@@ -19,10 +19,12 @@ public class Hooks {
 
     @After
     public void captureScreenShot(Scenario scenario) throws IOException, InterruptedException {
-        File file = ReporterUtils.saveScreenShot(BasePage.takeScreenShot());
-
-        Path p = Paths.get("Screenshots\\" + file.getName());
-        scenario.embed(readAllBytes(p), "image/png");
+        byte[] screenshot = BasePage.takeScreenShotAsByteArray();
+//        File file = ReporterUtils.saveScreenShot(BasePage.takeScreenShot());
+//        String relativePath = "." + "/" + "Screenshots" + "/" + file.getName();
+//        Path p = Paths.get("Screenshots\\" + file.getName());
+        scenario.embed(screenshot, "image/png");
+//        scenario.embed(screenshot, "image/png");
 
     }
 }

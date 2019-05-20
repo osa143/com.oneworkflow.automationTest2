@@ -121,11 +121,16 @@ public class BasePage {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
     }
 
-        public void tearDown () {
-            driver.close();
-            driver.quit();
+    public static byte[] takeScreenShotAsByteArray(){
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+    }
 
-        }
+    public void tearDown () {
+        driver.close();
+        driver.quit();
+
+    }
+
 
     }
 

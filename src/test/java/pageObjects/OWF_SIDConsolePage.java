@@ -50,7 +50,7 @@ public class OWF_SIDConsolePage extends BasePage {
     private static final String ddValueALL_CIS = "All CIs";
     private static final String ddValueCIRCUIT_CIS = "Circuit CIs";
     private static final String ddValueCLEAR= "(clear)";
-    
+
 
     public void clickFilerDropDown(){
         selectDropDownMenu(ddFILTER);

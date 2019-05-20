@@ -18,7 +18,8 @@ import java.util.concurrent.TimeUnit;
 
 public class Test1 {
     public static void main (String args[]) throws InterruptedException {
-        test1();
+//        1test1();
+        System.out.println("========" + System.getProperty("user.dir"));
     }
 
 

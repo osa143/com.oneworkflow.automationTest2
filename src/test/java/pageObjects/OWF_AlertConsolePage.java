@@ -11,15 +11,19 @@ public class OWF_AlertConsolePage extends BasePage {
 
 
     public void clickOpenButton(){
+
         driver.findElement(By.id(btnOPEN)).click();
     }
-    public void clickDeleteButton(){
+    public void clickDeleteButton()
+    {
         driver.findElement(By.id(btnDELETE)).click();
     }
     public void clickMarkAsReadButton(){
+
         driver.findElement(By.id(btnMARK_AS_READ)).click();
     }
     public void clickMarkAsUnReadButton(){
+
         driver.findElement(By.id(btnMARK_AS_UNREAD)).click();
     }
 }

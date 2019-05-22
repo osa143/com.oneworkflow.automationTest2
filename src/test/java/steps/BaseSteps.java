@@ -5,8 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pageObjects.BasePage;
 import pageObjects.OWF_LoginPage;
+import utils.DriverSetUp;
 
-public class BaseSteps {
+public class BaseSteps extends DriverSetUp {
 
     WebDriver driver;
     String appURL = null;
@@ -20,8 +21,8 @@ public class BaseSteps {
             appURL = "https://www.google.co.in";
         }
 
-        OWF_LoginPage loginPage = new OWF_LoginPage();
-        loginPage.getURL(appURL);
+       // OWF_LoginPage loginPage = new OWF_LoginPage();
+       // loginPage.getURL(appURL);
 
         Assert.assertTrue(false);
 

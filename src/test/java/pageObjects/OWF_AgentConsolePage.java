@@ -1,53 +1,127 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 public class OWF_AgentConsolePage extends BasePage {
 
-    public static final String menuForCONSOLE = "Console";
-    public static final String menuForCREATE = "Create";
-    public static final String menuForSEARCH = "Search";
-    public static final String menuForADMINISTRATION = "Administartion";
+    public OWF_AgentConsolePage(WebDriver driver){
 
-    public static final String menuForNAV_USERNAME = "Menu for Nav-Username";
+        this.driver= driver;
+    }
 
-    public static final String menuItemAGENT_CONSOLE = "Agent Console";
-    public static final String menuItemALERT_CONSOLE = "Alert Console";
-    public static final String menuItemSID_CONSOLE = "SID Console";
-    public static final String menuItemCHANGE_RECORD = "Change Record/Project/Freeze";
-    public static final String menuItemFROM_FILE = "From File";
-    public static final String menuItemPROBLEM_RECORD = "Problem Record";
-    public static final String menuItemTROUBLE_EVENT = "Trouble Event";
-    public static final String menuItemWORK_ORDER = "Work Order";
+    private static final String menuForCONSOLE = "Console";
+    private static final String menuForCREATE = "Create";
+    private static final String menuForSEARCH = "Search";
+    private static final String menuForADMINISTRATION = "Administartion";
 
-    public static final String menuItemMY_ACCOUNT = "My Account";
-    public static final String menuItemCHANGE_PASSWORD = "Change Password";
-    public static final String menuItemHELP = "Help";
-    public static final String menuItemABOUT = "About";
-    public static final String menuItemLOGOUT = "Logout";
+    private static final String menuForNAV_USERNAME = "Menu for Nav-Username";
 
-    public static final String txtSEARCH = "WIN_2_730000011";
+    private static final String menuItemAGENT_CONSOLE = "Agent Console";
+    private static final String menuItemALERT_CONSOLE = "Alert Console";
+    private static final String menuItemSID_CONSOLE = "SID Console";
+    private static final String menuItemCHANGE_RECORD = "Change Record/Project/Freeze";
+    private static final String menuItemFROM_FILE = "From File";
+    private static final String menuItemPROBLEM_RECORD = "Problem Record";
+    private static final String menuItemTROUBLE_EVENT = "Trouble Event";
+    private static final String menuItemWORK_ORDER = "Work Order";
 
-    public static final String btnSEARCH = "WIN_0_700010480";
-    public static final String btnCLEAR = "WIN_0_777501009";
-    public static final String btnREFRESH = "WIN_0_8000903";
-    public static final String btnHIDE_FUNCTIONS = "WIN_0_999000120";
-    public static final String btnMORE_FILTERS = "WIN_0_600002901";
-    public static final String btnSAVE = "WIN_0_700010480";
-    public static final String btnADD = "WIN_0_800006404";
+    private static final String menuItemMY_ACCOUNT = "My Account";
+    private static final String menuItemCHANGE_PASSWORD = "Change Password";
+    private static final String menuItemHELP = "Help";
+    private static final String menuItemABOUT = "About";
+    private static final String menuItemLOGOUT = "Logout";
 
-    public static final String ddfilterForALL_TICKETS = "WIN_0_700010167";
-    public static final String ddfiltetForALL_ROLES = "WIN_0_700010200";
-    public static final String ddfilterforALL = "WIN_0_700010165";
+    private static final String txtSEARCH = "WIN_2_730000011";
 
-    public static final String ddFilterValueALL_ROLES = "All Roles";
-    public static final String ddFilterValueINTERESTED_PARTIES = "Interested Parties";
-    public static final String ddFilterValueMYASSIGNEE_PROFILE = "My Assignee Profile";
-    public static final String ddFilterValueCREATER_USER_LEVEL = "Creator (user level)";
-    public static final String ddFilterValueMY_OWNER_PROFILE = "My Owner Profile";
+    private static final String btnSEARCH = "WIN_0_700010480";
+    private static final String btnCLEAR = "WIN_0_777501009";
+    private static final String btnREFRESH = "WIN_0_8000903";
+    private static final String btnHIDE_FUNCTIONS = "WIN_0_999000120";
+    private static final String btnMORE_FILTERS = "WIN_0_600002901";
+    private static final String btnSAVE = "WIN_0_700010480";
+    private static final String btnADD = "WIN_0_800006404";
 
-    public void enterSearch(String searchTExt){
-        driver.findElement(By.id(txtSEARCH)).sendKeys(searchTExt);
+    private static final String ddALL_TICKETS = "WIN_0_700010167";
+    private static final String ddALL_ROLES = "WIN_0_700010200";
+    private static final String ddALL = "WIN_0_700010165";
+
+    private static final String ddValueALL_ROLES = "All Roles";
+    private static final String ddValueINTERESTED_PARTIES = "Interested Parties";
+    private static final String ddValueMYASSIGNEE_PROFILE = "My Assignee Profile";
+    private static final String ddValueCREATER_USER_LEVEL = "Creator (user level)";
+    private static final String ddValueMY_OWNER_PROFILE = "My Owner Profile";
+
+    private static final String ddValueALL_TICKETS = "All Tickets";
+    private static final String ddValueCHANGE_FREEZE = "Change Freeze";
+    private static final String ddValueCHANGE_PROJECT = "Change Project";
+    private static final String ddValueCHANGE_RECORD = "Change Record";
+    private static final String ddValueKNOWN_ERROR = "Known Error";
+    private static final String ddValuePB_OP_KE = "PB & OP & KE";
+    private static final String ddValuePROBLEM = "Problem";
+    private static final String ddValueTROUBLE_TICKET = "Trouble Ticket";
+    private static final String ddValueWO_OP = "WO & OP";
+    private static final String ddValueWO_OP_CR = "WO & OP & CR";
+    private static final String ddValueWORK_ORDER = "Work Order";
+
+    private static final String ddValueALL = "All";
+    private static final String ddValueASIGNED_TO_ME = "Assigned To Me";
+    private static final String ddValueCREATED_BY_ME = "Created by Me";
+    private static final String ddValueOWNED_BY_ME = "Owned by Me";
+
+
+    public void selectDdValueAll(){
+        selectDropDownValue(ddValueALL);
+    }
+    public void selectDdValueAsignedToMe(){
+        selectDropDownValue(ddValueASIGNED_TO_ME);
+    }
+    public void selectDdValueCreatedByMe(){
+        selectDropDownValue(ddValueCREATED_BY_ME);
+    }
+    public void selectDdValueOWNED_BY_ME(){
+        selectDropDownValue(ddValueOWNED_BY_ME);
+    }
+
+
+    public void selectDdValueAllTickets(){
+        selectDropDownValue(ddValueALL_TICKETS);
+    }
+    public void selectDdValueChangeProject(){
+        selectDropDownValue(ddValueCHANGE_PROJECT);
+    }
+    public void selectDdValueChangeFreeze(){
+        selectDropDownValue(ddValueCHANGE_FREEZE);
+    }
+    public void selectDdValueChangeRecord(){
+        selectDropDownValue(ddValueCHANGE_RECORD);
+    }
+    public void selectDdValueKnownError(){
+        selectDropDownValue(ddValueKNOWN_ERROR);
+    }
+    public void selectDdValuePB_OP_KE(){
+        selectDropDownValue(ddValuePB_OP_KE);
+    }
+    public void selectDdValueProblem(){
+        selectDropDownValue(ddValuePROBLEM);
+    }
+    public void selectDdValueTroubleTicket(){
+        selectDropDownValue(ddValueTROUBLE_TICKET);
+    }
+    public void selectDdValueWO_OP(){
+        selectDropDownValue(ddValueWO_OP);
+    }
+    public void selectDdValueWO_OP_CR(){
+        selectDropDownValue(ddValueWO_OP_CR);
+    }
+
+    public void selectDdValueWorkOrder(){
+        selectDropDownValue(ddValueWORK_ORDER);
+    }
+
+
+    public void enterSearch(String searchText){
+        driver.findElement(By.id(txtSEARCH)).sendKeys(searchText);
     }
 
 
@@ -168,35 +242,35 @@ public class OWF_AgentConsolePage extends BasePage {
 
 
     public void selectAllRoles() {
-        selectDropDownValue(ddFilterValueALL_ROLES);
+        selectDropDownValue(ddValueALL_ROLES);
     }
 
     public void selectInterestedParties() {
-        selectDropDownValue(ddFilterValueINTERESTED_PARTIES);
+        selectDropDownValue(ddValueINTERESTED_PARTIES);
     }
 
     public void selectMyAssigneeProfile() {
-        selectDropDownValue(ddFilterValueMYASSIGNEE_PROFILE);
+        selectDropDownValue(ddValueMYASSIGNEE_PROFILE);
     }
 
     public void selectMyCreaterUserLevel() {
-        selectDropDownValue(ddFilterValueCREATER_USER_LEVEL);
+        selectDropDownValue(ddValueCREATER_USER_LEVEL);
     }
 
     public void selectMyOwnerProfile() {
-        selectDropDownValue(ddFilterValueMY_OWNER_PROFILE);
+        selectDropDownValue(ddValueMY_OWNER_PROFILE);
     }
 
-    public void clickAllTicketsFilter() {
-        driver.findElement(By.id(ddfilterForALL_TICKETS)).click();
+    public void clickAllTicketsDropDown() {
+        driver.findElement(By.id(ddALL_TICKETS)).click();
     }
 
-    public void clickAllRolesFilter() {
-        driver.findElement(By.id(ddfiltetForALL_ROLES)).click();
+    public void clickAllRolesDropDown() {
+        driver.findElement(By.id(ddALL_ROLES)).click();
     }
 
-    public void clickAllFilter() {
-        driver.findElement(By.id(ddfilterforALL)).click();
+    public void clickAllDropDown() {
+        driver.findElement(By.id(ddALL)).click();
     }
 
 

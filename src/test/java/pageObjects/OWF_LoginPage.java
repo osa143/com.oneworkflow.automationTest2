@@ -1,18 +1,26 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import utils.DriverSetUp;
 
-public class OWF_LoginPage extends BasePage {
+public class OWF_LoginPage extends DriverSetUp {
 
-    public static final String txtUSERNAME = "username-id";
-    public static final String txtPASSWORD = "pwd-id";
-    public static final String btnLOGIN = "login";
+    public OWF_LoginPage(WebDriver driver){
+        this.driver=driver;
+    }
+
+    private static final String txtUSERNAME = "username-id";
+    private static final String txtPASSWORD = "pwd-id";
+    private static final String btnLOGIN = "login";
 
     public void enterUsername(String username) {
+
         driver.findElement(By.id(txtUSERNAME)).sendKeys(username);
     }
 
-    public void enterPassword(String password) {
+    public void enterPassword(String password)
+    {
         driver.findElement(By.id(txtPASSWORD)).sendKeys(password);
     }
 

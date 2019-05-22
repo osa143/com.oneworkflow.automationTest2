@@ -3,22 +3,31 @@ package pageObjects;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import utils.DriverSetUp;
 
 import java.io.File;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class BasePage {
+public class BasePage extends DriverSetUp {
+
+    public BasePage(){
+        super();
+    }
+    public void setUp(){
+        initialization();
+    }
 
     public static WebDriver driver;
 
-    public BasePage() {
+    /*public BasePage() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
 
-    }
+    }*/
 
     public void getURL(String appURL) {
 
@@ -100,7 +109,7 @@ public class BasePage {
         }
     }
 
-        public int getColumnIndexByHeaderName (String headerName){
+        public  static int getColumnIndexByHeaderName (String headerName){
             int columnIndex = -1;
             //Get all web elements with BaseTableHeader class name
             List<WebElement> tableHeaders = driver.findElements(By.className("BaseTableHeader"));

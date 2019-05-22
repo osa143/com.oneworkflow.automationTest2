@@ -5,7 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
+import pageObjects.OWF_AgentConsolePage;
+import pageObjects.OWF_ChangeRecordPage;
+import pageObjects.OWF_CiSearchPage;
+import pageObjects.OWF_SIDConsolePage;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -18,8 +23,8 @@ import java.util.concurrent.TimeUnit;
 
 public class Test1 {
     public static void main (String args[]) throws InterruptedException {
-//        1test1();
-        System.out.println("========" + System.getProperty("user.dir"));
+    test4();
+       // System.out.println("========" + System.getProperty("user.dir"));
     }
 
 
@@ -200,8 +205,9 @@ public class Test1 {
     }
     public static void test4() throws InterruptedException {
 
+
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver =new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://td220lbf-mtint.ddc.teliasonera.net/arsys/shared/login.jsp?/arsys/home");
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -213,6 +219,9 @@ public class Test1 {
         Thread.sleep(3000);
         String menuItem = "Change Record/Project/Freeze";
         driver.findElement(By.className("MenuTableBody")).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(menuItem)).findFirst().orElse(null).click();
+        OWF_SIDConsolePage sidConsolePage = new OWF_SIDConsolePage();
+        OWF_CiSearchPage ciSearchPage = new OWF_CiSearchPage();
+        OWF_ChangeRecordPage changeRecordPage = new OWF_ChangeRecordPage();
 
         // move to function to switch to particular tab
         Set<String> handles = driver.getWindowHandles();
@@ -221,7 +230,8 @@ public class Test1 {
         String childWindow = it.next();
         driver.switchTo().window(childWindow);
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//img[@alt='ReadOnly menu for Request Type']/..")).click();
+        changeRecordPage.selectRequestType("Normal change");
+
        // driver.findElement(By.xpath("//*[@id=\"WIN_0_777031002\"]/a"));
         Thread.sleep(3000);
         //driver.findElement(By.xpath("/html/body/div[8]/div[2]/table/tbody/tr[1]/td[1]")).click();
@@ -262,6 +272,27 @@ public class Test1 {
         //driver.findElement(By.xpath("//a[contains(text(),'Diagnosis')]")).click();
        driver.findElement(By.className("OuterOuterTab")).findElements(By.tagName("dl")).stream().filter(element -> element.getText().equals("Diagnosis")).findFirst().orElse(null).click();
         driver.findElement(By.id("WIN_0_999000229")).click();
+
+        sidConsolePage.clickClearButton();
+        sidConsolePage.clickSearchFor();
+        sidConsolePage.selectDropDownValueAllCis();
+        sidConsolePage.clickNamePlusTextBox("One Workflow Automation system test");
+        sidConsolePage.clickSearchButton();
+        ciSearchPage.clickToselectCi();
+        ciSearchPage.clickLevelDropdown();
+        ciSearchPage.selectDegradationOfServiceDropdownValue();
+        ciSearchPage.clickRelateCiButton();
+        driver.switchTo().alert().accept();
+        ciSearchPage.clickCloseButton();
+        System.out.println(driver.findElement(By.id("WIN_0_600002905")).isEnabled());
+        changeRecordPage.clicksendButton();
+        System.out.println(driver.findElement(By.id("WIN_0_777504152")).isEnabled());
+        changeRecordPage.clickSave();
+
+
+
+
+
     }
 
 }

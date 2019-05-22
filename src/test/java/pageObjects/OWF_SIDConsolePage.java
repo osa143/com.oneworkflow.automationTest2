@@ -75,8 +75,8 @@ public class OWF_SIDConsolePage extends BasePage {
     public void clickLocationPlusTextBox(){
         driver.findElement(By.id(txtbxLOCATION_PLUS)).click();
     }
-    public void clickNamePlusTextBox(){
-        driver.findElement(By.id(txtbxNAME_PLUS)).click();
+    public void clickNamePlusTextBox(String namePlus){
+        driver.findElement(By.id(txtbxNAME_PLUS)).sendKeys(namePlus);
     }
 
     public void clickReRunButton(){

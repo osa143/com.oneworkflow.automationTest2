@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import utils.CommonUtils;
 
 public class OWF_ChangeRecordPage extends BasePage {
@@ -38,8 +39,19 @@ public class OWF_ChangeRecordPage extends BasePage {
 
 
     private static final String btnSAVE = "arid_WIN_0_900000019";
-    private static final String tabDIAGNOSIS = "//a[contains(text(),'Diagnosis')]";
+    private static final String btnDIAGNOSIS = "//a[contains(text(),'Diagnosis')]";
     private static final String btnCISEARCH = "WIN_0_999000229";
+    public static final String btnSEND = "WIN_0_600002905";
+    private static final String btnACKNOWLEDGE = "WIN_0_777504152";
+
+
+    public void clickAcknowledgeButton(){
+        driver.findElement(By.id(btnACKNOWLEDGE)).click();
+    }
+    public void clicksendButton(){
+        driver.findElement(By.id(btnSEND)).click();
+    }
+
 
     public void clickDenmarkCheckBox(){
         driver.findElement(By.id(chkbxDENMARK)).click();
@@ -122,7 +134,7 @@ public class OWF_ChangeRecordPage extends BasePage {
     }
 
     public void clickDiagnosis() {
-        driver.findElement(By.xpath(tabDIAGNOSIS)).click();
+        driver.findElement(By.xpath(btnDIAGNOSIS)).click();
     }
 
     public void clickCiSearch() {

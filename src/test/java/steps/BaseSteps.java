@@ -15,17 +15,6 @@ public class BaseSteps extends BasePage{
     //WebDriver driver = DriverFactory.getInstance().getDriver();
     String appURL = null;
 
-    @When("User clicks on add column from preferences and selects OP next due date")
-    public void userClicksOnAddColumnFromPreferencesAndSelectsOPNextDueDate() {
-        setPreferences("Add Column:OP Next Due Date");
-    }
-
-    @And("User clicks on Remove Column under preferences and selects OP Target date")
-    public void userClicksOnRemoveColumnUnderPreferencesAndSelectsOPTargetDate() {
-        setPreferences("Remove Column:OP Target Date");
-
-    }
-
     @Given("the application is {string}")
     public void theApplicationIs(String app) {
 

@@ -185,14 +185,14 @@ public void selectDdValue1(){
     }
 
 
-    public void clickCategoryDd(){
-        selectMainMenu(ddCATEGORY);
+    public void clickCategoryDropDown(){
+        selectDropDownMenu(ddCATEGORY);
     }
-    public void clickTypeMenu(){
-        selectMainMenu(ddTYPE);
+    public void clickTypeDropDown(){
+        selectDropDownMenu(ddTYPE);
     }
-    public void clickItemMenu(){
-        selectMainMenu(ddITEM);
+    public void clickItemDropDown(){
+        selectDropDownMenu(ddITEM);
     }
 
     public void clickSearchFor(){

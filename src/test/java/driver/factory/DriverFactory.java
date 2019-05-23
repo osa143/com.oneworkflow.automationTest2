@@ -19,7 +19,7 @@ public class DriverFactory {
 
     }
     public enum BrowserType{
-        chrome, firefox, ie;
+        chrome, firefox, ie, safari;
     }
 
     private static WebDriver driver;

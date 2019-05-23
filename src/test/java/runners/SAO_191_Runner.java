@@ -7,6 +7,6 @@ import cucumber.api.CucumberOptions;
         glue = {"steps", "cucumberHooks"},
       tags = {"@SAO_191"}
 )
-public class DemoRunner extends BaseTest {
+public class SAO_191_Runner extends BaseTest {
 
 }

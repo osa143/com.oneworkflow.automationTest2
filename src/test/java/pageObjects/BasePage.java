@@ -17,7 +17,8 @@ public class BasePage{
     public static WebDriver driver;
 
 
-    protected BasePage(){
+    protected BasePage()
+    {
         driver = DriverFactory.getInstance().getDriver();
     }
 

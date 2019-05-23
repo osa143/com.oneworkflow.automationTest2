@@ -3,12 +3,9 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class OWF_AgentConsolePage extends BasePage {
+public class OWF_AgentConsolePage extends BasePage{
 
-    public OWF_AgentConsolePage(WebDriver driver){
 
-        this.driver= driver;
-    }
 
     private static final String menuForCONSOLE = "Console";
     private static final String menuForCREATE = "Create";

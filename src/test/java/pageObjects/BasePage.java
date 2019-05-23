@@ -1,33 +1,29 @@
 package pageObjects;
 
+import driver.factory.DriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.Assert;
 import utils.DriverSetUp;
 
 import java.io.File;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class BasePage extends DriverSetUp {
-
-    public BasePage(){
-        super();
-    }
-    public void setUp(){
-        initialization();
-    }
+public class BasePage{
 
     public static WebDriver driver;
 
-    /*public BasePage() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
 
-    }*/
+    protected BasePage(){
+        driver = DriverFactory.getInstance().getDriver();
+    }
+
+    public WebDriver getDriver(){
+        return driver;
+    }
 
     public void getURL(String appURL) {
 
@@ -124,9 +120,36 @@ public class BasePage extends DriverSetUp {
             }
             return columnIndex;
         }
+    public void validateOpNextDueDateDetails() {
+        int columnIndex = BasePage.getColumnIndexByHeaderName("Site Name");
+
+        //Get all the table rows by Id
+        List<WebElement> tableRows = driver.findElement(By.id("T700009024")).findElements(By.tagName("tr"));
+        String cellValue = null;
+        int rowsCount = 0;
+        if (columnIndex >= 0) {
+            for (int i = 1; i < tableRows.size(); i++) {
+                //Get all the cell values for Site Name column
+                cellValue = tableRows.get(i).findElements(By.tagName("td")).get(columnIndex - 1).getText();
+                if (cellValue != null)
+                    rowsCount++;
+            }
+        }
+        if (rowsCount > 0)
+        {
+            Assert.assertTrue(true);
+        }
+        else {
+            //If we don't find the Site Name column, test should fail
+            Assert.assertTrue(false);
+        }
+
+    }
+
 
 
     public static File takeScreenShot(){
+
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
     }
 

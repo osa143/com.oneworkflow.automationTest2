@@ -22,9 +22,9 @@ public class SAO_191_StepDef extends DriverSetUp {
 
     WebDriver driver;
 
-    OWF_LoginPage loginPage = new OWF_LoginPage(driver);
-    BasePage basePage = new BasePage();
-    OWF_AgentConsolePage agentConsolePage= new OWF_AgentConsolePage(driver);
+    OWF_LoginPage loginPage = new OWF_LoginPage();
+
+    OWF_AgentConsolePage agentConsolePage= new OWF_AgentConsolePage();
     OWF_SIDConsolePage sidConsolePage = new OWF_SIDConsolePage();
 
     @Given("user is on OneWorkFlow login page")
@@ -98,7 +98,7 @@ System.out.println(SIDConsolePageTitle);
         wait(1000);
         agentConsolePage.clickMenuItemLogout();
         wait(1000);
-        basePage.tearDown();
+       // basePage.tearDown();
     }
     private void ValidateSiteNameDetails() {
         int columnIndex = BasePage.getColumnIndexByHeaderName("Site Name");

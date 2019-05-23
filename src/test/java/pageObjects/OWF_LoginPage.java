@@ -4,11 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utils.DriverSetUp;
 
-public class OWF_LoginPage extends DriverSetUp {
-
-    public OWF_LoginPage(WebDriver driver){
-        this.driver=driver;
-    }
+public class OWF_LoginPage extends BasePage{
 
     private static final String txtUSERNAME = "username-id";
     private static final String txtPASSWORD = "pwd-id";

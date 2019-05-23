@@ -5,7 +5,7 @@ import cucumber.api.CucumberOptions;
 
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
-      tags = {"@regression"}
+      tags = {"@SAO_191"}
 )
 public class DemoRunner extends BaseTest {
 

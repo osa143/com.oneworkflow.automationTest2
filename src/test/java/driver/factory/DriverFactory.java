@@ -42,7 +42,7 @@ public class DriverFactory {
             e.printStackTrace();
         }
 
-        String browserName = prop.getProperty("browser");
+        String browserName = prop.getProperty("driver");
 
         switch (browserName.toUpperCase()) {
 

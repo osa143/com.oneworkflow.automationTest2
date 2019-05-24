@@ -21,20 +21,15 @@ public class OWF_LoginPageSteps {
 
     @Given("User is on the OneWorkflow login page")
     public void userIsOnTheOneWorkflowLoginPage() {
-        String Title = loginPage.getDriver().getTitle();
-        System.out.println(Title);
-    }
-
-    @When("User enters valid credentials")
-    public void userEntersValidCredentials() {
-        loginPage.doLogin("Change_Automation_1", "Test@1234");
-
+        loginPage.getDriver();
+        loginPage.getURL("https://td220lbf-mtint.ddc.teliasonera.net/arsys/shared/login.jsp?/arsys/home");
+        System.out.println(loginPage.getTitle());
     }
 
     @When("user logins with valid user credentials")
     public void userLoginsWithValidUserCredentials() throws InterruptedException {
         loginPage.doLogin("Tohall_copy", "Test@1234" );
-        loginPage.wait(3000);
+        loginPage.wait(5000);
     }
 
 }

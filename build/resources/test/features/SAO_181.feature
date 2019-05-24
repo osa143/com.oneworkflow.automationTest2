@@ -1,8 +1,8 @@
 
 @regression
-Feature Verification of OP target due date visibility
+Feature: Verification of OP target due date visibility
 
-  Scenario Verify OP Target Due date availability
+  Scenario: Verify OP Target Due date availability
 
     Given User is on the OneWorkflow login page
     When user logins with valid user credentials

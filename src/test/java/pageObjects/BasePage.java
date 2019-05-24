@@ -82,7 +82,7 @@ public class BasePage{
 
         driver.findElement(By.id(preferences)).findElement(By.xpath("//a[contains(text(),'Preferences')]")).click();
 
-        wait(500);
+        wait(1000);
 
         String arr[] = preferences.split(":");
         for (int i = 0; i < arr.length; i++) {

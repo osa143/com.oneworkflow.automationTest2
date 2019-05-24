@@ -10,6 +10,11 @@ public class OWF_LoginPage extends BasePage{
     private static final String txtPASSWORD = "pwd-id";
     private static final String btnLOGIN = "login";
 
+    public String getTitle()
+    {
+       return driver.getTitle();
+    }
+
     public void enterUsername(String username) {
 
         driver.findElement(By.id(txtUSERNAME)).sendKeys(username);

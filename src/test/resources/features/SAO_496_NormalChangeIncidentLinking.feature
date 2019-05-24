@@ -1,7 +1,7 @@
 @regression @SAO_496
-Feature Linking of Incident Ticket to Normal Change during implementation window
+Feature: Linking of Incident Ticket to Normal Change during implementation window
 
-  Scenario Normal Change
+  Scenario: Normal Change
 
     Given User is logged into Oneworkflow
     When user clicks on change record from agent console

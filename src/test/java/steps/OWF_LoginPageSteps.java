@@ -39,5 +39,6 @@ public class OWF_LoginPageSteps extends BaseSteps {
     public void userLogsInWithValidProblemInitiatorCredentials() {
         loginPage.doLogin("Tohall_copy", "Test@1234");
         loginPage.wait(5000);
+        //login with intiator credentials
     }
 }

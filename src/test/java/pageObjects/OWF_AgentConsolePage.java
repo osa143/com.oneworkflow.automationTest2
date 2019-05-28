@@ -2,6 +2,9 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class OWF_AgentConsolePage extends BasePage{
 
@@ -10,9 +13,9 @@ public class OWF_AgentConsolePage extends BasePage{
     private static final String menuForCONSOLE = "Console";
     private static final String menuForCREATE = "Create";
     private static final String menuForSEARCH = "Search";
-    private static final String menuForADMINISTRATION = "Administartion";
+    private static final String menuForADMINISTRATION = "Administration";
 
-    private static final String menuForNAV_USERNAME = "Menu for Nav-Username";
+    private static final String menuForNAV_USERNAME = "Nav-Username";
 
     private static final String menuItemAGENT_CONSOLE = "Agent Console";
     private static final String menuItemALERT_CONSOLE = "Alert Console";
@@ -66,6 +69,24 @@ public class OWF_AgentConsolePage extends BasePage{
     private static final String ddValueCREATED_BY_ME = "Created by Me";
     private static final String ddValueOWNED_BY_ME = "Owned by Me";
 
+    private static final String table_ID = "WIN_0_777000002";
+
+    public void clickPreferences()
+    {
+        driver.findElement(By.id(table_ID)).findElement(By.xpath("//a[contains(text(),'Preferences')]")).click();
+    }
+
+    public List<WebElement> opNextDuedateTableRows()
+
+    {
+        return getTableRows(table_ID);
+    }
+
+    public boolean validateOpNextDueDateInformation()
+    {
+        int columnIndex = getColumnIndexByHeaderName("Next Due Date");
+        return checkIfColumnHasData("Next Due Date", table_ID, columnIndex);
+    }
 
     public void selectDdValueAll(){
         selectDropDownValue(ddValueALL);

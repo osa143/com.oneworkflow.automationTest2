@@ -13,9 +13,8 @@ Feature: Sitename details search Feature
     And user selects Type as Radio Access Network
     And user selects Item as GSMCell
     And user clicks on Search
-    Then ci details should be displayed
-    When user verifies Site Name details avilable for all CI's
-    Then Site name should be displayed for all CI CTI search details
+    Then CI details should be displayed
+    And Site name should be displayed for all CI CTI search details
     And user logouts and closes the browser
 
 

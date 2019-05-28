@@ -10,7 +10,7 @@ import utils.ReporterUtils;
 
 @CucumberOptions(
         strict = true, //it will check if any step is not defined in step definition file
-        plugin = {"extentreports.cucumber.adapter.ExtentCucumberAdapter:", "pretty", "html:target/cucumber-reports"})
+        plugin = {"extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 
 public class BaseTest extends AbstractTestNGCucumberTests {
     @BeforeClass

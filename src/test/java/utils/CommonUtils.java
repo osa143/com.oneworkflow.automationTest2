@@ -1,19 +1,22 @@
 package utils;
 
 import org.openqa.selenium.WebDriver;
+import pageObjects.BasePage;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Iterator;
 import java.util.Properties;
 import java.util.Set;
 import java.util.TimeZone;
 
-public class CommonUtils {
+public class CommonUtils extends BasePage {
 
-    public static void SwitchWindow(WebDriver driver, String windowType) {
+    public static void switchWindow(WebDriver driver, String windowType) {
         Set<String> handles = driver.getWindowHandles();
         Iterator<String> it = handles.iterator();
         String parentWindow = it.next();
@@ -29,7 +32,7 @@ public class CommonUtils {
 
     public static String getDateTime(String pattern, String timeZone, int minutes) {
         if (timeZone.equals(""))
-            timeZone = TimeZone.getDefault().getDisplayName();
+            timeZone = ZoneId.systemDefault().getId();
         LocalDateTime startDateTime = null;
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(pattern);
         LocalDateTime currentDateTime = LocalDateTime.now(TimeZone.getTimeZone(timeZone).toZoneId());
@@ -55,6 +58,7 @@ public class CommonUtils {
         }
         return prop.getProperty(property);
     }
+
 
 
 }

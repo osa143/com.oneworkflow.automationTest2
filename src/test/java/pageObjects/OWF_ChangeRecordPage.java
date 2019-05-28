@@ -1,7 +1,6 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import utils.CommonUtils;
 
 public class OWF_ChangeRecordPage extends BasePage {
@@ -22,9 +21,9 @@ public class OWF_ChangeRecordPage extends BasePage {
     private static final String txtEND_DATE = "arid_WIN_0_777021161";
     private static final String txtEXPECTED_ALARMS= "arid_WIN_0_705001002";
     private static final String txtIMPACT_DURATION_DAYS= "arid_WIN_0_990001006";
-    private static final String txtIMPACT_DURATION_HRS= "arid_WIN_0_990001006";
-    private static final String txtIMPACT_DURATION_MINS= "arid_WIN_0_990001006";
-    private static final String txtIMPACT_DURATION_SECS= "arid_WIN_0_990001006";
+    private static final String txtIMPACT_DURATION_HRS= "arid_WIN_0_900000018";
+    private static final String txtIMPACT_DURATION_MINS= "arid_WIN_0_900000019";
+    private static final String txtIMPACT_DURATION_SECS= "arid_WIN_0_990001007";
 
     private static final String chkbxSWEDEN= "WIN_0_rc0id600002001";
     private static final String chkbxFINLAND= "WIN_0_rc0id600002002";
@@ -38,7 +37,7 @@ public class OWF_ChangeRecordPage extends BasePage {
 
 
 
-    private static final String btnSAVE = "arid_WIN_0_900000019";
+    private static final String btnSAVE = "WIN_0_700025244";
     private static final String btnDIAGNOSIS = "//a[contains(text(),'Diagnosis')]";
     private static final String btnCISEARCH = "WIN_0_999000229";
     public static final String btnSEND = "WIN_0_600002905";
@@ -81,17 +80,18 @@ public class OWF_ChangeRecordPage extends BasePage {
         driver.findElement(By.id(chkbxINTERNAL)).click();
     }
 
-    public void clickImpactDurationDays(){
-        driver.findElement(By.id(txtIMPACT_DURATION_DAYS)).click();
+    public void enterImpactDurationDays(String impactDurationDays){
+        driver.findElement(By.id(txtIMPACT_DURATION_DAYS)).sendKeys(impactDurationDays);
     }
-    public void clickImpactDurationHrs(){
-        driver.findElement(By.id(txtIMPACT_DURATION_HRS)).click();
+    public void enterImpactDurationHrs(String impactDurationHrs){
+        driver.findElement(By.id(txtIMPACT_DURATION_HRS)).sendKeys(impactDurationHrs);
     }
-    public void clickImpactDurationMins(){
-        driver.findElement(By.id(txtIMPACT_DURATION_MINS)).click();
+    public void enterImpactDurationMins(String impactDurationMins){
+        driver.findElement(By.id(txtIMPACT_DURATION_MINS)).sendKeys(impactDurationMins);
     }
-    public void clickImpactDurationSecs(){
-        driver.findElement(By.id(txtIMPACT_DURATION_SECS)).click();
+    public void enterImpactDurationSecs(String impactDurationSecs){
+
+        driver.findElement(By.id(txtIMPACT_DURATION_SECS)).sendKeys(impactDurationSecs);
     }
     public void selectActualImpact(String value){
         selectDropDown(ddACTUAL_IMPACT, value);
@@ -109,7 +109,7 @@ public class OWF_ChangeRecordPage extends BasePage {
     public void selectCompletedCode(String value){
         selectDropDown(ddCOMPLETED_CODE, value);
     }
-    public void clickExtectedAlarm(){
+    public void clickExpectedAlarm(){
         driver.findElement(By.id(txtEXPECTED_ALARMS)).click();
     }
 
@@ -120,8 +120,12 @@ public class OWF_ChangeRecordPage extends BasePage {
         selectDropDown(ddREQUEST_TYPE, value);
     }
 
-    public void selectTemplate(String value) {
-        selectDropDown(ddTEMPLATE, value);
+    public void selectTemplateAsAll_Mobile_RANExternals_RANConnectivity() {
+        selectDropDown(ddTEMPLATE, "All:Mobile:RAN - Externals:RAN Connectivity");
+    }
+    public Boolean ackButtonStatus(){
+        Boolean status = driver.findElement(By.id(btnACKNOWLEDGE)).isEnabled();
+        return status;
     }
 
 
@@ -143,15 +147,19 @@ public class OWF_ChangeRecordPage extends BasePage {
 
     public void setStartDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", delay);
 
         driver.findElement(By.id(txtSTART_DATE)).sendKeys(dateTime);
 
     }
+    public String getChangeRecordPageTitle(){
+        String ChangeRecordPageTitle= driver.getTitle();
+        return ChangeRecordPageTitle;
+    }
 
     public void setEndDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", delay);
 
         driver.findElement(By.id(txtEND_DATE)).sendKeys(dateTime);
 

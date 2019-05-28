@@ -1,11 +1,15 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import java.util.List;
 
 public class OWF_SIDConsolePage extends BasePage {
-    private static final String ddCATEGORY = "category";
-    private static final String ddTYPE = "TYPE";
-    private static final String ddITEM = "ITEM";
+    private static final String ddCATEGORY = "Category";
+    private static final String ddTYPE = "Type";
+    private static final String ddITEM = "Item";
     private static final String ddSEARCH_FOR = "arid_WIN_0_700009236";
     private static final String ddFILTER = "Filter";
 
@@ -50,6 +54,8 @@ public class OWF_SIDConsolePage extends BasePage {
     private static final String ddValueALL_CIS = "All CIs";
     private static final String ddValueCIRCUIT_CIS = "Circuit CIs";
     private static final String ddValueCLEAR= "(clear)";
+
+    private static final String ciDetailsTable_ID = "T700009024";
 
 
     public void clickFilerDropDown(){
@@ -198,6 +204,33 @@ public void selectDdValue1(){
     public void clickSearchFor(){
         driver.findElement(By.id(ddSEARCH_FOR)).click();
     }
+
+    public List<WebElement> ciDetailsTableRows()
+    {
+       return getTableRows(ciDetailsTable_ID);
+    }
+
+    public boolean validateSiteNameDetails() {
+        int columnIndex = getColumnIndexByHeaderName("Site Name");
+        //Get all the table rows by Id
+        List<WebElement> tableRows = ciDetailsTableRows();
+        String cellValue = null;
+        if (columnIndex >= 0) {
+            for (int i = 1; i < tableRows.size(); i++) {
+                //Get all the cell values for Site Name column
+                cellValue = tableRows.get(i).findElements(By.tagName("td")).get(columnIndex - 1).getText();
+                //Check if Cell value is not null (if cell value is null, test should fail)
+                if(cellValue.equals("") || cellValue == null){
+                    return false;
+                }
+            }
+        } else {
+            Assert.assertTrue(false, "Site name column not found.");
+            return false;
+        }
+       return  true;
+    }
+
 
 
 

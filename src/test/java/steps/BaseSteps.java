@@ -9,18 +9,21 @@ import org.testng.Assert;
 import pageObjects.BasePage;
 import pageObjects.OWF_LoginPage;
 import utils.DriverSetUp;
+import utils.TestContext;
 
-public class BaseSteps extends BasePage{
+import java.io.FileInputStream;
+import java.util.Properties;
 
-    //WebDriver driver = DriverFactory.getInstance().getDriver();
-    String appURL = null;
+public class BaseSteps {
 
-    @Given("the application is {string}")
-    public void theApplicationIs(String app) {
+    protected Properties envProperties;
 
-       driver.get(appURL);
-
+    public Properties getProperties(){
+        return TestContext.getInstance().getEnvironmentProperties();
     }
+
+
+
 
 
 }

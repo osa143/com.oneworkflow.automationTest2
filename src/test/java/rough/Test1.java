@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Test1 {
     public static void main (String args[]) throws InterruptedException {
-    test4();
+    test1();
        // System.out.println("========" + System.getProperty("user.dir"));
     }
 
@@ -278,7 +278,7 @@ public class Test1 {
         sidConsolePage.selectDropDownValueAllCis();
         sidConsolePage.clickNamePlusTextBox("One Workflow Automation system test");
         sidConsolePage.clickSearchButton();
-        ciSearchPage.clickToselectCi();
+        ciSearchPage.clickToSelectCi();
         ciSearchPage.clickLevelDropdown();
         ciSearchPage.selectDegradationOfServiceDropdownValue();
         ciSearchPage.clickRelateCiButton();

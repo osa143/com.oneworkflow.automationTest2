@@ -15,21 +15,29 @@ import utils.DriverSetUp;
 
 import java.util.List;
 
-public class OWF_LoginPageSteps {
+public class OWF_LoginPageSteps extends BaseSteps {
 
     OWF_LoginPage loginPage = new OWF_LoginPage();
 
     @Given("User is on the OneWorkflow login page")
     public void userIsOnTheOneWorkflowLoginPage() {
-        loginPage.getDriver();
-        loginPage.getURL("https://td220lbf-mtint.ddc.teliasonera.net/arsys/shared/login.jsp?/arsys/home");
-        System.out.println(loginPage.getTitle());
+//        loginPage.getDriver();
+        loginPage.getURL(getProperties().getProperty("appURL"));
+        String LoginPageTitle= loginPage.getDriver().getTitle();
+        System.out.println(LoginPageTitle);
+
+       // Assert.assertEquals(LoginPageTitle, "BMC Remedy Mid Tier 9.1 - Login");
     }
 
     @When("user logins with valid user credentials")
     public void userLoginsWithValidUserCredentials() throws InterruptedException {
-        loginPage.doLogin("Tohall_copy", "Test@1234" );
+        loginPage.doLogin("Change_Automation_1", "Test@1234" );
         loginPage.wait(5000);
     }
 
+    @When("user logs in with valid problem initiator credentials")
+    public void userLogsInWithValidProblemInitiatorCredentials() {
+        loginPage.doLogin("Tohall_copy", "Test@1234");
+        loginPage.wait(5000);
+    }
 }

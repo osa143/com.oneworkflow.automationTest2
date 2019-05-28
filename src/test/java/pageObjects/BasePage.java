@@ -42,8 +42,9 @@ public class BasePage{
 
     public void selectMainMenu(String mainMenu) {
 
-        String mainMenuXpath = "//img[@alt='Menu for " + mainMenu + "']/a";
+        String mainMenuXpath = "//img[@alt='Menu for " + mainMenu + "']/..";
         driver.findElement(By.xpath(mainMenuXpath)).click();
+        wait(500);
     }
 
     public void selectMenuItem(String menuItem) {
@@ -53,8 +54,9 @@ public class BasePage{
     }
     public void selectDropDownMenu(String DropDownMenu) {
 
-        String mainMenuXpath = "//img[@alt='Menu for " + DropDownMenu + "']/a";
+        String mainMenuXpath = "//img[@alt='Menu for " + DropDownMenu + "']/..";
         driver.findElement(By.xpath(mainMenuXpath)).click();
+        wait(500);
     }
 
     public void selectDropDownValue(String DropDownValue) {
@@ -65,7 +67,7 @@ public class BasePage{
 
     public void selectDropDown(String dropdownName, String dropdownValue) {
 
-        String dropdownXpath = "//img[@alt='ReadOnly menu for " + dropdownName + "']/a";
+        String dropdownXpath = "//img[@alt='ReadOnly menu for " + dropdownName + "']/..";
         driver.findElement(By.xpath(dropdownXpath)).click();
         wait(500);
 
@@ -80,8 +82,6 @@ public class BasePage{
     //    preferences = "Menu1:Menu2"
     public void setPreferences(String preferences) {
 
-        driver.findElement(By.id(preferences)).findElement(By.xpath("//a[contains(text(),'Preferences')]")).click();
-
         wait(1000);
 
         String arr[] = preferences.split(":");
@@ -92,7 +92,7 @@ public class BasePage{
         }
     }
 
-    public void setfilterPreferences(String preferences) {
+    public void setFilterPreferences(String preferences) {
 
         driver.findElement(By.id(preferences)).findElement(By.xpath("//a[contains(text(),'Preferences')]")).click();
 
@@ -114,14 +114,48 @@ public class BasePage{
             for (int i = 0; i < tableHeaders.size(); i++) {
 
                 if (tableHeaders.get(i).getText().trim().equals(headerName)) {
-                    //Get the column index of the Site Name column
+                    //Get the column index using headerName
                     columnIndex = i;
                     break;
                 }
             }
             return columnIndex;
         }
-    public void validateOpNextDueDateDetails() {
+
+        public List<WebElement> getTableRows(String tableId)
+        {
+            List<WebElement> tableRows = driver.findElement(By.id(tableId)).findElements(By.tagName("tr"));
+            return tableRows;
+        }
+
+        public boolean checkIfColumnHasData( String tableId, String columnName, int columnIndex)
+        {
+            boolean columnHasData = false;
+            //Get all the table rows by Id
+            List<WebElement> tableRows = getTableRows(tableId);
+            String cellValue = null;
+
+            if (columnIndex >= 0) {
+                for (int i = 1; i < tableRows.size(); i++) {
+                    //Get cell values for specified column
+                    //this step is failing.
+                    WebElement element = tableRows.get(i).findElements(By.tagName("td")).get(columnIndex - 1);
+                    if (element != null) {
+                        cellValue = element.getText();
+                        //return true if at least one row has got value
+                        if (cellValue != null)
+                            return true;
+                    }
+                }
+            }
+            else {
+                //If we don't find the column, test should fail
+                Assert.assertTrue(false, columnName + " Column not found.");
+                return false;
+            }
+            return  columnHasData;
+        }
+   /* public void validateOpNextDueDateDetails() {
         int columnIndex = BasePage.getColumnIndexByHeaderName("Site Name");
 
         //Get all the table rows by Id
@@ -146,7 +180,7 @@ public class BasePage{
         }
 
     }
-
+*/
 
 
     public static File takeScreenShot(){

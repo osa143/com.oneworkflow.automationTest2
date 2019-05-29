@@ -65,9 +65,13 @@ public class BasePage{
 
     }
 
-    public void selectDropDown(String dropdownName, String dropdownValue) {
+    public void selectDropDown(String dropdownName, String dropdownValue, boolean readonly) {
+        String dropdownXpath;
+        if (readonly)
+            dropdownXpath = "//img[@alt='ReadOnly menu for " + dropdownName + "']/..";
+        else
+            dropdownXpath = "//img[@alt='Menu for " + dropdownName + "']/..";
 
-        String dropdownXpath = "//img[@alt='ReadOnly menu for " + dropdownName + "']/..";
         driver.findElement(By.xpath(dropdownXpath)).click();
         wait(500);
 
@@ -109,15 +113,17 @@ public class BasePage{
         public  static int getColumnIndexByHeaderName (String headerName){
             int columnIndex = -1;
             //Get all web elements with BaseTableHeader class name
-            List<WebElement> tableHeaders = driver.findElements(By.className("BaseTableHeader"));
+            List<WebElement> tableHeaders = driver.findElement(By.className("BaseTableColHeaders")).findElements(By.className("BaseTableHeader"));
 
             for (int i = 0; i < tableHeaders.size(); i++) {
+                //System.out.println("=== " + i + " === " + tableHeaders.get(i).getText().trim() + " ===");
 
-                if (tableHeaders.get(i).getText().trim().equals(headerName)) {
+               if (tableHeaders.get(i).getText().trim().equals(headerName)) {
                     //Get the column index using headerName
+                   //System.out.println("=== " + i + " === " + tableHeaders.get(i).getText().trim() + " ===");
                     columnIndex = i;
-                    break;
-                }
+                   break;
+               }
             }
             return columnIndex;
         }
@@ -139,7 +145,8 @@ public class BasePage{
                 for (int i = 1; i < tableRows.size(); i++) {
                     //Get cell values for specified column
                     //this step is failing.
-                    WebElement element = tableRows.get(i).findElements(By.tagName("td")).get(columnIndex - 1);
+                    List<WebElement> elements = tableRows.get(i).findElements(By.tagName("td"));
+                    WebElement element = elements.get(columnIndex - 1);
                     if (element != null) {
                         cellValue = element.getText();
                         //return true if at least one row has got value

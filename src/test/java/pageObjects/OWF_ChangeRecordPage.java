@@ -6,6 +6,15 @@ import utils.CommonUtils;
 public class OWF_ChangeRecordPage extends BasePage {
 
 
+    private static final String ddSTATUS = "Status*";
+    private static final String ddSERVICE_PROVIDER = "Service Provider";
+
+    private static final String ddValueASSIGNED = "Assigned";
+    private static final String ddValuePENDING = "Pending";
+    private static final String ddValueUNDER_INVESTIGATION = "Under Investigation";
+    private static final String ddValueWITHDRWAN = "Withdrawn";
+    private static final String ddValueCLEAR = "(clear)";
+
     private static final String ddREQUEST_TYPE = "Request Type";
     private static final String ddTEMPLATE = "Template";
     private static final String ddESTIMATED_IMPACT= "Estimated Impact";
@@ -34,7 +43,6 @@ public class OWF_ChangeRecordPage extends BasePage {
     private static final String chkbxTELIA_CARRIER= "WIN_0_rc0id600002008";
     private static final String chkbxUNKOWN= "WIN_0_rc0id600002010";
     private static final String chkbxINTERNAL= "WIN_0_rc0id600002009";
-
 
 
     private static final String btnSAVE = "WIN_0_700025244";
@@ -94,34 +102,34 @@ public class OWF_ChangeRecordPage extends BasePage {
         driver.findElement(By.id(txtIMPACT_DURATION_SECS)).sendKeys(impactDurationSecs);
     }
     public void selectActualImpact(String value){
-        selectDropDown(ddACTUAL_IMPACT, value);
+        selectDropDown(ddACTUAL_IMPACT, value, true);
     }
     public void clickChangeRecord(){
         selectMenuItem(ddCHANGE_RECORD);
     }
 
     public void selectEstimatedImpact(String value) {
-        selectDropDown(ddESTIMATED_IMPACT, value);
+        selectDropDown(ddESTIMATED_IMPACT, value, true);
     }
         public void selectRequestCategory(String value){
-            selectDropDown(ddREQUEST_CATEGORY, value);
+            selectDropDown(ddREQUEST_CATEGORY, value, true);
     }
     public void selectCompletedCode(String value){
-        selectDropDown(ddCOMPLETED_CODE, value);
+        selectDropDown(ddCOMPLETED_CODE, value, true);
     }
     public void clickExpectedAlarm(){
         driver.findElement(By.id(txtEXPECTED_ALARMS)).click();
     }
 
     public void selectTitle(String value){
-        selectDropDown(ddTITLE, value);
+        selectDropDown(ddTITLE, value, true);
     }
     public void selectRequestType(String value) {
-        selectDropDown(ddREQUEST_TYPE, value);
+        selectDropDown(ddREQUEST_TYPE, value, true);
     }
 
     public void selectTemplateAsAll_Mobile_RANExternals_RANConnectivity() {
-        selectDropDown(ddTEMPLATE, "All:Mobile:RAN - Externals:RAN Connectivity");
+        selectDropDown(ddTEMPLATE, "All:Mobile:RAN - Externals:RAN Connectivity", true);
     }
     public Boolean ackButtonStatus(){
         Boolean status = driver.findElement(By.id(btnACKNOWLEDGE)).isEnabled();
@@ -131,6 +139,42 @@ public class OWF_ChangeRecordPage extends BasePage {
 
     public void enterChangeBuilderType(String changeBuilderName) {
         driver.findElement(By.id(txtCHANGE_BUILDER_FIELD)).sendKeys(changeBuilderName);
+    }
+    public void selectAssignedDdValue(){
+        selectDropDownValue(ddValueASSIGNED);
+    }
+    public void selectPendingDdValue(){
+        selectDropDownValue(ddValuePENDING);
+    }
+    public void selectUnderInvestigationDdValue(){
+        selectDropDownValue(ddValueUNDER_INVESTIGATION);
+    }
+    public void selectWithdrawnDdValue(){
+        selectDropDownValue(ddValueWITHDRWAN);
+    }
+    public void selectClearDdValue(){
+        selectDropDownValue(ddValueCLEAR);
+    }
+
+    private static final String ddSTATuS_ID = "arid_WIN_0_777031003";
+
+
+    public void clickStatusDropDown(){
+        selectDropDownMenu(ddSTATUS);
+    }
+
+
+    public void clickServiceProviderDropDown(){
+        selectDropDownMenu(ddSERVICE_PROVIDER);
+    }
+
+    public String getStatusText(){
+        String StatusText= driver.findElement(By.id(ddSTATuS_ID)).getText();
+        return StatusText;
+    }
+    public boolean verifyStatusWithdrawn(){
+        boolean flag = driver.findElement(By.id(ddSTATuS_ID)).isEnabled();
+        return flag;
     }
 
     public void clickSave() {
@@ -163,5 +207,9 @@ public class OWF_ChangeRecordPage extends BasePage {
 
         driver.findElement(By.id(txtEND_DATE)).sendKeys(dateTime);
 
+    }
+    public void selectRequestTypeAsAccessNetworksRANOptimization()
+    {
+        selectDropDown(ddREQUEST_TYPE, "Access Networks:RAN Optimization", false);
     }
 }

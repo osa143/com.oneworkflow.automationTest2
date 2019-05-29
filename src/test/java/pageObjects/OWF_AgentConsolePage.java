@@ -3,7 +3,7 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
+import org.openqa.selenium.JavascriptExecutor;
 import java.util.List;
 
 public class OWF_AgentConsolePage extends BasePage{
@@ -82,10 +82,27 @@ public class OWF_AgentConsolePage extends BasePage{
         return getTableRows(table_ID);
     }
 
-    public boolean validateOpNextDueDateInformation()
+    public boolean validateOpNextDueDateInformation() {
+        int columnIndex = getColumnIndexByHeaderName("OP Next Due Date");
+        return checkIfColumnHasData(table_ID, "OP Next Due Date", columnIndex);
+    }
+        public void getOpNextDueDate(){
+            System.out.println(driver.findElement(By.xpath("//div[contains(text(),'OP Next Due Date')]")).getAttribute("Title"));
+        }
+
+
+    /*public void getTableHeader()
     {
-        int columnIndex = getColumnIndexByHeaderName("Next Due Date");
-        return checkIfColumnHasData("Next Due Date", table_ID, columnIndex);
+        WebElement element = driver.findElement(By.xpath("//div[contains(text(),'OP Next Due Date')]"));
+        if (element != null)
+        System.out.println("element not null");
+        else
+        System.out.println("element is null");
+    }*/
+    public void scrollUntilElementFound()
+    {
+         JavascriptExecutor jse = (JavascriptExecutor)driver;
+         jse.executeScript("window.scrollBy(1000,0)", "");
     }
 
     public void selectDdValueAll(){

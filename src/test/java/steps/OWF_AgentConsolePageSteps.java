@@ -37,15 +37,14 @@ public class OWF_AgentConsolePageSteps {
 
     @Then("OP Next due date column within agent console should be displayed")
     public void opNextDueDateColumnWithinAgentConsoleShouldBeDisplayed() {
-        agentConsolePage.getOpNextDueDate();
-       // int columnIndex = BasePage.getColumnIndexByHeaderName("OP Next Due Date");
-        //Assert.assertNotEquals(columnIndex, -1, 0, "OP Next due date column within agent console is not displayed");
+        int columnIndex = BasePage.getColumnIndexByHeaderName("OP Next Due Date");
+        Assert.assertNotEquals(columnIndex, -1, 0, "OP Next due date column within agent console is not displayed");
     }
 
 
     @And("OP next due date information should be displayed")
     public void opNextDueDateInformationShouldBeDisplayed() {
-        //Assert.assertTrue(agentConsolePage.validateOpNextDueDateInformation(),"OP next due date information is not displayed");
+        Assert.assertTrue(agentConsolePage.validateOpNextDueDateInformation(),"OP next due date information is not displayed");
     }
 
 
@@ -151,10 +150,12 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.clickCreateMenu();
         agentConsolePage.clickMenuItemChangeRecord();
         CommonUtils.switchWindow(agentConsolePage.getDriver(), "child");
-
-
     }
 
+    @And("user searches for previously created problem ticket")
+    public void userSearchesForPreviouslyCreatedProblemTicket() {
+        agentConsolePage.clickSearch_OpenSearch_ProblemRecord();
+    }
 }
 
 

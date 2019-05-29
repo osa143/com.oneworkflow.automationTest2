@@ -71,6 +71,10 @@ public class OWF_AgentConsolePage extends BasePage{
 
     private static final String table_ID = "WIN_0_777000002";
 
+    public void clickSearch_OpenSearch_ProblemRecord(){
+        selectDropDown("Search", "Open Search Form:Problem Record", false );
+    }
+
     public void clickPreferences()
     {
         driver.findElement(By.id(table_ID)).findElement(By.xpath("//a[contains(text(),'Preferences')]")).click();
@@ -86,10 +90,6 @@ public class OWF_AgentConsolePage extends BasePage{
         int columnIndex = getColumnIndexByHeaderName("OP Next Due Date");
         return checkIfColumnHasData(table_ID, "OP Next Due Date", columnIndex);
     }
-        public void getOpNextDueDate(){
-            System.out.println(driver.findElement(By.xpath("//div[contains(text(),'OP Next Due Date')]")).getAttribute("Title"));
-        }
-
 
     /*public void getTableHeader()
     {

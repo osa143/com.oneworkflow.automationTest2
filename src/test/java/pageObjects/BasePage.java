@@ -116,11 +116,11 @@ public class BasePage{
             List<WebElement> tableHeaders = driver.findElement(By.className("BaseTableColHeaders")).findElements(By.className("BaseTableHeader"));
 
             for (int i = 0; i < tableHeaders.size(); i++) {
-                //System.out.println("=== " + i + " === " + tableHeaders.get(i).getText().trim() + " ===");
+                System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
 
-               if (tableHeaders.get(i).getText().trim().equals(headerName)) {
+               if (tableHeaders.get(i).getAttribute("innerHTML").trim().equals(headerName)) {
                     //Get the column index using headerName
-                   //System.out.println("=== " + i + " === " + tableHeaders.get(i).getText().trim() + " ===");
+                   System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
                     columnIndex = i;
                    break;
                }
@@ -148,7 +148,7 @@ public class BasePage{
                     List<WebElement> elements = tableRows.get(i).findElements(By.tagName("td"));
                     WebElement element = elements.get(columnIndex - 1);
                     if (element != null) {
-                        cellValue = element.getText();
+                        cellValue = element.getAttribute("innerHTML");
                         //return true if at least one row has got value
                         if (cellValue != null)
                             return true;

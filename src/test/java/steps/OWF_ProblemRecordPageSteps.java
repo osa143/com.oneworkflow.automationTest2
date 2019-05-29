@@ -40,8 +40,8 @@ public class OWF_ProblemRecordPageSteps {
         Assert.assertTrue(problemRecordPage.validateErrorMessage(arg0), "Error message didn't appear");
     }
 
-    @When("user clicks on sweden checkbox under affected BU's and selects save button")
-    public void userClicksOnSwedenCheckboxUnderAffectedBUSAndSelectsSaveButton() {
+    @When("user clicks on sweden checkbox under affected BU's")
+    public void userClicksOnSwedenCheckboxUnderAffectedBUS() {
       changeRecordPage.clickSwedenCheckBox();
         problemRecordPage.clickSaveButton();
     }
@@ -67,12 +67,10 @@ public class OWF_ProblemRecordPageSteps {
          problemRecordPage.enterDescription(arg0);
     }
 
-    @And("selects urgency as low and clicks on save button")
-    public void selectsUrgencyAsLowAndClicksOnSaveButton() {
+    @And("user selects urgency as low")
+    public void selectsUrgencyAsLow() {
           problemRecordPage.clickUrgencyDropDown();
           problemRecordPage.selectLowDdValue();
-          problemRecordPage.clickSaveButton();
-          problemRecordPage.wait(1000);
     }
 
     @Then("ticket should be created and status should be assigned")
@@ -80,15 +78,11 @@ public class OWF_ProblemRecordPageSteps {
 
         System.out.println(changeRecordPage.getStatusText());
         //Assert.assertEquals(changeRecordPage.getStatusText(),"Assigned" );
-
     }
-
-    @When("user change status to withdrawn and clicks save button")
+    @When("user changes status to withdrawn")
     public void userChangeStatusToWithdrawnAndClicksSaveButton() {
         changeRecordPage.clickStatusDropDown();
         changeRecordPage.selectWithdrawnDdValue();
-        problemRecordPage.clickSaveButton();
-        problemRecordPage.wait(5000);
         //CommonUtils.switchWindow(problemRecordPage.getDriver(), "child");
     }
 
@@ -132,4 +126,12 @@ public class OWF_ProblemRecordPageSteps {
     }
 
 
+    @And("user gets ticket value")
+    public void userGetsTicketValue() {
+    }
+
+    @And("user opens Problem Ticket")
+    public void userOpensProblemTicket() {
+
+    }
 }

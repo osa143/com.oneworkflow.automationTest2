@@ -1,4 +1,4 @@
-@Initiator_Runner
+@Initiator_Create_Ticket_Runner
 Feature: initator create ticket and withdraw
 
 
@@ -24,7 +24,7 @@ Feature: initator create ticket and withdraw
     When user changes status to withdrawn
     And user clicks on save button on the problem form
     And user clicks on yes on warning window
-    Then an error message "Required field (without a default) not specified : Withdrawn Reason (ARERR 9424)	" should appear with red boarder around withdrawn reason
+    Then an error message "Required field (without a default) not specified : Withdrawn Reason (ARERR 9424)" should appear with red boarder around withdrawn reason
     When user selects withdrawn reason as false alarm and clicks save
     And user should see confirmation message and clicks on yes button
     Then  problem ticket should be withdrawn

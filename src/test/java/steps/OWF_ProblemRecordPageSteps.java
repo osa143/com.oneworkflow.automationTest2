@@ -4,6 +4,8 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pageObjects.BasePage;
 import pageObjects.OWF_AgentConsolePage;
@@ -76,40 +78,44 @@ public class OWF_ProblemRecordPageSteps {
     @Then("ticket should be created and status should be assigned")
     public void ticketShouldBeCreatedAndStatusShouldBeAssigned() {
 
-        System.out.println(changeRecordPage.getStatusText());
+        System.out.println("Status text is:" + changeRecordPage.getStatusText());
         //Assert.assertEquals(changeRecordPage.getStatusText(),"Assigned" );
     }
     @When("user changes status to withdrawn")
     public void userChangeStatusToWithdrawnAndClicksSaveButton() {
+        changeRecordPage.wait(3000);
         changeRecordPage.clickStatusDropDown();
+        changeRecordPage.wait(1000);
         changeRecordPage.selectWithdrawnDdValue();
         //CommonUtils.switchWindow(problemRecordPage.getDriver(), "child");
     }
 
     @And("user clicks on yes on warning window")
     public void userClicksOnYesOnWarningWindow() {
-        //problemRecordPage.acceptAlert();
-        //problemRecordPage.getDriver().findElement(By.id("WIN_0_700027904")).click();
-
+        problemRecordPage.wait(1000);
+        problemRecordPage.getDriver().switchTo().frame(2);
+        problemRecordPage.wait(1000);
+        problemRecordPage.getDriver().findElement(By.id("WIN_0_700027904")).click();
     }
 
     @Then("an error message {string} should appear with red boarder around withdrawn reason")
     public void anErrorMessageShouldAppearWithRedBoarderAroundWithdrawnReason(String arg0) {
-       // Assert.assertTrue(problemRecordPage.validateErrorMessage(arg0), "Error message didn't appear");
+        Assert.assertTrue(problemRecordPage.validateErrorMessage(arg0), "Error message didn't appear");
     }
 
     @When("user selects withdrawn reason as false alarm and clicks save")
     public void userSelectsWithdrawnReasonAsFalseAlarmAndClicksSave() {
-        problemRecordPage.clickWithdrawnReasonDropDown();
-        problemRecordPage.selectFalseAlarmDdValue();
+        problemRecordPage.selectWithdrawnReason_FalseAlarmDropDown();
         problemRecordPage.clickSaveButton();
 
     }
 
     @And("user should see confirmation message and clicks on yes button")
     public void userShouldSeeConfirmationMessageAndClicksOnYesButton() {
-        problemRecordPage.acceptAlert();
-
+        problemRecordPage.wait(1000);
+        problemRecordPage.switchToFrame(2);
+        problemRecordPage.wait(1000);
+        problemRecordPage.clickYesOnFrame();
     }
 
     @Then("problem ticket should be withdrawn")
@@ -128,10 +134,18 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user gets ticket value")
     public void userGetsTicketValue() {
+        String problemTicket =  problemRecordPage.getProblemTicket();
     }
 
-    @And("user opens Problem Ticket")
-    public void userOpensProblemTicket() {
+    @And("user enters Problem Ticket")
+    public void userEntersProblemTicket() {
+        problemRecordPage.enterTicket(problemRecordPage.getProblemTicket());
+    }
+
+    @And("user clicks Search on ticket search")
+    public void userClicksSearchOnTicketSearch() {
+        problemRecordPage.clickSearchButton();
+        problemRecordPage.wait(3000);
 
     }
 }

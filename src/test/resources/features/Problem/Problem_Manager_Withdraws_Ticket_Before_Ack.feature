@@ -2,7 +2,7 @@
 Feature: problem manager withdraw ticket
 
 
-  Scenario: problem manager withdraw before Acknowledge
+  Scenario: problem manager withdraw ticket before Acknowledge
 
     Given User is on the OneWorkflow login page
     When user logs in with valid problem initiator credentials
@@ -22,8 +22,9 @@ Feature: problem manager withdraw ticket
     Given User is on the OneWorkflow login page
     When user logs in with valid problem manager username "frvi96_auto" and password "Test@1234"
     Then user successfully logged in to oneworkflow and agent console should be displayed
-    And user searches for previously created problem ticket
-    And user opens Problem Ticket
+    And user clicks on search and selects open search forms and problem record
+    And user enters Problem Ticket
+    And user clicks Search on ticket search
     When user changes status to withdrawn
     And user clicks on save button on the problem form
     And user clicks on yes on warning window

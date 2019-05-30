@@ -56,12 +56,12 @@ public class BasePage{
 
         String mainMenuXpath = "//img[@alt='Menu for " + DropDownMenu + "']/..";
         driver.findElement(By.xpath(mainMenuXpath)).click();
-        wait(500);
+        wait(1000);
     }
 
     public void selectDropDownValue(String DropDownValue) {
         driver.findElement(By.className("MenuTableBody")).findElements(By.tagName("td")).stream()
-                .filter(element -> element.getText().equals(DropDownValue)).findFirst().orElse(null).click();
+                .filter(element -> element.getText().trim().equals(DropDownValue)).findFirst().orElse(null).click();
 
     }
 
@@ -116,7 +116,7 @@ public class BasePage{
             List<WebElement> tableHeaders = driver.findElement(By.className("BaseTableColHeaders")).findElements(By.className("BaseTableHeader"));
 
             for (int i = 0; i < tableHeaders.size(); i++) {
-                System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
+                //System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
 
                if (tableHeaders.get(i).getAttribute("innerHTML").trim().equals(headerName)) {
                     //Get the column index using headerName
@@ -139,13 +139,21 @@ public class BasePage{
             boolean columnHasData = false;
             //Get all the table rows by Id
             List<WebElement> tableRows = getTableRows(tableId);
+
             String cellValue = null;
 
             if (columnIndex >= 0) {
                 for (int i = 1; i < tableRows.size(); i++) {
                     //Get cell values for specified column
                     //this step is failing.
-                    List<WebElement> elements = tableRows.get(i).findElements(By.tagName("td"));
+                    List<WebElement> elements = null;
+                    try {
+                        elements = tableRows.get(i).findElements(By.tagName("td"));
+                    }
+                    catch (Exception ex)
+                    {
+                       continue;
+                    }
                     WebElement element = elements.get(columnIndex - 1);
                     if (element != null) {
                         cellValue = element.getAttribute("innerHTML");
@@ -200,7 +208,6 @@ public class BasePage{
     }
 
     public void tearDown () {
-        driver.close();
         driver.quit();
 
     }

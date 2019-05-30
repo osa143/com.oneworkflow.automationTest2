@@ -7,6 +7,12 @@ import java.util.List;
 
 public class OWF_ProblemRecordPage extends BasePage{
 
+    private static final String txtTICKET_ID= "arid_WIN_0_730000060";
+    private static final String txtSEARCH_TICKET_ID = "arid_WIN_0_777777600";
+
+    public void enterTicket(String ticket){
+        driver.findElement(By.id(txtSEARCH_TICKET_ID)).sendKeys(ticket);
+    }
    private static final String ddNO_ID ="arid_WIN_0_600001801";
 
    private static final String txtTITLE_ID = "arid_WIN_0_777031000";
@@ -14,7 +20,7 @@ public class OWF_ProblemRecordPage extends BasePage{
 
    private static final String ddIMPACT = "Impact";
    private static final String ddURGENCY = "Urgency";
-   private static final String ddWITHDRAWN_REASON = "arid_WIN_0_777031390";
+   private static final String ddWITHDRAWN_REASON = "Withdrawn Reason";
 
     private static final String ddValueDUPLICATE_ENTRIES = "Duplicate Entries";
     private static final String ddValueFALSE_ALARM = "False Alarm";
@@ -42,7 +48,17 @@ public class OWF_ProblemRecordPage extends BasePage{
     private static final String btnEXTERNAL_OPEN_ID = "WIN_0_600002903";
     private static final String btnEXTERNAL_DELETE_ID = "WIN_0_600002906";
     private static final String btnSAVE_ID = "WIN_0_700025244";
-    private static final String errorTABLE_ID = "//*[@id='pbartable']";
+    private static final String btnSEARCH_ID = "WIN_0_1002";
+    private static final String errorTABLE_XPATH = "//*[@id='pbartable']";
+    private static final String btnYES_ON_FRAME_ID = "WIN_0_700027904";
+
+    public void clickYesOnFrame(){
+        driver.findElement(By.id(btnYES_ON_FRAME_ID)).click();
+    }
+    public void switchToFrame(int frame_index)
+    {
+        driver.switchTo().frame(frame_index);
+    }
 
     public void clickAddButton(){
         driver.findElement(By.id(btnADD_ID)).click();
@@ -63,12 +79,20 @@ public class OWF_ProblemRecordPage extends BasePage{
         driver.findElement(By.id(btnSAVE_ID)).click();
     }
 
+    public void clickSearchButton(){
+        driver.findElement(By.id(btnSEARCH_ID)).click();
+    }
+    public String getProblemTicket(){
+        driver.findElement(By.id(txtTICKET_ID)).getText();
+
+        return null;
+    }
 
     public void enterDescription(String description){
         driver.findElement(By.id(txtDESCRIPTION_ID)).sendKeys(description);
     }
-    public void clickWithdrawnReasonDropDown(){
-        driver.findElement(By.xpath(ddWITHDRAWN_REASON)).click();
+    public void selectWithdrawnReason_FalseAlarmDropDown(){
+        selectDropDown(ddWITHDRAWN_REASON, "False Alarm", true);
     }
 
 
@@ -152,10 +176,10 @@ public class OWF_ProblemRecordPage extends BasePage{
 
     public boolean validateErrorMessage(String message)
     {
-        List<WebElement> errorElements = driver.findElement(By.xpath(errorTABLE_ID)).findElements(By.tagName("tr"));
+        List<WebElement> errorElements = driver.findElement(By.xpath(errorTABLE_XPATH)).findElements(By.tagName("tr"));
         if (errorElements.size() > 0) {
 
-            WebElement e = errorElements.stream().filter(x -> x.getText().contains(message)).findFirst().orElse(null);
+            WebElement e = errorElements.stream().filter(x -> x.getText().trim().contains(message)).findFirst().orElse(null);
             if (e != null) {
                 return true;
             }
@@ -165,7 +189,7 @@ public class OWF_ProblemRecordPage extends BasePage{
 
     public boolean validateMultipleErrorMessages()
     {
-        List<WebElement> errorElements = driver.findElement(By.xpath(errorTABLE_ID)).findElements(By.tagName("tr"));
+        List<WebElement> errorElements = driver.findElement(By.xpath(errorTABLE_XPATH)).findElements(By.tagName("tr"));
         if (errorElements.size() > 5) {
             return  true;
         }

@@ -51,7 +51,6 @@ public class OWF_ChangeRecordPage extends BasePage {
     public static final String btnSEND = "WIN_0_600002905";
     private static final String btnACKNOWLEDGE = "WIN_0_777504152";
 
-
     public void clickAcknowledgeButton(){
         driver.findElement(By.id(btnACKNOWLEDGE)).click();
     }
@@ -169,7 +168,7 @@ public class OWF_ChangeRecordPage extends BasePage {
     }
 
     public String getStatusText(){
-        String StatusText= driver.findElement(By.id(ddSTATuS_ID)).getText();
+        String StatusText= driver.findElement(By.id(ddSTATuS_ID)).getAttribute("innerHTML");
         return StatusText;
     }
     public boolean verifyStatusWithdrawn(){

@@ -1,5 +1,5 @@
 @Initiator_Create_Ticket_Runner
-Feature: initator create ticket and withdraw
+Feature: initiator create ticket and withdraw
 
 
   Scenario: user should be able to create a problem ticket and withdraw it
@@ -28,6 +28,7 @@ Feature: initator create ticket and withdraw
     When user selects withdrawn reason as false alarm and clicks save
     And user should see confirmation message and clicks on yes button
     Then  problem ticket should be withdrawn
+    Then user logouts and closes the browser
 
 
 

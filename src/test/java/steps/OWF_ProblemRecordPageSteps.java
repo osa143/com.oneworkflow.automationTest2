@@ -1,6 +1,7 @@
 package steps;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
@@ -11,10 +12,13 @@ import pageObjects.BasePage;
 import pageObjects.OWF_AgentConsolePage;
 import pageObjects.OWF_ChangeRecordPage;
 import pageObjects.OWF_ProblemRecordPage;
+import runners.PM_Withdraw_Ticket_After_Ack_Runner;
 import utils.CommonUtils;
 
-public class OWF_ProblemRecordPageSteps {
+import static java.lang.System.getProperties;
 
+public class OWF_ProblemRecordPageSteps {
+    CommonUtils commonUtils = new CommonUtils();
     OWF_ProblemRecordPage problemRecordPage = new OWF_ProblemRecordPage();
     OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
     OWF_ChangeRecordPage changeRecordPage = new OWF_ChangeRecordPage();
@@ -34,6 +38,7 @@ public class OWF_ProblemRecordPageSteps {
     @When("user clicks on save button on the problem form")
     public void userClicksOnSaveButtonOnTheProblemForm() {
       problemRecordPage.clickSaveButton();
+      problemRecordPage.wait(3000);
     }
 
     @Then("an error message should appear: {string}")
@@ -80,6 +85,7 @@ public class OWF_ProblemRecordPageSteps {
 
         System.out.println("Status text is:" + changeRecordPage.getStatusText());
         //Assert.assertEquals(changeRecordPage.getStatusText(),"Assigned" );
+        problemRecordPage.wait(10000);
     }
     @When("user changes status to withdrawn")
     public void userChangeStatusToWithdrawnAndClicksSaveButton() {
@@ -133,13 +139,22 @@ public class OWF_ProblemRecordPageSteps {
 
 
     @And("user gets ticket value")
-    public void userGetsTicketValue() {
+    public String userGetsTicketValue() {
         String problemTicket =  problemRecordPage.getProblemTicket();
+       System.out.println("Stored problem ticket is "+problemTicket);
+        commonUtils.imATicket=problemTicket;
+        return problemTicket;
     }
 
     @And("user enters Problem Ticket")
     public void userEntersProblemTicket() {
-        problemRecordPage.enterTicket(problemRecordPage.getProblemTicket());
+
+        //String pt = problemRecordPage.getProblemTicket();
+        //System.out.println(userGetsTicketValue());
+        //System.out.println("Stored problem ticket is "+problemRecordPage.getProblemTicket());
+        System.out.println("ticket: "+commonUtils.imATicket);
+        problemRecordPage.enterTicket(commonUtils.imATicket);
+        System.out.println("user entered problem ticket"+ commonUtils.imATicket);
     }
 
     @And("user clicks Search on ticket search")
@@ -147,5 +162,54 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.clickSearchButton();
         problemRecordPage.wait(3000);
 
+    }
+
+    @And("user waits some time")
+    public void userWaitsSomeTime()
+    {
+        problemRecordPage.wait(10000);
+    }
+
+    @Given("user opens browser again")
+    public void userOpensBrowserAgain() {
+
+        problemRecordPage.getDriver().get("https://td444lb-mtint.ddc.teliasonera.net/arsys/");
+    }
+
+    @When("user clicks on Ack button")
+    public void userClicksOnAckButton() {
+        problemRecordPage.clickAckButton();
+        problemRecordPage.wait(3000);
+    }
+
+    @Then("problem ticket status should be under investigation")
+    public void problemTicketStatusShouldBeUnderInvestigation() {
+
+
+    }
+
+    @And("change should also be reflected in the timeline.")
+    public void changeShouldAlsoBeReflectedInTheTimeline() {
+
+    }
+
+    @When("user tries to change the status to withdrawn")
+    public void userTriesToChangeTheStatusToWithdrawn() {
+
+    }
+
+    @Then("user logsOut")
+    public void userLogsOut() {
+        agentConsolePage.clickNavUserMenu();
+        agentConsolePage.wait(1000);
+        agentConsolePage.clickMenuItemLogout();
+        agentConsolePage.wait(5000);
+
+    }
+
+    @And("user goes back to login page")
+    public void userGoesBackToLoginPage() {
+        problemRecordPage.getDriver().findElement(By.xpath("//a[contains(text(),'Return to home page')]")).click();
+        problemRecordPage.wait(5000);
     }
 }

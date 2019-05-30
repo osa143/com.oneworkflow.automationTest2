@@ -148,6 +148,7 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.clickMenuItemLogout();
         agentConsolePage.wait(1000);
         agentConsolePage.tearDown();
+        agentConsolePage.wait(5000);
     }
     @When("user clicks on change record from agent console")
     public void userClicksOnChangeRecordFromAgentConsole() {
@@ -159,7 +160,7 @@ public class OWF_AgentConsolePageSteps {
     @And("user clicks on search and selects open search forms and problem record")
     public void userClicksOnSearchAndSelectsOpenSearchFormsAndProblemRecord() {
         agentConsolePage.clickSearch_OpenSearch_ProblemRecord();
-        CommonUtils.switchWindow(agentConsolePage.getDriver(), "child");
+        CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), "child2");
     }
 }
 

@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -51,6 +52,7 @@ public class OWF_ProblemRecordPage extends BasePage{
     private static final String btnSEARCH_ID = "WIN_0_1002";
     private static final String errorTABLE_XPATH = "//*[@id='pbartable']";
     private static final String btnYES_ON_FRAME_ID = "WIN_0_700027904";
+    private static final String btnACK_ID = "WIN_0_777504152";
 
     public void clickYesOnFrame(){
         driver.findElement(By.id(btnYES_ON_FRAME_ID)).click();
@@ -78,14 +80,16 @@ public class OWF_ProblemRecordPage extends BasePage{
     public void clickSaveButton(){
         driver.findElement(By.id(btnSAVE_ID)).click();
     }
+    public void clickAckButton(){driver.findElement (By.id(btnACK_ID));}
 
     public void clickSearchButton(){
         driver.findElement(By.id(btnSEARCH_ID)).click();
     }
-    public String getProblemTicket(){
-        driver.findElement(By.id(txtTICKET_ID)).getText();
 
-        return null;
+    public String getProblemTicket(){
+        String ticket = driver.findElement(By.id(txtTICKET_ID)).getAttribute("value");
+
+      return ticket;
     }
 
     public void enterDescription(String description){

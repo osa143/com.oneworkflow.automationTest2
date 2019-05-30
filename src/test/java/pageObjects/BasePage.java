@@ -44,7 +44,7 @@ public class BasePage{
 
         String mainMenuXpath = "//img[@alt='Menu for " + mainMenu + "']/..";
         driver.findElement(By.xpath(mainMenuXpath)).click();
-        wait(500);
+        wait(1000);
     }
 
     public void selectMenuItem(String menuItem) {
@@ -209,6 +209,7 @@ public class BasePage{
 
     public void tearDown () {
         driver.quit();
+        //driver.close();
 
     }
 

@@ -5,17 +5,14 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pageObjects.OWF_ProblemRecordPage;
-import runners.PM_Withdraw_Ticket_After_Ack_Runner;
 import utils.CommonUtils;
 
-import static java.lang.System.getProperties;
 
 public class OWF_ProblemRecordPageSteps {
     public String problemTicket;
+
     OWF_ProblemRecordPage problemRecordPage = new OWF_ProblemRecordPage();
 
     @Then("problem record form should appear in new tab")
@@ -49,13 +46,12 @@ public class OWF_ProblemRecordPageSteps {
 
     @When("user enters {string} in Title field")
     public void userEntersInTitleField(String arg0) {
+
         problemRecordPage.enterTitle(arg0);
     }
-
-
-
     @And("user enters description as {string}")
-    public void userEntersDescriptionAs(String arg0) {
+    public void userEntersDescriptionAs(String arg0)
+    {
          problemRecordPage.enterDescription(arg0);
     }
 
@@ -70,9 +66,9 @@ public class OWF_ProblemRecordPageSteps {
     @And("user clicks on yes on warning window")
     public void userClicksOnYesOnWarningWindow() {
         problemRecordPage.wait(1000);
-        problemRecordPage.getDriver().switchTo().frame(2);
+        problemRecordPage.switchToFrame(2);
         problemRecordPage.wait(1000);
-        problemRecordPage.getDriver().findElement(By.id("WIN_0_700027904")).click();
+        problemRecordPage.clickYesOnFrame();
     }
 
     @Then("an error message {string} should appear with red boarder around withdrawn reason")
@@ -95,13 +91,11 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.clickYesOnFrame();
     }
 
-
     @And("user selects impact type as moderate:limited")
     public void userSelectsImpactTypeAsModerateLimited() {
         problemRecordPage.clickImpactDropDown();
         problemRecordPage.selectModerateLimitedDropDown();
     }
-
 
     @And("user gets ticket value")
     public void userGetsTicketValue() {
@@ -112,7 +106,6 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user enters Problem Ticket")
     public void userEntersProblemTicket() {
-
         problemRecordPage.enterTicket(problemTicket);
         System.out.println("user entered problem ticket"+ problemTicket);
     }
@@ -122,18 +115,6 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.clickSearchButton();
         problemRecordPage.wait(3000);
 
-    }
-
-    @And("user waits some time")
-    public void userWaitsSomeTime()
-    {
-        problemRecordPage.wait(10000);
-    }
-
-    @Given("user opens browser again")
-    public void userOpensBrowserAgain() {
-
-        problemRecordPage.getDriver().get("https://td444lb-mtint.ddc.teliasonera.net/arsys/");
     }
 
     @When("user clicks on Ack button")
@@ -167,5 +148,15 @@ public class OWF_ProblemRecordPageSteps {
     @And("user switches to window {string}")
     public void userSwitchesToWindow(String arg0) {
         CommonUtils.switchToChildWindow(problemRecordPage.getDriver(), arg0);
+    }
+
+    @When("user tries to change description")
+    public void userTriesToChangeDescription() {
+
+    }
+
+    @Then("description field should be greyed out should not be able to changed")
+    public void descriptionFieldShouldBeGreyedOutShouldNotBeAbleToChanged() {
+
     }
 }

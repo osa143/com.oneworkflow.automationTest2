@@ -1,11 +1,11 @@
 @Initiator_Change_Description_After_Ack
-Feature:initiator change description
+Feature:Initiator change description
 
-  Scenario: after Acknowledge
+  Scenario: After Acknowledge
 
     Given User is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
-    Then user successfully logged in to oneworkflow and agent console should be displayed
+    Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create problem record
     Then problem record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
@@ -17,22 +17,28 @@ Feature:initiator change description
     And user clicks on save button on the problem form
     Then ticket should be created and status should be assigned
     And user gets ticket value
-    Then user logouts and closes the browser
+    Then user logsOut
+    And user goes back to login page
     Given User is on the OneWorkflow login page
     When user logs in with valid problem manager username "frvi96_auto" and password "Test@1234"
-    Then user successfully logged in to oneworkflow and agent console should be displayed
-    And user searches for previously created problem ticket
-    And user opens Problem Ticket
-    When user clicks on Ack button
+    Then user successfully logged in to OneWorkflow and agent console should be displayed
+    And user clicks on search and selects open search forms and problem record
+    And user switches to window "child2"
+    And user enters Problem Ticket
+    And user clicks Search on ticket search
     Then problem ticket status should be under investigation
     And change should also be reflected in the timeline.
     When user tries to change the status to withdrawn
     Then problem ticket status should be under investigation
-    Then user logouts and closes the browser
+    Then user logsOut
+    And user goes back to login page
     Given User is on the OneWorkflow login page
-    When user logs in with valid problem initiator credentials
-    Then user successfully logged in to oneworkflow and agent console should be displayed
-    And user opens Problem Ticket
+    When user logs in with valid username "Tohall_copy" and password as "Test@1234"
+    Then user successfully logged in to OneWorkflow and agent console should be displayed
+    And user clicks on search and selects open search forms and problem record
+    And user switches to window "child2"
+    And user enters Problem Ticket
+    And user clicks Search on ticket search
     When user tries to change description
     Then description field should be greyed out should not be able to changed
-    Then user logouts and closes the browser
+    Then user logsOut and closes the browser

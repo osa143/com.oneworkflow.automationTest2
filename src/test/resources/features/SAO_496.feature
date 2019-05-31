@@ -5,7 +5,7 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
 
     Given User is on the OneWorkflow login page
     When user logins with valid user credentials
-    Then user successfully logged in to oneworkflow and agent console should be displayed
+    Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on change record from agent console
     Then change record page should be opened and Change form is displayed
     And User selects template as All:Mobile:RAN-Externals:RAN connectivity
@@ -44,5 +44,5 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
     Then User waits for implementation to finish
     And Verify a new OP ticket has been created
     Then Verify new OP has other OP in container
-    #And   user logouts and closes the browser
+    And   user logsOut and closes the browser
 

@@ -6,7 +6,7 @@ Feature: Verification of OP target due date visibility
 
     Given User is on the OneWorkflow login page
     When user logins with valid user credentials
-    Then user successfully logged in to oneworkflow and agent console should be displayed
+    Then user successfully logged in to OneWorkflow and agent console should be displayed
     When User clicks on add column under preferences and selects OP next due date
     Then OP Next due date column within agent console should be displayed
     And OP next due date information should be displayed
@@ -31,7 +31,7 @@ Feature: Verification of OP target due date visibility
     And User clicks on Remove Column under preferences and selects OP Target date
     Then User shouldn't see OP target date column in the agent console
     Then OP target date information should not visible
-    And user logouts and closes the browser
+    And user logsOut and closes the browser
 
 
 

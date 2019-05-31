@@ -6,7 +6,7 @@ Feature: Sitename details search Feature
 
     Given User is on the OneWorkflow login page
     When user logins with valid user credentials
-    Then user successfully logged in to oneworkflow and agent console should be displayed
+    Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects SID console from agent console
     Then SID console page should be opened
     When user selects Category as Access
@@ -15,7 +15,7 @@ Feature: Sitename details search Feature
     And user clicks on Search
     Then CI details should be displayed
     And Site name should be displayed for all CI CTI search details
-    And user logouts and closes the browser
+    And user logsOut and closes the browser
 
 
 

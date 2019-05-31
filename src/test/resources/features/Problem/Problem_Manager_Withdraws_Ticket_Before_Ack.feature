@@ -6,7 +6,7 @@ Feature: problem record
 
     Given User is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
-    Then user successfully logged in to oneworkflow and agent console should be displayed
+    Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create problem record
     Then problem record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
@@ -21,7 +21,7 @@ Feature: problem record
     Then user logsOut
     And user goes back to login page
     When user logs in with valid problem manager username "frvi96_auto" and password "Test@1234"
-    Then user successfully logged in to oneworkflow and agent console should be displayed
+    Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
     And user switches to window "child2"
     And user enters Problem Ticket
@@ -33,7 +33,7 @@ Feature: problem record
     When user selects withdrawn reason as false alarm and clicks save
     And user should see confirmation message and clicks on yes button
     Then  problem ticket should be withdrawn
-    Then user logouts and closes the browser
+    Then user logsOut and closes the browser
 
 
 

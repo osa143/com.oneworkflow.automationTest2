@@ -16,7 +16,7 @@ public class OWF_AgentConsolePageSteps {
 
     OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
 
-    @Then("user successfully logged in to oneworkflow and agent console should be displayed")
+    @Then("user successfully logged in to OneWorkflow and agent console should be displayed")
     public void userSuccessfullyLoggedInToOneworkflowAndAgentConsoleShouldBeDisplayed() {
         String AgentConsolePageTitle= agentConsolePage.getDriver().getTitle();
         //System.out.println(AgentConsolePageTitle);
@@ -148,8 +148,8 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.setPreferences("Add Column:OP Target Date");
 
     }
-    @And("user logouts and closes the browser")
-    public void userLogoutsAndCloseTheBrowser() throws InterruptedException {
+    @And("user logsOut and closes the browser")
+    public void userLogsOutsAndCloseTheBrowser() throws InterruptedException {
         CommonUtils.switchWindow(agentConsolePage.getDriver(), "parent");
         agentConsolePage.clickNavUserMenu();
         agentConsolePage.wait(2000);

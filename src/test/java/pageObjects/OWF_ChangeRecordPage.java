@@ -34,7 +34,7 @@ public class OWF_ChangeRecordPage extends BasePage {
     private static final String txtIMPACT_DURATION_MINS= "arid_WIN_0_900000019";
     private static final String txtIMPACT_DURATION_SECS= "arid_WIN_0_990001007";
 
-    private static final String chkbxSWEDEN= "WIN_0_rc0id600002001";
+
     private static final String chkbxFINLAND= "WIN_0_rc0id600002002";
     private static final String chkbxDENMARK= "WIN_0_rc0id600002003";
     private static final String chkbxNORWAY= "WIN_0_rc0id600002004";
@@ -62,9 +62,7 @@ public class OWF_ChangeRecordPage extends BasePage {
     public void clickDenmarkCheckBox(){
         driver.findElement(By.id(chkbxDENMARK)).click();
     }
-    public void clickSwedenCheckBox(){
-        driver.findElement(By.id(chkbxSWEDEN)).click();
-    }
+
     public void clickNorwayCheckBox(){
         driver.findElement(By.id(chkbxNORWAY)).click();
     }
@@ -168,13 +166,11 @@ public class OWF_ChangeRecordPage extends BasePage {
     }
 
     public String getStatusText(){
-        String StatusText= driver.findElement(By.id(ddSTATuS_ID)).getAttribute("innerHTML");
+        String StatusText= driver.findElement(By.id(ddSTATuS_ID)).getAttribute("value");
         return StatusText;
+
     }
-    public boolean verifyStatusWithdrawn(){
-        boolean flag = driver.findElement(By.id(ddSTATuS_ID)).isEnabled();
-        return flag;
-    }
+
 
     public void clickSave() {
         driver.findElement(By.id(btnSAVE)).click();

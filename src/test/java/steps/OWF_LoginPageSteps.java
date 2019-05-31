@@ -35,15 +35,15 @@ public class OWF_LoginPageSteps extends BaseSteps {
         loginPage.wait(5000);
     }
 
-    @When("user logs in with valid problem initiator credentials")
-    public void userLogsInWithValidProblemInitiatorCredentials() {
-        loginPage.doLogin("Tohall_copy", "Test@1234");
-        loginPage.wait(5000);
-        //login with intiator credentials
-    }
-
     @When("user logs in with valid problem manager username {string} and password {string}")
     public void userLogsInWithValidProblemManagerUsernameAndPassword(String arg0, String arg1) {
+        loginPage.doLogin(arg0, arg1);
+        loginPage.wait(5000);
+
+    }
+
+    @When("user logs in with valid username {string} and password as {string}")
+    public void userLogsInWithValidUsernameAndPasswordAs(String arg0, String arg1) {
         loginPage.doLogin(arg0, arg1);
         loginPage.wait(5000);
 

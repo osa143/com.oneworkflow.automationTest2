@@ -5,7 +5,7 @@ Feature:withdraw problem Ticket
   Scenario: withdraw ticket after Acknowledge
 
     Given User is on the OneWorkflow login page
-    When user logs in with valid problem initiator credentials
+    When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to oneworkflow and agent console should be displayed
     When user clicks on create problem record
     Then problem record form should appear in new tab
@@ -23,6 +23,7 @@ Feature:withdraw problem Ticket
     When user logs in with valid problem manager username "frvi96_auto" and password "Test@1234"
     Then user successfully logged in to oneworkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
+    And user switches to window "child2"
     And user enters Problem Ticket
     And user clicks Search on ticket search
     When user clicks on Ack button
@@ -30,11 +31,13 @@ Feature:withdraw problem Ticket
     And change should also be reflected in the timeline.
     When user tries to change the status to withdrawn
     Then problem ticket status should be under investigation
-    Then user logouts and closes the browser
-    Given User is on the OneWorkflow login page
-    When user logs in with valid problem initiator credentials
+    Then user logsOut
+    And user goes back to login page
+    And User is on the OneWorkflow login page
+    When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to oneworkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
+    And user switches to window "child3"
     And user enters Problem Ticket
     And user clicks Search on ticket search
     When user tries to change the status to withdrawn

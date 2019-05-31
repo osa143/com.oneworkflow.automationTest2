@@ -15,6 +15,34 @@ public class OWF_ChangeRecordPageSteps {
 
     }
 
+    @Then("ticket should be created and status should be assigned")
+    public void ticketShouldBeCreatedAndStatusShouldBeAssigned() {
+
+        System.out.println("Status text is:" + changeRecordPage.getStatusText());
+        Assert.assertEquals(changeRecordPage.getStatusText(), "Assigned", "ticket status is not assigned");
+        changeRecordPage.wait(5000);
+    }
+
+    @And("user selects request type as Access Networks:RAN optimization")
+    public void userSelectsRequestTypeAsAccessNetworksRANOptimization() {
+        changeRecordPage.selectRequestTypeAsAccessNetworksRANOptimization();
+    }
+
+    @When("user changes status to withdrawn")
+    public void userChangeStatusToWithdrawnAndClicksSaveButton() {
+        changeRecordPage.wait(3000);
+        changeRecordPage.clickStatusDropDown();
+        changeRecordPage.wait(1000);
+        changeRecordPage.selectWithdrawnDdValue();
+        //CommonUtils.switchWindow(problemRecordPage.getDriver(), "child");
+    }
+    @Then("problem ticket should be withdrawn")
+    public void problemTicketShouldBeWithdrawn() {
+        Assert.assertEquals(changeRecordPage.getStatusText(), "Withdrawn", "problem ticket status is not withdrawn");
+
+    }
+
+
     @When("User selects request type as normal change")
     public void userSelectsRequestTypeAsNormalChange() {
         changeRecordPage.selectRequestType("Normal Change");

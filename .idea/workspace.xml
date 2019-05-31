@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="badd7ff5-e319-43b0-9286-7a6dad2e897c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/runners/PM_Withdraw_Before_Ack_Runner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runners/PM_Withdraw_Ticket_After_Ack_Runner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Problem/pm_withdraw_ticket.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
@@ -18,22 +15,26 @@
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/Screenshots/embedded1.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/Screenshots/embedded1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/pageObjects/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/pageObjects/BasePage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_ChangeRecordPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_ChangeRecordPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_ProblemRecordPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_ProblemRecordPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_AgentConsolePageSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_AgentConsolePageSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_ChangeRecordPageSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_ChangeRecordPageSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_LoginPageSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_LoginPageSteps.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/utils/CommonUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/utils/CommonUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/test/configs/runtime_test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/configs/runtime_test.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/Initiator_Create_Ticket_Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Initiator_Create_Ticket_Runner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_AgentConsolePageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_AgentConsolePageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_LoginPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_LoginPageSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/utils/CommonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/CommonUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Problem/Initiator_Change_desciption_After_Ack.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Problem/Initiator_Change_desciption_After_Ack.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/Problem/Initiator_Create_Ticket_And_Withdraw.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Problem/Initiator_Create_Ticket_And_Withdraw.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/Problem/Problem_Manager_Withdraws_Ticket_After_Ack.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Problem/Problem_Manager_Withdraws_Ticket_After_Ack.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/Problem/Problem_Manager_Withdraws_Ticket_Before_Ack.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Problem/Problem_Manager_Withdraws_Ticket_Before_Ack.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Problem/pm_withdraw_ticket.feature" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -87,25 +88,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="156" column="79" selection-start-line="156" selection-start-column="79" selection-end-line="156" selection-end-column="79" />
+            <state relative-caret-position="196">
+              <caret line="168" selection-start-line="168" selection-end-line="168" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5803#5804#0" expanded="true" />
-                <element signature="e#5848#5849#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#468#469#0" expanded="true" />
+                <element signature="e#532#533#0" expanded="true" />
+                <element signature="e#596#597#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/utils/CommonUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+            <state relative-caret-position="195">
+              <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runtime/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -113,22 +136,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+            <state relative-caret-position="141">
+              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#409#410#0" expanded="true" />
                 <element signature="e#488#489#0" expanded="true" />
+                <element signature="e#5392#5393#0" expanded="true" />
+                <element signature="e#5439#5440#0" expanded="true" />
+                <element signature="e#6574#6575#0" expanded="true" />
+                <element signature="e#6636#6637#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/runners/PM_Withdraw_Ticket_After_Ack_Runner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -136,8 +154,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/resources/features/Problem/Problem_Manager_Withdraws_Ticket_After_Ack.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <state relative-caret-position="100">
+              <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/Problem/Problem_Manager_Withdraws_Ticket_Before_Ack.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -145,8 +172,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_AgentConsolePageSteps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-688">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="181">
+              <caret line="169" selection-start-line="169" selection-end-line="169" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -180,6 +207,7 @@
       <find>WIN_0_777000002</find>
       <find>userSelectsImpactTypeAsModerateLimited</find>
       <find>ticket</find>
+      <find>changeRecordPage</find>
     </findStrings>
     <replaceStrings>
       <replace>.orElse(null).</replace>
@@ -213,7 +241,6 @@
         <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_CiSearchPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/steps/Sao_496.java" />
         <option value="$PROJECT_DIR$/src/test/java/steps/OWF_CiSearchPageSteps.java" />
-        <option value="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" />
         <option value="$PROJECT_DIR$/src/test/resources/features/SAO_496.feature" />
         <option value="$PROJECT_DIR$/src/test/java/driver/factory/DriverFactory.java" />
         <option value="$PROJECT_DIR$/src/test/java/steps/InitiatorSteps.java" />
@@ -221,28 +248,29 @@
         <option value="$PROJECT_DIR$/src/test/resources/features/InitiaterCreateTicketAndWithdraw.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/InitiatorCreateTicketAndWithdraw.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Problem/InitiatorCreateTicketAndWithdraw.feature" />
-        <option value="$PROJECT_DIR$/src/test/java/steps/OWF_LoginPageSteps.java" />
         <option value="$PROJECT_DIR$/src/test/resources/features/SAO_181.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Problem/PM_Withdraw_Before_Ack.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Problem/Initiater_Change_desciption_After_Ack.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Problem/Initiator_Change_desciption_After_Ack.feature" />
         <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_AgentConsolePage.java" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Problem/Problem_Manager_Withdraw_Before_Ack.feature" />
-        <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/runners/PM_Withdraw_Before_Ack_Runner.java" />
         <option value="$PROJECT_DIR$/src/test/java/runners/Initiator_Create_Ticket_Runner.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Problem/Initiator_Create_Ticket_And_Withdraw.feature" />
         <option value="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Problem/Problem_Manager_Withdraws_Ticket_Before_Ack.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Problem/pm_withdraw_ticket.feature" />
         <option value="$PROJECT_DIR$/src/test/java/runners/PM_Withdraw_Ticket_Runner.java" />
         <option value="$PROJECT_DIR$/src/test/java/runners/PM_Withdraw_Ticket_After_Ack_Runner.java" />
-        <option value="$PROJECT_DIR$/src/test/java/steps/OWF_AgentConsolePageSteps.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Problem/pm_withdraw_ticket.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" />
         <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/utils/CommonUtils.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Problem/Problem_Manager_Withdraws_Ticket_After_Ack.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/steps/OWF_LoginPageSteps.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Problem/Initiator_Change_desciption_After_Ack.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Problem/Initiator_Create_Ticket_And_Withdraw.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/steps/OWF_AgentConsolePageSteps.java" />
         <option value="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Problem/Problem_Manager_Withdraws_Ticket_Before_Ack.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Problem/Problem_Manager_Withdraws_Ticket_After_Ack.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/utils/CommonUtils.java" />
       </list>
     </option>
   </component>
@@ -266,6 +294,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -360,7 +389,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -700,7 +728,8 @@
       <workItem from="1559115506513" duration="26779000" />
       <workItem from="1559155170679" duration="11388000" />
       <workItem from="1559201614638" duration="1928000" />
-      <workItem from="1559204244672" duration="26330000" />
+      <workItem from="1559204244672" duration="26513000" />
+      <workItem from="1559242382458" duration="9772000" />
     </task>
     <task id="LOCAL-00001" summary="Added tests and extent report">
       <created>1558602390464</created>
@@ -765,54 +794,60 @@
       <option name="project" value="LOCAL" />
       <updated>1559210380069</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added features and steps for problem test case PM withdraws ticket After Ack">
+      <created>1559233012146</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1559233012146</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 16h 45m 11s.xml">
+    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 22h 39m 17s.xml">
       <configuration name="PM_Withdraw_Ticket_After_Ack_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 16h 45m 54s.xml">
+    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 22h 43m 52s.xml">
       <configuration name="PM_Withdraw_Ticket_After_Ack_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 16h 46m 34s.xml">
+    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 22h 51m 52s.xml">
       <configuration name="PM_Withdraw_Ticket_After_Ack_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 16h 47m 12s.xml">
+    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 22h 56m 07s.xml">
       <configuration name="PM_Withdraw_Ticket_After_Ack_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 16h 52m 04s.xml">
+    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 23h 01m 27s.xml">
       <configuration name="PM_Withdraw_Ticket_After_Ack_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 16h 52m 09s.xml">
+    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 23h 06m 34s.xml">
       <configuration name="PM_Withdraw_Ticket_After_Ack_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 16h 55m 49s.xml">
+    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 23h 09m 04s.xml">
       <configuration name="PM_Withdraw_Ticket_After_Ack_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 17h 00m 00s.xml">
+    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 23h 11m 39s.xml">
       <configuration name="PM_Withdraw_Ticket_After_Ack_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 17h 08m 58s.xml">
+    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 23h 14m 00s.xml">
       <configuration name="PM_Withdraw_Ticket_After_Ack_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 17h 12m 26s.xml">
+    <history-entry file="PM_Withdraw_Ticket_After_Ack_Runner - 2019.05.30 at 23h 17m 06s.xml">
       <configuration name="PM_Withdraw_Ticket_After_Ack_Runner" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="297536000" />
+    <option name="totallyTimeSpent" value="307491000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Designer" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.20375335" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.21849866" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32956153" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
@@ -822,7 +857,7 @@
       <window_info anchor="bottom" id="Build" order="5" weight="0.18104668" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.3281471" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.042432815" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.3281471" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.35785007" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -845,7 +880,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Designer" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.23793566" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.21849866" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32956153" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
@@ -855,8 +890,8 @@
       <window_info anchor="bottom" id="Build" order="5" weight="0.18104668" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.3281471" />
-      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.042432815" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.13295615" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.3281471" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.35785007" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
@@ -933,7 +968,8 @@
     <MESSAGE value="Added steps for SAO_191, 181,496" />
     <MESSAGE value="Added features and steps for problem test cases" />
     <MESSAGE value="Added features and steps for problem test case PM withdraws ticket before Ack" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added features and steps for problem test case PM withdraws ticket before Ack" />
+    <MESSAGE value="Added features and steps for problem test case PM withdraws ticket After Ack" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added features and steps for problem test case PM withdraws ticket After Ack" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -949,6 +985,18 @@
           <line>156</line>
           <properties />
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java</url>
+          <line>168</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/utils/CommonUtils.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1031,16 +1079,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="150" column="9" lean-forward="true" selection-start-line="147" selection-start-column="8" selection-end-line="150" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="940">
-          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1148,38 +1186,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="155" column="5" lean-forward="true" selection-start-line="155" selection-start-column="5" selection-end-line="155" selection-end-column="5" />
-          <folding>
-            <element signature="e#6439#6440#0" expanded="true" />
-            <element signature="e#6483#6484#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Problem/Initiator_Change_desciption_After_Ack.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="27" column="56" lean-forward="true" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_AgentConsolePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="189" column="18" lean-forward="true" selection-start-line="189" selection-start-column="18" selection-end-line="189" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8914#8915#0" expanded="true" />
-            <element signature="e#8976#8977#0" expanded="true" />
-            <element signature="e#9338#9339#0" expanded="true" />
-            <element signature="e#9400#9401#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.IntelliJIdea2019.1/system/temp-testng-customsuite.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1198,34 +1204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Problem/Initiator_Create_Ticket_And_Withdraw.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Problem/Problem_Manager_Withdraws_Ticket_Before_Ack.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/runners/Initiator_Create_Ticket_Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_LoginPageSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -1293,13 +1271,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runtime/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/runners/PM_Withdraw_Before_Ack_Runner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1307,52 +1278,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_AgentConsolePageSteps.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/runners/Initiator_Create_Ticket_Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-688">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_AgentConsolePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="147">
+          <caret line="189" column="8" selection-start-line="189" selection-start-column="8" selection-end-line="189" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8914#8915#0" expanded="true" />
+            <element signature="e#8976#8977#0" expanded="true" />
+            <element signature="e#9338#9339#0" expanded="true" />
+            <element signature="e#9400#9401#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/Problem/pm_withdraw_ticket.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        <state relative-caret-position="140">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        <state relative-caret-position="54">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="155" column="3" selection-start-line="155" selection-start-column="3" selection-end-line="155" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+        <state>
+          <caret lean-forward="true" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#488#489#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1364,29 +1340,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/utils/CommonUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Problem/Initiator_Change_desciption_After_Ack.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        <state relative-caret-position="176">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Problem/Initiator_Create_Ticket_And_Withdraw.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="7" column="83" selection-start-line="7" selection-start-column="83" selection-end-line="7" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_LoginPageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_AgentConsolePageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="169" selection-start-line="169" selection-end-line="169" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Problem/Problem_Manager_Withdraws_Ticket_Before_Ack.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/Problem/Problem_Manager_Withdraws_Ticket_After_Ack.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        <state relative-caret-position="100">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runtime/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#5392#5393#0" expanded="true" />
+            <element signature="e#5439#5440#0" expanded="true" />
+            <element signature="e#6574#6575#0" expanded="true" />
+            <element signature="e#6636#6637#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="156" column="79" selection-start-line="156" selection-start-column="79" selection-end-line="156" selection-end-column="79" />
+        <state relative-caret-position="196">
+          <caret line="168" selection-start-line="168" selection-end-line="168" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5803#5804#0" expanded="true" />
-            <element signature="e#5848#5849#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/utils/CommonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
         </state>
       </provider>
     </entry>

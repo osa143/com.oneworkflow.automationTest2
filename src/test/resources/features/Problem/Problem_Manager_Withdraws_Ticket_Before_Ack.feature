@@ -2,10 +2,10 @@
 Feature: problem record
 
 
-  Scenario: create ticket and save
+  Scenario: problem manager withdraws ticket before Ack
 
     Given User is on the OneWorkflow login page
-    When user logs in with valid problem initiator credentials
+    When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to oneworkflow and agent console should be displayed
     When user clicks on create problem record
     Then problem record form should appear in new tab
@@ -18,7 +18,24 @@ Feature: problem record
     And user clicks on save button on the problem form
     Then ticket should be created and status should be assigned
     And user gets ticket value
+    Then user logsOut
+    And user goes back to login page
+    When user logs in with valid problem manager username "frvi96_auto" and password "Test@1234"
+    Then user successfully logged in to oneworkflow and agent console should be displayed
+    And user clicks on search and selects open search forms and problem record
+    And user switches to window "child2"
+    And user enters Problem Ticket
+    And user clicks Search on ticket search
+    When user changes status to withdrawn
+    And user clicks on save button on the problem form
+    And user clicks on yes on warning window
+    Then an error message "Required field (without a default) not specified : Withdrawn Reason (ARERR 9424)	" should appear with red boarder around withdrawn reason
+    When user selects withdrawn reason as false alarm and clicks save
+    And user should see confirmation message and clicks on yes button
+    Then  problem ticket should be withdrawn
     Then user logouts and closes the browser
+
+
 
 
 

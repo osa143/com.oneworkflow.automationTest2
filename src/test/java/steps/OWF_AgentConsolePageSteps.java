@@ -41,6 +41,14 @@ public class OWF_AgentConsolePageSteps {
         Assert.assertNotEquals(columnIndex, -1, 0, "OP Next due date column within agent console is not displayed");
     }
 
+    @When("user clicks on create problem record")
+    public void userClicksOnCreateProblemRecord() {
+        agentConsolePage.clickCreateMenu();
+        agentConsolePage.clickMenuItemProblemRecord();
+        CommonUtils.switchWindow(agentConsolePage.getDriver(), "child");
+    }
+
+
 
     @And("OP next due date information should be displayed")
     public void opNextDueDateInformationShouldBeDisplayed() {
@@ -142,13 +150,12 @@ public class OWF_AgentConsolePageSteps {
     }
     @And("user logouts and closes the browser")
     public void userLogoutsAndCloseTheBrowser() throws InterruptedException {
-        //CommonUtils.switchWindow(agentConsolePage.getDriver(), "parent");
+        CommonUtils.switchWindow(agentConsolePage.getDriver(), "parent");
         agentConsolePage.clickNavUserMenu();
-        agentConsolePage.wait(1000);
+        agentConsolePage.wait(2000);
         agentConsolePage.clickMenuItemLogout();
         agentConsolePage.wait(1000);
         agentConsolePage.tearDown();
-        agentConsolePage.wait(5000);
     }
     @When("user clicks on change record from agent console")
     public void userClicksOnChangeRecordFromAgentConsole() {
@@ -160,8 +167,17 @@ public class OWF_AgentConsolePageSteps {
     @And("user clicks on search and selects open search forms and problem record")
     public void userClicksOnSearchAndSelectsOpenSearchFormsAndProblemRecord() {
         agentConsolePage.clickSearch_OpenSearch_ProblemRecord();
-        CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), "child2");
+
     }
+    @Then("user logsOut")
+    public void userLogsOut() {
+        agentConsolePage.clickNavUserMenu();
+        agentConsolePage.wait(1000);
+        agentConsolePage.clickMenuItemLogout();
+        agentConsolePage.wait(5000);
+
+    }
+
 }
 
 

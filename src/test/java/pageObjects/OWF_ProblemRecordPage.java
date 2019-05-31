@@ -15,6 +15,7 @@ public class OWF_ProblemRecordPage extends BasePage{
         driver.findElement(By.id(txtSEARCH_TICKET_ID)).sendKeys(ticket);
     }
    private static final String ddNO_ID ="arid_WIN_0_600001801";
+    private static final String ddSTATuS_ID = "arid_WIN_0_777031003";
 
    private static final String txtTITLE_ID = "arid_WIN_0_777031000";
    private static final String txtDESCRIPTION_ID = "arid_WIN_0_777031007";
@@ -54,6 +55,8 @@ public class OWF_ProblemRecordPage extends BasePage{
     private static final String btnYES_ON_FRAME_ID = "WIN_0_700027904";
     private static final String btnACK_ID = "WIN_0_777504152";
 
+    private static final String chkbxSWEDEN= "WIN_0_rc0id600002001";
+
     public void clickYesOnFrame(){
         driver.findElement(By.id(btnYES_ON_FRAME_ID)).click();
     }
@@ -80,7 +83,7 @@ public class OWF_ProblemRecordPage extends BasePage{
     public void clickSaveButton(){
         driver.findElement(By.id(btnSAVE_ID)).click();
     }
-    public void clickAckButton(){driver.findElement (By.id(btnACK_ID));}
+    public void clickAckButton(){driver.findElement (By.id(btnACK_ID)).click();}
 
     public void clickSearchButton(){
         driver.findElement(By.id(btnSEARCH_ID)).click();
@@ -177,6 +180,15 @@ public class OWF_ProblemRecordPage extends BasePage{
     }
 
 
+
+    public void clickSwedenCheckBox(){
+        driver.findElement(By.id(chkbxSWEDEN)).click();
+    }
+    public String getStatusText(){
+        String StatusText= driver.findElement(By.id(ddSTATuS_ID)).getAttribute("value");
+        return StatusText;
+
+    }
 
     public boolean validateErrorMessage(String message)
     {

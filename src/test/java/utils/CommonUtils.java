@@ -16,8 +16,6 @@ import java.util.TimeZone;
 
 public class CommonUtils extends BasePage {
 
-    public String imATicket;
-
     public static void switchWindow(WebDriver driver, String windowType) {
         Set<String> handles = driver.getWindowHandles();
         Iterator<String> it = handles.iterator();
@@ -38,12 +36,18 @@ public class CommonUtils extends BasePage {
         String parentWindow = it.next();
         String childWindow = it.next();
         String childWindow2 = it.next();
-        if ((windowType == "child")) {
+
+        if (windowType.equals("child")) {
             driver.switchTo().window(childWindow);
         }
-        else if(windowType== "child2")
+        else if(windowType.equals("child2"))
         {
           driver.switchTo().window(childWindow2);
+        }
+        else if(windowType.equals("child3"))
+        {
+            String childWindow3 = it.next();
+            driver.switchTo().window(childWindow3);
         }
         else
         {

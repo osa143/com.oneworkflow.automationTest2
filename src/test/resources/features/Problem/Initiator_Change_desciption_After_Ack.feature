@@ -4,7 +4,7 @@ Feature:initiator change description
   Scenario: after Acknowledge
 
     Given User is on the OneWorkflow login page
-    When user logs in with valid problem initiator credentials
+    When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to oneworkflow and agent console should be displayed
     When user clicks on create problem record
     Then problem record form should appear in new tab

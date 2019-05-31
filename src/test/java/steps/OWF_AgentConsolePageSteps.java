@@ -167,6 +167,7 @@ public class OWF_AgentConsolePageSteps {
     @And("user clicks on search and selects open search forms and problem record")
     public void userClicksOnSearchAndSelectsOpenSearchFormsAndProblemRecord() {
         agentConsolePage.clickSearch_OpenSearch_ProblemRecord();
+        agentConsolePage.wait(2000);
 
     }
     @Then("user logsOut")

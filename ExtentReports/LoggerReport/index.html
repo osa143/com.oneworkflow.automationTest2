@@ -50,6 +50,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -94,11 +102,11 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
+										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
-										
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="skip"><i class="fa fa-dot-circle-o text-blue"></i>Skip</span></a>
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 									</div>
@@ -111,7 +119,7 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Withdraw_Ticket_After_Ack</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@Verification_of_ownership</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -128,38 +136,38 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="pass">
-											<div class="st pass test l0" 
-												tags="@Withdraw_Ticket_After_Ack"
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@Verification_of_ownership"
 												devices="">
-												<span class="tt">05.30.2019 23:14:57</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">[withdraw problem Ticket] started</span>
+												<span class="tt">05.31.2019 15:43:28</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[Verification of Problem ticket owner] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Withdraw_Ticket_After_Ack</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Verification_of_ownership</span>
 												</span>
 												
 											</div>
-											<div class="st pass test l1" 
-												tags="@Withdraw_Ticket_After_Ack"
+											<div class="st fail test l1" 
+												tags="@Verification_of_ownership"
 												devices="">
-												<span class="tt">05.30.2019 23:14:57</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">|---[withdraw ticket after Acknowledge] started</span>
+												<span class="tt">05.31.2019 15:43:28</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[user shouldn't be able to alter a problem ticket not assigned to them] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Withdraw_Ticket_After_Ack</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Verification_of_ownership</span>
 												</span>
 												
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:14:57</span>&nbsp;
+												<span class="tt">05.31.2019 15:43:28</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is on the OneWorkflow login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:15:02</span>&nbsp;
+													<span class="tt">05.31.2019 15:43:33</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is on the OneWorkflow login page]</span>
 													
@@ -169,12 +177,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:15:02</span>&nbsp;
+												<span class="tt">05.31.2019 15:43:33</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Tohall_copy" and password as "Test@1234"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:15:10</span>&nbsp;
+													<span class="tt">05.31.2019 15:43:42</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Tohall_copy" and password as "Test@1234"]</span>
 													
@@ -184,14 +192,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:15:10</span>&nbsp;
+												<span class="tt">05.31.2019 15:43:42</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to oneworkflow and agent console should be displayed] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:15:15</span>&nbsp;
+													<span class="tt">05.31.2019 15:43:47</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to oneworkflow and agent console should be displayed]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -199,12 +207,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:15:15</span>&nbsp;
+												<span class="tt">05.31.2019 15:43:47</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create problem record] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:15:17</span>&nbsp;
+													<span class="tt">05.31.2019 15:43:49</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create problem record]</span>
 													
@@ -214,12 +222,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:15:17</span>&nbsp;
+												<span class="tt">05.31.2019 15:43:49</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem record form should appear in new tab] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:15:17</span>&nbsp;
+													<span class="tt">05.31.2019 15:43:49</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem record form should appear in new tab]</span>
 													
@@ -229,12 +237,42 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:15:17</span>&nbsp;
+												<span class="tt">05.31.2019 15:43:49</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on save button on the problem form] started</span>
+												
+												<div class="st pass">
+													<span class="tt">05.31.2019 15:43:58</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on save button on the problem form]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">05.31.2019 15:43:58</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then an error message should appear: "Please select at least one country of impact for this problem. (ARERR 10000)"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">05.31.2019 15:43:59</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then an error message should appear: "Please select at least one country of impact for this problem. (ARERR 10000)"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">05.31.2019 15:43:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on sweden checkbox under affected BU's] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:15:22</span>&nbsp;
+													<span class="tt">05.31.2019 15:43:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on sweden checkbox under affected BU's]</span>
 													
@@ -244,87 +282,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:15:22</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters "proactive investigation of Tohall_Copy" in Title field] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:15:22</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters "proactive investigation of Tohall_Copy" in Title field]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:15:22</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as Access Networks:RAN optimization] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:15:24</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as Access Networks:RAN optimization]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:15:24</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "UAT Test1 withdraw after Ack"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:15:25</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "UAT Test1 withdraw after Ack"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:15:25</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects impact type as moderate:limited] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:15:26</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects impact type as moderate:limited]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:15:26</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects urgency as low] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:15:28</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects urgency as low]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:15:28</span>&nbsp;
+												<span class="tt">05.31.2019 15:43:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:15:34</span>&nbsp;
+													<span class="tt">05.31.2019 15:44:05</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form]</span>
 													
@@ -334,12 +297,117 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:15:34</span>&nbsp;
+												<span class="tt">05.31.2019 15:44:05</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Mulitple error messages should appear with red boarder around fields] started</span>
+												
+												<div class="st pass">
+													<span class="tt">05.31.2019 15:44:05</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Mulitple error messages should appear with red boarder around fields]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">05.31.2019 15:44:05</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters "proactive investigation of Tohall_Copy" in Title field] started</span>
+												
+												<div class="st pass">
+													<span class="tt">05.31.2019 15:44:05</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters "proactive investigation of Tohall_Copy" in Title field]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">05.31.2019 15:44:05</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as Access Networks:RAN optimization] started</span>
+												
+												<div class="st pass">
+													<span class="tt">05.31.2019 15:44:07</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as Access Networks:RAN optimization]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">05.31.2019 15:44:07</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "UAT Test3"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">05.31.2019 15:44:08</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "UAT Test3"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">05.31.2019 15:44:08</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects impact type as moderate:limited] started</span>
+												
+												<div class="st pass">
+													<span class="tt">05.31.2019 15:44:09</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects impact type as moderate:limited]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">05.31.2019 15:44:09</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects urgency as low] started</span>
+												
+												<div class="st pass">
+													<span class="tt">05.31.2019 15:44:11</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects urgency as low]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">05.31.2019 15:44:11</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form] started</span>
+												
+												<div class="st pass">
+													<span class="tt">05.31.2019 15:44:17</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">05.31.2019 15:44:17</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then ticket should be created and status should be assigned] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:15:41</span>&nbsp;
+													<span class="tt">05.31.2019 15:44:25</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then ticket should be created and status should be assigned]</span>
 													
@@ -349,12 +417,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:15:41</span>&nbsp;
+												<span class="tt">05.31.2019 15:44:25</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user gets ticket value] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:15:41</span>&nbsp;
+													<span class="tt">05.31.2019 15:44:25</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user gets ticket value]</span>
 													
@@ -364,12 +432,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:15:41</span>&nbsp;
+												<span class="tt">05.31.2019 15:44:25</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user logsOut] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:15:49</span>&nbsp;
+													<span class="tt">05.31.2019 15:44:33</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user logsOut]</span>
 													
@@ -379,12 +447,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:15:49</span>&nbsp;
+												<span class="tt">05.31.2019 15:44:33</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user goes back to login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:15:55</span>&nbsp;
+													<span class="tt">05.31.2019 15:44:39</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user goes back to login page]</span>
 													
@@ -394,14 +462,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:15:55</span>&nbsp;
+												<span class="tt">05.31.2019 15:44:39</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid problem manager username "frvi96_auto" and password "Test@1234"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid username "mina09_auto" and password as "Test@1234"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:01</span>&nbsp;
+													<span class="tt">05.31.2019 15:44:56</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid problem manager username "frvi96_auto" and password "Test@1234"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid username "mina09_auto" and password as "Test@1234"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -409,14 +477,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:16:01</span>&nbsp;
+												<span class="tt">05.31.2019 15:44:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to oneworkflow and agent console should be displayed] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:07</span>&nbsp;
+													<span class="tt">05.31.2019 15:44:56</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to oneworkflow and agent console should be displayed]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -424,12 +492,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:16:07</span>&nbsp;
+												<span class="tt">05.31.2019 15:44:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search and selects open search forms and problem record] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:10</span>&nbsp;
+													<span class="tt">05.31.2019 15:45:00</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search and selects open search forms and problem record]</span>
 													
@@ -439,12 +507,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:16:10</span>&nbsp;
+												<span class="tt">05.31.2019 15:45:00</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window "child2"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:10</span>&nbsp;
+													<span class="tt">05.31.2019 15:45:00</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window "child2"]</span>
 													
@@ -454,12 +522,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:16:10</span>&nbsp;
+												<span class="tt">05.31.2019 15:45:00</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters Problem Ticket] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:12</span>&nbsp;
+													<span class="tt">05.31.2019 15:45:01</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters Problem Ticket]</span>
 													
@@ -469,12 +537,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:16:12</span>&nbsp;
+												<span class="tt">05.31.2019 15:45:01</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:16</span>&nbsp;
+													<span class="tt">05.31.2019 15:45:05</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search]</span>
 													
@@ -484,14 +552,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:16:16</span>&nbsp;
+												<span class="tt">05.31.2019 15:45:05</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on Ack button] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user tries to Ack the ticket but its shouldn't allow] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:21</span>&nbsp;
+													<span class="tt">05.31.2019 15:45:07</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on Ack button]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user tries to Ack the ticket but its shouldn't allow]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -499,255 +567,98 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:16:21</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem ticket status should be under investigation] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:24</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem ticket status should be under investigation]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:16:24</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And change should also be reflected in the timeline.] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:24</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And change should also be reflected in the timeline.]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:16:24</span>&nbsp;
+												<span class="tt">05.31.2019 15:45:07</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user tries to change the status to withdrawn] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:24</span>&nbsp;
+													<span class="tt">05.31.2019 15:45:07</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user tries to change the status to withdrawn]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st fail test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:16:24</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem ticket status should be under investigation] started</span>
+												<span class="tt">05.31.2019 15:45:07</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem ticket status should be assigned] started</span>
 												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:24</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem ticket status should be under investigation]</span>
+												<div class="st fail">
+													<span class="tt">05.31.2019 15:45:07</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem ticket status should be assigned]</span>
 													
-													<span class="td"></span>
+													<span class="td">threw an exception<br><textarea disabled class="code-block">java.lang.AssertionError: ticket status is not Assigned expected [Assigned] but found [Under Investigation]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at steps.OWF_ProblemRecordPageSteps.problemTicketStatusShouldBeAssigned(OWF_ProblemRecordPageSteps.java:209)
+	at ✽.problem ticket status should be assigned(features/Problem/Verification_Of_Ownership.feature:34)
+</textarea></span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">05.31.2019 15:45:07</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user tries to change request type as Access Networks:RAN NSN 2G:3G:4G] started</span>
+												
+												<div class="st skip">
+													<span class="tt">05.31.2019 15:45:07</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user tries to change request type as Access Networks:RAN NSN 2G:3G:4G]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">05.31.2019 15:45:07</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then request type should be RAN optimization] started</span>
+												
+												<div class="st skip">
+													<span class="tt">05.31.2019 15:45:07</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then request type should be RAN optimization]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">05.31.2019 15:45:07</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user logsOut and closes the browser] started</span>
+												
+												<div class="st skip">
+													<span class="tt">05.31.2019 15:45:07</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user logsOut and closes the browser]</span>
+													
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.30.2019 23:16:24</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user logsOut] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:32</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user logsOut]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:16:32</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user goes back to login page] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:37</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user goes back to login page]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:16:37</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User is on the OneWorkflow login page] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:38</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User is on the OneWorkflow login page]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:16:38</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Tohall_copy" and password as "Test@1234"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:45</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Tohall_copy" and password as "Test@1234"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:16:45</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to oneworkflow and agent console should be displayed] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:50</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to oneworkflow and agent console should be displayed]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:16:50</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search and selects open search forms and problem record] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:52</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search and selects open search forms and problem record]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:16:52</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window "child3"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:52</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window "child3"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:16:52</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters Problem Ticket] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:55</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters Problem Ticket]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:16:55</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:58</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:16:58</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user tries to change the status to withdrawn] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:16:58</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user tries to change the status to withdrawn]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:16:58</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem ticket status should be under investigation] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:17:00</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem ticket status should be under investigation]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:17:00</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user logouts and closes the browser] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:17:06</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user logouts and closes the browser]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.30.2019 23:17:06</span>&nbsp;
+												<span class="tt">05.31.2019 15:45:07</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.captureScreenShot(Scenario)] started</span>
 												
-												<div class="st pass">
-													<span class="tt">05.30.2019 23:17:06</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st info">
+													<span class="tt">05.31.2019 15:45:12</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.captureScreenShot(Scenario)]</span>
-													
+													<span class="tm"><a href='#' class='indigo badge' data-featherlight='C:\Temp\com.oneworkflow.automation\ExtentReports\Screenshots\embedded1.png'>img</a></span>
 													<span class="td"></span>
 												</div>
 											</div>

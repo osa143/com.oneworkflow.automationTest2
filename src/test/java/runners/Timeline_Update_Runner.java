@@ -1,10 +1,10 @@
 package runners;
+
 import cucumber.api.CucumberOptions;
 
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
-        tags = {"@Initiator_Create_Ticket_Runner"}
-)
-public class Initiator_Create_Ticket_Runner extends BaseTest {
+        tags = {"@Timeline_Update"})
 
+public class Timeline_Update_Runner extends BaseTest {
 }

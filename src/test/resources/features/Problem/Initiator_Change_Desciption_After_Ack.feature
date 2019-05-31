@@ -26,8 +26,9 @@ Feature:Initiator change description
     And user switches to window "child2"
     And user enters Problem Ticket
     And user clicks Search on ticket search
+    When user clicks on Ack button
     Then problem ticket status should be under investigation
-    And change should also be reflected in the timeline.
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation. "
     When user tries to change the status to withdrawn
     Then problem ticket status should be under investigation
     Then user logsOut
@@ -36,7 +37,7 @@ Feature:Initiator change description
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
-    And user switches to window "child2"
+    And user switches to window "child3"
     And user enters Problem Ticket
     And user clicks Search on ticket search
     When user tries to change description

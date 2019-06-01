@@ -26,7 +26,7 @@ public class OWF_AgentConsolePageSteps {
     public void userSelectsSIDConsoleFromAgentConsole() {
         agentConsolePage.clickConsoleMenu();
         agentConsolePage.clickMenuItemSIDConsole();
-        CommonUtils.switchWindow(agentConsolePage.getDriver(), "child");
+        CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
     }
     @When("User clicks on add column under preferences and selects OP next due date")
     public void userClicksOnAddColumnUnderPreferencesAndSelectsOPNextDueDate() {
@@ -37,7 +37,7 @@ public class OWF_AgentConsolePageSteps {
 
     @Then("OP Next due date column within agent console should be displayed")
     public void opNextDueDateColumnWithinAgentConsoleShouldBeDisplayed() {
-        int columnIndex = BasePage.getColumnIndexByHeaderName("OP Next Due Date");
+        int columnIndex = agentConsolePage.getColumnIndexByHeaderName("OP Next Due Date");
         Assert.assertNotEquals(columnIndex, -1, 0, "OP Next due date column within agent console is not displayed");
     }
 
@@ -45,14 +45,14 @@ public class OWF_AgentConsolePageSteps {
     public void userClicksOnCreateProblemRecord() {
         agentConsolePage.clickCreateMenu();
         agentConsolePage.clickMenuItemProblemRecord();
-        CommonUtils.switchWindow(agentConsolePage.getDriver(), "child");
+        CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
     }
 
 
 
     @And("OP next due date information should be displayed")
     public void opNextDueDateInformationShouldBeDisplayed() {
-        //Assert.assertTrue(agentConsolePage.validateOpNextDueDateInformation(),"OP next due date information is not displayed");
+        Assert.assertTrue(agentConsolePage.validateOpNextDueDateInformation(),"OP next due date information is not displayed");
     }
 
 
@@ -60,11 +60,13 @@ public class OWF_AgentConsolePageSteps {
     @Then("OP next due date column within agent console should not be displayed")
     public void opNextDueDateColumnWithinAgentConsoleShouldNotBeDisplayed() {
 
+        int columnIndex = agentConsolePage.getColumnIndexByHeaderName("OP Next Due Date");
+        Assert.assertEquals(columnIndex, -1, 0, "OP Next due date column within agent console is still displayed");
     }
 
     @And("User shouldn't see OP next due date information")
     public void userShouldnTSeeOPNextDueDateInformation() {
-
+        Assert.assertFalse(agentConsolePage.validateOpNextDueDateInformation(),"OP next due date information is still displayed");
     }
 
 
@@ -150,7 +152,7 @@ public class OWF_AgentConsolePageSteps {
     }
     @And("user logsOut and closes the browser")
     public void userLogsOutsAndCloseTheBrowser() throws InterruptedException {
-        CommonUtils.switchWindow(agentConsolePage.getDriver(), "parent");
+        CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 0);
         agentConsolePage.clickNavUserMenu();
         agentConsolePage.wait(2000);
         agentConsolePage.clickMenuItemLogout();
@@ -161,7 +163,7 @@ public class OWF_AgentConsolePageSteps {
     public void userClicksOnChangeRecordFromAgentConsole() {
         agentConsolePage.clickCreateMenu();
         agentConsolePage.clickMenuItemChangeRecord();
-        CommonUtils.switchWindow(agentConsolePage.getDriver(), "child");
+        CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
     }
 
     @And("user clicks on search and selects open search forms and problem record")

@@ -5,7 +5,7 @@ Feature: Verification of OP target due date visibility
   Scenario: Verify OP Target Due date availability
 
     Given User is on the OneWorkflow login page
-    When user logins with valid user credentials
+    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When User clicks on add column under preferences and selects OP next due date
     Then OP Next due date column within agent console should be displayed

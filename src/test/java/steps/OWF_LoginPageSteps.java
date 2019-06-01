@@ -21,30 +21,15 @@ public class OWF_LoginPageSteps extends BaseSteps {
 
     @Given("User is on the OneWorkflow login page")
     public void userIsOnTheOneWorkflowLoginPage() {
-//        loginPage.getDriver();
         loginPage.getURL(getProperties().getProperty("appURL"));
-        String LoginPageTitle= loginPage.getDriver().getTitle();
+        String LoginPageTitle = loginPage.getPageTitle();
         System.out.println(LoginPageTitle);
-
        // Assert.assertEquals(LoginPageTitle, "BMC Remedy Mid Tier 9.1 - Login");
     }
 
-    @When("user logins with valid user credentials")
-    public void userLoginsWithValidUserCredentials() throws InterruptedException {
-        loginPage.doLogin("Change_Automation_1", "Test@1234" );
-        loginPage.wait(5000);
-    }
-
-    @When("user logs in with valid problem manager username {string} and password {string}")
-    public void userLogsInWithValidProblemManagerUsernameAndPassword(String arg0, String arg1) {
-        loginPage.doLogin(arg0, arg1);
-        loginPage.wait(5000);
-
-    }
-
     @When("user logs in with valid username {string} and password as {string}")
-    public void userLogsInWithValidUsernameAndPasswordAs(String arg0, String arg1) {
-        loginPage.doLogin(arg0, arg1);
+    public void userLogsInWithValidUsernameAndPasswordAs(String username, String password) {
+        loginPage.doLogin(username, password);
         loginPage.wait(5000);
 
     }

@@ -4,7 +4,7 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
   Scenario: Normal Change
 
     Given User is on the OneWorkflow login page
-    When user logins with valid user credentials
+    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on change record from agent console
     Then change record page should be opened and Change form is displayed

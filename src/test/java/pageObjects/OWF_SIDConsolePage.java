@@ -211,7 +211,7 @@ public void selectDdValue1(){
     }
 
     public boolean validateSiteNameDetails() {
-        int columnIndex = getColumnIndexByHeaderName("Site Name");
+        int columnIndex = getColumnIndexByHeaderName(By.id(ciDetailsTable_ID),"Site Name");
         //Get all the table rows by Id
         List<WebElement> tableRows = ciDetailsTableRows();
         String cellValue = null;

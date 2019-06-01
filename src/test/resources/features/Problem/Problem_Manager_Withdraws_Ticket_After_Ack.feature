@@ -20,10 +20,10 @@ Feature:withdraw problem Ticket
     And user gets ticket value
     Then user logsOut
     And user goes back to login page
-    When user logs in with valid problem manager username "frvi96_auto" and password "Test@1234"
+    When user logs in with valid username "frvi96_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
-    And user switches to window "child2"
+    And user switches to window 2
     And user enters Problem Ticket
     And user clicks Search on ticket search
     When user clicks on Ack button
@@ -37,7 +37,7 @@ Feature:withdraw problem Ticket
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
-    And user switches to window "child3"
+    And user switches to window 3
     And user enters Problem Ticket
     And user clicks Search on ticket search
     When user tries to change the status to withdrawn

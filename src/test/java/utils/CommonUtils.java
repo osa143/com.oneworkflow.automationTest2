@@ -16,42 +16,24 @@ import java.util.TimeZone;
 
 public class CommonUtils extends BasePage {
 
-    public static void switchWindow(WebDriver driver, String windowType) {
+    // 0 - parent window
+    // 1 - first child and so on
+    public static void switchToChildWindow(WebDriver driver, int windowId) {
         Set<String> handles = driver.getWindowHandles();
-        Iterator<String> it = handles.iterator();
-        String parentWindow = it.next();
-        String childWindow = it.next();
-        if ((windowType == "child")) {
-            driver.switchTo().window(childWindow);
-        }
-        else
+        int handlesCount = handles.size();
+        if (handlesCount > 0)
         {
-            driver.switchTo().window(parentWindow);
-        }
-    }
-
-    public static void switchToChildWindow(WebDriver driver, String windowType) {
-        Set<String> handles = driver.getWindowHandles();
-        Iterator<String> it = handles.iterator();
-        String parentWindow = it.next();
-        String childWindow = it.next();
-        String childWindow2 = it.next();
-
-        if (windowType.equals("child")) {
-            driver.switchTo().window(childWindow);
-        }
-        else if(windowType.equals("child2"))
-        {
-          driver.switchTo().window(childWindow2);
-        }
-        else if(windowType.equals("child3"))
-        {
-            String childWindow3 = it.next();
-            driver.switchTo().window(childWindow3);
-        }
-        else
-        {
-            driver.switchTo().window(parentWindow);
+            Iterator<String> it = handles.iterator();
+            for (int i = 0; i <= handlesCount - 1; i++)
+            {
+                if (it.hasNext()) {
+                    String window = it.next();
+                    if (i == windowId) {
+                        driver.switchTo().window(window);
+                        break;
+                    }
+                }
+            }
         }
     }
 

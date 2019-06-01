@@ -3,7 +3,6 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.JavascriptExecutor;
 import java.util.List;
 
 public class OWF_AgentConsolePage extends BasePage{
@@ -69,7 +68,7 @@ public class OWF_AgentConsolePage extends BasePage{
     private static final String ddValueCREATED_BY_ME = "Created by Me";
     private static final String ddValueOWNED_BY_ME = "Owned by Me";
 
-    private static final String table_ID = "WIN_0_777000002";
+    private static final String table_ID = "T777000002";
 
     public void clickSearch_OpenSearch_ProblemRecord(){
         selectDropDown("Search", "Open Search Form:Problem Record", false );
@@ -87,7 +86,7 @@ public class OWF_AgentConsolePage extends BasePage{
     }
 
     public boolean validateOpNextDueDateInformation() {
-        int columnIndex = getColumnIndexByHeaderName("OP Next Due Date");
+        int columnIndex = getColumnIndexByHeaderName(By.id(table_ID), "OP Next Due Date");
         return checkIfColumnHasData(table_ID, "OP Next Due Date", columnIndex);
     }
 
@@ -99,11 +98,6 @@ public class OWF_AgentConsolePage extends BasePage{
         else
         System.out.println("element is null");
     }*/
-    public void scrollUntilElementFound()
-    {
-         JavascriptExecutor jse = (JavascriptExecutor)driver;
-         jse.executeScript("window.scrollBy(1000,0)", "");
-    }
 
     public void selectDdValueAll(){
         selectDropDownValue(ddValueALL);
@@ -308,5 +302,7 @@ public class OWF_AgentConsolePage extends BasePage{
         driver.findElement(By.id(ddALL)).click();
     }
 
-
+    public int getColumnIndexByHeaderName(String columnName){
+        return BasePage.getColumnIndexByHeaderName(By.id(table_ID), columnName);
+    }
 }

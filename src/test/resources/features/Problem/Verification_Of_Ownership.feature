@@ -26,7 +26,7 @@ Feature: Verification of Problem ticket owner
     And user logs in with valid username "mina09_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
-    And user switches to window "child2"
+    And user switches to window 2
     And user enters Problem Ticket
     And user clicks Search on ticket search
     When user tries to Ack the ticket but its shouldn't allow

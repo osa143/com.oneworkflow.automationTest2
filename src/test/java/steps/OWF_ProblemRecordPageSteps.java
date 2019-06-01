@@ -52,7 +52,7 @@ public class OWF_ProblemRecordPageSteps {
     @And("user enters description as {string}")
     public void userEntersDescriptionAs(String arg0)
     {
-         problemRecordPage.enterDescription(arg0);
+        problemRecordPage.enterDescription(arg0);
     }
 
     @And("user selects urgency as low")
@@ -156,28 +156,17 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.wait(5000);
     }
 
-    @And("user switches to window {string}")
-    public void userSwitchesToWindow(String arg0) {
-        CommonUtils.switchToChildWindow(problemRecordPage.getDriver(), arg0);
-    }
+    @And("user switches to window {int}")
+    public void userSwitchesToWindow(int windowId) {
 
-    @When("user tries to change description")
-    public void userTriesToChangeDescription() {
-       try{
-           problemRecordPage.enterDescription("Test1234");
-       }
-       catch (Exception e){
-           System.out.println("element is grey out and not able to modify");
-        }
-
+        CommonUtils.switchToChildWindow(problemRecordPage.getDriver(), windowId);
     }
 
     @Then("description field should be greyed out should not be able to changed")
     public void descriptionFieldShouldBeGreyedOutShouldNotBeAbleToChanged() {
         System.out.println(problemRecordPage.getDescriptionText());
-
-      //  Assert.assertEquals(problemRecordPage.getDescriptionText(), "UAT Test1 withdraw after Ack");
-
+        Assert.assertTrue(problemRecordPage.getDescriptionTextBoxStatus(), "description is not greyed out");
+        Assert.assertEquals(problemRecordPage.getDescriptionText(), "UAT Test1 withdraw after Ack");
 
     }
 
@@ -216,7 +205,7 @@ public class OWF_ProblemRecordPageSteps {
           problemRecordPage.selectRequestTypeAs_AccessNetworks_RAN_NSN_2G_3G_4G();
         }
         catch(Exception e) {
-            System.out.println("user is not bale to change request type");
+            System.out.println("user is not able to change request type");
         }
 
     }

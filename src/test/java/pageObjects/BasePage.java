@@ -9,10 +9,11 @@ import org.testng.Assert;
 import utils.DriverSetUp;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class BasePage{
+public abstract class BasePage{
 
     public static WebDriver driver;
 
@@ -29,6 +30,11 @@ public class BasePage{
     public void getURL(String appURL) {
 
         driver.get(appURL);
+    }
+
+    public String getPageTitle()
+    {
+        return driver.getTitle();
     }
 
     public void wait(int mills) {
@@ -110,17 +116,29 @@ public class BasePage{
         }
     }
 
-        public  static int getColumnIndexByHeaderName (String headerName){
+    public boolean checkIfControlIsReadonly(String textBoxId)
+    {
+        String isReadOnly = driver.findElement(By.id(textBoxId)).getAttribute("readonly");
+        if (isReadOnly != null && isReadOnly.contains("true"))
+        {
+            return true;
+        }
+        return false;
+    }
+
+
+    public  static int getColumnIndexByHeaderName (By table, String headerName){
             int columnIndex = -1;
-            //Get all web elements with BaseTableHeader class name
-            List<WebElement> tableHeaders = driver.findElement(By.className("BaseTableColHeaders")).findElements(By.className("BaseTableHeader"));
+            //Get all web elements
+            List<WebElement> tableHeaders = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr")).get(0).findElements(By.tagName("th"));
 
             for (int i = 0; i < tableHeaders.size(); i++) {
+                tableHeaders = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr")).get(0).findElements(By.tagName("th"));
                 //System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
 
                if (tableHeaders.get(i).getAttribute("innerHTML").trim().equals(headerName)) {
                     //Get the column index using headerName
-                   System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
+                   //System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
                     columnIndex = i;
                    break;
                }
@@ -130,15 +148,16 @@ public class BasePage{
 
         public List<WebElement> getTableRows(String tableId)
         {
-            List<WebElement> tableRows = driver.findElement(By.id(tableId)).findElements(By.tagName("tr"));
+            List<WebElement> tableRows = driver.findElement(By.id(tableId)).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
             return tableRows;
         }
 
-        public boolean checkIfColumnHasData( String tableId, String columnName, int columnIndex)
+        public boolean checkIfColumnHasData(String tableId, String columnName, int columnIndex)
         {
             boolean columnHasData = false;
-            //Get all the table rows by Id
-            List<WebElement> tableRows = getTableRows(tableId);
+
+            List<WebElement> tableRows = new ArrayList<>();
+            tableRows = driver.findElement(By.id(tableId)).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
 
             String cellValue = null;
 
@@ -148,13 +167,14 @@ public class BasePage{
                     //this step is failing.
                     List<WebElement> elements = null;
                     try {
+                        tableRows = driver.findElement(By.id(tableId)).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
                         elements = tableRows.get(i).findElements(By.tagName("td"));
                     }
                     catch (Exception ex)
                     {
                        continue;
                     }
-                    WebElement element = elements.get(columnIndex - 1);
+                    WebElement element = elements.get(columnIndex).findElement(By.tagName("nobr")).findElement(By.tagName("span"));
                     if (element != null) {
                         cellValue = element.getAttribute("innerHTML");
                         //return true if at least one row has got value

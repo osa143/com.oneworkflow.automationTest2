@@ -1,29 +1,23 @@
 package pageObjects;
 
 import driver.factory.DriverFactory;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
-import utils.DriverSetUp;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
-public abstract class BasePage{
+public abstract class BasePage {
 
     public static WebDriver driver;
 
 
-    protected BasePage()
-    {
+    protected BasePage() {
         driver = DriverFactory.getInstance().getDriver();
     }
 
-    public WebDriver getDriver(){
+    public WebDriver getDriver() {
         return driver;
     }
 
@@ -32,8 +26,7 @@ public abstract class BasePage{
         driver.get(appURL);
     }
 
-    public String getPageTitle()
-    {
+    public String getPageTitle() {
         return driver.getTitle();
     }
 
@@ -44,6 +37,10 @@ public abstract class BasePage{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public String getTextById(String Id) {
+        return driver.findElement(By.id(Id)).getAttribute("value");
     }
 
     public void selectMainMenu(String mainMenu) {
@@ -58,6 +55,7 @@ public abstract class BasePage{
                 .filter(element -> element.getText().equals(menuItem)).findFirst().orElse(null).click();
 
     }
+
     public void selectDropDownMenu(String DropDownMenu) {
 
         String mainMenuXpath = "//img[@alt='Menu for " + DropDownMenu + "']/..";
@@ -71,7 +69,7 @@ public abstract class BasePage{
 
     }
 
-    public void selectDropDown(String dropdownName, String dropdownValue, boolean readonly) {
+    public void selectDropDownNameAndValue(String dropdownName, String dropdownValue, boolean readonly) {
         String dropdownXpath;
         if (readonly)
             dropdownXpath = "//img[@alt='ReadOnly menu for " + dropdownName + "']/..";
@@ -89,6 +87,7 @@ public abstract class BasePage{
         }
 
     }
+
     //    preferences = "Menu1:Menu2"
     public void setPreferences(String preferences) {
 
@@ -116,124 +115,182 @@ public abstract class BasePage{
         }
     }
 
-    public boolean checkIfControlIsReadonly(String textBoxId)
-    {
-        String isReadOnly = driver.findElement(By.id(textBoxId)).getAttribute("readonly");
-        if (isReadOnly != null && isReadOnly.contains("true"))
-        {
+    public boolean checkIfControlIsReadonly(String Id) {
+        String isReadOnly = driver.findElement(By.id(Id)).getAttribute("readonly");
+        if (isReadOnly != null && isReadOnly.contains("true")) {
             return true;
         }
         return false;
     }
 
+    //columnData[0] = column Index
+    //columnData[1] = column Width
+//    public static int[] getColumnIndexByHeaderName(By table, String headerName) {
+//        int[] columnInfo = {-1, -1};
+//        //Get all web elements
+//        List<WebElement> tableHeaders = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr")).get(0).findElements(By.tagName("th"));
+//
+//        for (int i = 0; i < tableHeaders.size(); i++) {
+//            tableHeaders = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr")).get(0).findElements(By.tagName("th"));
+//            //System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
+//            WebElement tableHeader = tableHeaders.get(i);
+//            if (tableHeader.getAttribute("innerHTML").trim().equals(headerName)) {
+//                //Get the column index using headerName
+//                //System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
+//                columnInfo[0] = i; //column Index
+//                String columnWidth = tableHeader.getCssValue("width");
+//                System.out.println("Column width is: " + columnWidth);
+//
+//                if (!columnWidth.equals("0px")) {
+//                    columnInfo[1] = 0; //column width
+//                }
+//                else
+//                {
+//                    columnInfo[1] = 1;
+//                }
+//                break;
+//            }
+//        }
+//        return columnInfo;
+//    }
 
-    public  static int getColumnIndexByHeaderName (By table, String headerName){
-            int columnIndex = -1;
-            //Get all web elements
-            List<WebElement> tableHeaders = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr")).get(0).findElements(By.tagName("th"));
 
-            for (int i = 0; i < tableHeaders.size(); i++) {
-                tableHeaders = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr")).get(0).findElements(By.tagName("th"));
+    public static int getColumnIndexByHeaderName(By table, String headerName) {
+        int columnInfo = -1;
+        //Get all web elements
+        List<WebElement> tableHeaders = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr")).get(0).findElements(By.tagName("th"));
+
+        for (int i = 0; i < tableHeaders.size(); i++) {
+            tableHeaders = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr")).get(0).findElements(By.tagName("th"));
+            //System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
+            WebElement tableHeader = tableHeaders.get(i);
+            if (tableHeader.getAttribute("innerHTML").trim().equals(headerName)) {
+                //Get the column index using headerName
                 //System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
-
-               if (tableHeaders.get(i).getAttribute("innerHTML").trim().equals(headerName)) {
-                    //Get the column index using headerName
-                   //System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
-                    columnIndex = i;
-                   break;
-               }
+                columnInfo = i;
+                break;
             }
-            return columnIndex;
         }
+        return columnInfo;
+    }
 
-        public List<WebElement> getTableRows(String tableId)
-        {
-            List<WebElement> tableRows = driver.findElement(By.id(tableId)).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
-            return tableRows;
-        }
+    public boolean isColumnDisplayed(String columnName){
+//        left: 3508px; text-align: left; width: 89px;
+        boolean columnDisplayed = false;
 
-        public boolean checkIfColumnHasData(String tableId, String columnName, int columnIndex)
-        {
-            boolean columnHasData = false;
+        //Get all web elements
+        List<WebElement> tableHeaders = driver.findElement(By.className("BaseTableColHeaders")).findElements(By.className("BaseTableHeader"));
 
-            List<WebElement> tableRows = new ArrayList<>();
-            tableRows = driver.findElement(By.id(tableId)).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
-
-            String cellValue = null;
-
-            if (columnIndex >= 0) {
-                for (int i = 1; i < tableRows.size(); i++) {
-                    //Get cell values for specified column
-                    //this step is failing.
-                    List<WebElement> elements = null;
-                    try {
-                        tableRows = driver.findElement(By.id(tableId)).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
-                        elements = tableRows.get(i).findElements(By.tagName("td"));
-                    }
-                    catch (Exception ex)
-                    {
-                       continue;
-                    }
-                    WebElement element = elements.get(columnIndex).findElement(By.tagName("nobr")).findElement(By.tagName("span"));
-                    if (element != null) {
-                        cellValue = element.getAttribute("innerHTML");
-                        //return true if at least one row has got value
-                        if (cellValue != null)
-                            return true;
-                    }
+        for (int i = 0; i < tableHeaders.size(); i++) {
+           // System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
+            WebElement tableHeader = tableHeaders.get(i);
+            if (tableHeader.getAttribute("innerHTML").trim().equals(columnName)) {
+                if(!tableHeader.getAttribute("style").trim().split(";")[2].trim().equals("width: 0px")){
+                    columnDisplayed = true;
+                    break;
                 }
             }
-            else {
-                //If we don't find the column, test should fail
-                Assert.assertTrue(false, columnName + " Column not found.");
-                return false;
-            }
-            return  columnHasData;
         }
-   /* public void validateOpNextDueDateDetails() {
-        int columnIndex = BasePage.getColumnIndexByHeaderName("Site Name");
+        return columnDisplayed;
+    }
 
-        //Get all the table rows by Id
-        List<WebElement> tableRows = driver.findElement(By.id("T700009024")).findElements(By.tagName("tr"));
+    public List<WebElement> getTableRows(By table) {
+        List<WebElement> tableRows = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
+        return tableRows;
+    }
+
+    //use this method for only dynamic tables like table in Agent Console page
+    //columnHasData
+    public boolean columnHasData(String tableId, String columnName) {
+
+        if(!isColumnDisplayed(columnName)){
+            return false;
+        }
+        int columnIndex = getColumnIndexByHeaderName(By.id(tableId), columnName);
+        boolean columnHasData = false;
+
+        List<WebElement> tableRows = new ArrayList<>();
+        tableRows = driver.findElement(By.id(tableId)).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
+
         String cellValue = null;
-        int rowsCount = 0;
+
+        if (columnIndex >= 0) {
+            for (int i = 1; i < tableRows.size(); i++) {
+                //Get cell values for specified column
+                List<WebElement> elements = null;
+                try {
+                    tableRows = driver.findElement(By.id(tableId)).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
+                    elements = tableRows.get(i).findElements(By.tagName("td"));
+                } catch (Exception ex) {
+                    continue;
+                }
+                WebElement element = elements.get(columnIndex).findElement(By.tagName("nobr")).findElement(By.tagName("span"));
+                if (element != null) {
+                    cellValue = element.getAttribute("innerHTML");
+                    //return true if at least one row has got value
+                    if (cellValue != null)
+                        return true;
+                }
+            }
+        } else {
+            //If we don't find the column, test should fail
+            Assert.assertTrue(false, columnName + " Column not found.");
+            return false;
+        }
+        return columnHasData;
+    }
+
+    //use this method for only static tables like table in SID Console page
+    public boolean validateIfAllColumnRowsHasData(String tableId, String columnName) {
+        int columnIndex = getColumnIndexByHeaderName(By.id(tableId), columnName);
+        //Get all the table rows by Id
+        List<WebElement> tableRows = getTableRows(By.id(tableId));
+        String cellValue = null;
         if (columnIndex >= 0) {
             for (int i = 1; i < tableRows.size(); i++) {
                 //Get all the cell values for Site Name column
                 cellValue = tableRows.get(i).findElements(By.tagName("td")).get(columnIndex - 1).getText();
-                if (cellValue != null)
-                    rowsCount++;
+                //Check if Cell value is not null (if cell value is null, test should fail)
+                if (cellValue.equals("") || cellValue == null) {
+                    return false;
+                }
             }
+        } else {
+            //If we don't find the column, test should fail
+            Assert.assertTrue(false, columnName + " Column not found.");
+            return false;
         }
-        if (rowsCount > 0)
-        {
-            Assert.assertTrue(true);
-        }
-        else {
-            //If we don't find the Site Name column, test should fail
-            Assert.assertTrue(false);
-        }
-
+        return true;
     }
-*/
 
+    // rowNum : 0 gives header row
+    // rowNum : 1 gives first row
+    public String getTableCellData(By table, String columnName, int rowNum){
+       String cellData = null;
+        int colNum = getColumnIndexByHeaderName(table, columnName);
+        List<WebElement> getTableRows = getTableRows(table);
 
-    public static File takeScreenShot(){
+        if(getTableRows.size() > 0){
+            cellData =  getTableRows.get(rowNum).findElements(By.tagName("td")).get(colNum).getText();
+        }
+        return cellData;
+    }
+    public static File takeScreenShot() {
 
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
     }
 
-    public static byte[] takeScreenShotAsByteArray(){
+    public static byte[] takeScreenShotAsByteArray() {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
-    public void tearDown () {
+    public void tearDown() {
         driver.quit();
         //driver.close();
 
     }
 
 
-    }
+}
 
 

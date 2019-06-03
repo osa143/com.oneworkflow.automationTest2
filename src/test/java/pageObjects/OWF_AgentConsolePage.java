@@ -1,12 +1,8 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import java.util.List;
 
-public class OWF_AgentConsolePage extends BasePage{
-
+public class OWF_AgentConsolePage extends BasePage {
 
 
     private static final String menuForCONSOLE = "Console";
@@ -70,86 +66,89 @@ public class OWF_AgentConsolePage extends BasePage{
 
     private static final String table_ID = "T777000002";
 
-    public void clickSearch_OpenSearch_ProblemRecord(){
-        selectDropDown("Search", "Open Search Form:Problem Record", false );
+    public void clickSearch_OpenSearch_ProblemRecord() {
+        selectDropDownNameAndValue("Search", "Open Search Form:Problem Record", false);
     }
 
-    public void clickPreferences()
-    {
+    public void clickPreferences() {
         driver.findElement(By.id(table_ID)).findElement(By.xpath("//a[contains(text(),'Preferences')]")).click();
     }
 
-    public List<WebElement> opNextDuedateTableRows()
-
-    {
-        return getTableRows(table_ID);
+    public int getTableRowsCount() {
+        return getTableRows(By.id(table_ID)).size();
     }
 
     public boolean validateOpNextDueDateInformation() {
-        int columnIndex = getColumnIndexByHeaderName(By.id(table_ID), "OP Next Due Date");
-        return checkIfColumnHasData(table_ID, "OP Next Due Date", columnIndex);
+        return columnHasData(table_ID, "OP Next Due Date");
     }
 
-    /*public void getTableHeader()
-    {
-        WebElement element = driver.findElement(By.xpath("//div[contains(text(),'OP Next Due Date')]"));
-        if (element != null)
-        System.out.println("element not null");
-        else
-        System.out.println("element is null");
-    }*/
+    public boolean validateOpTargetDateInformation() {
+        return columnHasData(table_ID, "OP Target Date");
+    }
 
-    public void selectDdValueAll(){
+    public void selectDdValueAll() {
         selectDropDownValue(ddValueALL);
     }
-    public void selectDdValueAsignedToMe(){
+
+    public void selectDdValueAsignedToMe() {
         selectDropDownValue(ddValueASIGNED_TO_ME);
     }
-    public void selectDdValueCreatedByMe(){
+
+    public void selectDdValueCreatedByMe() {
         selectDropDownValue(ddValueCREATED_BY_ME);
     }
-    public void selectDdValueOWNED_BY_ME(){
+
+    public void selectDdValueOWNED_BY_ME() {
         selectDropDownValue(ddValueOWNED_BY_ME);
     }
 
 
-    public void selectDdValueAllTickets(){
+    public void selectDdValueAllTickets() {
         selectDropDownValue(ddValueALL_TICKETS);
     }
-    public void selectDdValueChangeProject(){
+
+    public void selectDdValueChangeProject() {
         selectDropDownValue(ddValueCHANGE_PROJECT);
     }
-    public void selectDdValueChangeFreeze(){
+
+    public void selectDdValueChangeFreeze() {
         selectDropDownValue(ddValueCHANGE_FREEZE);
     }
-    public void selectDdValueChangeRecord(){
+
+    public void selectDdValueChangeRecord() {
         selectDropDownValue(ddValueCHANGE_RECORD);
     }
-    public void selectDdValueKnownError(){
+
+    public void selectDdValueKnownError() {
         selectDropDownValue(ddValueKNOWN_ERROR);
     }
-    public void selectDdValuePB_OP_KE(){
+
+    public void selectDdValuePB_OP_KE() {
         selectDropDownValue(ddValuePB_OP_KE);
     }
-    public void selectDdValueProblem(){
+
+    public void selectDdValueProblem() {
         selectDropDownValue(ddValuePROBLEM);
     }
-    public void selectDdValueTroubleTicket(){
+
+    public void selectDdValueTroubleTicket() {
         selectDropDownValue(ddValueTROUBLE_TICKET);
     }
-    public void selectDdValueWO_OP(){
+
+    public void selectDdValueWO_OP() {
         selectDropDownValue(ddValueWO_OP);
     }
-    public void selectDdValueWO_OP_CR(){
+
+    public void selectDdValueWO_OP_CR() {
         selectDropDownValue(ddValueWO_OP_CR);
     }
 
-    public void selectDdValueWorkOrder(){
+    public void selectDdValueWorkOrder() {
         selectDropDownValue(ddValueWORK_ORDER);
     }
 
 
-    public void enterSearch(String searchText){
+    public void enterSearch(String searchText) {
         driver.findElement(By.id(txtSEARCH)).sendKeys(searchText);
     }
 
@@ -302,7 +301,7 @@ public class OWF_AgentConsolePage extends BasePage{
         driver.findElement(By.id(ddALL)).click();
     }
 
-    public int getColumnIndexByHeaderName(String columnName){
+    public int getColumnIndexByHeaderName(String columnName) {
         return BasePage.getColumnIndexByHeaderName(By.id(table_ID), columnName);
     }
 }

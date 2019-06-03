@@ -2,7 +2,6 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 import java.util.List;
 
@@ -43,195 +42,191 @@ public class OWF_SIDConsolePage extends BasePage {
     private static final String ddValueWLAN_ACCESS = "WLAN ACCESS";
 
     private static final String ddValueBSC = "BSC";
-    private static final String ddValueENODEB= "eNodeB";
+    private static final String ddValueENODEB = "eNodeB";
     private static final String ddValueGSMCEll = "GSMCell";
     private static final String ddValueLTECELL = "LTECell";
-    private static final String ddValueNODEB= "nodeB";
+    private static final String ddValueNODEB = "nodeB";
     private static final String ddValueREPEATER = "Repeater";
     private static final String ddValueUMTSCELL = "UMTSCell";
 
     private static final String ddValueCIS_WITH_LOCATION = "CIs with Location";
     private static final String ddValueALL_CIS = "All CIs";
     private static final String ddValueCIRCUIT_CIS = "Circuit CIs";
-    private static final String ddValueCLEAR= "(clear)";
+    private static final String ddValueCLEAR = "(clear)";
 
     private static final String ciDetailsTable_ID = "T700009024";
 
 
-    public void clickFilerDropDown(){
+    public void clickFilerDropDown() {
         selectDropDownMenu(ddFILTER);
     }
 
-    public void selectDropDownValueCisWithLocation(){
+    public void selectDropDownValueCisWithLocation() {
         selectDropDownValue(ddValueCIS_WITH_LOCATION);
     }
-    public void selectDropDownValueAllCis(){
+
+    public void selectDropDownValueAllCis() {
         selectDropDownValue(ddValueALL_CIS);
     }
-    public void selectDropDownValueCircuitCis(){
+
+    public void selectDropDownValueCircuitCis() {
         selectDropDownValue(ddValueCIRCUIT_CIS);
     }
-    public void selectDropDownValueClear(){
+
+    public void selectDropDownValueClear() {
         selectDropDownValue(ddValueCLEAR);
     }
 
 
-
-
-    public void clickLocationPlusTextBox(){
+    public void clickLocationPlusTextBox() {
         driver.findElement(By.id(txtbxLOCATION_PLUS)).click();
     }
-    public void clickNamePlusTextBox(String namePlus){
+
+    public void clickNamePlusTextBox(String namePlus) {
         driver.findElement(By.id(txtbxNAME_PLUS)).sendKeys(namePlus);
     }
 
-    public void clickReRunButton(){
+    public void clickReRunButton() {
         driver.findElement(By.id(btnRERUN)).click();
     }
 
-    public void clickSearchButton(){
+    public void clickSearchButton() {
         driver.findElement(By.id(btnSEARCH)).click();
     }
 
-    public void clickAdvancedSearchButton(){
+    public void clickAdvancedSearchButton() {
         driver.findElement(By.id(btnADVANCED_SEARCH)).click();
     }
-    public void clickClearButton(){
+
+    public void clickClearButton() {
         driver.findElement(By.id(btnCLEAR)).click();
     }
-    public void clickInActiveCheckBox(){
+
+    public void clickInActiveCheckBox() {
         driver.findElement(By.id(chkbxINACTIVE)).click();
     }
-    public void selectDdValueBsc(){
+
+    public void selectDdValueBsc() {
         selectDropDownValue(ddValueBSC);
     }
-    public void selectDdValueEnodeB(){
+
+    public void selectDdValueEnodeB() {
         selectDropDownValue(ddValueENODEB);
     }
-    public void selectDdValueGsmCell(){
+
+    public void selectDdValueGsmCell() {
         selectDropDownValue(ddValueGSMCEll);
     }
-    public void selectDdValueLteCell(){
+
+    public void selectDdValueLteCell() {
         selectDropDownValue(ddValueLTECELL);
     }
-    public void selectDdValueNodeB(){
+
+    public void selectDdValueNodeB() {
         selectDropDownValue(ddValueNODEB);
     }
-    public void selectDdValueRepeater(){
+
+    public void selectDdValueRepeater() {
         selectDropDownValue(ddValueREPEATER);
     }
-    public void selectDdValueUmtsCell(){
+
+    public void selectDdValueUmtsCell() {
         selectDropDownValue(ddValueUMTSCELL);
     }
 
 
-
-    public void selectDdValueRadiAccessNetwork(){
+    public void selectDdValueRadiAccessNetwork() {
         selectDropDownValue(ddValueRADIO_ACCESS_NETWORK);
     }
 
-    public void selectDdValueRan(){
+    public void selectDdValueRan() {
         selectDropDownValue(ddValueRAN);
     }
-    public void selectDdValueTeliaOwnedCpe(){
+
+    public void selectDdValueTeliaOwnedCpe() {
         selectDropDownValue(ddValueTELIA_OWNED_CPE);
     }
-    public void selectDdValueWlan(){
+
+    public void selectDdValueWlan() {
         selectDropDownValue(ddValueWLAN);
     }
-    public void selectDdValueWlanAccess(){
+
+    public void selectDdValueWlanAccess() {
         selectDropDownValue(ddValueWLAN_ACCESS);
     }
 
 
+    public void selectDdValue1() {
+        selectDropDownValue(ddValue1);
+    }
 
-public void selectDdValue1(){
-    selectDropDownValue(ddValue1);
-}
-
-    public void selectDdValueAccess(){
+    public void selectDdValueAccess() {
         selectDropDownValue(ddValueACCESS);
     }
 
-    public void selectDdValueAccessTransport(){
+    public void selectDdValueAccessTransport() {
         selectDropDownValue(ddValueACCESS_TRANSPORT);
     }
 
-    public void selectDdValueBss(){
+    public void selectDdValueBss() {
         selectDropDownValue(ddValueBSS);
     }
 
-    public void selectDdValueComputerEquipment(){
+    public void selectDdValueComputerEquipment() {
         selectDropDownValue(ddValueCOMPTER_EQUIPMENT);
     }
-    public void selectDdValueComputerServices(){
+
+    public void selectDdValueComputerServices() {
         selectDropDownValue(ddValueCOMPUTER_SERVICES);
     }
-    public void selectDdValueComputerCore(){
+
+    public void selectDdValueComputerCore() {
         selectDropDownValue(ddValueCORE);
     }
 
-    public void selectDdValueCustomerServices(){
+    public void selectDdValueCustomerServices() {
         selectDropDownValue(ddValueCUSTOMER_SERVICES);
     }
-    public void selectDdValueDs(){
+
+    public void selectDdValueDs() {
         selectDropDownValue(ddValueDS);
     }
 
-    public void selectDdValueExternal(){
+    public void selectDdValueExternal() {
         selectDropDownValue(ddValueEXTERNAL);
     }
 
-    public void selectDdValueHardware(){
+    public void selectDdValueHardware() {
         selectDropDownValue(ddValueHARDWARE);
     }
 
-    public void selectDdValueInternal_Services(){
+    public void selectDdValueInternal_Services() {
         selectDropDownValue(ddValueINTERNAL_SERVICES);
     }
 
 
-    public void clickCategoryDropDown(){
+    public void clickCategoryDropDown() {
         selectDropDownMenu(ddCATEGORY);
     }
-    public void clickTypeDropDown(){
+
+    public void clickTypeDropDown() {
         selectDropDownMenu(ddTYPE);
     }
-    public void clickItemDropDown(){
+
+    public void clickItemDropDown() {
         selectDropDownMenu(ddITEM);
     }
 
-    public void clickSearchFor(){
+    public void clickSearchFor() {
         driver.findElement(By.id(ddSEARCH_FOR)).click();
     }
 
-    public List<WebElement> ciDetailsTableRows()
-    {
-       return getTableRows(ciDetailsTable_ID);
+    public List<WebElement> ciDetailsTableRows() {
+        return getTableRows(By.id(ciDetailsTable_ID));
     }
 
     public boolean validateSiteNameDetails() {
-        int columnIndex = getColumnIndexByHeaderName(By.id(ciDetailsTable_ID),"Site Name");
-        //Get all the table rows by Id
-        List<WebElement> tableRows = ciDetailsTableRows();
-        String cellValue = null;
-        if (columnIndex >= 0) {
-            for (int i = 1; i < tableRows.size(); i++) {
-                //Get all the cell values for Site Name column
-                cellValue = tableRows.get(i).findElements(By.tagName("td")).get(columnIndex - 1).getText();
-                //Check if Cell value is not null (if cell value is null, test should fail)
-                if(cellValue.equals("") || cellValue == null){
-                    return false;
-                }
-            }
-        } else {
-            Assert.assertTrue(false, "Site name column not found.");
-            return false;
-        }
-       return  true;
+
+        return validateIfAllColumnRowsHasData(ciDetailsTable_ID, "Site Name");
     }
-
-
-
-
 }

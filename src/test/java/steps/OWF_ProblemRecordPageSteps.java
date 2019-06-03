@@ -1,7 +1,6 @@
 package steps;
 
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
@@ -22,14 +21,14 @@ public class OWF_ProblemRecordPageSteps {
 
     @When("user clicks on save button on the problem form")
     public void userClicksOnSaveButtonOnTheProblemForm() {
-      problemRecordPage.clickSaveButton();
-      problemRecordPage.wait(5000);
+        problemRecordPage.clickSaveButton();
+        problemRecordPage.wait(5000);
     }
 
     @Then("an error message should appear: {string}")
-    public void anErrorMessageShouldAppear(String arg0) {
+    public void anErrorMessageShouldAppear(String errorMessage) {
 
-        Assert.assertTrue(problemRecordPage.validateErrorMessage(arg0), "Error message didn't appear");
+        Assert.assertTrue(problemRecordPage.validateErrorMessage(errorMessage), "Error message didn't appear");
     }
 
     @When("user clicks on sweden checkbox under affected BU's")
@@ -38,28 +37,28 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.clickSaveButton();
     }
 
-    @Then("Mulitple error messages should appear with red boarder around fields")
-    public void mulitpleErrorMessagesShouldAppearWithRedBoarderAroundFields() {
-        Assert.assertTrue(problemRecordPage.validateMultipleErrorMessages(), "Multiple error messages are not shown");
+    @Then("Multiple error messages should appear with red boarder around fields")
+    public void multipleErrorMessagesShouldAppearWithRedBoarderAroundFields() {
+        Assert.assertTrue(problemRecordPage.validateMultipleErrorMessages(5), "Multiple error messages are not shown");
         //Red border should appear around fields
     }
 
     @When("user enters {string} in Title field")
-    public void userEntersInTitleField(String arg0) {
+    public void userEntersInTitleField(String title) {
 
-        problemRecordPage.enterTitle(arg0);
+        problemRecordPage.enterTitle(title);
     }
+
     @And("user enters description as {string}")
-    public void userEntersDescriptionAs(String arg0)
-    {
-        problemRecordPage.enterDescription(arg0);
+    public void userEntersDescriptionAs(String description) {
+        problemRecordPage.enterDescription(description);
     }
 
     @And("user selects urgency as low")
     public void selectsUrgencyAsLow() {
-          problemRecordPage.clickUrgencyDropDown();
-          problemRecordPage.wait(1000);
-          problemRecordPage.selectLowDdValue();
+        problemRecordPage.clickUrgencyDropDown();
+        problemRecordPage.wait(1000);
+        problemRecordPage.selectLowDdValue();
     }
 
 
@@ -72,8 +71,8 @@ public class OWF_ProblemRecordPageSteps {
     }
 
     @Then("an error message {string} should appear with red boarder around withdrawn reason")
-    public void anErrorMessageShouldAppearWithRedBoarderAroundWithdrawnReason(String arg0) {
-        //Assert.assertTrue(problemRecordPage.validateErrorMessage(arg0), "Error message didn't appear");
+    public void anErrorMessageShouldAppearWithRedBoarderAroundWithdrawnReason(String errorMessage) {
+        //Assert.assertTrue(problemRecordPage.validateErrorMessage(errorMessage), "Error message didn't appear");
     }
 
     @When("user selects withdrawn reason as false alarm and clicks save")
@@ -99,15 +98,15 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user gets ticket value")
     public void userGetsTicketValue() {
-        problemTicket =  problemRecordPage.getProblemTicket();
-       System.out.println("Stored problem ticket is "+problemTicket);
+        problemTicket = problemRecordPage.getProblemTicket();
+        System.out.println("Stored problem ticket is " + problemTicket);
 
     }
 
     @And("user enters Problem Ticket")
     public void userEntersProblemTicket() {
         problemRecordPage.enterTicket(problemTicket);
-        System.out.println("user entered problem ticket"+ problemTicket);
+        System.out.println("user entered problem ticket" + problemTicket);
     }
 
     @And("user clicks Search on ticket search")
@@ -129,25 +128,16 @@ public class OWF_ProblemRecordPageSteps {
 
     }
 
-    @And("change should also be reflected in the timeline.")
-    public void changeShouldAlsoBeReflectedInTheTimeline() {
-        problemRecordPage.clickTimelineButton();
-
-
-        //Assert.assertTrue(false);
-
-    }
-
+    //TO_DO should be changed by using checkIfControlIsReadonly method from base class
     @When("user tries to change the status to withdrawn")
     public void userTriesToChangeTheStatusToWithdrawn() {
         try {
             problemRecordPage.clickStatusDropDown();
+            problemRecordPage.wait(1000);
             problemRecordPage.selectWithdrawnDdValue();
+        } catch (NullPointerException ex) {
+            System.out.println("user is unable to change the status to withdrawn");
         }
-        catch (Exception e){
-            System.out.println("status is not withdrawn");
-        }
-
     }
 
     @And("user goes back to login page")
@@ -171,24 +161,16 @@ public class OWF_ProblemRecordPageSteps {
     }
 
     @And("change should also be reflected in the timeline as {string}")
-    public void changeShouldAlsoBeReflectedInTheTimelineAs(String arg0) {
-        problemRecordPage.clickTimelineButton();
-        //Assert.assertEquals(problemRecordPage.getTimelineStatus(), arg0, "Ticket Status is not displayed on timeline");
-        System.out.println("Timeline status is "+problemRecordPage.getTimelineStatus());
-
+    public void changeShouldAlsoBeReflectedInTheTimelineAs(String message) {
+         problemRecordPage.clickTimelineButton();
+         boolean containsMessage = problemRecordPage.getTimelineStatus().contains(message);
+        Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
     }
 
     @When("user tries to Ack the ticket but its shouldn't allow")
     public void userTriesAckTheTicketButItsShouldnTAllow() {
-        try {
-            problemRecordPage.clickAckButton();
-            System.out.println("user is able to Ack Ticket");
-        }
-        catch (Exception e)
-        {
-            System.out.println("user is not able to click on ack button, because its grey out and not enabled");
-        }
 
+        Assert.assertFalse(problemRecordPage.getAckButtonStatus(), "user is able to Ack Ticket");
     }
 
     @Then("problem ticket status should be assigned")
@@ -198,15 +180,11 @@ public class OWF_ProblemRecordPageSteps {
         Assert.assertEquals(problemRecordPage.getStatusText(), "Assigned", "ticket status is not Assigned");
     }
 
+    // change to try catch if fails
     @When("user tries to change request type as Access Networks:RAN NSN 2G:3G:4G")
     public void userTriesToChangeRequestTypeAsAccessNetworksRANNSNGGG() {
 
-        try {
-          problemRecordPage.selectRequestTypeAs_AccessNetworks_RAN_NSN_2G_3G_4G();
-        }
-        catch(Exception e) {
-            System.out.println("user is not able to change request type");
-        }
+        Assert.assertTrue(problemRecordPage.getRequestTypeDropDownStatus(), "user is able to change request type");
 
     }
 
@@ -216,6 +194,7 @@ public class OWF_ProblemRecordPageSteps {
         System.out.println(problemRecordPage.getRequestTypeText());
 
     }
+
     @Then("user selects impact type as significant:large")
     public void userSelectsImpactTypeAsSignificantLarge() {
         problemRecordPage.selectSignificantLargeDdValue();
@@ -231,46 +210,56 @@ public class OWF_ProblemRecordPageSteps {
     public void userValidatesThatPriorityChangesToMajor() {
         System.out.println(problemRecordPage.getPriorityText());
         //Assert.assertEquals(problemRecordPage.getPriorityText(), "Major", "priority is not Major");
-        
+
     }
 
     @Then("user clicks on timeline tab")
     public void userClicksOnTimelineTab() {
         problemRecordPage.clickTimelineButton();
-        
+
     }
 
     @And("user selects Auto text:Tech bridge closed")
     public void userSelectsAutoTextTechBridgeClosed() {
-        
+        problemRecordPage.selectAutoText_TechBridgeClosed();
+
     }
 
     @Then("user selects Text template:analysis ongoing")
     public void userSelectsTextTemplateAnalysisOngoing() {
-        
+        problemRecordPage.selectTextTemplate_AnalysisOnGoing();
+
     }
 
     @And("user clicks on add button")
     public void userClicksOnAddButton() {
-        
+        problemRecordPage.clickAddButtonOnTemplate();
+
     }
 
     @Then("user selects Actions:Time tracking")
     public void userSelectsActionsTimeTracking() {
-        
+        problemRecordPage.selectActions_TimeTracking();
+
     }
 
     @And("user selects Activity:Working on ticket")
     public void userSelectsActivityWorkingOnTicket() {
-        
+        problemRecordPage.selectActivity_WorkingOnTicket();
+
     }
 
     @And("user enters {string} under the minutes field")
-    public void userEntersUnderTheMinutesField(String arg0) {
-        
+    public void userEntersUnderTheMinutesField(String minutes) {
+
     }
 
     @And("user clicks on Ok button")
     public void userClicksOnOkButton() {
+    }
+
+    @And("user switches to frame")
+    public void userSwitchesToFrame() {
+        problemRecordPage.switchToFrame(1);
     }
 }

@@ -20,16 +20,17 @@ Feature: User is able to update the timeline with entries
     And user selects urgency as High
     And user clicks on save button
     Then user validates that priority changes to major
-    And change should also be reflected in the timeline.
+    And change should also be reflected in the timeline as ""
     Then user enters description as "-more information"
-    And change should also be reflected in the timeline.
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation"
     Then user clicks on timeline tab
     And user selects Auto text:Tech bridge closed
-    And change should also be reflected in the timeline.
+    And change should also be reflected in the timeline as ""
     Then user selects Text template:analysis ongoing
     And user clicks on add button
-    And change should also be reflected in the timeline.
+    And change should also be reflected in the timeline as ""
     Then user selects Actions:Time tracking
+    And user switches to frame
     And user selects Activity:Working on ticket
     And user enters "20" under the minutes field
     And user clicks on Ok button

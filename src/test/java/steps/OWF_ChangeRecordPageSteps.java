@@ -8,10 +8,11 @@ import pageObjects.OWF_ChangeRecordPage;
 
 public class OWF_ChangeRecordPageSteps {
     OWF_ChangeRecordPage changeRecordPage = new OWF_ChangeRecordPage();
+
     @Then("change record page should be opened and Change form is displayed")
     public void changeRecordPageShouldBeOpenedAndChangeFormIsDisplayed() {
         //System.out.println(changeRecordPage.getChangeRecordPageTitle());
-       //Assert.assertEquals(changeRecordPage.getChangeRecordPageTitle(), "OS3 Change Record (New)");
+        //Assert.assertEquals(changeRecordPage.getChangeRecordPageTitle(), "OS3 Change Record (New)");
 
     }
 
@@ -36,6 +37,7 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.selectWithdrawnDdValue();
         //CommonUtils.switchWindow(problemRecordPage.getDriver(), "child");
     }
+
     @Then("problem ticket should be withdrawn")
     public void problemTicketShouldBeWithdrawn() {
         Assert.assertEquals(changeRecordPage.getStatusText(), "Withdrawn", "problem ticket status is not withdrawn");
@@ -48,6 +50,7 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.selectRequestType("Normal Change");
 
     }
+
     @And("User selects template as All:Mobile:RAN-Externals:RAN connectivity")
     public void userSelectsTemplateAsAllMobileRANExternalsRANConnectivity() {
         changeRecordPage.selectTemplateAsAll_Mobile_RANExternals_RANConnectivity();
@@ -55,13 +58,14 @@ public class OWF_ChangeRecordPageSteps {
     }
 
     @And("User enters as {string} in Change Builder field")
-    public void userEntersAsInChangeBuilderField(String arg0) {
-        changeRecordPage.enterChangeBuilderType(arg0);
+    public void userEntersAsInChangeBuilderField(String text) {
+        changeRecordPage.enterChangeBuilderType(text);
 
     }
+
     @Then("User enters start time as some minutes fast from current sweden time")
     public void userEntersStartTimeAsMinutesFastFromCurrentSwedenTime() {
-     changeRecordPage.setStartDate(5);
+        changeRecordPage.setStartDate(5);
 
     }
 
@@ -76,12 +80,14 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.enterImpactDurationMins("5");
 
     }
+
     @And("user clicks on save button")
     public void userClicksOnSaveButton() {
         changeRecordPage.clickSave();
         changeRecordPage.wait(2000);
 
     }
+
     @Then("new tabs should be displayed including Diagnosis tab")
     public void newTabsShouldBeDisplayedIncludingDiagnosisTab() {
 
@@ -94,7 +100,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user clicks on CI search button")
     public void userClicksOnCISearchButton() {
-    changeRecordPage.clickCiSearch();
+        changeRecordPage.clickCiSearch();
     }
 
 

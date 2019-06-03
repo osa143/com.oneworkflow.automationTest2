@@ -3,30 +3,26 @@ package steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
-import pageObjects.BasePage;
 import pageObjects.OWF_SIDConsolePage;
-import utils.CommonUtils;
-
-import java.util.List;
 
 public class OWF_SIDConsolePageSteps {
-OWF_SIDConsolePage sidConsolePage = new OWF_SIDConsolePage();
+    OWF_SIDConsolePage sidConsolePage = new OWF_SIDConsolePage();
 
 
     @Then("SID console page should be opened")
     public void sidConsolePageShouldBeOpened() {
-        String SIDConsolePageTitle= sidConsolePage.getDriver().getTitle();
+        String SIDConsolePageTitle = sidConsolePage.getDriver().getTitle();
         System.out.println(SIDConsolePageTitle);
     }
+
     @When("user selects Category as Access")
     public void userSelectsCategoryAsAccess() {
         sidConsolePage.clickCategoryDropDown();
-        sidConsolePage.selectDdValueAccess();;
+        sidConsolePage.selectDdValueAccess();
+        ;
     }
+
     @And("user selects Type as Radio Access Network")
     public void userSelectsTypeAsRadioAccessNetwork() {
         sidConsolePage.clickTypeDropDown();
@@ -53,8 +49,7 @@ OWF_SIDConsolePage sidConsolePage = new OWF_SIDConsolePage();
     }
 
     @Then("Site name should be displayed for all CI CTI search details")
-    public void siteNameShouldBeDisplayedForAllCICTISearchDetails()
-    {
+    public void siteNameShouldBeDisplayedForAllCICTISearchDetails() {
         boolean ciDetailsActual = sidConsolePage.validateSiteNameDetails();
         Assert.assertTrue(ciDetailsActual, "Site name was not available for all CIs.");
     }

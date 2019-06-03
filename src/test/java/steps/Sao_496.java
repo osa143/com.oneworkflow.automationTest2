@@ -2,7 +2,6 @@ package steps;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 
 public class Sao_496 {
 
@@ -71,12 +70,9 @@ public class Sao_496 {
     }
 
 
-
-
     @And("User validates inactivity of Send button and activity of ACK button")
     public void userValidatesInactivityOfSendButtonAndActivityOfACKButton() {
     }
-
 
 
 }

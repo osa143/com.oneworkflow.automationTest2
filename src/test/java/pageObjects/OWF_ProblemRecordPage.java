@@ -2,20 +2,19 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.CommonUtils;
 
 import java.util.List;
 
-public class OWF_ProblemRecordPage extends BaseRecordPage{
+public class OWF_ProblemRecordPage extends BaseRecordPage {
 
 
-    private static final String txtTICKET_ID= "arid_WIN_0_730000060";
+    private static final String txtTICKET_ID = "arid_WIN_0_730000060";
     private static final String txtSEARCH_TICKET_ID = "arid_WIN_0_777777600";
 
-    private static final String btnTIMELINE_XPATH= "//a[contains(text(),'Timeline')]";
+    private static final String btnTIMELINE_XPATH = "//a[contains(text(),'Timeline')]";
     private static final String fld_TIMELINE_DISPLAY_XPATH = "//div[@id='WIN_0_999000510']//div[@class='BaseTableInner']";
 
-    private static final String ddNO_ID ="arid_WIN_0_600001801";
+    private static final String ddNO_ID = "arid_WIN_0_600001801";
 
     private static final String txtTITLE_ID = "arid_WIN_0_777031000";
     private static final String txtDESCRIPTION_ID = "arid_WIN_0_777031007";
@@ -56,174 +55,197 @@ public class OWF_ProblemRecordPage extends BaseRecordPage{
     private static final String errorTABLE_XPATH = "//*[@id='pbartable']";
     private static final String btnYES_ON_FRAME_ID = "WIN_0_700027904";
     private static final String btnACK_ID = "WIN_0_777504152";
+    private static final String timeline_TABLE_ID = "T999000510";
 
-    private static final String chkbxSWEDEN= "WIN_0_rc0id600002001";
+    private static final String chkbxSWEDEN = "WIN_0_rc0id600002001";
 
-
-    public String getTimelineStatus(){
-        String TimelineStatus= driver.findElement(By.xpath(fld_TIMELINE_DISPLAY_XPATH)).getAttribute("value");
-        return TimelineStatus;
+    public String getTimelineStatus() {
+        String status = getTableCellData(By.id(timeline_TABLE_ID), "Description", 1);
+        System.out.println("Timeline status is: " + status );
+        return status;
     }
-    public void clickTimelineButton(){
+
+    public void clickTimelineButton() {
         driver.findElement(By.xpath(btnTIMELINE_XPATH)).click();
     }
 
-    public void enterTicket(String ticket){
+    public void enterTicket(String ticket) {
         driver.findElement(By.id(txtSEARCH_TICKET_ID)).sendKeys(ticket);
     }
 
-    public void clickYesOnFrame(){
+    public void clickYesOnFrame() {
         driver.findElement(By.id(btnYES_ON_FRAME_ID)).click();
     }
-    public void switchToFrame(int frame_index)
-    {
+
+    public void switchToFrame(int frame_index) {
         driver.switchTo().frame(frame_index);
     }
 
-    public void clickAddButton(){
+    public void clickAddButton() {
         driver.findElement(By.id(btnADD_ID)).click();
     }
-    public void clickInternalOpenButton(){
-       driver.findElement(By.id(btnINTERNAL_OPEN_ID)).click();
+
+    public void clickInternalOpenButton() {
+        driver.findElement(By.id(btnINTERNAL_OPEN_ID)).click();
     }
-    public void clickInternalDeleteButton(){
+
+    public void clickInternalDeleteButton() {
         driver.findElement(By.id(btnINTERNAL_DELETE_ID)).click();
     }
-    public void clickExternalOpenButton(){
+
+    public void clickExternalOpenButton() {
         driver.findElement(By.id(btnEXTERNAL_OPEN_ID)).click();
     }
-    public void clickExternalDeleteButton(){
+
+    public void clickExternalDeleteButton() {
         driver.findElement(By.id(btnEXTERNAL_DELETE_ID)).click();
     }
-    public void clickSaveButton(){
+
+    public void clickSaveButton() {
         driver.findElement(By.id(btnSAVE_ID)).click();
     }
-    public void clickAckButton(){driver.findElement (By.id(btnACK_ID)).click();}
 
-    public void clickSearchButton(){
+    public void clickAckButton() {
+        driver.findElement(By.id(btnACK_ID)).click();
+    }
+
+    public void clickSearchButton() {
         driver.findElement(By.id(btnSEARCH_ID)).click();
     }
 
-    public String getProblemTicket(){
-        String ticket = driver.findElement(By.id(txtTICKET_ID)).getAttribute("value");
-
-      return ticket;
+    public String getProblemTicket() {
+        return getTextById(txtTICKET_ID);
     }
-        public String getRequestTypeText(){
-        String RequestTypeText = driver.findElement(By.id(ddREQUEST_TYPE_ID)).getAttribute("value");
-        return RequestTypeText;
-        }
+
+    public String getRequestTypeText() {
+        return getTextById(ddREQUEST_TYPE_ID);
+    }
+
     public void enterDescription(String description) {
         driver.findElement(By.id(txtDESCRIPTION_ID)).sendKeys(description);
     }
 
-        public String getDescriptionText(){
-            String DescriptionText= driver.findElement(By.id(txtDESCRIPTION_ID)).getAttribute("value");
-            return DescriptionText;
-        }
-        public String getPriorityText(){
-        String PriorityText = driver.findElement(By.id(ddPRIORITY_ID)).getAttribute("value");
-        return PriorityText;
-        }
+    public String getDescriptionText() {
+        return getTextById(txtDESCRIPTION_ID);
+    }
 
-    public boolean getDescriptionTextBoxStatus()
-    {
+    public String getPriorityText() {
+        return getTextById(ddPRIORITY_ID);
+    }
+
+    public boolean getDescriptionTextBoxStatus() {
         boolean status = checkIfControlIsReadonly(txtDESCRIPTION_ID);
-        System.out.println("Description TextBox read only status is: " + status);
         return status;
     }
 
-    public void selectWithdrawnReason_FalseAlarmDropDown(){
-        selectDropDown(ddWITHDRAWN_REASON, "False Alarm", true);
+    public boolean getRequestTypeDropDownStatus() {
+        boolean status = checkIfControlIsReadonly(ddREQUEST_TYPE_ID);
+        System.out.println("Request type dropdown is read only: " + status);
+        return status;
+    }
+
+    public boolean getAckButtonStatus()
+    {
+        return driver.findElement(By.id(btnACK_ID)).isEnabled();
+    }
+
+    public void selectWithdrawnReason_FalseAlarmDropDown() {
+        selectDropDownNameAndValue(ddWITHDRAWN_REASON, "False Alarm", true);
     }
 
 
-    public void enterTitle(String Title){
+    public void enterTitle(String Title) {
         driver.findElement(By.id(txtTITLE_ID)).sendKeys(Title);
     }
 
 
-
-    public void clickNoDropdown(){
+    public void clickNoDropdown() {
         driver.findElement(By.id(ddNO_ID)).click();
     }
 
-    public void clickImpactDropDown(){
+    public void clickImpactDropDown() {
         selectDropDownMenu(ddIMPACT);
     }
-    public void clickUrgencyDropDown(){
+
+    public void clickUrgencyDropDown() {
         selectDropDownMenu(ddURGENCY);
     }
 
-    public void selectExtensiveWidespreadDdValue(){
-       selectDropDownValue(ddValueEXTENSIVE_WIDESPREAD);
-   }
-    public void selectSignificantLargeDdValue(){
-        selectDropDownValue(ddValueSIGNIFICANT_LARGE);
-    }
-    public void selectModerateLimitedDdValue(){
-        selectDropDownValue(ddValueMODERATE_LIMITED);
-    }
-    public void select_Impact_ClearDdValue(){
-        selectDropDownValue(ddValueCLEAR);
-    }
-    public void selectCriticalDdValue(){
-        selectDropDownValue(ddValueCRITICAL);
-    }
-    public void selectHighDdValue(){
-        selectDropDownValue(ddValueHIGH);
+    public void selectExtensiveWidespreadDdValue() {
+        selectDropDownValue(ddValueEXTENSIVE_WIDESPREAD);
     }
 
-    public void selectMediumDdValue(){
+    public void selectSignificantLargeDdValue() {
+        selectDropDownNameAndValue(ddIMPACT, ddValueSIGNIFICANT_LARGE, false);
+    }
+
+    public void selectModerateLimitedDdValue() {
+        selectDropDownValue(ddValueMODERATE_LIMITED);
+    }
+
+    public void select_Impact_ClearDdValue() {
+        selectDropDownValue(ddValueCLEAR);
+    }
+
+    public void selectCriticalDdValue() {
+        selectDropDownValue(ddValueCRITICAL);
+    }
+
+    public void selectHighDdValue() {
+        selectDropDownNameAndValue(ddURGENCY, ddValueHIGH, false);
+    }
+
+    public void selectMediumDdValue() {
         selectDropDownValue(ddValueMEDIUM);
     }
 
-    public void selectLowDdValue(){
+    public void selectLowDdValue() {
         selectDropDownValue(ddValueLOW);
     }
 
-    public void selectPriority_ClearDdValue(){
+    public void selectPriority_ClearDdValue() {
         selectDropDownValue(dd_PRIORITY_ValueCLEAR);
     }
-    public void selectDuplicateEntriesDdValue(){
+
+    public void selectDuplicateEntriesDdValue() {
         selectDropDownValue(ddValueDUPLICATE_ENTRIES);
     }
-    public void selectFalseAlarmDdValue(){
+
+    public void selectFalseAlarmDdValue() {
         selectDropDownValue(ddValueFALSE_ALARM);
     }
 
-    public void selectInsuficientInformationDdValue(){
+    public void selectInsuficientInformationDdValue() {
         selectDropDownValue(ddValueINSUFICIENT_INFORMATION);
     }
 
-    public void selectNot_aRootCauseInvestigationDdValue(){
+    public void selectNot_aRootCauseInvestigationDdValue() {
         selectDropDownValue(ddValueNOT_A_ROOTCAUSE_INVESTIGATION);
     }
 
-    public void selectOtherProcessSlovingProblemDdValue(){
+    public void selectOtherProcessSlovingProblemDdValue() {
         selectDropDownValue(ddValueOTHER_PROCESS_SOLVING_PROBLEM);
     }
 
-    public void selectTestTicketDdValue(){
+    public void selectTestTicketDdValue() {
         selectDropDownValue(ddValueTEST_TICKET);
     }
 
-    public void selectTrainingDdValue(){
+    public void selectTrainingDdValue() {
         selectDropDownValue(ddValueTRAINING);
     }
-    public void selectWithdrawnReason_ClearDdValue(){
+
+    public void selectWithdrawnReason_ClearDdValue() {
         selectDropDownValue(dd_WITHDRAWN_REASON_ValueCLEAR);
     }
 
 
-
-    public void clickSwedenCheckBox(){
+    public void clickSwedenCheckBox() {
         driver.findElement(By.id(chkbxSWEDEN)).click();
     }
 
 
-    public boolean validateErrorMessage(String message)
-    {
+    public boolean validateErrorMessage(String message) {
         List<WebElement> errorElements = driver.findElement(By.xpath(errorTABLE_XPATH)).findElements(By.tagName("tr"));
         if (errorElements.size() > 0) {
 
@@ -235,15 +257,15 @@ public class OWF_ProblemRecordPage extends BaseRecordPage{
         return false;
     }
 
-    public boolean validateMultipleErrorMessages()
-    {
+    public boolean validateMultipleErrorMessages(int errorMessagesCount) {
         List<WebElement> errorElements = driver.findElement(By.xpath(errorTABLE_XPATH)).findElements(By.tagName("tr"));
-        if (errorElements.size() > 5) {
-            return  true;
+        if (errorElements.size() > errorMessagesCount) {
+            return true;
         }
-        return  false;
+        return false;
     }
-    public void acceptAlert(){
+
+    public void acceptAlert() {
         driver.switchTo().alert().accept();
     }
 

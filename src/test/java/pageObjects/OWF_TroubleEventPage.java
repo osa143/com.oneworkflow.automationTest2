@@ -1,4 +1,5 @@
 package pageObjects;
+
 import org.openqa.selenium.By;
 
 public class OWF_TroubleEventPage extends BasePage {
@@ -33,13 +34,15 @@ public class OWF_TroubleEventPage extends BasePage {
     private static final String ddValueWORKFORCE_ESCALATION_SE = "Workforce Escalation-SE";
     private static final String ddValueCLEAR_TEMPLATE = "(clear)";
 
-    public void selectSiteAccessRegistrationDdValue(){
+    public void selectSiteAccessRegistrationDdValue() {
         selectDropDownValue(ddValueSITE_ACCESS_REGISTRATION);
     }
-    public void selectWorkforceEscalationSeDdValue(){
+
+    public void selectWorkforceEscalationSeDdValue() {
         selectDropDownValue(ddValueWORKFORCE_ESCALATION_SE);
     }
-    public void selectClearTemplateDdvalue(){
+
+    public void selectClearTemplateDdvalue() {
         selectDropDownValue(ddValueCLEAR_TEMPLATE);
     }
 
@@ -52,28 +55,35 @@ public class OWF_TroubleEventPage extends BasePage {
     private static final String ddValueTHIRD_PARTY = "Third Party";
     private static final String ddValueCLEAR_REQUEST_TYPE = "(clear)";
 
-    public void selectCustomerDdValue(){
+    public void selectCustomerDdValue() {
         selectDropDownValue(ddValueCUSTOMER);
     }
-    public void selectCustomerReclamationDdValue(){
+
+    public void selectCustomerReclamationDdValue() {
         selectDropDownValue(ddValueCUSTOMER_RECLAMATION);
     }
-    public void selectEventDdValue(){
+
+    public void selectEventDdValue() {
         selectDropDownValue(ddValueEVENT);
     }
-    public void selectInternalUserDdValue(){
+
+    public void selectInternalUserDdValue() {
         selectDropDownValue(ddValueINTERNAL_USER);
     }
-    public void selectPreventiveMaintenanceDdValue(){
+
+    public void selectPreventiveMaintenanceDdValue() {
         selectDropDownValue(ddValuePREVENTIVE_MAINTENANCE);
     }
-    public void selectStakeHolderDdValue(){
+
+    public void selectStakeHolderDdValue() {
         selectDropDownValue(ddValueSTAKEHOLDER);
     }
-    public void selectThirdPartyDdValue(){
+
+    public void selectThirdPartyDdValue() {
         selectDropDownValue(ddValueTHIRD_PARTY);
     }
-    public void selectClearRequestTypeDdValue(){
+
+    public void selectClearRequestTypeDdValue() {
         selectDropDownValue(ddValueCLEAR_REQUEST_TYPE);
     }
 
@@ -88,34 +98,43 @@ public class OWF_TroubleEventPage extends BasePage {
     private static final String ddValueVOICE_FAULT = "Voice Fault";
     private static final String ddValueCLEAR_FAULT_TYPE = "(clear)";
 
-    public void selectApplicationFaultDdValue(){
+    public void selectApplicationFaultDdValue() {
         selectDropDownValue(ddValueAPPLICATION_FAULT);
     }
-    public void selectDataFaultDdValue(){
+
+    public void selectDataFaultDdValue() {
         selectDropDownValue(ddValueDATA_FAULT);
     }
-    public void selectNetworkFaultDdValue(){
+
+    public void selectNetworkFaultDdValue() {
         selectDropDownValue(ddValueNETWORK_FAULT);
     }
-    public void selectRoamingDataFaultDdValue(){
+
+    public void selectRoamingDataFaultDdValue() {
         selectDropDownValue(ddValueROAMING_DATA_FAULT);
     }
-    public void selectRoamingVoiceFaultDdValue(){
+
+    public void selectRoamingVoiceFaultDdValue() {
         selectDropDownValue(ddValueROAMING_VOICE_FAULT);
     }
-    public void selectSiteFaultDdValue(){
+
+    public void selectSiteFaultDdValue() {
         selectDropDownValue(ddValueSITE_FAULT);
     }
-    public void selectTransmissionFaultDdValue(){
+
+    public void selectTransmissionFaultDdValue() {
         selectDropDownValue(ddValueTRANSMISSION_FAULT);
     }
-    public void selectTvFaultDdValue(){
+
+    public void selectTvFaultDdValue() {
         selectDropDownValue(ddValueTV_FAULT);
     }
-    public void selectVoiceFaultDdValue(){
+
+    public void selectVoiceFaultDdValue() {
         selectDropDownValue(ddValueVOICE_FAULT);
     }
-    public void selectClearFaultType(){
+
+    public void selectClearFaultType() {
         selectDropDownValue(ddValueCLEAR_FAULT_TYPE);
     }
 
@@ -125,19 +144,23 @@ public class OWF_TroubleEventPage extends BasePage {
     private static final String ddValueLOW = "Low";
     private static final String ddValueCLEAR_IMPORTANCE = "(clear)";
 
-    public void selectCriticalImportanceDdValue(){
+    public void selectCriticalImportanceDdValue() {
         selectDropDownValue(ddValueCRITICAL_IMPORTANCE);
     }
-    public void selectHighDdValue(){
+
+    public void selectHighDdValue() {
         selectDropDownValue(ddValueHIGH);
     }
-    public void selectAverageDdValue(){
+
+    public void selectAverageDdValue() {
         selectDropDownValue(ddValueAVERAGE);
     }
-    public void selectLowDdValue(){
+
+    public void selectLowDdValue() {
         selectDropDownValue(ddValueLOW);
     }
-    public void selectClearImportanceDdValue(){
+
+    public void selectClearImportanceDdValue() {
         selectDropDownValue(ddValueCLEAR_IMPORTANCE);
     }
 
@@ -147,60 +170,74 @@ public class OWF_TroubleEventPage extends BasePage {
     private static final String ddValueMAJOR = "Major";
     private static final String ddValueCRITICAL_IMPACT = "Critical";
 
-    private static final String ddValueCLEAR_ASIGNMENT_PROFILE= "(clear)";
+    private static final String ddValueCLEAR_ASIGNMENT_PROFILE = "(clear)";
 
-    public void selectNoDdValue(){
+    public void selectNoDdValue() {
         selectDropDownValue(ddValueNO);
     }
-    public void selectMinorDdValue(){
+
+    public void selectMinorDdValue() {
         selectDropDownValue(ddValueMINOR);
     }
-    public void selectMediumDdValue(){
+
+    public void selectMediumDdValue() {
         selectDropDownValue(ddValueMEDIUM);
     }
-    public void selectMajorDdValue(){
+
+    public void selectMajorDdValue() {
         selectDropDownValue(ddValueMAJOR);
     }
-    public void selectCriticalImpactDdValue(){
+
+    public void selectCriticalImpactDdValue() {
         selectDropDownValue(ddValueCRITICAL_IMPACT);
     }
-    public void selectClearAsignmentProfileDdValue(){
+
+    public void selectClearAsignmentProfileDdValue() {
         selectDropDownValue(ddValueCLEAR_ASIGNMENT_PROFILE);
     }
+
     private static final String chkbxDO_NOT_AUTOCLOSE = "WIN_0_rc0id600002014";
 
     private static final String btnSAVE = "WIN_0_777505104";
 
 
-    public void clickDoNotAutoCloseCheckBox(){
+    public void clickDoNotAutoCloseCheckBox() {
         driver.findElement(By.id(chkbxDO_NOT_AUTOCLOSE)).click();
     }
-    public void clickSaveButton(){
+
+    public void clickSaveButton() {
         driver.findElement(By.id(btnSAVE)).click();
     }
 
-    public void clickTemplateDropDown(){
+    public void clickTemplateDropDown() {
         selectDropDownMenu(ddTEMPLATE);
     }
-    public void clickTitleDropDown(){
+
+    public void clickTitleDropDown() {
         selectDropDownMenu(ddTITLE);
     }
-    public void clickRequestTypeDropDown(){
+
+    public void clickRequestTypeDropDown() {
         selectDropDownMenu(ddREQUEST_TYPEE);
     }
-    public void clickFaultTypeDropDown(){
+
+    public void clickFaultTypeDropDown() {
         selectDropDownMenu(ddFAULT_TYPE);
     }
-    public void clickImportanceDropdown(){
+
+    public void clickImportanceDropdown() {
         driver.findElement(By.xpath(ddIMPORTANCE_XPATH)).click();
     }
-    public void clickImpactDropDown(){
+
+    public void clickImpactDropDown() {
         selectDropDownMenu(ddIMPACT);
     }
-    public void clickAsignmentProfileDropDown(){
+
+    public void clickAsignmentProfileDropDown() {
         selectDropDownMenu(ddASIGNMENT_PROFILE);
     }
-    public void clickAsigneeDropDown(){
+
+    public void clickAsigneeDropDown() {
         selectDropDownMenu(ddASIGNEE);
     }
 
@@ -208,46 +245,60 @@ public class OWF_TroubleEventPage extends BasePage {
     public void enterCustRemainingSla(String cust_remaining_sla) {
         driver.findElement(By.id(txtCUST_REMAINING_SLA_ID)).sendKeys(cust_remaining_sla);
     }
+
     public void enterOlaTargetTime(String ola_target_time) {
         driver.findElement(By.id(txtOLA_TARGET_TIME_ID)).sendKeys(ola_target_time);
     }
-    public void enterDescription(String description){
+
+    public void enterDescription(String description) {
         driver.findElement(By.id(txtDESCRIPTION_ID)).sendKeys(description);
     }
+
     public void enterWoStatus(String wo_status) {
         driver.findElement(By.id(txtWO_STATUS_ID)).sendKeys(wo_status);
     }
+
     public void enterRejectionReason(String rejection_reason) {
         driver.findElement(By.id(txtREJECTION_REASON_ID)).sendKeys(rejection_reason);
     }
+
     public void enterReAsignedReason(String re_asigned_reason) {
         driver.findElement(By.id(txtRE_ASIGNED_REASON_ID)).sendKeys(re_asigned_reason);
     }
+
     public void enterCustomerEscalatedIncidents(String customer_escalated_incidents) {
         driver.findElement(By.id(txtCUSTOMER_ESCALATED_INCIDENTS_ID)).sendKeys(customer_escalated_incidents);
     }
+
     public void enterLastAckBy(String last_ack_by) {
         driver.findElement(By.id(txtLAST_ACK_BY_ID)).sendKeys(last_ack_by);
     }
+
     public void enterResponseReason(String response_reason) {
         driver.findElement(By.id(txtRESPONSE_REASON_ID)).sendKeys(response_reason);
     }
+
     public void enterReAsignmentCount(String re_asignment_count) {
         driver.findElement(By.id(txtRE_ASIGNMENT_COUNT_ID)).sendKeys(re_asignment_count);
     }
+
     public void enterServiceDeskEscalated(String service_desk_escalated) {
         driver.findElement(By.id(txtSERVICE_DESK_ESCALATED_INCIDENTS_ID)).sendKeys(service_desk_escalated);
     }
-    public void enterEventStartTime(String event_start_time){
+
+    public void enterEventStartTime(String event_start_time) {
         driver.findElement(By.id(txtEVENT_START_TIME)).sendKeys(event_start_time);
     }
-    public void enterEstimatedReady(String estimated_ready){
+
+    public void enterEstimatedReady(String estimated_ready) {
         driver.findElement(By.id(txtESTIMATED_READY)).sendKeys(estimated_ready);
     }
-    public void enterAutoCloseDate(String auto_close_date){
+
+    public void enterAutoCloseDate(String auto_close_date) {
         driver.findElement(By.id(txtAUTO_CLOSE_DATE)).sendKeys(auto_close_date);
     }
-    public void enterResponseTime(String response_time){
+
+    public void enterResponseTime(String response_time) {
         driver.findElement(By.id(txtRESPONSE_TIME)).sendKeys(response_time);
     }
 }

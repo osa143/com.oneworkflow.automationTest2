@@ -1,5 +1,5 @@
 package pageObjects;
 
-public class OWF_WorkOrderPage extends BasePage{
+public class OWF_WorkOrderPage extends BasePage {
 
 }

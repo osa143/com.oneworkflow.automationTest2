@@ -28,7 +28,7 @@ Feature:Initiator change description
     And user clicks Search on ticket search
     When user clicks on Ack button
     Then problem ticket status should be under investigation
-    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation. "
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation"
     When user tries to change the status to withdrawn
     Then problem ticket status should be under investigation
     Then user logsOut

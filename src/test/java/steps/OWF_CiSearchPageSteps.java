@@ -35,7 +35,7 @@ public class OWF_CiSearchPageSteps {
 
     @And("user selects a CI from list")
     public void userSelectsACIFromList() {
-    ciSearchPage.clickToSelectCi();
+        ciSearchPage.clickToSelectCi();
     }
 
     @And("user Choose impact level as degradation of service")
@@ -46,7 +46,7 @@ public class OWF_CiSearchPageSteps {
 
     @And("user clicks on relate CI")
     public void userClicksOnRelateCI() {
-      ciSearchPage.clickRelateCiButton();
+        ciSearchPage.clickRelateCiButton();
     }
 
     @And("user closes warning message and clicks on close button")

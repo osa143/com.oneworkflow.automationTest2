@@ -7,7 +7,7 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String btnRELATE_CI = "WIN_0_700009085";
     private static final String btnClOSE = "WIN_0_777000001";
     private static final String btnCLEAR = "WIN_0_700009116";
-    private static final String btnSEARCH = "WIN_0_700009021";
+    private static final String btnCI_SEARCH = "WIN_0_700009021";
 
     private static final String ddLEVEL = "Level";
     private static final String ddSEARCH_FOR = "arid_WIN_0_700009236";
@@ -40,8 +40,8 @@ public class OWF_CiSearchPage extends BasePage {
         selectDropDownValue(ddValueALL_CIS);
     }
 
-    public void clickSearchButton() {
-        driver.findElement(By.id(btnSEARCH)).click();
+    public void clickCiSearchButton() {
+        driver.findElement(By.id(btnCI_SEARCH)).click();
     }
 
     public void clickCloseButton() {

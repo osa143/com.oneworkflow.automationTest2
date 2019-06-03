@@ -163,7 +163,7 @@ public class OWF_ProblemRecordPageSteps {
     @And("change should also be reflected in the timeline as {string}")
     public void changeShouldAlsoBeReflectedInTheTimelineAs(String message) {
          problemRecordPage.clickTimelineButton();
-         boolean containsMessage = problemRecordPage.getTimelineStatus().contains(message);
+        boolean containsMessage = problemRecordPage.getTimelineStatus().contains(message);
         Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
     }
 
@@ -251,15 +251,81 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user enters {string} under the minutes field")
     public void userEntersUnderTheMinutesField(String minutes) {
-
+    problemRecordPage.enterMins(minutes);
     }
 
     @And("user clicks on Ok button")
     public void userClicksOnOkButton() {
+        problemRecordPage.clickOkButton();
     }
 
     @And("user switches to frame")
     public void userSwitchesToFrame() {
-        problemRecordPage.switchToFrame(1);
+        problemRecordPage.switchToFrame(2);
+    }
+
+    @Then("User changes status to investigation complete")
+    public void userChangesStatusToInvestigationComplete() {
+        problemRecordPage.clickStatusDropDown();
+        problemRecordPage.selectInvestigationCompleteDdValue();
+    }
+
+    @And("user selects root cause code as Technical:HW error under route cause")
+    public void userSelectsRootCauseCodeAsTechnicalHWErrorUnderRouteCause() {
+     problemRecordPage.selectRootCauseCodeAs_Technical_HwError();
+    }
+
+    @And("user enters route cause details as {string}")
+    public void userEntersRouteCauseDetailsAs(String rootCauseDetails) {
+    problemRecordPage.enterRootCauseDetails(rootCauseDetails);
+    }
+
+    @And("user enters RC found date as current date")
+    public void userEntersRCFoundDateAsCurrentDate() {
+    problemRecordPage.enterRcFoundDate();
+    }
+
+    @When("user changes status to closed")
+    public void userChangesStatusToClosed() {
+        problemRecordPage.clickStatusDropDown();
+        problemRecordPage.selectClosedDdValue();
+    }
+
+    @Then("user enters actual finish as current date")
+    public void userEntersActualFinishAsCurrentDate() {
+        problemRecordPage.enterActualFinishDate();
+
+    }
+
+    @And("user enters decision go no go as current date")
+    public void userEntersDecisionGoNoGoAsCurrentDate() {
+      problemRecordPage.enterDecisionGoNoGoDate();
+    }
+
+    @And("user selects solved under closure code")
+    public void userSelectsSolvedUnderClosureCode() {
+        problemRecordPage.selectCloserCodeAsSolved();
+    }
+
+    @And("user enters solution as {string}")
+    public void userEntersSolutionAs(String Text) {
+    problemRecordPage.enterSolution(Text);
+    }
+
+    @And("user enters solution found date as current date")
+    public void userEntersSolutionFoundDateAsCurrentDate() {
+
+    }
+
+    @And("ticket status should be closed")
+    public void ticketStatusShouldBeClosed() {
+        String closed= problemRecordPage.getStatusText();
+        Assert.assertEquals(closed, "closed", "status is not closed");
+
+    }
+
+    @When("user clicks on clone button")
+    public void userClicksOnCloneButton() {
+        problemRecordPage.clickCloneButton();
     }
 }

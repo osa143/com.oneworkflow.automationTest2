@@ -1,6 +1,8 @@
 @Close_Ticket
 Feature: User is able to close and clone a problem ticket
+
   Scenario: User logs into One workflow, creates a problem ticket, closes it then clones it
+
     Given User is on the OneWorkflow login page
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -17,11 +19,11 @@ Feature: User is able to close and clone a problem ticket
     Then user clicks on Ack button
     And problem ticket status should be under investigation
     Then User changes status to investigation complete
-    And user selects Technical:HW error under route cause
+    And user selects root cause code as Technical:HW error under route cause
     And user enters route cause details as "Bad Management"
     And user enters RC found date as current date
     And user clicks on save button
-    And change should also be reflected in the timeline.
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Under Investigation to Investigation Complete. "
     When user changes status to closed
     And user clicks on save button
     Then an error message should appear: "Required field (without a default) not specified :Actual Finish (ARERR 9424)"
@@ -36,7 +38,7 @@ Feature: User is able to close and clone a problem ticket
     And user enters solution found date as current date
     Then user clicks on save button
     And ticket status should be closed
-    And change should also be reflected in the timeline.
+    And change should also be reflected in the timeline as "Status has changed from Investigation Complete to Closed."
     When user clicks on clone button
     Then problem record form should appear in new tab
     And problem ticket status should be under investigation

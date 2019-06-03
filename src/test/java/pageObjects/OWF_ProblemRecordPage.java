@@ -79,6 +79,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
     public void switchToFrame(int frame_index) {
         driver.switchTo().frame(frame_index);
+
     }
 
     public void clickAddButton() {

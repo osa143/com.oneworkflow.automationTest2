@@ -27,9 +27,9 @@ public class OWF_CiSearchPageSteps {
         ciSearchPage.enterNamePlus(arg0);
     }
 
-    @And("user clicks on search button")
-    public void userClicksOnSearchButton() {
-        ciSearchPage.clickSearchButton();
+    @And("user clicks on search button on CI search window")
+    public void userClicksOnSearchButtonOnCiSearchWindow() {
+        ciSearchPage.clickCiSearchButton();
 
     }
 

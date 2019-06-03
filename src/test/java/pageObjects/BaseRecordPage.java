@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import utils.CommonUtils;
 
 public abstract class BaseRecordPage extends BasePage {
@@ -9,8 +10,10 @@ public abstract class BaseRecordPage extends BasePage {
     public static final String ddSTATUS = "Status*";
     public static final String ddValuePENDING = "Pending";
     public static final String ddValueUNDER_INVESTIGATION = "Under Investigation";
+    public static final String ddValueINVESTIGATION_COMPLETE = "Investigation Complete";
     public static final String ddValueWITHDRWAN = "Withdrawn";
     public static final String ddValueCLEAR = "(clear)";
+    public static final String ddValueCLOSED = "Closed";
 
     public static final String txtCHANGE_BUILDER_FIELD = "arid_WIN_0_600001054";
     public static final String txtSTART_DATE = "arid_WIN_0_777021160";
@@ -34,13 +37,19 @@ public abstract class BaseRecordPage extends BasePage {
     public static final String ddCHANGE_RECORD = "WIN_0_755000000";
     public static final String ddSERVICE_PROVIDER = "Service Provider";
     public static final String ddSTATuS_ID = "arid_WIN_0_777031003";
-
+    public static final String ddROOT_CAUSE_CODE = "Root Cause Code";
+    public static final String ddROOT_CAUSE_DETAILS_ID = "arid_WIN_0_705002081";
+    public static final String ddCLOSER_CODE = "Closure Code";
+    public static final String ddValueSOLVED = "Solved";
 
     public static final String txtEXPECTED_ALARMS = "arid_WIN_0_705001002";
     public static final String txtIMPACT_DURATION_DAYS = "arid_WIN_0_990001006";
     public static final String txtIMPACT_DURATION_HRS = "arid_WIN_0_900000018";
     public static final String txtIMPACT_DURATION_MINS = "arid_WIN_0_900000019";
     public static final String txtIMPACT_DURATION_SECS = "arid_WIN_0_990001007";
+    public static final String txtRC_FOUND_DATE_ID = "arid_WIN_0_600001041";
+    public static final String txtACTUAL_FINISH_ID = "arid_WIN_0_777504605";
+    public static final String txtDECISION_GO_NO_GO_ID = "arid_WIN_0_777504604";
 
 
     public static final String chkbxFINLAND = "WIN_0_rc0id600002002";
@@ -52,16 +61,25 @@ public abstract class BaseRecordPage extends BasePage {
     public static final String chkbxUNKOWN = "WIN_0_rc0id600002010";
     public static final String chkbxINTERNAL = "WIN_0_rc0id600002009";
 
+    public static final String txtSOLUTION_ID = "arid_WIN_0_777031390";
+    public static final String txtSOLUTION_FOUND_DATE = "arid_WIN_0_600001042";
+    public static final String btnCLONE_ID = "WIN_0_600002901";
 
-    public static String ddAUTO_TEXT = "Auto Text";
-    public static String ddValueTECH_BRIDGE_CLOSED = "Tech Bridge Closed";
-    public static String ddTEXT_TEMPLATE = "Text Template";
-    public static String ddValueANALYSIS_ONGOING  = "Analysis ongoing";
-    public static String ddACTIONS = "Actions";
-    public static String ddValueTIME_TRACKING   = "Time Tracking";
 
-    public static String ddACTIVITY_IN_FRAME = "Activity";
-    public static String ddValueWORKING_ON_TICKET = "Working On Ticket";
+    public static final String ddAUTO_TEXT = "Auto Text";
+    public static final String ddValueTECH_BRIDGE_CLOSED = "Tech Bridge Closed";
+    public static final String ddTEXT_TEMPLATE = "Text Template";
+    public static final String ddValueANALYSIS_ONGOING  = "Analysis ongoing";
+    public static final String ddACTIONS = "Actions";
+    public static final String ddValueTIME_TRACKING   = "Time Tracking";
+
+    public static final String ddACTIVITY_IN_FRAME = "Activity";
+    public static final String ddValueWORKING_ON_TICKET = "Working On Ticket";
+    public static final String txtMINS_ID = "arid_WIN_0_900006507";
+    public static final String btnOK_ID = "WIN_0_777777851";
+
+
+
 
     public void selectAutoText_TechBridgeClosed(){
     selectDropDownNameAndValue(ddAUTO_TEXT, ddValueTECH_BRIDGE_CLOSED, false);
@@ -77,7 +95,27 @@ public abstract class BaseRecordPage extends BasePage {
     public void selectActivity_WorkingOnTicket(){
         selectDropDownNameAndValue(ddACTIVITY_IN_FRAME, ddValueWORKING_ON_TICKET, false);
     }
-
+    public void enterMins(String mins){
+        driver.findElement(By.id(txtMINS_ID)).sendKeys(mins);
+    }
+    public void clickOkButton(){
+        driver.findElement(By.id(btnOK_ID)).click();
+    }
+    public void selectInvestigationCompleteDdValue(){
+        selectDropDownValue(ddValueINVESTIGATION_COMPLETE);
+    }
+    public void selectRootCauseCodeAs_Technical_HwError() {
+        selectDropDownNameAndValue(ddROOT_CAUSE_CODE, "Technical:HW error", false);
+    }
+    public void enterRootCauseDetails(String rootCauseDetails){
+        driver.findElement(By.id(ddROOT_CAUSE_DETAILS_ID)).sendKeys(rootCauseDetails);
+    }
+    public void selectCloserCodeAsSolved(){
+        selectDropDownNameAndValue(ddCLOSER_CODE, ddValueSOLVED, true);
+    }
+    public void selectClosedDdValue(){
+        selectDropDownValue(ddValueCLOSED);
+    }
 
     public void clickAcknowledgeButton() {
         driver.findElement(By.id(btnACKNOWLEDGE)).click();
@@ -249,9 +287,26 @@ public abstract class BaseRecordPage extends BasePage {
         driver.findElement(By.id(txtEND_DATE)).sendKeys(dateTime);
 
     }
-
+   public void enterRcFoundDate(){
+       driver.findElement(By.id(txtRC_FOUND_DATE_ID)).sendKeys(Keys.ENTER);
+   }
+   public void enterActualFinishDate(){
+        driver.findElement(By.id(txtACTUAL_FINISH_ID)).sendKeys(Keys.ENTER);
+   }
+   public void enterDecisionGoNoGoDate(){
+        driver.findElement(By.id(txtDECISION_GO_NO_GO_ID)).sendKeys(Keys.ENTER);
+   }
     public void selectRequestTypeAsAccessNetworksRANOptimization() {
         selectDropDownNameAndValue(ddREQUEST_TYPE, "Access Networks:RAN Optimization", false);
+    }
+    public void enterSolution(String Text){
+        driver.findElement(By.id(txtSOLUTION_ID)).sendKeys(Text);
+    }
+    public void enterSolutionFoundDate(){
+        driver.findElement(By.id(txtSOLUTION_FOUND_DATE)).sendKeys(Keys.ENTER);
+    }
+    public void clickCloneButton(){
+        driver.findElement(By.id(btnCLONE_ID)).click();
     }
 
 }

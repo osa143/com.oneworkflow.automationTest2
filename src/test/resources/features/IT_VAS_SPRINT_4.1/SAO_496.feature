@@ -21,7 +21,7 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
     Then CI search tab should be opened
     When user clicks on clear button and selects search for all cis
     And  user enters "One WorkFlow system test" in name field
-    And  user clicks on search button
+    And  user clicks on search button on CI search window
     And user selects a CI from list
     And user Choose impact level as degradation of service
     And  user clicks on relate CI

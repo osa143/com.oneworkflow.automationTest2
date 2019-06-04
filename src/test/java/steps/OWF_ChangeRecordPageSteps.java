@@ -45,7 +45,7 @@ public class OWF_ChangeRecordPageSteps {
     }
 
 
-    @When("User selects request type as normal change")
+    @When("user selects request type as normal change")
     public void userSelectsRequestTypeAsNormalChange() {
         changeRecordPage.selectRequestType("Normal Change");
 
@@ -73,11 +73,11 @@ public class OWF_ChangeRecordPageSteps {
     public void userEntersRequestEndTimeAsMinutesFastFromRequestStartTime() {
 
         changeRecordPage.setEndDate(11);
-    }
 
-    @And("User enters impact duration as some minutes")
-    public void userEntersImpactDurationAsMinutes() {
-        changeRecordPage.enterImpactDurationMins("5");
+    }
+    @And("user enters impact duration as {string} minutes")
+    public void userEntersImpactDurationAsMinutes(String impactDuration) {
+        changeRecordPage.enterImpactDurationMins(impactDuration);
 
     }
 
@@ -126,4 +126,73 @@ public class OWF_ChangeRecordPageSteps {
     public void formShouldBeSaved() {
     }
 
+    @Then("Change record form should open in a new tab")
+    public void changeRecordFormShouldOpenInANewTab() {
+        //Title Assertion
+    }
+
+    @And("user selects template as All:Mobile:Billing:No-bill-Customer refund\\(SE)")
+    public void userSelectsTemplateAsAllMobileBillingNoBillCustomerRefundSE() {
+        changeRecordPage.selectTemplateAs_All_Mobile_Billing_NoBillCustomerRefund_SE();
+    }
+    @And("user selects request category as cable splicing")
+    public void userSelectsRequestCategoryAsCableSplicing() {
+
+        changeRecordPage.selectRequestCategoryAsCableSplicing();
+    }
+
+    @And("user enters reason field as {string}")
+    public void userEntersReasonFieldAs(String Reason) {
+     changeRecordPage.enterReason(Reason);
+    }
+
+
+    @And("user enters {string} in the change builder field")
+    public void userEntersInTheChangeBuilderField(String changeBuilder) {
+        changeRecordPage.enterChangeBuilder(changeBuilder);
+    }
+
+    @And("user enters {string} in the implementation field")
+    public void userEntersInTheImplementationField(String implementation) {
+     changeRecordPage.enterImplementation(implementation);
+    }
+
+    @And("user enters {string} in the test plan field")
+    public void userEntersInTheTestPlanField(String testPlan) {
+     changeRecordPage.enterTestPlan(testPlan);
+    }
+
+    @And("user enters {string} in the rollback field")
+    public void userEntersInTheRollbackField(String rollBack) {
+      changeRecordPage.enterRollBack(rollBack);
+    }
+
+    @And("user enters {string} in the communication plan field")
+    public void userEntersInTheCommunicationPlanField(String arg0) {
+      changeRecordPage.enterCommunicationPlan(arg0);
+    }
+
+    @And("user enters {string} in the ver of functionality field")
+    public void userEntersInTheVerOfFunctionalityField(String arg0) {
+        changeRecordPage.enterVerOfFunctionality(arg0);
+    }
+
+    @And("user enters {string} in the risk description field")
+    public void userEntersInTheRiskDescriptionField(String arg0) {
+       changeRecordPage.enterRiskDescriptionId(arg0);
+    }
+
+    @Then("user clicks on schedule tab")
+    public void userClicksOnScheduleTab() {
+        //doesn't need implementation
+    }
+
+
+
+    @And("user selects estimated impact dropdown as no impact")
+    public void userSelectsEstimatedImpactDropdownAsNoImpact() {
+    //changeRecordPage.selectEstimatedImpact("no impact");
+        changeRecordPage.selectEstimatedImpactAs_NoImpact();
+
+    }
 }

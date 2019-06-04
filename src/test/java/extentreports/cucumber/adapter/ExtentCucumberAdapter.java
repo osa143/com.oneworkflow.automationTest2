@@ -221,7 +221,7 @@ public class ExtentCucumberAdapter
                 writeBytesToURL(event.data, url);
                 try {
                     File f = new File(url.toURI());
-                    stepTestThreadLocal.get().info("", MediaEntityBuilder.createScreenCaptureFromPath(f.getAbsolutePath()).build());
+                    //stepTestThreadLocal.get().info("", MediaEntityBuilder.createScreenCaptureFromPath(f.getAbsolutePath()).build());
                     //UK
                     stepTestThreadLocal.get().addScreenCaptureFromPath(f.getAbsolutePath());
                 } catch (URISyntaxException e) {

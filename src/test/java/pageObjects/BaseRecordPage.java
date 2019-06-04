@@ -15,9 +15,28 @@ public abstract class BaseRecordPage extends BasePage {
     public static final String ddValueCLEAR = "(clear)";
     public static final String ddValueCLOSED = "Closed";
 
-    public static final String txtCHANGE_BUILDER_FIELD = "arid_WIN_0_600001054";
+    public static final String txtCHANGE_BUILDER_FIELD_ID = "arid_WIN_0_600001054";
+    public static final String txtIMPLEMENTATION_ID = "arid_WIN_0_700007007";
+    public static final String txtTEST_PLAN_ID = "arid_WIN_0_700007008";
     public static final String txtSTART_DATE = "arid_WIN_0_777021160";
+    public static final String txtROLL_BACK = "arid_WIN_0_700007009";
+    public static final String txtCOMMUNICATION_PLAN_ID = "arid_WIN_0_600001053";
+    public static final String txtVER_OF_FUNCTIONALITY_ID = "arid_WIN_0_600001055";
+    public static final String txtRISK_DESCRIPTION_ID = "arid_WIN_0_600001065";
+
     public static final String txtEND_DATE = "arid_WIN_0_777021161";
+    public static final String txtREASON_ID = "arid_WIN_0_705001003";
+
+    public static final String txtEXPECTED_ALARMS = "arid_WIN_0_705001002";
+    public static final String txtIMPACT_DURATION_DAYS = "arid_WIN_0_990001006";
+    public static final String txtIMPACT_DURATION_HRS = "arid_WIN_0_900000018";
+    public static final String txtIMPACT_DURATION_MINS = "arid_WIN_0_900000019";
+    public static final String txtIMPACT_DURATION_SECS = "arid_WIN_0_990001007";
+    public static final String txtRC_FOUND_DATE_ID = "arid_WIN_0_600001041";
+    public static final String txtACTUAL_FINISH_ID = "arid_WIN_0_777504605";
+    public static final String txtDECISION_GO_NO_GO_ID = "arid_WIN_0_777504604";
+
+
 
     public static final String btnSAVE = "WIN_0_700025244";
     public static final String btnDIAGNOSIS = "//a[contains(text(),'Diagnosis')]";
@@ -41,15 +60,12 @@ public abstract class BaseRecordPage extends BasePage {
     public static final String ddROOT_CAUSE_DETAILS_ID = "arid_WIN_0_705002081";
     public static final String ddCLOSER_CODE = "Closure Code";
     public static final String ddValueSOLVED = "Solved";
+    public static final String ddValueNO_IMPACT = "No Impact";
 
-    public static final String txtEXPECTED_ALARMS = "arid_WIN_0_705001002";
-    public static final String txtIMPACT_DURATION_DAYS = "arid_WIN_0_990001006";
-    public static final String txtIMPACT_DURATION_HRS = "arid_WIN_0_900000018";
-    public static final String txtIMPACT_DURATION_MINS = "arid_WIN_0_900000019";
-    public static final String txtIMPACT_DURATION_SECS = "arid_WIN_0_990001007";
-    public static final String txtRC_FOUND_DATE_ID = "arid_WIN_0_600001041";
-    public static final String txtACTUAL_FINISH_ID = "arid_WIN_0_777504605";
-    public static final String txtDECISION_GO_NO_GO_ID = "arid_WIN_0_777504604";
+    public void selectEstimatedImpactAs_NoImpact(){
+        selectDropDownMenu(ddESTIMATED_IMPACT);
+        selectDropDownValue(ddValueNO_IMPACT);
+    }
 
 
     public static final String chkbxFINLAND = "WIN_0_rc0id600002002";
@@ -72,6 +88,7 @@ public abstract class BaseRecordPage extends BasePage {
     public static final String ddValueANALYSIS_ONGOING  = "Analysis ongoing";
     public static final String ddACTIONS = "Actions";
     public static final String ddValueTIME_TRACKING   = "Time Tracking";
+    public static final String ddValueCABLE_SPLICING = "Cable splicing";
 
     public static final String ddACTIVITY_IN_FRAME = "Activity";
     public static final String ddValueWORKING_ON_TICKET = "Working On Ticket";
@@ -237,7 +254,7 @@ public abstract class BaseRecordPage extends BasePage {
 
 
     public void enterChangeBuilderType(String changeBuilderName) {
-        driver.findElement(By.id(txtCHANGE_BUILDER_FIELD)).sendKeys(changeBuilderName);
+        driver.findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).sendKeys(changeBuilderName);
     }
 
     public void selectAssignedDdValue() {
@@ -308,5 +325,43 @@ public abstract class BaseRecordPage extends BasePage {
     public void clickCloneButton(){
         driver.findElement(By.id(btnCLONE_ID)).click();
     }
+    public void selectRequestTypeAs_AccessNetworks_RANNSN2G3G4G(){
+        selectDropDownNameAndValue(ddREQUEST_TYPE, "Access Networks:RAN NSN 2G:3G:4G", false);
+    }
+    public void selectTemplateAs_All_Mobile_Billing_NoBillCustomerRefund_SE(){
+        selectDropDownNameAndValue(ddTEMPLATE, "All:Mobile:Billing:Nobill - Customer refund (SE)", false);
+    }
+    public void selectRequestCategoryAsCableSplicing(){
+        selectDropDownMenu(ddREQUEST_CATEGORY);
+        selectDropDownValue(ddValueCABLE_SPLICING);
+    }
+    public void enterReason(String Reason){
+        driver.findElement(By.id(txtREASON_ID)).sendKeys(Reason);
+    }
+    public void enterChangeBuilder(String ChangeBuilder){
+        driver.findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).sendKeys(ChangeBuilder);
+
+    }
+   public void enterImplementation(String implementation){
+        driver.findElement(By.id(txtIMPLEMENTATION_ID)).sendKeys(implementation);
+   }
+   public void enterTestPlan(String testPlan){
+        driver.findElement(By.id(txtTEST_PLAN_ID)).sendKeys(testPlan);
+   }
+
+    public void enterRollBack(String rollBack){
+        driver.findElement(By.id(txtROLL_BACK)).sendKeys(rollBack);
+    }
+    public void enterCommunicationPlan(String communicationPlan){
+        driver.findElement(By.id(txtCOMMUNICATION_PLAN_ID)).sendKeys(communicationPlan);
+
+    }
+    public void enterVerOfFunctionality(String verOfFunctionality){
+        driver.findElement(By.id(txtVER_OF_FUNCTIONALITY_ID)).sendKeys(txtVER_OF_FUNCTIONALITY_ID);
+    }
+    public void enterRiskDescriptionId(String riskDescriptionId){
+        driver.findElement(By.id(txtRISK_DESCRIPTION_ID)).sendKeys(riskDescriptionId);
+    }
+
 
 }

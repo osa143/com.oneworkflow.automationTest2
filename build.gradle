@@ -31,5 +31,5 @@ dependencies {
 //        exclude group: 'io.cucumber', module: 'cucumber-junit'
 //        exclude group: 'org.testng', module: 'testng'
 //    }
-    compile group: 'com.aventstack', name: 'extentreports', version: '4.0.9'
+    compile group: 'com.aventstack', name: 'extentreports', version: '4.0.7'
 }

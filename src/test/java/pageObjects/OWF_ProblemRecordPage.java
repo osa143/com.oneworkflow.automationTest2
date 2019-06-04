@@ -57,11 +57,13 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String btnACK_ID = "WIN_0_777504152";
     private static final String timeline_TABLE_ID = "T999000510";
 
+    private static final String ddValueMAJOR = "Major";
+
     private static final String chkbxSWEDEN = "WIN_0_rc0id600002001";
 
     public String getTimelineStatus() {
         String status = getTableCellData(By.id(timeline_TABLE_ID), "Description", 1);
-        System.out.println("Timeline status is: " + status );
+        System.out.println("Timeline status is: " + status);
         return status;
     }
 
@@ -145,8 +147,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         return status;
     }
 
-    public boolean getAckButtonStatus()
-    {
+    public boolean getAckButtonStatus() {
         return driver.findElement(By.id(btnACK_ID)).isEnabled();
     }
 
@@ -270,4 +271,9 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         driver.switchTo().alert().accept();
     }
 
+
+    public void selectPriorityAs_Major() {
+        selectDropDownMenu(ddPRIORITY_ID);
+        selectDropDownValue(ddValueMAJOR);
+    }
 }

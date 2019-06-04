@@ -9,7 +9,7 @@ Feature: Verification of ability to link tickets
     Then problem record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
     When user enters "proactive investigation of Tohall_Copy" in Title field
-    And user selects request type as  Access Networks:RAN NSN 2G:3G:4G
+    And user selects request type as Access Networks:RAN NSN 2G:3G:4G
     And user enters description as "UAT Test2 Linked items"
     And user selects impact type as moderate:limited
     And user selects urgency as low
@@ -27,7 +27,7 @@ Feature: Verification of ability to link tickets
     Then Change record form should open in a new tab
     When user clicks on sweden checkbox under affected BU's
     And user selects request type as normal change
-    And user selects title as IT:Mobile:Billing
+    And user selects template as All:Mobile:Billing:No-bill-Customer refund(SE)
     And user selects request category as cable splicing
     And user enters description as "Correcting error"
     And user enters reason field as "none"
@@ -40,9 +40,9 @@ Feature: Verification of ability to link tickets
     And user enters "Not possible" in the ver of functionality field
     And user enters "No Risk" in the risk description field
     Then user clicks on schedule tab
-    And user enters request start date as 00:00:00 one day in the future
-    And user enters request end date as 02:00:00 one day in the future
-    And user enters the impact duration as 5 minutes
+    And user enters request start date as "00:00:00" one day in the future
+    And user enters request end date as "02:00:00" one day in the future
+    And user enters impact duration as "5" minutes
     And user selects estimated impact dropdown as no impact
     And user clicks on save button
     Then user clicks on risk tab
@@ -58,7 +58,7 @@ Feature: Verification of ability to link tickets
     And user clicks on CI search button
     When user clicks on clear button and selects search for all cis
     And  user enters "SE_CPE_FRECPE5" in name field
-    And  user clicks on search button
+    And user clicks on search button
     And user selects a SE_CPE_FRECPE5 from list
     And user Choose impact level as no impact
     And  user clicks on relate CI

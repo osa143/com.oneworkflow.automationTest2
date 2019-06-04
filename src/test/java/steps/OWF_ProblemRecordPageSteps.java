@@ -329,4 +329,13 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.clickCloneButton();
     }
 
+    @And("user selects request type as Access Networks:RAN NSN 2G:3G:4G")
+    public void userSelectsRequestTypeAsAccessNetworksRANNSNGGG() {
+        problemRecordPage.selectRequestTypeAs_AccessNetworks_RAN_NSN_2G_3G_4G();
+    }
+
+    @And("user selects priority as major")
+    public void userSelectsPriorityAsMajor() {
+        problemRecordPage.selectPriorityAs_Major();
+    }
 }

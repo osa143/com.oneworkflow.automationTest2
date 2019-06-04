@@ -181,6 +181,20 @@ public class OWF_AgentConsolePageSteps {
 
     }
 
+    @When("user clicks on create trouble event")
+    public void userClicksOnCreateTroubleEvent() {
+        agentConsolePage.clickCreateMenu();
+        agentConsolePage.wait(1000);
+        agentConsolePage.clickMenuItemTroubleEvent();
+    }
+
+
+    @When("user clicks on create change record")
+    public void userClicksOnCreateChangeRecord() {
+        agentConsolePage.clickCreateMenu();
+        agentConsolePage.wait(1000);
+        agentConsolePage.clickMenuItemChangeRecord();
+    }
 }
 
 

@@ -1,11 +1,13 @@
 package driver.factory;
 
+import bsh.Capabilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
 import utils.TestContext;
 import utils.WaitUtil;
@@ -19,7 +21,7 @@ public class DriverFactory {
     private static WebDriver driver = null;
 
     private static DriverFactory instance = null;
-
+    private static DesiredCapabilities capabilities = null;
     private DriverFactory()
     {
 
@@ -56,8 +58,11 @@ public class DriverFactory {
 
                 case "IE":
                     WebDriverManager.iedriver().setup();
-                    driver = new InternetExplorerDriver();
 
+                    capabilities = DesiredCapabilities.internetExplorer();
+                    capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+//                    capabilities.setCapability(InternetExplorerDriver., true);
+                    driver = new InternetExplorerDriver(capabilities);
                     break;
 
                 case "FIREFOX":

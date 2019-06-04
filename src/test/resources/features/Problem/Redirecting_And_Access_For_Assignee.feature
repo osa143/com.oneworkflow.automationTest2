@@ -8,7 +8,7 @@ Feature: Changing of assignee for problem ticket
     Then problem record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
     When user enters "proactive investigation of Tohall_Copy" in Title field
-    And user selects request type as Access Networks:RAN NSN 2G/3G/4G
+    And user selects request type as Access Networks:RAN NSN 2G:3G:4G
     And user enters description as "UAT Test4"
     And user selects impact type as moderate:limited
     And user selects urgency as low

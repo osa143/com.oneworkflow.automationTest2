@@ -44,12 +44,14 @@ public class OWF_SIDConsolePageSteps {
 
     @Then("CI details should be displayed")
     public void ciDetailsShouldBeDisplayed() {
+        //Assert.assertTrue(false);
         int size = sidConsolePage.ciDetailsTableRows().size();
         Assert.assertNotEquals(size, 0, 0, "CI details are not displayed");
     }
 
     @Then("Site name should be displayed for all CI CTI search details")
     public void siteNameShouldBeDisplayedForAllCICTISearchDetails() {
+        Assert.assertTrue(false);
         boolean ciDetailsActual = sidConsolePage.validateSiteNameDetails();
         Assert.assertTrue(ciDetailsActual, "Site name was not available for all CIs.");
     }

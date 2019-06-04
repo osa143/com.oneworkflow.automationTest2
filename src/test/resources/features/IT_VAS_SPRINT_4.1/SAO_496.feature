@@ -9,11 +9,11 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
     When user clicks on change record from agent console
     Then change record page should be opened and Change form is displayed
     And User selects template as All:Mobile:RAN-Externals:RAN connectivity
-    When User selects request type as normal change
+    When user selects request type as normal change
     And User enters as "Change_Automation_1" in Change Builder field
     Then User enters start time as some minutes fast from current sweden time
     And User enters Request End time as some minutes fast from request start time
-    And User enters impact duration as some minutes
+    And user enters impact duration as "5" minutes
     And user clicks on save button
     Then new tabs should be displayed including Diagnosis tab
     When user clicks on Diagnosis tab

@@ -3,7 +3,7 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
 
   Scenario: Normal Change
 
-    Given User is on the OneWorkflow login page
+    Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on change record from agent console
@@ -16,7 +16,7 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
     And User enters impact duration as some minutes
     And user clicks on save button
     Then new tabs should be displayed including Diagnosis tab
-    When User clicks on Diagnosis tab
+    When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then CI search tab should be opened
     When user clicks on clear button and selects search for all cis
@@ -45,4 +45,4 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
     And Verify a new OP ticket has been created
     Then Verify new OP has other OP in container
     And   user logsOut and closes the browser
-
+    And user validates that priority changes to major

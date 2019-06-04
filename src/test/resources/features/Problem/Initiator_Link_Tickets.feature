@@ -1,7 +1,8 @@
 @Initiator_Link_Tickets
 Feature: Verification of ability to link tickets
   Scenario: user should be able to link different types of tickets together
-    Given User is on the OneWorkflow login page
+
+    Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create problem record

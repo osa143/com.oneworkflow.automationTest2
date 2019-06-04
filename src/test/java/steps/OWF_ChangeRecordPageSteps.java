@@ -93,7 +93,7 @@ public class OWF_ChangeRecordPageSteps {
 
     }
 
-    @When("User clicks on Diagnosis tab")
+    @When("user clicks on Diagnosis tab")
     public void userClicksOnDiagnosisTab() {
         changeRecordPage.clickDiagnosis();
     }

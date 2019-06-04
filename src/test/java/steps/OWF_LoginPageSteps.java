@@ -8,7 +8,7 @@ public class OWF_LoginPageSteps extends BaseSteps {
 
     OWF_LoginPage loginPage = new OWF_LoginPage();
 
-    @Given("User is on the OneWorkflow login page")
+    @Given("user is on the OneWorkflow login page")
     public void userIsOnTheOneWorkflowLoginPage() {
         loginPage.getURL(getProperties().getProperty("appURL"));
         String LoginPageTitle = loginPage.getPageTitle();

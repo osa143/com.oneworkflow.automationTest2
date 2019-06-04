@@ -37,7 +37,7 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.clickSaveButton();
     }
 
-    @Then("Multiple error messages should appear with red boarder around fields")
+    @Then("multiple error messages should appear with red boarder around fields")
     public void multipleErrorMessagesShouldAppearWithRedBoarderAroundFields() {
         Assert.assertTrue(problemRecordPage.validateMultipleErrorMessages(5), "Multiple error messages are not shown");
         //Red border should appear around fields
@@ -264,7 +264,7 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.switchToFrame(2);
     }
 
-    @Then("User changes status to investigation complete")
+    @Then("user changes status to investigation complete")
     public void userChangesStatusToInvestigationComplete() {
         problemRecordPage.clickStatusDropDown();
         problemRecordPage.selectInvestigationCompleteDdValue();

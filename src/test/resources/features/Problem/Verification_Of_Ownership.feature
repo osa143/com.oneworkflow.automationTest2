@@ -3,7 +3,7 @@ Feature: Verification of Problem ticket owner
 
   Scenario: user shouldn't be able to alter a problem ticket not assigned to them
 
-    Given User is on the OneWorkflow login page
+    Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create problem record
@@ -12,7 +12,7 @@ Feature: Verification of Problem ticket owner
     Then an error message should appear: "Please select at least one country of impact for this problem. (ARERR 10000)"
     When user clicks on sweden checkbox under affected BU's
     And  user clicks on save button on the problem form
-    Then Multiple error messages should appear with red boarder around fields
+    Then multiple error messages should appear with red boarder around fields
     When user enters "proactive investigation of Tohall_Copy" in Title field
     And user selects request type as Access Networks:RAN optimization
     And user enters description as "UAT Test3"

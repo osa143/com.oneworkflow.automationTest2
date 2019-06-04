@@ -51,25 +51,25 @@ public class OWF_ChangeRecordPageSteps {
 
     }
 
-    @And("User selects template as All:Mobile:RAN-Externals:RAN connectivity")
+    @And("user selects template as All:Mobile:RAN-Externals:RAN connectivity")
     public void userSelectsTemplateAsAllMobileRANExternalsRANConnectivity() {
         changeRecordPage.selectTemplateAsAll_Mobile_RANExternals_RANConnectivity();
         //"All:Mobile:RAN - Externals:RAN Connectivity"
     }
 
-    @And("User enters as {string} in Change Builder field")
+    @And("user enters as {string} in Change Builder field")
     public void userEntersAsInChangeBuilderField(String text) {
         changeRecordPage.enterChangeBuilderType(text);
 
     }
 
-    @Then("User enters start time as some minutes fast from current sweden time")
+    @Then("user enters start time as some minutes fast from current sweden time")
     public void userEntersStartTimeAsMinutesFastFromCurrentSwedenTime() {
         changeRecordPage.setStartDate(5);
 
     }
 
-    @And("User enters Request End time as some minutes fast from request start time")
+    @And("user enters Request End time as some minutes fast from request start time")
     public void userEntersRequestEndTimeAsMinutesFastFromRequestStartTime() {
 
         changeRecordPage.setEndDate(11);
@@ -109,7 +109,7 @@ public class OWF_ChangeRecordPageSteps {
 
     }
 
-    @When("User clicks on Send button")
+    @When("user clicks on Send button")
     public void userClicksOnSendButton() {
         changeRecordPage.clicksendButton();
 
@@ -126,7 +126,7 @@ public class OWF_ChangeRecordPageSteps {
     public void formShouldBeSaved() {
     }
 
-    @Then("Change record form should open in a new tab")
+    @Then("change record form should open in a new tab")
     public void changeRecordFormShouldOpenInANewTab() {
         //Title Assertion
     }

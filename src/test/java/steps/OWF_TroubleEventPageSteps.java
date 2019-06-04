@@ -6,7 +6,7 @@ import pageObjects.OWF_TroubleEventPage;
 
 public class OWF_TroubleEventPageSteps {
     OWF_TroubleEventPage troubleEventPage = new OWF_TroubleEventPage();
-    @Then("Trouble record form should appear in new tab")
+    @Then("trouble record form should appear in new tab")
     public void troubleRecordFormShouldAppearInNewTab() {
     }
 

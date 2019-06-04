@@ -2,8 +2,11 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 
+import static pageObjects.BaseRecordPage.ddSTATuS_ID;
+
 public class OWF_TroubleEventPage extends BasePage {
 
+    private static final String ddSTATUS_ID = "arid_WIN_0_777031003";
     private static final String txtCUST_REMAINING_SLA_ID = "arid_WIN_0_600001303";
     private static final String txtOLA_TARGET_TIME_ID = "arid_WIN_0_600001308";
     private static final String txtDESCRIPTION_ID = "arid_WIN_0_777031007";
@@ -300,5 +303,11 @@ public class OWF_TroubleEventPage extends BasePage {
 
     public void enterResponseTime(String response_time) {
         driver.findElement(By.id(txtRESPONSE_TIME)).sendKeys(response_time);
+    }
+
+    public String getStatusText() {
+        String StatusText = driver.findElement(By.id(ddSTATUS_ID)).getAttribute("value");
+        return StatusText;
+
     }
 }

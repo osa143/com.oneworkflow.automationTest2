@@ -34,7 +34,7 @@ public class OWF_ProblemRecordPageSteps {
     @When("user clicks on sweden checkbox under affected BU's")
     public void userClicksOnSwedenCheckboxUnderAffectedBUS() {
         problemRecordPage.clickSwedenCheckBox();
-        problemRecordPage.clickSaveButton();
+       // problemRecordPage.clickSaveButton();
     }
 
     @Then("Multiple error messages should appear with red boarder around fields")

@@ -17,29 +17,30 @@ Feature: Verification of ability to link tickets
     Then ticket should be created and status should be assigned
     When user clicks on create trouble event
     Then Trouble record form should appear in new tab
+    And user switches to window 2
     When user clicks on sweden checkbox under affected BU's
     And user enters "A Problem Test" in Title field
     And user selects request type as Customer
     And user enters description as "A Customer Complaint"
     And user clicks on save button
-    Then ticket should be created and status should be assigned
+    Then trouble ticket should be created and status should be assigned
     When user clicks on create change record
     Then Change record form should open in a new tab
+    And user switches to window 3
     When user clicks on sweden checkbox under affected BU's
-    And user selects request type as normal change
-    And user selects template as All:Mobile:Billing:No-bill-Customer refund(SE)
-    And user selects request category as cable splicing
-    And user enters description as "Correcting error"
-    And user enters reason field as "none"
-    And user selects priority as major
-    And user enters "Problem initiator" in the change builder field
-    And user enters "New implementation" in the implementation field
-    And user enters "Yes" in the test plan field
-    And user enters "Not possible" in the rollback field
-    And user enters "Comm plan" in the communication plan field
-    And user enters "Not possible" in the ver of functionality field
-    And user enters "No Risk" in the risk description field
-    Then user clicks on schedule tab
+    And user selects template as All:IT:Other:TEST TEMPLATE[UAT]-Normal Change
+    #And user selects request category as cable splicing
+    #And user enters description as "Correcting error"
+    #And user enters reason field as "none"
+    #And user selects priority as major
+    #And user enters "Problem initiator" in the change builder field
+    #And user enters "New implementation" in the implementation field
+    #And user enters "Yes" in the test plan field
+    #And user enters "Not possible" in the rollback field
+    #And user enters "Comm plan" in the communication plan field
+    #And user enters "Not possible" in the ver of functionality field
+    #And user enters "No Risk" in the risk description field
+    And user enters "Test Ticket No Impact" in the service and customer impact field
     And user enters request start date as "00:00:00" one day in the future
     And user enters request end date as "02:00:00" one day in the future
     And user enters impact duration as "5" minutes

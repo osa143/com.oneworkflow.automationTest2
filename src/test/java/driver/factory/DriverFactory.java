@@ -21,7 +21,7 @@ public class DriverFactory {
     private static WebDriver driver = null;
 
     private static DriverFactory instance = null;
-    private static DesiredCapabilities capabilities = null;
+    //private static DesiredCapabilities capabilities = null;
     private DriverFactory()
     {
 
@@ -59,10 +59,10 @@ public class DriverFactory {
                 case "IE":
                     WebDriverManager.iedriver().setup();
 
-                    capabilities = DesiredCapabilities.internetExplorer();
-                    capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+                    //capabilities = DesiredCapabilities.internetExplorer();
+                    //capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 //                    capabilities.setCapability(InternetExplorerDriver., true);
-                    driver = new InternetExplorerDriver(capabilities);
+                    driver = new InternetExplorerDriver();
                     break;
 
                 case "FIREFOX":

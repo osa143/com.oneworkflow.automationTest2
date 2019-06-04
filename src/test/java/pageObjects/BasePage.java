@@ -77,7 +77,7 @@ public abstract class BasePage {
             dropdownXpath = "//img[@alt='Menu for " + dropdownName + "']/..";
 
         driver.findElement(By.xpath(dropdownXpath)).click();
-        wait(500);
+        wait(1000);
 
         String arr[] = dropdownValue.split(":");
         for (int i = 0; i < arr.length; i++) {

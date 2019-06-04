@@ -285,7 +285,7 @@ public class Test1 {
         driver.switchTo().alert().accept();
         ciSearchPage.clickCloseButton();
         System.out.println(driver.findElement(By.id("WIN_0_600002905")).isEnabled());
-        changeRecordPage.clicksendButton();
+       // changeRecordPage.clicksendButton();
         System.out.println(driver.findElement(By.id("WIN_0_777504152")).isEnabled());
         changeRecordPage.clickSave();
 

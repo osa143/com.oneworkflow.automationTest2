@@ -5,6 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
 import pageObjects.OWF_ChangeRecordPage;
+import pageObjects.OWF_ProblemRecordPage;
 
 public class OWF_ChangeRecordPageSteps {
     OWF_ChangeRecordPage changeRecordPage = new OWF_ChangeRecordPage();
@@ -84,7 +85,7 @@ public class OWF_ChangeRecordPageSteps {
     @And("user clicks on save button")
     public void userClicksOnSaveButton() {
         changeRecordPage.clickSave();
-        changeRecordPage.wait(2000);
+        changeRecordPage.wait(5000);
 
     }
 
@@ -111,7 +112,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @When("User clicks on Send button")
     public void userClicksOnSendButton() {
-        changeRecordPage.clicksendButton();
+        changeRecordPage.clickSendButton();
 
     }
 
@@ -194,5 +195,21 @@ public class OWF_ChangeRecordPageSteps {
     //changeRecordPage.selectEstimatedImpact("no impact");
         changeRecordPage.selectEstimatedImpactAs_NoImpact();
 
+    }
+
+    @Then("user clicks on risk tab")
+    public void userClicksOnRiskTab() {
+
+    }
+
+    @And("user selects template as All:IT:Other:TEST TEMPLATE[UAT]-Normal Change")
+    public void userSelectsTemplateAsAllITOtherTESTTEMPLATEUATNormalChange() {
+        changeRecordPage.selectTemplateAs_All_It_Other_TestTemplate_uat_NormalChange();
+
+    }
+
+    @And("user enters {string} in the service and customer impact field")
+    public void userEntersInTheServiceAndCustomerImpactField(String arg0){
+        changeRecordPage.enterServiceAndCustomerImpact(arg0);
     }
 }

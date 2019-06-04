@@ -35,6 +35,7 @@ public abstract class BaseRecordPage extends BasePage {
     public static final String txtRC_FOUND_DATE_ID = "arid_WIN_0_600001041";
     public static final String txtACTUAL_FINISH_ID = "arid_WIN_0_777504605";
     public static final String txtDECISION_GO_NO_GO_ID = "arid_WIN_0_777504604";
+    public static final String txtSERVICE_AND_CUSTOMER_IMPACT = "arid_WIN_0_730030000";
 
 
 
@@ -330,6 +331,10 @@ public abstract class BaseRecordPage extends BasePage {
     }
     public void selectTemplateAs_All_Mobile_Billing_NoBillCustomerRefund_SE(){
         selectDropDownNameAndValue(ddTEMPLATE, "All:Mobile:Billing:Nobill - Customer refund (SE)", false);
+
+    }
+    public void selectTemplateAs_All_It_Other_TestTemplate_uat_NormalChange(){
+        selectDropDownNameAndValue(ddTEMPLATE, "All:IT:Other:TEST TEMPLATE[UAT]-Normal Change", true);
     }
     public void selectRequestCategoryAsCableSplicing(){
         selectDropDownMenu(ddREQUEST_CATEGORY);
@@ -362,6 +367,7 @@ public abstract class BaseRecordPage extends BasePage {
     public void enterRiskDescriptionId(String riskDescriptionId){
         driver.findElement(By.id(txtRISK_DESCRIPTION_ID)).sendKeys(riskDescriptionId);
     }
-
-
+    public void enterServiceAndCustomerImpact(String text){
+        driver.findElement(By.id(txtSERVICE_AND_CUSTOMER_IMPACT)).sendKeys(text);
+    }
 }

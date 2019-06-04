@@ -7,7 +7,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
 
     public static final String btnSEND = "WIN_0_600002905";
 
-    public void clicksendButton() {
+    public void clickSendButton() {
         driver.findElement(By.id(btnSEND)).click();
     }
 

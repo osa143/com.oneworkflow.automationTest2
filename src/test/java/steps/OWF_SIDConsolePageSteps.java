@@ -49,7 +49,7 @@ public class OWF_SIDConsolePageSteps {
         Assert.assertNotEquals(size, 0, 0, "CI details are not displayed");
     }
 
-    @Then("Site name should be displayed for all CI CTI search details")
+    @Then("site name should be displayed for all CI CTI search details")
     public void siteNameShouldBeDisplayedForAllCICTISearchDetails() {
         Assert.assertTrue(false);
         boolean ciDetailsActual = sidConsolePage.validateSiteNameDetails();

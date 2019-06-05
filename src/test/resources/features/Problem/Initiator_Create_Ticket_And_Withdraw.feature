@@ -12,8 +12,8 @@ Feature: initiator create ticket and withdraw
     When user clicks on save button on the problem form
     Then an error message should appear: "Please select at least one country of impact for this problem. (ARERR 10000)"
     When user clicks on sweden checkbox under affected BU's
-    And  user clicks on save button on the problem form
-    Then Multiple error messages should appear with red boarder around fields
+    And user clicks on save button on the problem form
+    Then multiple error messages should appear with red boarder around fields
     When user enters "proactive investigation of Tohall_Copy" in Title field
     And user selects request type as Access Networks:RAN optimization
     And user enters description as "UAT Test1"
@@ -27,7 +27,7 @@ Feature: initiator create ticket and withdraw
     Then an error message "Required field (without a default) not specified : Withdrawn Reason (ARERR 9424)" should appear with red boarder around withdrawn reason
     When user selects withdrawn reason as false alarm and clicks save
     And user should see confirmation message and clicks on yes button
-    Then  problem ticket should be withdrawn
+    Then problem ticket should be withdrawn
     Then user logsOut and closes the browser
 
 

@@ -25,14 +25,14 @@ public class OWF_AgentConsolePageSteps {
         CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
     }
 
-    @When("User clicks on add column under preferences and selects OP next due date")
+    @When("user clicks on add column under preferences and selects OP next due date")
     public void userClicksOnAddColumnUnderPreferencesAndSelectsOPNextDueDate() {
         agentConsolePage.clickPreferences();
         agentConsolePage.setPreferences("Add Column:OP Next Due Date");
         agentConsolePage.wait(5000);
     }
 
-    @Then("OP Next due date column within agent console should be displayed")
+    @Then("OP next due date column within agent console should be displayed")
     public void opNextDueDateColumnWithinAgentConsoleShouldBeDisplayed() {
         int columnIndex = agentConsolePage.getColumnIndexByHeaderName("OP Next Due Date");
         Assert.assertNotEquals(columnIndex, -1, 0, "OP Next due date column within agent console is not displayed");
@@ -57,30 +57,30 @@ public class OWF_AgentConsolePageSteps {
        Assert.assertFalse(agentConsolePage.isColumnDisplayed("OP Next Due Date"), "OP Next due date column within agent console is still displayed even after removing");
     }
 
-    @And("User shouldn't see OP next due date information")
+    @And("user shouldn't see OP next due date information")
     public void userShouldnTSeeOPNextDueDateInformation() {
         Assert.assertFalse(agentConsolePage.validateOpNextDueDateInformation(), "OP next due date information is still displayed");
     }
 
 
-    @Then("User should see tickets related to assignee profile of user")
+    @Then("user should see tickets related to assignee profile of user")
     public void userShouldSeeTicketsRelatedToAssigneeProfileOfUser() {
      Assert.assertNotEquals(agentConsolePage.getTableRowsCount(), 0, "My Assignee profile tickets are not displayed");
     }
 
 
-    @Then("User should see OP target date column in the agent console")
+    @Then("user should see OP target date column in the agent console")
     public void userShouldSeeOPTargetDateInTheAgentConsole() {
         Assert.assertTrue(agentConsolePage.isColumnDisplayed("OP Target Date"), "OP Target date column within agent console is not displayed");
 
     }
 
-    @And("User should see OP target date information")
+    @And("user should see OP target date information")
     public void userShouldSeeOPTargetDateInformation() {
         Assert.assertTrue(agentConsolePage.validateOpTargetDateInformation(), "OP target date information in the agent console is not displayed");
     }
 
-    @Then("User shouldn't see OP target date column in the agent console")
+    @Then("user shouldn't see OP target date column in the agent console")
     public void userShouldnTSeeOPTargetDateInTheAgentConsole() {
         Assert.assertFalse(agentConsolePage.isColumnDisplayed("OP Target Date"), "OP Target date column within agent console is still displayed");
     }
@@ -90,13 +90,13 @@ public class OWF_AgentConsolePageSteps {
         Assert.assertFalse(agentConsolePage.isColumnDisplayed("OP Target Date"), "OP Target date information within agent console is still displayed");
     }
 
-    @When("User clicks on add column from preferences and selects OP next due date")
+    @When("user clicks on add column from preferences and selects OP next due date")
     public void userClicksOnAddColumnFromPreferencesAndSelectsOPNextDueDate() {
         agentConsolePage.clickPreferences();
         agentConsolePage.setPreferences("Add Column:OP Next Due Date");
     }
 
-    @And("User clicks on Remove Column under preferences and selects OP Target date")
+    @And("user clicks on Remove Column under preferences and selects OP Target date")
     public void userClicksOnRemoveColumnUnderPreferencesAndSelectsOPTargetDate() {
         agentConsolePage.clickPreferences();
         agentConsolePage.setPreferences("Remove Column:OP Target Date");
@@ -104,13 +104,13 @@ public class OWF_AgentConsolePageSteps {
     }
 
 
-    @When("User clicks on remove column under preferences and selects OP next due date")
+    @When("user clicks on remove column under preferences and selects OP next due date")
     public void userClicksOnRemoveColumnUnderPreferencesAndSelectsOPNextDueDate() {
         agentConsolePage.clickPreferences();
         agentConsolePage.setPreferences("Remove Column:OP Next Due Date");
     }
 
-    @When("User clicks on All roles drop down and selects my assignee profile")
+    @When("user clicks on All roles drop down and selects my assignee profile")
     public void userClicksOnAllRolesDropDownAndSelectsMyAssigneeProfile() throws InterruptedException {
         agentConsolePage.clickAllRolesDropDown();
         agentConsolePage.wait(2000);
@@ -118,7 +118,7 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.wait(3000);
     }
 
-    @Then("User clicks on My Assignee profile dropdown and selects Creator\\(user level)")
+    @Then("user clicks on My Assignee profile dropdown and selects Creator\\(user level)")
     public void userClicksOnMyAssigneeProfileDropdownAndSelectsCreatorUserLevel() throws InterruptedException {
         agentConsolePage.clickAllRolesDropDown();
         agentConsolePage.wait(2000);
@@ -126,14 +126,14 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.wait(3000);
     }
 
-    @And("User clicks on All tickets dropdown and selects WO and OP")
+    @And("user clicks on All tickets dropdown and selects WO and OP")
     public void userClicksOnAllTicketsDropdownAndSelectsWOAndOP() {
         agentConsolePage.clickAllTicketsDropDown();
         agentConsolePage.wait(2000);
         agentConsolePage.selectDdValueWO_OP();
     }
 
-    @When("User clicks on Creator\\(user level) dropdown and selects My Owner Profile")
+    @When("user clicks on Creator\\(user level) dropdown and selects My Owner Profile")
     public void userClicksOnCreatorUserLevelDropdownAndSelectsMyOwnerProfile() throws InterruptedException {
         agentConsolePage.clickAllRolesDropDown();
         agentConsolePage.wait(2000);
@@ -141,7 +141,7 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.wait(3000);
     }
 
-    @When("User clicks on add column under preferences and selects OP Target date")
+    @When("user clicks on add column under preferences and selects OP Target date")
     public void userClicksOnAddColumnUnderPreferencesAndSelectsOPTargetDate() {
         agentConsolePage.clickPreferences();
         agentConsolePage.setPreferences("Add Column:OP Target Date");

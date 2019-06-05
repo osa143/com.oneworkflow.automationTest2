@@ -3,7 +3,7 @@ Feature:Initiator change description
 
   Scenario: After Acknowledge
 
-    Given User is on the OneWorkflow login page
+    Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create problem record
@@ -19,7 +19,7 @@ Feature:Initiator change description
     And user gets ticket value
     Then user logsOut
     And user goes back to login page
-    Given User is on the OneWorkflow login page
+    Given user is on the OneWorkflow login page
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
@@ -33,7 +33,7 @@ Feature:Initiator change description
     Then problem ticket status should be under investigation
     Then user logsOut
     And user goes back to login page
-    Given User is on the OneWorkflow login page
+    Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record

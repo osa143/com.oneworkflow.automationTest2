@@ -45,4 +45,3 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
     And verify a new OP ticket has been created
     Then verify new OP has other OP in container
     And user logsOut and closes the browser
-    And user validates that priority changes to major

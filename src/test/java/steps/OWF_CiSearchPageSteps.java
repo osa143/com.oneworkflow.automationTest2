@@ -38,10 +38,9 @@ public class OWF_CiSearchPageSteps {
         ciSearchPage.clickToSelectCi();
     }
 
-    @And("user Choose impact level as degradation of service")
-    public void userChooseImpactLevelAsDegradationOfService() {
-        ciSearchPage.clickLevelDropdown();
-        ciSearchPage.selectDegradationOfServiceDropdownValue();
+    @And("user Choose impact level as {string}")
+    public void userChooseImpactLevelAs(String level) {
+        ciSearchPage.selectLevel(level);
     }
 
     @And("user clicks on relate CI")

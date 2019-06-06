@@ -27,8 +27,8 @@ Feature: Verification of ability to link tickets
     Then change record form should open in a new tab
     When user clicks on sweden checkbox under affected BU's
     And user selects request type as normal change
-    And user selects template as All:Mobile:Billing:No-bill-Customer refund(SE)
-    And user selects request category as cable splicing
+    And user selects template as "All:Mobile:Billing:Nobill - Customer refund (SE)"
+    And user selects request category as "Cable splicing"
     And user enters description as "Correcting error"
     And user enters reason field as "none"
     And user selects priority as major
@@ -43,7 +43,7 @@ Feature: Verification of ability to link tickets
     And user enters request start date as "00:00:00" one day in the future
     And user enters request end date as "02:00:00" one day in the future
     And user enters impact duration as "5" minutes
-    And user selects estimated impact dropdown as no impact
+    And user selects estimated impact as "No Impact"
     And user clicks on save button
     Then user clicks on risk tab
     And user selects Impact to other systems/technologies are unclear under change impact to other systems dropdown

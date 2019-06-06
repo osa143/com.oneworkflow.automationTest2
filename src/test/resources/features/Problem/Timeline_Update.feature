@@ -9,7 +9,7 @@ Feature: User is able to update the timeline with entries
     Then problem record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
     When user enters "proactive investigation of: frvi96_auto" in Title field
-    And user selects request type as Access Networks:RAN optimization
+    And user selects request type as "Access Networks:RAN Optimization"
     And user enters description as "UAT Test9"
     And user selects impact type as moderate:limited
     And user selects urgency as low

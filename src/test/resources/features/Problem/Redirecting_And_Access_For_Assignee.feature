@@ -34,7 +34,7 @@ Feature: Changing of assignee for problem ticket
     And user selects frvi96_auto under the assignee profile
     And user clicks on save button on the problem form
     And change should also be reflected in the timeline as "Request has been reassigned from Assignee user "Tohall_copy" to  Assignee  user "frvi96_auto". "
-    Then user selects request type as Access Networks:RAN optimization
+    And user selects request type as "Access Networks:RAN Optimization"
     And user clicks on save button
     Then problem ticket status should be assigned
     And user "frvi96_auto" is listed as the assigned profile

@@ -39,6 +39,12 @@ public abstract class BasePage {
         }
     }
 
+    //To be used for all send keys methods.
+    public void enterTextBy(By textElement, String text)
+    {
+        driver.findElement(textElement).sendKeys(text);
+    }
+
     public String getTextById(String Id) {
         return driver.findElement(By.id(Id)).getAttribute("value");
     }
@@ -83,7 +89,7 @@ public abstract class BasePage {
         for (int i = 0; i < arr.length; i++) {
             final String temp = arr[i];
             driver.findElements(By.className("MenuTableBody")).get(i).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
-            wait(500);
+            wait(1000);
         }
 
     }

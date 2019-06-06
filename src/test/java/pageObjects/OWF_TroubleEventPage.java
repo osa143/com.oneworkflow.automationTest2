@@ -22,6 +22,11 @@ public class OWF_TroubleEventPage extends BasePage {
     private static final String txtESTIMATED_READY = "arid_WIN_0_777504503";
     private static final String txtAUTO_CLOSE_DATE = "arid_WIN_0_600001305";
     private static final String txtRESPONSE_TIME = "arid_WIN_0_700048056";
+    private static final String txtTITLE_ID = "arid_WIN_0_777031000";
+
+    public void enterLevel(String level){
+        driver.findElement(By.id(txtTITLE_ID)).sendKeys(level);
+    }
 
 
     private static final String ddTEMPLATE = "Template";
@@ -32,6 +37,10 @@ public class OWF_TroubleEventPage extends BasePage {
     private static final String ddIMPACT = "Impact";
     private static final String ddASIGNMENT_PROFILE = "Assignment Profile";
     private static final String ddASIGNEE = "Assignee";
+
+    public void selectRequestType(String value){
+        selectDropDownNameAndValue(ddREQUEST_TYPEE, value, false );
+    }
 
     private static final String ddValueSITE_ACCESS_REGISTRATION = "Site access registration";
     private static final String ddValueWORKFORCE_ESCALATION_SE = "Workforce Escalation-SE";

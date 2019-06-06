@@ -25,37 +25,16 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.wait(5000);
     }
 
-    @And("user selects request type as Access Networks:RAN optimization")
-    public void userSelectsRequestTypeAsAccessNetworksRANOptimization() {
-        changeRecordPage.selectRequestTypeAsAccessNetworksRANOptimization();
-    }
 
-    @When("user changes status to withdrawn")
-    public void userChangeStatusToWithdrawnAndClicksSaveButton() {
-        changeRecordPage.wait(3000);
-        changeRecordPage.clickStatusDropDown();
-        changeRecordPage.wait(1000);
-        changeRecordPage.selectWithdrawnDdValue();
-        //CommonUtils.switchWindow(problemRecordPage.getDriver(), "child");
+    @When("user changes status to {string}")
+    public void userChangeStatusTo(String status) {
+        changeRecordPage.selectStatus(status);
     }
 
     @Then("problem ticket should be withdrawn")
     public void problemTicketShouldBeWithdrawn() {
         Assert.assertEquals(changeRecordPage.getStatusText(), "Withdrawn", "problem ticket status is not withdrawn");
 
-    }
-
-
-    @When("user selects request type as normal change")
-    public void userSelectsRequestTypeAsNormalChange() {
-        changeRecordPage.selectRequestType("Normal Change");
-
-    }
-
-    @And("user selects template as All:Mobile:RAN-Externals:RAN connectivity")
-    public void userSelectsTemplateAsAllMobileRANExternalsRANConnectivity() {
-        changeRecordPage.selectTemplateAsAll_Mobile_RANExternals_RANConnectivity();
-        //"All:Mobile:RAN - Externals:RAN Connectivity"
     }
 
     @And("user enters as {string} in Change Builder field")
@@ -132,14 +111,13 @@ public class OWF_ChangeRecordPageSteps {
         //Title Assertion
     }
 
-    @And("user selects template as All:Mobile:Billing:No-bill-Customer refund\\(SE)")
-    public void userSelectsTemplateAsAllMobileBillingNoBillCustomerRefundSE() {
-        changeRecordPage.selectTemplateAs_All_Mobile_Billing_NoBillCustomerRefund_SE();
+    @And("user selects template as {string}")
+    public void userSelectsTemplateAsAllMobileBillingNoBillCustomerRefundSE(String template) {
+        changeRecordPage.selectTemplate(template);
     }
-    @And("user selects request category as cable splicing")
-    public void userSelectsRequestCategoryAsCableSplicing() {
-
-        changeRecordPage.selectRequestCategoryAsCableSplicing();
+    @And("user selects request category as {string}")
+    public void userSelectsRequestCategoryAsCableSplicing(String category) {
+        changeRecordPage.selectRequestCategory(category);
     }
 
     @And("user enters reason field as {string}")
@@ -190,10 +168,9 @@ public class OWF_ChangeRecordPageSteps {
 
 
 
-    @And("user selects estimated impact dropdown as no impact")
-    public void userSelectsEstimatedImpactDropdownAsNoImpact() {
-    //changeRecordPage.selectEstimatedImpact("no impact");
-        changeRecordPage.selectEstimatedImpactAs_NoImpact();
+    @And("user selects estimated impact dropdown as {string}")
+    public void userSelectsEstimatedImpactDropdownAsNoImpact(String estimatedImpact) {
+    changeRecordPage.selectEstimatedImpact(estimatedImpact);
 
     }
 
@@ -202,14 +179,30 @@ public class OWF_ChangeRecordPageSteps {
 
     }
 
-    @And("user selects template as All:IT:Other:TEST TEMPLATE[UAT]-Normal Change")
-    public void userSelectsTemplateAsAllITOtherTESTTEMPLATEUATNormalChange() {
-        changeRecordPage.selectTemplateAs_All_It_Other_TestTemplate_uat_NormalChange();
+    @And("user selects template as {string}")
+    public void userSelectsTemplateAsAllITOtherTESTTEMPLATEUATNormalChange(String template) {
+        changeRecordPage.selectTemplate(template);
 
     }
 
-    @And("user enters {string} in the service and customer impact field")
-    public void userEntersInTheServiceAndCustomerImpactField(String arg0){
+    @And("user selects template as {string}")
+    public void userSelectsTemplateAs(String templateType) {
+        changeRecordPage.selectTemplate(templateType);
+    }
+
+    @When("user selects request type as {string}")
+    public void userSelectsRequestTypeAs(String requestType) {
+        changeRecordPage.selectRequestType(requestType, true);
+    }
+
+    @And("user enters as {string} in service and customer impact")
+    public void userEntersAsInServiceAndCustomerImpact(String arg0) {
         changeRecordPage.enterServiceAndCustomerImpact(arg0);
+
+    }
+
+    @And("user validates ticket status")
+    public void userValidatesTicketStatus() {
+        Assert.assertEquals(changeRecordPage.getStatusText(), "Implementation", "status is not implementation");
     }
 }

@@ -11,16 +11,19 @@ public class OWF_TroubleEventPageSteps {
     public void troubleRecordFormShouldAppearInNewTab() {
     }
 
-    @And("user selects request type as Customer")
-    public void userSelectsRequestTypeAsCustomer() {
-        troubleEventPage.clickRequestTypeDropDown();
-        troubleEventPage.wait(1000);
-        troubleEventPage.selectCustomerDdValue();
-    }
-
     @Then("trouble ticket should be created and status should be assigned")
     public void troubleTicketShouldBeCreatedAndStatusShouldBeAssigned() {
         System.out.println(troubleEventPage.getStatusText());
      Assert.assertEquals(troubleEventPage.getStatusText(), "Assigned", "status is not assigned");
+    }
+
+    @Then("user enters {string} in Title field in Trouble event")
+    public void userEntersInTitleFieldInTroubleEvent(String level) {
+        troubleEventPage.enterLevel(level);
+    }
+
+    @And("user selects request type as {string} on trouble event page")
+    public void userSelectsRequestTypeAsStringOnTroubleEventPage(String requestType) {
+        troubleEventPage.selectRequestType(requestType);
     }
 }

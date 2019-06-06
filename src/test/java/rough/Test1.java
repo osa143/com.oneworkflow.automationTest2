@@ -1,4 +1,4 @@
-package rough;
+/*package rough;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -196,14 +196,14 @@ public class Test1 {
             //If we don't find the Site Name column, test should fail
             Assert.assertNotNull(cellValue);
         }*/
-        Thread.sleep(3000);
+       // Thread.sleep(3000);
         //preferences.click();
         //driver.findElement(By.className("MenuTableBody")).findElements(By.tagName("td")).stream().filter(x -> x.getText().equals("Remove Column")).findFirst().orElse(null).click();
         //driver.findElement(By.xpath("//td[contains(text(),'OP Next Due Date')]")).click();
 
 
-    }
-    public static void test4() throws InterruptedException {
+  //  }
+  /*  public static void test4() throws InterruptedException {
 
 
         WebDriverManager.chromedriver().setup();
@@ -230,7 +230,7 @@ public class Test1 {
         String childWindow = it.next();
         driver.switchTo().window(childWindow);
         Thread.sleep(3000);
-        changeRecordPage.selectRequestType("Normal change");
+        //changeRecordPage.selectRequestType("Normal change");
 
        // driver.findElement(By.xpath("//*[@id=\"WIN_0_777031002\"]/a"));
         Thread.sleep(3000);
@@ -294,5 +294,5 @@ public class Test1 {
 
 
     }
-
-}
+*/
+//}

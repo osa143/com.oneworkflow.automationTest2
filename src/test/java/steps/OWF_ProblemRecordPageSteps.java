@@ -129,12 +129,10 @@ public class OWF_ProblemRecordPageSteps {
     }
 
     //TO_DO should be changed by using checkIfControlIsReadonly method from base class
-    @When("user tries to change the status to withdrawn")
-    public void userTriesToChangeTheStatusToWithdrawn() {
+    @When("user tries to change the status to {string}")
+    public void userTriesToChangeTheStatusTo(String status) {
         try {
-            problemRecordPage.clickStatusDropDown();
-            problemRecordPage.wait(1000);
-            problemRecordPage.selectWithdrawnDdValue();
+            problemRecordPage.selectStatus(status);
         } catch (NullPointerException ex) {
             System.out.println("user is unable to change the status to withdrawn");
         }
@@ -277,6 +275,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user enters route cause details as {string}")
     public void userEntersRouteCauseDetailsAs(String rootCauseDetails) {
+        //problemRecordPage.enterText("rootCauseDetails", rootCauseDetails);
     problemRecordPage.enterRootCauseDetails(rootCauseDetails);
     }
 
@@ -331,11 +330,12 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user selects request type as Access Networks:RAN NSN 2G:3G:4G")
     public void userSelectsRequestTypeAsAccessNetworksRANNSNGGG() {
-        problemRecordPage.selectRequestTypeAs_AccessNetworks_RAN_NSN_2G_3G_4G();
+        problemRecordPage.selectRequestType("Access Networks:RAN NSN 2G/3G/4G", false);
     }
 
-    @And("user selects priority as major")
-    public void userSelectsPriorityAsMajor() {
-        problemRecordPage.selectPriorityAs_Major();
+
+    @And("user selects priority as {string}")
+    public void userSelectsPriorityAs(String Major) {
+        problemRecordPage.selectPriority(Major);
     }
 }

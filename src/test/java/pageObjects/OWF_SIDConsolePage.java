@@ -57,6 +57,17 @@ public class OWF_SIDConsolePage extends BasePage {
     private static final String ciDetailsTable_ID = "T700009024";
 
 
+    public void selectCategory(String value){
+        selectDropDownNameAndValue(ddCATEGORY, value, false);
+    }
+    public void selectType(String value){
+        selectDropDownNameAndValue(ddTYPE, value, false);
+    }
+    public void selectsItem(String value){
+        selectDropDownNameAndValue(ddITEM, value, false);
+    }
+
+
     public void clickFilerDropDown() {
         selectDropDownMenu(ddFILTER);
     }

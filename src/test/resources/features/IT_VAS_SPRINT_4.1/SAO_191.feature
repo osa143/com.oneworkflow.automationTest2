@@ -9,9 +9,9 @@ Feature: Site name details search Feature
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects SID console from agent console
     Then SID console page should be opened
-    When user selects Category as Access
-    And user selects Type as Radio Access Network
-    And user selects Item as GSMCell
+    When user selects Category as "Access"
+    And user selects Type as "Radio Access Network"
+    And user selects Item as "GSMCell"
     And user clicks on Search
     Then CI details should be displayed
     And site name should be displayed for all CI CTI search details

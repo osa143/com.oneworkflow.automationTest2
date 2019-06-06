@@ -272,8 +272,8 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
 
-    public void selectPriorityAs_Major() {
-        selectDropDownMenu(ddPRIORITY_ID);
-        selectDropDownValue(ddValueMAJOR);
+    public void selectPriority(String value) {
+        selectDropDownNameAndValue(ddPRIORITY_ID, value, false);
+
     }
 }

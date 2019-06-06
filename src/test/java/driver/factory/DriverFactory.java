@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
 import utils.TestContext;
@@ -58,11 +59,13 @@ public class DriverFactory {
 
                 case "IE":
                     WebDriverManager.iedriver().setup();
+                    InternetExplorerOptions options = new InternetExplorerOptions();
+                    options.setCapability("ignoreProtectedModeSettings", true);
 
                     //capabilities = DesiredCapabilities.internetExplorer();
                     //capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 //                    capabilities.setCapability(InternetExplorerDriver., true);
-                    driver = new InternetExplorerDriver();
+                    driver = new InternetExplorerDriver(options);
                     break;
 
                 case "FIREFOX":

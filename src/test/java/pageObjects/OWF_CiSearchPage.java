@@ -79,4 +79,7 @@ public class OWF_CiSearchPage extends BasePage {
     public void clickToSelectCi() {
         driver.findElement(By.xpath(chkbxTO_SELECT_CI)).click();
     }
+    public void selectLevel(String value){
+        selectDropDownNameAndValue(ddLEVEL, value, false);
+    }
 }

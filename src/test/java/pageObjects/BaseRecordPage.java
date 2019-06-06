@@ -58,16 +58,10 @@ public abstract class BaseRecordPage extends BasePage {
     public static final String ddSERVICE_PROVIDER = "Service Provider";
     public static final String ddSTATuS_ID = "arid_WIN_0_777031003";
     public static final String ddROOT_CAUSE_CODE = "Root Cause Code";
-    public static final String ddROOT_CAUSE_DETAILS_ID = "arid_WIN_0_705002081";
+    public static final String txtROOT_CAUSE_DETAILS_ID = "arid_WIN_0_705002081";
     public static final String ddCLOSER_CODE = "Closure Code";
     public static final String ddValueSOLVED = "Solved";
     public static final String ddValueNO_IMPACT = "No Impact";
-
-    public void selectEstimatedImpactAs_NoImpact(){
-        selectDropDownMenu(ddESTIMATED_IMPACT);
-        selectDropDownValue(ddValueNO_IMPACT);
-    }
-
 
     public static final String chkbxFINLAND = "WIN_0_rc0id600002002";
     public static final String chkbxDENMARK = "WIN_0_rc0id600002003";
@@ -97,7 +91,37 @@ public abstract class BaseRecordPage extends BasePage {
     public static final String btnOK_ID = "WIN_0_777777851";
 
 
+   //use this method for all send keys.
+    public void enterText(String textName, String text)
+    {
+        switch(textName)
+        {
+            case "rootCauseDetails" :
+                enterTextBy(By.id(txtROOT_CAUSE_DETAILS_ID), text);
+                break;
 
+            case "minutes" :
+                enterTextBy(By.id(txtMINS_ID), text);
+                break;
+
+            case "durationdays":
+                enterTextBy(By.id(txtIMPACT_DURATION_DAYS), text);
+                break;
+
+            case "durationhours":
+                enterTextBy(By.id(txtIMPACT_DURATION_HRS), text);
+                break;
+
+            case "durationminutes":
+                enterTextBy(By.id(txtIMPACT_DURATION_MINS), text);
+                break;
+
+            case "durationseconds":
+                enterTextBy(By.id(txtIMPACT_DURATION_SECS), text);
+                break;
+
+        }
+    }
 
     public void selectAutoText_TechBridgeClosed(){
     selectDropDownNameAndValue(ddAUTO_TEXT, ddValueTECH_BRIDGE_CLOSED, false);
@@ -126,7 +150,7 @@ public abstract class BaseRecordPage extends BasePage {
         selectDropDownNameAndValue(ddROOT_CAUSE_CODE, "Technical:HW error", false);
     }
     public void enterRootCauseDetails(String rootCauseDetails){
-        driver.findElement(By.id(ddROOT_CAUSE_DETAILS_ID)).sendKeys(rootCauseDetails);
+        driver.findElement(By.id(txtROOT_CAUSE_DETAILS_ID)).sendKeys(rootCauseDetails);
     }
     public void selectCloserCodeAsSolved(){
         selectDropDownNameAndValue(ddCLOSER_CODE, ddValueSOLVED, true);
@@ -145,6 +169,9 @@ public abstract class BaseRecordPage extends BasePage {
 
     public void clickStatusDropDown() {
         selectDropDownMenu(ddSTATUS);
+    }
+    public void selectStatus(String value){
+        selectDropDownNameAndValue(ddSTATUS, value, false);
     }
 
     public void clickServiceProviderDropDown() {
@@ -193,7 +220,7 @@ public abstract class BaseRecordPage extends BasePage {
     }
 
     public void selectEstimatedImpact(String value) {
-        selectDropDownNameAndValue(ddESTIMATED_IMPACT, value, true);
+        selectDropDownNameAndValue(ddESTIMATED_IMPACT, value, false);
     }
 
     public void selectRequestCategory(String value) {
@@ -212,25 +239,19 @@ public abstract class BaseRecordPage extends BasePage {
         selectDropDownNameAndValue(ddTITLE, value, true);
     }
 
-    public void selectRequestType(String value) {
-        selectDropDownNameAndValue(ddREQUEST_TYPE, value, true);
+    public void selectRequestType(String value, boolean readOnly) {
+        selectDropDownNameAndValue(ddREQUEST_TYPE, value, readOnly);
     }
-
-    public void selectTemplateAsAll_Mobile_RANExternals_RANConnectivity() {
-        selectDropDownNameAndValue(ddTEMPLATE, "All:Mobile:RAN - Externals:RAN Connectivity", true);
-    }
-
-    public void selectRequestTypeAs_AccessNetworks_RAN_NSN_2G_3G_4G() {
-        selectDropDownNameAndValue(ddREQUEST_TYPE, "Access Networks:RAN NSN 2G/3G/4G", false);
+    //ALL:IT:Other
+    public void selectTemplate(String value) {
+        selectDropDownNameAndValue(ddTEMPLATE, value, true);
 
     }
-
     public String getStatusText() {
         String StatusText = driver.findElement(By.id(ddSTATuS_ID)).getAttribute("value");
         return StatusText;
 
     }
-
     public void enterImpactDurationDays(String impactDurationDays) {
         driver.findElement(By.id(txtIMPACT_DURATION_DAYS)).sendKeys(impactDurationDays);
     }
@@ -256,26 +277,6 @@ public abstract class BaseRecordPage extends BasePage {
 
     public void enterChangeBuilderType(String changeBuilderName) {
         driver.findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).sendKeys(changeBuilderName);
-    }
-
-    public void selectAssignedDdValue() {
-        selectDropDownValue(ddValueASSIGNED);
-    }
-
-    public void selectPendingDdValue() {
-        selectDropDownValue(ddValuePENDING);
-    }
-
-    public void selectUnderInvestigationDdValue() {
-        selectDropDownValue(ddValueUNDER_INVESTIGATION);
-    }
-
-    public void selectWithdrawnDdValue() {
-        selectDropDownValue(ddValueWITHDRWAN);
-    }
-
-    public void selectClearDdValue() {
-        selectDropDownValue(ddValueCLEAR);
     }
 
     public void clickSave() {
@@ -314,9 +315,6 @@ public abstract class BaseRecordPage extends BasePage {
    public void enterDecisionGoNoGoDate(){
         driver.findElement(By.id(txtDECISION_GO_NO_GO_ID)).sendKeys(Keys.ENTER);
    }
-    public void selectRequestTypeAsAccessNetworksRANOptimization() {
-        selectDropDownNameAndValue(ddREQUEST_TYPE, "Access Networks:RAN Optimization", false);
-    }
     public void enterSolution(String Text){
         driver.findElement(By.id(txtSOLUTION_ID)).sendKeys(Text);
     }
@@ -325,20 +323,6 @@ public abstract class BaseRecordPage extends BasePage {
     }
     public void clickCloneButton(){
         driver.findElement(By.id(btnCLONE_ID)).click();
-    }
-    public void selectRequestTypeAs_AccessNetworks_RANNSN2G3G4G(){
-        selectDropDownNameAndValue(ddREQUEST_TYPE, "Access Networks:RAN NSN 2G:3G:4G", false);
-    }
-    public void selectTemplateAs_All_Mobile_Billing_NoBillCustomerRefund_SE(){
-        selectDropDownNameAndValue(ddTEMPLATE, "All:Mobile:Billing:Nobill - Customer refund (SE)", false);
-
-    }
-    public void selectTemplateAs_All_It_Other_TestTemplate_uat_NormalChange(){
-        selectDropDownNameAndValue(ddTEMPLATE, "All:IT:Other:TEST TEMPLATE[UAT]-Normal Change", true);
-    }
-    public void selectRequestCategoryAsCableSplicing(){
-        selectDropDownMenu(ddREQUEST_CATEGORY);
-        selectDropDownValue(ddValueCABLE_SPLICING);
     }
     public void enterReason(String Reason){
         driver.findElement(By.id(txtREASON_ID)).sendKeys(Reason);

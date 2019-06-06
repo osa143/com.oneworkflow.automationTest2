@@ -8,9 +8,10 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on change record from agent console
     Then change record page should be opened and Change form is displayed
-    And user selects template as All:Mobile:RAN-Externals:RAN connectivity
-    When user selects request type as normal change
+    And user selects template as "All:Mobile:RAN-Externals:RAN connectivity"
+    When user selects request type as "Normal change"
     And user enters as "Change_Automation_1" in Change Builder field
+    And user enters as "Test ticket no impact" in service and customer impact
     Then user enters start time as some minutes fast from current sweden time
     And user enters Request End time as some minutes fast from request start time
     And user enters impact duration as "5" minutes
@@ -23,7 +24,7 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
     And user enters "One WorkFlow system test" in name field
     And user clicks on search button on CI search window
     And user selects a CI from list
-    And user Choose impact level as degradation of service
+    And user Choose impact level as "Degradation of Service"
     And user clicks on relate CI
     And user closes warning message and clicks on close button
     Then CI should be listed and displayed under the Diagnosis tab
@@ -31,16 +32,21 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
     Then send button becomes inactive and Ack button should be active
     When user clicks on save button
     Then form should be saved
-    Then user changes status to Analysis
-    And user changes status to Approval Requested
-    And user changes status to Schedule Requested
-    And user changes status to Implementation
+    Then user changes status to "Analysis"
+    And user changes status to "Approval Requested"
+    And user changes status to "Schedule Requested"
+    And user changes status to "Implementation"
     And user validates ticket status
-    Then user creates Trouble ticket from Change Request
-    Then new tab should be opened
-    Then user fills value for request type
-    And user presses the save button
-    And user Validates change value in timeline
+    Then user clicks on create trouble event
+    Then trouble record form should appear in new tab
+    When user clicks on sweden checkbox under affected BU's
+    And user enters "Test creation of container" in Title field in Trouble event
+    And user enters description as "Test creation of container"
+    And user selects request type as "Customer" on trouble event page
+    And user clicks on save button
+    And change should also be reflected in the timeline as ""
+    And user clicks on Diagnosis tab
+    And user clicks on CI search button
     Then user waits for implementation to finish
     And verify a new OP ticket has been created
     Then verify new OP has other OP in container

@@ -16,23 +16,22 @@ public class OWF_SIDConsolePageSteps {
         System.out.println(SIDConsolePageTitle);
     }
 
-    @When("user selects Category as Access")
-    public void userSelectsCategoryAsAccess() {
-        sidConsolePage.clickCategoryDropDown();
-        sidConsolePage.selectDdValueAccess();
-        ;
+    @When("user selects Category as {string}")
+    public void userSelectsCategoryAs(String category) {
+        sidConsolePage.selectCategory(category);
+
+
     }
 
-    @And("user selects Type as Radio Access Network")
-    public void userSelectsTypeAsRadioAccessNetwork() {
-        sidConsolePage.clickTypeDropDown();
-        sidConsolePage.selectDdValueRadiAccessNetwork();
+    @And("user selects Type as {string}")
+    public void userSelectsTypeAs(String arg0) {
+        sidConsolePage.selectType(arg0);
+
     }
 
-    @And("user selects Item as GSMCell")
-    public void userSelectsItemAsGSMCell() {
-        sidConsolePage.clickItemDropDown();
-        sidConsolePage.selectDdValueGsmCell();
+    @And("user selects Item as {string}")
+    public void userSelectsItemAs(String arg0) {
+        sidConsolePage.selectsItem(arg0);
     }
 
     @And("user clicks on Search")
@@ -51,9 +50,9 @@ public class OWF_SIDConsolePageSteps {
 
     @Then("site name should be displayed for all CI CTI search details")
     public void siteNameShouldBeDisplayedForAllCICTISearchDetails() {
-        Assert.assertTrue(false);
         boolean ciDetailsActual = sidConsolePage.validateSiteNameDetails();
         Assert.assertTrue(ciDetailsActual, "Site name was not available for all CIs.");
     }
+
 
 }

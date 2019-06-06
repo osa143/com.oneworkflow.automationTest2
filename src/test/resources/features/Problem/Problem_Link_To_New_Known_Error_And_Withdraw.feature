@@ -10,7 +10,7 @@
       Then problem record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       When user enters "proactive investigation of: frvi96_auto" in Title field
-      And user selects request type as Access Networks:RAN optimization
+      And user selects request type as "Access Networks:RAN Optimization"
       And user enters description as "UAT Test Known Error linked items"
       And user selects impact type as moderate:limited
       And user selects urgency as low
@@ -36,7 +36,7 @@
       Then user clicks on linked items tab on known error form
       And user clicks on radio button cleared
       And problem ticket should be listed
-      Then user changes status to withdrawn
+      When user changes status to "Withdrawn"
       And user clicks on yes on warning window
       Then an error message "Required field (without a default) not specified : Withdrawn Reason (ARERR 9424)" should appear with red boarder around withdrawn reason
       When user selects withdrawn reason as false alarm and clicks save

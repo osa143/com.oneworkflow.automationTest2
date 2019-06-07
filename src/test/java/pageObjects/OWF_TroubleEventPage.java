@@ -6,6 +6,8 @@ import static pageObjects.BaseRecordPage.ddSTATuS_ID;
 
 public class OWF_TroubleEventPage extends BasePage {
 
+    private static final String btnREFRESH_IMAGE_ID= "reg_img_600003444";
+
     private static final String ddSTATUS_ID = "arid_WIN_0_777031003";
     private static final String txtCUST_REMAINING_SLA_ID = "arid_WIN_0_600001303";
     private static final String txtOLA_TARGET_TIME_ID = "arid_WIN_0_600001308";
@@ -23,10 +25,12 @@ public class OWF_TroubleEventPage extends BasePage {
     private static final String txtAUTO_CLOSE_DATE = "arid_WIN_0_600001305";
     private static final String txtRESPONSE_TIME = "arid_WIN_0_700048056";
     private static final String txtTITLE_ID = "arid_WIN_0_777031000";
-
-    public void enterLevel(String level){
-        driver.findElement(By.id(txtTITLE_ID)).sendKeys(level);
-    }
+    private static final String txtSOURCE_ID = "arid_WIN_0_777777912";
+    private static final String chkbxHEADER_XPATH = "//div[@id='WIN_0_700508140']//input[@class='checkboxheader']";
+    private static final String btnTERMINATE_ALARM = "WIN_0_600002926";
+    private static final String btnALARMS_XPATH = "//div[@id='WIN_0_999000003']//div[@class='OuterTabsDiv']//div[@class='TabsViewPort']//div//a[@class='btn f1'][contains(text(),'Alarms')]";
+    private static final String btnWORK_ORDER_XPATH = "//a[contains(text(),'Work Orders')] ";
+    private static final String btnCREATE_FROM_TICKET_ID  = "WIN_0_777504010";
 
 
     private static final String ddTEMPLATE = "Template";
@@ -38,13 +42,83 @@ public class OWF_TroubleEventPage extends BasePage {
     private static final String ddASIGNMENT_PROFILE = "Assignment Profile";
     private static final String ddASIGNEE = "Assignee";
 
-    public void selectRequestType(String value){
-        selectDropDownNameAndValue(ddREQUEST_TYPEE, value, false );
-    }
 
     private static final String ddValueSITE_ACCESS_REGISTRATION = "Site access registration";
     private static final String ddValueWORKFORCE_ESCALATION_SE = "Workforce Escalation-SE";
     private static final String ddValueCLEAR_TEMPLATE = "(clear)";
+
+    private static final String ddValueCUSTOMER = "Customer";
+    private static final String ddValueCUSTOMER_RECLAMATION = "Customer Reclamation";
+    private static final String ddValueEVENT = "Event";
+    private static final String ddValueINTERNAL_USER = "Internal User";
+    private static final String ddValuePREVENTIVE_MAINTENANCE = "Preventive Maintenance";
+    private static final String ddValueSTAKEHOLDER = "Stakeholder";
+    private static final String ddValueTHIRD_PARTY = "Third Party";
+    private static final String ddValueCLEAR_REQUEST_TYPE = "(clear)";
+
+    private static final String ddValueAPPLICATION_FAULT = "Application fault";
+    private static final String ddValueDATA_FAULT = "Data Fault";
+    private static final String ddValueNETWORK_FAULT = "Network Fault";
+    private static final String ddValueROAMING_DATA_FAULT = "Roaming-Data Fault";
+    private static final String ddValueROAMING_VOICE_FAULT = "Roaming-Voice Fault";
+    private static final String ddValueSITE_FAULT = "Site Fault";
+    private static final String ddValueTRANSMISSION_FAULT = "Transmission Fault";
+    private static final String ddValueTV_FAULT = "TV Fault";
+    private static final String ddValueVOICE_FAULT = "Voice Fault";
+    private static final String ddValueCLEAR_FAULT_TYPE = "(clear)";
+
+    private static final String ddValueCRITICAL_IMPORTANCE = "Critical";
+    private static final String ddValueHIGH = "High";
+    private static final String ddValueAVERAGE = "Average";
+    private static final String ddValueLOW = "Low";
+    private static final String ddValueCLEAR_IMPORTANCE = "(clear)";
+
+
+    private static final String ddValueNO = "NO";
+    private static final String ddValueMINOR = "Minor";
+    private static final String ddValueMEDIUM = "Medium";
+    private static final String ddValueMAJOR = "Major";
+    private static final String ddValueCRITICAL_IMPACT = "Critical";
+
+    private static final String ddValueCLEAR_ASIGNMENT_PROFILE = "(clear)";
+
+    private static final String chkbxDO_NOT_AUTOCLOSE = "WIN_0_rc0id600002014";
+
+    private static final String btnSAVE = "WIN_0_777505104";
+
+
+
+
+    public void clickTerminateAlarm(){
+        driver.findElement(By.id(btnTERMINATE_ALARM)).click();
+    }
+    public void clickRefreshButtonImage(){
+        driver.findElement(By.id(btnREFRESH_IMAGE_ID)).click();
+
+    }
+
+    public void clickCreateFromTicket(){
+    driver.findElement(By.id(btnCREATE_FROM_TICKET_ID)).click();
+    }
+    public void clickAlarmTab(){
+        driver.findElement(By.xpath(btnALARMS_XPATH)).click();
+    }
+    public void clickWorkOrder(){
+        driver.findElement(By.xpath(btnWORK_ORDER_XPATH)).click();
+    }
+    public void enterLevel(String level){
+        driver.findElement(By.id(txtTITLE_ID)).sendKeys(level);
+    }
+
+    public void clickAllAlarmBox(){
+        driver.findElement(By.xpath(chkbxHEADER_XPATH)).click();
+    }
+
+
+
+    public void selectRequestType(String value){
+        selectDropDownNameAndValue(ddREQUEST_TYPEE, value, false );
+    }
 
     public void selectSiteAccessRegistrationDdValue() {
         selectDropDownValue(ddValueSITE_ACCESS_REGISTRATION);
@@ -57,15 +131,6 @@ public class OWF_TroubleEventPage extends BasePage {
     public void selectClearTemplateDdvalue() {
         selectDropDownValue(ddValueCLEAR_TEMPLATE);
     }
-
-    private static final String ddValueCUSTOMER = "Customer";
-    private static final String ddValueCUSTOMER_RECLAMATION = "Customer Reclamation";
-    private static final String ddValueEVENT = "Event";
-    private static final String ddValueINTERNAL_USER = "Internal User";
-    private static final String ddValuePREVENTIVE_MAINTENANCE = "Preventive Maintenance";
-    private static final String ddValueSTAKEHOLDER = "Stakeholder";
-    private static final String ddValueTHIRD_PARTY = "Third Party";
-    private static final String ddValueCLEAR_REQUEST_TYPE = "(clear)";
 
     public void selectCustomerDdValue() {
         selectDropDownValue(ddValueCUSTOMER);
@@ -98,17 +163,6 @@ public class OWF_TroubleEventPage extends BasePage {
     public void selectClearRequestTypeDdValue() {
         selectDropDownValue(ddValueCLEAR_REQUEST_TYPE);
     }
-
-    private static final String ddValueAPPLICATION_FAULT = "Application fault";
-    private static final String ddValueDATA_FAULT = "Data Fault";
-    private static final String ddValueNETWORK_FAULT = "Network Fault";
-    private static final String ddValueROAMING_DATA_FAULT = "Roaming-Data Fault";
-    private static final String ddValueROAMING_VOICE_FAULT = "Roaming-Voice Fault";
-    private static final String ddValueSITE_FAULT = "Site Fault";
-    private static final String ddValueTRANSMISSION_FAULT = "Transmission Fault";
-    private static final String ddValueTV_FAULT = "TV Fault";
-    private static final String ddValueVOICE_FAULT = "Voice Fault";
-    private static final String ddValueCLEAR_FAULT_TYPE = "(clear)";
 
     public void selectApplicationFaultDdValue() {
         selectDropDownValue(ddValueAPPLICATION_FAULT);
@@ -150,11 +204,6 @@ public class OWF_TroubleEventPage extends BasePage {
         selectDropDownValue(ddValueCLEAR_FAULT_TYPE);
     }
 
-    private static final String ddValueCRITICAL_IMPORTANCE = "Critical";
-    private static final String ddValueHIGH = "High";
-    private static final String ddValueAVERAGE = "Average";
-    private static final String ddValueLOW = "Low";
-    private static final String ddValueCLEAR_IMPORTANCE = "(clear)";
 
     public void selectCriticalImportanceDdValue() {
         selectDropDownValue(ddValueCRITICAL_IMPORTANCE);
@@ -175,14 +224,6 @@ public class OWF_TroubleEventPage extends BasePage {
     public void selectClearImportanceDdValue() {
         selectDropDownValue(ddValueCLEAR_IMPORTANCE);
     }
-
-    private static final String ddValueNO = "NO";
-    private static final String ddValueMINOR = "Minor";
-    private static final String ddValueMEDIUM = "Medium";
-    private static final String ddValueMAJOR = "Major";
-    private static final String ddValueCRITICAL_IMPACT = "Critical";
-
-    private static final String ddValueCLEAR_ASIGNMENT_PROFILE = "(clear)";
 
     public void selectNoDdValue() {
         selectDropDownValue(ddValueNO);
@@ -207,10 +248,6 @@ public class OWF_TroubleEventPage extends BasePage {
     public void selectClearAsignmentProfileDdValue() {
         selectDropDownValue(ddValueCLEAR_ASIGNMENT_PROFILE);
     }
-
-    private static final String chkbxDO_NOT_AUTOCLOSE = "WIN_0_rc0id600002014";
-
-    private static final String btnSAVE = "WIN_0_777505104";
 
 
     public void clickDoNotAutoCloseCheckBox() {
@@ -317,6 +354,10 @@ public class OWF_TroubleEventPage extends BasePage {
     public String getStatusText() {
         String StatusText = driver.findElement(By.id(ddSTATUS_ID)).getAttribute("value");
         return StatusText;
+
+    }
+    public String getSourceText(){
+         return getTextById(txtSOURCE_ID);
 
     }
 }

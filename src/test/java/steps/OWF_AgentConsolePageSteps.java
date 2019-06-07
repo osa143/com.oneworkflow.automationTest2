@@ -156,7 +156,6 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.wait(2000);
         agentConsolePage.clickMenuItemLogout();
         agentConsolePage.wait(1000);
-        agentConsolePage.tearDown();
     }
 
     @When("user clicks on change record from agent console")

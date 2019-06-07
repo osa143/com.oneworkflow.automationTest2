@@ -1,6 +1,7 @@
 package cucumberHooks;
 
 import com.aventstack.extentreports.ExtentTest;
+import driver.factory.DriverFactory;
 import extentreports.cucumber.adapter.ExtentCucumberAdapter;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -18,7 +19,7 @@ import static java.nio.file.Files.readAllBytes;
 public class Hooks {
 
     @After
-    public void captureScreenShot(Scenario scenario) throws IOException, InterruptedException {
+    public void Teardown(Scenario scenario) throws IOException, InterruptedException {
 
         //if(scenario.isFailed()){
             byte[] screenshot = BasePage.takeScreenShotAsByteArray();
@@ -27,7 +28,7 @@ public class Hooks {
 //        Path p = Paths.get("Screenshots\\" + file.getName());
             scenario.embed(screenshot, "image/png");
 //        }
-
+        DriverFactory.getInstance().quit();
 
     }
 }

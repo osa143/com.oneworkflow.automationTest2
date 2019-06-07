@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import utils.CommonUtils;
 
-public abstract class BaseRecordPage extends BasePage {
+public class BaseRecordPage extends BasePage {
 
     public static final String ddValueASSIGNED = "Assigned";
     public static final String ddSTATUS = "Status*";

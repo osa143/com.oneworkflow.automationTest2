@@ -13,7 +13,7 @@ public class ReporterUtils {
     }
 
     public static String getScreenShotPath(){
-        return System.getProperty("user.dir") + CommonUtils.getProperty("paths.properties", "screenshotPath");
+        return System.getProperty("user.dir") + CommonUtils.getProperty("paths.properties", "screenshotPath") + "/Screenshots_" + CommonUtils.getDateTime("yyyyMMdd_HHmmss", "", 0);
 
     }
 

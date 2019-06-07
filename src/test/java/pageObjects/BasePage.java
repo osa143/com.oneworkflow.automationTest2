@@ -9,7 +9,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class BasePage {
+public class BasePage {
 
     public static WebDriver driver;
 
@@ -23,7 +23,7 @@ public abstract class BasePage {
     }
 
     public void getURL(String appURL) {
-
+        driver = DriverFactory.getInstance().getDriver();
         driver.get(appURL);
     }
 
@@ -309,11 +309,6 @@ public abstract class BasePage {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
-    public void tearDown() {
-        driver.quit();
-        //driver.close();
-
-    }
 
 
 }

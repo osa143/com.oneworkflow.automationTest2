@@ -92,4 +92,11 @@ public class DriverFactory {
         return driver;
     }
 
+    public void quit(){
+        if(driver!= null){
+            driver.quit();
+            driver = null;
+        }
+    }
+
 }

@@ -6,6 +6,7 @@ Feature: Verification of ability to link tickets
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create problem record
+    And user switches to window 1
     Then problem record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
     When user enters "proactive investigation of Tohall_Copy" in Title field
@@ -16,22 +17,24 @@ Feature: Verification of ability to link tickets
     And user clicks on save button on the problem form
     Then ticket should be created and status should be assigned
     When user clicks on create trouble event
+    And user switches to window 2
     Then trouble record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
     And user enters "A Problem Test" in Title field
-    And user selects request type as Customer
+    And user selects request type as "Customer" on trouble event page
     And user enters description as "A Customer Complaint"
     And user clicks on save button
     Then ticket should be created and status should be assigned
     When user clicks on create change record
+    And user switches to window 3
     Then change record form should open in a new tab
     When user clicks on sweden checkbox under affected BU's
-    And user selects request type as normal change
-    And user selects template as "All:Mobile:Billing:Nobill - Customer refund (SE)"
-    And user selects request category as "Cable splicing"
+    And user selects template as "All:IT:Other:TEST TEMPLATE [UAT] - Normal Change"
+    And user selects request type as "Normal Change"
+    And user selects request category as "Cable splicing" on change record page
     And user enters description as "Correcting error"
     And user enters reason field as "none"
-    And user selects priority as major
+    And user selects priority as "Major"
     And user enters "Problem initiator" in the change builder field
     And user enters "New implementation" in the implementation field
     And user enters "Yes" in the test plan field
@@ -46,47 +49,53 @@ Feature: Verification of ability to link tickets
     And user selects estimated impact as "No Impact"
     And user clicks on save button
     Then user clicks on risk tab
-    And user selects Impact to other systems/technologies are unclear under change impact to other systems dropdown
-    And user selects No under Have resources and preparation been adequately secured for the change dropdown
-    And user selects Tested successfully, this is a pilot under the tested and earlier implementation of similar changes
-    And user selects Yes (outcome of the change can be instantly verified under is verification under is verification instant dropdown
-    And user selects Yes under is rollback possible dropdown
-    And user selects Simple under what is the complexity of this change dropdown
-    And user selects No under does this change need CAB approval dropdown
+    And user selects answer as "Impact to other systems/technologies are unclear"
+    And user selects answer as "No"
+    And user selects answer as "Tested succesfully, this is a pilot"
+    And user selects answer as "Yes (outcome of the change can be instantly verified)"
+    And user selects answer as "Yes"
+    And user selects answer as "Simple"
+    And user selects last answer as "No"
     And user clicks on save button
     Then user clicks on Diagnosis tab
     And user clicks on CI search button
-    When user clicks on clear button and selects search for all cis
+    When user clicks on clear button
+    And user selects search for as "All CIs"
     And  user enters "SE_CPE_FRECPE5" in name field
-    And user clicks on search button
-    And user selects a SE_CPE_FRECPE5 from list
-    And user Choose impact level as no impact
+    And user clicks on search button on CI search window
+    And user selects a CI from list
+    And user selects impact level as "No Impact"
     And user clicks on relate CI
     And user closes warning message and clicks on close button
     Then CI should be listed and displayed under the Diagnosis tab
     When user clicks on Send button
     Then ticket should be created and status should be assigned
     And user gets ticket value
-    When user switches to window "Linked Tab"
-    Then user clicks on linked items tab
-    And user selects OS3 change under target application dropdown
-    And user selects caused by under target application dropdown 2
-    When user clicks on link button
-    Then select target request window should open
-    And user enters change ticket in ticket ID+ field
-    And user clicks ticket checkbox
-    And user clicks accept button
-    Then user switches to window "Trouble Form"
-    And user gets ticket value
-    When user switches to window "Problem Form"
-    And user selects OS3 operations under target application dropdown
-    And user selects is related to under target application dropdown 2
+    And user switches to window 1
+    When user clicks on linked items tab
+    And user selects target application first dropdown as "OS3 Change"
+    And user selects target application second dropdown as "Caused by"
     When user clicks on link button
     Then select target request window should open
     And user switches to frame
-    And user enters trouble ticket in ticket ID+ field
+    And user enters ticket in ticket ID+ field
+    And user clicks on CI search button
+    And user clicks ticket checkbox
+    And user clicks accept button
+    When user clicks on linked items tab
+    And user selects target application first dropdown as "OS3 - Operations"
+    And user selects target application second dropdown as "Is related to"
+    When user clicks on link button
+    Then select target request window should open
+    And user switches to frame
+    And user enters ticket in ticket ID+ field
     And user clicks ticket checkbox
     And user clicks accept button
     Then trouble ticket should be in list of linked items
     And change ticket should be in list of linked items
     Then user logsOut and closes the browser
+
+
+    # And fill the base page fields with data
+    # |template|ALL:IT:Other:BlaBla:Bla/5G|
+    # |sweden|true|

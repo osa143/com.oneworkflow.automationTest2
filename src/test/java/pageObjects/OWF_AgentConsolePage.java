@@ -304,4 +304,8 @@ public class OWF_AgentConsolePage extends BasePage {
     public int getColumnIndexByHeaderName(String columnName) {
         return BasePage.getColumnIndexByHeaderName(By.id(table_ID), columnName);
     }
+
+    public void selectSearchMenu(String menuItem){
+        selectMainMenuAndMenuItem(menuForSEARCH, menuItem);
+    }
 }

@@ -13,7 +13,7 @@ public class OWF_AgentConsolePageSteps {
 
     @Then("user successfully logged in to OneWorkflow and agent console should be displayed")
     public void userSuccessfullyLoggedInToOneworkflowAndAgentConsoleShouldBeDisplayed() {
-        String AgentConsolePageTitle = agentConsolePage.getDriver().getTitle();
+       // String AgentConsolePageTitle = agentConsolePage.getDriver().getTitle();
         //System.out.println(AgentConsolePageTitle);
         //Assert.assertEquals(AgentConsolePageTitle, "Agent Console (New)");
     }
@@ -22,7 +22,7 @@ public class OWF_AgentConsolePageSteps {
     public void userSelectsSIDConsoleFromAgentConsole() {
         agentConsolePage.clickConsoleMenu();
         agentConsolePage.clickMenuItemSIDConsole();
-        CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
+        //CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
     }
 
     @When("user clicks on add column under preferences and selects OP next due date")
@@ -42,7 +42,8 @@ public class OWF_AgentConsolePageSteps {
     public void userClicksOnCreateProblemRecord() {
         agentConsolePage.clickCreateMenu();
         agentConsolePage.clickMenuItemProblemRecord();
-        CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
+        agentConsolePage.wait(5000);
+        //CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
     }
 
 
@@ -162,7 +163,6 @@ public class OWF_AgentConsolePageSteps {
     public void userClicksOnChangeRecordFromAgentConsole() {
         agentConsolePage.clickCreateMenu();
         agentConsolePage.clickMenuItemChangeRecord();
-        CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
     }
 
     @And("user clicks on search and selects open search forms and problem record")
@@ -186,6 +186,7 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.clickCreateMenu();
         agentConsolePage.wait(1000);
         agentConsolePage.clickMenuItemTroubleEvent();
+
     }
 
 
@@ -194,6 +195,12 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.clickCreateMenu();
         agentConsolePage.wait(1000);
         agentConsolePage.clickMenuItemChangeRecord();
+    }
+
+
+    @When("user selects search menu as {string}")
+    public void userSelectsSearchMenuAs(String arg0) {
+        agentConsolePage.selectSearchMenu(arg0);
     }
 }
 

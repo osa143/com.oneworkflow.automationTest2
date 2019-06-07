@@ -8,11 +8,43 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String btnClOSE = "WIN_0_777000001";
     private static final String btnCLEAR = "WIN_0_700009116";
     private static final String btnCI_SEARCH = "WIN_0_700009021";
+    private static final String btnLINK_ID = "WIN_4_777506009";
+    private static final String btnACCEPT_ID = "WIN_0_730011058";
+
+    public void clickAcceptButton(){
+        driver.findElement(By.id(btnACCEPT_ID)).click();
+    }
+    private static final String txtTICKET_ID_PLUS_ID= "arid_WIN_0_777777600";
+
+    public void enterTicketIdPlus(String ticketId){
+        driver.findElement(By.id(txtTICKET_ID_PLUS_ID)).sendKeys(ticketId);
+
+    }
+
+    public void clickLink(){
+        driver.findElement(By.id(btnLINK_ID)).click();
+    }
+
+    private static final String ddTARGET_APPLICATION_FIRST = "Target Application";
+    private static final String ddTARGET_APPLICATION_SECOND = "Fld-SourceRelationshipType";
+
+    public void selectTargetApplicationFirst(String value){
+        selectDropDownNameAndValue(ddTARGET_APPLICATION_FIRST,value, false);
+    }
+    public void selectTargetApplicationSecond(String value){
+        selectDropDownNameAndValue(ddTARGET_APPLICATION_SECOND,value, false);
+    }
+
 
     private static final String ddLEVEL = "Level";
-    private static final String ddSEARCH_FOR = "arid_WIN_0_700009236";
+    private static final String ddSEARCH_FOR_ID = "arid_WIN_0_700009236";
 
     private static final String ddValueALL_CIS = "All CIs";
+    private static final String btnLINKED_ITEMS_XPATH= "//a[contains(text(), 'Linked Items')]";
+
+    public void clickLinkedItems(){
+        driver.findElement(By.xpath(btnLINKED_ITEMS_XPATH)).click();
+    }
 
     private static final String ddValueDEGRADATION_OF_SERVICES = "Degradation of Service";
     private static final String ddValueLOSS_OF_SERVICE = "Loss of Service";
@@ -33,7 +65,7 @@ public class OWF_CiSearchPage extends BasePage {
     }
 
     public void clickSearchForDropdown() {
-        driver.findElement(By.id(ddSEARCH_FOR)).click();
+        driver.findElement(By.id(ddSEARCH_FOR_ID)).click();
     }
 
     public void selectAllCiDdValue() {

@@ -4,6 +4,7 @@ import driver.factory.DriverFactory;
 import org.openqa.selenium.*;
 import org.testng.Assert;
 
+import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -62,6 +63,21 @@ public abstract class BasePage {
 
     }
 
+
+    public void selectMenuItemSplit(String menuItem) {
+        String arr[] = menuItem.split(":");
+        for (int i = 0; i < arr.length; i++) {
+            final String temp = arr[i];
+            driver.findElements(By.className("MenuTableBody")).get(i).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
+            wait(1000);
+        }
+    }
+    public void selectMainMenuAndMenuItem(String mainMenu, String menuItem){
+        selectMainMenu(mainMenu);
+        selectMenuItemSplit(menuItem);
+
+    }
+
     public void selectDropDownMenu(String DropDownMenu) {
 
         String mainMenuXpath = "//img[@alt='Menu for " + DropDownMenu + "']/..";
@@ -74,6 +90,9 @@ public abstract class BasePage {
                 .filter(element -> element.getText().trim().equals(DropDownValue)).findFirst().orElse(null).click();
 
     }
+
+
+
 
     public void selectDropDownNameAndValue(String dropdownName, String dropdownValue, boolean readonly) {
         String dropdownXpath;

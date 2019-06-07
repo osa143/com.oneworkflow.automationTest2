@@ -26,4 +26,14 @@ public class OWF_TroubleEventPageSteps {
     public void userSelectsRequestTypeAsStringOnTroubleEventPage(String requestType) {
         troubleEventPage.selectRequestType(requestType);
     }
+
+    @And("user clicks on search button")
+    public void userClicksOnSearchButton() {
+
+    }
+
+    @And("user enters ticket id as")
+    public void userEntersTicketIdAs() {
+        troubleEventPage.wait(15000);
+    }
 }

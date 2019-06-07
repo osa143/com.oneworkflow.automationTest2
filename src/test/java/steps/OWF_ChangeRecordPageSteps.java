@@ -111,10 +111,10 @@ public class OWF_ChangeRecordPageSteps {
         //Title Assertion
     }
 
-    @And("user selects template as {string}")
-    public void userSelectsTemplateAsAllMobileBillingNoBillCustomerRefundSE(String template) {
+   /* @And("user selects template as {string}")
+    public void userSelectsTemplateAs(String template) {
         changeRecordPage.selectTemplate(template);
-    }
+    }*/
     @And("user selects request category as {string}")
     public void userSelectsRequestCategoryAsCableSplicing(String category) {
         changeRecordPage.selectRequestCategory(category);
@@ -179,11 +179,11 @@ public class OWF_ChangeRecordPageSteps {
 
     }
 
-    @And("user selects template as {string}")
+   /* @And("user selects template as {string}")
     public void userSelectsTemplateAsAllITOtherTESTTEMPLATEUATNormalChange(String template) {
         changeRecordPage.selectTemplate(template);
 
-    }
+    }*/
 
     @And("user selects template as {string}")
     public void userSelectsTemplateAs(String templateType) {
@@ -193,6 +193,7 @@ public class OWF_ChangeRecordPageSteps {
     @When("user selects request type as {string}")
     public void userSelectsRequestTypeAs(String requestType) {
         changeRecordPage.selectRequestType(requestType, true);
+        changeRecordPage.wait(1000);
     }
 
     @And("user enters as {string} in service and customer impact")
@@ -204,5 +205,28 @@ public class OWF_ChangeRecordPageSteps {
     @And("user validates ticket status")
     public void userValidatesTicketStatus() {
         Assert.assertEquals(changeRecordPage.getStatusText(), "Implementation", "status is not implementation");
+    }
+
+    @And("user selects estimated impact as {string}")
+    public void userSelectsEstimatedImpactAs(String arg0) {
+        changeRecordPage.selectEstimatedImpact(arg0);
+    }
+
+    @And("user selects answer as {string}")
+    public void userSelectsAnswerAs(String arg0) {
+        changeRecordPage.selectAnswer(arg0);
+        changeRecordPage.clickDownButton();
+
+    }
+
+    @And("user selects last answer as {string}")
+    public void userSelectsLastAnswerAs(String answer) {
+        changeRecordPage.selectAnswer(answer);
+    }
+
+
+    @And("user selects request category as {string} on change record page")
+    public void userSelectsRequestCategoryAsOnChangeRecordPage(String category) {
+        changeRecordPage.selectRequestCategoryOnChangeRecordPage(category);
     }
 }

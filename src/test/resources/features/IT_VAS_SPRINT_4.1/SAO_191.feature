@@ -8,6 +8,7 @@ Feature: Site name details search Feature
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects SID console from agent console
+    And user switches to window 1
     Then SID console page should be opened
     When user selects Category as "Access"
     And user selects Type as "Radio Access Network"

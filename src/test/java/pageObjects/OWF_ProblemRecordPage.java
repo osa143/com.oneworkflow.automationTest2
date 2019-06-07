@@ -11,6 +11,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txtTICKET_ID = "arid_WIN_0_730000060";
     private static final String txtSEARCH_TICKET_ID = "arid_WIN_0_777777600";
 
+
     private static final String btnTIMELINE_XPATH = "//a[contains(text(),'Timeline')]";
     private static final String fld_TIMELINE_DISPLAY_XPATH = "//div[@id='WIN_0_999000510']//div[@class='BaseTableInner']";
 
@@ -23,7 +24,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String ddIMPACT = "Impact";
     private static final String ddURGENCY = "Urgency";
     private static final String ddWITHDRAWN_REASON = "Withdrawn Reason";
-    private static final String ddPRIORITY_ID = "arid_WIN_0_700025204";
+    private static final String ddPRIORITY_ID = "Priority";
 
     private static final String ddValueDUPLICATE_ENTRIES = "Duplicate Entries";
     private static final String ddValueFALSE_ALARM = "False Alarm";

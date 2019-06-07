@@ -29,7 +29,7 @@ Feature:withdraw problem Ticket
     When user clicks on Ack button
     Then problem ticket status should be under investigation
     And change should also be reflected in the timeline as ""
-    When user tries to change the status to withdrawn
+    When user tries to change the status to "Withdrawn"
     Then problem ticket status should be under investigation
     Then user logsOut
     And user goes back to login page
@@ -40,7 +40,7 @@ Feature:withdraw problem Ticket
     And user switches to window 3
     And user enters Problem Ticket
     And user clicks Search on ticket search
-    When user tries to change the status to withdrawn
+    When user tries to change the status to "Withdrawn"
     Then problem ticket status should be under investigation
     Then user logsOut and closes the browser
 

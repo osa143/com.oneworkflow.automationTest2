@@ -6,7 +6,7 @@ import runners.BaseTest;
 
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
-      tags = {"@Regression"}
+      tags = {"@SAO_52_OW_Clear"}  //@SAO_191
 )
 public class SAO_191_Runner extends BaseTest {
 

@@ -34,7 +34,7 @@ public class OWF_SIDConsolePageSteps {
         sidConsolePage.selectsItem(arg0);
     }
 
-    @And("user clicks on Search")
+    @And("user clicks on search")
     public void userClicksOnSearch() throws InterruptedException {
         sidConsolePage.clickSearchButton();
         sidConsolePage.wait(1000);

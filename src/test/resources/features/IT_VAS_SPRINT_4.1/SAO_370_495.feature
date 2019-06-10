@@ -4,16 +4,14 @@ Feature: Alarm tab in agent console
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user enters ticket id as "" in the search bar and searches for ticket
+    When user enters ticket id as "" in the agent console search box and searches for ticket
     Then trouble ticket should be present in agent console
     When user highlights present ticket
-    And user navigates to the alarm tab
+    And user clicks on alarm tab
     Then user should see an alarm present
-    When user clicks on preferences under the alarm tab
-    And user clicks on remove column:Alarm ID
+    When user sets the preferences under the alarm tab as "Remove Column:Alarm ID"
     Then user shouldn't see alarm ID column
-    When user clicks on preferences under the alarm tab
-    And user clicks on add column:Alarm ID
+    When user sets the preferences under the alarm tab as "Add Column:Alarm ID"
     Then user should see alarm ID column
     When user double clicks on the alarm present
     Then user should see alarm details

@@ -20,6 +20,7 @@ public class OWF_AgentConsolePageSteps {
 
     @When("user selects SID console from agent console")
     public void userSelectsSIDConsoleFromAgentConsole() {
+        Assert.assertTrue(false);
         agentConsolePage.clickConsoleMenu();
         agentConsolePage.clickMenuItemSIDConsole();
         //CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
@@ -200,6 +201,26 @@ public class OWF_AgentConsolePageSteps {
     @When("user selects search menu as {string}")
     public void userSelectsSearchMenuAs(String arg0) {
         agentConsolePage.selectSearchMenu(arg0);
+    }
+
+    @And("user clicks on alarm tab")
+    public void userClicksOnAlarmTab() {
+
+    }
+
+    @When("user clicks on preferences under the alarm tab")
+    public void userClicksOnPreferencesUnderTheAlarmTab() {
+
+    }
+
+    @When("When user sets the preferences under the alarm tab as {string}")
+    public void userClicksOnPreferencesUnderTheAlarmTabAndSelects(String arg0) {
+      agentConsolePage.setFilterPreferences(arg0);
+    }
+
+    @When("user sets the preferences under the alarm tab as {string}")
+    public void whenUserSetsThePreferencesUnderTheAlarmTabAs(String arg0) {
+        agentConsolePage.setFilterPreferences(arg0);
     }
 }
 

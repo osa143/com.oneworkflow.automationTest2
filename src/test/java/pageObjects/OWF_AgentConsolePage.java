@@ -65,6 +65,11 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String ddValueOWNED_BY_ME = "Owned by Me";
 
     private static final String table_ID = "T777000002";
+    private static final String tabALARM_XPATH = "//a[contains(text(),'Alarms')]";
+
+    public void clickAlarmTab(){
+        driver.findElement(By.xpath(tabALARM_XPATH)).click();
+    }
 
     public void clickSearch_OpenSearch_ProblemRecord() {
         selectDropDownNameAndValue("Search", "Open Search Form:Problem Record", false);
@@ -308,4 +313,5 @@ public class OWF_AgentConsolePage extends BasePage {
     public void selectSearchMenu(String menuItem){
         selectMainMenuAndMenuItem(menuForSEARCH, menuItem);
     }
+
 }

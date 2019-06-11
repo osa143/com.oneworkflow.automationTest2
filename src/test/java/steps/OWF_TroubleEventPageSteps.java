@@ -46,7 +46,7 @@ public class OWF_TroubleEventPageSteps {
 
     @When("user clicks on work order tab")
     public void userClicksOnWorkOrderTab() {
-     //troubleEventPage.clickWorkOrder();
+     troubleEventPage.clickWorkOrder();
         troubleEventPage.wait(3000);
     }
 
@@ -76,10 +76,20 @@ public class OWF_TroubleEventPageSteps {
         troubleEventPage.clickTerminateAlarm();
     }
 
-    @And("user validates child affected BU is same as parent ticket")
+    @And("user validates child ticket details are same as parent ticket")
     public void userValidatesChildAffectedBUIsSameAsParentTicket() {
         Ticket childTicket = troubleEventPage.getTicket();
         if (childTicket.isEqual(parentTicket))
             System.out.println("ticket details match");
+    }
+
+    @And("User waits for alarms to be cleared")
+    public void userWaitsForAlarmsToBeCleared() {
+        troubleEventPage.wait(30000);
+    }
+
+    @And("user clicks refresh button on alarm tab")
+    public void userClicksRefreshButtonOnAlarmTab() {
+        troubleEventPage.clickRefreshButton_AlarmTab();
     }
 }

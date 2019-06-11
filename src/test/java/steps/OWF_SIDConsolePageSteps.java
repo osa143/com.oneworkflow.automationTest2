@@ -43,8 +43,7 @@ public class OWF_SIDConsolePageSteps {
 
     @Then("CI details should be displayed")
     public void ciDetailsShouldBeDisplayed() {
-        //Assert.assertTrue(false);
-        int size = sidConsolePage.ciDetailsTableRows().size();
+        int size = sidConsolePage.TableRows().size();
         Assert.assertNotEquals(size, 0, 0, "CI details are not displayed");
     }
 

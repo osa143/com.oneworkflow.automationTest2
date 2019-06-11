@@ -33,6 +33,8 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txtSOURCE_ID = "arid_WIN_0_777777912";
     private static final String txtTROUBLE_TICKET_ID = "arid_WIN_0_777777600";
     private static final String chkbxHEADER_XPATH = "//div[@id='WIN_0_700508140']//input[@class='checkboxheader']";
+
+    private static final String btnREFRESH_ALARM_TAB_XPATH= "//a[contains(text(),'Refresh')] ";
     private static final String btnTERMINATE_ALARM = "WIN_0_600002926";
     private static final String btnALARMS_XPATH = "//div[@id='WIN_0_999000003']//div[@class='OuterTabsDiv']//div[@class='TabsViewPort']//div//a[@class='btn f1'][contains(text(),'Alarms')]";
     private static final String btnWORK_ORDER_XPATH = "//a[contains(text(),'Work Orders')]";
@@ -110,6 +112,9 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         driver.findElement(By.id(btnREFRESH_IMAGE_ID)).click();
 
     }
+    public void clickRefreshButton_AlarmTab(){
+        driver.findElement(By.xpath(btnREFRESH_ALARM_TAB_XPATH)).click();
+    }
 
     public void clickCreateFromTicket(){
     driver.findElement(By.id(btnCREATE_FROM_TICKET_ID)).click();
@@ -118,7 +123,6 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         driver.findElement(By.xpath(btnALARMS_XPATH)).click();
     }
     public void clickWorkOrder(){
-        wait(2000);
         driver.findElement(By.xpath(btnWORK_ORDER_XPATH)).click();
     }
     public void enterLevel(String level){

@@ -19,12 +19,7 @@ Feature: Closing of incident ticket that has linked WO
     And user validates parent ticket id availability
     Then user clicks on save button on the problem form
     And user validates ticket status as "New"
-    And user validates child affected BU is same as parent ticket
-    And user validates child title is same as parent ticket
-    And user validates child request type is same as parent ticket
-    And user validates child priority is same as parent ticket
-    And user validates child location is same as parent ticket
-    And user validates child description is same as parent ticket
+    And user validates child ticket details are same as parent ticket
     Then user clicks on save button on the problem form
     When user switches to window 1
     And clicks on ticket refresh button
@@ -57,9 +52,12 @@ Feature: Closing of incident ticket that has linked WO
     Then user changes status to "Closed"
     And user validates ticket status as "Closed"
     Then user switches to window 1
-    And user clicks on ticket refresh button
+    And clicks on ticket refresh button
     And user validates WorkOrder status as "CLOSED"
     Then user clicks on alarms tab
+    When user highlights all shown alarms
+    And user clicks on terminate
+    And user clicks refresh button on alarm tab
     And user validates alarm status is cleared
     Then user changes status to "Cleared"
     And user clicks on save button on the problem form

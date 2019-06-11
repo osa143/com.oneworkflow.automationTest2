@@ -54,7 +54,7 @@ public class OWF_SIDConsolePage extends BasePage {
     private static final String ddValueCIRCUIT_CIS = "Circuit CIs";
     private static final String ddValueCLEAR = "(clear)";
 
-    private static final String ciDetailsTable_ID = "T700009024";
+    private static final String AgentConsoleTable_ID = "T700009024";
 
 
     public void selectCategory(String value){
@@ -232,12 +232,12 @@ public class OWF_SIDConsolePage extends BasePage {
         driver.findElement(By.id(ddSEARCH_FOR)).click();
     }
 
-    public List<WebElement> ciDetailsTableRows() {
-        return getTableRows(By.id(ciDetailsTable_ID));
+    public List<WebElement> TableRows() {
+        return getTableRows(By.id(AgentConsoleTable_ID));
     }
 
     public boolean validateSiteNameDetails() {
 
-        return validateIfAllColumnRowsHasData(ciDetailsTable_ID, "Site Name");
+        return validateIfAllColumnRowsHasData(AgentConsoleTable_ID, "Site Name");
     }
 }

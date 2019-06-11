@@ -18,7 +18,7 @@ Feature: User is able to close and clone a problem ticket
     Then ticket should be created and status should be assigned
     Then user clicks on Ack button
     And problem ticket status should be under investigation
-    Then User changes status to investigation complete
+    Then user changes status to investigation complete
     And user selects root cause code as Technical:HW error under route cause
     And user enters route cause details as "Bad Management"
     And user enters RC found date as current date

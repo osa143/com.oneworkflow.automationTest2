@@ -50,6 +50,7 @@ task cukes (type: Test){
     useTestNG(){
         print suite
        useDefaultListeners = true
+        scanForTestClasses = false
         suites "src/test/resources/TestNG.xml"
 
     }

@@ -32,8 +32,8 @@ public class BaseTest extends AbstractTestNGCucumberTests {
 
     }
 
-    @Test
-    public void test1(){
-
-    }
+//    @Test
+//    public void test1(){
+//
+//    }
     }

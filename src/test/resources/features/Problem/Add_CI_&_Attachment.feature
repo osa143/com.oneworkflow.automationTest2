@@ -23,7 +23,7 @@
       Then user clicks on CI search button
       And user enters "SE_CPE_FRECPE5" in name field
       And user selects a CI from list
-      And user Choose impact level as no impact
+      And user selects impact level as "No Impact"
       And user clicks on relate CI
       And user closes warning message and clicks on close button
       Then CI should be listed and displayed under the Diagnosis tab

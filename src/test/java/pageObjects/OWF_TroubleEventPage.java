@@ -123,7 +123,8 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         driver.findElement(By.xpath(btnALARMS_XPATH)).click();
     }
     public void clickWorkOrder(){
-        driver.findElement(By.xpath(btnWORK_ORDER_XPATH)).click();
+        wait(2000);
+        selectTab("Work Orders");
     }
     public void enterLevel(String level){
         driver.findElement(By.id(txtTITLE_ID)).sendKeys(level);
@@ -387,7 +388,10 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         wait(2000);
         for (int i = 0; i < elements.size(); i++) {
             if (elements.get(i).isSelected())
-                location = elements.get(i).getAttribute("arvalue");
+                //location = elements.get(i).getAttribute("arvalue");
+                location = elements.get(i).findElement(By.tagName("label")).getText();
+            System.out.println("location is: " + location);
+            break;
 
         }
         String title = getTextById(txtTITLE_ID);

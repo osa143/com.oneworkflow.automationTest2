@@ -30,7 +30,7 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String menuItemABOUT = "About";
     private static final String menuItemLOGOUT = "Logout";
 
-    private static final String txtSEARCH = "WIN_2_730000011";
+    private static final String txtSEARCH = "arid_WIN_3_730000011";
 
     private static final String btnSEARCH = "WIN_0_700010480";
     private static final String btnCLEAR = "WIN_0_777501009";
@@ -125,7 +125,7 @@ public class OWF_AgentConsolePage extends BasePage {
         return getTableRows(By.id(table_ID)).size();
     }
     public int getAlarmTableRowsCount(){
-        return getTableRows(By.id(table_ID)).size();
+        return getTableRows(By.id(quick_view_ALARM_TABLE)).size();
     }
 
     public boolean validateOpNextDueDateInformation() {
@@ -199,6 +199,7 @@ public class OWF_AgentConsolePage extends BasePage {
 
 
     public void enterSearch(String searchText) {
+        wait(2000);
         driver.findElement(By.id(txtSEARCH)).sendKeys(searchText);
         driver.findElement(By.id(txtSEARCH)).sendKeys(Keys.ENTER);
     }

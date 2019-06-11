@@ -78,6 +78,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user validates child ticket details are same as parent ticket")
     public void userValidatesChildAffectedBUIsSameAsParentTicket() {
+        troubleEventPage.wait(3000);
         Ticket childTicket = troubleEventPage.getTicket();
         if (childTicket.isEqual(parentTicket))
             System.out.println("ticket details match");

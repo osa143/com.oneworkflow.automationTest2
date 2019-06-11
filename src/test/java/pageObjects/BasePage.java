@@ -127,8 +127,8 @@ public class BasePage {
     }
 
     public void setFilterPreferences(String preferences) {
-
-        driver.findElement(By.id(preferences)).findElement(By.xpath("//a[contains(text(),'Preferences')]")).click();
+        wait(2000);
+        driver.findElement(By.xpath("//div[@id='WIN_0_999000525']//div[@class='TableHdr']//tr")).click();
 
         wait(500);
 
@@ -307,6 +307,13 @@ public class BasePage {
 
     public static byte[] takeScreenShotAsByteArray() {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+    }
+
+
+
+    public void selectTab(String tab) {
+        driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tab)).findFirst().orElse(null).click();
+
     }
 
 

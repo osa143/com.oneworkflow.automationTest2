@@ -7,6 +7,8 @@ import org.testng.Assert;
 import pageObjects.OWF_AgentConsolePage;
 import utils.CommonUtils;
 
+import java.awt.datatransfer.StringSelection;
+
 public class OWF_AgentConsolePageSteps {
 
     OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
@@ -203,15 +205,9 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.selectSearchMenu(arg0);
     }
 
-    @And("user clicks on alarm tab")
-    public void userClicksOnAlarmTab() {
-
-    }
-
-
-    @When("When user sets the preferences under the alarm tab as {string}")
-    public void userClicksOnPreferencesUnderTheAlarmTabAndSelects(String arg0) {
-      agentConsolePage.setFilterPreferences(arg0);
+    @And("user clicks on {string} tab")
+    public void userClicksOnAlarmTab(String tabName) {
+      agentConsolePage.selectTab(tabName);
     }
 
     @When("user sets the preferences under the alarm tab as {string}")
@@ -225,8 +221,8 @@ public class OWF_AgentConsolePageSteps {
     }
 
     @When("user enters ticket id as {string} in the agent console search box and searches for ticket")
-    public void userEntersTicketIdAsInTheAgentConsoleSearchBoxAndSearchesForTicket(String arg0) {
-        agentConsolePage.enterSearch(arg0);
+    public void userEntersTicketIdAsInTheAgentConsoleSearchBoxAndSearchesForTicket(String ticketId) {
+        agentConsolePage.enterSearch(ticketId);
         agentConsolePage.wait(2000);
         
     }
@@ -271,7 +267,7 @@ public class OWF_AgentConsolePageSteps {
 
     @Then("user should see an alarm present")
     public void userShouldSeeAnAlarmPresent() {
-        Assert.assertNotEquals(agentConsolePage.getAlarmTableRowsCount(), 0, 0, "alarm is not present");
+        Assert.assertEquals(agentConsolePage.getAlarmTableRowsCount(), 2, 0, "alarm is not present");
 
     }
 

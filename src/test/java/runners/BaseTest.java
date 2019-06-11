@@ -5,6 +5,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 import utils.CommonUtils;
 import utils.ReporterUtils;
 
@@ -28,6 +29,11 @@ public class BaseTest extends AbstractTestNGCucumberTests {
 
     @AfterClass
     public void teardown(){
+
+    }
+
+    @Test
+    public void test1(){
 
     }
     }

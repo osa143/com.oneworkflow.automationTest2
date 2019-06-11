@@ -1,4 +1,4 @@
-@SAO_496_Normal Change
+@SAO_496_Normal_Change
 Feature: Linking of Incident Ticket to Normal Change during implementation window
 
   Scenario: Normal Change

@@ -1,4 +1,4 @@
-@SAO_496_Standard Change
+@SAO_496_Standard_Change
 Feature: Linking of Incident Ticket to Standard Change during implementation window
   Scenario: Standard Change
     Given user is on the OneWorkflow login page

@@ -358,10 +358,5 @@ public class BaseRecordPage extends BasePage {
         driver.findElement(By.id(txtSERVICE_AND_CUSTOMER_IMPACT)).sendKeys(text);
     }
 
-    public void getTicket()
-    {
-      WebElement affectedBus = driver.findElement(By.xpath("//*[@id=\"WIN_0_600002504\"]/fieldset"));
-        List<WebElement> elements = affectedBus.findElements(By.xpath("//input[@type= 'checkbox'])"));
-        System.out.println("elements size is:" + elements.size());
-    }
+
 }

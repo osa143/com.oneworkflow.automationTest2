@@ -29,9 +29,11 @@ public class CalendarLoginTest {
 
         WebElement username= driver.findElement(By.xpath("//input[@placeholder='Username']"));
         wait.until(ExpectedConditions.elementToBeClickable(username)).sendKeys("TestUser10");
+        Thread.sleep(2000);
 
         WebElement passWord= driver.findElement(By.xpath("//input[@placeholder='Password']"));
         wait.until(ExpectedConditions.elementToBeClickable(passWord)).sendKeys("Pa55w0rd");
+        Thread.sleep(2000);
 
         WebElement loginButton= driver.findElement(By.xpath("//button[@class='login__btn']"));
         wait.until(ExpectedConditions.elementToBeClickable(loginButton)).click();
@@ -43,7 +45,7 @@ public class CalendarLoginTest {
          WebElement month = driver.findElement(By.xpath("/html[1]/body[1]/ani-main[1]/div[1]/div[2]/ani-calendar[1]/div[1]/div[2]/div[3]/div[1]/ng-fullcalendar[1]/div[1]/div[2]/div[1]/button[2]"));
         wait.until(ExpectedConditions.elementToBeClickable(month)).click();
         driver.findElement(By.xpath("//mat-icon[contains(text(),'menu')]")).click();
-        Thread.sleep(2000);
+       Thread.sleep(2000);
         driver.findElement(By.xpath("//div[contains(text(),'Compact')]")).click();
         Thread.sleep(2000);
         driver.findElement(By.xpath("//div[@class='fc-day-grid fc-unselectable']//div[1]//div[2]//table[1]//tbody[1]//tr[1]//td[1]//a[1]")).click();

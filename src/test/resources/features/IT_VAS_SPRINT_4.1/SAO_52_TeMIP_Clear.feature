@@ -9,12 +9,12 @@ Feature: Closing of incident ticket that has linked WO
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects search menu as "Open Search Form:Trouble Event"
     Then trouble record form should appear in new tab
-    And user switches to window 2
-    And user enters ticket id as
-    And user clicks on search button
+    And user switches to window 1
+    And user enters ticket id as "OP-000000898604"
     Then trouble ticket should appear related to TeMIP
     When user clicks on work order tab
     And user clicks on create from ticket
+    When user switches to window 2
     And user validates ticket status as "New"
     And user validates parent ticket id availability
     Then user clicks on save button on the problem form

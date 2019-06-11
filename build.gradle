@@ -4,6 +4,7 @@
 //}
 
 apply plugin : 'java'
+apply plugin : 'java-library'
 apply plugin: 'maven'
 
 group 'com.oneworkflow.automation'
@@ -38,20 +39,22 @@ dependencies {
     compile group: 'com.aventstack', name: 'extentreports', version: '4.0.7'
 }
 
-task cukes(type:Test){
+task cukes (type: Test){
     testLogging.showStandardStreams = true
     print 'hi'
     systemProperty "owf.env", System.getProperty("owf.env", 'runtime_test')
-    def suite = 'src/test/resources/testng.xml'
+    def suite = 'src/test/resources/TestNG.xml'
 
     ignoreFailures = true
 
     useTestNG(){
         print suite
        useDefaultListeners = true
-        suites "src/test/resources/testng.xml"
+        suites "src/test/resources/TestNG.xml"
 
     }
+
+    outputs.upToDateWhen {false}
 }
 
 //test{

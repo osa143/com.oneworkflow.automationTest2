@@ -338,4 +338,9 @@ public class OWF_ProblemRecordPageSteps {
     public void userSelectsPriorityAs(String Major) {
         problemRecordPage.selectPriority(Major);
     }
+
+    @Then("user clicks on attachments under sections")
+    public void userClicksOnAttachmentsUnderSections() {
+        problemRecordPage.clickAttachments();
+    }
 }

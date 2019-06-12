@@ -34,7 +34,7 @@ public class OWF_SIDConsolePageSteps {
         sidConsolePage.selectsItem(arg0);
     }
 
-    @And("user clicks on Search")
+    @And("user clicks on search")
     public void userClicksOnSearch() throws InterruptedException {
         sidConsolePage.clickSearchButton();
         sidConsolePage.wait(1000);
@@ -43,8 +43,7 @@ public class OWF_SIDConsolePageSteps {
 
     @Then("CI details should be displayed")
     public void ciDetailsShouldBeDisplayed() {
-        //Assert.assertTrue(false);
-        int size = sidConsolePage.ciDetailsTableRows().size();
+        int size = sidConsolePage.TableRows().size();
         Assert.assertNotEquals(size, 0, 0, "CI details are not displayed");
     }
 

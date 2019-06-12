@@ -4,36 +4,37 @@ Feature: Alarm tab in agent console
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user enters ticket id as "" in the search bar and searches for ticket
+    When user enters ticket id as "OP-000000898604" in the agent console search box and searches for ticket
     Then trouble ticket should be present in agent console
     When user highlights present ticket
-    And user navigates to the alarm tab
+    And user clicks on "Alarms" tab
     Then user should see an alarm present
-    When user clicks on preferences under the alarm tab
-    And user clicks on remove column:Alarm ID
+    When user sets the preferences under the alarm tab as "Remove Column:Alarm ID"
     Then user shouldn't see alarm ID column
-    When user clicks on preferences under the alarm tab
-    And user clicks on add column:Alarm ID
+    When user sets the preferences under the alarm tab as "Add Column:Alarm ID"
     Then user should see alarm ID column
     When user double clicks on the alarm present
-    Then user should see alarm details
+    Then user switches to frame
+    Then alarm details should be displayed in new window
     When user clicks on close button
     Then trouble ticket should be present in agent console
-    When user selects "open full view" from the action dropdown
+    When user selects action dropdown as "Open Full View"
+    And user switches to frame
     Then user should see alarm console displayed
     And user should see list of alarms
     Then user closes alarm console
     When user selects one secondary alarm
-    And user clicks on detach button
-    And user clicks "Yes" on the popup
+    And user selects action dropdown as "Detach"
+    And  user clicks "Yes" on the popup
     Then user shouldn't see the detached alarm
     When user selects one secondary alarm
     And user clicks on make primary button
     Then user validates secondary alarm turns primary
     When user selects one secondary alarm
-    And clicks on detach & create button
+    And user selects action dropdown as "Detach & Create"
     And user clicks "Yes" on the popup
     Then trouble record form should appear in new tab
+    And user switches to window 1
     When user enters mandatory fields
     And user clicks on save button on the problem form
     Then ticket should be created and status should be assigned
@@ -42,6 +43,6 @@ Feature: Alarm tab in agent console
     Then user validates OLA value is set
     When user switches to window 1
     And user selects one secondary alarm
-    And user selects "Terminate" from the action dropdown
+    And user selects action dropdown as "Terminate"
     And user clicks on refresh button on alarms tab
     Then user validates alarm status should be refreshed to "cleared"

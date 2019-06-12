@@ -4,7 +4,7 @@ Feature: Closing of incident ticket that has linked WO
 
   Scenario: User is able to close an incident after closing a WO linked to it
 
-# Test requires user to manually get ticket ID value from JMeter and enter ticket ID below
+# Test requires user to manually get ticket ID value from JMeter and enter ticket ID below//
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
@@ -12,8 +12,8 @@ Feature: Closing of incident ticket that has linked WO
     When user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 1
     Then trouble record form should appear in new tab
-    And user enters ticket id as
-    And user clicks on Search
+    And user enters ticket id as ""
+    And user clicks on search
     Then trouble ticket should appear related to TeMIP
     When user clicks on work order tab
     And user clicks on create from ticket
@@ -22,12 +22,7 @@ Feature: Closing of incident ticket that has linked WO
     And user validates parent ticket id availability
     Then user clicks on save button on the problem form
     And user validates ticket status as "New"
-    And user validates child affected BU is same as parent ticket
-    And user validates child title is same as parent ticket
-    And user validates child request type is same as parent ticket
-    And user validates child priority is same as parent ticket
-    And user validates child location is same as parent ticket
-    And user validates child description is same as parent ticket
+    And user validates child ticket details are same as parent ticket
     Then user clicks on save button on the problem form
     When user switches to window 1
     And clicks on ticket refresh button
@@ -64,6 +59,7 @@ Feature: Closing of incident ticket that has linked WO
     Then user clicks on alarms tab
     And user highlights all shown alarms
     And user clicks on terminate
+    And User waits for alarms to be cleared
     Then user clicks on refresh button
     And user validates alarm status is cleared
     Then user changes status to "Cleared"

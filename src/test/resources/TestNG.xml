@@ -1,0 +1,9 @@
+<suite name="Suite1" verbose="1" >
+
+    <test name="Test">
+        <classes>
+            <class name="runners.IT_VAS_SPRINT_4_1_runners.SAO_181_Runner"/>
+           <class name="runners.IT_VAS_SPRINT_4_1_runners.SAO_191_Runner"/>
+        </classes>
+    </test>
+</suite>

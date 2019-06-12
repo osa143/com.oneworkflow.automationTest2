@@ -1,6 +1,9 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class OWF_AgentConsolePage extends BasePage {
 
@@ -27,7 +30,7 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String menuItemABOUT = "About";
     private static final String menuItemLOGOUT = "Logout";
 
-    private static final String txtSEARCH = "WIN_2_730000011";
+    private static final String txtSEARCH = "arid_WIN_3_730000011";
 
     private static final String btnSEARCH = "WIN_0_700010480";
     private static final String btnCLEAR = "WIN_0_777501009";
@@ -66,6 +69,46 @@ public class OWF_AgentConsolePage extends BasePage {
 
     private static final String table_ID = "T777000002";
 
+    private static final String quick_view_ALARM_TABLE= "T700508140";
+    private static final String tabALARM_XPATH = "//a[contains(text(),'Alarms')]";
+    private static final String btnCLOSE_ON_FRAME_XPATH = "//div[@class='f7']";
+    private static final String imgCLOSED_ID = "ardivpcl";
+    private static final String ddACTION = "Action";
+    private static final String btnREFRESH_ALARM_TAB = "//a[contains(text(),'Refresh')]";
+    private static final String tdROW1_XPATH = "//div[@id='WIN_0_999000005']//td[1]//nobr[1]";
+    private static final String alarmTdROW1_XPATH = "//fieldset[@id='WIN_0_836889423']//tr[2]";
+
+    Actions action = new Actions(driver);
+
+    public void doubleClickOnAlarm(){
+        WebElement element= driver.findElement(By.xpath(alarmTdROW1_XPATH));
+        action.doubleClick(element).perform();
+    }
+
+
+    public void clickOnTicket(){
+        driver.findElement(By.xpath(tdROW1_XPATH)).click();
+    }
+
+    public void clickRefresh_AlarmTab(){
+        driver.findElement(By.xpath(btnREFRESH_ALARM_TAB)).click();
+    }
+
+    public void selectAction(String value){
+        selectDropDownNameAndValue(ddACTION, value, false);
+    }
+
+    public void clickCloseButtonOnFrame(){
+        driver.findElement(By.xpath(btnCLOSE_ON_FRAME_XPATH)).click();
+    }
+    public void clickOnCloseImage(){
+        driver.findElement(By.id(imgCLOSED_ID)).click();
+    }
+
+    public void clickAlarmTab(){
+        driver.findElement(By.xpath(tabALARM_XPATH)).click();
+    }
+
     public void clickSearch_OpenSearch_ProblemRecord() {
         selectDropDownNameAndValue("Search", "Open Search Form:Problem Record", false);
     }
@@ -74,8 +117,15 @@ public class OWF_AgentConsolePage extends BasePage {
         driver.findElement(By.id(table_ID)).findElement(By.xpath("//a[contains(text(),'Preferences')]")).click();
     }
 
+    public void acceptAlert(){
+        driver.switchTo().alert().accept();
+    }
+
     public int getTableRowsCount() {
         return getTableRows(By.id(table_ID)).size();
+    }
+    public int getAlarmTableRowsCount(){
+        return getTableRows(By.id(quick_view_ALARM_TABLE)).size();
     }
 
     public boolean validateOpNextDueDateInformation() {
@@ -149,7 +199,9 @@ public class OWF_AgentConsolePage extends BasePage {
 
 
     public void enterSearch(String searchText) {
+        wait(2000);
         driver.findElement(By.id(txtSEARCH)).sendKeys(searchText);
+        driver.findElement(By.id(txtSEARCH)).sendKeys(Keys.ENTER);
     }
 
 
@@ -308,4 +360,7 @@ public class OWF_AgentConsolePage extends BasePage {
     public void selectSearchMenu(String menuItem){
         selectMainMenuAndMenuItem(menuForSEARCH, menuItem);
     }
+
+
+
 }

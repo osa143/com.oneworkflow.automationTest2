@@ -7,6 +7,8 @@ import org.testng.Assert;
 import pageObjects.OWF_AgentConsolePage;
 import utils.CommonUtils;
 
+import java.awt.datatransfer.StringSelection;
+
 public class OWF_AgentConsolePageSteps {
 
     OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
@@ -20,6 +22,7 @@ public class OWF_AgentConsolePageSteps {
 
     @When("user selects SID console from agent console")
     public void userSelectsSIDConsoleFromAgentConsole() {
+        Assert.assertTrue(false);
         agentConsolePage.clickConsoleMenu();
         agentConsolePage.clickMenuItemSIDConsole();
         //CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
@@ -200,6 +203,93 @@ public class OWF_AgentConsolePageSteps {
     @When("user selects search menu as {string}")
     public void userSelectsSearchMenuAs(String arg0) {
         agentConsolePage.selectSearchMenu(arg0);
+    }
+
+    @And("user clicks on {string} tab")
+    public void userClicksOnAlarmTab(String tabName) {
+      agentConsolePage.selectTab(tabName);
+    }
+
+    @When("user sets the preferences under the alarm tab as {string}")
+    public void whenUserSetsThePreferencesUnderTheAlarmTabAs(String arg0) {
+        agentConsolePage.setFilterPreferences(arg0);
+    }
+
+    @Then("user clicks on refresh button")
+    public void userClicksOnRefreshButton() {
+
+    }
+
+    @When("user enters ticket id as {string} in the agent console search box and searches for ticket")
+    public void userEntersTicketIdAsInTheAgentConsoleSearchBoxAndSearchesForTicket(String ticketId) {
+        agentConsolePage.enterSearch(ticketId);
+        agentConsolePage.wait(2000);
+        
+    }
+
+    @When("user clicks on close button")
+    public void userClicksOnCloseButton() {
+        agentConsolePage.clickCloseButtonOnFrame();
+    }
+
+    @When("user selects action dropdown as {string}")
+    public void userSelectsActionDropdownAs(String arg0) {
+        agentConsolePage.selectAction(arg0);
+    }
+
+    @Then("user closes alarm console")
+    public void userClosesAlarmConsole() {
+        agentConsolePage.clickOnCloseImage();
+
+    }
+
+    @And("user clicks {string} on the popup")
+    public void userClicksOnThePopup(String arg0) {
+        agentConsolePage.acceptAlert();
+    }
+
+    @And("user clicks on refresh button on alarms tab")
+    public void userClicksOnRefreshButtonOnAlarmsTab() {
+        agentConsolePage.clickRefresh_AlarmTab();
+    }
+
+    @Then("trouble ticket should be present in agent console")
+    public void troubleTicketShouldBePresentInAgentConsole() {
+        int size = agentConsolePage.getTableRowsCount();
+        Assert.assertNotEquals(size,0, 0, "Trouble ticket is not present ");
+    }
+
+    @When("user highlights present ticket")
+    public void userHighlightsPresentTicket() {
+        agentConsolePage.clickOnTicket();
+
+    }
+
+    @Then("user should see an alarm present")
+    public void userShouldSeeAnAlarmPresent() {
+        Assert.assertEquals(agentConsolePage.getAlarmTableRowsCount(), 2, 0, "alarm is not present");
+
+    }
+
+    @Then("user shouldn't see alarm ID column")
+    public void userShouldnTSeeAlarmIDColumn() {
+        //int ColumnIndex= agentConsolePage.getColumnIndexByHeaderName("Alarm ID");
+        //Assert.assertNotEquals(ColumnIndex, -1, 0, "user is able to see Alarm Id column");
+
+        Assert.assertFalse(agentConsolePage.isColumnDisplayed(""), "user is able to see the Alarm");
+
+    }
+
+    @Then("user should see alarm ID column")
+    public void userShouldSeeAlarmIDColumn() {
+        Assert.assertTrue(agentConsolePage.isColumnDisplayed(""), "Alarm ID column is not present");
+
+    }
+
+    @When("user double clicks on the alarm present")
+    public void userDoubleClicksOnTheAlarmPresent() {
+        agentConsolePage.doubleClickOnAlarm();
+
     }
 }
 

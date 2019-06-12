@@ -9,17 +9,17 @@ import pageObjects.OWF_WorkOrderPage;
 import java.sql.Driver;
 
 public class OWF_WorkOrderPageSteps {
-    String TemipTicketID= "";
 
    OWF_WorkOrderPage workOrderPage= new OWF_WorkOrderPage();
     @And("user validates ticket status as {string}")
     public void userValidatesTicketStatusAs(String arg0) {
+        workOrderPage.wait(2000);
         Assert.assertEquals(workOrderPage.getStatusText(), arg0, "Status is not new");
     }
 
     @And("user validates parent ticket id availability")
     public void userValidatesParentTicketIdAvailability() {
-        Assert.assertEquals(workOrderPage.getParentTicketId(), TemipTicketID, "Parent ticket is not displayed");
+        Assert.assertNotEquals(workOrderPage.getParentTicketId(), "", "Parent ticket is not displayed");
 
     }
 

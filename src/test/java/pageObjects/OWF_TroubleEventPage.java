@@ -1,10 +1,15 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import utils.Ticket;
+
+import java.util.List;
 
 import static pageObjects.BaseRecordPage.ddSTATuS_ID;
 
-public class OWF_TroubleEventPage extends BasePage {
+public class OWF_TroubleEventPage extends BaseRecordPage {
 
     private static final String btnREFRESH_IMAGE_ID= "reg_img_600003444";
 
@@ -26,10 +31,13 @@ public class OWF_TroubleEventPage extends BasePage {
     private static final String txtRESPONSE_TIME = "arid_WIN_0_700048056";
     private static final String txtTITLE_ID = "arid_WIN_0_777031000";
     private static final String txtSOURCE_ID = "arid_WIN_0_777777912";
+    private static final String txtTROUBLE_TICKET_ID = "arid_WIN_0_777777600";
     private static final String chkbxHEADER_XPATH = "//div[@id='WIN_0_700508140']//input[@class='checkboxheader']";
+
+    private static final String btnREFRESH_ALARM_TAB_XPATH= "//a[contains(text(),'Refresh')] ";
     private static final String btnTERMINATE_ALARM = "WIN_0_600002926";
     private static final String btnALARMS_XPATH = "//div[@id='WIN_0_999000003']//div[@class='OuterTabsDiv']//div[@class='TabsViewPort']//div//a[@class='btn f1'][contains(text(),'Alarms')]";
-    private static final String btnWORK_ORDER_XPATH = "//a[contains(text(),'Work Orders')] ";
+    private static final String btnWORK_ORDER_XPATH = "//a[contains(text(),'Work Orders')]";
     private static final String btnCREATE_FROM_TICKET_ID  = "WIN_0_777504010";
 
 
@@ -41,6 +49,9 @@ public class OWF_TroubleEventPage extends BasePage {
     private static final String ddIMPACT = "Impact";
     private static final String ddASIGNMENT_PROFILE = "Assignment Profile";
     private static final String ddASIGNEE = "Assignee";
+    private static final String ddPRIORITY = "Priority";
+    private static final String ddREQUEST_TYPE_ID = "arid_WIN_0_777031002";
+    private static final String ddPRIORITY_ID = "arid_WIN_0_700025204";
 
 
     private static final String ddValueSITE_ACCESS_REGISTRATION = "Site access registration";
@@ -87,7 +98,12 @@ public class OWF_TroubleEventPage extends BasePage {
     private static final String btnSAVE = "WIN_0_777505104";
 
 
-
+    public void enterTroubleTicket(String troubleTicketId)
+    {
+       WebElement element = driver.findElement(By.id(txtTROUBLE_TICKET_ID));
+        element.sendKeys(troubleTicketId);
+        element.sendKeys(Keys.ENTER);
+    }
 
     public void clickTerminateAlarm(){
         driver.findElement(By.id(btnTERMINATE_ALARM)).click();
@@ -95,6 +111,9 @@ public class OWF_TroubleEventPage extends BasePage {
     public void clickRefreshButtonImage(){
         driver.findElement(By.id(btnREFRESH_IMAGE_ID)).click();
 
+    }
+    public void clickRefreshButton_AlarmTab(){
+        driver.findElement(By.xpath(btnREFRESH_ALARM_TAB_XPATH)).click();
     }
 
     public void clickCreateFromTicket(){
@@ -104,7 +123,8 @@ public class OWF_TroubleEventPage extends BasePage {
         driver.findElement(By.xpath(btnALARMS_XPATH)).click();
     }
     public void clickWorkOrder(){
-        driver.findElement(By.xpath(btnWORK_ORDER_XPATH)).click();
+        wait(2000);
+        selectTab("Work Orders");
     }
     public void enterLevel(String level){
         driver.findElement(By.id(txtTITLE_ID)).sendKeys(level);
@@ -359,5 +379,27 @@ public class OWF_TroubleEventPage extends BasePage {
     public String getSourceText(){
          return getTextById(txtSOURCE_ID);
 
+    }
+    public Ticket getTicket()
+    {
+        String location = "";
+        WebElement affectedBus = driver.findElement(By.xpath("//fieldset[@class =' pnl ']"));
+        List<WebElement> elements = affectedBus.findElements(By.xpath("//input[@type='checkbox']"));
+        wait(2000);
+        for (int i = 0; i < elements.size(); i++) {
+            if (elements.get(i).isSelected())
+                //location = elements.get(i).getAttribute("arvalue");
+                location = elements.get(i).findElement(By.tagName("label")).getText();
+            System.out.println("location is: " + location);
+            break;
+
+        }
+        String title = getTextById(txtTITLE_ID);
+        String requestType = getTextById(ddREQUEST_TYPE_ID);
+        String description = getTextById(txtDESCRIPTION_ID);
+        String priority = getTextById(ddPRIORITY_ID);
+
+        Ticket ticket = new Ticket(title, requestType, priority, location, description);
+        return ticket;
     }
 }

@@ -5,9 +5,11 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
 import pageObjects.OWF_TroubleEventPage;
+import utils.Ticket;
 
 public class OWF_TroubleEventPageSteps {
     OWF_TroubleEventPage troubleEventPage = new OWF_TroubleEventPage();
+    Ticket parentTicket;
     @Then("trouble record form should appear in new tab")
     public void troubleRecordFormShouldAppearInNewTab() {
     }
@@ -28,18 +30,15 @@ public class OWF_TroubleEventPageSteps {
         troubleEventPage.selectRequestType(requestType);
     }
 
-    @And("user clicks on search button")
-    public void userClicksOnSearchButton() {
 
-    }
-
-    @And("user enters ticket id as")
-    public void userEntersTicketIdAs() {
-        troubleEventPage.wait(15000);
+    @And("user enters ticket id as {string}")
+    public void userEntersTicketIdAs(String ticketID) {
+        troubleEventPage.enterTroubleTicket(ticketID);
     }
 
     @Then("trouble ticket should appear related to TeMIP")
     public void troubleTicketShouldAppearRelatedToTeMIP() {
+        parentTicket = troubleEventPage.getTicket();
         Assert.assertEquals(troubleEventPage.getSourceText(), "HPE Common Temip", "Ticket is not related to TeMIP");
 
 
@@ -48,6 +47,7 @@ public class OWF_TroubleEventPageSteps {
     @When("user clicks on work order tab")
     public void userClicksOnWorkOrderTab() {
      troubleEventPage.clickWorkOrder();
+        troubleEventPage.wait(3000);
     }
 
     @And("user clicks on create from ticket")
@@ -74,5 +74,23 @@ public class OWF_TroubleEventPageSteps {
     @And("user clicks on terminate")
     public void userClicksOnTerminate() {
         troubleEventPage.clickTerminateAlarm();
+    }
+
+    @And("user validates child ticket details are same as parent ticket")
+    public void userValidatesChildAffectedBUIsSameAsParentTicket() {
+        troubleEventPage.wait(3000);
+        Ticket childTicket = troubleEventPage.getTicket();
+        if (childTicket.isEqual(parentTicket))
+            System.out.println("ticket details match");
+    }
+
+    @And("User waits for alarms to be cleared")
+    public void userWaitsForAlarmsToBeCleared() {
+        troubleEventPage.wait(30000);
+    }
+
+    @And("user clicks refresh button on alarm tab")
+    public void userClicksRefreshButtonOnAlarmTab() {
+        troubleEventPage.clickRefreshButton_AlarmTab();
     }
 }

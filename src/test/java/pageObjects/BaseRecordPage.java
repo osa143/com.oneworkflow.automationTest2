@@ -2,7 +2,10 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import utils.CommonUtils;
+
+import java.util.List;
 
 public class BaseRecordPage extends BasePage {
 
@@ -89,6 +92,12 @@ public class BaseRecordPage extends BasePage {
     public static final String ddValueWORKING_ON_TICKET = "Working On Ticket";
     public static final String txtMINS_ID = "arid_WIN_0_900006507";
     public static final String btnOK_ID = "WIN_0_777777851";
+
+    public static final String btnATTACHMENTS = "WIN_0_999000623";
+
+    public void clickAttachments(){
+        driver.findElement(By.id(btnATTACHMENTS)).click();
+    }
 
 
    //use this method for all send keys.
@@ -354,4 +363,6 @@ public class BaseRecordPage extends BasePage {
     public void enterServiceAndCustomerImpact(String text){
         driver.findElement(By.id(txtSERVICE_AND_CUSTOMER_IMPACT)).sendKeys(text);
     }
+
+
 }

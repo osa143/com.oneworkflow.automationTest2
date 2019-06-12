@@ -1,6 +1,11 @@
-plugins {
-    id 'java'
-}
+//plugins {
+//    id 'java'
+//    id 'maven'
+//}
+
+apply plugin : 'java'
+apply plugin : 'java-library'
+apply plugin: 'maven'
 
 group 'com.oneworkflow.automation'
 version '1.0-SNAPSHOT'
@@ -33,3 +38,31 @@ dependencies {
 //    }
     compile group: 'com.aventstack', name: 'extentreports', version: '4.0.7'
 }
+
+task cukes (type: Test){
+    testLogging.showStandardStreams = true
+    print 'hi'
+    systemProperty "owf.env", System.getProperty("owf.env", 'runtime_test')
+    def suite = 'src/test/resources/TestNG.xml'
+
+    ignoreFailures = true
+
+    useTestNG(){
+        print suite
+       useDefaultListeners = true
+        scanForTestClasses = false
+        suites "src/test/resources/TestNG.xml"
+
+    }
+
+    outputs.upToDateWhen {false}
+}
+
+//test{
+//    useTestNG(){
+//        suites "src/test/resources/testng.xml"
+//
+//    }
+//}
+
+

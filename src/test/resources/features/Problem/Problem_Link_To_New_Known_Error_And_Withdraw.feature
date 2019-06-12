@@ -19,7 +19,7 @@
       Then user clicks on Ack button
       And problem ticket status should be under investigation
       And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation ."
-      Then User changes status to investigation complete
+      Then user changes status to investigation complete
       And user selects root cause code as Technical:HW error under route cause
       And user enters route cause details as "Bad Management"
       And user enters RC found date as current date

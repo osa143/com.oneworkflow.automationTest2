@@ -31,7 +31,7 @@ Feature: Verification of Problem ticket owner
     And user enters Problem Ticket
     And user clicks Search on ticket search
     When user tries to Ack the ticket but its shouldn't allow
-    When user tries to change the status to withdrawn
+    When user tries to change the status to "Withdrawn"
     Then problem ticket status should be assigned
     When user tries to change request type as Access Networks:RAN NSN 2G:3G:4G
     Then request type should be RAN optimization

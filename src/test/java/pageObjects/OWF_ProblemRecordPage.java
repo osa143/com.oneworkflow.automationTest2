@@ -80,10 +80,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         driver.findElement(By.id(btnYES_ON_FRAME_ID)).click();
     }
 
-    public void switchToFrame(int frame_index) {
-        driver.switchTo().frame(frame_index);
 
-    }
 
     public void clickAddButton() {
         driver.findElement(By.id(btnADD_ID)).click();

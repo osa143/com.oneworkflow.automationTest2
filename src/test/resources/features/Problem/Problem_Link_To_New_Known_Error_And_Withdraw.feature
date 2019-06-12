@@ -31,7 +31,7 @@
       When user clicks on add button under linked items
       Then a known error ticket should appear in new tab
       And a known error ticket should be in status new
-      Then user clicks on save button on the known error form
+      Then user clicks on save button on the problem form
       And user validates that ticket is in draft status
       Then user clicks on linked items tab on known error form
       And user clicks on radio button cleared
@@ -41,7 +41,7 @@
       Then an error message "Required field (without a default) not specified : Withdrawn Reason (ARERR 9424)" should appear with red boarder around withdrawn reason
       When user selects withdrawn reason as false alarm and clicks save
       Then user should see confirmation message and clicks on yes button
-      And known error status should be withdrawn
+      And user validates ticket status as "Withdrawn"
       Then user logsOut and closes the browser
 
 

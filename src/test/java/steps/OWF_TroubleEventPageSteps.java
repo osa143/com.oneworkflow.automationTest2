@@ -93,4 +93,34 @@ public class OWF_TroubleEventPageSteps {
     public void userClicksRefreshButtonOnAlarmTab() {
         troubleEventPage.clickRefreshButton_AlarmTab();
     }
+
+    @And("user clicks on finland checkbox under affected BU's")
+    public void userClicksOnFinlandCheckboxUnderAffectedBUS() {
+        troubleEventPage.clickFinalndCheckBox();
+    }
+
+    @And("user clicks on estonia checkbox under affected BU's")
+    public void userClicksOnEstoniaCheckboxUnderAffectedBUS() {
+        troubleEventPage.clickEstoniaCheckBox();
+    }
+
+    @And("user clicks on norway checkbox under affected BU's")
+    public void userClicksOnNorwayCheckboxUnderAffectedBUS() {
+        troubleEventPage.clickNorwayCheckBox();
+    }
+
+    @And("user clicks on lithuania checkbox under affected BU's")
+    public void userClicksOnLithuaniaCheckboxUnderAffectedBUS() {
+        troubleEventPage.clickLithuniaCheckBox();
+    }
+
+    @And("user clicks on denmark checkbox under affected BU's")
+    public void userClicksOnDenmarkCheckboxUnderAffectedBUS() {
+        troubleEventPage.clickDenmarkCheckBox();
+    }
+
+    @When("user clicks on main page refresh")
+    public void userClicksOnMainPageRefresh() {
+        troubleEventPage.refreshPage();
+    }
 }

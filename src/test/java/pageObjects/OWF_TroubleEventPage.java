@@ -402,4 +402,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         Ticket ticket = new Ticket(title, requestType, priority, location, description);
         return ticket;
     }
+    public void refreshPage(){
+        driver.navigate().refresh();
+    }
 }

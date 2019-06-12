@@ -65,7 +65,7 @@ public class OWF_ProblemRecordPageSteps {
     @And("user clicks on yes on warning window")
     public void userClicksOnYesOnWarningWindow() {
         problemRecordPage.wait(1000);
-        problemRecordPage.switchToFrame(2);
+        problemRecordPage.switchToFrameByIndex(2);
         problemRecordPage.wait(1000);
         problemRecordPage.clickYesOnFrame();
     }
@@ -85,7 +85,7 @@ public class OWF_ProblemRecordPageSteps {
     @And("user should see confirmation message and clicks on yes button")
     public void userShouldSeeConfirmationMessageAndClicksOnYesButton() {
         problemRecordPage.wait(1000);
-        problemRecordPage.switchToFrame(2);
+        problemRecordPage.switchToFrameByIndex(2);
         problemRecordPage.wait(1000);
         problemRecordPage.clickYesOnFrame();
     }
@@ -259,7 +259,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user switches to frame")
     public void userSwitchesToFrame() {
-        problemRecordPage.switchToFrame(2);
+        problemRecordPage.switchToFrameByIndex(2);
     }
 
     @Then("user changes status to investigation complete")

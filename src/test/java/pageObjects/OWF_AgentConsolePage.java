@@ -77,12 +77,28 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String btnREFRESH_ALARM_TAB = "//a[contains(text(),'Refresh')]";
     private static final String tdROW1_XPATH = "//div[@id='WIN_0_999000005']//td[1]//nobr[1]";
     private static final String alarmTdROW1_XPATH = "//fieldset[@id='WIN_0_836889423']//tr[2]";
+    private static final String txtALARM_NUMBER_ID = "arid_WIN_0_700511109";
+    private static final String Alarm_Console_fullView_Table_ID = "bubble_tooltip";
+    private static final String btnYES_ON_FRAME_ID = "WIN_0_700027904";
+    private static final String secondary_ALARM_XPATH = "//td[@class='BaseTableCell BaseTableCellColor BaseTableStaticText']//span[contains(text(),'Secondary')]";
+
+    public void clickSecondaryAlarm(){
+        driver.findElement(By.xpath(secondary_ALARM_XPATH)).click();
+    }
+    public void clickOnYes(){
+        driver.findElement(By.id(btnYES_ON_FRAME_ID)).click();
+    }
+
+
 
     Actions action = new Actions(driver);
 
     public void doubleClickOnAlarm(){
         WebElement element= driver.findElement(By.xpath(alarmTdROW1_XPATH));
         action.doubleClick(element).perform();
+    }
+    public void clickFilterPreferences(){
+        driver.findElement(By.id(quick_view_ALARM_TABLE)).findElement(By.xpath(" //div[@id='WIN_0_700508140']//a[@class='Prefs btn btn3d TableBtn'][contains(text(),'Preferences')]")).click();
     }
 
 
@@ -95,6 +111,7 @@ public class OWF_AgentConsolePage extends BasePage {
     }
 
     public void selectAction(String value){
+        wait(1000);
         selectDropDownNameAndValue(ddACTION, value, false);
     }
 
@@ -102,6 +119,9 @@ public class OWF_AgentConsolePage extends BasePage {
         driver.findElement(By.xpath(btnCLOSE_ON_FRAME_XPATH)).click();
     }
     public void clickOnCloseImage(){
+        //driver.findElement(By.id("WIN_0_860000010")).click();
+
+       // driver.findElement(By.xpath("//button[@title='Close']")).click();
         driver.findElement(By.id(imgCLOSED_ID)).click();
     }
 
@@ -359,6 +379,10 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void selectSearchMenu(String menuItem){
         selectMainMenuAndMenuItem(menuForSEARCH, menuItem);
+    }
+
+    public String getAlarmNumber(){
+        return driver.findElement(By.id(txtALARM_NUMBER_ID)).getText();
     }
 
 

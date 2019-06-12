@@ -126,10 +126,7 @@ public class BasePage {
     }
 
     public void setFilterPreferences(String preferences) {
-        wait(2000);
-        driver.findElement(By.xpath("//div[@id='WIN_0_999000525']//div[@class='TableHdr']//tr")).click();
-
-        wait(500);
+        wait(1000);
 
         String arr[] = preferences.split(":");
         for (int i = 0; i < arr.length; i++) {
@@ -314,6 +311,14 @@ public class BasePage {
         driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tab)).findFirst().orElse(null).click();
 
     }
+    public void switchToFrameByIndex(int frame_index) {
+        driver.switchTo().frame(frame_index);
+    }
+
+    public void switchToFrameByName(String frameName){
+        driver.switchTo().frame(frameName);
+    }
+
 
 
 

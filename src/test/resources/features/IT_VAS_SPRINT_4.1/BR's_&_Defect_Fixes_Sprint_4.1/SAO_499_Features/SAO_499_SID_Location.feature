@@ -7,74 +7,75 @@ Feature: data searching using wildcards
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects SID console from agent console
     Then SID console page should be opened
-    When user enters "%_RNC_SE" in the location+ field
+    Then user switches to window 1
+    When user enters "%_Site_BIA" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "%_RNC_FI" in the location+ field
+    When user enters "%_Site_alaköyliö" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "%_RNC_DK" in the location+ field
+    When user enters "%_Site_S1530" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "%_RNC_EE" in the location+ field
+    When user enters "%_Site_TALLI" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "%_RNC_LT" in the location+ field
+    When user enters "%_Site_40A" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "%_RNC_NO" in the location+ field
+    When user enters "%_Site_BSK" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "SE_%_RNC" in the location+ field
+    When user enters "SE_%_a" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "FI_%_RNC" in the location+ field
+    When user enters "FI_%_a" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "DK_%_RNC" in the location+ field
+    When user enters "DK_%_a" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "EE_%_RNC" in the location+ field
+    When user enters "EE_%_a" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "LT_%_RNC" in the location+ field
+    When user enters "LT_%_a" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "NO_%_RNC" in the location+ field
+    When user enters "NO_%_a" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "SE_RNC_%" in the location+ field
+    When user enters "SE_Site_%" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "FI_RNC_%" in the location+ field
+    When user enters "FI_Site_%" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "DK_RNC_%" in the location+ field
+    When user enters "DK_Site_%" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "EE_RNC_%" in the location+ field
+    When user enters "EE_Site_%" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "LT_RNC_%" in the location+ field
+    When user enters "LT_Site_%" in the location+ field
     And user clicks on search
     Then user should see related country CI information
     When user clicks on clear button
-    When user enters "NO_RNC_%" in the location+ field
+    When user enters "NO_Site_%" in the location+ field
     And user clicks on search
     Then user should see related country CI information

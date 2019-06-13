@@ -14,75 +14,75 @@ Feature: data searching using wildcards
     Then user switches to frame
     When user clicks on clear button
     And user enters "%_Site_BIA" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "%_Site_TALLI" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "%_Site_alaköyliö" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "%_Site_BSK" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "%_Site_S1530" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "%_Site_40A" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "SE_%_a" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "EE_%_a" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "FI_%_a" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "NO_%_a" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "DK_%_a" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "LT_%_a" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "SE_Site_%" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "EE_Site_%" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "FI_Site_%" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "NO_Site_%" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "DK_Site_%" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     When user clicks on clear button
     And user enters "LT_Site_%" in location field
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user validates CI availability
     And user closes warning message and clicks on close button
 

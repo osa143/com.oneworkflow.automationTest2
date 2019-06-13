@@ -42,4 +42,3 @@ Feature: User is able to close and clone a problem ticket
     When user clicks on clone button
     Then problem record form should appear in new tab
     And problem ticket status should be under investigation
-    Then user logsOut and closes the browser

@@ -41,4 +41,4 @@ Feature:Initiator change description
     And user enters Problem Ticket
     And user clicks Search on ticket search
     Then description field should be greyed out should not be able to changed
-    Then user logsOut and closes the browser
+

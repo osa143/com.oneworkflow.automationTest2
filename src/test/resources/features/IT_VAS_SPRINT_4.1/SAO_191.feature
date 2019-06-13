@@ -16,7 +16,7 @@ Feature: Site name details search Feature
     And user clicks on search
     Then CI details should be displayed
     And site name should be displayed for all CI CTI search details
-    And user logsOut and closes the browser
+
 
 
 

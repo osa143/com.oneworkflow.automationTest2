@@ -97,4 +97,3 @@ Feature: Changing of assignee for problem ticket
     Then user clicks on save button on the problem form
     And problem ticket status should be investigation complete
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Under Investigation to Investigation Complete. "
-    Then user logsOut and closes the browser

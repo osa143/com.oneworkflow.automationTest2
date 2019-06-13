@@ -52,4 +52,4 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
     Then user waits for implementation to finish
     And verify a new OP ticket has been created
     Then verify new OP has other OP in container
-    And user logsOut and closes the browser
+

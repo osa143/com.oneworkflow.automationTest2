@@ -33,7 +33,7 @@ Feature: problem record
     When user selects withdrawn reason as false alarm and clicks save
     And user should see confirmation message and clicks on yes button
     Then  problem ticket should be withdrawn
-    Then user logsOut and closes the browser
+
 
 
 

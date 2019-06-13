@@ -6,6 +6,7 @@ Feature: data searching using wildcards
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user enters ticket id as "OP-000000898440" in the agent console search box and searches for ticket
+    And user double clicks on ticket to open
     Then user switches to window 1
     And user validates ticket status as "Assigned"
     When user clicks on Diagnosis tab
@@ -84,4 +85,4 @@ Feature: data searching using wildcards
     And user clicks on CI search button
     Then user validates CI availability
     And user closes warning message and clicks on close button
-    Then user logsOut and closes the browser
+

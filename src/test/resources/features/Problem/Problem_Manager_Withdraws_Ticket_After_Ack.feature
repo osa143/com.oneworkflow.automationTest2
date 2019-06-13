@@ -42,5 +42,5 @@ Feature:withdraw problem Ticket
     And user clicks Search on ticket search
     When user tries to change the status to "Withdrawn"
     Then problem ticket status should be under investigation
-    Then user logsOut and closes the browser
+
 

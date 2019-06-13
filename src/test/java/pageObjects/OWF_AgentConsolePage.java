@@ -105,6 +105,10 @@ public class OWF_AgentConsolePage extends BasePage {
     public void clickOnTicket(){
         driver.findElement(By.xpath(tdROW1_XPATH)).click();
     }
+    public void doubleClickOnTicket(){
+        WebElement element= driver.findElement(By.xpath(tdROW1_XPATH));
+        action.doubleClick(element).perform();
+    }
 
     public void clickRefresh_AlarmTab(){
         driver.findElement(By.xpath(btnREFRESH_ALARM_TAB)).click();
@@ -119,6 +123,7 @@ public class OWF_AgentConsolePage extends BasePage {
         driver.findElement(By.xpath(btnCLOSE_ON_FRAME_XPATH)).click();
     }
     public void clickOnCloseImage(){
+        System.out.println("inside frame");
         //driver.findElement(By.id("WIN_0_860000010")).click();
 
        // driver.findElement(By.xpath("//button[@title='Close']")).click();

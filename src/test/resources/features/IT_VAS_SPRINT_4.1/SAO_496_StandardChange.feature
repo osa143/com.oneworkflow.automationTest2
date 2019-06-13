@@ -58,4 +58,4 @@ Feature: Linking of Incident Ticket to Standard Change during implementation win
     Then user clicks on linked items tab
     And user should see value for Trouble event listed with relationship type "Caused by"
     Then user validates that auto created OP container is present
-    And user logsOut and closes the browser
+

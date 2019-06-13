@@ -35,4 +35,4 @@ Feature: Verification of Problem ticket owner
     Then problem ticket status should be assigned
     When user tries to change request type as Access Networks:RAN NSN 2G:3G:4G
     Then request type should be RAN optimization
-    Then user logsOut and closes the browser
+

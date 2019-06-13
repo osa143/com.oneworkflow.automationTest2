@@ -93,9 +93,7 @@ Feature: Verification of ability to link tickets
     And user clicks accept button
     Then trouble ticket should be in list of linked items
     And change ticket should be in list of linked items
-    Then user logsOut and closes the browser
 
 
-    # And fill the base page fields with data
-    # |template|ALL:IT:Other:BlaBla:Bla/5G|
-    # |sweden|true|
+
+

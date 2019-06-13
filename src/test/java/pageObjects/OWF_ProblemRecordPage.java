@@ -59,6 +59,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String timeline_TABLE_ID = "T999000510";
 
     private static final String ddValueMAJOR = "Major";
+    private static final String txtSOURCE_ID = "arid_WIN_0_777777912";
 
     private static final String chkbxSWEDEN = "WIN_0_rc0id600002001";
 
@@ -66,6 +67,10 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         String status = getTableCellData(By.id(timeline_TABLE_ID), "Description", 1);
         System.out.println("Timeline status is: " + status);
         return status;
+    }
+
+    public void enterSource(String source){
+        driver.findElement(By.id(txtSOURCE_ID)).sendKeys(source);
     }
 
     public void clickTimelineButton() {
@@ -274,4 +279,5 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         selectDropDownNameAndValue(ddPRIORITY_ID, value, false);
 
     }
+
 }

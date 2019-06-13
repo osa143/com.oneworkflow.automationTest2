@@ -1,6 +1,9 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class OWF_CiSearchPage extends BasePage {
 
@@ -10,6 +13,26 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String btnCI_SEARCH = "WIN_0_700009021";
     private static final String btnLINK_ID = "WIN_4_777506009";
     private static final String btnACCEPT_ID = "WIN_0_730011058";
+    private static final String txtLOCATION_ID = "arid_WIN_0_700009015";
+    private static final String ddValueDEGRADATION_OF_SERVICES = "Degradation of Service";
+    private static final String ddValueLOSS_OF_SERVICE = "Loss of Service";
+    private static final String ddValueNO_IMPACT = "No Impact";
+    private static final String ddValueCLEAR = "(clear)";
+
+    private static final String chkbxTO_SELECT_CI = "//input[class='colcheck']";
+
+    private static final String txtNAME_PLUS = "arid_WIN_0_700009016";
+
+    private static final String ddLEVEL = "Level";
+    private static final String ddSEARCH_FOR_ID = "arid_WIN_0_700009236";
+
+    private static final String ddValueALL_CIS = "All CIs";
+    private static final String btnLINKED_ITEMS_XPATH= "//a[contains(text(), 'Linked Items')]";
+    private static final String Table_ID = "T700009024";
+
+    public void enterLocation(String location){
+        driver.findElement(By.id(txtLOCATION_ID)).sendKeys(location);
+    }
 
     public void clickAcceptButton(){
         driver.findElement(By.id(btnACCEPT_ID)).click();
@@ -36,24 +59,9 @@ public class OWF_CiSearchPage extends BasePage {
     }
 
 
-    private static final String ddLEVEL = "Level";
-    private static final String ddSEARCH_FOR_ID = "arid_WIN_0_700009236";
-
-    private static final String ddValueALL_CIS = "All CIs";
-    private static final String btnLINKED_ITEMS_XPATH= "//a[contains(text(), 'Linked Items')]";
-
     public void clickLinkedItems(){
         driver.findElement(By.xpath(btnLINKED_ITEMS_XPATH)).click();
     }
-
-    private static final String ddValueDEGRADATION_OF_SERVICES = "Degradation of Service";
-    private static final String ddValueLOSS_OF_SERVICE = "Loss of Service";
-    private static final String ddValueNO_IMPACT = "No Impact";
-    private static final String ddValueCLEAR = "(clear)";
-
-    private static final String chkbxTO_SELECT_CI = "//input[class='colcheck']";
-
-    private static final String txtNAME_PLUS = "arid_WIN_0_700009016";
 
 
     public void acceptAlert() {
@@ -114,4 +122,8 @@ public class OWF_CiSearchPage extends BasePage {
     public void selectLevel(String value){
         selectDropDownNameAndValue(ddLEVEL, value, false);
     }
+
+   public List<WebElement> tableRows(){
+        return getTableRows(By.id(Table_ID));
+   }
 }

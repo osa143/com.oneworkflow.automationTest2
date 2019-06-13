@@ -40,5 +40,5 @@ Feature: User is able to change status to pending
     Then user waits for 30 minutes
     And problem ticket status should be under investigation
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Pending to Under Investigation ."
-    Then user logsOut and closes the browser
+
 

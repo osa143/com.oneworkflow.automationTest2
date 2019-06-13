@@ -37,7 +37,6 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btnREFRESH_ALARM_TAB_XPATH= "//a[contains(text(),'Refresh')] ";
     private static final String btnTERMINATE_ALARM = "WIN_0_600002926";
     private static final String btnALARMS_XPATH = "//div[@id='WIN_0_999000003']//div[@class='OuterTabsDiv']//div[@class='TabsViewPort']//div//a[@class='btn f1'][contains(text(),'Alarms')]";
-    private static final String btnWORK_ORDER_XPATH = "//a[contains(text(),'Work Orders')]";
     private static final String btnCREATE_FROM_TICKET_ID  = "WIN_0_777504010";
 
 

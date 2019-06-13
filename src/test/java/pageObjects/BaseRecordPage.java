@@ -96,12 +96,37 @@ public class BaseRecordPage extends BasePage {
     public static final String btnATTACHMENTS = "WIN_0_999000623";
     private static final String txtTICKET_ID = "arid_WIN_0_730000060";
     private static final String txtSEARCH_TICKET_ID = "arid_WIN_0_777777600";
+    private static final String ddSUMMARY = "Summary*";
+    private static final String txtDESCRIPTION_ON_FRAME_ID = "arid_WIN_0_700500102";
+    private static final String btnADD_ATTACHMENT_ON_FRAME = "//a[contains(@class,'Add btn btn3d TableBtn')]";
+    private static final String btnCHOOSE_FILE_XPATH = "//input[@id='PopupAttInput']";
+    private static final String btnOK_ON_FRAME_XPATH = "//a[contains(text(),'OK')]";
+    private static final String btnSAVE_ATTACHMENT_ON_FRAME = "WIN_0_700500109";
 
+    public void enterDescription_Attachment_OnFrame(String description){
+        driver.findElement(By.id(txtDESCRIPTION_ON_FRAME_ID)).sendKeys(description);
+    }
+    public void clickAdd_AttachmentOnFrame(){
+        driver.findElement(By.xpath(btnADD_ATTACHMENT_ON_FRAME)).click();
+    }
+    public void clickonChooseFile_OnFrame(){
+        driver.findElement(By.xpath(btnCHOOSE_FILE_XPATH)).click();
+    }
+    public void clickOk_AttachmentOnFrame(){
+        driver.findElement(By.xpath(btnOK_ON_FRAME_XPATH)).click();
+    }
+
+    public void clickSave_AttachmentOnFrame(){
+        driver.findElement(By.id(btnSAVE_ATTACHMENT_ON_FRAME)).click();
+    }
 
     public void clickAttachments(){
         driver.findElement(By.id(btnATTACHMENTS)).click();
     }
+    public void selectSummaryDropDownAs(String value){
+    selectDropDownNameAndValue(ddSUMMARY, value, false);
 
+    }
 
    //use this method for all send keys.
     public void enterText(String textName, String text)

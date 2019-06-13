@@ -390,4 +390,50 @@ public class OWF_ProblemRecordPageSteps {
     public void userShouldSeeTroubleTicket() {
         Assert.assertNotNull(problemRecordPage.verifyTicketIsNotNull());
     }
+
+    @And("user clicks on add button under internal")
+    public void userClicksOnAddButtonUnderInternal() {
+        problemRecordPage.clickAddButton();
+    }
+
+    @Then("user selects summary dropdown as {string}")
+    public void userSelectsSummaryDropdownAs(String arg0) {
+     problemRecordPage.selectSummaryDropDownAs(arg0);
+    }
+
+    @And("user enters attachment description as {string}")
+    public void userEntersAttachmentDescriptionAs(String arg0) {
+        problemRecordPage.enterDescription_Attachment_OnFrame(arg0);
+    }
+
+    @Then("user clicks on add button in attachment window")
+    public void userClicksOnAddButtonInAttachmentWindow() {
+        problemRecordPage.clickAdd_AttachmentOnFrame();
+    }
+
+    @When("user clicks on choose file button")
+    public void userClicksOnChooseFileButton() {
+        problemRecordPage.clickonChooseFile_OnFrame();
+    }
+
+    @Then("user searches for attachment and adds attachment to ticket")
+    public void userSearchesForAttachmentAndAddsAttachmentToTicket() {
+        CommonUtils.uploadFile("C:\\Users\\mahesh vaddegani\\Documents\\attachment\\attachment.doc");
+    }
+
+    @Then("user clicks on attachment ok button")
+    public void userClicksOnAttachmentOkButton() {
+    problemRecordPage.clickOk_AttachmentOnFrame();
+    }
+
+    @And("user clicks on save button on attachment window")
+    public void userClicksOnSaveButtonOnAttachmentWindow() {
+        problemRecordPage.clickSave_AttachmentOnFrame();
+    }
+
+    @And("user selects request type as {string} in problem form")
+    public void userSelectsRequestTypeAsInProblemForm(String requestType) {
+        problemRecordPage.selectRequestType(requestType, false);
+        problemRecordPage.wait(1000);
+    }
 }

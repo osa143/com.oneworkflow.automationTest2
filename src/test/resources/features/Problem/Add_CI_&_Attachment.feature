@@ -6,10 +6,11 @@
       When user logs in with valid username "Tohall_copy" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create problem record
+      And user switches to window 1
       Then problem record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       When user enters "proactive investigation of Tohall_Copy" in Title field
-      And user selects request type as "Access Networks:RAN Optimization"
+      And user selects request type as "Access Networks:RAN Optimization" in problem form
       And user enters description as "UAT Test 3 Add CI and attachment"
       And user selects impact type as moderate:limited
       And user selects urgency as low
@@ -29,12 +30,13 @@
       Then CI should be listed and displayed under the Diagnosis tab
       Then user clicks on attachments under sections
       And user clicks on add button under internal
-      Then user selects decision under summary dropdown
+      And user switches to frame 2
+      Then user selects summary dropdown as "Decision"
       And user enters attachment description as "A Document Attached"
       Then user clicks on add button in attachment window
-      When user clicks on browse button
-      Then user searches for attachment to add
-      And user adds attachment to ticket
+      And user switches to frame 2
+      When user clicks on choose file button
+      Then user searches for attachment and adds attachment to ticket
       Then user clicks on attachment ok button
       And user clicks on save button on attachment window
       And change should also be reflected in the timeline as "Attachment has been added. File Name - attachment.doc"

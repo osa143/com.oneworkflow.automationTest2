@@ -42,7 +42,7 @@
       When user selects withdrawn reason as false alarm and clicks save
       Then user should see confirmation message and clicks on yes button
       And user validates ticket status as "Withdrawn"
-      Then user logsOut and closes the browser
+
 
 
 

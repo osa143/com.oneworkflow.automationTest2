@@ -78,4 +78,3 @@ Feature: data searching using wildcards
     When user enters "NO_RNC_%" in the name+ field
     And user clicks on search
     Then user should see related country CI information
-    Then user logsOut and closes the browser

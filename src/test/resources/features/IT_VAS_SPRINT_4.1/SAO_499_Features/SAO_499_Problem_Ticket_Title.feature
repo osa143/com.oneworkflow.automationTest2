@@ -78,4 +78,4 @@ Feature: data searching using wildcards
     When user enters "Ser%" in Title field
     And user clicks Search on ticket search
     Then user should see problem ticket
-    Then user logsOut and closes the browser
+

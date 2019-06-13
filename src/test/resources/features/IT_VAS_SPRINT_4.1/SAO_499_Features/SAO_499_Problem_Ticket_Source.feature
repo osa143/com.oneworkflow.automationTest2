@@ -42,4 +42,4 @@ Feature: data searching using wildcards
     And user clicks on denmark checkbox under affected BU's
     And user clicks Search on ticket search
     Then user should see problem ticket
-    Then user logsOut and closes the browser
+

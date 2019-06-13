@@ -84,5 +84,5 @@ Feature: data searching using wildcards
     And user clicks on CI search button
     Then user validates CI availability
     And user closes warning message and clicks on close button
-    Then user logsOut and closes the browser
+
 

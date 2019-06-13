@@ -31,7 +31,7 @@ Feature: Verification of OP target due date visibility
     And user clicks on Remove Column under preferences and selects OP Target date
     Then user shouldn't see OP target date column in the agent console
     Then OP target date information should not visible
-    And user logsOut and closes the browser
+
 
 
 

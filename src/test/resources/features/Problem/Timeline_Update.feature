@@ -36,4 +36,3 @@ Feature: User is able to update the timeline with entries
     And user enters "20" under the minutes field
     And user clicks on Ok button
     And change should also be reflected in the timeline as "Time Tracking: Working On Ticket (20 Minutes)"
-    Then user logsOut and closes the browser

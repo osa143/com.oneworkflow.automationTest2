@@ -51,6 +51,6 @@
       And user clicks on the delete button under internal
       And change should also be reflected in the timeline as "Attachment has been removed. File Name - attachment.doc"
       Then attachment should no longer be visible
-      And user logsOut and closes the browser
+
 
 

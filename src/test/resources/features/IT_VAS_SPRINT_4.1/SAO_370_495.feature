@@ -19,10 +19,10 @@ Feature: Alarm tab in agent console
     Then alarm details should be displayed in new window
     When user clicks on close button
     Then trouble ticket should be present in agent console
-#    When user selects action dropdown as "Open Full View"
-#    And user switches to frame 0
-#    Then user should see list of alarms in alarm console
-#    Then user closes alarm console
+    When user selects action dropdown as "Open Full View"
+    And user switches to frame by id
+    Then user should see list of alarms in alarm console
+    Then user closes alarm console
     When user selects one secondary alarm
     And user selects action dropdown as "Detach"
     And  user clicks "Yes" on the popup
@@ -44,4 +44,4 @@ Feature: Alarm tab in agent console
     And user selects one secondary alarm
     And user selects action dropdown as "Terminate"
     And user clicks on refresh button on alarms tab
-    Then user validates alarm status should be refreshed to "cleared"
+    Then user validates ticket status as "cleared"

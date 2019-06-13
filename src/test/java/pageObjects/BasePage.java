@@ -319,6 +319,10 @@ public class BasePage {
         driver.switchTo().frame(frameName);
     }
 
+    public void switchToFrameById(String id){
+        driver.switchTo().frame(id);
+    }
+
 
 
 

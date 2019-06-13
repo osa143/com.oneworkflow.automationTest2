@@ -5,7 +5,7 @@ Feature: data searching using wildcards
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user clicks on search and selects open search forms and trouble ticket
+    When user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 1
     Then user should see blank trouble search form
     When user enters "true%" in the source field

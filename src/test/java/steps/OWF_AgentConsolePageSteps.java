@@ -214,11 +214,6 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.setFilterPreferences(arg0);
     }
 
-    @Then("user clicks on refresh button")
-    public void userClicksOnRefreshButton() {
-
-    }
-
     @When("user enters ticket id as {string} in the agent console search box and searches for ticket")
     public void userEntersTicketIdAsInTheAgentConsoleSearchBoxAndSearchesForTicket(String ticketId) {
         agentConsolePage.enterSearch(ticketId);
@@ -234,6 +229,7 @@ public class OWF_AgentConsolePageSteps {
     @When("user selects action dropdown as {string}")
     public void userSelectsActionDropdownAs(String arg0) {
         agentConsolePage.selectAction(arg0);
+        agentConsolePage.wait(5000);
     }
 
     @Then("user closes alarm console")
@@ -299,7 +295,7 @@ public class OWF_AgentConsolePageSteps {
 
     @Then("alarm details should be displayed in new window")
     public void alarmDetailsShouldBeDisplayedInNewWindow() {
-        //Assert.assertNotNull(agentConsolePage.getAlarmNumber());
+        Assert.assertNotNull(agentConsolePage.getAlarmNumber());
 
     }
 
@@ -323,7 +319,17 @@ public class OWF_AgentConsolePageSteps {
 
     @Then("user shouldn't see the detached alarm")
     public void userShouldnTSeeTheDetachedAlarm() {
-        //Assert.assertEquals("");
+        Assert.assertTrue(false);
+    }
+
+    @And("user double clicks on ticket to open")
+    public void userDoubleClicksOnTicketToOpen() {
+        agentConsolePage.doubleClickOnTicket();
+    }
+
+    @And("user switches to frame by id")
+    public void userSwitchesToFrameById() {
+        agentConsolePage.switchToFrameById("1560363005201P");
     }
 }
 

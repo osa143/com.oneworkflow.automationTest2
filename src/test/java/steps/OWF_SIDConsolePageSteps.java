@@ -54,4 +54,20 @@ public class OWF_SIDConsolePageSteps {
     }
 
 
-}
+    @When("user enters {string} in the location+ field")
+    public void userEntersInTheLocationField(String arg0) {
+        sidConsolePage.enterLocationPlus(arg0);
+    }
+
+    @When("user enters {string} in the name+ field")
+    public void userEntersInTheNameField(String arg0) {
+        sidConsolePage.enterNamePlus(arg0);
+    }
+
+    @Then("user should see related country CI information")
+    public void userShouldSeeRelatedCountryCIInformation() {
+        int size = sidConsolePage.TableRows().size();
+        Assert.assertNotEquals(size, 0, 0, "CI details are not displayed");
+    }
+    }
+

@@ -343,4 +343,51 @@ public class OWF_ProblemRecordPageSteps {
     public void userClicksOnAttachmentsUnderSections() {
         problemRecordPage.clickAttachments();
     }
+
+    @Then("user should see blank change record search form")
+    public void userShouldSeeBlankChangeRecordSearchForm() {
+     //Assert.assertNull(problemRecordPage.verifyTicketIsnull(), "Change record search form is not blank");
+    }
+
+    @Then("user should see change record ticket")
+    public void userShouldSeeChangeRecordTicket() {
+
+        Assert.assertNotNull(problemRecordPage.verifyTicketIsNotNull());
+
+    }
+
+    @Then("user should see blank problem search form")
+    public void userShouldSeeBlankProblemSearchForm() {
+        Assert.assertNull(problemRecordPage.verifyTicketIsnull());
+    }
+
+    @Then("user should see problem ticket")
+    public void userShouldSeeProblemTicket() {
+        Assert.assertNotNull(problemRecordPage.verifyTicketIsNotNull());
+    }
+
+    @Then("user should see blank known error search form")
+    public void userShouldSeeBlankKnownErrorSearchForm() {
+        problemRecordPage.verifyTicketIsnull();
+    }
+
+    @Then("user should see known error ticket")
+    public void userShouldSeeKnownErrorTicket() {
+        Assert.assertNotNull(problemRecordPage.verifyTicketIsNotNull());
+    }
+
+    @When("user enters {string} in the source field")
+    public void userEntersInTheSourceField(String arg0) {
+        problemRecordPage.enterSource(arg0);
+    }
+
+    @Then("user should see blank trouble search form")
+    public void userShouldSeeBlankTroubleSearchForm() {
+        problemRecordPage.verifyTicketIsnull();
+    }
+
+    @Then("user should see trouble ticket")
+    public void userShouldSeeTroubleTicket() {
+        Assert.assertNotNull(problemRecordPage.verifyTicketIsNotNull());
+    }
 }

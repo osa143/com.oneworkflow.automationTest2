@@ -89,11 +89,11 @@ public class OWF_SIDConsolePage extends BasePage {
     }
 
 
-    public void clickLocationPlusTextBox() {
-        driver.findElement(By.id(txtbxLOCATION_PLUS)).click();
+    public void enterLocationPlus(String locationPlus) {
+        driver.findElement(By.id(txtbxLOCATION_PLUS)).sendKeys(locationPlus);
     }
 
-    public void clickNamePlusTextBox(String namePlus) {
+    public void enterNamePlus(String namePlus) {
         driver.findElement(By.id(txtbxNAME_PLUS)).sendKeys(namePlus);
     }
 

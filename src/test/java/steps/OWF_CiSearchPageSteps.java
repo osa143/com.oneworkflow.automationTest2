@@ -3,6 +3,7 @@ package steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.testng.Assert;
 import pageObjects.OWF_CiSearchPage;
 
 public class OWF_CiSearchPageSteps {
@@ -77,10 +78,6 @@ public class OWF_CiSearchPageSteps {
         ciSearchPage.clickLink();
     }
 
-    @Then("select target request window should open")
-    public void selectTargetRequestWindowShouldOpen() {
-        
-    }
 
     @And("user enters ticket in ticket ID+ field")
     public void userEntersTicketInTicketIDField() {
@@ -98,12 +95,17 @@ public class OWF_CiSearchPageSteps {
     }
 
 
-    @Then("trouble ticket should be in list of linked items")
-    public void troubleTicketShouldBeInListOfLinkedItems() {
-        
+
+    @And("user enters {string} in location field")
+    public void userEntersInLocationField(String arg0) {
+        ciSearchPage.enterLocation(arg0);
     }
 
-    @And("change ticket should be in list of linked items")
-    public void changeTicketShouldBeInListOfLinkedItems() {
+
+    @Then("user validates CI availability")
+    public void userValidatesCIAvailability() {
+        int size = ciSearchPage.tableRows().size();
+        Assert.assertNotEquals(size, 0, 0, "CI details are not displayed");
+
     }
 }

@@ -35,7 +35,7 @@ public class Hooks {
             agentConsolePage.clickNavUserMenu();
             agentConsolePage.wait(1000);
             agentConsolePage.clickMenuItemLogout();
-            agentConsolePage.wait(5000);
+            agentConsolePage.wait(2000);
 
             DriverFactory.getInstance().quit();
 

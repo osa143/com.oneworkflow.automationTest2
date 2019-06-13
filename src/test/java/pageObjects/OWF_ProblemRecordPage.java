@@ -47,6 +47,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String dd_PRIORITY_ValueCLEAR = "(clear)";
 
     private static final String btnADD_ID = "WIN_0_777000020";
+    private static final String btnADD_ON_FRAME_XPATH = "//a[contains(@class,'Add btn btn3d TableBtn')]";
     private static final String btnINTERNAL_OPEN_ID = "WIN_0_777000021";
     private static final String btnINTERNAL_DELETE_ID = "WIN_0_777000022";
     private static final String btnEXTERNAL_OPEN_ID = "WIN_0_600002903";
@@ -87,8 +88,12 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
 
 
+
     public void clickAddButton() {
         driver.findElement(By.id(btnADD_ID)).click();
+    }
+    public void clickAddButtonOnFrame(){
+        driver.findElement(By.xpath(btnADD_ON_FRAME_XPATH)).click();
     }
 
     public void clickInternalOpenButton() {

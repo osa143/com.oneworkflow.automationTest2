@@ -29,6 +29,7 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String ddValueALL_CIS = "All CIs";
     private static final String btnLINKED_ITEMS_XPATH= "//a[contains(text(), 'Linked Items')]";
     private static final String Table_ID = "T700009024";
+    private static final String CI_DIAGNOSIS_TABLE_ID = "T700009087";
 
     public void enterLocation(String location){
         driver.findElement(By.id(txtLOCATION_ID)).sendKeys(location);
@@ -125,5 +126,8 @@ public class OWF_CiSearchPage extends BasePage {
 
    public List<WebElement> tableRows(){
         return getTableRows(By.id(Table_ID));
+   }
+   public List<WebElement> ciDiagnosisTableRows(){
+        return getTableRows(By.id(CI_DIAGNOSIS_TABLE_ID));
    }
 }

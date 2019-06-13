@@ -84,11 +84,6 @@ public class OWF_ChangeRecordPageSteps {
     }
 
 
-    @Then("CI should be listed and displayed under the Diagnosis tab")
-    public void ciShouldBeListedAndDisplayedUnderTheDiagnosisTab() {
-
-    }
-
     @When("user clicks on Send button")
     public void userClicksOnSendButton() {
         changeRecordPage.clickSendButton();

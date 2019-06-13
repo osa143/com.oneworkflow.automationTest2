@@ -71,7 +71,7 @@ public class CommonUtils extends BasePage {
     }
 
 //    filename - full path of the file
-    public void uploadFile(String filename){
+    public static void uploadFile(String filename){
 
         StringSelection stringSelection = new StringSelection(filename);
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);

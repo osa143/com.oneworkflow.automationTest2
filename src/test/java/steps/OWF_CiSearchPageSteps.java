@@ -108,4 +108,10 @@ public class OWF_CiSearchPageSteps {
         Assert.assertNotEquals(size, 0, 0, "CI details are not displayed");
 
     }
+
+    @Then("CI should be listed and displayed under the Diagnosis tab")
+    public void ciShouldBeListedAndDisplayedUnderTheDiagnosisTab() {
+        int size = ciSearchPage.ciDiagnosisTableRows().size();
+        Assert.assertNotEquals(size, 0, 0, "CI details are not displayed");
+    }
 }

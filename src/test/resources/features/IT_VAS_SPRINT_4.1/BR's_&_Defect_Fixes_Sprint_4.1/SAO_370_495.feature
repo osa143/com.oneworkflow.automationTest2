@@ -20,7 +20,6 @@ Feature: Alarm tab in agent console
     When user clicks on close button
     Then trouble ticket should be present in agent console
     When user selects action dropdown as "Open Full View"
-    And user switches to frame by id
     Then user should see list of alarms in alarm console
     Then user closes alarm console
     When user selects one secondary alarm

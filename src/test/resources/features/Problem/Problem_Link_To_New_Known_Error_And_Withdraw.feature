@@ -26,8 +26,8 @@
       Then user clicks on save button
       And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Under Investigation to Investigation Complete. "
       Then user clicks on linked items tab
-      And user selects OS3-known error under target application dropdown
-      And user selects caused by under target application dropdown 2
+      And user selects target application first dropdown as "OS3-Known Error"
+      And user selects target application second dropdown as "Caused By"
       When user clicks on add button under linked items
       Then a known error ticket should appear in new tab
       And a known error ticket should be in status new

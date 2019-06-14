@@ -5,6 +5,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import java.util.List;
+
 public class OWF_AgentConsolePage extends BasePage {
 
 
@@ -68,8 +70,9 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String ddValueOWNED_BY_ME = "Owned by Me";
 
     private static final String table_ID = "T777000002";
+    private static final String timeline_table_DIV_ID = "WIN_0_700508140";
 
-    private static final String quick_view_ALARM_TABLE= "T700508140";
+    private static final String timeline_TABLE_ID = "T700508140";
     private static final String tabALARM_XPATH = "//a[contains(text(),'Alarms')]";
     private static final String btnCLOSE_ON_FRAME_XPATH = "//div[@class='f7']";
     private static final String imgCLOSED_ID = "ardivpcl";
@@ -81,9 +84,32 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String Alarm_Console_fullView_Table_ID = "bubble_tooltip";
     private static final String btnYES_ON_FRAME_ID = "WIN_0_700027904";
     private static final String secondary_ALARM_XPATH = "//td[@class='BaseTableCell BaseTableCellColor BaseTableStaticText']//span[contains(text(),'Secondary')]";
+    private static final String fullView_TABLE_ID = "T860000008";
+
+    public boolean checkIfAlarmsPresent()
+    {
+        int alarmsCount = getTableRows(By.id(fullView_TABLE_ID)).size();
+        driver.switchTo().defaultContent();
+        if (alarmsCount > 1)
+            return true;
+        return false;
+    }
 
     public void clickSecondaryAlarm(){
-        driver.findElement(By.xpath(secondary_ALARM_XPATH)).click();
+        //driver.findElement(By.xpath(secondary_ALARM_XPATH)).click();
+        List<WebElement> elements = driver.findElement(By.id(timeline_TABLE_ID)).findElements(By.tagName("tr"));
+        for (int i = 0; i <= elements.size(); i++)
+        {
+           List<WebElement> trElements = elements.get(i).findElements(By.tagName("td"));
+           for (int j = 0; j < trElements.size(); j++)
+           {
+               if (trElements.get(j).getText().equals("Secondary"))
+               {
+                   trElements.get(j).click();
+                   return;
+               }
+           }
+        }
     }
     public void clickOnYes(){
         driver.findElement(By.id(btnYES_ON_FRAME_ID)).click();
@@ -98,7 +124,7 @@ public class OWF_AgentConsolePage extends BasePage {
         action.doubleClick(element).perform();
     }
     public void clickFilterPreferences(){
-        driver.findElement(By.id(quick_view_ALARM_TABLE)).findElement(By.xpath(" //div[@id='WIN_0_700508140']//a[@class='Prefs btn btn3d TableBtn'][contains(text(),'Preferences')]")).click();
+        driver.findElement(By.id(timeline_TABLE_ID)).findElement(By.xpath(" //div[@id='WIN_0_700508140']//a[@class='Prefs btn btn3d TableBtn'][contains(text(),'Preferences')]")).click();
     }
 
 
@@ -150,7 +176,7 @@ public class OWF_AgentConsolePage extends BasePage {
         return getTableRows(By.id(table_ID)).size();
     }
     public int getAlarmTableRowsCount(){
-        return getTableRows(By.id(quick_view_ALARM_TABLE)).size();
+        return getTableRows(By.id(timeline_TABLE_ID)).size();
     }
 
     public boolean validateOpNextDueDateInformation() {
@@ -222,6 +248,10 @@ public class OWF_AgentConsolePage extends BasePage {
         selectDropDownValue(ddValueWORK_ORDER);
     }
 
+    public boolean isColumnDisplayed(String columnName)
+    {
+        return isColumnDisplayedByDivId(columnName, timeline_table_DIV_ID);
+    }
 
     public void enterSearch(String searchText) {
         wait(2000);
@@ -387,7 +417,7 @@ public class OWF_AgentConsolePage extends BasePage {
     }
 
     public String getAlarmNumber(){
-        return driver.findElement(By.id(txtALARM_NUMBER_ID)).getText();
+        return driver.findElement(By.id(txtALARM_NUMBER_ID)).getAttribute("value");
     }
 
 

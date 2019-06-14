@@ -232,6 +232,11 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.wait(5000);
     }
 
+    @Then("user validates secondary alarm turns primary")
+    public void secondaryAlarmTurnsPrimary() {
+System.out.println("Test");
+    }
+
     @Then("user closes alarm console")
     public void userClosesAlarmConsole() {
         agentConsolePage.clickOnCloseImage();
@@ -241,6 +246,7 @@ public class OWF_AgentConsolePageSteps {
     @And("user clicks {string} on the popup")
     public void userClicksOnThePopup(String arg0) {
         agentConsolePage.switchToFrameByIndex(2);
+        Assert.assertTrue(false);
         agentConsolePage.clickOnYes();
     }
 
@@ -267,18 +273,18 @@ public class OWF_AgentConsolePageSteps {
 
     }
 
-    @Then("user shouldn't see alarm ID column")
-    public void userShouldnTSeeAlarmIDColumn() {
-        //int ColumnIndex= agentConsolePage.getColumnIndexByHeaderName("Alarm ID");
-        //Assert.assertNotEquals(ColumnIndex, -1, 0, "user is able to see Alarm Id column");
+    @Then("user shouldn't see {string} column")
+    public void userShouldnTSeeAlarmIDColumn(String alarmID) {
 
-       // Assert.assertFalse(agentConsolePage.isColumnDisplayed(""), "user is able to see the Alarm");
+        Assert.assertFalse(agentConsolePage.isColumnDisplayed(alarmID));
 
     }
 
-    @Then("user should see alarm ID column")
-    public void userShouldSeeAlarmIDColumn() {
-     //   Assert.assertTrue(agentConsolePage.isColumnDisplayed(""), "Alarm ID column is not present");
+    @Then("user should see {string} column")
+    public void userShouldSeeAlarmIDColumn(String alarmID) {
+
+        agentConsolePage.wait(5000);
+        Assert.assertTrue(agentConsolePage.isColumnDisplayed(alarmID), "Alarm ID column is not present");
 
     }
 
@@ -295,14 +301,16 @@ public class OWF_AgentConsolePageSteps {
 
     @Then("alarm details should be displayed in new window")
     public void alarmDetailsShouldBeDisplayedInNewWindow() {
+
         Assert.assertNotNull(agentConsolePage.getAlarmNumber());
 
     }
 
     @Then("user should see list of alarms in alarm console")
     public void userShouldSeeListOfAlarmsInAlarmConsole() {
+        agentConsolePage.switchToFrameByIndex(2);
+       Assert.assertTrue(agentConsolePage.checkIfAlarmsPresent(), "Alarms are not present");
 
-    //Assert.assertNotNull("");
     }
 
     @And("user switches to frame {string}")

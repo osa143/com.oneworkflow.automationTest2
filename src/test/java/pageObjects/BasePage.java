@@ -194,6 +194,26 @@ public class BasePage {
         }
         return columnInfo;
     }
+// TO-DO method should be removed. use below method instead by passing div id
+    public boolean isColumnDisplayedByDivId(String columnName, String divId){
+//        left: 3508px; text-align: left; width: 89px;
+        boolean columnDisplayed = false;
+
+        //Get all web elements
+        List<WebElement> tableHeaders = driver.findElement(By.id(divId)).findElement(By.className("BaseTableColHeaders")).findElements(By.className("BaseTableHeader"));
+
+        for (int i = 0; i < tableHeaders.size(); i++) {
+            // System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
+            WebElement tableHeader = tableHeaders.get(i);
+            if (tableHeader.getAttribute("innerHTML").trim().equals(columnName)) {
+                if(!tableHeader.getAttribute("style").trim().split(";")[2].trim().equals("width: 0px")){
+                    columnDisplayed = true;
+                    break;
+                }
+            }
+        }
+        return columnDisplayed;
+    }
 
     public boolean isColumnDisplayed(String columnName){
 //        left: 3508px; text-align: left; width: 89px;
@@ -214,6 +234,7 @@ public class BasePage {
         }
         return columnDisplayed;
     }
+
 
     public List<WebElement> getTableRows(By table) {
         List<WebElement> tableRows = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));

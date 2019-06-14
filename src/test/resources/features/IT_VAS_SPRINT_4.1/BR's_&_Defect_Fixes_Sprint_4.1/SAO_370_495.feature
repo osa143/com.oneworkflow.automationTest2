@@ -11,9 +11,9 @@ Feature: Alarm tab in agent console
     And user clicks on "Alarms" tab
     Then user should see an alarm present
     When user sets the preferences under the alarm tab as "Remove Column:Alarm ID"
-    Then user shouldn't see alarm ID column
+    Then user shouldn't see "Alarm ID" column
     When user sets the preferences under the alarm tab as "Add Column:Alarm ID"
-    Then user should see alarm ID column
+    Then user should see "Alarm ID" column
     When user double clicks on the alarm present
     Then user switches to frame 2
     Then alarm details should be displayed in new window

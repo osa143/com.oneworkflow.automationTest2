@@ -1,3 +1,4 @@
+
 @SAO_106
 Feature: clearing of alarms within OW
   Scenario: user is able to clear alarms that have come from a FM system
@@ -6,8 +7,8 @@ Feature: clearing of alarms within OW
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects search menu as "Open Search Form:Trouble Event"
-    Then trouble record form should appear in new tab
     And user switches to window 1
+    Then trouble record form should appear in new tab
     And user enters ticket id as ""
     Then trouble ticket should appear related to TeMIP
     When user changes status to "Cleared"
@@ -16,12 +17,13 @@ Feature: clearing of alarms within OW
     And an error message should appear: "Required field (without a default) not specified : Fault Position (ARERR 9424)"
     And an error message should appear: "Required field (without a default) not specified : Cause (ARERR 9424)"
     When user clicks on Diagnosis tab
-    And user clicks on primary CI and chooses: "Impact:Clear All"
+    #rightclick and select dropdown
+    And user clicks on primary CI and selects "Impact:Clear All"
     And user clicks on yes on CI warning window
-    And user validates CI status is "inactive"
+    And user validates CI impact status is "Inactive"
     Then user enters event end time as current time
-    And user selects fault position as: "N/A:N/A"
-    And user selects cause as: "N/A:N/A:N/A"
+    And user selects fault position as "N/A:N/A"
+    And user selects cause as "N/A:N/A:N/A"
     Then user clicks on save button on the problem form
     When user clicks on alarms tab
     And user clicks on all alarm checkbox

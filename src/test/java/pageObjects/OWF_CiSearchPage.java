@@ -44,6 +44,9 @@ public class OWF_CiSearchPage extends BasePage {
         driver.findElement(By.id(txtTICKET_ID_PLUS_ID)).sendKeys(ticketId);
 
     }
+    public void clickLinkedItems(){
+        selectTab("Linked Items");
+    }
 
     public void clickLink(){
         driver.findElement(By.id(btnLINK_ID)).click();
@@ -60,9 +63,6 @@ public class OWF_CiSearchPage extends BasePage {
     }
 
 
-    public void clickLinkedItems(){
-        driver.findElement(By.xpath(btnLINKED_ITEMS_XPATH)).click();
-    }
 
 
     public void acceptAlert() {

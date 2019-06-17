@@ -1,4 +1,3 @@
-
 @SAO_106
 Feature: clearing of alarms within OW
   Scenario: user is able to clear alarms that have come from a FM system
@@ -18,7 +17,7 @@ Feature: clearing of alarms within OW
     And an error message should appear: "Required field (without a default) not specified : Cause (ARERR 9424)"
     When user clicks on Diagnosis tab
     #rightclick and select dropdown
-    And user clicks on primary CI and selects "Impact:Clear All"
+    And user right clicks on primary CI and selects "Impact:Clear All"
     And user clicks on yes on CI warning window
     And user validates CI impact status is "Inactive"
     Then user enters event end time as current time

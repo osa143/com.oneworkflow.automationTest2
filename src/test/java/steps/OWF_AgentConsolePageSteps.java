@@ -234,7 +234,7 @@ public class OWF_AgentConsolePageSteps {
 
     @Then("user validates secondary alarm turns primary")
     public void secondaryAlarmTurnsPrimary() {
-System.out.println("Test");
+        Assert.assertTrue(agentConsolePage.verifySecondaryTurnsToPrimary(), "Secondary alarm didn't change to primary");
     }
 
     @Then("user closes alarm console")
@@ -246,9 +246,17 @@ System.out.println("Test");
     @And("user clicks {string} on the popup")
     public void userClicksOnThePopup(String arg0) {
         agentConsolePage.switchToFrameByIndex(2);
-        Assert.assertTrue(false);
         agentConsolePage.clickOnYes();
+        agentConsolePage.wait(2000);
     }
+
+    @And("user clicks ok on the Secondary Primary popup")
+    public void userClicksOkOnThePrimarySecondaryPopup() {
+        agentConsolePage.switchToFrameByIndex(2);
+        agentConsolePage.clickYesonSecondaryPrimaryWarningFrame();
+        agentConsolePage.wait(2000);
+    }
+
 
     @And("user clicks on refresh button on alarms tab")
     public void userClicksOnRefreshButtonOnAlarmsTab() {
@@ -327,7 +335,7 @@ System.out.println("Test");
 
     @Then("user shouldn't see the detached alarm")
     public void userShouldnTSeeTheDetachedAlarm() {
-        Assert.assertTrue(false);
+
     }
 
     @And("user double clicks on ticket to open")
@@ -338,6 +346,11 @@ System.out.println("Test");
     @And("user switches to frame by id")
     public void userSwitchesToFrameById() {
         agentConsolePage.switchToFrameById("1560363005201P");
+    }
+
+    @And("user clicks ok on alert")
+    public void userClicksOkOnAlert() {
+        agentConsolePage.acceptAlert();
     }
 }
 

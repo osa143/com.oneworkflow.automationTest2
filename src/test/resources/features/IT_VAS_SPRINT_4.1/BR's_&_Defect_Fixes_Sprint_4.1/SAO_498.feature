@@ -1,6 +1,8 @@
 @SAO_498
-  Feature:
-    Scenario:
+  Feature: Show child alarms on parent ticket alarms tab
+
+    Scenario: user is able to see child alarms present on parent ticket alarms tab
+
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -8,8 +10,7 @@
       Then trouble record form should appear in new tab
       And user switches to window 1
       And user enters ticket id as "OP-000000898806"
-      And user clicks Search on ticket search
-      Then trouble ticket should appear related to TeMIP
+      Then trouble ticket should be appeared related to TeMIP
       When user clicks on Diagnosis tab
       Then user should see an alarm present
       When user clicks on linked items tab

@@ -31,13 +31,25 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txtRESPONSE_TIME = "arid_WIN_0_700048056";
     private static final String txtTITLE_ID = "arid_WIN_0_777031000";
     private static final String txtSOURCE_ID = "arid_WIN_0_777777912";
-    private static final String txtTROUBLE_TICKET_ID = "arid_WIN_0_777777600";
-    private static final String chkbxHEADER_XPATH = "//div[@id='WIN_0_700508140']//input[@class='checkboxheader']";
+    private static final String txtTROUBLE_TICKET_ID = "arid_WIN_0_777777600"; //Ticket ID+
+    private static final String txtEVENT_END_TIME = "arid_WIN_0_777010106";
+    private static final String txtCLOSURE_INFO = "arid_WIN_0_777031384";
+
+    private static final String chkbxHEADER_XPATH_AlarmsTab = "//div[@id='WIN_0_700508140']//input[@class='checkboxheader']";
+    private static final String chkbxHEADER_XPATH_Diagnosis = "//div[@id='WIN_0_700009087']//input[@class='checkboxheader']";
+    private static final String chkbxDO_NOT_AUTOCLOSE = "WIN_0_rc0id600002014";
+    private static final String chkbxSELECT_TIKCET = "//input[@class='colcheck']";
 
     private static final String btnREFRESH_ALARM_TAB_XPATH= "//a[contains(text(),'Refresh')] ";
     private static final String btnTERMINATE_ALARM = "WIN_0_600002926";
     private static final String btnALARMS_XPATH = "//div[@id='WIN_0_999000003']//div[@class='OuterTabsDiv']//div[@class='TabsViewPort']//div//a[@class='btn f1'][contains(text(),'Alarms')]";
     private static final String btnCREATE_FROM_TICKET_ID  = "WIN_0_777504010";
+    private static final String btnOK_DIAGNOSIS_ON_FRAME = "arid_WIN_0_777031384";
+    private static final String btnSEARCH_SELECT_TARGET_REQUEST = "WIN_0_700506222";
+    private static final String btnCLEAR_SELECT_TARGET_REQUEST = "WIN_0_700506223";
+    private static final String btnACCEPT_SELECT_TARGET_REQUEST = "WIN_0_730011058";
+    private static final String rbtnDISPLAY_ACTIVE_CHILD_ALARMS = "WIN_0_rc0id730030000";
+
 
 
     private static final String ddTEMPLATE = "Template";
@@ -51,57 +63,70 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String ddPRIORITY = "Priority";
     private static final String ddREQUEST_TYPE_ID = "arid_WIN_0_777031002";
     private static final String ddPRIORITY_ID = "arid_WIN_0_700025204";
+    private static final String ddFAULTY_POSITION = "Fault Position";
+    private static final String ddCAUSE = "Cause";
+    private static final String ddRELATION_TYPE = "Relationship Type";
 
 
-    private static final String ddValueSITE_ACCESS_REGISTRATION = "Site access registration";
-    private static final String ddValueWORKFORCE_ESCALATION_SE = "Workforce Escalation-SE";
-    private static final String ddValueCLEAR_TEMPLATE = "(clear)";
+    public void selectTicket(){
+        driver.findElement(By.xpath(chkbxSELECT_TIKCET)).click();
+    }
+    public void clickDisplayActiveChildAlarms(){
+        driver.findElement(By.id(rbtnDISPLAY_ACTIVE_CHILD_ALARMS)).click();
+    }
 
-    private static final String ddValueCUSTOMER = "Customer";
-    private static final String ddValueCUSTOMER_RECLAMATION = "Customer Reclamation";
-    private static final String ddValueEVENT = "Event";
-    private static final String ddValueINTERNAL_USER = "Internal User";
-    private static final String ddValuePREVENTIVE_MAINTENANCE = "Preventive Maintenance";
-    private static final String ddValueSTAKEHOLDER = "Stakeholder";
-    private static final String ddValueTHIRD_PARTY = "Third Party";
-    private static final String ddValueCLEAR_REQUEST_TYPE = "(clear)";
+    public void clickAccept_selectTargetRequest(){
+        driver.findElement(By.id(btnACCEPT_SELECT_TARGET_REQUEST)).click();
+    }
 
-    private static final String ddValueAPPLICATION_FAULT = "Application fault";
-    private static final String ddValueDATA_FAULT = "Data Fault";
-    private static final String ddValueNETWORK_FAULT = "Network Fault";
-    private static final String ddValueROAMING_DATA_FAULT = "Roaming-Data Fault";
-    private static final String ddValueROAMING_VOICE_FAULT = "Roaming-Voice Fault";
-    private static final String ddValueSITE_FAULT = "Site Fault";
-    private static final String ddValueTRANSMISSION_FAULT = "Transmission Fault";
-    private static final String ddValueTV_FAULT = "TV Fault";
-    private static final String ddValueVOICE_FAULT = "Voice Fault";
-    private static final String ddValueCLEAR_FAULT_TYPE = "(clear)";
-
-    private static final String ddValueCRITICAL_IMPORTANCE = "Critical";
-    private static final String ddValueHIGH = "High";
-    private static final String ddValueAVERAGE = "Average";
-    private static final String ddValueLOW = "Low";
-    private static final String ddValueCLEAR_IMPORTANCE = "(clear)";
+    public void selectRelationshipType(String value){
+        selectDropDownNameAndValue(ddRELATION_TYPE, value, false);
+    }
 
 
-    private static final String ddValueNO = "NO";
-    private static final String ddValueMINOR = "Minor";
-    private static final String ddValueMEDIUM = "Medium";
-    private static final String ddValueMAJOR = "Major";
-    private static final String ddValueCRITICAL_IMPACT = "Critical";
+    public void enterTicketIdPlus(String ticketIdPlus){
+        driver.findElement(By.id(txtTROUBLE_TICKET_ID)).sendKeys(ticketIdPlus);
+    }
 
-    private static final String ddValueCLEAR_ASIGNMENT_PROFILE = "(clear)";
+    public void clickClear_selectTargetRequest() {
+     driver.findElement(By.id(btnCLEAR_SELECT_TARGET_REQUEST)).click();
+    }
+    public void clickSearch_selctTargetRequest(){
+        driver.findElement(By.id(btnSEARCH_SELECT_TARGET_REQUEST)).click();
+    }
 
-    private static final String chkbxDO_NOT_AUTOCLOSE = "WIN_0_rc0id600002014";
+    public String getOlaTargetTime(){
+        return getTextById(txtOLA_TARGET_TIME_ID);
+    }
+
 
     private static final String btnSAVE = "WIN_0_777505104";
+    public void enterClosureInfo(String closureInfo){
+        driver.findElement(By.id(txtCLOSURE_INFO)).sendKeys(closureInfo);
+    }
+    public void clickOk_Diagnosis_OnFame(){
+        driver.findElement(By.id(btnOK_DIAGNOSIS_ON_FRAME)).click();
+    }
 
+    public void clickAllAlarms_Diagnosis(){
+        driver.findElement(By.xpath(chkbxHEADER_XPATH_Diagnosis)).click();
+    }
+
+    public void selectFaultPosition(String value){
+        selectDropDownNameAndValue(ddFAULTY_POSITION, value, false);
+    }
+    public void selectCause(String value){
+        selectDropDownNameAndValue(ddCAUSE, value, true);
+    }
 
     public void enterTroubleTicket(String troubleTicketId)
     {
-       WebElement element = driver.findElement(By.id(txtTROUBLE_TICKET_ID));
+        WebElement element = driver.findElement(By.id(txtTROUBLE_TICKET_ID));
         element.sendKeys(troubleTicketId);
         element.sendKeys(Keys.ENTER);
+    }
+    public void enterEventEndTimeAsCurrentTime(){
+        driver.findElement(By.id(txtEVENT_END_TIME)).sendKeys(Keys.ENTER);
     }
 
     public void clickTerminateAlarm(){
@@ -116,7 +141,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
 
     public void clickCreateFromTicket(){
-    driver.findElement(By.id(btnCREATE_FROM_TICKET_ID)).click();
+        driver.findElement(By.id(btnCREATE_FROM_TICKET_ID)).click();
     }
     public void clickAlarmTab(){
         driver.findElement(By.xpath(btnALARMS_XPATH)).click();
@@ -130,144 +155,11 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
 
     public void clickAllAlarmBox(){
-        driver.findElement(By.xpath(chkbxHEADER_XPATH)).click();
+        driver.findElement(By.xpath(chkbxHEADER_XPATH_AlarmsTab)).click();
     }
-
-
-
     public void selectRequestType(String value){
         selectDropDownNameAndValue(ddREQUEST_TYPEE, value, false );
     }
-
-    public void selectSiteAccessRegistrationDdValue() {
-        selectDropDownValue(ddValueSITE_ACCESS_REGISTRATION);
-    }
-
-    public void selectWorkforceEscalationSeDdValue() {
-        selectDropDownValue(ddValueWORKFORCE_ESCALATION_SE);
-    }
-
-    public void selectClearTemplateDdvalue() {
-        selectDropDownValue(ddValueCLEAR_TEMPLATE);
-    }
-
-    public void selectCustomerDdValue() {
-        selectDropDownValue(ddValueCUSTOMER);
-    }
-
-    public void selectCustomerReclamationDdValue() {
-        selectDropDownValue(ddValueCUSTOMER_RECLAMATION);
-    }
-
-    public void selectEventDdValue() {
-        selectDropDownValue(ddValueEVENT);
-    }
-
-    public void selectInternalUserDdValue() {
-        selectDropDownValue(ddValueINTERNAL_USER);
-    }
-
-    public void selectPreventiveMaintenanceDdValue() {
-        selectDropDownValue(ddValuePREVENTIVE_MAINTENANCE);
-    }
-
-    public void selectStakeHolderDdValue() {
-        selectDropDownValue(ddValueSTAKEHOLDER);
-    }
-
-    public void selectThirdPartyDdValue() {
-        selectDropDownValue(ddValueTHIRD_PARTY);
-    }
-
-    public void selectClearRequestTypeDdValue() {
-        selectDropDownValue(ddValueCLEAR_REQUEST_TYPE);
-    }
-
-    public void selectApplicationFaultDdValue() {
-        selectDropDownValue(ddValueAPPLICATION_FAULT);
-    }
-
-    public void selectDataFaultDdValue() {
-        selectDropDownValue(ddValueDATA_FAULT);
-    }
-
-    public void selectNetworkFaultDdValue() {
-        selectDropDownValue(ddValueNETWORK_FAULT);
-    }
-
-    public void selectRoamingDataFaultDdValue() {
-        selectDropDownValue(ddValueROAMING_DATA_FAULT);
-    }
-
-    public void selectRoamingVoiceFaultDdValue() {
-        selectDropDownValue(ddValueROAMING_VOICE_FAULT);
-    }
-
-    public void selectSiteFaultDdValue() {
-        selectDropDownValue(ddValueSITE_FAULT);
-    }
-
-    public void selectTransmissionFaultDdValue() {
-        selectDropDownValue(ddValueTRANSMISSION_FAULT);
-    }
-
-    public void selectTvFaultDdValue() {
-        selectDropDownValue(ddValueTV_FAULT);
-    }
-
-    public void selectVoiceFaultDdValue() {
-        selectDropDownValue(ddValueVOICE_FAULT);
-    }
-
-    public void selectClearFaultType() {
-        selectDropDownValue(ddValueCLEAR_FAULT_TYPE);
-    }
-
-
-    public void selectCriticalImportanceDdValue() {
-        selectDropDownValue(ddValueCRITICAL_IMPORTANCE);
-    }
-
-    public void selectHighDdValue() {
-        selectDropDownValue(ddValueHIGH);
-    }
-
-    public void selectAverageDdValue() {
-        selectDropDownValue(ddValueAVERAGE);
-    }
-
-    public void selectLowDdValue() {
-        selectDropDownValue(ddValueLOW);
-    }
-
-    public void selectClearImportanceDdValue() {
-        selectDropDownValue(ddValueCLEAR_IMPORTANCE);
-    }
-
-    public void selectNoDdValue() {
-        selectDropDownValue(ddValueNO);
-    }
-
-    public void selectMinorDdValue() {
-        selectDropDownValue(ddValueMINOR);
-    }
-
-    public void selectMediumDdValue() {
-        selectDropDownValue(ddValueMEDIUM);
-    }
-
-    public void selectMajorDdValue() {
-        selectDropDownValue(ddValueMAJOR);
-    }
-
-    public void selectCriticalImpactDdValue() {
-        selectDropDownValue(ddValueCRITICAL_IMPACT);
-    }
-
-    public void selectClearAsignmentProfileDdValue() {
-        selectDropDownValue(ddValueCLEAR_ASIGNMENT_PROFILE);
-    }
-
 
     public void clickDoNotAutoCloseCheckBox() {
         driver.findElement(By.id(chkbxDO_NOT_AUTOCLOSE)).click();
@@ -301,11 +193,11 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         selectDropDownMenu(ddIMPACT);
     }
 
-    public void clickAsignmentProfileDropDown() {
+    public void clickAssignmentProfileDropDown() {
         selectDropDownMenu(ddASIGNMENT_PROFILE);
     }
 
-    public void clickAsigneeDropDown() {
+    public void clickAssigneeDropDown() {
         selectDropDownMenu(ddASIGNEE);
     }
 
@@ -330,7 +222,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         driver.findElement(By.id(txtREJECTION_REASON_ID)).sendKeys(rejection_reason);
     }
 
-    public void enterReAsignedReason(String re_asigned_reason) {
+    public void enterReAssignedReason(String re_asigned_reason) {
         driver.findElement(By.id(txtRE_ASIGNED_REASON_ID)).sendKeys(re_asigned_reason);
     }
 
@@ -376,7 +268,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
 
     }
     public String getSourceText(){
-         return getTextById(txtSOURCE_ID);
+        return getTextById(txtSOURCE_ID);
 
     }
     public Ticket getTicket()
@@ -404,4 +296,46 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     public void refreshPage(){
         driver.navigate().refresh();
     }
+
+
+
+    private static final String ddValueSITE_ACCESS_REGISTRATION = "Site access registration";
+    private static final String ddValueWORKFORCE_ESCALATION_SE = "Workforce Escalation-SE";
+    private static final String ddValueCLEAR_TEMPLATE = "(clear)";
+
+    private static final String ddValueCUSTOMER = "Customer";
+    private static final String ddValueCUSTOMER_RECLAMATION = "Customer Reclamation";
+    private static final String ddValueEVENT = "Event";
+    private static final String ddValueINTERNAL_USER = "Internal User";
+    private static final String ddValuePREVENTIVE_MAINTENANCE = "Preventive Maintenance";
+    private static final String ddValueSTAKEHOLDER = "Stakeholder";
+    private static final String ddValueTHIRD_PARTY = "Third Party";
+    private static final String ddValueCLEAR_REQUEST_TYPE = "(clear)";
+
+    private static final String ddValueAPPLICATION_FAULT = "Application fault";
+    private static final String ddValueDATA_FAULT = "Data Fault";
+    private static final String ddValueNETWORK_FAULT = "Network Fault";
+    private static final String ddValueROAMING_DATA_FAULT = "Roaming-Data Fault";
+    private static final String ddValueROAMING_VOICE_FAULT = "Roaming-Voice Fault";
+    private static final String ddValueSITE_FAULT = "Site Fault";
+    private static final String ddValueTRANSMISSION_FAULT = "Transmission Fault";
+    private static final String ddValueTV_FAULT = "TV Fault";
+    private static final String ddValueVOICE_FAULT = "Voice Fault";
+    private static final String ddValueCLEAR_FAULT_TYPE = "(clear)";
+
+    private static final String ddValueCRITICAL_IMPORTANCE = "Critical";
+    private static final String ddValueHIGH = "High";
+    private static final String ddValueAVERAGE = "Average";
+    private static final String ddValueLOW = "Low";
+    private static final String ddValueCLEAR_IMPORTANCE = "(clear)";
+
+
+    private static final String ddValueNO = "NO";
+    private static final String ddValueMINOR = "Minor";
+    private static final String ddValueMEDIUM = "Medium";
+    private static final String ddValueMAJOR = "Major";
+    private static final String ddValueCRITICAL_IMPACT = "Critical";
+
+    private static final String ddValueCLEAR_ASIGNMENT_PROFILE = "(clear)";
+
 }

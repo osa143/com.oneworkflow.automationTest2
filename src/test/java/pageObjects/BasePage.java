@@ -144,37 +144,6 @@ public class BasePage {
         return false;
     }
 
-    //columnData[0] = column Index
-    //columnData[1] = column Width
-//    public static int[] getColumnIndexByHeaderName(By table, String headerName) {
-//        int[] columnInfo = {-1, -1};
-//        //Get all web elements
-//        List<WebElement> tableHeaders = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr")).get(0).findElements(By.tagName("th"));
-//
-//        for (int i = 0; i < tableHeaders.size(); i++) {
-//            tableHeaders = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr")).get(0).findElements(By.tagName("th"));
-//            //System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
-//            WebElement tableHeader = tableHeaders.get(i);
-//            if (tableHeader.getAttribute("innerHTML").trim().equals(headerName)) {
-//                //Get the column index using headerName
-//                //System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
-//                columnInfo[0] = i; //column Index
-//                String columnWidth = tableHeader.getCssValue("width");
-//                System.out.println("Column width is: " + columnWidth);
-//
-//                if (!columnWidth.equals("0px")) {
-//                    columnInfo[1] = 0; //column width
-//                }
-//                else
-//                {
-//                    columnInfo[1] = 1;
-//                }
-//                break;
-//            }
-//        }
-//        return columnInfo;
-//    }
-
 
     public static int getColumnIndexByHeaderName(By table, String headerName) {
         int columnInfo = -1;

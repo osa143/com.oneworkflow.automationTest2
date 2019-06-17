@@ -34,6 +34,7 @@ public class OWF_TroubleEventPageSteps {
     @And("user enters ticket id as {string}")
     public void userEntersTicketIdAs(String ticketID) {
         troubleEventPage.enterTroubleTicket(ticketID);
+        troubleEventPage.wait(3000);
     }
 
     @Then("trouble ticket should appear related to TeMIP")
@@ -122,5 +123,87 @@ public class OWF_TroubleEventPageSteps {
     @When("user clicks on main page refresh")
     public void userClicksOnMainPageRefresh() {
         troubleEventPage.refreshPage();
+    }
+
+    @Then("user enters event end time as current time")
+    public void userEntersEventEndTimeAsCurrentTime() {
+     troubleEventPage.enterEventEndTimeAsCurrentTime();
+    }
+
+    @And("user selects fault position as {string}")
+    public void userSelectsFaultPositionAs(String arg0) {
+        troubleEventPage.selectFaultPosition(arg0);
+    }
+
+    @And("user selects cause as {string}")
+    public void userSelectsCauseAs(String arg0) {
+        troubleEventPage.selectCause(arg0);
+    }
+
+    @And("user clicks on all alarm checkbox")
+    public void userClicksOnAllAlarmCheckbox() {
+    troubleEventPage.clickAllAlarms_Diagnosis();
+    }
+
+    @Then("user enters closure info as {string}")
+    public void userEntersClosureInfoAs(String arg0) {
+        troubleEventPage.enterClosureInfo(arg0);
+    }
+
+    @And("user clicks on yes on CI warning window")
+    public void userClicksOnYesOnCIWarningWindow() {
+        troubleEventPage.switchToFrameByIndex(2);
+        troubleEventPage.clickOk_Diagnosis_OnFame();
+    }
+
+    @Then("user validates OLA value is set")
+    public void userValidatesOLAValueIsSet() {
+    Assert.assertNotNull(troubleEventPage.getOlaTargetTime());
+    }
+
+    @When("user clicks on the clear button")
+    public void userClicksOnTheClearButton() {
+        troubleEventPage.clickClear_selectTargetRequest();
+
+    }
+
+    @Then("user should see target request search")
+    public void userShouldSeeTargetRequestSearch() {
+    }
+
+    @And("user clicks on the search button")
+    public void userClicksOnTheSearchButton() {
+        troubleEventPage.clickSearch_selctTargetRequest();
+    }
+
+    @And("user enters {string} in the ticket ID field")
+    public void userEntersInTheTicketIDField(String arg0) {
+    troubleEventPage.enterTicketIdPlus(arg0);
+    }
+
+    @And("user selects relationship type as {string}")
+    public void userSelectsRelationshipTypeAs(String arg0) {
+        troubleEventPage.selectRelationshipType(arg0);
+    }
+
+    @And("user clicks on accept button")
+    public void userClicksOnAcceptButton() {
+        troubleEventPage.clickAccept_selectTargetRequest();
+
+    }
+
+    @Then("user selects ticket under select target request")
+    public void userSelectsTicketUnderSelectTargetRequest() {
+     troubleEventPage.selectTicket();
+    }
+
+    @And("user clicks on display active child alarms radio button")
+    public void userClicksOnDisplayActiveChildAlarmsRadioButton() {
+     troubleEventPage.clickDisplayActiveChildAlarms();
+    }
+
+    @Then("trouble ticket should be appeared related to TeMIP")
+    public void troubleTicketShouldBeAppearedRelatedToTeMIP() {
+        Assert.assertEquals(troubleEventPage.getSourceText(), "HPE Common Temip", "Ticket is not related to TeMIP");
     }
 }

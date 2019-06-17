@@ -5,7 +5,7 @@ Feature: Closing of incident ticket that has linked WO
   Scenario: User is able to close an incident after closing a WO linked to it
 
 # Test requires user to manually get ticket ID value from JMeter and enter ticket ID below//
-
+#UAT execution
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed

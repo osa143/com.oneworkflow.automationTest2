@@ -5,7 +5,7 @@ Feature: Alarm tab in agent console
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user enters ticket id as "OP-000000898801" in the agent console search box and searches for ticket
+    When user enters ticket id as "OP-000000898807" in the agent console search box and searches for ticket
     Then trouble ticket should be present in agent console
     When user highlights present ticket
     And user clicks on "Alarms" tab
@@ -28,6 +28,7 @@ Feature: Alarm tab in agent console
     Then user shouldn't see the detached alarm
     When user selects one secondary alarm
     And user selects action dropdown as "Make Primary"
+    And user clicks ok on the Secondary Primary popup
     Then user validates secondary alarm turns primary
     When user selects one secondary alarm
     And user selects action dropdown as "Detach & Create"
@@ -39,8 +40,9 @@ Feature: Alarm tab in agent console
     When user clicks on Diagnosis tab
     Then CI should be listed and displayed under the Diagnosis tab
     Then user validates OLA value is set
-    When user switches to window 1
+    When user switches to window 0
     And user selects one secondary alarm
     And user selects action dropdown as "Terminate"
     And user clicks on refresh button on alarms tab
+    When user switches to window 1
     Then user validates ticket status as "cleared"

@@ -1,5 +1,6 @@
-@SAO_499_SID_Location
-Feature: data searching using wildcards
+
+  @SAO_499_SID_Location
+  Feature: data searching using wildcards
   Scenario: user is able to search for data using wildcards
 
     Given user is on the OneWorkflow login page
@@ -79,3 +80,24 @@ Feature: data searching using wildcards
     When user enters "NO_Site_%" in the location+ field
     And user clicks on search
     Then user should see related country CI information
+
+
+
+    #@SAO_499_SID_Location
+#Feature: data searching using wildcards
+#  Scenario Outline: user is able to search for data using wildcards
+#    Given user is on the OneWorkflow login page
+#    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+#    Then user successfully logged in to OneWorkflow and agent console should be displayed
+#    When user selects SID console from agent console
+#    Then SID console page should be opened
+#    Then user switches to window 1
+#    When user enters "locationField" in the location+ field
+#    And user clicks on search
+#    Then user should see related country CI information
+#    When user clicks on clear button
+#
+#    Examples:
+#    TestData/data.csv
+#
+#    -------------------------------

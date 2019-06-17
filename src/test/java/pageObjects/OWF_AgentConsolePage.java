@@ -5,6 +5,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import java.security.Key;
+import java.security.PublicKey;
+import java.util.HashMap;
 import java.util.List;
 
 public class OWF_AgentConsolePage extends BasePage {
@@ -83,9 +86,13 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String txtALARM_NUMBER_ID = "arid_WIN_0_700511109";
     private static final String Alarm_Console_fullView_Table_ID = "bubble_tooltip";
     private static final String btnYES_ON_FRAME_ID = "WIN_0_700027904";
-    private static final String secondary_ALARM_XPATH = "//td[@class='BaseTableCell BaseTableCellColor BaseTableStaticText']//span[contains(text(),'Secondary')]";
     private static final String fullView_TABLE_ID = "T860000008";
+    private static final String btnOK_secondaryPrimary_onFRAME_XPATH = "//*[@id='PopupMsgFooter']/a";
 
+    public void clickYesonSecondaryPrimaryWarningFrame()
+    {
+        driver.findElement(By.xpath(btnOK_secondaryPrimary_onFRAME_XPATH)).click();
+    }
     public boolean checkIfAlarmsPresent()
     {
         int alarmsCount = getTableRows(By.id(fullView_TABLE_ID)).size();
@@ -95,22 +102,74 @@ public class OWF_AgentConsolePage extends BasePage {
         return false;
     }
 
+
+    String alarmId = "";
+
     public void clickSecondaryAlarm(){
-        //driver.findElement(By.xpath(secondary_ALARM_XPATH)).click();
-        List<WebElement> elements = driver.findElement(By.id(timeline_TABLE_ID)).findElements(By.tagName("tr"));
-        for (int i = 0; i <= elements.size(); i++)
+
+        List<WebElement> elements = driver.findElement(By.id(timeline_TABLE_ID)).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
+        //get index using this and use in the loop
+        int columnIndex = getColumnIndexByHeaderName(By.id(timeline_TABLE_ID), "Primary-Secondary");
+        for (int i = 1; i < elements.size(); i++)
         {
            List<WebElement> trElements = elements.get(i).findElements(By.tagName("td"));
-           for (int j = 0; j < trElements.size(); j++)
-           {
-               if (trElements.get(j).getText().equals("Secondary"))
-               {
-                   trElements.get(j).click();
-                   return;
-               }
-           }
+
+            if (trElements.size() > 0) {
+                if (trElements.get(2).getText().equals("Secondary")) {
+                    trElements.get(2).click();
+                    alarmId = trElements.get(1).getText();
+                    return;
+                }
+            }
+
         }
     }
+
+    public boolean verifySecondaryTurnsToPrimary(){
+
+        List<WebElement> elements = driver.findElement(By.id(timeline_TABLE_ID)).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
+        for (int i = 1; i < elements.size(); i++)
+        {
+            List<WebElement> trElements = elements.get(i).findElements(By.tagName("td"));
+
+            if (trElements.size() > 0) {
+                if (trElements.get(1).getText().equals(alarmId)) {
+                    if (trElements.get(2).getText().equalsIgnoreCase("primary"))
+                        return true;
+
+                }
+            }
+
+        }
+        return false;
+
+    }
+
+    //use this common method instead of top 2 methods
+    //text = "Secondary"
+    private HashMap<WebElement, String> getTableElementAndTextBasedOnIndex(By table, String headerName, String text, int columnIndex)
+    {
+        HashMap<WebElement, String> map = new HashMap<WebElement, String>();
+        List<WebElement> elements = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
+
+        for (int i = 1; i < elements.size(); i++)
+        {
+            List<WebElement> trElements = elements.get(i).findElements(By.tagName("td"));
+
+            if (trElements.size() > 0) {
+                if (trElements.get(2).getText().equals(text)) {
+                    trElements.get(2).click();
+                    alarmId = trElements.get(1).getText();
+                    map.put(trElements.get(2), trElements.get(1).getText());
+                    return map;
+                }
+            }
+
+        }
+        return null;
+    }
+
+
     public void clickOnYes(){
         driver.findElement(By.id(btnYES_ON_FRAME_ID)).click();
     }
@@ -191,7 +250,7 @@ public class OWF_AgentConsolePage extends BasePage {
         selectDropDownValue(ddValueALL);
     }
 
-    public void selectDdValueAsignedToMe() {
+    public void selectDdValueAssignedToMe() {
         selectDropDownValue(ddValueASIGNED_TO_ME);
     }
 

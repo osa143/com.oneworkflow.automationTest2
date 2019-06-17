@@ -76,6 +76,7 @@ public class OWF_ChangeRecordPageSteps {
     @When("user clicks on Diagnosis tab")
     public void userClicksOnDiagnosisTab() {
         changeRecordPage.clickDiagnosis();
+
     }
 
     @And("user clicks on CI search button")

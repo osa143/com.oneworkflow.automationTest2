@@ -110,6 +110,7 @@ public class OWF_AgentConsolePage extends BasePage {
         List<WebElement> elements = driver.findElement(By.id(timeline_TABLE_ID)).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
         //get index using this and use in the loop
         int columnIndex = getColumnIndexByHeaderName(By.id(timeline_TABLE_ID), "Primary-Secondary");
+
         for (int i = 1; i < elements.size(); i++)
         {
            List<WebElement> trElements = elements.get(i).findElements(By.tagName("td"));
@@ -147,20 +148,21 @@ public class OWF_AgentConsolePage extends BasePage {
 
     //use this common method instead of top 2 methods
     //text = "Secondary"
-    private HashMap<WebElement, String> getTableElementAndTextBasedOnIndex(By table, String headerName, String text, int columnIndex)
+    private HashMap<WebElement, String> getTableElementAndTextBasedOnIndex(By table, String headerName, String text)
     {
         HashMap<WebElement, String> map = new HashMap<WebElement, String>();
         List<WebElement> elements = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
+        int columnIndex = getColumnIndexByHeaderName(table, headerName);
 
         for (int i = 1; i < elements.size(); i++)
         {
-            List<WebElement> trElements = elements.get(i).findElements(By.tagName("td"));
+            List<WebElement> tdElements = elements.get(i).findElements(By.tagName("td"));
 
-            if (trElements.size() > 0) {
-                if (trElements.get(2).getText().equals(text)) {
-                    trElements.get(2).click();
-                    alarmId = trElements.get(1).getText();
-                    map.put(trElements.get(2), trElements.get(1).getText());
+            if (tdElements.size() > 0) {
+                if (tdElements.get(columnIndex).getText().equals(text)) {
+                    //trElements.get(columnIndex).click();
+                    //alarmId = trElements.get(1).getText();
+                    map.put(tdElements.get(2), tdElements.get(1).getText());
                     return map;
                 }
             }

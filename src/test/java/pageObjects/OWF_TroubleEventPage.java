@@ -7,8 +7,6 @@ import utils.Ticket;
 
 import java.util.List;
 
-import static pageObjects.BaseRecordPage.ddSTATuS_ID;
-
 public class OWF_TroubleEventPage extends BaseRecordPage {
 
     private static final String btnREFRESH_IMAGE_ID= "reg_img_600003444";
@@ -66,6 +64,17 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String ddFAULTY_POSITION = "Fault Position";
     private static final String ddCAUSE = "Cause";
     private static final String ddRELATION_TYPE = "Relationship Type";
+
+    private static final String table_WORKORDERS_ID = "T777504000";
+
+
+    public boolean validateChildWorkOrderAvailability(){
+          int size= getTableRows(By.id(table_WORKORDERS_ID)).size();
+          if(size>0)
+              return true;
+        return false;
+
+    }
 
 
     public void selectTicket(){
@@ -276,7 +285,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         String location = "";
         WebElement affectedBus = driver.findElement(By.xpath("//fieldset[@class =' pnl ']"));
         List<WebElement> elements = affectedBus.findElements(By.xpath("//input[@type='checkbox']"));
-        wait(2000);
+        wait(3000);
         for (int i = 0; i < elements.size(); i++) {
             if (elements.get(i).isSelected())
                 //location = elements.get(i).getAttribute("arvalue");

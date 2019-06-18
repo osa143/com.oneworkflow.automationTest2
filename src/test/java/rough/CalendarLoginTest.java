@@ -28,11 +28,11 @@ public class CalendarLoginTest {
         driver.get("http://localhost:8080/#/calendar");
 
         WebElement username= driver.findElement(By.xpath("//input[@placeholder='Username']"));
-        wait.until(ExpectedConditions.elementToBeClickable(username)).sendKeys("TestUser10");
+        wait.until(ExpectedConditions.elementToBeClickable(username)).sendKeys("ATestUser1");
         Thread.sleep(2000);
 
         WebElement passWord= driver.findElement(By.xpath("//input[@placeholder='Password']"));
-        wait.until(ExpectedConditions.elementToBeClickable(passWord)).sendKeys("Pa55w0rd");
+        wait.until(ExpectedConditions.elementToBeClickable(passWord)).sendKeys("Test@1234");
         Thread.sleep(2000);
 
         WebElement loginButton= driver.findElement(By.xpath("//button[@class='login__btn']"));

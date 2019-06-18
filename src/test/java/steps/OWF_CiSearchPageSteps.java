@@ -114,4 +114,20 @@ public class OWF_CiSearchPageSteps {
         int size = ciSearchPage.ciDiagnosisTableRows().size();
         Assert.assertNotEquals(size, 1, 0, "CI details are not displayed");
     }
+
+    @When("user clicks on create button under linked items")
+    public void userClicksOnCreateButtonUnderLinkedItems() {
+     ciSearchPage.clickCreate_linkedItems();
+     ciSearchPage.wait(3000);
+    }
+
+    @And("user clicks on radio button cleared")
+    public void userClicksOnRadioButtonCleared() {
+        ciSearchPage.clickClearedRadioButton_linkedItems();
+    }
+
+    @And("problem ticket should be listed")
+    public void problemTicketShouldBeListed() {
+        Assert.assertTrue(ciSearchPage.verifyIsProblemTicketListed());
+    }
 }

@@ -45,4 +45,5 @@ Feature: Alarm tab in agent console
     And user selects action dropdown as "Terminate"
     And user clicks on refresh button on alarms tab
     When user switches to window 1
+    #Failing at this step. Status is coming as Assigned
     Then user validates ticket status as "cleared"

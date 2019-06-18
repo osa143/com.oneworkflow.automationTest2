@@ -18,8 +18,9 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String ddValueLOSS_OF_SERVICE = "Loss of Service";
     private static final String ddValueNO_IMPACT = "No Impact";
     private static final String ddValueCLEAR = "(clear)";
-
+    private static final String btnCREATE_linked_items = "WIN_4_777506020";
     private static final String chkbxTO_SELECT_CI = "//input[class='colcheck']";
+    private static final String rbtn_CLEARED_ID = "WIN_4_rc1id730011091";
 
     private static final String txtNAME_PLUS = "arid_WIN_0_700009016";
 
@@ -27,9 +28,24 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String ddSEARCH_FOR_ID = "arid_WIN_0_700009236";
 
     private static final String ddValueALL_CIS = "All CIs";
-    private static final String btnLINKED_ITEMS_XPATH= "//a[contains(text(), 'Linked Items')]";
     private static final String Table_ID = "T700009024";
     private static final String CI_DIAGNOSIS_TABLE_ID = "T700009087";
+    private static final String TABLE_ID_linkedItems = "T777506000";
+
+    public void clickClearedRadioButton_linkedItems(){
+        driver.findElement(By.id(rbtn_CLEARED_ID)).click();
+    }
+    public boolean verifyIsProblemTicketListed(){
+        int size= getTableRows(By.id(TABLE_ID_linkedItems)).size();
+        if(size>1){
+            return true;
+        }
+        else return false;
+    }
+
+    public void clickCreate_linkedItems(){
+        driver.findElement(By.id(btnCREATE_linked_items)).click();
+    }
 
     public void enterLocation(String location){
         driver.findElement(By.id(txtLOCATION_ID)).sendKeys(location);

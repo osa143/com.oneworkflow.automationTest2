@@ -6,7 +6,7 @@ import runners.BaseTest;
 
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
-        tags = {"@SAO_496_Normal_Change"}
+        tags = {"@Add_CI_&_Attachment"}
 )
 
 public class Test_Runner extends BaseTest {

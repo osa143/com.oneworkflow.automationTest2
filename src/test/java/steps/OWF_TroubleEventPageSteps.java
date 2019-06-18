@@ -206,4 +206,12 @@ public class OWF_TroubleEventPageSteps {
     public void troubleTicketShouldBeAppearedRelatedToTeMIP() {
         Assert.assertEquals(troubleEventPage.getSourceText(), "HPE Common Temip", "Ticket is not related to TeMIP");
     }
+
+    @And("user validates child WorkOrder availability")
+    public void userValidatesChildWorkOrderAvailability() {
+        Assert.assertTrue(troubleEventPage.validateChildWorkOrderAvailability());
+
+    }
+
+
 }

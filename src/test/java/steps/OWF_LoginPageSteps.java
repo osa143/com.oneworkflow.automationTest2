@@ -19,7 +19,10 @@ public class OWF_LoginPageSteps extends BaseSteps {
     @When("user logs in with valid username {string} and password as {string}")
     public void userLogsInWithValidUsernameAndPasswordAs(String username, String password) {
         loginPage.doLogin(username, password);
-        loginPage.wait(5000);
+        loginPage.wait(3000);
 
     }
+
+
 }
+

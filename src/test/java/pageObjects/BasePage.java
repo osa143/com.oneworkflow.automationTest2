@@ -313,7 +313,9 @@ public class BasePage {
         driver.switchTo().frame(id);
     }
 
-
+  public boolean verifyIsTabDisplayed(String tabName){
+      return driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tabName)).findFirst().orElse(null).isDisplayed();
+  }
 
 
 }

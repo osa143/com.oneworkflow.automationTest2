@@ -16,9 +16,11 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String fld_TIMELINE_DISPLAY_XPATH = "//div[@id='WIN_0_999000510']//div[@class='BaseTableInner']";
 
     private static final String ddNO_ID = "arid_WIN_0_600001801";
+    private static final String ddREASON = "Reason";
 
     private static final String txtTITLE_ID = "arid_WIN_0_777031000";
     private static final String txtDESCRIPTION_ID = "arid_WIN_0_777031007";
+    private static final String txtWORK_AROUND = "arid_WIN_0_600001040";
 
     private static final String ddREQUEST_TYPE_ID = "arid_WIN_0_777031002";
     private static final String ddIMPACT = "Impact";
@@ -58,16 +60,32 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String btnYES_ON_FRAME_ID = "WIN_0_700027904";
     private static final String btnACK_ID = "WIN_0_777504152";
     private static final String timeline_TABLE_ID = "T999000510";
+    private static final String btnRELEASE_ID = "WIN_0_777021435";
 
     private static final String ddValueMAJOR = "Major";
     private static final String txtSOURCE_ID = "arid_WIN_0_777777912";
 
     private static final String chkbxSWEDEN = "WIN_0_rc0id600002001";
+    private static final String txtTO_DATE = "arid_WIN_0_777031004";
+
+    public void clickRelease(){
+        driver.findElement(By.id(btnRELEASE_ID)).click();
+    }
+    public void enterToDate(String toDate){
+        driver.findElement(By.id(txtTO_DATE)).sendKeys(toDate);
+    }
+
+    public void selectReasonAs(String value){
+        selectDropDownNameAndValue(ddREASON, value, true);
+    }
 
     public String getTimelineStatus() {
         String status = getTableCellData(By.id(timeline_TABLE_ID), "Description", 1);
         System.out.println("Timeline status is: " + status);
         return status;
+    }
+    public void enterWorkAround(String workAround){
+        driver.findElement(By.id(txtWORK_AROUND)).sendKeys(workAround);
     }
 
     public void enterSource(String source){

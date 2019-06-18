@@ -13,7 +13,7 @@ public class OWF_WorkOrderPageSteps {
    OWF_WorkOrderPage workOrderPage= new OWF_WorkOrderPage();
     @And("user validates ticket status as {string}")
     public void userValidatesTicketStatusAs(String arg0) {
-        workOrderPage.wait(2000);
+        workOrderPage.wait(3000);
         Assert.assertEquals(workOrderPage.getStatusText(), arg0, "Status is not new");
     }
 
@@ -35,7 +35,7 @@ public class OWF_WorkOrderPageSteps {
 
     @And("user should see B2B dispatch tab")
     public void userShouldSeeBBDispatchTab(int arg0) {
-
+         Assert.assertTrue(workOrderPage.verifyIsTabDisplayed("B2B Dispatch"));
 
     }
 
@@ -77,6 +77,11 @@ public class OWF_WorkOrderPageSteps {
     @And("user should see dispatch status as {string}")
     public void userShouldSeeDispatchStatusAs(String arg0) {
         Assert.assertEquals(workOrderPage.getDispatchStatus(), arg0, "dispatch status is not submitted");
+    }
+    @Then("user should see assigned profile as {string}")
+    public void userShouldSeeAssignedProfileAs(String arg0) {
+     Assert.assertTrue(workOrderPage.getAssignedProfileStatus());
+
     }
 
     }

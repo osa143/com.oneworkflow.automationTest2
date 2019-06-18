@@ -16,6 +16,8 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txtWFM_TIKCET_ID  = "arid_WIN_0_777504105";
     private static final String txtDISPATCH_STATUS_ID  = "arid_WIN_0_777504105";
 
+    private static final String ddASSIGNED_PROFILE = "arid_WIN_0_777031408";
+
     public String getDispatchStatus(){
          return getTextById(txtDISPATCH_STATUS_ID);
     }
@@ -64,6 +66,14 @@ public class OWF_WorkOrderPage extends BasePage {
     }
     public void selectSlaClass(String value){
         selectDropDownNameAndValue(ddSLA_CLASS, value, false);
+    }
+
+    public boolean getAssignedProfileStatus(){
+        String text =getTextById(ddASSIGNED_PROFILE);
+        if(text.contains("B2B")) {
+            return true;
+        }
+        else return false;
     }
 
 

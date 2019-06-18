@@ -8,6 +8,8 @@ import org.testng.Assert;
 import pageObjects.OWF_ProblemRecordPage;
 import utils.CommonUtils;
 
+import java.sql.SQLOutput;
+
 
 public class OWF_ProblemRecordPageSteps {
     public String problemTicket;
@@ -72,7 +74,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("an error message {string} should appear with red boarder around withdrawn reason")
     public void anErrorMessageShouldAppearWithRedBoarderAroundWithdrawnReason(String errorMessage) {
-        //Assert.assertTrue(problemRecordPage.validateErrorMessage(errorMessage), "Error message didn't appear");
+        Assert.assertTrue(problemRecordPage.validateErrorMessage(errorMessage), "Error message didn't appear");
     }
 
     @When("user selects withdrawn reason as false alarm and clicks save")
@@ -435,5 +437,66 @@ public class OWF_ProblemRecordPageSteps {
     public void userSelectsRequestTypeAsInProblemForm(String requestType) {
         problemRecordPage.selectRequestType(requestType, false);
         problemRecordPage.wait(1000);
+    }
+
+    @And("user selects request type as {string} on Problem record page")
+    public void userSelectsRequestTypeAsOnProblemRecordPage(String requestType) {
+        problemRecordPage.selectRequestType(requestType, false);
+        problemRecordPage.wait(1000);
+    }
+
+    @Then("a known error ticket should appear in new tab")
+    public void aKnownErrorTicketShouldAppearInNewTab() {
+        System.out.println(problemRecordPage.getPageTitle());
+        problemRecordPage.verifyTicketIsNotNull();
+    }
+
+    @Then("user enters {string} in the work around field")
+    public void userEntersInTheWorkAroundField(String arg0) {
+        problemRecordPage.enterWorkAround(arg0);
+    }
+
+    @Then("an error message {string} should appear with red boarder around to date field")
+    public void anErrorMessageShouldAppearWithRedBoarderAroundToDateField(String arg0) {
+       // Assert.assertTrue(problemRecordPage.validateErrorMessage(arg0));
+    }
+
+    @And("an error message {string} should appear with red boarder around reason field")
+    public void anErrorMessageShouldAppearWithRedBoarderAroundReasonField(String arg0) {
+      //  Assert.assertTrue(problemRecordPage.validateErrorMessage(arg0));
+    }
+
+    @And("user selects reason dropdown as {string}")
+    public void userSelectsReasonDropdownAs(String arg0) {
+        problemRecordPage.selectReasonAs(arg0);
+    }
+
+
+    @When("user clicks on release button")
+    public void userClicksOnReleaseButton() {
+        problemRecordPage.clickRelease();
+        problemRecordPage.wait(2000);
+    }
+
+    @And("user enters date value as {int} minutes in the future")
+    public void userEntersDateValueAsMinutesInTheFuture(int arg0) {
+        problemRecordPage.enterToDate(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", arg0));
+    }
+
+    @Then("user enters date value as a week in the future")
+    public void userEntersDateValueAsAWeekInTheFuture() {
+        problemRecordPage.enterToDate(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", 10080));
+
+    }
+
+    @Then("user waits for {int} minutes")
+    public void userWaitsForMinutes(int arg0) {
+        problemRecordPage.wait(400000);
+    }
+
+    @And("user enters request start date as {string} one day in the future")
+    public void userEntersRequestStartDateAsOneDayInTheFuture(String arg0) {
+        Assert.assertTrue(false);
+
     }
 }

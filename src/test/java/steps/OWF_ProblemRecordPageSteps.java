@@ -496,7 +496,17 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user enters request start date as {string} one day in the future")
     public void userEntersRequestStartDateAsOneDayInTheFuture(String arg0) {
-        Assert.assertTrue(false);
+        problemRecordPage.enterStartDateAsTodayMidnight(0);
 
+    }
+
+    @And("user enters request end date as {string} one day in the future")
+    public void userEntersRequestEndDateAsOneDayInTheFuture(String arg0) {
+        problemRecordPage.enterEndDateAsTodayMidnight(120);
+    }
+
+    @Then("select target request window should open")
+    public void selectTargetRequestWindowShouldOpen() {
+        //dummy step, doesn't need verification
     }
 }

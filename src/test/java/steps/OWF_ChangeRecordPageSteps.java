@@ -172,6 +172,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @Then("user clicks on risk tab")
     public void userClicksOnRiskTab() {
+        changeRecordPage.selectTab("Risk");
 
     }
 

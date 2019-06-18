@@ -5,6 +5,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import utils.CommonUtils;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class BaseRecordPage extends BasePage {
@@ -343,6 +348,18 @@ public class BaseRecordPage extends BasePage {
         driver.findElement(By.id(txtEND_DATE)).sendKeys(dateTime);
 
     }
+
+    public void enterStartDateAsTodayMidnight(int delay)
+    {
+        driver.findElement(By.id(txtSTART_DATE)).sendKeys(CommonUtils.getDateAsTodayMidnight(delay));
+    }
+
+    public void enterEndDateAsTodayMidnight(int delay)
+    {
+        driver.findElement(By.id(txtEND_DATE)).sendKeys(CommonUtils.getDateAsTodayMidnight(delay));
+    }
+
+
    public void enterRcFoundDate(){
        driver.findElement(By.id(txtRC_FOUND_DATE_ID)).sendKeys(Keys.ENTER);
    }

@@ -8,9 +8,7 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Iterator;
 import java.util.Properties;
@@ -53,6 +51,16 @@ public class CommonUtils extends BasePage {
             startDateTime = currentDateTime.minusMinutes(Math.abs(minutes));
         }
         return dateTimeFormatter.format(startDateTime);
+
+    }
+    public static String getDateAsTodayMidnight(int delayMinutes)
+    {
+        LocalTime midnight = LocalTime.MIDNIGHT;
+        LocalDate today = LocalDate.now(ZoneId.of("Europe/Stockholm"));
+        LocalDateTime todayMidnight = LocalDateTime.of(today, midnight);
+        todayMidnight = todayMidnight.plusMinutes(delayMinutes);
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");
+        return dateTimeFormatter.format(todayMidnight);
 
     }
 

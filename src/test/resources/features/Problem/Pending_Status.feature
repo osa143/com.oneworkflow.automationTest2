@@ -19,7 +19,7 @@ Feature: User is able to change status to pending
     Then ticket should be created and status should be assigned
     Then user clicks on Ack button
     And problem ticket status should be under investigation
-    #And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation ."
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation."
     Then user enters "There is no known work around available" in the work around field
     When user changes status to "Pending"
     And user clicks on save button on the problem form
@@ -29,17 +29,17 @@ Feature: User is able to change status to pending
     And user selects reason dropdown as "Incident ongoing"
     And user clicks on save button on the problem form
     Then user validates ticket status as "Pending"
-    #And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Under Investigation to Pending ."
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Under Investigation to Pending."
     When user clicks on release button
     Then problem ticket status should be under investigation
-    #And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Pending to Under Investigation ."
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Pending to Under Investigation."
     When user changes status to "Pending"
     And user enters date value as 2 minutes in the future
     And user selects reason dropdown as "Incident ongoing"
     Then user validates ticket status as "Pending"
-    #And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Under Investigation to Pending ."
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Under Investigation to Pending."
     Then user waits for 4 minutes
     And problem ticket status should be under investigation
-    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Pending to Under Investigation ."
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Pending to Under Investigation."
 
 

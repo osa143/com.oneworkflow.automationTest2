@@ -24,11 +24,11 @@ Feature: Closing of incident ticket that has linked WO
     When user switches to window 1
     And clicks on ticket refresh button
     Then user clicks on work order tab
-    And user validates child WO availability
+    And user validates child WorkOrder availability
     And user validates WorkOrder status as "OPEN"
     When user switches to window 2
     And user clicks on apply B2B button
-    Then user should see assigned profile as ""
+    Then user should see assigned profile as "B2B"
     And user should see B2B dispatch tab
     Then user clicks on Diagnosis tab
     And CI should be listed and displayed under the Diagnosis tab

@@ -509,4 +509,10 @@ public class OWF_ProblemRecordPageSteps {
     public void selectTargetRequestWindowShouldOpen() {
         //dummy step, doesn't need verification
     }
+
+    @When("user clicks on assignment under sections")
+    public void userClicksOnAssignmentUnderSections() {
+        problemRecordPage.clickAssignments();
+
+    }
 }

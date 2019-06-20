@@ -226,4 +226,10 @@ public class OWF_ChangeRecordPageSteps {
     public void userSelectsRequestCategoryAsOnChangeRecordPage(String category) {
         changeRecordPage.selectRequestCategoryOnChangeRecordPage(category);
     }
+
+
+    @And("user selects title as {string} on Change record page")
+    public void userSelectsTitleAsOnChangeRecordPage(String arg0) {
+        changeRecordPage.selectTitleAs(arg0);
+    }
 }

@@ -352,6 +352,11 @@ public class OWF_AgentConsolePageSteps {
     public void userClicksOkOnAlert() {
         agentConsolePage.acceptAlert();
     }
+
+    @When("user clicks on create known error")
+    public void userClicksOnCreateKnownError() {
+        agentConsolePage.selectCreateAsKnownError();
+    }
 }
 
 

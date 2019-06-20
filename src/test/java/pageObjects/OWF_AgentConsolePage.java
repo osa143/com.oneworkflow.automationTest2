@@ -28,6 +28,7 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String menuItemPROBLEM_RECORD = "Problem Record";
     private static final String menuItemTROUBLE_EVENT = "Trouble Event";
     private static final String menuItemWORK_ORDER = "Work Order";
+    private static final String menuitemKNOWN_ERROR = "Known Error";
 
     private static final String menuItemMY_ACCOUNT = "My Account";
     private static final String menuItemCHANGE_PASSWORD = "Change Password";
@@ -101,7 +102,9 @@ public class OWF_AgentConsolePage extends BasePage {
             return true;
         return false;
     }
-
+     public void selectCreateAsKnownError(){
+        selectMainMenuAndMenuItem(menuForCREATE, menuitemKNOWN_ERROR);
+     }
 
     String alarmId = "";
 

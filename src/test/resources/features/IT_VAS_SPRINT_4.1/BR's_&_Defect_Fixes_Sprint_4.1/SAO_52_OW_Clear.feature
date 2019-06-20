@@ -12,7 +12,7 @@ Feature: Closing of incident ticket that has linked WO
     When user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 1
     Then trouble record form should appear in new tab
-    And user enters ticket id as "OP-000000898806"
+    And user enters ticket id as "OP-000001085771"
     Then trouble ticket should appear related to TeMIP
     When user clicks on work order tab
     And user clicks on create from ticket

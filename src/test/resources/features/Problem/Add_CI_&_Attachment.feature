@@ -3,7 +3,8 @@
     Scenario: user can create a problem record and add a CI and attachment to it
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Tohall_copy" and password as "Test@1234"
+      #When user logs in with valid username "Tohall_copy" and password as "Test@1234"
+      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create problem record
       And user switches to window 1

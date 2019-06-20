@@ -280,6 +280,9 @@ public class BaseRecordPage extends BasePage {
     public void selectTitle(String value) {
         selectDropDownNameAndValue(ddTITLE, value, true);
     }
+    public void selectTitleAs(String value){
+        selectDropDownNameAndValue(ddTITLE, value, false);
+    }
 
     public void selectRequestType(String value, boolean readOnly) {
         selectDropDownNameAndValue(ddREQUEST_TYPE, value, readOnly);

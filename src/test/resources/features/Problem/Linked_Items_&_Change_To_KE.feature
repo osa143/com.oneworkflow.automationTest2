@@ -10,13 +10,13 @@
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       When user enters "Problem test" in Title field
-      And user selects request type as "Customer"
+      And user selects request type as "Customer" on trouble event page
       And user enters description as "A customer complaint"
       And user clicks on save button on the problem form
       Then ticket should be created and status should be assigned
       And user switches to window 1
       When user clicks on change record from agent console
-      And user switches to window 3
+      And user switches to window 2
       Then change record form should open in a new tab
       When user clicks on sweden checkbox under affected BU's
       And user selects request type as "Normal Change"
@@ -33,15 +33,17 @@
       And user enters "Not possible" in the ver of functionality field
       And user enters "No Risk" in the risk description field
       Then user clicks on schedule tab
+      And user enters as "Test ticket no impact" in service and customer impact
       And user enters request start date as "00:00:00" one day in the future
       And user enters request end date as "02:00:00" one day in the future
       And user enters impact duration as "5" minutes
       And user selects estimated impact as "No Impact"
       And user clicks on save button
-      Then user clicks on risk tab
+      Then user clicks on "Risk" tab
+      And user answers all risk quetions as below
       And user selects answer as "Impact to other systems/technologies are unclear"
       And user selects answer as "No"
-      And user selects answer as "Tested successfully, this is a pilot"
+      And user selects answer as "Tested succesfully, this is a pilot"
       And user selects answer as "Yes (outcome of the change can be instantly verified)"
       And user selects answer as "Yes"
       And user selects answer as "Simple"
@@ -49,7 +51,8 @@
       And user clicks on save button
       Then user clicks on Diagnosis tab
       And user clicks on CI search button
-      When user clicks on clear button
+      And user switches to frame 2
+      #When user clicks on clear button
       And user selects search for as "All CIs"
       And  user enters "SE_CPE_FRECPE5" in name field
       And user clicks on search button on CI search window
@@ -65,7 +68,7 @@
       And user switches to window 3
       Then known error form should appear in new tab
       And user enters "Known Error B" in Title field
-      And user selects request type as "Rejected:Ticket Rejected"
+      And user selects request type as "Rejected:Ticket Rejected" on known error page
       And user enters description as "A known error"
       And user selects priority as "Minor"
       And user clicks on save button

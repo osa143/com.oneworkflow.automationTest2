@@ -403,7 +403,7 @@ public class BaseRecordPage extends BasePage {
 
     }
     public void enterVerOfFunctionality(String verOfFunctionality){
-        driver.findElement(By.id(txtVER_OF_FUNCTIONALITY_ID)).sendKeys(txtVER_OF_FUNCTIONALITY_ID);
+        driver.findElement(By.id(txtVER_OF_FUNCTIONALITY_ID)).sendKeys(verOfFunctionality);
     }
     public void enterRiskDescriptionId(String riskDescriptionId){
         driver.findElement(By.id(txtRISK_DESCRIPTION_ID)).sendKeys(riskDescriptionId);

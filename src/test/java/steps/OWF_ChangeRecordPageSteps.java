@@ -64,7 +64,7 @@ public class OWF_ChangeRecordPageSteps {
     @And("user clicks on save button")
     public void userClicksOnSaveButton() {
         changeRecordPage.clickSave();
-        changeRecordPage.wait(5000);
+        changeRecordPage.wait(7000);
 
     }
 
@@ -82,6 +82,7 @@ public class OWF_ChangeRecordPageSteps {
     @And("user clicks on CI search button")
     public void userClicksOnCISearchButton() {
         changeRecordPage.clickCiSearch();
+        changeRecordPage.wait(5000);
     }
 
 
@@ -213,6 +214,7 @@ public class OWF_ChangeRecordPageSteps {
     public void userSelectsAnswerAs(String arg0) {
         changeRecordPage.selectAnswer(arg0);
         changeRecordPage.clickDownButton();
+        //changeRecordPage.wait(1000);
 
     }
 
@@ -231,5 +233,15 @@ public class OWF_ChangeRecordPageSteps {
     @And("user selects title as {string} on Change record page")
     public void userSelectsTitleAsOnChangeRecordPage(String arg0) {
         changeRecordPage.selectTitleAs(arg0);
+    }
+
+    @And("user answers all risk quetions as below")
+    public void userAnswersAllRiskQuetionsAsBelow() {
+        //Dummy step Doesn't need implementation
+    }
+
+    @And("user switches to frame by id {string}")
+    public void userSwitchesToFrameById(String arg0) {
+        changeRecordPage.switchToFrameById(arg0);
     }
 }

@@ -59,6 +59,7 @@ Feature: Verification of ability to link tickets
     And user clicks on save button
     Then user clicks on Diagnosis tab
     And user clicks on CI search button
+    And user switches to frame by id
     When user clicks on clear button
     And user selects search for as "All CIs"
     And  user enters "SE_CPE_FRECPE5" in name field

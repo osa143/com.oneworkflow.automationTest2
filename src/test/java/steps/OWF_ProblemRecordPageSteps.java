@@ -515,4 +515,19 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.clickAssignments();
 
     }
+
+    @Then("at least one problem ticket should appear in the list")
+    public void atLeastOneProblemTicketShouldAppearInTheList() {
+        Assert.assertTrue(problemRecordPage.verifyProblemTickets());
+    }
+
+
+    @When("user verifies PM office tab visibility")
+    public void userVerifiesPMOfficeTabVisibility() {
+        //dummy step
+    }
+
+    @Then("PM office tab should not be visible")
+    public void pmOfficeTabShouldNotBeVisible() {
+    }
 }

@@ -15,6 +15,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txtTICKET_ID = "arid_WIN_0_730000060";
     private static final String txtSEARCH_TICKET_ID = "arid_WIN_0_777777600";
     private static final String linkASSIGNMENTS = "WIN_0_999000346";
+    private static final String TABLE_ID = "T1020";
 
 
     private static final String btnTIMELINE_XPATH = "//a[contains(text(),'Timeline')]";
@@ -72,6 +73,14 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
     private static final String chkbxSWEDEN = "WIN_0_rc0id600002001";
     private static final String txtTO_DATE = "arid_WIN_0_777031004";
+
+    public boolean verifyProblemTickets(){
+        int size= getTableRows(By.id(TABLE_ID)).size();
+        if(size>1){
+            return true;
+        }
+        else return false;
+    }
 
     public void clickAssignments(){
         driver.findElement(By.id(linkASSIGNMENTS)).click();

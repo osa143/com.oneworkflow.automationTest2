@@ -22,11 +22,13 @@
       And user selects type as "Additional Access" under interested parties
       And user clicks on radio button user
       And user enters "probleminitiator" in login name plus field
-      And user clicks on search
+      And user enters "Test User" in first name plus field
+      And user enters "Automation Test" in last name plus field
+      And user clicks on search under add interested party
       Then problem initiator should be listed without an email address
       When user highlights Problem initiator's row the one without email address
       And user selects access radio button as read and write
-      And  user selects auto notify radio buton as yes
+      And  user selects auto notify radio button as yes
       Then problem Initiator should be listed as a interested party with Read Write access.
       When user clicks on Diagnosis tab
       And user clicks on CI search button
@@ -38,7 +40,7 @@
       And user clicks on relate CI
       And user closes warning message and clicks on close button
       Then CI should be listed and displayed under the Diagnosis tab
-      When user selects status dropdown as "Published"
+      When user changes status to "Published"
       And user clicks on save button
       Then known error ticket status should be "Published"
       When user enters description as "More information"
@@ -46,13 +48,13 @@
       Then change should also be reflected in the timeline as ""
       When user clicks on timeline tab
       And user selects Auto text:Tech bridge closed
-      Then the timeline should be updated accordingly
+      Then change should also be reflected in the timeline as ""
       When user selects action dropdown as "Time Tracking"
       Then time tracking window should open
-      When user selects activity dropdown as "Working on ticket"
-      And user enters 20 in minutes field
-      And user clicks on ok
-      Then the timeline should be updated accordingly
+      When user selects activity dropdown as "Working On Ticket"
+      And user enters "20" in minutes field
+      And user clicks on Ok button
+      Then change should also be reflected in the timeline as ""
       When user changes status to "closed"
       And user clicks on save button
       Then an error message should appear and a red border should be visible around the closure code field

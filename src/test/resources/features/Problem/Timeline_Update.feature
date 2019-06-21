@@ -1,5 +1,7 @@
 @Timeline_Update
+
 Feature: User is able to update the timeline with entries
+
   Scenario: User logs into One workflow, creates a problem ticket and updates the timeline
 
     Given user is on the OneWorkflow login page

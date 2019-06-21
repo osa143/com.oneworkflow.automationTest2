@@ -130,4 +130,9 @@ public class OWF_CiSearchPageSteps {
     public void problemTicketShouldBeListed() {
         Assert.assertTrue(ciSearchPage.verifyIsProblemTicketListed());
     }
+
+    @Then("CI search panel should open")
+    public void ciSearchPanelShouldOpen() {
+        //dummy step
+    }
 }

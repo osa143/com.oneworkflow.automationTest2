@@ -1,5 +1,7 @@
 @Problem_Link_To_New_Known_Error_And_Withdraw
+
   Feature: user is able to link problem to new known error and withdraw
+
     Scenario: user opens problem ticket, then opens known error and withdraws
 
       Given user is on the OneWorkflow login page

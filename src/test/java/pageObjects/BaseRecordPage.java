@@ -3,6 +3,7 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import utils.CommonUtils;
 
 import java.time.LocalDate;
@@ -132,6 +133,7 @@ public class BaseRecordPage extends BasePage {
     selectDropDownNameAndValue(ddSUMMARY, value, false);
 
     }
+
 
    //use this method for all send keys.
     public void enterText(String textName, String text)
@@ -411,12 +413,29 @@ public class BaseRecordPage extends BasePage {
     public void enterServiceAndCustomerImpact(String text){
         driver.findElement(By.id(txtSERVICE_AND_CUSTOMER_IMPACT)).sendKeys(text);
     }
-    public String verifyTicketIsnull(){
+    public String verifyTicketIsBlank(){
         return getTextById(txtSEARCH_TICKET_ID);
     }
     public String verifyTicketIsNotNull(){
         return getTextById(txtTICKET_ID);
     }
 
+    public boolean verifyDropdownValues(String statuses, String dropdownName)
+    {
+        String[] multipleStatus = statuses.split(":");
+        List<String> dropdownValues = getDropdownValues(dropdownName);
+        clickEscButton();
+
+        System.out.println("Dropdown values are: " + dropdownValues);
+        for (int i = 0; i < multipleStatus.length; i++)
+        {
+            if (!dropdownValues.contains(multipleStatus[i]))
+            {
+                return false;
+            }
+
+        }
+        return true;
+    }
 
 }

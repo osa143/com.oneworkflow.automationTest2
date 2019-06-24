@@ -2,6 +2,7 @@ package pageObjects;
 
 import driver.factory.DriverFactory;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import java.awt.*;
@@ -39,6 +40,13 @@ public class BasePage {
         }
     }
 
+    public void clickEscButton()
+    {
+        Actions action = new Actions(driver);
+        action.sendKeys(Keys.ESCAPE).perform();
+        wait(2000);
+
+    }
     //To be used for all send keys methods.
     public void enterTextBy(By textElement, String text)
     {
@@ -87,6 +95,22 @@ public class BasePage {
     public void selectDropDownValue(String DropDownValue) {
         driver.findElement(By.className("MenuTableBody")).findElements(By.tagName("td")).stream()
                 .filter(element -> element.getText().trim().equals(DropDownValue)).findFirst().orElse(null).click();
+
+    }
+
+    public List<String> getDropdownValues(String dropdownMenuName)
+    {
+        List<String> dropdownValues = new ArrayList<String>();
+        selectDropDownMenu(dropdownMenuName);
+
+        List<WebElement> elements = driver.findElement(By.className("MenuTableBody")).findElements(By.tagName("td"));
+
+        for (int i = 0; i < elements.size(); i ++)
+        {
+            dropdownValues.add(elements.get(i).getText().trim());
+        }
+
+        return dropdownValues;
 
     }
 

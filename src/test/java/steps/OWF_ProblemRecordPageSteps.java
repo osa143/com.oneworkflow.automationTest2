@@ -8,7 +8,7 @@ import org.testng.Assert;
 import pageObjects.OWF_ProblemRecordPage;
 import utils.CommonUtils;
 
-import java.sql.SQLOutput;
+import java.util.List;
 
 
 public class OWF_ProblemRecordPageSteps {
@@ -114,14 +114,14 @@ public class OWF_ProblemRecordPageSteps {
     @And("user clicks Search on ticket search")
     public void userClicksSearchOnTicketSearch() {
         problemRecordPage.clickSearchButton();
-        problemRecordPage.wait(3000);
+        problemRecordPage.wait(5000);
 
     }
 
     @When("user clicks on Ack button")
     public void userClicksOnAckButton() {
         problemRecordPage.clickAckButton();
-        problemRecordPage.wait(3000);
+        problemRecordPage.wait(5000);
     }
 
     @Then("problem ticket status should be under investigation")
@@ -348,7 +348,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("user should see blank change record search form")
     public void userShouldSeeBlankChangeRecordSearchForm() {
-     //Assert.assertNull(problemRecordPage.verifyTicketIsnull(), "Change record search form is not blank");
+     //Assert.assertNull(problemRecordPage.verifyTicketIsBlank(), "Change record search form is not blank");
     }
 
     @Then("user should see change record ticket")
@@ -360,7 +360,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("user should see blank problem search form")
     public void userShouldSeeBlankProblemSearchForm() {
-        Assert.assertNull(problemRecordPage.verifyTicketIsnull());
+        Assert.assertEquals(problemRecordPage.verifyTicketIsBlank(), "");
     }
 
     @Then("user should see problem ticket")
@@ -370,7 +370,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("user should see blank known error search form")
     public void userShouldSeeBlankKnownErrorSearchForm() {
-        problemRecordPage.verifyTicketIsnull();
+        problemRecordPage.verifyTicketIsBlank();
     }
 
     @Then("user should see known error ticket")
@@ -385,7 +385,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("user should see blank trouble search form")
     public void userShouldSeeBlankTroubleSearchForm() {
-        problemRecordPage.verifyTicketIsnull();
+        problemRecordPage.verifyTicketIsBlank();
     }
 
     @Then("user should see trouble ticket")
@@ -529,5 +529,16 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("PM office tab should not be visible")
     public void pmOfficeTabShouldNotBeVisible() {
+    }
+
+    @Then("multiple statuses {string} should be available in {string} dropdown")
+    public void multipleStatusesShouldBeAvailableInDropdown(String statuses, String dropdownName) {
+        problemRecordPage.verifyDropdownValues(statuses, dropdownName);
+
+    }
+
+    @When("user verifies for all entries in status dropdown")
+    public void userVerifiesForAllEntriesInStatusDropdown() {
+        //dummy step
     }
 }

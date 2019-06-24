@@ -3,8 +3,11 @@ package steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.cucumber.datatable.DataTable;
 import org.testng.Assert;
 import pageObjects.OWF_SIDConsolePage;
+
+import java.util.List;
 
 public class OWF_SIDConsolePageSteps {
     OWF_SIDConsolePage sidConsolePage = new OWF_SIDConsolePage();
@@ -54,9 +57,9 @@ public class OWF_SIDConsolePageSteps {
     }
 
 
-    @When("user enters {string} in the location+ field")
-    public void userEntersInTheLocationField(String arg0) {
-        sidConsolePage.enterLocationPlus(arg0);
+    @When("user enters following locations in the location+ field, user clicks search and verifies CI information and clicks on clear button")
+    public void userVerifiesCiInformationForMultipleLocations(DataTable locations) {
+        sidConsolePage.validateCiDetailsForMultipleLocations(locations);
     }
 
     @When("user enters {string} in the name+ field")

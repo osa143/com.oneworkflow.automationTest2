@@ -1,7 +1,9 @@
 package pageObjects;
 
+import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -88,6 +90,20 @@ public class OWF_SIDConsolePage extends BasePage {
         selectDropDownValue(ddValueCLEAR);
     }
 
+    public void validateCiDetailsForMultipleLocations(DataTable location)
+    {
+        List<List<String>> locations = location.asLists(String.class);
+        for (int i = 1; i < locations.size(); i ++) {
+            System.out.println("location is: " + locations.get(i).get(0));
+            enterLocationPlus(locations.get(i).get(0));
+            clickSearchButton();
+            wait(1000);
+            int size = TableRows().size();
+            boolean ciDetailsDisplayed = size > 1 ? true: false;
+            Assert.assertTrue(ciDetailsDisplayed, "CI details are not displayed");
+            clickClearButton();
+        }
+    }
 
     public void enterLocationPlus(String locationPlus) {
         driver.findElement(By.id(txtbxLOCATION_PLUS)).sendKeys(locationPlus);

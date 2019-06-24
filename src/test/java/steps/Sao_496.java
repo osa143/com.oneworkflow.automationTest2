@@ -2,6 +2,7 @@ package steps;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 import pageObjects.BaseRecordPage;
 import pageObjects.OWF_ProblemRecordPage;
@@ -20,4 +21,6 @@ public class Sao_496 {
 
         if (dataMap.containsKey("template")) prp.selectTemplate(dataMap.get("template"));
     }
+
+
 }

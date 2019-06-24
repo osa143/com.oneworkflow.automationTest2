@@ -7,6 +7,7 @@ Feature: Changing of assignee for problem ticket
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create problem record
+    And user switches to window 1
     Then problem record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
     When user enters "proactive investigation of Tohall_Copy" in Title field

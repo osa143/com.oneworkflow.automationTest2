@@ -82,6 +82,10 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         else return false;
     }
 
+    public void highlightUser(){
+        driver.findElement(By.xpath("//div[@id='FormApp']//tr[2]")).click();
+    }
+
     public void clickAssignments(){
         driver.findElement(By.id(linkASSIGNMENTS)).click();
     }

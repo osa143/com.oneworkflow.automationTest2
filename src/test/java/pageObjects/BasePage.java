@@ -350,6 +350,7 @@ public class BasePage {
         driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tab)).findFirst().orElse(null).click();
 
     }
+
     public void switchToFrameByIndex(int frame_index) {
         driver.switchTo().frame(frame_index);
     }

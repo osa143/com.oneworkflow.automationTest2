@@ -570,6 +570,7 @@ public class OWF_ProblemRecordPageSteps {
     @And("user clicks on save button under interested parties frame")
     public void userClicksOnSaveButtonUnderInterestedPartiesFrame() {
         problemRecordPage.clickOkButton();
+        problemRecordPage.wait(2000);
     }
 
 
@@ -610,8 +611,35 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("priority should be {string}")
     public void priorityShouldBe(String arg0) {
-        problemRecordPage.wait(1000);
+        problemRecordPage.wait(500);
         System.out.println(problemRecordPage.getPriorityText());
         Assert.assertEquals(problemRecordPage.getPriorityText(), arg0);
+    }
+
+    @When("user highlights present user under add interested party")
+    public void userHighlightsPresentUser() {
+        problemRecordPage.highlightUser();
+
+    }
+
+    @Then("problem initiator user should be listed under interested parties tab")
+    public void problemInitiatorUserShouldBeListedUnderInterestedPartiesTab() {
+    Assert.assertTrue(problemRecordPage.verifyUserListedUnderInterestedParty());
+    }
+
+    @Then("user should see problem initiator listed as analysis team member one as {string}")
+    public void userShouldSeeProblemInitiatorListedAsAnalysisTeamMemberOneAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getAnalysisTeamMember1(),arg0);
+
+    }
+
+    @And("user enters {string} in the information field")
+    public void userEntersInTheInformationField(String arg0) {
+        problemRecordPage.enterInformation_restrictedInformation(arg0);
+    }
+
+    @Then("user validates text availability within information field")
+    public void userValidatesTextAvailabilityWithinInformationField() {
+        Assert.assertNotNull(problemRecordPage.getInformationText_restrictedInformation());
     }
 }

@@ -6,6 +6,7 @@
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create problem record
+      And user switches to window 1
       Then problem record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       And user clicks on save button on the problem form
@@ -17,7 +18,7 @@
       And user selects urgency as low
       And user clicks on save button on the problem form
       Then ticket should be created and status should be assigned
-      And user validates restricted info tab is not visible
+      And user validates "Restricted Info" tab is not visible
       Then user tries to change the status to "Under investigation"
       But user should be unable to change the ticket status
       When user gets ticket value
@@ -29,7 +30,7 @@
       When user changes status to "Under Investigation"
       And user clicks on save button on the problem form
       Then problem ticket status should be under investigation
-      When user clicks on restricted info tab
+      When user clicks on "Restricted Info" tab
       And user enters "Restricted info" in the information field
       And user clicks on save button on the problem form
       Then change should also be reflected in the timeline as ""

@@ -23,7 +23,7 @@
       And user selects type as "Additional Access" under interested parties
       And user clicks on radio button user
       Then user enters "Tohall_copy" in login name plus field
-      When user highlights present user
+      When user highlights present user under add interested party
       And user selects access radio button as read and write
       And user selects auto notify radio button as yes
       And user clicks on save button under interested parties frame

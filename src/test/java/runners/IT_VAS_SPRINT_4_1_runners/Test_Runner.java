@@ -6,7 +6,7 @@ import runners.BaseTest;
 
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
-        tags = {"@Priority_Calculation"}
+        tags = {"@Profile_Permissions_Part_1"}
 )
 
 public class Test_Runner extends BaseTest {

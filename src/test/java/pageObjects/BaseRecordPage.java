@@ -33,6 +33,7 @@ public class BaseRecordPage extends BasePage {
     public static final String txtCOMMUNICATION_PLAN_ID = "arid_WIN_0_600001053";
     public static final String txtVER_OF_FUNCTIONALITY_ID = "arid_WIN_0_600001055";
     public static final String txtRISK_DESCRIPTION_ID = "arid_WIN_0_600001065";
+    public static final String txtINFORMATION_RESTRICTED_INFORMATION_ID= "arid_WIN_0_600001056";
 
     public static final String txtEND_DATE = "arid_WIN_0_777021161";
     public static final String txtREASON_ID = "arid_WIN_0_705001003";
@@ -116,6 +117,22 @@ public class BaseRecordPage extends BasePage {
     private static final String btnOK_ON_FRAME_XPATH = "//a[contains(text(),'OK')]";
     private static final String btnSAVE_ATTACHMENT_ON_FRAME = "WIN_0_700500109";
 
+    private static final String table_INTERESTED_PARTIES_ID = "T705002015";
+
+    public boolean verifyUserListedUnderInterestedParty(){
+        int size= getTableRows(By.id(table_INTERESTED_PARTIES_ID)).size();
+        if(size>2){
+            return true;
+        }
+        return false;
+    }
+   public void enterInformation_restrictedInformation(String text){
+        driver.findElement(By.id(txtINFORMATION_RESTRICTED_INFORMATION_ID)).sendKeys(text);
+   }
+
+   public String getInformationText_restrictedInformation(){
+        return getTextById(txtINFORMATION_RESTRICTED_INFORMATION_ID);
+   }
 
     public void enterAnalysisTeamMember1(String text){
         driver.findElement(By.id(txtANALYSIS_TEAM_MEMBER1_ID)).sendKeys(text);

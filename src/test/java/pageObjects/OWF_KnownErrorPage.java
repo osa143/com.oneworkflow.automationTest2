@@ -12,8 +12,8 @@ public class OWF_KnownErrorPage extends BaseRecordPage {
     private static final String txtFIRST_NAME_PLUS_ID = "arid_WIN_0_700027160";
     private static final String txtLAST_NAME_PLUS_ID = "arid_WIN_0_700027161";
     private static final String btnSEARCH_add_interested_parties = "WIN_0_900000010";
-    private static final String rbtnREAD_WRITE_access_ID = "WIN_0_rc0id700027223";
-    private static final String rbtnYES_autoNotify_ID = "WIN_0_rc0id700027223";
+    private static final String rbtnREAD_WRITE_access_ID = "//input[@id='WIN_0_rc0id700027223']";
+    private static final String rbtnYES_autoNotify_ID = "//input[@id='WIN_0_rc1id700027961']";
 
 
     public void clickReadWrite_access(){
@@ -28,7 +28,7 @@ public class OWF_KnownErrorPage extends BaseRecordPage {
 
 
     public void enterLoginNamePlus(String loginName){
-        driver.findElement(By.id(txtLOGIN_NAME_PLUS_ID)).click();
+        driver.findElement(By.id(txtLOGIN_NAME_PLUS_ID)).sendKeys(loginName);
     }
     public void enterFirstNamePlus(String loginName){
         driver.findElement(By.id(txtFIRST_NAME_PLUS_ID)).click();

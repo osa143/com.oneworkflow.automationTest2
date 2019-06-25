@@ -68,8 +68,8 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String timeline_TABLE_ID = "T999000510";
     private static final String btnRELEASE_ID = "WIN_0_777021435";
 
-    private static final String ddValueMAJOR = "Major";
     private static final String txtSOURCE_ID = "arid_WIN_0_777777912";
+    private static final String txtPRIORITY_ID = "arid_WIN_0_700025204";
 
     private static final String chkbxSWEDEN = "WIN_0_rc0id600002001";
     private static final String txtTO_DATE = "arid_WIN_0_777031004";
@@ -120,6 +120,10 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
     public void clickYesOnFrame() {
         driver.findElement(By.id(btnYES_ON_FRAME_ID)).click();
+    }
+
+    public String getPriorityText(){
+        return getTextById(txtPRIORITY_ID);
     }
 
 
@@ -178,10 +182,6 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         return getTextById(txtDESCRIPTION_ID);
     }
 
-    public String getPriorityText() {
-        return getTextById(ddPRIORITY_ID);
-    }
-
     public boolean getDescriptionTextBoxStatus() {
         boolean status = checkIfControlIsReadonly(txtDESCRIPTION_ID);
         return status;
@@ -230,6 +230,9 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     public void selectModerateLimitedDdValue() {
         selectDropDownValue(ddValueMODERATE_LIMITED);
     }
+    public void selectImpactType(String value){
+        selectDropDownNameAndValue(ddIMPACT, value, false);
+    }
 
     public void select_Impact_ClearDdValue() {
         selectDropDownValue(ddValueCLEAR);
@@ -243,6 +246,9 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         selectDropDownNameAndValue(ddURGENCY, ddValueHIGH, false);
     }
 
+    public void selectUrgency(String value) {
+        selectDropDownNameAndValue(ddURGENCY, value, false);
+    }
     public void selectMediumDdValue() {
         selectDropDownValue(ddValueMEDIUM);
     }

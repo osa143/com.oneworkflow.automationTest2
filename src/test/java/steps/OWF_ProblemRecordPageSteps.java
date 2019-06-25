@@ -587,4 +587,31 @@ public class OWF_ProblemRecordPageSteps {
     public void userClicksOnRemoveButton() {
         problemRecordPage.clickRemoveButton();
     }
+
+    @When("user selects root cause code as {string}")
+    public void userSelectsRootCauseCodeAs(String arg0) {
+        problemRecordPage.selectRootCauseCode(arg0);
+    }
+
+    @When("user selects closure code as {string}")
+    public void userSelectsClosureCodeAs(String arg0) {
+        problemRecordPage.selectRootCauseCode(arg0);
+    }
+
+    @When("user selects impact type as {string}")
+    public void userSelectsImpactTypeAs(String arg0) {
+        problemRecordPage.selectImpactType(arg0);
+    }
+
+    @And("user selects urgency as {string}")
+    public void userSelectsUrgencyAs(String arg0) {
+        problemRecordPage.selectUrgency(arg0);
+    }
+
+    @Then("priority should be {string}")
+    public void priorityShouldBe(String arg0) {
+        problemRecordPage.wait(1000);
+        System.out.println(problemRecordPage.getPriorityText());
+        Assert.assertEquals(problemRecordPage.getPriorityText(), arg0);
+    }
 }

@@ -231,11 +231,18 @@ public class BaseRecordPage extends BasePage {
     public void selectRootCauseCodeAs_Technical_HwError() {
         selectDropDownNameAndValue(ddROOT_CAUSE_CODE, "Technical:HW error", false);
     }
+    public void selectRootCauseCode(String value) {
+        selectDropDownNameAndValue(ddROOT_CAUSE_CODE, value, false);
+    }
     public void enterRootCauseDetails(String rootCauseDetails){
         driver.findElement(By.id(txtROOT_CAUSE_DETAILS_ID)).sendKeys(rootCauseDetails);
     }
     public void selectCloserCodeAsSolved(){
         selectDropDownNameAndValue(ddCLOSER_CODE, ddValueSOLVED, true);
+    }
+
+    public void selectCloserCode(String value){
+        selectDropDownNameAndValue(ddCLOSER_CODE, value, true);
     }
     public void selectClosedDdValue(){
         selectDropDownValue(ddValueCLOSED);

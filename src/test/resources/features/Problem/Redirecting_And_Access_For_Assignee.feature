@@ -30,11 +30,11 @@ Feature: Changing of assignee for problem ticket
     Then problem ticket status should be under investigation
     When user clicks on assignment under sections
     Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
-    And user selects assignee as "ain"
+    And user selects assignee as "Tohall_copy"
     And user clicks on save button on the problem form
     Then change should also be reflected in the timeline
        |timeline message|
-    |STATUS MODIFIED. Request has been reassigned from Assignee user "mina09" to  Assignee  user "ain".|
+    |STATUS MODIFIED. Request has been reassigned from Assignee user "mina09" to  Assignee  user "Tohall_copy".|
     When user clicks on assignment under sections
     Then user selects assigned profile dropdown as "Problem Management:Problem Manager"
     And user selects assignee as "frvi96_auto"

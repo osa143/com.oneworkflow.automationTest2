@@ -1,5 +1,6 @@
 package pageObjects;
 
+import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -35,6 +36,7 @@ public class BaseRecordPage extends BasePage {
 
     public static final String txtEND_DATE = "arid_WIN_0_777021161";
     public static final String txtREASON_ID = "arid_WIN_0_705001003";
+    public static final String txtASSIGNEE_ID = "arid_WIN_0_4";
 
     public static final String txtEXPECTED_ALARMS = "arid_WIN_0_705001002";
     public static final String txtIMPACT_DURATION_DAYS = "arid_WIN_0_990001006";
@@ -45,6 +47,7 @@ public class BaseRecordPage extends BasePage {
     public static final String txtACTUAL_FINISH_ID = "arid_WIN_0_777504605";
     public static final String txtDECISION_GO_NO_GO_ID = "arid_WIN_0_777504604";
     public static final String txtSERVICE_AND_CUSTOMER_IMPACT = "arid_WIN_0_730030000";
+    public static final String txtANALYSIS_TEAM_MEMBER1_ID = "arid_WIN_0_600001015";
 
 
 
@@ -69,6 +72,9 @@ public class BaseRecordPage extends BasePage {
     public static final String ddROOT_CAUSE_CODE = "Root Cause Code";
     public static final String txtROOT_CAUSE_DETAILS_ID = "arid_WIN_0_705002081";
     public static final String ddCLOSER_CODE = "Closure Code";
+    public static final String ddASSIGNED_PROFILE = "Assigned Profile";
+    public static final String ddASSIGNEE = "Assignee";
+
     public static final String ddValueSOLVED = "Solved";
     public static final String ddValueNO_IMPACT = "No Impact";
 
@@ -84,6 +90,7 @@ public class BaseRecordPage extends BasePage {
     public static final String txtSOLUTION_ID = "arid_WIN_0_777031390";
     public static final String txtSOLUTION_FOUND_DATE = "arid_WIN_0_600001042";
     public static final String btnCLONE_ID = "WIN_0_600002901";
+    public static final String btnREMOVE = "WIN_0_705002008";
 
 
     public static final String ddAUTO_TEXT = "Auto Text";
@@ -109,6 +116,19 @@ public class BaseRecordPage extends BasePage {
     private static final String btnOK_ON_FRAME_XPATH = "//a[contains(text(),'OK')]";
     private static final String btnSAVE_ATTACHMENT_ON_FRAME = "WIN_0_700500109";
 
+
+    public void enterAnalysisTeamMember1(String text){
+        driver.findElement(By.id(txtANALYSIS_TEAM_MEMBER1_ID)).sendKeys(text);
+    }
+
+    public void selectAssignedProfile(String value){
+        selectDropDownNameAndValue(ddASSIGNED_PROFILE, value, false);
+    }
+
+    public String getAssigneeText(){
+        return getTextById(txtASSIGNEE_ID);
+    }
+
     public void enterDescription_Attachment_OnFrame(String description){
         driver.findElement(By.id(txtDESCRIPTION_ON_FRAME_ID)).sendKeys(description);
     }
@@ -132,6 +152,22 @@ public class BaseRecordPage extends BasePage {
     public void selectSummaryDropDownAs(String value){
     selectDropDownNameAndValue(ddSUMMARY, value, false);
 
+    }
+    public String getAnalysisTeamMember1(){
+       return getTextById(txtANALYSIS_TEAM_MEMBER1_ID);
+    }
+
+    public void selectAssignee(String value){
+
+        selectDropDownNameAndValueForInvisibleElements(ddASSIGNEE, value, false);
+    }
+    public String verifyMessage(DataTable dataTable) {
+        List<List<String>> messages = dataTable.asLists(String.class);
+        for (int i = 1; i < messages.size(); i++) {
+            System.out.println("timeline message is: " + messages.get(i).get(0));
+            return messages.get(i).get(0);
+        }
+        return null;
     }
 
 
@@ -166,7 +202,9 @@ public class BaseRecordPage extends BasePage {
 
         }
     }
-
+   public void clickRemoveButton(){
+        driver.findElement(By.id(btnREMOVE)).click();
+   }
     public void selectAutoText_TechBridgeClosed(){
     selectDropDownNameAndValue(ddAUTO_TEXT, ddValueTECH_BRIDGE_CLOSED, false);
     }

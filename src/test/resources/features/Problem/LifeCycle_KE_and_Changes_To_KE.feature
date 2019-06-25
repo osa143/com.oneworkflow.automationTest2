@@ -21,9 +21,7 @@
       And user switches to frame 2
       And user selects type as "Additional Access" under interested parties
       And user clicks on radio button user
-      And user enters "probleminitiator" in login name plus field
-      And user enters "Test User" in first name plus field
-      And user enters "Automation Test" in last name plus field
+      And user enters "Tohall_copy" in login name plus field
       And user clicks on search under add interested party
       Then problem initiator should be listed without an email address
       When user highlights Problem initiator's row the one without email address

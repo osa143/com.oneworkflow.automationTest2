@@ -3,6 +3,7 @@ package steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.OWF_ProblemRecordPage;
@@ -540,5 +541,50 @@ public class OWF_ProblemRecordPageSteps {
     @When("user verifies for all entries in status dropdown")
     public void userVerifiesForAllEntriesInStatusDropdown() {
         //dummy step
+    }
+
+    @Then("user selects assigned profile dropdown as {string}")
+    public void userSelectsAssignedProfileDropdownAs(String arg0) {
+        problemRecordPage.selectAssignedProfile(arg0);
+    }
+
+    @And("user selects assignee as {string}")
+    public void userSelectsAssigneeAs(String arg0) {
+        problemRecordPage.selectAssignee(arg0);
+
+    }
+
+    @Then("change should also be reflected in the timeline")
+    public void changeShouldAlsoBeReflectedInTheTimeline(DataTable dataTable) {
+        problemRecordPage.clickTimelineButton();
+        boolean containsMessage = problemRecordPage.getTimelineStatus().contains(problemRecordPage.verifyMessage(dataTable));
+        Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
+
+    }
+
+    @And("user {string} is listed as the assigned profile")
+    public void userIsListedAsTheAssignedProfile(String arg0) {
+        Assert.assertEquals(problemRecordPage.getAssigneeText(), arg0);
+    }
+
+    @And("user clicks on save button under interested parties frame")
+    public void userClicksOnSaveButtonUnderInterestedPartiesFrame() {
+        problemRecordPage.clickOkButton();
+    }
+
+
+    @And("user enters {string} in the analysis team member one field")
+    public void userEntersInTheAnalysisTeamMemberOneField(String arg0) {
+        problemRecordPage.enterAnalysisTeamMember1(arg0);
+    }
+
+    @And("user validates {string} is listed under analysis team member one field")
+    public void userValidatesIsListedUnderAnalysisTeamMemberOneField(String arg0) {
+        Assert.assertEquals(problemRecordPage.getAnalysisTeamMember1(), arg0);
+    }
+
+    @And("user clicks on remove button")
+    public void userClicksOnRemoveButton() {
+        problemRecordPage.clickRemoveButton();
     }
 }

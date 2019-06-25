@@ -105,6 +105,8 @@ public class OWF_SIDConsolePage extends BasePage {
         }
     }
 
+
+
     public void enterLocationPlus(String locationPlus) {
         driver.findElement(By.id(txtbxLOCATION_PLUS)).sendKeys(locationPlus);
     }

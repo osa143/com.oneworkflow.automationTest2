@@ -548,17 +548,11 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.selectAssignedProfile(arg0);
     }
 
-    @And("user selects assignee as {string}")
-    public void userSelectsAssigneeAs(String arg0) {
-        problemRecordPage.selectAssignee(arg0);
-
-    }
-
-    @Then("change should also be reflected in the timeline")
-    public void changeShouldAlsoBeReflectedInTheTimeline(DataTable dataTable) {
+    @Then("change should also be reflected in the timeline {string}")
+    public void changeShouldAlsoBeReflectedInTheTimeline(String message) {
         problemRecordPage.clickTimelineButton();
-        boolean containsMessage = problemRecordPage.getTimelineStatus().contains(problemRecordPage.verifyMessage(dataTable));
-        Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
+        String timelineStatus = problemRecordPage.getTimelineStatus();
+        Assert.assertTrue(problemRecordPage.verifyTimelineUpdate(timelineStatus, message), "Ticket Status is not displayed on timeline");
 
     }
 
@@ -641,5 +635,10 @@ public class OWF_ProblemRecordPageSteps {
     @Then("user validates text availability within information field")
     public void userValidatesTextAvailabilityWithinInformationField() {
         Assert.assertNotNull(problemRecordPage.getInformationText_restrictedInformation());
+    }
+
+    @And("user selects assignee as {string} by using alphabet {string} key up {int} times")
+    public void userSelectsAssigneeAsByUsingAlphabetKeyUpTimes(String assignee, String alphabet, int keyupTimes) {
+        problemRecordPage.selectAssignee(assignee, alphabet, keyupTimes);
     }
 }

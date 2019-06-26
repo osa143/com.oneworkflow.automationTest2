@@ -30,26 +30,20 @@ Feature: Changing of assignee for problem ticket
     Then problem ticket status should be under investigation
     When user clicks on assignment under sections
     Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
-    And user selects assignee as "Tohall_copy"
+    And user selects assignee as "Tohall_copy" by using alphabet "u" key up 16 times
     And user clicks on save button on the problem form
-    Then change should also be reflected in the timeline
-       |timeline message|
-    |STATUS MODIFIED. Request has been reassigned from Assignee user "mina09" to  Assignee  user "Tohall_copy".|
+    Then change should also be reflected in the timeline "STATUS MODIFIED:mina09:Tohall_copy"
     When user clicks on assignment under sections
     Then user selects assigned profile dropdown as "Problem Management:Problem Manager"
-    And user selects assignee as "frvi96_auto"
+    And user selects assignee as "frvi96_auto" by using alphabet "g" key up 0 times
     And user clicks on save button on the problem form
-    And change should also be reflected in the timeline
-      |timeline message|
-      |Request has been reassigned from Assignee user "Tohall_copy" to  Assignee  user "frvi96_auto".|
+    And change should also be reflected in the timeline "STATUS MODIFIED:Tohall_copy:frvi96_auto"
     When user clicks on assignment under sections
     And user selects request type as "Access Networks:RAN Optimization"
     And user clicks on save button
     Then problem ticket status should be assigned
     And user "frvi96_auto" is listed as the assigned profile
-    And change should also be reflected in the timeline
-      |timeline message|
-      |Ticket Request Type has changed from "Access Networks : RAN NSN 2G/3G/4G" to "Access Networks :RAN Optimization".|
+    And change should also be reflected in the timeline "STATUS MODIFIED:RAN NSN 2G/3G/4G:RAN Optimization"
     And user gets ticket value
     Then user logsOut
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"
@@ -82,11 +76,9 @@ Feature: Changing of assignee for problem ticket
     And user validates "Thgi00" is listed under analysis team member one field
     When user clicks on assignment under sections
     Then user selects assigned profile dropdown as "Problem Management:Problem Manager"
-    And user selects assignee as "mina09_auto"
+    And user selects assignee as "mina09_auto" by using alphabet "n" key up 0 times
     And user clicks on save button on the problem form
-    And change should also be reflected in the timeline
-      |timeline message|
-  |Request has been reassigned from Assignee user "mina09" to  Assignee  user "Tohall_copy".|
+    And change should also be reflected in the timeline "STATUS MODIFIED:mina09:Tohall_copy"
     Then user logsOut
     And user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed

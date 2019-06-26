@@ -138,7 +138,7 @@ public class BasePage {
 
     }
 
-    public void selectDropDownNameAndValueForInvisibleElements(String dropdownName, String dropdownValue, boolean readonly) {
+    public void selectDropDownNameAndValueForInvisibleElements(String dropdownName, String dropdownValue, boolean readonly, String alphabet, int keyUpCount) {
         String dropdownXpath;
         if (readonly)
             dropdownXpath = "//img[@alt='ReadOnly menu for " + dropdownName + "']/..";
@@ -146,16 +146,23 @@ public class BasePage {
             dropdownXpath = "//img[@alt='Menu for " + dropdownName + "']/..";
 
         driver.findElement(By.xpath(dropdownXpath)).click();
+        driver.findElement(By.xpath(dropdownXpath)).sendKeys(Keys.DOWN);
+        driver.findElement(By.xpath(dropdownXpath)).sendKeys(alphabet);
+        for (int i = 0; i < keyUpCount; i++) {
+            driver.findElement(By.xpath(dropdownXpath)).sendKeys(Keys.UP);
+        }
         wait(1000);
 
         String arr[] = dropdownValue.split(":");
         for (int i = 0; i < arr.length; i++) {
             final String temp = arr[i];
 
-          WebElement e =  driver.findElements(By.className("MenuTableBody")).get(i).findElements(By.tagName("td")).stream().filter(element -> element.getAttribute("innerHTML").equals(temp)).findFirst().orElse(null);
-          wait(1000);
-          System.out.println("element name is: " + e.getAttribute("innerHTML"));
-          e.click();
+          WebElement e =  driver.findElements(By.className("MenuTableBody")).get(i).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null);
+
+            wait(1000);
+            System.out.println("element name is: " + e.getAttribute("innerHTML"));
+
+            e.click();
             wait(1000);
         }
 
@@ -183,6 +190,19 @@ public class BasePage {
             driver.findElements(By.className("MenuTableBody")).get(i).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
             wait(500);
         }
+    }
+
+    public boolean verifyTimelineUpdate(String actualMessage, String expectedMessage)
+    {
+        String[] containsText = expectedMessage.split(":");
+        for (int i = 0; i < containsText.length; i++)
+        {
+            if (!actualMessage.contains(containsText[i]))
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     public boolean checkIfControlIsReadonly(String Id) {

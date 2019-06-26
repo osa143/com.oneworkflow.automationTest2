@@ -174,9 +174,9 @@ public class BaseRecordPage extends BasePage {
        return getTextById(txtANALYSIS_TEAM_MEMBER1_ID);
     }
 
-    public void selectAssignee(String value){
+    public void selectAssignee(String value, String alphabet, int keyupTimes){
 
-        selectDropDownNameAndValueForInvisibleElements(ddASSIGNEE, value, false);
+        selectDropDownNameAndValueForInvisibleElements(ddASSIGNEE, value, false, alphabet, keyupTimes);
     }
     public String verifyMessage(DataTable dataTable) {
         List<List<String>> messages = dataTable.asLists(String.class);

@@ -1,4 +1,4 @@
-@E2E problem and known error
+@E2E_problem_and_known_error
 
   Feature: problem
 
@@ -24,13 +24,14 @@
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       And user clicks on search and selects open search forms and problem record
+      And user switches to window 2
       And user enters Problem Ticket
       And user clicks Search on ticket search
       When user clicks on Ack button
       Then problem ticket status should be under investigation
-      Then change should also be reflected in the timeline as ""
+      #Then change should also be reflected in the timeline as ""
       Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
-      And user selects assignee as "probleminitiator"
+      And user selects assignee as "Tohall_copy" by using alphabet "u" key up 16 times
       And user clicks on save button on the problem form
       Then change should also be reflected in the timeline
         |timeline message|

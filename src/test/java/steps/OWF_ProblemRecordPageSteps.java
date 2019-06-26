@@ -1,6 +1,7 @@
 package steps;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.But;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
@@ -316,7 +317,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user enters solution found date as current date")
     public void userEntersSolutionFoundDateAsCurrentDate() {
-
+     problemRecordPage.enterSolutionFoundDate();
     }
 
     @And("ticket status should be closed")
@@ -641,4 +642,33 @@ public class OWF_ProblemRecordPageSteps {
     public void userSelectsAssigneeAsByUsingAlphabetKeyUpTimes(String assignee, String alphabet, int keyupTimes) {
         problemRecordPage.selectAssignee(assignee, alphabet, keyupTimes);
     }
+
+    @And("user validates {string} tab is not visible")
+    public void userValidatesTabIsNotVisible(String arg0) {
+        Assert.assertFalse(problemRecordPage.isRestrictedTabDisplayed());
+
+    }
+
+    @But("user should be unable to change the ticket status")
+    public void userShouldBeUnableToChangeTheTicketStatus() {
+        Assert.assertTrue(problemRecordPage.isStatusDropDownReadOnly());
+
+    }
+
+    @But("ticket field should be grayed out")
+    public void ticketFieldShouldBeGrayedOut() {
+        Assert.assertTrue(problemRecordPage.isStatusDropDownReadOnly());
+        Assert.assertTrue(problemRecordPage.getDescriptionTextBoxStatus());
+        Assert.assertTrue(problemRecordPage.getRequestTypeDropDownStatus());
+    }
+//
+//    @And("change should also be reflected in the timeline as {string} after refresh")
+//    public void changeShouldAlsoBeReflectedInTheTimelineAsAfterRefresh(String message) {
+//        problemRecordPage.clickTimelineButton();
+//        problemRecordPage.wait(1500);
+//        problemRecordPage.clickRefresh_timeline();
+//        problemRecordPage.wait(1500);
+//        boolean containsMessage = problemRecordPage.getTimelineStatus().contains(message);
+//        Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
+//    }
 }

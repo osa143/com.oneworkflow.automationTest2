@@ -68,7 +68,7 @@
       And user enters RC found date as current date
       Then user clicks on save button on the problem form
       And user validates ticket status as "Investigation Complete"
-      And change should also be reflected in the timeline as ""
+      And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Under Investigation to Investigation Complete. "
       When user clicks on "Restricted Info" tab
       Then user validates text availability within information field
       And user enters "Even more Restricted info" in the information field

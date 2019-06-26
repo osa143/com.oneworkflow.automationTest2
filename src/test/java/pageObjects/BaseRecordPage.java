@@ -88,7 +88,7 @@ public class BaseRecordPage extends BasePage {
     public static final String chkbxUNKOWN = "WIN_0_rc0id600002010";
     public static final String chkbxINTERNAL = "WIN_0_rc0id600002009";
 
-    public static final String txtSOLUTION_ID = "arid_WIN_0_777031390";
+    public static final String txtSOLUTION_ID = "arid_WIN_0_705002080";
     public static final String txtSOLUTION_FOUND_DATE = "arid_WIN_0_600001042";
     public static final String btnCLONE_ID = "WIN_0_600002901";
     public static final String btnREMOVE = "WIN_0_705002008";
@@ -108,16 +108,29 @@ public class BaseRecordPage extends BasePage {
     public static final String btnOK_ID = "WIN_0_777777851";
 
     public static final String btnATTACHMENTS = "WIN_0_999000623";
-    private static final String txtTICKET_ID = "arid_WIN_0_730000060";
-    private static final String txtSEARCH_TICKET_ID = "arid_WIN_0_777777600";
-    private static final String ddSUMMARY = "Summary*";
-    private static final String txtDESCRIPTION_ON_FRAME_ID = "arid_WIN_0_700500102";
-    private static final String btnADD_ATTACHMENT_ON_FRAME = "//a[contains(@class,'Add btn btn3d TableBtn')]";
-    private static final String btnCHOOSE_FILE_XPATH = "//input[@id='PopupAttInput']";
-    private static final String btnOK_ON_FRAME_XPATH = "//a[contains(text(),'OK')]";
-    private static final String btnSAVE_ATTACHMENT_ON_FRAME = "WIN_0_700500109";
+    public  static final String txtTICKET_ID = "arid_WIN_0_730000060";
+    public static final String txtSEARCH_TICKET_ID = "arid_WIN_0_777777600";
+    public static final String ddSUMMARY = "Summary*";
+    public static final String txtDESCRIPTION_ON_FRAME_ID = "arid_WIN_0_700500102";
+    public static final String btnADD_ATTACHMENT_ON_FRAME = "//a[contains(@class,'Add btn btn3d TableBtn')]";
+    public static final String btnCHOOSE_FILE_XPATH = "//input[@id='PopupAttInput']";
+    public static final String btnOK_ON_FRAME_XPATH = "//a[contains(text(),'OK')]";
+    public static final String btnSAVE_ATTACHMENT_ON_FRAME = "WIN_0_700500109";
 
-    private static final String table_INTERESTED_PARTIES_ID = "T705002015";
+    public static final String table_INTERESTED_PARTIES_ID = "T705002015";
+    public static final String tab_RESTRICTED_INFO = "//a[contains(text(),'Restricted Info')]";
+    public static final String btnREFRESH_XPATH = "//div[@id='WIN_0_999000510']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
+
+    public void clickRefresh_timeline(){
+        driver.findElement(By.xpath(btnREFRESH_XPATH)).click();
+    }
+    public boolean isStatusDropDownReadOnly(){
+        return checkIfControlIsReadonly(ddSTATuS_ID);
+    }
+
+    public boolean isRestrictedTabDisplayed(){
+        return driver.findElement(By.xpath(tab_RESTRICTED_INFO)).isDisplayed();
+    }
 
     public boolean verifyUserListedUnderInterestedParty(){
         int size= getTableRows(By.id(table_INTERESTED_PARTIES_ID)).size();

@@ -107,12 +107,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.NoSuchElementException</a>
+							<a href="#" class="item-title _500">org.openqa.selenium.NoSuchFrameException</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.NoSuchElementException</h5>
+								<h5 class="mb-4">org.openqa.selenium.NoSuchFrameException</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="39" parent-id="1">
+<tr class="s-fail" test-id="47" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And user selects request type as "Access Networks:RAN Optimization" <br/><span class="text-muted text-sm">User is able to change assignment/assignee on problem ticket</span></td>
-	<td>0h 1m 0s+90msc</td>
+	<td class="_600">And user switches to frame 3 <br/><span class="text-muted text-sm">user permission testing</span></td>
+	<td>0h 0m 0s+17msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,15 +136,13 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@alt='ReadOnly menu for Request Type']/.."}
+		<textarea disabled class="code-block">org.openqa.selenium.NoSuchFrameException: no such frame
   (Session info: chrome=75.0.3770.100)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.240.151', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.239.57', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61686}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 58c48fd947a256c93eb4c80768cfa35b
-*** Element info: {Using=xpath, value=//img[@alt='ReadOnly menu for Request Type']/..}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50984}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a27ba77ff3f4e3ce4e31a87779b82081
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -155,14 +153,10 @@ Session ID: 58c48fd947a256c93eb4c80768cfa35b
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.BasePage.selectDropDownNameAndValue(BasePage.java:128)
-	at pageObjects.BaseRecordPage.selectRequestType(BaseRecordPage.java:352)
-	at steps.OWF_ChangeRecordPageSteps.userSelectsRequestTypeAs(OWF_ChangeRecordPageSteps.java:194)
-	at ✽.user selects request type as "Access Networks:RAN Optimization"(features/Problem/Redirecting_And_Access_For_Assignee.feature:42)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:872)
+	at pageObjects.BasePage.switchToFrameByIndex(BasePage.java:375)
+	at steps.OWF_AgentConsolePageSteps.userSwitchesToFrame(OWF_AgentConsolePageSteps.java:307)
+	at ✽.user switches to frame 3(features/Problem/Profile_Permissions_Part_4.feature:50)
 </textarea>
 	</td>
 </tr>
@@ -190,10 +184,10 @@ Session ID: 58c48fd947a256c93eb4c80768cfa35b
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="103" parent-id="1">
+<tr class="s-fail" test-id="62" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Hooks.Teardown(Scenario) <br/><span class="text-muted text-sm">User is able to change assignment/assignee on problem ticket</span></td>
-	<td>0h 0m 0s+668msc</td>
+	<td class="_600">Hooks.Teardown(Scenario) <br/><span class="text-muted text-sm">user permission testing</span></td>
+	<td>0h 0m 0s+328msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -202,7 +196,7 @@ Session ID: 58c48fd947a256c93eb4c80768cfa35b
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">cucumber.runtime.CucumberException: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow.automation\ExtentReports\Screenshots\Screenshots_20190625_204123
+		<textarea disabled class="code-block">cucumber.runtime.CucumberException: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow.automation\ExtentReports\Screenshots\Screenshots_20190626_155048
 	at extentreports.cucumber.adapter.ExtentCucumberAdapter.createReportFileOutputStream(ExtentCucumberAdapter.java:249)
 	at extentreports.cucumber.adapter.ExtentCucumberAdapter.writeBytesToURL(ExtentCucumberAdapter.java:237)
 	at extentreports.cucumber.adapter.ExtentCucumberAdapter.handleEmbed(ExtentCucumberAdapter.java:221)
@@ -255,7 +249,7 @@ Session ID: 58c48fd947a256c93eb4c80768cfa35b
 	at org.testng.TestNG.run(TestNG.java:1017)
 	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)
 	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
-Caused by: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow.automation\ExtentReports\Screenshots\Screenshots_20190625_204123
+Caused by: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow.automation\ExtentReports\Screenshots\Screenshots_20190626_155048
 	at extentreports.cucumber.adapter.URLOutputStream.ensureParentDirExists(URLOutputStream.java:60)
 	at extentreports.cucumber.adapter.URLOutputStream.<init>(URLOutputStream.java:40)
 	at extentreports.cucumber.adapter.URLOutputStream.<init>(URLOutputStream.java:30)
@@ -288,7 +282,7 @@ Caused by: java.io.IOException: Failed to create directory C:\Users\mahesh%20vad
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Jun 25, 2019 08:41:23 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jun 26, 2019 03:50:48 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

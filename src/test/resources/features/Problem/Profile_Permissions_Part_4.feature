@@ -47,6 +47,7 @@
       And user clicks on CI search button
       And CI search panel should open
       #And user switches to frame by id "VF999000183_1561559973180IF_0"
+      And user switches to frame
       Then user clicks on clear button
       And user enters "SE_CPE_FRECPE5" in name field
       And user clicks on search button on CI search window

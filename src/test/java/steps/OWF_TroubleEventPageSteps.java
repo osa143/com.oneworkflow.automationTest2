@@ -189,7 +189,7 @@ public class OWF_TroubleEventPageSteps {
     @And("user clicks on accept button")
     public void userClicksOnAcceptButton() {
         troubleEventPage.clickAccept_selectTargetRequest();
-
+        troubleEventPage.wait(10000);
     }
 
     @Then("user selects ticket under select target request")
@@ -214,4 +214,24 @@ public class OWF_TroubleEventPageSteps {
     }
 
 
+    @Then("user validates linked tickets availability")
+    public void userValidatesLinkedTicketsAvailability() {
+        Assert.assertTrue(troubleEventPage.validateLinkedItemsAvailability(), "Linked items are not available");
+    }
+
+    @Then("user should see child alarms present in alarms tab")
+    public void userShouldSeeChildAlarmsPresentInAlarmsTab() {
+        Assert.assertTrue(troubleEventPage.validateChildAlarmsAvailability(), "Child alarms are not available");
+    }
+
+    @And("user right clicks on primary CI and selects {string}")
+    public void userRightClicksOnPrimaryCIAndSelects(String arg0) {
+        troubleEventPage.selectPrimaryTicket();
+       troubleEventPage.setPreferences(arg0);
+    }
+
+    @And("user validates CI impact status is {string}")
+    public void userValidatesCIImpactStatusIs(String arg0) {
+       Assert.assertEquals(troubleEventPage.verifyImpactStatusAsInactive(), arg0, "CI Impact status is not inactive");
+    }
 }

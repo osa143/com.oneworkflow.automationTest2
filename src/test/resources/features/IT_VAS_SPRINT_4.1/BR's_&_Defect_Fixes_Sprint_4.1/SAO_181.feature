@@ -1,5 +1,6 @@
 @SAO_181 @Regression
   #Test case is not finding the column so is throwing exception
+  #OP next due date Column dosn't have any data. that is why its failing.
 Feature: Verification of OP target due date visibility
 
   Scenario: Verify OP Target Due date availability

@@ -87,6 +87,7 @@ public class BaseRecordPage extends BasePage {
     public static final String chkbxTELIA_CARRIER = "WIN_0_rc0id600002008";
     public static final String chkbxUNKOWN = "WIN_0_rc0id600002010";
     public static final String chkbxINTERNAL = "WIN_0_rc0id600002009";
+    public static final String chkbxFirstRow_Diagnosis = "//*[@id='T700009087']/tbody/tr[2]/td[1]/input";
 
     public static final String txtSOLUTION_ID = "arid_WIN_0_705002080";
     public static final String txtSOLUTION_FOUND_DATE = "arid_WIN_0_600001042";
@@ -108,7 +109,7 @@ public class BaseRecordPage extends BasePage {
     public static final String btnOK_ID = "WIN_0_777777851";
 
     public static final String btnATTACHMENTS = "WIN_0_999000623";
-    public  static final String txtTICKET_ID = "arid_WIN_0_730000060";
+    public static final String txtTICKET_ID = "arid_WIN_0_730000060";
     public static final String txtSEARCH_TICKET_ID = "arid_WIN_0_777777600";
     public static final String ddSUMMARY = "Summary*";
     public static final String txtDESCRIPTION_ON_FRAME_ID = "arid_WIN_0_700500102";
@@ -117,10 +118,43 @@ public class BaseRecordPage extends BasePage {
     public static final String btnOK_ON_FRAME_XPATH = "//a[contains(text(),'OK')]";
     public static final String btnSAVE_ATTACHMENT_ON_FRAME = "WIN_0_700500109";
 
+    public static final String table_DIAGNOSIS_ID = "";
+    public static final String table_ALARMS_ID = "T700508140";
+    public static final String table_LINKED_ITEMS_ID = "T777506000";
     public static final String table_INTERESTED_PARTIES_ID = "T705002015";
     public static final String tab_RESTRICTED_INFO = "//a[contains(text(),'Restricted Info')]";
     public static final String btnREFRESH_XPATH = "//div[@id='WIN_0_999000510']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
 
+    Actions action = new Actions(driver);
+
+    public String verifyImpactStatusAsInactive()
+    {
+      return getTableCellData(By.id(table_DIAGNOSIS_ID), "Impact Status", 1 );
+
+    }
+    public void selectPrimaryTicket()
+    {
+       WebElement element = driver.findElement(By.xpath(chkbxFirstRow_Diagnosis));
+       element.click();
+       action.contextClick(element).build().perform();
+
+    }
+    public boolean validateLinkedItemsAvailability()
+    {
+       int size = getTableRows(By.id(table_LINKED_ITEMS_ID)).size();
+       if(size > 4){
+           return true;
+       }
+       return false;
+    }
+    public boolean validateChildAlarmsAvailability()
+    {
+        int size = getTableRows(By.id(table_ALARMS_ID)).size();
+        if(size > 4){
+            return true;
+        }
+        return false;
+    }
     public void clickRefresh_timeline(){
         driver.findElement(By.xpath(btnREFRESH_XPATH)).click();
     }

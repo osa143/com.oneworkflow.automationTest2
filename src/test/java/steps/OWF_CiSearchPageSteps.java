@@ -76,6 +76,7 @@ public class OWF_CiSearchPageSteps {
     @When("user clicks on link button")
     public void userClicksOnLinkButton() {
         ciSearchPage.clickLink();
+        ciSearchPage.wait(1000);
     }
 
 

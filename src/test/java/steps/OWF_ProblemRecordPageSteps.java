@@ -135,11 +135,12 @@ public class OWF_ProblemRecordPageSteps {
     //TO_DO should be changed by using checkIfControlIsReadonly method from base class
     @When("user tries to change the status to {string}")
     public void userTriesToChangeTheStatusTo(String status) {
-        try {
-            problemRecordPage.selectStatus(status);
-        } catch (NullPointerException ex) {
-            System.out.println("user is unable to change the status to withdrawn");
-        }
+        Assert.assertTrue(problemRecordPage.isStatusDropDownReadOnly());
+//        try {
+//            problemRecordPage.selectStatus(status);
+//        } catch (NullPointerException ex) {
+//            System.out.println("user is unable to change the status to withdrawn");
+//        }
     }
 
     @And("user goes back to login page")
@@ -644,8 +645,8 @@ public class OWF_ProblemRecordPageSteps {
     }
 
     @And("user validates {string} tab is not visible")
-    public void userValidatesTabIsNotVisible(String arg0) {
-        Assert.assertFalse(problemRecordPage.isRestrictedTabDisplayed());
+    public void userValidatesTabIsNotVisible(String tabName) {
+        Assert.assertFalse(problemRecordPage.isRestrictedTabDisplayed(tabName));
 
     }
 

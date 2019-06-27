@@ -38,14 +38,10 @@ Feature: Changing of assignee for problem ticket
     And user selects assignee as "frvi96_auto" by using alphabet "g" key up 0 times
     And user clicks on save button on the problem form
     And change should also be reflected in the timeline "STATUS MODIFIED:Tohall_copy:frvi96_auto"
-    When user clicks on assignment under sections
-    And user selects request type as "Access Networks:RAN Optimization"
-    And user clicks on save button
-    Then problem ticket status should be assigned
     And user "frvi96_auto" is listed as the assigned profile
-    And change should also be reflected in the timeline "STATUS MODIFIED:RAN NSN 2G/3G/4G:RAN Optimization"
     And user gets ticket value
     Then user logsOut
+    And user goes back to login page
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record

@@ -128,8 +128,15 @@ public class BaseRecordPage extends BasePage {
         return checkIfControlIsReadonly(ddSTATuS_ID);
     }
 
-    public boolean isRestrictedTabDisplayed(){
-        return driver.findElement(By.xpath(tab_RESTRICTED_INFO)).isDisplayed();
+    public boolean isRestrictedTabDisplayed(String tabName){
+        try {
+            selectTab(tabName);
+        }
+        catch (NullPointerException ex)
+        {
+            return false;
+        }
+        return true;
     }
 
     public boolean verifyUserListedUnderInterestedParty(){

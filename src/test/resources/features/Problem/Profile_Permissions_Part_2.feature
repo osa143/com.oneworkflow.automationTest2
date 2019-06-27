@@ -18,7 +18,7 @@
       And user selects urgency as low
       And user clicks on save button on the problem form
       Then ticket should be created and status should be assigned
-      #And user validates "Restricted Info" tab is not visible
+      And user validates "Restricted Info" tab is not visible
       Then user tries to change the status to "Under investigation"
       But user should be unable to change the ticket status
       When user gets ticket value
@@ -43,7 +43,7 @@
       And user switches to window 3
       Then user enters Problem Ticket
       And user clicks Search on ticket search
-      #And user tries to change the status to "Investigation Complete"
+      And user tries to change the status to "Investigation Complete"
       But ticket field should be grayed out
-      #And user validates "Restricted Info" tab is not visible
+      And user validates "Restricted Info" tab is not visible
 

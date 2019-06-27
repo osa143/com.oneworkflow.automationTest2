@@ -1,3 +1,4 @@
+#passed
 @SAO_499_Trouble_Ticket_Title
 Feature: data searching using wildcards
   Scenario: user is able to search for data using wildcards

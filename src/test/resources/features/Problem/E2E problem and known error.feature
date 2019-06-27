@@ -33,9 +33,7 @@
       Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
       And user selects assignee as "Tohall_copy" by using alphabet "u" key up 16 times
       And user clicks on save button on the problem form
-      Then change should also be reflected in the timeline
-        |timeline message|
-        |STATUS MODIFIED. Request has been reassigned from Assignee user "mina09" to  Assignee  user "probleminitiator".|
+      Then change should also be reflected in the timeline "Request has been reassigned from Assignee user :mina09:probleminitiator"
       Then user logsOut
       And user goes back to login page
       When user logs in with valid username "Tohall_copy" and password as "Test@1234"
@@ -45,7 +43,7 @@
       And user enters Problem Ticket
       And user clicks Search on ticket search
       When user changes status to "Investigation Complete"
-      Then mandatory fields should be indicated in bold
+      #Then mandatory fields should be indicated in bold
       When user selects root cause code as Technical:HW error under route cause
       And user enters route cause details as "Bad management"
       And user enters RC found date as current date
@@ -72,7 +70,7 @@
       Then known error ticket status should be "Draft"
       And user switches to window 3
       When user changes status to "Closed"
-      Then mandatory fields should be indicated in bold
+     # Then mandatory fields should be indicated in bold
       When user enters decision go no go as current date
       And user selects solved under closure code
       And user enters solution as "A change in processes"
@@ -93,7 +91,7 @@
       Then user validates ticket status as "Published"
       When user changes status to "Closed"
       And user clicks on save button
-      And mandatory fields should be indicated in bold
+     #  And mandatory fields should be indicated in bold
       When user selects closure code as "Full impact"
       And user clicks on save button
       Then user validates ticket status as "Closed"

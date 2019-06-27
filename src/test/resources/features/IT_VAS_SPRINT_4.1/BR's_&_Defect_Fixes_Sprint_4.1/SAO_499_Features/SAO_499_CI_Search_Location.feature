@@ -5,9 +5,10 @@ Feature: data searching using wildcards
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user enters ticket id as "OP-000000898440" in the agent console search box and searches for ticket
-    And user double clicks on ticket to open
-    Then user switches to window 1
+    And user selects search menu as "Open Search Form:Trouble Event"
+    And user switches to window 1
+    And user enters ticket id as "OP-000000898440"
+    And user clicks Search on ticket search
     And user validates ticket status as "Assigned"
     When user clicks on Diagnosis tab
     And user clicks on CI search button

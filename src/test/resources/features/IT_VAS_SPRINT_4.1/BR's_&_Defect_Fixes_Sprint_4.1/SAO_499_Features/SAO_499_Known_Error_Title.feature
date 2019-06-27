@@ -1,4 +1,5 @@
-@SAO_499_Trouble_Ticket_Source
+#passed
+@SAO_499_known-Error_Title
 Feature: data searching using wildcards
   Scenario: user is able to search for data using wildcards
 

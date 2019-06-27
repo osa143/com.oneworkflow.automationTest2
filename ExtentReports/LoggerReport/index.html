@@ -50,6 +50,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -94,11 +102,11 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
+										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
-										
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="skip"><i class="fa fa-dot-circle-o text-blue"></i>Skip</span></a>
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 									</div>
@@ -111,7 +119,7 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Profile_Permissions_Part_2</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@SAO_499_CI_Search_Location</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -128,38 +136,38 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="pass">
-											<div class="st pass test l0" 
-												tags="@Profile_Permissions_Part_2"
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@SAO_499_CI_Search_Location"
 												devices="">
-												<span class="tt">06.26.2019 21:28:22</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">[Validation of permissions] started</span>
+												<span class="tt">06.27.2019 10:31:56</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[data searching using wildcards] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Profile_Permissions_Part_2</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SAO_499_CI_Search_Location</span>
 												</span>
 												
 											</div>
-											<div class="st pass test l1" 
-												tags="@Profile_Permissions_Part_2"
+											<div class="st fail test l1" 
+												tags="@SAO_499_CI_Search_Location"
 												devices="">
-												<span class="tt">06.26.2019 21:28:22</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">|---[user permission testing] started</span>
+												<span class="tt">06.27.2019 10:31:56</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[user is able to search for data using wildcards] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Profile_Permissions_Part_2</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SAO_499_CI_Search_Location</span>
 												</span>
 												
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:28:22</span>&nbsp;
+												<span class="tt">06.27.2019 10:31:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">06.26.2019 21:28:27</span>&nbsp;
+													<span class="tt">06.27.2019 10:32:01</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
 													
@@ -169,14 +177,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:28:27</span>&nbsp;
+												<span class="tt">06.27.2019 10:32:01</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "frvi96_auto" and password as "Test@1234"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Change_Automation_1" and password as "Test@1234"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">06.26.2019 21:28:34</span>&nbsp;
+													<span class="tt">06.27.2019 10:32:07</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "frvi96_auto" and password as "Test@1234"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Change_Automation_1" and password as "Test@1234"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -184,12 +192,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:28:34</span>&nbsp;
+												<span class="tt">06.27.2019 10:32:07</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
 												
 												<div class="st pass">
-													<span class="tt">06.26.2019 21:28:34</span>&nbsp;
+													<span class="tt">06.27.2019 10:32:07</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
 													
@@ -199,14 +207,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:28:34</span>&nbsp;
+												<span class="tt">06.27.2019 10:32:07</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create problem record] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects search menu as "Open Search Form:Trouble Event"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">06.26.2019 21:28:49</span>&nbsp;
+													<span class="tt">06.27.2019 10:32:20</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create problem record]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects search menu as "Open Search Form:Trouble Event"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -214,12 +222,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:28:49</span>&nbsp;
+												<span class="tt">06.27.2019 10:32:20</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
 												
 												<div class="st pass">
-													<span class="tt">06.26.2019 21:28:49</span>&nbsp;
+													<span class="tt">06.27.2019 10:32:21</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
 													
@@ -229,601 +237,1282 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:28:49</span>&nbsp;
+												<span class="tt">06.27.2019 10:32:21</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem record form should appear in new tab] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters ticket id as "OP-000000898440"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">06.26.2019 21:28:49</span>&nbsp;
+													<span class="tt">06.27.2019 10:32:27</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem record form should appear in new tab]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters ticket id as "OP-000000898440"]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st fail test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:28:49</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on sweden checkbox under affected BU's] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:28:50</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on sweden checkbox under affected BU's]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:28:50</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:28:56</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:28:56</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple error messages should appear with red boarder around fields] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:28:56</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple error messages should appear with red boarder around fields]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:28:56</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters "Proactive investigation of: frvi96_auto" in Title field] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:28:56</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters "Proactive investigation of: frvi96_auto" in Title field]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:28:56</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Access Networks:RAN NSN 2G/3G/4G" on Problem record page] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:01</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Access Networks:RAN NSN 2G/3G/4G" on Problem record page]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:29:01</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "UAT Profile Permissions test 2"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:01</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "UAT Profile Permissions test 2"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:29:01</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects impact type as moderate:limited] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:02</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects impact type as moderate:limited]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:29:02</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects urgency as low] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:05</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects urgency as low]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:29:05</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:10</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:29:10</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then ticket should be created and status should be assigned] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:17</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then ticket should be created and status should be assigned]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:29:17</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Restricted Info" tab is not visible] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:18</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Restricted Info" tab is not visible]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:29:18</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user tries to change the status to "Under investigation"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:18</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user tries to change the status to "Under investigation"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:29:18</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[But user should be unable to change the ticket status] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:18</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[But user should be unable to change the ticket status]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:29:18</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user gets ticket value] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:18</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user gets ticket value]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:29:18</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:26</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:29:26</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user goes back to login page] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:32</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user goes back to login page]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:29:32</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:37</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:29:37</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on search and selects open search forms and problem record] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:53</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on search and selects open search forms and problem record]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:29:53</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 2] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:53</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 2]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:29:53</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters Problem Ticket] started</span>
-												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:54</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters Problem Ticket]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">06.26.2019 21:29:54</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">06.27.2019 10:32:27</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:29:59</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st fail">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search]</span>
 													
-													<span class="td"></span>
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=75.0.3770.100)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.240.85', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58995}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ce9599861ed68ccf90f0da60457ee705
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.OWF_ProblemRecordPage.clickSearchButton(OWF_ProblemRecordPage.java:169)
+	at steps.OWF_ProblemRecordPageSteps.userClicksSearchOnTicketSearch(OWF_ProblemRecordPageSteps.java:118)
+	at ✽.user clicks Search on ticket search(features/IT_VAS_SPRINT_4.1/BR's_&_Defect_Fixes_Sprint_4.1/SAO_499_Features/SAO_499_CI_Search_Location.feature:11)
+</textarea></span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:29:59</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to "Under Investigation"] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates ticket status as "Assigned"] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:30:05</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to "Under Investigation"]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates ticket status as "Assigned"]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:30:05</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on Diagnosis tab] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:30:10</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on Diagnosis tab]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:30:10</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem ticket status should be under investigation] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on CI search button] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:30:12</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem ticket status should be under investigation]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on CI search button]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:30:12</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Restricted Info" tab] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to frame] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:30:14</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Restricted Info" tab]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to frame]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:30:14</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "Restricted info" in the information field] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:30:14</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "Restricted info" in the information field]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:30:14</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "%_Site_BIA" in location field] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:30:19</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "%_Site_BIA" in location field]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:30:19</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then change should also be reflected in the timeline as ""] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:30:24</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then change should also be reflected in the timeline as ""]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:30:24</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logsOut] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:30:32</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logsOut]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:30:32</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user goes back to login page] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:30:37</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user goes back to login page]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:30:37</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid username "Tohall_copy" and password as "Test@1234"] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "%_Site_TALLI" in location field] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:30:43</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid username "Tohall_copy" and password as "Test@1234"]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "%_Site_TALLI" in location field]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:30:43</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on search and selects open search forms and problem record] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:30:58</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on search and selects open search forms and problem record]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:30:58</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 3] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:30:58</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 3]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:30:58</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters Problem Ticket] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:30:59</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters Problem Ticket]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:30:59</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "%_Site_alaköyliö" in location field] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:31:04</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "%_Site_alaköyliö" in location field]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:31:04</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user tries to change the status to "Investigation Complete"] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:31:07</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user tries to change the status to "Investigation Complete"]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:31:07</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[But ticket field should be grayed out] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:31:08</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[But ticket field should be grayed out]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:31:08</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Restricted Info" tab is not visible] started</span>
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:31:08</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Restricted Info" tab is not visible]</span>
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">06.26.2019 21:31:08</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "%_Site_BSK" in location field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "%_Site_BSK" in location field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "%_Site_S1530" in location field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "%_Site_S1530" in location field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "%_Site_40A" in location field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "%_Site_40A" in location field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "SE_%_a" in location field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "SE_%_a" in location field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "EE_%_a" in location field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "EE_%_a" in location field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "FI_%_a" in location field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "FI_%_a" in location field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "NO_%_a" in location field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "NO_%_a" in location field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "DK_%_a" in location field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "DK_%_a" in location field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "LT_%_a" in location field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "LT_%_a" in location field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "SE_Site_%" in location field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "SE_Site_%" in location field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "EE_Site_%" in location field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "EE_Site_%" in location field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "FI_Site_%" in location field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "FI_Site_%" in location field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "NO_Site_%" in location field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "NO_Site_%" in location field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "DK_Site_%" in location field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "DK_Site_%" in location field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on clear button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "LT_Site_%" in location field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "LT_Site_%" in location field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search button on CI search window]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates CI availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user closes warning message and clicks on close button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user closes warning message and clicks on close button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
 												
-												<div class="st pass">
-													<span class="tt">06.26.2019 21:31:13</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st fail">
+													<span class="tt">06.27.2019 10:33:27</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
 													
-													<span class="td"></span>
+													<span class="td">threw an exception<br><textarea disabled class="code-block">cucumber.runtime.CucumberException: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow.automation\ExtentReports\Screenshots\Screenshots_20190627_103156
+	at extentreports.cucumber.adapter.ExtentCucumberAdapter.createReportFileOutputStream(ExtentCucumberAdapter.java:249)
+	at extentreports.cucumber.adapter.ExtentCucumberAdapter.writeBytesToURL(ExtentCucumberAdapter.java:237)
+	at extentreports.cucumber.adapter.ExtentCucumberAdapter.handleEmbed(ExtentCucumberAdapter.java:221)
+	at extentreports.cucumber.adapter.ExtentCucumberAdapter.access$400(ExtentCucumberAdapter.java:61)
+	at extentreports.cucumber.adapter.ExtentCucumberAdapter$6.receive(ExtentCucumberAdapter.java:121)
+	at extentreports.cucumber.adapter.ExtentCucumberAdapter$6.receive(ExtentCucumberAdapter.java:118)
+	at cucumber.runner.AbstractEventPublisher.send(AbstractEventPublisher.java:45)
+	at cucumber.runner.AbstractEventBus.send(AbstractEventBus.java:9)
+	at cucumber.runner.TimeServiceEventBus.send(TimeServiceEventBus.java:3)
+	at cucumber.runner.ThreadLocalRunnerSupplier$SynchronizedEventBus.send(ThreadLocalRunnerSupplier.java:90)
+	at cucumber.runner.ThreadLocalRunnerSupplier$LocalEventBus.send(ThreadLocalRunnerSupplier.java:63)
+	at cucumber.runner.Scenario.embed(Scenario.java:58)
+	at cucumberHooks.Hooks.Teardown(Hooks.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:63)
+	at cucumber.runner.TestStep.run(TestStep.java:49)
+	at cucumber.runner.TestCase.run(TestCase.java:48)
+	at cucumber.runner.Runner.runPickle(Runner.java:40)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:68)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+Caused by: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow.automation\ExtentReports\Screenshots\Screenshots_20190627_103156
+	at extentreports.cucumber.adapter.URLOutputStream.ensureParentDirExists(URLOutputStream.java:60)
+	at extentreports.cucumber.adapter.URLOutputStream.<init>(URLOutputStream.java:40)
+	at extentreports.cucumber.adapter.URLOutputStream.<init>(URLOutputStream.java:30)
+	at extentreports.cucumber.adapter.ExtentCucumberAdapter.createReportFileOutputStream(ExtentCucumberAdapter.java:247)
+	... 51 more
+</textarea></span>
 												</div>
 											</div>
 											</div>

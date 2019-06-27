@@ -1,5 +1,7 @@
+#Passing
 @Profile_Permissions_Part_1
-  Feature: Validation of permissions
+
+  Feature: Validation of permissions part 1
     Scenario: user permission testing
 
       Given user is on the OneWorkflow login page

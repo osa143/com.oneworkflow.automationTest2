@@ -7,6 +7,7 @@ Feature: data searching using wildcards
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects SID console from agent console
     Then SID console page should be opened
+    And user switches to window 1
     When user enters "%_RNC_SE" in the name+ field
     And user clicks on search
     Then user should see related country CI information

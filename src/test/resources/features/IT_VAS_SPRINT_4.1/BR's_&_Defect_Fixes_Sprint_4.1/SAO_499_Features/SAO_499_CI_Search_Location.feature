@@ -1,4 +1,5 @@
-@SAO_499_CI_Search_Location
+#Need to speak to someone about this - same data works in SID console, but not in CI search box
+@SAO_499_Location
 Feature: data searching using wildcards
   Scenario: user is able to search for data using wildcards
 
@@ -8,9 +9,8 @@ Feature: data searching using wildcards
     And user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 1
     And user enters ticket id as "OP-000000898440"
-    And user clicks Search on ticket search
     And user validates ticket status as "Assigned"
-    When user clicks on Diagnosis tab
+    When user clicks on "Diagnosis" tab
     And user clicks on CI search button
     Then user switches to frame
     When user clicks on clear button

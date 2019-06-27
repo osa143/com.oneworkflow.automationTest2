@@ -1,4 +1,5 @@
 @Close_Ticket
+  #Test isnt able to find the error messages
 Feature: User is able to close and clone a problem ticket
 
   Scenario: User logs into One workflow, creates a problem ticket, closes it then clones it

@@ -1,7 +1,7 @@
+#AccessNetworks:RAN Optimization not able to be found
 @Withdraw_Ticket_After_Ack
 
 Feature:withdraw problem Ticket
-
 
   Scenario: withdraw ticket after Acknowledge
 
@@ -9,10 +9,11 @@ Feature:withdraw problem Ticket
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create problem record
+    And user switches to window 1
     Then problem record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
     When user enters "proactive investigation of Tohall_Copy" in Title field
-    And user selects request type as "Access Networks:RAN Optimization"
+    And user selects request type as "Access Networks:RAN Optimization" in problem form
     And user enters description as "UAT Test1 withdraw after Ack"
     And user selects impact type as moderate:limited
     And user selects urgency as low

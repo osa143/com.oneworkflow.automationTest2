@@ -47,9 +47,8 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
     And user selects request type as "Customer" on trouble event page
     And user clicks on save button
     And change should also be reflected in the timeline as ""
-    And user clicks on Diagnosis tab
-    And user clicks on CI search button
     Then user waits for implementation to finish
+    #After implementation, new op should be created and other OP ticket should show up in container of original OP ticket
     And verify a new OP ticket has been created
     Then verify new OP has other OP in container
 

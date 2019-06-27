@@ -1,6 +1,6 @@
+#Passing
 @Initiator_Create_Ticket_Runner
 Feature: initiator create ticket and withdraw
-
 
   Scenario: user should be able to create a problem ticket and withdraw it
 
@@ -8,8 +8,8 @@ Feature: initiator create ticket and withdraw
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create problem record
-    And user switches to window 1
     Then problem record form should appear in new tab
+    And user switches to window 1
     When user clicks on save button on the problem form
     Then an error message should appear: "Please select at least one country of impact for this problem. (ARERR 10000)"
     When user clicks on sweden checkbox under affected BU's

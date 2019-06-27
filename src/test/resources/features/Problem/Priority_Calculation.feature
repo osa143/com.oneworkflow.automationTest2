@@ -1,7 +1,7 @@
+#Passing
 @Priority_Calculation
 
   Feature: problem
-
     Scenario: priority calculation
 
       Given user is on the OneWorkflow login page

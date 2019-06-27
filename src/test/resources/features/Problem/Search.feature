@@ -1,5 +1,4 @@
 @search
-
   Feature: problem record Search
   Scenario: user is able to search for tickets using problem ticket status
 
@@ -17,6 +16,7 @@
     And user switches to window 0
     When user selects search menu as "Open Search Form:Problem Record"
     And user switches to window 1
+    #Unable to find blank search form id
     Then user should see blank problem search form
     When user verifies for all entries in status dropdown
     Then multiple statuses "New:Assigned:Under Investigation:Pending:Investigation Complete:Closed:Withdrawn:(clear)" should be available in "Status*" dropdown

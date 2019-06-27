@@ -1,4 +1,6 @@
+#Passed
 @Profile_Permissions_Part_2
+
   Feature: Validation of permissions
     Scenario: user permission testing
 

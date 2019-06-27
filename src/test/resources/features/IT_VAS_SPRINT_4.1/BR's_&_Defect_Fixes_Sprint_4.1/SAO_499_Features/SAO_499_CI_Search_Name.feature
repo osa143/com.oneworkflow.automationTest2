@@ -1,3 +1,4 @@
+#Need to run due to CI search box not opening
 @SAO_499_CI_Search_Name
 Feature: data searching using wildcards
   Scenario: user is able to search for data using wildcards

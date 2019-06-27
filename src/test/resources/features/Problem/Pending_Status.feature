@@ -1,3 +1,4 @@
+#need to check on the delay, 4 mins doesnt work - 30 mins is needed
 @Pending_Status
 Feature: User is able to change status to pending
 

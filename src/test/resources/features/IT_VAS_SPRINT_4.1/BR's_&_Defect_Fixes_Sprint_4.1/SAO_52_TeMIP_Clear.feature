@@ -1,5 +1,5 @@
 @SAO_52_TeMIP_Clear
-#UAT execution
+#UAT execution due to B2B needed
 Feature: Closing of incident ticket that has linked WO
 
   Scenario: User is able to close an incident after closing a WO linked to it

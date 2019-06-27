@@ -1,5 +1,5 @@
-
 @SAO_181 @Regression
+  #Test case is not finding the column so is throwing exception
 Feature: Verification of OP target due date visibility
 
   Scenario: Verify OP Target Due date availability

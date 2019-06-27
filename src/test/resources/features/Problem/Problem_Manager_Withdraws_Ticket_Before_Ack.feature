@@ -1,17 +1,17 @@
 @Pm_Withdraw_Ticket_Before_Ack
+
 Feature: problem record
-
-
   Scenario: problem manager withdraws ticket before Ack
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create problem record
+    And user switches to window 1
     Then problem record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
     When user enters "proactive investigation of Tohall_Copy" in Title field
-    And user selects request type as "Access Networks:RAN Optimization"
+    And user selects request type as "Access Networks:RAN Optimization" in problem form
     And user enters description as "UAT Test1 withdraw"
     And user selects impact type as moderate:limited
     And user selects urgency as low
@@ -32,7 +32,7 @@ Feature: problem record
     Then an error message "Required field (without a default) not specified : Withdrawn Reason (ARERR 9424)	" should appear with red boarder around withdrawn reason
     When user selects withdrawn reason as false alarm and clicks save
     And user should see confirmation message and clicks on yes button
-    Then  problem ticket should be withdrawn
+    Then problem ticket should be withdrawn
 
 
 

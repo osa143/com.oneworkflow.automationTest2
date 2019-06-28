@@ -662,6 +662,12 @@ public class OWF_ProblemRecordPageSteps {
         Assert.assertTrue(problemRecordPage.getDescriptionTextBoxStatus());
         Assert.assertTrue(problemRecordPage.getRequestTypeDropDownStatus());
     }
+    @Then("user should see blank work order form")
+    public void userShouldSeeBlankWorkOrderForm() {
+        problemRecordPage.verifyTicketIsBlank();
+
+    }
+
 //
 //    @And("change should also be reflected in the timeline as {string} after refresh")
 //    public void changeShouldAlsoBeReflectedInTheTimelineAsAfterRefresh(String message) {

@@ -4,14 +4,13 @@ Feature: data searching using wildcards
   Scenario: user is able to search for data using wildcards
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+    When user logs in with valid username "Change_Automation_2" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 1
-    And user enters ticket id as "OP-000000898440"
-    And user clicks Search on ticket search
+    And user enters ticket id as "OP-000001095803"
     And user validates ticket status as "Assigned"
-    When user clicks on Diagnosis tab
+    When user clicks on "Diagnosis" tab
     And user clicks on CI search button
     Then user switches to frame
     When user clicks on clear button

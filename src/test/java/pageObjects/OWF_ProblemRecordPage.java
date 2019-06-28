@@ -29,7 +29,6 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txtWORK_AROUND = "arid_WIN_0_600001040";
 
     private static final String ddREQUEST_TYPE_ID = "arid_WIN_0_777031002";
-    private static final String ddIMPACT = "Impact";
     private static final String ddURGENCY = "Urgency";
     private static final String ddWITHDRAWN_REASON = "Withdrawn Reason";
     private static final String ddPRIORITY_ID = "Priority";
@@ -62,7 +61,8 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String btnEXTERNAL_DELETE_ID = "WIN_0_600002906";
     private static final String btnSAVE_ID = "WIN_0_700025244";
     private static final String btnSEARCH_ID = "WIN_0_1002";
-    private static final String errorTABLE_XPATH = "//*[@id='pbartable']";
+    private static final String errorTABLE_XPATH = "//*[@id='PromptBar']";
+    private static final String errorTABLE_ID = "pbartable";
     private static final String btnYES_ON_FRAME_ID = "WIN_0_700027904";
     private static final String btnACK_ID = "WIN_0_777504152";
     private static final String timeline_TABLE_ID = "T999000510";
@@ -303,26 +303,40 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         driver.findElement(By.id(chkbxSWEDEN)).click();
     }
 
-
-    public boolean validateErrorMessage(String message) {
-        List<WebElement> errorElements = driver.findElement(By.xpath(errorTABLE_XPATH)).findElements(By.tagName("tr"));
-        if (errorElements.size() > 0) {
-
-            WebElement e = errorElements.stream().filter(x -> x.getText().trim().contains(message)).findFirst().orElse(null);
-            if (e != null) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public boolean validateMultipleErrorMessages(int errorMessagesCount) {
-        List<WebElement> errorElements = driver.findElement(By.xpath(errorTABLE_XPATH)).findElements(By.tagName("tr"));
-        if (errorElements.size() > errorMessagesCount) {
+    public boolean validateErrorMessage(){
+        int size=getTableRows(By.id(errorTABLE_ID)).size();
+        if(size>0){
             return true;
         }
         return false;
     }
+    public boolean validateMultipleErrorMessages(){
+        int size=getTableRows(By.id(errorTABLE_ID)).size();
+        if(size>0){
+            return true;
+        }
+        return false;
+    }
+
+//    public boolean validateErrorMessage(String message) {
+//        List<WebElement> errorElements = driver.findElement(By.xpath(errorTABLE_XPATH)).findElements(By.tagName("tr"));
+//        if (errorElements.size() > 0) {
+//
+//            WebElement e = errorElements.stream().filter(x -> x.getText().trim().contains(message)).findFirst().orElse(null);
+//            if (e != null) {
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
+//
+//    public boolean validateMultipleErrorMessages(int errorMessagesCount) {
+//        List<WebElement> errorElements = driver.findElement(By.xpath(errorTABLE_XPATH)).findElements(By.tagName("tr"));
+//        if (errorElements.size() > errorMessagesCount) {
+//            return true;
+//        }
+//        return false;
+//    }
 
     public void acceptAlert() {
         driver.switchTo().alert().accept();

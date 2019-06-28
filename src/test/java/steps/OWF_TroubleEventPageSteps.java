@@ -39,7 +39,8 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("trouble ticket should appear related to TeMIP")
     public void troubleTicketShouldAppearRelatedToTeMIP() {
-        parentTicket = troubleEventPage.getTicket();
+        troubleEventPage.wait(2000);
+        //parentTicket = troubleEventPage.getTicket();
         Assert.assertEquals(troubleEventPage.getSourceText(), "HPE Common Temip", "Ticket is not related to TeMIP");
 
 
@@ -233,5 +234,10 @@ public class OWF_TroubleEventPageSteps {
     @And("user validates CI impact status is {string}")
     public void userValidatesCIImpactStatusIs(String arg0) {
        Assert.assertEquals(troubleEventPage.verifyImpactStatusAsInactive(), arg0, "CI Impact status is not inactive");
+    }
+
+    @Then("user should see alarm status as {string}")
+    public void userShouldSeeAlarmStatusAs(String arg0) {
+     Assert.assertEquals(troubleEventPage.verifyAlarmStatus(), arg0, "Alarm status is not closed");
     }
 }

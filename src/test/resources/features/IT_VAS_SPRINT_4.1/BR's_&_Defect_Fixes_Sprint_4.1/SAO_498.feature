@@ -1,7 +1,7 @@
 #Passed
 @SAO_498
 
-  #To execute this test 6 temip tickets should be present
+  #To execute this test 5 temip tickets should be present
   Feature: Show child alarms on parent ticket alarms tab
 
     Scenario: user is able to see child alarms present on parent ticket alarms tab

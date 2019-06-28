@@ -62,6 +62,7 @@ public class BaseRecordPage extends BasePage {
 
     public static final String ddREQUEST_TYPE = "Request Type";
     public static final String ddTEMPLATE = "Template";
+    public static final String ddIMPACT = "Impact";
     public static final String ddESTIMATED_IMPACT = "Estimated Impact";
     public static final String ddACTUAL_IMPACT = "Actual Impact";
     public static final String ddCOMPLETED_CODE = "Completed Code";
@@ -79,6 +80,7 @@ public class BaseRecordPage extends BasePage {
     public static final String ddValueSOLVED = "Solved";
     public static final String ddValueNO_IMPACT = "No Impact";
 
+    public static final String chkbxSWEDEN = "WIN_0_rc0id600002001";
     public static final String chkbxFINLAND = "WIN_0_rc0id600002002";
     public static final String chkbxDENMARK = "WIN_0_rc0id600002003";
     public static final String chkbxNORWAY = "WIN_0_rc0id600002004";
@@ -94,7 +96,8 @@ public class BaseRecordPage extends BasePage {
     public static final String btnCLONE_ID = "WIN_0_600002901";
     public static final String btnREMOVE = "WIN_0_705002008";
 
-
+    public static final String div_AFFECTED_BU_ID = "WIN_0_600002504";
+    public static final String chkbx_AFFECTED_BU_XPATH= "//input[type='checkbox']";
     public static final String ddAUTO_TEXT = "Auto Text";
     public static final String ddValueTECH_BRIDGE_CLOSED = "Tech Bridge Closed";
     public static final String ddTEXT_TEMPLATE = "Text Template";
@@ -118,12 +121,42 @@ public class BaseRecordPage extends BasePage {
     public static final String btnOK_ON_FRAME_XPATH = "//a[contains(text(),'OK')]";
     public static final String btnSAVE_ATTACHMENT_ON_FRAME = "WIN_0_700500109";
 
-    public static final String table_DIAGNOSIS_ID = "";
+    public static final String table_DIAGNOSIS_ID = "T700009087";
     public static final String table_ALARMS_ID = "T700508140";
     public static final String table_LINKED_ITEMS_ID = "T777506000";
     public static final String table_INTERESTED_PARTIES_ID = "T705002015";
     public static final String tab_RESTRICTED_INFO = "//a[contains(text(),'Restricted Info')]";
     public static final String btnREFRESH_XPATH = "//div[@id='WIN_0_999000510']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
+
+
+    public boolean verifySwedenEnable(){
+        return verifyElementIsEnabledById(By.id(chkbxSWEDEN));
+    }
+    public boolean verifyFinlandEnable(){
+        return verifyElementIsEnabledById(By.id(chkbxFINLAND));
+    }
+    public boolean verifyDenmarkEnable(){
+        return verifyElementIsEnabledById(By.id(chkbxDENMARK));
+    }
+    public boolean verifyNorwayEnable(){
+        return verifyElementIsEnabledById(By.id(chkbxNORWAY));
+    }
+    public boolean verifyLithuniaEnable(){
+        return verifyElementIsEnabledById(By.id(chkbxLITHUANIA));
+    }
+    public boolean verifyEstoniaEnable(){
+        return verifyElementIsEnabledById(By.id(chkbxESTONIA));
+    }
+    public boolean verifyTeliaCarrierEnable(){
+        return verifyElementIsEnabledById(By.id(chkbxTELIA_CARRIER));
+    }
+    public boolean verifyInternalEnable(){
+        return verifyElementIsEnabledById(By.id(chkbxINTERNAL));
+    }
+    public boolean verifyUnknownEnable(){
+        return verifyElementIsEnabledById(By.id(chkbxUNKOWN));
+    }
+
 
     Actions action = new Actions(driver);
 
@@ -131,6 +164,9 @@ public class BaseRecordPage extends BasePage {
     {
       return getTableCellData(By.id(table_DIAGNOSIS_ID), "Impact Status", 1 );
 
+    }
+    public String verifyAlarmStatus(){
+        return getTableCellData(By.id(table_ALARMS_ID), "AlarmStatus", 1);
     }
     public void selectPrimaryTicket()
     {
@@ -553,5 +589,7 @@ public class BaseRecordPage extends BasePage {
         }
         return true;
     }
-
+public void selectImpact(String value){
+        selectDropDownNameAndValue(ddIMPACT, value, false);
+}
 }

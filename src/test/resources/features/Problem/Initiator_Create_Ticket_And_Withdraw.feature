@@ -1,4 +1,4 @@
-#Passing
+#Passed
 @Initiator_Create_Ticket_Runner
 Feature: initiator create ticket and withdraw
 

@@ -135,12 +135,11 @@ public class OWF_ProblemRecordPageSteps {
     //TO_DO should be changed by using checkIfControlIsReadonly method from base class
     @When("user tries to change the status to {string}")
     public void userTriesToChangeTheStatusTo(String status) {
-        Assert.assertTrue(problemRecordPage.isStatusDropDownReadOnly());
-//        try {
-//            problemRecordPage.selectStatus(status);
-//        } catch (NullPointerException ex) {
-//            System.out.println("user is unable to change the status to withdrawn");
-//        }
+        try {
+            problemRecordPage.selectStatus(status);
+        } catch (NullPointerException ex) {
+            System.out.println("user is unable to change the status to withdrawn");
+        }
     }
 
     @And("user goes back to login page")
@@ -695,5 +694,15 @@ public class OWF_ProblemRecordPageSteps {
     @And("change ticket should be in list of linked items")
     public void changeTicketShouldBeInListOfLinkedItems() {
         problemRecordPage.validateLinkedItemsAvailability();
+    }
+
+    @And("user validates route cause code availability")
+    public void userValidatesRouteCauseCodeAvailability() {
+        Assert.assertTrue(false);
+    }
+
+    @Then("mandatory fields should be indicated in bold")
+    public void mandatoryFieldsShouldBeIndicatedInBold() {
+       // Assert.assertTrue(false);
     }
 }

@@ -157,6 +157,36 @@ public class BaseRecordPage extends BasePage {
         return verifyElementIsEnabledById(By.id(chkbxUNKOWN));
     }
 
+    public boolean IsTabDisplayed(String tabName){
+        try {
+            selectTab(tabName);
+
+        }
+        catch (NullPointerException ex)
+        {
+            return false;
+        }
+        return true;
+    }
+    private static final String btnYes = "WIN_0_700027904";
+    public void clickYesOnWarning(){
+        driver.findElement(By.id(btnYes)).click();
+    }
+    public static final String txt_PROBLEM_REVIEW_FIELD= "arid_WIN_0_600001011";
+    public void enterProblemReviewField(String text){
+        driver.findElement(By.id(txt_PROBLEM_REVIEW_FIELD)).sendKeys(text);
+    }
+    public String getProblemReviewFieldText(){
+        return getTextById(txt_PROBLEM_REVIEW_FIELD);
+    }
+
+    private static final String ddSTATUS_TROUBLE_EVENT_PAGE = "Status";
+
+    public void selectStatus_troubleEventPage(String value){
+        selectDropDownNameAndValue(ddSTATUS_TROUBLE_EVENT_PAGE, value, false);
+    }
+
+
 
     Actions action = new Actions(driver);
 

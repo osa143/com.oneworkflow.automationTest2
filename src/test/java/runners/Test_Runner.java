@@ -6,7 +6,7 @@ import runners.BaseTest;
 
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
-        tags = {"@Initiator_Link_Tickets"}
+        tags = {"@PMO_Tab"}
 )
 
 public class Test_Runner extends BaseTest {

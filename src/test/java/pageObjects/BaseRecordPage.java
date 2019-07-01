@@ -51,7 +51,7 @@ public class BaseRecordPage extends BasePage {
     public static final String txtANALYSIS_TEAM_MEMBER1_ID = "arid_WIN_0_600001015";
 
 
-
+    public static final String btnYES = "WIN_4_700027904";
     public static final String btnSAVE = "WIN_0_700025244";
     public static final String btnDIAGNOSIS = "//a[contains(text(),'Diagnosis')]";
     public static final String btnCISEARCH = "WIN_0_999000229";
@@ -186,7 +186,9 @@ public class BaseRecordPage extends BasePage {
         selectDropDownNameAndValue(ddSTATUS_TROUBLE_EVENT_PAGE, value, false);
     }
 
-
+   public void clickYes(){
+        driver.findElement(By.id(btnYES)).click();
+   }
 
     Actions action = new Actions(driver);
 

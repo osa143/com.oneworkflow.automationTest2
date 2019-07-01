@@ -240,4 +240,9 @@ public class OWF_TroubleEventPageSteps {
     public void userShouldSeeAlarmStatusAs(String arg0) {
      Assert.assertEquals(troubleEventPage.verifyAlarmStatus(), arg0, "Alarm status is not closed");
     }
+
+    @When("user changes status to {string} on trouble event page")
+    public void userChangesStatusToOnTroubleEventPage(String arg0) {
+        troubleEventPage.selectStatus(arg0);
+    }
 }

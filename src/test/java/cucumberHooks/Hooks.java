@@ -31,13 +31,13 @@ public class Hooks {
             scenario.embed(screenshot, "image/png");
         }
 
-            OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
-            agentConsolePage.clickNavUserMenu();
-            agentConsolePage.wait(1000);
-            agentConsolePage.clickMenuItemLogout();
-            agentConsolePage.wait(2000);
-
-            DriverFactory.getInstance().quit();
+//            OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
+//            agentConsolePage.clickNavUserMenu();
+//            agentConsolePage.wait(1000);
+//            agentConsolePage.clickMenuItemLogout();
+//            agentConsolePage.wait(2000);
+//
+//            DriverFactory.getInstance().quit();
 
         }
     }

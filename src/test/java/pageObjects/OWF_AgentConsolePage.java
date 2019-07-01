@@ -312,7 +312,7 @@ public class OWF_AgentConsolePage extends BasePage {
         selectDropDownValue(ddValueWORK_ORDER);
     }
 
-    public boolean isColumnDisplayed(String columnName)
+    public boolean isColumnDisplayedByDivId(String columnName)
     {
         return isColumnDisplayedByDivId(columnName, timeline_table_DIV_ID);
     }

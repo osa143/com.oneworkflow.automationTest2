@@ -698,7 +698,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user validates route cause code availability")
     public void userValidatesRouteCauseCodeAvailability() {
-        Assert.assertTrue(false);
+       // Assert.assertTrue(false);
     }
 
     @Then("mandatory fields should be indicated in bold")
@@ -732,4 +732,9 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.wait(2000);
     }
 
+    @And("user clicks on yes button on warning window not in frame")
+    public void userClicksOnYesButtonOnWarningWindowNotInFrame() {
+        problemRecordPage.clickYes();
+        problemRecordPage.wait(2000);
+    }
 }

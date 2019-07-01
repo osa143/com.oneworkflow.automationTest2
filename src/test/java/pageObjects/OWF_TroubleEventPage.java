@@ -49,7 +49,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String rbtnDISPLAY_ACTIVE_CHILD_ALARMS = "WIN_0_rc0id730030000";
 
 
-
+    private static final String ddSTATUS = "Status";
     private static final String ddTEMPLATE = "Template";
     private static final String ddTITLE = "Title";
     private static final String ddREQUEST_TYPEE = "Request Type";
@@ -75,7 +75,9 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         return false;
 
     }
-
+  public void selectStatus(String value){
+        selectDropDownNameAndValue(ddSTATUS, value, false);
+  }
 
     public void selectTicket(){
         driver.findElement(By.xpath(chkbxSELECT_TIKCET)).click();
@@ -122,10 +124,10 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
 
     public void selectFaultPosition(String value){
-        selectDropDownNameAndValue(ddFAULTY_POSITION, value, false);
+        selectDropDownNameAndValueForMultipleMenuTableBodys(ddFAULTY_POSITION, value, false, 2);
     }
     public void selectCause(String value){
-        selectDropDownNameAndValue(ddCAUSE, value, true);
+        selectDropDownNameAndValueForMultipleMenuTableBodys(ddCAUSE, value, true, 2);
     }
 
     public void enterTroubleTicket(String troubleTicketId)

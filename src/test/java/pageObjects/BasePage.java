@@ -390,6 +390,10 @@ public class BasePage {
   public boolean verifyIsTabDisplayed(String tabName){
       return driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tabName)).findFirst().orElse(null).isDisplayed();
   }
+  public boolean verifyElementIsEnabledById(By element){
+
+        return driver.findElement(element).isEnabled();
+  }
 
 
 }

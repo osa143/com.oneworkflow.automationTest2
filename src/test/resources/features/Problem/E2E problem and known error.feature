@@ -70,7 +70,7 @@
       Then known error ticket status should be "Draft"
       And user switches to window 3
       When user changes status to "Closed"
-     # Then mandatory fields should be indicated in bold
+      Then mandatory fields should be indicated in bold
       When user enters decision go no go as current date
       And user selects solved under closure code
       And user enters solution as "A change in processes"

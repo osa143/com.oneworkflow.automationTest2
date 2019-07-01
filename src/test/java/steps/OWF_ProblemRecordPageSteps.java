@@ -32,7 +32,7 @@ public class OWF_ProblemRecordPageSteps {
     @Then("an error message should appear: {string}")
     public void anErrorMessageShouldAppear(String errorMessage) {
 
-        Assert.assertTrue(problemRecordPage.validateErrorMessage(errorMessage), "Error message didn't appear");
+        Assert.assertTrue(problemRecordPage.validateErrorMessage(), "Error message didn't appear");
     }
 
     @When("user clicks on sweden checkbox under affected BU's")
@@ -43,7 +43,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("multiple error messages should appear with red boarder around fields")
     public void multipleErrorMessagesShouldAppearWithRedBoarderAroundFields() {
-        Assert.assertTrue(problemRecordPage.validateMultipleErrorMessages(5), "Multiple error messages are not shown");
+        Assert.assertTrue(problemRecordPage.validateMultipleErrorMessages(), "Multiple error messages are not shown");
         //Red border should appear around fields
     }
 
@@ -76,7 +76,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("an error message {string} should appear with red boarder around withdrawn reason")
     public void anErrorMessageShouldAppearWithRedBoarderAroundWithdrawnReason(String errorMessage) {
-        Assert.assertTrue(problemRecordPage.validateErrorMessage(errorMessage), "Error message didn't appear");
+        Assert.assertTrue(problemRecordPage.validateErrorMessage(), "Error message didn't appear");
     }
 
     @When("user selects withdrawn reason as false alarm and clicks save")
@@ -135,12 +135,11 @@ public class OWF_ProblemRecordPageSteps {
     //TO_DO should be changed by using checkIfControlIsReadonly method from base class
     @When("user tries to change the status to {string}")
     public void userTriesToChangeTheStatusTo(String status) {
-        Assert.assertTrue(problemRecordPage.isStatusDropDownReadOnly());
-//        try {
-//            problemRecordPage.selectStatus(status);
-//        } catch (NullPointerException ex) {
-//            System.out.println("user is unable to change the status to withdrawn");
-//        }
+        try {
+            problemRecordPage.selectStatus(status);
+        } catch (NullPointerException ex) {
+            System.out.println("user is unable to change the status to withdrawn");
+        }
     }
 
     @And("user goes back to login page")
@@ -662,20 +661,48 @@ public class OWF_ProblemRecordPageSteps {
         Assert.assertTrue(problemRecordPage.getDescriptionTextBoxStatus());
         Assert.assertTrue(problemRecordPage.getRequestTypeDropDownStatus());
     }
-    @Then("user should see blank work order form")
-    public void userShouldSeeBlankWorkOrderForm() {
-        problemRecordPage.verifyTicketIsBlank();
+
+    @Then("user validates BU availability")
+    public void userValidatesBUAvailability() {
+        Assert.assertTrue(problemRecordPage.verifyDenmarkEnable());
+        Assert.assertTrue(problemRecordPage.verifySwedenEnable());
+        Assert.assertTrue(problemRecordPage.verifyLithuniaEnable());
+        Assert.assertTrue(problemRecordPage.verifyUnknownEnable());
+        Assert.assertTrue(problemRecordPage.verifyInternalEnable());
+        Assert.assertTrue(problemRecordPage.verifyTeliaCarrierEnable());
+        Assert.assertTrue(problemRecordPage.verifyNorwayEnable());
+        Assert.assertTrue(problemRecordPage.verifyEstoniaEnable());
+        Assert.assertTrue(problemRecordPage.verifyFinlandEnable());
 
     }
 
-//
-//    @And("change should also be reflected in the timeline as {string} after refresh")
-//    public void changeShouldAlsoBeReflectedInTheTimelineAsAfterRefresh(String message) {
-//        problemRecordPage.clickTimelineButton();
-//        problemRecordPage.wait(1500);
-//        problemRecordPage.clickRefresh_timeline();
-//        problemRecordPage.wait(1500);
-//        boolean containsMessage = problemRecordPage.getTimelineStatus().contains(message);
-//        Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
-//    }
+    @And("user clicks on internal checkbox under affected BU's")
+    public void userClicksOnInternalCheckboxUnderAffectedBUS() {
+        problemRecordPage.clickInternalCheckBox();
+    }
+
+    @And("user selects impact as {string}")
+    public void userSelectsImpactAs(String arg0) {
+        problemRecordPage.selectImpact(arg0);
+    }
+
+    @Then("trouble ticket should be in list of linked items")
+    public void troubleTicketShouldBeInListOfLinkedItems() {
+        problemRecordPage.validateLinkedItemsAvailability();
+    }
+
+    @And("change ticket should be in list of linked items")
+    public void changeTicketShouldBeInListOfLinkedItems() {
+        problemRecordPage.validateLinkedItemsAvailability();
+    }
+
+    @And("user validates route cause code availability")
+    public void userValidatesRouteCauseCodeAvailability() {
+        Assert.assertTrue(false);
+    }
+
+    @Then("mandatory fields should be indicated in bold")
+    public void mandatoryFieldsShouldBeIndicatedInBold() {
+       // Assert.assertTrue(false);
+    }
 }

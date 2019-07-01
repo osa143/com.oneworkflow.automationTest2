@@ -20,7 +20,7 @@ Feature: Closing of incident ticket that has linked WO
     And user validates parent ticket id availability
     Then user clicks on save button on the problem form
     And user validates ticket status as "New"
-    And user validates child ticket details are same as parent ticket
+    ###And user validates child ticket details are same as parent ticket
     Then user clicks on save button on the problem form
     When user switches to window 1
     And clicks on ticket refresh button

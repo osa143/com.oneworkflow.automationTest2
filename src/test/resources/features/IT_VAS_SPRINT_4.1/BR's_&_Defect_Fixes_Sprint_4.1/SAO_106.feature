@@ -28,7 +28,7 @@ Feature: clearing of alarms within OW
     And user clicks on all alarm checkbox
     And user clicks on terminate
     Then user clicks refresh button on alarm tab
-    Then user should see alarm status as "cleared"
+    Then user should see alarm status as "Cleared"
     Then user changes status to "Closed"
     And user clicks on save button on the problem form
     Then an error message should appear: "Required field (without a default) not specified : Closure Info (ARERR 9424)"

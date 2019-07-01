@@ -16,8 +16,19 @@ Feature: Verification of ability to link tickets
     And user selects urgency as low
     And user clicks on save button on the problem form
     Then ticket should be created and status should be assigned
-    When user clicks on create trouble event
+    When user clicks on create problem record
     And user switches to window 2
+    Then problem record form should appear in new tab
+    When user clicks on sweden checkbox under affected BU's
+    When user enters "proactive investigation of Tohall_Copy" in Title field
+    And user selects request type as Access Networks:RAN NSN 2G:3G:4G
+    And user enters description as "UAT Test2 Linked items - Linked problem"
+    And user selects impact type as moderate:limited
+    And user selects urgency as low
+    And user clicks on save button on the problem form
+    Then ticket should be created and status should be assigned
+    When user clicks on create trouble event
+    And user switches to window 3
     Then trouble record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
     And user enters "A Problem Test" in Title field
@@ -26,10 +37,10 @@ Feature: Verification of ability to link tickets
     And user clicks on save button
     Then ticket should be created and status should be assigned
     When user clicks on create change record
-    And user switches to window 3
+    And user switches to window 4
     Then change record form should open in a new tab
     When user clicks on sweden checkbox under affected BU's
-    And user selects template as "All:IT:Other:TEST TEMPLATE [UAT] - Normal Change"
+    And user selects template as "All:Mobile:Billing:Nobill - Customer refund (SE)"
     And user selects request type as "Normal Change"
     And user selects request category as "Cable splicing" on change record page
     And user enters description as "Correcting error"
@@ -43,6 +54,7 @@ Feature: Verification of ability to link tickets
     And user enters "Not possible" in the ver of functionality field
     And user enters "No Risk" in the risk description field
     Then user clicks on schedule tab
+    And user enters as "Test Service and customer impact" in service and customer impact
     And user enters request start date as "00:00:00" one day in the future
     And user enters request end date as "02:00:00" one day in the future
     And user enters impact duration as "5" minutes
@@ -73,6 +85,16 @@ Feature: Verification of ability to link tickets
     Then ticket should be created and status should be assigned
     And user gets ticket value
     And user switches to window 1
+    When user clicks on linked items tab
+    And user selects target application first dropdown as "OS3 - Problem"
+    And user selects target application second dropdown as "Is related to"
+    When user clicks on link button
+    Then select target request window should open
+    And user switches to frame
+    And user enters ticket in ticket ID+ field
+    And user clicks on CI search button
+    And user clicks ticket checkbox
+    And user clicks accept button
     When user clicks on linked items tab
     And user selects target application first dropdown as "OS3 Change"
     And user selects target application second dropdown as "Caused by"

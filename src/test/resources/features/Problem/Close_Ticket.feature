@@ -1,3 +1,4 @@
+#passed
 @Close_Ticket
   #Test isnt able to find the error messages
 Feature: User is able to close and clone a problem ticket
@@ -39,8 +40,9 @@ Feature: User is able to close and clone a problem ticket
     And user enters solution as "A change in processes"
     And user enters solution found date as current date
     Then user clicks on save button
-    And ticket status should be closed
+    And user validates ticket status as "Closed"
     And change should also be reflected in the timeline as "Status has changed from Investigation Complete to Closed."
     When user clicks on clone button
+    And user switches to window 2
     Then problem record form should appear in new tab
-    And problem ticket status should be under investigation
+    And user validates ticket status as "Investigation Complete"

@@ -107,12 +107,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.NoSuchElementException</a>
+							<a href="#" class="item-title _500">java.lang.NullPointerException</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.NoSuchElementException</h5>
+								<h5 class="mb-4">java.lang.NullPointerException</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="10" parent-id="1">
+<tr class="s-fail" test-id="61" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then trouble ticket should appear related to TeMIP <br/><span class="text-muted text-sm">user is able to clear alarms that have come from a FM system</span></td>
-	<td>0h 1m 4s+143msc</td>
+	<td class="_600">Then user clicks on risk tab <br/><span class="text-muted text-sm">user should be able to link different types of tickets together</span></td>
+	<td>0h 0m 2s+882msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,33 +136,10 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"label"}
-  (Session info: chrome=75.0.3770.100)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.238.96', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52945}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c278c4cbcfee156aa95bccd0b3c7b636
-*** Element info: {Using=tag name, value=label}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:185)
-	at org.openqa.selenium.remote.RemoteWebElement.findElementByTagName(RemoteWebElement.java:277)
-	at org.openqa.selenium.By$ByTagName.findElement(By.java:320)
-	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:181)
-	at pageObjects.OWF_TroubleEventPage.getTicket(OWF_TroubleEventPage.java:292)
-	at steps.OWF_TroubleEventPageSteps.troubleTicketShouldAppearRelatedToTeMIP(OWF_TroubleEventPageSteps.java:42)
-	at ✽.trouble ticket should appear related to TeMIP(features/IT_VAS_SPRINT_4.1/BR's_&_Defect_Fixes_Sprint_4.1/SAO_106.feature:12)
+		<textarea disabled class="code-block">java.lang.NullPointerException
+	at pageObjects.BasePage.selectTab(BasePage.java:374)
+	at steps.OWF_ChangeRecordPageSteps.userClicksOnRiskTab(OWF_ChangeRecordPageSteps.java:177)
+	at ✽.user clicks on risk tab(features/Problem/Initiator_Link_Tickets.feature:63)
 </textarea>
 	</td>
 </tr>
@@ -190,10 +167,10 @@ Session ID: c278c4cbcfee156aa95bccd0b3c7b636
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="37" parent-id="1">
+<tr class="s-fail" test-id="117" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Hooks.Teardown(Scenario) <br/><span class="text-muted text-sm">user is able to clear alarms that have come from a FM system</span></td>
-	<td>0h 0m 0s+584msc</td>
+	<td class="_600">Hooks.Teardown(Scenario) <br/><span class="text-muted text-sm">user should be able to link different types of tickets together</span></td>
+	<td>0h 0m 0s+411msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -202,7 +179,7 @@ Session ID: c278c4cbcfee156aa95bccd0b3c7b636
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">cucumber.runtime.CucumberException: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow.automation\ExtentReports\Screenshots\Screenshots_20190627_223611
+		<textarea disabled class="code-block">cucumber.runtime.CucumberException: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow.automation\ExtentReports\Screenshots\Screenshots_20190630_124327
 	at extentreports.cucumber.adapter.ExtentCucumberAdapter.createReportFileOutputStream(ExtentCucumberAdapter.java:249)
 	at extentreports.cucumber.adapter.ExtentCucumberAdapter.writeBytesToURL(ExtentCucumberAdapter.java:237)
 	at extentreports.cucumber.adapter.ExtentCucumberAdapter.handleEmbed(ExtentCucumberAdapter.java:221)
@@ -255,7 +232,7 @@ Session ID: c278c4cbcfee156aa95bccd0b3c7b636
 	at org.testng.TestNG.run(TestNG.java:1017)
 	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)
 	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
-Caused by: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow.automation\ExtentReports\Screenshots\Screenshots_20190627_223611
+Caused by: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow.automation\ExtentReports\Screenshots\Screenshots_20190630_124327
 	at extentreports.cucumber.adapter.URLOutputStream.ensureParentDirExists(URLOutputStream.java:60)
 	at extentreports.cucumber.adapter.URLOutputStream.<init>(URLOutputStream.java:40)
 	at extentreports.cucumber.adapter.URLOutputStream.<init>(URLOutputStream.java:30)
@@ -288,7 +265,7 @@ Caused by: java.io.IOException: Failed to create directory C:\Users\mahesh%20vad
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Jun 27, 2019 10:36:11 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jun 30, 2019 12:43:27 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

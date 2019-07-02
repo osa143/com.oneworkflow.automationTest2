@@ -76,6 +76,7 @@ public class BaseRecordPage extends BasePage {
     public static final String ddCLOSER_CODE = "Closure Code";
     public static final String ddASSIGNED_PROFILE = "Assigned Profile";
     public static final String ddASSIGNEE = "Assignee";
+    public static final String ddCLOSURE_CODE = "Closure Code";
 
     public static final String ddValueSOLVED = "Solved";
     public static final String ddValueNO_IMPACT = "No Impact";
@@ -157,6 +158,9 @@ public class BaseRecordPage extends BasePage {
         return verifyElementIsEnabledById(By.id(chkbxUNKOWN));
     }
 
+    public void selectClosureCode(String value){
+        selectDropDownNameAndValue(ddCLOSER_CODE, value, true);
+    }
     public boolean IsTabDisplayed(String tabName){
         try {
             selectTab(tabName);

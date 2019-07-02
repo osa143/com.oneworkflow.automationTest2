@@ -735,6 +735,6 @@ public class OWF_ProblemRecordPageSteps {
     @And("user clicks on yes button on warning window not in frame")
     public void userClicksOnYesButtonOnWarningWindowNotInFrame() {
         problemRecordPage.clickYes();
-        problemRecordPage.wait(2000);
+        problemRecordPage.wait(3000);
     }
 }

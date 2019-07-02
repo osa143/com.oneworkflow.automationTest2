@@ -90,4 +90,8 @@ public class OWF_KnownErrorPageSteps {
         knownErrorPage.enterMins(arg0);
     }
 
+    @When("user selects error code as {string}")
+    public void userSelectsErrorCodeAs(String arg0) {
+       knownErrorPage.selectCloserCode(arg0);
+    }
 }

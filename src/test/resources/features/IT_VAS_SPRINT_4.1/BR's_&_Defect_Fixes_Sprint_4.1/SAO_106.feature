@@ -1,4 +1,6 @@
 @SAO_106
+
+  # need to run in UAT
 Feature: clearing of alarms within OW
   Scenario: user is able to clear alarms that have come from a FM system
 
@@ -8,7 +10,7 @@ Feature: clearing of alarms within OW
     When user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 1
     Then trouble record form should appear in new tab
-    And user enters ticket id as "OP-000000898806"
+    And user enters ticket id as "OP-000000899303"
     Then trouble ticket should appear related to TeMIP
     When user changes status to "Cleared" on trouble event page
     And user clicks on save button on the problem form
@@ -24,7 +26,7 @@ Feature: clearing of alarms within OW
     And user selects fault position as "N/A:N/A"
     And user selects cause as "N/A:N/A:N/A"
     Then user clicks on save button on the problem form
-    And user clicks on yes button on warning window not in frame
+    #And user clicks on yes button on warning window not in frame
     When user clicks on "Alarms" tab
     And user clicks on all alarm checkbox
     And user clicks on terminate

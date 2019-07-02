@@ -21,13 +21,14 @@
       And user switches to frame 2
       And user selects type as "Additional Access" under interested parties
       And user clicks on radio button user
-      And user enters "Tohall_copy" in login name plus field
+      Then user enters "Tohall_copy" in login name plus field
       And user clicks on search under add interested party
-      Then problem initiator should be listed without an email address
-      When user highlights Problem initiator's row the one without email address
+      When user highlights present user under add interested party
       And user selects access radio button as read and write
-      And  user selects auto notify radio button as yes
-      Then problem Initiator should be listed as a interested party with Read Write access.
+      And user selects auto notify radio button as yes
+      And user clicks on save button under interested parties frame
+      Then problem initiator user should be listed under interested parties tab
+      And user clicks on save button
       When user clicks on Diagnosis tab
       And user clicks on CI search button
       Then CI search panel should open
@@ -55,7 +56,7 @@
       Then change should also be reflected in the timeline as ""
       When user changes status to "closed"
       And user clicks on save button
-      Then an error message should appear and a red border should be visible around the closure code field
-      When user selects error code as "Full impact"
+      #Then an error message should appear and a red border should be visible around the closure code field
+      When user selects error code as "Full Impact"
       And user clicks on save button
       Then known error ticket status should be "Closed"

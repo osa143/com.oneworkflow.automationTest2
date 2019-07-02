@@ -142,6 +142,30 @@ public class BasePage {
 
     }
 
+    public void selectDropDownNameAndValueForMultipleMenuTableBodys(String dropdownName, String dropdownValue, boolean readonly, int index) {
+        String dropdownXpath;
+        if (readonly)
+            dropdownXpath = "//img[@alt='ReadOnly menu for " + dropdownName + "']/..";
+        else
+            dropdownXpath = "//img[@alt='Menu for " + dropdownName + "']/..";
+
+        driver.findElement(By.xpath(dropdownXpath)).click();
+        wait(1000);
+
+        String arr[] = dropdownValue.split(":");
+        for (int i = 0; i < arr.length; i++) {
+            final String temp = arr[i];
+
+            List<WebElement> elements = driver.findElements(By.className("MenuTableBody"));
+            if (elements.size() > 0) {
+
+                elements.get(i + index).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
+            }
+            wait(1000);
+        }
+
+    }
+
     public void selectDropDownNameAndValueForInvisibleElements(String dropdownName, String dropdownValue, boolean readonly, String alphabet, int keyUpCount) {
         String dropdownXpath;
         if (readonly)

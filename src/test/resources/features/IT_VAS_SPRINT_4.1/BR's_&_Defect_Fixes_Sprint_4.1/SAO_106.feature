@@ -10,7 +10,7 @@ Feature: clearing of alarms within OW
     Then trouble record form should appear in new tab
     And user enters ticket id as "OP-000000898806"
     Then trouble ticket should appear related to TeMIP
-    When user changes status to "Cleared"
+    When user changes status to "Cleared" on trouble event page
     And user clicks on save button on the problem form
     Then an error message should appear: "Required field (without a default) not specified : Event End Time (ARERR 9424)"
     And an error message should appear: "Required field (without a default) not specified : Fault Position (ARERR 9424)"
@@ -18,13 +18,14 @@ Feature: clearing of alarms within OW
     When user clicks on "Diagnosis" tab
     #rightclick and select dropdown
     And user right clicks on primary CI and selects "Impact:Clear All"
-    And user clicks on yes on CI warning window
+    And user clicks on yes button on warning window not in frame
     And user validates CI impact status is "Inactive"
     Then user enters event end time as current time
     And user selects fault position as "N/A:N/A"
     And user selects cause as "N/A:N/A:N/A"
     Then user clicks on save button on the problem form
-    When user clicks on alarms tab
+    And user clicks on yes button on warning window not in frame
+    When user clicks on "Alarms" tab
     And user clicks on all alarm checkbox
     And user clicks on terminate
     Then user clicks refresh button on alarm tab

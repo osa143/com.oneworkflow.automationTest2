@@ -54,7 +54,7 @@
       #user error: Insufficient knowledge, unintended use of product, service, features, systems.
       #Vendor management: Insufficient prioritization of resource allocation, Technical vendor interaction
       And user validates route cause code availability
-      Then user selects root cause code as "Vendor management:Insufficient prioritization of resource allocation"
+      Then user selects root cause code as "People:Emotional stress"
       And user enters route cause details as "Vendor contracts to be reviewed"
       And user enters RC found date as current date
       Then user clicks on save button on the problem form

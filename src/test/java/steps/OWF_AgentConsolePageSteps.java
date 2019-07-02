@@ -284,7 +284,7 @@ public class OWF_AgentConsolePageSteps {
     @Then("user shouldn't see {string} column")
     public void userShouldnTSeeAlarmIDColumn(String alarmID) {
 
-        Assert.assertFalse(agentConsolePage.isColumnDisplayed(alarmID));
+        Assert.assertFalse(agentConsolePage.isColumnDisplayedByDivId(alarmID));
 
     }
 
@@ -292,7 +292,7 @@ public class OWF_AgentConsolePageSteps {
     public void userShouldSeeAlarmIDColumn(String alarmID) {
 
         agentConsolePage.wait(5000);
-        Assert.assertTrue(agentConsolePage.isColumnDisplayed(alarmID), "Alarm ID column is not present");
+        Assert.assertTrue(agentConsolePage.isColumnDisplayedByDivId(alarmID), "Alarm ID column is not present");
 
     }
 

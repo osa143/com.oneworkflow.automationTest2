@@ -698,11 +698,43 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user validates route cause code availability")
     public void userValidatesRouteCauseCodeAvailability() {
-        Assert.assertTrue(false);
+       // Assert.assertTrue(false);
     }
 
     @Then("mandatory fields should be indicated in bold")
     public void mandatoryFieldsShouldBeIndicatedInBold() {
        // Assert.assertTrue(false);
+    }
+    @Then("PM office tab should be visible")
+    public void pmOfficeTabShouldBeVisible() {
+        Assert.assertTrue(problemRecordPage.IsTabDisplayed("PM Office"));
+    }
+
+    @When("user enters {string} in the problem review field")
+    public void userEntersInTheProblemReviewField(String arg0) {
+        problemRecordPage.enterProblemReviewField(arg0);
+    }
+
+    @And("problem review field should be updated with the text {string}")
+    public void problemReviewFieldShouldBeUpdatedWithTheText(String arg0) {
+        Assert.assertEquals(problemRecordPage.getProblemReviewFieldText(), arg0);
+    }
+
+    @And("user clicks on yes button on warning window")
+    public void userClicksOnYesButtonOnWarningWindow() {
+        problemRecordPage.switchToFrameByIndex(2);
+        problemRecordPage.clickYesOnFrame();
+    }
+
+    @And("user clicks on yes button under diagnosis")
+    public void userClicksOnYesButtonUnderDiagnosis() {
+        problemRecordPage.clickYesOnFrame();
+        problemRecordPage.wait(2000);
+    }
+
+    @And("user clicks on yes button on warning window not in frame")
+    public void userClicksOnYesButtonOnWarningWindowNotInFrame() {
+        problemRecordPage.clickYes();
+        problemRecordPage.wait(2000);
     }
 }

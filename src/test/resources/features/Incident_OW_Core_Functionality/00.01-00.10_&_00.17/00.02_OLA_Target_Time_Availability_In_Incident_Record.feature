@@ -1,4 +1,4 @@
-@OLA_Target_Time_Availability
+@OLA_Target_Time_Availability @Incident
 
 Feature: Incident
 

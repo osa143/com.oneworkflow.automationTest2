@@ -1,9 +1,7 @@
 @Estimated_Ready_Date_Time_Availability
 
 Feature: Incident
-
   Scenario: verify estimated ready date and time availability in incident record
-
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"

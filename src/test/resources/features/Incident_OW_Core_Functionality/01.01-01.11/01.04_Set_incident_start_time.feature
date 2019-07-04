@@ -1,10 +1,7 @@
-@Template_Data_Field_Contain_Valid_Options
+@01.04_Set_incident_start_time @Incident
+Feature: Setting of incident start time
 
-Feature: Incident
-  #incident
-
-  Scenario: user validates behaviour and options for data field template
-
+  Scenario: Incident start time is set when creating the ticket
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
@@ -12,5 +9,5 @@ Feature: Incident
     When user clicks on create trouble event
     And user switches to window 1
     Then trouble record form should appear in new tab
-    And user verifies template field is visible
-    Then multiple statuses "Site access registration:Workforce Escalation-SE:(clear)" should be available in "Template" dropdown
+    And user validates event start time is present
+

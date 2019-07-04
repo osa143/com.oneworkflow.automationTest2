@@ -1,8 +1,9 @@
-@Validate_Behaviour_And_Options_For_Data_Field_RequestType
+@Template_Data_Field_Contain_Valid_Options @Incident
 
 Feature: Incident
+  #incident
 
-  Scenario: user validates behaviour and options for data field request type
+  Scenario: user validates behaviour and options for data field template
 
 
     Given user is on the OneWorkflow login page
@@ -11,5 +12,5 @@ Feature: Incident
     When user clicks on create trouble event
     And user switches to window 1
     Then trouble record form should appear in new tab
-    And user verifies request type field is visible
-    Then multiple statuses "Customer Reclamation:Event:Stakeholder:Third Party:(clear)" should be available in "Request Type" dropdown
+    And user verifies template field is visible
+    Then multiple statuses "Site access registration:Workforce Escalation-SE:(clear)" should be available in "Template" dropdown

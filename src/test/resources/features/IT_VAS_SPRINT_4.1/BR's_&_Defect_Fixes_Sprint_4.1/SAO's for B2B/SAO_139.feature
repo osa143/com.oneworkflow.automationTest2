@@ -1,5 +1,4 @@
 @SAO_139
-  #need to speak with Prasanna, doesnt say to add a ci but i think you need to in order to send wo to FS
 Feature: B2B Error handling
   Scenario: user should see error message and created ticket
 

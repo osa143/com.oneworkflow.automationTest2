@@ -12,7 +12,7 @@
       And user switches to window 1
       Then trouble record form should appear in new tab
       And user verifies priority field is visible
-      Then priority field must be greyed out and not possible for user to alter.
+      Then priority field must be greyed out and not possible for user to alter
       When user clicks on denmark checkbox under affected BU's
       And user enters "Test case 00.05 Validate the Priority Field" in Title field
       And user selects request type as "Customer" on trouble event page

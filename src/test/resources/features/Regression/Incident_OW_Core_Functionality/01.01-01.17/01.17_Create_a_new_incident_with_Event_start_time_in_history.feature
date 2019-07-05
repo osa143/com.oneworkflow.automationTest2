@@ -10,8 +10,9 @@ Feature: Creation of incident with event start time in the past
     And user switches to window 1
     Then trouble record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
-    And user enters "Test Case 01.11 Add CI's" in Title field in Trouble event
+    And user enters "Test Case 01.17 Event Start Time In History" in Title field in Trouble event
     And user selects request type as "Customer"
-    And user enters description as "Test Case 01.11 Add CI's"
+    And user enters description as "Test Case 01.17 Event Start Time In History"
+    And user changes event start time 1 day in the past
     And user clicks on save button on the problem form
     Then ticket should be created and status should be assigned

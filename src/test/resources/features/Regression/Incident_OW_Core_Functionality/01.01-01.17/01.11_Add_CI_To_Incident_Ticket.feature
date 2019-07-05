@@ -23,10 +23,23 @@ Feature: Adding of CI to incident ticket
     And user selects ci item as "EPG"
     And user clicks on search button on CI search window
     Then user should see at least 2 nodes per country
-    And user selects CI's "SE_EPG_FREEPG1, SE_EPG_HYEPG1, SE_EPG_LDHEPG1, SE_EPG_VRREPG1"
-    Then user clicks on relate CI
+    When user enters "SE_EPG_FREEPG1" in name field
+    Then user selects impact level as "Degradation of Service"
+    And user clicks on relate CI
     And an error message should appear: "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
-    And user closes warning message
+    Then user closes warning message
+    And user clicks on clear button
+    When user enters "SE_EPG_HYEPG1" in name field
+    Then user selects impact level as "Degradation of Service"
+    And user clicks on relate CI
+    Then user closes warning message
+    And user clicks on clear button
+    When user enters "SE_EPG_LDHEPG1" in name field
+    Then user selects impact level as "Degradation of Service"
+    And user clicks on relate CI
+    Then user closes warning message
+    And user clicks on clear button
+    When user enters "SE_EPG_VRREPG1" in name field
     Then user selects impact level as "Degradation of Service"
     And user clicks on relate CI
     Then user closes warning message and clicks on close button
@@ -35,11 +48,12 @@ Feature: Adding of CI to incident ticket
     And user validates primary CI is equal to "SE_EPG_FREEPG1"
     And user validates CI impact status is "Active"
     And user validates CI impact category is "Actual"
-    When user right clicks on "SE_EPG_VRREPG1"
+    When user right clicks on CI "SE_EPG_VRREPG1"
     And user selects "Impact:Update"
     And user switches to frame
     Then user selects impact name as "Loss of Service"
     And user clicks on close button on bulk update window
+    And user validates no changes were made on the chosen CI
     Then user switches to window 1
     When user right clicks on "SE_EPG_VRREPG1"
     And user selects "Impact:Update"
@@ -48,7 +62,7 @@ Feature: Adding of CI to incident ticket
     And user clicks confirm checkbox
     And user clicks on bulk update save button
     And user switches to window 1
-    Then user validates CI impact level is "Loss of Service"
+    Then user validates CI "SE_EPG_VRREPG1" impact is "Loss of Service"
     Then user clicks on save button on the problem form
 
 

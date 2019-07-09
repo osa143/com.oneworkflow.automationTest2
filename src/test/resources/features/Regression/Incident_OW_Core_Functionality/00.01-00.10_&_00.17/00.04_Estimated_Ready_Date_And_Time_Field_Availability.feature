@@ -16,11 +16,9 @@ Feature: Incident
     And user clicks on save button on the problem form
     Then ticket should be created and status should be assigned
     And user gets ticket value
-    And user logsOut
-    And user goes back to login page
     When user selects search menu as "Open Search Form:Trouble Event"
-    And user switches to window 1
-    And user enters trouble ticket previously created
+    And user switches to window 2
+    And user enters ticket previously created
     And user clicks Search on ticket search
     Then user verifies estimated ready field is available
     When user enters estimated ready as event start time plus 4 days

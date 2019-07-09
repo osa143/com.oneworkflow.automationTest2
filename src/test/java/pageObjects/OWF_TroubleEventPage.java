@@ -68,12 +68,37 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String table_WORKORDERS_ID = "T777504000";
 
 
-    public boolean validateChildWorkOrderAvailability(){
+    public boolean isPriorityFieldDisplayed(){
+        return verifyElementIsDisplayed(By.id(ddPRIORITY_ID));
+    }
+    public boolean verifyPriorityFieldIsReadOnly(){
+        return checkIfControlIsReadonly(ddPRIORITY_ID);
+    }
+    public boolean isEstimatedReadyDisplayed() {
+     return findElement(By.id(txtESTIMATED_READY)).isDisplayed();
+    }
+        public boolean validateChildWorkOrderAvailability (){
           int size= getTableRows(By.id(table_WORKORDERS_ID)).size();
           if(size>0)
               return true;
         return false;
 
+    }
+    public String getCust_Remaining_SLA(){
+        String SLA_Target_Time =getTextById(txtCUST_REMAINING_SLA_ID);
+        System.out.println(SLA_Target_Time);
+        return SLA_Target_Time;
+    }
+    public String getOLATargetTime(){
+        String SLA_Target_Time =getTextById(txtOLA_TARGET_TIME_ID);
+        System.out.println(SLA_Target_Time);
+        return SLA_Target_Time;
+    }
+    public boolean verifyOLA_Target_IsReadOnly(){
+        return checkIfControlIsReadonly(txtOLA_TARGET_TIME_ID);
+    }
+    public boolean verifyCust_Remaining_SLAIsReadOnly(){
+        return checkIfControlIsReadonly(txtCUST_REMAINING_SLA_ID);
     }
   public void selectStatus(String value){
         selectDropDownNameAndValue(ddSTATUS, value, false);

@@ -14,7 +14,7 @@ import java.util.List;
 
 
 public class OWF_ProblemRecordPageSteps {
-    public String problemTicket;
+    public String ticket;
 
     OWF_ProblemRecordPage problemRecordPage = new OWF_ProblemRecordPage();
 
@@ -102,15 +102,15 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user gets ticket value")
     public void userGetsTicketValue() {
-        problemTicket = problemRecordPage.getProblemTicket();
-        System.out.println("Stored problem ticket is " + problemTicket);
+        ticket = problemRecordPage.getProblemTicket();
+        System.out.println("Stored problem ticket is " + ticket);
 
     }
 
     @And("user enters Problem Ticket")
     public void userEntersProblemTicket() {
-        problemRecordPage.enterTicket(problemTicket);
-        System.out.println("user entered problem ticket" + problemTicket);
+        problemRecordPage.enterTicket(ticket);
+        System.out.println("user entered problem ticket" + ticket);
     }
 
     @And("user clicks Search on ticket search")
@@ -736,5 +736,11 @@ public class OWF_ProblemRecordPageSteps {
     public void userClicksOnYesButtonOnWarningWindowNotInFrame() {
         problemRecordPage.clickYes();
         problemRecordPage.wait(3000);
+    }
+
+    @And("user enters ticket previously created")
+    public void userEntersTicketPreviouslyCreated() {
+        problemRecordPage.enterTicket(ticket);
+        System.out.println("user entered problem ticket" + ticket);
     }
 }

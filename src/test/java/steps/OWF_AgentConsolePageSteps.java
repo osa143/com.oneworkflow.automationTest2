@@ -357,6 +357,11 @@ public class OWF_AgentConsolePageSteps {
     public void userClicksOnCreateKnownError() {
         agentConsolePage.selectCreateAsKnownError();
     }
+
+    @And("multiple menu options {string} should be available")
+    public void multipleMenuOptionsShouldBeAvailable(String arg0) {
+        Assert.assertTrue(agentConsolePage.verifyMenuItems(arg0));
+    }
 }
 
 

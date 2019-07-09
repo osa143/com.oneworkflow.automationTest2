@@ -297,6 +297,11 @@ public class OWF_TroubleEventPageSteps {
     public void priorityFieldMustBeGreyedOutAndNotPossibleForUserToAlter() {
      Assert.assertTrue(troubleEventPage.verifyPriorityFieldIsReadOnly());
     }
+
+    @And("user validates that the content of date and time format as {string}")
+    public void userValidatesThatTheContentOfDateAndTimeFormatAs(String arg0) {
+
+    }
 }
 
 

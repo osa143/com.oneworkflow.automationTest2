@@ -50,6 +50,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -94,7 +102,7 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
@@ -111,7 +119,7 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@SLA_Target_Time_Availability</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@00.10_Validate_Urgency_field_availability_in_Incident_record</span></a>
 						    	        <a class="dropdown-item" href="#"><span class="cf">@Incident</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
@@ -129,27 +137,27 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="pass">
-											<div class="st pass test l0" 
-												tags="@SLA_Target_Time_Availability @Incident"
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@00.10_Validate_Urgency_field_availability_in_Incident_record @Incident"
 												devices="">
-												<span class="tt">07.10.2019 11:35:21</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">[Incident] started</span>
+												<span class="tt">07.10.2019 14:01:24</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[validation of impact field availability and structure] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SLA_Target_Time_Availability</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00.10_Validate_Urgency_field_availability_in_Incident_record</span>
 													<span class="category badge"><i class="fa fa-tag"></i> @Incident</span>
 												</span>
 												
 											</div>
-											<div class="st pass test l1" 
-												tags="@SLA_Target_Time_Availability @Incident"
+											<div class="st fail test l1" 
+												tags="@00.10_Validate_Urgency_field_availability_in_Incident_record @Incident"
 												devices="">
-												<span class="tt">07.10.2019 11:35:21</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">|---[verify SLA target time availability in incident record] started</span>
+												<span class="tt">07.10.2019 14:01:24</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[user validates impact field availability and structure] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SLA_Target_Time_Availability</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00.10_Validate_Urgency_field_availability_in_Incident_record</span>
 													<span class="category badge"><i class="fa fa-tag"></i> @Incident</span>
 												</span>
 												
@@ -157,12 +165,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:35:21</span>&nbsp;
+												<span class="tt">07.10.2019 14:01:24</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:35:28</span>&nbsp;
+													<span class="tt">07.10.2019 14:01:33</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
 													
@@ -172,12 +180,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:35:28</span>&nbsp;
+												<span class="tt">07.10.2019 14:01:33</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Change_Automation_1" and password as "Test@1234"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:35:40</span>&nbsp;
+													<span class="tt">07.10.2019 14:01:40</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Change_Automation_1" and password as "Test@1234"]</span>
 													
@@ -187,12 +195,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:35:40</span>&nbsp;
+												<span class="tt">07.10.2019 14:01:40</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:35:40</span>&nbsp;
+													<span class="tt">07.10.2019 14:01:40</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
 													
@@ -202,14 +210,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:35:40</span>&nbsp;
+												<span class="tt">07.10.2019 14:01:40</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And multiple menu options "Console:Create:Search:Administration" should be available] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:05</span>&nbsp;
+													<span class="tt">07.10.2019 14:02:06</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And multiple menu options "Console:Create:Search:Administration" should be available]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -217,27 +225,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:36:05</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects search menu as "Open Search Form:Trouble Event"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:09</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects search menu as "Open Search Form:Trouble Event"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.10.2019 11:36:09</span>&nbsp;
+												<span class="tt">07.10.2019 14:02:06</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:09</span>&nbsp;
+													<span class="tt">07.10.2019 14:02:06</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
 													
@@ -247,14 +240,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:36:09</span>&nbsp;
+												<span class="tt">07.10.2019 14:02:06</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters ticket id as "OP-000000044545"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:18</span>&nbsp;
+													<span class="tt">07.10.2019 14:02:13</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters ticket id as "OP-000000044545"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -262,75 +255,73 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:36:18</span>&nbsp;
+												<span class="tt">07.10.2019 14:02:13</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then ticket with SLA should be opened] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates importance field] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:23</span>&nbsp;
+													<span class="tt">07.10.2019 14:02:13</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then ticket with SLA should be opened]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates importance field]</span>
 													
 													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">07.10.2019 14:02:13</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Critical:High:Average:Low:(Clear)" should be available in "Importance" dropdown] started</span>
+												
+												<div class="st fail">
+													<span class="tt">07.10.2019 14:03:13</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Critical:High:Average:Low:(Clear)" should be available in "Importance" dropdown]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@alt='Menu for Importance']/.."}
+  (Session info: chrome=75.0.3770.100)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.240.190', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57936}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: cc38d6218aa7cdac6b6aaa401a2b8b15
+*** Element info: {Using=xpath, value=//img[@alt='Menu for Importance']/..}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pageObjects.BasePage.selectDropDownMenu(BasePage.java:135)
+	at pageObjects.BasePage.getDropdownValues(BasePage.java:148)
+	at pageObjects.BaseRecordPage.verifyDropdownValues(BaseRecordPage.java:614)
+	at steps.OWF_ProblemRecordPageSteps.multipleStatusesShouldBeAvailableInDropdown(OWF_ProblemRecordPageSteps.java:538)
+	at ✽.multiple statuses "Critical:High:Average:Low:(Clear)" should be available in "Importance" dropdown(features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&_00.17/00.10_Validate_Urgency_field_availability_in_Incident_record.feature:14)
+</textarea></span>
 												</div>
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:36:23</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Cust. Remaining SLA or SLA Target Time availability] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:23</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Cust. Remaining SLA or SLA Target Time availability]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.10.2019 11:36:23</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then customer SLA field must be greyed out and not possible for user to alter] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:23</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then customer SLA field must be greyed out and not possible for user to alter]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.10.2019 11:36:23</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates that the content of date and time format as "YYYY:MM:DD:HH:MM:SS"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:23</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates that the content of date and time format as "YYYY:MM:DD:HH:MM:SS"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.10.2019 11:36:23</span>&nbsp;
+												<span class="tt">07.10.2019 14:03:13</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
 												
-												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:23</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st info">
+													<span class="tt">07.10.2019 14:03:13</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
-													
+													<span class="tm"><a href='#' class='indigo badge' data-featherlight='C:\Temp\com.oneworkflow.automation\ExtentReports\Screenshots\Screenshots_20190710_140123\embedded1.png'>img</a></span>
 													<span class="td"></span>
 												</div>
 											</div>

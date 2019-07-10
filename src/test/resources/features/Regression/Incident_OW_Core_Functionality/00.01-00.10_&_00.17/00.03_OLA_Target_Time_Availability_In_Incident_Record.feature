@@ -14,4 +14,4 @@ Feature: Incident
     Then ticket with OLA should be opened
     And user validates OLA Target Time availability
     Then OLA target time field must be greyed out and not possible for user to alter
-    And user validates that the content of date and time format as "YYYY:MM:DD:HH:MM:SS"
+    And user validates that the content of OLA date and time format as "YYYY:MM:DD:HH:MM:SS"

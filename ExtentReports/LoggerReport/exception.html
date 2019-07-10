@@ -107,12 +107,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.ElementNotInteractableException</a>
+							<a href="#" class="item-title _500">org.openqa.selenium.NoSuchElementException</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.ElementNotInteractableException</h5>
+								<h5 class="mb-4">org.openqa.selenium.NoSuchElementException</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -126,8 +126,8 @@
 	
 <tr class="s-fail" test-id="10" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And user clicks Search on ticket search <br/><span class="text-muted text-sm">verify SLA target time availability in incident record</span></td>
-	<td>0h 1m 5s+650msc</td>
+	<td class="_600">Then multiple statuses "Critical:High:Average:Low:(Clear)" should be available in "Importance" dropdown <br/><span class="text-muted text-sm">user validates impact field availability and structure</span></td>
+	<td>0h 1m 0s+43msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,13 +136,15 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.ElementNotInteractableException: element not interactable
+		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@alt='Menu for Importance']/.."}
   (Session info: chrome=75.0.3770.100)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-7E7TNJR', ip: '10.85.240.233', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.240.190', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58346}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 57cd22c4dc6a117bb1133859e3465cbd
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57936}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: cc38d6218aa7cdac6b6aaa401a2b8b15
+*** Element info: {Using=xpath, value=//img[@alt='Menu for Importance']/..}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -153,11 +155,15 @@ Session ID: 57cd22c4dc6a117bb1133859e3465cbd
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at pageObjects.OWF_ProblemRecordPage.clickSearchButton(OWF_ProblemRecordPage.java:169)
-	at steps.OWF_ProblemRecordPageSteps.userClicksSearchOnTicketSearch(OWF_ProblemRecordPageSteps.java:118)
-	at ✽.user clicks Search on ticket search(features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&_00.17/00.02_SLA_Target_Time_Availability_In_Incident_Record.feature:15)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pageObjects.BasePage.selectDropDownMenu(BasePage.java:135)
+	at pageObjects.BasePage.getDropdownValues(BasePage.java:148)
+	at pageObjects.BaseRecordPage.verifyDropdownValues(BaseRecordPage.java:614)
+	at steps.OWF_ProblemRecordPageSteps.multipleStatusesShouldBeAvailableInDropdown(OWF_ProblemRecordPageSteps.java:538)
+	at ✽.multiple statuses "Critical:High:Average:Low:(Clear)" should be available in "Importance" dropdown(features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&_00.17/00.10_Validate_Urgency_field_availability_in_Incident_record.feature:14)
 </textarea>
 	</td>
 </tr>
@@ -185,7 +191,7 @@ Session ID: 57cd22c4dc6a117bb1133859e3465cbd
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Jul 10, 2019 11:30:47 AM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jul 10, 2019 02:01:23 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

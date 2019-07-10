@@ -9,6 +9,6 @@ Feature: validation of impact field availability and structure
     And user switches to window 1
     Then trouble record form should appear in new tab
     When user clicks on owner under sections
-    And user validates owner field availability
+    And user validates owner profile field availability
     #There are many values for the dropdown to validate
     Then multiple statuses "" should be available in "" dropdown

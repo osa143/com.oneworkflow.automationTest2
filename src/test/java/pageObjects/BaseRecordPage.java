@@ -121,6 +121,7 @@ public class BaseRecordPage extends BasePage {
     public static final String btnCHOOSE_FILE_XPATH = "//input[@id='PopupAttInput']";
     public static final String btnOK_ON_FRAME_XPATH = "//a[contains(text(),'OK')]";
     public static final String btnSAVE_ATTACHMENT_ON_FRAME = "WIN_0_700500109";
+    public static final String btnOWNER_ID = "WIN_0_999000621";
 
     public static final String table_DIAGNOSIS_ID = "T700009087";
     public static final String table_ALARMS_ID = "T700508140";
@@ -158,6 +159,10 @@ public class BaseRecordPage extends BasePage {
         return verifyElementIsEnabledById(By.id(chkbxUNKOWN));
     }
 
+
+    public void clickOwner(){
+        findElement(By.id(btnOWNER_ID)).click();
+    }
     public void selectClosureCode(String value){
         selectDropDownNameAndValue(ddCLOSER_CODE, value, true);
     }

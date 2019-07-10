@@ -1,6 +1,7 @@
 @00.10_Validate_Urgency_field_availability_in_Incident_record @Incident
 
 Feature: validation of impact field availability and structure
+
   Scenario: user validates impact field availability and structure
 
     Given user is on the OneWorkflow login page

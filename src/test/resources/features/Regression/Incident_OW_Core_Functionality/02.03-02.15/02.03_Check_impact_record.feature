@@ -49,7 +49,7 @@
       And user closes warning message and clicks on close button
       #Category Type, Item, Site Name, Impact Type, Impact Category, Impact Level, Impact Status, Impact From, Impact To, CI Class Type,
       Then user validates CI column availability
-      #Impcat to and CI class type wont have data - this is fine (based on ALM test)
+      #Impact to and CI class type wont have data - this is fine (based on ALM test)
       And user validates columns have data present
       When user right clicks on CI "SE_EPG_VRREPG1"
       And user selects "Impact:Update"

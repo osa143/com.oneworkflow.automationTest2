@@ -24,22 +24,26 @@ Feature: Adding of CI to incident ticket
     And user clicks on search button on CI search window
     Then user should see at least 2 nodes per country
     When user enters "SE_EPG_FREEPG1" in name field
+    And user selects a CI from list
     Then user selects impact level as "Degradation of Service"
     And user clicks on relate CI
     And an error message should appear: "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
     Then user closes warning message
     And user clicks on clear button
     When user enters "SE_EPG_HYEPG1" in name field
+    And user selects a CI from list
     Then user selects impact level as "Degradation of Service"
     And user clicks on relate CI
     Then user closes warning message
     And user clicks on clear button
     When user enters "SE_EPG_LDHEPG1" in name field
+    And user selects a CI from list
     Then user selects impact level as "Degradation of Service"
     And user clicks on relate CI
     Then user closes warning message
     And user clicks on clear button
     When user enters "SE_EPG_VRREPG1" in name field
+    And user selects a CI from list
     Then user selects impact level as "Degradation of Service"
     And user clicks on relate CI
     Then user closes warning message and clicks on close button

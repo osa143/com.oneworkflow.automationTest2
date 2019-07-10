@@ -3,7 +3,9 @@ package pageObjects;
 import driver.factory.DriverFactory;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.awt.*;
@@ -14,6 +16,7 @@ import java.util.List;
 public class BasePage {
 
     public static WebDriver driver;
+    WebDriverWait webDriverWait = new WebDriverWait(DriverFactory.getInstance().getDriver(), 30);
 
     protected BasePage() {
         driver = DriverFactory.getInstance().getDriver();
@@ -40,6 +43,23 @@ public class BasePage {
             e.printStackTrace();
         }
     }
+    public WebElement findElement(By locator){
+        return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public boolean verifyElementIsDisplayed(By element){
+        return findElement(element).isDisplayed();
+    }
+    public boolean verifyMenuItems(String items){
+        String [] menuItems = items.split(":");
+        for (int i=0; i<menuItems.length; i++){
+            String mainMenuXpath = "//img[@alt='Menu for " + menuItems[i] + "']/..";
+            boolean result= verifyElementIsDisplayed(By.xpath(mainMenuXpath));
+            if(result==false)
+                return false;
+        }
+        return true;
+    }
 
     public void clickEscButton()
     {
@@ -55,7 +75,7 @@ public class BasePage {
     }
 
     public String getTextById(String Id) {
-        return driver.findElement(By.id(Id)).getAttribute("value");
+        return findElement(By.id(Id)).getAttribute("value");
     }
 
     public void selectMainMenu(String mainMenu) {
@@ -234,7 +254,7 @@ public class BasePage {
     }
 
     public boolean checkIfControlIsReadonly(String Id) {
-        String isReadOnly = driver.findElement(By.id(Id)).getAttribute("readonly");
+        String isReadOnly = findElement(By.id(Id)).getAttribute("readonly");
         if (isReadOnly != null && isReadOnly.contains("true")) {
             return true;
         }

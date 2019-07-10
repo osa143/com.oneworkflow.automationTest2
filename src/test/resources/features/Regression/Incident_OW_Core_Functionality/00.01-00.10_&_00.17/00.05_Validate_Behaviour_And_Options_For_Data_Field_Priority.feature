@@ -19,10 +19,13 @@
       And user enters description as "Test case 00.05 Validate the Priority Field"
       And user selects impact as "Major"
       And user selects importance as "High"
-      And user clicks on save button on the problem form
+      And user clicks on save button
       And user gets ticket value
       And user validates that priority changes to major
-      And user switches to window 0
-      When user enters ticket id as {string} in the agent console search box and searches for ticket
+      When user selects search menu as "Open Search Form:Trouble Event"
+      And user switches to window 2
+      And user enters ticket previously created
+      And user clicks Search on ticket search
       And ticket should be displayed
       And user validates ticket priority as "Major"
+

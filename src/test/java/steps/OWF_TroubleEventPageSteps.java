@@ -245,4 +245,63 @@ public class OWF_TroubleEventPageSteps {
     public void userChangesStatusToOnTroubleEventPage(String arg0) {
         troubleEventPage.selectStatus(arg0);
     }
+
+
+    @Then("OLA target time field must be greyed out and not possible for user to alter")
+    public void olaTargetTimeFieldMustBeGreyedOutAndNotPossibleForUserToAlter() {
+        Assert.assertTrue(troubleEventPage.verifyOLA_Target_IsReadOnly());
+    }
+
+    @Then("ticket with SLA should be opened")
+    public void ticketWithSLAShouldBeOpened() {
+        Assert.assertNotNull(troubleEventPage.getCust_Remaining_SLA());
+    }
+
+    @And("user validates SLA Target Time availability")
+    public void userValidatesSLATargetTimeAvailability() {
+            Assert.assertNotNull(troubleEventPage.getCust_Remaining_SLA());
+        }
+
+
+    @And("user validates Cust. Remaining SLA or SLA Target Time availability")
+    public void userValidatesCustRemainingSLAOrSLATargetTimeAvailability() {
+        Assert.assertNotNull(troubleEventPage.getCust_Remaining_SLA());
+    }
+
+    @Then("customer SLA field must be greyed out and not possible for user to alter")
+    public void customerSLAFieldMustBeGreyedOutAndNotPossibleForUserToAlter() {
+        Assert.assertTrue(troubleEventPage.verifyCust_Remaining_SLAIsReadOnly());
+    }
+
+    @Then("ticket with OLA should be opened")
+    public void ticketWithOLAShouldBeOpened() {
+        Assert.assertNotNull(troubleEventPage.getOLATargetTime());
+    }
+
+    @And("user validates OLA Target Time availability")
+    public void userValidatesOLATargetTimeAvailability() {
+        Assert.assertNotNull(troubleEventPage.getOLATargetTime());
+    }
+
+    @Then("user verifies estimated ready field is available")
+    public void userVerifiesEstimatedReadyFieldIsAvailable() {
+      Assert.assertTrue(troubleEventPage.isEstimatedReadyDisplayed());
+    }
+
+    @And("user verifies priority field is visible")
+    public void userVerifiesPriorityFieldIsVisible() {
+        Assert.assertTrue(troubleEventPage.isPriorityFieldDisplayed());
+    }
+
+    @Then("priority field must be greyed out and not possible for user to alter")
+    public void priorityFieldMustBeGreyedOutAndNotPossibleForUserToAlter() {
+     Assert.assertTrue(troubleEventPage.verifyPriorityFieldIsReadOnly());
+    }
+
+    @And("user validates that the content of date and time format as {string}")
+    public void userValidatesThatTheContentOfDateAndTimeFormatAs(String arg0) {
+
+    }
 }
+
+

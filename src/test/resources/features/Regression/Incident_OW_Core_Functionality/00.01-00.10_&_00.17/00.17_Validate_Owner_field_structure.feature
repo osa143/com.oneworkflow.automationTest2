@@ -1,5 +1,7 @@
 @00.17_Validate_Owner_field_structure @Incident
+
 Feature: validation of impact field availability and structure
+
   Scenario: user validates impact field availability and structure
 
     Given user is on the OneWorkflow login page

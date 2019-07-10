@@ -10,7 +10,10 @@ import org.testng.Assert;
 
 import java.awt.*;
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class BasePage {
@@ -54,12 +57,32 @@ public class BasePage {
         String [] menuItems = items.split(":");
         for (int i=0; i<menuItems.length; i++){
             String mainMenuXpath = "//img[@alt='Menu for " + menuItems[i] + "']/..";
-            boolean result= verifyElementIsDisplayed(By.xpath(mainMenuXpath));
+            WebElement element = driver.findElement(By.xpath(mainMenuXpath));
+            boolean result= element.isEnabled();
             if(result==false)
                 return false;
         }
         return true;
     }
+
+    public boolean verifyDateTimeFormat(String format, String dateToValidate)
+    {
+        boolean valid = false;
+        try
+        {
+            SimpleDateFormat formatter = new SimpleDateFormat(format);
+            formatter.setLenient(false);
+            Date parsedDate = formatter.parse(dateToValidate);
+            System.out.println("Parsed date is: " + parsedDate.toString());
+            valid = true;
+        }
+        catch (Exception ex)
+        {
+            valid = false;
+        }
+        return valid;
+    }
+
 
     public void clickEscButton()
     {

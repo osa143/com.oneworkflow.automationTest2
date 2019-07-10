@@ -302,6 +302,30 @@ public class OWF_TroubleEventPageSteps {
     public void userValidatesThatTheContentOfDateAndTimeFormatAs(String arg0) {
 
     }
+
+    @And("user selects importance as {string}")
+    public void userSelectsImportanceAs(String arg0) {
+        troubleEventPage.selectImportance(arg0);
+    }
+
+    @And("user validates ticket priority as {string}")
+    public void userValidatesTicketPriorityAs(String arg0) {
+        Assert.assertEquals(troubleEventPage.getPriorityText(), arg0);
+    }
+
+    @And("user selects impact as {string} on trouble event page")
+    public void userSelectsImpactAsOnTroubleEventPage(String arg0) {
+        troubleEventPage.selectImpact(arg0);
+    }
+
+    @And("ticket should be displayed")
+    public void ticketShouldBeDisplayed() {
+        Assert.assertNotNull(troubleEventPage.getTroubleTicket());
+    }
+
+    @And("user verifies request type field is visible")
+    public void userVerifiesRequestTypeFieldIsVisible() {
+    }
 }
 
 

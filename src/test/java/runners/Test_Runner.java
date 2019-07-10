@@ -6,7 +6,7 @@ import runners.BaseTest;
 
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
-        tags = {"@Estimated_Ready_Date_Time_Availability"}
+        tags = {"@Validate_Behaviour_And_Options_For_Data_Field_Priority"}
 )
 
 public class Test_Runner extends BaseTest {

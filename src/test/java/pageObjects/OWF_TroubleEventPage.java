@@ -64,10 +64,21 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String ddFAULTY_POSITION = "Fault Position";
     private static final String ddCAUSE = "Cause";
     private static final String ddRELATION_TYPE = "Relationship Type";
-
+    private static final String ddIMPORTANCE_ID = "arid_WIN_0_600001821";
     private static final String table_WORKORDERS_ID = "T777504000";
 
 
+     public void selectImpact(String value){
+         selectDropDownNameAndValue(ddIMPACT, value, true);
+     }
+
+    public String getPriorityText(){
+         return getTextById(ddPRIORITY_ID);
+     }
+    public void selectImportance(String value){
+        findElement(By.id(ddIMPORTANCE_ID)).click();
+        selectDropDownValue(value);
+    }
     public boolean isPriorityFieldDisplayed(){
         return verifyElementIsDisplayed(By.id(ddPRIORITY_ID));
     }
@@ -160,6 +171,14 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         WebElement element = driver.findElement(By.id(txtTROUBLE_TICKET_ID));
         element.sendKeys(troubleTicketId);
         element.sendKeys(Keys.ENTER);
+    }
+    public String getTroubleTicket() {
+        String troubleTicket= getTextById(txtTICKET_ID);
+        System.out.println("Ticket opened is" +troubleTicket);
+        return troubleTicket;
+    }
+    public void isRequestTypeVisible(){
+        verifyElementIsDisplayed(By.id())
     }
     public void enterEventEndTimeAsCurrentTime(){
         driver.findElement(By.id(txtEVENT_END_TIME)).sendKeys(Keys.ENTER);

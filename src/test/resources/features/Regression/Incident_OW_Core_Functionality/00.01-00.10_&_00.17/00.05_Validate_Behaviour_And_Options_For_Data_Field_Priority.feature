@@ -1,5 +1,5 @@
 @Validate_Behaviour_And_Options_For_Data_Field_Priority @Incident
-
+#Passed
   Feature: Incident
 
     Scenario: user validates behaviour and options for data field priority
@@ -17,7 +17,7 @@
       And user enters "Test case 00.05 Validate the Priority Field" in Title field
       And user selects request type as "Customer" on trouble event page
       And user enters description as "Test case 00.05 Validate the Priority Field"
-      And user selects impact as "Major"
+      And user selects impact as "Major" on trouble event page
       And user selects importance as "High"
       And user clicks on save button
       And user gets ticket value

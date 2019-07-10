@@ -11,7 +11,7 @@ Feature: Incident
     And multiple menu options "Console:Create:Search:Administration" should be available
     When user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 1
-    And user enters ticket id as "OP-000000899019"
+    And user enters ticket id as "OP-000000044545"
     And user clicks Search on ticket search
     Then ticket with SLA should be opened
     And user validates Cust. Remaining SLA or SLA Target Time availability

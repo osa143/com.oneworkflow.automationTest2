@@ -178,7 +178,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         return troubleTicket;
     }
     public void isRequestTypeVisible(){
-        verifyElementIsDisplayed(By.id())
+        verifyElementIsDisplayed(By.id(ddREQUEST_TYPE_ID));
     }
     public void enterEventEndTimeAsCurrentTime(){
         driver.findElement(By.id(txtEVENT_END_TIME)).sendKeys(Keys.ENTER);

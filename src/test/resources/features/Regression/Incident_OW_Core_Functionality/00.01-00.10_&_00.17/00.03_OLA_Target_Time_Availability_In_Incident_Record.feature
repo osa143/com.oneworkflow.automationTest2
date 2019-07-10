@@ -10,7 +10,7 @@ Feature: Incident
     And multiple menu options "Console:Create:Search:Administration" should be available
     When user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 1
-    And user enters ticket id as "OP-000000044545"
+    And user enters ticket id as "OP-000000898921"
     Then ticket with OLA should be opened
     And user validates OLA Target Time availability
     Then OLA target time field must be greyed out and not possible for user to alter

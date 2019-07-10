@@ -10,9 +10,9 @@
       And user switches to window 1
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
-      And user enters "Test Case 01.11 Add CI's" in Title field in Trouble event
+      And user enters "Test Case 02.15 Search for Known Errors" in Title field in Trouble event
       And user selects request type as "Customer"
-      And user enters description as "Test Case 01.11 Add CI's"
+      And user enters description as "Test Case 02.15 Search for Known Errors"
       And user clicks on save button on the problem form
       Then ticket should be created and status should be assigned
       When user clicks on Diagnosis tab

@@ -1,5 +1,6 @@
-@SLA_Target_Time_Availability @Incident
 
+@SLA_Target_Time_Availability @Incident
+#Passed
 Feature: Incident
 
   Scenario: verify SLA target time availability in incident record
@@ -15,7 +16,7 @@ Feature: Incident
     Then ticket with SLA should be opened
     And user validates Cust. Remaining SLA or SLA Target Time availability
     Then customer SLA field must be greyed out and not possible for user to alter
-    And user validates that the content of SLA date and time format as "YYYY:MM:DD:HH:MM:SS"
+    And user validates that the content of SLA date and time format as "yyyy-MM-dd HH:mm:ss"
 
 
 

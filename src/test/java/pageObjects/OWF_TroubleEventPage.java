@@ -5,6 +5,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import utils.Ticket;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 
 public class OWF_TroubleEventPage extends BaseRecordPage {
@@ -47,6 +51,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btnCLEAR_SELECT_TARGET_REQUEST = "WIN_0_700506223";
     private static final String btnACCEPT_SELECT_TARGET_REQUEST = "WIN_0_730011058";
     private static final String rbtnDISPLAY_ACTIVE_CHILD_ALARMS = "WIN_0_rc0id730030000";
+    private static final String Error_POP_UP_ID= "PopupMsgBox";
 
 
     private static final String ddSTATUS = "Status";
@@ -71,8 +76,41 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String ddTITLE_Field_ID= "WIN_0_777031000";
     private static final String ddIMPORTANCE_Field_ID= "WIN_0_600001821";
     private static final String ddOWNER_PROFILE_ID = "WIN_0_777031401";
+    private static final String btn_OK_Popup = "//*[@id=\"PopupMsgFooter\"]/a";
 
+    public String getErrorText(){
+        String error= getTextById(Error_POP_UP_ID);
+        System.out.println(error);
+        return error;
+    }
 
+    public void clickOkOnPopup()
+    {
+        findElement(By.xpath(btn_OK_Popup)).click();
+    }
+
+    public String getEstimatedReady(int days){
+
+            String format = "yyyy-MM-dd HH:mm:ss";
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
+            LocalDateTime dateTime = LocalDateTime.parse(getEventStartTime(), formatter);
+            String estimatedTime = dateTime.plusDays(days).toString();
+        estimatedTime = estimatedTime.replace('T',' ');
+        System.out.println("Estimated time is: " + estimatedTime);
+        return estimatedTime;
+
+    }
+
+    public String getSavedEstimatedReady(){
+        return getTextById(txtESTIMATED_READY);
+    }
+    public void clearEstimatedReady(){
+        findElement(By.id(txtESTIMATED_READY)).clear();
+
+    }
+   public String getEventStartTime(){
+       return getTextById(txtEVENT_START_TIME);
+   }
     public boolean verifyOwnerProfileAvailability(){
         return verifyElementIsDisplayed(By.id(ddOWNER_PROFILE_ID));
     }

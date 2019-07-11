@@ -1,5 +1,5 @@
 @OLA_Target_Time_Availability @Incident
-
+#Passed
 Feature: Incident
 
   Scenario: verify OLA target time availability in incident record
@@ -14,4 +14,4 @@ Feature: Incident
     Then ticket with OLA should be opened
     And user validates OLA Target Time availability
     Then OLA target time field must be greyed out and not possible for user to alter
-    And user validates that the content of OLA date and time format as "YYYY:MM:DD:HH:MM:SS"
+    And user validates that the content of OLA date and time format as "yyyy-MM-dd HH:mm:ss"

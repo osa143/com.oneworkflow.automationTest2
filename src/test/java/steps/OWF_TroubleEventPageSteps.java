@@ -364,6 +364,31 @@ public class OWF_TroubleEventPageSteps {
         Assert.assertTrue(troubleEventPage.verifyOwnerProfileAvailability());
 
     }
+
+    @When("user enters estimated ready as event start time plus {int} days")
+    public void userEntersEstimatedReadyAsEventStartTimePlusDays(int arg0) {
+        troubleEventPage.clearEstimatedReady();
+        troubleEventPage.enterEstimatedReady(troubleEventPage.getEstimatedReady(arg0));
+    }
+
+    @Then("estimated ready time should be saved correctly")
+    public void estimatedReadyTimeShouldBeSavedCorrectly() {
+        Assert.assertEquals(troubleEventPage.getEstimatedReady(4), troubleEventPage.getSavedEstimatedReady());
+    }
+
+    @When("user enters estimated ready as event start time minus {int} day")
+    public void userEntersEstimatedReadyAsEventStartTimeMinusDay(int arg0) {
+        troubleEventPage.clearEstimatedReady();
+        troubleEventPage.enterEstimatedReady(troubleEventPage.getEstimatedReady(-1));
+    }
+
+    @Then("error message should display as {string}")
+    public void errorMessageShouldDisplayAs(String arg0) {
+       //troubleEventPage.switchToFrameById("1562791998969P");
+        Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
+        troubleEventPage.clickOkOnPopup();
+
+    }
 }
 
 

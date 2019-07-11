@@ -1,4 +1,4 @@
-@Estimated_Ready_Date_Time_Availability
+@Estimated_Ready_Date_Time
 
 Feature: Incident
   Scenario: verify estimated ready date and time availability in incident record

@@ -9,7 +9,7 @@ Feature: Sending of WO to OneCo
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user clicks on create Work Order
+      When user selects create menu as "Work Order"
       And user switches to window 1
       Then work order form should appear in new tab
       When user clicks on norway checkbox under affected BU's

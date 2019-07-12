@@ -3,7 +3,7 @@ Feature: B2B Error handling
   Scenario: user should see error message and created ticket
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+    When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create trouble event
     Then trouble record form should appear in new tab
@@ -19,7 +19,7 @@ Feature: B2B Error handling
     And user clicks on CI search button
     Then user switches to frame
     And user clicks on clear button
-    When user enters "FI_LTECell%" in name field
+    When user enters "FI_LTECell_Valpe4H" in name field
     And user clicks on search button on CI search window
     And user selects a CI from list
     And user selects impact level as "No Impact"
@@ -41,9 +41,11 @@ Feature: B2B Error handling
     When user switches to window 2
     When user clicks on assignment under sections
     And user clicks on apply B2B button
+    #And user selects assigned profile dropdown as "Field Service:Mobile (B2B):Eltel - FS - FIN - B2B"
     Then user should see assigned profile as "Eltel - FS - FIN - B2B"
     When user selects SLA class as "10 Hours repair time"
-    Then user validates estimated ready time is updated
+    #validate Event start+SLA
+    Then user validates estimated ready time is updated for 10 hours
     When user clicks on B2B dispatch tab
     And user enters header value as "Test"
     And user enters message value as "Automated Test"

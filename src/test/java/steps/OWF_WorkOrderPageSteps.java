@@ -84,5 +84,14 @@ public class OWF_WorkOrderPageSteps {
 
     }
 
+    @Then("work order form should appear in new tab")
+    public void workOrderFormShouldAppearInNewTab() {
+        //Title assertion
+    }
+
+    @When("user selects create menu as {string}")
+    public void userSelectsCreateMenuAs(String arg0) {
+        workOrderPage.selectMenuItem(arg0);
+    }
 }
 

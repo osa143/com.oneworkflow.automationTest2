@@ -461,6 +461,9 @@ public class BasePage {
 
         return driver.findElement(element).isEnabled();
   }
+  public void switchToDefault(){
+        driver.switchTo().defaultContent();
+  }
 
 
 }

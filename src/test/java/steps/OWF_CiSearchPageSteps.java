@@ -48,7 +48,8 @@ public class OWF_CiSearchPageSteps {
 
     @And("user closes warning message and clicks on close button")
     public void userClosesWarningMessageAndClicksOnCloseButton() {
-        ciSearchPage.acceptAlert();
+        ciSearchPage.switchToFrameById("1562937263859P");
+        ciSearchPage.clickOk_OnPop_up();
         ciSearchPage.clickCloseButton();
 
     }
@@ -141,5 +142,21 @@ public class OWF_CiSearchPageSteps {
     public void userClicksOkOnCIWindowPopUp() {
         ciSearchPage.switchToFrameById("1562925224075P");
       ciSearchPage.clickOk_OnPop_up();
+    }
+
+    @And("user clicks on close button on CI search window")
+    public void userClicksOnCloseButtonOnCISearchWindow() {
+        ciSearchPage.clickCloseButton();
+    }
+
+    @Then("user clicks ok on warning CI search window")
+    public void userClicksOkOnWarningCISearchWindow() {
+        ciSearchPage.switchToFrameByIndex(3);
+        ciSearchPage.clickOk_OnPop_up();
+    }
+
+    @And("user switches to default")
+    public void userSwitchesToDefault() {
+        ciSearchPage.switchToDefault();
     }
 }

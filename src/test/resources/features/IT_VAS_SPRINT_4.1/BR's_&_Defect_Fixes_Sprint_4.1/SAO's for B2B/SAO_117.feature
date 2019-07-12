@@ -1,5 +1,5 @@
 @SAO_117
-#started in ALM from step 11 (Prasanna's comment
+#started in ALM from step 11 (Prasanna's comment)
 Feature: SLA class wrongly calculated
   Scenario: user creates a B2B work order and checks SLA class
 

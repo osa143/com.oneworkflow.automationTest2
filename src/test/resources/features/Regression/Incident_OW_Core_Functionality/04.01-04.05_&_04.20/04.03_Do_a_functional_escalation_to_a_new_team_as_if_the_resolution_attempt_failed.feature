@@ -1,0 +1,22 @@
+@04.03_Do_a_functional_escalation_to_a_new_team_as_if_the_resolution_attempt_failed @Incident
+  Feature: assigning ticket to new team
+    Scenario: user can assign ticket to new assignee
+
+      Given user is on the OneWorkflow login page
+      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+      Then user successfully logged in to OneWorkflow and agent console should be displayed
+      When user clicks on create trouble event
+      And user switches to window 1
+      Then trouble record form should appear in new tab
+      When user clicks on sweden checkbox under affected BU's
+      And user enters "Test case 04.03 Assign ticket to new assignment group" in Title field in Trouble event
+      And user selects request type as "Customer"
+      And user enters description as "Test case 04.03 Assign ticket to new assignment group"
+      And user clicks on save button on the problem form
+      Then ticket should be created and status should be assigned
+      When user clicks on Ack button
+      And user clicks on assignment under sections
+      Then user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core East"
+      And user clicks on save button on the problem form
+      Then user should see assigned profile as "Mob PS Core East"
+

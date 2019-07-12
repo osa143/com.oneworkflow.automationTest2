@@ -12,6 +12,7 @@ public class OWF_TroubleEventPageSteps {
     Ticket parentTicket;
     @Then("trouble record form should appear in new tab")
     public void troubleRecordFormShouldAppearInNewTab() {
+        troubleEventPage.getPageTitle();
     }
 
     @Then("trouble ticket should be created and status should be assigned")
@@ -298,9 +299,9 @@ public class OWF_TroubleEventPageSteps {
      Assert.assertTrue(troubleEventPage.verifyPriorityFieldIsReadOnly());
     }
 
-    @And("user validates that the content of date and time format as {string}")
+    @And("user validates that the content of SLA date and time format as {string}")
     public void userValidatesThatTheContentOfDateAndTimeFormatAs(String arg0) {
-
+      Assert.assertTrue(troubleEventPage.verifyDateTimeFormat(arg0, troubleEventPage.getCust_Remaining_SLA()));
     }
 
     @And("user selects importance as {string}")
@@ -325,6 +326,68 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user verifies request type field is visible")
     public void userVerifiesRequestTypeFieldIsVisible() {
+        Assert.assertTrue(troubleEventPage.isRequestTypeVisible());
+    }
+
+    @And("user validates that the content of OLA date and time format as {string}")
+    public void userValidatesThatTheContentOfOLADateAndTimeFormatAs(String arg0) {
+        Assert.assertTrue(troubleEventPage.verifyDateTimeFormat(arg0, troubleEventPage.getOLATargetTime()));
+    }
+
+    @When("user validates template dropdown availability")
+    public void userValidatesTemplateDropdownAvailability() {
+        Assert.assertTrue(troubleEventPage.verifyTemplateIsAvailable());
+    }
+
+    @When("user validates Title availability")
+    public void userValidatesTitleAvailability() {
+        Assert.assertTrue(troubleEventPage.verifyTitleAvailability());
+    }
+
+    @When("user validates impact field availability")
+    public void userValidatesImpactFieldAvailability() {
+        Assert.assertTrue(troubleEventPage.verifyImpactAvailability());
+    }
+
+    @When("user validates importance field")
+    public void userValidatesImportanceField() {
+        Assert.assertTrue(troubleEventPage.verifyImportanceAvailability());
+    }
+
+    @When("user clicks on owner under sections")
+    public void userClicksOnOwnerUnderSections() {
+        troubleEventPage.clickOwner();
+    }
+
+    @And("user validates owner profile field availability")
+    public void userValidatesOwnerFieldAvailability() {
+        Assert.assertTrue(troubleEventPage.verifyOwnerProfileAvailability());
+
+    }
+
+    @When("user enters estimated ready as event start time plus {int} days")
+    public void userEntersEstimatedReadyAsEventStartTimePlusDays(int arg0) {
+        troubleEventPage.clearEstimatedReady();
+        troubleEventPage.enterEstimatedReady(troubleEventPage.getEstimatedReady(arg0));
+    }
+
+    @Then("estimated ready time should be saved correctly")
+    public void estimatedReadyTimeShouldBeSavedCorrectly() {
+        Assert.assertEquals(troubleEventPage.getEstimatedReady(4), troubleEventPage.getSavedEstimatedReady());
+    }
+
+    @When("user enters estimated ready as event start time minus {int} day")
+    public void userEntersEstimatedReadyAsEventStartTimeMinusDay(int arg0) {
+        troubleEventPage.clearEstimatedReady();
+        troubleEventPage.enterEstimatedReady(troubleEventPage.getEstimatedReady(-1));
+    }
+
+    @Then("error message should display as {string}")
+    public void errorMessageShouldDisplayAs(String arg0) {
+       //troubleEventPage.switchToFrameById("1562791998969P");
+        Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
+        troubleEventPage.clickOkOnPopup();
+
     }
 }
 

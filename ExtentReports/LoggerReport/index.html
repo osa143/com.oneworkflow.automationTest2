@@ -50,6 +50,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -94,7 +102,7 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
@@ -111,8 +119,7 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@SLA_Target_Time_Availability</span></a>
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Incident</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@Estimated_Ready_Date_Time</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -129,40 +136,38 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="pass">
-											<div class="st pass test l0" 
-												tags="@SLA_Target_Time_Availability @Incident"
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@Estimated_Ready_Date_Time"
 												devices="">
-												<span class="tt">07.10.2019 11:35:21</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">07.10.2019 21:59:33</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
 												<span class="tn">[Incident] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SLA_Target_Time_Availability</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @Incident</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Estimated_Ready_Date_Time</span>
 												</span>
 												
 											</div>
-											<div class="st pass test l1" 
-												tags="@SLA_Target_Time_Availability @Incident"
+											<div class="st fail test l1" 
+												tags="@Estimated_Ready_Date_Time"
 												devices="">
-												<span class="tt">07.10.2019 11:35:21</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">|---[verify SLA target time availability in incident record] started</span>
+												<span class="tt">07.10.2019 21:59:33</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[verify estimated ready date and time availability in incident record] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SLA_Target_Time_Availability</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @Incident</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Estimated_Ready_Date_Time</span>
 												</span>
 												
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:35:21</span>&nbsp;
+												<span class="tt">07.10.2019 21:59:33</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:35:28</span>&nbsp;
+													<span class="tt">07.10.2019 21:59:38</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
 													
@@ -172,12 +177,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:35:28</span>&nbsp;
+												<span class="tt">07.10.2019 21:59:38</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Change_Automation_1" and password as "Test@1234"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:35:40</span>&nbsp;
+													<span class="tt">07.10.2019 21:59:46</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Change_Automation_1" and password as "Test@1234"]</span>
 													
@@ -187,12 +192,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:35:40</span>&nbsp;
+												<span class="tt">07.10.2019 21:59:46</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:35:40</span>&nbsp;
+													<span class="tt">07.10.2019 21:59:46</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
 													
@@ -202,14 +207,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:35:40</span>&nbsp;
+												<span class="tt">07.10.2019 21:59:46</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And multiple menu options "Console:Create:Search:Administration" should be available] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:05</span>&nbsp;
+													<span class="tt">07.10.2019 21:59:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And multiple menu options "Console:Create:Search:Administration" should be available]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -217,27 +222,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:36:05</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects search menu as "Open Search Form:Trouble Event"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:09</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects search menu as "Open Search Form:Trouble Event"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.10.2019 11:36:09</span>&nbsp;
+												<span class="tt">07.10.2019 21:59:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:09</span>&nbsp;
+													<span class="tt">07.10.2019 21:59:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
 													
@@ -247,14 +237,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:36:09</span>&nbsp;
+												<span class="tt">07.10.2019 21:59:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters ticket id as "OP-000000044545"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:18</span>&nbsp;
+													<span class="tt">07.10.2019 21:59:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters ticket id as "OP-000000044545"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -262,14 +252,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:36:18</span>&nbsp;
+												<span class="tt">07.10.2019 21:59:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then ticket with SLA should be opened] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on sweden checkbox under affected BU's] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:23</span>&nbsp;
+													<span class="tt">07.10.2019 21:59:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then ticket with SLA should be opened]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on sweden checkbox under affected BU's]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -277,14 +267,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:36:23</span>&nbsp;
+												<span class="tt">07.10.2019 21:59:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Cust. Remaining SLA or SLA Target Time availability] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters "Test case 00.04 Estimated Ready date and time" in Title field] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:23</span>&nbsp;
+													<span class="tt">07.10.2019 21:59:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Cust. Remaining SLA or SLA Target Time availability]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters "Test case 00.04 Estimated Ready date and time" in Title field]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -292,14 +282,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:36:23</span>&nbsp;
+												<span class="tt">07.10.2019 21:59:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then customer SLA field must be greyed out and not possible for user to alter] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Customer" on trouble event page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:23</span>&nbsp;
+													<span class="tt">07.10.2019 22:00:02</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then customer SLA field must be greyed out and not possible for user to alter]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Customer" on trouble event page]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -307,14 +297,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:36:23</span>&nbsp;
+												<span class="tt">07.10.2019 22:00:02</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates that the content of date and time format as "YYYY:MM:DD:HH:MM:SS"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "Test case 00.04 Estimated Ready date and time"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:23</span>&nbsp;
+													<span class="tt">07.10.2019 22:00:02</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates that the content of date and time format as "YYYY:MM:DD:HH:MM:SS"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "Test case 00.04 Estimated Ready date and time"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -322,15 +312,252 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.10.2019 11:36:23</span>&nbsp;
+												<span class="tt">07.10.2019 22:00:02</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form] started</span>
+												
+												<div class="st pass">
+													<span class="tt">07.10.2019 22:00:08</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">07.10.2019 22:00:08</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then ticket should be created and status should be assigned] started</span>
+												
+												<div class="st pass">
+													<span class="tt">07.10.2019 22:00:14</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then ticket should be created and status should be assigned]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">07.10.2019 22:00:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user gets ticket value] started</span>
+												
+												<div class="st pass">
+													<span class="tt">07.10.2019 22:00:14</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user gets ticket value]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">07.10.2019 22:00:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects search menu as "Open Search Form:Trouble Event"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">07.10.2019 22:00:18</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects search menu as "Open Search Form:Trouble Event"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">07.10.2019 22:00:18</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 2] started</span>
+												
+												<div class="st pass">
+													<span class="tt">07.10.2019 22:00:18</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 2]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">07.10.2019 22:00:18</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters ticket previously created] started</span>
+												
+												<div class="st pass">
+													<span class="tt">07.10.2019 22:00:19</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters ticket previously created]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">07.10.2019 22:00:19</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search] started</span>
+												
+												<div class="st pass">
+													<span class="tt">07.10.2019 22:00:24</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">07.10.2019 22:00:24</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user verifies estimated ready field is available] started</span>
+												
+												<div class="st pass">
+													<span class="tt">07.10.2019 22:00:24</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user verifies estimated ready field is available]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">07.10.2019 22:00:24</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters estimated ready as event start time plus 4 days] started</span>
+												
+												<div class="st pass">
+													<span class="tt">07.10.2019 22:00:25</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters estimated ready as event start time plus 4 days]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">07.10.2019 22:00:25</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button] started</span>
+												
+												<div class="st pass">
+													<span class="tt">07.10.2019 22:00:32</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">07.10.2019 22:00:32</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then estimated ready time should be saved correctly] started</span>
+												
+												<div class="st pass">
+													<span class="tt">07.10.2019 22:00:32</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then estimated ready time should be saved correctly]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">07.10.2019 22:00:32</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters estimated ready as event start time minus 1 day] started</span>
+												
+												<div class="st pass">
+													<span class="tt">07.10.2019 22:00:33</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters estimated ready as event start time minus 1 day]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">07.10.2019 22:00:33</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button] started</span>
+												
+												<div class="st pass">
+													<span class="tt">07.10.2019 22:00:41</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">07.10.2019 22:00:41</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then error message should display as "Estimated Ready Time cannot be earlier than Event Start Time (ARERR 10000)"] started</span>
+												
+												<div class="st fail">
+													<span class="tt">07.10.2019 22:01:41</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then error message should display as "Estimated Ready Time cannot be earlier than Event Start Time (ARERR 10000)"]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=75.0.3770.100)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.240.190', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62169}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 632d04fe12f7c6e54ab2ba1a4f28d342
+*** Element info: {Using=css selector, value=frame#1562791998969P,iframe#1562791998969P}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:881)
+	at pageObjects.BasePage.switchToFrameById(BasePage.java:454)
+	at steps.OWF_TroubleEventPageSteps.errorMessageShouldDisplayAs(OWF_TroubleEventPageSteps.java:387)
+	at ✽.error message should display as "Estimated Ready Time cannot be earlier than Event Start Time (ARERR 10000)"(features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&_00.17/00.04_Estimated_Ready_Date_Time_Availability.feature:29)
+</textarea></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">07.10.2019 22:01:41</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
 												
-												<div class="st pass">
-													<span class="tt">07.10.2019 11:36:23</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st info">
+													<span class="tt">07.10.2019 22:01:41</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
-													
+													<span class="tm"><a href='#' class='indigo badge' data-featherlight='C:\Temp\com.oneworkflow.automation\ExtentReports\Screenshots\Screenshots_20190710_215932\embedded1.png'>img</a></span>
 													<span class="td"></span>
 												</div>
 											</div>

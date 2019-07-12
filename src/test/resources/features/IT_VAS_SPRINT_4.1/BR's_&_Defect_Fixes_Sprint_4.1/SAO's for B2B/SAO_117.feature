@@ -25,7 +25,7 @@ Feature: SLA class wrongly calculated
     And user selects a CI from list
     And user selects impact level as "No Impact"
     And user clicks on relate CI
-    Then user clicks ok on CI window pop up
+    Then user closes warning message and clicks on close button
     When user clicks on work order tab
     And user clicks on create from ticket
     When user switches to window 2

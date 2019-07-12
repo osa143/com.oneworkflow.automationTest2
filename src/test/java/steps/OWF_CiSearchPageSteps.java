@@ -136,4 +136,10 @@ public class OWF_CiSearchPageSteps {
     public void ciSearchPanelShouldOpen() {
         //dummy step
     }
+
+    @Then("user clicks ok on CI window pop up")
+    public void userClicksOkOnCIWindowPopUp() {
+        ciSearchPage.switchToFrameById("1562925224075P");
+      ciSearchPage.clickOk_OnPop_up();
+    }
 }

@@ -2,17 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/exception.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/exception.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_TroubleEventPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_TroubleEventPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_TroubleEventPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_TroubleEventPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_TroubleEventPageSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_TroubleEventPageSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_CiSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_CiSearchPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_TroubleEventPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_TroubleEventPageSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.02_SLA_Target_Time_Availability_In_Incident_Record.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.02_SLA_Target_Time_Availability_In_Incident_Record.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.03_OLA_Target_Time_Availability_In_Incident_Record.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.03_OLA_Target_Time_Availability_In_Incident_Record.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.04_Estimated_Ready_Date_Time_Availability.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.04_Estimated_Ready_Date_Time_Availability.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_CiSearchPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_CiSearchPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.1/BR's_&amp;_Defect_Fixes_Sprint_4.1/SAO's for B2B/SAO_117.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.1/BR's_&amp;_Defect_Fixes_Sprint_4.1/SAO's for B2B/SAO_117.feature" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -88,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+            <state relative-caret-position="117">
+              <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#998#999#0" expanded="true" />
@@ -108,34 +115,116 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.07_Template_data_field_must_contain_valid_options.feature">
+        <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="95" selection-start-line="12" selection-start-column="95" selection-end-line="12" selection-end-column="95" />
+            <state relative-caret-position="200">
+              <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="537" column="36" lean-forward="true" selection-start-line="537" selection-start-column="36" selection-end-line="537" selection-end-column="36" />
+            <state relative-caret-position="180">
+              <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
               <folding>
-                <element signature="e#25258#25259#0" expanded="true" />
-                <element signature="e#25310#25311#0" expanded="true" />
+                <element signature="e#2094#2095#0" expanded="true" />
+                <element signature="e#2146#2147#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_TroubleEventPageSteps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="619" column="25" lean-forward="true" selection-start-line="619" selection-start-column="25" selection-end-line="619" selection-end-column="25" />
+            <state relative-caret-position="180">
+              <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#458#459#0" expanded="true" />
+                <element signature="e#505#506#0" expanded="true" />
+                <element signature="e#12573#12574#0" expanded="true" />
+                <element signature="e#12650#12651#0" expanded="true" />
+                <element signature="e#12935#12936#0" expanded="true" />
+                <element signature="e#13017#13018#0" expanded="true" />
+                <element signature="e#13118#13119#0" expanded="true" />
+                <element signature="e#13163#13164#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_CiSearchPageSteps.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="142" column="29" selection-start-line="142" selection-start-column="29" selection-end-line="142" selection-end-column="29" />
+              <folding>
+                <element signature="e#674#675#0" expanded="true" />
+                <element signature="e#722#723#0" expanded="true" />
+                <element signature="e#980#981#0" expanded="true" />
+                <element signature="e#1026#1027#0" expanded="true" />
+                <element signature="e#1134#1135#0" expanded="true" />
+                <element signature="e#1181#1182#0" expanded="true" />
+                <element signature="e#1614#1615#0" expanded="true" />
+                <element signature="e#1661#1662#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_CiSearchPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
+              <folding>
+                <element signature="e#1737#1738#0" expanded="true" />
+                <element signature="e#1765#1766#0" expanded="true" />
+                <element signature="e#3254#3255#0" expanded="true" />
+                <element signature="e#3325#3326#0" expanded="true" />
+                <element signature="e#3772#3773#0" expanded="true" />
+                <element signature="e#3831#3832#0" expanded="true" />
+                <element signature="e#4492#4493#0" expanded="true" />
+                <element signature="e#4563#4564#0" expanded="true" />
+                <element signature="e#4606#4607#0" expanded="true" />
+                <element signature="e#4671#4672#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.1/BR's_&amp;_Defect_Fixes_Sprint_4.1/SAO's for B2B/SAO_117.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_AgentConsolePageSteps.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="352" column="31" selection-start-line="352" selection-start-column="31" selection-end-line="352" selection-end-column="31" />
+              <folding>
+                <element signature="e#13461#13462#0" expanded="true" />
+                <element signature="e#13507#13508#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_AgentConsolePage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="234" column="16" selection-start-line="234" selection-start-column="16" selection-end-line="234" selection-end-column="16" />
+              <folding>
+                <element signature="e#9839#9840#0" expanded="true" />
+                <element signature="e#9889#9890#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -203,9 +292,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/resources/features/Problem/Verification_Of_Ownership.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Problem/Drop_Down.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.1/BR's_&amp;_Defect_Fixes_Sprint_4.1/SAO_181.feature" />
         <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_AgentConsolePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/cucumberHooks/Hooks.java" />
         <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java" />
@@ -248,12 +334,15 @@
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.02_SLA_Target_Time_Availability_In_Incident_Record.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.03_OLA_Target_Time_Availability_In_Incident_Record.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.04_Estimated_Ready_Date_Time_Availability.feature" />
-        <option value="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" />
         <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_TroubleEventPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/steps/OWF_TroubleEventPageSteps.java" />
         <option value="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" />
         <option value="$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.1/BR's_&amp;_Defect_Fixes_Sprint_4.1/SAO's for B2B/SAO_117.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/steps/OWF_CiSearchPageSteps.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_CiSearchPage.java" />
       </list>
     </option>
   </component>
@@ -311,23 +400,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pageObjects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com.oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="runners" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com.oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="steps" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
@@ -359,6 +432,25 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="BR's_&amp;_Defect_Fixes_Sprint_4.1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="BR's_&amp;_Defect_Fixes_Sprint_4.1" type="462c0819:PsiDirectoryNode" />
+              <item name="SAO's for B2B" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
               <item name="IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -379,17 +471,6 @@
               <item name="features" type="462c0819:PsiDirectoryNode" />
               <item name="Regression" type="462c0819:PsiDirectoryNode" />
               <item name="Incident_OW_Core_Functionality" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="com.oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="Regression" type="462c0819:PsiDirectoryNode" />
-              <item name="Incident_OW_Core_Functionality" type="462c0819:PsiDirectoryNode" />
-              <item name="00.01-00.10_&amp;_00.17" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -670,14 +751,8 @@
       <workItem from="1562571955871" duration="507000" />
       <workItem from="1562601519402" duration="18809000" />
       <workItem from="1562744712417" duration="7333000" />
-      <workItem from="1562779893391" duration="9183000" />
-    </task>
-    <task id="LOCAL-00006" summary="Added steps for SAO_191, 181,496">
-      <created>1559129808879</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1559129808879</updated>
+      <workItem from="1562779893391" duration="9234000" />
+      <workItem from="1562873351733" duration="8636000" />
     </task>
     <task id="LOCAL-00007" summary="Added features and steps for problem test cases">
       <created>1559145909923</created>
@@ -1015,43 +1090,50 @@
       <option name="project" value="LOCAL" />
       <updated>1562767692974</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="modified features and steps for incident">
+      <created>1562831379146</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1562831379146</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_Runner - 2019.07.10 at 21h 23m 39s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.07.10 at 21h 30m 20s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.07.10 at 21h 35m 27s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.07.10 at 21h 39m 29s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.07.10 at 21h 40m 09s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.07.10 at 21h 42m 08s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.07.10 at 21h 47m 55s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.07.10 at 21h 54m 27s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.07.10 at 22h 01m 42s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="Test_Runner - 2019.07.10 at 22h 13m 07s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.07.12 at 09h 31m 25s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.07.12 at 09h 35m 09s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.07.12 at 09h 44m 27s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.07.12 at 09h 48m 22s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.07.12 at 09h 55m 44s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.07.12 at 10h 02m 19s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.07.12 at 10h 23m 34s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.07.12 at 10h 59m 33s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.07.12 at 11h 02m 29s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1050779000" />
+    <option name="totallyTimeSpent" value="1059466000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1071,7 +1153,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Designer" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.26675603" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.27010724" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.15700142" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
@@ -1081,8 +1163,8 @@
       <window_info anchor="bottom" id="Build" order="5" weight="0.5459689" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.19519095" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.20509194" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.26449788" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.1923621" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.50777936" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.042432815" />
@@ -1189,7 +1271,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added new features SAO_52 and steps" />
     <MESSAGE value="Added new features SAO_52, 370, 495 and steps" />
     <MESSAGE value="Added steps for SAO_52" />
     <MESSAGE value="changes for ScreenShort, Extent report" />
@@ -1214,7 +1295,8 @@
     <MESSAGE value="SAO-181 passed" />
     <MESSAGE value="modified features and steps for incident 02, 03, 04" />
     <MESSAGE value="modified features and steps for incident features" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified features and steps for incident features" />
+    <MESSAGE value="modified features and steps for incident" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified features and steps for incident" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1225,16 +1307,30 @@
           <properties />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_CiSearchPage.java</url>
+          <line>37</line>
+          <properties class="pageObjects.OWF_CiSearchPage" method="clickOk_OnPop_up">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="TestNG">
         <watch expression="String s = getEventStartTime();" language="JAVA" />
+        <watch expression="findElement(By.xpath(&quot;//a[@class='btn btn3d PopupBtn']&quot;)).click();" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>findElement(By.xpath(&quot;//a[@class='btn btn3d PopupBtn']&quot;)).click();</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>String s = getEventStartTime();</expression-string>
         <language-id>JAVA</language-id>
@@ -1280,11 +1376,6 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>elements.get(i).findElements(By.tagName(&quot;td&quot;)).get(15).getText()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
@@ -1301,58 +1392,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.17_Create_a_new_incident_with_Event_start_time_in_history.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="17" column="63" lean-forward="true" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.05_Acknowledge_the_functional_escalation_to_you_aka_incident_assignment.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_AgentConsolePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5380">
-          <caret line="329" selection-start-line="329" selection-end-line="329" />
-          <folding>
-            <element signature="e#10152#10153#0" expanded="true" />
-            <element signature="e#10218#10219#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/Tieto_OW_Integration/BR-2965_Tieto_Create.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/Tieto_OW_Integration/BR-2965_Tieto_Assignment.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Close_Ticket.feature">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/E2E problem and known error.feature">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.1/BR's_&amp;_Defect_Fixes_Sprint_4.1/SAO_498.feature">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1373,25 +1412,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.1/BR's_&amp;_Defect_Fixes_Sprint_4.1/SAO's for B2B/SAO_117.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.04_Template_Data_Field_Contain_Valid_Options.feature" />
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Drop_Down.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_AgentConsolePageSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6860">
-          <caret line="368" selection-start-line="368" selection-end-line="368" />
         </state>
       </provider>
     </entry>
@@ -1585,23 +1610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/runners/Test_Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runtime/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_TroubleEventPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
@@ -1686,10 +1694,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.04_Estimated_Ready_Date_Time_Availability.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.1/BR's_&amp;_Defect_Fixes_Sprint_4.1/SAO's for B2B/SAO_150.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.1/BR's_&amp;_Defect_Fixes_Sprint_4.1/SAO's for B2B/SAO_139.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-721" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.1/BR's_&amp;_Defect_Fixes_Sprint_4.1/SAO_52_OW_Clear.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-420" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.07_Template_data_field_must_contain_valid_options.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="95" selection-start-line="12" selection-start-column="95" selection-end-line="12" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9580">
+          <caret line="619" column="25" selection-start-line="619" selection-start-column="25" selection-end-line="619" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/runners/Test_Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114">
+          <caret line="265" column="38" selection-start-line="265" selection-start-column="38" selection-end-line="265" selection-end-column="38" />
+          <folding>
+            <element signature="e#9455#9456#0" expanded="true" />
+            <element signature="e#9512#9513#0" expanded="true" />
+            <element signature="e#25258#25259#0" expanded="true" />
+            <element signature="e#25310#25311#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_TroubleEventPageSteps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="857">
-          <caret line="393" lean-forward="true" selection-start-line="393" selection-end-line="393" />
+        <state relative-caret-position="180">
+          <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
           <folding>
             <element signature="e#458#459#0" expanded="true" />
             <element signature="e#505#506#0" expanded="true" />
@@ -1703,24 +1773,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.04_Estimated_Ready_Date_Time_Availability.feature">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        <state relative-caret-position="180">
+          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+          <folding>
+            <element signature="e#2094#2095#0" expanded="true" />
+            <element signature="e#2146#2147#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.07_Template_data_field_must_contain_valid_options.feature">
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="95" selection-start-line="12" selection-start-column="95" selection-end-line="12" selection-end-column="95" />
+        <state relative-caret-position="200">
+          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_AgentConsolePageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="352" column="31" selection-start-line="352" selection-start-column="31" selection-end-line="352" selection-end-column="31" />
+          <folding>
+            <element signature="e#13461#13462#0" expanded="true" />
+            <element signature="e#13507#13508#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_AgentConsolePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="234" column="16" selection-start-line="234" selection-start-column="16" selection-end-line="234" selection-end-column="16" />
+          <folding>
+            <element signature="e#9839#9840#0" expanded="true" />
+            <element signature="e#9889#9890#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+        <state relative-caret-position="117">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#998#999#0" expanded="true" />
@@ -1737,24 +1833,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runtime/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="619" column="25" lean-forward="true" selection-start-line="619" selection-start-column="25" selection-end-line="619" selection-end-column="25" />
+        <state relative-caret-position="134">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_CiSearchPageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="142" column="29" selection-start-line="142" selection-start-column="29" selection-end-line="142" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1026#1027#0" expanded="true" />
+            <element signature="e#1134#1135#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1614#1615#0" expanded="true" />
+            <element signature="e#1661#1662#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_CiSearchPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="537" column="36" lean-forward="true" selection-start-line="537" selection-start-column="36" selection-end-line="537" selection-end-column="36" />
+        <state relative-caret-position="119">
+          <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
           <folding>
-            <element signature="e#25258#25259#0" expanded="true" />
-            <element signature="e#25310#25311#0" expanded="true" />
+            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1765#1766#0" expanded="true" />
+            <element signature="e#3254#3255#0" expanded="true" />
+            <element signature="e#3325#3326#0" expanded="true" />
+            <element signature="e#3772#3773#0" expanded="true" />
+            <element signature="e#3831#3832#0" expanded="true" />
+            <element signature="e#4492#4493#0" expanded="true" />
+            <element signature="e#4563#4564#0" expanded="true" />
+            <element signature="e#4606#4607#0" expanded="true" />
+            <element signature="e#4671#4672#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.1/BR's_&amp;_Defect_Fixes_Sprint_4.1/SAO's for B2B/SAO_117.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
         </state>
       </provider>
     </entry>

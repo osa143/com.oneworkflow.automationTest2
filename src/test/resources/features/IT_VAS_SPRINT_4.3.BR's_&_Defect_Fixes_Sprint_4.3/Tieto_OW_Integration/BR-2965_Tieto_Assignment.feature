@@ -12,8 +12,8 @@ Feature: creation and sending of WO to Tieto - Tieto Rejects assignment
     And user selects request type as "SA Request:Support" in work order page
     And user enters description as "Tieto Test"
     And user selects priority as "Emergency"
-    And user selects reason dropdown as "Integration Testing"
-    Then user clicks on save button on the problem form
+    #And user selects reason dropdown as "Integration Testing"
+    Then user clicks on save button
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user switches to frame

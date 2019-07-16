@@ -19,39 +19,42 @@ Feature: B2B Error handling
     And user clicks on CI search button
     Then user switches to frame
     And user clicks on clear button
-    When user enters "FI_LTECell%" in name field
+    When user enters "FI_LTECell_Valpe4H" in name field
     And user clicks on search button on CI search window
     And user selects a CI from list
     And user selects impact level as "No Impact"
     And user clicks on relate CI
-    Then user closes warning message and clicks on close button
+    #Then user closes warning message and clicks on close button
+    And user clicks on close button on CI search window
     When user clicks on work order tab
     And user clicks on create from ticket
     When user switches to window 2
     And user validates ticket status as "New"
     Then user clicks on save button on the problem form
     And user validates ticket status as "New"
-    And user validates child ticket details are same as parent ticket
-    Then user clicks on save button on the problem form
+    #And user validates child ticket details are same as parent ticket
+    #Then user clicks on save button on the problem form
     When user switches to window 1
     And clicks on ticket refresh button
+    And user accepts alert
     Then user clicks on work order tab
     And user validates child WorkOrder availability
     And user validates WorkOrder status as "OPEN"
     When user switches to window 2
-    When user clicks on assignment under sections
-    And user clicks on apply B2B button
+    And user clicks on apply BtwoB button
     Then user should see assigned profile as "Eltel - FS - FIN - B2B"
-    When user selects SLA class as "10 Hours repair time"
-    Then user validates estimated ready time is updated
-    When user clicks on B2B dispatch tab
+    When user selects SLA class as "10 Hours repair time (FI=A1)"
+    #validate Event start+SLA
+    Then user validates estimated ready time is updated for 10 hours
+    When user clicks on BtwoB dispatch tab
     And user enters header value as "Test"
     And user enters message value as "Automated Test"
-    Then user clicks on save button on the problem form
+    Then user clicks on save button
     When user switches to window 1
-    Then user should see OP ticket listed with title of: "Error in the B2B Interface"
+    Then user should see OP ticket listed with title of "Error in the B2B Interface"
     When user gets B2B ticket value
     And user selects search menu as "Open Search Form:Trouble Event"
+    And user switches to window 2
     Then user enters B2B ticket value
     And user clicks on the search button
     Then user should see trouble ticket

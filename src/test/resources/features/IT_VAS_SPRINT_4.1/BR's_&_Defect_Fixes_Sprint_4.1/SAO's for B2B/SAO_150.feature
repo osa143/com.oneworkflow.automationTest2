@@ -2,6 +2,7 @@
   #Test requires ticket created from TeMIP - new one every time
   #need to add closure messages for both wo and op
   #Will only be able to do this with the B2B stub as WO needs to be closed by FS then we need to check we can close OP
+#306-315
 Feature: WO not closed after receiving inbound event
   Scenario: user validates ticket gets closed after receiving inbound event
 
@@ -11,7 +12,7 @@ Feature: WO not closed after receiving inbound event
     When user selects search menu as "Open Search Form:Trouble Event"
     Then trouble record form should appear in new tab
     And user switches to window 1
-    And user enters ticket id as ""
+    And user enters ticket id as "OP-000000899305"
     Then trouble ticket should appear related to TeMIP
     When user clicks on work order tab
     And user clicks on create from ticket
@@ -20,8 +21,8 @@ Feature: WO not closed after receiving inbound event
     And user validates parent ticket id availability
     Then user clicks on save button on the problem form
     And user validates ticket status as "New"
-    And user validates child ticket details are same as parent ticket
-    Then user clicks on save button on the problem form
+    #And user validates child ticket details are same as parent ticket
+    Then user clicks on save button
     When user clicks on assignment under sections
     And user clicks on apply B2B button
     #Assigned profile will depend on the TeMIP ticket - with the ticket i used its Eltel Sweden
@@ -31,13 +32,13 @@ Feature: WO not closed after receiving inbound event
     When user clicks on B2B dispatch tab
     And user enters header value as "Test"
     And user enters message value as "Automated Test"
-    When user clicks on save button on the problem form
-    And user clicks on outbound events refresh button
-    And user clicks on inbound events refresh button
+    When user clicks on save button
+    When user clicks on B2B dispatch tab
+    And user should see outbound assignment event
     Then user should see WFM ticket ID
     And user should see dispatch status as "Submitted"
+    And user clicks on inbound events refresh button
     And user should see inbound acknowledgment event
-    And user should see outbound assignment event
     Then user changes status to "Work In Progress"
     And user clicks on save button on the problem form
     Then user changes status to "Cleared"

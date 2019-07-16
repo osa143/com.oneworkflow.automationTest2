@@ -1,4 +1,5 @@
 @SAO_117
+  #Passed
 #started in ALM from step 11 (Prasanna's comment)
 Feature: SLA class wrongly calculated
   Scenario: user creates a B2B work order and checks SLA class
@@ -20,34 +21,36 @@ Feature: SLA class wrongly calculated
     And user clicks on CI search button
     Then user switches to frame
     And user clicks on clear button
-    When user enters "FI_LTECell%" in name field
+    When user enters "FI_LTECell_Valpe4H" in name field
     And user clicks on search button on CI search window
     And user selects a CI from list
     And user selects impact level as "No Impact"
     And user clicks on relate CI
-    Then user closes warning message and clicks on close button
+    And user clicks on close button on CI search window
     When user clicks on work order tab
     And user clicks on create from ticket
     When user switches to window 2
     And user validates ticket status as "New"
-    Then user clicks on save button on the problem form
+    Then user clicks on save button
     And user validates ticket status as "New"
-    And user validates child ticket details are same as parent ticket
-    Then user clicks on save button on the problem form
+    #And user validates child ticket details are same as parent ticket
+    #Then user clicks on save button
     When user switches to window 1
     And clicks on ticket refresh button
+    And user accepts alert
     Then user clicks on work order tab
     And user validates child WorkOrder availability
     And user validates WorkOrder status as "OPEN"
     When user switches to window 2
-    And user clicks on assignment under sections
-    And user clicks on apply B2B button
+    And user clicks on apply BtwoB button
+    #And user selects assigned profile dropdown as "Field Service:Mobile (B2B):Eltel - FS - FIN - B2B"
     Then user should see assigned profile as "Eltel - FS - FIN - B2B"
       #[SLA Class] - [Estimated Ready] is updated with calculated time (Event Start Time+SLA)
     When user selects SLA class as "10 Hours repair time (FI=A1)"
-    Then user validates estimated ready time is updated
+    Then user validates estimated ready time is updated for 10 hours
+      # get date and compare with Event start time
     When user selects SLA class as "2 month repair time"
-    Then user validates estimated ready time is updated
+    Then user validates estimated ready time is updated for 2 months
     When user selects SLA class as "22 Hours repair time"
-    Then user validates estimated ready time is updated
+    Then user validates estimated ready time is updated for 22 hours
 

@@ -15,8 +15,13 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String btnREFRESH_INBOUND = "//div[@id='WIN_0_600002301']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')] ";
     private static final String txtWFM_TIKCET_ID  = "arid_WIN_0_777504105";
     private static final String txtDISPATCH_STATUS_ID  = "arid_WIN_0_777504105";
-
+    private static final String btnAPPLY_B2B_ID = "WIN_0_600002903";
+    private static final String ddREQUEST_TYPE= "Request Type";
     private static final String ddASSIGNED_PROFILE = "arid_WIN_0_777031408";
+
+    public void selectRequestType(String value){
+        selectDropDownNameAndValue(ddREQUEST_TYPE, value, false);
+    }
 
     public String getDispatchStatus(){
          return getTextById(txtDISPATCH_STATUS_ID);
@@ -45,11 +50,10 @@ public class OWF_WorkOrderPage extends BasePage {
         return validateNotNullById(txtESTIMATED_READY);
 
     }
+
     public boolean validateWFM_ticket_ID(){
          return validateNotNullById(txtWFM_TIKCET_ID);
     }
-
-    private static final String btnAPPLY_B2B_ID = "WIN_0_600002903";
 
     public String getWOsStatusText(){
         return getTextById(txtWOs_STATUS_ID);

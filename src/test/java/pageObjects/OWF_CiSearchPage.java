@@ -21,12 +21,10 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String btnCREATE_linked_items = "WIN_4_777506020";
     private static final String chkbxTO_SELECT_CI = "//*[@id=\"T700009024\"]/tbody/tr[2]";
     private static final String rbtn_CLEARED_ID = "WIN_4_rc1id730011091";
-
+    private static final String ddCATEGORY= "Category*";
     private static final String txtNAME_PLUS_ID = "arid_WIN_0_700009016";
-
     private static final String ddLEVEL = "Level*";
     private static final String ddSEARCH_FOR_ID = "arid_WIN_0_700009236";
-
     private static final String ddValueALL_CIS = "All CIs";
     private static final String Table_ID = "T700009024";
     private static final String CI_DIAGNOSIS_TABLE_ID = "T700009087";
@@ -34,6 +32,9 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String OK_POP_UP_XPATH= "//*[@id=\"PopupMsgFooter\"]/a";
 
 
+    public void selectCategory_CiSearchPage(String value){
+        selectDropDownNameAndValue(ddCATEGORY,value, false );
+    }
 
     public void clickOk_OnPop_up(){
         findElement(By.xpath("//a[@class='btn btn3d PopupBtn']")).click();
@@ -84,14 +85,6 @@ public class OWF_CiSearchPage extends BasePage {
     public void selectTargetApplicationSecond(String value){
         selectDropDownNameAndValue(ddTARGET_APPLICATION_SECOND,value, false);
     }
-
-
-
-
-    public void acceptAlert() {
-        driver.switchTo().alert().accept();
-    }
-
     public void enterNamePlus(String name_plus) {
         driver.findElement(By.id(txtNAME_PLUS_ID)).sendKeys(name_plus);
     }
@@ -138,6 +131,7 @@ public class OWF_CiSearchPage extends BasePage {
 
     public void clickRelateCiButton() {
         driver.findElement(By.id(btnRELATE_CI)).click();
+        wait(1000);
     }
 
     public void clickToSelectCi() {

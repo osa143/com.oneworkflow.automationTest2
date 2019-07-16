@@ -13,7 +13,6 @@ public class OWF_WorkOrderPageSteps {
    OWF_WorkOrderPage workOrderPage= new OWF_WorkOrderPage();
     @And("user validates ticket status as {string}")
     public void userValidatesTicketStatusAs(String arg0) {
-        workOrderPage.wait(3000);
         Assert.assertEquals(workOrderPage.getStatusText(), arg0, "Status is not new");
     }
 
@@ -28,8 +27,8 @@ public class OWF_WorkOrderPageSteps {
         Assert.assertEquals(workOrderPage.getWOsStatusText(), arg0, "status in not open");
     }
 
-    @And("user clicks on apply B2B button")
-    public void userClicksOnApplyBBButton(int arg0) {
+    @And("user clicks on apply BtwoB button")
+    public void userClicksOnApplyBBButton() {
         workOrderPage.clickApplyB2B();
     }
 
@@ -49,7 +48,7 @@ public class OWF_WorkOrderPageSteps {
         Assert.assertEquals(workOrderPage.validateEstimatedReady(),"false", "Estimated date is not updated");
     }
 
-    @When("user clicks on B2B dispatch tab")
+    @When("user clicks on BtwoB dispatch tab")
     public void userClicksOnBBDispatchTab(int arg0) {
         workOrderPage.clickB2BDispatch();
     }
@@ -84,5 +83,20 @@ public class OWF_WorkOrderPageSteps {
 
     }
 
+    @Then("work order form should appear in new tab")
+    public void workOrderFormShouldAppearInNewTab() {
+        workOrderPage.getPageTitle();
+    }
+
+
+    @Then("blank work order form should appear in new tab")
+    public void blankWorkOrderFormShouldAppearInNewTab() {
+        workOrderPage.getPageTitle();
+    }
+
+    @And("user selects request type as {string} in work order page")
+    public void userSelectsRequestTypeAsInWorkOrderPage(String arg0) {
+       workOrderPage.selectRequestType(arg0);
+    }
 }
 

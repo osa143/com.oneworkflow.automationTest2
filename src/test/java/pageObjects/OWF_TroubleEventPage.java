@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.joda.time.DateTime;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -27,7 +28,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txtLAST_ACK_BY_ID = "arid_WIN_0_777031402";
     private static final String txtRESPONSE_REASON_ID = "arid_WIN_0_700048055";
     private static final String txtRE_ASIGNMENT_COUNT_ID = "arid_WIN_0_777031450";
-    private static final String txtEVENT_START_TIME = "arid_WIN_0_703001000";
+    private static final String txtEVENT_START_TIME = "arid_WIN_0_600001302";
     private static final String txtESTIMATED_READY = "arid_WIN_0_777504503";
     private static final String txtAUTO_CLOSE_DATE = "arid_WIN_0_600001305";
     private static final String txtRESPONSE_TIME = "arid_WIN_0_700048056";
@@ -84,6 +85,16 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         return error;
     }
 
+    //Event start+SLA
+    public String calculateEstimatedReadyUpdated(){
+        String eventStartTime= getTextById(txtEVENT_START_TIME);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        DateTime dateTime= new DateTime(eventStartTime).plusHours(10);
+        String estimatedReady = dateTime.toString();
+        System.out.println(estimatedReady);
+        return estimatedReady;
+    }
+
     public void clickOkOnPopup()
     {
         findElement(By.xpath(btn_OK_Popup)).click();
@@ -100,9 +111,22 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         return estimatedTime;
 
     }
+    public String calculateEstimatedReady(int hours){
+
+        String format = "yyyy-MM-dd HH:mm:ss";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
+        LocalDateTime dateTime = LocalDateTime.parse(getEventStartTime(), formatter);
+        String estimatedTime = dateTime.plusHours(hours).toString();
+        estimatedTime = estimatedTime.replace('T',' ');
+        System.out.println("Estimated time is: " + estimatedTime);
+        return estimatedTime;
+
+    }
 
     public String getSavedEstimatedReady(){
-        return getTextById(txtESTIMATED_READY);
+        String estimatedReady= getTextById(txtESTIMATED_READY);
+        System.out.println(estimatedReady);
+        return estimatedReady;
     }
     public void clearEstimatedReady(){
         findElement(By.id(txtESTIMATED_READY)).clear();

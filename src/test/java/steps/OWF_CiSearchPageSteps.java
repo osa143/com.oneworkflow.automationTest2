@@ -44,11 +44,13 @@ public class OWF_CiSearchPageSteps {
     @And("user clicks on relate CI")
     public void userClicksOnRelateCI() {
         ciSearchPage.clickRelateCiButton();
+        ciSearchPage.wait(3000);
     }
 
     @And("user closes warning message and clicks on close button")
     public void userClosesWarningMessageAndClicksOnCloseButton() {
-        ciSearchPage.switchToFrameById("1562937263859P");
+        //ciSearchPage.switchToFrameByIndex(0);
+        ciSearchPage.wait(2000);
         ciSearchPage.clickOk_OnPop_up();
         ciSearchPage.clickCloseButton();
 
@@ -158,5 +160,11 @@ public class OWF_CiSearchPageSteps {
     @And("user switches to default")
     public void userSwitchesToDefault() {
         ciSearchPage.switchToDefault();
+
+    }
+
+    @And("user selects impact category as {string}")
+    public void userSelectsImpactCategoryAs(String arg0) {
+        ciSearchPage.selectCategory_CiSearchPage(arg0);
     }
 }

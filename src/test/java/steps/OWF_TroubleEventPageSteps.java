@@ -50,7 +50,7 @@ public class OWF_TroubleEventPageSteps {
     @When("user clicks on work order tab")
     public void userClicksOnWorkOrderTab() {
      troubleEventPage.clickWorkOrder();
-        troubleEventPage.wait(3000);
+        troubleEventPage.wait(2000);
     }
 
     @And("user clicks on create from ticket")
@@ -388,6 +388,21 @@ public class OWF_TroubleEventPageSteps {
         Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
         troubleEventPage.clickOkOnPopup();
 
+    }
+
+    @Then("user validates estimated ready time is updated for {int} hours")
+    public void userValidatesEstimatedReadyTimeIsUpdatedForHours(int arg0) {
+        Assert.assertEquals(troubleEventPage.calculateEstimatedReady(arg0), troubleEventPage.getSavedEstimatedReady());
+    }
+
+    @Then("user validates estimated ready time is updated for {int} months")
+    public void userValidatesEstimatedReadyTimeIsUpdatedForMonths(int arg0) {
+        Assert.assertEquals(troubleEventPage.getEstimatedReady(60), troubleEventPage.getSavedEstimatedReady());
+    }
+
+    @And("user accepts alert")
+    public void userAcceptsAlert() {
+        troubleEventPage.acceptAlert();
     }
 }
 

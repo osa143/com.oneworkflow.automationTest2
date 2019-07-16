@@ -94,11 +94,11 @@ public class BasePage {
     //To be used for all send keys methods.
     public void enterTextBy(By textElement, String text)
     {
-        driver.findElement(textElement).sendKeys(text);
+        findElement(textElement).sendKeys(text);
     }
 
     public String getTextById(String Id) {
-        return findElement(By.id(Id)).getAttribute("value");
+        return driver.findElement(By.id(Id)).getAttribute("value");
     }
 
     public void selectMainMenu(String mainMenu) {
@@ -443,6 +443,8 @@ public class BasePage {
     }
 
     public void switchToFrameByIndex(int frame_index) {
+        int size= driver.findElements(By.tagName("iframe")).size();
+        System.out.println("Number of frames are: " +size);
         driver.switchTo().frame(frame_index);
     }
 
@@ -463,7 +465,11 @@ public class BasePage {
   }
   public void switchToDefault(){
         driver.switchTo().defaultContent();
+        wait(1000);
   }
+    public void acceptAlert() {
+        driver.switchTo().alert().accept();
+    }
 
 
 }

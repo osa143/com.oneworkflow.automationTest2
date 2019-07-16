@@ -362,6 +362,11 @@ public class OWF_AgentConsolePageSteps {
     public void multipleMenuOptionsShouldBeAvailable(String arg0) {
         Assert.assertTrue(agentConsolePage.verifyMenuItems(arg0));
     }
+
+    @When("user clicks on create work order")
+    public void userSelectsCreateMenuAs() {
+        agentConsolePage.selectMainMenuAndMenuItem("Create", "Work Order");
+    }
 }
 
 

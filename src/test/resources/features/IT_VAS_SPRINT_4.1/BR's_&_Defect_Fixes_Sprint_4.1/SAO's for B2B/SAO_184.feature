@@ -37,13 +37,12 @@ Feature: Sending of WO to OneCo
       And user clicks on B2B dispatch tab
       And user enters header value as "Test"
       And user enters message value as "Automated Test"
-      Then user clicks on save button on the problem form
-      And user clicks on outbound events refresh button
-      And user clicks on inbound events refresh button
+      Then user clicks on save button
+      And user should see outbound assignment event
       Then user should see WFM ticket ID
       And user should see dispatch status as "Submitted"
       And user should see inbound acknowledgment event
-      And user should see outbound assignment event
+      And user clicks on inbound events refresh button
       And user double clicks on B2B outbound event
       And user switches to window 2
       Then user navigates to custom field tab on above URL

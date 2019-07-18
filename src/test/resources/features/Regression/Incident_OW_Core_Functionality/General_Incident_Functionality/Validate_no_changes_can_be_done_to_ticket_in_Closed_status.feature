@@ -1,0 +1,2 @@
+@Validate_no_changes_can_be_done_to_ticket_in_Closed_status @Incident
+

@@ -12,7 +12,7 @@ Feature: creation and sending of WO to Tieto - Tieto Pending
     And user selects request type as "SA Request:Support" in work order page
     And user enters description as "Tieto Test"
     And user selects priority as "Emergency"
-    And user selects reason dropdown as "Integration Testing"
+    And user enters reason field as "Integration Testing"
     Then user clicks on save button on the problem form
     When user clicks on Diagnosis tab
     And user clicks on CI search button

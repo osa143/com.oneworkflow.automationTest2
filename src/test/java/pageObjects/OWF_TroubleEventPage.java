@@ -38,14 +38,12 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txtEVENT_END_TIME = "arid_WIN_0_777010106";
     private static final String txtCLOSURE_INFO = "arid_WIN_0_777031384";
 
-    private static final String chkbxHEADER_XPATH_AlarmsTab = "//div[@id='WIN_0_700508140']//input[@class='checkboxheader']";
-    private static final String chkbxHEADER_XPATH_Diagnosis = "//div[@id='WIN_0_700009087']//input[@class='checkboxheader']";
+
     private static final String chkbxDO_NOT_AUTOCLOSE = "WIN_0_rc0id600002014";
     private static final String chkbxSELECT_TIKCET = "//input[@class='colcheck']";
 
     private static final String btnREFRESH_ALARM_TAB_XPATH= "//a[contains(text(),'Refresh')] ";
     private static final String btnTERMINATE_ALARM = "WIN_0_600002926";
-    private static final String btnALARMS_XPATH = "//div[@id='WIN_0_999000003']//div[@class='OuterTabsDiv']//div[@class='TabsViewPort']//div//a[@class='btn f1'][contains(text(),'Alarms')]";
     private static final String btnCREATE_FROM_TICKET_ID  = "WIN_0_777504010";
     private static final String btnOK_DIAGNOSIS_ON_FRAME = "arid_WIN_0_777031384";
     private static final String btnSEARCH_SELECT_TARGET_REQUEST = "WIN_0_700506222";
@@ -53,6 +51,20 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btnACCEPT_SELECT_TARGET_REQUEST = "WIN_0_730011058";
     private static final String rbtnDISPLAY_ACTIVE_CHILD_ALARMS = "WIN_0_rc0id730030000";
     private static final String Error_POP_UP_ID= "PopupMsgBox";
+    private static final String btn_CTI_DETAILS_UNDER_SECTIONS = "WIN_0_777789018";
+    private static final String btn_LOCATION_UNDER_SECTIONS= "WIN_0_999000344";
+    private static final String btn_OWNER_UNDER_SECTIONS= "WIN_0_999000347";
+    private static final String btn_ON_HOLD_UNDER_SECTIONS = "WIN_0_999000343";
+    private static final String btn_VENDOR_UNDER_SECTIONS= "WIN_0_999000348";
+    private static final String btn_CLOSURE_UNDER_SECTIONS= "WIN_0_999000364";
+    private static final String btn_ATTACHMENTS_UNDER_SECTIONS= "WIN_0_999000368";
+    private static final String btn_ROOT_CAUSE_UNDER_SECTIONS = "WIN_0_999000372";
+    private static final String btn_ADD ="WIN_0_777000020";
+    private static final String btn_OPEN_INTERNAL= "WIN_0_777000021";
+    private static final String btn_DELETE= "WIN_0_777000022";
+    private static final String btn_OPEN_EXTERNAL= "WIN_0_600002903";
+    private static final String div_CAUSE= "WIN_0_777031380";
+
 
 
     private static final String ddSTATUS = "Status";
@@ -60,7 +72,6 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String ddTITLE = "Title";
     private static final String ddREQUEST_TYPEE = "Request Type";
     private static final String ddFAULT_TYPE = "Fault Type";
-    private static final String ddIMPORTANCE_XPATH = "//div[@id='WIN_0_600001821']//a[@class='btn btn3d selectionbtn']";
     private static final String ddIMPACT = "Impact";
     private static final String ddASIGNMENT_PROFILE = "Assignment Profile";
     private static final String ddASIGNEE = "Assignee";
@@ -78,13 +89,118 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String ddIMPORTANCE_Field_ID= "WIN_0_600001821";
     private static final String ddOWNER_PROFILE_ID = "WIN_0_777031401";
     private static final String btn_OK_Popup = "//*[@id=\"PopupMsgFooter\"]/a";
+    private static final String fld_LOCATION_INFORMATION= "//*[@id=\"WIN_0_999000300\"]/table/tbody/tr/td";
+    private static final String fld_ON_HOLD_UNTIL= "//*[@id=\"WIN_0_700000040\"]/table/tbody/tr/td";
+    private static final String fld_CLOSURE_CODE = "//*[@id=\"WIN_0_777010094\"]/table/tbody/tr/td";
+    private static final String fld_INTERNAL= "//*[@id=\"WIN_0_999000353\"]/table/tbody/tr/td";
+    private static final String fld_EXTERNAL = "//*[@id=\"WIN_0_600003301\"]/table/tbody/tr/td";
+    private static final String fld_OWNER= "//*[@id=\"WIN_0_777010095\"]/table/tbody/tr/td";
+    private static final String fld_VENDOR= "//*[@id=\"WIN_0_777021005\"]/table/tbody/tr/td";
+    private static final String fld_ROOT_CAUSE= "//*[@id=\"WIN_0_799999914\"]/table/tbody/tr/td";
 
+
+    public boolean verifyIsRootCauseIsPresent(){
+        return findElement(By.xpath(fld_ROOT_CAUSE)).isDisplayed();
+    }
+
+    public boolean verifyIsCauseIsPresent(){
+        return findElement(By.id(div_CAUSE)).isDisplayed();
+    }
+    public boolean verifyIsAddIsPresent(){
+        return findElement(By.id(btn_ADD)).isDisplayed();
+    }
+    public boolean verifyIsOpen_InternalIsPresent(){
+        return findElement(By.id(btn_OPEN_INTERNAL)).isDisplayed();
+    }
+
+    public boolean verifyIsDeleteIsPresent(){
+        return findElement(By.id(btn_DELETE)).isDisplayed();
+    }
+
+    public boolean verifyIsOpen_ExternalIsPresent(){
+        return findElement(By.id(btn_OPEN_EXTERNAL)).isDisplayed();
+    }
+
+    public boolean verifyIsPreferences_InternalIsPresent(){
+        return findElement(By.xpath(btn_PREFRENCES_INTERNAL)).isDisplayed();
+    }
+    public boolean verifyIsRefresh_InternalIsPresent(){
+        return findElement(By.xpath(btn_REFRESH_INTERNAL)).isDisplayed();
+    }
+
+    public boolean verifyIsPreferences_ExternalIsPresent(){
+        return findElement(By.xpath(btn_PREFRENCES_EXTERNAL)).isDisplayed();
+    }
+
+    public boolean verifyIsRefresh_ExternalIsPresent(){
+        return findElement(By.xpath(btn_REFRESH_EXTERNAL)).isDisplayed();
+    }
+    public void clickRootCause(){
+        findElement(By.id(btn_ROOT_CAUSE_UNDER_SECTIONS)).click();
+    }
+
+    public boolean verifyIsOwnerIsPresent(){
+        return findElement(By.xpath(fld_OWNER)).isDisplayed();
+    }
+    public boolean verifyIsVendorIsPresent(){
+        return findElement(By.xpath(fld_VENDOR)).isDisplayed();
+    }
+
+    public boolean verifyIsExternalIsPresent(){
+       return findElement(By.xpath(fld_EXTERNAL)).isDisplayed();
+    }
+
+    public boolean verifyIsInternalIsPresent(){
+        return findElement(By.xpath(fld_INTERNAL)).isDisplayed();
+    }
+
+    public boolean verifyIsOnHoldUntilPresent(){
+        return findElement(By.xpath(fld_ON_HOLD_UNTIL)).isDisplayed();
+    }
+
+    public boolean verifyIsLocationInformationIspPresent(){
+         return findElement(By.xpath(fld_LOCATION_INFORMATION)).isDisplayed();
+    }
+    public boolean verifyIsClosureCodeIspPresent(){
+        return findElement(By.xpath(fld_CLOSURE_CODE)).isDisplayed();
+    }
+
+    public void clickClosure(){
+        findElement(By.id(btn_CLOSURE_UNDER_SECTIONS)).click();
+    }
+
+    public void clickVendor(){
+        findElement(By.id(btn_VENDOR_UNDER_SECTIONS)).click();
+    }
+
+    public void clickOnHold(){
+        findElement(By.id(btn_ON_HOLD_UNDER_SECTIONS)).click();
+    }
+
+    public void clickAttachments(){
+        findElement(By.id(btn_ATTACHMENTS_UNDER_SECTIONS)).click();
+    }
+
+    public void clickLocation(){
+        findElement(By.id(btn_LOCATION_UNDER_SECTIONS)).click();
+    }
+    public void clickOwner(){
+        findElement(By.id(btn_OWNER_UNDER_SECTIONS)).click();
+    }
     public String getErrorText(){
         String error= getTextById(Error_POP_UP_ID);
         System.out.println(error);
         return error;
     }
-
+    public void clickCtiDetails(){
+        findElement(By.id(btn_CTI_DETAILS_UNDER_SECTIONS)).click();
+    }
+    public boolean verifyCtiDetailsIsDisplayed(){
+        return verifyElementIsDisplayed(By.id(btn_CTI_DETAILS_UNDER_SECTIONS));
+    }
+    public boolean verifyWosStatusIsDisplayed(){
+        return findElement(By.id(txtWO_STATUS_ID)).isDisplayed();
+    }
     //Event start+SLA
     public String calculateEstimatedReadyUpdated(){
         String eventStartTime= getTextById(txtEVENT_START_TIME);
@@ -439,7 +555,14 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         driver.navigate().refresh();
     }
 
-
+    private static final String btn_PREFRENCES_INTERNAL= "//div[@id='WIN_0_777000013']//a[@class='Prefs btn btn3d TableBtn'][contains(text(),'Preferences')]";
+    private static final String btn_REFRESH_INTERNAL= "//div[@id='WIN_0_777000013']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
+    private static final String btn_PREFRENCES_EXTERNAL= "//div[@id='WIN_0_600002205']//a[@class='Prefs btn btn3d TableBtn'][contains(text(),'Preferences')]";
+    private static final String btn_REFRESH_EXTERNAL= "//div[@id='WIN_0_600002205']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
+    private static final String chkbxHEADER_XPATH_AlarmsTab = "//div[@id='WIN_0_700508140']//input[@class='checkboxheader']";
+    private static final String btnALARMS_XPATH = "//div[@id='WIN_0_999000003']//div[@class='OuterTabsDiv']//div[@class='TabsViewPort']//div//a[@class='btn f1'][contains(text(),'Alarms')]";
+    private static final String ddIMPORTANCE_XPATH = "//div[@id='WIN_0_600001821']//a[@class='btn btn3d selectionbtn']";
+    private static final String chkbxHEADER_XPATH_Diagnosis = "//div[@id='WIN_0_700009087']//input[@class='checkboxheader']";
 
     private static final String ddValueSITE_ACCESS_REGISTRATION = "Site access registration";
     private static final String ddValueWORKFORCE_ESCALATION_SE = "Workforce Escalation-SE";

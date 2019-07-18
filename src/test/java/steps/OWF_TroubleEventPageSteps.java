@@ -404,6 +404,146 @@ public class OWF_TroubleEventPageSteps {
     public void userAcceptsAlert() {
         troubleEventPage.acceptAlert();
     }
+
+    @And("user validates {string} is present")
+    public void userValidatesIsPresent(String arg0) {
+        Assert.assertTrue(troubleEventPage.verifyElementIsDisplayedByContainsText(arg0));
+
+    }
+
+
+    @And("user validates WO's Status is present")
+    public void userValidatesWOSStatusIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyWosStatusIsDisplayed());
+    }
+
+    @And("user validates CTI Details is present")
+    public void userValidatesCTIDetailsIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyCtiDetailsIsDisplayed());
+
+    }
+
+    @Then("user clicks on CTI details under sections")
+    public void userClicksOnCTIDetailsUnderSections() {
+        troubleEventPage.clickCtiDetails();
+    }
+
+    @Then("user clicks on location under sections")
+    public void userClicksOnLocationUnderSections() {
+        troubleEventPage.clickLocation();
+    }
+
+
+    @Then("user clicks on On Hold under sections")
+    public void userClicksOnOnHoldUnderSections() {
+       troubleEventPage.clickOnHold();
+    }
+
+    @Then("user clicks on vendor under sections")
+    public void userClicksOnVendorUnderSections() {
+        troubleEventPage.clickVendor();
+    }
+
+    @Then("user clicks on closure under sections")
+    public void userClicksOnClosureUnderSections() {
+        troubleEventPage.clickClosure();
+    }
+
+    @And("user validates Location Information is present")
+    public void userValidatesLocationInformationIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsLocationInformationIspPresent());
+    }
+
+    @And("user validates On Hold Until is present")
+    public void userValidatesOnHoldUntilIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsOnHoldUntilPresent());
+    }
+
+    @And("user validates Closure Codes is present")
+    public void userValidatesClosureCodesIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsClosureCodeIspPresent());
+    }
+
+    @And("user validates Internal is present")
+    public void userValidatesInternalIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsInternalIsPresent());
+    }
+
+    @And("user validates External is present")
+    public void userValidatesExternalIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsExternalIsPresent());
+    }
+
+    @And("user validates Vendor is present")
+    public void userValidatesVendorIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsVendorIsPresent());
+    }
+
+    @And("user validates Owner is present")
+    public void userValidatesOwnerIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsOwnerIsPresent());
+    }
+
+    @Then("user clicks on attachments under sections on trouble event page")
+    public void userClicksOnAttachmentsUnderSectionsOnTroubleEventPage() {
+        troubleEventPage.clickAttachments();
+    }
+
+    @And("user validates Add is present")
+    public void userValidatesAddIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsAddIsPresent());
+    }
+
+
+    @And("user validates Delete is present")
+    public void userValidatesDeleteIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsDeleteIsPresent());
+    }
+
+    @And("user validates internal Open is present")
+    public void userValidatesInternalOpenIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsOpen_InternalIsPresent());
+    }
+
+    @And("user validates external Open is present")
+    public void userValidatesExternalOpenIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsOpen_ExternalIsPresent());
+    }
+
+    @And("user validates internal Preferences is present")
+    public void userValidatesInternalPreferencesIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsPreferences_InternalIsPresent());
+    }
+
+    @And("user validates internal Refresh is present")
+    public void userValidatesInternalRefreshIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsRefresh_InternalIsPresent());
+    }
+
+    @And("user validates external Preferences is present")
+    public void userValidatesExternalPreferencesIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsPreferences_ExternalIsPresent());
+    }
+
+    @And("user validates external Refresh is present")
+    public void userValidatesExternalRefreshIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsRefresh_ExternalIsPresent());
+    }
+
+    @And("user validates Cause is present")
+    public void userValidatesCauseIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsCauseIsPresent());
+    }
+
+    @And("user clicks on root cause under sections")
+    public void userClicksOnRootCauseUnderSections() {
+        troubleEventPage.clickRootCause();
+    }
+
+    @And("user validates root cause is present")
+    public void userValidatesRootCauseIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyIsRootCauseIsPresent());
+    }
 }
 
 

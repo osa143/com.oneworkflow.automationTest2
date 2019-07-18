@@ -2,6 +2,7 @@ package pageObjects;
 
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -295,7 +296,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void clickAttachments(){
-        driver.findElement(By.id(btnATTACHMENTS)).click();
+        findElement(By.id(btnATTACHMENTS)).click();
     }
     public void selectSummaryDropDownAs(String value){
     selectDropDownNameAndValue(ddSUMMARY, value, false);

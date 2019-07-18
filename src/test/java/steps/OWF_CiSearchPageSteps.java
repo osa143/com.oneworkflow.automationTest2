@@ -10,10 +10,7 @@ public class OWF_CiSearchPageSteps {
 
     OWF_CiSearchPage ciSearchPage = new OWF_CiSearchPage();
 
-    @Then("CI search tab should be opened")
-    public void ciSearchTabShouldBeOpened() {
 
-    }
     @And("user selects search for as {string}")
     public void userSelectsSearchForAs(String arg0) {
         ciSearchPage.clickSearchForDropdown();
@@ -46,6 +43,10 @@ public class OWF_CiSearchPageSteps {
         ciSearchPage.clickRelateCiButton();
         ciSearchPage.wait(3000);
     }
+    @Then("CI search tab should be opened")
+    public void ciSearchTabShouldBeOpened() {
+        //dummy step
+    }
 
     @And("user closes warning message and clicks on close button")
     public void userClosesWarningMessageAndClicksOnCloseButton() {
@@ -53,7 +54,6 @@ public class OWF_CiSearchPageSteps {
         ciSearchPage.wait(2000);
         ciSearchPage.clickOk_OnPop_up();
         ciSearchPage.clickCloseButton();
-
     }
     @When("user clicks on clear button")
     public void userClicksOnClearButton() {

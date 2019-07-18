@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -103,6 +104,8 @@ public class OWF_CiSearchPage extends BasePage {
 
     public void clickCloseButton() {
         driver.findElement(By.id(btnClOSE)).click();
+        WebElement html = driver.findElement(By.tagName("html"));
+        html.sendKeys(Keys.chord(Keys.CONTROL, "0"));
     }
 
     public void clickClearButton() {

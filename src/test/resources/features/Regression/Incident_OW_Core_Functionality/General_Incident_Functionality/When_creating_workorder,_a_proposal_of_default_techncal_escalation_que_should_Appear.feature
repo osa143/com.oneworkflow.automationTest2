@@ -1,3 +1,0 @@
-@When_creating_workorder_a_proposal_of_default_techncal_escalation_que_should_appears @Incident
-
-

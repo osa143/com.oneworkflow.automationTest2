@@ -65,7 +65,7 @@ public class OWF_ChangeRecordPageSteps {
     @And("user clicks on save button")
     public void userClicksOnSaveButton() {
         changeRecordPage.clickSave();
-        changeRecordPage.wait(5000);
+        changeRecordPage.wait(7000);
 
     }
 
@@ -83,7 +83,7 @@ public class OWF_ChangeRecordPageSteps {
     @And("user clicks on CI search button")
     public void userClicksOnCISearchButton() {
         changeRecordPage.clickCiSearch();
-        changeRecordPage.wait(5000);
+        changeRecordPage.wait(3000);
     }
 
 

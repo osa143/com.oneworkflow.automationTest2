@@ -2,8 +2,10 @@ package driver.factory;
 
 import bsh.Capabilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -59,13 +61,12 @@ public class DriverFactory {
 
                 case "IE":
                     WebDriverManager.iedriver().setup();
-                    InternetExplorerOptions options = new InternetExplorerOptions();
-                    options.setCapability("ignoreProtectedModeSettings", true);
-
+                    //InternetExplorerOptions options = new InternetExplorerOptions();
+                    //options.setCapability("ignoreProtectedModeSettings", true);
                     //capabilities = DesiredCapabilities.internetExplorer();
                     //capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-//                    capabilities.setCapability(InternetExplorerDriver., true);
-                    driver = new InternetExplorerDriver(options);
+                    //capabilities.setCapability(InternetExplorerDriver., true);
+                    //driver = new InternetExplorerDriver(options);
                     break;
 
                 case "FIREFOX":
@@ -87,6 +88,9 @@ public class DriverFactory {
             driver.manage().deleteAllCookies();
              driver.manage().timeouts().pageLoadTimeout(WaitUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
             driver.manage().timeouts().implicitlyWait(WaitUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+            //JavascriptExecutor executor = (JavascriptExecutor)driver;
+            //executor.executeScript("document.body.style.zoom = '0.9'");
+
         }
 
         return driver;

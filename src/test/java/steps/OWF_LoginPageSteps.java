@@ -11,6 +11,7 @@ public class OWF_LoginPageSteps extends BaseSteps {
     @Given("user is on the OneWorkflow login page")
     public void userIsOnTheOneWorkflowLoginPage() {
         loginPage.getURL(getProperties().getProperty("appURL"));
+
         String LoginPageTitle = loginPage.getPageTitle();
         System.out.println(LoginPageTitle);
         // Assert.assertEquals(LoginPageTitle, "BMC Remedy Mid Tier 9.1 - Login");

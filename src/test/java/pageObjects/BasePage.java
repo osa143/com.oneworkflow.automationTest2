@@ -32,6 +32,7 @@ public class BasePage {
     public void getURL(String appURL) {
         driver = DriverFactory.getInstance().getDriver();
         driver.get(appURL);
+
     }
 
     public String getPageTitle() {
@@ -53,6 +54,14 @@ public class BasePage {
     public boolean verifyElementIsDisplayed(By element){
         return findElement(element).isDisplayed();
     }
+
+    public boolean verifyElementIsDisplayedByContainsText(String textName){
+        String element = String.format("//label[contains(text(),'%s')]", textName);
+        System.out.println(element);
+        return findElement(By.xpath(element)).isDisplayed();
+
+    }
+
     public boolean verifyMenuItems(String items){
         String [] menuItems = items.split(":");
         for (int i=0; i<menuItems.length; i++){
@@ -98,7 +107,7 @@ public class BasePage {
     }
 
     public String getTextById(String Id) {
-        return driver.findElement(By.id(Id)).getAttribute("value");
+        return findElement(By.id(Id)).getAttribute("value");
     }
 
     public void selectMainMenu(String mainMenu) {

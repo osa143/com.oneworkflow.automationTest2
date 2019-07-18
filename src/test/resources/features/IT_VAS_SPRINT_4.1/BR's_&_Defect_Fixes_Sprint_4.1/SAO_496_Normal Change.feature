@@ -20,7 +20,7 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
     Then new tabs should be displayed including Diagnosis tab
     When user clicks on Diagnosis tab
     And user clicks on CI search button
-    Then CI search tab should be opened
+    And user switches to frame
     When user clicks on clear button
     And user selects search for as "All CIs"
     And user enters "One WorkFlow system test" in name field
@@ -28,7 +28,7 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
     And user selects a CI from list
     And user selects impact level as "Degradation of Service"
     And user clicks on relate CI
-    And user closes warning message and clicks on close button
+    And user clicks on close button on CI search window
     Then CI should be listed and displayed under the Diagnosis tab
     When user clicks on Send button
     Then send button becomes inactive and Ack button should be active

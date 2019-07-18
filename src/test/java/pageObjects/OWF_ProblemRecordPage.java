@@ -75,6 +75,9 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txtTO_DATE = "arid_WIN_0_777031004";
 
 
+    public boolean verifyIsSaveIsPresent(){
+        return findElement(By.id(btnSAVE_ID)).isDisplayed();
+    }
     public boolean verifyProblemTickets(){
         int size= getTableRows(By.id(TABLE_ID)).size();
         if(size>1){

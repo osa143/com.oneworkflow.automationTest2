@@ -743,4 +743,9 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.enterTicket(ticket);
         System.out.println("user entered problem ticket" + ticket);
     }
+
+    @And("user validates Save is present")
+    public void userValidatesSaveIsPresent() {
+        Assert.assertTrue(problemRecordPage.verifyIsSaveIsPresent());
+    }
 }

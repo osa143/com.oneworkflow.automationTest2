@@ -6,10 +6,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import utils.Ticket;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 public class OWF_TroubleEventPage extends BaseRecordPage {
@@ -37,6 +36,11 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txtTROUBLE_TICKET_ID = "arid_WIN_0_777777600"; //Ticket ID+
     private static final String txtEVENT_END_TIME = "arid_WIN_0_777010106";
     private static final String txtCLOSURE_INFO = "arid_WIN_0_777031384";
+    private static final String txt_CATEGORY= "arid_WIN_0_200000003";
+    private static final String txt_TYPE= "arid_WIN_0_200000004";
+    private static final String txt_ITEM= "arid_WIN_0_200000005";
+    private static final String txt_EVENT_START_TIME= "arid_WIN_0_703001000";
+    private static final String txt_LOCATION_ID_PLUS = "arid_WIN_0_777031006";
 
 
     private static final String chkbxDO_NOT_AUTOCLOSE = "WIN_0_rc0id600002014";
@@ -97,7 +101,40 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String fld_OWNER= "//*[@id=\"WIN_0_777010095\"]/table/tbody/tr/td";
     private static final String fld_VENDOR= "//*[@id=\"WIN_0_777021005\"]/table/tbody/tr/td";
     private static final String fld_ROOT_CAUSE= "//*[@id=\"WIN_0_799999914\"]/table/tbody/tr/td";
+    private static final String table_SELECT_LOCATION= "T700024013";
+    private static final String btn_NEXT_CHUNK_RIGHT= "//div[@id='WIN_0_700024013']//a[@class='btn chunkright']";
+    private static final String btn_OK_SELECT_LOCATION= "WIN_0_700000104";
 
+    public void clickOnRow(String text)
+    {
+        WebElement element = getTableElementAndTextBasedOnIndex(By.id(table_SELECT_LOCATION),"Name",text);
+        element.click();
+    }
+
+    public void clickOk_SelectLocation(){
+        findElement(By.id(btn_OK_SELECT_LOCATION)).click();
+    }
+
+    public void clickNextChunkRight(){
+        findElement(By.xpath(btn_NEXT_CHUNK_RIGHT)).click();
+    }
+
+    public boolean verifyListOfSwedishSites(){
+        int listSize= getTableRows(By.id(table_SELECT_LOCATION)).size();
+        if (listSize>1)
+            return true;
+        else return false;
+    }
+    public void enterLocationIdPlus(String text){
+        findElement(By.id(txt_LOCATION_ID_PLUS)).sendKeys(text);
+        findElement(By.id(txt_LOCATION_ID_PLUS)).sendKeys(Keys.ENTER);
+    }
+    public boolean verifyEventStartTimeIsAvailable(){
+        return verifyElementIsDisplayed(By.id(txt_EVENT_START_TIME));
+    }
+    public String eventStartDateTime(){
+        return getTextById(txt_EVENT_START_TIME);
+    }
 
     public boolean verifyIsRootCauseIsPresent(){
         return findElement(By.xpath(fld_ROOT_CAUSE)).isDisplayed();
@@ -249,7 +286,9 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
 
     }
    public String getEventStartTime(){
-       return getTextById(txtEVENT_START_TIME);
+       String eventStartTime=  getTextById(txtEVENT_START_TIME);
+       System.out.println(eventStartTime);
+       return eventStartTime;
    }
     public boolean verifyOwnerProfileAvailability(){
         return verifyElementIsDisplayed(By.id(ddOWNER_PROFILE_ID));
@@ -263,7 +302,26 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         System.out.println(availability);
         return availability;
     }
-
+   public boolean verifyCategoryAvailability(){
+       Boolean availability= verifyElementIsDisplayed(By.id(txt_CATEGORY));
+       System.out.println(availability);
+       return availability;
+   }
+    public boolean verifyEventStartTimeAvailability(){
+        Boolean availability= verifyElementIsDisplayed(By.id(txt_EVENT_START_TIME));
+        System.out.println(availability);
+        return availability;
+    }
+    public boolean verifyTypeAvailability(){
+        Boolean availability= verifyElementIsDisplayed(By.id(txt_TYPE));
+        System.out.println(availability);
+        return availability;
+    }
+    public boolean verifyItemAvailability(){
+        Boolean availability= verifyElementIsDisplayed(By.id(txt_ITEM));
+        System.out.println(availability);
+        return availability;
+    }
 
      public void selectImpact(String value){
          selectDropDownNameAndValue(ddIMPACT, value, true);

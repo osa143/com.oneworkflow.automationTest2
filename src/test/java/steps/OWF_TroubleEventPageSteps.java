@@ -5,6 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
 import pageObjects.OWF_TroubleEventPage;
+import utils.CommonUtils;
 import utils.Ticket;
 
 public class OWF_TroubleEventPageSteps {
@@ -543,6 +544,52 @@ public class OWF_TroubleEventPageSteps {
     @And("user validates root cause is present")
     public void userValidatesRootCauseIsPresent() {
         Assert.assertTrue(troubleEventPage.verifyIsRootCauseIsPresent());
+    }
+
+    @And("user validates availability of category dropdown")
+    public void userValidatesAvailabilityOfCategoryDropdown() {
+     Assert.assertTrue(troubleEventPage.verifyCategoryAvailability());
+    }
+
+    @Then("user validates availability of type dropdown")
+    public void userValidatesAvailabilityOfTypeDropdown() {
+        Assert.assertTrue(troubleEventPage.verifyTypeAvailability());
+    }
+
+    @When("user validates availability of item dropdown")
+    public void userValidatesAvailabilityOfItemDropdown() {
+        Assert.assertTrue(troubleEventPage.verifyCategoryAvailability());
+    }
+
+    @And("user validates event start time is present")
+    public void userValidatesEventStartTimeIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyEventStartTimeAvailability());
+        Assert.assertNotNull(troubleEventPage.eventStartDateTime());
+    }
+
+    @And("user enters {string} within the location ID+ field")
+    public void userEntersWithinTheLocationIDField(String arg0) {
+        troubleEventPage.enterLocationIdPlus(arg0);
+    }
+
+    @Then("user should see list of swedish sites")
+    public void userShouldSeeListOfSwedishSites() {
+        Assert.assertTrue(troubleEventPage.verifyListOfSwedishSites());
+    }
+
+    @When("user clicks on the next chunk button")
+    public void userClicksOnTheNextChunkButton() {
+      troubleEventPage.clickNextChunkRight();
+    }
+
+    @And("user highlights location {string}")
+    public void userHighlightsLocation(String arg0) {
+        troubleEventPage.clickOnRow(arg0);
+    }
+
+    @Then("user clicks on ok button on location search")
+    public void userClicksOnOkButtonOnLocationSearch() {
+        troubleEventPage.clickOk_SelectLocation();
     }
 }
 

@@ -1,5 +1,5 @@
 @01.03_Set_correct_categorization @Incident
-
+#passed
 Feature: Setting of correct categorization
 
   Scenario: user can set correct categorization
@@ -10,7 +10,7 @@ Feature: Setting of correct categorization
     When user clicks on create trouble event
     And user switches to window 1
     Then trouble record form should appear in new tab
-    When user clicks CTI under sections
+    When user clicks on CTI details under sections
     And user validates availability of category dropdown
     Then multiple statuses "1:Access:Access|Transport:BSS:Computer Services:CORE:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:OSS:Packet_Transport:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:TV:VAS" should be available in "Category" dropdown
     And user selects Category as "CORE"

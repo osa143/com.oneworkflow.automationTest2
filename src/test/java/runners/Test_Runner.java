@@ -6,7 +6,7 @@ import runners.BaseTest;
 
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
-        tags = {"@Validate_Incident_Record_Process_Artifact"}
+        tags = {"@01.05_Set_location_of_incident_origin"}
 )
 
 public class Test_Runner extends BaseTest {

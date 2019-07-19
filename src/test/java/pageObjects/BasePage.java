@@ -14,6 +14,7 @@ import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 public class BasePage {
@@ -423,6 +424,33 @@ public class BasePage {
         return true;
     }
 
+    //use this common method instead of top 2 methods
+    //text = "Secondary"
+    public WebElement getTableElementAndTextBasedOnIndex(By table, String headerName, String text)
+    {
+
+        List<WebElement> elements = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
+        int columnIndex = getColumnIndexByHeaderName(table, headerName);
+
+        for (int i = 1; i < elements.size(); i++)
+        {
+            List<WebElement> tdElements = elements.get(i).findElements(By.tagName("td"));
+
+            if (tdElements.size() > 0) {
+                if (tdElements.get(columnIndex).getText().equals(text)) {
+                    //trElements.get(columnIndex).click();
+                    //alarmId = trElements.get(1).getText();
+                    System.out.println(tdElements.get(1).getText());
+                    System.out.println(tdElements.get(2).getText());
+                    return tdElements.get(2);
+                }
+            }
+
+        }
+        return null;
+    }
+
+
     // rowNum : 0 gives header row
     // rowNum : 1 gives first row
     public String getTableCellData(By table, String columnName, int rowNum){
@@ -434,6 +462,9 @@ public class BasePage {
             cellData =  getTableRows.get(rowNum).findElements(By.tagName("td")).get(colNum).getText();
         }
         return cellData;
+    }
+    public void clickByCellData(By table, String columnName, int rowNum, String cellData){
+        getTableCellData(table, columnName, rowNum);
     }
     public static File takeScreenShot() {
 

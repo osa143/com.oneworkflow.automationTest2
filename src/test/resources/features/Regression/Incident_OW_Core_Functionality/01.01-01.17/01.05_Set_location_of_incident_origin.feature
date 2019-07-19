@@ -12,6 +12,7 @@ Feature: Setting of incident start time
     When user clicks on location under sections
     #To search for the location details you need to press enter after the text
     And user enters "SE_" within the location ID+ field
+    And user switches to frame
     Then user should see list of swedish sites
     When user clicks on the next chunk button
     And user highlights location "SE_Site_SE M1"

@@ -748,4 +748,11 @@ public class OWF_ProblemRecordPageSteps {
     public void userValidatesSaveIsPresent() {
         Assert.assertTrue(problemRecordPage.verifyIsSaveIsPresent());
     }
+
+    @Then("user validates sweden and finland checkboxes are selected")
+    public void userValidatesSwedenAndFinlandCheckboxesAreSelected() {
+      Assert.assertTrue(problemRecordPage.verifyIsSwedenSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsFinlandSelected());
+
+    }
 }

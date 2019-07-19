@@ -132,6 +132,13 @@ public class BaseRecordPage extends BasePage {
     public static final String btnREFRESH_XPATH = "//div[@id='WIN_0_999000510']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
 
 
+
+    public boolean verifyIsFinlandSelected(){
+        return findElement(By.id(chkbxFINLAND)).isSelected();
+    }
+    public boolean verifyIsSwedenSelected(){
+        return findElement(By.id(chkbxSWEDEN)).isSelected();
+    }
     public boolean verifySwedenEnable(){
         return verifyElementIsEnabledById(By.id(chkbxSWEDEN));
     }

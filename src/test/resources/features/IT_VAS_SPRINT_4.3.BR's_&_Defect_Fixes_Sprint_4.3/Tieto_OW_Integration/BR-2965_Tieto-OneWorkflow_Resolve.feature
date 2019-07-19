@@ -1,6 +1,7 @@
 @BR-2965_Tieto-OneWorkflow_Resolve @Tieto
   Feature: creation and sending of WO to Tieto - OW resolves
     Scenario: user is able to create and send a WO to Tieto - OW resolves
+
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Auto_Basic1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed

@@ -1,4 +1,4 @@
-@When_creating_workorder_a_proposal_of_default_technical_escalation_queue_should_appears @Incident
+@When_creating_workorder_a_proposal_of_default_technical_escalation_queue_should_appear @Incident
   Feature:
     Scenario:
       Given user is on the OneWorkflow login page

@@ -2,6 +2,9 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class OWF_WorkOrderPage extends BasePage {
 
     private static final String txtSTATUS_ID = "arid_WIN_0_777031003";
@@ -18,6 +21,33 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String btnAPPLY_B2B_ID = "WIN_0_600002903";
     private static final String ddREQUEST_TYPE= "Request Type";
     private static final String ddASSIGNED_PROFILE = "arid_WIN_0_777031408";
+    private static final String txtEVENT_START_TIME = "arid_WIN_0_600001302";
+
+
+    public void enterEstimatedReady(String estimated_ready) {
+        driver.findElement(By.id(txtESTIMATED_READY)).sendKeys(estimated_ready);
+    }
+
+    public boolean isEstimatedReadyDisplayed() {
+        return findElement(By.id(txtESTIMATED_READY)).isDisplayed();
+    }
+    public String getSavedEstimatedReady(){
+        String estimatedReady= getTextById(txtESTIMATED_READY);
+        System.out.println(estimatedReady);
+        return estimatedReady;
+    }
+    public void clearEstimatedReady(){
+        findElement(By.id(txtESTIMATED_READY)).clear();
+
+    }
+
+
+
+
+    public void enterEventStartTime(String event_start_time) {
+        driver.findElement(By.id(txtEVENT_START_TIME)).sendKeys(event_start_time);
+    }
+
 
     public void selectRequestType(String value){
         selectDropDownNameAndValue(ddREQUEST_TYPE, value, false);

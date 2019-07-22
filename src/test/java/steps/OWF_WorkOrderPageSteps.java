@@ -98,5 +98,34 @@ public class OWF_WorkOrderPageSteps {
     public void userSelectsRequestTypeAsInWorkOrderPage(String arg0) {
        workOrderPage.selectRequestType(arg0);
     }
+    @Then("estimated ready time should be saved correctly")
+    public void estimatedReadyTimeShouldBeSavedCorrectly() {
+        Assert.assertEquals(workOrderPage.calculateEstimatedReady(4, "days"), workOrderPage.getSavedEstimatedReady());
+    }
+
+    @Then("user verifies estimated ready field is available")
+    public void userVerifiesEstimatedReadyFieldIsAvailable() {
+        Assert.assertTrue(workOrderPage.isEstimatedReadyDisplayed());
+    }
+
+    @When("user enters estimated ready as event start time minus {int} day")
+    public void userEntersEstimatedReadyAsEventStartTimeMinusDay(int arg0) {
+        workOrderPage.clearEstimatedReady();
+        workOrderPage.enterEstimatedReady(workOrderPage.calculateEstimatedReady(-1, "days"));
+    }
+    @Then("user validates estimated ready time is updated for {int} hours")
+    public void userValidatesEstimatedReadyTimeIsUpdatedForHours(int arg0) {
+        Assert.assertEquals(workOrderPage.calculateEstimatedReady(arg0, "hours"), workOrderPage.getSavedEstimatedReady());
+    }
+
+    @Then("user validates estimated ready time is updated for {int} months")
+    public void userValidatesEstimatedReadyTimeIsUpdatedForMonths(int arg0) {
+        Assert.assertEquals(workOrderPage.calculateEstimatedReady(60, "days"), workOrderPage.getSavedEstimatedReady());
+    }
+    @When("user enters estimated ready as event start time plus {int} days")
+    public void userEntersEstimatedReadyAsEventStartTimePlusDays(int arg0) {
+        workOrderPage.clearEstimatedReady();
+        workOrderPage.enterEstimatedReady(workOrderPage.calculateEstimatedReady(arg0, "days"));
+    }
 }
 

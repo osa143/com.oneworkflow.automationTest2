@@ -535,7 +535,13 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("multiple statuses {string} should be available in {string} dropdown")
     public void multipleStatusesShouldBeAvailableInDropdown(String statuses, String dropdownName) {
-        problemRecordPage.verifyDropdownValues(statuses, dropdownName);
+        problemRecordPage.verifyDropdownValues(statuses, dropdownName, "notreadonly");
+
+    }
+
+    @Then("multiple statuses {string} should be available in {string} dropdown readonly")
+    public void multipleStatusesShouldBeAvailableInDropdownReadOnly(String statuses, String dropdownName) {
+        problemRecordPage.verifyDropdownValues(statuses, dropdownName, "readonly");
 
     }
 

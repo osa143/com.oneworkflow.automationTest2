@@ -50,14 +50,6 @@
 							</a>
 						</li>
 						<li>
-							<a href="exception.html">
-							<span class="nav-icon">
-							<i class="fa fa-warning"></i>
-							</span>
-							<span class="nav-text">Exceptions</span>
-							</a>
-						</li>
-						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -102,11 +94,11 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
-										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
-										<a class="dropdown-item" href="#"><span class="tf" status="skip"><i class="fa fa-dot-circle-o text-blue"></i>Skip</span></a>
+										
+										
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 									</div>
@@ -119,7 +111,7 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@01.05_Set_location_of_incident_origin</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@00.10_Validate_Urgency_field_availability_in_Incident_record</span></a>
 						    	        <a class="dropdown-item" href="#"><span class="cf">@Incident</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
@@ -137,27 +129,27 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="fail">
-											<div class="st fail test l0" 
-												tags="@01.05_Set_location_of_incident_origin @Incident"
+											<div class="tsc" status="pass">
+											<div class="st pass test l0" 
+												tags="@00.10_Validate_Urgency_field_availability_in_Incident_record @Incident"
 												devices="">
-												<span class="tt">07.18.2019 20:27:08</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">[Setting of incident start time] started</span>
+												<span class="tt">07.21.2019 22:04:29</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">[validation of impact field availability and structure] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @01.05_Set_location_of_incident_origin</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00.10_Validate_Urgency_field_availability_in_Incident_record</span>
 													<span class="category badge"><i class="fa fa-tag"></i> @Incident</span>
 												</span>
 												
 											</div>
-											<div class="st fail test l1" 
-												tags="@01.05_Set_location_of_incident_origin @Incident"
+											<div class="st pass test l1" 
+												tags="@00.10_Validate_Urgency_field_availability_in_Incident_record @Incident"
 												devices="">
-												<span class="tt">07.18.2019 20:27:08</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">|---[Incident start time is set when creating the ticket] started</span>
+												<span class="tt">07.21.2019 22:04:29</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">|---[user validates impact field availability and structure] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @01.05_Set_location_of_incident_origin</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00.10_Validate_Urgency_field_availability_in_Incident_record</span>
 													<span class="category badge"><i class="fa fa-tag"></i> @Incident</span>
 												</span>
 												
@@ -165,12 +157,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.18.2019 20:27:08</span>&nbsp;
+												<span class="tt">07.21.2019 22:04:29</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.18.2019 20:27:15</span>&nbsp;
+													<span class="tt">07.21.2019 22:04:35</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
 													
@@ -180,12 +172,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.18.2019 20:27:15</span>&nbsp;
+												<span class="tt">07.21.2019 22:04:35</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Change_Automation_1" and password as "Test@1234"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.18.2019 20:27:21</span>&nbsp;
+													<span class="tt">07.21.2019 22:04:41</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Change_Automation_1" and password as "Test@1234"]</span>
 													
@@ -195,12 +187,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.18.2019 20:27:21</span>&nbsp;
+												<span class="tt">07.21.2019 22:04:41</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.18.2019 20:27:21</span>&nbsp;
+													<span class="tt">07.21.2019 22:04:41</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
 													
@@ -210,12 +202,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.18.2019 20:27:21</span>&nbsp;
+												<span class="tt">07.21.2019 22:04:41</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.18.2019 20:27:31</span>&nbsp;
+													<span class="tt">07.21.2019 22:04:51</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event]</span>
 													
@@ -225,12 +217,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.18.2019 20:27:31</span>&nbsp;
+												<span class="tt">07.21.2019 22:04:51</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.18.2019 20:27:31</span>&nbsp;
+													<span class="tt">07.21.2019 22:04:51</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
 													
@@ -240,12 +232,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.18.2019 20:27:31</span>&nbsp;
+												<span class="tt">07.21.2019 22:04:51</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.18.2019 20:27:36</span>&nbsp;
+													<span class="tt">07.21.2019 22:04:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab]</span>
 													
@@ -255,14 +247,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.18.2019 20:27:36</span>&nbsp;
+												<span class="tt">07.21.2019 22:04:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on location under sections] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates importance field] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.18.2019 20:27:36</span>&nbsp;
+													<span class="tt">07.21.2019 22:04:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on location under sections]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates importance field]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -270,14 +262,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.18.2019 20:27:36</span>&nbsp;
+												<span class="tt">07.21.2019 22:04:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "SE_" within the location ID+ field] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Critical:High:Average:Low:(Clear)" should be available in Importance dropdown] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.18.2019 20:27:38</span>&nbsp;
+													<span class="tt">07.21.2019 22:04:57</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "SE_" within the location ID+ field]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Critical:High:Average:Low:(Clear)" should be available in Importance dropdown]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -285,122 +277,15 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.18.2019 20:27:38</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to frame] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.18.2019 20:27:38</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to frame]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.18.2019 20:27:38</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see list of swedish sites] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.18.2019 20:27:39</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see list of swedish sites]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.18.2019 20:27:39</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on the next chunk button] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.18.2019 20:27:39</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on the next chunk button]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st fail test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.18.2019 20:27:39</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user highlights location "SE_Site_SE M1"] started</span>
-												
-												<div class="st fail">
-													<span class="tt">07.18.2019 20:27:39</span>&nbsp;
-													<span class="ts">fail</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user highlights location "SE_Site_SE M1"]</span>
-													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=75.0.3770.142)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.239.223', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59821}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 80e12e7408cc1e4df576e475c41dff0f
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
-	at pageObjects.BasePage.getTableElementAndTextBasedOnIndex(BasePage.java:440)
-	at pageObjects.OWF_TroubleEventPage.clickOnRow(OWF_TroubleEventPage.java:110)
-	at steps.OWF_TroubleEventPageSteps.userHighlightsLocation(OWF_TroubleEventPageSteps.java:587)
-	at ✽.user highlights location "SE_Site_SE M1"(features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.05_Set_location_of_incident_origin.feature:18)
-</textarea></span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.18.2019 20:27:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on ok button on location search] started</span>
-												
-												<div class="st skip">
-													<span class="tt">07.18.2019 20:27:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on ok button on location search]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.18.2019 20:27:39</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates location details are updated] started</span>
-												
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.18.2019 20:27:39</span>&nbsp;
+												<span class="tt">07.21.2019 22:04:57</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
 												
-												<div class="st info">
-													<span class="tt">07.18.2019 20:27:40</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
+												<div class="st pass">
+													<span class="tt">07.21.2019 22:04:57</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
-													<span class="tm"><a href='#' class='indigo badge' data-featherlight='C:\Temp\com.oneworkflow.automation\ExtentReports\Screenshots\Screenshots_20190718_202707\embedded1.png'>img</a></span>
+													
 													<span class="td"></span>
 												</div>
 											</div>

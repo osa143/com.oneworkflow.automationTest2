@@ -5,10 +5,13 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
 import pageObjects.OWF_TroubleEventPage;
+import pageObjects.OWF_WorkOrderPage;
+import utils.CommonUtils;
 import utils.Ticket;
 
 public class OWF_TroubleEventPageSteps {
     OWF_TroubleEventPage troubleEventPage = new OWF_TroubleEventPage();
+    OWF_WorkOrderPage workOrderPage= new OWF_WorkOrderPage();
     Ticket parentTicket;
     @Then("trouble record form should appear in new tab")
     public void troubleRecordFormShouldAppearInNewTab() {
@@ -284,10 +287,18 @@ public class OWF_TroubleEventPageSteps {
         Assert.assertNotNull(troubleEventPage.getOLATargetTime());
     }
 
-    @Then("user verifies estimated ready field is available")
-    public void userVerifiesEstimatedReadyFieldIsAvailable() {
-      Assert.assertTrue(troubleEventPage.isEstimatedReadyDisplayed());
+    @When("user enters estimated ready as event start time plus {int} days on trouble event page")
+    public void userEntersEstimatedReadyAsEventStartTimePlusDays(int arg0) {
+
+        workOrderPage.clearEstimatedReady();
+        workOrderPage.enterEstimatedReady(troubleEventPage.calculateEstimatedReady(arg0, "days"));
     }
+
+    @Then("estimated ready time should be saved correctly on trouble event page")
+    public void estimatedReadyTimeShouldBeSavedCorrectly() {
+        Assert.assertEquals(troubleEventPage.calculateEstimatedReady(4, "days"), workOrderPage.getSavedEstimatedReady());
+    }
+
 
     @And("user verifies priority field is visible")
     public void userVerifiesPriorityFieldIsVisible() {
@@ -365,40 +376,19 @@ public class OWF_TroubleEventPageSteps {
 
     }
 
-    @When("user enters estimated ready as event start time plus {int} days")
-    public void userEntersEstimatedReadyAsEventStartTimePlusDays(int arg0) {
-        troubleEventPage.clearEstimatedReady();
-        troubleEventPage.enterEstimatedReady(troubleEventPage.getEstimatedReady(arg0));
-    }
 
-    @Then("estimated ready time should be saved correctly")
-    public void estimatedReadyTimeShouldBeSavedCorrectly() {
-        Assert.assertEquals(troubleEventPage.getEstimatedReady(4), troubleEventPage.getSavedEstimatedReady());
-    }
 
-    @When("user enters estimated ready as event start time minus {int} day")
-    public void userEntersEstimatedReadyAsEventStartTimeMinusDay(int arg0) {
-        troubleEventPage.clearEstimatedReady();
-        troubleEventPage.enterEstimatedReady(troubleEventPage.getEstimatedReady(-1));
-    }
+
 
     @Then("error message should display as {string}")
     public void errorMessageShouldDisplayAs(String arg0) {
-       //troubleEventPage.switchToFrameById("1562791998969P");
+
         Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
         troubleEventPage.clickOkOnPopup();
 
     }
 
-    @Then("user validates estimated ready time is updated for {int} hours")
-    public void userValidatesEstimatedReadyTimeIsUpdatedForHours(int arg0) {
-        Assert.assertEquals(troubleEventPage.calculateEstimatedReady(arg0), troubleEventPage.getSavedEstimatedReady());
-    }
 
-    @Then("user validates estimated ready time is updated for {int} months")
-    public void userValidatesEstimatedReadyTimeIsUpdatedForMonths(int arg0) {
-        Assert.assertEquals(troubleEventPage.getEstimatedReady(60), troubleEventPage.getSavedEstimatedReady());
-    }
 
     @And("user accepts alert")
     public void userAcceptsAlert() {
@@ -543,6 +533,68 @@ public class OWF_TroubleEventPageSteps {
     @And("user validates root cause is present")
     public void userValidatesRootCauseIsPresent() {
         Assert.assertTrue(troubleEventPage.verifyIsRootCauseIsPresent());
+    }
+
+    @And("user validates availability of category dropdown")
+    public void userValidatesAvailabilityOfCategoryDropdown() {
+     Assert.assertTrue(troubleEventPage.verifyCategoryAvailability());
+    }
+
+    @Then("user validates availability of type dropdown")
+    public void userValidatesAvailabilityOfTypeDropdown() {
+        Assert.assertTrue(troubleEventPage.verifyTypeAvailability());
+    }
+
+    @When("user validates availability of item dropdown")
+    public void userValidatesAvailabilityOfItemDropdown() {
+        Assert.assertTrue(troubleEventPage.verifyCategoryAvailability());
+    }
+
+    @And("user validates event start time is present")
+    public void userValidatesEventStartTimeIsPresent() {
+        Assert.assertTrue(troubleEventPage.verifyEventStartTimeAvailability());
+        Assert.assertNotNull(troubleEventPage.eventStartDateTime());
+    }
+
+    @And("user enters {string} within the location ID+ field")
+    public void userEntersWithinTheLocationIDField(String arg0) {
+        troubleEventPage.enterLocationIdPlus(arg0);
+    }
+
+    @Then("user should see list of swedish sites")
+    public void userShouldSeeListOfSwedishSites() {
+        Assert.assertTrue(troubleEventPage.verifyListOfSwedishSites());
+    }
+
+    @When("user clicks on the next chunk button")
+    public void userClicksOnTheNextChunkButton() {
+      troubleEventPage.clickNextChunkRight();
+    }
+
+    @And("user highlights location {string} and clicks ok and validates location details")
+    public void userHighlightsLocationClicksOkAndValidatesLocationDetails(String arg0) {
+        String[] tableTexts = troubleEventPage.clickOnRow(arg0);
+        troubleEventPage.clickOk_SelectLocation();
+        Assert.assertEquals(tableTexts[0], troubleEventPage.getLocationName());
+        Assert.assertEquals(tableTexts[1], troubleEventPage.getLocationId());
+        Assert.assertEquals(tableTexts[2], troubleEventPage.getRegionName());
+        Assert.assertEquals(tableTexts[3], troubleEventPage.getRegionId());
+        Assert.assertEquals(tableTexts[4], troubleEventPage.getLatitude());
+        Assert.assertEquals(tableTexts[5], troubleEventPage.getLongitude());
+    }
+
+    @Then("user clicks on ok button on location search")
+    public void userClicksOnOkButtonOnLocationSearch() {
+        troubleEventPage.clickOk_SelectLocation();
+    }
+
+    @Then("user validates location details are updated")
+    public void userValidatesLocationDetailsAreUpdated() {
+    }
+
+    @Then("multiple statuses {string} should be available in Importance dropdown")
+    public void multipleStatusesShouldBeAvailableInImportanceDropdown(String arg0) {
+       troubleEventPage.verifyDropdownValuesForImportance(arg0,"");
     }
 }
 

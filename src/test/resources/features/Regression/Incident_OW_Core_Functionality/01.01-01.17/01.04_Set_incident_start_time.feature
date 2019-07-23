@@ -1,6 +1,6 @@
 @01.04_Set_incident_start_time @Incident
 Feature: Setting of incident start time
-
+#passed
   Scenario: Incident start time is set when creating the ticket
 
     Given user is on the OneWorkflow login page

@@ -1,4 +1,5 @@
 @01.05_Set_location_of_incident_origin @Incident
+#Passed
 Feature: Setting of incident start time
 
   Scenario: Incident start time is set when creating the ticket
@@ -12,10 +13,10 @@ Feature: Setting of incident start time
     When user clicks on location under sections
     #To search for the location details you need to press enter after the text
     And user enters "SE_" within the location ID+ field
+    And user switches to frame
     Then user should see list of swedish sites
     When user clicks on the next chunk button
-    And user highlights location "SE_Site_SE M1"
-    Then user clicks on ok button on location search
-    #Location ID+, Location Name, Region ID, Region Name, Latitude, Longitude
-    Then user validates location details are updated
+    #Location Name,Location ID+,Region Name, Region ID, Latitude, Longitude
+    And user highlights location "SE_Site_SE M1" and clicks ok and validates location details
+
 

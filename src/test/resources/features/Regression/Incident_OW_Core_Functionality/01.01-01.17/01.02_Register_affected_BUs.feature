@@ -1,5 +1,5 @@
-@01.02_Register_affected_BUs @Incident
-
+@Register_affected_BUs @Incident
+#passed
 Feature: validation of BU availability and structure
 
   Scenario: user validates BU availability and structure

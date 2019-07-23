@@ -11,12 +11,16 @@ import org.testng.Assert;
 import java.awt.*;
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 public class BasePage {
+
+    private static final String txtEVENT_START_TIME = "arid_WIN_0_600001302";
 
     public static WebDriver driver;
     WebDriverWait webDriverWait = new WebDriverWait(DriverFactory.getInstance().getDriver(), 30);
@@ -110,6 +114,31 @@ public class BasePage {
         return findElement(By.id(Id)).getAttribute("value");
     }
 
+    public String calculateEstimatedReady(int time, String timeUnit){
+        String estimatedTime = "";
+        String format = "yyyy-MM-dd HH:mm:ss";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
+        LocalDateTime dateTime = LocalDateTime.parse(getEventStartTime(), formatter);
+        if(timeUnit.equals("days"))
+        {
+            estimatedTime = dateTime.plusDays(time).toString();
+        }
+        else if(timeUnit.equals("hours"))
+        {
+            estimatedTime = dateTime.plusHours(time).toString();
+        }
+
+        estimatedTime = estimatedTime.replace('T',' ');
+        System.out.println("Estimated time is: " + estimatedTime);
+        return estimatedTime;
+    }
+
+    public String getEventStartTime(){
+        String eventStartTime=  getTextById(txtEVENT_START_TIME);
+        System.out.println(eventStartTime);
+        return eventStartTime;
+    }
+
     public void selectMainMenu(String mainMenu) {
 
         String mainMenuXpath = "//img[@alt='Menu for " + mainMenu + "']/..";
@@ -145,16 +174,34 @@ public class BasePage {
         wait(1000);
     }
 
+    public void selectDropDownMenuForReadOnly(String DropDownMenu) {
+
+        String mainMenuXpath = "//img[@alt='ReadOnly menu for " + DropDownMenu + "']/..";
+        driver.findElement(By.xpath(mainMenuXpath)).click();
+        wait(1000);
+    }
+
     public void selectDropDownValue(String DropDownValue) {
         driver.findElement(By.className("MenuTableBody")).findElements(By.tagName("td")).stream()
                 .filter(element -> element.getText().trim().equals(DropDownValue)).findFirst().orElse(null).click();
 
     }
 
-    public List<String> getDropdownValues(String dropdownMenuName)
+    public void clickDropDownById(String id)
+    {
+        findElement(By.id(id)).click();
+    }
+
+    public List<String> getDropdownValues(String dropdownMenuName, String dropdownId)
     {
         List<String> dropdownValues = new ArrayList<String>();
-        selectDropDownMenu(dropdownMenuName);
+
+        if (dropdownId.equals("readonly"))
+            selectDropDownMenuForReadOnly(dropdownMenuName);
+        else if (dropdownId.equals("notreadonly"))
+            selectDropDownMenu(dropdownMenuName);
+        else
+             clickDropDownById(dropdownId);
 
         List<WebElement> elements = driver.findElement(By.className("MenuTableBody")).findElements(By.tagName("td"));
 
@@ -423,6 +470,43 @@ public class BasePage {
         return true;
     }
 
+    //use this common method instead of top 2 methods
+    //text = "Secondary"
+    public String[] ClickTableElementByText(By table, String headerName, String text, boolean getText)
+    {
+        String[] texts = new String[6];
+        List<WebElement> elements = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
+        int columnIndex = getColumnIndexByHeaderName(table, headerName);
+        wait(1000);
+        for (int i = 1; i < elements.size(); i++)
+        {
+            wait(1000);
+            List<WebElement> tdElements = elements.get(i).findElements(By.tagName("td"));
+
+            if (tdElements.size() > 0) {
+                if (tdElements.get(columnIndex).getText().equals(text)) {
+
+                    System.out.println(tdElements.get(0).getText());
+
+                    if(getText) {
+                        texts[0] = tdElements.get(6).getText();
+                        texts[1] = tdElements.get(1).getText();
+                        texts[2] = tdElements.get(7).getText();
+                        texts[3] = tdElements.get(8).getText();
+                        texts[4] = tdElements.get(10).getText();
+                        texts[5] = tdElements.get(11).getText();
+                    }
+                    tdElements.get(1).click();
+
+                    return texts;
+                }
+            }
+
+        }
+        return null;
+    }
+
+
     // rowNum : 0 gives header row
     // rowNum : 1 gives first row
     public String getTableCellData(By table, String columnName, int rowNum){
@@ -434,6 +518,9 @@ public class BasePage {
             cellData =  getTableRows.get(rowNum).findElements(By.tagName("td")).get(colNum).getText();
         }
         return cellData;
+    }
+    public void clickByCellData(By table, String columnName, int rowNum, String cellData){
+        getTableCellData(table, columnName, rowNum);
     }
     public static File takeScreenShot() {
 

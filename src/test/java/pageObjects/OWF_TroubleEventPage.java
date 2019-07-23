@@ -6,10 +6,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import utils.Ticket;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.List;
 
 public class OWF_TroubleEventPage extends BaseRecordPage {
@@ -28,8 +26,9 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txtLAST_ACK_BY_ID = "arid_WIN_0_777031402";
     private static final String txtRESPONSE_REASON_ID = "arid_WIN_0_700048055";
     private static final String txtRE_ASIGNMENT_COUNT_ID = "arid_WIN_0_777031450";
-    private static final String txtEVENT_START_TIME = "arid_WIN_0_600001302";
-    private static final String txtESTIMATED_READY = "arid_WIN_0_777504503";
+
+    private static final String txtEVENT_START_TIME ="arid_WIN_0_703001000";
+
     private static final String txtAUTO_CLOSE_DATE = "arid_WIN_0_600001305";
     private static final String txtRESPONSE_TIME = "arid_WIN_0_700048056";
     private static final String txtTITLE_ID = "arid_WIN_0_777031000";
@@ -37,6 +36,11 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txtTROUBLE_TICKET_ID = "arid_WIN_0_777777600"; //Ticket ID+
     private static final String txtEVENT_END_TIME = "arid_WIN_0_777010106";
     private static final String txtCLOSURE_INFO = "arid_WIN_0_777031384";
+    private static final String txt_CATEGORY= "arid_WIN_0_200000003";
+    private static final String txt_TYPE= "arid_WIN_0_200000004";
+    private static final String txt_ITEM= "arid_WIN_0_200000005";
+    private static final String txt_EVENT_START_TIME= "arid_WIN_0_703001000";
+    private static final String txt_LOCATION_ID_PLUS = "arid_WIN_0_777031006";
 
 
     private static final String chkbxDO_NOT_AUTOCLOSE = "WIN_0_rc0id600002014";
@@ -64,6 +68,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btn_DELETE= "WIN_0_777000022";
     private static final String btn_OPEN_EXTERNAL= "WIN_0_600002903";
     private static final String div_CAUSE= "WIN_0_777031380";
+    private static final String dd_IMPORTANCE="arid_WIN_0_600001821";
 
 
 
@@ -97,7 +102,77 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String fld_OWNER= "//*[@id=\"WIN_0_777010095\"]/table/tbody/tr/td";
     private static final String fld_VENDOR= "//*[@id=\"WIN_0_777021005\"]/table/tbody/tr/td";
     private static final String fld_ROOT_CAUSE= "//*[@id=\"WIN_0_799999914\"]/table/tbody/tr/td";
+    private static final String table_SELECT_LOCATION= "T700024013";
+    private static final String btn_NEXT_CHUNK_RIGHT= "//div[@id='WIN_0_700024013']//a[@class='btn chunkright']";
+    private static final String btn_OK_SELECT_LOCATION= "WIN_0_700000104";
+    private static final String txt_LOCATION_NAME_PLUS_ID = "arid_WIN_0_777031430";
+    private static final String txt_LOCATION_REGION_ID ="arid_WIN_0_700009452";
+    private static final String txt_LOCATION_REGION_NAME_ID ="arid_WIN_0_700009638";
+    private static final String txt_LOCATION_LATITUDE_ID ="arid_WIN_0_700024008";
+    private static final String txt_LOCATION_LONGITUDE_ID ="arid_WIN_0_700024009";
 
+    public String getLocationId()
+    {
+       return getTextById(txt_LOCATION_ID_PLUS);
+    }
+    public String getLocationName()
+    {
+        return getTextById(txt_LOCATION_NAME_PLUS_ID);
+    }
+    public String getRegionId()
+    {
+        return getTextById(txt_LOCATION_REGION_ID);
+    }
+    public String getRegionName()
+    {
+        return getTextById(txt_LOCATION_REGION_NAME_ID);
+    }
+    public String getLatitude()
+    {
+        return getTextById(txt_LOCATION_LATITUDE_ID);
+    }
+    public String getLongitude()
+    {
+        return getTextById(txt_LOCATION_LONGITUDE_ID);
+    }
+
+
+    public String[] clickOnRow(String text)
+    {
+        wait(1000);
+        return ClickTableElementByText(By.id(table_SELECT_LOCATION),"Name",text, true);
+
+    }
+
+    public void clickOk_SelectLocation(){
+        findElement(By.id(btn_OK_SELECT_LOCATION)).click();
+    }
+
+    public void verifyDropdownValuesForImportance(String statuses, String dropdownName)
+    {
+        verifyDropdownValues(statuses, dropdownName, dd_IMPORTANCE);
+    }
+
+    public void clickNextChunkRight(){
+        findElement(By.xpath(btn_NEXT_CHUNK_RIGHT)).click();
+    }
+
+    public boolean verifyListOfSwedishSites(){
+        int listSize= getTableRows(By.id(table_SELECT_LOCATION)).size();
+        if (listSize>1)
+            return true;
+        else return false;
+    }
+    public void enterLocationIdPlus(String text){
+        findElement(By.id(txt_LOCATION_ID_PLUS)).sendKeys(text);
+        findElement(By.id(txt_LOCATION_ID_PLUS)).sendKeys(Keys.ENTER);
+    }
+    public boolean verifyEventStartTimeIsAvailable(){
+        return verifyElementIsDisplayed(By.id(txt_EVENT_START_TIME));
+    }
+    public String eventStartDateTime(){
+        return getTextById(txt_EVENT_START_TIME);
+    }
 
     public boolean verifyIsRootCauseIsPresent(){
         return findElement(By.xpath(fld_ROOT_CAUSE)).isDisplayed();
@@ -187,8 +262,10 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     public void clickOwner(){
         findElement(By.id(btn_OWNER_UNDER_SECTIONS)).click();
     }
+
     public String getErrorText(){
-        String error= getTextById(Error_POP_UP_ID);
+        switchToFrameByIndex(2);
+        String error= findElement(By.id(Error_POP_UP_ID)).getText();
         System.out.println(error);
         return error;
     }
@@ -201,56 +278,16 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     public boolean verifyWosStatusIsDisplayed(){
         return findElement(By.id(txtWO_STATUS_ID)).isDisplayed();
     }
-    //Event start+SLA
-    public String calculateEstimatedReadyUpdated(){
-        String eventStartTime= getTextById(txtEVENT_START_TIME);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-        DateTime dateTime= new DateTime(eventStartTime).plusHours(10);
-        String estimatedReady = dateTime.toString();
-        System.out.println(estimatedReady);
-        return estimatedReady;
-    }
 
     public void clickOkOnPopup()
     {
         findElement(By.xpath(btn_OK_Popup)).click();
     }
 
-    public String getEstimatedReady(int days){
 
-            String format = "yyyy-MM-dd HH:mm:ss";
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
-            LocalDateTime dateTime = LocalDateTime.parse(getEventStartTime(), formatter);
-            String estimatedTime = dateTime.plusDays(days).toString();
-        estimatedTime = estimatedTime.replace('T',' ');
-        System.out.println("Estimated time is: " + estimatedTime);
-        return estimatedTime;
 
-    }
-    public String calculateEstimatedReady(int hours){
 
-        String format = "yyyy-MM-dd HH:mm:ss";
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
-        LocalDateTime dateTime = LocalDateTime.parse(getEventStartTime(), formatter);
-        String estimatedTime = dateTime.plusHours(hours).toString();
-        estimatedTime = estimatedTime.replace('T',' ');
-        System.out.println("Estimated time is: " + estimatedTime);
-        return estimatedTime;
 
-    }
-
-    public String getSavedEstimatedReady(){
-        String estimatedReady= getTextById(txtESTIMATED_READY);
-        System.out.println(estimatedReady);
-        return estimatedReady;
-    }
-    public void clearEstimatedReady(){
-        findElement(By.id(txtESTIMATED_READY)).clear();
-
-    }
-   public String getEventStartTime(){
-       return getTextById(txtEVENT_START_TIME);
-   }
     public boolean verifyOwnerProfileAvailability(){
         return verifyElementIsDisplayed(By.id(ddOWNER_PROFILE_ID));
     }
@@ -263,7 +300,26 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         System.out.println(availability);
         return availability;
     }
-
+   public boolean verifyCategoryAvailability(){
+       Boolean availability= verifyElementIsDisplayed(By.id(txt_CATEGORY));
+       System.out.println(availability);
+       return availability;
+   }
+    public boolean verifyEventStartTimeAvailability(){
+        Boolean availability= verifyElementIsDisplayed(By.id(txt_EVENT_START_TIME));
+        System.out.println(availability);
+        return availability;
+    }
+    public boolean verifyTypeAvailability(){
+        Boolean availability= verifyElementIsDisplayed(By.id(txt_TYPE));
+        System.out.println(availability);
+        return availability;
+    }
+    public boolean verifyItemAvailability(){
+        Boolean availability= verifyElementIsDisplayed(By.id(txt_ITEM));
+        System.out.println(availability);
+        return availability;
+    }
 
      public void selectImpact(String value){
          selectDropDownNameAndValue(ddIMPACT, value, true);
@@ -288,9 +344,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     public boolean verifyPriorityFieldIsReadOnly(){
         return checkIfControlIsReadonly(ddPRIORITY_ID);
     }
-    public boolean isEstimatedReadyDisplayed() {
-     return findElement(By.id(txtESTIMATED_READY)).isDisplayed();
-    }
+
         public boolean validateChildWorkOrderAvailability (){
           int size= getTableRows(By.id(table_WORKORDERS_ID)).size();
           if(size>0)
@@ -504,13 +558,14 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         driver.findElement(By.id(txtSERVICE_DESK_ESCALATED_INCIDENTS_ID)).sendKeys(service_desk_escalated);
     }
 
-    public void enterEventStartTime(String event_start_time) {
-        driver.findElement(By.id(txtEVENT_START_TIME)).sendKeys(event_start_time);
+    //this is override method as txtEVENT_START_TIME id is different for trouble and work order page
+    public String getEventStartTime(){
+        String eventStartTime=  getTextById(txtEVENT_START_TIME);
+        System.out.println(eventStartTime);
+        return eventStartTime;
     }
 
-    public void enterEstimatedReady(String estimated_ready) {
-        driver.findElement(By.id(txtESTIMATED_READY)).sendKeys(estimated_ready);
-    }
+
 
     public void enterAutoCloseDate(String auto_close_date) {
         driver.findElement(By.id(txtAUTO_CLOSE_DATE)).sendKeys(auto_close_date);

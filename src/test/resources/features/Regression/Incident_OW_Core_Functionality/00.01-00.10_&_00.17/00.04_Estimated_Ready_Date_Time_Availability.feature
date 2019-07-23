@@ -1,5 +1,5 @@
 @Estimated_Ready_Date_Time
-
+#Passed
 Feature: Incident
   Scenario: verify estimated ready date and time availability in incident record
 
@@ -21,9 +21,10 @@ Feature: Incident
     And user enters ticket previously created
     And user clicks Search on ticket search
     Then user verifies estimated ready field is available
-    When user enters estimated ready as event start time plus 4 days
+    #SAO_117 feature is also using the method GetEstimatedReady. see if id's are different
+    When user enters estimated ready as event start time plus 4 days on trouble event page
     And user clicks on save button
-    Then estimated ready time should be saved correctly
-    When user enters estimated ready as event start time minus 1 day
+    Then estimated ready time should be saved correctly on trouble event page
+    When user enters estimated ready as event start time plus -1 days on trouble event page
     And user clicks on save button
     Then error message should display as "Estimated Ready Time cannot be earlier than Event Start Time (ARERR 10000)"

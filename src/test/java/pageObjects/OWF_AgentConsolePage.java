@@ -149,32 +149,6 @@ public class OWF_AgentConsolePage extends BasePage {
 
     }
 
-    //use this common method instead of top 2 methods
-    //text = "Secondary"
-    private HashMap<WebElement, String> getTableElementAndTextBasedOnIndex(By table, String headerName, String text)
-    {
-        HashMap<WebElement, String> map = new HashMap<WebElement, String>();
-        List<WebElement> elements = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
-        int columnIndex = getColumnIndexByHeaderName(table, headerName);
-
-        for (int i = 1; i < elements.size(); i++)
-        {
-            List<WebElement> tdElements = elements.get(i).findElements(By.tagName("td"));
-
-            if (tdElements.size() > 0) {
-                if (tdElements.get(columnIndex).getText().equals(text)) {
-                    //trElements.get(columnIndex).click();
-                    //alarmId = trElements.get(1).getText();
-                    map.put(tdElements.get(2), tdElements.get(1).getText());
-                    return map;
-                }
-            }
-
-        }
-        return null;
-    }
-
-
     public void clickOnYes(){
         driver.findElement(By.id(btnYES_ON_FRAME_ID)).click();
     }

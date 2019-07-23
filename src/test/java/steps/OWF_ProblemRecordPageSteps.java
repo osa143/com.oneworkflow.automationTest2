@@ -535,7 +535,13 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("multiple statuses {string} should be available in {string} dropdown")
     public void multipleStatusesShouldBeAvailableInDropdown(String statuses, String dropdownName) {
-        problemRecordPage.verifyDropdownValues(statuses, dropdownName);
+        problemRecordPage.verifyDropdownValues(statuses, dropdownName, "notreadonly");
+
+    }
+
+    @Then("multiple statuses {string} should be available in {string} dropdown readonly")
+    public void multipleStatusesShouldBeAvailableInDropdownReadOnly(String statuses, String dropdownName) {
+        problemRecordPage.verifyDropdownValues(statuses, dropdownName, "readonly");
 
     }
 
@@ -747,5 +753,12 @@ public class OWF_ProblemRecordPageSteps {
     @And("user validates Save is present")
     public void userValidatesSaveIsPresent() {
         Assert.assertTrue(problemRecordPage.verifyIsSaveIsPresent());
+    }
+
+    @Then("user validates sweden and finland checkboxes are selected")
+    public void userValidatesSwedenAndFinlandCheckboxesAreSelected() {
+      Assert.assertTrue(problemRecordPage.verifyIsSwedenSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsFinlandSelected());
+
     }
 }

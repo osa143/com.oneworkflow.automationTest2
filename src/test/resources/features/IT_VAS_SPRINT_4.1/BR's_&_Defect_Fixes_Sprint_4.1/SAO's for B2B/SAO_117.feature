@@ -26,6 +26,7 @@ Feature: SLA class wrongly calculated
     And user selects a CI from list
     And user selects impact level as "No Impact"
     And user clicks on relate CI
+    #this step is not working. need to close window manually
     And user clicks on close button on CI search window
     When user clicks on work order tab
     And user clicks on create from ticket

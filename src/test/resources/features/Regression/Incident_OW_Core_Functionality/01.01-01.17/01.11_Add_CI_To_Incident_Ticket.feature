@@ -13,14 +13,14 @@ Feature: Adding of CI to incident ticket
     And user enters "Test Case 01.11 Add CI's" in Title field in Trouble event
     And user selects request type as "Customer"
     And user enters description as "Test Case 01.11 Add CI's"
-    And user clicks on save button on the problem form
+    And user clicks on save button
     Then ticket should be created and status should be assigned
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user switches to frame
-    And user selects ci category as "Core"
-    And user selects ci type as "Mobile PS Core Network"
-    And user selects ci item as "EPG"
+    And user selects Category as "CORE"
+    And user selects Type as "Mobile PS Core Network"
+    And user selects Item as "EPG"
     And user clicks on search button on CI search window
     Then user should see at least 2 nodes per country
     When user enters "SE_EPG_FREEPG1" in name field
@@ -46,7 +46,8 @@ Feature: Adding of CI to incident ticket
     And user selects a CI from list
     Then user selects impact level as "Degradation of Service"
     And user clicks on relate CI
-    Then user closes warning message and clicks on close button
+    Then user closes warning message
+    And user clicks on close button on CI search window
     And user switches to window 1
     And CI should be listed and displayed under the Diagnosis tab
     And user validates primary CI is equal to "SE_EPG_FREEPG1"

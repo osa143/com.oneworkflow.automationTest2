@@ -596,6 +596,11 @@ public class OWF_TroubleEventPageSteps {
     public void multipleStatusesShouldBeAvailableInImportanceDropdown(String arg0) {
        troubleEventPage.verifyDropdownValuesForImportance(arg0,"");
     }
+    @And("user changes event start time {int} day in the past")
+    public void userChangesEventStartTimeDayInThePast(int arg0) {
+        troubleEventPage.eventStartTime();
+        troubleEventPage.enterEventStartTime(troubleEventPage.calculateEstimatedReady(arg0, "days"));
+    }
 }
 
 

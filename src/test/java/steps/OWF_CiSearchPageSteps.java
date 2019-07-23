@@ -48,12 +48,14 @@ public class OWF_CiSearchPageSteps {
         //dummy step
     }
 
-    @And("user closes warning message and clicks on close button")
+    @And("user closes warning message")
     public void userClosesWarningMessageAndClicksOnCloseButton() {
-        //ciSearchPage.switchToFrameByIndex(0);
-        ciSearchPage.wait(2000);
-        ciSearchPage.clickOk_OnPop_up();
-        ciSearchPage.clickCloseButton();
+//        ciSearchPage.switchToFrameByIndex(2);
+//        ciSearchPage.wait(1000);
+//        ciSearchPage.clickOk_OnPop_up();
+//        ciSearchPage.clickCloseButton();
+        ciSearchPage.wait(1000);
+        ciSearchPage.closeWarningMessage();
     }
     @When("user clicks on clear button")
     public void userClicksOnClearButton() {
@@ -166,5 +168,10 @@ public class OWF_CiSearchPageSteps {
     @And("user selects impact category as {string}")
     public void userSelectsImpactCategoryAs(String arg0) {
         ciSearchPage.selectCategory_CiSearchPage(arg0);
+    }
+
+    @When("user selects CI {string}")
+    public void userSelectsCI(String arg0) {
+      ciSearchPage.selectCi(arg0);
     }
 }

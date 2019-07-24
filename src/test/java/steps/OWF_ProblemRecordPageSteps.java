@@ -761,4 +761,9 @@ public class OWF_ProblemRecordPageSteps {
         Assert.assertTrue(problemRecordPage.verifyIsFinlandSelected());
 
     }
+
+    @Then("user validates availability of tabs {string}")
+    public void userValidatesAvailabilityOfTabs(String tabs) {
+        Assert.assertTrue(problemRecordPage.verifyTabValues(tabs));
+    }
 }

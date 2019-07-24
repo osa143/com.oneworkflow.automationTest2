@@ -1,12 +1,14 @@
 package pageObjects;
 
 import driver.factory.DriverFactory;
+import org.joda.time.DateTime;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import utils.CommonUtils;
 
 import java.awt.*;
 import java.io.File;
@@ -118,7 +120,11 @@ public class BasePage {
         String estimatedTime = "";
         String format = "yyyy-MM-dd HH:mm:ss";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
-        LocalDateTime dateTime = LocalDateTime.parse(getEventStartTime(), formatter);
+        String eventStartTime = getEventStartTime();
+        if(eventStartTime.isEmpty())
+            eventStartTime  = CommonUtils.getDateTime(format, "Europe/Stockholm", 0);
+        ;
+        LocalDateTime dateTime = LocalDateTime.parse(eventStartTime, formatter);
         if(timeUnit.equals("days"))
         {
             estimatedTime = dateTime.plusDays(time).toString();
@@ -536,6 +542,19 @@ public class BasePage {
     public void selectTab(String tab) {
         driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tab)).findFirst().orElse(null).click();
 
+    }
+
+    public List<String> getTabValues()
+    {
+        List<String> tabValues = new ArrayList<String>();
+
+        List<WebElement> elements = driver.findElements(By.className("Tab"));
+
+        for (int i = 0; i < elements.size(); i ++)
+        {
+            tabValues.add(elements.get(i).getText().trim());
+        }
+        return tabValues;
     }
 
     public void switchToFrameByIndex(int frame_index) {

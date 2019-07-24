@@ -38,8 +38,8 @@ public class OWF_WorkOrderPage extends BasePage {
     }
     public void clearEstimatedReady(){
         findElement(By.id(txtESTIMATED_READY)).clear();
-
     }
+
 
 
 

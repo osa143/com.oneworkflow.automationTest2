@@ -638,7 +638,23 @@ public class BaseRecordPage extends BasePage {
         }
         return true;
     }
-public void selectImpact(String value){
+
+    public boolean verifyTabValues(String tabValues)
+    {
+        String[] multipleTabs = tabValues.split(":");
+        List<String> tabs = getTabValues();
+        System.out.println("Dropdown values are: " + tabs);
+        for (int i = 0; i < multipleTabs.length; i++)
+        {
+            if (!tabs.contains(multipleTabs[i]))
+            {
+                return false;
+            }
+
+        }
+        return true;
+    }
+    public void selectImpact(String value){
         selectDropDownNameAndValue(ddIMPACT, value, false);
 }
-}
+    }

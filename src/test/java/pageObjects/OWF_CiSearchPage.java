@@ -9,7 +9,8 @@ import java.util.List;
 public class OWF_CiSearchPage extends BasePage {
 
     private static final String btnRELATE_CI = "WIN_0_700009085";
-    private static final String btnClOSE = "WIN_0_777000001";
+    private static final String btnClOSE =  "WIN_0_777000001";
+    private static final String btnCLOSEOnWarningMessage = "ardivpcl";
     private static final String btnCLEAR = "WIN_0_700009116";
     private static final String btnCI_SEARCH = "WIN_0_700009021";
     private static final String btnLINK_ID = "WIN_4_777506009";
@@ -31,6 +32,12 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String CI_DIAGNOSIS_TABLE_ID = "T700009087";
     private static final String TABLE_ID_linkedItems = "T777506000";
     private static final String OK_POP_UP_XPATH= "//*[@id=\"PopupMsgFooter\"]/a";
+
+
+    public void selectCi(String text)
+    {
+        ClickTableElementByText(By.id(Table_ID),"Name",text,false);
+    }
 
 
     public void selectCategory_CiSearchPage(String value){
@@ -106,6 +113,11 @@ public class OWF_CiSearchPage extends BasePage {
         driver.findElement(By.id(btnClOSE)).click();
         WebElement html = driver.findElement(By.tagName("html"));
         html.sendKeys(Keys.chord(Keys.CONTROL, "0"));
+    }
+
+    public void closeWarningMessage()
+    {
+        driver.findElement(By.id(btnCLOSEOnWarningMessage)).click();
     }
 
     public void clickClearButton() {

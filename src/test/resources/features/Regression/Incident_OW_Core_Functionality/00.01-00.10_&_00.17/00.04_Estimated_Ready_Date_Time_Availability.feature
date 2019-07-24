@@ -13,7 +13,7 @@ Feature: Incident
     When user enters "Test case 00.04 Estimated Ready date and time" in Title field
     And user selects request type as "Customer" on trouble event page
     And user enters description as "Test case 00.04 Estimated Ready date and time"
-    And user clicks on save button on the problem form
+    And user clicks on save button
     Then ticket should be created and status should be assigned
     And user gets ticket value
     When user selects search menu as "Open Search Form:Trouble Event"

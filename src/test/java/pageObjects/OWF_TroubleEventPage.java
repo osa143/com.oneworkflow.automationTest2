@@ -136,7 +136,13 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         return getTextById(txt_LOCATION_LONGITUDE_ID);
     }
 
+    public void eventStartTime(){
+        findElement(By.id(txtEVENT_START_TIME)).clear();
+    }
 
+    public void enterEventStartTime(String eventStartTime){
+        findElement(By.id(txt_EVENT_START_TIME)).sendKeys(eventStartTime);
+    }
     public String[] clickOnRow(String text)
     {
         wait(1000);

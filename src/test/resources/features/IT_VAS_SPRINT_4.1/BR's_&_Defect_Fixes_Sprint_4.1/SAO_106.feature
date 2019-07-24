@@ -13,7 +13,7 @@ Feature: clearing of alarms within OW
     And user enters ticket id as "OP-000000899303"
     Then trouble ticket should appear related to TeMIP
     When user changes status to "Cleared" on trouble event page
-    And user clicks on save button on the problem form
+    And user clicks on save button
     Then an error message should appear: "Required field (without a default) not specified : Event End Time (ARERR 9424)"
     And an error message should appear: "Required field (without a default) not specified : Fault Position (ARERR 9424)"
     And an error message should appear: "Required field (without a default) not specified : Cause (ARERR 9424)"
@@ -25,7 +25,7 @@ Feature: clearing of alarms within OW
     Then user enters event end time as current time
     And user selects fault position as "N/A:N/A"
     And user selects cause as "N/A:N/A:N/A"
-    Then user clicks on save button on the problem form
+    Then user clicks on save button
     #And user clicks on yes button on warning window not in frame
     When user clicks on "Alarms" tab
     And user clicks on all alarm checkbox
@@ -33,10 +33,10 @@ Feature: clearing of alarms within OW
     Then user clicks refresh button on alarm tab
     Then user should see alarm status as "Cleared"
     Then user changes status to "Closed"
-    And user clicks on save button on the problem form
+    And user clicks on save button
     Then an error message should appear: "Required field (without a default) not specified : Closure Info (ARERR 9424)"
     And an error message should appear: "Required field (without a default) not specified : Action (ARERR 9424)"
     Then user selects action dropdown as "N/A:N/A"
     Then user enters closure info as "Test Ticket"
-    And user clicks on save button on the problem form
+    And user clicks on save button
     Then ticket status should be closed

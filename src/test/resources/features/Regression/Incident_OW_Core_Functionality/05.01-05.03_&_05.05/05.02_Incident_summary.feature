@@ -11,9 +11,9 @@ Feature: user enters closure info
     Then trouble record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
     And user enters "Test case 05.02 Incident Summary" in Title field in Trouble event
-    And user selects request type as "Customer"
+    And user selects request type as "Customer" on trouble event page
     And user enters description as "Test case 05.02 Incident Summary"
-    And user clicks on save button on the problem form
+    And user clicks on save button
     Then ticket should be created and status should be assigned
     When user clicks on Diagnosis tab
     And user clicks on CI search button
@@ -23,7 +23,8 @@ Feature: user enters closure info
     Then user selects impact level as "Degradation of Service"
     And user clicks on relate CI
     And an error message should appear: "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
-    Then user closes warning message and clicks on close button
+    Then user closes warning message
+    And user clicks on close button on CI search window
     When user changes status to "Cleared"
     And user selects fault position as "N/A:N/A"
     And user selects cause as "N/A:N/A:N/A"
@@ -35,9 +36,9 @@ Feature: user enters closure info
     Then user switches to frame
     And user should see confirmation message and clicks on yes button
     Then user switches to window 1
-    And user clicks on save button on the problem form
+    And user clicks on save button
     Then user validates ticket status as "Cleared"
     When user changes status to "Closed"
-    And user clicks on save button on the problem form
+    And user clicks on save button
     Then user validates ticket status as "Closed"
     And user validates closure info is present

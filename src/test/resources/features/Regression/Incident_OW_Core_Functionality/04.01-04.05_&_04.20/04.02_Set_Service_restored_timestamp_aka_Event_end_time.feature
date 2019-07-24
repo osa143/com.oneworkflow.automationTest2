@@ -10,15 +10,15 @@
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       And user enters "Test case 04.02 Set event end time" in Title field in Trouble event
-      And user selects request type as "Customer"
+      And user selects request type as "Customer" on trouble event page
       And user enters description as "Test case 04.02 Set event end time"
-      And user clicks on save button on the problem form
+      And user clicks on save button
       Then ticket should be created and status should be assigned
-      When user changes status to "Cleared"
+      When user changes status to "Cleared" on trouble event page
       And user enters event end time as current time
-      Then user clicks on save button on the problem form
+      Then user clicks on save button
       Then multiple error messages should appear with red boarder around fields
       When user selects fault position as "N/A:N/A"
       And user selects cause as "Test Ticket:N/A:N/A"
-      Then user clicks on save button on the problem form
+      Then user clicks on save button
       And user validates ticket status as "Cleared"

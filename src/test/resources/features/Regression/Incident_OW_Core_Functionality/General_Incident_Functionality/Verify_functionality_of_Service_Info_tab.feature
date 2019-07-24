@@ -10,9 +10,9 @@
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       And user enters "Test case verify functionality of service info tab" in Title field in Trouble event
-      And user selects request type as "Customer"
+      And user selects request type as "Customer" on trouble event page
       And user enters description as "Test case verify functionality of service info tab"
-      And user clicks on save button on the problem form
+      And user clicks on save button
       Then ticket should be created and status should be assigned
       Then user clicks on "Service Info" tab
       And user validates "info type" is visible

@@ -65,7 +65,7 @@ public class OWF_ChangeRecordPageSteps {
     @And("user clicks on save button")
     public void userClicksOnSaveButton() {
         changeRecordPage.clickSave();
-        changeRecordPage.wait(7000);
+        changeRecordPage.wait(5000);
 
     }
 
@@ -244,5 +244,10 @@ public class OWF_ChangeRecordPageSteps {
     @And("user switches to frame by id {string}")
     public void userSwitchesToFrameById(String arg0) {
         changeRecordPage.switchToFrameById(arg0);
+    }
+
+    @When("user selects change type as {string}")
+    public void userSelectsChangeTypeAs(String arg0) {
+        changeRecordPage.selectChangeType(arg0);
     }
 }

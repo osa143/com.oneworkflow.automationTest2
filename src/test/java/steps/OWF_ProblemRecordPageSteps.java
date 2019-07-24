@@ -766,4 +766,9 @@ public class OWF_ProblemRecordPageSteps {
     public void userValidatesAvailabilityOfTabs(String tabs) {
         Assert.assertTrue(problemRecordPage.verifyTabValues(tabs));
     }
+
+    @And("user enters ticket in ticket ID+ field")
+    public void userEntersTicketInTicketIDField() {
+        problemRecordPage.enterTicketIdPlus(ticket);
+    }
 }

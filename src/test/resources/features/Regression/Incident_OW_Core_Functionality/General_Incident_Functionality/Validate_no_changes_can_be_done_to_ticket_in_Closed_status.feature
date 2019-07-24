@@ -11,19 +11,19 @@
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       And user enters "Test case validate no changes can be done to a ticket in closed status" in Title field in Trouble event
-      And user selects request type as "Customer"
+      And user selects request type as "Customer" on trouble event page
       And user enters description as "Test case validate no changes can be done to a ticket in closed status"
-      And user clicks on save button on the problem form
+      And user clicks on save button
       Then ticket should be created and status should be assigned
       When user changes status to "Cleared"
       And user selects fault position as "N/A:N/A"
       And user selects cause as "N/A:N/A:N/A"
       And user selects action dropdown as "N/A:N/A"
       And user enters closure info as "Test Ticket"
-      And user clicks on save button on the problem form
+      And user clicks on save button
       Then user validates ticket status as "Cleared"
       When user changes status to "Closed"
-      And user clicks on save button on the problem form
+      And user clicks on save button
       Then user validates ticket status as "Closed"
       And user clicks on CTI details under sections
       And user clicks on location under sections

@@ -1,4 +1,5 @@
 @04.01_Document_the_service_restoration_actions_and_results @Incident
+  #passed
   Feature: document service restoration
     Scenario: user documents service restoration and results
 
@@ -10,20 +11,23 @@
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       And user enters "Test case 04.01 Document service restoration" in Title field in Trouble event
-      And user selects request type as "Customer"
+      And user selects request type as "Customer" on trouble event page
       And user enters description as "Test case 04.01 Document service restoration"
-      And user clicks on save button on the problem form
+      And user clicks on save button
       Then ticket should be created and status should be assigned
       When user clicks on assignment under sections
-      And user selects assigned profile dropdown as "Core:Mobile PS:Mob PS Core WEST"
+      And user selects assignment profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
+      And user selects assignee as "Change_Automation_1" by using alphabet "c" key up 0 times
+      And user clicks on save button
       When user enters "Test Resolution Update" in the timeline text box
       And user clicks on public radio button
-      And user clicks on add button under timeline
+      And user clicks on add button
       Then change should also be reflected in the timeline as "Test Resolution Update"
-      When user clicks on Ack button
-      And user changes status to "Cleared"
-      When user clicks on route cause under sections
-      Then user enters route cause description as "Test Resolution Result"
+      And user clicks on Ack button
+      And user changes status to "Cleared" on trouble event page
+      When user clicks on root cause under sections
+      Then user enters root cause description as "Test Resolution Result"
+
 
 
 

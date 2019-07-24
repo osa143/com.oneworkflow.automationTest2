@@ -117,15 +117,39 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_ASSIGNEE= "arid_WIN_0_4";
     private static final String dd_ASSIGNMENT_PROFILE= "Assignment Profile";
     private static final String btn_PRIORITY_CHECK= "WIN_0_600002912";
-
+    private static final String table_SELECT_TARGET_REQUEST= "T700506101";
+    private static final String btn_LINK_LINKED_ITEMS= "WIN_5_777506009";
+    private static final String txt_TIMELINE= "arid_WIN_0_777777103";
+    private static final String rbtn_PUBLIC= "WIN_0_rc0id777021180";
+    private static final String txt_ROOT_CAUSE_DESCRIPTION= "arid_WIN_0_777021052";
+    private static final String btn_ACCEPT_SELECT_TARGET_REQUEST= "//div[contains text(), 'Accept']";
 
     public void verifyRelatedCiTableColumnsHaveData(){
         columnHasData(Table_DIAGNOSIS,"CI Name" );
+    }
+    public void enterRootCauseDescription(String text){
+        findElement(By.id(txt_ROOT_CAUSE_DESCRIPTION)).sendKeys(text);
+    }
+    public void clickPublicRadioButton(){
+        findElement(By.id(rbtn_PUBLIC)).click();
+    }
+    public void enterText_timeline(String text){
+       findElement(By.id(txt_TIMELINE)).sendKeys(text);
+    }
+    public void clickLink_LinkedItems(){
+        findElement(By.id(btn_LINK_LINKED_ITEMS)).click();
     }
 
     public void clickPriorityCheck(){
         findElement(By.id(btn_PRIORITY_CHECK)).click();
         wait(1000);
+    }
+    public boolean verifyAvailabilityOfTicket(){
+        int size= getTableRows(By.id(table_SELECT_TARGET_REQUEST)).size();
+        System.out.println("Number of Tickets available"+ (size-1));
+        if(size>1)
+        return true;
+        else return false;
     }
 
     public void selectAssignmentProfile(String value){
@@ -432,7 +456,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
 
     public void clickAccept_selectTargetRequest(){
-        driver.findElement(By.id(btnACCEPT_SELECT_TARGET_REQUEST)).click();
+        findElement(By.id(btnACCEPT_SELECT_TARGET_REQUEST)).click();
     }
 
     public void selectRelationshipType(String value){

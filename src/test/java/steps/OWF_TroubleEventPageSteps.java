@@ -193,7 +193,7 @@ public class OWF_TroubleEventPageSteps {
     @And("user clicks on accept button")
     public void userClicksOnAcceptButton() {
         troubleEventPage.clickAccept_selectTargetRequest();
-        troubleEventPage.wait(10000);
+        troubleEventPage.wait(1000);
     }
 
     @Then("user selects ticket under select target request")
@@ -641,6 +641,42 @@ public class OWF_TroubleEventPageSteps {
     @Then("user should see work orders listed under work order tab")
     public void userShouldSeeWorkOrdersListedUnderWorkOrderTab() {
       Assert.assertTrue(troubleEventPage.verifyAvailabilityOfWorkOrders());
+    }
+
+    @And("user should see known error ticket listed")
+    public void userShouldSeeKnownErrorTicketListed() {
+        Assert.assertTrue(troubleEventPage.verifyAvailabilityOfTicket());
+    }
+
+    @And("user clicks on link button under linked items tab")
+    public void userClicksOnLinkButtonUnderLinkedItemsTab() {
+        troubleEventPage.clickLink_LinkedItems();
+    }
+
+    @When("user enters {string} in the timeline text box")
+    public void userEntersInTheTimelineTextBox(String arg0) {
+       troubleEventPage.enterText_timeline(arg0);
+    }
+
+    @And("user clicks on public radio button")
+    public void userClicksOnPublicRadioButton() {
+        troubleEventPage.clickPublicRadioButton();
+    }
+
+    @Then("user validates {int} linked ticket availability")
+    public void userValidatesLinkedTicketAvailability(int arg0) {
+        troubleEventPage.validateLinkedItemsAvailability(arg0);
+
+    }
+
+    @Then("user enters root cause description as {string}")
+    public void userEntersRootCauseDescriptionAs(String arg0) {
+        troubleEventPage.enterRootCauseDescription(arg0);
+    }
+
+    @And("user clicks on accept button on select target request window")
+    public void userClicksOnAcceptButtonOnSelectTargetRequestWindow() {
+
     }
 }
 

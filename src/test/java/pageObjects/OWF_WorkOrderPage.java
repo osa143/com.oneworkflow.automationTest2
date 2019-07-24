@@ -102,9 +102,10 @@ public class OWF_WorkOrderPage extends BasePage {
         selectDropDownNameAndValue(ddSLA_CLASS, value, false);
     }
 
-    public boolean getAssignedProfileStatus(String b2b){
+    public boolean getAssignedProfileStatus(String text1){
         String text =getTextById(ddASSIGNED_PROFILE);
-        if(text.contains(b2b)) {
+        System.out.println(text);
+        if(text.contains(text1)) {
             return true;
         }
         else return false;

@@ -29,6 +29,7 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String TABLE_ID_linkedItems = "T777506000";
 
 
+
     public void selectCi(String text)
     {
         ClickTableElementByText(By.id(Table_ID),"Name",text,false);
@@ -65,12 +66,7 @@ public class OWF_CiSearchPage extends BasePage {
     public void clickAcceptButton(){
         driver.findElement(By.id(btnACCEPT_ID)).click();
     }
-    private static final String txtTICKET_ID_PLUS_ID= "arid_WIN_0_777777600";
 
-    public void enterTicketIdPlus(String ticketId){
-        driver.findElement(By.id(txtTICKET_ID_PLUS_ID)).sendKeys(ticketId);
-
-    }
     public void clickLinkedItems(){
         selectTab("Linked Items");
     }
@@ -105,9 +101,9 @@ public class OWF_CiSearchPage extends BasePage {
     }
 
     public void clickCloseButton() {
+        wait(1000);
         driver.findElement(By.id(btnClOSE)).click();
-//        WebElement html = driver.findElement(By.tagName("html"));
-//        html.sendKeys(Keys.chord(Keys.CONTROL, "0"));
+
     }
 
     public void closeWarningMessage()
@@ -121,7 +117,7 @@ public class OWF_CiSearchPage extends BasePage {
 
     public void clickRelateCiButton() {
         driver.findElement(By.id(btnRELATE_CI)).click();
-        wait(1000);
+        wait(500);
     }
 
     public void clickToSelectCi() {

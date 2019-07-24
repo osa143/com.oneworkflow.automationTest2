@@ -1,5 +1,5 @@
 @03.02_Do_a_public_Timeline_update_on_OW_incident_ticket @Incident
-
+#passed
   Feature: public timeline update
     Scenario: user can send a public timeline update on a ticket
 
@@ -11,13 +11,13 @@
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       And user enters "Test Case 03.02 Public Timeline Update" in Title field in Trouble event
-      And user selects request type as "Customer"
+      And user selects request type as "Customer" on trouble event page
       And user enters description as "Test Case 03.02 Public Timeline Update"
-      And user clicks on save button on the problem form
+      And user clicks on save button
       Then ticket should be created and status should be assigned
       When user enters "Test Update - Public" in the timeline text box
       And user clicks on public radio button
-      And user clicks on add button under timeline
+      And user clicks on add button
       Then change should also be reflected in the timeline as "Test Update - Public"
 
 

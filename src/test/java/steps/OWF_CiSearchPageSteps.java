@@ -79,11 +79,6 @@ public class OWF_CiSearchPageSteps {
     }
 
 
-    @And("user enters ticket in ticket ID+ field")
-    public void userEntersTicketInTicketIDField() {
-        ciSearchPage.enterTicketIdPlus("here enter ticket previously created");
-    }
-
     @And("user clicks ticket checkbox")
     public void userClicksTicketCheckbox() {
         ciSearchPage.clickToSelectCi();

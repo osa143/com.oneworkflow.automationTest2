@@ -132,6 +132,14 @@ public class BaseRecordPage extends BasePage {
     public static final String btnREFRESH_XPATH = "//div[@id='WIN_0_999000510']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
 
 
+    private static final String txtTICKET_ID_PLUS_ID= "arid_WIN_0_777777600";
+
+    public void enterTicketIdPlus(String ticketId){
+        driver.findElement(By.id(txtTICKET_ID_PLUS_ID)).sendKeys(ticketId);
+
+    }
+
+
 
     public boolean verifyIsFinlandSelected(){
         return findElement(By.id(chkbxFINLAND)).isSelected();
@@ -231,6 +239,16 @@ public class BaseRecordPage extends BasePage {
            return true;
        }
        return false;
+    }
+    public boolean validateLinkedItemsAvailability(int ticketSize)
+    {
+        wait(1000);
+        int size = getTableRows(By.id(table_LINKED_ITEMS_ID)).size();
+        System.out.println("Available Tickets" + (size-1));
+        if(ticketSize > size){
+            return true;
+        }
+        return false;
     }
     public boolean validateChildAlarmsAvailability()
     {

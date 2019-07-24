@@ -1,4 +1,4 @@
-@SAO-427-BR2862-Bulk_Loading_Additonal_Definitions_Default_Settings @SAO-427
+@SAO-427-BR2862-Bulk_Loading_Additional_Definitions_Default_Settings @SAO-427
 Feature: checking of bulk loading additional definitions default settings
   Scenario: user checks the bulk loading additional definitions default settings
 

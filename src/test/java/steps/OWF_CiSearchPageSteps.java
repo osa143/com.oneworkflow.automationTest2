@@ -41,7 +41,6 @@ public class OWF_CiSearchPageSteps {
     @And("user clicks on relate CI")
     public void userClicksOnRelateCI() {
         ciSearchPage.clickRelateCiButton();
-        ciSearchPage.wait(3000);
     }
     @Then("CI search tab should be opened")
     public void ciSearchTabShouldBeOpened() {
@@ -50,11 +49,6 @@ public class OWF_CiSearchPageSteps {
 
     @And("user closes warning message")
     public void userClosesWarningMessageAndClicksOnCloseButton() {
-//        ciSearchPage.switchToFrameByIndex(2);
-//        ciSearchPage.wait(1000);
-//        ciSearchPage.clickOk_OnPop_up();
-//        ciSearchPage.clickCloseButton();
-        ciSearchPage.wait(1000);
         ciSearchPage.closeWarningMessage();
     }
     @When("user clicks on clear button")

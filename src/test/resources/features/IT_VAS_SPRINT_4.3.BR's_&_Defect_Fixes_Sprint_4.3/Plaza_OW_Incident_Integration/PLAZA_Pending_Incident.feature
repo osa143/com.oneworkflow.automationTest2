@@ -16,6 +16,6 @@ Feature: Plaza creation of incident ticket - pending status
     When user changes status to "Pending"
     And user enters on hold to date 5 minutes in the future
     And user enters on hold reason as "Pending ticket test"
-    Then user clicks on save button on the problem form
+    Then user clicks on save button
     And user validates ticket status as "Pending"
 

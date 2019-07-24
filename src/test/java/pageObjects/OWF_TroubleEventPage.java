@@ -110,6 +110,41 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_LOCATION_REGION_NAME_ID ="arid_WIN_0_700009638";
     private static final String txt_LOCATION_LATITUDE_ID ="arid_WIN_0_700024008";
     private static final String txt_LOCATION_LONGITUDE_ID ="arid_WIN_0_700024009";
+    private static final String Table_DIAGNOSIS= "T700009087";
+    private static final String dd_IMPACT_NAME= "Impact Name";
+    private static final String chkbx_CONFIRM_ID= "WIN_0_rc0id990000905";
+    private static final String btn_SAVE_BULK_UPDATE_ID= "WIN_0_990000906";
+    private static final String txt_ASSIGNEE= "arid_WIN_0_4";
+    private static final String dd_ASSIGNMENT_PROFILE= "Assignment Profile";
+    private static final String btn_PRIORITY_CHECK= "WIN_0_600002912";
+
+
+    public void verifyRelatedCiTableColumnsHaveData(){
+        columnHasData(Table_DIAGNOSIS,"CI Name" );
+    }
+
+    public void clickPriorityCheck(){
+        findElement(By.id(btn_PRIORITY_CHECK)).click();
+        wait(1000);
+    }
+
+    public void selectAssignmentProfile(String value){
+        selectDropDownNameAndValue(dd_ASSIGNMENT_PROFILE, value, false);
+    }
+
+    public String getAssignee(){
+        return getTextById(txt_ASSIGNEE);
+    }
+
+    public void clickSave_bulkUpdate(){
+        findElement(By.id(btn_SAVE_BULK_UPDATE_ID)).click();
+    }
+    public void selectImpactName(String value){
+        selectDropDownNameAndValue(dd_IMPACT_NAME,value, false);
+    }
+     public void clickConfirmCheckBox(){
+        findElement(By.id(chkbx_CONFIRM_ID)).click();
+     }
 
     public String getLocationId()
     {
@@ -136,7 +171,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         return getTextById(txt_LOCATION_LONGITUDE_ID);
     }
 
-    public void eventStartTime(){
+    public void clearEventStartTime(){
         findElement(By.id(txtEVENT_START_TIME)).clear();
     }
 
@@ -270,9 +305,13 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
 
     public String getErrorText(){
-        switchToFrameByIndex(2);
+        driver.switchTo().parentFrame();
+        wait(2000);
+
+        driver.switchTo().frame(1);
+        wait(2000);
         String error= findElement(By.id(Error_POP_UP_ID)).getText();
-        System.out.println(error);
+        System.out.println("Error message is" +error);
         return error;
     }
     public void clickCtiDetails(){
@@ -328,6 +367,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
 
      public void selectImpact(String value){
+            wait(500);
          selectDropDownNameAndValue(ddIMPACT, value, true);
      }
 
@@ -354,9 +394,15 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         public boolean validateChildWorkOrderAvailability (){
           int size= getTableRows(By.id(table_WORKORDERS_ID)).size();
           if(size>0)
-              return true;
-        return false;
-
+          return true;
+          else return false;
+    }
+    public boolean verifyAvailabilityOfWorkOrders(){
+        int size= getTableRows(By.id(table_WORKORDERS_ID)).size();
+        System.out.println("Number of work orders available are" +(size-1));
+        if(size>2)
+        return true;
+        else return false;
     }
     public String getCust_Remaining_SLA(){
         String SLA_Target_Time =getTextById(txtCUST_REMAINING_SLA_ID);
@@ -548,8 +594,8 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         driver.findElement(By.id(txtCUSTOMER_ESCALATED_INCIDENTS_ID)).sendKeys(customer_escalated_incidents);
     }
 
-    public void enterLastAckBy(String last_ack_by) {
-        driver.findElement(By.id(txtLAST_ACK_BY_ID)).sendKeys(last_ack_by);
+    public String getLastAckBy(){
+        return getTextById(txtLAST_ACK_BY_ID);
     }
 
     public void enterResponseReason(String response_reason) {

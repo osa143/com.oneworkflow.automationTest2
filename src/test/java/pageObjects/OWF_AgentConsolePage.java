@@ -42,13 +42,14 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String btnCLEAR = "WIN_0_777501009";
     private static final String btnREFRESH = "WIN_0_8000903";
     private static final String btnHIDE_FUNCTIONS = "WIN_0_999000120";
-    private static final String btnMORE_FILTERS = "WIN_0_600002901";
     private static final String btnSAVE = "WIN_0_700010480";
     private static final String btnADD = "WIN_0_800006404";
 
     private static final String ddALL_TICKETS = "WIN_0_700010167";
     private static final String ddALL_ROLES = "WIN_0_700010200";
     private static final String ddALL = "WIN_0_700010165";
+    private static final String dd_ALL_TICKETS= "Fld-OfTypeID";
+    private static final String dd_STATUS= "Status";
 
     private static final String ddValueALL_ROLES = "All Roles";
     private static final String ddValueINTERESTED_PARTIES = "Interested Parties";
@@ -85,10 +86,36 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String tdROW1_XPATH = "//div[@id='WIN_0_999000005']//td[1]//nobr[1]";
     private static final String alarmTdROW1_XPATH = "//fieldset[@id='WIN_0_836889423']//tr[2]";
     private static final String txtALARM_NUMBER_ID = "arid_WIN_0_700511109";
-    private static final String Alarm_Console_fullView_Table_ID = "bubble_tooltip";
     private static final String btnYES_ON_FRAME_ID = "WIN_0_700027904";
     private static final String fullView_TABLE_ID = "T860000008";
     private static final String btnOK_secondaryPrimary_onFRAME_XPATH = "//*[@id='PopupMsgFooter']/a";
+    private static final String btn_MORE_FILTERS = "WIN_0_536889440";
+    private static final String btn_APPLY = "WIN_0_600002902";
+    private static final String fld_DETAILS= "WIN_0_600003303";
+    private static final String fld_CTI_DETAILS= "WIN_0_600003302";
+
+
+   public boolean verifyDetailsIsPresent(){
+       return verifyElementIsDisplayed(By.id(fld_DETAILS));
+   }
+    public boolean verifyCtiDetailsIsPresent(){
+        return verifyElementIsDisplayed(By.id(fld_CTI_DETAILS));
+    }
+   public void clickApply_userMoreFilters(){
+       findElement(By.id(btn_APPLY)).click();
+   }
+
+   public void clickMoreFilters(){
+   findElement(By.id(btn_MORE_FILTERS)).click();
+   }
+
+   public void selectStatus(String value){
+       selectDropDownNameAndValue(dd_STATUS, value, false);
+   }
+
+    public void selectAllTickets(String value){
+        selectDropDownNameAndValue(dd_ALL_TICKETS, value, false);
+    }
 
     public void clickYesonSecondaryPrimaryWarningFrame()
     {
@@ -343,10 +370,6 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void clickHideFunctions() {
         driver.findElement(By.id(btnHIDE_FUNCTIONS)).click();
-    }
-
-    public void clickMoreFilters() {
-        driver.findElement(By.id(btnMORE_FILTERS)).click();
     }
 
     public void clickSave() {

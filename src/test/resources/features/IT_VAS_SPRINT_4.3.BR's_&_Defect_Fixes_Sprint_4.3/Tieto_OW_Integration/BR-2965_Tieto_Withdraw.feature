@@ -56,7 +56,8 @@ Feature: creation and sending and withdrawing of WO to Tieto
     And user selects impact category as "Potential"
     And user selects impact level as "No Impact"
     And user clicks on relate CI
-    Then user closes warning message and clicks on close button
+    Then user closes warning message
+    And user clicks on close button on CI search window
     When user clicks on assignment under sections
     And user selects assigned profile dropdown as "Tieto"
 

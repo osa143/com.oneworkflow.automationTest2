@@ -33,6 +33,7 @@
       And user selects CI "DK_SGSN_AMBMME1"
       And user clicks on relate CI
       Then error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
+      #And user closes warning message
       And error message should display as "Please fill in all impact details in order to relate CI to the request. (ARERR 300825)"
       #Need to validate the options under impact level: "Degradation of service, Loss of Service, No Impact, (clear)"
       Then multiple statuses "Degradation of service:Loss of Service:No Impact:(clear)" should be available in "Level*" dropdown

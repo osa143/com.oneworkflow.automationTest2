@@ -6,7 +6,6 @@ import cucumber.api.java.en.When;
 import org.testng.Assert;
 import pageObjects.OWF_TroubleEventPage;
 import pageObjects.OWF_WorkOrderPage;
-import utils.CommonUtils;
 import utils.Ticket;
 
 public class OWF_TroubleEventPageSteps {
@@ -373,23 +372,13 @@ public class OWF_TroubleEventPageSteps {
     @And("user validates owner profile field availability")
     public void userValidatesOwnerFieldAvailability() {
         Assert.assertTrue(troubleEventPage.verifyOwnerProfileAvailability());
-
     }
-
-
-
-
 
     @Then("error message should display as {string}")
     public void errorMessageShouldDisplayAs(String arg0) {
-
         Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
         troubleEventPage.clickOkOnPopup();
-
     }
-
-
-
     @And("user accepts alert")
     public void userAcceptsAlert() {
         troubleEventPage.acceptAlert();
@@ -398,10 +387,7 @@ public class OWF_TroubleEventPageSteps {
     @And("user validates {string} is present")
     public void userValidatesIsPresent(String arg0) {
         Assert.assertTrue(troubleEventPage.verifyElementIsDisplayedByContainsText(arg0));
-
     }
-
-
     @And("user validates WO's Status is present")
     public void userValidatesWOSStatusIsPresent() {
         Assert.assertTrue(troubleEventPage.verifyWosStatusIsDisplayed());
@@ -422,8 +408,6 @@ public class OWF_TroubleEventPageSteps {
     public void userClicksOnLocationUnderSections() {
         troubleEventPage.clickLocation();
     }
-
-
     @Then("user clicks on On Hold under sections")
     public void userClicksOnOnHoldUnderSections() {
        troubleEventPage.clickOnHold();
@@ -598,8 +582,65 @@ public class OWF_TroubleEventPageSteps {
     }
     @And("user changes event start time {int} day in the past")
     public void userChangesEventStartTimeDayInThePast(int arg0) {
-        troubleEventPage.eventStartTime();
+        troubleEventPage.clearEventStartTime();
         troubleEventPage.enterEventStartTime(troubleEventPage.calculateEstimatedReady(arg0, "days"));
+    }
+
+    @Then("user selects impact name as {string}")
+    public void userSelectsImpactNameAs(String arg0) {
+       troubleEventPage.selectImpactName(arg0);
+    }
+
+    @And("user clicks confirm checkbox")
+    public void userClicksConfirmCheckbox() {
+        troubleEventPage.clickConfirmCheckBox();
+    }
+
+    @And("user clicks on bulk update save button")
+    public void userClicksOnBulkUpdateSaveButton() {
+       troubleEventPage.clickSave_bulkUpdate();
+    }
+
+    @And("user validates last ack by field has data present")
+    public void userValidatesLastAckByFieldHasDataPresent() {
+        Assert.assertNotNull(troubleEventPage.getLastAckBy());
+    }
+
+    @Then("user validates assignee is {string}")
+    public void userValidatesAssigneeIs(String arg0) {
+        Assert.assertEquals(arg0, troubleEventPage.getAssignee());
+    }
+
+    @When("user selects assignment profile dropdown as {string}")
+    public void userSelectsAssignmentProfileDropdownAs(String arg0) {
+        troubleEventPage.selectAssignmentProfile(arg0);
+    }
+
+    @And("user changes event start time as {string} future date and time")
+    public void userChangesEventStartTimeAsFutureDateAndTime(String arg0) {
+        troubleEventPage.clearEventStartTime();
+        troubleEventPage.enterEventStartTime(arg0);
+    }
+
+    @When("user changes event start time as {string} past date and time")
+    public void userChangesEventStartTimeAsPastDateAndTime(String arg0) {
+        troubleEventPage.clearEventStartTime();
+        troubleEventPage.enterEventStartTime(arg0);
+    }
+
+    @And("user clicks on priority check button")
+    public void userClicksOnPriorityCheckButton() {
+        troubleEventPage.clickPriorityCheck();
+    }
+
+    @Then("user validates that priority changes to {string}")
+    public void userValidatesThatPriorityChangesTo(String arg0) {
+        Assert.assertEquals(arg0, troubleEventPage.getPriorityText());
+    }
+
+    @Then("user should see work orders listed under work order tab")
+    public void userShouldSeeWorkOrdersListedUnderWorkOrderTab() {
+      Assert.assertTrue(troubleEventPage.verifyAvailabilityOfWorkOrders());
     }
 }
 

@@ -20,10 +20,9 @@ public class OWF_AgentConsolePageSteps {
 
     @When("user selects SID console from agent console")
     public void userSelectsSIDConsoleFromAgentConsole() {
-       // Assert.assertTrue(false);
+
         agentConsolePage.clickConsoleMenu();
         agentConsolePage.clickMenuItemSIDConsole();
-        //CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
     }
 
     @When("user clicks on add column under preferences and selects OP next due date")
@@ -366,6 +365,36 @@ public class OWF_AgentConsolePageSteps {
     @When("user clicks on create work order")
     public void userSelectsCreateMenuAs() {
         agentConsolePage.selectMainMenuAndMenuItem("Create", "Work Order");
+    }
+
+    @When("user selects {string} under all tickets")
+    public void userSelectsUnderAllTickets(String arg0) {
+       agentConsolePage.selectAllTickets(arg0);
+    }
+
+    @When("user clicks on more filters button")
+    public void userClicksOnMoreFiltersButton() {
+        agentConsolePage.clickMoreFilters();
+    }
+
+    @When("user selects status as {string} on user more filters window")
+    public void userSelectsStatusAsOnUserMoreFiltersWindow(String arg0) {
+        agentConsolePage.selectStatus(arg0);
+    }
+
+    @And("user clicks on apply button on user more filters window")
+    public void userClicksOnApplyButtonOnUserMoreFiltersWindow() {
+       agentConsolePage.clickApply_userMoreFilters();
+    }
+
+    @And("user validates Details is present on user more filters window")
+    public void userValidatesDetailsIsPresentOnUserMoreFiltersWindow() {
+        Assert.assertTrue(agentConsolePage.verifyDetailsIsPresent());
+    }
+
+    @And("user validates CTI Details is present on user more filters window")
+    public void userValidatesCTIDetailsIsPresentOnUserMoreFiltersWindow() {
+        Assert.assertTrue(agentConsolePage.verifyCtiDetailsIsPresent());
     }
 }
 

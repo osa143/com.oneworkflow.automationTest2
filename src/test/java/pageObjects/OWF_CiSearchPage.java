@@ -16,10 +16,6 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String btnLINK_ID = "WIN_4_777506009";
     private static final String btnACCEPT_ID = "WIN_0_730011058";
     private static final String txtLOCATION_ID = "arid_WIN_0_700009015";
-    private static final String ddValueDEGRADATION_OF_SERVICES = "Degradation of Service";
-    private static final String ddValueLOSS_OF_SERVICE = "Loss of Service";
-    private static final String ddValueNO_IMPACT = "No Impact";
-    private static final String ddValueCLEAR = "(clear)";
     private static final String btnCREATE_linked_items = "WIN_4_777506020";
     private static final String chkbxTO_SELECT_CI = "//*[@id=\"T700009024\"]/tbody/tr[2]";
     private static final String rbtn_CLEARED_ID = "WIN_4_rc1id730011091";
@@ -31,7 +27,6 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String Table_ID = "T700009024";
     private static final String CI_DIAGNOSIS_TABLE_ID = "T700009087";
     private static final String TABLE_ID_linkedItems = "T777506000";
-    private static final String OK_POP_UP_XPATH= "//*[@id=\"PopupMsgFooter\"]/a";
 
 
     public void selectCi(String text)
@@ -111,37 +106,17 @@ public class OWF_CiSearchPage extends BasePage {
 
     public void clickCloseButton() {
         driver.findElement(By.id(btnClOSE)).click();
-        WebElement html = driver.findElement(By.tagName("html"));
-        html.sendKeys(Keys.chord(Keys.CONTROL, "0"));
+//        WebElement html = driver.findElement(By.tagName("html"));
+//        html.sendKeys(Keys.chord(Keys.CONTROL, "0"));
     }
 
     public void closeWarningMessage()
     {
-        driver.findElement(By.id(btnCLOSEOnWarningMessage)).click();
+        findElement(By.id(btnCLOSEOnWarningMessage)).click();
     }
 
     public void clickClearButton() {
         driver.findElement(By.id(btnCLEAR)).click();
-    }
-
-    public void clickLevelDropdown() {
-        selectDropDownMenu(ddLEVEL);
-    }
-
-    public void selectDegradationOfServiceDropdownValue() {
-        selectDropDownValue(ddValueDEGRADATION_OF_SERVICES);
-    }
-
-    public void selectLossOfServiceDropdownVale() {
-        selectDropDownValue(ddValueLOSS_OF_SERVICE);
-    }
-
-    public void selectNoImpactDropdownValue() {
-        selectDropDownValue(ddValueNO_IMPACT);
-    }
-
-    public void selectClearDropDownValue() {
-        selectDropDownValue(ddValueCLEAR);
     }
 
     public void clickRelateCiButton() {

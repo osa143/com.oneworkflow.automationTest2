@@ -128,6 +128,5 @@ public class OWF_WorkOrderPageSteps {
         workOrderPage.enterEstimatedReady(workOrderPage.calculateEstimatedReady(arg0, "days"));
     }
 
-
 }
 

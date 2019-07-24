@@ -15,6 +15,7 @@
       And user clicks on save button on the problem form
       Then ticket should be created and status should be assigned
       When user changes status to "Cleared"
+      Then user should see closure codes appear
 
 
 

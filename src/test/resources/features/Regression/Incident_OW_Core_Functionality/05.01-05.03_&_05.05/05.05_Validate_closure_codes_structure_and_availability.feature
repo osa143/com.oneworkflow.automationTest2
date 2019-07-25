@@ -1,4 +1,5 @@
 @05.05_Validate_closure_codes_structure_and_availability @Incident
+  #passed
   Feature: validation of closure codes
     Scenario: user validates fault position, cause and action fields on incident ticket
 
@@ -14,7 +15,7 @@
       And user enters description as "Test case 05.03 Event End Time"
       And user clicks on save button
       Then ticket should be created and status should be assigned
-      When user changes status to "Cleared"
+      When user changes status to "Cleared" on trouble event page
       Then user should see closure codes appear
 
 

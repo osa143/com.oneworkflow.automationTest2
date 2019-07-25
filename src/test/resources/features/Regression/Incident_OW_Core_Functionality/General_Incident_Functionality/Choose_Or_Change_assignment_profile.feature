@@ -1,4 +1,5 @@
 @Choose_Or_Change_assignment_profile @Incident
+  #passed
   Feature: changing of assignment
     Scenario: user can change assignment profile on incident ticket
 
@@ -15,9 +16,10 @@
       And user clicks on save button
       Then ticket should be created and status should be assigned
       When user clicks on assignment under sections
-      And user selects assigned profile dropdown as "Control Center:Incident Manager"
-      Then user clicks on save button
-      And user validates assigned profile as "Incident Manager"
+      And user selects assignment profile dropdown as "Control Center:Incident Manager"
+      And user clicks on save button
+      Then user should see assigned profile as "Incident Manager"
+
 
 
 

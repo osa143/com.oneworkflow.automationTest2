@@ -16,28 +16,14 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String menuForCONSOLE = "Console";
     private static final String menuForCREATE = "Create";
     private static final String menuForSEARCH = "Search";
-    private static final String menuForADMINISTRATION = "Administration";
-
     private static final String menuForNAV_USERNAME = "Nav-Username";
-
-    private static final String menuItemAGENT_CONSOLE = "Agent Console";
-    private static final String menuItemALERT_CONSOLE = "Alert Console";
     private static final String menuItemSID_CONSOLE = "SID Console";
     private static final String menuItemCHANGE_RECORD = "Change Record/Project/Freeze";
-    private static final String menuItemFROM_FILE = "From File";
     private static final String menuItemPROBLEM_RECORD = "Problem Record";
     private static final String menuItemTROUBLE_EVENT = "Trouble Event";
-    private static final String menuItemWORK_ORDER = "Work Order";
     private static final String menuitemKNOWN_ERROR = "Known Error";
-
-    private static final String menuItemMY_ACCOUNT = "My Account";
-    private static final String menuItemCHANGE_PASSWORD = "Change Password";
-    private static final String menuItemHELP = "Help";
-    private static final String menuItemABOUT = "About";
     private static final String menuItemLOGOUT = "Logout";
-
     private static final String txtSEARCH = "arid_WIN_3_730000011";
-
     private static final String btnSEARCH = "WIN_0_700010480";
     private static final String btnCLEAR = "WIN_0_777501009";
     private static final String btnREFRESH = "WIN_0_8000903";
@@ -47,32 +33,14 @@ public class OWF_AgentConsolePage extends BasePage {
 
     private static final String ddALL_TICKETS = "WIN_0_700010167";
     private static final String ddALL_ROLES = "WIN_0_700010200";
-    private static final String ddALL = "WIN_0_700010165";
     private static final String dd_ALL_TICKETS= "Fld-OfTypeID";
     private static final String dd_STATUS= "Status";
-
-    private static final String ddValueALL_ROLES = "All Roles";
-    private static final String ddValueINTERESTED_PARTIES = "Interested Parties";
+    private static final String dd_ALL_ROLES= "Fld-RoleViewMenu";
+    private static final String dd_ALL = "Fld-ViewTicketsID";
     private static final String ddValueMYASSIGNEE_PROFILE = "My Assignee Profile";
     private static final String ddValueCREATER_USER_LEVEL = "Creator (user level)";
     private static final String ddValueMY_OWNER_PROFILE = "My Owner Profile";
-
-    private static final String ddValueALL_TICKETS = "All Tickets";
-    private static final String ddValueCHANGE_FREEZE = "Change Freeze";
-    private static final String ddValueCHANGE_PROJECT = "Change Project";
-    private static final String ddValueCHANGE_RECORD = "Change Record";
-    private static final String ddValueKNOWN_ERROR = "Known Error";
-    private static final String ddValuePB_OP_KE = "PB & OP & KE";
-    private static final String ddValuePROBLEM = "Problem";
-    private static final String ddValueTROUBLE_TICKET = "Trouble Ticket";
     private static final String ddValueWO_OP = "WO & OP";
-    private static final String ddValueWO_OP_CR = "WO & OP & CR";
-    private static final String ddValueWORK_ORDER = "Work Order";
-
-    private static final String ddValueALL = "All";
-    private static final String ddValueASIGNED_TO_ME = "Assigned To Me";
-    private static final String ddValueCREATED_BY_ME = "Created by Me";
-    private static final String ddValueOWNED_BY_ME = "Owned by Me";
 
     private static final String table_ID = "T777000002";
     private static final String timeline_table_DIV_ID = "WIN_0_700508140";
@@ -93,8 +61,37 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String btn_APPLY = "WIN_0_600002902";
     private static final String fld_DETAILS= "WIN_0_600003303";
     private static final String fld_CTI_DETAILS= "WIN_0_600003302";
+    private static final String txt_SEARCH_USER_MORE_FILTERS= "arid_WIN_0_600001011";
+    private static final String btn_SEARCH_USER_MORE_FILTERS= "WIN_0_600002904";
+    private static final String tableRow1_USER_MORE_FILTERS= "//*[@id='T600002201']/tbody/tr[2]/td";
+    private static final String btn_ADD_USER_MORE_FILTERS = "WIN_0_600002905";
+    private static final String txt_REFRESH_INTERVAL = "interval";
+    private static final String btn_OK_REFRESH_INTERVAL= "//*[@id='PopupSearchesFooter']/a[1]";
 
+    public void clickOk(){
+        wait(500);
+        findElement(By.xpath(btn_OK_REFRESH_INTERVAL)).click();
+    }
 
+    public void enterRefreshInterval(String time){
+        findElement(By.id(txt_REFRESH_INTERVAL)).sendKeys(time);
+    }
+    public void selectAll(String value){
+        selectDropDownNameAndValue(dd_ALL, value, false);
+    }
+    public void clickAdd_userMoreFilters(){
+        findElement(By.id(btn_ADD_USER_MORE_FILTERS)).click();
+    }
+    public void clickRow1(){
+        findElement(By.xpath(tableRow1_USER_MORE_FILTERS)).click();
+    }
+    public void clickSearch_userMoreFilters(){
+        findElement(By.id(btn_SEARCH_USER_MORE_FILTERS)).click();
+    }
+
+    public void enterSearch_userMoreFilters(String text){
+      findElement(By.id(txt_SEARCH_USER_MORE_FILTERS)).sendKeys(text);
+    }
    public boolean verifyDetailsIsPresent(){
        return verifyElementIsDisplayed(By.id(fld_DETAILS));
    }
@@ -252,65 +249,8 @@ public class OWF_AgentConsolePage extends BasePage {
         return columnHasData(table_ID, "OP Target Date");
     }
 
-    public void selectDdValueAll() {
-        selectDropDownValue(ddValueALL);
-    }
-
-    public void selectDdValueAssignedToMe() {
-        selectDropDownValue(ddValueASIGNED_TO_ME);
-    }
-
-    public void selectDdValueCreatedByMe() {
-        selectDropDownValue(ddValueCREATED_BY_ME);
-    }
-
-    public void selectDdValueOWNED_BY_ME() {
-        selectDropDownValue(ddValueOWNED_BY_ME);
-    }
-
-
-    public void selectDdValueAllTickets() {
-        selectDropDownValue(ddValueALL_TICKETS);
-    }
-
-    public void selectDdValueChangeProject() {
-        selectDropDownValue(ddValueCHANGE_PROJECT);
-    }
-
-    public void selectDdValueChangeFreeze() {
-        selectDropDownValue(ddValueCHANGE_FREEZE);
-    }
-
-    public void selectDdValueChangeRecord() {
-        selectDropDownValue(ddValueCHANGE_RECORD);
-    }
-
-    public void selectDdValueKnownError() {
-        selectDropDownValue(ddValueKNOWN_ERROR);
-    }
-
-    public void selectDdValuePB_OP_KE() {
-        selectDropDownValue(ddValuePB_OP_KE);
-    }
-
-    public void selectDdValueProblem() {
-        selectDropDownValue(ddValuePROBLEM);
-    }
-
-    public void selectDdValueTroubleTicket() {
-        selectDropDownValue(ddValueTROUBLE_TICKET);
-    }
-
     public void selectDdValueWO_OP() {
         selectDropDownValue(ddValueWO_OP);
-    }
-
-    public void selectDdValueWO_OP_CR() {
-        selectDropDownValue(ddValueWO_OP_CR);
-    }
-
-    public void selectDdValueWorkOrder() {
-        selectDropDownValue(ddValueWORK_ORDER);
     }
 
     public boolean isColumnDisplayedByDivId(String columnName)
@@ -319,7 +259,7 @@ public class OWF_AgentConsolePage extends BasePage {
     }
 
     public void enterSearch(String searchText) {
-        wait(2000);
+        wait(1000);
         driver.findElement(By.id(txtSEARCH)).sendKeys(searchText);
         driver.findElement(By.id(txtSEARCH)).sendKeys(Keys.ENTER);
     }
@@ -338,18 +278,6 @@ public class OWF_AgentConsolePage extends BasePage {
 
     }
 
-    public void clickSearchMenu() {
-
-        selectMainMenu(menuForSEARCH);
-
-    }
-
-
-    public void clickAdministrationMenu() {
-
-        selectMainMenu(menuForADMINISTRATION);
-
-    }
 
     public void clickNavUserMenu() {
         selectMainMenu(menuForNAV_USERNAME);
@@ -380,26 +308,12 @@ public class OWF_AgentConsolePage extends BasePage {
         driver.findElement(By.id(btnADD)).click();
     }
 
-    public void clickMenuItemAgentConsole() {
-
-        selectMenuItem(menuItemAGENT_CONSOLE);
-    }
-
-    public void clickMenuItemAlertConsole() {
-        selectMenuItem(menuItemALERT_CONSOLE);
-    }
-
     public void clickMenuItemSIDConsole() {
         selectMenuItem(menuItemSID_CONSOLE);
     }
 
     public void clickMenuItemChangeRecord() {
         selectMenuItem(menuItemCHANGE_RECORD);
-    }
-
-    public void clickMenuItemFromFile() {
-
-        selectMenuItem(menuItemFROM_FILE);
     }
 
     public void clickMenuItemProblemRecord() {
@@ -412,38 +326,16 @@ public class OWF_AgentConsolePage extends BasePage {
         selectMenuItem(menuItemTROUBLE_EVENT);
     }
 
-    public void clickMenuItemWorkOrder() {
-        selectMenuItem(menuItemWORK_ORDER);
-    }
-
-    public void clickMenuItemMyAccount() {
-        selectMenuItem(menuItemMY_ACCOUNT);
-    }
-
-    public void clickMenuItemChangePassword() {
-        selectMenuItem(menuItemCHANGE_PASSWORD);
-    }
-
-    public void clickMenuItemHelp() {
-        selectMenuItem(menuItemHELP);
-    }
-
-    public void clickMenuItemAbout() {
-        selectMenuItem(menuItemABOUT);
-    }
 
     public void clickMenuItemLogout() {
         selectMenuItem(menuItemLOGOUT);
     }
 
 
-    public void selectAllRoles() {
-        selectDropDownValue(ddValueALL_ROLES);
+    public void selectAllRoles(String value) {
+        selectDropDownNameAndValue(dd_ALL_ROLES, value, false);
     }
 
-    public void selectInterestedParties() {
-        selectDropDownValue(ddValueINTERESTED_PARTIES);
-    }
 
     public void selectMyAssigneeProfile() {
         selectDropDownValue(ddValueMYASSIGNEE_PROFILE);
@@ -463,10 +355,6 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void clickAllRolesDropDown() {
         driver.findElement(By.id(ddALL_ROLES)).click();
-    }
-
-    public void clickAllDropDown() {
-        driver.findElement(By.id(ddALL)).click();
     }
 
     public int getColumnIndexByHeaderName(String columnName) {

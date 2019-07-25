@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import utils.CommonUtils;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -22,6 +23,15 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String ddREQUEST_TYPE= "Request Type";
     private static final String ddASSIGNED_PROFILE = "arid_WIN_0_777031408";
     private static final String txtEVENT_START_TIME = "arid_WIN_0_600001302";
+    private static final String dd_COMPLETION_CODE= "Completion Code";
+    private static final String txt_SCHEDULE_END= "arid_WIN_0_777021165";
+
+    public void enterActualScheduleEnd(){
+        findElement(By.id(txt_SCHEDULE_END)).sendKeys(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+    public void selectCompletionCode(String value){
+        selectDropDownNameAndValue(dd_COMPLETION_CODE, value, true);
+    }
 
 
     public void enterEstimatedReady(String estimated_ready) {

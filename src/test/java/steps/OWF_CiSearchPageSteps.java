@@ -115,6 +115,11 @@ public class OWF_CiSearchPageSteps {
      ciSearchPage.clickCreate_linkedItems();
      ciSearchPage.wait(3000);
     }
+    @And("user clicks on create button")
+    public void userClicksOnCreateButton() {
+        ciSearchPage.clickCreate();
+        ciSearchPage.wait(3000);
+    }
 
     @And("user clicks on radio button cleared")
     public void userClicksOnRadioButtonCleared() {

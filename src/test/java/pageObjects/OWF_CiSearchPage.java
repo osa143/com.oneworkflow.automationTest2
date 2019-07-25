@@ -17,6 +17,7 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String btnACCEPT_ID = "WIN_0_730011058";
     private static final String txtLOCATION_ID = "arid_WIN_0_700009015";
     private static final String btnCREATE_linked_items = "WIN_4_777506020";
+    private static final String btn_CREATE_linked_items= "WIN_5_777506020";
     private static final String chkbxTO_SELECT_CI = "//*[@id=\"T700009024\"]/tbody/tr[2]";
     private static final String rbtn_CLEARED_ID = "WIN_4_rc1id730011091";
     private static final String ddCATEGORY= "Category*";
@@ -56,15 +57,18 @@ public class OWF_CiSearchPage extends BasePage {
     }
 
     public void clickCreate_linkedItems(){
-        driver.findElement(By.id(btnCREATE_linked_items)).click();
+        findElement(By.id(btnCREATE_linked_items)).click();
+    }
+    public void clickCreate(){
+        findElement(By.id(btn_CREATE_linked_items)).click();
     }
 
     public void enterLocation(String location){
-        driver.findElement(By.id(txtLOCATION_ID)).sendKeys(location);
+        findElement(By.id(txtLOCATION_ID)).sendKeys(location);
     }
 
     public void clickAcceptButton(){
-        driver.findElement(By.id(btnACCEPT_ID)).click();
+        findElement(By.id(btnACCEPT_ID)).click();
     }
 
     public void clickLinkedItems(){
@@ -117,7 +121,7 @@ public class OWF_CiSearchPage extends BasePage {
 
     public void clickRelateCiButton() {
         driver.findElement(By.id(btnRELATE_CI)).click();
-        wait(500);
+        wait(1000);
     }
 
     public void clickToSelectCi() {

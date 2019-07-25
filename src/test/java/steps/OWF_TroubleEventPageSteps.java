@@ -12,6 +12,8 @@ public class OWF_TroubleEventPageSteps {
     OWF_TroubleEventPage troubleEventPage = new OWF_TroubleEventPage();
     OWF_WorkOrderPage workOrderPage= new OWF_WorkOrderPage();
     Ticket parentTicket;
+    int ciSizeBeforeDetach;
+    int ciSizeAfterDetatch;
     @Then("trouble record form should appear in new tab")
     public void troubleRecordFormShouldAppearInNewTab() {
         troubleEventPage.getPageTitle();
@@ -234,9 +236,9 @@ public class OWF_TroubleEventPageSteps {
        troubleEventPage.setPreferences(arg0);
     }
 
-    @And("user validates CI impact status is {string}")
-    public void userValidatesCIImpactStatusIs(String arg0) {
-       Assert.assertEquals(troubleEventPage.verifyImpactStatusAsInactive(), arg0, "CI Impact status is not inactive");
+    @And("user validates CI {string} is {string}")
+    public void userValidatesCIImpactStatusIs(String arg0, String arg1) {
+       Assert.assertEquals(troubleEventPage.verifyColumnStatus(arg1), arg0, "CI Impact status is not inactive");
     }
 
     @Then("user should see alarm status as {string}")
@@ -674,9 +676,54 @@ public class OWF_TroubleEventPageSteps {
         troubleEventPage.enterRootCauseDescription(arg0);
     }
 
-    @And("user clicks on accept button on select target request window")
-    public void userClicksOnAcceptButtonOnSelectTargetRequestWindow() {
 
+
+    @And("user validates {string} CI is equal to {string}")
+    public void userValidatesCIIsEqualTo(String arg0, String arg1) {
+        troubleEventPage.PrimaryIsDK_SGSN_AMBMME1(arg0, arg1);
+    }
+
+
+
+    @When("user right clicks on CI SE_EPG_VRREPG1 and user selects {string}")
+    public void userRightClicksOnCIAndUserSelects(String arg0) {
+        troubleEventPage.selectTicketAndRightClick();
+        troubleEventPage.setPreferences(arg0);
+    }
+
+
+    @Then("user should see CI's {string}, {string}, {string}, {string}")
+    public void userShouldSeeCIS(String arg0, String arg1, String arg2, String arg3) {
+        troubleEventPage.verifyCiDetails(arg0, arg1, arg2, arg3);
+    }
+
+
+    @Then("user should see closure codes appear")
+    public void userShouldSeeClosureCodesAppear() {
+        Assert.assertTrue(troubleEventPage.verifyIsClosureCodeIspPresent());
+    }
+
+    @When("user right clicks on secondary CI and selects {string}")
+    public void userRightClicksOnSecondaryCIAndSelects(String arg0) {
+        troubleEventPage.selectTicketAndRightClick();
+        troubleEventPage.setPreferences(arg0);
+
+    }
+
+    @And("user gets number of CI's")
+    public void userGetsNumberOfCIS() {
+        ciSizeBeforeDetach =troubleEventPage.getNumberOfCis();
+    }
+
+    @Then("CI should be detached from ticket")
+    public void ciShouldBeDetachedFromTicket() {
+        ciSizeAfterDetatch= troubleEventPage.getNumberOfCis();
+        Assert.assertNotEquals(ciSizeBeforeDetach, ciSizeAfterDetatch);
+    }
+
+    @And("user clicks on cancel button")
+    public void userClicksOnCancelButton() {
+        troubleEventPage.clickCancel();
     }
 }
 

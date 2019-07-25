@@ -21,7 +21,7 @@ Feature: clearing of alarms within OW
     #rightclick and select dropdown
     And user right clicks on primary CI and selects "Impact:Clear All"
     And user clicks on yes button on warning window not in frame
-    And user validates CI impact status is "Inactive"
+    And user validates CI "Impact Status" is "Inactive"
     Then user enters event end time as current time
     And user selects fault position as "N/A:N/A"
     And user selects cause as "N/A:N/A:N/A"

@@ -128,5 +128,14 @@ public class OWF_WorkOrderPageSteps {
         workOrderPage.enterEstimatedReady(workOrderPage.calculateEstimatedReady(arg0, "days"));
     }
 
+    @And("user selects completion code as {string}")
+    public void userSelectsCompletionCodeAs(String arg0) {
+        workOrderPage.selectCompletionCode(arg0);
+    }
+
+    @And("user enters schedule end as current date")
+    public void userEntersScheduleEndAsCurrentDate() {
+      workOrderPage.enterActualScheduleEnd();
+    }
 }
 

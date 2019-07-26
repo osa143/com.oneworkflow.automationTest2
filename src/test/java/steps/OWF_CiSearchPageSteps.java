@@ -107,7 +107,7 @@ public class OWF_CiSearchPageSteps {
     @Then("CI should be listed and displayed under the Diagnosis tab")
     public void ciShouldBeListedAndDisplayedUnderTheDiagnosisTab() {
         int size = ciSearchPage.ciDiagnosisTableRows().size();
-        Assert.assertNotEquals(size, 1, 0, "CI details are not displayed");
+        Assert.assertNotEquals(size, 1, "CI details are not displayed");
     }
 
     @When("user clicks on create button under linked items")

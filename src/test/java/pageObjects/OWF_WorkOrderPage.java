@@ -82,17 +82,15 @@ public class OWF_WorkOrderPage extends BasePage {
         driver.findElement(By.xpath(btnB2B_DISPATCH_XPATH)).click();
     }
 
-    public boolean validateNotNullById(String Id){
-       boolean notNull= getTextById(Id).isEmpty();
-       return notNull;
-    }
-    public boolean validateEstimatedReady(){
-        return validateNotNullById(txtESTIMATED_READY);
+
+    public String getEstimatedReady(){
+         return getTextById(txtESTIMATED_READY);
 
     }
 
-    public boolean validateWFM_ticket_ID(){
-         return validateNotNullById(txtWFM_TIKCET_ID);
+    public String getWFM_ticket_ID(){
+
+        return getTextById(txtWFM_TIKCET_ID);
     }
 
     public String getWOsStatusText(){

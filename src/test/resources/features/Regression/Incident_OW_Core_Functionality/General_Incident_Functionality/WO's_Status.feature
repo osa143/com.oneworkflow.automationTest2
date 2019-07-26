@@ -14,20 +14,25 @@
       And user enters description as "Test case WO Status"
       And user clicks on save button
       Then ticket should be created and status should be assigned
-      And user validates WO's Status is empty
+    #Empty status ("")
+      And user validates WO's Status is ""
       When user clicks on work order tab
       And user clicks on create from ticket
       Then user switches to window 2
       Then user clicks on save button
-      And ticket should be created and status should be assigned
+      And user validates ticket status as "New"
       Then user switches to window 1
       And user validates WO's Status is present
       When user clicks on work order tab
       And user clicks on create from ticket
       Then user switches to window 3
       Then user clicks on save button
-      And ticket should be created and status should be assigned
+      And user validates ticket status as "New"
       Then user switches to window 2
+      And user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
+      And user selects assignee as "Change_Automation_1" by using alphabet "C" key up 0 times
+      Then user clicks on save button
+      And user validates ticket status as "Assigned"
       And user changes status to "Cleared"
       And user selects completion code as "Success"
       Then user clicks on schedule tab
@@ -39,6 +44,10 @@
       When user switches to window 1
       Then user validates WO's Status is "Open"
       When user switches to window 3
+      And user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
+      And user selects assignee as "Change_Automation_1" by using alphabet "C" key up 0 times
+      Then user clicks on save button
+      And user validates ticket status as "Assigned"
       And user changes status to "Cleared"
       And user selects completion code as "Success"
       Then user clicks on schedule tab

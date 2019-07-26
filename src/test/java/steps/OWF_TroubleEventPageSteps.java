@@ -725,6 +725,11 @@ public class OWF_TroubleEventPageSteps {
     public void userClicksOnCancelButton() {
         troubleEventPage.clickCancel();
     }
+
+    @And("user validates WO's Status is {string}")
+    public void userValidatesWOSStatusIsEmpty(String arg0) {
+        Assert.assertEquals(troubleEventPage.getWoStatus(), arg0);
+    }
 }
 
 

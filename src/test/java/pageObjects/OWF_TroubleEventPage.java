@@ -128,6 +128,12 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         columnHasData(Table_DIAGNOSIS,"CI Name" );
     }
 
+    public String getWoStatus(){
+        return getTextById(txtWO_STATUS_ID);
+    }
+
+
+
     public void clickCancel(){
         wait(500);
         findElement(By.id(btn_CANCEL)).click();

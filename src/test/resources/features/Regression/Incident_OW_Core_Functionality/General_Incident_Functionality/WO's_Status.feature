@@ -10,45 +10,54 @@
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       And user enters "Test case WO Status" in Title field in Trouble event
-      And user selects request type as "Customer"
+      And user selects request type as "Customer" on trouble event page
       And user enters description as "Test case WO Status"
-      And user clicks on save button on the problem form
+      And user clicks on save button
       Then ticket should be created and status should be assigned
-      And user validates WO's Status is empty
+     #Empty status ("")
+      And user validates WO's Status is ""
       When user clicks on work order tab
       And user clicks on create from ticket
       Then user switches to window 2
-      Then user clicks on save button on the problem form
-      And ticket should be created and status should be assigned
+      Then user clicks on save button
+      And user validates ticket status as "New"
       Then user switches to window 1
       And user validates WO's Status is present
       When user clicks on work order tab
       And user clicks on create from ticket
       Then user switches to window 3
-      Then user clicks on save button on the problem form
-      And ticket should be created and status should be assigned
+      Then user clicks on save button
+      And user validates ticket status as "New"
       Then user switches to window 2
+      And user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mobile PS Core WEST"
+      And user selects assignee as "Change_Automation_1" by using alphabet "C" key up 0 times
+      Then user clicks on save button
+      And user validates ticket status as "Assigned"
       And user changes status to "Cleared"
       And user selects completion code as "Success"
       Then user clicks on schedule tab
       And user enters schedule end as current date
-      Then user clicks on save button on the problem form
+      Then user clicks on save button
       When user changes status to "Closed"
-      And user clicks on save button on the problem form
+      And user clicks on save button
       Then user validates ticket status as "Closed"
       When user switches to window 1
       Then user validates WO's Status is "Open"
       When user switches to window 3
+      And user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mobile PS Core WEST"
+      And user selects assignee as "Change_Automation_1" by using alphabet "C" key up 0 times
+      Then user clicks on save button
+      And user validates ticket status as "Assigned"
       And user changes status to "Cleared"
       And user selects completion code as "Success"
       Then user clicks on schedule tab
       And user enters schedule end as current date
-      Then user clicks on save button on the problem form
+      Then user clicks on save button
       When user switches to window 1
       Then user validates WO's Status is "Open"
       When user switches to window 3
       And user changes status to "Closed"
-      And user clicks on save button on the problem form
+      And user clicks on save button
       Then user validates ticket status as "Closed"
       When user switches to window 1
       Then user validates WO's Status is "Closed"

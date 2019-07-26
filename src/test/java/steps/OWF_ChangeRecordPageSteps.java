@@ -236,8 +236,8 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.selectTitleAs(arg0);
     }
 
-    @And("user answers all risk quetions as below")
-    public void userAnswersAllRiskQuetionsAsBelow() {
+    @And("user answers all risk questions as below")
+    public void userAnswersAllRiskQuestionsAsBelow() {
         //Dummy step Doesn't need implementation
     }
 

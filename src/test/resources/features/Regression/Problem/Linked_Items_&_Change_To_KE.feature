@@ -40,7 +40,7 @@
       And user selects estimated impact as "No Impact"
       And user clicks on save button
       Then user clicks on "Risk" tab
-      And user answers all risk quetions as below
+      And user answers all risk questions as below
       And user selects answer as "Impact to other systems/technologies are unclear"
       And user selects answer as "No"
       And user selects answer as "Tested succesfully, this is a pilot"

@@ -1,4 +1,5 @@
 @Verify_status_of_BU_receiving_disturbance_information_in_Service_Info_tab @Incident
+  #passed
   Feature: Validate BU receives disturbance info
     Scenario: user validates BU receives disturbance information
 
@@ -10,7 +11,7 @@
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       And user enters "Test case Verify BU receiving disturbance information" in Title field in Trouble event
-      And user selects request type as "Customer"
+      And user selects request type as "Customer" on trouble event page
       And user enters description as "Test case Test case Verify BU receiving disturbance information"
       And user clicks on save button on the problem form
       Then ticket should be created and status should be assigned
@@ -18,6 +19,7 @@
       And user clicks on CI search button
       Then user switches to frame
       And user enters "SE_LTECell_100000012" in the name+ field
+      And user clicks on search button on CI search window
       And user selects a CI from list
       And user selects impact level as "No Impact"
       And user clicks on relate CI

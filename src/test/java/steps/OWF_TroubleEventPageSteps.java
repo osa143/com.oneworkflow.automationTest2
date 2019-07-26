@@ -730,6 +730,16 @@ public class OWF_TroubleEventPageSteps {
     public void userValidatesWOSStatusIsEmpty(String arg0) {
         Assert.assertEquals(troubleEventPage.getWoStatus(), arg0);
     }
+
+    @And("user validates {string} is visible")
+    public void userValidatesIsVisible(String arg0) {
+      Assert.assertTrue(troubleEventPage.verifyElementIsDisplayedByContainsTextAndTagNameSpan("span", arg0));
+    }
+
+    @When("user clicks on {string} under info type")
+    public void userClicksOnUnderInfoType(String arg0) {
+        troubleEventPage.clickElementByContainsTextAndTagName("span", arg0);
+    }
 }
 
 

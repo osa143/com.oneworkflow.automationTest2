@@ -1,4 +1,5 @@
 @Verify_functionality_of_Service_Info_tab @Incident
+  #passed
   Feature: Verification of service info tab
     Scenario: user validates service info tab
 
@@ -15,15 +16,24 @@
       And user clicks on save button
       Then ticket should be created and status should be assigned
       Then user clicks on "Service Info" tab
-      And user validates "info type" is visible
+      Then user clicks on "Service Info" tab
       Then user validates "Public service information extent controlled" is visible
-      And user validates "Public service information large failure" is visible
-      And user validates "OPInfo by CI/Locale" is visible
-      And user validates "IT Disturbance Info" is visible
-      Then user validates "Info Channel" is visible
       And user validates "Telia.se kartan" is visible
       And user validates "SMS till SLM kunder" is visible
       And user validates "Mail till SLM kunder" is visible
       And user validates "Tele2 om 3G" is visible
-
+      When user clicks on "Public service information large failure" under info type
+      Then user validates "Telia.se viktig info" is visible
+      And user validates "SOS Alarm viktig info" is visible
+      When user clicks on "OPInfo by CI/Locale" under info type
+      Then user validates "English" is visible
+      And user validates "Danish" is visible
+      And user validates "Finnish" is visible
+      And user validates "Norwegian" is visible
+      And user validates "Lithuanian" is visible
+      And user validates "Swedish" is visible
+      And user validates "Estonia" is visible
+      When user clicks on "IT Disturbance Info" under info type
+      Then user validates "English" is visible
+      And user validates "Finnish" is visible
 

@@ -67,6 +67,18 @@ public class BasePage {
         return findElement(By.xpath(element)).isDisplayed();
 
     }
+    public boolean verifyElementIsDisplayedByContainsTextAndTagNameSpan(String tagName, String textName){
+        String element = String.format("//%s[contains(text(),'%s')]", tagName, textName);
+        System.out.println(element);
+        return findElement(By.xpath(element)).isDisplayed();
+
+    }
+    public void clickElementByContainsTextAndTagName(String tagName, String textName){
+        String element = String.format("//%s[contains(text(),'%s')]", tagName, textName);
+        System.out.println(element);
+         findElement(By.xpath(element)).click();
+
+    }
 
     public boolean verifyMenuItems(String items){
         String [] menuItems = items.split(":");

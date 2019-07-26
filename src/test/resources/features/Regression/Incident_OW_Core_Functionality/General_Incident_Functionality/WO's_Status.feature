@@ -3,7 +3,7 @@
     Scenario: user validates different work order status'
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+      When user logs in with valid username "Change_Automation_2" and password as "Telia@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create trouble event
       And user switches to window 1
@@ -29,10 +29,12 @@
       Then user clicks on save button
       And user validates ticket status as "New"
       Then user switches to window 2
-      And user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mobile PS Core WEST"
+      And user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
       And user selects assignee as "Change_Automation_1" by using alphabet "C" key up 0 times
       Then user clicks on save button
       And user validates ticket status as "Assigned"
+      Then user clicks on Ack button
+      And user validates ticket status as "Work In Progress"
       And user changes status to "Cleared"
       And user selects completion code as "Success"
       Then user clicks on schedule tab
@@ -44,10 +46,12 @@
       When user switches to window 1
       Then user validates WO's Status is "Open"
       When user switches to window 3
-      And user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mobile PS Core WEST"
+      And user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
       And user selects assignee as "Change_Automation_1" by using alphabet "C" key up 0 times
       Then user clicks on save button
       And user validates ticket status as "Assigned"
+      Then user clicks on Ack button
+      And user validates ticket status as "Work In Progress"
       And user changes status to "Cleared"
       And user selects completion code as "Success"
       Then user clicks on schedule tab

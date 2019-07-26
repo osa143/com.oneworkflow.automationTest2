@@ -21,6 +21,7 @@ public class OWF_ChangeRecordPageSteps {
     public void ticketShouldBeCreatedAndStatusShouldBeAssigned() {
 
         System.out.println("Status text is:" + changeRecordPage.getStatusText());
+        changeRecordPage.wait(1000);
         Assert.assertEquals(changeRecordPage.getStatusText(), "Assigned", "ticket status is not assigned");
         changeRecordPage.wait(5000);
     }

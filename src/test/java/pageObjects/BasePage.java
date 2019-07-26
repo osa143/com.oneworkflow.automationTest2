@@ -523,6 +523,7 @@ public class BasePage {
         if(getTableRows.size() > 0){
             cellData =  getTableRows.get(rowNum).findElements(By.tagName("td")).get(colNum).getText();
         }
+        System.out.println("Table cell value is :" + cellData);
         return cellData;
     }
     public void clickByCellData(By table, String columnName, int rowNum, String cellData){
@@ -564,6 +565,7 @@ public class BasePage {
     }
 
     public void switchToFrameByName(String frameName){
+        wait(1000);
         driver.switchTo().frame(frameName);
     }
 

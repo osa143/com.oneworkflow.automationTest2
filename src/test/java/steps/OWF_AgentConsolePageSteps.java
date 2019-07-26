@@ -322,7 +322,6 @@ public class OWF_AgentConsolePageSteps {
 
     @And("user switches to frame {string}")
     public void userSwitchesToFrame(String arg0) {
-        agentConsolePage.wait(2000);
         agentConsolePage.switchToFrameByName(arg0);
     }
 
@@ -395,6 +394,53 @@ public class OWF_AgentConsolePageSteps {
     @And("user validates CTI Details is present on user more filters window")
     public void userValidatesCTIDetailsIsPresentOnUserMoreFiltersWindow() {
         Assert.assertTrue(agentConsolePage.verifyCtiDetailsIsPresent());
+    }
+
+    @When("user selects all roles dropdown as {string}")
+    public void userSelectsAllRolesDropdownAs(String arg0) {
+        agentConsolePage.selectAllRoles(arg0);
+    }
+
+    @And("user enter in the search as {string} on user more filters window")
+    public void userEnterInTheSearchAsOnUserMoreFiltersWindow(String arg0) {
+        agentConsolePage.enterSearch_userMoreFilters(arg0);
+    }
+
+    @Then("user clicks search button on more user filters window")
+    public void userClicksSearchButtonOnMoreUserFiltersWindow() {
+      agentConsolePage.clickSearch_userMoreFilters();
+    }
+
+    @And("user selects shown assignment profile")
+    public void userSelectsShownAssignmentProfile() {
+        agentConsolePage.clickRow1();
+    }
+
+    @And("user clicks on more filters add button")
+    public void userClicksOnMoreFiltersAddButton() {
+      agentConsolePage.clickAdd_userMoreFilters();
+    }
+
+    @When("user selects all dropdown as {string}")
+    public void userSelectsAllDropdownAs(String arg0) {
+        agentConsolePage.selectAll(arg0);
+    }
+
+    @When("user sets the preferences as {string}")
+    public void userSetsThePreferencesAs(String arg0) {
+        agentConsolePage.clickPreferences();
+        agentConsolePage.setPreferences(arg0);
+    }
+
+
+    @Then("user enters refresh interval as {string} minutes")
+    public void userEntersRefreshIntervalAsMinutes(String arg0) {
+        agentConsolePage.enterRefreshInterval(arg0);
+    }
+
+    @And("user clicks on refresh ok button")
+    public void userClicksOnRefreshOkButton() {
+        agentConsolePage.clickOk();
     }
 }
 

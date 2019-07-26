@@ -10,15 +10,15 @@
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       And user enters "Test case 04.04 create change from incident" in Title field in Trouble event
-      And user selects request type as "Customer"
+      And user selects request type as "Customer" on trouble event page
       And user enters description as "Test case 04.04 create change from incident"
-      And user clicks on save button on the problem form
+      And user clicks on save button
       Then ticket should be created and status should be assigned
       When user clicks on Ack button
       And user clicks on assignment under sections
-      Then user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core East"
-      And user clicks on save button on the problem form
-      Then user should see assigned profile as "Mob PS Core East"
+      Then user selects assignment profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core EAST"
+      And user clicks on save button
+      Then user should see assigned profile as "Mob PS Core EAST"
       When user clicks on linked items tab
       And user selects target application first dropdown as "OS3 - Change"
       And user selects target application second dropdown as "Caused by"
@@ -26,8 +26,8 @@
       And user switches to window 2
       When user selects change type as "Change Record"
       And user selects request type as "Normal Change"
+      And user selects title as "IT:Other" on Change record page
       And user selects request category as "Cable splicing" on change record page
-      And user enters description as "Test case 04.04 create change from incident"
       And user enters reason field as "Test Ticket"
       And user selects priority as "Info"
       And user enters "Change_Automation_1" in the change builder field
@@ -38,16 +38,15 @@
       And user enters "Test Ticket" in the ver of functionality field
       And user enters "Test Ticket" in the risk description field
       And user enters as "Test Ticket" in service and customer impact
-      And user enters request start date as "09:00:00" one day in the future
-      And user enters request end date as "09:30:00" one day in the future
-      And user enters impact duration as "10" minutes
-      Then user clicks on save button on the problem form
-      And ticket should be created and status should be assigned
+      And user selects estimated impact as "Degradation of Service"
+      Then user enters start time as some minutes fast from current sweden time
+      And user enters Request End time as some minutes fast from request start time
+      And user enters impact duration as "4" minutes
+      Then user clicks on save button
       When user switches to window 1
       And user clicks on linked items tab
-      Then user validates linked tickets availability
-      When user clicks on timeline tab
+      Then user validates 1 linked ticket availability
       #Ticket number will change every test
-      Then change should also be reflected in the timeline as "Correlation to ticket CR:xxxxxxx - Relationship type: Fixed by"
+      Then change should also be reflected in the timeline as "Correlation to ticket Relationship Type: Caused"
 
 

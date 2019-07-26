@@ -6,42 +6,40 @@
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Trouble Event"
+      And user switches to window 1
       Then user should see blank trouble search form
-      When user changes status to "Closed"
-      And user clicks on "Location" under sections
-      And user enters "SE_" in the location ID+ field
-      Then user clicks Search on ticket search
+      When user changes status to "Closed" on trouble event page
+      And user clicks on location under sections
+      And user enters "SE_" within the location ID+ field
+      And user switches to frame
       And user should see closed "Swedish" tickets
-      When user clicks on main page refresh
-      And user changes status to "Closed"
-      And user clicks on "Location" under sections
-      And user enters "FI_" in the location ID+ field
-      Then user clicks Search on ticket search
+      And user clicks on cancel button
+      And user changes status to "Closed" on trouble event page
+      And user enters "FI_" within the location ID+ field
+      And user switches to frame
       And user should see closed "Finland" tickets
-      When user clicks on main page refresh
-      And user changes status to "Closed"
-      And user clicks on "Location" under sections
-      And user enters "LT_" in the location ID+ field
-      Then user clicks Search on ticket search
+      And user clicks on cancel button
+      And user changes status to "Closed" on trouble event page
+      And user enters "LT_" within the location ID+ field
+      And user switches to frame
       And user should see closed "Lithuania" tickets
-      When user clicks on main page refresh
-      And user changes status to "Closed"
-      And user clicks on "Location" under sections
-      And user enters NO_" in the location ID+ field
-      Then user clicks Search on ticket search
+      And user clicks on cancel button
+      And user changes status to "Closed" on trouble event page
+      And user enters "NO_" within the location ID+ field
+      And user switches to frame
       And user should see closed "Norway" tickets
-      When user clicks on main page refresh
-      And user changes status to "Closed"
-      And user clicks on "Location" under sections
-      And user enters "DK_" in the location ID+ field
-      Then user clicks Search on ticket search
+      And user clicks on cancel button
+      And user changes status to "Closed" on trouble event page
+      And user enters "DK_" within the location ID+ field
+      And user switches to frame
       And user should see closed "Denmark" tickets
-      When user clicks on main page refresh
-      And user changes status to "Closed"
-      And user clicks on "Location" under sections
-      And user enters "EE_" in the location ID+ field
-      Then user clicks Search on ticket search
+      And user clicks on cancel button
+      And user changes status to "Closed" on trouble event page
+      And user enters "EE_" within the location ID+ field
+      And user switches to frame
       And user should see closed "Estonia" tickets
+      And user clicks on cancel button
+
 
       
 

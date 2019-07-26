@@ -5,10 +5,10 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user sets the preferences under the alarm tab as "Set Refresh Interval"
+      When user sets the preferences as "Set Refresh Interval"
       And user switches to frame
-      Then user enters refresh interval as "5"
+      Then user enters refresh interval as "4" minutes
       And user clicks on refresh ok button
-      Then user waits for 5 minutes
-      And user validates agent console is refreshed
+      Then user waits for 4 minutes
+      #And user validates agent console is refreshed
 

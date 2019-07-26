@@ -17,6 +17,7 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String btnACCEPT_ID = "WIN_0_730011058";
     private static final String txtLOCATION_ID = "arid_WIN_0_700009015";
     private static final String btnCREATE_linked_items = "WIN_4_777506020";
+    private static final String btn_CREATE_linked_items= "WIN_5_777506020";
     private static final String chkbxTO_SELECT_CI = "//*[@id=\"T700009024\"]/tbody/tr[2]";
     private static final String rbtn_CLEARED_ID = "WIN_4_rc1id730011091";
     private static final String ddCATEGORY= "Category*";
@@ -27,6 +28,7 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String Table_ID = "T700009024";
     private static final String CI_DIAGNOSIS_TABLE_ID = "T700009087";
     private static final String TABLE_ID_linkedItems = "T777506000";
+
 
 
     public void selectCi(String text)
@@ -55,22 +57,20 @@ public class OWF_CiSearchPage extends BasePage {
     }
 
     public void clickCreate_linkedItems(){
-        driver.findElement(By.id(btnCREATE_linked_items)).click();
+        findElement(By.id(btnCREATE_linked_items)).click();
+    }
+    public void clickCreate(){
+        findElement(By.id(btn_CREATE_linked_items)).click();
     }
 
     public void enterLocation(String location){
-        driver.findElement(By.id(txtLOCATION_ID)).sendKeys(location);
+        findElement(By.id(txtLOCATION_ID)).sendKeys(location);
     }
 
     public void clickAcceptButton(){
-        driver.findElement(By.id(btnACCEPT_ID)).click();
+        findElement(By.id(btnACCEPT_ID)).click();
     }
-    private static final String txtTICKET_ID_PLUS_ID= "arid_WIN_0_777777600";
 
-    public void enterTicketIdPlus(String ticketId){
-        driver.findElement(By.id(txtTICKET_ID_PLUS_ID)).sendKeys(ticketId);
-
-    }
     public void clickLinkedItems(){
         selectTab("Linked Items");
     }
@@ -105,9 +105,9 @@ public class OWF_CiSearchPage extends BasePage {
     }
 
     public void clickCloseButton() {
+        wait(1000);
         driver.findElement(By.id(btnClOSE)).click();
-//        WebElement html = driver.findElement(By.tagName("html"));
-//        html.sendKeys(Keys.chord(Keys.CONTROL, "0"));
+
     }
 
     public void closeWarningMessage()

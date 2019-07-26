@@ -6,7 +6,7 @@ import runners.BaseTest;
 
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
-        tags = {"@02.14_Find_Newly_Created_Or_Implemented_Changes"}
+        tags = {"@Verify_functionality_of_Service_Info_tab"}
 )
 
 public class Test_Runner extends BaseTest {

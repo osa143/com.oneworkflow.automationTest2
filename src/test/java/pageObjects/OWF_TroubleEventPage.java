@@ -94,14 +94,14 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String ddIMPORTANCE_Field_ID= "WIN_0_600001821";
     private static final String ddOWNER_PROFILE_ID = "WIN_0_777031401";
     private static final String btn_OK_Popup = "//*[@id=\"PopupMsgFooter\"]/a";
-    private static final String fld_LOCATION_INFORMATION= "//*[@id=\"WIN_0_999000300\"]/table/tbody/tr/td";
-    private static final String fld_ON_HOLD_UNTIL= "//*[@id=\"WIN_0_700000040\"]/table/tbody/tr/td";
-    private static final String fld_CLOSURE_CODE = "//*[@id=\"WIN_0_777010094\"]/table/tbody/tr/td";
-    private static final String fld_INTERNAL= "//*[@id=\"WIN_0_999000353\"]/table/tbody/tr/td";
-    private static final String fld_EXTERNAL = "//*[@id=\"WIN_0_600003301\"]/table/tbody/tr/td";
-    private static final String fld_OWNER= "//*[@id=\"WIN_0_777010095\"]/table/tbody/tr/td";
-    private static final String fld_VENDOR= "//*[@id=\"WIN_0_777021005\"]/table/tbody/tr/td";
-    private static final String fld_ROOT_CAUSE= "//*[@id=\"WIN_0_799999914\"]/table/tbody/tr/td";
+    private static final String fld_LOCATION_INFORMATION= "WIN_0_999000300";
+    private static final String fld_ON_HOLD_UNTIL= "WIN_0_700000040";
+    private static final String fld_CLOSURE_CODE = "WIN_0_777010094";
+    private static final String fld_INTERNAL= "WIN_0_999000353";
+    private static final String fld_EXTERNAL = "WIN_0_600003301";
+    private static final String fld_OWNER= "WIN_0_777010095";
+    private static final String fld_VENDOR= "WIN_0_777021005";
+    private static final String fld_ROOT_CAUSE= "WIN_0_799999914";
     private static final String table_SELECT_LOCATION= "T700024013";
     private static final String btn_NEXT_CHUNK_RIGHT= "//div[@id='WIN_0_700024013']//a[@class='btn chunkright']";
     private static final String btn_OK_SELECT_LOCATION= "WIN_0_700000104";
@@ -117,15 +117,54 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_ASSIGNEE= "arid_WIN_0_4";
     private static final String dd_ASSIGNMENT_PROFILE= "Assignment Profile";
     private static final String btn_PRIORITY_CHECK= "WIN_0_600002912";
-
+    private static final String table_SELECT_TARGET_REQUEST= "T700506101";
+    private static final String btn_LINK_LINKED_ITEMS= "WIN_5_777506009";
+    private static final String txt_TIMELINE= "arid_WIN_0_777777103";
+    private static final String rbtn_PUBLIC= "WIN_0_rc0id777021180";
+    private static final String txt_ROOT_CAUSE_DESCRIPTION= "arid_WIN_0_777021052";
+    private static final String btn_CANCEL= "WIN_0_700000105";
 
     public void verifyRelatedCiTableColumnsHaveData(){
         columnHasData(Table_DIAGNOSIS,"CI Name" );
     }
 
+    public String getWoStatus(){
+        return getTextById(txtWO_STATUS_ID);
+    }
+
+
+
+    public void clickCancel(){
+        wait(500);
+        findElement(By.id(btn_CANCEL)).click();
+    }
+
+    public int getNumberOfCis(){
+        return  getTableRows(By.id(table_DIAGNOSIS_ID)).size();
+    }
+    public void enterRootCauseDescription(String text){
+        findElement(By.id(txt_ROOT_CAUSE_DESCRIPTION)).sendKeys(text);
+    }
+    public void clickPublicRadioButton(){
+        findElement(By.id(rbtn_PUBLIC)).click();
+    }
+    public void enterText_timeline(String text){
+       findElement(By.id(txt_TIMELINE)).sendKeys(text);
+    }
+    public void clickLink_LinkedItems(){
+        findElement(By.id(btn_LINK_LINKED_ITEMS)).click();
+    }
+
     public void clickPriorityCheck(){
         findElement(By.id(btn_PRIORITY_CHECK)).click();
         wait(1000);
+    }
+    public boolean verifyAvailabilityOfTicket(){
+        int size= getTableRows(By.id(table_SELECT_TARGET_REQUEST)).size();
+        System.out.println("Number of Tickets available"+ (size-1));
+        if(size>1)
+        return true;
+        else return false;
     }
 
     public void selectAssignmentProfile(String value){
@@ -256,29 +295,29 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
 
     public boolean verifyIsOwnerIsPresent(){
-        return findElement(By.xpath(fld_OWNER)).isDisplayed();
+        return findElement(By.id(fld_OWNER)).isDisplayed();
     }
     public boolean verifyIsVendorIsPresent(){
-        return findElement(By.xpath(fld_VENDOR)).isDisplayed();
+        return findElement(By.id(fld_VENDOR)).isDisplayed();
     }
 
     public boolean verifyIsExternalIsPresent(){
-       return findElement(By.xpath(fld_EXTERNAL)).isDisplayed();
+       return findElement(By.id(fld_EXTERNAL)).isDisplayed();
     }
 
     public boolean verifyIsInternalIsPresent(){
-        return findElement(By.xpath(fld_INTERNAL)).isDisplayed();
+        return findElement(By.id(fld_INTERNAL)).isDisplayed();
     }
 
     public boolean verifyIsOnHoldUntilPresent(){
-        return findElement(By.xpath(fld_ON_HOLD_UNTIL)).isDisplayed();
+        return findElement(By.id(fld_ON_HOLD_UNTIL)).isDisplayed();
     }
 
     public boolean verifyIsLocationInformationIspPresent(){
-         return findElement(By.xpath(fld_LOCATION_INFORMATION)).isDisplayed();
+         return findElement(By.id(fld_LOCATION_INFORMATION)).isDisplayed();
     }
     public boolean verifyIsClosureCodeIspPresent(){
-        return findElement(By.xpath(fld_CLOSURE_CODE)).isDisplayed();
+        return findElement(By.id(fld_CLOSURE_CODE)).isDisplayed();
     }
 
     public void clickClosure(){
@@ -307,7 +346,6 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     public String getErrorText(){
         driver.switchTo().parentFrame();
         wait(2000);
-
         driver.switchTo().frame(1);
         wait(2000);
         String error= findElement(By.id(Error_POP_UP_ID)).getText();
@@ -328,10 +366,6 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     {
         findElement(By.xpath(btn_OK_Popup)).click();
     }
-
-
-
-
 
     public boolean verifyOwnerProfileAvailability(){
         return verifyElementIsDisplayed(By.id(ddOWNER_PROFILE_ID));
@@ -432,7 +466,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
 
     public void clickAccept_selectTargetRequest(){
-        driver.findElement(By.id(btnACCEPT_SELECT_TARGET_REQUEST)).click();
+        findElement(By.id(btnACCEPT_SELECT_TARGET_REQUEST)).click();
     }
 
     public void selectRelationshipType(String value){

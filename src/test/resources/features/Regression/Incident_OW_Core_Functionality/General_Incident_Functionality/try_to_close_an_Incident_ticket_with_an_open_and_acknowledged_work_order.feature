@@ -10,14 +10,14 @@
        Then trouble record form should appear in new tab
        When user clicks on sweden checkbox under affected BU's
        And user enters "Test case Try to close an incident with an open and ack'd work order" in Title field in Trouble event
-       And user selects request type as "Customer"
+       And user selects request type as "Customer" on trouble event page
        And user enters description as "Test case Try to close an incident with an open and ack'd work order"
-       And user clicks on save button on the problem form
+       And user clicks on save button
        Then ticket should be created and status should be assigned
        When user clicks on work order tab
        And user clicks on create from ticket
        Then user switches to window 2
-       Then user clicks on save button on the problem form
+       Then user clicks on save button
        And ticket should be created and status should be assigned
        When user switches to window 1
        And user changes status to "Cleared"
@@ -26,7 +26,7 @@
        And user selects action dropdown as "N/A:N/A"
        And user enters closure info as "Test Ticket"
        Then user enters event end time as current time
-       And user clicks on save button on the problem form
+       And user clicks on save button
        When user changes status to "Closed"
-       And user clicks on save button on the problem form
+       And user clicks on save button
        Then error message should display as "Trouble Ticket OP- could not be saved. Please complete all outstanding Work Orders. (ARERR 033054) (ARERR 10000)"

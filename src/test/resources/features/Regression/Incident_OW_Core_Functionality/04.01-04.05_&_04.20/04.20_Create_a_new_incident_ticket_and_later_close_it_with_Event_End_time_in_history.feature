@@ -10,9 +10,9 @@
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       And user enters "Test case 04.20 Close incident with event end time in history" in Title field in Trouble event
-      And user selects request type as "Customer"
+      And user selects request type as "Customer" on trouble event page
       And user enters description as "Test case 04.20 Close incident with event end time in history"
-      And user clicks on save button on the problem form
+      And user clicks on save button
       Then ticket should be created and status should be assigned
       When user changes status to "Cleared"
       And user selects fault position as "N/A:N/A"
@@ -21,10 +21,10 @@
       And user enters closure info as "Test Ticket"
       #Event end time must be set at least 1 hour in the past
       And user enters event end time as ""
-      Then user clicks on save button on the problem form
+      Then user clicks on save button
       And user validates ticket status as "Cleared"
       When user changes status to "Closed"
-      And user clicks on save button on the problem form
+      And user clicks on save button
       Then ticket status should be closed
 
 

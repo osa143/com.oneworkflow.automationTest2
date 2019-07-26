@@ -387,7 +387,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("user should see blank trouble search form")
     public void userShouldSeeBlankTroubleSearchForm() {
-        problemRecordPage.verifyTicketIsBlank();
+        Assert.assertEquals(problemRecordPage.verifyTicketIsBlank(), "");
     }
 
     @Then("user should see trouble ticket")
@@ -493,7 +493,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("user waits for {int} minutes")
     public void userWaitsForMinutes(int arg0) {
-        problemRecordPage.wait(400000);
+        problemRecordPage.wait(240000);
     }
 
     @And("user enters request start date as {string} one day in the future")
@@ -765,5 +765,10 @@ public class OWF_ProblemRecordPageSteps {
     @Then("user validates availability of tabs {string}")
     public void userValidatesAvailabilityOfTabs(String tabs) {
         Assert.assertTrue(problemRecordPage.verifyTabValues(tabs));
+    }
+
+    @And("user enters ticket in ticket ID+ field")
+    public void userEntersTicketInTicketIDField() {
+        problemRecordPage.enterTicketIdPlus(ticket);
     }
 }

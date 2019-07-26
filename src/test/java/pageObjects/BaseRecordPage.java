@@ -6,6 +6,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import utils.CommonUtils;
 
 import java.time.LocalDate;
@@ -92,6 +93,7 @@ public class BaseRecordPage extends BasePage {
     public static final String chkbxUNKOWN = "WIN_0_rc0id600002010";
     public static final String chkbxINTERNAL = "WIN_0_rc0id600002009";
     public static final String chkbxFirstRow_Diagnosis = "//*[@id='T700009087']/tbody/tr[2]/td[1]/input";
+    public static final String chkbx_ThirdRow_Diagnosis= "//*[@id='T700009087']/tbody/tr[4]/td[1]/input";
 
     public static final String txtSOLUTION_ID = "arid_WIN_0_705002080";
     public static final String txtSOLUTION_FOUND_DATE = "arid_WIN_0_600001042";
@@ -130,6 +132,14 @@ public class BaseRecordPage extends BasePage {
     public static final String table_INTERESTED_PARTIES_ID = "T705002015";
     public static final String tab_RESTRICTED_INFO = "//a[contains(text(),'Restricted Info')]";
     public static final String btnREFRESH_XPATH = "//div[@id='WIN_0_999000510']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
+
+
+    private static final String txtTICKET_ID_PLUS_ID= "arid_WIN_0_777777600";
+
+    public void enterTicketIdPlus(String ticketId){
+        driver.findElement(By.id(txtTICKET_ID_PLUS_ID)).sendKeys(ticketId);
+
+    }
 
 
 
@@ -209,11 +219,27 @@ public class BaseRecordPage extends BasePage {
 
     Actions action = new Actions(driver);
 
-    public String verifyImpactStatusAsInactive()
+    public String verifyColumnStatus(String columnName)
     {
-      return getTableCellData(By.id(table_DIAGNOSIS_ID), "Impact Status", 1 );
+        wait(500);
+      return getTableCellData(By.id(table_DIAGNOSIS_ID), columnName, 1 );
 
     }
+    public void PrimaryIsDK_SGSN_AMBMME1(String primary, String ciName)
+    {
+        Assert.assertEquals(getTableCellData(By.id(table_DIAGNOSIS_ID), "PrimarySecondary", 1 ), primary);
+        Assert.assertEquals(getTableCellData(By.id(table_DIAGNOSIS_ID), "CI Name", 1 ), ciName);
+
+    }
+    public void verifyCiDetails(String ci1, String ci2, String ci3, String ci4)
+    {
+        Assert.assertEquals(getTableCellData(By.id(table_DIAGNOSIS_ID), "CI Name", 1 ), ci1);
+        Assert.assertEquals(getTableCellData(By.id(table_DIAGNOSIS_ID), "CI Name", 2 ), ci2);
+        Assert.assertEquals(getTableCellData(By.id(table_DIAGNOSIS_ID), "CI Name", 3 ), ci3);
+        Assert.assertEquals(getTableCellData(By.id(table_DIAGNOSIS_ID), "CI Name", 4 ), ci4);
+
+    }
+
     public String verifyAlarmStatus(){
         return getTableCellData(By.id(table_ALARMS_ID), "AlarmStatus", 1);
     }
@@ -224,6 +250,13 @@ public class BaseRecordPage extends BasePage {
        action.contextClick(element).build().perform();
 
     }
+    public void selectTicketAndRightClick()
+    {
+        WebElement element = driver.findElement(By.xpath(chkbx_ThirdRow_Diagnosis));
+        element.click();
+        action.contextClick(element).build().perform();
+
+    }
     public boolean validateLinkedItemsAvailability()
     {
        int size = getTableRows(By.id(table_LINKED_ITEMS_ID)).size();
@@ -231,6 +264,16 @@ public class BaseRecordPage extends BasePage {
            return true;
        }
        return false;
+    }
+    public boolean validateLinkedItemsAvailability(int ticketSize)
+    {
+        wait(1000);
+        int size = getTableRows(By.id(table_LINKED_ITEMS_ID)).size();
+        System.out.println("Available Tickets" + (size-1));
+        if(ticketSize > size){
+            return true;
+        }
+        return false;
     }
     public boolean validateChildAlarmsAvailability()
     {

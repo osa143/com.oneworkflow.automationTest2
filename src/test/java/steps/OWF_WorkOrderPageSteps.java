@@ -45,7 +45,7 @@ public class OWF_WorkOrderPageSteps {
 
     @And("user validates estimated ready time is updated")
     public void userValidatesEstimatedReadyTimeIsUpdated() {
-        Assert.assertEquals(workOrderPage.validateEstimatedReady(),"false", "Estimated date is not updated");
+        Assert.assertNotNull(workOrderPage.getEstimatedReady());
     }
 
     @When("user clicks on BtwoB dispatch tab")
@@ -70,7 +70,8 @@ public class OWF_WorkOrderPageSteps {
 
     @And("user should see WFM ticket ID")
     public void userShouldSeeWFMTicketID() {
-     workOrderPage.validateWFM_ticket_ID();
+
+        Assert.assertNotNull(workOrderPage.getWFM_ticket_ID());
     }
 
     @And("user should see dispatch status as {string}")
@@ -128,5 +129,14 @@ public class OWF_WorkOrderPageSteps {
         workOrderPage.enterEstimatedReady(workOrderPage.calculateEstimatedReady(arg0, "days"));
     }
 
+    @And("user selects completion code as {string}")
+    public void userSelectsCompletionCodeAs(String arg0) {
+        workOrderPage.selectCompletionCode(arg0);
+    }
+
+    @And("user enters schedule end as current date")
+    public void userEntersScheduleEndAsCurrentDate() {
+      workOrderPage.enterActualScheduleEnd();
+    }
 }
 

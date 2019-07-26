@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="6" parent-id="1">
+<tr class="s-fail" test-id="33" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">When user selects "Change Record" under all tickets <br/><span class="text-muted text-sm">user can search for newly created or implemented changes</span></td>
-	<td>0h 1m 0s+74msc</td>
+	<td class="_600">And user changes status to "Cleared" on trouble event page <br/><span class="text-muted text-sm">user validates different work order status'</span></td>
+	<td>0h 1m 0s+143msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,15 +136,15 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@alt='Menu for Fld-OfTypeID']/.."}
+		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@alt='Menu for Status']/.."}
   (Session info: chrome=75.0.3770.142)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.239.96', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.240.29', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56549}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: a7bd32552ada7551c42af7221a2178e2
-*** Element info: {Using=xpath, value=//img[@alt='Menu for Fld-OfTypeID']/..}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57531}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3c413aa693ccac25059387750eaf9e83
+*** Element info: {Using=xpath, value=//img[@alt='Menu for Status']/..}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -160,9 +160,9 @@ Session ID: a7bd32552ada7551c42af7221a2178e2
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at pageObjects.BasePage.selectDropDownNameAndValue(BasePage.java:233)
-	at pageObjects.OWF_AgentConsolePage.selectAllTickets(OWF_AgentConsolePage.java:117)
-	at steps.OWF_AgentConsolePageSteps.userSelectsUnderAllTickets(OWF_AgentConsolePageSteps.java:372)
-	at ✽.user selects "Change Record" under all tickets(features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.14_Find_Newly_Created_Or_Implemented_Changes.feature:9)
+	at pageObjects.OWF_TroubleEventPage.selectStatus(OWF_TroubleEventPage.java:458)
+	at steps.OWF_TroubleEventPageSteps.userChangesStatusToOnTroubleEventPage(OWF_TroubleEventPageSteps.java:251)
+	at ✽.user changes status to "Cleared" on trouble event page(features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/WO's_Status.feature:36)
 </textarea>
 	</td>
 </tr>
@@ -190,7 +190,7 @@ Session ID: a7bd32552ada7551c42af7221a2178e2
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Jul 24, 2019 09:12:32 AM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jul 26, 2019 02:23:00 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

@@ -68,4 +68,4 @@
       Then user clicks on bulk update save button
       And user switches to window 1
       And user right clicks on CI "SE_SGSN_LDHMME1" and user selects "Impact:Clear"
-      And user validates CI impact status is "Inactive"
+      And user validates CI "Impact Status" is "Inactive"

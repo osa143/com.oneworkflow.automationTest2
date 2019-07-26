@@ -1,4 +1,4 @@
-#Passing
+#Passed
 @SAO_191 @Regression
 Feature: Site name details search Feature
 

@@ -1,5 +1,5 @@
 @02.15_Search_for_Known_Errors_using_quick_search_based_on_Category_Type_and_Item @Incident
-
+#passed
   Feature: known error searches
     Scenario: user can search for known errors using quick search
 
@@ -26,21 +26,21 @@
       Then user clicks on relate CI
       And user closes warning message
       And user clicks on close button on CI search window
-      Then user switches to window 1
       Then CI should be listed and displayed under the Diagnosis tab
       When user clicks on CTI details under sections
-      And user selects Category as "Core"
+      And user selects Category as "CORE"
       And user selects Type as "Other"
       And user selects Item as "BR"
       Then user clicks on save button
       When user clicks on linked items tab
       And user selects target application first dropdown as "OS3 - Known Error"
       And user selects target application second dropdown as "Has workaround"
+      And user clicks on link button under linked items tab
       Then user switches to frame
-      And user selects target category as "Core"
-      And user selects target type as "Other"
-      And user selects target item as "BR"
-      Then user clicks on linked item search
+      And user selects Category as "CORE"
+      And user selects Type as "Other"
+      And user selects Item as "BR"
+      And user clicks on the search button
       And user should see known error ticket listed
 
 

@@ -25,7 +25,8 @@ Feature: Linking of Incident Ticket to Standard Change during implementation win
     And user selects a CI from list
     And user selects impact level as "Degradation of Service"
     And user clicks on relate CI
-    And user closes warning message and clicks on close button
+    And user closes warning message
+    And user clicks on close button on CI search window
     Then CI should be listed and displayed under the Diagnosis tab
     When user clicks on Send button
     Then send button becomes inactive and Ack button should be active
@@ -48,7 +49,8 @@ Feature: Linking of Incident Ticket to Standard Change during implementation win
     And user selects a CI from list
     And user selects impact level as "Degradation of Service"
     And user clicks on relate CI
-    And user closes warning message and clicks on close button
+    And user closes warning message
+    And user clicks on close button on CI search window
     Then CI should be listed and displayed under the Diagnosis tab
     When user clicks on linked items tab
     Then user should see value for Change record listed with relationship type "caused"

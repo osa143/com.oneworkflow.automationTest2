@@ -105,8 +105,8 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         selectDropDownNameAndValue(ddREASON, value, true);
     }
 
-    public String getTimelineStatus() {
-        String status = getTableCellData(By.id(timeline_TABLE_ID), "Description", 1);
+    public String getTimelineStatus(int rowNum) {
+        String status = getTableCellData(By.id(timeline_TABLE_ID), "Description", rowNum);
         System.out.println("Timeline status is: " + status);
         return status;
     }
@@ -174,9 +174,6 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
 
 
-    public String getProblemTicket() {
-        return getTextById(txtTICKET_ID);
-    }
 
     public String getRequestTypeText() {
         return getTextById(ddREQUEST_TYPE_ID);

@@ -1,4 +1,4 @@
-#Passing
+#Passed
 @Profile_Permissions_Part_1
 
   Feature: Validation of permissions part 1

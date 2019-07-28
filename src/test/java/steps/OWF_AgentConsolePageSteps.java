@@ -442,6 +442,11 @@ public class OWF_AgentConsolePageSteps {
     public void userClicksOnRefreshOkButton() {
         agentConsolePage.clickOk();
     }
+
+    @Then("user should only see change tickets with {string} of {string}")
+    public void userShouldOnlySeeChangeTicketsWithStatusOf(String columnName, String columnValue) {
+        agentConsolePage.verifyFilteredStatus(columnName, columnValue);
+    }
 }
 
 

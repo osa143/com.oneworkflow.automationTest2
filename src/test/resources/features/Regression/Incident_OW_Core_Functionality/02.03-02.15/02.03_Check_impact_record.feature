@@ -49,7 +49,7 @@
       And user closes warning message
       And user clicks on close button on CI search window
       #Category Type, Item, Site Name, Impact Type, Impact Category, Impact Level, Impact Status, Impact From, Impact To, CI Class Type,
-      Then user validates CI column availability
+      Then user validates CI columns "Category:Type:Item:Site Name:Impact Type:Impact Category:Impact Level:Impact Status:Impact From:Impact To:CI Class Type" availability
       #Impact to and CI class type wont have data - this is fine (based on ALM test)
       And user validates columns have data present
       When user right clicks on CI "SE_SGSN_HYMME2" and selects "Impact:Update"
@@ -59,13 +59,12 @@
       Then user selects impact name as "Loss of Service"
       And user clicks confirm checkbox
       And user clicks on bulk update save button
-      And user switches to window 1
       Then user validates CI "SE_SGSN_HYMME2" impact level is "Loss of Service"
-      When user right clicks on CI "SE_SGSN_VRRMME1" and user selects "Impact:Update"
+      When user right clicks on CI "SE_SGSN_VRRMME1" and selects "Impact:Update"
       Then user switches to frame
       And user selects impact from at least 1 day in the past
       And user clicks confirm checkbox
       Then user clicks on bulk update save button
       And user switches to window 1
-      And user right clicks on CI "SE_SGSN_LDHMME1" and user selects "Impact:Clear"
+      And user right clicks on CI "SE_SGSN_LDHMME1" and selects "Impact:Clear"
       And user validates CI "Impact Status" is "Inactive"

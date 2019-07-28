@@ -37,7 +37,8 @@
       And user selects a CI from list
       And user selects impact level as "No Impact"
       And user clicks on relate CI
-      And user closes warning message and clicks on close button
+      And user closes warning message
+      And user clicks on close button on CI search window
       Then CI should be listed and displayed under the Diagnosis tab
       When user changes status to "Published"
       And user clicks on save button

@@ -6,6 +6,7 @@ import cucumber.api.java.en.When;
 import org.testng.Assert;
 import pageObjects.OWF_TroubleEventPage;
 import pageObjects.OWF_WorkOrderPage;
+import utils.CommonUtils;
 import utils.Ticket;
 
 public class OWF_TroubleEventPageSteps {
@@ -237,8 +238,8 @@ public class OWF_TroubleEventPageSteps {
     }
 
     @And("user validates CI {string} is {string}")
-    public void userValidatesCIImpactStatusIs(String arg0, String arg1) {
-       Assert.assertEquals(troubleEventPage.verifyColumnStatus(arg1), arg0, "CI Impact status is not inactive");
+    public void userValidatesCIImpactStatusIs(String columnName, String columnValue) {
+       Assert.assertEquals(troubleEventPage.verifyColumnStatus(columnName, 1), columnValue, "CI Impact status is not inactive");
     }
 
     @Then("user should see alarm status as {string}")
@@ -671,6 +672,8 @@ public class OWF_TroubleEventPageSteps {
 
     }
 
+
+
     @Then("user enters root cause description as {string}")
     public void userEntersRootCauseDescriptionAs(String arg0) {
         troubleEventPage.enterRootCauseDescription(arg0);
@@ -696,6 +699,7 @@ public class OWF_TroubleEventPageSteps {
     public void userShouldSeeCIS(String arg0, String arg1, String arg2, String arg3) {
         troubleEventPage.verifyCiDetails(arg0, arg1, arg2, arg3);
     }
+
 
 
     @Then("user should see closure codes appear")
@@ -739,6 +743,86 @@ public class OWF_TroubleEventPageSteps {
     @When("user clicks on {string} under info type")
     public void userClicksOnUnderInfoType(String arg0) {
         troubleEventPage.clickElementByContainsTextAndTagName("span", arg0);
+    }
+
+    @And("user validates {string} BU is added automatically")
+    public void userValidatesBUIsAddedAutomatically(String arg0) {
+        troubleEventPage.verifyIsDenmarkSelected();
+    }
+
+    @And("user clicks on close button on bulk update window")
+    public void userClicksOnCloseButtonOnBulkUpdateWindow() {
+        troubleEventPage.clickClose_bulkUpdate();
+    }
+
+    @And("user validates no changes were made on the chosen CI")
+    public void userValidatesNoChangesWereMadeOnTheChosenCI() {
+        Assert.assertEquals(CommonUtils.ciDetailsBeforeUpdate, troubleEventPage.saveCiDetails(false));
+    }
+
+
+    @Then("user validates CI SE_EPG_VRREPG impact is {string}")
+    public void userValidatesCISE_EPG_VRREPGImpactIs(String arg0) {
+       Assert.assertEquals(arg0, troubleEventPage.verifyColumnStatus("Impact Level", 4));
+    }
+
+    @When("user right clicks on CI SE_EPG_VRREPG{int} and user selects {string} without selecting checkbox")
+    public void userRightClicksOnCISE_EPG_VRREPGAndUserSelectsWithoutSelectingCheckbox(int arg0, String arg1) {
+        troubleEventPage.rightClickOnCi();
+        troubleEventPage.setPreferences(arg1);
+    }
+
+    @Then("user validates CI columns {string} availability")
+    public void userValidatesCIColumnAvailability(String columnNames) {
+        Assert.assertTrue(troubleEventPage.verifyColumnNamesByTable(columnNames));
+    }
+
+    @And("user validates columns have data present")
+    public void userValidatesColumnsHaveDataPresent() {
+        Assert.assertTrue(troubleEventPage.validateCIColumnsHaveData());
+    }
+
+    @When("user right clicks on CI {string} and selects {string}")
+    public void userRightClicksOnCIAndSelects(String cellData, String preferences) {
+        troubleEventPage.selectAndRightClickOnTableElement(cellData);
+        troubleEventPage.setPreferences(preferences);
+    }
+
+    @Then("user validates CI {string} impact level is {string}")
+    public void userValidatesCIImpactLevelIs(String arg0, String cellValue) {
+        Assert.assertEquals(cellValue, troubleEventPage.verifyColumnStatus("Impact Level", 2));
+    }
+
+    @And("user selects impact from at least {int} day in the past")
+    public void userSelectsImpactFromAtLeastDayInThePast(int arg0) {
+        troubleEventPage.enterImpactFromAsOneDayPast();
+    }
+
+    @And("user gets trouble ticket value")
+    public void userGetsTroubleTicketValue() {
+            CommonUtils.opTicket = troubleEventPage.getTicketValue();
+            System.out.println("Stored trouble ticket is " + CommonUtils.opTicket);
+    }
+
+    @When("user selects fault position as {string} on trouble event page")
+    public void userSelectsFaultPositionAsOnTroubleEventPage(String arg0) {
+        troubleEventPage.selectFaultPosition_troubleEventPage(arg0);
+
+    }
+
+    @And("user selects cause as {string} on trouble event page")
+    public void userSelectsCauseAsOnTroubleEventPage(String arg0) {
+      troubleEventPage.selectCause_troubleEventPage(arg0);
+    }
+
+    @And("user enters event end time as {int} mins past")
+    public void userEntersEventEndTimeAsMinsPast(int arg0) {
+        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", arg0));
+    }
+
+    @And("user selects action dropdown as {string} on trouble event page")
+    public void userSelectsActionDropdownAsOnTroubleEventPage(String arg0) {
+        troubleEventPage.selectAction(arg0);
     }
 }
 

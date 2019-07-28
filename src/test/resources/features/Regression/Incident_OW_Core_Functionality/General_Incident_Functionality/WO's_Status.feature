@@ -37,7 +37,7 @@
       And user validates ticket status as "Work In Progress"
       And user changes status to "Cleared"
       And user selects completion code as "Success"
-      Then user clicks on schedule tab
+      Then user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       When user changes status to "Closed"
@@ -54,7 +54,7 @@
       And user validates ticket status as "Work In Progress"
       And user changes status to "Cleared"
       And user selects completion code as "Success"
-      Then user clicks on schedule tab
+      Then user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       When user switches to window 1

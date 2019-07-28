@@ -101,7 +101,9 @@ public class OWF_CiSearchPage extends BasePage {
     }
 
     public void clickCiSearchButton() {
+        wait(500);
         driver.findElement(By.id(btnCI_SEARCH)).click();
+        wait(500);
     }
 
     public void clickCloseButton() {
@@ -113,6 +115,7 @@ public class OWF_CiSearchPage extends BasePage {
     public void closeWarningMessage()
     {
         findElement(By.id(btnCLOSEOnWarningMessage)).click();
+        wait(1000);
     }
 
     public void clickClearButton() {
@@ -121,14 +124,17 @@ public class OWF_CiSearchPage extends BasePage {
 
     public void clickRelateCiButton() {
         driver.findElement(By.id(btnRELATE_CI)).click();
-        wait(1000);
+        wait(1500);
     }
 
     public void clickToSelectCi() {
+        wait(500);
         findElement(By.xpath(chkbxTO_SELECT_CI)).click();
+
     }
     public void selectLevel(String value){
         selectDropDownNameAndValue(ddLEVEL, value, false);
+        wait(500);
     }
 
    public List<WebElement> tableRows(){

@@ -23,6 +23,7 @@
       And user enters description as "Test Case 03.03 Link to master ticket ticket (ticket 2)"
       And user clicks on save button
       Then ticket should be created and status should be assigned
+      And user gets ticket value
       When user clicks on linked items tab
       And user selects target application first dropdown as "OS3 - Operations"
       And user selects target application second dropdown as "Is master of"
@@ -33,7 +34,8 @@
       Then user highlights present ticket
       And user clicks on accept button
       Then user validates 1 linked ticket availability
-      Then change should also be reflected in the timeline as "Correlation to ticket OP-. Relationship Type: Is child of"
+      Then change should also be reflected in the timeline as "Correlation to ticket;. Relationship Type: Is child of" for trouble ticket
+
 
 
 

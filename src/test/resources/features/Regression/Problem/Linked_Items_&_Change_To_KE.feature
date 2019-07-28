@@ -32,7 +32,7 @@
       And user enters "Comm plan" in the communication plan field
       And user enters "Not possible" in the ver of functionality field
       And user enters "No Risk" in the risk description field
-      Then user clicks on schedule tab
+      Then user clicks on "Schedule" tab
       And user enters as "Test ticket no impact" in service and customer impact
       And user enters request start date as "00:00:00" one day in the future
       And user enters request end date as "02:00:00" one day in the future
@@ -59,7 +59,8 @@
       And user selects a CI from list
       And user selects impact level as "No Impact"
       And user clicks on relate CI
-      And user closes warning message and clicks on close button
+      And user closes warning message
+      And user clicks on close button on CI search window
       Then CI should be listed and displayed under the Diagnosis tab
       When user clicks on Send button
       Then ticket should be created and status should be assigned

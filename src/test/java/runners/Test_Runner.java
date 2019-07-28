@@ -6,7 +6,7 @@ import runners.BaseTest;
 
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
-        tags = {"@Verify_status_of_BU_receiving_disturbance_information_in_Service_Info_tab"}
+        tags = {"@04.20_Create_a_new_incident_ticket_and_later_close_it_with_Event_End_time_in_history"}
 )
 
 public class Test_Runner extends BaseTest {

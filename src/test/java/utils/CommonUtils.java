@@ -17,6 +17,10 @@ import java.util.TimeZone;
 
 public class CommonUtils extends BasePage {
 
+    public static String ciDetailsBeforeUpdate;
+    public static String opTicket;
+    public static String pbTicket;
+
     // 0 - parent window
     // 1 - first child and so on
     public static void switchToChildWindow(WebDriver driver, int windowId) {

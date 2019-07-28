@@ -14,13 +14,13 @@
       And user enters description as "Test case 04.20 Close incident with event end time in history"
       And user clicks on save button
       Then ticket should be created and status should be assigned
-      When user changes status to "Cleared"
-      And user selects fault position as "N/A:N/A"
-      And user selects cause as "N/A:N/A:N/A"
-      And user selects action dropdown as "N/A:N/A"
+      When user changes status to "Cleared" on trouble event page
+      And user selects fault position as "N/A:N/A" on trouble event page
+      And user selects cause as "N/A:N/A:N/A" on trouble event page
+      And user selects action dropdown as "N/A:N/A" on trouble event page
       And user enters closure info as "Test Ticket"
       #Event end time must be set at least 1 hour in the past
-      And user enters event end time as ""
+      And user enters event end time as -60 mins past
       Then user clicks on save button
       And user validates ticket status as "Cleared"
       When user changes status to "Closed"

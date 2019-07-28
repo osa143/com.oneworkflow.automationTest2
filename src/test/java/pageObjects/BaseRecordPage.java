@@ -18,13 +18,9 @@ import java.util.List;
 
 public class BaseRecordPage extends BasePage {
 
-    public static final String ddValueASSIGNED = "Assigned";
+
     public static final String ddSTATUS = "Status*";
-    public static final String ddValuePENDING = "Pending";
-    public static final String ddValueUNDER_INVESTIGATION = "Under Investigation";
     public static final String ddValueINVESTIGATION_COMPLETE = "Investigation Complete";
-    public static final String ddValueWITHDRWAN = "Withdrawn";
-    public static final String ddValueCLEAR = "(clear)";
     public static final String ddValueCLOSED = "Closed";
 
     public static final String txtCHANGE_BUILDER_FIELD_ID = "arid_WIN_0_600001054";
@@ -81,7 +77,7 @@ public class BaseRecordPage extends BasePage {
     public static final String ddCLOSURE_CODE = "Closure Code";
 
     public static final String ddValueSOLVED = "Solved";
-    public static final String ddValueNO_IMPACT = "No Impact";
+
 
     public static final String chkbxSWEDEN = "WIN_0_rc0id600002001";
     public static final String chkbxFINLAND = "WIN_0_rc0id600002002";
@@ -93,7 +89,7 @@ public class BaseRecordPage extends BasePage {
     public static final String chkbxUNKOWN = "WIN_0_rc0id600002010";
     public static final String chkbxINTERNAL = "WIN_0_rc0id600002009";
     public static final String chkbxFirstRow_Diagnosis = "//*[@id='T700009087']/tbody/tr[2]/td[1]/input";
-    public static final String chkbx_ThirdRow_Diagnosis= "//*[@id='T700009087']/tbody/tr[4]/td[1]/input";
+    public static final String chkbx_ThirdRow_Diagnosis= "//*[@id='T700009087']/tbody/tr[5]/td[1]/input";
 
     public static final String txtSOLUTION_ID = "arid_WIN_0_705002080";
     public static final String txtSOLUTION_FOUND_DATE = "arid_WIN_0_600001042";
@@ -108,7 +104,6 @@ public class BaseRecordPage extends BasePage {
     public static final String ddValueANALYSIS_ONGOING  = "Analysis ongoing";
     public static final String ddACTIONS = "Actions";
     public static final String ddValueTIME_TRACKING   = "Time Tracking";
-    public static final String ddValueCABLE_SPLICING = "Cable splicing";
 
     public static final String ddACTIVITY_IN_FRAME = "Activity";
     public static final String ddValueWORKING_ON_TICKET = "Working On Ticket";
@@ -130,15 +125,18 @@ public class BaseRecordPage extends BasePage {
     public static final String table_ALARMS_ID = "T700508140";
     public static final String table_LINKED_ITEMS_ID = "T777506000";
     public static final String table_INTERESTED_PARTIES_ID = "T705002015";
-    public static final String tab_RESTRICTED_INFO = "//a[contains(text(),'Restricted Info')]";
     public static final String btnREFRESH_XPATH = "//div[@id='WIN_0_999000510']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
-
-
+    private static final String btnYes = "WIN_0_700027904";
+    public static final String txt_PROBLEM_REVIEW_FIELD= "arid_WIN_0_600001011";
+    private static final String ddSTATUS_TROUBLE_EVENT_PAGE = "Status";
     private static final String txtTICKET_ID_PLUS_ID= "arid_WIN_0_777777600";
 
     public void enterTicketIdPlus(String ticketId){
-        driver.findElement(By.id(txtTICKET_ID_PLUS_ID)).sendKeys(ticketId);
+        enterTextByElement(By.id(txtTICKET_ID_PLUS_ID),ticketId);
 
+    }
+    public boolean verifyIsDenmarkSelected(){
+        return verifyIsElementSelected(By.id(chkbxDENMARK));
     }
 
 
@@ -195,34 +193,28 @@ public class BaseRecordPage extends BasePage {
         }
         return true;
     }
-    private static final String btnYes = "WIN_0_700027904";
-    public void clickYesOnWarning(){
-        driver.findElement(By.id(btnYes)).click();
-    }
-    public static final String txt_PROBLEM_REVIEW_FIELD= "arid_WIN_0_600001011";
+
     public void enterProblemReviewField(String text){
-        driver.findElement(By.id(txt_PROBLEM_REVIEW_FIELD)).sendKeys(text);
+        findElement(By.id(txt_PROBLEM_REVIEW_FIELD)).sendKeys(text);
     }
     public String getProblemReviewFieldText(){
         return getTextById(txt_PROBLEM_REVIEW_FIELD);
     }
-
-    private static final String ddSTATUS_TROUBLE_EVENT_PAGE = "Status";
 
     public void selectStatus_troubleEventPage(String value){
         selectDropDownNameAndValue(ddSTATUS_TROUBLE_EVENT_PAGE, value, false);
     }
 
    public void clickYes(){
-        driver.findElement(By.id(btnYES)).click();
+        findElement(By.id(btnYES)).click();
    }
 
     Actions action = new Actions(driver);
 
-    public String verifyColumnStatus(String columnName)
+    public String verifyColumnStatus(String columnName, int rowNum)
     {
         wait(500);
-      return getTableCellData(By.id(table_DIAGNOSIS_ID), columnName, 1 );
+      return getTableCellData(By.id(table_DIAGNOSIS_ID), columnName, rowNum );
 
     }
     public void PrimaryIsDK_SGSN_AMBMME1(String primary, String ciName)
@@ -245,18 +237,65 @@ public class BaseRecordPage extends BasePage {
     }
     public void selectPrimaryTicket()
     {
-       WebElement element = driver.findElement(By.xpath(chkbxFirstRow_Diagnosis));
+       WebElement element = findElement(By.xpath(chkbxFirstRow_Diagnosis));
        element.click();
        action.contextClick(element).build().perform();
 
     }
     public void selectTicketAndRightClick()
     {
-        WebElement element = driver.findElement(By.xpath(chkbx_ThirdRow_Diagnosis));
+        saveCiDetails(true);
+        WebElement element = findElement(By.xpath(chkbx_ThirdRow_Diagnosis));
         element.click();
         action.contextClick(element).build().perform();
 
     }
+
+    public boolean verifyColumnNamesByTable(String columnNames)
+    {
+       return verifyColumnNames(columnNames, By.id(table_DIAGNOSIS_ID));
+    }
+    public void rightClickOnCi(){
+        action.contextClick(findElement(By.xpath(chkbx_ThirdRow_Diagnosis))).build().perform();
+        wait(1000);
+    }
+    public String saveCiDetails(boolean before)
+    {
+        String str = "";
+        WebElement tr = driver.findElement(By.xpath("//*[@id='T700009087']/tbody/tr[4]"));
+        List<WebElement> tds = tr.findElements(By.tagName("td"));
+        for(int i = 0; i < tds.size(); i++)
+        {
+            str += tds.get(i).getText() + ":";
+        }
+        System.out.println("CI Details: " + str);
+
+        if(before)
+           CommonUtils.ciDetailsBeforeUpdate = str;
+        return  str;
+    }
+
+    public void selectAndRightClickOnTableElement(String cellData)
+    {
+        WebElement element = getTableCellElement(By.id(table_DIAGNOSIS_ID), "CI Name", cellData);
+        element.click();
+        rightClickOnElement(element);
+        wait(1000);
+
+    }
+    public String getTicketValue() {
+        return getTextById(txtTICKET_ID);
+    }
+
+    public boolean validateCIColumnsHaveData()
+    {
+        int size = getTableRows(By.id(table_DIAGNOSIS_ID)).size();
+        if(size > 1){
+            return true;
+        }
+        return false;
+    }
+
     public boolean validateLinkedItemsAvailability()
     {
        int size = getTableRows(By.id(table_LINKED_ITEMS_ID)).size();
@@ -283,8 +322,9 @@ public class BaseRecordPage extends BasePage {
         }
         return false;
     }
-    public void clickRefresh_timeline(){
-        driver.findElement(By.xpath(btnREFRESH_XPATH)).click();
+    public void clickRefresh_timeline()
+    {
+        clickElement(By.xpath(btnREFRESH_XPATH));
     }
     public boolean isStatusDropDownReadOnly(){
         return checkIfControlIsReadonly(ddSTATuS_ID);
@@ -309,7 +349,7 @@ public class BaseRecordPage extends BasePage {
         return false;
     }
    public void enterInformation_restrictedInformation(String text){
-        driver.findElement(By.id(txtINFORMATION_RESTRICTED_INFORMATION_ID)).sendKeys(text);
+        enterTextByElement(By.id(txtINFORMATION_RESTRICTED_INFORMATION_ID), text);
    }
 
    public String getInformationText_restrictedInformation(){
@@ -317,7 +357,7 @@ public class BaseRecordPage extends BasePage {
    }
 
     public void enterAnalysisTeamMember1(String text){
-        driver.findElement(By.id(txtANALYSIS_TEAM_MEMBER1_ID)).sendKeys(text);
+        enterTextByElement(By.id(txtANALYSIS_TEAM_MEMBER1_ID), text);
     }
 
     public void selectAssignedProfile(String value){
@@ -329,24 +369,24 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterDescription_Attachment_OnFrame(String description){
-        driver.findElement(By.id(txtDESCRIPTION_ON_FRAME_ID)).sendKeys(description);
+        enterTextByElement(By.id(txtDESCRIPTION_ON_FRAME_ID), description);
     }
     public void clickAdd_AttachmentOnFrame(){
-        driver.findElement(By.xpath(btnADD_ATTACHMENT_ON_FRAME)).click();
+        clickElement(By.xpath(btnADD_ATTACHMENT_ON_FRAME));
     }
     public void clickonChooseFile_OnFrame(){
-        driver.findElement(By.xpath(btnCHOOSE_FILE_XPATH)).click();
+        clickElement(By.xpath(btnCHOOSE_FILE_XPATH));
     }
     public void clickOk_AttachmentOnFrame(){
-        driver.findElement(By.xpath(btnOK_ON_FRAME_XPATH)).click();
+        clickElement(By.xpath(btnOK_ON_FRAME_XPATH));
     }
 
     public void clickSave_AttachmentOnFrame(){
-        driver.findElement(By.id(btnSAVE_ATTACHMENT_ON_FRAME)).click();
+        clickElement(By.id(btnSAVE_ATTACHMENT_ON_FRAME));
     }
 
     public void clickAttachments(){
-        findElement(By.id(btnATTACHMENTS)).click();
+        clickElement(By.id(btnATTACHMENTS));
     }
     public void selectSummaryDropDownAs(String value){
     selectDropDownNameAndValue(ddSUMMARY, value, false);
@@ -376,33 +416,33 @@ public class BaseRecordPage extends BasePage {
         switch(textName)
         {
             case "rootCauseDetails" :
-                enterTextBy(By.id(txtROOT_CAUSE_DETAILS_ID), text);
+                enterTextByElement(By.id(txtROOT_CAUSE_DETAILS_ID), text);
                 break;
 
             case "minutes" :
-                enterTextBy(By.id(txtMINS_ID), text);
+                enterTextByElement(By.id(txtMINS_ID), text);
                 break;
 
             case "durationdays":
-                enterTextBy(By.id(txtIMPACT_DURATION_DAYS), text);
+                enterTextByElement(By.id(txtIMPACT_DURATION_DAYS), text);
                 break;
 
             case "durationhours":
-                enterTextBy(By.id(txtIMPACT_DURATION_HRS), text);
+                enterTextByElement(By.id(txtIMPACT_DURATION_HRS), text);
                 break;
 
             case "durationminutes":
-                enterTextBy(By.id(txtIMPACT_DURATION_MINS), text);
+                enterTextByElement(By.id(txtIMPACT_DURATION_MINS), text);
                 break;
 
             case "durationseconds":
-                enterTextBy(By.id(txtIMPACT_DURATION_SECS), text);
+                enterTextByElement(By.id(txtIMPACT_DURATION_SECS), text);
                 break;
 
         }
     }
    public void clickRemoveButton(){
-        driver.findElement(By.id(btnREMOVE)).click();
+        clickElement(By.id(btnREMOVE));
    }
     public void selectAutoText_TechBridgeClosed(){
     selectDropDownNameAndValue(ddAUTO_TEXT, ddValueTECH_BRIDGE_CLOSED, false);
@@ -410,7 +450,7 @@ public class BaseRecordPage extends BasePage {
     public void selectTextTemplate_AnalysisOnGoing(){
         selectDropDownNameAndValue(ddTEXT_TEMPLATE, ddValueANALYSIS_ONGOING, false);
     } public void clickAddButtonOnTemplate(){
-        driver.findElement(By.id(btnADD_ID)).click();
+        clickElement(By.id(btnADD_ID));
     }
     public void selectActions_TimeTracking(){
         selectDropDownNameAndValue(ddACTIONS, ddValueTIME_TRACKING, false);
@@ -419,10 +459,10 @@ public class BaseRecordPage extends BasePage {
         selectDropDownNameAndValue(ddACTIVITY_IN_FRAME, ddValueWORKING_ON_TICKET, false);
     }
     public void enterMins(String mins){
-        driver.findElement(By.id(txtMINS_ID)).sendKeys(mins);
+        enterTextByElement(By.id(txtMINS_ID), mins);
     }
     public void clickOkButton(){
-        driver.findElement(By.id(btnOK_ID)).click();
+        clickElement(By.id(btnOK_ID));
     }
     public void selectInvestigationCompleteDdValue(){
         selectDropDownValue(ddValueINVESTIGATION_COMPLETE);
@@ -434,7 +474,7 @@ public class BaseRecordPage extends BasePage {
         selectDropDownNameAndValue(ddROOT_CAUSE_CODE, value, false);
     }
     public void enterRootCauseDetails(String rootCauseDetails){
-        driver.findElement(By.id(txtROOT_CAUSE_DETAILS_ID)).sendKeys(rootCauseDetails);
+        enterTextByElement(By.id(txtROOT_CAUSE_DETAILS_ID), rootCauseDetails);
     }
     public void selectCloserCodeAsSolved(){
         selectDropDownNameAndValue(ddCLOSER_CODE, ddValueSOLVED, true);
@@ -448,11 +488,11 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void clickAcknowledgeButton() {
-        driver.findElement(By.id(btnACKNOWLEDGE)).click();
+        clickElement(By.id(btnACKNOWLEDGE));
     }
 
     public void clickSendButton() {
-        driver.findElement(By.id(btnSEND)).click();
+        clickElement(By.id(btnSEND));
     }
 
     public void clickStatusDropDown() {
@@ -462,49 +502,40 @@ public class BaseRecordPage extends BasePage {
         selectDropDownNameAndValue(ddSTATUS, value, false);
     }
 
-    public void clickServiceProviderDropDown() {
-        selectDropDownMenu(ddSERVICE_PROVIDER);
-    }
-
-
     public void clickDenmarkCheckBox() {
         driver.findElement(By.id(chkbxDENMARK)).click();
     }
 
     public void clickNorwayCheckBox() {
-        driver.findElement(By.id(chkbxNORWAY)).click();
+        clickElement(By.id(chkbxNORWAY));
     }
 
     public void clickLithuniaCheckBox() {
-        driver.findElement(By.id(chkbxLITHUANIA)).click();
+        clickElement(By.id(chkbxLITHUANIA));
     }
 
     public void clickFinalndCheckBox() {
-        driver.findElement(By.id(chkbxFINLAND)).click();
+        clickElement(By.id(chkbxFINLAND));
     }
 
     public void clickEstoniaCheckBox() {
-        driver.findElement(By.id(chkbxESTONIA)).click();
+        clickElement(By.id(chkbxESTONIA));
     }
 
     public void clickTeliaCarrierCheckBox() {
-        driver.findElement(By.id(chkbxTELIA_CARRIER)).click();
+        clickElement(By.id(chkbxTELIA_CARRIER));
     }
 
     public void clickUnknownCheckBox() {
-        driver.findElement(By.id(chkbxUNKOWN)).click();
+        clickElement(By.id(chkbxUNKOWN));
     }
 
     public void clickInternalCheckBox() {
-        driver.findElement(By.id(chkbxINTERNAL)).click();
+        clickElement(By.id(chkbxINTERNAL));
     }
 
     public void selectActualImpact(String value) {
         selectDropDownNameAndValue(ddACTUAL_IMPACT, value, true);
-    }
-
-    public void clickChangeRecord() {
-        selectMenuItem(ddCHANGE_RECORD);
     }
 
     public void selectEstimatedImpact(String value) {
@@ -520,7 +551,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void clickExpectedAlarm() {
-        driver.findElement(By.id(txtEXPECTED_ALARMS)).click();
+        clickElement(By.id(txtEXPECTED_ALARMS));
     }
 
     public void selectTitle(String value) {
@@ -539,54 +570,56 @@ public class BaseRecordPage extends BasePage {
 
     }
     public String getStatusText() {
-        String StatusText = driver.findElement(By.id(ddSTATuS_ID)).getAttribute("value");
+        String StatusText = findElement(By.id(ddSTATuS_ID)).getAttribute("value");
         return StatusText;
 
     }
     public void enterImpactDurationDays(String impactDurationDays) {
-        driver.findElement(By.id(txtIMPACT_DURATION_DAYS)).sendKeys(impactDurationDays);
+        enterTextByElement(By.id(txtIMPACT_DURATION_DAYS), impactDurationDays);
+
     }
 
     public void enterImpactDurationHrs(String impactDurationHrs) {
-        driver.findElement(By.id(txtIMPACT_DURATION_HRS)).sendKeys(impactDurationHrs);
+        enterTextByElement(By.id(txtIMPACT_DURATION_DAYS), impactDurationHrs);
     }
 
     public void enterImpactDurationMins(String impactDurationMins) {
-        driver.findElement(By.id(txtIMPACT_DURATION_MINS)).sendKeys(impactDurationMins);
+        enterTextByElement(By.id(txtIMPACT_DURATION_MINS), impactDurationMins);
     }
 
     public void enterImpactDurationSecs(String impactDurationSecs) {
 
-        driver.findElement(By.id(txtIMPACT_DURATION_SECS)).sendKeys(impactDurationSecs);
+        enterTextByElement(By.id(txtIMPACT_DURATION_SECS), impactDurationSecs);
     }
 
     public Boolean ackButtonStatus() {
-        Boolean status = driver.findElement(By.id(btnACKNOWLEDGE)).isEnabled();
-        return status;
+         return verifyElementIsEnabledById(By.id(btnACKNOWLEDGE));
+
     }
 
 
     public void enterChangeBuilderType(String changeBuilderName) {
-        driver.findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).sendKeys(changeBuilderName);
+        enterTextByElement(By.id(txtCHANGE_BUILDER_FIELD_ID), changeBuilderName);
     }
 
     public void clickSave() {
-        driver.findElement(By.id(btnSAVE)).click();
+        clickElement(By.id(btnSAVE));
     }
 
     public void clickDiagnosis() {
-        driver.findElement(By.xpath(btnDIAGNOSIS)).click();
+        clickElement(By.xpath(btnDIAGNOSIS));
     }
 
     public void clickCiSearch() {
-        driver.findElement(By.id(btnCISEARCH)).click();
+        clickElement(By.id(btnCISEARCH));
     }
 
     public void setStartDate(int delay) {
 
         String dateTime = CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", delay);
 
-        driver.findElement(By.id(txtSTART_DATE)).sendKeys(dateTime);
+        enterTextByElement(By.id(txtSTART_DATE),dateTime );
+
 
     }
 
@@ -594,68 +627,67 @@ public class BaseRecordPage extends BasePage {
 
         String dateTime = CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", delay);
 
-        driver.findElement(By.id(txtEND_DATE)).sendKeys(dateTime);
-
+        enterTextByElement(By.id(txtEND_DATE),dateTime );
     }
 
     public void enterStartDateAsTodayMidnight(int delay)
     {
-        driver.findElement(By.id(txtSTART_DATE)).sendKeys(CommonUtils.getDateAsTodayMidnight(delay));
+        enterTextByElement(By.id(txtSTART_DATE), CommonUtils.getDateAsTodayMidnight(delay));
     }
 
     public void enterEndDateAsTodayMidnight(int delay)
     {
-        driver.findElement(By.id(txtEND_DATE)).sendKeys(CommonUtils.getDateAsTodayMidnight(delay));
+        enterTextByElement(By.id(txtEND_DATE), CommonUtils.getDateAsTodayMidnight(delay));
+
     }
 
-
-   public void enterRcFoundDate(){
-       driver.findElement(By.id(txtRC_FOUND_DATE_ID)).sendKeys(Keys.ENTER);
+   public void enterRcFoundDate() {
+      findElement(By.id(txtRC_FOUND_DATE_ID)).sendKeys(Keys.ENTER);
    }
    public void enterActualFinishDate(){
-        driver.findElement(By.id(txtACTUAL_FINISH_ID)).sendKeys(Keys.ENTER);
+        findElement(By.id(txtACTUAL_FINISH_ID)).sendKeys(Keys.ENTER);
    }
    public void enterDecisionGoNoGoDate(){
-        driver.findElement(By.id(txtDECISION_GO_NO_GO_ID)).sendKeys(Keys.ENTER);
+        findElement(By.id(txtDECISION_GO_NO_GO_ID)).sendKeys(Keys.ENTER);
    }
-    public void enterSolution(String Text){
-        driver.findElement(By.id(txtSOLUTION_ID)).sendKeys(Text);
+    public void enterSolution(String Text)
+    {enterTextByElement(By.id(txtSOLUTION_ID),Text);
     }
     public void enterSolutionFoundDate(){
-        driver.findElement(By.id(txtSOLUTION_FOUND_DATE)).sendKeys(Keys.ENTER);
+        findElement(By.id(txtSOLUTION_FOUND_DATE)).sendKeys(Keys.ENTER);
     }
     public void clickCloneButton(){
-        driver.findElement(By.id(btnCLONE_ID)).click();
+        clickElement(By.id(btnCLONE_ID));
     }
     public void enterReason(String Reason){
-        driver.findElement(By.id(txtREASON_ID)).sendKeys(Reason);
+        enterTextByElement(By.id(txtREASON_ID),Reason);
     }
     public void enterChangeBuilder(String ChangeBuilder){
-        driver.findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).sendKeys(ChangeBuilder);
+        enterTextByElement(By.id(txtCHANGE_BUILDER_FIELD_ID), ChangeBuilder);
 
     }
    public void enterImplementation(String implementation){
-        driver.findElement(By.id(txtIMPLEMENTATION_ID)).sendKeys(implementation);
+        enterTextByElement(By.id(txtIMPLEMENTATION_ID),implementation);
    }
    public void enterTestPlan(String testPlan){
-        driver.findElement(By.id(txtTEST_PLAN_ID)).sendKeys(testPlan);
+        enterTextByElement(By.id(txtTEST_PLAN_ID),testPlan);
    }
 
     public void enterRollBack(String rollBack){
-        driver.findElement(By.id(txtROLL_BACK)).sendKeys(rollBack);
+        enterTextByElement(By.id(txtROLL_BACK),rollBack);
     }
     public void enterCommunicationPlan(String communicationPlan){
-        driver.findElement(By.id(txtCOMMUNICATION_PLAN_ID)).sendKeys(communicationPlan);
+        enterTextByElement(By.id(txtCOMMUNICATION_PLAN_ID),communicationPlan);
 
     }
     public void enterVerOfFunctionality(String verOfFunctionality){
-        driver.findElement(By.id(txtVER_OF_FUNCTIONALITY_ID)).sendKeys(verOfFunctionality);
+        enterTextByElement(By.id(txtVER_OF_FUNCTIONALITY_ID),verOfFunctionality);
     }
     public void enterRiskDescriptionId(String riskDescriptionId){
-        driver.findElement(By.id(txtRISK_DESCRIPTION_ID)).sendKeys(riskDescriptionId);
+       enterTextByElement(By.id(txtRISK_DESCRIPTION_ID),riskDescriptionId);
     }
     public void enterServiceAndCustomerImpact(String text){
-        driver.findElement(By.id(txtSERVICE_AND_CUSTOMER_IMPACT)).sendKeys(text);
+        enterTextByElement(By.id(txtSERVICE_AND_CUSTOMER_IMPACT),text);
     }
     public String verifyTicketIsBlank(){
         return getTextById(txtSEARCH_TICKET_ID);
@@ -686,10 +718,26 @@ public class BaseRecordPage extends BasePage {
     {
         String[] multipleTabs = tabValues.split(":");
         List<String> tabs = getTabValues();
-        System.out.println("Dropdown values are: " + tabs);
+        System.out.println("Tab values are: " + tabs);
         for (int i = 0; i < multipleTabs.length; i++)
         {
             if (!tabs.contains(multipleTabs[i]))
+            {
+                return false;
+            }
+
+        }
+        return true;
+    }
+
+    public boolean verifyColumnNames(String colNames, By table)
+    {
+        String[] multipleCols = colNames.split(":");
+        List<String> columns = getTableHeaders(table);
+        System.out.println("Column values are: " + columns);
+        for (int i = 0; i < multipleCols.length; i++)
+        {
+            if (!columns.contains(multipleCols[i]))
             {
                 return false;
             }

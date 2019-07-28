@@ -1,4 +1,5 @@
 @03.04_Link_child_tickets_and_make_master_ticket @Incident
+  #passed
   Feature: user can link child tickets and make master
     Scenario: user can link child tickets and make master
 
@@ -33,8 +34,6 @@
       And user clicks on the search button
       And user clicks on accept button
       Then user validates 1 linked ticket availability
-      #Then user should see ticket listed under linked items
-      When user clicks on timeline tab
-      Then change should also be reflected in the timeline as "Correlation to ticket OP-. Relationship Type: Is master of"
+      Then change should also be reflected in the timeline as "Correlation to ticket;. Relationship Type: Is master of" for trouble ticket
 
 

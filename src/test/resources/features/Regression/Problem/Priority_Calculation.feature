@@ -1,4 +1,4 @@
-#Passing
+#Passed
 @Priority_Calculation
 
   Feature: problem

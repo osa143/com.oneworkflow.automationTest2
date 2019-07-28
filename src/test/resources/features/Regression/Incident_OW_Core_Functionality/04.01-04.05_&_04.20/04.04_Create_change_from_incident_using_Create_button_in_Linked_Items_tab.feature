@@ -1,4 +1,5 @@
 @04.04_Create_change_from_incident_using_Create_button_in_Linked_Items_tab @Incident
+  #passed
   Feature: Create change from incident
     Scenario: user can create a change from an incident ticket
 
@@ -43,10 +44,11 @@
       And user enters Request End time as some minutes fast from request start time
       And user enters impact duration as "4" minutes
       Then user clicks on save button
+      And user gets ticket value
       When user switches to window 1
       And user clicks on linked items tab
       Then user validates 1 linked ticket availability
       #Ticket number will change every test
-      Then change should also be reflected in the timeline as "Correlation to ticket Relationship Type: Caused"
+      Then change should also be reflected in the timeline as "Correlation to ticket;. Relationship Type: Caused" for trouble ticket
 
 

@@ -1,4 +1,5 @@
-@04.02_Set_Service_restored_timestamp_aka_Event_end_time @Incident#
+@04.02_Set_Service_restored_timestamp_aka_Event_end_time @Incident
+  #passed
   Feature: setting of event end time
     Scenario: user can set the event end time
 
@@ -18,7 +19,7 @@
       And user enters event end time as current time
       Then user clicks on save button
       Then multiple error messages should appear with red boarder around fields
-      When user selects fault position as "N/A:N/A"
-      And user selects cause as "Test Ticket:N/A:N/A"
+      When user selects fault position as "N/A:N/A" on trouble event page
+      And user selects cause as "Test Ticket:N/A:N/A" on trouble event page
       Then user clicks on save button
       And user validates ticket status as "Cleared"

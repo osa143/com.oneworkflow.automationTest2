@@ -53,8 +53,9 @@ public class BasePage {
             e.printStackTrace();
         }
     }
-    public WebElement findElement(By locator){
-        return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    // To find element using webdriver wait
+    public WebElement findElement(By element){
+        return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(element));
     }
 
     public boolean verifyElementIsDisplayed(By element){
@@ -80,11 +81,20 @@ public class BasePage {
 
     }
 
+    public boolean verifyIsElementSelected(By element){
+        return findElement(element).isSelected();
+    }
+
+    // To click any element by locator and element
+    public void clickElement(By element){
+        findElement(element).click();
+    }
+
     public boolean verifyMenuItems(String items){
         String [] menuItems = items.split(":");
         for (int i=0; i<menuItems.length; i++){
             String mainMenuXpath = "//img[@alt='Menu for " + menuItems[i] + "']/..";
-            WebElement element = driver.findElement(By.xpath(mainMenuXpath));
+            WebElement element = findElement(By.xpath(mainMenuXpath));
             boolean result= element.isEnabled();
             if(result==false)
                 return false;
@@ -119,9 +129,9 @@ public class BasePage {
 
     }
     //To be used for all send keys methods.
-    public void enterTextBy(By textElement, String text)
+    public void enterTextByElement(By element, String text)
     {
-        findElement(textElement).sendKeys(text);
+        findElement(element).sendKeys(text);
     }
 
     public String getTextById(String Id) {
@@ -221,7 +231,7 @@ public class BasePage {
         else
              clickDropDownById(dropdownId);
 
-        List<WebElement> elements = driver.findElement(By.className("MenuTableBody")).findElements(By.tagName("td"));
+        List<WebElement> elements = findElement(By.className("MenuTableBody")).findElements(By.tagName("td"));
 
         for (int i = 0; i < elements.size(); i ++)
         {
@@ -243,7 +253,7 @@ public class BasePage {
             dropdownXpath = "//img[@alt='Menu for " + dropdownName + "']/..";
 
         driver.findElement(By.xpath(dropdownXpath)).click();
-        wait(1000);
+        wait(800);
 
         String arr[] = dropdownValue.split(":");
         for (int i = 0; i < arr.length; i++) {
@@ -254,11 +264,11 @@ public class BasePage {
 
                 elements.get(i).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
             }
-            wait(1000);
+            wait(800);
         }
 
     }
-
+// index is used as there can be multiple MenuTableBody elements
     public void selectDropDownNameAndValueForMultipleMenuTableBodys(String dropdownName, String dropdownValue, boolean readonly, int index) {
         String dropdownXpath;
         if (readonly)
@@ -267,7 +277,7 @@ public class BasePage {
             dropdownXpath = "//img[@alt='Menu for " + dropdownName + "']/..";
 
         driver.findElement(By.xpath(dropdownXpath)).click();
-        wait(1000);
+        wait(800);
 
         String arr[] = dropdownValue.split(":");
         for (int i = 0; i < arr.length; i++) {
@@ -278,7 +288,7 @@ public class BasePage {
 
                 elements.get(i + index).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
             }
-            wait(1000);
+            wait(800);
         }
 
     }
@@ -316,7 +326,7 @@ public class BasePage {
     //    preferences = "Menu1:Menu2"
     public void setPreferences(String preferences) {
 
-        wait(1000);
+        wait(1500);
 
         String arr[] = preferences.split(":");
         for (int i = 0; i < arr.length; i++) {
@@ -383,7 +393,7 @@ public class BasePage {
         boolean columnDisplayed = false;
 
         //Get all web elements
-        List<WebElement> tableHeaders = driver.findElement(By.id(divId)).findElement(By.className("BaseTableColHeaders")).findElements(By.className("BaseTableHeader"));
+        List<WebElement> tableHeaders = findElement(By.id(divId)).findElement(By.className("BaseTableColHeaders")).findElements(By.className("BaseTableHeader"));
 
         for (int i = 0; i < tableHeaders.size(); i++) {
             // System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
@@ -403,7 +413,7 @@ public class BasePage {
         boolean columnDisplayed = false;
 
         //Get all web elements
-        List<WebElement> tableHeaders = driver.findElement(By.className("BaseTableColHeaders")).findElements(By.className("BaseTableHeader"));
+        List<WebElement> tableHeaders = findElement(By.className("BaseTableColHeaders")).findElements(By.className("BaseTableHeader"));
 
         for (int i = 0; i < tableHeaders.size(); i++) {
            // System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
@@ -493,7 +503,7 @@ public class BasePage {
     public String[] ClickTableElementByText(By table, String headerName, String text, boolean getText)
     {
         String[] texts = new String[6];
-        List<WebElement> elements = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
+        List<WebElement> elements = findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
         int columnIndex = getColumnIndexByHeaderName(table, headerName);
         wait(1000);
         for (int i = 1; i < elements.size(); i++)
@@ -541,6 +551,52 @@ public class BasePage {
     public void clickByCellData(By table, String columnName, int rowNum, String cellData){
         getTableCellData(table, columnName, rowNum);
     }
+    public WebElement getTableCellElement(By table, String columnName, String cellData)
+    {
+        int colNum = getColumnIndexByHeaderName(table, columnName);
+        List<WebElement> tableRows = getTableRows(table);
+
+        if(tableRows.size() > 0){
+            for (int i = 1; i < tableRows.size(); i++) {
+                WebElement td = tableRows.get(i).findElements(By.tagName("td")).get(colNum);
+
+                    if(td.getText().trim().equals(cellData))
+                    {
+                        System.out.println("Table cell value is :" + td.getText().trim());
+                        return td;
+                    }
+            }
+        }
+
+        return null;
+    }
+
+    public boolean verifyColumnValues(By table, String columnName, String columnValue)
+    {
+        int colNum = getColumnIndexByHeaderName(table, columnName);
+        List<WebElement> tableRows = getTableRows(table);
+        System.out.println("Number of rows are: "+ tableRows.size());
+
+        if(tableRows.size() > 0){
+            for (int i = 1; i < tableRows.size(); i++) {
+                WebElement td = tableRows.get(i).findElements(By.tagName("td")).get(colNum);
+                System.out.println("Table cell value is: "+ td.getText().trim());
+                if(!td.getText().trim().equals(columnValue))
+                {
+                    System.out.println("Table cell value is not as expected:" + td.getText().trim());
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    public void rightClickOnElement(WebElement element)
+    {
+        Actions action = new Actions(driver);
+        action.contextClick(element).build().perform();
+    }
     public static File takeScreenShot() {
 
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -570,6 +626,19 @@ public class BasePage {
         return tabValues;
     }
 
+    public List<String> getTableHeaders(By table)
+    {
+        List<String> tabValues = new ArrayList<String>();
+
+        List<WebElement> elements = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr")).get(0).findElements(By.tagName("th"));
+
+        for (int i = 0; i < elements.size(); i++) {
+            WebElement tableHeader = elements.get(i);
+            tabValues.add(tableHeader.getAttribute("innerHTML").trim());
+        }
+        return tabValues;
+    }
+
     public void switchToFrameByIndex(int frame_index) {
         int size= driver.findElements(By.tagName("iframe")).size();
         System.out.println("Number of frames are: " +size);
@@ -590,7 +659,7 @@ public class BasePage {
   }
   public boolean verifyElementIsEnabledById(By element){
 
-        return driver.findElement(element).isEnabled();
+        return findElement(element).isEnabled();
   }
   public void switchToDefault(){
         driver.switchTo().defaultContent();

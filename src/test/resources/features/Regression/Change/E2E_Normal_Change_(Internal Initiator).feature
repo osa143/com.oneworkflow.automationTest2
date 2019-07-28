@@ -141,7 +141,7 @@
       Then user enters "New Communication plan" in the communication plan field
       And user clicks on save button
       Then change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) to TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) - Additional info. "
-      When user clicks on schedule tab
+      Then user clicks on "Schedule" tab
       And user changes request start time to be one week later
       And user changes request end time to be one week later
       Then user clicks on save button
@@ -253,7 +253,7 @@
       When user changes status to "Implementation"
       And user clicks on save button
       Then change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Start has changed from  UTC to 2019-07-26 13:09:51 UTC. Request Status has changed from Scheduled to Implementation. "
-      When user clicks on schedule tab
+      Then user clicks on "Schedule" tab
       Then user validates actual start time is updated
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab

@@ -4,6 +4,7 @@ import org.joda.time.DateTime;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import utils.CommonUtils;
 import utils.Ticket;
 
 import java.time.LocalDateTime;
@@ -41,6 +42,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_ITEM= "arid_WIN_0_200000005";
     private static final String txt_EVENT_START_TIME= "arid_WIN_0_703001000";
     private static final String txt_LOCATION_ID_PLUS = "arid_WIN_0_777031006";
+    private static final String txt_IMPACT_FROM = "arid_WIN_0_999000298";
 
 
     private static final String chkbxDO_NOT_AUTOCLOSE = "WIN_0_rc0id600002014";
@@ -69,6 +71,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btn_OPEN_EXTERNAL= "WIN_0_600002903";
     private static final String div_CAUSE= "WIN_0_777031380";
     private static final String dd_IMPORTANCE="arid_WIN_0_600001821";
+    private static final String btn_CLOSE_BULK_UPDATE= "WIN_0_999000100";
 
 
 
@@ -132,11 +135,18 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         return getTextById(txtWO_STATUS_ID);
     }
 
-
+     public void clickClose_bulkUpdate(){
+        clickElement(By.id(btn_CLOSE_BULK_UPDATE));
+     }
 
     public void clickCancel(){
         wait(500);
         findElement(By.id(btn_CANCEL)).click();
+    }
+    public void enterImpactFromAsOneDayPast(){
+        WebElement element= findElement(By.id(txt_IMPACT_FROM));
+        element.clear();
+        element.sendKeys(CommonUtils.getDateAsTodayMidnight(-1));
     }
 
     public int getNumberOfCis(){
@@ -169,6 +179,9 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
 
     public void selectAssignmentProfile(String value){
         selectDropDownNameAndValue(dd_ASSIGNMENT_PROFILE, value, false);
+    }
+    public void selectAction(String value){
+        selectDropDownNameAndValue(ddACTIONS, value, true);
     }
 
     public String getAssignee(){
@@ -345,11 +358,10 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
 
     public String getErrorText(){
         driver.switchTo().parentFrame();
-        wait(2000);
+        driver.switchTo().frame(2);
         driver.switchTo().frame(1);
-        wait(2000);
         String error= findElement(By.id(Error_POP_UP_ID)).getText();
-        System.out.println("Error message is" +error);
+        System.out.println("Error message is: " +error);
         return error;
     }
     public void clickCtiDetails(){
@@ -365,6 +377,8 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     public void clickOkOnPopup()
     {
         findElement(By.xpath(btn_OK_Popup)).click();
+        driver.switchTo().frame(2);
+        wait(1500);
     }
 
     public boolean verifyOwnerProfileAvailability(){
@@ -515,6 +529,13 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         element.sendKeys(troubleTicketId);
         element.sendKeys(Keys.ENTER);
     }
+    public void selectFaultPosition_troubleEventPage(String value){
+        selectDropDownNameAndValue(ddFAULTY_POSITION, value, false);
+    }
+    public void selectCause_troubleEventPage(String value){
+        selectDropDownNameAndValue(ddCAUSE, value, true);
+    }
+
     public String getTroubleTicket() {
         String troubleTicket= getTextById(txtTICKET_ID);
         System.out.println("Ticket opened is" +troubleTicket);
@@ -526,7 +547,9 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     public void enterEventEndTimeAsCurrentTime(){
         driver.findElement(By.id(txtEVENT_END_TIME)).sendKeys(Keys.ENTER);
     }
-
+    public void enterEventEndTimeAsPast(String time){
+        enterTextByElement(By.id(txtEVENT_END_TIME), time);
+    }
     public void clickTerminateAlarm(){
         driver.findElement(By.id(btnTERMINATE_ALARM)).click();
     }

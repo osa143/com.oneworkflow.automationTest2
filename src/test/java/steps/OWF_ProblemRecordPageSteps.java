@@ -4,13 +4,10 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.But;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.OWF_ProblemRecordPage;
 import utils.CommonUtils;
-
-import java.util.List;
 
 
 public class OWF_ProblemRecordPageSteps {
@@ -102,8 +99,9 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user gets ticket value")
     public void userGetsTicketValue() {
-        ticket = problemRecordPage.getProblemTicket();
+        ticket = problemRecordPage.getTicketValue();
         System.out.println("Stored problem ticket is " + ticket);
+        CommonUtils.pbTicket = ticket;
 
     }
 
@@ -165,7 +163,41 @@ public class OWF_ProblemRecordPageSteps {
     @And("change should also be reflected in the timeline as {string}")
     public void changeShouldAlsoBeReflectedInTheTimelineAs(String message) {
          problemRecordPage.clickTimelineButton();
-        boolean containsMessage = problemRecordPage.getTimelineStatus().contains(message);
+        boolean containsMessage = problemRecordPage.getTimelineStatus(1).contains(message);
+        Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
+    }
+
+    @And("change should also be reflected in the timeline as {string} for OP ticket")
+    public void changeShouldAlsoBeReflectedInTheTimelineForOPTicket(String message) {
+        message += CommonUtils.opTicket;
+
+        problemRecordPage.clickTimelineButton();
+        boolean containsMessage = problemRecordPage.getTimelineStatus(4).contains(message);
+        Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
+    }
+
+    @And("change should also be reflected in the timeline as {string} for PB ticket")
+    public void changeShouldAlsoBeReflectedInTheTimelineForPBTicket(String message) {
+        message += CommonUtils.pbTicket;
+
+        problemRecordPage.clickTimelineButton();
+        boolean containsMessage = problemRecordPage.getTimelineStatus(1).contains(message);
+        Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
+    }
+
+    @And("change should also be reflected in the timeline as {string} for trouble ticket")
+    public void changeShouldAlsoBeReflectedInTheTimelineForOPTicketAs(String message) {
+        String[] str = message.split(";");
+        str[0] += " " + CommonUtils.pbTicket;
+
+        String newMessage = "";
+        for(int i = 0; i< str.length; i++)
+        {
+            newMessage += str[i];
+        }
+        System.out.println("Expected timeline status is: " + newMessage);
+        problemRecordPage.clickTimelineButton();
+        boolean containsMessage = problemRecordPage.getTimelineStatus(1).contains(newMessage);
         Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
     }
 
@@ -558,7 +590,7 @@ public class OWF_ProblemRecordPageSteps {
     @Then("change should also be reflected in the timeline {string}")
     public void changeShouldAlsoBeReflectedInTheTimeline(String message) {
         problemRecordPage.clickTimelineButton();
-        String timelineStatus = problemRecordPage.getTimelineStatus();
+        String timelineStatus = problemRecordPage.getTimelineStatus(1);
         Assert.assertTrue(problemRecordPage.verifyTimelineUpdate(timelineStatus, message), "Ticket Status is not displayed on timeline");
 
     }

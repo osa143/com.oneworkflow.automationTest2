@@ -70,27 +70,28 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void clickOk(){
         wait(500);
-        findElement(By.xpath(btn_OK_REFRESH_INTERVAL)).click();
+        clickElement(By.xpath(btn_OK_REFRESH_INTERVAL));
     }
 
     public void enterRefreshInterval(String time){
-        findElement(By.id(txt_REFRESH_INTERVAL)).sendKeys(time);
+
+        enterTextByElement((By.id(txt_REFRESH_INTERVAL)), time);
     }
     public void selectAll(String value){
         selectDropDownNameAndValue(dd_ALL, value, false);
     }
     public void clickAdd_userMoreFilters(){
-        findElement(By.id(btn_ADD_USER_MORE_FILTERS)).click();
+       clickElement(By.id(btn_ADD_USER_MORE_FILTERS));
     }
     public void clickRow1(){
-        findElement(By.xpath(tableRow1_USER_MORE_FILTERS)).click();
+        clickElement(By.xpath(tableRow1_USER_MORE_FILTERS));
     }
     public void clickSearch_userMoreFilters(){
-        findElement(By.id(btn_SEARCH_USER_MORE_FILTERS)).click();
+        clickElement(By.id(btn_SEARCH_USER_MORE_FILTERS));
     }
 
     public void enterSearch_userMoreFilters(String text){
-      findElement(By.id(txt_SEARCH_USER_MORE_FILTERS)).sendKeys(text);
+      enterTextByElement(By.id(txt_SEARCH_USER_MORE_FILTERS),text);
     }
    public boolean verifyDetailsIsPresent(){
        return verifyElementIsDisplayed(By.id(fld_DETAILS));
@@ -99,11 +100,12 @@ public class OWF_AgentConsolePage extends BasePage {
         return verifyElementIsDisplayed(By.id(fld_CTI_DETAILS));
     }
    public void clickApply_userMoreFilters(){
-       findElement(By.id(btn_APPLY)).click();
+       clickElement(By.id(btn_APPLY));
+       wait(500);
    }
 
    public void clickMoreFilters(){
-   findElement(By.id(btn_MORE_FILTERS)).click();
+   clickElement(By.id(btn_MORE_FILTERS));
    }
 
    public void selectStatus(String value){
@@ -116,7 +118,7 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void clickYesonSecondaryPrimaryWarningFrame()
     {
-        driver.findElement(By.xpath(btnOK_secondaryPrimary_onFRAME_XPATH)).click();
+       clickElement(By.xpath(btnOK_secondaryPrimary_onFRAME_XPATH));
     }
     public boolean checkIfAlarmsPresent()
     {
@@ -174,7 +176,7 @@ public class OWF_AgentConsolePage extends BasePage {
     }
 
     public void clickOnYes(){
-        driver.findElement(By.id(btnYES_ON_FRAME_ID)).click();
+        clickElement(By.id(btnYES_ON_FRAME_ID));
     }
 
 
@@ -182,7 +184,7 @@ public class OWF_AgentConsolePage extends BasePage {
     Actions action = new Actions(driver);
 
     public void doubleClickOnAlarm(){
-        WebElement element= driver.findElement(By.xpath(alarmTdROW1_XPATH));
+        WebElement element= findElement(By.xpath(alarmTdROW1_XPATH));
         action.doubleClick(element).perform();
     }
     public void clickFilterPreferences(){
@@ -191,15 +193,15 @@ public class OWF_AgentConsolePage extends BasePage {
 
 
     public void clickOnTicket(){
-        driver.findElement(By.xpath(tdROW1_XPATH)).click();
+        clickElement(By.xpath(tdROW1_XPATH));
     }
     public void doubleClickOnTicket(){
-        WebElement element= driver.findElement(By.xpath(tdROW1_XPATH));
+        WebElement element= findElement(By.xpath(tdROW1_XPATH));
         action.doubleClick(element).perform();
     }
 
     public void clickRefresh_AlarmTab(){
-        driver.findElement(By.xpath(btnREFRESH_ALARM_TAB)).click();
+        clickElement(By.xpath(btnREFRESH_ALARM_TAB));
     }
 
     public void selectAction(String value){
@@ -208,18 +210,15 @@ public class OWF_AgentConsolePage extends BasePage {
     }
 
     public void clickCloseButtonOnFrame(){
-        driver.findElement(By.xpath(btnCLOSE_ON_FRAME_XPATH)).click();
+        clickElement(By.xpath(btnCLOSE_ON_FRAME_XPATH));
     }
     public void clickOnCloseImage(){
         System.out.println("inside frame");
-        //driver.findElement(By.id("WIN_0_860000010")).click();
-
-       // driver.findElement(By.xpath("//button[@title='Close']")).click();
-        driver.findElement(By.id(imgCLOSED_ID)).click();
+        clickElement(By.id(imgCLOSED_ID));
     }
 
     public void clickAlarmTab(){
-        driver.findElement(By.xpath(tabALARM_XPATH)).click();
+        clickElement(By.xpath(tabALARM_XPATH));
     }
 
     public void clickSearch_OpenSearch_ProblemRecord() {
@@ -285,27 +284,27 @@ public class OWF_AgentConsolePage extends BasePage {
     }
 
     public void clickSearch() {
-        driver.findElement(By.id(btnSEARCH)).click();
+        clickElement(By.id(btnSEARCH));
     }
 
     public void clickClear() {
-        driver.findElement(By.id(btnCLEAR)).click();
+        clickElement(By.id(btnCLEAR));
     }
 
     public void clickRefresh() {
-        driver.findElement(By.id(btnREFRESH)).click();
+        clickElement(By.id(btnREFRESH));
     }
 
     public void clickHideFunctions() {
-        driver.findElement(By.id(btnHIDE_FUNCTIONS)).click();
+        clickElement(By.id(btnHIDE_FUNCTIONS));
     }
 
     public void clickSave() {
-        driver.findElement(By.id(btnSAVE)).click();
+        clickElement(By.id(btnSAVE));
     }
 
     public void clickAdd() {
-        driver.findElement(By.id(btnADD)).click();
+        clickElement(By.id(btnADD));
     }
 
     public void clickMenuItemSIDConsole() {
@@ -331,6 +330,10 @@ public class OWF_AgentConsolePage extends BasePage {
         selectMenuItem(menuItemLOGOUT);
     }
 
+    public boolean verifyFilteredStatus(String columnName, String columnValue)
+    {
+       return verifyColumnValues(By.id(table_ID), columnName, columnValue);
+    }
 
     public void selectAllRoles(String value) {
         selectDropDownNameAndValue(dd_ALL_ROLES, value, false);
@@ -350,11 +353,11 @@ public class OWF_AgentConsolePage extends BasePage {
     }
 
     public void clickAllTicketsDropDown() {
-        driver.findElement(By.id(ddALL_TICKETS)).click();
+        clickElement(By.id(ddALL_TICKETS));
     }
 
     public void clickAllRolesDropDown() {
-        driver.findElement(By.id(ddALL_ROLES)).click();
+        clickElement(By.id(ddALL_ROLES));
     }
 
     public int getColumnIndexByHeaderName(String columnName) {
@@ -366,7 +369,7 @@ public class OWF_AgentConsolePage extends BasePage {
     }
 
     public String getAlarmNumber(){
-        return driver.findElement(By.id(txtALARM_NUMBER_ID)).getAttribute("value");
+        return findElement(By.id(txtALARM_NUMBER_ID)).getAttribute("value");
     }
 
 

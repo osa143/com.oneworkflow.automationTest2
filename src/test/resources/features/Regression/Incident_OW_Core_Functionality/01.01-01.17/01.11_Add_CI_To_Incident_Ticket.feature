@@ -1,5 +1,5 @@
 @01.11_Add_CI_To_Incident_Ticket @Incident
-
+#passed
 Feature: Adding of CI to incident ticket
   Scenario: user is able to add CI's to incident ticket
 
@@ -27,8 +27,7 @@ Feature: Adding of CI to incident ticket
     And user selects a CI from list
     Then user selects impact level as "Degradation of Service"
     And user clicks on relate CI
-    #And an error message should appear: "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
-    Then user closes warning message
+    And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
     And user clicks on clear button
     When user enters "SE_EPG_HYEPG1" in name field
     And user clicks on search button on CI search window
@@ -56,21 +55,18 @@ Feature: Adding of CI to incident ticket
     And user validates "Primary" CI is equal to "SE_EPG_FREEPG1"
     And user validates CI "Impact Status" is "Active"
     And user validates CI "Impact Category" is "Actual"
-    And user right clicks on primary CI and selects ""
     When user right clicks on CI SE_EPG_VRREPG1 and user selects "Impact:Update"
     And user switches to frame
     Then user selects impact name as "Loss of Service"
-    And user clicks on close button on bulk update window
-    And user validates no changes were made on the chosen CI
-    Then user switches to window 1
-    When user right clicks on CI SE_EPG_VRREPG1 and user selects "Impact:Update"
-    And user switches to frame
-    Then user selects impact name as "Loss of Service"
+#    And user clicks on close button on bulk update window
+#    And user validates no changes were made on the chosen CI
+#    When user right clicks on CI SE_EPG_VRREPG1 and user selects "Impact:Update" without selecting checkbox
+#    And user switches to frame
+#    Then user selects impact name as "Loss of Service"
     And user clicks confirm checkbox
     And user clicks on bulk update save button
-    And user switches to window 1
-    Then user validates CI "SE_EPG_VRREPG1" impact is "Loss of Service"
-    Then user clicks on save button on the problem form
+    Then user validates CI SE_EPG_VRREPG impact is "Loss of Service"
+    Then user clicks on save button
 
 
 

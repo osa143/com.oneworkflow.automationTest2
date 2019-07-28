@@ -14,6 +14,7 @@
       And user enters description as "Test case 04.03 Create Problem Candidate From Incident"
       And user clicks on save button
       Then ticket should be created and status should be assigned
+      And user gets trouble ticket value
       When user clicks on linked items tab
       And user selects target application first dropdown as "OS3 - Problem"
       And user selects target application second dropdown as "Investigates"
@@ -24,14 +25,15 @@
       And user selects urgency as "Low"
       Then user clicks on save button
       And ticket should be created and status should be assigned
+      And user gets ticket value
       When user clicks on linked items tab
       Then user validates 1 linked ticket availability
       #Ticket number will change every time
-      #Then change should also be reflected in the timeline as "Correlation to ticket OP-xxxxxx - Relationship type: Fixed by"
+      Then change should also be reflected in the timeline as "Correlation to ticket;. - Relationship type: Fixed by"
       When user switches to window 1
       And user clicks on linked items tab
       Then user validates 1 linked ticket availability
       #Ticket number will change every time
-      #Then change should also be reflected in the timeline as "Correlation to ticket PB-xxxxxx - Relationship type: Fixed by"
+      Then change should also be reflected in the timeline as "Correlation to ticket;. - Relationship type: Fixed by"
 
 

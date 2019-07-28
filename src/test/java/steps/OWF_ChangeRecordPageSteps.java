@@ -110,10 +110,6 @@ public class OWF_ChangeRecordPageSteps {
         //Title Assertion
     }
 
-   /* @And("user selects template as {string}")
-    public void userSelectsTemplateAs(String template) {
-        changeRecordPage.selectTemplate(template);
-    }*/
     @And("user selects request category as {string}")
     public void userSelectsRequestCategoryAsCableSplicing(String category) {
         changeRecordPage.selectRequestCategory(category);
@@ -160,12 +156,6 @@ public class OWF_ChangeRecordPageSteps {
        changeRecordPage.enterRiskDescriptionId(arg0);
     }
 
-    @Then("user clicks on schedule tab")
-    public void userClicksOnScheduleTab() {
-        //doesn't need implementation
-    }
-
-
 
     @And("user selects estimated impact dropdown as {string}")
     public void userSelectsEstimatedImpactDropdownAsNoImpact(String estimatedImpact) {
@@ -178,12 +168,6 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.selectTab("Risk");
 
     }
-
-   /* @And("user selects template as {string}")
-    public void userSelectsTemplateAsAllITOtherTESTTEMPLATEUATNormalChange(String template) {
-        changeRecordPage.selectTemplate(template);
-
-    }*/
 
     @And("user selects template as {string}")
     public void userSelectsTemplateAs(String templateType) {

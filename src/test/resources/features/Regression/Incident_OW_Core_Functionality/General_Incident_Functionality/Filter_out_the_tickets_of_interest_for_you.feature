@@ -1,4 +1,5 @@
 @Filter_out_the_tickets_of_interest_for_you @Incident
+  #passed
   Feature: filtering of tickets
     Scenario: user can filter tickets of interest12
 
@@ -6,15 +7,20 @@
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects "Problem" under all tickets
-      Then user should only see problem tickets
+      # PB for problem Tickets
+      Then user should only see "PB" tickets
       When user selects "Change Record" under all tickets
-      Then user should only see change tickets
+      # CR for change Tickets
+      Then user should only see "CR" tickets
       When user selects "Trouble Ticket" under all tickets
-      Then user should only see trouble tickets
+      # OP for trouble Tickets
+      Then user should only see "OP" tickets
       When user selects "Known Error" under all tickets
-      Then user should only see known error tickets
+      # KE for known error Tickets
+      Then user should only see "KE" tickets
       When user selects "Work Order" under all tickets
-      Then user should only see work order tickets
+      # WO for work order Tickets
+      Then user should only see "WO" tickets
       When user selects "All Tickets" under all tickets
       And user clicks on more filters button
       Then user switches to frame

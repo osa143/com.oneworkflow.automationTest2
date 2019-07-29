@@ -850,6 +850,12 @@ public class OWF_TroubleEventPageSteps {
     public void userClicksOnTicketRefreshButton() {
         troubleEventPage.clickRefresh_ticketFresh();
     }
+
+    @When("user changes status to {string} on trouble event page second time")
+    public void userChangesStatusToOnTroubleEventPageSecondTime(String arg0) {
+        troubleEventPage.selectStatus_secondTime(arg0);
+
+    }
 }
 
 

@@ -1,4 +1,5 @@
 @05.01_Manually_close_an_incident @Incident
+  #passed
   Feature: incident closure
     Scenario: user can manually close an incident ticket
 
@@ -35,7 +36,7 @@
       And user should see confirmation message for impact clear and clicks ok
       And user clicks on save button
       Then user validates ticket status as "Cleared"
-      When user changes status to "Closed" on trouble event page
+      When user changes status to "Closed" on trouble event page second time
       And user clicks on save button
       Then user validates ticket status as "Closed"
 

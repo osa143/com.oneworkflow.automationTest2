@@ -126,7 +126,9 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String dd_ACTION= "Action";
     private static final String btn_YES_ON_FRAME_IMPACT_CLEAR= "WIN_5_700027904";
 
-
+    public void selectStatus_secondTime(String value){
+        selectDropDownNameAndValueForMultipleMenuTableBodys(ddSTATUS, value, false, 2);
+    }
     public String verifyEndTimeIsMandatory(){
         String mandatoryText= findElement(By.id(txt_EVENT_END_TIME_MANDATORY)).getText();
         System.out.println(mandatoryText);

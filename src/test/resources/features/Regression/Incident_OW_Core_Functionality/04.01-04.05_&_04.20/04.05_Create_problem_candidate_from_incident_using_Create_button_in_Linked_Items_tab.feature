@@ -1,4 +1,5 @@
 @04.05_Create_problem_candidate_from_incident_using_Create_button_in_Linked_Items_tab @Incident
+  #passed
   Feature: create problem from incident
     Scenario: user can create a problem ticket using create button in incident ticket
 
@@ -29,11 +30,11 @@
       When user clicks on linked items tab
       Then user validates 1 linked ticket availability
       #Ticket number will change every time
-      Then change should also be reflected in the timeline as "Correlation to ticket;. - Relationship type: Fixed by"
+      Then change should also be reflected in the timeline as "Correlation to ticket " for OP ticket
       When user switches to window 1
       And user clicks on linked items tab
       Then user validates 1 linked ticket availability
       #Ticket number will change every time
-      Then change should also be reflected in the timeline as "Correlation to ticket;. - Relationship type: Fixed by"
+      Then change should also be reflected in the timeline as "Correlation to ticket " for PB ticket
 
 

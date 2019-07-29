@@ -463,27 +463,39 @@ public class OWF_AgentConsolePageSteps {
     }
     @Then("user should see Alerts ticket value")
     public void userShouldSeeAlertsTicketValue() {
-        Assert.assertNotNull(agentConsolePage.getAlerts());
+        Assert.assertNotEquals(agentConsolePage.getAlerts(), "");
     }
 
     @And("user should see New ticket value")
     public void userShouldSeeNewTicketValue() {
-        Assert.assertNotNull(agentConsolePage.getNew());
+
+        Assert.assertNotEquals(agentConsolePage.getNew(), "");
     }
 
     @And("user should see Assigned ticket value")
     public void userShouldSeeAssignedTicketValue() {
-        Assert.assertNotNull(agentConsolePage.getAssigned());
+        Assert.assertNotEquals(agentConsolePage.getAssigned(), "");
     }
 
     @And("user should see WIP ticket value")
     public void userShouldSeeWIPTicketValue() {
-        Assert.assertNotNull(agentConsolePage.getWip());
+        Assert.assertNotEquals(agentConsolePage.getWip(), "");
     }
 
     @And("user should see Cleared ticket value")
     public void userShouldSeeClearedTicketValue() {
-        Assert.assertNotNull(agentConsolePage.getCleared());
+        Assert.assertNotEquals(agentConsolePage.getCleared(), "");
+    }
+
+
+    @Then("user should only see tickets assigned to current {string} as {string}")
+    public void userShouldOnlySeeTicketsAssignedToCurrentAs(String arg0, String arg1) {
+        Assert.assertTrue(agentConsolePage.verifyTicketsAssignedToCurrentUserProfile(arg0, arg1, false));
+    }
+
+    @Then("user should only see {string} tickets")
+    public void userShouldOnlySeeTickets(String colValue) {
+        Assert.assertTrue(agentConsolePage.verifyTicketsAssignedToCurrentUserProfile("ID", colValue, true));
     }
 }
 

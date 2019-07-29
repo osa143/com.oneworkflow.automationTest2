@@ -6,9 +6,9 @@
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects "Problem" under all tickets
-      Then user should only see change records
-      When user selects "Change Record" under all tickets
       Then user should only see problem tickets
+      When user selects "Change Record" under all tickets
+      Then user should only see change tickets
       When user selects "Trouble Ticket" under all tickets
       Then user should only see trouble tickets
       When user selects "Known Error" under all tickets
@@ -24,7 +24,6 @@
       And user selects shown assignment profile
       And user clicks on more filters add button
       And user clicks on apply button on user more filters window
-      And user switches to window 0
-      Then user should only see tickets with assigned profile of Mobile service-FLEN
+      Then user should only see tickets with "Assignee Profile" of "Mobile service-FLEN"
       When user selects all dropdown as "Single Country:Finland"
-      Then user should only see Finnish tickets with assigned profile of Mobile service-FLEN
+      Then user should only see tickets with "Countries" of "Finland"

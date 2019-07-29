@@ -15,14 +15,15 @@
       And user enters description as "Test case validate no changes can be done to a ticket in closed status"
       And user clicks on save button
       Then ticket should be created and status should be assigned
-      When user changes status to "Cleared"
-      And user selects fault position as "N/A:N/A"
-      And user selects cause as "N/A:N/A:N/A"
-      And user selects action dropdown as "N/A:N/A"
+      When user changes status to "Cleared" on trouble event page
+      And user selects fault position as "N/A:N/A" on trouble event page
+      And user selects cause as "N/A:N/A:N/A" on trouble event page
+      And user selects action dropdown as "N/A:N/A" on trouble event page
       And user enters closure info as "Test Ticket"
+      And user enters event end time as current time
       And user clicks on save button
       Then user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on trouble event page
       And user clicks on save button
       Then user validates ticket status as "Closed"
       And user clicks on CTI details under sections
@@ -31,8 +32,8 @@
       And user clicks on assignment under sections
       And user clicks on On Hold under sections
       And user clicks on vendor under sections
-      And user clicks on attachments under sections
       And user clicks on root cause under sections
+      And user clicks on attachments under sections
       Then user validates "Ack" is readonly
       And user validates "Status*" is readonly
       And user validates "Source*" is readonly

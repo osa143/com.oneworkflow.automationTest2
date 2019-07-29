@@ -14,6 +14,7 @@ public class OWF_WorkOrderPageSteps {
     @And("user validates ticket status as {string}")
     public void userValidatesTicketStatusAs(String arg0) {
         Assert.assertEquals(workOrderPage.getStatusText(), arg0, "Status is not new");
+        workOrderPage.wait(500);
     }
 
     @And("user validates parent ticket id availability")
@@ -137,6 +138,7 @@ public class OWF_WorkOrderPageSteps {
     @And("user enters schedule end as current date")
     public void userEntersScheduleEndAsCurrentDate() {
       workOrderPage.enterActualScheduleEnd();
+
     }
 }
 

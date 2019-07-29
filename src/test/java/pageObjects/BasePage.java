@@ -1,23 +1,19 @@
 package pageObjects;
 
 import driver.factory.DriverFactory;
-import org.joda.time.DateTime;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import utils.CommonUtils;
 
-import java.awt.*;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 
 public class BasePage {
@@ -94,7 +90,7 @@ public class BasePage {
         String [] menuItems = items.split(":");
         for (int i=0; i<menuItems.length; i++){
             String mainMenuXpath = "//img[@alt='Menu for " + menuItems[i] + "']/..";
-            WebElement element = findElement(By.xpath(mainMenuXpath));
+            WebElement element = driver.findElement(By.xpath(mainMenuXpath));
             boolean result= element.isEnabled();
             if(result==false)
                 return false;
@@ -134,8 +130,11 @@ public class BasePage {
         findElement(element).sendKeys(text);
     }
 
-    public String getTextById(String Id) {
+    public String getAttributeValueById(String Id) {
         return findElement(By.id(Id)).getAttribute("value");
+    }
+    public String getTextByID(String id){
+        return findElement(By.id(id)).getText();
     }
 
     public String calculateEstimatedReady(int time, String timeUnit){
@@ -162,7 +161,7 @@ public class BasePage {
     }
 
     public String getEventStartTime(){
-        String eventStartTime=  getTextById(txtEVENT_START_TIME);
+        String eventStartTime=  getAttributeValueById(txtEVENT_START_TIME);
         System.out.println(eventStartTime);
         return eventStartTime;
     }
@@ -253,7 +252,7 @@ public class BasePage {
             dropdownXpath = "//img[@alt='Menu for " + dropdownName + "']/..";
 
         driver.findElement(By.xpath(dropdownXpath)).click();
-        wait(800);
+        wait(1000);
 
         String arr[] = dropdownValue.split(":");
         for (int i = 0; i < arr.length; i++) {
@@ -264,7 +263,7 @@ public class BasePage {
 
                 elements.get(i).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
             }
-            wait(800);
+            wait(1000);
         }
 
     }

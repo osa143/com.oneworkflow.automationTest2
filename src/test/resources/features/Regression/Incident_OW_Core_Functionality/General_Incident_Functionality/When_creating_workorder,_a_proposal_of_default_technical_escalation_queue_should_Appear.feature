@@ -23,8 +23,7 @@
       And user selects a CI from list
       Then user selects impact level as "Degradation of Service"
       And user clicks on relate CI
-      #And an error message should appear: "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
-      Then user closes warning message
+      And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
       And user clicks on close button on CI search window
       When user clicks on work order tab
       And user clicks on create from ticket

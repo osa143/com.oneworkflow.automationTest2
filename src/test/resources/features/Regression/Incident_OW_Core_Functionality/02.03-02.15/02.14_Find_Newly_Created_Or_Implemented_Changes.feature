@@ -30,25 +30,25 @@
       When multiple statuses "New:Assigned:Analysis:Approval Requested:Approved:Schedule Requested:Scheduled:Implementation:Pending:Completed:(clear)" should be available in "Status" dropdown
       When user selects status as "New" on user more filters window
       And user clicks on apply button on user more filters window
-      Then user should only see change tickets with "Status" of "New"
+      Then user should only see tickets with "Status" of "New"
       When user clicks on more filters button
       And user switches to frame
       And user clicks on "Core" tab
       When user selects status as "Assigned" on user more filters window
       And user clicks on apply button on user more filters window
-      Then user should only see change tickets with "Status" of "Assigned"
+      Then user should only see tickets with "Status" of "Assigned"
       When user clicks on more filters button
       And user switches to frame
       And user clicks on "Core" tab
       When user selects status as "Implementation" on user more filters window
       And user clicks on apply button on user more filters window
-      Then user should only see change tickets with "Status" of "Implementation"
+      Then user should only see tickets with "Status" of "Implementation"
       When user clicks on more filters button
       And user switches to frame
       And user clicks on "Core" tab
       When user selects status as "Completed" on user more filters window
       And user clicks on apply button on user more filters window
-      Then user should only see change tickets with "Status" of "Completed"
+      Then user should only see tickets with "Status" of "Completed"
 
 
 

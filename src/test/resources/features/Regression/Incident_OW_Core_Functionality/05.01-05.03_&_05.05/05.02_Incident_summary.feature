@@ -19,26 +19,24 @@ Feature: user enters closure info
     And user clicks on CI search button
     Then user switches to frame
     When user enters "SE_EPG_FREEPG1" in name field
+    And user clicks on search button on CI search window
     And user selects a CI from list
     Then user selects impact level as "Degradation of Service"
     And user clicks on relate CI
-    And an error message should appear: "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
-    Then user closes warning message
+    And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
     And user clicks on close button on CI search window
-    When user changes status to "Cleared"
-    And user selects fault position as "N/A:N/A"
-    And user selects cause as "N/A:N/A:N/A"
-    And user selects action dropdown as "N/A:N/A"
+    When user changes status to "Cleared" on trouble event page
+    And user selects fault position as "N/A:N/A" on trouble event page
+    And user selects cause as "N/A:N/A:N/A" on trouble event page
+    And user selects action dropdown as "N/A:N/A" on trouble event page
     And user enters closure info as "Test Ticket"
     Then user enters event end time as current time
     When user clicks on Diagnosis tab
     And user right clicks on primary CI and selects "Impact:Clear All"
-    Then user switches to frame
-    And user should see confirmation message and clicks on yes button
-    Then user switches to window 1
+    And user should see confirmation message for impact clear and clicks ok
     And user clicks on save button
     Then user validates ticket status as "Cleared"
-    When user changes status to "Closed"
+    When user changes status to "Closed" on trouble event page
     And user clicks on save button
     Then user validates ticket status as "Closed"
     And user validates closure info is present

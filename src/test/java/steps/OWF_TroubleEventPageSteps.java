@@ -824,6 +824,32 @@ public class OWF_TroubleEventPageSteps {
     public void userSelectsActionDropdownAsOnTroubleEventPage(String arg0) {
         troubleEventPage.selectAction(arg0);
     }
+
+    @And("user enters event start time as {int} mins past")
+    public void userEntersEventStartTimeAsMinsPast(int arg0) {
+        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", arg0));
+    }
+
+    @And("user should see confirmation message for impact clear and clicks ok")
+    public void userShouldSeeConfirmationMessageForImpactClearAndClicksOk() {
+        troubleEventPage.clickOK_ImpactClear();
+    }
+
+    @And("user validates closure info is present")
+    public void userValidatesClosureInfoIsPresent() {
+        Assert.assertNotNull(troubleEventPage.getClosureInfo());
+    }
+
+    @Then("user validates event end time is a mandatory field")
+    public void userValidatesEventEndTimeIsAMandatoryField() {
+      Assert.assertEquals(troubleEventPage.verifyEndTimeIsMandatory(), "Event End Time*");
+    }
+
+
+    @And("user clicks on ticket refresh button")
+    public void userClicksOnTicketRefreshButton() {
+        troubleEventPage.clickRefresh_ticketFresh();
+    }
 }
 
 

@@ -5,9 +5,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import java.security.Key;
-import java.security.PublicKey;
-import java.util.HashMap;
 import java.util.List;
 
 public class OWF_AgentConsolePage extends BasePage {
@@ -26,7 +23,7 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String txtSEARCH = "arid_WIN_3_730000011";
     private static final String btnSEARCH = "WIN_0_700010480";
     private static final String btnCLEAR = "WIN_0_777501009";
-    private static final String btnREFRESH = "WIN_0_8000903";
+    private static final String btnREFRESH_IMAGE = "WIN_0_8000903";
     private static final String btnHIDE_FUNCTIONS = "WIN_0_999000120";
     private static final String btnSAVE = "WIN_0_700010480";
     private static final String btnADD = "WIN_0_800006404";
@@ -67,7 +64,33 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String btn_ADD_USER_MORE_FILTERS = "WIN_0_600002905";
     private static final String txt_REFRESH_INTERVAL = "interval";
     private static final String btn_OK_REFRESH_INTERVAL= "//*[@id='PopupSearchesFooter']/a[1]";
+    private static final String fld_ALERTS= "WIN_2_999000104";
+    private static final String fld_NEW= "WIN_2_999000106";
+    private static final String fld_ASSIGNED= "WIN_2_999000108";
+    private static final String fld_WIP= "WIN_2_999000110";
+    private static final String fld_CLEARED= "WIN_2_999000112";
 
+
+   public String getAlerts(){
+       String alerts= getTextByID(fld_ALERTS);
+       System.out.println("Number of Alerts alerts: " +alerts );
+       return alerts;
+
+   }
+    public String getNew(){
+        String ticketsNew= getTextByID(fld_ALERTS);
+        System.out.println("Number of New Tickets are: " + ticketsNew);
+        return ticketsNew ;
+    }
+    public String getAssigned(){
+        return getTextByID(fld_ASSIGNED);
+    }
+    public String getWip(){
+        return getTextByID(fld_WIP);
+    }
+    public String getCleared(){
+        return getTextByID(fld_CLEARED);
+    }
     public void clickOk(){
         wait(500);
         clickElement(By.xpath(btn_OK_REFRESH_INTERVAL));
@@ -76,6 +99,9 @@ public class OWF_AgentConsolePage extends BasePage {
     public void enterRefreshInterval(String time){
 
         enterTextByElement((By.id(txt_REFRESH_INTERVAL)), time);
+    }
+    public boolean verifySearchIsDisplayed(){
+        return verifyElementIsDisplayed(By.id(txtSEARCH));
     }
     public void selectAll(String value){
         selectDropDownNameAndValue(dd_ALL, value, false);
@@ -128,6 +154,14 @@ public class OWF_AgentConsolePage extends BasePage {
             return true;
         return false;
     }
+    public boolean validateTicketsAvailabilityInAgentConsoleTable(){
+        int count= getTableRowsCount();
+        System.out.println(count);
+        if (count>50)
+            return true;
+        else return false;
+        }
+
      public void selectCreateAsKnownError(){
         selectMainMenuAndMenuItem(menuForCREATE, menuitemKNOWN_ERROR);
      }
@@ -291,8 +325,8 @@ public class OWF_AgentConsolePage extends BasePage {
         clickElement(By.id(btnCLEAR));
     }
 
-    public void clickRefresh() {
-        clickElement(By.id(btnREFRESH));
+    public void clickRefresh_image() {
+        clickElement(By.id(btnREFRESH_IMAGE));
     }
 
     public void clickHideFunctions() {

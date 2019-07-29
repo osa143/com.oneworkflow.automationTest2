@@ -85,9 +85,9 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user should see confirmation message and clicks on yes button")
     public void userShouldSeeConfirmationMessageAndClicksOnYesButton() {
-        problemRecordPage.wait(1000);
+        problemRecordPage.wait(500);
         problemRecordPage.switchToFrameByIndex(2);
-        problemRecordPage.wait(1000);
+        problemRecordPage.wait(500);
         problemRecordPage.clickYesOnFrame();
     }
 
@@ -100,7 +100,7 @@ public class OWF_ProblemRecordPageSteps {
     @And("user gets ticket value")
     public void userGetsTicketValue() {
         ticket = problemRecordPage.getTicketValue();
-        System.out.println("Stored problem ticket is " + ticket);
+        System.out.println("Stored ticket is " + ticket);
         CommonUtils.pbTicket = ticket;
 
     }
@@ -196,7 +196,8 @@ public class OWF_ProblemRecordPageSteps {
             newMessage += str[i];
         }
         System.out.println("Expected timeline status is: " + newMessage);
-        problemRecordPage.clickTimelineButton();
+        problemRecordPage.wait(1000);
+        problemRecordPage.selectTab("Timeline");
         boolean containsMessage = problemRecordPage.getTimelineStatus(1).contains(newMessage);
         Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
     }

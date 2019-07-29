@@ -3,9 +3,6 @@ package pageObjects;
 import org.openqa.selenium.By;
 import utils.CommonUtils;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
 public class OWF_WorkOrderPage extends BasePage {
 
     private static final String txtSTATUS_ID = "arid_WIN_0_777031003";
@@ -28,6 +25,7 @@ public class OWF_WorkOrderPage extends BasePage {
 
     public void enterActualScheduleEnd(){
         findElement(By.id(txt_SCHEDULE_END)).sendKeys(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+        wait(2000);
     }
     public void selectCompletionCode(String value){
         selectDropDownNameAndValue(dd_COMPLETION_CODE, value, true);
@@ -42,7 +40,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return findElement(By.id(txtESTIMATED_READY)).isDisplayed();
     }
     public String getSavedEstimatedReady(){
-        String estimatedReady= getTextById(txtESTIMATED_READY);
+        String estimatedReady= getAttributeValueById(txtESTIMATED_READY);
         System.out.println(estimatedReady);
         return estimatedReady;
     }
@@ -64,7 +62,7 @@ public class OWF_WorkOrderPage extends BasePage {
     }
 
     public String getDispatchStatus(){
-         return getTextById(txtDISPATCH_STATUS_ID);
+         return getAttributeValueById(txtDISPATCH_STATUS_ID);
     }
 
     public void clickRefresh_Inbound(){
@@ -84,23 +82,24 @@ public class OWF_WorkOrderPage extends BasePage {
 
 
     public String getEstimatedReady(){
-         return getTextById(txtESTIMATED_READY);
+         return getAttributeValueById(txtESTIMATED_READY);
 
     }
 
     public String getWFM_ticket_ID(){
 
-        return getTextById(txtWFM_TIKCET_ID);
+        return getAttributeValueById(txtWFM_TIKCET_ID);
     }
 
     public String getWOsStatusText(){
-        return getTextById(txtWOs_STATUS_ID);
+        return getAttributeValueById(txtWOs_STATUS_ID);
     }
     public String getStatusText(){
-        return getTextById(txtSTATUS_ID);
+        return getAttributeValueById(txtSTATUS_ID);
+
     }
     public String getParentTicketId(){
-        return getTextById(txtPARENT_TICKET_ID);
+        return getAttributeValueById(txtPARENT_TICKET_ID);
     }
 
     public void clickApplyB2B() {
@@ -111,7 +110,7 @@ public class OWF_WorkOrderPage extends BasePage {
     }
 
     public boolean getAssignedProfileStatus(String text1){
-        String text =getTextById(ddASSIGNED_PROFILE);
+        String text = getAttributeValueById(ddASSIGNED_PROFILE);
         System.out.println(text);
         if(text.contains(text1)) {
             return true;

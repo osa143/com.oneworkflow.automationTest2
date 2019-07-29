@@ -2,18 +2,12 @@ package pageObjects;
 
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import utils.CommonUtils;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class BaseRecordPage extends BasePage {
@@ -109,6 +103,7 @@ public class BaseRecordPage extends BasePage {
     public static final String ddValueWORKING_ON_TICKET = "Working On Ticket";
     public static final String txtMINS_ID = "arid_WIN_0_900006507";
     public static final String btnOK_ID = "WIN_0_777777851";
+    public static final String btn_REFRESH= "WIN_0_600003444";
 
     public static final String btnATTACHMENTS = "WIN_0_999000623";
     public static final String txtTICKET_ID = "arid_WIN_0_730000060";
@@ -139,7 +134,9 @@ public class BaseRecordPage extends BasePage {
         return verifyIsElementSelected(By.id(chkbxDENMARK));
     }
 
-
+    public void clickRefresh_ticketFresh(){
+        clickElement(By.id(btn_REFRESH));
+    }
 
     public boolean verifyIsFinlandSelected(){
         return findElement(By.id(chkbxFINLAND)).isSelected();
@@ -198,7 +195,7 @@ public class BaseRecordPage extends BasePage {
         findElement(By.id(txt_PROBLEM_REVIEW_FIELD)).sendKeys(text);
     }
     public String getProblemReviewFieldText(){
-        return getTextById(txt_PROBLEM_REVIEW_FIELD);
+        return getAttributeValueById(txt_PROBLEM_REVIEW_FIELD);
     }
 
     public void selectStatus_troubleEventPage(String value){
@@ -284,7 +281,7 @@ public class BaseRecordPage extends BasePage {
 
     }
     public String getTicketValue() {
-        return getTextById(txtTICKET_ID);
+        return getAttributeValueById(txtTICKET_ID);
     }
 
     public boolean validateCIColumnsHaveData()
@@ -353,7 +350,7 @@ public class BaseRecordPage extends BasePage {
    }
 
    public String getInformationText_restrictedInformation(){
-        return getTextById(txtINFORMATION_RESTRICTED_INFORMATION_ID);
+        return getAttributeValueById(txtINFORMATION_RESTRICTED_INFORMATION_ID);
    }
 
     public void enterAnalysisTeamMember1(String text){
@@ -365,7 +362,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public String getAssigneeText(){
-        return getTextById(txtASSIGNEE_ID);
+        return getAttributeValueById(txtASSIGNEE_ID);
     }
 
     public void enterDescription_Attachment_OnFrame(String description){
@@ -393,7 +390,7 @@ public class BaseRecordPage extends BasePage {
 
     }
     public String getAnalysisTeamMember1(){
-       return getTextById(txtANALYSIS_TEAM_MEMBER1_ID);
+       return getAttributeValueById(txtANALYSIS_TEAM_MEMBER1_ID);
     }
 
     public void selectAssignee(String value, String alphabet, int keyupTimes){
@@ -690,10 +687,10 @@ public class BaseRecordPage extends BasePage {
         enterTextByElement(By.id(txtSERVICE_AND_CUSTOMER_IMPACT),text);
     }
     public String verifyTicketIsBlank(){
-        return getTextById(txtSEARCH_TICKET_ID);
+        return getAttributeValueById(txtSEARCH_TICKET_ID);
     }
     public String verifyTicketIsNotNull(){
-        return getTextById(txtTICKET_ID);
+        return getAttributeValueById(txtTICKET_ID);
     }
 
     public boolean verifyDropdownValues(String statuses, String dropdownName, String dropdownId)

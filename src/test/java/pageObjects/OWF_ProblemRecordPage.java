@@ -1,13 +1,6 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.ZoneId;
-import java.util.List;
 
 public class OWF_ProblemRecordPage extends BaseRecordPage {
 
@@ -131,7 +124,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
     public String getPriorityText(){
-        return getTextById(txtPRIORITY_ID);
+        return getAttributeValueById(txtPRIORITY_ID);
     }
 
 
@@ -176,7 +169,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
 
     public String getRequestTypeText() {
-        return getTextById(ddREQUEST_TYPE_ID);
+        return getAttributeValueById(ddREQUEST_TYPE_ID);
     }
 
     public void enterDescription(String description) {
@@ -184,7 +177,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
     public String getDescriptionText() {
-        return getTextById(txtDESCRIPTION_ID);
+        return getAttributeValueById(txtDESCRIPTION_ID);
     }
 
     public boolean getDescriptionTextBoxStatus() {

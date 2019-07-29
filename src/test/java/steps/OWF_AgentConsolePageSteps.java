@@ -443,9 +443,47 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.clickOk();
     }
 
-    @Then("user should only see change tickets with {string} of {string}")
+    @Then("user should only see tickets with {string} of {string}")
     public void userShouldOnlySeeChangeTicketsWithStatusOf(String columnName, String columnValue) {
         agentConsolePage.verifyFilteredStatus(columnName, columnValue);
+    }
+    @Then("user validates search bar is visible")
+    public void userValidatesSearchBarIsVisible() {
+        Assert.assertTrue(agentConsolePage.verifySearchIsDisplayed());
+    }
+
+    @Then("user validates tickets are listed in agent console table")
+    public void userValidatesTicketsAreListedInAgentConsoleTable() {
+        Assert.assertTrue(agentConsolePage.validateTicketsAvailabilityInAgentConsoleTable());
+    }
+
+    @When("user clicks on refresh button above ticket numbers")
+    public void userClicksOnRefreshButtonAboveTicketNumbers() {
+        agentConsolePage.clickRefresh_image();
+    }
+    @Then("user should see Alerts ticket value")
+    public void userShouldSeeAlertsTicketValue() {
+        Assert.assertNotNull(agentConsolePage.getAlerts());
+    }
+
+    @And("user should see New ticket value")
+    public void userShouldSeeNewTicketValue() {
+        Assert.assertNotNull(agentConsolePage.getNew());
+    }
+
+    @And("user should see Assigned ticket value")
+    public void userShouldSeeAssignedTicketValue() {
+        Assert.assertNotNull(agentConsolePage.getAssigned());
+    }
+
+    @And("user should see WIP ticket value")
+    public void userShouldSeeWIPTicketValue() {
+        Assert.assertNotNull(agentConsolePage.getWip());
+    }
+
+    @And("user should see Cleared ticket value")
+    public void userShouldSeeClearedTicketValue() {
+        Assert.assertNotNull(agentConsolePage.getCleared());
     }
 }
 

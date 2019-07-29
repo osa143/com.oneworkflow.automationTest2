@@ -44,6 +44,7 @@
       And user clicks on save button
       Then user validates ticket status as "Closed"
       When user switches to window 1
+      And user clicks on ticket refresh button
       Then user validates WO's Status is "Open"
       When user switches to window 3
       And user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"

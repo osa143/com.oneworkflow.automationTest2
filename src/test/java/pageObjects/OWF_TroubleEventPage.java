@@ -1,14 +1,11 @@
 package pageObjects;
 
-import org.joda.time.DateTime;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import utils.CommonUtils;
 import utils.Ticket;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class OWF_TroubleEventPage extends BaseRecordPage {
@@ -43,7 +40,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_EVENT_START_TIME= "arid_WIN_0_703001000";
     private static final String txt_LOCATION_ID_PLUS = "arid_WIN_0_777031006";
     private static final String txt_IMPACT_FROM = "arid_WIN_0_999000298";
-
+    private static final String txt_EVENT_END_TIME_MANDATORY= "label777010106";
 
     private static final String chkbxDO_NOT_AUTOCLOSE = "WIN_0_rc0id600002014";
     private static final String chkbxSELECT_TIKCET = "//input[@class='colcheck']";
@@ -126,13 +123,22 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String rbtn_PUBLIC= "WIN_0_rc0id777021180";
     private static final String txt_ROOT_CAUSE_DESCRIPTION= "arid_WIN_0_777021052";
     private static final String btn_CANCEL= "WIN_0_700000105";
+    private static final String dd_ACTION= "Action";
+    private static final String btn_YES_ON_FRAME_IMPACT_CLEAR= "WIN_5_700027904";
 
-    public void verifyRelatedCiTableColumnsHaveData(){
-        columnHasData(Table_DIAGNOSIS,"CI Name" );
+
+    public String verifyEndTimeIsMandatory(){
+        String mandatoryText= findElement(By.id(txt_EVENT_END_TIME_MANDATORY)).getText();
+        System.out.println(mandatoryText);
+        return mandatoryText;
+    }
+    public void clickOK_ImpactClear(){
+        clickElement(By.id(btn_YES_ON_FRAME_IMPACT_CLEAR));
+        wait(500);
     }
 
     public String getWoStatus(){
-        return getTextById(txtWO_STATUS_ID);
+        return getAttributeValueById(txtWO_STATUS_ID);
     }
 
      public void clickClose_bulkUpdate(){
@@ -181,11 +187,12 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         selectDropDownNameAndValue(dd_ASSIGNMENT_PROFILE, value, false);
     }
     public void selectAction(String value){
-        selectDropDownNameAndValue(ddACTIONS, value, true);
+        selectDropDownNameAndValue(dd_ACTION, value, true);
     }
 
+
     public String getAssignee(){
-        return getTextById(txt_ASSIGNEE);
+        return getAttributeValueById(txt_ASSIGNEE);
     }
 
     public void clickSave_bulkUpdate(){
@@ -194,42 +201,45 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     public void selectImpactName(String value){
         selectDropDownNameAndValue(dd_IMPACT_NAME,value, false);
     }
-     public void clickConfirmCheckBox(){
+    public void clickConfirmCheckBox(){
         findElement(By.id(chkbx_CONFIRM_ID)).click();
+     }
+
+     public void enterEventStartTime(String time){
+        findElement(By.id(txt_EVENT_START_TIME)).clear();
+        enterTextByElement(By.id(txt_EVENT_START_TIME), time);
      }
 
     public String getLocationId()
     {
-       return getTextById(txt_LOCATION_ID_PLUS);
+       return getAttributeValueById(txt_LOCATION_ID_PLUS);
     }
     public String getLocationName()
     {
-        return getTextById(txt_LOCATION_NAME_PLUS_ID);
+        return getAttributeValueById(txt_LOCATION_NAME_PLUS_ID);
     }
     public String getRegionId()
     {
-        return getTextById(txt_LOCATION_REGION_ID);
+        return getAttributeValueById(txt_LOCATION_REGION_ID);
     }
     public String getRegionName()
     {
-        return getTextById(txt_LOCATION_REGION_NAME_ID);
+        return getAttributeValueById(txt_LOCATION_REGION_NAME_ID);
     }
     public String getLatitude()
     {
-        return getTextById(txt_LOCATION_LATITUDE_ID);
+        return getAttributeValueById(txt_LOCATION_LATITUDE_ID);
     }
     public String getLongitude()
     {
-        return getTextById(txt_LOCATION_LONGITUDE_ID);
+        return getAttributeValueById(txt_LOCATION_LONGITUDE_ID);
     }
 
     public void clearEventStartTime(){
         findElement(By.id(txtEVENT_START_TIME)).clear();
     }
 
-    public void enterEventStartTime(String eventStartTime){
-        findElement(By.id(txt_EVENT_START_TIME)).sendKeys(eventStartTime);
-    }
+
     public String[] clickOnRow(String text)
     {
         wait(1000);
@@ -264,7 +274,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         return verifyElementIsDisplayed(By.id(txt_EVENT_START_TIME));
     }
     public String eventStartDateTime(){
-        return getTextById(txt_EVENT_START_TIME);
+        return getAttributeValueById(txt_EVENT_START_TIME);
     }
 
     public boolean verifyIsRootCauseIsPresent(){
@@ -420,7 +430,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
      }
 
     public String getPriorityText(){
-         return getTextById(ddPRIORITY_ID);
+         return getAttributeValueById(ddPRIORITY_ID);
      }
     public void selectImportance(String value){
         findElement(By.id(ddIMPORTANCE_ID)).click();
@@ -453,12 +463,12 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         else return false;
     }
     public String getCust_Remaining_SLA(){
-        String SLA_Target_Time =getTextById(txtCUST_REMAINING_SLA_ID);
+        String SLA_Target_Time = getAttributeValueById(txtCUST_REMAINING_SLA_ID);
         System.out.println(SLA_Target_Time);
         return SLA_Target_Time;
     }
     public String getOLATargetTime(){
-        String SLA_Target_Time =getTextById(txtOLA_TARGET_TIME_ID);
+        String SLA_Target_Time = getAttributeValueById(txtOLA_TARGET_TIME_ID);
         System.out.println(SLA_Target_Time);
         return SLA_Target_Time;
     }
@@ -470,6 +480,9 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
   public void selectStatus(String value){
         selectDropDownNameAndValue(ddSTATUS, value, false);
+  }
+  public String getClosureInfo(){
+        return getAttributeValueById((txtCLOSURE_INFO));
   }
 
     public void selectTicket(){
@@ -500,7 +513,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
 
     public String getOlaTargetTime(){
-        return getTextById(txtOLA_TARGET_TIME_ID);
+        return getAttributeValueById(txtOLA_TARGET_TIME_ID);
     }
 
 
@@ -537,7 +550,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
 
     public String getTroubleTicket() {
-        String troubleTicket= getTextById(txtTICKET_ID);
+        String troubleTicket= getAttributeValueById(txtTICKET_ID);
         System.out.println("Ticket opened is" +troubleTicket);
         return troubleTicket;
     }
@@ -652,7 +665,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
 
     public String getLastAckBy(){
-        return getTextById(txtLAST_ACK_BY_ID);
+        return getAttributeValueById(txtLAST_ACK_BY_ID);
     }
 
     public void enterResponseReason(String response_reason) {
@@ -669,7 +682,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
 
     //this is override method as txtEVENT_START_TIME id is different for trouble and work order page
     public String getEventStartTime(){
-        String eventStartTime=  getTextById(txtEVENT_START_TIME);
+        String eventStartTime=  getAttributeValueById(txtEVENT_START_TIME);
         System.out.println(eventStartTime);
         return eventStartTime;
     }
@@ -690,7 +703,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
 
     }
     public String getSourceText(){
-        return getTextById(txtSOURCE_ID);
+        return getAttributeValueById(txtSOURCE_ID);
 
     }
     public Ticket getTicket()
@@ -707,10 +720,10 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
             break;
 
         }
-        String title = getTextById(txtTITLE_ID);
-        String requestType = getTextById(ddREQUEST_TYPE_ID);
-        String description = getTextById(txtDESCRIPTION_ID);
-        String priority = getTextById(ddPRIORITY_ID);
+        String title = getAttributeValueById(txtTITLE_ID);
+        String requestType = getAttributeValueById(ddREQUEST_TYPE_ID);
+        String description = getAttributeValueById(txtDESCRIPTION_ID);
+        String priority = getAttributeValueById(ddPRIORITY_ID);
 
         Ticket ticket = new Ticket(title, requestType, priority, location, description);
         return ticket;

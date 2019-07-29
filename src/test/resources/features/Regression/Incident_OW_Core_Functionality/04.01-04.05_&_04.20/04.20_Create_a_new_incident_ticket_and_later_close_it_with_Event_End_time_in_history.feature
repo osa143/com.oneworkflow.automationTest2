@@ -1,4 +1,5 @@
 @04.20_Create_a_new_incident_ticket_and_later_close_it_with_Event_End_time_in_history @Incident
+  #passed
   Feature: closure of incident in past
     Scenario: user can create an incident and later close it with event end time in history
 
@@ -19,12 +20,12 @@
       And user selects cause as "N/A:N/A:N/A" on trouble event page
       And user selects action dropdown as "N/A:N/A" on trouble event page
       And user enters closure info as "Test Ticket"
-      #Event end time must be set at least 1 hour in the past
-      And user enters event end time as -60 mins past
+      And user enters event start time as -65 mins past
+      And user enters event end time as -55 mins past
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on trouble event page
       And user clicks on save button
-      Then ticket status should be closed
+      Then user validates ticket status as "Closed"
 
 

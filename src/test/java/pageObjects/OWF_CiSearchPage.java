@@ -14,6 +14,7 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String btnCLEAR = "WIN_0_700009116";
     private static final String btnCI_SEARCH = "WIN_0_700009021";
     private static final String btnLINK_ID = "WIN_4_777506009";
+    private static final String btn_LINK = "WIN_5_777506009";
     private static final String btnACCEPT_ID = "WIN_0_730011058";
     private static final String txtLOCATION_ID = "arid_WIN_0_700009015";
     private static final String btnCREATE_linked_items = "WIN_4_777506020";
@@ -76,7 +77,10 @@ public class OWF_CiSearchPage extends BasePage {
     }
 
     public void clickLink(){
-        driver.findElement(By.id(btnLINK_ID)).click();
+        clickElement(By.id(btnLINK_ID));
+    }
+    public void clickLink_linkedItems(){
+        clickElement(By.id(btn_LINK));
     }
 
     private static final String ddTARGET_APPLICATION_FIRST = "Target Application";

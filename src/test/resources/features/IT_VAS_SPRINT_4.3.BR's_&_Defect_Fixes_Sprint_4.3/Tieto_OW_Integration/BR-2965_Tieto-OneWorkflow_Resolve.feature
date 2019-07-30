@@ -58,3 +58,19 @@
       And user clicks on relate CI
       Then user closes warning message
       And user clicks on close button on CI search window
+      When user clicks on assignment under sections
+      And user selects assigned profile dropdown as "Tieto"
+      Then user clicks on save button
+      #Tieto then sends a timeline update to OW
+      When user enters "Test update" in the timeline text box
+      And user clicks on save button
+      Then change should also be reflected in the timeline as ""
+      When user changes status to "Cleared"
+      And user selects completion code as "Success"
+      Then user clicks on "Schedule" tab
+      And user enters schedule end as current date
+      Then user clicks on save button
+      #Tieto then validates that they receive the resolved message
+      #Tieto will then send the closure message to OW
+      Then user validates ticket status as "Closed"
+

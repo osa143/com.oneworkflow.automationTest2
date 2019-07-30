@@ -59,3 +59,6 @@ Feature: creation and sending of WO to Tieto - Tieto Rejects
     And user clicks on close button on CI search window
     When user clicks on assignment under sections
     And user selects assigned profile dropdown as "Tieto"
+    Then user clicks on save button
+    #Tieto then sends back a reject message
+    Then user validates ticket status as "Cleared"

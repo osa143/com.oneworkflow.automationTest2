@@ -60,3 +60,7 @@ Feature: creation and sending of WO to Tieto - Tieto Resolves
     And user clicks on close button on CI search window
     When user clicks on assignment under sections
     And user selects assigned profile dropdown as "Tieto"
+    Then user clicks on save button
+    When user changes status to "Work In Progress"
+    And user clicks on save button
+    #Teito then validates that they receive the work in progress message

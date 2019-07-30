@@ -60,3 +60,33 @@
       And user clicks on close button on CI search window
       When user clicks on assignment under sections
       And user selects assigned profile dropdown as "Tieto"
+      Then user clicks on save button
+      #Tieto should receive this message
+      When user clears "Title*" value
+      And user enters "TEST TICKET - new title" in Title field
+      Then user clicks on save button
+      #Tieto then validates that they receive new title value
+      When user clears "Description*" value
+      And user enters description as "NEW Info - Tieto test"
+      Then user clicks on save button
+      #Tieto then validates that they receive new description value
+      When user clicks on attachments under sections
+      And user clicks on add button under external
+      And user searches for attachment and adds attachment to ticket
+      And user enters attachment description as "Test Attachment"
+      Then user clicks on save button
+      #Tieto then validates that they receive the attachment
+      When user selects priority as "Minor"
+      And user clicks on save button
+      #Tieto then validates that they receive the new priority value
+      When user changes status to "Cleared"
+      And user selects completion code as "Success"
+      Then user clicks on "Schedule" tab
+      And user enters schedule end as current date
+      Then user clicks on save button
+      #Tieto then validates that they receive the resolved message
+      When user changes status to "Closed"
+      And user clicks on save button
+      Then user validates ticket status as "Closed"
+      #Tieto then validates that they receive the closure message
+

@@ -60,4 +60,11 @@ Feature: creation and sending and withdrawing of WO to Tieto
     And user clicks on close button on CI search window
     When user clicks on assignment under sections
     And user selects assigned profile dropdown as "Tieto"
+    And user enters "Test Update" in the timeline text box
+    Then user clicks on save button
+    When user clicks on assignment under sections
+    And user selects assigned profile dropdown as "One Workflow"
+    Then user clicks on save button
+    #Tieto then validates that they receive cancellation message
+    And user validates ticket status as "Withdrawn"
 

@@ -60,3 +60,18 @@ Feature: creation and sending of WO to Tieto - Tieto Pending
     And user clicks on close button on CI search window
     When user clicks on assignment under sections
     And user selects assigned profile dropdown as "Tieto"
+    Then user clicks on save button
+    #Tieto should then receive the ticket and send to us a pending message
+    Then user validates ticket status as "Pending"
+    #Tieto will then send to us the work in progress message
+    Then user validates ticket status as "Work in Progress"
+    When user changes status to "Cleared"
+    And user selects completion code as "Success"
+    Then user clicks on "Schedule" tab
+    And user enters schedule end as current date
+    Then user clicks on save button
+    #Tieto then validates that they receive the resolved message
+    When user changes status to "Closed"
+    And user clicks on save button
+    Then user validates ticket status as "Closed"
+    #Tieto then validates that they receive the closure message

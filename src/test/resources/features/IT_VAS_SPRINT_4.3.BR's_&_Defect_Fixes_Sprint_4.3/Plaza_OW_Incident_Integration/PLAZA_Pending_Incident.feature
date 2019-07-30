@@ -11,7 +11,7 @@ Feature: Plaza creation of incident ticket - pending status
     Then user should see blank trouble search form
     When user enters ticket id as ""
     Then user should see plaza incident ticket
-      #will need to get the information plaza is sending to validate if its correct
+    #will need to get the information plaza is sending to validate if its correct
     And user validates ticket information
     When user changes status to "Pending"
     And user enters on hold to date 5 minutes in the future

@@ -259,6 +259,7 @@ public class BasePage {
             final String temp = arr[i];
 
             List<WebElement> elements = driver.findElements(By.className("MenuTableBody"));
+            System.out.println("Number of MenuTableBody's : "+elements.size());
             if (elements.size() > 0) {
 
                 elements.get(i).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
@@ -585,6 +586,38 @@ public class BasePage {
                     System.out.println("Table cell value is not as expected:" + td.getText().trim());
                     return false;
                 }
+            }
+        }
+
+        return true;
+    }
+
+    //columnValue should be separated by :
+    public boolean verifyColumnValuesMultiple(By table, String columnName, String columnValue, boolean partialText)
+    {
+        int colNum = getColumnIndexByHeaderName(table, columnName);
+        List<WebElement> tableRows = getTableRows(table);
+        System.out.println("Number of rows are: "+ tableRows.size());
+
+        if(tableRows.size() > 0){
+            for (int i = 1; i < tableRows.size(); i++) {
+                WebElement td = tableRows.get(i).findElements(By.tagName("td")).get(colNum);
+                System.out.println("Table cell value is: "+ td.getText().trim());
+                if(partialText)
+                {
+                    if(!td.getText().trim().contains(columnValue))
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    if(!columnValue.contains(td.getText().trim()))
+                    {
+                        return false;
+                    }
+                }
+
             }
         }
 

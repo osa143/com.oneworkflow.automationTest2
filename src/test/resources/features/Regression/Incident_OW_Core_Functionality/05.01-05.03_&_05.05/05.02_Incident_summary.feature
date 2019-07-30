@@ -1,5 +1,5 @@
 @05.02_Incident_summary @Incident
-
+#passed
 Feature: user enters closure info
   Scenario: user enters closure information
 
@@ -36,7 +36,7 @@ Feature: user enters closure info
     And user should see confirmation message for impact clear and clicks ok
     And user clicks on save button
     Then user validates ticket status as "Cleared"
-    When user changes status to "Closed" on trouble event page
+    When user changes status to "Closed" on trouble event page second time
     And user clicks on save button
     Then user validates ticket status as "Closed"
     And user validates closure info is present

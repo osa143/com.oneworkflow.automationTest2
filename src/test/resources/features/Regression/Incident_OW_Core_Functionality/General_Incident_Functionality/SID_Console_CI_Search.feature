@@ -13,7 +13,7 @@
       And user clicks on search
       Then user validates CI's for all countries appear
       When user enters "SE_S" in the name+ field
-      # CI name starts with SE
+      # CI name starts with SE for swedish
       Then user validates only Swedish CI's appear
 
 

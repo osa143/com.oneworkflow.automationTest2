@@ -70,6 +70,10 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String fld_WIP= "WIN_2_999000110";
     private static final String fld_CLEARED= "WIN_2_999000112";
 
+    public boolean verifyTicketsAssignedToCurrentUserProfile(String colName, String colValue, boolean partialText){
+        return verifyColumnValuesMultiple(By.id(table_ID), colName, colValue, partialText );
+
+    }
 
    public String getAlerts(){
        String alerts= getTextByID(fld_ALERTS);
@@ -78,18 +82,25 @@ public class OWF_AgentConsolePage extends BasePage {
 
    }
     public String getNew(){
-        String ticketsNew= getTextByID(fld_ALERTS);
+        String ticketsNew= getTextByID(fld_NEW);
         System.out.println("Number of New Tickets are: " + ticketsNew);
-        return ticketsNew ;
+        return ticketsNew;
     }
-    public String getAssigned(){
-        return getTextByID(fld_ASSIGNED);
+    public String getAssigned()
+    {
+        String ticketsAssigned = getTextByID(fld_ASSIGNED);
+        System.out.println("Number of Assigned Tickets are: " + ticketsAssigned);
+        return ticketsAssigned;
     }
     public String getWip(){
-        return getTextByID(fld_WIP);
+        String ticketsWip = getTextByID(fld_WIP);
+        System.out.println("Number of WIP Tickets are: " + ticketsWip);
+        return ticketsWip;
     }
     public String getCleared(){
-        return getTextByID(fld_CLEARED);
+        String ticketsCleared = getTextByID(fld_CLEARED);
+        System.out.println("Number of cleared Tickets are: " + ticketsCleared);
+        return ticketsCleared;
     }
     public void clickOk(){
         wait(500);
@@ -139,7 +150,9 @@ public class OWF_AgentConsolePage extends BasePage {
    }
 
     public void selectAllTickets(String value){
+        wait(500);
         selectDropDownNameAndValue(dd_ALL_TICKETS, value, false);
+        wait(1000);
     }
 
     public void clickYesonSecondaryPrimaryWarningFrame()
@@ -327,6 +340,7 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void clickRefresh_image() {
         clickElement(By.id(btnREFRESH_IMAGE));
+        wait(2000);
     }
 
     public void clickHideFunctions() {

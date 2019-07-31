@@ -209,6 +209,7 @@ public class BasePage {
     }
 
     public void selectDropDownValue(String DropDownValue) {
+        wait(500);
         driver.findElement(By.className("MenuTableBody")).findElements(By.tagName("td")).stream()
                 .filter(element -> element.getText().trim().equals(DropDownValue)).findFirst().orElse(null).click();
 
@@ -367,7 +368,18 @@ public class BasePage {
         }
         return false;
     }
-
+    public boolean checkIfControlIsReadonlyByElement(By element) {
+        String isReadOnly = findElement(element).getAttribute("readonly");
+        if (isReadOnly != null && isReadOnly.contains("true")) {
+            return true;
+        }
+        return false;
+    }
+    public boolean verifyElementIsReadyOnlyByContainsText(String textName) {
+        String element = String.format("//label[contains(text(),'%s')]/text area", textName);
+        System.out.println(element);
+        return checkIfControlIsReadonlyByElement(By.xpath(element));
+    }
 
     public static int getColumnIndexByHeaderName(By table, String headerName) {
         int columnInfo = -1;
@@ -699,6 +711,11 @@ public class BasePage {
   }
     public void acceptAlert() {
         driver.switchTo().alert().accept();
+    }
+
+    public void closeTab(){
+        driver.close();
+        wait(2000);
     }
 
 

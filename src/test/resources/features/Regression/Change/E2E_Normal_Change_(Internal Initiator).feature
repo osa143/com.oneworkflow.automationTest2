@@ -7,7 +7,7 @@
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create change record
       Then user switches to window 1
-      When user clicks on save button on the problem form
+      When user clicks on save button
       Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)"
       And user switches to frame
       Then user closes warning by pressing OK button

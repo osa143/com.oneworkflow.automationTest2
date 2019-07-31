@@ -547,6 +547,10 @@ public class OWF_TroubleEventPageSteps {
     public void userEntersWithinTheLocationIDField(String arg0) {
         troubleEventPage.enterLocationIdPlus(arg0);
     }
+    @And("user enters {string} within the location ID+")
+    public void userEntersWithinTheLocationID(String arg0) {
+        troubleEventPage.enterLocationId_Plus(arg0);
+    }
 
     @Then("user should see list of swedish sites")
     public void userShouldSeeListOfSwedishSites() {
@@ -855,6 +859,22 @@ public class OWF_TroubleEventPageSteps {
     public void userChangesStatusToOnTroubleEventPageSecondTime(String arg0) {
         troubleEventPage.selectStatus_secondTime(arg0);
 
+    }
+
+    @And("user validates {string} is readonly")
+    public void userValidatesIsReadonly(String arg0) {
+     Assert.assertTrue(troubleEventPage.verifyElementIsReadyOnlyByContainsText(arg0));
+    }
+
+    @And("user selects site {string}")
+    public void userSelectsSite(String arg0) {
+        troubleEventPage.clickLocationName_selectLocation(arg0);
+    }
+
+    @And("user should see {string} {string} tickets")
+    public void userShouldSeeTickets(String arg0, String arg1) {
+       Assert.assertTrue(troubleEventPage.verifyClosedTickets("Status", arg0));
+       Assert.assertTrue(troubleEventPage.verifyTicketsCountry("Location ID+", arg1));
     }
 }
 

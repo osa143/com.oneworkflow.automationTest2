@@ -14,7 +14,7 @@ Feature: Incident
     #ST ENV
     #And user enters ticket id as "OP-000000044545"
     #SIT ENV
-    #And user enters ticket id as "OP-000000538992"
+    And user enters ticket id as "OP-000000538992"
     Then ticket with SLA should be opened
     And user validates Cust. Remaining SLA or SLA Target Time availability
     Then customer SLA field must be greyed out and not possible for user to alter

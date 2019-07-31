@@ -106,6 +106,7 @@ public class BaseRecordPage extends BasePage {
     public static final String btn_REFRESH= "WIN_0_600003444";
 
     public static final String btnATTACHMENTS = "WIN_0_999000623";
+    public static final String btn_ATTACHMENTS = "WIN_0_999000368";
     public static final String txtTICKET_ID = "arid_WIN_0_730000060";
     public static final String txtSEARCH_TICKET_ID = "arid_WIN_0_777777600";
     public static final String ddSUMMARY = "Summary*";
@@ -125,6 +126,11 @@ public class BaseRecordPage extends BasePage {
     public static final String txt_PROBLEM_REVIEW_FIELD= "arid_WIN_0_600001011";
     private static final String ddSTATUS_TROUBLE_EVENT_PAGE = "Status";
     private static final String txtTICKET_ID_PLUS_ID= "arid_WIN_0_777777600";
+    private static final String btn_SEARCH= "WIN_0_1002";
+
+    public void clickSearch(){
+        clickElement(By.id(btn_SEARCH));
+    }
 
     public void enterTicketIdPlus(String ticketId){
         enterTextByElement(By.id(txtTICKET_ID_PLUS_ID),ticketId);
@@ -384,6 +390,9 @@ public class BaseRecordPage extends BasePage {
 
     public void clickAttachments(){
         clickElement(By.id(btnATTACHMENTS));
+    }
+    public void clickOnAttachments(){
+        clickElement(By.id(btn_ATTACHMENTS));
     }
     public void selectSummaryDropDownAs(String value){
     selectDropDownNameAndValue(ddSUMMARY, value, false);

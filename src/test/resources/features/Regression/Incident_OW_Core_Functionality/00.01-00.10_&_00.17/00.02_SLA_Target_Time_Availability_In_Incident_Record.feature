@@ -11,7 +11,10 @@ Feature: Incident
     And multiple menu options "Console:Create:Search:Administration" should be available
     When user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 1
-    And user enters ticket id as "OP-000000044545"
+    #ST ENV
+    #And user enters ticket id as "OP-000000044545"
+    #SIT ENV
+    #And user enters ticket id as "OP-000000538992"
     Then ticket with SLA should be opened
     And user validates Cust. Remaining SLA or SLA Target Time availability
     Then customer SLA field must be greyed out and not possible for user to alter

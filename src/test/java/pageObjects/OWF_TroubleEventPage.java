@@ -125,6 +125,22 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btn_CANCEL= "WIN_0_700000105";
     private static final String dd_ACTION= "Action";
     private static final String btn_YES_ON_FRAME_IMPACT_CLEAR= "WIN_5_700027904";
+    private static final String table_MAIN_PAGE= "T1020";
+
+    public boolean verifyClosedTickets(String colName, String colValue){
+        return verifyColumnValues(By.id(table_MAIN_PAGE), colName, colValue);
+    }
+    public boolean verifyTicketsCountry(String colName, String colValue){
+        return verifyColumnValuesMultiple(By.id(table_MAIN_PAGE), colName, colValue, true);
+    }
+
+    public void clickLocationName_selectLocation(String text){
+        ClickTableElementByText(By.id(table_SELECT_LOCATION), "Name", text,false);
+    }
+
+    public boolean verifyElementIsReadOnly(){
+        return checkIfControlIsReadonlyByElement(By.tagName("textarea"));
+    }
 
     public void selectStatus_secondTime(String value){
         selectDropDownNameAndValueForMultipleMenuTableBodys(ddSTATUS, value, false, 2);
@@ -271,6 +287,10 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     public void enterLocationIdPlus(String text){
         findElement(By.id(txt_LOCATION_ID_PLUS)).sendKeys(text);
         findElement(By.id(txt_LOCATION_ID_PLUS)).sendKeys(Keys.ENTER);
+    }
+    public void enterLocationId_Plus(String text){
+        findElement(By.id(txt_LOCATION_ID_PLUS)).sendKeys(text);
+
     }
     public boolean verifyEventStartTimeIsAvailable(){
         return verifyElementIsDisplayed(By.id(txt_EVENT_START_TIME));

@@ -528,6 +528,10 @@ public class OWF_ProblemRecordPageSteps {
     public void userWaitsForMinutes(int arg0) {
         problemRecordPage.wait(240000);
     }
+    @Then("user waits for two minutes")
+    public void userWaitsForTwoMinutes(int arg0) {
+        problemRecordPage.wait(120000);
+    }
 
     @And("user enters request start date as {string} one day in the future")
     public void userEntersRequestStartDateAsOneDayInTheFuture(String arg0) {
@@ -812,5 +816,9 @@ public class OWF_ProblemRecordPageSteps {
             Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
         }
 
+    @And("user clicks attachments under sections")
+    public void userClicksAttachmentsUnderSections() {
+        problemRecordPage.clickOnAttachments();
     }
+}
 

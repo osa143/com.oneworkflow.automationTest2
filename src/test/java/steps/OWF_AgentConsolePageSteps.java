@@ -497,6 +497,11 @@ public class OWF_AgentConsolePageSteps {
     public void userShouldOnlySeeTickets(String colValue) {
         Assert.assertTrue(agentConsolePage.verifyTicketsAssignedToCurrentUserProfile("ID", colValue, true));
     }
+
+    @Then("user closes current tab")
+    public void userClosesCurrentTab() {
+        agentConsolePage.closeTab();
+    }
 }
 
 

@@ -3,7 +3,7 @@
     Scenario: user verifies available information
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
+      When user logs in with valid username "syvaptu1_auto" and password as "Telia@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create problem record
       And user switches to window 1
@@ -59,5 +59,4 @@
       And user enters RC found date as current date
       Then user clicks on save button on the problem form
       When user changes status to "Closed"
-      #closure codes should be: No solution identified, not repeatable, rejected, risk accepted, solved, workaround
-      Then multiple statuses "No solution identified:Not repeatable:Rejected:Risk accepted:Solved:Workaround" should be available in "Closure code" dropdown
+      Then multiple statuses "No solution identified:Not repeatable:Rejected:Risk accepted:Solved:Workaround:(clear)" should be available in "Closure code" dropdown

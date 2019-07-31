@@ -33,8 +33,8 @@
       And user clicks on On Hold under sections
       And user clicks on vendor under sections
       And user clicks on root cause under sections
-      And user clicks on attachments under sections
-      Then user validates "Ack" is readonly
+      And user clicks attachments under sections
+      #Then user tries to Ack the ticket but its shouldn't allow
       And user validates "Status*" is readonly
       And user validates "Source*" is readonly
       And user validates "Service Provider*" is readonly

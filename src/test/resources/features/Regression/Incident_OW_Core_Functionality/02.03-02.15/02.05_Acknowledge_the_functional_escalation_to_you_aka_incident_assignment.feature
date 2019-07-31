@@ -4,7 +4,7 @@
     Scenario: user acknowledges ticket that's been assigned to them
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+      When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create trouble event
       And user switches to window 1
@@ -23,6 +23,7 @@
       #assignee needs to be the same as the user who last ack'd ticket (in this case will be ticket creator)
       Then user selects assignee as "Change_Automation_1" by using alphabet "C" key up 0 times
       And user clicks on save button
+      When user clicks on assignment under sections
       Then user validates assignee is "Change_Automation_1"
 
 

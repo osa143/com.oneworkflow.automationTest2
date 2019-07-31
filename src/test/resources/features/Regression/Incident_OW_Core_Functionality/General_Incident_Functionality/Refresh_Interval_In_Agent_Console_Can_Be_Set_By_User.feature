@@ -1,4 +1,4 @@
-@Refresh_Interval_In_Agent_Console_Can_Be_Set_By_User @Incident
+@Refresh_Interval_In_Agent_Console_Can_Be_Set_By_User #@Incident
   Feature: setting of refresh interval
     Scenario: user can set the refresh interval
 

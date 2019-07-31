@@ -598,7 +598,7 @@ public class BasePage {
         int colNum = getColumnIndexByHeaderName(table, columnName);
         List<WebElement> tableRows = getTableRows(table);
         System.out.println("Number of rows are: "+ tableRows.size());
-
+         wait(1000);
         if(tableRows.size() > 0){
             for (int i = 1; i < tableRows.size(); i++) {
                 WebElement td = tableRows.get(i).findElements(By.tagName("td")).get(colNum);

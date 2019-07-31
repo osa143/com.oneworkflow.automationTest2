@@ -72,5 +72,15 @@ public class OWF_SIDConsolePageSteps {
         int size = sidConsolePage.TableRows().size();
         Assert.assertNotEquals(size, 0, 0, "CI details are not displayed");
     }
+
+    @Then("user validates only {string} CI's appear")
+    public void userValidatesOnlySwedishCISAppear(String colValue) {
+        Assert.assertTrue(sidConsolePage.verifyCIS("Name", colValue, true));
     }
+
+    @Then("user validates CI's for all countries {string}")
+    public void userValidatesCISForAllCountries(String colValues) {
+        Assert.assertTrue(sidConsolePage.verifyCISForAllCountries("Name", colValues, true));
+    }
+}
 

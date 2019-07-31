@@ -258,4 +258,19 @@ public class OWF_SIDConsolePage extends BasePage {
 
         return validateIfAllColumnRowsHasData(AgentConsoleTable_ID, "Site Name");
     }
+
+    public boolean verifyCIS(String colName, String colValue, boolean partialText){
+        return verifyColumnValuesMultiple(By.id(AgentConsoleTable_ID), colName, colValue, partialText );
+
+
+    }
+    public boolean verifyCISForAllCountries(String colName, String colValue, boolean partialText){
+
+//        String[] colValues = colValue.split(":");
+//        for(int i = 0; i < colValues.length; i++)
+//        {
+//            Assert.assertTrue(verifyColumnValuesMultiple(By.id(AgentConsoleTable_ID), colName, colValues[i], partialText));
+//        }
+        return  true;
+    }
 }

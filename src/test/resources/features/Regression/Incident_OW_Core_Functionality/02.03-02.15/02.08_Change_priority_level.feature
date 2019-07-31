@@ -4,7 +4,7 @@
     Scenario: user verifies priority calculation
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+      When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create trouble event
       And user switches to window 1
@@ -20,7 +20,7 @@
       And user clicks on priority check button
       And user clicks on save button
       Then user validates that priority changes to "Emergency"
-      And change should also be reflected in the timeline as "The Ticket Priority has been updated to :  Emergency"
+      And change should also be reflected in the timeline as "The Ticket Priority has been updated to :  Emergency" on row 2
 
 
 

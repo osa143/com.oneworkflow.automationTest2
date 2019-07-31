@@ -804,4 +804,13 @@ public class OWF_ProblemRecordPageSteps {
     public void userEntersTicketInTicketIDField() {
         problemRecordPage.enterTicketIdPlus(ticket);
     }
-}
+
+    @And("change should also be reflected in the timeline as {string} on row {int}")
+    public void changeShouldAlsoBeReflectedInTheTimelineAsOnRow(String message, int row) {
+            problemRecordPage.clickTimelineButton();
+            boolean containsMessage = problemRecordPage.getTimelineStatus(row).contains(message);
+            Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
+        }
+
+    }
+

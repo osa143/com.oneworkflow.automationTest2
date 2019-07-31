@@ -33,6 +33,7 @@ public class OWF_WorkOrderPage extends BasePage {
 
 
     public void enterEstimatedReady(String estimated_ready) {
+        wait(1000);
         driver.findElement(By.id(txtESTIMATED_READY)).sendKeys(estimated_ready);
     }
 

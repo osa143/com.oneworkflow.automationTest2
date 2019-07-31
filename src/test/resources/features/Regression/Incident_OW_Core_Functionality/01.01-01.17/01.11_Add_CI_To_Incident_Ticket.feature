@@ -1,10 +1,12 @@
 @01.11_Add_CI_To_Incident_Ticket @Incident
 #passed
+  #CORE for ST, Core for SIT
+   #Mobile PS Core Network
 Feature: Adding of CI to incident ticket
   Scenario: user is able to add CI's to incident ticket
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+    When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create trouble event
     And user switches to window 1
@@ -18,7 +20,7 @@ Feature: Adding of CI to incident ticket
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user switches to frame
-    And user selects Category as "CORE"
+    And user selects Category as "Core"
     And user selects Type as "Mobile PS Core Network"
     And user selects Item as "EPG"
     #Then user should see at least 2 nodes per country

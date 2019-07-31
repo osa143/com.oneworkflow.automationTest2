@@ -1,11 +1,12 @@
 @01.03_Set_correct_categorization @Incident
 #passed
+# CORE for ST, Core for SIT
 Feature: Setting of correct categorization
 
   Scenario: user can set correct categorization
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+    When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create trouble event
     And user switches to window 1
@@ -13,7 +14,7 @@ Feature: Setting of correct categorization
     When user clicks on CTI details under sections
     And user validates availability of category dropdown
     Then multiple statuses "1:Access:Access|Transport:BSS:Computer Services:CORE:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:OSS:Packet_Transport:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:TV:VAS" should be available in "Category" dropdown
-    And user selects Category as "CORE"
+    And user selects Category as "Core"
     Then user validates availability of type dropdown
     And multiple statuses "Fixed_IMS:IP:MESSAGING:Mobile CS Core Network:Mobile IMS Core NetworkMobile PS Core Network:Mobile_CS:Mobile_PS:NFVI:Other:Performance:Planning:Presentation:Software:Sync:WLAN:Workflow" should be available in "Type" dropdown
     Then user selects Type as "Mobile PS Core Network"

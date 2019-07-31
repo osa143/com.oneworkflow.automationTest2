@@ -1,4 +1,4 @@
-@Search_for_closed_incidents_for_a_specific_Location @Incident
+@Search_for_closed_incidents_for_a_specific_Location #@Incident
   Feature: closed incident location search
     Scenario: user can search for all countries closed incident tickets
 

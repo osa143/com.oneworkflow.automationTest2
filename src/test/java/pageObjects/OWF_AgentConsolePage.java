@@ -21,6 +21,7 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String menuitemKNOWN_ERROR = "Known Error";
     private static final String menuItemLOGOUT = "Logout";
     private static final String txtSEARCH = "arid_WIN_3_730000011";
+    private static final String txt_SEARCH= "arid_WIN_2_730000011";
     private static final String btnSEARCH = "WIN_0_700010480";
     private static final String btnCLEAR = "WIN_0_777501009";
     private static final String btnREFRESH_IMAGE = "WIN_0_8000903";
@@ -64,14 +65,15 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String btn_ADD_USER_MORE_FILTERS = "WIN_0_600002905";
     private static final String txt_REFRESH_INTERVAL = "interval";
     private static final String btn_OK_REFRESH_INTERVAL= "//*[@id='PopupSearchesFooter']/a[1]";
-    private static final String fld_ALERTS= "WIN_2_999000104";
-    private static final String fld_NEW= "WIN_2_999000106";
-    private static final String fld_ASSIGNED= "WIN_2_999000108";
-    private static final String fld_WIP= "WIN_2_999000110";
-    private static final String fld_CLEARED= "WIN_2_999000112";
+    private static final String fld_ALERTS= "WIN_3_999000104";
+    private static final String fld_NEW= "WIN_3_999000106";
+    private static final String fld_ASSIGNED= "WIN_3_999000108";
+    private static final String fld_WIP= "WIN_3_999000110";
+    private static final String fld_CLEARED= "WIN_3_999000112";
 
     public boolean verifyTicketsAssignedToCurrentUserProfile(String colName, String colValue, boolean partialText){
         return verifyColumnValuesMultiple(By.id(table_ID), colName, colValue, partialText );
+
 
     }
 
@@ -112,7 +114,7 @@ public class OWF_AgentConsolePage extends BasePage {
         enterTextByElement((By.id(txt_REFRESH_INTERVAL)), time);
     }
     public boolean verifySearchIsDisplayed(){
-        return verifyElementIsDisplayed(By.id(txtSEARCH));
+        return verifyElementIsDisplayed(By.id(txt_SEARCH));
     }
     public void selectAll(String value){
         selectDropDownNameAndValue(dd_ALL, value, false);
@@ -152,7 +154,7 @@ public class OWF_AgentConsolePage extends BasePage {
     public void selectAllTickets(String value){
         wait(500);
         selectDropDownNameAndValue(dd_ALL_TICKETS, value, false);
-        wait(1000);
+        wait(5000);
     }
 
     public void clickYesonSecondaryPrimaryWarningFrame()

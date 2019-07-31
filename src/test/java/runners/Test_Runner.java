@@ -6,7 +6,7 @@ import runners.BaseTest;
 
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
-        tags = {"@WO's_Status"}
+        tags = {"@OLA_Target_Time_Availability"}
 )
 
 public class Test_Runner extends BaseTest {

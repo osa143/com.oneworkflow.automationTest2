@@ -1,4 +1,4 @@
-@01.09_Add_attachments_to_field_named_Internal_attachments @Incident
+@01.09_Add_attachments_to_field_named_Internal_attachments #@Incident
 #Add Attachment can't do at the movement
   Feature: Adding of Attachments to incident ticket
     Scenario: user is able to add an attachment to incident ticket

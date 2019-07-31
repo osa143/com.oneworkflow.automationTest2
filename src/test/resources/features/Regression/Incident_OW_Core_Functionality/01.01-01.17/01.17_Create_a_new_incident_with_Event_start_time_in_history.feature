@@ -4,7 +4,7 @@ Feature: Creation of incident with event start time in the past
   Scenario: user is able create a ticket with event start time in past
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+    When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create trouble event
     And user switches to window 1

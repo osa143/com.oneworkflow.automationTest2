@@ -280,7 +280,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
 
     public boolean verifyIsRootCauseIsPresent(){
-        return findElement(By.xpath(fld_ROOT_CAUSE)).isDisplayed();
+        return findElement(By.id(fld_ROOT_CAUSE)).isDisplayed();
     }
 
     public boolean verifyIsCauseIsPresent(){
@@ -316,6 +316,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         return findElement(By.xpath(btn_REFRESH_EXTERNAL)).isDisplayed();
     }
     public void clickRootCause(){
+        wait(500);
         findElement(By.id(btn_ROOT_CAUSE_UNDER_SECTIONS)).click();
     }
 

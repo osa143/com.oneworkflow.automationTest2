@@ -4,7 +4,7 @@ Feature: data searching using wildcards
   Scenario: user is able to search for data using wildcards
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+    When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 1
@@ -85,5 +85,6 @@ Feature: data searching using wildcards
     And user enters "LT_Site_%" in location field
     And user clicks on search button on CI search window
     Then user validates CI availability
-    And user closes warning message and clicks on close button
+    And user closes warning message
+    And user clicks on close button on CI search window
 

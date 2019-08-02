@@ -145,5 +145,10 @@ public class OWF_WorkOrderPageSteps {
     public void userEntersTitle() {
 
     }
+
+    @Then("user should see blank work order form")
+    public void userShouldSeeBlankWorkOrderForm() {
+
+    }
 }
 

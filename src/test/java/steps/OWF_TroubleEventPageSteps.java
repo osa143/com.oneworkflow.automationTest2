@@ -863,7 +863,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user validates all text area fields are readonly")
     public void userValidatesAllFieldsAreReadOnly() {
-     Assert.assertTrue(troubleEventPage.verifyElementsAreReadOnly());
+     Assert.assertTrue(troubleEventPage.verifyElementsAreReadOnly("textarea"));
     }
 
     @And("user selects site {string}")
@@ -881,6 +881,21 @@ public class OWF_TroubleEventPageSteps {
     public void errorMessageShouldDisplayAsOnChangeRecordPage(String arg0) {
         Assert.assertEquals(troubleEventPage.getErrorText_change_recordPage(), arg0);
 
+    }
+
+    @And("user validates Affected BU's area is read only")
+    public void userValidatesAffectedBUSAreaIsReadOnly() {
+        Assert.assertTrue(troubleEventPage.verifyElementsAreReadOnly("input"));
+    }
+
+    @And("user validates {string} is disabled")
+    public void userValidatesIsDisabled(String text) {
+        Assert.assertFalse(troubleEventPage.verifyElementIsEnabledByContainsTextAndTagName("div", text));
+    }
+
+    @And("user validates add is disabled")
+    public void userValidatesAddIsDisabled() {
+        Assert.assertFalse(troubleEventPage.verifyElementIsDisabled());
     }
 }
 

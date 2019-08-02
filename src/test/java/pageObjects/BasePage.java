@@ -76,6 +76,12 @@ public class BasePage {
          findElement(By.xpath(element)).click();
 
     }
+    public boolean verifyElementIsEnabledByContainsTextAndTagName(String tagName, String textName){
+        String element = String.format("//%s[contains(text(),'%s')]", tagName, textName);
+        System.out.println(element);
+        return findElement(By.xpath(element)).isEnabled();
+
+    }
 
     public boolean verifyIsElementSelected(By element){
         return findElement(element).isSelected();
@@ -761,7 +767,23 @@ public class BasePage {
         driver.close();
         wait(2000);
     }
+    public boolean verifyElementsAreReadOnlyByDivAndTagName(By element, By locator)
+    {
+        List<WebElement> elements = driver.findElement(element).findElements(locator);
 
+        for (int i = 0; i < elements.size(); i++)
+        {
+            String isReadOnly = elements.get(i).getAttribute("readonly");
+            if (isReadOnly != null && isReadOnly.contains("true")) {
+                continue;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 
 }
 

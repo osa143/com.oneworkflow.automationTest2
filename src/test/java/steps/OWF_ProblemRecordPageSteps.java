@@ -388,8 +388,8 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("user should see change record ticket")
     public void userShouldSeeChangeRecordTicket() {
-
         Assert.assertNotNull(problemRecordPage.verifyTicketIsNotNull());
+        problemRecordPage.wait(1000);
 
     }
 
@@ -529,7 +529,7 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.wait(240000);
     }
     @Then("user waits for two minutes")
-    public void userWaitsForTwoMinutes(int arg0) {
+    public void userWaitsForTwoMinutes() {
         problemRecordPage.wait(120000);
     }
 

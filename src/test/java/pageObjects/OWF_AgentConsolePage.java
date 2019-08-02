@@ -70,11 +70,49 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String fld_ASSIGNED= "WIN_3_999000108";
     private static final String fld_WIP= "WIN_3_999000110";
     private static final String fld_CLEARED= "WIN_3_999000112";
+    private static final String btn_QUICK_SEARCH= "WIN_0_999000675";
+    private static  final String txt_LOCATION_ID_PLUS= "arid_WIN_0_777031006";
+    private static final String table_SELECT_LOCATION= "T700024013";
+    private static final String btn_CANCEL_SELECT_LOCATION= "WIN_0_700000105";
+    private static final String btn_CLEAR_SELECT_LOCATION= "WIN_0_700010521";
+    private static final String txt_LOCATION_NAME_PLUS= "arid_WIN_0_777031430";
+
+    public void enterLocationNamePlus_selectLocation(String text){
+        enterTextByElement(By.id(txt_LOCATION_NAME_PLUS), text);
+    }
+    public void enterSendKeysToLocationNamePlus(){
+        enterSendKeys(By.id(txt_LOCATION_NAME_PLUS));
+    }
+
+    public void clickClear_selectLoaction(){
+        clickElement(By.id(btn_CLEAR_SELECT_LOCATION));
+    }
+
+    public void clickCancel_selectLocation(){
+        clickElement(By.id(btn_CANCEL_SELECT_LOCATION));
+    }
+
+   public boolean verifyLocation(String colName, String colValue, boolean partialText){
+       return verifyColumnValuesMultiple(By.id(table_SELECT_LOCATION), colName, colValue, partialText );
+
+   }
+    public void enterLocationPlus(String text){
+        enterTextByElement(By.id(txt_LOCATION_ID_PLUS), text);
+    }
+
+
+
+    public void clickQuickSearch(){
+        clickElement(By.id(btn_QUICK_SEARCH));
+        wait(3000);
+    }
 
     public boolean verifyTicketsAssignedToCurrentUserProfile(String colName, String colValue, boolean partialText){
         return verifyColumnValuesMultiple(By.id(table_ID), colName, colValue, partialText );
 
-
+    }
+    public String getAgentConsoleTableCellData(String columnName, int rowNum){
+        return getTableCellData(By.id(table_ID), columnName, rowNum);
     }
 
    public String getAlerts(){
@@ -110,7 +148,6 @@ public class OWF_AgentConsolePage extends BasePage {
     }
 
     public void enterRefreshInterval(String time){
-
         enterTextByElement((By.id(txt_REFRESH_INTERVAL)), time);
     }
     public boolean verifySearchIsDisplayed(){

@@ -1,5 +1,4 @@
 @SAO_181
-  #Test case is not finding the column so is throwing exception
   #OP next due date Column doesn't have any data. that is why its failing.
 Feature: Verification of OP target due date visibility
 

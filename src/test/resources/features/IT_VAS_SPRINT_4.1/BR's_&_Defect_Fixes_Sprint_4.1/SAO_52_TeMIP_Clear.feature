@@ -27,18 +27,18 @@ Feature: Closing of incident ticket that has linked WO
     And user validates child WorkOrder availability
     And user validates WorkOrder status as "OPEN"
     When user switches to window 2
-    And user clicks on apply B2B button
+    And user clicks on apply BtwoB button
     Then user should see assigned profile as "B2B"
     And user should see B2B dispatch tab
     Then user clicks on Diagnosis tab
     And CI should be listed and displayed under the Diagnosis tab
     Then user selects SLA class as "118hv"
     And user validates estimated ready time is updated
-    When user clicks on B2B dispatch tab
+    When user clicks on BtwoB dispatch tab
     And user enters header value as "Test"
     And user enters message value as "Automated Test"
     And user clicks on save button on the problem form
-    When user clicks on B2B dispatch tab
+    When user clicks on BtwoB dispatch tab
     Then user should see assigned update within B2B outbound events
     When user clicks on inbound events refresh button
     Then user should see inbound acknowledgment event
@@ -58,7 +58,7 @@ Feature: Closing of incident ticket that has linked WO
     When user highlights all shown alarms
     And user clicks on terminate
     And user clicks refresh button on alarm tab
-    And user validates alarm status is cleared
+    And user validates alarm status is "Cleared"
     Then user changes status to "Cleared"
     And user clicks on save button on the problem form
     Then user changes status to "Closed"

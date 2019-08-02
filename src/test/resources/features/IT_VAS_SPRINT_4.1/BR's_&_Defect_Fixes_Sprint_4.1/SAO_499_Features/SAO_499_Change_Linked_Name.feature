@@ -18,29 +18,40 @@ Feature: data searching using wildcards
     Then user switches to frame
     When user clicks on the clear button
     #need to speak Tomas about this one - have sent an email to him
-    When user enters "SE_" in the linked name field
-    And user clicks on the search button
-    Then user should see ticket related to Sweden
-    And user clicks on the clear button
-    When user enters "FI_" in the linked name field
-    And user clicks on the search button
-    Then user should see ticket related to Finland
-    And user clicks on the clear button
-    When user enters "EE_" in the linked name field
-    And user clicks on the search button
-    Then user should see ticket related to Estonia
-    And user clicks on the clear button
-    When user enters "DK_" in the linked name field
-    And user clicks on the search button
-    Then user should see ticket related to Denmark
-    And user clicks on the clear button
-    When user enters "NO_" in the linked name field
-    And user clicks on the search button
-    Then user should see ticket related to Norway
-    And user clicks on the clear button
-    When user enters "LT_" in the linked name field
-    And user clicks on the search button
-    Then user should see ticket related to Lithuania
+    When user searches below in the Name plus field and verifies CI information
+      |locationNamePlus|
+      |SE_             |
+      |FI_             |
+      |EE_             |
+      |DK_             |
+      |NO_             |
+      |LT_             |
+    And user clicks on cancel on select target window
+
+
+#    When user enters "SE_" in the linked name field
+#    And user clicks on the search button
+#    Then user should see ticket related to Sweden
+#    And user clicks on the clear button
+#    When user enters "FI_" in the linked name field
+#    And user clicks on the search button
+#    Then user should see ticket related to Finland
+#    And user clicks on the clear button
+#    When user enters "EE_" in the linked name field
+#    And user clicks on the search button
+#    Then user should see ticket related to Estonia
+#    And user clicks on the clear button
+#    When user enters "DK_" in the linked name field
+#    And user clicks on the search button
+#    Then user should see ticket related to Denmark
+#    And user clicks on the clear button
+#    When user enters "NO_" in the linked name field
+#    And user clicks on the search button
+#    Then user should see ticket related to Norway
+#    And user clicks on the clear button
+#    When user enters "LT_" in the linked name field
+#    And user clicks on the search button
+#    Then user should see ticket related to Lithuania
 
 
 

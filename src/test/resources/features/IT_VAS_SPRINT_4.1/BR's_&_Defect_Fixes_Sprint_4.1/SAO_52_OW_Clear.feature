@@ -28,14 +28,15 @@ Feature: Closing of incident ticket that has linked WO
     And user validates child WorkOrder availability
     And user validates WorkOrder status as "OPEN"
     When user switches to window 2
-    And user clicks on apply B2B button
+    And user clicks on BtwoB dispatch tab
+    And user clicks on apply BtwoB button
     Then user should see assigned profile as ""
     And user should see B2B dispatch tab
     Then user clicks on Diagnosis tab
     And CI should be listed and displayed under the Diagnosis tab
     Then user selects SLA class as "118 Hour 5 days Cleanup correction time workdays"
     And user validates estimated ready time is updated
-    When user clicks on B2B dispatch tab
+    When user clicks on "B2B Dispatch" tab
     And user enters header value as "Test"
     And user enters message value as "Automated Test"
     And user clicks on save button on the problem form

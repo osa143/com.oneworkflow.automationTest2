@@ -138,6 +138,24 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         ClickTableElementByText(By.id(table_SELECT_LOCATION), "Name", text,false);
     }
 
+    public boolean verifyElementsAreReadOnly()
+    {
+        List<WebElement> elements = driver.findElement(By.id("WIN_0_777021070")).findElements(By.tagName("textarea"));
+
+        for (int i = 0; i < elements.size(); i++)
+        {
+            String isReadOnly = elements.get(i).getAttribute("readonly");
+            if (isReadOnly != null && isReadOnly.contains("true")) {
+                continue;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public boolean verifyElementIsReadOnly(){
         return checkIfControlIsReadonlyByElement(By.tagName("textarea"));
     }
@@ -396,6 +414,14 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         String error= findElement(By.id(Error_POP_UP_ID)).getText();
         System.out.println("Error message is: " +error);
         return error;
+    }
+    public String getErrorText_change_recordPage(){
+        switchToFrameByIndex(2);
+        String error =getTextByID(Error_POP_UP_ID);
+        System.out.println(error);
+        clickElementByContainsTextAndTagName("a", "OK");
+        return error;
+
     }
     public void clickCtiDetails(){
         findElement(By.id(btn_CTI_DETAILS_UNDER_SECTIONS)).click();

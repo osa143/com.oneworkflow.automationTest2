@@ -264,13 +264,9 @@ public class OWF_SIDConsolePage extends BasePage {
 
 
     }
-    public boolean verifyCISForAllCountries(String colName, String colValue, boolean partialText){
+    public boolean verifyCISForAllCountries(String colName, String colValue){
 
-//        String[] colValues = colValue.split(":");
-//        for(int i = 0; i < colValues.length; i++)
-//        {
-//            Assert.assertTrue(verifyColumnValuesMultiple(By.id(AgentConsoleTable_ID), colName, colValues[i], partialText));
-//        }
-        return  true;
+        return verifyColumnValuesForMultipleInputs(By.id(AgentConsoleTable_ID), colName, colValue);
+
     }
 }

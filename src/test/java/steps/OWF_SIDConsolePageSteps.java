@@ -80,7 +80,7 @@ public class OWF_SIDConsolePageSteps {
 
     @Then("user validates CI's for all countries {string}")
     public void userValidatesCISForAllCountries(String colValues) {
-        Assert.assertTrue(sidConsolePage.verifyCISForAllCountries("Name", colValues, true));
+        Assert.assertTrue(sidConsolePage.verifyCISForAllCountries("Name", colValues));
     }
 }
 

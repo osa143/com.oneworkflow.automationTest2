@@ -1,4 +1,4 @@
-@E2E_Normal_Change_(Internal_Initiator) @Change
+@E2E_Normal_Change_Internal_Initiator @Change
   Feature: Internal Normal Change E2E
     Scenario: Internal user processes a normal change ticket
 
@@ -8,20 +8,18 @@
       When user clicks on create change record
       Then user switches to window 1
       When user clicks on save button
-      Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)"
-      And user switches to frame
-      Then user closes warning by pressing OK button
+      Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)" on change record page
       When user enters "Regression - Change Management Process" in the implementation field
       And user enters "Regression - Change Management Process" in the test plan field
       And user enters "Regression - Change Management Process" in the rollback field
       And user enters "Regression - Change Management Process" in the communication plan field
       And user enters "Regression - Change Management Process" in the ver of functionality field
       And user enters "Regression - Change Management Process" in the risk description field
-      Then user clicks on save button on the problem form
+      Then user clicks on save button
       And multiple error messages should appear with red boarder around fields
       When user clicks on "Calendar" under actions
       #Need to check this as it appears in a different window not different Tab
-      And user switches to window
+      And user switches to window 2
       When user enters "Change Record" in calendar search box
       And user clicks on ticket type "Change Record"
       Then user validates change records are shown in calendar

@@ -50,6 +50,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -94,11 +102,11 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
+										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
-										
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="skip"><i class="fa fa-dot-circle-o text-blue"></i>Skip</span></a>
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 									</div>
@@ -111,8 +119,8 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Filter_out_the_tickets_of_interest_for_you</span></a>
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Incident</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@SAO_499_Change_Ticket_Linked_Location</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@499</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -129,40 +137,40 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="pass">
-											<div class="st pass test l0" 
-												tags="@Filter_out_the_tickets_of_interest_for_you @Incident"
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@SAO_499_Change_Ticket_Linked_Location @499"
 												devices="">
-												<span class="tt">07.31.2019 16:34:31</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">[filtering of tickets] started</span>
+												<span class="tt">08.02.2019 10:45:43</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[data searching using wildcards] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Filter_out_the_tickets_of_interest_for_you</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @Incident</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SAO_499_Change_Ticket_Linked_Location</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @499</span>
 												</span>
 												
 											</div>
-											<div class="st pass test l1" 
-												tags="@Filter_out_the_tickets_of_interest_for_you @Incident"
+											<div class="st fail test l1" 
+												tags="@SAO_499_Change_Ticket_Linked_Location @499"
 												devices="">
-												<span class="tt">07.31.2019 16:34:31</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">|---[user can filter tickets of interest12] started</span>
+												<span class="tt">08.02.2019 10:45:43</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[user is able to search for data using wildcards] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Filter_out_the_tickets_of_interest_for_you</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @Incident</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SAO_499_Change_Ticket_Linked_Location</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @499</span>
 												</span>
 												
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.31.2019 16:34:31</span>&nbsp;
+												<span class="tt">08.02.2019 10:45:43</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.31.2019 16:34:37</span>&nbsp;
+													<span class="tt">08.02.2019 10:45:48</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
 													
@@ -172,14 +180,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.31.2019 16:34:37</span>&nbsp;
+												<span class="tt">08.02.2019 10:45:48</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.31.2019 16:34:45</span>&nbsp;
+													<span class="tt">08.02.2019 10:45:58</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -187,12 +195,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.31.2019 16:34:45</span>&nbsp;
+												<span class="tt">08.02.2019 10:45:58</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.31.2019 16:34:45</span>&nbsp;
+													<span class="tt">08.02.2019 10:45:58</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
 													
@@ -202,14 +210,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.31.2019 16:34:45</span>&nbsp;
+												<span class="tt">08.02.2019 10:45:58</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects "Problem" under all tickets] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects search menu as "Open Search Form:Change Record/Project/Freeze"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.31.2019 16:35:15</span>&nbsp;
+													<span class="tt">08.02.2019 10:46:36</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects "Problem" under all tickets]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects search menu as "Open Search Form:Change Record/Project/Freeze"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -217,14 +225,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.31.2019 16:35:15</span>&nbsp;
+												<span class="tt">08.02.2019 10:46:36</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should only see "PB" tickets] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.31.2019 16:35:20</span>&nbsp;
+													<span class="tt">08.02.2019 10:46:36</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should only see "PB" tickets]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -232,14 +240,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.31.2019 16:35:20</span>&nbsp;
+												<span class="tt">08.02.2019 10:46:36</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects "Change Record" under all tickets] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see blank change record search form] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.31.2019 16:35:30</span>&nbsp;
+													<span class="tt">08.02.2019 10:46:36</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects "Change Record" under all tickets]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see blank change record search form]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -247,14 +255,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.31.2019 16:35:30</span>&nbsp;
+												<span class="tt">08.02.2019 10:46:36</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should only see "CR" tickets] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects change type as "Change Record"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.31.2019 16:35:34</span>&nbsp;
+													<span class="tt">08.02.2019 10:46:43</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should only see "CR" tickets]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects change type as "Change Record"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -262,14 +270,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.31.2019 16:35:34</span>&nbsp;
+												<span class="tt">08.02.2019 10:46:43</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects "Trouble Ticket" under all tickets] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects status as "Assigned"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.31.2019 16:35:45</span>&nbsp;
+													<span class="tt">08.02.2019 10:46:45</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects "Trouble Ticket" under all tickets]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects status as "Assigned"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -277,14 +285,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.31.2019 16:35:45</span>&nbsp;
+												<span class="tt">08.02.2019 10:46:45</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should only see "OP" tickets] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.31.2019 16:35:49</span>&nbsp;
+													<span class="tt">08.02.2019 10:46:50</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should only see "OP" tickets]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -292,14 +300,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.31.2019 16:35:49</span>&nbsp;
+												<span class="tt">08.02.2019 10:46:50</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects "Known Error" under all tickets] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see change record ticket] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:01</span>&nbsp;
+													<span class="tt">08.02.2019 10:46:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects "Known Error" under all tickets]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see change record ticket]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -307,14 +315,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.31.2019 16:36:01</span>&nbsp;
+												<span class="tt">08.02.2019 10:46:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should only see "KE" tickets] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Linked Items" tab] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:05</span>&nbsp;
+													<span class="tt">08.02.2019 10:47:09</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should only see "KE" tickets]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Linked Items" tab]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -322,14 +330,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.31.2019 16:36:05</span>&nbsp;
+												<span class="tt">08.02.2019 10:47:09</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects "Work Order" under all tickets] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects target application first dropdown as "OS3 - Change"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:16</span>&nbsp;
+													<span class="tt">08.02.2019 10:47:13</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects "Work Order" under all tickets]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects target application first dropdown as "OS3 - Change"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -337,14 +345,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.31.2019 16:36:16</span>&nbsp;
+												<span class="tt">08.02.2019 10:47:13</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should only see "WO" tickets] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on link button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:20</span>&nbsp;
+													<span class="tt">08.02.2019 10:47:15</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should only see "WO" tickets]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on link button]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -352,42 +360,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.31.2019 16:36:20</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects "All Tickets" under all tickets] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:30</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects "All Tickets" under all tickets]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.31.2019 16:36:30</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on more filters button] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:32</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on more filters button]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.31.2019 16:36:32</span>&nbsp;
+												<span class="tt">08.02.2019 10:47:15</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to frame] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:32</span>&nbsp;
+													<span class="tt">08.02.2019 10:47:15</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to frame]</span>
 													
@@ -397,150 +375,95 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.31.2019 16:36:32</span>&nbsp;
+												<span class="tt">08.02.2019 10:47:15</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on "Assignment Profile" tab] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on the clear button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:33</span>&nbsp;
+													<span class="tt">08.02.2019 10:47:16</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on "Assignment Profile" tab]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on the clear button]</span>
 													
 													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.02.2019 10:47:16</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user searches below in the location+ field and verifies CI information] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.02.2019 10:47:16</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user searches below in the location+ field and verifies CI information]</span>
+													
+													<span class="td"><table class='runtime-table table-striped table'><tr><td>locationIdPlus</td></tr><tr><td>SE_</td></tr><tr><td>FI_</td></tr><tr><td>EE_</td></tr><tr><td>DK_</td></tr><tr><td>NO_</td></tr><tr><td>LT_</td></tr></table></span>
+												</div>
+												<div class="st fail">
+													<span class="tt">08.02.2019 10:48:19</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user searches below in the location+ field and verifies CI information]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#T700506101"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.239.221', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53074}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a3639258570ed57a2f80e61df6df3c5c
+*** Element info: {Using=id, value=T700506101}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pageObjects.BasePage.getTableRows(BasePage.java:447)
+	at pageObjects.OWF_ChangeRecordPage.TableRows(OWF_ChangeRecordPage.java:57)
+	at pageObjects.OWF_ChangeRecordPage.validateCiDetailsForMultipleLocationsID(OWF_ChangeRecordPage.java:89)
+	at steps.OWF_ChangeRecordPageSteps.userSearchesBelowInTheLocationFieldAndVerifiesCIInformation(OWF_ChangeRecordPageSteps.java:264)
+	at ✽.user searches below in the location+ field and verifies CI information(features/IT_VAS_SPRINT_4.1/BR's_&_Defect_Fixes_Sprint_4.1/SAO_499_Features/SAO_499_Change_Linked_Location.feature:22)
+</textarea></span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.02.2019 10:48:19</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on cancel on select target window] started</span>
+												
+												<div class="st skip">
+													<span class="tt">08.02.2019 10:48:19</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on cancel on select target window]</span>
+													
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">07.31.2019 16:36:33</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enter in the search as "Mobile service-FLEN" on user more filters window] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:33</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enter in the search as "Mobile service-FLEN" on user more filters window]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.31.2019 16:36:33</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks search button on more user filters window] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:33</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks search button on more user filters window]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.31.2019 16:36:33</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects shown assignment profile] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:33</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects shown assignment profile]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.31.2019 16:36:33</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on more filters add button] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:34</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on more filters add button]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.31.2019 16:36:34</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on apply button on user more filters window] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:36</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on apply button on user more filters window]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.31.2019 16:36:36</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should only see tickets with "Assignee Profile" of "Mobile service-FLEN"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:38</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should only see tickets with "Assignee Profile" of "Mobile service-FLEN"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.31.2019 16:36:38</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects all dropdown as "Single Country:Finland"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:42</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects all dropdown as "Single Country:Finland"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.31.2019 16:36:42</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should only see tickets with "Countries" of "Finland"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:45</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should only see tickets with "Countries" of "Finland"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">07.31.2019 16:36:45</span>&nbsp;
+												<span class="tt">08.02.2019 10:48:19</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
 												
-												<div class="st pass">
-													<span class="tt">07.31.2019 16:36:45</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st info">
+													<span class="tt">08.02.2019 10:48:19</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
-													
+													<span class="tm"><a href='#' class='indigo badge' data-featherlight='C:\Temp\com.oneworkflow.automation\ExtentReports\Screenshots\Screenshots_20190802_104542\embedded1.png'>img</a></span>
 													<span class="td"></span>
 												</div>
 											</div>

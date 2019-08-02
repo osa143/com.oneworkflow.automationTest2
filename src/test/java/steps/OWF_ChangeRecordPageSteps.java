@@ -3,9 +3,12 @@ package steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.cucumber.datatable.DataTable;
 import org.testng.Assert;
 import pageObjects.OWF_ChangeRecordPage;
 import pageObjects.OWF_ProblemRecordPage;
+
+import javax.accessibility.AccessibleStateSet;
 
 public class OWF_ChangeRecordPageSteps {
     OWF_ChangeRecordPage changeRecordPage = new OWF_ChangeRecordPage();
@@ -234,5 +237,40 @@ public class OWF_ChangeRecordPageSteps {
     @When("user selects change type as {string}")
     public void userSelectsChangeTypeAs(String arg0) {
         changeRecordPage.selectChangeType(arg0);
+    }
+
+    @When("user clicks on {string} under actions")
+    public void userClicksOnUnderActions(String arg0) {
+        changeRecordPage.clickElementByContainsTextAndTagName("span", arg0);
+    }
+
+    @When("user enters {string} in calendar search box")
+    public void userEntersInCalendarSearchBox(String arg0) {
+        changeRecordPage.enterSearch_calendar(arg0);
+    }
+
+    @And("user clicks on ticket type {string}")
+    public void userClicksOnTicketType(String arg0) {
+        changeRecordPage.clickChange_Record();
+    }
+
+    @And("user selects status as {string}")
+    public void userSelectsStatusAs(String arg0) {
+        changeRecordPage.selectStatus(arg0);
+    }
+
+    @When("user searches below in the location+ field and verifies CI information")
+    public void userSearchesBelowInTheLocationFieldAndVerifiesCIInformation(DataTable locationIdPlus) {
+        changeRecordPage.validateCiDetailsForMultipleLocationsID(locationIdPlus);
+    }
+
+    @And("user clicks on cancel on select target window")
+    public void userClicksOnCancelOnSelectTargetWindow() {
+        changeRecordPage.clickCancel_selectTarget();
+    }
+
+    @When("user searches below in the Name plus field and verifies CI information")
+    public void userSearchesBelowInTheNamePlusFieldAndVerifiesCIInformation(DataTable locationNamePlus) {
+        changeRecordPage.validateCiDetailsForMultipleLocationsName(locationNamePlus);
     }
 }

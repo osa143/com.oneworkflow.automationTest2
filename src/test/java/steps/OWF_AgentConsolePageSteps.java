@@ -7,6 +7,8 @@ import org.testng.Assert;
 import pageObjects.OWF_AgentConsolePage;
 import utils.CommonUtils;
 
+import static utils.CommonUtils.*;
+
 public class OWF_AgentConsolePageSteps {
 
     OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
@@ -501,6 +503,54 @@ public class OWF_AgentConsolePageSteps {
     @Then("user closes current tab")
     public void userClosesCurrentTab() {
         agentConsolePage.closeTab();
+    }
+
+    @And("user gets first ticket from the agent console table")
+    public void userGetsFirstTicketFromTheAgentConsoleTable() {
+        firstTicketBefore=agentConsolePage.getAgentConsoleTableCellData("ID", 1);
+    }
+
+    @And("user validates agent console is not refreshed")
+    public void userValidatesAgentConsoleIsNotRefreshed() {
+        firstTicketAfterWait=agentConsolePage.getAgentConsoleTableCellData("ID", 1);
+        Assert.assertEquals(firstTicketBefore, firstTicketAfterWait);
+    }
+
+    @And("user validates agent console is refreshed")
+    public void userValidatesAgentConsoleIsRefreshed() {
+        firstTicketAfterRefreshInterval=agentConsolePage.getAgentConsoleTableCellData("ID", 1);
+        Assert.assertNotEquals(firstTicketBefore, firstTicketAfterRefreshInterval);
+    }
+
+    @And("user enters {string} in the Location ID+ field")
+    public void userEntersInTheLocationIDField(String arg0) {
+       agentConsolePage.enterLocationPlus(arg0);
+    }
+
+    @Then("user clicks on quick search button")
+    public void userClicksOnQuickSearchButton() {
+        agentConsolePage.clickQuickSearch();
+    }
+
+    @And("user should see list of CI's related to {string}")
+    public void userShouldSeeListOfCISRelatedTo(String arg0) {
+     Assert.assertTrue(agentConsolePage.verifyLocation("Name",arg0,true));
+    }
+
+    @Then("user clicks on the close button")
+    public void userClicksOnTheCloseButton() {
+     agentConsolePage.clickCancel_selectLocation();
+    }
+
+    @When("user clicks on the quick search clear button")
+    public void userClicksOnTheQuickSearchClearButton() {
+        agentConsolePage.clickClear_selectLoaction();
+    }
+
+    @And("user enters {string} in the Location Name+ field")
+    public void userEntersInTheLocationNameField(String arg0) {
+        agentConsolePage.enterLocationNamePlus_selectLocation(arg0);
+        agentConsolePage.enterSendKeysToLocationNamePlus();
     }
 }
 

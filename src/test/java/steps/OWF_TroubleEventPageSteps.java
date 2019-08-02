@@ -861,9 +861,9 @@ public class OWF_TroubleEventPageSteps {
 
     }
 
-    @And("user validates {string} is readonly")
-    public void userValidatesIsReadonly(String arg0) {
-     Assert.assertTrue(troubleEventPage.verifyElementIsReadyOnlyByContainsText(arg0));
+    @And("user validates all text area fields are readonly")
+    public void userValidatesAllFieldsAreReadOnly() {
+     Assert.assertTrue(troubleEventPage.verifyElementsAreReadOnly());
     }
 
     @And("user selects site {string}")
@@ -875,6 +875,12 @@ public class OWF_TroubleEventPageSteps {
     public void userShouldSeeTickets(String arg0, String arg1) {
        Assert.assertTrue(troubleEventPage.verifyClosedTickets("Status", arg0));
        Assert.assertTrue(troubleEventPage.verifyTicketsCountry("Location ID+", arg1));
+    }
+
+    @Then("error message should display as {string} on change record page")
+    public void errorMessageShouldDisplayAsOnChangeRecordPage(String arg0) {
+        Assert.assertEquals(troubleEventPage.getErrorText_change_recordPage(), arg0);
+
     }
 }
 

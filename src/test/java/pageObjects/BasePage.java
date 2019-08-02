@@ -86,6 +86,7 @@ public class BasePage {
         findElement(element).click();
     }
 
+
     public boolean verifyMenuItems(String items){
         String [] menuItems = items.split(":");
         for (int i=0; i<menuItems.length; i++){
@@ -381,6 +382,7 @@ public class BasePage {
         return checkIfControlIsReadonlyByElement(By.xpath(element));
     }
 
+
     public static int getColumnIndexByHeaderName(By table, String headerName) {
         int columnInfo = -1;
         //Get all web elements
@@ -560,9 +562,7 @@ public class BasePage {
         System.out.println("Table cell value is :" + cellData);
         return cellData;
     }
-    public void clickByCellData(By table, String columnName, int rowNum, String cellData){
-        getTableCellData(table, columnName, rowNum);
-    }
+
     public WebElement getTableCellElement(By table, String columnName, String cellData)
     {
         int colNum = getColumnIndexByHeaderName(table, columnName);
@@ -598,9 +598,49 @@ public class BasePage {
                     System.out.println("Table cell value is not as expected:" + td.getText().trim());
                     return false;
                 }
+                if(i == 50)
+                    break;
             }
         }
 
+        return true;
+    }
+
+    private boolean verifySingleColumnValue(String columnValue, String[] verifyValues)
+    {
+        for(int i = 0; i < verifyValues.length; i++)
+        {
+           if (columnValue.contains(verifyValues[i]))
+           {
+               return true;
+           }
+        }
+        return  false;
+    }
+
+    public boolean verifyColumnValuesForMultipleInputs(By table, String columnName, String columnValue)
+    {
+        String[] columnValues = columnValue.split(":");
+
+        int colNum = getColumnIndexByHeaderName(table, columnName);
+        List<WebElement> tableRows = getTableRows(table);
+        System.out.println("Number of rows are: "+ tableRows.size());
+
+        if(tableRows.size() > 0){
+            for (int i = 1; i < tableRows.size(); i++) {
+                WebElement td = tableRows.get(i).findElements(By.tagName("td")).get(colNum);
+                System.out.println("Table cell value is: "+ td.getText().trim());
+
+                if(i == 51)
+                    break;
+
+                if(verifySingleColumnValue(td.getText().trim(), columnValues))
+                    continue;
+                else
+                    return false;
+
+            }
+        }
         return true;
     }
 
@@ -629,7 +669,8 @@ public class BasePage {
                         return false;
                     }
                 }
-
+                if(i == 50)
+                    break;
             }
         }
 
@@ -708,6 +749,9 @@ public class BasePage {
   public void switchToDefault(){
         driver.switchTo().defaultContent();
         wait(1000);
+  }
+  public void enterSendKeys(By element){
+      findElement(element).sendKeys(Keys.ENTER);
   }
     public void acceptAlert() {
         driver.switchTo().alert().accept();

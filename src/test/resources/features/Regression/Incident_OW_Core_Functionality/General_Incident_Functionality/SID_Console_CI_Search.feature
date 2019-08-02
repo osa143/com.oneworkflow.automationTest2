@@ -1,4 +1,5 @@
 @SID_Console_CI_Search #@Incident
+  #passed
   Feature: using SID console to search for CI's
     Scenario: user can use the SID console to search for CI's
 
@@ -13,6 +14,7 @@
       And user clicks on search
       Then user validates CI's for all countries "EE:FI:NO:SE:LT:DK"
       When user enters "SE_S" in the name+ field
+      And user clicks on search
       # CI name starts with SE for swedish
       Then user validates only "SE" CI's appear
 

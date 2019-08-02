@@ -20,11 +20,15 @@ public class CommonUtils extends BasePage {
     public static String ciDetailsBeforeUpdate;
     public static String opTicket;
     public static String pbTicket;
+    public static String firstTicketBefore;
+    public static String firstTicketAfterWait;
+    public static String firstTicketAfterRefreshInterval;
 
     // 0 - parent window
     // 1 - first child and so on
     public static void switchToChildWindow(WebDriver driver, int windowId) {
         Set<String> handles = driver.getWindowHandles();
+        System.out.println(handles);
         int handlesCount = handles.size();
         if (handlesCount > 0)
         {

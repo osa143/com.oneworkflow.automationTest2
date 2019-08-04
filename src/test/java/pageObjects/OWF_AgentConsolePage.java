@@ -217,6 +217,9 @@ public class OWF_AgentConsolePage extends BasePage {
      public void selectCreateAsKnownError(){
         selectMainMenuAndMenuItem(menuForCREATE, menuitemKNOWN_ERROR);
      }
+    public void selectCreateMenu(String menuItem){
+        selectMainMenuAndMenuItem(menuForCREATE, menuItem);
+    }
 
     String alarmId = "";
 
@@ -345,8 +348,8 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void enterSearch(String searchText) {
         wait(1000);
-        driver.findElement(By.id(txtSEARCH)).sendKeys(searchText);
-        driver.findElement(By.id(txtSEARCH)).sendKeys(Keys.ENTER);
+        driver.findElement(By.id(txt_SEARCH)).sendKeys(searchText);
+        driver.findElement(By.id(txt_SEARCH)).sendKeys(Keys.ENTER);
     }
 
 

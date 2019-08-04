@@ -1,11 +1,10 @@
-#Passed
-@SAO_191 @Regression
+@191
 Feature: Site name details search Feature
 
   Scenario:Verify Site Name details available for all CI's
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+    When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects SID console from agent console
     And user switches to window 1

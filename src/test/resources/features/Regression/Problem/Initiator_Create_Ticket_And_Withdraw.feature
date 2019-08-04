@@ -1,5 +1,5 @@
-#Passed
-@Initiator_Create_Ticket_Runner
+@Initiator_Create_Ticket @problem
+  #Passed
 Feature: initiator create ticket and withdraw
 
   Scenario: user should be able to create a problem ticket and withdraw it
@@ -22,7 +22,7 @@ Feature: initiator create ticket and withdraw
     And user selects urgency as low
     And user clicks on save button on the problem form
     Then ticket should be created and status should be assigned
-    When user changes status to "Withdrawn"
+    When user changes status to "Withdrawn" on problem record page
     And user clicks on save button on the problem form
     And user clicks on yes on warning window
     Then an error message "Required field (without a default) not specified : Withdrawn Reason (ARERR 9424)" should appear with red boarder around withdrawn reason

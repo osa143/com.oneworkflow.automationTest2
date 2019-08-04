@@ -1,5 +1,5 @@
+@Profile_Permissions_Part_1 @problem
 #Passed
-@Profile_Permissions_Part_1
 
   Feature: Validation of permissions part 1
     Scenario: user permission testing
@@ -45,12 +45,12 @@
       Then user gets ticket value
       And user logsOut
       Then user goes back to login page
-      And user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
+      And user logs in with valid username "syvaptu1_auto" and password as "Telia@1234"
       Then user clicks on search and selects open search forms and problem record
       And user switches to window 2
       Then user enters Problem Ticket
       And user clicks Search on ticket search
-      When user changes status to "Under Investigation"
+      When user changes status to "Under Investigation" on problem record page
       And user clicks on save button on the problem form
       Then problem ticket status should be under investigation
       And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation. "
@@ -64,7 +64,7 @@
       And user switches to window 3
       Then user enters Problem Ticket
       And user clicks Search on ticket search
-      When user changes status to investigation complete
+      When user changes status to "Investigation Complete" on problem record page
       And user selects root cause code as Technical:HW error under route cause
       And user enters route cause details as "Lacking information and RC found date"
       And user enters RC found date as current date
@@ -77,5 +77,5 @@
       And user clicks on save button on the problem form
       When user enters description as "More information on problem ticket"
       And user clicks on save button on the problem form
-      Then change should also be reflected in the timeline as ""
+      Then change should also be reflected in the timeline "Ticket Description has changed from:UAT Profile Permissions test:UAT Profile Permissions testMore information on problem ticket"
 

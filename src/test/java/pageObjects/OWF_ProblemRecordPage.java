@@ -1,6 +1,10 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class OWF_ProblemRecordPage extends BaseRecordPage {
 
@@ -9,6 +13,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txtSEARCH_TICKET_ID = "arid_WIN_0_777777600";
     private static final String linkASSIGNMENTS = "WIN_0_999000346";
     private static final String TABLE_ID = "T1020";
+    private static final String dd_STATUS= "Status*";
 
 
     private static final String btnTIMELINE_XPATH = "//a[contains(text(),'Timeline')]";
@@ -57,7 +62,8 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String errorTABLE_XPATH = "//*[@id='PromptBar']";
     private static final String errorTABLE_ID = "pbartable";
     private static final String btnYES_ON_FRAME_ID = "WIN_0_700027904";
-    private static final String btnACK_ID = "WIN_0_777504152";
+    private static final String btn_ACK_ID = "WIN_0_777504152";
+    private static final String btnACK_CSS = "#WIN_0_777504152";
     private static final String timeline_TABLE_ID = "T999000510";
     private static final String btnRELEASE_ID = "WIN_0_777021435";
 
@@ -66,8 +72,29 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
     private static final String chkbxSWEDEN = "WIN_0_rc0id600002001";
     private static final String txtTO_DATE = "arid_WIN_0_777031004";
+    private static final String table_ADD_INTERESTED_PARTY= "T700027964";
 
+    public void clickTableElement_addInterestedParty(String headerName, String text){
+        ClickTableElementByText(By.id(table_ADD_INTERESTED_PARTY),headerName, text, false);
+    }
 
+    public boolean verifyStatusDdIsReadonly(){
+        return checkIfControlIsReadonly(ddSTATuS_ID);
+    }
+
+    public void enterStatus(String text){
+        findElement(By.id(ddSTATuS_ID)).clear();
+       enterTextByElement(By.id(ddSTATuS_ID), text);
+    }
+
+    public void enterAssignee(String text)
+    {
+        findElement(By.id("arid_WIN_0_4")).clear();
+        enterTextByElement(By.id("arid_WIN_0_4"), text);
+    }
+    public void selectStatus_problemRecord(String value){
+        selectDropDownNameAndValue(dd_STATUS, value, false);
+    }
     public boolean verifyIsSaveIsPresent(){
         return findElement(By.id(btnSAVE_ID)).isDisplayed();
     }
@@ -100,7 +127,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
     public String getTimelineStatus(int rowNum) {
         String status = getTableCellData(By.id(timeline_TABLE_ID), "Description", rowNum);
-        System.out.println("Timeline status is: " + status);
+        System.out.println("Expected Timeline status is: " + status);
         return status;
     }
     public void enterWorkAround(String workAround){
@@ -156,9 +183,25 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     public void clickSaveButton() {
         driver.findElement(By.id(btnSAVE_ID)).click();
     }
+    WebDriverWait wait= new WebDriverWait(driver, 20);
+    public void clickAckButton_problemRecord() {
+        wait(3000);
+        WebElement element= driver.findElement(By.id(btn_ACK_ID));
+        try{
+            waitUntilElementClickable(By.id(btn_ACK_ID)).click();
+        }
+        catch (Exception exception)
+        {
+            System.out.println("Error message is : "+ exception.getMessage());
+            try {
+                element.click();
+            }
+            catch (Exception ex)
+            {
 
-    public void clickAckButton() {
-        driver.findElement(By.id(btnACK_ID)).click();
+            }
+        }
+
     }
 
     public void clickSearchButton() {
@@ -192,7 +235,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
     public boolean getAckButtonStatus() {
-        return driver.findElement(By.id(btnACK_ID)).isEnabled();
+        return driver.findElement(By.id(btn_ACK_ID)).isEnabled();
     }
 
     public void selectWithdrawnReason_FalseAlarmDropDown() {

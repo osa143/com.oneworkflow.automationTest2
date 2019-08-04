@@ -1,4 +1,5 @@
 @Profile_Permissions_Part_4
+  #CI search window issue
   Feature: Validation of permissions
     Scenario: user permission testing
 
@@ -56,13 +57,14 @@
       Then user clicks on relate CI
       And user clicks on yes on CI warning window
       And CI should be listed and displayed under the Diagnosis tab
-      When user changes status to "Investigation Complete"
+      When user changes status to "Investigation Complete" on problem record page
       And user clicks on Diagnosis tab
       #right click CI and then choose impact:clear all
-      Then user clears CI impact
+      Then user right clicks on CI "SE_CPE_FRECPE5" and selects "Impact:Clear All"
       And user switches to frame
       Then user clicks on yes on warning window
-      And CI impact should be "Inactive"
+      And user validates CI "SE_CPE_FRECPE5" impact level is "Inactive"
+
 
 
 

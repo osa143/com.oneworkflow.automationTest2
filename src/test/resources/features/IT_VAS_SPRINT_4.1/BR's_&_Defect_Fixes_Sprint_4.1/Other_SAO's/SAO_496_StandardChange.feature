@@ -5,14 +5,28 @@ Feature: Linking of Incident Ticket to Standard Change during implementation win
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on change record from agent console
-    Then change record page should be opened and Change form is displayed
-    And user selects template as "All:IT:Other:Test Template [UAT] - Standard change"
-    When user selects request type as "Standard Change"
-    And user enters as "Change_Automation_1" in Change Builder field
-    And user enters as "Test ticket no impact" in service and customer impact
-    Then user enters start time as some minutes fast from current sweden time
-    And user enters Request End time as some minutes fast from request start time
+    Then change record form should open in a new tab
+    When user clicks on sweden checkbox under affected BU's
+    And user selects request type as "Standard Change"
+    And user selects template as "All:Mobile:Billing:Nobill - Customer refund (SE)"
+    And user selects title as "IT:Mobile:Billing" on Change record page
+    And user selects request category as "Cable splicing" on change record page
+    And user enters description as "Correcting error"
+    And user enters reason field as "none"
+    And user selects priority as "Major"
+    And user enters "Problem initiator" in the change builder field
+    And user enters "New implementation" in the implementation field
+    And user enters "Yes" in the test plan field
+    And user enters "Not possible" in the rollback field
+    And user enters "Comm plan" in the communication plan field
+    And user enters "Not possible" in the ver of functionality field
+    And user enters "No Risk" in the risk description field
+    Then user clicks on "Schedule" tab
+    And user enters as "Test Service and customer impact" in service and customer impact
+    And user enters request start date as "00:00:00" one day in the future
+    And user enters request end date as "02:00:00" one day in the future
     And user enters impact duration as "5" minutes
+    And user selects estimated impact as "No Impact"
     And user clicks on save button
     Then new tabs should be displayed including Diagnosis tab
     When user clicks on Diagnosis tab

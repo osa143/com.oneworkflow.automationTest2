@@ -22,6 +22,18 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txtEVENT_START_TIME = "arid_WIN_0_600001302";
     private static final String dd_COMPLETION_CODE= "Completion Code";
     private static final String txt_SCHEDULE_END= "arid_WIN_0_777021165";
+    private static final String txt_TICKET_ID= "arid_WIN_0_777777600";
+    private static final String txt_TITLE= "arid_WIN_0_777031000";
+
+
+    public void enterTitle(String text){
+        enterTextByElement(By.id(txt_TITLE), text);
+    }
+    public String getTicket(){
+      String ticket= getTextByID(txt_TICKET_ID);
+        System.out.println(ticket);
+        return ticket;
+    }
 
     public void enterActualScheduleEnd(){
         findElement(By.id(txt_SCHEDULE_END)).sendKeys(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));

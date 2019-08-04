@@ -50,7 +50,7 @@ public class OWF_WorkOrderPageSteps {
     }
 
     @When("user clicks on BtwoB dispatch tab")
-    public void userClicksOnBBDispatchTab(int arg0) {
+    public void userClicksOnBBDispatchTab() {
         workOrderPage.clickB2BDispatch();
     }
 
@@ -141,14 +141,26 @@ public class OWF_WorkOrderPageSteps {
 
     }
 
-    @When("user enters <Title>")
-    public void userEntersTitle() {
-
-    }
-
     @Then("user should see blank work order form")
     public void userShouldSeeBlankWorkOrderForm() {
+      Assert.assertEquals("", workOrderPage.getTicket());
+    }
 
+    @Then("user should see work order")
+    public void userShouldSeeWorkOrder() {
+        Assert.assertNotEquals("", workOrderPage.getTicket());
+    }
+
+
+
+    @When("^user enters title as \"([^\"]*)\"$")
+    public void userEntersTitle(String title) {
+        workOrderPage.enterTitle(title);
+    }
+
+    @And("user selects request type as {string} on work order page")
+    public void userSelectsRequestTypeAsOnWorkOrderPage(String requestType) {
+        workOrderPage.selectRequestType(requestType);
     }
 }
 

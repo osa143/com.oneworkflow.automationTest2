@@ -6,7 +6,8 @@ import runners.BaseTest;
 
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
-        tags = {"@Trouble_Linked_Name"}
+        //dryRun = true,
+        tags = {"@Timeline_Update"}
 )
 
 public class Test_Runner extends BaseTest {

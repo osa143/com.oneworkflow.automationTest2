@@ -29,28 +29,33 @@
       And user clicks Search on ticket search
       When user clicks on Ack button
       Then problem ticket status should be under investigation
-      #Then change should also be reflected in the timeline as ""
-      Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
-      And user selects assignee as "Tohall_copy" by using alphabet "u" key up 16 times
+      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation."
+      And user clicks on assignment under sections
+      Then user selects assigned profile dropdown as "Problem Initiator"
+      #Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
+      And user enters "Tohall_copy" in assignee
+      #And user selects assignee as "Tohall_copy" by using alphabet "u" key up 16 times
       And user clicks on save button on the problem form
-      Then change should also be reflected in the timeline "Request has been reassigned from Assignee user :mina09:probleminitiator"
+      Then change should also be reflected in the timeline "Request has been reassigned from Assignee user :frvi96_auto:Tohall_copy"
       Then user logsOut
       And user goes back to login page
       When user logs in with valid username "Tohall_copy" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       And user clicks on search and selects open search forms and problem record
-      And user switches to window 2
+      And user switches to window 3
       And user enters Problem Ticket
       And user clicks Search on ticket search
-      When user changes status to "Investigation Complete"
+      And user enters "Investigation Complete" in status
+      #When user changes status to "Investigation Complete" on problem record page
       #Then mandatory fields should be indicated in bold
-      When user selects root cause code as Technical:HW error under route cause
+      When user selects root cause code as "Technical:HW error"
       And user enters route cause details as "Bad management"
       And user enters RC found date as current date
       And user clicks on save button
-      Then problem ticket status should be under investigation
-      And change should also be reflected in the timeline as ""
+      Then user validates ticket status as "Investigation Complete"
+      And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Under Investigation to Investigation Complete."
       And user logsOut
+      And user switches to window 2
       And user goes back to login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed

@@ -1,5 +1,5 @@
-@Timeline_Update
-
+@Timeline_Update @problem
+#passed
 Feature: User is able to update the timeline with entries
 
   Scenario: User logs into One workflow, creates a problem ticket and updates the timeline
@@ -8,10 +8,11 @@ Feature: User is able to update the timeline with entries
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create problem record
+    And user switches to window 1
     Then problem record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
     When user enters "proactive investigation of: frvi96_auto" in Title field
-    And user selects request type as "Access Networks:RAN Optimization"
+    And user selects request type as "Access Networks:RAN Optimization" on Problem record page
     And user enters description as "UAT Test9"
     And user selects impact type as moderate:limited
     And user selects urgency as low
@@ -25,7 +26,7 @@ Feature: User is able to update the timeline with entries
     Then user validates that priority changes to major
     And change should also be reflected in the timeline as "Priority has changed from Minor to Major"
     Then user enters description as "-more information"
-    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation"
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation" on row 2
     Then user clicks on timeline tab
     And user selects Auto text:Tech bridge closed
     And change should also be reflected in the timeline as "All parties drop from technical troubleshooting bridge."

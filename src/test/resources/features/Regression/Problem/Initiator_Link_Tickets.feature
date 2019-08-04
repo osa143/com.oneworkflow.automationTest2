@@ -1,4 +1,5 @@
 @Initiator_Link_Tickets
+  #CI search window issue
 Feature: Verification of ability to link tickets
   Scenario: user should be able to link different types of tickets together
 
@@ -40,8 +41,9 @@ Feature: Verification of ability to link tickets
     And user switches to window 4
     Then change record form should open in a new tab
     When user clicks on sweden checkbox under affected BU's
-    And user selects template as "All:Mobile:Billing:Nobill - Customer refund (SE)"
     And user selects request type as "Normal Change"
+    And user selects template as "All:Mobile:Billing:Nobill - Customer refund (SE)"
+    And user selects title as "IT:Mobile:Billing" on Change record page
     And user selects request category as "Cable splicing" on change record page
     And user enters description as "Correcting error"
     And user enters reason field as "none"

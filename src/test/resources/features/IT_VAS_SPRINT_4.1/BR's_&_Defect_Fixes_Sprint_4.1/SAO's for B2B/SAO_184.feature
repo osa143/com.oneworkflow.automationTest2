@@ -28,13 +28,14 @@ Feature: Sending of WO to OneCo
       And user selects a CI from list
       And user selects impact level as "Loss Of Service"
       And user clicks on relate CI
-      Then user closes warning message and clicks on close button
+      Then user closes warning message
+      And user clicks on close button on CI search window
       And CI should be listed and displayed under the Diagnosis tab
       When user clicks on assignment under sections
-      And user clicks on apply B2B button
+      And user clicks on apply BtwoB button
       Then user should see assigned profile as "OneCo - FS - NO - B2B"
       When user selects SLA class as "10 Hours repair time"
-      And user clicks on B2B dispatch tab
+      And user clicks on "B2B Dispatch" tab
       And user enters header value as "Test"
       And user enters message value as "Automated Test"
       Then user clicks on save button

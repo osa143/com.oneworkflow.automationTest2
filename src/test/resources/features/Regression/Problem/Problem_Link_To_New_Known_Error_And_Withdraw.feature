@@ -1,5 +1,5 @@
-#Passed
-@Problem_Link_To_New_Known_Error_And_Withdraw
+@Problem_Link_To_New_Known_Error_And_Withdraw @problem
+  #Passed
 
   Feature: user is able to link problem to new known error and withdraw
 
@@ -40,7 +40,7 @@
       Then user clicks on linked items tab
       And user clicks on radio button cleared
       And problem ticket should be listed
-      When user changes status to "Withdrawn"
+      When user changes status to "Withdrawn" on problem record page
       And user clicks on save button
       And user clicks on yes on warning window
       Then an error message "Required field (without a default) not specified : Withdrawn Reason (ARERR 9424)" should appear with red boarder around withdrawn reason

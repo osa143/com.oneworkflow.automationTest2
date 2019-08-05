@@ -36,75 +36,9 @@
       And user clicks attachments under sections
       #Then user tries to Ack the ticket but its shouldn't allow
       And user validates all text area fields are readonly
-#      And user validates "Status*" is readonly
-#      And user validates "Source*" is readonly
-#      And user validates "Service Provider*" is readonly
-#      And user validates "Cust. Remaining SLA" is readonly
-#      And user validates "OLA Target Time" is readonly
-#      And user validates "Template" is readonly
-#      And user validates "Title*" is readonly
-#      And user validates "Request Type*" is readonly
-#      And user validates "Description*" is readonly
-#      And user validates "Priority*" is readonly
-#      And user validates "Event Start Time*" is readonly
-#      And user validates "Estimated Ready" is readonly
-#      And user validates "Fault Type" is readonly
-#      And user validates "WO's Status" is readonly
-#      And user validates "Fault Domain" is readonly
-#      And user validates "Rejection Reason" is readonly
-#      And user validates "Re-Assigned Reason" is readonly
-#      And user validates "Auto Close Date" is readonly
-#      And user validates "Auto Close" is readonly
-#      And user validates "Request sent to FM" is readonly
-#      And user validates "Servicedesk Escalated Incidents" is readonly
-#      And user validates "Customer Escalated Incidents" is readonly
-#      And user validates "Hierarchic escalation level" is readonly
-#      And user validates "Importance" is readonly
-#      And user validates "Impact" is readonly
-#      And user validates "Priority Check" is readonly
-#      And user validates "Creator" is readonly
-#      And user validates "Category" is readonly
-#      And user validates "Type" is readonly
-#      And user validates "Item" is readonly
-#      And user validates "Technology" is readonly
-#      And user validates "Model" is readonly
-#      And user validates "Manufacturer" is readonly
-#      And user validates "Location ID+" is readonly
-#      And user validates "Location Name +" is readonly
-#      And user validates "Region ID" is readonly
-#      And user validates "Region Name" is readonly
-#      And user validates "Latitude" is readonly
-#      And user validates "Longitude" is readonly
-#      And user validates "Location Details" is readonly
-#      And user validates "Owner Profile*" is readonly
-#      And user validates "Owner*" is readonly
-#      And user validates "Assignment Profile" is readonly
-#      And user validates "Assignee" is readonly
-#      And user validates "Last Ack By" is readonly
-#      And user validates "Response Time" is readonly
-#      And user validates "Response Reason" is readonly
-#      And user validates "Reassignment Count" is readonly
-#      And user validates "To Date" is readonly
-#      And user validates "Reason" is readonly
-#      And user validates "Vendor Name +" is readonly
-#      And user validates "Onsite Engineer(s)" is readonly
-#      And user validates "Account Number" is readonly
-#      And user validates "Telephone Number" is readonly
-#      And user validates "Hours of Operation" is readonly
-#      And user validates "Vendor Ref" is readonly
-#      And user validates "Root Cause same as Primary Cause" is readonly
-#      And user validates "Root Cause" is readonly
-#      And user validates "Description" is readonly
-#      And user validates "Fault Position" is readonly
-#      And user validates "Equipment" is readonly
-#      And user validates "Cause*" is readonly
-#      And user validates "Action*" is readonly
-#      And user validates "Closure Info*" is readonly
-#      And user validates "Resolved Group" is readonly
-#      And user validates "Resolved Person" is readonly
-#      And user validates "Event End Time*" is readonly
-#      And user validates "Withdrawn Reason" is readonly
-      And user validates "Affected BU's" is disabled
+      And user validates Affected BU's area is readonly
+
+
       And user validates "Created by Light GUI" is disabled
       And user validates "Do Not AutoClose" is disabled
        And user validates "Add" is disabled

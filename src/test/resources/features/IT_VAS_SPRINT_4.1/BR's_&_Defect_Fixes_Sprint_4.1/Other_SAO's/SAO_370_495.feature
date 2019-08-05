@@ -1,6 +1,6 @@
 @SAO_370_495
 
-  #Run UAT
+  #Run UAT or if Temip is pointed to SIT then run in SIT
 Feature: Alarm tab in agent console
   Scenario: User is able to view alarm details and make modifications from the agent console
 

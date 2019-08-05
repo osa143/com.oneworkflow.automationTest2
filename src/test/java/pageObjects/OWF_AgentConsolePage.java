@@ -461,6 +461,9 @@ public class OWF_AgentConsolePage extends BasePage {
         return findElement(By.id(txtALARM_NUMBER_ID)).getAttribute("value");
     }
 
+    public void enterSendKeysInSearchBox(){
+        enterSendKeys(By.id(txt_SEARCH));
+    }
 
 
 }

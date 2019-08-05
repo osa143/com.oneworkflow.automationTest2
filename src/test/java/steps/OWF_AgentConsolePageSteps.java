@@ -557,6 +557,12 @@ public class OWF_AgentConsolePageSteps {
     public void userSelectsCreateMenuAs(String arg0) {
         agentConsolePage.selectCreateMenu(arg0);
     }
+
+    @And("user clicks on agent console ticket search box and user enters enter key")
+    public void userClicksOnAgentConsoleTicketSearchBoxAndUserEntersEnterKey() {
+        agentConsolePage.enterSendKeysInSearchBox();
+
+    }
 }
 
 

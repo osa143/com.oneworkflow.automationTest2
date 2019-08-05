@@ -28,6 +28,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_LOCATION_NAME_PLUS= "arid_WIN_0_777031430";
     private static final String btn_CANCEL_LOCATION= "WIN_0_700000105";
     private static final String table_SELECT_LOCATION= "T700024013";
+    private static final String btn_ADVANCED_SEARCH= "WIN_0_777505104";
 
 
     public void clickCancel(){

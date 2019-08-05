@@ -1,6 +1,5 @@
 @181
-  #OP next due date Column doesn't have any data. that is why its failing.
-  #Replace ticket
+  #Passed
 Feature: Verification of OP target due date visibility
 
   Scenario: Verify OP Target Due date availability
@@ -8,7 +7,7 @@ Feature: Verification of OP target due date visibility
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user enters ticket id as "OP-000000899011" in the agent console search box and searches for ticket
+    When user enters ticket id as "OP-000000540763" in the agent console search box and searches for ticket
     And user clicks on add column under preferences and selects OP next due date
     Then OP next due date column within agent console should be displayed
     And OP next due date information should be displayed
@@ -26,6 +25,7 @@ Feature: Verification of OP target due date visibility
     And OP next due date information should be displayed
     When user clicks on Creator(user level) dropdown and selects My Owner Profile
     Then OP next due date column within agent console should be displayed
+    And user clicks on agent console ticket search box and user enters enter key
     And OP next due date information should be displayed
     When user clicks on add column under preferences and selects OP Target date
     Then user should see OP target date column in the agent console

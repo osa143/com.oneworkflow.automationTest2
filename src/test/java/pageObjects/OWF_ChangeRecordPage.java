@@ -123,6 +123,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
 
     public void clickSendButton() {
         driver.findElement(By.id(btnSEND)).click();
+        wait(1000);
     }
     public void clickDownButton(){
         driver.findElement(By.id(btnDOWN)).click();

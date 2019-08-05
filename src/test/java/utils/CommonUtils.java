@@ -23,6 +23,7 @@ public class CommonUtils extends BasePage {
     public static String firstTicketBefore;
     public static String firstTicketAfterWait;
     public static String firstTicketAfterRefreshInterval;
+    public static String changeTicket;
 
     // 0 - parent window
     // 1 - first child and so on

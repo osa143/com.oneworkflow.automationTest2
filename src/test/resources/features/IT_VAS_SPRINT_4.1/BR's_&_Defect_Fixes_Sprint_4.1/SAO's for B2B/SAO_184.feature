@@ -39,10 +39,10 @@ Feature: Sending of WO to OneCo
       And user enters header value as "Test"
       And user enters message value as "Automated Test"
       Then user clicks on save button
-      And user should see outbound assignment event
+      Then user should see "Assignment" notification in outbound in row 1
       Then user should see WFM ticket ID
       And user should see dispatch status as "Submitted"
-      And user should see inbound acknowledgment event
+      Then user should see "BTA:ExecutionStatusNotification" notification in inbound in row 1
       And user clicks on inbound events refresh button
       And user double clicks on B2B outbound event
       And user switches to window 2

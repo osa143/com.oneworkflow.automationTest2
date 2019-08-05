@@ -31,6 +31,9 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String TABLE_ID_linkedItems = "T777506000";
 
 
+    public void clickRiskTab(){
+        findElement(By.xpath("//a[contains(text(), 'Risk')]")).click();
+    }
 
     public void selectCi(String text)
     {

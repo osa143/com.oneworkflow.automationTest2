@@ -625,7 +625,7 @@ public class BaseRecordPage extends BasePage {
 
     public void setStartDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
 
         enterTextByElement(By.id(txtSTART_DATE),dateTime );
 
@@ -634,7 +634,7 @@ public class BaseRecordPage extends BasePage {
 
     public void setEndDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
 
         enterTextByElement(By.id(txtEND_DATE),dateTime );
     }

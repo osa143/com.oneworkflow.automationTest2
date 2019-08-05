@@ -20,7 +20,6 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String menuItemTROUBLE_EVENT = "Trouble Event";
     private static final String menuitemKNOWN_ERROR = "Known Error";
     private static final String menuItemLOGOUT = "Logout";
-    private static final String txtSEARCH = "arid_WIN_3_730000011";
     private static final String txt_SEARCH= "arid_WIN_2_730000011";
     private static final String btnSEARCH = "WIN_0_700010480";
     private static final String btnCLEAR = "WIN_0_777501009";

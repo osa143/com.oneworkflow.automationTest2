@@ -7,6 +7,7 @@ import io.cucumber.datatable.DataTable;
 import org.testng.Assert;
 import pageObjects.OWF_ChangeRecordPage;
 import pageObjects.OWF_ProblemRecordPage;
+import utils.CommonUtils;
 
 import javax.accessibility.AccessibleStateSet;
 
@@ -99,9 +100,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @Then("send button becomes inactive and Ack button should be active")
     public void sendButtonBecomesInactiveAndAckButtonShouldBeActive() {
-        Assert.assertEquals(changeRecordPage.ackButtonStatus(), "true");
-
-
+        Assert.assertTrue(changeRecordPage.ackButtonStatus());
     }
 
     @Then("form should be saved")
@@ -168,6 +167,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @Then("user clicks on risk tab")
     public void userClicksOnRiskTab() {
+        changeRecordPage.wait(2000);
         changeRecordPage.selectTab("Risk");
 
     }
@@ -203,7 +203,7 @@ public class OWF_ChangeRecordPageSteps {
     public void userSelectsAnswerAs(String arg0) {
         changeRecordPage.selectAnswer(arg0);
         changeRecordPage.clickDownButton();
-        //changeRecordPage.wait(1000);
+        changeRecordPage.wait(500);
 
     }
 
@@ -226,7 +226,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user answers all risk questions as below")
     public void userAnswersAllRiskQuestionsAsBelow() {
-        //Dummy step Doesn't need implementation
+        changeRecordPage.wait(1000);
     }
 
     @And("user switches to frame by id {string}")
@@ -280,4 +280,13 @@ public class OWF_ChangeRecordPageSteps {
     }
 
 
+    @And("user gets change ticket value")
+    public void userGetsChangeTicketValue() {
+        CommonUtils.changeTicket= changeRecordPage.getTicketValue();
+    }
+
+    @And("user enters change ticket in ticket ID+ field")
+    public void userEntersChangeTicketInTicketIDField() {
+        changeRecordPage.enterTicketIdPlus(CommonUtils.changeTicket);
+    }
 }

@@ -1,4 +1,5 @@
 @SAO_139
+  #Nee to run Manually due to ticket coming through 1 hour later
 Feature: B2B Error handling
   Scenario: user should see error message and created ticket
 
@@ -37,6 +38,7 @@ Feature: B2B Error handling
     When user switches to window 1
     And clicks on ticket refresh button
     And user accepts alert
+    And user waits
     Then user clicks on "Work Orders" tab
     And user validates child WorkOrder availability
     And user validates WorkOrder status as "OPEN"
@@ -51,18 +53,19 @@ Feature: B2B Error handling
     And user enters header value as "Test"
     And user enters message value as "Automated Test"
     And user clicks save button
-    When user switches to window 1
-    Then user should see OP ticket listed with title of "Error in the B2B Interface"
-    When user gets B2B ticket value
-    And user selects search menu as "Open Search Form:Trouble Event"
-    And user switches to window 2
-    Then user enters B2B ticket value
-    And user clicks on the search button
-    Then user should see trouble ticket
-    And user validates title as "Error in the B2B Interface"
-    And user validates request type as "Maintenance"
-    #The WO ID will be different every time
-    And user validates description as "Your work order WO-000000037328 has error. Please take a look"
+    When user switches to window 0
+  ################ Need to run manually from here
+#    Then user should see OP ticket listed with title of "Error in the B2B Interface" in agent console table
+#    When user gets B2B ticket value
+#    And user selects search menu as "Open Search Form:Trouble Event"
+#    And user switches to window 2
+#    Then user enters B2B ticket value
+#    And user clicks on the search button
+#    Then user should see trouble ticket
+#    And user validates title as "Error in the B2B Interface"
+#    And user validates request type as "Maintenance"
+#    #The WO ID will be different every time
+#    And user validates description as "Your work order WO-000000037328 has error. Please take a look"
 
 
 

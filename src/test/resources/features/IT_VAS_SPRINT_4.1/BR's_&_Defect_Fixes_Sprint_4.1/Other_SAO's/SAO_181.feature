@@ -1,4 +1,4 @@
-@SAO_181
+@181
   #OP next due date Column doesn't have any data. that is why its failing.
   #Replace ticket
 Feature: Verification of OP target due date visibility

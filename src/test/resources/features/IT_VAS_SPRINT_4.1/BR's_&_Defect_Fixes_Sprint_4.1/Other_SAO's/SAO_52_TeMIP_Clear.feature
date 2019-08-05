@@ -19,7 +19,7 @@ Feature: Closing of incident ticket that has linked WO
     And user validates parent ticket id availability
     Then user clicks on save button on the problem form
     And user validates ticket status as "New"
-    And user validates child ticket details are same as parent ticket
+    #And user validates child ticket details are same as parent ticket
     Then user clicks on save button on the problem form
     When user switches to window 1
     And clicks on ticket refresh button
@@ -39,9 +39,9 @@ Feature: Closing of incident ticket that has linked WO
     And user enters message value as "Automated Test"
     And user clicks on save button on the problem form
     When user clicks on BtwoB dispatch tab
-    Then user should see assigned update within B2B outbound events
+    Then user should see "Assignment" notification in outbound in row 1
     When user clicks on inbound events refresh button
-    Then user should see inbound acknowledgment event
+    Then user should see "BTA:ExecutionStatusNotification" notification in inbound in row 1
     And user should see WFM ticket ID
     And user should see dispatch status as "submitted"
     Then user changes status to "Work in Progress"

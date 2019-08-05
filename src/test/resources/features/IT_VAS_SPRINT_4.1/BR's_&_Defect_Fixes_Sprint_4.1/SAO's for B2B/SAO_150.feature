@@ -34,11 +34,11 @@ Feature: WO not closed after receiving inbound event
     And user enters message value as "Automated Test"
     When user clicks on save button
     When user clicks on "B2B Dispatch" tab
-    And user should see outbound assignment event
+    Then user should see "Assignment" notification in outbound in row 1
     Then user should see WFM ticket ID
     And user should see dispatch status as "Submitted"
     And user clicks on inbound events refresh button
-    And user should see inbound acknowledgment event
+    Then user should see "BTA:ExecutionStatusNotification" notification in inbound in row 1
     Then user changes status to "Work In Progress"
     And user clicks on save button on the problem form
     Then user changes status to "Cleared"

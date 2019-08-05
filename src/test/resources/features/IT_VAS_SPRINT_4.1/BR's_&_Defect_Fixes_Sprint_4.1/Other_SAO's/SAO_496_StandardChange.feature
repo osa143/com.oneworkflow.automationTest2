@@ -23,12 +23,13 @@ Feature: Linking of Incident Ticket to Standard Change during implementation win
     And user enters "No Risk" in the risk description field
     Then user clicks on "Schedule" tab
     And user enters as "Test Service and customer impact" in service and customer impact
-    And user enters request start date as "00:00:00" one day in the future
-    And user enters request end date as "02:00:00" one day in the future
+    And user enters start time as some minutes fast from current sweden time
+    And user enters Request End time as some minutes fast from request start time
     And user enters impact duration as "5" minutes
     And user selects estimated impact as "No Impact"
     And user clicks on save button
     Then new tabs should be displayed including Diagnosis tab
+    And user gets ticket value
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then CI search tab should be opened

@@ -1,5 +1,5 @@
-#Passed
 @SAO_499_SID_Location
+  #Passed
   Feature: data searching using wildcards
   Scenario: user is able to search for data using wildcards
 

@@ -899,6 +899,15 @@ public class OWF_TroubleEventPageSteps {
     }
 
 
+    @And("user enters trouble ticket in ticket ID+ field")
+    public void userEntersTroubleTicketInTicketIDField() {
+        troubleEventPage.enterTicketIdPlus(CommonUtils.opTicket);
+    }
+
+    @And("user clicks on the search button on select target request")
+    public void userClicksOnTheSearchButtonOnSelectTargetRequest() {
+        troubleEventPage.clickSearch_selctTargetRequest();
+    }
 }
 
 

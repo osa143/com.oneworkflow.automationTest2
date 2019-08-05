@@ -30,7 +30,7 @@ Feature: Closing of incident ticket that has linked WO
     When user switches to window 2
     And user clicks on BtwoB dispatch tab
     And user clicks on apply BtwoB button
-    Then user should see assigned profile as ""
+    Then user should see assigned profile as "B2B"
     And user should see B2B dispatch tab
     Then user clicks on Diagnosis tab
     And CI should be listed and displayed under the Diagnosis tab
@@ -40,9 +40,9 @@ Feature: Closing of incident ticket that has linked WO
     And user enters header value as "Test"
     And user enters message value as "Automated Test"
     And user clicks on save button on the problem form
-    Then user should see assigned update within B2B inbound events
+    Then user should see "Assignment" notification in outbound in row 1
     When user clicks on inbound events refresh button
-    Then user should see inbound acknowledgment event
+    Then user should see "BTA:ExecutionStatusNotification" notification in inbound in row 1
     And user should see WFM ticket ID
     And user should see dispatch status as "submitted"
     Then user changes status to "Work in Progress"
@@ -59,8 +59,8 @@ Feature: Closing of incident ticket that has linked WO
     And user highlights all shown alarms
     And user clicks on terminate
     And User waits for alarms to be cleared
-    Then user clicks on refresh button
-    And user validates alarm status is cleared
+    And user clicks refresh button on alarm tab
+    And user validates alarm status is "Cleared"
     Then user changes status to "Cleared"
     And user clicks on save button on the problem form
     Then user changes status to "Closed"

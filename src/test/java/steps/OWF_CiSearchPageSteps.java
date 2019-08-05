@@ -168,4 +168,9 @@ public class OWF_CiSearchPageSteps {
     public void userSelectsCI(String arg0) {
       ciSearchPage.selectCi(arg0);
     }
+
+    @Then("user clicks on Risk tab")
+    public void userClicksOnRiskTab() {
+        ciSearchPage.clickRiskTab();
+    }
 }

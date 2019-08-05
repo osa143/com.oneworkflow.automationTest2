@@ -137,6 +137,7 @@ public class OWF_CiSearchPage extends BasePage {
 
     }
     public void selectLevel(String value){
+        wait(250);
         selectDropDownNameAndValue(ddLEVEL, value, false);
         wait(500);
     }

@@ -23,7 +23,7 @@ public class OWF_ProblemRecordPageSteps {
     @When("user clicks on save button on the problem form")
     public void userClicksOnSaveButtonOnTheProblemForm() {
         problemRecordPage.clickSaveButton();
-        problemRecordPage.wait(5000);
+        problemRecordPage.wait(4000);
     }
 
     @Then("an error message should appear: {string}")
@@ -114,14 +114,14 @@ public class OWF_ProblemRecordPageSteps {
     @And("user clicks Search on ticket search")
     public void userClicksSearchOnTicketSearch() {
         problemRecordPage.clickSearchButton();
-        problemRecordPage.wait(5000);
+        problemRecordPage.wait(7000);
 
     }
 
     @When("user clicks on Ack button")
     public void userClicksOnAckButton() {
-        problemRecordPage.clickAckButton();
-        problemRecordPage.wait(5000);
+        problemRecordPage.clickAckButton_problemRecord();
+        problemRecordPage.wait(3000);
     }
 
     @Then("problem ticket status should be under investigation")
@@ -129,8 +129,6 @@ public class OWF_ProblemRecordPageSteps {
         Assert.assertEquals(problemRecordPage.getStatusText(), "Under Investigation", "Ticket status is not Under Investigation");
 
     }
-
-    //TO_DO should be changed by using checkIfControlIsReadonly method from base class
     @When("user tries to change the status to {string}")
     public void userTriesToChangeTheStatusTo(String status) {
         try {
@@ -139,6 +137,12 @@ public class OWF_ProblemRecordPageSteps {
             System.out.println("user is unable to change the status to withdrawn");
         }
     }
+
+    @When("user verifies status is read only")
+    public void userVerifiesStatusIsReadOnly() {
+        Assert.assertTrue(problemRecordPage.verifyStatusDdIsReadonly());
+    }
+
 
     @And("user goes back to login page")
     public void userGoesBackToLoginPage() {
@@ -162,7 +166,17 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("change should also be reflected in the timeline as {string}")
     public void changeShouldAlsoBeReflectedInTheTimelineAs(String message) {
-         problemRecordPage.clickTimelineButton();
+        problemRecordPage.clickTimelineButton();
+        System.out.println("Actual Timeline Message is :" + message);
+        boolean containsMessage = problemRecordPage.getTimelineStatus(1).contains(message);
+        Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
+    }
+
+    @And("change should be reflected in the timeline {string}")
+    public void changeShouldBeReflectedInTheTimeline(String message) {
+        message = message.replace('|','"');
+        problemRecordPage.clickTimelineButton();
+        System.out.println("Actual Timeline Message is :" + message);
         boolean containsMessage = problemRecordPage.getTimelineStatus(1).contains(message);
         Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
     }
@@ -819,6 +833,41 @@ public class OWF_ProblemRecordPageSteps {
     @And("user clicks attachments under sections")
     public void userClicksAttachmentsUnderSections() {
         problemRecordPage.clickOnAttachments();
+    }
+
+    @And("user clicks save button")
+    public void userClicksSaveButton() {
+        problemRecordPage.clickSave();
+
+    }
+
+    @When("user changes status to {string} on problem record page")
+    public void userChangesStatusToOnProblemRecordPage(String arg0) {
+      problemRecordPage.selectStatus_problemRecord(arg0);
+    }
+
+    @And("user enters {string} in assignee")
+    public void userEntersInAssignee(String assigneeName) {
+        problemRecordPage.enterAssignee(assigneeName);
+    }
+
+    @And("user enters {string} in status")
+    public void userEntersInStatus(String arg0) {
+       problemRecordPage.enterStatus(arg0);
+    }
+
+    @Then("user highlights {string} Gillgren")
+    public void userHighlightsGillgren(String arg0) {
+        problemRecordPage.clickTableElement_addInterestedParty("First Name", arg0);
+    }
+    @Then("user validates {string} Gillgren is listed as an interested party")
+    public void userValidatesGillgrenIsListedAsAnInterestedParty(String arg0) {
+       Assert.assertEquals(problemRecordPage.getText("First Name", 1), arg0);
+    }
+
+    @And("user waits")
+    public void userWaits() {
+        problemRecordPage.wait(3000);
     }
 }
 

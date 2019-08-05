@@ -1,4 +1,5 @@
 @Drop_Down
+  #passed
   Feature: user validates drop-downs for problem record
     Scenario: user verifies available information
 
@@ -22,7 +23,7 @@
       When user clicks on save button on the problem form
       #status' available include: Assigned, Pending, Under investigation, Withdrawn
       Then multiple statuses "Assigned:Pending:Under Investigation:Withdrawn" should be available in "Status*" dropdown
-      When user changes status to "Under Investigation"
+      When user changes status to "Under Investigation" on problem record page
       And user clicks on save button on the problem form
       Then user validates ticket status as "Under Investigation"
       And change should also be reflected in the timeline as ""
@@ -58,5 +59,5 @@
       And user enters route cause details as "Vendor contracts to be reviewed"
       And user enters RC found date as current date
       Then user clicks on save button on the problem form
-      When user changes status to "Closed"
-      Then multiple statuses "No solution identified:Not repeatable:Rejected:Risk accepted:Solved:Workaround:(clear)" should be available in "Closure code" dropdown
+      When user changes status to "Closed" on problem record page
+      Then multiple statuses "No solution identified:Not repeatable:Rejected:Risk accepted:Solved:Workaround:(clear)" should be available in "Closure Code" dropdown readonly

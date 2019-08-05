@@ -1,5 +1,5 @@
-
-@PMO_Tab
+@PMO_Tab @problem
+#passed
 Feature: PMO Tab
 
   Scenario: PMO Tab
@@ -23,14 +23,14 @@ Feature: PMO Tab
     Then PM office tab should not be visible
     Then user logsOut
     And user goes back to login page
-    When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
+    When user logs in with valid username "syvaptu1_auto" and password as "Telia@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
     And user switches to window 2
     And user enters Problem Ticket
     And user clicks Search on ticket search
-    When user verifies PM office tab visibility
-    Then PM office tab should be visible
+    Then user validates availability of tabs "PM Office"
+    And user clicks on "PM Office" tab
     When user enters "Secret problem stuff" in the problem review field
     And user clicks on save button
     And problem review field should be updated with the text "Secret problem stuff"
@@ -43,7 +43,7 @@ Feature: PMO Tab
     And user switches to window 2
     And user enters Problem Ticket
     And user clicks Search on ticket search
-    When user changes status to "Withdrawn"
+    And user changes status to "Withdrawn" on problem record page
     And user selects withdrawn reason as false alarm and clicks save
     And user clicks on yes button on warning window
     Then user validates ticket status as "Withdrawn"
@@ -51,7 +51,7 @@ Feature: PMO Tab
     And user logsOut
     And user switches to window 1
     And user goes back to login page
-    When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
+    When user logs in with valid username "syvaptu1_auto" and password as "Telia@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
     And user switches to window 2

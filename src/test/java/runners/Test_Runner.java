@@ -6,7 +6,8 @@ import runners.BaseTest;
 
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
-        tags = {"@SAO_499_Change_Ticket_Linked_Location"}
+        //dryRun = true,
+        tags = {"@Timeline_Update"}
 )
 
 public class Test_Runner extends BaseTest {

@@ -126,6 +126,14 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String dd_ACTION= "Action";
     private static final String btn_YES_ON_FRAME_IMPACT_CLEAR= "WIN_5_700027904";
     private static final String table_MAIN_PAGE= "T1020";
+    private static final String div_ID_TopToBottom= "WIN_0_777021070";
+
+
+   public boolean verifyElementIsDisabled(){
+       boolean result= findElement(By.id(btn_ADD)).isEnabled();
+       System.out.println("Element Enabled is : " +result);
+       return result;
+   }
 
     public boolean verifyClosedTickets(String colName, String colValue){
         return verifyColumnValues(By.id(table_MAIN_PAGE), colName, colValue);
@@ -138,22 +146,9 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         ClickTableElementByText(By.id(table_SELECT_LOCATION), "Name", text,false);
     }
 
-    public boolean verifyElementsAreReadOnly()
+    public boolean verifyElementsAreReadOnly(String tagName)
     {
-        List<WebElement> elements = driver.findElement(By.id("WIN_0_777021070")).findElements(By.tagName("textarea"));
-
-        for (int i = 0; i < elements.size(); i++)
-        {
-            String isReadOnly = elements.get(i).getAttribute("readonly");
-            if (isReadOnly != null && isReadOnly.contains("true")) {
-                continue;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        return true;
+        return verifyElementsAreReadOnlyByDivAndTagName(By.id(div_ID_TopToBottom), By.tagName(tagName));
     }
 
     public boolean verifyElementIsReadOnly(){

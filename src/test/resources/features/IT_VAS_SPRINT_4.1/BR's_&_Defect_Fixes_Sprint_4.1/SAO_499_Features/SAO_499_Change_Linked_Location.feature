@@ -1,5 +1,5 @@
 @SAO_499_Change_Ticket_Linked_Location @499
-
+#passed
 Feature: data searching using wildcards
   Scenario: user is able to search for data using wildcards
 

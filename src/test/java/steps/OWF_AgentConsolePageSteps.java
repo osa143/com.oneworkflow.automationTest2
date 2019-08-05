@@ -153,11 +153,12 @@ public class OWF_AgentConsolePageSteps {
 
     @And("user logsOut and closes the browser")
     public void userLogsOutsAndCloseTheBrowser() throws InterruptedException {
-        CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 0);
         agentConsolePage.clickNavUserMenu();
         agentConsolePage.wait(2000);
         agentConsolePage.clickMenuItemLogout();
         agentConsolePage.wait(1000);
+        agentConsolePage.getDriver().close();
+
     }
 
     @When("user clicks on change record from agent console")
@@ -551,6 +552,10 @@ public class OWF_AgentConsolePageSteps {
     public void userEntersInTheLocationNameField(String arg0) {
         agentConsolePage.enterLocationNamePlus_selectLocation(arg0);
         agentConsolePage.enterSendKeysToLocationNamePlus();
+    }
+    @When("user selects create menu as {string}")
+    public void userSelectsCreateMenuAs(String arg0) {
+        agentConsolePage.selectCreateMenu(arg0);
     }
 }
 

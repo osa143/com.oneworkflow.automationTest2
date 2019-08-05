@@ -343,7 +343,9 @@ public class BaseRecordPage extends BasePage {
         }
         return true;
     }
-
+    public String getText(String columnName, int rowNum){
+        return getTableCellData(By.id(table_INTERESTED_PARTIES_ID), columnName, rowNum);
+    }
     public boolean verifyUserListedUnderInterestedParty(){
         int size= getTableRows(By.id(table_INTERESTED_PARTIES_ID)).size();
         if(size>2){
@@ -610,6 +612,7 @@ public class BaseRecordPage extends BasePage {
 
     public void clickSave() {
         clickElement(By.id(btnSAVE));
+        wait(1000);
     }
 
     public void clickDiagnosis() {
@@ -722,6 +725,7 @@ public class BaseRecordPage extends BasePage {
 
     public boolean verifyTabValues(String tabValues)
     {
+        wait(1000);
         String[] multipleTabs = tabValues.split(":");
         List<String> tabs = getTabValues();
         System.out.println("Tab values are: " + tabs);

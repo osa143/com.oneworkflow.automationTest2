@@ -26,7 +26,8 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String table_SELECT_TARGET_LOCATION= "T700506101";
     private static final String btn_CANCEL= "WIN_0_777000001";
     private static final String txt_LOCATION_NAME_PLUS= "arid_WIN_0_777031430";
-    private static final String btn_CANCEL_LOCATION= "WIN_0_700000104";
+    private static final String btn_CANCEL_LOCATION= "WIN_0_700000105";
+    private static final String table_SELECT_LOCATION= "T700024013";
 
 
     public void clickCancel(){
@@ -54,7 +55,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         clickElement(By.id(btn_clear));
     }
     public List<WebElement> TableRows() {
-        return getTableRows(By.id(table_SELECT_TARGET_LOCATION));
+        return getTableRows(By.id(table_SELECT_LOCATION));
     }
     public void validateCiDetailsForMultipleLocationsName(DataTable locationNamePlus)
     {
@@ -68,10 +69,13 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
             switchToFrameByIndex(2);
             switchToFrameByIndex(1);
             int size = TableRows().size();
+            System.out.println("table size is : "+size);
             boolean ciDetailsDisplayed = size > 1 ? true: false;
             Assert.assertTrue(ciDetailsDisplayed, "CI details are not displayed");
             clickCancel();
-            clickClear_selectTarget();
+            switchToFrameByIndex(2);
+            wait(1000);
+
         }
     }
 
@@ -90,7 +94,8 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
             boolean ciDetailsDisplayed = size > 1 ? true: false;
             Assert.assertTrue(ciDetailsDisplayed, "CI details are not displayed");
             clickCancel();
-            clickClear_selectTarget();
+            switchToFrameByIndex(2);
+            wait(1000);
         }
     }
 

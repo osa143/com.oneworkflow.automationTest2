@@ -76,6 +76,12 @@ public class BasePage {
          findElement(By.xpath(element)).click();
 
     }
+    public boolean verifyElementIsEnabledByContainsTextAndTagName(String tagName, String textName){
+        String element = String.format("//%s[contains(text(),'%s')]", tagName, textName);
+        System.out.println(element);
+        return findElement(By.xpath(element)).isEnabled();
+
+    }
 
     public boolean verifyIsElementSelected(By element){
         return findElement(element).isSelected();
@@ -171,10 +177,11 @@ public class BasePage {
 
         String mainMenuXpath = "//img[@alt='Menu for " + mainMenu + "']/..";
         driver.findElement(By.xpath(mainMenuXpath)).click();
-        wait(1000);
+        wait(700);
     }
 
     public void selectMenuItem(String menuItem) {
+        wait(500);
         driver.findElement(By.className("MenuTableBody")).findElements(By.tagName("td")).stream()
                 .filter(element -> element.getText().equals(menuItem)).findFirst().orElse(null).click();
 
@@ -186,7 +193,7 @@ public class BasePage {
         for (int i = 0; i < arr.length; i++) {
             final String temp = arr[i];
             driver.findElements(By.className("MenuTableBody")).get(i).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
-            wait(1000);
+            wait(700);
         }
     }
     public void selectMainMenuAndMenuItem(String mainMenu, String menuItem){
@@ -199,14 +206,14 @@ public class BasePage {
 
         String mainMenuXpath = "//img[@alt='Menu for " + DropDownMenu + "']/..";
         driver.findElement(By.xpath(mainMenuXpath)).click();
-        wait(1000);
+        wait(800);
     }
 
     public void selectDropDownMenuForReadOnly(String DropDownMenu) {
 
         String mainMenuXpath = "//img[@alt='ReadOnly menu for " + DropDownMenu + "']/..";
         driver.findElement(By.xpath(mainMenuXpath)).click();
-        wait(1000);
+        wait(800);
     }
 
     public void selectDropDownValue(String DropDownValue) {
@@ -244,6 +251,10 @@ public class BasePage {
     }
 
 
+    public WebElement waitUntilElementClickable(By by)
+    {
+        return webDriverWait.until(ExpectedConditions.elementToBeClickable(by));
+    }
 
 
     public void selectDropDownNameAndValue(String dropdownName, String dropdownValue, boolean readonly) {
@@ -253,8 +264,9 @@ public class BasePage {
         else
             dropdownXpath = "//img[@alt='Menu for " + dropdownName + "']/..";
 
+         wait(200);
         driver.findElement(By.xpath(dropdownXpath)).click();
-        wait(1000);
+        wait(800);
 
         String arr[] = dropdownValue.split(":");
         for (int i = 0; i < arr.length; i++) {
@@ -266,7 +278,7 @@ public class BasePage {
 
                 elements.get(i).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
             }
-            wait(1000);
+            wait(800);
         }
 
     }
@@ -279,7 +291,7 @@ public class BasePage {
             dropdownXpath = "//img[@alt='Menu for " + dropdownName + "']/..";
 
         driver.findElement(By.xpath(dropdownXpath)).click();
-        wait(800);
+        wait(700);
 
         String arr[] = dropdownValue.split(":");
         for (int i = 0; i < arr.length; i++) {
@@ -290,7 +302,7 @@ public class BasePage {
 
                 elements.get(i + index).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
             }
-            wait(800);
+            wait(700);
         }
 
     }
@@ -694,6 +706,7 @@ public class BasePage {
 
 
     public void selectTab(String tab) {
+        wait(500);
         driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tab)).findFirst().orElse(null).click();
 
     }
@@ -755,13 +768,30 @@ public class BasePage {
   }
     public void acceptAlert() {
         driver.switchTo().alert().accept();
+        wait(2000);
     }
 
     public void closeTab(){
         driver.close();
         wait(2000);
     }
+    public boolean verifyElementsAreReadOnlyByDivAndTagName(By element, By locator)
+    {
+        List<WebElement> elements = driver.findElement(element).findElements(locator);
 
+        for (int i = 0; i < elements.size(); i++)
+        {
+            String isReadOnly = elements.get(i).getAttribute("readonly");
+            if (isReadOnly != null && isReadOnly.contains("true")) {
+                continue;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 
 }
 

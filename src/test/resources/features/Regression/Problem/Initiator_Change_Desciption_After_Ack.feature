@@ -1,5 +1,5 @@
-#passed
-@Initiator_Change_Description_After_Ack
+@Initiator_Change_Description_After_Ack @problem
+  #passed
 Feature:Initiator change description
 
   Scenario: After Acknowledge

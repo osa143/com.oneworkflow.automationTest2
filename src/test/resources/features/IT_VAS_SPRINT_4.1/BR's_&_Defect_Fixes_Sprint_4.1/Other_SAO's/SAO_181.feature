@@ -1,11 +1,12 @@
 @SAO_181
   #OP next due date Column doesn't have any data. that is why its failing.
+  #Replace ticket
 Feature: Verification of OP target due date visibility
 
   Scenario: Verify OP Target Due date availability
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+    When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user enters ticket id as "OP-000000899011" in the agent console search box and searches for ticket
     And user clicks on add column under preferences and selects OP next due date

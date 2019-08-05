@@ -1,4 +1,5 @@
-@Pm_Withdraw_Ticket_Before_Ack
+@Pm_Withdraw_Ticket_Before_Ack @problem
+  #passed
 
 Feature: problem record
   Scenario: problem manager withdraws ticket before Ack
@@ -26,7 +27,7 @@ Feature: problem record
     And user switches to window 2
     And user enters Problem Ticket
     And user clicks Search on ticket search
-    When user changes status to "Withdrawn"
+    When user changes status to "Withdrawn" on problem record page
     And user clicks on save button on the problem form
     And user clicks on yes on warning window
     Then an error message "Required field (without a default) not specified : Withdrawn Reason (ARERR 9424)	" should appear with red boarder around withdrawn reason

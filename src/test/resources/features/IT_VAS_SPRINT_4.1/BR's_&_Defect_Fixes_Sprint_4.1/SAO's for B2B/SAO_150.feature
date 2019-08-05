@@ -24,16 +24,16 @@ Feature: WO not closed after receiving inbound event
     #And user validates child ticket details are same as parent ticket
     Then user clicks on save button
     When user clicks on assignment under sections
-    And user clicks on apply B2B button
+    And user clicks on apply BtwoB button
     #Assigned profile will depend on the TeMIP ticket - with the ticket i used its Eltel Sweden
     Then user should see assigned profile as "Eltel - FS - SE - B2B"
     When user selects SLA class as "10 Hours repair time"
     Then user validates estimated ready time is updated
-    When user clicks on B2B dispatch tab
+    When user clicks on "B2B Dispatch" tab
     And user enters header value as "Test"
     And user enters message value as "Automated Test"
     When user clicks on save button
-    When user clicks on B2B dispatch tab
+    When user clicks on "B2B Dispatch" tab
     And user should see outbound assignment event
     Then user should see WFM ticket ID
     And user should see dispatch status as "Submitted"
@@ -46,7 +46,7 @@ Feature: WO not closed after receiving inbound event
     Then user changes status to "Closed"
     And user clicks on save button on the problem form
     Then user validates ticket status as "Closed"
-    When user clicks on B2B dispatch tab
+    When user clicks on "B2B Dispatch" tab
     And user clicks on inbound events refresh button
     Then user validates inbound events have no errors
     When user switches to window 1

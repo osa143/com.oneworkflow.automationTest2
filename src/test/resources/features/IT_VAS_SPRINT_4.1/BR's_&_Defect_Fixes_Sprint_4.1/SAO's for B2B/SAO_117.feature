@@ -5,7 +5,7 @@ Feature: SLA class wrongly calculated
   Scenario: user creates a B2B work order and checks SLA class
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+    When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create trouble event
     Then trouble record form should appear in new tab
@@ -15,7 +15,7 @@ Feature: SLA class wrongly calculated
     And user enters "B2B Test Ticket" in Title field
     And user selects request type as "Customer" on trouble event page
     And user enters description as "B2B Test Ticket"
-    And user clicks on save button
+    And user clicks save button
     Then ticket should be created and status should be assigned
     When user clicks on "Diagnosis" tab
     And user clicks on CI search button
@@ -26,21 +26,20 @@ Feature: SLA class wrongly calculated
     And user selects a CI from list
     And user selects impact level as "No Impact"
     And user clicks on relate CI
-    #this step is not working. need to close window manually
     And user closes warning message
     And user clicks on close button on CI search window
     When user clicks on work order tab
     And user clicks on create from ticket
     When user switches to window 2
     And user validates ticket status as "New"
-    Then user clicks on save button
+    Then user clicks save button
     And user validates ticket status as "New"
     #And user validates child ticket details are same as parent ticket
-    #Then user clicks on save button
+    Then user clicks save button
     When user switches to window 1
     And clicks on ticket refresh button
     And user accepts alert
-    Then user clicks on work order tab
+    Then user clicks on "Work Orders" tab
     And user validates child WorkOrder availability
     And user validates WorkOrder status as "OPEN"
     When user switches to window 2

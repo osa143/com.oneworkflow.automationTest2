@@ -1,6 +1,5 @@
-#AccessNetworks:RAN Optimization not able to be found
-@Withdraw_Ticket_After_Ack
-
+@Withdraw_Ticket_After_Ack @problem
+#passed
 Feature:withdraw problem Ticket
 
   Scenario: withdraw ticket after Acknowledge
@@ -30,7 +29,7 @@ Feature:withdraw problem Ticket
     And user clicks Search on ticket search
     When user clicks on Ack button
     Then problem ticket status should be under investigation
-    And change should also be reflected in the timeline as ""
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation."
     When user tries to change the status to "Withdrawn"
     Then problem ticket status should be under investigation
     Then user logsOut
@@ -42,7 +41,7 @@ Feature:withdraw problem Ticket
     And user switches to window 3
     And user enters Problem Ticket
     And user clicks Search on ticket search
-    When user tries to change the status to "Withdrawn"
+    When user verifies status is read only
     Then problem ticket status should be under investigation
 
 

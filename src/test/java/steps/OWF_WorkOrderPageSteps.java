@@ -162,5 +162,35 @@ public class OWF_WorkOrderPageSteps {
     public void userSelectsRequestTypeAsOnWorkOrderPage(String requestType) {
         workOrderPage.selectRequestType(requestType);
     }
+
+    @Then("user validates manufacturer as {string}")
+    public void userValidatesManufacturerAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getManufacturer(), arg0);
+    }
+
+    @When("user clicks on outbound events refresh button")
+    public void userClicksOnOutboundEventsRefreshButton() {
+        workOrderPage.clickRefresh_outbound();
+    }
+
+    @Then("user should see {string} notification in outbound in row {int}")
+    public void userShouldSeeNotification(String arg0, int arg1) {
+      Assert.assertEquals(workOrderPage.getOutboundText("Operation", arg1), arg0);
+    }
+
+    @Then("user should see {string} notification in inbound in row {int}")
+    public void userShouldSeeNotificationInInboundInRow(String arg0, int arg1) {
+        Assert.assertEquals(workOrderPage.getInboundText("Operation", arg1), arg0);
+    }
+
+    @When("user selects dispatch status as {string}")
+    public void userSelectsDispatchStatusAs(String arg0) {
+       workOrderPage.selectDispatchStatus(arg0);
+    }
+
+    @And("user enters Cancel Requested Reason as {string}")
+    public void userEntersCancelRequestedReasonAs(String arg0) {
+        workOrderPage.enterCancelRequestReason(arg0);
+    }
 }
 

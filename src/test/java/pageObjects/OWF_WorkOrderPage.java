@@ -24,6 +24,39 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_SCHEDULE_END= "arid_WIN_0_777021165";
     private static final String txt_TICKET_ID= "arid_WIN_0_777777600";
     private static final String txt_TITLE= "arid_WIN_0_777031000";
+    private static final String txt_MANUFACTURER= "arid_WIN_0_240001003";
+    private static final String REFRESH_OUTBOUND_DIV= "WIN_0_600002302";
+    private static final String btn_REFRESH_OUTBOUND= "//a[contains(text(),'Refresh')]";
+    private static final String table_INBOUND = "T600002301";
+    private static final String table_OUTBOUND = "T600002302";
+    private static final String txt_DISPATCH_STATUS= "arid_WIN_0_709003012";
+    private static final String txt_CANCEL_REQUEST_REASON= "arid_WIN_0_600001090";
+
+    public void enterCancelRequestReason(String text){
+        enterTextByElement(By.id(txt_CANCEL_REQUEST_REASON), text);
+    }
+
+
+    public void selectDispatchStatus(String text){
+        findElement(By.id(txt_DISPATCH_STATUS)).click();
+        wait(500);
+        selectMenuItem(text);
+    }
+
+    public String getOutboundText(String columnName, int rowNum){
+        return getTableCellData(By.id(table_OUTBOUND), columnName, rowNum);
+    }
+
+    public String getInboundText(String columnName, int rowNum){
+        return getTableCellData(By.id(table_INBOUND), columnName, rowNum);
+    }
+    public void clickRefresh_outbound(){
+        driver.findElement(By.id(REFRESH_OUTBOUND_DIV)).findElement(By.xpath(btn_REFRESH_OUTBOUND)).click();
+    }
+
+    public String getManufacturer(){
+        return getTextByID(txt_MANUFACTURER);
+    }
 
 
     public void enterTitle(String text){

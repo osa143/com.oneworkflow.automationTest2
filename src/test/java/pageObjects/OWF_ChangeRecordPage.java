@@ -29,7 +29,16 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String btn_CANCEL_LOCATION= "WIN_0_700000105";
     private static final String table_SELECT_LOCATION= "T700024013";
     private static final String btn_ADVANCED_SEARCH= "WIN_0_777505104";
+    private static final String txt_ADVANCED_SEARCH= "arid1005";
 
+    public void enterAdvancedSearch(String text){
+        enterTextByElement(By.id(txt_ADVANCED_SEARCH), text);
+    }
+
+    public void clickAdvancedSearch(){
+        clickElement(By.id(btn_ADVANCED_SEARCH));
+        wait(2000);
+    }
 
     public void clickCancel(){
         clickElement(By.id(btn_CANCEL_LOCATION));

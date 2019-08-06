@@ -1,4 +1,5 @@
 @BR-2965_Tieto_Create @Tieto
+  #Stubs needed - Tieto timeline update
   Feature: creation and sending of WO to Tieto
     Scenario: user is able to create and send a WO to Tieto
 
@@ -13,7 +14,7 @@
       And user enters description as "Tieto Test"
       And user selects priority as "Emergency"
       And user enters reason field as "Integration Testing"
-      Then user clicks on save button on the problem form
+      Then user clicks on save button
       When user clicks on Diagnosis tab
       And user clicks on CI search button
       Then user switches to frame
@@ -71,7 +72,7 @@
       Then user clicks on save button
       #Tieto then validates that they receive new description value
       When user clicks on attachments under sections
-      And user clicks on add button under external
+      And user clicks on add button under internal
       And user searches for attachment and adds attachment to ticket
       And user enters attachment description as "Test Attachment"
       Then user clicks on save button

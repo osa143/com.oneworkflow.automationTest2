@@ -289,4 +289,15 @@ public class OWF_ChangeRecordPageSteps {
     public void userEntersChangeTicketInTicketIDField() {
         changeRecordPage.enterTicketIdPlus(CommonUtils.changeTicket);
     }
+
+    @When("user clicks on advanced search button")
+    public void userClicksOnAdvancedSearchButton() {
+        changeRecordPage.clickAdvancedSearch();
+    }
+
+    @And("user enters {string} in the advanced search bar")
+    public void userEntersInTheAdvancedSearchBar(String text) {
+        text = text.replace('|','"');
+        changeRecordPage.enterAdvancedSearch(text);
+    }
 }

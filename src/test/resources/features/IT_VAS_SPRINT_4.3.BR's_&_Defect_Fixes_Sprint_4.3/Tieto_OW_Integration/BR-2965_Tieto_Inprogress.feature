@@ -1,4 +1,5 @@
 @BR-2965_Tieto_Resolve @Tieto
+  #Tieto Timeline update
 Feature: creation and sending of WO to Tieto - Tieto Resolves
   Scenario: user is able to create and send a WO to Tieto - Tieto Resolves
 
@@ -61,6 +62,7 @@ Feature: creation and sending of WO to Tieto - Tieto Resolves
     When user clicks on assignment under sections
     And user selects assigned profile dropdown as "Tieto"
     Then user clicks on save button
-    When user changes status to "Work In Progress"
+    When user clicks on Ack button
     And user clicks on save button
+    Then user validates ticket status as "Work In Progress"
     #Teito then validates that they receive the work in progress message

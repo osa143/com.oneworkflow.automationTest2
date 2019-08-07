@@ -1,4 +1,5 @@
 @BR-2965_Tieto-OneWorkflow_Resolve @Tieto
+  #Stubs needed: Tieto Timeline Update, Tieto Closure
   Feature: creation and sending of WO to Tieto - OW resolves
     Scenario: user is able to create and send a WO to Tieto - OW resolves
 
@@ -58,8 +59,8 @@
       And user clicks on relate CI
       Then user closes warning message
       And user clicks on close button on CI search window
-      When user clicks on owner under sections
-      And user selects owner profile as "Third Parties:ITVAS:TIETO"
+      When user clicks on assignment under sections
+      And user selects assigned profile dropdown as "Third Parties:ITVAS:Tieto"
       Then user clicks on save button
       #Tieto then sends a timeline update to OW
       When user enters "Test update" in the timeline text box

@@ -1,4 +1,5 @@
 @BR_2965_Tieto_Assignment @Tieto
+  #Stubs needed - Tieto Reject message
 Feature: creation and sending of WO to Tieto - Tieto Rejects assignment
   Scenario: user is able to create and send a WO to Tieto - Tieto Rejects assignment
 
@@ -10,7 +11,7 @@ Feature: creation and sending of WO to Tieto - Tieto Rejects assignment
     Then blank work order form should appear in new tab
     When user enters "General | Support" in Title field
     And user selects request type as "SA Request:Support" in work order page
-    And user enters description as "Tieto Test"
+    And user enters description as "Tieto Test - Assignment"
     And user selects priority as "Emergency"
     And user enters reason field as "Integration Testing"
     Then user clicks on save button

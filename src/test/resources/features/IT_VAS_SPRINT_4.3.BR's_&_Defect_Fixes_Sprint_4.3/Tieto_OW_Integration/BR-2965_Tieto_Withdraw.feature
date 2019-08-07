@@ -1,5 +1,5 @@
 @BR-2965_Tieto_Withdraw @Tieto
-
+#Stubs Needed: Tieto Timeline update
 Feature: creation and sending and withdrawing of WO to Tieto
   Scenario: user is able to create, send and withdraw a WO to Tieto
 
@@ -59,11 +59,12 @@ Feature: creation and sending and withdrawing of WO to Tieto
     Then user closes warning message
     And user clicks on close button on CI search window
     When user clicks on assignment under sections
-    And user selects assigned profile dropdown as "Tieto"
+    And user selects assigned profile dropdown as "Third Parties:IIVAS:Tieto"
     And user enters "Test Update" in the timeline text box
     Then user clicks on save button
     When user clicks on assignment under sections
     And user selects assigned profile dropdown as "One Workflow"
+    And user changes status to "Withdrawn"
     Then user clicks on save button
     #Tieto then validates that they receive cancellation message
     And user validates ticket status as "Withdrawn"

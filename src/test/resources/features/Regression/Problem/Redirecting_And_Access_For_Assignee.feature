@@ -1,4 +1,5 @@
 @Assignee
+  #All feilds greyout from step 98
 Feature: Changing of assignee for problem ticket
 
   Scenario: User is able to change assignment/assignee on problem ticket
@@ -62,23 +63,26 @@ Feature: Changing of assignee for problem ticket
     And user selects type as "Additional Access" under interested parties
     And user clicks on radio button user
     And user enters "Thgi00" in login name plus field
-    Then user highlights "Tomas" Gillgren
+    And user clicks on search under add interested party
+    Then user highlights "Thomas" Gillgren
     And user selects access radio button as read and write
     And  user selects auto notify radio button as yes
     And user clicks on save button under interested parties frame
-    Then user validates "Tomas" Gillgren is listed as an interested party
+    Then user validates "Thomas" Gillgren is listed as an interested party
     And change should also be reflected in the timeline as "The User Thomas Gillgren has been added as interested parties."
     Then user clicks on "Additional Info" tab
     And user enters "Thgi00" in the analysis team member one field
     And user clicks on save button on the problem form
+    Then user clicks on "Additional Info" tab
     And user validates "Thgi00" is listed under analysis team member one field
     When user clicks on assignment under sections
-    Then user selects assigned profile dropdown as "Problem Management:Problem Manager"
+    Then user selects assigned profile dropdown as "Problem Manager"
     And user enters "mina09_auto" in assignee
     #And user selects assignee as "mina09_auto" by using alphabet "n" key up 0 times
     And user clicks on save button on the problem form
-    And change should also be reflected in the timeline "STATUS MODIFIED:mina09:Tohall_copy"
+    And change should be reflected in the timeline "Request has been reassigned from Assignee user |frvi96_auto| to  Assignee  user |mina09_auto|."
     Then user logsOut
+    And user goes back to login page
     And user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
@@ -88,9 +92,9 @@ Feature: Changing of assignee for problem ticket
     And user clicks Search on ticket search
     And user should see problem ticket
     Then user clicks on "Interested Parties" tab
-    And user highlights/selects user "Thgi00"
+    And user highlights user "thgi00" under interested parties
     And user clicks on remove button
-    Then user "Thgi00" shouldn't be listed anymore
+    Then user Thgi00 shouldn't be listed anymore
     When user changes status to "Investigation Complete" on problem record page
     And user clicks on save button on the problem form
     Then an error message should appear: "Required field (without a default) not specified : Root Cause Details (ARERR 9424)"

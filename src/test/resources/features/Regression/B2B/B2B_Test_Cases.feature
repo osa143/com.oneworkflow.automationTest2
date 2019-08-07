@@ -20,6 +20,7 @@
       When user enters "<CIName>" in the name+ field
       And user clicks on search button on CI search window
       And user selects a CI from list
+      And user waits
       And user selects impact level as "Degradation of Service"
       Then user clicks on relate CI
       And user closes warning message

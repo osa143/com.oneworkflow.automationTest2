@@ -173,4 +173,9 @@ public class OWF_CiSearchPageSteps {
     public void userClicksOnRiskTab() {
         ciSearchPage.clickRiskTab();
     }
+
+    @And("user enters impact from date as current date")
+    public void userEntersImpactFromDateAsCurrentDate() {
+       ciSearchPage.enterImpactFrom();
+    }
 }

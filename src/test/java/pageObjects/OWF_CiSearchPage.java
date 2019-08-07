@@ -29,6 +29,11 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String Table_ID = "T700009024";
     private static final String CI_DIAGNOSIS_TABLE_ID = "T700009087";
     private static final String TABLE_ID_linkedItems = "T777506000";
+    private static final String txt_IMPACT_FROM= "arid_WIN_0_700009083";
+
+    public void enterImpactFrom(){
+        findElement(By.id(txt_IMPACT_FROM)).sendKeys(Keys.ENTER);
+    }
 
 
     public void clickRiskTab(){
@@ -140,7 +145,7 @@ public class OWF_CiSearchPage extends BasePage {
 
     }
     public void selectLevel(String value){
-        wait(250);
+        wait(500);
         selectDropDownNameAndValue(ddLEVEL, value, false);
         wait(500);
     }

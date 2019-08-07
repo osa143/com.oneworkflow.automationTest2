@@ -28,7 +28,7 @@ Feature: SLA class wrongly calculated
     And user clicks on relate CI
     And user closes warning message
     And user clicks on close button on CI search window
-    When user clicks on work order tab
+    Then user clicks "Work Orders" tab
     And user clicks on create from ticket
     When user switches to window 2
     And user validates ticket status as "New"
@@ -39,7 +39,8 @@ Feature: SLA class wrongly calculated
     When user switches to window 1
     And clicks on ticket refresh button
     And user accepts alert
-    Then user clicks on "Work Orders" tab
+    And user waits
+    Then user clicks on work order tab
     And user validates child WorkOrder availability
     And user validates WorkOrder status as "OPEN"
     When user switches to window 2

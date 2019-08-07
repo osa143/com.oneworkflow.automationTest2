@@ -3,6 +3,7 @@ package steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pageObjects.OWF_TroubleEventPage;
 import pageObjects.OWF_WorkOrderPage;
@@ -907,6 +908,22 @@ public class OWF_TroubleEventPageSteps {
     @And("user clicks on the search button on select target request")
     public void userClicksOnTheSearchButtonOnSelectTargetRequest() {
         troubleEventPage.clickSearch_selctTargetRequest();
+    }
+
+    @Then("user clicks {string} tab")
+    public void userClicksTab(String arg0) {
+        troubleEventPage.wait(3000);
+        troubleEventPage.selectTab(arg0);
+    }
+
+    @And("user validates CI SE_CPE_FRECPE5 {string} is {string} in row {int}")
+    public void userValidatesCISE_CPE_FRECPEIsInRow(String colName, String colValue, int rowNum) {
+        Assert.assertEquals(colValue, troubleEventPage.verifyColumnStatus(colName, rowNum));
+    }
+
+    @And("user highlights user {string} under interested parties")
+    public void userHighlightsUserUnderInterestedParties(String arg0) {
+         troubleEventPage.clickTableElement_interestedParteis("Login Name", arg0);
     }
 }
 

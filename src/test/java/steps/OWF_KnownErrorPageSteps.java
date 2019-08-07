@@ -94,4 +94,9 @@ public class OWF_KnownErrorPageSteps {
     public void userSelectsErrorCodeAs(String arg0) {
        knownErrorPage.selectCloserCode(arg0);
     }
+
+    @When("user enters closure code as {string}")
+    public void userEntersClosureCodeAs(String arg0) {
+     knownErrorPage.enterClosureCode(arg0);
+    }
 }

@@ -15,7 +15,6 @@
       And user enters description as "A customer complaint"
       And user clicks on save button on the problem form
       Then ticket should be created and status should be assigned
-      And user switches to window 1
       When user clicks on change record from agent console
       And user switches to window 2
       Then change record form should open in a new tab
@@ -35,9 +34,9 @@
       And user enters "No Risk" in the risk description field
       Then user clicks on "Schedule" tab
       And user enters as "Test ticket no impact" in service and customer impact
-      And user enters request start date as "00:00:00" one day in the future
-      And user enters request end date as "02:00:00" one day in the future
-      And user enters impact duration as "5" minutes
+      And user enters start time as some minutes fast from current sweden time
+      And user enters Request End time as some minutes fast from request start time
+      And user enters impact duration as "4" minutes
       And user selects estimated impact as "No Impact"
       And user clicks on save button
       Then user clicks on "Risk" tab
@@ -52,7 +51,7 @@
       And user clicks on save button
       Then user clicks on Diagnosis tab
       And user clicks on CI search button
-      And user switches to frame 2
+      And user switches to frame
       #When user clicks on clear button
       And user selects search for as "All CIs"
       And  user enters "SE_CPE_FRECPE5" in name field
@@ -65,7 +64,6 @@
       Then CI should be listed and displayed under the Diagnosis tab
       When user clicks on Send button
       Then ticket should be created and status should be assigned
-      And user switches to window 1
       When user clicks on create known error
       And user switches to window 3
       Then known error form should appear in new tab
@@ -82,10 +80,9 @@
       Then select target request window should open
       When user enters ticket in ticket ID+ field
       And user clicks on search button on CI search window
-      Then change ticket should appeared in the list on select target request window
-      And user highlights ticket on select target request window
+      And user selects ticket under select target request
       And user clicks on accept button
-      Then change ticket should now appear in the list of linked items
+      Then user validates 1 linked ticket availability
       And user clicks on linked items tab
       And user selects target application first dropdown as "OS3 Change"
       And user selects target application second dropdown as "Caused by"
@@ -93,7 +90,6 @@
       Then select target request window should open
       When user enters ticket in ticket ID+ field
       And user clicks on search button on CI search window
-      Then incident ticket should appeared in the list on select target request window
-      When user highlights ticket on select target request window
+      And user selects ticket under select target request
       And user clicks on accept button
-      Then incident ticket should now appear in the list of linked items
+      Then user validates 2 linked ticket availability

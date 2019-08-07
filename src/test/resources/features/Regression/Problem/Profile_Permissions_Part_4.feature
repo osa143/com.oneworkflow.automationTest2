@@ -1,5 +1,6 @@
 @Profile_Permissions_Part_4
-  #CI search window issue
+  #passed
+  #CI search window
   Feature: Validation of permissions
     Scenario: user permission testing
 
@@ -52,17 +53,17 @@
       And user enters "SE_CPE_FRECPE5" in name field
       And user clicks on search button on CI search window
       When user selects a CI from list
-      And user selects impact level as "None"
+      And user selects impact level as "No Impact"
       Then user clicks on relate CI
-      And user clicks on yes on CI warning window
+      And user closes warning message
+      And user clicks on close button on CI search window
       And CI should be listed and displayed under the Diagnosis tab
       When user changes status to "Investigation Complete" on problem record page
       And user clicks on Diagnosis tab
       #right click CI and then choose impact:clear all
       Then user right clicks on CI "SE_CPE_FRECPE5" and selects "Impact:Clear All"
-      And user switches to frame
-      Then user clicks on yes on warning window
-      And user validates CI "SE_CPE_FRECPE5" impact level is "Inactive"
+      And user should see confirmation message for impact clear and clicks ok
+      And user validates CI SE_CPE_FRECPE5 "Impact Status" is "Inactive" in row 1
 
 
 

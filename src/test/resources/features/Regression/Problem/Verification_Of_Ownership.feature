@@ -1,4 +1,5 @@
 @Verification_of_ownership
+  #passed
 Feature: Verification of Problem ticket owner
 
   Scenario: user shouldn't be able to alter a problem ticket not assigned to them
@@ -19,20 +20,23 @@ Feature: Verification of Problem ticket owner
     And user enters description as "UAT Test3"
     And user selects impact type as moderate:limited
     And user selects urgency as low
+    And user clicks on assignment under sections
+    And user selects assigned profile dropdown as "Problem Initiator"
+    And user enters "Tohall_copy" in assignee
     And user clicks on save button on the problem form
     Then ticket should be created and status should be assigned
     And user gets ticket value
     Then user logsOut
     And user goes back to login page
     #username and password are not correct for below step, replace credentials
-    And user logs in with valid username "mina09_auto" and password as "Test@1234"
+    And user logs in with valid username "Mina09_Auto2" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
     And user switches to window 2
     And user enters Problem Ticket
     And user clicks Search on ticket search
-    When user tries to Ack the ticket but its shouldn't allow
-    When user tries to change the status to "withdrawn"
+    #When user tries to Ack the ticket but its shouldn't allow
+    When user verifies status is read only
     Then problem ticket status should be assigned
     When user tries to change request type as Access Networks:RAN NSN 2G:3G:4G
     Then request type should be RAN optimization

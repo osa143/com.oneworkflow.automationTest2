@@ -66,6 +66,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String btnACK_CSS = "#WIN_0_777504152";
     private static final String timeline_TABLE_ID = "T999000510";
     private static final String btnRELEASE_ID = "WIN_0_777021435";
+    private static final String btn_YES= "WIN_6_700027904";
 
     private static final String txtSOURCE_ID = "arid_WIN_0_777777912";
     private static final String txtPRIORITY_ID = "arid_WIN_0_700025204";
@@ -74,9 +75,18 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txtTO_DATE = "arid_WIN_0_777031004";
     private static final String table_ADD_INTERESTED_PARTY= "T700027964";
 
+    public void clickYes_impactClear(){
+        clickElement(By.id(btn_YES));
+        wait(1000);
+    }
+
     public void clickTableElement_addInterestedParty(String headerName, String text){
         ClickTableElementByText(By.id(table_ADD_INTERESTED_PARTY),headerName, text, false);
     }
+    public void clickTableElement_linkedItems(String headerName, String text){
+        ClickTableElementByText(By.id(table_LINKED_ITEMS_ID),headerName, text, false);
+    }
+
 
     public boolean verifyStatusDdIsReadonly(){
         return checkIfControlIsReadonly(ddSTATuS_ID);

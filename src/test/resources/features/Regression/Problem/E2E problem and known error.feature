@@ -1,5 +1,5 @@
 @E2E_problem_and_known_error
-
+#step 98 wrong ticket
   Feature: problem
 
     Scenario: E2E problem and known error
@@ -45,8 +45,8 @@
       And user switches to window 3
       And user enters Problem Ticket
       And user clicks Search on ticket search
-      And user enters "Investigation Complete" in status
-      #When user changes status to "Investigation Complete" on problem record page
+      #And user enters "Investigation Complete" in status
+      When user changes status as Investigation Complete on problem record page
       #Then mandatory fields should be indicated in bold
       When user selects root cause code as "Technical:HW error"
       And user enters route cause details as "Bad management"
@@ -60,43 +60,46 @@
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       And user clicks on search and selects open search forms and problem record
+      And user switches to window 3
       And user enters Problem Ticket
       And user clicks Search on ticket search
       When user clicks on linked items tab
-      And user selects target application first dropdown as "OS3 Known Error"
+      And user selects target application first dropdown as "OS3 - Known Error"
       And user selects target application second dropdown as "Caused by"
       And user clicks on create button under linked items
-      And user switches to window 3
+      And user switches to window 4
       Then known error ticket status should be "New"
       And user gets ticket value
-      When user selects request type as "Risks & Failures:Lack of Business Continuity Management (BCM)"
-      And user enters description as "Test"
+#      When user selects request type as "Risks & Failures:Lack of Business Continuity Management (BCM)"
+#      And user enters description as "Test"
       And user clicks on save button
       Then known error ticket status should be "Draft"
       And user switches to window 3
-      When user changes status to "Closed"
+      When user changes status to "Closed" on problem record page
+      And user clicks save button
       Then mandatory fields should be indicated in bold
+      And user enters actual finish as current date
       When user enters decision go no go as current date
       And user selects solved under closure code
       And user enters solution as "A change in processes"
       And user enters solution found date as current date
       And user clicks on save button
-      Then ticket status should be closed
-      And change should also be reflected in the timeline as ""
+      Then user validates ticket status as "Closed"
+      And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Investigation Complete to Closed. "
       And user logsOut
+      And user switches to window 2
       And user goes back to login page
-      When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
+      When user logs in with valid username "syvaptu1_auto" and password as "Telia@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       And user clicks on search and selects open search forms and problem record
       And user switches to window 4
       And user enters Problem Ticket
       And user clicks Search on ticket search
-      When user changes status to "Published"
+      When user changes status to "Published" on problem record page
       And user clicks on save button
       Then user validates ticket status as "Published"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on problem record page
       And user clicks on save button
-     #  And mandatory fields should be indicated in bold
       When user selects closure code as "Full impact"
       And user clicks on save button
       Then user validates ticket status as "Closed"

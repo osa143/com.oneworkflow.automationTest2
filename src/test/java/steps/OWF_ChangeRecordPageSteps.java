@@ -88,7 +88,7 @@ public class OWF_ChangeRecordPageSteps {
     @And("user clicks on CI search button")
     public void userClicksOnCISearchButton() {
         changeRecordPage.clickCiSearch();
-        changeRecordPage.wait(3000);
+        changeRecordPage.wait(1500);
     }
 
 

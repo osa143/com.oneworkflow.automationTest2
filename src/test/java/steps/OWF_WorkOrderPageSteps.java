@@ -174,8 +174,8 @@ public class OWF_WorkOrderPageSteps {
     }
 
     @Then("user should see {string} notification in outbound in row {int}")
-    public void userShouldSeeNotification(String arg0, int arg1) {
-      Assert.assertEquals(workOrderPage.getOutboundText("Operation", arg1), arg0);
+    public void userShouldSeeNotification(String arg0, int rowNum) {
+      Assert.assertEquals(workOrderPage.getOutboundText("Operation", rowNum), arg0);
     }
 
     @Then("user should see {string} notification in inbound in row {int}")
@@ -192,5 +192,8 @@ public class OWF_WorkOrderPageSteps {
     public void userEntersCancelRequestedReasonAs(String arg0) {
         workOrderPage.enterCancelRequestReason(arg0);
     }
+
+
+
 }
 

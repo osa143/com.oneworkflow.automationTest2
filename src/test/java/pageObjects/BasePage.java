@@ -266,7 +266,7 @@ public class BasePage {
 
          wait(200);
         driver.findElement(By.xpath(dropdownXpath)).click();
-        wait(800);
+        wait(900);
 
         String arr[] = dropdownValue.split(":");
         for (int i = 0; i < arr.length; i++) {
@@ -278,7 +278,7 @@ public class BasePage {
 
                 elements.get(i).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
             }
-            wait(800);
+            wait(900);
         }
 
     }
@@ -706,7 +706,7 @@ public class BasePage {
 
 
     public void selectTab(String tab) {
-        wait(500);
+        wait(2000);
         driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tab)).findFirst().orElse(null).click();
 
     }

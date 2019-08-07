@@ -167,6 +167,7 @@ public class OWF_ProblemRecordPageSteps {
     @And("change should also be reflected in the timeline as {string}")
     public void changeShouldAlsoBeReflectedInTheTimelineAs(String message) {
         problemRecordPage.clickTimelineButton();
+        problemRecordPage.clickRefresh_timeline();
         System.out.println("Actual Timeline Message is :" + message);
         boolean containsMessage = problemRecordPage.getTimelineStatus(1).contains(message);
         Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
@@ -239,7 +240,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("request type should be RAN optimization")
     public void requestTypeShouldBeRANOptimization() {
-        Assert.assertEquals(problemRecordPage.getRequestTypeText(), "RAN Optimization", "Request type is not RAN Optimization");
+        Assert.assertEquals(problemRecordPage.getRequestTypeText(), "Access Networks | RAN Optimization", "Request type is not RAN Optimization");
         System.out.println(problemRecordPage.getRequestTypeText());
 
     }
@@ -862,12 +863,43 @@ public class OWF_ProblemRecordPageSteps {
     }
     @Then("user validates {string} Gillgren is listed as an interested party")
     public void userValidatesGillgrenIsListedAsAnInterestedParty(String arg0) {
-       Assert.assertEquals(problemRecordPage.getText("First Name", 1), arg0);
+       Assert.assertEquals(problemRecordPage.getText("First Name", 2), arg0);
     }
 
     @And("user waits")
     public void userWaits() {
         problemRecordPage.wait(3000);
     }
+
+    @And("user highlights user {string}")
+    public void userHighlightsUser(String arg0) {
+        problemRecordPage.clickTableElement_linkedItems("Login Name", arg0);
+
+    }
+
+    @Then("user Thgi00 shouldn't be listed anymore")
+    public void userThgiShouldnTBeListedAnymore() {
+        Assert.assertFalse(problemRecordPage.verifyUserListedUnderInterestedParty());
+    }
+
+    @And("user should see confirmation message for impact clear and user clicks yes")
+    public void userShouldSeeConfirmationMessageForImpactClearAndUserClicksOk() {
+        problemRecordPage.clickYes_impactClear();
+    }
+
+
+    @When("user changes status as Investigation Complete on problem record page")
+    public void userChangesStatusAsInvestigationCompleteOnProblemRecordPage() {
+        try{
+            problemRecordPage.selectStatus_problemRecord("Investigation Complete");
+        }
+        catch(Exception e){
+            userWaits();
+            problemRecordPage.selectStatus_problemRecord("Investigation Complete");
+
+        }
+
+    }
+
 }
 

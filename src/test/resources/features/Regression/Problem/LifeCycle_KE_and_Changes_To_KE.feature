@@ -31,33 +31,38 @@
       And user clicks on save button
       When user clicks on Diagnosis tab
       And user clicks on CI search button
+      And user switches to frame
       Then CI search panel should open
       And  user enters "SE_CPE_FRECPE5" in name field
       And user clicks on search button on CI search window
       And user selects a CI from list
       And user selects impact level as "No Impact"
+      And user enters impact from date as current date
       And user clicks on relate CI
       And user closes warning message
       And user clicks on close button on CI search window
       Then CI should be listed and displayed under the Diagnosis tab
-      When user changes status to "Published"
+      When user changes status to "Published" on problem record page
       And user clicks on save button
       Then known error ticket status should be "Published"
       When user enters description as "More information"
       And user clicks on save button
-      Then change should also be reflected in the timeline as ""
+      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Draft to Published." on row 2
       When user clicks on timeline tab
       And user selects Auto text:Tech bridge closed
-      Then change should also be reflected in the timeline as ""
-      When user selects action dropdown as "Time Tracking"
+      Then change should also be reflected in the timeline as "All parties drop from technical troubleshooting bridge."
+      When user selects Actions:Time tracking
       Then time tracking window should open
       When user selects activity dropdown as "Working On Ticket"
       And user enters "20" in minutes field
       And user clicks on Ok button
-      Then change should also be reflected in the timeline as ""
-      When user changes status to "closed"
+      Then change should also be reflected in the timeline as "Time Tracking: Working On Ticket (20 Minutes)"
+      When user changes status to "Closed" on problem record page
       And user clicks on save button
       #Then an error message should appear and a red border should be visible around the closure code field
       When user selects error code as "Full Impact"
+      When user clicks on Diagnosis tab
+      And user right clicks on CI "SE_CPE_FRECPE5" and selects "Impact:Clear All"
+      And user should see confirmation message for impact clear and user clicks yes
       And user clicks on save button
       Then known error ticket status should be "Closed"

@@ -14,6 +14,7 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txtHEADER_ID = "arid_WIN_0_600001032";
     private static final String txtMESSAGE_ID = "arid_WIN_0_600001033";
     private static final String btnREFRESH_INBOUND = "//div[@id='WIN_0_600002301']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')] ";
+    private static final String btn_REFRESH_OUTBOUND= "//div[@id='WIN_0_600002302']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
     private static final String txtWFM_TIKCET_ID  = "arid_WIN_0_777504105";
     private static final String txtDISPATCH_STATUS_ID  = "arid_WIN_0_777504105";
     private static final String btnAPPLY_B2B_ID = "WIN_0_600002903";
@@ -25,8 +26,6 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_TICKET_ID= "arid_WIN_0_777777600";
     private static final String txt_TITLE= "arid_WIN_0_777031000";
     private static final String txt_MANUFACTURER= "arid_WIN_0_240001003";
-    private static final String REFRESH_OUTBOUND_DIV= "WIN_0_600002302";
-    private static final String btn_REFRESH_OUTBOUND= "//a[contains(text(),'Refresh')]";
     private static final String table_INBOUND = "T600002301";
     private static final String table_OUTBOUND = "T600002302";
     private static final String txt_DISPATCH_STATUS= "arid_WIN_0_709003012";
@@ -51,11 +50,13 @@ public class OWF_WorkOrderPage extends BasePage {
         return getTableCellData(By.id(table_INBOUND), columnName, rowNum);
     }
     public void clickRefresh_outbound(){
-        driver.findElement(By.id(REFRESH_OUTBOUND_DIV)).findElement(By.xpath(btn_REFRESH_OUTBOUND)).click();
+        findElement(By.xpath(btn_REFRESH_OUTBOUND)).click();
     }
 
     public String getManufacturer(){
-        return getTextByID(txt_MANUFACTURER);
+        String manufacturer = getAttributeValueById(txt_MANUFACTURER);
+        System.out.println("Manufacturer text is : "+manufacturer);
+        return manufacturer;
     }
 
 

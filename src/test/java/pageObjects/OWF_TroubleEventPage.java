@@ -625,8 +625,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         driver.findElement(By.xpath(btnALARMS_XPATH)).click();
     }
     public void clickWorkOrder(){
-        wait(2000);
-        selectTab("Work Orders");
+        waitUntilElementClickable(By.xpath("//a[contains(text(), 'Work Orders')]")).click();
     }
     public void enterLevel(String level){
         driver.findElement(By.id(txtTITLE_ID)).sendKeys(level);

@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import utils.CommonUtils;
 
@@ -121,12 +122,18 @@ public class BaseRecordPage extends BasePage {
     public static final String table_ALARMS_ID = "T700508140";
     public static final String table_LINKED_ITEMS_ID = "T777506000";
     public static final String table_INTERESTED_PARTIES_ID = "T705002015";
+    private static final String table_ADD_INTERESTED_PARTIES= "T700027964";
     public static final String btnREFRESH_XPATH = "//div[@id='WIN_0_999000510']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
     private static final String btnYes = "WIN_0_700027904";
     public static final String txt_PROBLEM_REVIEW_FIELD= "arid_WIN_0_600001011";
     private static final String ddSTATUS_TROUBLE_EVENT_PAGE = "Status";
     private static final String txtTICKET_ID_PLUS_ID= "arid_WIN_0_777777600";
     private static final String btn_SEARCH= "WIN_0_1002";
+
+    public void clickTableElement_interestedParteis(String colName, String cellData){
+        WebElement element=getTableCellElement(By.id(table_INTERESTED_PARTIES_ID), colName, cellData);
+        element.click();
+    }
 
     public void clickSearch(){
         clickElement(By.id(btn_SEARCH));
@@ -328,6 +335,7 @@ public class BaseRecordPage extends BasePage {
     public void clickRefresh_timeline()
     {
         clickElement(By.xpath(btnREFRESH_XPATH));
+        wait(1500);
     }
     public boolean isStatusDropDownReadOnly(){
         return checkIfControlIsReadonly(ddSTATuS_ID);
@@ -489,7 +497,13 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void selectCloserCode(String value){
-        selectDropDownNameAndValue(ddCLOSER_CODE, value, true);
+        findElement(By.id("arid_WIN_0_777031381")).click();
+        wait(2000);
+        selectDropDownValue(value);
+    }
+    public void enterClosureCode(String text){
+        enterTextByElement(By.id("arid_WIN_0_777031381"),text);
+
     }
     public void selectClosedDdValue(){
         selectDropDownValue(ddValueCLOSED);

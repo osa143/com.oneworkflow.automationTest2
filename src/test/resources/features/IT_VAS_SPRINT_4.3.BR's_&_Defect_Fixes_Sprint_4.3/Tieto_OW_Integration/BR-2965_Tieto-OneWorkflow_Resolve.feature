@@ -71,7 +71,7 @@
       Then user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
-      #Tieto then validates that they receive the resolved message
-      #Tieto will then send the closure message to OW
+      #Tieto will then send the resolved message to OW
+      When user changes status to "Closed"
       Then user validates ticket status as "Closed"
 

@@ -64,6 +64,7 @@ Feature: creation and sending of WO to Tieto - Tieto Rejects assignment
     #TIETO THEN SENDS BACK TO US REJECT MESSAGE (USING STUB IN ST ENV)
     When user validates reject message is received
     Then user selects assigned profile dropdown as "Control Center:Incident Manager"
+    And user changes status to "Work In Progress"
     And user clicks on save button
     #Tieto should see new user
 

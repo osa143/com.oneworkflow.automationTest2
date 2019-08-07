@@ -85,7 +85,7 @@
       Then user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
-      #Tieto then validates that they receive the resolved message
+      #Tieto then send resolved message
       When user changes status to "Closed"
       And user clicks on save button
       Then user validates ticket status as "Closed"

@@ -1,4 +1,4 @@
-@BR-2965_Tieto_Pending @Tieto
+ @BR-2965_Tieto_Pending @Tieto
 Feature: creation and sending of WO to Tieto - Tieto Pending
   Scenario: user is able to create a wO and change status to pending
 

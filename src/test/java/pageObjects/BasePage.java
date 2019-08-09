@@ -266,9 +266,12 @@ public class BasePage {
 
          wait(200);
         driver.findElement(By.xpath(dropdownXpath)).click();
-        wait(900);
+        wait(700);
 
         String arr[] = dropdownValue.split(":");
+        int index = getMenuTableBodyIndex(arr[0]);
+        if (index == -1) index = 0;
+
         for (int i = 0; i < arr.length; i++) {
             final String temp = arr[i];
 
@@ -276,9 +279,9 @@ public class BasePage {
             System.out.println("Number of MenuTableBody's : "+elements.size());
             if (elements.size() > 0) {
 
-                elements.get(i).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
+                elements.get(i + index).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
             }
-            wait(900);
+            wait(700);
         }
 
     }
@@ -305,6 +308,22 @@ public class BasePage {
             wait(700);
         }
 
+    }
+
+    public int getMenuTableBodyIndex(String firstMenuItem)
+    {
+        List<WebElement> elements = driver.findElements(By.className("MenuTableBody"));
+        if (elements.size() > 0) {
+            if (elements.size() == 1)
+                return 0;
+            for (int i = 0; i < elements.size(); i++)
+            {
+               WebElement webElement = elements.get(i).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(firstMenuItem)).findFirst().orElse(null);
+               if(webElement != null)
+                   return i;
+            }
+        }
+        return -1;
     }
 
     public void selectDropDownNameAndValueForInvisibleElements(String dropdownName, String dropdownValue, boolean readonly, String alphabet, int keyUpCount) {
@@ -413,6 +432,39 @@ public class BasePage {
         }
         return columnInfo;
     }
+
+    public static int getColumnIndexByDivId(String columnName, String divId){
+        int columnInfo = -1;
+
+        //Get all web elements
+        List<WebElement> tableHeaders = driver.findElement(By.id(divId)).findElement(By.className("BaseTableColHeaders")).findElements(By.className("BaseTableHeader"));
+
+        for (int i = 0; i < tableHeaders.size(); i++) {
+            // System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");
+            WebElement tableHeader = tableHeaders.get(i);
+            if (tableHeader.getAttribute("innerHTML").trim().equals(columnName)) {
+                columnInfo = i;
+                    break;
+                }
+            }
+
+        return columnInfo;
+    }
+    public String getTableCellDataByDivId(String divId, By table, String columnName, int rowNum){
+        String cellData = null;
+        int colNum = getColumnIndexByDivId(columnName, divId);
+        List<WebElement> getTableRows = getTableRows(table);
+
+        if(getTableRows.size() > 0){
+            cellData =  getTableRows.get(rowNum).findElements(By.tagName("td")).get(colNum).getText();
+        }
+        System.out.println("Table cell value is :" + cellData);
+        return cellData;
+    }
+
+
+
+
 // TO-DO method should be removed. use below method instead by passing div id
     public boolean isColumnDisplayedByDivId(String columnName, String divId){
 //        left: 3508px; text-align: left; width: 89px;
@@ -755,7 +807,7 @@ public class BasePage {
   public boolean verifyIsTabDisplayed(String tabName){
       return driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tabName)).findFirst().orElse(null).isDisplayed();
   }
-  public boolean verifyElementIsEnabledById(By element){
+  public boolean verifyElementIsEnabledByElement(By element){
 
         return findElement(element).isEnabled();
   }

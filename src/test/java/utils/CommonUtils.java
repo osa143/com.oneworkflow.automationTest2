@@ -24,6 +24,8 @@ public class CommonUtils extends BasePage {
     public static String firstTicketAfterWait;
     public static String firstTicketAfterRefreshInterval;
     public static String changeTicket;
+    public static String beforeAnswering_riskScore;
+    public static String afterAnswering_riskScore;
 
     // 0 - parent window
     // 1 - first child and so on

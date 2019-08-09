@@ -175,7 +175,9 @@ public class OWF_WorkOrderPageSteps {
 
     @Then("user should see {string} notification in outbound in row {int}")
     public void userShouldSeeNotification(String arg0, int rowNum) {
-      Assert.assertEquals(workOrderPage.getOutboundText("Operation", rowNum), arg0);
+        String actual=workOrderPage.getOutboundText("Operation", rowNum);
+        System.out.println("Table cell value is : "+actual);
+      Assert.assertEquals(actual, arg0);
     }
 
     @Then("user should see {string} notification in inbound in row {int}")
@@ -194,6 +196,15 @@ public class OWF_WorkOrderPageSteps {
     }
 
 
+    @And("user waits {int} mins")
+    public void userWaitsMins(int arg0) {
+        int newDelay= arg0*60000;
+        workOrderPage.wait(newDelay);
+    }
 
+    @And("user validates Contact Name as {string}")
+    public void userValidatesContactNameAs(String arg0) {
+
+    }
 }
 

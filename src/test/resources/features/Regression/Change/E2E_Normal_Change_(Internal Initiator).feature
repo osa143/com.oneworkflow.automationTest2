@@ -7,7 +7,7 @@
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create change record
       Then user switches to window 1
-      When user clicks on save button
+      When user clicks save button
       Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)" on change record page
       When user enters "Regression - Change Management Process" in the implementation field
       And user enters "Regression - Change Management Process" in the test plan field
@@ -15,43 +15,43 @@
       And user enters "Regression - Change Management Process" in the communication plan field
       And user enters "Regression - Change Management Process" in the ver of functionality field
       And user enters "Regression - Change Management Process" in the risk description field
-      Then user clicks on save button
+      When user clicks save button
       And multiple error messages should appear with red boarder around fields
-      When user clicks on "Calendar" under actions
-      #Need to check this as it appears in a different window not different Tab
-      And user switches to window 2
-      When user enters "Change Record" in calendar search box
-      And user clicks on ticket type "Change Record"
-      Then user validates change records are shown in calendar
-      When user clicks on a present change record
-      #Need to check this as well
-      And user switches to frame
-      And user clicks on open button on calendar
-      Then user should see change record
-      And user closes change record window
-      And user closes calendar window
-      When user clicks on sweden checkbox under affected BU's
+#      When user clicks on "Calendar" under actions
+#      #Need to check this as it appears in a different window not different Tab
+#      And user switches to window 2
+#      When user enters "Change Record" in calendar search box
+#      And user clicks on ticket type "Change Record"
+#      Then user validates change records are shown in calendar
+#      When user clicks on a present change record
+#      #Need to check this as well
+#      And user switches to frame
+#      And user clicks on open button on calendar
+#      Then user should see change record
+#      And user closes change record window
+#      And user closes calendar window
+      #When user clicks on sweden checkbox under affected BU's
       And user selects request type as "Normal Change"
       Then user selects title as "Mobile:CS Core (Voice)" on Change record page
-      And user enters request category as "Software Installation"
+      And user selects request category as "Software Installation" on change record page
       And user enters description as "TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator)"
       And user enters reason field as "Regression"
       And user selects priority as "Critical"
       And user enters "Privacy Data: Just Testing" in the change builder field
+      Then user enters as "Test Data - Ignore Ticket" in service and customer impact
       Then user enters request start time 24 hours ahead of current date
       And user enters request end time 28 hours ahead of current date
       And user enters impact duration as "45" minutes
       And user selects estimated impact dropdown as "Degradation of Service"
-      Then user enters as "Test Data - Ignore Ticket" in service and customer impact
       And user clicks on save button
-      Then user validates availability of tabs "Timeline:Diagnosis:Risk:Schedule:Interested Parties:Approval:Notifications:Linked Items:Work Orders:Service Level:Related Project:Service Info:Telenor"
-      Then user clicks on assignment under sections
-      And user should see assigned profile as "Change Initiator-Internal"
-      And user validates assignee is "ChangeInitiatorInternal1"
-      When user clicks on Send button
-      Then error message should display as "You must provide an answer to all the risk question outlined in the Risk tab before Send (ARERR 10000)"
-      And user clicks ok button on BMC remedy user error message
-      When user clicks on risk tab
+      And user waits
+      Then user validates availability of tabs "Timeline:Diagnosis:Risk:Schedule:Interested Parties:Approval:Notifications:Linked Items:Work Orders:Service Level:Related Project:Service Info:Telenor" on change record page
+      When user clicks on owner under sections
+      And user validates owner profile as "Change Initiator-Internal"
+      And user validates owner as "ChangeInitiatorInternal1"
+      Then user clicks on Send button
+      Then error message should display as "You must provide an answer to all the risk question outlined in the Risk tab before Send (ARERR 10000)" on change record page
+      When user clicks on Risk tab
       And user gets current risk score value
       When user answers all risk questions as below
       And user selects answer as "Impact to other systems/technologies are unclear"
@@ -63,20 +63,18 @@
       And user selects last answer as "No"
       Then user validates risk score gets updated
       Then user clicks on Send button
-      And an error message should appear: "Please select at least one country of impact for this change. (ARERR 10000)"
+      Then an error message should appear: "Please select at least one country of impact for this change. (ARERR 10000)"
       When user clicks on estonia checkbox under affected BU's
       And user clicks on Send button
-      Then error message should display as "You must select at least one CI in the Diagnosis Tab (ARERR 10000)"
-      When user clicks ok button on BMC remedy user error message
+      Then error message should display as "You must select at least one CI in the Diagnosis Tab (ARERR 10000)" on change record page
       And user clicks on Diagnosis tab
       And user clicks on CI search button
       Then user switches to frame
       And CI search tab should be opened
-      Then user clicks on CI search button
       And user selects Category as "Core"
       And user selects Type as "Mobile CS Core Network"
       Then user enters "FI_MGW_SMG03TRE" in the name+ field
-      Then user clicks on search
+      Then user clicks on search button on CI search window
       And user selects a CI from list
       And user selects impact level as "Degradation of Service"
       And user clicks on relate CI
@@ -88,26 +86,26 @@
       When user clicks on "Interested Parties" tab
       And user enters email address as "Test@Test.com"
       And user clicks on add email button
-      Then user should see new email "Test@Test.com" added
+      Then user should see new email "Test@Test.com" added in "Email Address" in row 2
       When user clicks on Send button
       Then user validates ticket status as "Assigned"
+      And user clicks on assignment under sections
       Then user should see assigned profile as "DC CS Core (Voice)"
-      When user clicks on owner under sections
       Then user validates owner profile as "Change Manager"
-      And user validates owner as "Change Manager"
+      And user validates owner as "ChangeManager"
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab
       Then user should see "Assignment-Profile" email update
       And user validates "Send" is readonly
       And user clicks on timeline tab
       #Description, Project Code, Change Builder, Communication Plan, Ver Of Functionality, Risk Description and Timeline
-      Then user validates "Description*" isn't readonly
-      And user validates "Project Code" isn't readonly
-      And user validates "Change Builder+*" isn't readonly
-      And user validates "Communication Plan*" isn't readonly
-      And user validates "Ver of Functionality*" isn't readonly
-      And user validates "Risk Description*" isn't readonly
-      And user validates "Timeline" isn't readonly
+      Then user validates Description* isn't readonly
+      And user validates Project Code isn't readonly
+      And user validates Change Builder+* isn't readonly
+      And user validates Communication Plan* isn't readonly
+      And user validates Ver of Functionality* isn't readonly
+      And user validates Risk Description* isn't readonly
+      And user validates Timeline Text entry isn't readonly
       Then change should also be reflected in the timeline as "STATUS MODIFIED.  Assignee Profile has changed from  to DC CS Core (Voice). Finland Country has changed from  to Finland. Request Status has changed from New to Assigned. "
       And user gets ticket value
       When user logsOut

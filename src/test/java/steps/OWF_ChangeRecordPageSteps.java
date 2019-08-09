@@ -6,10 +6,7 @@ import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 import org.testng.Assert;
 import pageObjects.OWF_ChangeRecordPage;
-import pageObjects.OWF_ProblemRecordPage;
 import utils.CommonUtils;
-
-import javax.accessibility.AccessibleStateSet;
 
 public class OWF_ChangeRecordPageSteps {
     OWF_ChangeRecordPage changeRecordPage = new OWF_ChangeRecordPage();
@@ -299,5 +296,100 @@ public class OWF_ChangeRecordPageSteps {
     public void userEntersInTheAdvancedSearchBar(String text) {
         text = text.replace('|','"');
         changeRecordPage.enterAdvancedSearch(text);
+    }
+
+    @Then("user enters request start time {int} hours ahead of current date")
+    public void userEntersRequestStartTimeHoursAheadOfCurrentDate(int arg0) {
+        int newDelay= arg0*60;
+        changeRecordPage.setStartDate(newDelay);
+
+    }
+
+    @And("user enters request end time {int} hours ahead of current date")
+    public void userEntersRequestEndTimeHoursAheadOfCurrentDate(int arg0) {
+        int newDelay= arg0*60;
+        changeRecordPage.setEndDate(newDelay);
+
+    }
+
+    @Then("user validates availability of tabs {string} on change record page")
+    public void userValidatesAvailabilityOfTabsOnChangeRecordPage(String arg0) {
+        changeRecordPage.wait(2000);
+        changeRecordPage.verifyTabValues(arg0);
+    }
+
+    @And("user gets current risk score value")
+    public void userGetsCurrentRiskScoreValue() {
+        CommonUtils.beforeAnswering_riskScore=changeRecordPage.getRiskScore();
+        System.out.println("Before Answers risk score is : "+ CommonUtils.beforeAnswering_riskScore);
+    }
+
+    @Then("user validates risk score gets updated")
+    public void userValidatesRiskScoreGetsUpdated() {
+        CommonUtils.afterAnswering_riskScore=changeRecordPage.getRiskScore();
+        System.out.println("After Answers risk score is : "+ CommonUtils.afterAnswering_riskScore);
+        Assert.assertNotEquals(CommonUtils.beforeAnswering_riskScore, CommonUtils.afterAnswering_riskScore );
+
+    }
+
+    @And("user validates owner profile as {string}")
+    public void userValidatesOwnerProfileAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getOwnerProfile(), arg0);
+    }
+
+    @And("user validates owner as {string}")
+    public void userValidatesOwnerAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getOwner(), arg0);
+    }
+
+    @When("user clicks on Show CR Matching button")
+    public void userClicksOnShowCRMatchingButton() {
+        changeRecordPage.clickShowCrMatching();
+    }
+
+    @Then("user should see Show CR Matching table appear")
+    public void userShouldSeeShowCRMatchingTableAppear() {
+        Assert.assertTrue(changeRecordPage.verifyShowCrDivIsDisplayed());
+    }
+
+    @And("user enters email address as {string}")
+    public void userEntersEmailAddressAs(String arg0) {
+        changeRecordPage.enterEmail(arg0);
+    }
+
+    @And("user clicks on add email button")
+    public void userClicksOnAddEmailButton() {
+        changeRecordPage.clickAddEmail();
+    }
+
+    @Then("user should see new email {string} added in {string} in row {int}")
+    public void userShouldSeeNewEmailAddedInInRow(String expectedEmail, String colName, int rowNum) {
+        Assert.assertEquals(changeRecordPage.getText(colName, rowNum), expectedEmail);
+    }
+
+    @Then("user should see {string} email update")
+    public void userShouldSeeEmailUpdate(String arg0) {
+        Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 1), arg0);
+    }
+
+    @And("user validates {string} is readonly")
+    public void userValidatesIsReadonly(String arg0) {
+        Assert.assertFalse(changeRecordPage.verifySendButtonIsEnable());
+    }
+
+
+    @And("user validates Project Code isn't readonly")
+    public void userValidatesProjectCodeIsnTReadonly() {
+        Assert.assertFalse(changeRecordPage.verifyProjectCodeIsReadOnly());
+    }
+
+    @And("user validates Change Builder+* isn't readonly")
+    public void userValidatesChangeBuilderIsnTReadonly() {
+        Assert.assertFalse(changeRecordPage.verifyChangeBuilderIsReadOnly());
+    }
+
+    @And("user validates Communication Plan* isn't readonly")
+    public void userValidatesCommunicationPlanIsnTReadonly() {
+        Assert.assertFalse(changeRecordPage.verifyCommunicationPlanIsReadOnly());
     }
 }

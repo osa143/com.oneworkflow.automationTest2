@@ -35,13 +35,13 @@ public class OWF_ProblemRecordPageSteps {
     @When("user clicks on sweden checkbox under affected BU's")
     public void userClicksOnSwedenCheckboxUnderAffectedBUS() {
         problemRecordPage.clickSwedenCheckBox();
-       // problemRecordPage.clickSaveButton();
+
     }
 
     @Then("multiple error messages should appear with red boarder around fields")
     public void multipleErrorMessagesShouldAppearWithRedBoarderAroundFields() {
         Assert.assertTrue(problemRecordPage.validateMultipleErrorMessages(), "Multiple error messages are not shown");
-        //Red border should appear around fields
+
     }
 
     @When("user enters {string} in Title field")
@@ -550,7 +550,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user enters request start date as {string} one day in the future")
     public void userEntersRequestStartDateAsOneDayInTheFuture(String arg0) {
-        problemRecordPage.enterStartDateAsTodayMidnight(0);
+        problemRecordPage.enterStartDateAs(0);
 
     }
 
@@ -566,7 +566,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @When("user clicks on assignment under sections")
     public void userClicksOnAssignmentUnderSections() {
-        problemRecordPage.clickAssignments();
+        problemRecordPage.clickAssignments_underSections();
 
     }
 
@@ -649,7 +649,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @When("user selects closure code as {string}")
     public void userSelectsClosureCodeAs(String arg0) {
-        problemRecordPage.selectRootCauseCode(arg0);
+        problemRecordPage.selectClosureCode(arg0);
     }
 
     @When("user selects impact type as {string}")
@@ -816,7 +816,8 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("user validates availability of tabs {string}")
     public void userValidatesAvailabilityOfTabs(String tabs) {
-        Assert.assertTrue(problemRecordPage.verifyTabValues(tabs));
+            Assert.assertTrue(problemRecordPage.verifyTabValues(tabs));
+
     }
 
     @And("user enters ticket in ticket ID+ field")
@@ -844,7 +845,14 @@ public class OWF_ProblemRecordPageSteps {
 
     @When("user changes status to {string} on problem record page")
     public void userChangesStatusToOnProblemRecordPage(String arg0) {
-      problemRecordPage.selectStatus_problemRecord(arg0);
+        try{
+            problemRecordPage.selectStatus_problemRecord(arg0);
+        }
+        catch (Exception e){
+            System.out.println("Not able to change the status... Try again");
+            problemRecordPage.selectStatus_problemRecord(arg0);
+        }
+
     }
 
     @And("user enters {string} in assignee")
@@ -901,5 +909,14 @@ public class OWF_ProblemRecordPageSteps {
 
     }
 
+    @Then("user validates {string} Gillgren is listed as an interested party in row {int}")
+    public void userValidatesGillgrenIsListedAsAnInterestedPartyInRow(String arg0, int arg1) {
+        Assert.assertEquals(problemRecordPage.getText("First Name", arg1), arg0);
+    }
+
+    @Then("user validates Description* isn't readonly")
+    public void userValidatesDescriptionIsnTReadonly() {
+        Assert.assertFalse(problemRecordPage.verifyDescriptionIsReadOnly());
+    }
 }
 

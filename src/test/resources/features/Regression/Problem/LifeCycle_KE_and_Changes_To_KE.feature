@@ -61,6 +61,7 @@
       And user clicks on save button
       #Then an error message should appear and a red border should be visible around the closure code field
       When user selects error code as "Full Impact"
+      #When user selects closure code as "Full Impact"
       When user clicks on Diagnosis tab
       And user right clicks on CI "SE_CPE_FRECPE5" and selects "Impact:Clear All"
       And user should see confirmation message for impact clear and user clicks yes

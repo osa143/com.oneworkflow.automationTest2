@@ -50,7 +50,7 @@ Feature: Linking of Incident Ticket to Normal Change during implementation windo
     When user answers all risk questions as below
     And user selects answer as "Impact to other systems/technologies are unclear"
     And user selects answer as "No"
-    And user selects answer as "Tested succesfully, this is a pilot"
+    And user selects answer as "Tested successfully, this is a pilot"
     And user selects answer as "Yes (outcome of the change can be instantly verified)"
     And user selects answer as "Yes"
     And user selects answer as "Simple"

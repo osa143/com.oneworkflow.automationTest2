@@ -127,7 +127,116 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btn_YES_ON_FRAME_IMPACT_CLEAR= "WIN_5_700027904";
     private static final String table_MAIN_PAGE= "T1020";
     private static final String div_ID_TopToBottom= "WIN_0_777021070";
+    private static final String div_ADD_TIMELINE= "WIN_0_999000390";
+    private static final String btn_ADD_INTERESTED_PARTIES= "WIN_0_705002007";
+    private static final String btn_REMOVE_INTERESTED_PARTIES = "WIN_0_705002008";
+    private static final String btn_BULK_UPDATE_INTERESTED_PARTIES= "WIN_0_777789015";
+    private static final String btn_ADD_EMAIL= "WIN_0_600002906";
+    private static final String txt_METHOD= "arid_WIN_0_700020732";
+    private static final String txt_SEND_TO= "arid_WIN_0_700020733";
+    private static final String txt_SUBJECT= "arid_WIN_0_700020734";
+    private static final String txt_BODY= "arid_WIN_0_700020735";
+    private static final String txt_TARGET_APPLICATION= "arid_WIN_4_777506021";
+    private static final String btn_UNLINK_LINKED_ITEMS= "WIN_4_777506010";
+    private static final String btn_CREATE_LINKEDITEMS= "WIN_4_777506020";
+    private static final String btn_CREATE_FROM_TEMPLATE= "WIN_0_777504012";
+    private static final String btn_DETATCH= "WIN_0_700508132";
+    private static final String btn_DETATCH_CREATE= "WIN_0_600002901";
+    private static final String btn_TERMINATE_ALARM= "WIN_0_600002926";
+    private static final String REFRESH_STATUS_TIME= "arid_WIN_0_600001204";
+    private static final String btn_INSERT= "WIN_0_600002923";
+    private static final String btn_DISABLE = "WIN_0_600002925";
+    private static final String btn_ENABLE= "WIN_0_600002924";
 
+
+
+    public void selectImpact_update(){
+        findElement(By.cssSelector("body > div:nth-child(18) > div.MenuTableContainer > table > tbody > tr:nth-child(8) > td.MenuEntryName")).click();
+        wait(1000);
+        findElement(By.cssSelector("body > div:nth-child(20) > div.MenuTableContainer > table > tbody > tr:nth-child(2) > td.MenuEntryNameHover")).click();
+    }
+    public boolean verifyDisableButtonIsEnabled(){
+        return verifyElementIsEnabledByElement(By.id(btn_DISABLE));
+    }
+
+    public boolean verifyEnableButtonIsEnabled(){
+        return verifyElementIsEnabledByElement(By.id(btn_ENABLE));
+    }
+    public boolean verifyInsertButtonIsEnabled(){
+        return verifyElementIsEnabledByElement(By.id(btn_INSERT));
+    }
+
+    public boolean verifyRefreshStatusIsReadOnly(){
+        return checkIfControlIsReadonlyByElement(By.id(REFRESH_STATUS_TIME));
+    }
+
+    public boolean verifyCiDetatchButtonIsEnabled(){
+        return verifyElementIsEnabledByElement(By.id(btn_DETATCH));
+    }
+    public boolean verifyCiDetatchAndCreateButtonIsEnabled(){
+        return verifyElementIsEnabledByElement(By.id(btn_DETATCH_CREATE));
+    }
+    public boolean verifyCiTerminateButtonIsEnabled(){
+        return verifyElementIsEnabledByElement(By.id(btn_TERMINATE_ALARM));
+    }
+    public void clickCreateFromTemplate(){
+      clickElement(By.id(btn_CREATE_FROM_TEMPLATE));
+    }
+
+    public boolean verifyCiLinkButtonIsEnabled(){
+        return verifyElementIsEnabledByElement(By.id(btn_LINK_LINKED_ITEMS));
+    }
+    public boolean verifyCiUnLinkButtonIsEnabled(){
+        return verifyElementIsEnabledByElement(By.id(btn_UNLINK_LINKED_ITEMS));
+    }
+    public boolean verifyCiCreateButtonIsEnabled(){
+        return verifyElementIsEnabledByElement(By.id(btn_CREATE_LINKEDITEMS));
+    }
+
+    public boolean verifyTargetApplicationIsReadOnly(){
+        return checkIfControlIsReadonlyByElement(By.id(txt_TARGET_APPLICATION));
+    }
+
+    public boolean verifyMethodIsReadOnly(){
+        return checkIfControlIsReadonlyByElement(By.id(txt_METHOD));
+    }
+
+    public boolean verifySendToIsReadOnly(){
+        return checkIfControlIsReadonlyByElement(By.id(txt_SEND_TO));
+    }
+
+    public boolean verifySubjectIsReadOnly(){
+        return checkIfControlIsReadonlyByElement(By.id(txt_SUBJECT));
+    }
+
+    public boolean verifyBodyIsReadOnly(){
+        return checkIfControlIsReadonlyByElement(By.id(txt_BODY));
+    }
+
+
+    public boolean verifyCiSearchButtonIsReadOnly(){
+        return verifyElementIsEnabledByElement(By.id(btnCISEARCH));
+    }
+    public boolean verifyAddButtonIsReadOnly(){
+        return verifyElementIsEnabledByElement(By.id(btn_ADD_INTERESTED_PARTIES));
+    }
+    public boolean verifyRemoveButtonIsReadOnly(){
+        return verifyElementIsEnabledByElement(By.id(btn_BULK_UPDATE_INTERESTED_PARTIES));
+    }
+    public boolean verifyBulkUpdateButtonIsReadOnly(){
+        return verifyElementIsEnabledByElement(By.id(btn_REMOVE_INTERESTED_PARTIES));
+    }
+    public boolean verifyAddEmailButtonIsReadOnly(){
+        return verifyElementIsEnabledByElement(By.id(btn_ADD_EMAIL));
+    }
+    public void verifyAddTimelineDivIsPresent(){
+        try {
+            driver.findElement(By.id(div_ADD_TIMELINE));
+        }
+        catch (Exception e){
+            System.out.println("The Add timeline div is not present");
+        }
+    }
 
    public boolean verifyElementIsDisabled(){
        boolean result= findElement(By.id(btn_ADD)).isEnabled();
@@ -602,6 +711,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         return verifyElementIsDisplayed(By.id(ddREQUEST_TYPE_ID));
     }
     public void enterEventEndTimeAsCurrentTime(){
+        wait(1000);
         driver.findElement(By.id(txtEVENT_END_TIME)).sendKeys(Keys.ENTER);
     }
     public void enterEventEndTimeAsPast(String time){

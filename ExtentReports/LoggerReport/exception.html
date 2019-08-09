@@ -107,12 +107,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">java.lang.AssertionError</a>
+							<a href="#" class="item-title _500">java.lang.NullPointerException</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">java.lang.AssertionError</h5>
+								<h5 class="mb-4">java.lang.NullPointerException</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="93" parent-id="1">
+<tr class="s-fail" test-id="44" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then an error message should appear: "Required field (without a default) not specified : Root Cause Details (ARERR 9424)" <br/><span class="text-muted text-sm">User is able to change assignment/assignee on problem ticket</span></td>
-	<td>0h 0m 30s+72msc</td>
+	<td class="_600">When user clicks on "B2B Dispatch" tab <br/><span class="text-muted text-sm">user can cancel a work order sent to a field service before any work is carried out</span></td>
+	<td>0h 0m 9s+703msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,12 +136,10 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">java.lang.AssertionError: Error message didn't appear expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at steps.OWF_ProblemRecordPageSteps.anErrorMessageShouldAppear(OWF_ProblemRecordPageSteps.java:32)
-	at ✽.an error message should appear: "Required field (without a default) not specified : Root Cause Details (ARERR 9424)"(features/Regression/Problem/Redirecting_And_Access_For_Assignee.feature:100)
+		<textarea disabled class="code-block">java.lang.NullPointerException
+	at pageObjects.BasePage.selectTab(BasePage.java:762)
+	at steps.OWF_AgentConsolePageSteps.userClicksOnAlarmTab(OWF_AgentConsolePageSteps.java:210)
+	at ✽.user clicks on "B2B Dispatch" tab(features/Regression/B2B/B2B_Test_Cases.feature:47)
 </textarea>
 	</td>
 </tr>
@@ -169,7 +167,7 @@
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 7, 2019 09:22:17 AM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 9, 2019 11:23:24 AM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

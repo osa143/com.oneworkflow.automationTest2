@@ -30,6 +30,22 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String table_OUTBOUND = "T600002302";
     private static final String txt_DISPATCH_STATUS= "arid_WIN_0_709003012";
     private static final String txt_CANCEL_REQUEST_REASON= "arid_WIN_0_600001090";
+    private static final String div_B2B_OUTBOUND_EVENT= "WIN_0_600002302";
+    private static final String div_B2B_INBOUND_EVENT= "WIN_0_600002301";
+    private static final String txt_CONTACT_NAME= "arid_WIN_0_600001055";
+    private static final String txt_CONTACT_TELEPHONE_NUMBER= "arid_WIN_0_600001056";
+    private static final String txt_CONTACT_MAIL_ADDRESS= "arid_WIN_0_600001064";
+
+
+    public String getContactName(){
+        return getTextByID(txt_CONTACT_NAME);
+    }
+    public String getContactTelephoneNumber(){
+        return getTextByID(txt_CONTACT_TELEPHONE_NUMBER);
+    }
+    public String getContactMailAddress(){
+        return getTextByID(txt_CONTACT_MAIL_ADDRESS);
+    }
 
     public void enterCancelRequestReason(String text){
         enterTextByElement(By.id(txt_CANCEL_REQUEST_REASON), text);
@@ -43,11 +59,11 @@ public class OWF_WorkOrderPage extends BasePage {
     }
 
     public String getOutboundText(String columnName, int rowNum){
-        return getTableCellData(By.id(table_OUTBOUND), columnName, rowNum);
+        return getTableCellDataByDivId(div_B2B_OUTBOUND_EVENT, By.id(table_OUTBOUND), columnName, rowNum);
     }
 
     public String getInboundText(String columnName, int rowNum){
-        return getTableCellData(By.id(table_INBOUND), columnName, rowNum);
+        return getTableCellDataByDivId(div_B2B_INBOUND_EVENT, By.id(table_INBOUND), columnName, rowNum);
     }
     public void clickRefresh_outbound(){
         findElement(By.xpath(btn_REFRESH_OUTBOUND)).click();
@@ -114,6 +130,7 @@ public class OWF_WorkOrderPage extends BasePage {
 
     public void clickRefresh_Inbound(){
         driver.findElement(By.xpath(btnREFRESH_INBOUND)).click();
+        wait(1500);
     }
     public void enterMessage(String message){
         driver.findElement(By.id(txtMESSAGE_ID)).sendKeys(message);

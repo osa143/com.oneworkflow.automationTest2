@@ -75,6 +75,10 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txtTO_DATE = "arid_WIN_0_777031004";
     private static final String table_ADD_INTERESTED_PARTY= "T700027964";
 
+    public boolean verifyDescriptionIsReadOnly(){
+        return checkIfControlIsReadonly(txtDESCRIPTION_ID);
+    }
+
     public void clickYes_impactClear(){
         clickElement(By.id(btn_YES));
         wait(1000);
@@ -120,7 +124,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         driver.findElement(By.xpath("//div[@id='FormApp']//tr[2]")).click();
     }
 
-    public void clickAssignments(){
+    public void clickAssignments_underSections(){
         driver.findElement(By.id(linkASSIGNMENTS)).click();
     }
 

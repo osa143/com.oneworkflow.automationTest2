@@ -36,7 +36,6 @@ public class Hooks {
 //            agentConsolePage.wait(1000);
 //            agentConsolePage.clickMenuItemLogout();
 //            agentConsolePage.wait(2000);
-//
 //            DriverFactory.getInstance().quit();
 
         }

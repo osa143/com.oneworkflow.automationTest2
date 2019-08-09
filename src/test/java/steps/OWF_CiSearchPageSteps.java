@@ -59,7 +59,14 @@ public class OWF_CiSearchPageSteps {
 
     @When("user clicks on linked items tab")
     public void userClicksOnLinkedItemsTab() {
-        ciSearchPage.clickLinkedItems();
+        try{
+            ciSearchPage.clickLinkedItems();
+        }
+        catch(Exception e){
+            ciSearchPage.wait(1000);
+            ciSearchPage.clickLinkedItems();
+        }
+
     }
 
     @And("user selects target application first dropdown as {string}")

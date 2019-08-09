@@ -1,5 +1,5 @@
 @Initiator_Link_Tickets
-  #CI search window issue
+  #passed
 Feature: Verification of ability to link tickets
   Scenario: user should be able to link different types of tickets together
 
@@ -68,7 +68,7 @@ Feature: Verification of ability to link tickets
     Then user clicks on Risk tab
     And user selects answer as "Impact to other systems/technologies are unclear"
     And user selects answer as "No"
-    And user selects answer as "Tested succesfully, this is a pilot"
+    And user selects answer as "Tested successfully, this is a pilot"
     And user selects answer as "Yes (outcome of the change can be instantly verified)"
     And user selects answer as "Yes"
     And user selects answer as "Simple"
@@ -110,7 +110,6 @@ Feature: Verification of ability to link tickets
     And user enters change ticket in ticket ID+ field
     And user clicks on the search button on select target request
     And user clicks accept button
-    And user clicks on "Schedule" tab
     When user clicks on linked items tab
     And user selects target application first dropdown as "OS3 - Operations"
     And user selects target application second dropdown as "Is related to"

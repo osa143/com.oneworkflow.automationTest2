@@ -925,6 +925,149 @@ public class OWF_TroubleEventPageSteps {
     public void userHighlightsUserUnderInterestedParties(String arg0) {
          troubleEventPage.clickTableElement_interestedParteis("Login Name", arg0);
     }
+
+    @Then("user validates no timeline entries can be made")
+    public void userValidatesNoTimelineEntriesCanBeMade() {
+     troubleEventPage.verifyAddTimelineDivIsPresent();
+    }
+
+    @Then("user validates CI Search is disabled")
+    public void userValidatesCISearchIsDisabled() {
+   troubleEventPage.verifyCiSearchButtonIsReadOnly();
+    }
+
+    @And("user validates Add under interested parties is disabled")
+    public void userValidatesAddUnderInterestedPartiesIsDisabled() {
+       Assert.assertFalse(troubleEventPage.verifyAddButtonIsReadOnly());
+    }
+
+    @And("user validates Remove is disabled")
+    public void userValidatesRemoveIsDisabled() {
+        Assert.assertFalse(troubleEventPage.verifyRemoveButtonIsReadOnly());
+    }
+
+    @And("user validates Bulk Update is disabled")
+    public void userValidatesBulkUpdateIsDisabled() {
+        Assert.assertFalse(troubleEventPage.verifyBulkUpdateButtonIsReadOnly());
+    }
+
+    @And("user validates Add Email is disabled")
+    public void userValidatesAddEmailIsDisabled() {
+        Assert.assertFalse(troubleEventPage.verifyAddEmailButtonIsReadOnly());
+    }
+
+    @And("user validates Method is readonly")
+    public void userValidatesMethodIsReadonly() {
+       Assert.assertTrue(troubleEventPage.verifyMethodIsReadOnly());
+    }
+
+    @And("user validates Sent To is readonly")
+    public void userValidatesSentToIsReadonly() {
+        Assert.assertTrue(troubleEventPage.verifySendToIsReadOnly());
+    }
+
+    @And("user validates Subject is readonly")
+    public void userValidatesSubjectIsReadonly() {
+        Assert.assertTrue(troubleEventPage.verifySubjectIsReadOnly());
+    }
+
+    @And("user validates Body is readonly")
+    public void userValidatesBodyIsReadonly() {
+        Assert.assertTrue(troubleEventPage.verifyBodyIsReadOnly());
+    }
+
+    @And("user validates Target Application is readonly")
+    public void userValidatesTargetApplicationIsReadonly() {
+        Assert.assertTrue(troubleEventPage.verifyTargetApplicationIsReadOnly());
+    }
+
+    @And("user validates Link is disabled")
+    public void userValidatesLinkIsDisabled() {
+        Assert.assertFalse(troubleEventPage.verifyCiLinkButtonIsEnabled());
+    }
+
+    @And("user validates Unlink is disabled")
+    public void userValidatesUnlinkIsDisabled() {
+        Assert.assertFalse(troubleEventPage.verifyCiUnLinkButtonIsEnabled());
+    }
+
+    @And("user validates Create is disabled")
+    public void userValidatesCreateIsDisabled() {
+        Assert.assertFalse(troubleEventPage.verifyCiCreateButtonIsEnabled());
+    }
+
+    @And("user validates Create From Ticket is not visible")
+    public void userValidatesCreateFromTicketIsNotVisible() {
+        try{
+            troubleEventPage.clickCreateFromTicket();
+        }
+        catch (Exception e){
+            System.out.println("Create from ticket is not present");
+        }
+
+    }
+
+    @And("user validates Create From Template is not visible")
+    public void userValidatesCreateFromTemplateIsNotVisible() {
+        try{
+            troubleEventPage.clickCreateFromTemplate();
+        }
+        catch (Exception e){
+            System.out.println("Create from template is not present");
+        }
+    }
+
+    @And("user validates Detach&Create is disabled")
+    public void userValidatesDetachCreateIsDisabled() {
+        Assert.assertFalse(troubleEventPage.verifyCiDetatchButtonIsEnabled());
+    }
+
+    @And("user validates Refresh Status is disabled")
+    public void userValidatesRefreshStatusIsDisabled() {
+        Assert.assertFalse(troubleEventPage.verifyCiDetatchAndCreateButtonIsEnabled());
+    }
+
+    @And("user validates Terminate Alarm is disabled")
+    public void userValidatesTerminateAlarmIsDisabled() {
+        Assert.assertFalse(troubleEventPage.verifyCiTerminateButtonIsEnabled());
+    }
+
+    @And("user validates Refresh Status Time is readonly")
+    public void userValidatesRefreshStatusTimeIsReadonly() {
+     Assert.assertTrue(troubleEventPage.verifyRefreshStatusIsReadOnly());
+    }
+
+    @And("user validates Insert is disabled")
+    public void userValidatesInsertIsDisabled() {
+        Assert.assertFalse(troubleEventPage.verifyInsertButtonIsEnabled());
+    }
+
+    @And("user validates Enable is not visible")
+    public void userValidatesEnableIsNotVisible() {
+        try{
+            troubleEventPage.verifyEnableButtonIsEnabled();
+        }
+        catch (Exception e){
+            System.out.println("Enable button is Disabled");
+        }
+
+    }
+
+    @And("user validates Disable is not visible")
+    public void userValidatesDisableIsNotVisible() {
+        try{
+            troubleEventPage.verifyDisableButtonIsEnabled();
+        }
+        catch (Exception e){
+            System.out.println("Disable button is Disabled");
+        }
+    }
+
+    @When("user right clicks on CI {string} and selects Impact:Update")
+    public void userRightClicksOnCIAndSelectsImpactUpdate(String cellData) {
+        troubleEventPage.selectAndRightClickOnTableElement(cellData);
+        troubleEventPage.selectImpact_update();
+    }
 }
 
 

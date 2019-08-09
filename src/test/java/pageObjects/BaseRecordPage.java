@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import utils.CommonUtils;
 
@@ -129,11 +128,27 @@ public class BaseRecordPage extends BasePage {
     private static final String ddSTATUS_TROUBLE_EVENT_PAGE = "Status";
     private static final String txtTICKET_ID_PLUS_ID= "arid_WIN_0_777777600";
     private static final String btn_SEARCH= "WIN_0_1002";
+    private static final String table_NOTIFICATIONS= "T700020677";
+
+
+
+    public boolean verifyChangeBuilderIsReadOnly(){
+        return checkIfControlIsReadonly(txtCHANGE_BUILDER_FIELD_ID);
+    }
+    public boolean verifyCommunicationPlanIsReadOnly(){
+        return checkIfControlIsReadonly(txtCOMMUNICATION_PLAN_ID);
+    }
+
+    public String getText_notifications(String colName, int rowNum){
+        return getTableCellData(By.id(table_NOTIFICATIONS), colName, rowNum );
+    }
 
     public void clickTableElement_interestedParteis(String colName, String cellData){
         WebElement element=getTableCellElement(By.id(table_INTERESTED_PARTIES_ID), colName, cellData);
         element.click();
     }
+
+
 
     public void clickSearch(){
         clickElement(By.id(btn_SEARCH));
@@ -158,31 +173,31 @@ public class BaseRecordPage extends BasePage {
         return findElement(By.id(chkbxSWEDEN)).isSelected();
     }
     public boolean verifySwedenEnable(){
-        return verifyElementIsEnabledById(By.id(chkbxSWEDEN));
+        return verifyElementIsEnabledByElement(By.id(chkbxSWEDEN));
     }
     public boolean verifyFinlandEnable(){
-        return verifyElementIsEnabledById(By.id(chkbxFINLAND));
+        return verifyElementIsEnabledByElement(By.id(chkbxFINLAND));
     }
     public boolean verifyDenmarkEnable(){
-        return verifyElementIsEnabledById(By.id(chkbxDENMARK));
+        return verifyElementIsEnabledByElement(By.id(chkbxDENMARK));
     }
     public boolean verifyNorwayEnable(){
-        return verifyElementIsEnabledById(By.id(chkbxNORWAY));
+        return verifyElementIsEnabledByElement(By.id(chkbxNORWAY));
     }
     public boolean verifyLithuniaEnable(){
-        return verifyElementIsEnabledById(By.id(chkbxLITHUANIA));
+        return verifyElementIsEnabledByElement(By.id(chkbxLITHUANIA));
     }
     public boolean verifyEstoniaEnable(){
-        return verifyElementIsEnabledById(By.id(chkbxESTONIA));
+        return verifyElementIsEnabledByElement(By.id(chkbxESTONIA));
     }
     public boolean verifyTeliaCarrierEnable(){
-        return verifyElementIsEnabledById(By.id(chkbxTELIA_CARRIER));
+        return verifyElementIsEnabledByElement(By.id(chkbxTELIA_CARRIER));
     }
     public boolean verifyInternalEnable(){
-        return verifyElementIsEnabledById(By.id(chkbxINTERNAL));
+        return verifyElementIsEnabledByElement(By.id(chkbxINTERNAL));
     }
     public boolean verifyUnknownEnable(){
-        return verifyElementIsEnabledById(By.id(chkbxUNKOWN));
+        return verifyElementIsEnabledByElement(By.id(chkbxUNKOWN));
     }
 
 
@@ -615,7 +630,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public Boolean ackButtonStatus() {
-         return verifyElementIsEnabledById(By.id(btnACKNOWLEDGE));
+         return verifyElementIsEnabledByElement(By.id(btnACKNOWLEDGE));
 
     }
 
@@ -653,7 +668,7 @@ public class BaseRecordPage extends BasePage {
         enterTextByElement(By.id(txtEND_DATE),dateTime );
     }
 
-    public void enterStartDateAsTodayMidnight(int delay)
+    public void enterStartDateAs(int delay)
     {
         enterTextByElement(By.id(txtSTART_DATE), CommonUtils.getDateAsTodayMidnight(delay));
     }
@@ -739,7 +754,7 @@ public class BaseRecordPage extends BasePage {
 
     public boolean verifyTabValues(String tabValues)
     {
-        wait(1000);
+        wait(1500);
         String[] multipleTabs = tabValues.split(":");
         List<String> tabs = getTabValues();
         System.out.println("Tab values are: " + tabs);

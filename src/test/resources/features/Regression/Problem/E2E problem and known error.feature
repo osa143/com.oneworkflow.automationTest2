@@ -1,5 +1,5 @@
 @E2E_problem_and_known_error
-#step 98 wrong ticket
+#passed
   Feature: problem
 
     Scenario: E2E problem and known error
@@ -91,7 +91,7 @@
       And user goes back to login page
       When user logs in with valid username "syvaptu1_auto" and password as "Telia@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      And user clicks on search and selects open search forms and problem record
+      And user selects search menu as "Open Search Form:Known Error"
       And user switches to window 4
       And user enters Problem Ticket
       And user clicks Search on ticket search
@@ -100,7 +100,7 @@
       Then user validates ticket status as "Published"
       When user changes status to "Closed" on problem record page
       And user clicks on save button
-      When user selects closure code as "Full impact"
+      When user selects closure code as "Full Impact"
       And user clicks on save button
       Then user validates ticket status as "Closed"
 

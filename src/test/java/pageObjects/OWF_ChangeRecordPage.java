@@ -11,13 +11,13 @@ import java.util.List;
 public class OWF_ChangeRecordPage extends BaseRecordPage {
 
 
-    public static final String btnSEND = "WIN_0_600002905";
-    public static final String ddANSWER= "Answer";
-    public static final String btnDOWN = "reg_img_700050252";
+    private static final String btnSEND = "WIN_0_600002905";
+    private static final String ddANSWER= "Answer";
+    private static final String btnDOWN = "reg_img_700050252";
     private static final String ddREQUEST_CATEGORY = "Request Category*";
     private static final String dd_CHANGE_TYPE= "arid_WIN_0_755000000";
     private static final String txt_SEARCH_FILTER_CALENDAR= "combo-1017-inputEl";
-    private static final String txt_SEARCH_FILTER_CALENDAR_XPATH= "//*[@id=\"combo-1017-inputEl\"]";
+    private static final String txt_SEARCH_FILTER_CALENDAR_XPATH= "//*[@id='combo-1017-inputEl']";
     private static final String btn_CHANGE_RECORD= "button-1052";
     private static final String dd_STATUS= "Status";
     private static final String btn_SEARCH= "WIN_0_700506222";
@@ -30,6 +30,51 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String table_SELECT_LOCATION= "T700024013";
     private static final String btn_ADVANCED_SEARCH= "WIN_0_777505104";
     private static final String txt_ADVANCED_SEARCH= "arid1005";
+    private static final String txt_RISK_SCORE= "arid_WIN_0_700050316";
+    private static final String txt_OWNER_PROFILE= "arid_WIN_0_777031401";
+    private static final String txt_OWNER= "arid_WIN_0_777031400";
+    private static final String btn_SHOW_CR_MATCHING= "WIN_0_600002901";
+    private static final String div_SHOW_CR_MATCHING= "WIN_0_999000247";
+    private static final String txt_EMAIL_ADDRESS= "arid_WIN_0_700027017";
+    private static final String btn_ADD_EMAIL= "WIN_0_600002906";
+    private static final String txt_PROJECT_CODE= "arid_WIN_0_700007053";
+
+
+    public boolean verifyProjectCodeIsReadOnly(){
+        return checkIfControlIsReadonly(txt_PROJECT_CODE);
+    }
+
+
+    public boolean verifySendButtonIsEnable(){
+        return verifyElementIsEnabledByElement(By.id(btnSEND));
+    }
+    public void clickAddEmail(){
+        clickElement(By.id(btn_ADD_EMAIL));
+    }
+
+    public void enterEmail(String text){
+        enterTextByElement(By.id(txt_EMAIL_ADDRESS), text);
+    }
+
+    public boolean verifyShowCrDivIsDisplayed(){
+        return verifyElementIsDisplayed(By.id(div_SHOW_CR_MATCHING));
+    }
+
+    public void clickShowCrMatching(){
+        clickElement(By.id(btn_SHOW_CR_MATCHING));
+    }
+
+
+    public String getOwnerProfile(){
+        return getAttributeValueById(txt_OWNER_PROFILE);
+    }
+    public String getOwner(){
+        return getAttributeValueById(txt_OWNER);
+    }
+
+    public String getRiskScore(){
+        return getAttributeValueById(txt_RISK_SCORE);
+    }
 
     public void enterAdvancedSearch(String text){
         enterTextByElement(By.id(txt_ADVANCED_SEARCH), text);

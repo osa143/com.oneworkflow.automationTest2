@@ -36,16 +36,20 @@
       And user enters message value as "Automated Test"
       Then user clicks on save button
       When user clicks on outbound events refresh button
+      And user waits
       Then user should see "Assignment" notification in outbound in row 1
+      And user waits 1 mins
       When user clicks on inbound events refresh button
       Then user should see "BTA:ExecutionStatusNotification" notification in inbound in row 1
       And user should see "BTA:OrderAcknowledgmentBySupplier" notification in inbound in row 2
       Then user clicks on ticket refresh button
+      And user waits
+      And user waits
       When user clicks on "B2B Dispatch" tab
       Then user should see WFM ticket ID
-      And user validates "Contact Name" is visible
-      And user validates "Contact Telephone Number" is visible
-      And user validates "Contact Mail Address" is visible
+      And user validates Contact Name as "Transtema SOC"
+      And user validates Contact Telephone Number is present
+      And user validates Contact Mail Address as "support.tns@transtema.com"
       When user selects dispatch status as "Cancel Requested"
       And user enters Cancel Requested Reason as "TEST"
       And user clicks on save button

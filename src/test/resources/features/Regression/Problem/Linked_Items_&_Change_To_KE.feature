@@ -1,5 +1,5 @@
 @Linked_Items_&_Change_To_KE
-  #CI search window issue
+  #Passed
   Feature: linking of trouble and change ticket to KE
     Scenario: user is able to link a change and trouble ticket to a known error
 
@@ -13,7 +13,8 @@
       When user enters "Problem test" in Title field
       And user selects request type as "Customer" on trouble event page
       And user enters description as "A customer complaint"
-      And user clicks on save button on the problem form
+      And user clicks on save button
+      And user gets ticket value
       Then ticket should be created and status should be assigned
       When user clicks on change record from agent console
       And user switches to window 2
@@ -39,11 +40,12 @@
       And user enters impact duration as "4" minutes
       And user selects estimated impact as "No Impact"
       And user clicks on save button
-      Then user clicks on "Risk" tab
+      And user gets change ticket value
+      Then user clicks on Risk tab
       And user answers all risk questions as below
       And user selects answer as "Impact to other systems/technologies are unclear"
       And user selects answer as "No"
-      And user selects answer as "Tested succesfully, this is a pilot"
+      And user selects answer as "Tested successfully, this is a pilot"
       And user selects answer as "Yes (outcome of the change can be instantly verified)"
       And user selects answer as "Yes"
       And user selects answer as "Simple"
@@ -52,7 +54,6 @@
       Then user clicks on Diagnosis tab
       And user clicks on CI search button
       And user switches to frame
-      #When user clicks on clear button
       And user selects search for as "All CIs"
       And  user enters "SE_CPE_FRECPE5" in name field
       And user clicks on search button on CI search window
@@ -74,22 +75,22 @@
       And user clicks on save button
       Then user validates ticket status as "Draft"
       And user clicks on linked items tab
-      And user selects target application first dropdown as "OS3 Change"
-      And user selects target application second dropdown as "Caused by"
+      And user selects target application first dropdown as "OS3 - Operations"
+      And user selects target application second dropdown as "Is workaround for"
       When user clicks on link button
       Then select target request window should open
+      And user switches to frame
       When user enters ticket in ticket ID+ field
-      And user clicks on search button on CI search window
-      And user selects ticket under select target request
+      And user clicks on the search button on select target request
       And user clicks on accept button
       Then user validates 1 linked ticket availability
       And user clicks on linked items tab
-      And user selects target application first dropdown as "OS3 Change"
+      And user selects target application first dropdown as "OS3 - Change"
       And user selects target application second dropdown as "Caused by"
       When user clicks on link button
       Then select target request window should open
-      When user enters ticket in ticket ID+ field
-      And user clicks on search button on CI search window
-      And user selects ticket under select target request
+      And user switches to frame
+      When user enters change ticket in ticket ID+ field
+      And user clicks on the search button on select target request
       And user clicks on accept button
       Then user validates 2 linked ticket availability

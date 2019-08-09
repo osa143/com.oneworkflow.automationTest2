@@ -1,5 +1,5 @@
 @B2B_Test_Cases
-#Need to run rest in UAT due to only Transtema is present in SIT
+#Only Transtema is present in SIT
   Feature: B2B Cancel work order to field service before work is carried out
 
     Scenario Outline: user can cancel a work order sent to a field service before any work is carried out

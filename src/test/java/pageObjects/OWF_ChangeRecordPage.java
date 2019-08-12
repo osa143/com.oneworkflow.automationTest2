@@ -38,10 +38,14 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_EMAIL_ADDRESS= "arid_WIN_0_700027017";
     private static final String btn_ADD_EMAIL= "WIN_0_600002906";
     private static final String txt_PROJECT_CODE= "arid_WIN_0_700007053";
+    private static final String txt_TIMELINE_TEXT_ENTRY= "WIN_0_777777103";
 
 
     public boolean verifyProjectCodeIsReadOnly(){
         return checkIfControlIsReadonly(txt_PROJECT_CODE);
+    }
+    public boolean verifyTimelineTextEntryIsReadOnly(){
+        return checkIfControlIsReadonly(txt_TIMELINE_TEXT_ENTRY);
     }
 
 

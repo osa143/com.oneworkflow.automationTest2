@@ -556,7 +556,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user enters request end date as {string} one day in the future")
     public void userEntersRequestEndDateAsOneDayInTheFuture(String arg0) {
-        problemRecordPage.enterEndDateAsTodayMidnight(120);
+        problemRecordPage.enterEndDateAs(120);
     }
 
     @Then("select target request window should open")

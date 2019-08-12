@@ -93,12 +93,7 @@
       Then user should see assigned profile as "DC CS Core (Voice)"
       Then user validates owner profile as "Change Manager"
       And user validates owner as "ChangeManager"
-      When user clicks on "Notifications" tab
-      And user clicks on "Sent" tab
-      Then user should see "Assignment-Profile" email update
-      And user validates "Send" is readonly
       And user clicks on timeline tab
-      #Description, Project Code, Change Builder, Communication Plan, Ver Of Functionality, Risk Description and Timeline
       Then user validates Description* isn't readonly
       And user validates Project Code isn't readonly
       And user validates Change Builder+* isn't readonly
@@ -106,42 +101,47 @@
       And user validates Ver of Functionality* isn't readonly
       And user validates Risk Description* isn't readonly
       And user validates Timeline Text entry isn't readonly
-      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Assignee Profile has changed from  to DC CS Core (Voice). Finland Country has changed from  to Finland. Request Status has changed from New to Assigned. "
+      Then change should also be reflected in the timeline as "Assignee Profile has changed from  to DC CS Core (Voice). Finland Country has changed from  to Finland. Estonia Country has changed from  to Estonia. Request Status has changed from New to Assigned."
       And user gets ticket value
+      And user waits 30 secs
+      When user clicks on "Notifications" tab
+      And user clicks on "Sent" tab
+      Then user should see "Assignment-Profile" email update
+      #And user validates "Send" is readonly
       When user logsOut
-      And user switches to window 0
-      And user returns to home page
+      And user goes back to login page
       Then user logs in with valid username "DC CS Core (Voice)_auto" and password as "Telia@1234"
       And user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on more filters button
-      And user clicks on core tab
-      Then user enters "Mobile | CS Core (Voice)" in the filter title field
+      And user switches to frame
+      And user clicks on "Core" tab
+      Then user enters title as "Mobile | CS Core (Voice)" on more filter window
       And user selects status as "Assigned" on user more filters window
       Then user clicks on apply button on user more filters window
-      And user should see change tickets with status of "Assigned"
+      And user should see "CR" tickets with "Status" of "Assigned"
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
-      And user switches to window 1
+      And user switches to window 2
       Then user enters ticket previously created
+      And user clicks Search on ticket search
       When user clicks on Ack button
       Then user validates ticket status as "Analysis"
       And user validates last ack by field has data present
-      Then user selects assignee as "DC CS Core (Voice)_auto" by using alphabet "D" key up 0 times
+      Then user enters "DC CS Core (Voice)_auto" in assignee
+      #Then user selects assignee as "DC CS Core (Voice)_auto" by using alphabet "D" key up 0 times
       And user clicks on save button
       When user clicks on Diagnosis tab
       And user clicks on Show CR Matching button
       Then user should see Show CR Matching table appear
       When user enters description as "- Additional Information"
-      And user clears text in "Reason" field
       Then user enters reason field as "New Reason"
-      And user clears text in "Comminication Plan" field
+      And user clicks on details under sections
       Then user enters "New Communication plan" in the communication plan field
       And user clicks on save button
       Then change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) to TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) - Additional info. "
       Then user clicks on "Schedule" tab
-      And user changes request start time to be one week later
-      And user changes request end time to be one week later
+      Then user enters request start time 168 hours ahead of current date
+      And user enters request end time 172 hours ahead of current date
       Then user clicks on save button
-      Then user clicks on timeline tab
       #may need to check this, replaced the actual date with "XX's"
       And change should also be reflected in the timeline as "STATUS MODIFIED.  Requested Start has changed from XXXX-XX-XX XX:XX:XX UTC to XXXX-XX-XX XX:XX:XX UTC. Requested End has changed from XXXX-XX-XX XX:XX:XX UTC to XXXX-XX-XX XX:XX:XX UTC. "
       When user gets the schedule time values
@@ -151,7 +151,8 @@
       And user enters impact from time as same value as request start time
       And user enters impact to time as same value as request end time
       And user clicks confirm checkbox
-      Then user clicks on bulk update save buttonWhen user clicks on "Interested Parties" tab
+      Then user clicks on bulk update save button
+      When user clicks on "Interested Parties" tab
       And user enters email address as "Test2@Test2.com"
       And user clicks on add email button
       Then user should see new email "Test2@Test2.com" added

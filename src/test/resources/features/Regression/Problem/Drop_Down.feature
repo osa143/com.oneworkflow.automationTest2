@@ -61,3 +61,9 @@
       Then user clicks on save button on the problem form
       When user changes status to "Closed" on problem record page
       Then multiple statuses "No solution identified:Not repeatable:Rejected:Risk accepted:Solved:Workaround:(clear)" should be available in "Closure Code" dropdown readonly
+#      And User selects "Resolving Group" as dropdownValue and should see values for "readonly"
+#
+#        | DropdownValue | DropdownValuesToBePresent|
+#        | BSS:NEO | NEO IT Awaiting BU-DK |
+
+

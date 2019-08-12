@@ -196,15 +196,25 @@ public class OWF_WorkOrderPageSteps {
     }
 
 
-    @And("user waits {int} mins")
-    public void userWaitsMins(int arg0) {
-        int newDelay= arg0*60000;
+    @And("user waits {int} secs")
+    public void userWaitsSecs(int arg0) {
+        int newDelay= arg0*1000;
         workOrderPage.wait(newDelay);
     }
 
     @And("user validates Contact Name as {string}")
     public void userValidatesContactNameAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getContactName(), arg0);
+    }
 
+    @And("user validates Contact Telephone Number is present")
+    public void userValidatesContactTelephoneNumberIsPresent() {
+        Assert.assertNotNull(workOrderPage.getContactTelephoneNumber());
+    }
+
+    @And("user validates Contact Mail Address as {string}")
+    public void userValidatesContactMailAddressAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getContactMailAddress(), arg0);
     }
 }
 

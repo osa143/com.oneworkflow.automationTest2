@@ -257,6 +257,46 @@ public class BasePage {
     }
 
 
+    public boolean openDropdownAndGetValues(String dropdownName, String dropdownValue, boolean readonly, String lastDropDownValues) {
+        String dropdownXpath;
+        if (readonly)
+            dropdownXpath = "//img[@alt='ReadOnly menu for " + dropdownName + "']/..";
+        else
+            dropdownXpath = "//img[@alt='Menu for " + dropdownName + "']/..";
+
+        wait(200);
+        driver.findElement(By.xpath(dropdownXpath)).click();
+        wait(800);
+
+        String arr[] = dropdownValue.split(":");
+        int index = getMenuTableBodyIndex(arr[0]);
+        if (index == -1) index = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            final String temp = arr[i];
+
+            List<WebElement> elements = driver.findElements(By.className("MenuTableBody"));
+            System.out.println("Number of MenuTableBody's : "+elements.size());
+            if (elements.size() > 0) {
+                elements.get(i + index).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
+            }
+            wait(800);
+        }
+        List<WebElement> elements = driver.findElements(By.className("MenuTableBody"));
+        List<WebElement> webElements = elements.get(elements.size() - 1).findElements(By.tagName("td"));
+        for (int j =0; j < webElements.size(); j++)
+        {
+            if(!lastDropDownValues.contains(webElements.get(j).getText().trim()))
+            {
+                System.out.println("Failed because DropDown value is: " + webElements.get(j).getText().trim());
+                return false;
+            }
+            System.out.println("DropDown value is: " + webElements.get(j).getText().trim());
+        }
+      return true;
+    }
+
+
     public void selectDropDownNameAndValue(String dropdownName, String dropdownValue, boolean readonly) {
         String dropdownXpath;
         if (readonly)
@@ -266,7 +306,7 @@ public class BasePage {
 
          wait(200);
         driver.findElement(By.xpath(dropdownXpath)).click();
-        wait(700);
+        wait(800);
 
         String arr[] = dropdownValue.split(":");
         int index = getMenuTableBodyIndex(arr[0]);
@@ -281,7 +321,7 @@ public class BasePage {
 
                 elements.get(i + index).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
             }
-            wait(700);
+            wait(800);
         }
 
     }

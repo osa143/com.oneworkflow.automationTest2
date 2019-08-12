@@ -3,7 +3,7 @@ package steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.WebElement;
+import io.cucumber.datatable.DataTable;
 import org.testng.Assert;
 import pageObjects.OWF_TroubleEventPage;
 import pageObjects.OWF_WorkOrderPage;
@@ -1067,6 +1067,23 @@ public class OWF_TroubleEventPageSteps {
     public void userRightClicksOnCIAndSelectsImpactUpdate(String cellData) {
         troubleEventPage.selectAndRightClickOnTableElement(cellData);
         troubleEventPage.selectImpact_update();
+    }
+
+    @Then("multiple values should be available in {string} dropdown")
+    public void multipleValuesShouldBeAvailableInDropdown(String dropDownName) {
+        String dropdownValues = "IT CC:Access network:BSS:Control Center:Core:CTI Admin-Fi:Customer Operation:Customer Services:DC CS Core (Voice):Escalation Manager:External:Field Service:IBS-SE:Infrastructure:IOT:IT:it:OSS:Packet Transport:Security services:Third Parties:Transmission:TV:VAS:(clear)";
+        troubleEventPage.verifyDropdownValues(dropdownValues, dropDownName, "notreadonly");
+    }
+
+    @And("User selects {string} as {string} and should see {string}")
+    public void userSelectsAsAndShouldSee(String dropDownName, String selectedValue, String valuesToBePresent) {
+        Assert.assertTrue(troubleEventPage.verifyDropdownValuesByName(dropDownName,selectedValue, valuesToBePresent, "notreadonly"));
+        troubleEventPage.clickEscButton();
+    }
+
+    @And("User selects {string} as dropdownValue and should see values for {string}")
+    public void userSelectsDropdownNameAsDropdownValueAndShouldSeeValues(String dropdownName, String readOnly, DataTable dropdownValues) {
+        troubleEventPage.verifyMultipleDropdownValues(dropdownName,dropdownValues,readOnly);
     }
 }
 

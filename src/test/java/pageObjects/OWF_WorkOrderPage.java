@@ -37,14 +37,15 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_CONTACT_MAIL_ADDRESS= "arid_WIN_0_600001064";
 
 
+
     public String getContactName(){
-        return getTextByID(txt_CONTACT_NAME);
+        return getAttributeValueById(txt_CONTACT_NAME);
     }
     public String getContactTelephoneNumber(){
-        return getTextByID(txt_CONTACT_TELEPHONE_NUMBER);
+        return getAttributeValueById(txt_CONTACT_TELEPHONE_NUMBER);
     }
     public String getContactMailAddress(){
-        return getTextByID(txt_CONTACT_MAIL_ADDRESS);
+        return getAttributeValueById(txt_CONTACT_MAIL_ADDRESS);
     }
 
     public void enterCancelRequestReason(String text){
@@ -67,6 +68,7 @@ public class OWF_WorkOrderPage extends BasePage {
     }
     public void clickRefresh_outbound(){
         findElement(By.xpath(btn_REFRESH_OUTBOUND)).click();
+        wait(1500);
     }
 
     public String getManufacturer(){

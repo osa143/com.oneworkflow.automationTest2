@@ -154,10 +154,12 @@ public class OWF_AgentConsolePageSteps {
     @And("user logsOut and closes the browser")
     public void userLogsOutsAndCloseTheBrowser() throws InterruptedException {
         agentConsolePage.clickNavUserMenu();
-        agentConsolePage.wait(2000);
+        agentConsolePage.wait(1500);
         agentConsolePage.clickMenuItemLogout();
         agentConsolePage.wait(1000);
         agentConsolePage.getDriver().close();
+        agentConsolePage.wait(1000);
+
 
     }
 
@@ -207,7 +209,14 @@ public class OWF_AgentConsolePageSteps {
 
     @And("user clicks on {string} tab")
     public void userClicksOnAlarmTab(String tabName) {
-      agentConsolePage.selectTab(tabName);
+      try
+      {
+          agentConsolePage.selectTab(tabName);
+      }
+      catch (Exception e){
+          agentConsolePage.wait(1500);
+          agentConsolePage.selectTab(tabName);
+        }
     }
 
     @When("user sets the preferences under the alarm tab as {string}")
@@ -562,6 +571,18 @@ public class OWF_AgentConsolePageSteps {
     public void userClicksOnAgentConsoleTicketSearchBoxAndUserEntersEnterKey() {
         agentConsolePage.enterSendKeysInSearchBox();
 
+    }
+
+    @Then("user enters title as {string} on more filter window")
+    public void userEntersTitleAsOnMoreFilterWindow(String arg0) {
+        agentConsolePage.enterTitle_moreFilter(arg0);
+
+    }
+
+    @And("user should see {string} tickets with {string} of {string}")
+    public void userShouldSeeTicketsWithOf(String colValue, String colName, String ticketStatus) {
+        Assert.assertTrue(agentConsolePage.verifyTicketsAssignedToCurrentUserProfile("ID", colValue, true));
+        Assert.assertTrue(agentConsolePage.verifyTicketsAssignedToCurrentUserProfile(colName, ticketStatus, true));
     }
 }
 

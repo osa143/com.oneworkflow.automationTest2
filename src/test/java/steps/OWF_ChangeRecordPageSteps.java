@@ -48,14 +48,14 @@ public class OWF_ChangeRecordPageSteps {
 
     @Then("user enters start time as some minutes fast from current sweden time")
     public void userEntersStartTimeAsMinutesFastFromCurrentSwedenTime() {
-        changeRecordPage.setStartDate(5);
+        changeRecordPage.enterStartDate(5);
 
     }
 
     @And("user enters Request End time as some minutes fast from request start time")
     public void userEntersRequestEndTimeAsMinutesFastFromRequestStartTime() {
 
-        changeRecordPage.setEndDate(11);
+        changeRecordPage.enterEndDate(11);
 
     }
     @And("user enters impact duration as {string} minutes")
@@ -301,14 +301,14 @@ public class OWF_ChangeRecordPageSteps {
     @Then("user enters request start time {int} hours ahead of current date")
     public void userEntersRequestStartTimeHoursAheadOfCurrentDate(int arg0) {
         int newDelay= arg0*60;
-        changeRecordPage.setStartDate(newDelay);
+        changeRecordPage.enterStartDate(newDelay);
 
     }
 
     @And("user enters request end time {int} hours ahead of current date")
     public void userEntersRequestEndTimeHoursAheadOfCurrentDate(int arg0) {
         int newDelay= arg0*60;
-        changeRecordPage.setEndDate(newDelay);
+        changeRecordPage.enterEndDate(newDelay);
 
     }
 
@@ -392,4 +392,20 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesCommunicationPlanIsnTReadonly() {
         Assert.assertFalse(changeRecordPage.verifyCommunicationPlanIsReadOnly());
     }
+
+    @And("user validates Ver of Functionality* isn't readonly")
+    public void userValidatesVerOfFunctionalityIsnTReadonly() {
+        Assert.assertFalse(changeRecordPage.verifyVerOfFuncionalityIsReadOnly());
+    }
+
+    @And("user validates Risk Description* isn't readonly")
+    public void userValidatesRiskDescriptionIsnTReadonly() {
+        Assert.assertFalse(changeRecordPage.verifyRiskDescriptionIsReadOnly());
+    }
+
+    @And("user validates Timeline Text entry isn't readonly")
+    public void userValidatesTimelineTextEntryIsnTReadonly() {
+        Assert.assertFalse(changeRecordPage.verifyTimelineTextEntryIsReadOnly());
+    }
+
 }

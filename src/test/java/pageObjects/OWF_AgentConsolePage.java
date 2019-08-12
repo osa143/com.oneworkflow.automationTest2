@@ -75,6 +75,12 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String btn_CANCEL_SELECT_LOCATION= "WIN_0_700000105";
     private static final String btn_CLEAR_SELECT_LOCATION= "WIN_0_700010521";
     private static final String txt_LOCATION_NAME_PLUS= "arid_WIN_0_777031430";
+    private static final String txt_TITLE_MORE_FILTERS= "arid_WIN_0_600001002";
+
+
+    public void enterTitle_moreFilter(String text){
+        enterTextByElement(By.id(txt_TITLE_MORE_FILTERS), text);
+    }
 
     public void enterLocationNamePlus_selectLocation(String text){
         enterTextByElement(By.id(txt_LOCATION_NAME_PLUS), text);

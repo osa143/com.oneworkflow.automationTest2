@@ -16,7 +16,15 @@
       And user clicks on save button
       Then ticket should be created and status should be assigned
       When user changes status to "Cleared" on trouble event page
-      Then user should see closure codes appear
+      And User selects "Fault Position" as dropdownValue and should see values for "notreadonly"
+
+        | DropdownValue | DropdownValuesToBePresent|
+        | Carrier Voice | Genband |
+        | Customer      | Cable/Fibre fault:Configuration failure:Other:Power failure:Telia Owned CPE:Transmission failure:Unclear |
+      And User selects "Cause" as dropdownValue and should see values for "readonly"
+
+        | DropdownValue | DropdownValuesToBePresent|
+        | Change Process:Configuration | Customer:Other:Other Service Provider:Supplier:TC Field Force:Telia Company:Third Party:Unclear:Vendor |
 
 
 

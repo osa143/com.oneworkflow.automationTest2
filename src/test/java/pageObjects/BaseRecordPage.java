@@ -129,6 +129,7 @@ public class BaseRecordPage extends BasePage {
     private static final String txtTICKET_ID_PLUS_ID= "arid_WIN_0_777777600";
     private static final String btn_SEARCH= "WIN_0_1002";
     private static final String table_NOTIFICATIONS= "T700020677";
+    private static final String dd_OWNER_PROFILE= "Owner Profile*";
 
 
 
@@ -139,6 +140,13 @@ public class BaseRecordPage extends BasePage {
         return checkIfControlIsReadonly(txtCOMMUNICATION_PLAN_ID);
     }
 
+
+    public boolean verifyVerOfFuncionalityIsReadOnly(){
+        return checkIfControlIsReadonly(txtVER_OF_FUNCTIONALITY_ID);
+    }
+    public boolean verifyRiskDescriptionIsReadOnly(){
+        return checkIfControlIsReadonly(txtRISK_DESCRIPTION_ID);
+    }
     public String getText_notifications(String colName, int rowNum){
         return getTableCellData(By.id(table_NOTIFICATIONS), colName, rowNum );
     }
@@ -391,6 +399,28 @@ public class BaseRecordPage extends BasePage {
     public void selectAssignedProfile(String value){
         selectDropDownNameAndValue(ddASSIGNED_PROFILE, value, false);
     }
+    public boolean verifyDropdownValuesByName(String dropdownName, String value, String dropdownValues, String readOnly){
+        if(readOnly.equals("readonly")) {
+            return openDropdownAndGetValues(dropdownName, value, true, dropdownValues);
+        }
+        else
+        {
+            return openDropdownAndGetValues(dropdownName, value, false, dropdownValues);
+        }
+    }
+
+    public void verifyMultipleDropdownValues(String dropdownName, DataTable dataTable, String readOnly)
+    {
+        List<List<String>> dropdownValues = dataTable.asLists(String.class);
+        for (int i = 1; i < dropdownValues.size(); i ++) {
+
+            String selectedValue = dropdownValues.get(i).get(0);
+            String valuesToBePresent = dropdownValues.get(i).get(1);
+            Assert.assertTrue(verifyDropdownValuesByName(dropdownName,selectedValue, valuesToBePresent, readOnly));
+            clickEscButton();
+        }
+    }
+
 
     public String getAssigneeText(){
         return getAttributeValueById(txtASSIGNEE_ID);
@@ -652,28 +682,29 @@ public class BaseRecordPage extends BasePage {
         clickElement(By.id(btnCISEARCH));
     }
 
-    public void setStartDate(int delay) {
+    public void enterStartDate(int delay) {
 
         String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
-
+        findElement(By.id(txtSTART_DATE)).clear();
         enterTextByElement(By.id(txtSTART_DATE),dateTime );
 
 
     }
 
-    public void setEndDate(int delay) {
+    public void enterEndDate(int delay) {
 
         String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
-
+        findElement(By.id(txtEND_DATE)).clear();
         enterTextByElement(By.id(txtEND_DATE),dateTime );
     }
 
     public void enterStartDateAs(int delay)
     {
+        findElement(By.id(txtSTART_DATE)).clear();
         enterTextByElement(By.id(txtSTART_DATE), CommonUtils.getDateAsTodayMidnight(delay));
     }
 
-    public void enterEndDateAsTodayMidnight(int delay)
+    public void enterEndDateAs(int delay)
     {
         enterTextByElement(By.id(txtEND_DATE), CommonUtils.getDateAsTodayMidnight(delay));
 
@@ -698,6 +729,7 @@ public class BaseRecordPage extends BasePage {
         clickElement(By.id(btnCLONE_ID));
     }
     public void enterReason(String Reason){
+        findElement(By.id(txtREASON_ID)).clear();
         enterTextByElement(By.id(txtREASON_ID),Reason);
     }
     public void enterChangeBuilder(String ChangeBuilder){
@@ -715,6 +747,7 @@ public class BaseRecordPage extends BasePage {
         enterTextByElement(By.id(txtROLL_BACK),rollBack);
     }
     public void enterCommunicationPlan(String communicationPlan){
+        findElement(By.id(txtCOMMUNICATION_PLAN_ID)).clear();
         enterTextByElement(By.id(txtCOMMUNICATION_PLAN_ID),communicationPlan);
 
     }

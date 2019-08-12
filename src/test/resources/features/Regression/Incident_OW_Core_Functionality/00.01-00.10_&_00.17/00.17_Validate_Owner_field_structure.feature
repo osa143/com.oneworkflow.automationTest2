@@ -1,9 +1,7 @@
 @00.17_Validate_Owner_field_structure #@Incident
 
 Feature: validation of impact field availability and structure
-
   Scenario: user validates impact field availability and structure
-
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
@@ -20,9 +18,7 @@ Feature: validation of impact field availability and structure
       | Access network:Mobile:RAN:Common | Mobile Services-DS:NW Radio Quality-NO:RAN Customer Tickets SE |
       | Access network:Mobile:RAN:Customer | RAN Engineering Customer-DK                                  |
       | Access network:Mobile:RAN:Deployment | NW RAN Deployment-DK:Roll Out BTB-DK:Roll Out build Eltel-DK:Roll Out orbion-DK:Roll Out Rbld & Rplmnt-DK:Roll Out Relacom-DK|
-
-
-
+      | Access network:Mobile:RAN:Deployment SE |NW Deployment Eltel-SE:NW Deployment Netel-SE:NW Deployment Relacom-SE:NW Deployment Scanmast-SE                           |
 
     #And User selects "Owner Profile*" as "Access network:Mobile:RAN:Common" and should see "Mobile Services-DS:NW Radio Quality-NO:RAN Customer Tickets SE"
     #And User selects "Owner Profile*" as "Access network:Mobile:RAN:Customer" and should see "RAN Engineering Customer-DK"

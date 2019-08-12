@@ -19,8 +19,8 @@
       And user switches to frame
       Then user should see bulk ci loading window
       When user clicks on "Manual Input" radio button
-      And user enters impact from date as current date
-      And user enters impact to date as current date +4 hours
+      And user enters impact from date as current date midnight
+      And user enters impact to date as current date midnight +4 hours
       And user selects impact level as "Degradation of Service"
       And user enters hours as "3"
       And user enters "One Workflow" in manual CI search box
@@ -42,5 +42,31 @@
       And user validates "Last Modified By" is not null
       And user validates "Modified Date" is not null
       And user validates "Status" contains buttons "Pending:Checked:Importing:Completed:With Errors:Cancelled"
-      When user clicks on bulk loading close button
+      Then user clicks on bulk loading close button
+      When user clicks on "Add Bulk Import" button
+      And user switches to frame
+      And user selects impact level as "No Impact"
+      And user enters impact from date as current date midnight
+      And user enters impact to date as current date midnight +4 hours
+      And user enters hours as "3"
+      Then user clicks on "Upload Import File"
+      And user clicks on choose file button
+      Then user selects 50 CI's file
+      And user clicks on attachment ok button
+      Then user clicks on save button
+      And user validates import message appears
+      Then user clicks on ok button
+      When user clicks on "Show Bulk Import" button
+      Then user highlights "TXT" import type
+      And user validates txt doc is visible WIN_0_800038042
+      And user validates "Save Import Type" is visible
+      When user clicks on "Related CIs" tab
+      Then user validates at least 1 CI has "completed" status
+      And user validates at least 1 CI has "With Error" status
+      And user validates 1 CI has an error of "(33422): Impact record cannot be created. The entered From and To dates overlap with existing impact record for FI_AFG_AFG99FI (No Impact (2019-08-11 22:00:00 UTC - 2019-08-12 02:00:00 UTC ))."
+      When user clicks on "Other Fields" tab
+      Then user validates "Import Start Date" is not null
+      Then user validates "Import End Date" is not null
+      And user clicks on bulk loading close button
+
 

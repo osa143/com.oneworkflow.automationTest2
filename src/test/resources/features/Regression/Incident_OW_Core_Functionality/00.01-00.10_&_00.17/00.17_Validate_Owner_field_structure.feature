@@ -67,13 +67,13 @@ Feature: validation of impact field availability and structure
       | External | Keypro |
       | External:logica | Leam |
       | External:tcs | Channels |
-      | External:tieto:leam | BSS 4
+      | External:tieto:leam | BSS 4|
       | External:tieto | NAK:SMO:Tieto Billing |
       | External:wipro | Alpha2am |
       | Field Service:Mobile (B2B) | FDC-Common |
       | Infrastructure:Development | IT infra-Common |
       | Infrastructure:Maintenance | Large Production Premises-NO:Siteinfra-NO:Tech_Sites-SE |
-      | IOT | Operation
+      | IOT | Operation                                                                      |
       | IT:Application | Application-NO:Assurance:Billing:Billing-NO:CRM:Enterprise:IT-Application-OSS:JobSchedulling-FI:Middleware:Multibella-FI:NMS:Portal:Portal-NO:SAP:Security Services-FI:Tiksu-FI:Tunnestiimi-FI |
       | IT:Cloud Infrastructure | NFVI:Nimbus/TSVP |
       | IT:Database | Database-NO:MSSQL L3:MySQL L3:Oracle L3:Oracle/MSSQL/MySQL/PostgreSQL:PostgreSQL L3 |
@@ -88,7 +88,7 @@ Feature: validation of impact field availability and structure
       | IT:Server | Linux/Unix L2:Linux/Unix L3:Windows L2:Windows L3 |
       | IT:Service | Core-NO:NEO-NO:Service-NO |
       | it | Backup:SE:Storage |
-      | OSS:Distribution | OSS Distribution-Common:OSS-Dist
+      | OSS:Distribution | OSS Distribution-Common:OSS-Dist|
       | OSS:Monitoring | OSS Mon-CGI:OSS Monitoring Mob:OSS Monitoring-Common:OSS Mon-TEMIP:OSS-Mon1:OSS-Mon2 |
       | OSS:NEMS:Ericsson | RAN Ericsson NEMS-Common |
       | OSS:NEMS:Huawei | RAN Huawei NEMS-Common |
@@ -99,7 +99,7 @@ Feature: validation of impact field availability and structure
       | OSS:Workflow | OSS-Wflow1:OSS-Wflow2:SIA-common:SIA-Tieto |
       | OSS:Workflow:OW | OSS Workflow-Common |
       | OSS:Workflow:OW_Support | OW_ANS |
-      | Packet Transport:Mobile | Transport Mobile-Common
+      | Packet Transport:Mobile | Transport Mobile-Common|
       | Security services:SOC | SOC-Common-L1:SOC-Common-L2:SOC-Common-L3_SE |
       | Third Parties:Mobile | NOKIA_TTN_DK:Telenor Denmark |
       | Transmission:Mobile:Engineering | NW Transmission -ENG |

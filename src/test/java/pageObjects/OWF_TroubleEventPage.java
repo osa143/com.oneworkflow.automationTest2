@@ -147,9 +147,22 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btn_INSERT= "WIN_0_600002923";
     private static final String btn_DISABLE = "WIN_0_600002925";
     private static final String btn_ENABLE= "WIN_0_600002924";
+    private static final String txt_IMPACT_FROM_pLUS= "arid_WIN_0_999000298";
+    private static final String txt_IMPACT_TO_pLUS ="arid_WIN_0_999000299";
+    private static final String btn_ADD_TIMELINE= "WIN_0_777021404";
 
 
-
+    public void clickAdd_timeline(){
+        clickElement(By.id(btn_ADD));
+    }
+    public void enterImpactFromPlus(String text){
+        findElement(By.id(txt_IMPACT_FROM_pLUS)).clear();
+        enterTextByElement(By.id(txt_IMPACT_FROM_pLUS), text);
+    }
+    public void enterImpactToPlus(String text){
+        findElement(By.id(txt_IMPACT_TO_pLUS)).clear();
+        enterTextByElement(By.id(txt_IMPACT_TO_pLUS), text);
+    }
     public void selectImpact_update(){
         findElement(By.cssSelector("body > div:nth-child(18) > div.MenuTableContainer > table > tbody > tr:nth-child(8) > td.MenuEntryName")).click();
         wait(1000);

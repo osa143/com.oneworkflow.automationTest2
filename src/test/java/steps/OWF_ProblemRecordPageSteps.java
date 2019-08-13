@@ -550,13 +550,13 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user enters request start date as {string} one day in the future")
     public void userEntersRequestStartDateAsOneDayInTheFuture(String arg0) {
-        problemRecordPage.enterStartDateAs(0);
+        problemRecordPage.enterStartDateAs(CommonUtils.getDateAsTodayMidnight(0));
 
     }
 
     @And("user enters request end date as {string} one day in the future")
     public void userEntersRequestEndDateAsOneDayInTheFuture(String arg0) {
-        problemRecordPage.enterEndDateAs(120);
+        problemRecordPage.enterEndDateAs(CommonUtils.getDateAsTodayMidnight(120));
     }
 
     @Then("select target request window should open")
@@ -917,6 +917,41 @@ public class OWF_ProblemRecordPageSteps {
     @Then("user validates Description* isn't readonly")
     public void userValidatesDescriptionIsnTReadonly() {
         Assert.assertFalse(problemRecordPage.verifyDescriptionIsReadOnly());
+    }
+
+    @Then("user validates Title isn't readonly")
+    public void userValidatesTitleIsnTReadonly() {
+        Assert.assertFalse(problemRecordPage.verifyTitleIsReadOnly());
+    }
+
+    @And("user validates Request Category isn't readonly")
+    public void userValidatesRequestCategoryIsnTReadonly() {
+        Assert.assertFalse(problemRecordPage.verifyRequestCategoryIsReadOnly());
+    }
+
+    @And("user validates Reason isn't readonly")
+    public void userValidatesReasonIsnTReadonly() {
+        Assert.assertFalse(problemRecordPage.verifyReasonIsReadOnly());
+    }
+
+    @And("user validates Priority isn't readonly")
+    public void userValidatesPriorityIsnTReadonly() {
+        Assert.assertFalse(problemRecordPage.verifyPriorityIsReadOnly());
+    }
+
+    @And("user validates Implementation isn't readonly")
+    public void userValidatesImplementationIsnTReadonly() {
+        Assert.assertFalse(problemRecordPage.verifyImplementationIsReadOnly());
+    }
+
+    @And("user validates Test Plan isn't readonly")
+    public void userValidatesTestPlanIsnTReadonly() {
+        Assert.assertFalse(problemRecordPage.verifyTestPlanIsReadOnly());
+    }
+
+    @And("user validates Rollback isn't readonly")
+    public void userValidatesRollbackIsnTReadonly() {
+        Assert.assertFalse(problemRecordPage.verifyRollbackIsReadOnly());
     }
 }
 

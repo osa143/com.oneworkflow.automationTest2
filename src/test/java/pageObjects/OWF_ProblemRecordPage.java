@@ -23,6 +23,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String ddREASON = "Reason";
 
     private static final String txtTITLE_ID = "arid_WIN_0_777031000";
+    private static final String txtREQUEST_CATEGORY_ID="arid_WIN_0_777021548";
     private static final String txtDESCRIPTION_ID = "arid_WIN_0_777031007";
     private static final String txtWORK_AROUND = "arid_WIN_0_600001040";
 
@@ -75,6 +76,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txtTO_DATE = "arid_WIN_0_777031004";
     private static final String table_ADD_INTERESTED_PARTY= "T700027964";
 
+
     public boolean verifyDescriptionIsReadOnly(){
         return checkIfControlIsReadonly(txtDESCRIPTION_ID);
     }
@@ -82,6 +84,15 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     public void clickYes_impactClear(){
         clickElement(By.id(btn_YES));
         wait(1000);
+    }
+    public boolean verifyTitleIsReadOnly(){
+        return checkIfControlIsReadonly(txtTITLE_ID);
+    }
+    public boolean verifyRequestCategoryIsReadOnly(){
+        return checkIfControlIsReadonly(txtREQUEST_CATEGORY_ID);
+    }
+    public boolean verifyPriorityIsReadOnly(){
+        return checkIfControlIsReadonly(txtPRIORITY_ID);
     }
 
     public void clickTableElement_addInterestedParty(String headerName, String text){
@@ -230,6 +241,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
     public void enterDescription(String description) {
+        findElement(By.id(txtDESCRIPTION_ID)).clear();
         driver.findElement(By.id(txtDESCRIPTION_ID)).sendKeys(description);
     }
 

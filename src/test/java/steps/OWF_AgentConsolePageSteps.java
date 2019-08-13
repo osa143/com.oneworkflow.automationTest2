@@ -31,7 +31,7 @@ public class OWF_AgentConsolePageSteps {
     public void userClicksOnAddColumnUnderPreferencesAndSelectsOPNextDueDate() {
         agentConsolePage.clickPreferences();
         agentConsolePage.setPreferences("Add Column:OP Next Due Date");
-        agentConsolePage.wait(5000);
+        agentConsolePage.wait(2000);
     }
 
     @Then("OP next due date column within agent console should be displayed")
@@ -116,32 +116,26 @@ public class OWF_AgentConsolePageSteps {
     @When("user clicks on All roles drop down and selects my assignee profile")
     public void userClicksOnAllRolesDropDownAndSelectsMyAssigneeProfile() throws InterruptedException {
         agentConsolePage.clickAllRolesDropDown();
-        agentConsolePage.wait(2000);
         agentConsolePage.selectMyAssigneeProfile();
-        agentConsolePage.wait(3000);
     }
 
     @Then("user clicks on My Assignee profile dropdown and selects Creator\\(user level)")
     public void userClicksOnMyAssigneeProfileDropdownAndSelectsCreatorUserLevel() throws InterruptedException {
         agentConsolePage.clickAllRolesDropDown();
-        agentConsolePage.wait(2000);
         agentConsolePage.selectMyCreaterUserLevel();
-        agentConsolePage.wait(3000);
     }
 
     @And("user clicks on All tickets dropdown and selects WO and OP")
     public void userClicksOnAllTicketsDropdownAndSelectsWOAndOP() {
         agentConsolePage.clickAllTicketsDropDown();
-        agentConsolePage.wait(2000);
         agentConsolePage.selectDdValueWO_OP();
     }
 
     @When("user clicks on Creator\\(user level) dropdown and selects My Owner Profile")
     public void userClicksOnCreatorUserLevelDropdownAndSelectsMyOwnerProfile() throws InterruptedException {
         agentConsolePage.clickAllRolesDropDown();
-        agentConsolePage.wait(2000);
         agentConsolePage.selectMyOwnerProfile();
-        agentConsolePage.wait(3000);
+
     }
 
     @When("user clicks on add column under preferences and selects OP Target date")
@@ -154,11 +148,8 @@ public class OWF_AgentConsolePageSteps {
     @And("user logsOut and closes the browser")
     public void userLogsOutsAndCloseTheBrowser() throws InterruptedException {
         agentConsolePage.clickNavUserMenu();
-        agentConsolePage.wait(1500);
         agentConsolePage.clickMenuItemLogout();
-        agentConsolePage.wait(1000);
         agentConsolePage.getDriver().close();
-        agentConsolePage.wait(1000);
 
 
     }
@@ -172,23 +163,19 @@ public class OWF_AgentConsolePageSteps {
     @And("user clicks on search and selects open search forms and problem record")
     public void userClicksOnSearchAndSelectsOpenSearchFormsAndProblemRecord() {
         agentConsolePage.clickSearch_OpenSearch_ProblemRecord();
-        agentConsolePage.wait(2000);
 
     }
 
     @Then("user logsOut")
     public void userLogsOut() {
         agentConsolePage.clickNavUserMenu();
-        agentConsolePage.wait(1000);
         agentConsolePage.clickMenuItemLogout();
-        agentConsolePage.wait(5000);
 
     }
 
     @When("user clicks on create trouble event")
     public void userClicksOnCreateTroubleEvent() {
         agentConsolePage.clickCreateMenu();
-        agentConsolePage.wait(1000);
         agentConsolePage.clickMenuItemTroubleEvent();
 
     }
@@ -197,7 +184,6 @@ public class OWF_AgentConsolePageSteps {
     @When("user clicks on create change record")
     public void userClicksOnCreateChangeRecord() {
         agentConsolePage.clickCreateMenu();
-        agentConsolePage.wait(1000);
         agentConsolePage.clickMenuItemChangeRecord();
     }
 
@@ -228,7 +214,7 @@ public class OWF_AgentConsolePageSteps {
     @When("user enters ticket id as {string} in the agent console search box and searches for ticket")
     public void userEntersTicketIdAsInTheAgentConsoleSearchBoxAndSearchesForTicket(String ticketId) {
         agentConsolePage.enterSearch(ticketId);
-        agentConsolePage.wait(2000);
+
         
     }
 
@@ -240,7 +226,6 @@ public class OWF_AgentConsolePageSteps {
     @When("user selects action dropdown as {string}")
     public void userSelectsActionDropdownAs(String arg0) {
         agentConsolePage.selectAction(arg0);
-        agentConsolePage.wait(5000);
     }
 
     @Then("user validates secondary alarm turns primary")

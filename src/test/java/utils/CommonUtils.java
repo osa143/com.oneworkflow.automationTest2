@@ -26,6 +26,8 @@ public class CommonUtils extends BasePage {
     public static String changeTicket;
     public static String beforeAnswering_riskScore;
     public static String afterAnswering_riskScore;
+    public static String requestStart;
+    public static String requestEnd;
 
     // 0 - parent window
     // 1 - first child and so on

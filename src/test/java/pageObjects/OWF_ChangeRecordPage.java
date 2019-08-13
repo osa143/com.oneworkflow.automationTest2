@@ -13,6 +13,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
 
     private static final String btnSEND = "WIN_0_600002905";
     private static final String ddANSWER= "Answer";
+    private static final String dd_OWNER= "Owner*";
     private static final String btnDOWN = "reg_img_700050252";
     private static final String ddREQUEST_CATEGORY = "Request Category*";
     private static final String dd_CHANGE_TYPE= "arid_WIN_0_755000000";
@@ -39,7 +40,54 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String btn_ADD_EMAIL= "WIN_0_600002906";
     private static final String txt_PROJECT_CODE= "arid_WIN_0_700007053";
     private static final String txt_TIMELINE_TEXT_ENTRY= "WIN_0_777777103";
+    private static final String btn_DETAILS= "WIN_0_999000372";
+    private static final String dd_RESOLVED_GROUP= "Resolved Group";
+    private static final String dd_RESOLVED_PERSON= "Resolved Person";
+    private static final String txt_REVIEW_DETAILS= "arid_WIN_0_705002084";
+    private static final String btn_VIEW= "WIN_0_777021131";
+    private static final String txt_ACTUAL_START ="arid_WIN_0_777021164";
+    private static final String txt_ACTUAL_END ="arid_WIN_0_777021165";
+    private static final String dd_ACTUAL_IMPACT ="Actual Impact";
+    private static final String dd_COMPLETED_CODE ="Completed Code";
 
+
+
+    public void selectActualImpact_scheduleTab(String value){
+        selectDropDownNameAndValue(dd_ACTUAL_IMPACT, value, false);
+    }
+
+    public void selectCompletedCode_scheduleTab(String value){
+        selectDropDownNameAndValue(dd_COMPLETED_CODE, value, false);
+    }
+
+
+    public void clickView_approvalTab(){
+        clickElement(By.id(btn_VIEW));
+    }
+
+    public String getActualStart(){
+        return getTextByID(txt_ACTUAL_START);
+    }
+    public String getActualEnd(){
+        return getTextByID(txt_ACTUAL_END);
+    }
+    public void enterReviewDetails(String text){
+        enterTextByElement(By.id(txt_REVIEW_DETAILS), text);
+    }
+
+    public void selectResolvedGroup(String value){
+        selectDropDownNameAndValue(dd_RESOLVED_GROUP, value, true);
+    }
+    public void selectResolvedPerson(String value){
+        selectDropDownNameAndValue(dd_RESOLVED_PERSON, value, true);
+    }
+
+    public void selectOwner(String value){
+        selectDropDownNameAndValue(dd_OWNER, value, false);
+    }
+    public void clickDetails(){
+        clickElement(By.id(btn_DETAILS));
+    }
 
     public boolean verifyProjectCodeIsReadOnly(){
         return checkIfControlIsReadonly(txt_PROJECT_CODE);

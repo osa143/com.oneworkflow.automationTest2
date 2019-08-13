@@ -301,6 +301,7 @@ public class OWF_AgentConsolePage extends BasePage {
     public void selectAction(String value){
         wait(1000);
         selectDropDownNameAndValue(ddACTION, value, false);
+        wait(1000);
     }
 
     public void clickCloseButtonOnFrame(){
@@ -317,6 +318,7 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void clickSearch_OpenSearch_ProblemRecord() {
         selectDropDownNameAndValue("Search", "Open Search Form:Problem Record", false);
+        wait(1000);
     }
 
     public void clickPreferences() {
@@ -355,18 +357,17 @@ public class OWF_AgentConsolePage extends BasePage {
         wait(1000);
         driver.findElement(By.id(txt_SEARCH)).sendKeys(searchText);
         driver.findElement(By.id(txt_SEARCH)).sendKeys(Keys.ENTER);
+        wait(2000);
     }
 
 
     public void clickCreateMenu() {
-
         selectMainMenu(menuForCREATE);
-
+       wait(500);
 
     }
 
     public void clickConsoleMenu() {
-
         selectMainMenu(menuForCONSOLE);
 
     }
@@ -374,6 +375,7 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void clickNavUserMenu() {
         selectMainMenu(menuForNAV_USERNAME);
+        wait(3000);
 
     }
 
@@ -423,6 +425,7 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void clickMenuItemLogout() {
         selectMenuItem(menuItemLOGOUT);
+        wait(5000);
     }
 
     public boolean verifyFilteredStatus(String columnName, String columnValue)
@@ -437,22 +440,27 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void selectMyAssigneeProfile() {
         selectDropDownValue(ddValueMYASSIGNEE_PROFILE);
+        wait(1000);
     }
 
     public void selectMyCreaterUserLevel() {
         selectDropDownValue(ddValueCREATER_USER_LEVEL);
+        wait(1000);
     }
 
     public void selectMyOwnerProfile() {
         selectDropDownValue(ddValueMY_OWNER_PROFILE);
+        wait(2000);
     }
 
     public void clickAllTicketsDropDown() {
         clickElement(By.id(ddALL_TICKETS));
+        wait(1000);
     }
 
     public void clickAllRolesDropDown() {
         clickElement(By.id(ddALL_ROLES));
+        wait(1000);
     }
 
     public int getColumnIndexByHeaderName(String columnName) {

@@ -369,7 +369,17 @@ public class OWF_ChangeRecordPageSteps {
 
     @Then("user should see {string} email update")
     public void userShouldSeeEmailUpdate(String arg0) {
-        Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 1), arg0);
+        try{
+            Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 1), arg0);
+        }
+        catch (Exception e){
+         changeRecordPage.wait(5000);
+         changeRecordPage.selectTab("Linked Items");
+         changeRecordPage.selectTab("Notifications");
+         changeRecordPage.selectTab("Sent");
+         Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 1), arg0);
+        }
+
     }
 
     @And("user validates {string} is readonly")
@@ -408,4 +418,65 @@ public class OWF_ChangeRecordPageSteps {
         Assert.assertFalse(changeRecordPage.verifyTimelineTextEntryIsReadOnly());
     }
 
+    @And("user clicks on details under sections")
+    public void userClicksOnDetailsUnderSections() {
+       changeRecordPage.clickDetails();
+    }
+
+    @When("user gets the schedule time values")
+    public void userGetsTheScheduleTimeValues() {
+        CommonUtils.requestStart=changeRecordPage.getRequestStart();
+        CommonUtils.requestEnd=changeRecordPage.getRequestEnd();
+    }
+
+
+    @And("user selects owner as {string}")
+    public void userSelectsOwnerAs(String arg0) {
+        changeRecordPage.selectOwner(arg0);
+    }
+
+    @And("user selects resolved group as {string}")
+    public void userSelectsResolvedGroupAs(String arg0) {
+        changeRecordPage.selectResolvedGroup(arg0);
+    }
+
+    @And("user selects resolved person as {string}")
+    public void userSelectsResolvedPersonAs(String arg0) {
+        changeRecordPage.selectResolvedPerson(arg0);
+    }
+
+    @And("user enters review details as {string}")
+    public void userEntersReviewDetailsAs(String arg0) {
+        changeRecordPage.enterReviewDetails(arg0);
+    }
+
+    @And("user clicks on view button")
+    public void userClicksOnViewButton() {
+        changeRecordPage.clickView_approvalTab();
+    }
+
+    @Then("user validates actual start time is updated")
+    public void userValidatesActualStartTimeIsUpdated() {
+        Assert.assertNotNull(changeRecordPage.getActualStart());
+    }
+
+    @Then("user validates actual end time is updated")
+    public void userValidatesActualEndTimeIsUpdated() {
+        Assert.assertNotNull(changeRecordPage.getActualEnd());
+    }
+
+    @Then("user selects actual impact as {string}")
+    public void userSelectsActualImpactAs(String arg0) {
+        changeRecordPage.selectActualImpact_scheduleTab(arg0);
+    }
+
+    @And("user selects completed code as {string}")
+    public void userSelectsCompletedCodeAs(String arg0) {
+        changeRecordPage.selectCompletedCode_scheduleTab(arg0);
+    }
+
+    @When("user logsOut from One workflow")
+    public void userLogsOutFromOneWorkflow() {
+        changeRecordPage.selectDropDownNameAndValue("Nav-Username", "Logout", false);
+    }
 }

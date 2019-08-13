@@ -20,14 +20,14 @@ public class BaseRecordPage extends BasePage {
     public static final String txtCHANGE_BUILDER_FIELD_ID = "arid_WIN_0_600001054";
     public static final String txtIMPLEMENTATION_ID = "arid_WIN_0_700007007";
     public static final String txtTEST_PLAN_ID = "arid_WIN_0_700007008";
-    public static final String txtSTART_DATE = "arid_WIN_0_777021160";
+    public static final String txt_REQUEST_START = "arid_WIN_0_777021160";
     public static final String txtROLL_BACK = "arid_WIN_0_700007009";
     public static final String txtCOMMUNICATION_PLAN_ID = "arid_WIN_0_600001053";
     public static final String txtVER_OF_FUNCTIONALITY_ID = "arid_WIN_0_600001055";
     public static final String txtRISK_DESCRIPTION_ID = "arid_WIN_0_600001065";
     public static final String txtINFORMATION_RESTRICTED_INFORMATION_ID= "arid_WIN_0_600001056";
 
-    public static final String txtEND_DATE = "arid_WIN_0_777021161";
+    public static final String txt_REQUEST_END = "arid_WIN_0_777021161";
     public static final String txtREASON_ID = "arid_WIN_0_705001003";
     public static final String txtASSIGNEE_ID = "arid_WIN_0_4";
 
@@ -132,7 +132,12 @@ public class BaseRecordPage extends BasePage {
     private static final String dd_OWNER_PROFILE= "Owner Profile*";
 
 
-
+   public String getRequestStart(){
+       return getAttributeValueById(txt_REQUEST_START);
+   }
+    public String getRequestEnd(){
+        return getAttributeValueById(txt_REQUEST_END);
+    }
     public boolean verifyChangeBuilderIsReadOnly(){
         return checkIfControlIsReadonly(txtCHANGE_BUILDER_FIELD_ID);
     }
@@ -155,8 +160,18 @@ public class BaseRecordPage extends BasePage {
         WebElement element=getTableCellElement(By.id(table_INTERESTED_PARTIES_ID), colName, cellData);
         element.click();
     }
-
-
+    public boolean verifyReasonIsReadOnly(){
+        return checkIfControlIsReadonly(txtREASON_ID);
+    }
+    public boolean verifyImplementationIsReadOnly(){
+        return checkIfControlIsReadonly(txtIMPLEMENTATION_ID);
+    }
+    public boolean verifyTestPlanIsReadOnly(){
+        return checkIfControlIsReadonly(txtTEST_PLAN_ID);
+    }
+    public boolean verifyRollbackIsReadOnly(){
+        return checkIfControlIsReadonly(txtROLL_BACK);
+    }
 
     public void clickSearch(){
         clickElement(By.id(btn_SEARCH));
@@ -418,6 +433,7 @@ public class BaseRecordPage extends BasePage {
             String valuesToBePresent = dropdownValues.get(i).get(1);
             Assert.assertTrue(verifyDropdownValuesByName(dropdownName,selectedValue, valuesToBePresent, readOnly));
             clickEscButton();
+            wait(500);
         }
     }
 
@@ -470,38 +486,6 @@ public class BaseRecordPage extends BasePage {
         return null;
     }
 
-
-   //use this method for all send keys.
-    public void enterText(String textName, String text)
-    {
-        switch(textName)
-        {
-            case "rootCauseDetails" :
-                enterTextByElement(By.id(txtROOT_CAUSE_DETAILS_ID), text);
-                break;
-
-            case "minutes" :
-                enterTextByElement(By.id(txtMINS_ID), text);
-                break;
-
-            case "durationdays":
-                enterTextByElement(By.id(txtIMPACT_DURATION_DAYS), text);
-                break;
-
-            case "durationhours":
-                enterTextByElement(By.id(txtIMPACT_DURATION_HRS), text);
-                break;
-
-            case "durationminutes":
-                enterTextByElement(By.id(txtIMPACT_DURATION_MINS), text);
-                break;
-
-            case "durationseconds":
-                enterTextByElement(By.id(txtIMPACT_DURATION_SECS), text);
-                break;
-
-        }
-    }
    public void clickRemoveButton(){
         clickElement(By.id(btnREMOVE));
    }
@@ -683,30 +667,28 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterStartDate(int delay) {
-
         String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
-        findElement(By.id(txtSTART_DATE)).clear();
-        enterTextByElement(By.id(txtSTART_DATE),dateTime );
-
-
+        findElement(By.id(txt_REQUEST_START)).clear();
+        enterTextByElement(By.id(txt_REQUEST_START),dateTime );
     }
 
     public void enterEndDate(int delay) {
 
         String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
-        findElement(By.id(txtEND_DATE)).clear();
-        enterTextByElement(By.id(txtEND_DATE),dateTime );
+        findElement(By.id(txt_REQUEST_END)).clear();
+        enterTextByElement(By.id(txt_REQUEST_END),dateTime );
     }
 
-    public void enterStartDateAs(int delay)
+    public void enterStartDateAs(String startDate)
     {
-        findElement(By.id(txtSTART_DATE)).clear();
-        enterTextByElement(By.id(txtSTART_DATE), CommonUtils.getDateAsTodayMidnight(delay));
+        findElement(By.id(txt_REQUEST_START)).clear();
+        enterTextByElement(By.id(txt_REQUEST_START), startDate);
     }
 
-    public void enterEndDateAs(int delay)
+    public void enterEndDateAs(String endDate)
     {
-        enterTextByElement(By.id(txtEND_DATE), CommonUtils.getDateAsTodayMidnight(delay));
+        findElement(By.id(txt_REQUEST_END)).clear();
+        enterTextByElement(By.id(txt_REQUEST_END), endDate);
 
     }
 

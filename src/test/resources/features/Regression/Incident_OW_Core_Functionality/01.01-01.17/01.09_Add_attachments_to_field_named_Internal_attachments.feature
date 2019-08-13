@@ -4,16 +4,16 @@
     Scenario: user is able to add an attachment to incident ticket
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+      When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       And user enters "Test Case 01.09 Add attachments" in Title field in Trouble event
-      And user selects request type as "Customer"
+      And user selects request type as "Customer" on trouble event page
       And user enters description as "Test Case 01.09 Add attachments"
-      And user clicks on save button on the problem form
+      And user clicks on save button
       Then ticket should be created and status should be assigned
       When user clicks on attachments under sections
       And user clicks on add button under internal

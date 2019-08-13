@@ -103,11 +103,11 @@
       And user validates Timeline Text entry isn't readonly
       Then change should also be reflected in the timeline as "Assignee Profile has changed from  to DC CS Core (Voice). Finland Country has changed from  to Finland. Estonia Country has changed from  to Estonia. Request Status has changed from New to Assigned."
       And user gets ticket value
-      And user waits 30 secs
-      When user clicks on "Notifications" tab
-      And user clicks on "Sent" tab
-      Then user should see "Assignment-Profile" email update
-      #And user validates "Send" is readonly
+#      And user waits 40 secs
+#      When user clicks on "Notifications" tab
+#      And user clicks on "Sent" tab
+#      #Then user should see "Assignment-Profile" email update
+#      #And user validates "Send" is readonly
       When user logsOut
       And user goes back to login page
       Then user logs in with valid username "DC CS Core (Voice)_auto" and password as "Telia@1234"
@@ -137,43 +137,44 @@
       And user clicks on details under sections
       Then user enters "New Communication plan" in the communication plan field
       And user clicks on save button
-      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) to TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) - Additional info. "
+      #Then change should also be reflected in the timeline as "Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) to TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) - Additional info."
       Then user clicks on "Schedule" tab
       Then user enters request start time 168 hours ahead of current date
       And user enters request end time 172 hours ahead of current date
       Then user clicks on save button
       #may need to check this, replaced the actual date with "XX's"
-      And change should also be reflected in the timeline as "STATUS MODIFIED.  Requested Start has changed from XXXX-XX-XX XX:XX:XX UTC to XXXX-XX-XX XX:XX:XX UTC. Requested End has changed from XXXX-XX-XX XX:XX:XX UTC to XXXX-XX-XX XX:XX:XX UTC. "
+      #And change should also be reflected in the timeline as "Requested Start has changed from XXXX-XX-XX XX:XX:XX UTC to XXXX-XX-XX XX:XX:XX UTC. Requested End has changed from XXXX-XX-XX XX:XX:XX UTC to XXXX-XX-XX XX:XX:XX UTC. "
       When user gets the schedule time values
       And user clicks on Diagnosis tab
       And user right clicks on primary CI and selects "Impact:Update"
       Then user switches to frame
-      And user enters impact from time as same value as request start time
-      And user enters impact to time as same value as request end time
+      And user enters impact from time as same value as request start time on impact deatils bulk update window
+      And user enters impact to time as same value as request end time on impact deatils bulk update window
       And user clicks confirm checkbox
       Then user clicks on bulk update save button
       When user clicks on "Interested Parties" tab
       And user enters email address as "Test2@Test2.com"
       And user clicks on add email button
-      Then user should see new email "Test2@Test2.com" added
+      Then user should see new email "Test2@Test2.com" added in "Email Address" in row 3
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab
-      Then user should see "Acknowledged" email update
+      #Then user should see "Acknowledged" email update
       When user changes status to "Approval Requested"
       And user clicks on save button
+     # And change should also be reflected in the timeline as "Processing of the following notification event(s) started: Approvals Notification messages will be displayed on the Notifications tab."
+      #And change should also be reflected in the timeline as "Request Status has changed from Analysis to Approval Requested."
       Then user validates ticket status as "Approval Requested"
       And user validates availability of tabs "Approval"
-      And change should also be reflected in the timeline as "Processing of the following notification event(s) started: Approvals Notification messages will be displayed on the Notifications tab."
-      And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Analysis to Approval Requested. "
-      When user logsOut
-      And user switches to window 0
+      And user waits 2 secs
+      When user logsOut from One workflow
+      And user goes back to login page
       Then user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
       And user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on more filters button
-      And user clicks on core tab
+      And user clicks on "Core" tab
       And user selects status as "Approval Requested" on user more filters window
       And user clicks on apply button on user more filters window
-      Then user should see change tickets with status of "Approval Requested"
+      And user should see "CR" tickets with "Status" of "Approval Requested"
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
       And user switches to window 1
       Then user enters ticket previously created
@@ -186,23 +187,21 @@
       Then user should see Show CR Matching table appear
       When user changes status to "Analysis"
       And user clicks on save button
-      Then user validates "Title" isn't readonly
-      And user validates "Request Category" isn't readonly
-      And user validates "Description" isn't readonly
-      And user validates "Reason" isn't readonly
-      And user validates "Priority" isn't readonly
-      And user validates "Project Code" isn't readonly
-      And user validates "Change Builder" isn't readonly
-      And user validates "Implementation" isn't readonly
-      And user validates "Test Plan" isn't readonly
-      And user validates "Rollback" isn't readonly
-      And user validates "Communication Plan" isn't readonly
-      And user validates "Ver Of Functionality" isn't readonly
-      And user validates "Risk Description" isn't readonly
-      Then user clears text in "Description" field
+      Then user validates Title isn't readonly
+      And user validates Request Category isn't readonly
+      Then user validates Description* isn't readonly
+      And user validates Reason isn't readonly
+      And user validates Priority isn't readonly
+      And user validates Project Code isn't readonly
+      And user validates Change Builder+* isn't readonly
+      And user validates Implementation isn't readonly
+      And user validates Test Plan isn't readonly
+      And user validates Rollback isn't readonly
+      And user validates Ver of Functionality* isn't readonly
+      And user validates Timeline Text entry isn't readonly
       And user enters description as "TEST TICKET PLEASE IGNORE - New Description"
       And user clicks on save button
-      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) - Additional info to TEST TICKET PLEASE IGNORE - New Description. "
+      Then change should also be reflected in the timeline as "Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) - Additional info to TEST TICKET PLEASE IGNORE - New Description."
       When user clicks on risk tab
       And user selects last answer as "Yes"
       And user clicks on save button
@@ -214,7 +213,7 @@
       Then user switches to frame
       And user enters "Change can be approved right away" in comments field
       And user clicks on approve button
-      Then user switches to window 1
+      Then user switches to window 2
       And user clicks on ticket refresh button
       Then user validates ticket status as "Approved"
       When user clicks on "Notifications" tab
@@ -227,7 +226,8 @@
       And user validates ticket status as "Scheduled"
       Then user clicks on assignment under sections
       And user should see assigned profile as "Change Implementation Control"
-      And user selects assignee as "ChangeImplementationControl1" by using alphabet C key down 2 times
+      And user enters "ChangeImplementationControl1" in assignee
+      #And user selects assignee as "ChangeImplementationControl1" by using alphabet C key down 2 times
       And user clicks on owner under sections
       And user validates owner profile as "Change Manager"
       And user validates owner as "ChangeManager1_Automation"
@@ -236,30 +236,31 @@
       And user clicks on "Sent" tab
       Then user should see "Assignment-user" email update
       And user logsOut
-      Then user switches to window 0
+      And user goes back to login page
       When user logs in with valid username "ChangeImplementationControl1" and password as "Telia@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on more filters button
-      And user clicks on core tab
+      And user clicks on "Core" tab
       And user selects status as "Scheduled" on user more filters window
       And user clicks on apply button on user more filters window
-      Then user should see change tickets with status of "Scheduled"
+      And user should see "CR" tickets with "Status" of "Scheduled"
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
-      And user switches to window 1
+      And user switches to window 2
       Then user enters ticket previously created
       When user changes status to "Implementation"
       And user clicks on save button
-      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Start has changed from  UTC to 2019-07-26 13:09:51 UTC. Request Status has changed from Scheduled to Implementation. "
+      #Then change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Start has changed from  UTC to 2019-07-26 13:09:51 UTC. Request Status has changed from Scheduled to Implementation. "
       Then user clicks on "Schedule" tab
       Then user validates actual start time is updated
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab
       Then user should see "Implementation" email update
       When user clicks on timeline tab
-      And user enters timeline entry as "Successful - no issues during implementation"
+      And user enters "Successful - no issues during implementation" in the timeline text box
       And user clicks on add button on timeline
       When user changes status to "Completed"
       And user clicks on save button
+      Then user clicks on "Schedule" tab
       Then user validates actual end time is updated
       And error message should display as "	Required field (without a default) not specified : Actual Impact (ARERR 9424)"
       And error message should display as "Required field (without a default) not specified : Completed Code (ARERR 9424)"
@@ -270,22 +271,23 @@
       When user clicks on Diagnosis tab
       And user right clicks on primary CI and selects "Impact:Clear"
       And user clicks on yes on CI warning window
+      Then user validates CI "" impact level is "Inactive"
       Then user validates CI impact status is "Inactive"
       And user validates ci impact from time is updated
       And user validates ci impact to time is updated
       Then user clicks on save button
       And change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Impact has changed from  to No Impact. Actual End has changed from  UTC to 2019-07-26 13:23:51 UTC. Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed. "
       And user logsOut
-      Then user switches to window 0
+      And user goes back to login page
       When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on more filters button
-      And user clicks on core tab
+      And user clicks on "Core" tab
       And user selects status as "Completed" on user more filters window
       And user clicks on apply button on user more filters window
-      Then user should see change tickets with status of "Completed"
+      And user should see "CR" tickets with "Status" of "Completed"
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
-      And user switches to window 1
+      And user switches to window 2
       Then user enters ticket previously created
       When user changes status to "Closed"
       And user selects resolved group as "Change Manager"

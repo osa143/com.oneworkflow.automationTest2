@@ -220,6 +220,7 @@ public class BasePage {
         wait(500);
         driver.findElement(By.className("MenuTableBody")).findElements(By.tagName("td")).stream()
                 .filter(element -> element.getText().trim().equals(DropDownValue)).findFirst().orElse(null).click();
+        wait(500);
 
     }
 
@@ -304,9 +305,8 @@ public class BasePage {
         else
             dropdownXpath = "//img[@alt='Menu for " + dropdownName + "']/..";
 
-         wait(200);
         driver.findElement(By.xpath(dropdownXpath)).click();
-        wait(800);
+        wait(1000);
 
         String arr[] = dropdownValue.split(":");
         int index = getMenuTableBodyIndex(arr[0]);

@@ -40,8 +40,8 @@
       And user enters "Test Ticket" in the risk description field
       And user enters as "Test Ticket" in service and customer impact
       And user selects estimated impact as "Degradation of Service"
-      Then user enters start time as some minutes fast from current sweden time
-      And user enters Request End time as some minutes fast from request start time
+      Then user enters request start date as "" one day in the future
+      And user enters request end date as "" one day in the future
       And user enters impact duration as "4" minutes
       Then user clicks on save button
       And user gets ticket value

@@ -130,8 +130,12 @@ public class BaseRecordPage extends BasePage {
     private static final String btn_SEARCH= "WIN_0_1002";
     private static final String table_NOTIFICATIONS= "T700020677";
     private static final String dd_OWNER_PROFILE= "Owner Profile*";
+    private static final String txt_SUMMARY= "arid_WIN_0_700500101";
 
 
+    public void enterSummary_attachments(String text){
+        enterTextByElement(By.id(txt_SUMMARY), text);
+    }
    public String getRequestStart(){
        return getAttributeValueById(txt_REQUEST_START);
    }
@@ -460,7 +464,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void clickAttachments(){
-        clickElement(By.id(btnATTACHMENTS));
+        clickElement(By.id(btn_ATTACHMENTS));
     }
     public void clickOnAttachments(){
         clickElement(By.id(btn_ATTACHMENTS));

@@ -7,6 +7,7 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import pageObjects.BasePage;
 import pageObjects.OWF_AgentConsolePage;
+import utils.CommonUtils;
 import utils.ReporterUtils;
 
 import javax.swing.plaf.basic.BasicEditorPaneUI;
@@ -32,10 +33,9 @@ public class Hooks {
         }
 
 //            OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
+//            CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 0);
 //            agentConsolePage.clickNavUserMenu();
-//            agentConsolePage.wait(1000);
 //            agentConsolePage.clickMenuItemLogout();
-//            agentConsolePage.wait(2000);
 //            DriverFactory.getInstance().quit();
 
         }

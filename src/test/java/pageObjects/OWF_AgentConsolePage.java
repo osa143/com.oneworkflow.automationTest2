@@ -375,7 +375,7 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void clickNavUserMenu() {
         selectMainMenu(menuForNAV_USERNAME);
-        wait(3000);
+        wait(1000);
 
     }
 

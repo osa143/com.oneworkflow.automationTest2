@@ -35,6 +35,12 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_CONTACT_NAME= "arid_WIN_0_600001055";
     private static final String txt_CONTACT_TELEPHONE_NUMBER= "arid_WIN_0_600001056";
     private static final String txt_CONTACT_MAIL_ADDRESS= "arid_WIN_0_600001064";
+    private static final String dd_STATUS= "Status*";
+
+
+    public void selectStatus_workOrderPage(String value){
+        selectDropDownNameAndValue(dd_STATUS, value, false);
+    }
 
 
 

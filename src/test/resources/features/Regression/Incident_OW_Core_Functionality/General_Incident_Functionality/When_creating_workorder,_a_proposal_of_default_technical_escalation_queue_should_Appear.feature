@@ -25,7 +25,7 @@
       And user clicks on relate CI
       And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
       And user clicks on close button on CI search window
-      When user clicks on work order tab
+      When user clicks on "Work Orders" tab
       And user clicks on create from ticket
       Then user switches to window 2
       And user clicks on save button

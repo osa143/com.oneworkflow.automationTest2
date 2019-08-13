@@ -271,8 +271,7 @@
       When user clicks on Diagnosis tab
       And user right clicks on primary CI and selects "Impact:Clear"
       And user clicks on yes on CI warning window
-      Then user validates CI "" impact level is "Inactive"
-      Then user validates CI impact status is "Inactive"
+      Then user validates CI "Impact Status" is "Inactive"
       And user validates ci impact from time is updated
       And user validates ci impact to time is updated
       Then user clicks on save button

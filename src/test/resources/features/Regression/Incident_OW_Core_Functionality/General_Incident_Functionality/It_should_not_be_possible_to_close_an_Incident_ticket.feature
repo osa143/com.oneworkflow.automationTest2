@@ -15,7 +15,7 @@
        And user enters description as "Test case Try to close an incident with an open and ack'd work order"
        And user clicks on save button
        Then ticket should be created and status should be assigned
-       When user clicks on work order tab
+       When user clicks on "Work Orders" tab
        And user clicks on create from ticket
        Then user switches to window 2
        Then user clicks on save button
@@ -30,6 +30,7 @@
        And user selects action dropdown as "N/A:N/A" on trouble event page
        And user enters closure info as "Test Ticket"
        Then user enters event end time as current time
+       And user waits 5 secs
        And user clicks on save button
        When user changes status to "Closed" on trouble event page
        And user clicks on save button

@@ -25,8 +25,8 @@
       When user enters attachment summary as "Test JPEG"
       And user enters attachment description as "Test JPEG"
       Then user clicks on add button in attachment window
-      And user clicks on browse button
-      And user searches for a JPEG attachment and adds it
+      And user clicks on choose file button
+      And user searches for "" attachment and adds it
       Then user clicks on attachment ok button
       And user clicks on save button on attachment window
       And an error message should appear: "Check for Mandatory fields - Visibility (ARERR 13034)"

@@ -1,5 +1,6 @@
 @LifeCycle_KE_and_Changes_To_KE
-#CI search window issue
+  #passed
+#CI search window
     Feature: life cycle known error and change known error
 
     Scenario:user is able to change life cycle to known error

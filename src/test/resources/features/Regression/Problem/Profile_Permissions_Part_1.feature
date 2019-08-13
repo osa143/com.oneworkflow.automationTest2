@@ -34,7 +34,7 @@
       And user selects auto notify radio button as yes
       And user clicks on save button under interested parties frame
       Then problem initiator user should be listed under interested parties tab
-      And change should also be reflected in the timeline as "The User Frederic Viple has been added as interested parties."
+      And change should also be reflected in the timeline as "The User Tomas Hallén has been added as interested parties."
       When user clicks on "Additional Info" tab
       And user enters "Tohall_copy" in the analysis team member one field
       And user clicks on save button on the problem form
@@ -77,5 +77,5 @@
       And user clicks on save button on the problem form
       When user enters description as "More information on problem ticket"
       And user clicks on save button on the problem form
-      Then change should also be reflected in the timeline "Ticket Description has changed from:UAT Profile Permissions test:UAT Profile Permissions testMore information on problem ticket"
+      Then change should be reflected in the timeline "Ticket Description has changed from |UAT Profile Permissions test| to |More information on problem ticket|"
 

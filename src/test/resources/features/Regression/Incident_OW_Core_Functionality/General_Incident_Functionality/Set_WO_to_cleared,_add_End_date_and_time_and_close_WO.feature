@@ -20,12 +20,12 @@ Feature: Work order closure
     Then user clicks on save button
     And user clicks on Ack button
     Then user validates ticket status as "Work In Progress"
-    When user changes status to "Cleared"
+    When user changes status to "Cleared" on work order page
     And user selects completion code as "Success"
     And user clicks on "Schedule" tab
     And user enters schedule end as current date
     Then user clicks on save button
-    When user changes status to "Closed"
+    When user changes status to "Closed" on work order page
     And user clicks on save button
     Then user validates ticket status as "Closed"
 

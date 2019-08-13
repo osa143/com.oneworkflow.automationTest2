@@ -1,5 +1,6 @@
 @Initiator_Link_Tickets
   #passed
+  #CI search window
 Feature: Verification of ability to link tickets
   Scenario: user should be able to link different types of tickets together
 

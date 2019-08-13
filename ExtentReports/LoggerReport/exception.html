@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="41" parent-id="1">
+<tr class="s-fail" test-id="73" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And user selects answer as "Impact to other systems/technologies are unclear" <br/><span class="text-muted text-sm">Internal user processes a normal change ticket</span></td>
-	<td>0h 0m 2s+670msc</td>
+	<td class="_600">And user selects solved under closure code <br/><span class="text-muted text-sm">E2E problem and known error</span></td>
+	<td>0h 0m 2s+370msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -142,8 +142,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.241.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59309}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b28c776ad9b61d646e43054b1d234901
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56184}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 2f051af7f083e9468ee0f3df1c7f3688
 *** Element info: {Using=tag name, value=td}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -162,9 +162,9 @@ Session ID: b28c776ad9b61d646e43054b1d234901
 	at org.openqa.selenium.remote.RemoteWebElement.findElements(RemoteWebElement.java:177)
 	at pageObjects.BasePage.getMenuTableBodyIndex(BasePage.java:361)
 	at pageObjects.BasePage.selectDropDownNameAndValue(BasePage.java:312)
-	at pageObjects.OWF_ChangeRecordPage.selectAnswer(OWF_ChangeRecordPage.java:228)
-	at steps.OWF_ChangeRecordPageSteps.userSelectsAnswerAs(OWF_ChangeRecordPageSteps.java:201)
-	at ✽.user selects answer as "Impact to other systems/technologies are unclear"(features/Regression/Change/E2E_Normal_Change_(Internal Initiator).feature:57)
+	at pageObjects.BaseRecordPage.selectCloserCodeAsSolved(BaseRecordPage.java:529)
+	at steps.OWF_ProblemRecordPageSteps.userSelectsSolvedUnderClosureCode(OWF_ProblemRecordPageSteps.java:367)
+	at ✽.user selects solved under closure code(features/Regression/Problem/E2E problem and known error.feature:83)
 </textarea>
 	</td>
 </tr>
@@ -192,7 +192,7 @@ Session ID: b28c776ad9b61d646e43054b1d234901
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 12, 2019 04:54:33 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 13, 2019 07:54:18 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

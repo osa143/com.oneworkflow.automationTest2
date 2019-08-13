@@ -58,7 +58,7 @@
       When user clicks on "Linked Items" tab
       And user selects target application first dropdown as "OS3 - Problem"
       And user selects target application second dropdown as "Investigates"
-      And user clicks on create button
+      And user clicks on create button under linked items
       Then user switches to window 2
       When user clicks on save button on the problem form
       Then multiple error messages should appear with red boarder around fields

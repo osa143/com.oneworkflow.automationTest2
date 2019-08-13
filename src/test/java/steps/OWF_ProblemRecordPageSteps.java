@@ -212,7 +212,16 @@ public class OWF_ProblemRecordPageSteps {
         }
         System.out.println("Expected timeline status is: " + newMessage);
         problemRecordPage.wait(1000);
-        problemRecordPage.selectTab("Timeline");
+        try{
+            problemRecordPage.selectTab("Timeline");
+        }
+        catch(Exception e)
+        {
+            problemRecordPage.wait(1000);
+            System.out.println("Try again to click on Timeline Tab");
+            problemRecordPage.selectTab("Timeline");
+        }
+
         boolean containsMessage = problemRecordPage.getTimelineStatus(1).contains(newMessage);
         Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
     }
@@ -952,6 +961,15 @@ public class OWF_ProblemRecordPageSteps {
     @And("user validates Rollback isn't readonly")
     public void userValidatesRollbackIsnTReadonly() {
         Assert.assertFalse(problemRecordPage.verifyRollbackIsReadOnly());
+    }
+
+    @When("user enters attachment summary as {string}")
+    public void userEntersAttachmentSummaryAs(String arg0) {
+        problemRecordPage.enterSummary_attachments(arg0);
+    }
+
+    @And("user searches for {string} attachment and adds it")
+    public void userSearchesForAttachmentAndAddsIt(String arg0) {
     }
 }
 

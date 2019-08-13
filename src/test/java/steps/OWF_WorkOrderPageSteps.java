@@ -216,5 +216,10 @@ public class OWF_WorkOrderPageSteps {
     public void userValidatesContactMailAddressAs(String arg0) {
         Assert.assertEquals(workOrderPage.getContactMailAddress(), arg0);
     }
+
+    @When("user changes status to {string} on work order page")
+    public void userChangesStatusToOnWorkOrderPage(String arg0) {
+        workOrderPage.selectStatus_workOrderPage(arg0);
+    }
 }
 

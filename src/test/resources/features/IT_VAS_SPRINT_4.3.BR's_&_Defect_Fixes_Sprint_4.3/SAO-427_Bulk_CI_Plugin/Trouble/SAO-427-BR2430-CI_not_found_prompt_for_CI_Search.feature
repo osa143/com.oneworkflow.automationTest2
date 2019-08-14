@@ -1,4 +1,5 @@
 @SAO-427-BR2430_CI_not_found_prompt_for_CI_Search_Trouble @SAO-427
+  #passed
 Feature: checking of bulk loading Location details
   Scenario: user checks the bulk loading location details
 

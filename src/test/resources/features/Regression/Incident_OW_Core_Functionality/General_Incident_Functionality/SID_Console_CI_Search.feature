@@ -1,4 +1,4 @@
-@SID_Console_CI_Search #@Incident
+@SID_Console_CI_Search @Incident
   #passed
   Feature: using SID console to search for CI's
     Scenario: user can use the SID console to search for CI's

@@ -5,6 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
 import pageObjects.OWF_CiSearchPage;
+import utils.CommonUtils;
 
 public class OWF_CiSearchPageSteps {
 
@@ -184,5 +185,48 @@ public class OWF_CiSearchPageSteps {
     @And("user enters impact from date as current date")
     public void userEntersImpactFromDateAsCurrentDate() {
        ciSearchPage.enterImpactFrom();
+    }
+
+    @And("user clicks on Add Bulk Import button")
+    public void userClicksOnAddBulkImportButton() {
+        ciSearchPage.clickBulkImport();
+    }
+
+    @Then("user should see bulk ci loading window")
+    public void userShouldSeeBulkCiLoadingWindow() {
+        Assert.assertTrue(ciSearchPage.verifyBulkCiLoadingIsDisplayed());
+    }
+
+    @When("user clicks on Manual Input radio button")
+    public void userClicksOnManualInputRadioButton() {
+        ciSearchPage.clickManualInput();
+    }
+
+    @And("user enters impact from date as current date midnight on bulk CI loading window")
+    public void userEntersImpactFromDateAsCurrentDateMidnightOnBulkCILoadingWindow() {
+        ciSearchPage.enterImpactFrom(CommonUtils.getDateAsTodayMidnight(0));
+
+    }
+
+    @And("user enters impact to date as current date midnight plus {int} hours on bulk CI loading window")
+    public void userEntersImpactToDateAsCurrentDateMidnightHoursOnBulkCILoadingWindow(int arg0) {
+        int newDelay= arg0*60;
+        ciSearchPage.enterImpactFrom(CommonUtils.getDateAsTodayMidnight(newDelay));
+
+    }
+
+    @And("user enters {string} in manual CI search box")
+    public void userEntersInManualCISearchBox(String arg0) {
+        ciSearchPage.enterManualCiSearch(arg0);
+    }
+
+    @Then("user clicks on save button under bulk import")
+    public void userClicksOnSaveButtonUnderBulkImport() {
+        ciSearchPage.clickSave_bulkCiLoadingWindow();
+    }
+
+    @When("user clicks on Show Bulk Import button")
+    public void userClicksOnShowBulkImportButton() {
+        ciSearchPage.clickShowBulkImport();
     }
 }

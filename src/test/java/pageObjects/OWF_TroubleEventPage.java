@@ -150,6 +150,22 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_IMPACT_FROM_pLUS= "arid_WIN_0_999000298";
     private static final String txt_IMPACT_TO_pLUS ="arid_WIN_0_999000299";
     private static final String btn_ADD_TIMELINE= "WIN_0_777021404";
+    private static final String rbtn_INTERNAL = "WIN_0_rc0id600001901";
+    private static final String table_ATTACHMENT_INTERNAL= "T777000013";
+
+    public boolean validateAttachmentAvailability(int attachmentsSize)
+    {
+        wait(1000);
+        int size = getTableRows(By.id(table_ATTACHMENT_INTERNAL)).size();
+        System.out.println("Available Attachements" + (size-1));
+        if(attachmentsSize > size){
+            return true;
+        }
+        return false;
+    }
+    public void clickInternalRadioButton(){
+        clickElement(By.id(rbtn_INTERNAL));
+    }
 
 
     public void clickAdd_timeline(){
@@ -758,6 +774,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         driver.findElement(By.xpath(chkbxHEADER_XPATH_AlarmsTab)).click();
     }
     public void selectRequestType(String value){
+        wait(500);
         selectDropDownNameAndValue(ddREQUEST_TYPEE, value, false );
     }
 

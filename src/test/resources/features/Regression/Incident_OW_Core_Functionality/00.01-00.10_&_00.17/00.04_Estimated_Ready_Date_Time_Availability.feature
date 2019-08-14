@@ -1,4 +1,4 @@
-@Estimated_Ready_Date_Time #@Incident
+@Estimated_Ready_Date_Time @Incident
 #Passed
 Feature: Incident
   Scenario: verify estimated ready date and time availability in incident record
@@ -26,4 +26,5 @@ Feature: Incident
     Then estimated ready time should be saved correctly on trouble event page
     When user enters estimated ready as event start time plus -1 days on trouble event page
     And user clicks on save button
-    Then error message should display as "Estimated Ready Time cannot be earlier than Event Start Time (ARERR 10000)"
+    Then error message should display as "Estimated Ready Time cannot be earlier than Event Start Time (ARERR 10000)" on change record page
+

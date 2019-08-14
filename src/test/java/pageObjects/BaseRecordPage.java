@@ -133,6 +133,7 @@ public class BaseRecordPage extends BasePage {
     private static final String txt_SUMMARY= "arid_WIN_0_700500101";
 
 
+
     public void enterSummary_attachments(String text){
         enterTextByElement(By.id(txt_SUMMARY), text);
     }
@@ -453,6 +454,9 @@ public class BaseRecordPage extends BasePage {
         clickElement(By.xpath(btnADD_ATTACHMENT_ON_FRAME));
     }
     public void clickonChooseFile_OnFrame(){
+        driver.switchTo().parentFrame();
+        driver.switchTo().frame(2);
+        driver.switchTo().frame(1);
         clickElement(By.xpath(btnCHOOSE_FILE_XPATH));
     }
     public void clickOk_AttachmentOnFrame(){

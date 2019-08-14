@@ -970,6 +970,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user searches for {string} attachment and adds it")
     public void userSearchesForAttachmentAndAddsIt(String arg0) {
+        CommonUtils.uploadFile(arg0);
     }
 }
 

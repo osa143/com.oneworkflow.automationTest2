@@ -50,6 +50,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -94,11 +102,11 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
+										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
-										
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="skip"><i class="fa fa-dot-circle-o text-blue"></i>Skip</span></a>
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 									</div>
@@ -111,8 +119,8 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Initiator_Create_Ticket</span></a>
-						    	        <a class="dropdown-item" href="#"><span class="cf">@problem</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@SAO-427-BR2430_CI_not_found_prompt_for_CI_Search_Trouble</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@SAO-427</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -129,40 +137,40 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="pass">
-											<div class="st pass test l0" 
-												tags="@Initiator_Create_Ticket @problem"
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@SAO-427-BR2430_CI_not_found_prompt_for_CI_Search_Trouble @SAO-427"
 												devices="">
-												<span class="tt">08.13.2019 20:12:10</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">[initiator create ticket and withdraw] started</span>
+												<span class="tt">08.14.2019 13:56:24</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[checking of bulk loading Location details] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Initiator_Create_Ticket</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @problem</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SAO-427-BR2430_CI_not_found_prompt_for_CI_Search_Trouble</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SAO-427</span>
 												</span>
 												
 											</div>
-											<div class="st pass test l1" 
-												tags="@Initiator_Create_Ticket @problem"
+											<div class="st fail test l1" 
+												tags="@SAO-427-BR2430_CI_not_found_prompt_for_CI_Search_Trouble @SAO-427"
 												devices="">
-												<span class="tt">08.13.2019 20:12:10</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">|---[user should be able to create a problem ticket and withdraw it] started</span>
+												<span class="tt">08.14.2019 13:56:24</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[user checks the bulk loading location details] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Initiator_Create_Ticket</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @problem</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SAO-427-BR2430_CI_not_found_prompt_for_CI_Search_Trouble</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SAO-427</span>
 												</span>
 												
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:12:10</span>&nbsp;
+												<span class="tt">08.14.2019 13:56:24</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:12:16</span>&nbsp;
+													<span class="tt">08.14.2019 13:56:33</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
 													
@@ -172,14 +180,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:12:16</span>&nbsp;
+												<span class="tt">08.14.2019 13:56:33</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Tohall_copy" and password as "Test@1234"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Change_Automation_1" and password as "Test@1234"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:12:24</span>&nbsp;
+													<span class="tt">08.14.2019 13:56:39</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Tohall_copy" and password as "Test@1234"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Change_Automation_1" and password as "Test@1234"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -187,12 +195,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:12:24</span>&nbsp;
+												<span class="tt">08.14.2019 13:56:39</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:12:24</span>&nbsp;
+													<span class="tt">08.14.2019 13:56:39</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
 													
@@ -202,14 +210,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:12:24</span>&nbsp;
+												<span class="tt">08.14.2019 13:56:39</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create problem record] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:12:48</span>&nbsp;
+													<span class="tt">08.14.2019 13:56:47</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create problem record]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -217,27 +225,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:12:48</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem record form should appear in new tab] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.13.2019 20:12:48</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem record form should appear in new tab]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">08.13.2019 20:12:48</span>&nbsp;
+												<span class="tt">08.14.2019 13:56:47</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:12:48</span>&nbsp;
+													<span class="tt">08.14.2019 13:56:48</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
 													
@@ -247,14 +240,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:12:48</span>&nbsp;
+												<span class="tt">08.14.2019 13:56:48</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on save button on the problem form] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:12:55</span>&nbsp;
+													<span class="tt">08.14.2019 13:56:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on save button on the problem form]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -262,27 +255,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:12:55</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then an error message should appear: "Please select at least one country of impact for this problem. (ARERR 10000)"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.13.2019 20:12:55</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then an error message should appear: "Please select at least one country of impact for this problem. (ARERR 10000)"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">08.13.2019 20:12:55</span>&nbsp;
+												<span class="tt">08.14.2019 13:56:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on sweden checkbox under affected BU's] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:12:55</span>&nbsp;
+													<span class="tt">08.14.2019 13:56:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on sweden checkbox under affected BU's]</span>
 													
@@ -292,14 +270,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:12:55</span>&nbsp;
+												<span class="tt">08.14.2019 13:56:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "SAO-427 Test Bulk Loading CI not found Prompt" in Title field] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:00</span>&nbsp;
+													<span class="tt">08.14.2019 13:56:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "SAO-427 Test Bulk Loading CI not found Prompt" in Title field]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -307,14 +285,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:13:00</span>&nbsp;
+												<span class="tt">08.14.2019 13:56:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple error messages should appear with red boarder around fields] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Event" on trouble event page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:00</span>&nbsp;
+													<span class="tt">08.14.2019 13:56:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple error messages should appear with red boarder around fields]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Event" on trouble event page]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -322,14 +300,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:13:00</span>&nbsp;
+												<span class="tt">08.14.2019 13:56:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters "proactive investigation of Tohall_Copy" in Title field] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "SAO-427 Test Bulk Loading CI not found Prompt"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:00</span>&nbsp;
+													<span class="tt">08.14.2019 13:56:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters "proactive investigation of Tohall_Copy" in Title field]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "SAO-427 Test Bulk Loading CI not found Prompt"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -337,14 +315,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:13:00</span>&nbsp;
+												<span class="tt">08.14.2019 13:56:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Access Networks:RAN Optimization" on Problem record page] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:05</span>&nbsp;
+													<span class="tt">08.14.2019 13:57:02</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Access Networks:RAN Optimization" on Problem record page]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -352,72 +330,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:13:05</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "UAT Test1"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:05</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "UAT Test1"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">08.13.2019 20:13:05</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects impact type as moderate:limited] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:07</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects impact type as moderate:limited]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">08.13.2019 20:13:07</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects urgency as low] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:10</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects urgency as low]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">08.13.2019 20:13:10</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:15</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">08.13.2019 20:13:15</span>&nbsp;
+												<span class="tt">08.14.2019 13:57:02</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then ticket should be created and status should be assigned] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:32</span>&nbsp;
+													<span class="tt">08.14.2019 13:57:08</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then ticket should be created and status should be assigned]</span>
 													
@@ -427,14 +345,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:13:32</span>&nbsp;
+												<span class="tt">08.14.2019 13:57:08</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to "Withdrawn" on problem record page] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on Diagnosis tab] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:35</span>&nbsp;
+													<span class="tt">08.14.2019 13:57:09</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to "Withdrawn" on problem record page]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on Diagnosis tab]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -442,14 +360,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:13:35</span>&nbsp;
+												<span class="tt">08.14.2019 13:57:09</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on Add Bulk Import button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:40</span>&nbsp;
+													<span class="tt">08.14.2019 13:57:10</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on Add Bulk Import button]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -457,14 +375,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:13:40</span>&nbsp;
+												<span class="tt">08.14.2019 13:57:10</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on yes on warning window] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to frame] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:42</span>&nbsp;
+													<span class="tt">08.14.2019 13:57:10</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on yes on warning window]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to frame]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -472,14 +390,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:13:42</span>&nbsp;
+												<span class="tt">08.14.2019 13:57:10</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then an error message "Required field (without a default) not specified : Withdrawn Reason (ARERR 9424)" should appear with red boarder around withdrawn reason] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see bulk ci loading window] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:42</span>&nbsp;
+													<span class="tt">08.14.2019 13:57:10</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then an error message "Required field (without a default) not specified : Withdrawn Reason (ARERR 9424)" should appear with red boarder around withdrawn reason]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see bulk ci loading window]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -487,14 +405,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:13:42</span>&nbsp;
+												<span class="tt">08.14.2019 13:57:10</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects withdrawn reason as false alarm and clicks save] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Impact Type*" is visible on bulk CI loading window tagname "label"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:45</span>&nbsp;
+													<span class="tt">08.14.2019 13:57:10</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects withdrawn reason as false alarm and clicks save]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Impact Type*" is visible on bulk CI loading window tagname "label"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -502,14 +420,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:13:45</span>&nbsp;
+												<span class="tt">08.14.2019 13:57:10</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user should see confirmation message and clicks on yes button] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Category*" is visible on bulk CI loading window tagname "label"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:46</span>&nbsp;
+													<span class="tt">08.14.2019 13:57:10</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user should see confirmation message and clicks on yes button]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Category*" is visible on bulk CI loading window tagname "label"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -517,14 +435,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:13:46</span>&nbsp;
+												<span class="tt">08.14.2019 13:57:10</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem ticket should be withdrawn] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Level*" is visible on bulk CI loading window tagname "label"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:46</span>&nbsp;
+													<span class="tt">08.14.2019 13:57:10</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem ticket should be withdrawn]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Level*" is visible on bulk CI loading window tagname "label"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -532,15 +450,320 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2019 20:13:46</span>&nbsp;
+												<span class="tt">08.14.2019 13:57:10</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "From*" is visible on bulk CI loading window tagname "label"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.14.2019 13:57:10</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "From*" is visible on bulk CI loading window tagname "label"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:10</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "To+" is visible on bulk CI loading window tagname "label"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.14.2019 13:57:10</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "To+" is visible on bulk CI loading window tagname "label"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:10</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Ignore Duplicate CIs" is visible on bulk CI loading window tagname "label"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.14.2019 13:57:10</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Ignore Duplicate CIs" is visible on bulk CI loading window tagname "label"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:10</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Upload File" is visible on bulk CI loading window tagname "label"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.14.2019 13:57:10</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Upload File" is visible on bulk CI loading window tagname "label"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:10</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Manual Input" is visible on bulk CI loading window tagname "label"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.14.2019 13:57:10</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Manual Input" is visible on bulk CI loading window tagname "label"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:10</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Download File Template" is visible on bulk CI loading window tagname "label"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.14.2019 13:57:10</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Download File Template" is visible on bulk CI loading window tagname "label"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:10</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Upload Import File" is visible on bulk CI loading window tagname "div"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.14.2019 13:57:11</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Upload Import File" is visible on bulk CI loading window tagname "div"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:11</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on Manual Input radio button] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.14.2019 13:57:11</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on Manual Input radio button]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:11</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters impact from date as current date midnight on bulk CI loading window] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.14.2019 13:57:11</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters impact from date as current date midnight on bulk CI loading window]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:11</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.14.2019 13:57:11</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:11</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects impact level as "Degradation of Service"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.14.2019 13:57:14</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects impact level as "Degradation of Service"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "abcdefghijklmnopqrstuvwxyz" in manual CI search box] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.14.2019 13:57:14</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "abcdefghijklmnopqrstuvwxyz" in manual CI search box]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button under bulk import] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.14.2019 13:57:16</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button under bulk import]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:16</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And error message should display as "The manually identified CIs are now being processed..."] started</span>
+												
+												<div class="st fail">
+													<span class="tt">08.14.2019 13:57:16</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And error message should display as "The manually identified CIs are now being processed..."]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">java.lang.AssertionError: expected [The manually identified CIs are now being processed...] but found [The manually identified CIs are now being processed...
+Please Check for the progress of this process in "Show Bulk Import". (ARNOTE 10000)]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at steps.OWF_TroubleEventPageSteps.errorMessageShouldDisplayAs(OWF_TroubleEventPageSteps.java:383)
+	at ✽.error message should display as "The manually identified CIs are now being processed..."(features/IT_VAS_SPRINT_4.3.BR's_&_Defect_Fixes_Sprint_4.3/SAO-427_Bulk_CI_Plugin/Trouble/SAO-427-BR2430-CI_not_found_prompt_for_CI_Search.feature:39)
+</textarea></span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:16</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on Show Bulk Import button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">08.14.2019 13:57:16</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on Show Bulk Import button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:16</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to frame] started</span>
+												
+												<div class="st skip">
+													<span class="tt">08.14.2019 13:57:16</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to frame]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:16</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates related jobs has 1 entry] started</span>
+												
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:16</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user highlights related job] started</span>
+												
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:16</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on "Related CIs" tab] started</span>
+												
+												<div class="st skip">
+													<span class="tt">08.14.2019 13:57:16</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on "Related CIs" tab]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:16</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates warning message as "No CI named 'abcdefghijklmnopqrstuvwxyz' was found!"] started</span>
+												
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:16</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates status message as "Completed (With Warnings)"] started</span>
+												
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:16</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on bulk loading close button] started</span>
+												
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.14.2019 13:57:16</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
 												
-												<div class="st pass">
-													<span class="tt">08.13.2019 20:13:46</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st info">
+													<span class="tt">08.14.2019 13:57:17</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
-													
+													<span class="tm"><a href='#' class='indigo badge' data-featherlight='C:\Temp\com.oneworkflow.automation\ExtentReports\Screenshots\Screenshots_20190814_135623\embedded1.png'>img</a></span>
 													<span class="td"></span>
 												</div>
 											</div>

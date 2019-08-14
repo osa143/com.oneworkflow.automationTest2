@@ -744,6 +744,10 @@ public class OWF_TroubleEventPageSteps {
     public void userValidatesIsVisible(String arg0) {
       Assert.assertTrue(troubleEventPage.verifyElementIsDisplayedByContainsTextAndTagNameSpan("span", arg0));
     }
+    @And("user validates {string} is visible on bulk CI loading window tagname {string}")
+    public void userValidatesIsVisibleOnBulkCILoadingWindowTagname(String arg0, String arg1) {
+        Assert.assertTrue(troubleEventPage.verifyElementIsDisplayedByContainsTextAndTagNameSpan(arg1, arg0));
+    }
 
     @When("user clicks on {string} under info type")
     public void userClicksOnUnderInfoType(String arg0) {
@@ -1098,6 +1102,16 @@ public class OWF_TroubleEventPageSteps {
     @And("user clicks on add button on timeline")
     public void userClicksOnAddButtonOnTimeline() {
         troubleEventPage.clickAdd_timeline();
+    }
+
+    @And("user selects attachment visibility as Internal")
+    public void userSelectsAttachmentVisibilityAsInternal() {
+        troubleEventPage.clickInternalRadioButton();
+    }
+
+    @And("user validates {int} attachment visibility under internal")
+    public void userValidatesAttachmentVisibilityUnderInternal(int arg0) {
+        troubleEventPage.validateAttachmentAvailability(arg0);
     }
 }
 

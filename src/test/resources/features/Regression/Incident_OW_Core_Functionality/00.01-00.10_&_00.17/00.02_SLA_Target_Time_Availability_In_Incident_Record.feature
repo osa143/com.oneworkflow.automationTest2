@@ -1,4 +1,4 @@
-@SLA_Target_Time_Availability #@Incident
+@SLA_Target_Time_Availability @Incident
 #Passed
 Feature: Incident
 

@@ -30,9 +30,45 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String CI_DIAGNOSIS_TABLE_ID = "T700009087";
     private static final String TABLE_ID_linkedItems = "T777506000";
     private static final String txt_IMPACT_FROM= "arid_WIN_0_700009083";
+    private static final String btn_ADD_BULK_IMPORT= "WIN_0_800038046";
+    private static final String fld_BULK_CI_LOADING= "WIN_0_536870927";
+    private static final String rbtn_MANUAL_INPUT= "WIN_0_rc1id800038034";
+    private static final String txt_MANUAL_CI_SEARCH_BOX= "arid_WIN_0_800038045";
+    private static final String btn_SAVE_BULK_CI= "WIN_0_700025244";
+    private static final String btn_SHOW_BULK_IMPORT= "WIN_0_800038047";
+
+    public void clickShowBulkImport(){
+        clickElement(By.id(btn_SHOW_BULK_IMPORT));
+    }
+
+
+    public void clickSave_bulkCiLoadingWindow(){
+        clickElement(By.id(btn_SAVE_BULK_CI));
+    }
+
+    public void enterManualCiSearch(String text){
+        enterTextByElement(By.id(txt_MANUAL_CI_SEARCH_BOX), text);
+    }
+
+
+    public void clickManualInput(){
+        clickElement(By.id(rbtn_MANUAL_INPUT));
+    }
+
+
+    public boolean verifyBulkCiLoadingIsDisplayed(){
+        return verifyElementIsDisplayed(By.id(fld_BULK_CI_LOADING));
+    }
+
+    public void clickBulkImport(){
+        clickElement(By.id(btn_ADD_BULK_IMPORT));
+    }
 
     public void enterImpactFrom(){
         findElement(By.id(txt_IMPACT_FROM)).sendKeys(Keys.ENTER);
+    }
+    public void enterImpactFrom(String text){
+        findElement(By.id(txt_IMPACT_FROM)).sendKeys(text);
     }
 
 

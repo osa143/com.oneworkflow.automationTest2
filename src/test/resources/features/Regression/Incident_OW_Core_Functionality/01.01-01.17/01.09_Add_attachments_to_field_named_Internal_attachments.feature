@@ -18,82 +18,86 @@
       When user clicks on attachments under sections
       And user clicks on add button under internal
       Then user switches to frame
-      And user clicks on add button
-      Then user clicks on save button on attachment window
-      And an error message should appear: "Check for Mandatory fields - Summary,Description,Attachment,Visibility (ARERR 13034)"
-      Then user clicks on attachment ok button
+      #Then user clicks on save button on attachment window
+      #And an error message should appear: "Check for Mandatory fields - Summary,Description,Attachment,Visibility (ARERR 13034)"
       When user enters attachment summary as "Test JPEG"
       And user enters attachment description as "Test JPEG"
       Then user clicks on add button in attachment window
       And user clicks on choose file button
-      And user searches for "" attachment and adds it
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test JPEG FILE" attachment and adds it
+      And user waits 2 secs
       Then user clicks on attachment ok button
-      And user clicks on save button on attachment window
-      And an error message should appear: "Check for Mandatory fields - Visibility (ARERR 13034)"
-      Then user clicks on warning ok button
-      And user selects attachment visibility as "Internal"
+      And user switches to frame
+      #And user clicks on save button on attachment window
+      #And an error message should appear: "Check for Mandatory fields - Visibility (ARERR 13034)"
+      #Then user clicks on warning ok button
+      And user selects attachment visibility as Internal
       Then user clicks on save button on attachment window
-      And user switches to window 1
-      And user validates attachment visibility under internal
-      When user clicks on add button under internal
+      And user validates 1 attachment visibility under internal
+      And user clicks on add button under internal
       Then user switches to frame
-      And user clicks on add button
-      And user enters attachment summary as "Test JPEG"
-      And user enters attachment description as "Test JPEG"
-      And user clicks on browse button
-      Then user searches for a PNG attachment and adds it
+      When user enters attachment summary as "Test PNG"
+      And user enters attachment description as "Test PNG"
+      Then user clicks on add button in attachment window
+      And user clicks on choose file button
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PNG FILE" attachment and adds it
+      And user waits 2 secs
       Then user clicks on attachment ok button
-      And user selects attachment visibility as "Internal"
+      And user switches to frame
+      And user selects attachment visibility as Internal
       Then user clicks on save button on attachment window
-      And user switches to window 1
-      And user validates attachment visibility under internal
-      When user clicks on add button under internal
+      And user validates 2 attachment visibility under internal
+      And user clicks on add button under internal
       Then user switches to frame
-      And user clicks on add button
-      And user enters attachment summary as "Test PDF"
+      When user enters attachment summary as "Test PDF"
       And user enters attachment description as "Test PDF"
-      And user clicks on browse button
-      Then user searches for a PDF attachment and adds it
+      Then user clicks on add button in attachment window
+      And user clicks on choose file button
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PDF FILE" attachment and adds it
+      And user waits 2 secs
       Then user clicks on attachment ok button
-      And user selects attachment visibility as "Internal"
+      And user switches to frame
+      And user selects attachment visibility as Internal
       Then user clicks on save button on attachment window
-      And user switches to window 1
-      And user validates attachment visibility under internal
-      When user clicks on add button under internal
+      And user validates 3 attachment visibility under internal
+      And user clicks on add button under internal
       Then user switches to frame
-      And user clicks on add button
-      And user enters attachment summary as "Test Word Doc"
-      And user enters attachment description as "Test Word Doc"
-      And user clicks on browse button
-      Then user searches for a Word Doc attachment and adds it
+      When user enters attachment summary as "Test WORD"
+      And user enters attachment description as "Test WORD"
+      Then user clicks on add button in attachment window
+      And user clicks on choose file button
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test WORD FILE" attachment and adds it
+      And user waits 2 secs
       Then user clicks on attachment ok button
-      And user selects attachment visibility as "Internal"
+      And user switches to frame
+      And user selects attachment visibility as Internal
       Then user clicks on save button on attachment window
-      And user switches to window 1
-      And user validates attachment visibility under internal
-      When user clicks on add button under internal
+      And user validates 4 attachment visibility under internal
+      And user clicks on add button under internal
       Then user switches to frame
-      And user clicks on add button
-      And user enters attachment summary as "Test Excel"
-      And user enters attachment description as "Test Excel"
-      And user clicks on browse button
-      Then user searches for a Excel attachment and adds it
+      When user enters attachment summary as "Test EXCEL"
+      And user enters attachment description as "Test EXCEL"
+      Then user clicks on add button in attachment window
+      And user clicks on choose file button
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test XLS FILE" attachment and adds it
+      And user waits 2 secs
       Then user clicks on attachment ok button
-      And user selects attachment visibility as "Internal"
+      And user switches to frame
+      And user selects attachment visibility as Internal
       Then user clicks on save button on attachment window
-      And user switches to window 1
-      And user validates attachment visibility under internal
-      When user clicks on add button under internal
+      And user validates 5 attachment visibility under internal
+      And user clicks on add button under internal
       Then user switches to frame
-      And user clicks on add button
-      And user enters attachment summary as "Test Powerpoint"
-      And user enters attachment description as "Test PPTX"
-      And user clicks on browse button
-      Then user searches for a Powerpoint attachment and adds it
+      When user enters attachment summary as "Test PPT"
+      And user enters attachment description as "Test PPT"
+      Then user clicks on add button in attachment window
+      And user clicks on choose file button
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PPT FILE" attachment and adds it
+      And user waits 2 secs
       Then user clicks on attachment ok button
-      And user selects attachment visibility as "Internal"
+      And user switches to frame
+      And user selects attachment visibility as Internal
       Then user clicks on save button on attachment window
-      And user switches to window 1
-      And user validates attachment visibility under internal
-      Then user clicks on save button on the problem form
+      And user validates 6 attachment visibility under internal
+#      Then user clicks on save button
 

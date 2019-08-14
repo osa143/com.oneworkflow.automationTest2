@@ -120,8 +120,7 @@ Feature: Verification of ability to link tickets
     And user enters trouble ticket in ticket ID+ field
     And user clicks on the search button on select target request
     And user clicks accept button
-    Then trouble ticket should be in list of linked items
-    And change ticket should be in list of linked items
+    And user validates 3 linked ticket availability
 
 
 

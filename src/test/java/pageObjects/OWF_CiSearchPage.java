@@ -36,6 +36,62 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String txt_MANUAL_CI_SEARCH_BOX= "arid_WIN_0_800038045";
     private static final String btn_SAVE_BULK_CI= "WIN_0_700025244";
     private static final String btn_SHOW_BULK_IMPORT= "WIN_0_800038047";
+    private static final String btn_CLOSE_BULK_CI_LOADING= "WIN_0_777000001";
+    private static final String table_BULK_CI_LOADING_RELATED_JOBS= "T800038059";
+    private static final String table_BULK_CI_LOADING_RELATED_CIS="T800038049";
+    private static final String txt_IMPACT_TO_PLUS= "arid_WIN_0_700009084";
+    private static final String txt1_ERROR_MESSAGE= "//*[@id='PopupMsgBox']";
+    private static final String txt2_ERROR_MESSAGE= "//*[@id='PopupMsgBox']";
+
+    public void enterImpactToPlus(String text){
+        enterTextByElement(By.id(txt_IMPACT_TO_PLUS), text);
+    }
+
+    public boolean verifyErrorText1(String text){
+        driver.switchTo().parentFrame();
+        driver.switchTo().frame(2);
+        driver.switchTo().frame(1);
+        String error= findElement(By.xpath(txt1_ERROR_MESSAGE)).getText();
+        System.out.println("Error message is: " +error);
+        if(error.contains(text))
+        return true;
+        else return false;
+    }
+    public boolean verifyErrorText2(String text){
+        String error= findElement(By.xpath(txt2_ERROR_MESSAGE)).getText();
+        System.out.println("Error message is: " +error);
+        if(error.contains(text))
+            return true;
+        else return false;
+    }
+
+    public void clickOk_popUp(){
+        clickElement(By.xpath("//*[@id='PopupMsgFooter']/a"));
+    }
+
+    public boolean verifySaveButtonIsDisplayed(){
+        return verifyElementIsDisplayed(By.id(btn_SAVE_BULK_CI));
+    }
+    public boolean verifyCloseButtonIsDisplayed(){
+        return verifyElementIsDisplayed(By.id(btn_CLOSE_BULK_CI_LOADING));
+    }
+   public String verifyRelatedCIs(String columnName, int rowNum){
+       return getTableCellData(By.id(table_BULK_CI_LOADING_RELATED_CIS), columnName, rowNum);
+   }
+    public boolean validateRelatedJobsAvailability(int jobSize)
+    {
+        wait(1000);
+        int size = getTableRows(By.id(table_BULK_CI_LOADING_RELATED_JOBS)).size();
+        System.out.println("Available related Jobs" + (size-1));
+        if(jobSize==(size-1)){
+            return true;
+        }
+        return false;
+    }
+
+    public void clickClose_bulkCILoading(){
+        clickElement(By.id(btn_CLOSE_BULK_CI_LOADING));
+    }
 
     public void clickShowBulkImport(){
         clickElement(By.id(btn_SHOW_BULK_IMPORT));

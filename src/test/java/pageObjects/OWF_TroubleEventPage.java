@@ -93,7 +93,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String ddTITLE_Field_ID= "WIN_0_777031000";
     private static final String ddIMPORTANCE_Field_ID= "WIN_0_600001821";
     private static final String ddOWNER_PROFILE_ID = "WIN_0_777031401";
-    private static final String btn_OK_Popup = "//*[@id=\"PopupMsgFooter\"]/a";
+    private static final String btn_OK_Popup = "//*[@id='PopupMsgFooter']/a";
     private static final String fld_LOCATION_INFORMATION= "WIN_0_999000300";
     private static final String fld_ON_HOLD_UNTIL= "WIN_0_700000040";
     private static final String fld_CLOSURE_CODE = "WIN_0_777010094";

@@ -211,7 +211,7 @@ public class OWF_CiSearchPageSteps {
     @And("user enters impact to date as current date midnight plus {int} hours on bulk CI loading window")
     public void userEntersImpactToDateAsCurrentDateMidnightHoursOnBulkCILoadingWindow(int arg0) {
         int newDelay= arg0*60;
-        ciSearchPage.enterImpactFrom(CommonUtils.getDateAsTodayMidnight(newDelay));
+        ciSearchPage.enterImpactToPlus(CommonUtils.getDateAsTodayMidnight(newDelay));
 
     }
 
@@ -229,4 +229,43 @@ public class OWF_CiSearchPageSteps {
     public void userClicksOnShowBulkImportButton() {
         ciSearchPage.clickShowBulkImport();
     }
+
+    @Then("user clicks on bulk loading close button")
+    public void userClicksOnBulkLoadingCloseButton() {
+        ciSearchPage.clickClose_bulkCILoading();
+    }
+
+    @And("user validates related jobs has {int} entry")
+    public void userValidatesRelatedJobsHasEntry(int arg0) {
+     Assert.assertTrue(ciSearchPage.validateRelatedJobsAvailability(arg0));
+    }
+
+    @And("user validates {string} as {string} in row {int}")
+    public void userValidatesAsInRow(String columnName, String message, int rowNum) {
+        Assert.assertEquals(ciSearchPage.verifyRelatedCIs(columnName,rowNum), message);
+    }
+
+    @And("user validates Save is visible on bulk CI loading window")
+    public void userValidatesSaveIsVisibleOnBulkCILoadingWindow() {
+     Assert.assertTrue(ciSearchPage.verifySaveButtonIsDisplayed());
+    }
+
+    @And("user validates Close is visible on bulk CI loading window")
+    public void userValidatesCloseIsVisibleOnBulkCILoadingWindow() {
+        Assert.assertTrue(ciSearchPage.verifyCloseButtonIsDisplayed());
+    }
+
+    @And("first error message should display as {string} on bulk ci window")
+    public void firstErrorMessageShouldDisplayAsOnBulkCiWindow(String arg0) {
+        Assert.assertTrue(ciSearchPage.verifyErrorText1(arg0));
+    }
+
+    @And("second error message should display as {string} on bulk ci window")
+    public void secondErrorMessageShouldDisplayAsOnBulkCiWindow(String arg0) {
+        Assert.assertTrue(ciSearchPage.verifyErrorText2(arg0));
+        ciSearchPage.clickOk_popUp();
+        userSwitchesToDefault();
+
+    }
+
 }

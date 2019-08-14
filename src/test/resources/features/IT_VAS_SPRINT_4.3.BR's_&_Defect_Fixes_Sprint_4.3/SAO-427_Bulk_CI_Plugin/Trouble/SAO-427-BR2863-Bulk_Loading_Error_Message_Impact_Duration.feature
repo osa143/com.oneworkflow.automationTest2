@@ -27,7 +27,6 @@ Feature: checking of bulk loading error message impact duration
     When user selects impact level as "No Impact"
     And user enters impact from date as current date
     And user enters impact to date as current date -4h
-    And user enters hours as "3"
     And user clicks on "Manual Input" radio button
     And user enters "One Workflow" in manual CI search box
     Then user clicks on save button under bulk import

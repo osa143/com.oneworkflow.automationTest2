@@ -1,4 +1,4 @@
-@SAO-427-BR2863-Bulk_Loading_Error_Message_Impact_Duration @SAO-427
+@SAO-427-BR2863-Bulk_Loading_Error_Message_Impact_Duration_Trouble @SAO-427
 Feature: checking of bulk loading error message impact duration
   Scenario: user checks the impact duration message of bulk loading error
 
@@ -37,7 +37,7 @@ Feature: checking of bulk loading error message impact duration
     And user clicks on bulk import save button
     Then user should see error message of "Please fill in all required fields to relate the selected CIs. (Impact Type, Category, Level, From (Date), To (Date)) (ARERR 10000)"
     And user closes warning message
-    When user enters "" in manual CI search box
+    When user clears manual CI search box
     And user clicks on bulk import save button
     Then user should see error message of "Please type in or paste the list of CIs you you want to relate. (ARERR 10000)"
     And user closes warning message

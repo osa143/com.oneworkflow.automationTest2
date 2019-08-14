@@ -1,4 +1,4 @@
-@SAO-427-BR2430_CI_not_found_prompt_for_CI_Search @SAO-427
+@SAO-427-BR2430_CI_not_found_prompt_for_CI_Search_Trouble @SAO-427
 Feature: checking of bulk loading Location details
   Scenario: user checks the bulk loading location details
 
@@ -12,7 +12,7 @@ Feature: checking of bulk loading Location details
     And user enters "SAO-427 Test Bulk Loading CI not found Prompt" in Title field
     And user selects request type as "Event" on trouble event page
     And user enters description as "SAO-427 Test Bulk Loading CI not found Prompt"
-    And user clicks on save button under bulk import WIN_0_700025244
+    And user clicks on save button
     Then ticket should be created and status should be assigned
     When user clicks on Diagnosis tab
     And user clicks on "Add Bulk Import" button
@@ -38,9 +38,8 @@ Feature: checking of bulk loading Location details
     And user enters impact from date as current date midnight
     And user enters impact to date as current date midnight +4 hours
     And user selects impact level as "Degradation of Service"
-    And user enters hours as "3"
     And user enters "abcdefghijklmnopqrstuvwxyz" in manual CI search box
-    Then user clicks on save button under bulk import
+    Then user clicks on save button under bulk import WIN_0_700025244
     And user validates import message appears
     Then user clicks on ok button
     And user switches to window 1

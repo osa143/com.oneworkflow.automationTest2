@@ -1,4 +1,4 @@
-@SAO-427-BR2864-Bulk_Loading_Format @427
+@SAO-427-BR2864-Bulk_Loading_Format_Name_Trouble @427
 Feature: checking of bulk loading format
   Scenario: user checks the format of bulk loading format
 
@@ -33,10 +33,10 @@ Feature: checking of bulk loading format
       When user clicks on "Upload Import File" button
       Then user should see add attachment window
       When user clicks on "Choose File" Button
-      #50CI's with duplicates file
-      Then user selects file with duplicates in it
+      #10CI's XLS with incorrect column name
+      Then user selects XLS file with incorrect column name
       And user clicks on attachment ok button
-      Then user should see 50 CI's/w duplicate attachment within bulk loading window
+      Then user should see 10 CI's with incorrect column name TXT attachment
       Then user clicks on bulk import save button
       And user clicks on ok button on popup
       And user switches to window 1
@@ -45,14 +45,14 @@ Feature: checking of bulk loading format
       Then user validates uploaded file is visible
       And user validates "Save Import File" button is visible
       When user clicks on "Related CIs" tab
-      Then user validates "Total Rows" are 50
-      And user validates "Rows Ok" as 25
-      And user validates "With Errors" as 25
-      And user validates warning message as "(33422): Impact record cannot be created. The entered From and To dates overlap with existing impact record for SE (No Impact (2019-08-12 22:00:00 UTC - 2019-08-13 02:00:00 UTC ))."
-      And user validates status message as "With Error"
+      Then user validates "Total Rows" are 10
+      And user validates "Rows Ok" as 0
+      And user validates "With Errors" as 0
+      And user validates "With Warnings" as 10
+      And user validates warning message as "No CI named '	SE_AP_alvesta-radmannen-ap1' was found!"
+      And user validates status message as "Completed (With Warnings)"
       Then user clicks on bulk import close button
       And user switches to window 1
-
 
 
 

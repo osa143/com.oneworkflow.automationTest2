@@ -28,6 +28,17 @@ Feature: checking of bulk loading CTI details
     Then user clicks on save button under bulk import
     And user clicks on attachment ok button
     And user switches to window 1
+    When user clicks on "Show Bulk Import" button
+    And user switches to frame
+    Then user validates uploaded file is visible
+    And user clicks on "Related CIs" tab
+    Then user validates at least 1 CI has "completed" status
+    And user validates "Total Rows" as 1
+    And user validates "Rows Ok" as 1
+    And user validates "With Warnings" as 0
+    And user validates "With Errors" as 0
+    Then user clicks on bulk loading close button
+
 
 
 

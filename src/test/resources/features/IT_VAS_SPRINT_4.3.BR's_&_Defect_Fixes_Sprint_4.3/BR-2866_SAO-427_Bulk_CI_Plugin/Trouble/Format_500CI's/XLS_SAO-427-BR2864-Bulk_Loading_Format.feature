@@ -1,4 +1,4 @@
-@SAO-427-BR2864-Bulk_Loading_Format @427
+@SAO-427-BR2864-Bulk_Loading_Format_Trouble_XLS_500CIs@427
 Feature: checking of bulk loading format
   Scenario: user checks the format of bulk loading format
 
@@ -33,10 +33,10 @@ Feature: checking of bulk loading format
       When user clicks on "Upload Import File" button
       Then user should see add attachment window
       When user clicks on "Choose File" Button
-      #10 CI's with incorrect names
-      Then user selects file with incorrect CI names
+      #500CI's with no duplicates TXT file
+      Then user selects file with duplicates in it
       And user clicks on attachment ok button
-      Then user should see 10 CI's with incorrect names attachment within bulk loading window
+      Then user should see 500 CI attachment within bulk loading window
       Then user clicks on bulk import save button
       And user clicks on ok button on popup
       And user switches to window 1
@@ -45,12 +45,16 @@ Feature: checking of bulk loading format
       Then user validates uploaded file is visible
       And user validates "Save Import File" button is visible
       When user clicks on "Related CIs" tab
-      Then user validates "Total Rows" are 10
-      And user validates "With Warnings" as 0
-      And user validates warning message as "No CI named '	SE_AP_alvesta-radmannen-ap1' was found!"
+      And user highlights 500 CI TXT doc
+      Then user validates "Total Rows" are 500
+      And user validates "Rows Ok" as 446
+      And user validates "With Errors" as 53
+      And user validates "Warnings" as 1
+      And user validates warning message as "(33422): Impact record cannot be created. The entered From and To dates overlap with existing impact record for SE (No Impact (2019-08-12 22:00:00 UTC - 2019-08-13 02:00:00 UTC ))."
       And user validates status message as "Completed (With Warnings)"
+      And user validates status message as "With Error"
+      And user validates status message as "Completed"
       Then user clicks on bulk import close button
-
 
 
 

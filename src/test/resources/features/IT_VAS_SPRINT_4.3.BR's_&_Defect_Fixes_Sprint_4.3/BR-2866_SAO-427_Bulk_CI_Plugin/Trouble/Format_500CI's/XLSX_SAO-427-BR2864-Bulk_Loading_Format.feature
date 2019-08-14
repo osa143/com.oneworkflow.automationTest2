@@ -1,4 +1,4 @@
-@SAO-427-BR2864-Bulk_Loading_Format @427
+@SAO-427-BR2864-Bulk_Loading_Format_Trouble_XLSX_500CIs @427
 Feature: checking of bulk loading format
   Scenario: user checks the format of bulk loading format
 
@@ -33,7 +33,7 @@ Feature: checking of bulk loading format
       When user clicks on "Upload Import File" button
       Then user should see add attachment window
       When user clicks on "Choose File" Button
-      #500CI's with no duplicates file
+      #500CI's with no duplicates TXT file
       Then user selects file with duplicates in it
       And user clicks on attachment ok button
       Then user should see 500 CI attachment within bulk loading window
@@ -45,7 +45,7 @@ Feature: checking of bulk loading format
       Then user validates uploaded file is visible
       And user validates "Save Import File" button is visible
       When user clicks on "Related CIs" tab
-      And user highlights 500 CI doc
+      And user highlights 500 CI TXT doc
       Then user validates "Total Rows" are 500
       And user validates "Rows Ok" as 446
       And user validates "With Errors" as 53

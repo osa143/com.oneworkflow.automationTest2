@@ -586,7 +586,7 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("multiple statuses {string} should be available in Importance dropdown")
     public void multipleStatusesShouldBeAvailableInImportanceDropdown(String arg0) {
-       troubleEventPage.verifyDropdownValuesForImportance(arg0,"");
+       Assert.assertTrue(troubleEventPage.verifyDropdownValuesForImportance(arg0, ""));
     }
     @And("user changes event start time {int} day in the past")
     public void userChangesEventStartTimeDayInThePast(int arg0) {

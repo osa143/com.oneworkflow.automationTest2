@@ -42,6 +42,24 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String txt_IMPACT_TO_PLUS= "arid_WIN_0_700009084";
     private static final String txt1_ERROR_MESSAGE= "//*[@id='PopupMsgBox']";
     private static final String txt2_ERROR_MESSAGE= "//*[@id='PopupMsgBox']";
+    private static final String txt_IMPACT_TYPE= "arid_WIN_0_700009080";
+    private static final String txt_IMPACT_CATEGORY="arid_WIN_0_700009081";
+    private static final String txt_IMPACT_LEVEL="arid_WIN_0_700009082";
+
+
+    public boolean verifyImpactTypeDropdownValues(String statuses, String dropdownName){
+        return verifyDropdownValues(statuses, dropdownName, txt_IMPACT_TYPE);
+    }
+
+    public String getImpactType(){
+        return getAttributeValueById(txt_IMPACT_TYPE);
+    }
+    public String getImpactCategory(){
+        return getAttributeValueById(txt_IMPACT_CATEGORY);
+    }
+    public String getImpactLevel(){
+        return getAttributeValueById(txt_IMPACT_LEVEL);
+    }
 
     public void enterImpactToPlus(String text){
         enterTextByElement(By.id(txt_IMPACT_TO_PLUS), text);

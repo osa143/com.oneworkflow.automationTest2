@@ -757,56 +757,7 @@ public class BaseRecordPage extends BasePage {
         return getAttributeValueById(txtTICKET_ID);
     }
 
-    public boolean verifyDropdownValues(String statuses, String dropdownName, String dropdownId)
-    {
-        String[] multipleStatus = statuses.split(":");
-        List<String> dropdownValues = getDropdownValues(dropdownName, dropdownId);
-        clickEscButton();
 
-        System.out.println("Dropdown values are: " + dropdownValues);
-        for (int i = 0; i < multipleStatus.length; i++)
-        {
-            if (!dropdownValues.contains(multipleStatus[i]))
-            {
-                return false;
-            }
-
-        }
-        return true;
-    }
-
-    public boolean verifyTabValues(String tabValues)
-    {
-        wait(1500);
-        String[] multipleTabs = tabValues.split(":");
-        List<String> tabs = getTabValues();
-        System.out.println("Tab values are: " + tabs);
-        for (int i = 0; i < multipleTabs.length; i++)
-        {
-            if (!tabs.contains(multipleTabs[i]))
-            {
-                return false;
-            }
-
-        }
-        return true;
-    }
-
-    public boolean verifyColumnNames(String colNames, By table)
-    {
-        String[] multipleCols = colNames.split(":");
-        List<String> columns = getTableHeaders(table);
-        System.out.println("Column values are: " + columns);
-        for (int i = 0; i < multipleCols.length; i++)
-        {
-            if (!columns.contains(multipleCols[i]))
-            {
-                return false;
-            }
-
-        }
-        return true;
-    }
     public void selectImpact(String value){
         selectDropDownNameAndValue(ddIMPACT, value, false);
 }

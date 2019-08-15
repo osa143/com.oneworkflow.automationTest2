@@ -420,9 +420,9 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         findElement(By.id(btn_OK_SELECT_LOCATION)).click();
     }
 
-    public void verifyDropdownValuesForImportance(String statuses, String dropdownName)
+    public boolean verifyDropdownValuesForImportance(String statuses, String dropdownName)
     {
-        verifyDropdownValues(statuses, dropdownName, dd_IMPORTANCE);
+        return verifyDropdownValues(statuses, dropdownName, dd_IMPORTANCE);
     }
 
     public void clickNextChunkRight(){

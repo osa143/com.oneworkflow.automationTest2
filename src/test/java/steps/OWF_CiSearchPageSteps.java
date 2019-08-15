@@ -268,4 +268,23 @@ public class OWF_CiSearchPageSteps {
 
     }
 
+    @And("user validates Impact Type default value is {string}")
+    public void userValidatesImpactTypeDefaultValueIs(String arg0) {
+        Assert.assertEquals(ciSearchPage.getImpactType(), arg0);
+    }
+
+    @And("user validates Category default value is {string}")
+    public void userValidatesCategoryDefaultValueIs(String arg0) {
+        Assert.assertEquals(ciSearchPage.getImpactCategory(), arg0);
+    }
+
+    @And("user validates Level default value is {string}")
+    public void userValidatesLevelDefaultValueIs(String arg0) {
+        Assert.assertEquals(ciSearchPage.getImpactLevel(), arg0);
+    }
+
+    @Then("multiple statuses {string} should be available in Impact Type dropdown")
+    public void multipleStatusesShouldBeAvailableInImpactTypeDropdown(String arg0) {
+        Assert.assertTrue(ciSearchPage.verifyImpactTypeDropdownValues(arg0, ""));
+    }
 }

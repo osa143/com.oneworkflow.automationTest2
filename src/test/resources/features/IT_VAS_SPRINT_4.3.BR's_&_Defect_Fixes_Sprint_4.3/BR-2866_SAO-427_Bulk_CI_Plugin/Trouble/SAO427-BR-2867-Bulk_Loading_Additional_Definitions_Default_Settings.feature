@@ -1,4 +1,4 @@
-@SAO-427-BR2862-Bulk_Loading_Additional_Definitions_Default_Settings_Trouble @SAO-427
+@Bulk_Loading_Additional_Definitions_Default_Settings_Trouble @SAO-427
 Feature: checking of bulk loading additional definitions default settings
   Scenario: user checks the bulk loading additional definitions default settings
 
@@ -15,24 +15,25 @@ Feature: checking of bulk loading additional definitions default settings
     And user clicks on save button
     Then ticket should be created and status should be assigned
     When user clicks on Diagnosis tab
-    And user clicks on "Add Bulk Import" button
+    And user clicks on Add Bulk Import button
     And user switches to frame
     Then user should see bulk ci loading window
-    And user validates "Impact Type*" is present
-    And user validates "Impact Type*" default value is "Un-Planned"
-    Then multiple statuses "Planned:Un-Planned:(clear)" should be available in "Impact Type*" dropdown
-    And user validates "Category*" is present
-    And user validates "Category*" default value is "Actual"
+    And user validates "Impact Type*" is visible on bulk CI loading window tagname "label"
+    And user validates Impact Type default value is "Un-Planned"
+    Then multiple statuses "Planned:Un-Planned:(clear)" should be available in Impact Type dropdown
+    And user validates "Category*" is visible on bulk CI loading window tagname "label"
+    And user validates Category default value is "Actual"
     Then multiple statuses "Actual:Potential:(clear)" should be available in "Category*" dropdown
-    And user validates "Level*" is present
+    And user validates "Level*" is visible on bulk CI loading window tagname "label"
     #Blank default value for level
-    And user validates "Level" default value is ""
-    And user validates "From*" is visible
-    And user validates "To+" is visible
-    Then user validates CIs input type "Upload File" is present
-    And user validates CIs input type "Manual Input" is present
-    And user validates error handling contains "Ignore Duplicate CIs"
-    Then user clicks on close button under bulk loading
+    And user validates Level default value is ""
+    And user validates "From*" is visible on bulk CI loading window tagname "label"
+    And user validates "To+" is visible on bulk CI loading window tagname "label"
+    And user validates "Upload File" is visible on bulk CI loading window tagname "label"
+    And user validates "Manual Input" is visible on bulk CI loading window tagname "label"
+    And user validates "Ignore Duplicate CIs" is visible on bulk CI loading window tagname "label"
+    Then user clicks on bulk loading close button
+
 
 
 

@@ -2,9 +2,8 @@
   Feature: Plaza Alpha ETL Prod form test
     Scenario: user validates information sent to OW from Plaza
 
-      Given user is on the Plaza homepage
-      When user enters "testauto" as username and "test123" as password
-      And user clicks on the login button
+      Given user is on the Plaza login page
+      When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
       When user clicks on "Order Something" button
       And user clicks "IT Infrastructure" button
@@ -36,4 +35,4 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Finance & Assurance"
       And user validates description contains: ""
-
+#

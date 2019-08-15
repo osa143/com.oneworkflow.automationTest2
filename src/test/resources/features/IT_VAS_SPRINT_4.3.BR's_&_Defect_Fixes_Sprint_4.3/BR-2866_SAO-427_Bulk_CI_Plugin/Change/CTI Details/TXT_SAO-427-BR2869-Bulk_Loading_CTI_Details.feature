@@ -32,4 +32,31 @@ Feature: checking of bulk loading CTI details
     And user clicks on save button
     And user waits
     Then user validates availability of tabs "Timeline:Diagnosis:Risk:Schedule:Interested Parties:Approval:Notifications:Linked Items:Work Orders:Service Level:Related Project:Service Info:Telenor" on change record page
-
+    When user clicks on Diagnosis tab
+    And user clicks on "Add Bulk Import" button
+    And user switches to frame
+    Then user should see bulk ci loading window
+    And user validates "From*" is visible
+    And user validates "To+" is visible
+    When user selects impact level as "No Impact"
+    And user enters impact from date as current date
+    And user enters impact to date as current date +4h
+    When user clicks on "Upload Import File" button
+    Then user should see add attachment window
+    When user clicks on "Choose File" Button
+      #10CI's TXT no duplicate
+    Then user selects TXT file with 10 CI's
+    And user clicks on attachment ok button
+    Then user clicks on save button under bulk import
+    And user clicks on attachment ok button
+    And user switches to window 1
+    When user clicks on "Show Bulk Import" button
+    And user switches to frame
+    Then user validates uploaded file is visible
+    And user clicks on "Related CIs" tab
+    Then user validates at least 1 CI has "completed" status
+    And user validates "Total Rows" as 10
+    And user validates "Rows Ok" as 10
+    And user validates "With Warnings" as 0
+    And user validates "With Errors" as 0
+    Then user clicks on bulk loading close button

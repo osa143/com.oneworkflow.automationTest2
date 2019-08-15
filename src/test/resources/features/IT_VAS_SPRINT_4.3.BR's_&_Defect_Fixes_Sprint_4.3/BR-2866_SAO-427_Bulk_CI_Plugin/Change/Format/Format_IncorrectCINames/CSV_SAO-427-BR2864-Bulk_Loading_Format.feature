@@ -1,4 +1,4 @@
-@SAO-427-BR2864-Bulk_Loading_Format_Location_Change @427
+@SAO-427-BR2864-Bulk_Loading_Format @427
 Feature: checking of bulk loading format
   Scenario: user checks the format of bulk loading format
 
@@ -55,10 +55,10 @@ Feature: checking of bulk loading format
       When user clicks on "Upload Import File" button
       Then user should see add attachment window
       When user clicks on "Choose File" Button
-      #10CI's with incorrect column location
-      Then user selects file with incorrect column location
+      #10 CI's CSV with incorrect names
+      Then user selects CSV file with incorrect CI names
       And user clicks on attachment ok button
-      Then user should see 10 CI's with incorrect column location attachment within bulk loading window
+      Then user should see 10 CI's with incorrect names attachment within bulk loading window
       Then user clicks on bulk import save button
       And user clicks on ok button on popup
       And user switches to window 1
@@ -68,13 +68,10 @@ Feature: checking of bulk loading format
       And user validates "Save Import File" button is visible
       When user clicks on "Related CIs" tab
       Then user validates "Total Rows" are 10
-      And user validates "Rows Ok" as 0
-      And user validates "With Errors" as 0
-      And user validates "With Warnings" as 10
-      And user validates warning message as "No CI named '	SE_AP_alvesta-radmannen-ap1' was found!"
+      And user validates "With Warnings" as 0
+      And user validates warning message as "No CI named ' SE_AP_alvesta-radmannen-ap1' was found!"
       And user validates status message as "Completed (With Warnings)"
       Then user clicks on bulk import close button
-      And user switches to window 1
 
 
 

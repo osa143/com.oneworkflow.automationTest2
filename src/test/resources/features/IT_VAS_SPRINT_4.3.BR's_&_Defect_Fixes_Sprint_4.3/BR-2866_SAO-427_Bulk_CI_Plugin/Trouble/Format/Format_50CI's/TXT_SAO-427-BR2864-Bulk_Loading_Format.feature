@@ -30,6 +30,8 @@ Feature: checking of bulk loading format
       And user validates "Upload Import File" is visible
       And user validates "Save" is visible
       And user validates "Close" is visible
+      And user enters impact from date as current date midnight on bulk CI loading window
+      And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window
       When user clicks on "Add Bulk Import" button
       And user switches to frame
       Then user should see bulk ci loading window

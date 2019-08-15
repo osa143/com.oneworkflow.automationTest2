@@ -30,6 +30,8 @@ Feature: checking of bulk loading format
       And user validates "Upload Import File" is visible
       And user validates "Save" is visible
       And user validates "Close" is visible
+      And user enters impact from date as current date midnight on bulk CI loading window
+      And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window
       When user clicks on "Add Bulk Import" button
       And user switches to frame
       Then user should see bulk ci loading window
@@ -37,7 +39,7 @@ Feature: checking of bulk loading format
       Then user should see add attachment window
       When user clicks on "Choose File" Button
       #50 CI's with no duplicates XLSX file
-      Then user selects file with duplicates in it
+      Then user selects XLSX file with duplicates in it
       And user clicks on attachment ok button
       Then user should see 50 CI XLSX attachment within bulk loading window
       Then user clicks on bulk import save button

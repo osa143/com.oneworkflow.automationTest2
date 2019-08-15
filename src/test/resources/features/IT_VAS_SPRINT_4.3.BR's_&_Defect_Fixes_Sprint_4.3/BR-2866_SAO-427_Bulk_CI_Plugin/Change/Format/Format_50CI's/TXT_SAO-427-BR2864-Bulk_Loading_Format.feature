@@ -1,4 +1,4 @@
-@SAO-427-BR2864-Bulk_Loading_Format @427
+@Bulk_Loading_Format_Trouble_TXT_50CIs @427
 Feature: checking of bulk loading format
   Scenario: user checks the format of bulk loading format
 
@@ -41,10 +41,6 @@ Feature: checking of bulk loading format
       And user validates "Level*" is visible
       And user validates "From*" is visible
       And user validates "To+" is visible
-      And user validates "Hrs" is visible
-      And user validates "Mins" is visible
-      And user validates "Days" is visible
-      And user validates "Secs" is visible
       And user validates "Ignore Duplicate CIs" is visible
       And user validates "Upload File" radio button is visible
       And user validates "Manual Input" radio button is visible
@@ -52,13 +48,16 @@ Feature: checking of bulk loading format
       And user validates "Upload Import File" is visible
       And user validates "Save" is visible
       And user validates "Close" is visible
-      When user clicks on "Upload Import File" button
+      When user clicks on "Add Bulk Import" button
+      And user switches to frame
+      Then user should see bulk ci loading window
+      And user clicks on "Upload Import File" button
       Then user should see add attachment window
       When user clicks on "Choose File" Button
-      #50CI's with duplicates file
+      #50 CI's with no duplicates TXT file
       Then user selects file with duplicates in it
       And user clicks on attachment ok button
-      Then user should see 50 CI's/w duplicate attachment within bulk loading window
+      Then user should see 50 CI TXT attachment within bulk loading window
       Then user clicks on bulk import save button
       And user clicks on ok button on popup
       And user switches to window 1
@@ -68,12 +67,15 @@ Feature: checking of bulk loading format
       And user validates "Save Import File" button is visible
       When user clicks on "Related CIs" tab
       Then user validates "Total Rows" are 50
-      And user validates "Rows Ok" as 25
-      And user validates "With Errors" as 25
-      And user validates warning message as "(33422): Impact record cannot be created. The entered From and To dates overlap with existing impact record for SE (No Impact (2019-08-12 22:00:00 UTC - 2019-08-13 02:00:00 UTC ))."
+      And user validates "Rows Ok" as 49
+      And user validates "With Errors" as 1
+      And user validates status message as "Completed"
       And user validates status message as "With Error"
+      And user validates 1 CI has an error of "(33422): Impact record cannot be created. The entered From and To dates overlap with existing impact record for FI_AFG_AFG99FI (No Impact (2019-08-12 22:00:00 UTC - 2019-08-13 04:00:00 UTC ))."
       Then user clicks on bulk import close button
       And user switches to window 1
+
+
 
 
 

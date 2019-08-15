@@ -33,7 +33,7 @@
       When user clicks on "Upload Import File" button
       Then user should see add attachment window
       When user clicks on "Choose File" Button
-      #50CI's with duplicates
+      #5CI's TXT with duplicates
       Then user selects file with 50 duplicate CI's
       And user clicks on attachment ok button
       When user selects impact level as "No Impact"
@@ -54,5 +54,11 @@
       And user validates status message as "Completed (With Warnings)"
       Then user clicks on bulk import close button
       And user switches to window 1
+
+    LT DNS SIP
+    SE_AFG_AFG01SE
+    FI DNS Gi
+    FI DNS Gn
+    FI_AFG_AFG01FI
 
 

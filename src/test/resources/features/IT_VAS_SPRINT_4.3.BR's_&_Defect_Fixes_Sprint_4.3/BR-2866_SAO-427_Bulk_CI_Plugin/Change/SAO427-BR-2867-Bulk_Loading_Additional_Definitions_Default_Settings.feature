@@ -26,7 +26,9 @@ Feature: checking of bulk loading additional definitions default settings
     And user enters "Privacy Data: Just Testing" in the change builder field
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
     Then user enters request start time 24 hours ahead of current date
+    And user logs change start time
     And user enters request end time 28 hours ahead of current date
+    And user logs change end time
     And user enters impact duration as "45" minutes
     And user selects estimated impact dropdown as "Degradation of Service"
     And user clicks on save button

@@ -30,11 +30,14 @@
       And user validates "Upload Import File" is visible
       And user validates "Save" is visible
       And user validates "Close" is visible
-      When user clicks on "Upload Import File" button
-      Then user should see add attachment window
-      When user clicks on "Choose File" Button
-      #5CI's TXT with duplicates
-      Then user selects file with 50 duplicate CI's
+      When user selects impact level as "No Impact"
+      And user enters impact from date as current date
+      And user enters impact to date as current date +4h
+      And user clicks on "Manual Input" radio button
+      And user enters "LT DNS SIP;SE_AFG_AFG01SE;FI DNS Gi;FI DNS Gn;FI_AFG_AFG01FI" in manual CI search box
+      Then user clicks on save button under bulk import
+      And user clicks on attachment ok button
+      And user switches to window 1
       And user clicks on attachment ok button
       When user selects impact level as "No Impact"
       And user enters impact from date as current date
@@ -46,19 +49,18 @@
       Then user validates uploaded file is visible
       And user validates "Save Import File" button is visible
       When user clicks on "Related CIs" tab
-      Then user validates "Total Rows" are 50
-      And user validates "Rows Ok" as 24
-      And user validates "With Errors" as 24
-      And user validates "With Warnings" as 2
+      Then user validates "Total Rows" are 5
+      And user validates "Rows Ok" as 0
+      And user validates "With Errors" as 0
+      And user validates "With Warnings" as 5
+      And user validates Dup. CIs as "2"
       And user validates warning message as "Multiple CIs named 'LT DNS SIP' were found, and the import job is configured to Ignore Duplicate CIs!"
-      And user validates status message as "Completed (With Warnings)"
+      And user validates warning message as "Multiple CIs named 'SE_AFG_AFG01SE' were found, and the import job is configured to Ignore Duplicate CIs!"
+      And user validates warning message as "Multiple CIs named 'FI DNS Gi' were found, and the import job is configured to Ignore Duplicate CIs!"
+      And user validates warning message as "Multiple CIs named 'FI DNS Gn' were found, and the import job is configured to Ignore Duplicate CIs!"
+      And user validates warning message as "Multiple CIs named 'FI_AFG_AFG01FI' were found, and the import job is configured to Ignore Duplicate CIs!"
+      And user validates status message as "With Warnings"
       Then user clicks on bulk import close button
       And user switches to window 1
-
-    LT DNS SIP
-    SE_AFG_AFG01SE
-    FI DNS Gi
-    FI DNS Gn
-    FI_AFG_AFG01FI
 
 

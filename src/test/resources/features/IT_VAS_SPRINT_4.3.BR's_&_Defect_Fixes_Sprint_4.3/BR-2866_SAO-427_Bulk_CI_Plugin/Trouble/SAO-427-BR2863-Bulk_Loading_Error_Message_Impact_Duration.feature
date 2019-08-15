@@ -36,4 +36,5 @@ Feature: checking of bulk loading error message impact duration
     And user clicks on bulk import save button
     Then user should see error message of "Please type in or paste the list of CIs you you want to relate. (ARERR 10000)"
     And user closes warning message
+    When user enters "One Workflow SE_AFG_AFG01SE FI DNS Gi" in manual CI search box
     And user clicks on bulk import close button

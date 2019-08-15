@@ -1,12 +1,10 @@
-@SAO-427-BR2865-Bulk_Loading_Ignore_Duplicate_CI's_Change
+@SAO-427-BR2865-Bulk_Loading_Ignore_Duplicate_CI's_Trouble
   Feature: Bulk Loading ignore duplicate CI's
     Scenario: Bulk Loading ignore duplicate CI's
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user clicks on create change record
-      Then user switches to window 1
       When user clicks save button
       Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)" on change record page
       When user enters "Regression - Change Management Process" in the implementation field
@@ -36,10 +34,6 @@
       And user clicks on "Add Bulk Import" button
       And user switches to frame
       Then user should see bulk ci loading window
-      When user clicks on Diagnosis tab
-      And user clicks on "Add Bulk Import" button
-      And user switches to frame
-      Then user should see bulk ci loading window
       And user validates "Impact Type*" is visible
       And user validates "Category*" is visible
       And user validates "Level*" is visible
@@ -52,11 +46,14 @@
       And user validates "Upload Import File" is visible
       And user validates "Save" is visible
       And user validates "Close" is visible
-      When user clicks on "Upload Import File" button
-      Then user should see add attachment window
-      When user clicks on "Choose File" Button
-      #50CI's with duplicates
-      Then user selects file with 50 duplicate CI's
+      When user selects impact level as "No Impact"
+      And user enters impact from date as current date
+      And user enters impact to date as current date +4h
+      And user clicks on "Manual Input" radio button
+      And user enters "LT DNS SIP;SE_AFG_AFG01SE;FI DNS Gi;FI DNS Gn;FI_AFG_AFG01FI" in manual CI search box
+      Then user clicks on save button under bulk import
+      And user clicks on attachment ok button
+      And user switches to window 1
       And user clicks on attachment ok button
       When user selects impact level as "No Impact"
       And user enters impact from date as current date
@@ -68,12 +65,17 @@
       Then user validates uploaded file is visible
       And user validates "Save Import File" button is visible
       When user clicks on "Related CIs" tab
-      Then user validates "Total Rows" are 50
-      And user validates "Rows Ok" as 24
-      And user validates "With Errors" as 24
-      And user validates "With Warnings" as 2
+      Then user validates "Total Rows" are 5
+      And user validates "Rows Ok" as 0
+      And user validates "With Errors" as 0
+      And user validates "With Warnings" as 5
+      And user validates Dup. CIs as "2"
       And user validates warning message as "Multiple CIs named 'LT DNS SIP' were found, and the import job is configured to Ignore Duplicate CIs!"
-      And user validates status message as "Completed (With Warnings)"
+      And user validates warning message as "Multiple CIs named 'SE_AFG_AFG01SE' were found, and the import job is configured to Ignore Duplicate CIs!"
+      And user validates warning message as "Multiple CIs named 'FI DNS Gi' were found, and the import job is configured to Ignore Duplicate CIs!"
+      And user validates warning message as "Multiple CIs named 'FI DNS Gn' were found, and the import job is configured to Ignore Duplicate CIs!"
+      And user validates warning message as "Multiple CIs named 'FI_AFG_AFG01FI' were found, and the import job is configured to Ignore Duplicate CIs!"
+      And user validates status message as "With Warnings"
       Then user clicks on bulk import close button
       And user switches to window 1
 

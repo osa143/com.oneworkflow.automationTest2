@@ -33,7 +33,7 @@ Feature: checking of bulk loading error message impact duration
     And user waits
     Then user validates availability of tabs "Timeline:Diagnosis:Risk:Schedule:Interested Parties:Approval:Notifications:Linked Items:Work Orders:Service Level:Related Project:Service Info:Telenor" on change record page
     When user clicks on Diagnosis tab
-    And user clicks on "Add Bulk Import" button
+    And user clicks on Add Bulk Import button
     And user switches to frame
     Then user should see bulk ci loading window
     And user validates "From*" is visible
@@ -43,14 +43,25 @@ Feature: checking of bulk loading error message impact duration
     And user validates "Days" is visible
     And user validates "Secs" is visible
     When user selects impact level as "No Impact"
-    And user clears "To+" date field
+    And user enters impact from date as current date midnight plus 24 hours on bulk CI loading window
+    And user enters impact to date as current date midnight plus 30 hours on bulk CI loading window
     And user clicks on "Manual Input" radio button
     And user enters "One Workflow" in manual CI search box
     Then user clicks on save button under bulk import
-    Then user should see error message of "Please fill in all required fields to relate the selected CIs. (Impact Type, Category, Level, From (Date), To (Date)) (ARERR 10000)"
+    And user should see error message of "Errors where found:  (300825): From date cannot be in the future for un-planned impact record.  To date cannot be in the future for un-planned impact record."
     And user closes warning message
-    When user enters "" in manual CI search box
+    When user clears "To+" date field
+    And user enters impact to date as current date midnight plus 12 hours on bulk CI loading window
+    Then user should see error message of "Errors where found:  (300825): From date cannot be in the future for un-planned impact record.  Impact From date must be before Impact To date."
+    And user closes warning message
+    When user clears manual CI search box
     And user clicks on bulk import save button
     Then user should see error message of "Please type in or paste the list of CIs you you want to relate. (ARERR 10000)"
     And user closes warning message
+    When user enters "One Workflow SE_AFG_AFG01SE FI DNS Gi" in manual CI search box
     And user clicks on bulk import close button
+
+
+
+
+

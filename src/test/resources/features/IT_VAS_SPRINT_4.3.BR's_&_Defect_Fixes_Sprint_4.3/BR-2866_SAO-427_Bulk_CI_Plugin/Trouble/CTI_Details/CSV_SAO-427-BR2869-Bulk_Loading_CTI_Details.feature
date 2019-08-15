@@ -26,8 +26,8 @@ Feature: checking of bulk loading CTI details
     When user clicks on "Upload Import File" button
     Then user should see add attachment window
     When user clicks on "Choose File" Button
-      #10CI's XLS no duplicate
-    Then user selects XLS file with 10 CI's
+      #10CI's CSV no duplicate
+    Then user selects CSV file with 10 CI's
     And user clicks on attachment ok button
     Then user clicks on save button under bulk import
     And user clicks on attachment ok button

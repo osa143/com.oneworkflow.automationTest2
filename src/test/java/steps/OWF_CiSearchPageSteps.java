@@ -287,4 +287,19 @@ public class OWF_CiSearchPageSteps {
     public void multipleStatusesShouldBeAvailableInImpactTypeDropdown(String arg0) {
         Assert.assertTrue(ciSearchPage.verifyImpactTypeDropdownValues(arg0, ""));
     }
+
+    @Then("user validates bulk ci loading table contains column names:{string}")
+    public void userValidatesBulkCiLoadingTableContainsColumnNames(String arg0) {
+        Assert.assertTrue(ciSearchPage.verifyBulkCILoadingColumnValues(arg0));
+    }
+
+    @And("user validates total rows as {string}")
+    public void userValidatesTotalRowsAs(String arg0) {
+        Assert.assertEquals(ciSearchPage.getTotalRows(), arg0);
+    }
+
+    @And("user validates Rows OK as {string}")
+    public void userValidatesRowsOKAs(String arg0) {
+        Assert.assertEquals(ciSearchPage.getRowsOk(), arg0);
+    }
 }

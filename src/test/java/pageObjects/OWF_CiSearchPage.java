@@ -45,7 +45,20 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String txt_IMPACT_TYPE= "arid_WIN_0_700009080";
     private static final String txt_IMPACT_CATEGORY="arid_WIN_0_700009081";
     private static final String txt_IMPACT_LEVEL="arid_WIN_0_700009082";
+    private static final String txt_TOTAL_ROWS= "arid_WIN_0_800038068";
+    private static final String txt_ROWS_OK= "arid_WIN_0_800038071";
 
+
+    public String getTotalRows(){
+        return getAttributeValueById(txt_TOTAL_ROWS);
+    }
+
+    public String getRowsOk(){
+        return getAttributeValueById(txt_ROWS_OK);
+    }
+    public boolean verifyBulkCILoadingColumnValues(String columnValues){
+        return verifyColumnNames(columnValues, By.id(table_BULK_CI_LOADING_RELATED_JOBS));
+    }
 
     public boolean verifyImpactTypeDropdownValues(String statuses, String dropdownName){
         return verifyDropdownValues(statuses, dropdownName, txt_IMPACT_TYPE);

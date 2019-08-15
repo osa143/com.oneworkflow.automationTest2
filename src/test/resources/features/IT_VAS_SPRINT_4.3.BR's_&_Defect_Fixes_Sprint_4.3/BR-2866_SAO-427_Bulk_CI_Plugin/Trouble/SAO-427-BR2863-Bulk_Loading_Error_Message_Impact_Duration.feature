@@ -15,26 +15,22 @@ Feature: checking of bulk loading error message impact duration
     And user clicks on save button
     Then ticket should be created and status should be assigned
     When user clicks on Diagnosis tab
-    And user clicks on "Add Bulk Import" button
+    And user clicks on Add Bulk Import button
     And user switches to frame
     Then user should see bulk ci loading window
     And user validates "From*" is visible
     And user validates "To+" is visible
-    And user validates "Hrs" is visible
-    And user validates "Mins" is visible
-    And user validates "Days" is visible
-    And user validates "Secs" is visible
     When user selects impact level as "No Impact"
-    And user enters impact from date as current date
-    And user enters impact to date as current date -4h
+    And user enters impact from date as current date midnight plus 24 hours on bulk CI loading window
+    And user enters impact to date as current date midnight plus 30 hours on bulk CI loading window
     And user clicks on "Manual Input" radio button
     And user enters "One Workflow" in manual CI search box
     Then user clicks on save button under bulk import
-    And user should see error message of "Errors where found:Impact From date must be before Impact To date. Please check and make the necessary corrections, or contact the System Adminsitrators with the above error. (ARERR 10000)"
+    And user should see error message of "Errors where found:  (300825): From date cannot be in the future for un-planned impact record.  To date cannot be in the future for un-planned impact record."
     And user closes warning message
     When user clears "To+" date field
-    And user clicks on bulk import save button
-    Then user should see error message of "Please fill in all required fields to relate the selected CIs. (Impact Type, Category, Level, From (Date), To (Date)) (ARERR 10000)"
+    And user enters impact to date as current date midnight plus 12 hours on bulk CI loading window
+    Then user should see error message of "Errors where found:  (300825): From date cannot be in the future for un-planned impact record.  Impact From date must be before Impact To date."
     And user closes warning message
     When user clears manual CI search box
     And user clicks on bulk import save button

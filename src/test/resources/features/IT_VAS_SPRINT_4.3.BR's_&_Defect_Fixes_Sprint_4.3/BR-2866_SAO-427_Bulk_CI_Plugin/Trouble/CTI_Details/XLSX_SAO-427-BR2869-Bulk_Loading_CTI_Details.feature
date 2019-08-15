@@ -23,8 +23,12 @@ Feature: checking of bulk loading CTI details
     When user selects impact level as "No Impact"
     And user enters impact from date as current date
     And user enters impact to date as current date +4h
-    And user clicks on "Manual Input" radio button
-    And user enters "One Workflow" in manual CI search box
+    When user clicks on "Upload Import File" button
+    Then user should see add attachment window
+    When user clicks on "Choose File" Button
+      #10CI's XLSX no duplicate
+    Then user selects XLSX file with 10 CI's
+    And user clicks on attachment ok button
     Then user clicks on save button under bulk import
     And user clicks on attachment ok button
     And user switches to window 1
@@ -33,12 +37,8 @@ Feature: checking of bulk loading CTI details
     Then user validates uploaded file is visible
     And user clicks on "Related CIs" tab
     Then user validates at least 1 CI has "completed" status
-    And user validates "Total Rows" as 1
-    And user validates "Rows Ok" as 1
+    And user validates "Total Rows" as 10
+    And user validates "Rows Ok" as 10
     And user validates "With Warnings" as 0
     And user validates "With Errors" as 0
     Then user clicks on bulk loading close button
-
-
-
-

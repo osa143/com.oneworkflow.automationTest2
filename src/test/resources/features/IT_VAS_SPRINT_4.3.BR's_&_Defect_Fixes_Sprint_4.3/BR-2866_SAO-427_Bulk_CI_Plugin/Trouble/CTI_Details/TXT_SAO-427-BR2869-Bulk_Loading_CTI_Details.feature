@@ -26,8 +26,8 @@ Feature: checking of bulk loading CTI details
     When user clicks on "Upload Import File" button
     Then user should see add attachment window
     When user clicks on "Choose File" Button
-      #50CI's XLS with duplicates
-    Then user selects XLS file with 50 duplicate CI's
+      #10CI's TXT no duplicate
+    Then user selects TXT file with 10 CI's
     And user clicks on attachment ok button
     Then user clicks on save button under bulk import
     And user clicks on attachment ok button
@@ -37,8 +37,8 @@ Feature: checking of bulk loading CTI details
     Then user validates uploaded file is visible
     And user clicks on "Related CIs" tab
     Then user validates at least 1 CI has "completed" status
-    And user validates "Total Rows" as 1
-    And user validates "Rows Ok" as 1
+    And user validates "Total Rows" as 10
+    And user validates "Rows Ok" as 10
     And user validates "With Warnings" as 0
     And user validates "With Errors" as 0
     Then user clicks on bulk loading close button

@@ -1,4 +1,4 @@
-v                                                                                                                 @SAO-427-BR2864-Bulk_Loading_Format @427
+@SAO-427-BR2864-Bulk_Loading_Format_Manual_Trouble                                                                                                                 @SAO-427-BR2864-Bulk_Loading_Format @427
 Feature: checking of bulk loading format
   Scenario: user checks the format of bulk loading format
 

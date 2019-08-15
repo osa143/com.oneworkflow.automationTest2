@@ -1,9 +1,11 @@
-@SAO-427-BR2430_CI_not_found_prompt_for_CI_Search_Change @SAO-427
+@SAO-427-BR2430_CI_not_found_prompt_for_CI_Search_Trouble @SAO-427
+ #passed
+
 Feature: checking of bulk loading Location details
   Scenario: user checks the bulk loading location details
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "ChangeInitiatorInternal1" and password as "Test@1234"
+    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create change record
     Then user switches to window 1
@@ -33,43 +35,36 @@ Feature: checking of bulk loading Location details
     And user waits
     Then user validates availability of tabs "Timeline:Diagnosis:Risk:Schedule:Interested Parties:Approval:Notifications:Linked Items:Work Orders:Service Level:Related Project:Service Info:Telenor" on change record page
     When user clicks on Diagnosis tab
-    And user clicks on "Add Bulk Import" button
+    And user clicks on Add Bulk Import button
     And user switches to frame
     Then user should see bulk ci loading window
-    And user validates "Impact Type*" is visible
-    And user validates "Category*" is visible
-    And user validates "Level*" is visible
-    And user validates "From*" is visible
-    And user validates "To+" is visible
-    And user validates "Hrs" is visible
-    And user validates "Mins" is visible
-    And user validates "Days" is visible
-    And user validates "Secs" is visible
-    And user validates "Ignore Duplicate CIs" is visible
-    And user validates "Upload File" radio button is visible
-    And user validates "Manual Input" radio button is visible
-    And user validates "Download File Template" is visible
-    And user validates "Upload Import File" is visible
-    And user validates "Save" is visible
-    And user validates "Close" is visible
-    When user clicks on "Manual Input" radio button
+    And user validates "Impact Type*" is visible on bulk CI loading window tagname "label"
+    And user validates "Category*" is visible on bulk CI loading window tagname "label"
+    And user validates "Level*" is visible on bulk CI loading window tagname "label"
+    And user validates "From*" is visible on bulk CI loading window tagname "label"
+    And user validates "To+" is visible on bulk CI loading window tagname "label"
+    And user validates "Ignore Duplicate CIs" is visible on bulk CI loading window tagname "label"
+    And user validates "Upload File" is visible on bulk CI loading window tagname "label"
+    And user validates "Manual Input" is visible on bulk CI loading window tagname "label"
+    And user validates "Download File Template" is visible on bulk CI loading window tagname "label"
+    And user validates "Upload Import File" is visible on bulk CI loading window tagname "div"
+    And user validates Save is visible on bulk CI loading window
+    And user validates Close is visible on bulk CI loading window
+    When user clicks on Manual Input radio button
+    And user enters impact from date as current date midnight on bulk CI loading window
+    And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window
     And user selects impact level as "Degradation of Service"
-    And user enters hours as "3"
     And user enters "abcdefghijklmnopqrstuvwxyz" in manual CI search box
     Then user clicks on save button under bulk import
-    And user validates import message appears
-    Then user clicks on ok button
-    And user switches to window 1
-    When user clicks on "Show Bulk Import" button
+    And first error message should display as "The manually identified CIs are now being processed..." on bulk ci window
+    And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
+    When user clicks on Show Bulk Import button
     Then user switches to frame
-    #May want to store the number as int as we may reuse the same method
     And user validates related jobs has 1 entry
-    And user highlights related job
     Then user clicks on "Related CIs" tab
-    And user validates warning message as "No CI named 'abcdefghijklmnopqrstuvwxyz' was found!"
-    And user validates status message as "Completed (With Warnings)"
+    And user validates "Warning/Error Messages" as "No CI named 'abcdefghijklmnopqrstuvwxyz' was found!" in row 1
+    And user validates "Status" as "With Warnings" in row 1
     Then user clicks on bulk loading close button
-
 
 
 

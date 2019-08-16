@@ -29,7 +29,6 @@
       And user enters "SE_" within the location ID+ field
       And user switches to frame
       Then user should see list of swedish sites
-      When user clicks on the next chunk button
     #Location Name,Location ID+,Region Name, Region ID, Latitude, Longitude
       And user highlights location "SE_Site_SE M1" and clicks ok and validates location details
       When user enters "Test case MT004 Sweden E2E" in Title field in Trouble event

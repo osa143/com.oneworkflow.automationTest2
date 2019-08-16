@@ -1,4 +1,4 @@
-@E2E_Test_Norway_RAN @E2E_Test_Cases
+@E2E_Test_Lithuania_RAN @E2E_Test_Cases
 
 Feature: E2E Scenarios
   Scenario: E2E Scenarios for sweden trouble event

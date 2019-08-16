@@ -461,6 +461,7 @@ public class BaseRecordPage extends BasePage {
     }
     public void clickOk_AttachmentOnFrame(){
         clickElement(By.xpath(btnOK_ON_FRAME_XPATH));
+        wait(1000);
     }
 
     public void clickSave_AttachmentOnFrame(){

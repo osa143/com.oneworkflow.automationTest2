@@ -223,7 +223,12 @@ public class OWF_CiSearchPageSteps {
 
     @Then("user clicks on save button under bulk import")
     public void userClicksOnSaveButtonUnderBulkImport() {
-        ciSearchPage.clickSave_bulkCiLoadingWindow();
+        try{
+            ciSearchPage.clickSave_bulkCiLoadingWindow();
+        }
+      catch (Exception e){
+          ciSearchPage.clickSave_bulkCiLoadingWindow();
+      }
     }
 
     @When("user clicks on Show Bulk Import button")
@@ -324,7 +329,7 @@ public class OWF_CiSearchPageSteps {
         ciSearchPage.ClickBulkCiloadingTableElement(arg1, arg0);
     }
 
-    @And("user validates txt doc is visible")
+    @And("user validates attached document is visible")
     public void userValidatesTxtDocIsVisible() {
         Assert.assertTrue(ciSearchPage.verifyDocumentIsDisplayed());
     }
@@ -393,5 +398,9 @@ public class OWF_CiSearchPageSteps {
     @And("user validates with warnings as {string}")
     public void userValidatesWithWarningsAs(String arg0) {
         Assert.assertEquals(ciSearchPage.getWithWarnings(), arg0);
+    }
+
+    @Then("user validates primary ci as {string}")
+    public void userValidatesPrimaryCiAs(String arg0) {
     }
 }

@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="updated features and steps">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/SAO427-BR-2867-Bulk_Loading_Additional_Definitions_Default_Settings.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/SAO427-BR-2867-Bulk_Loading_Additional_Definitions_Default_Settings.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/SAO-427-BR2862-Bulk_Loading_Error_Message_Structure.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/SAO-427-BR2862-Bulk_Loading_Error_Message_Structure.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/SAO-427-BR2863-Bulk_Loading_Error_Message_Impact_Duration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/SAO-427-BR2863-Bulk_Loading_Error_Message_Impact_Duration.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.03_Set_correct_categorization.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.03_Set_correct_categorization.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/SAO-427-BR2430-CI_not_found_prompt_for_CI_Search.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/SAO-427-BR2430-CI_not_found_prompt_for_CI_Search.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/SAO-427-BR2862-Bulk_Loading_Error_Message_Structure.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/SAO-427-BR2862-Bulk_Loading_Error_Message_Structure.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/SAO-427-BR2863-Bulk_Loading_Error_Message_Impact_Duration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/SAO-427-BR2863-Bulk_Loading_Error_Message_Impact_Duration.feature" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -156,24 +154,24 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\h_smi\OneDrive\Documents\oneworkflow.automation\src\test\resources\features\IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3\BR-2866_SAO-427_Bulk_CI_Plugin\Change\Format_50CI's" />
-      <recent name="C:\Users\h_smi\OneDrive\Documents\oneworkflow.automation\src\test\resources\features\IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3\BR-2866_SAO-427_Bulk_CI_Plugin\Change\Format_500CI's" />
-      <recent name="C:\Users\h_smi\OneDrive\Documents\oneworkflow.automation\src\test\resources\features\IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3\BR-2866_SAO-427_Bulk_CI_Plugin\Change\Format_DuplicateCI's" />
-      <recent name="C:\Users\h_smi\OneDrive\Documents\oneworkflow.automation\src\test\resources\features\IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3\BR-2866_SAO-427_Bulk_CI_Plugin\Change\Format_IncorrectCINames" />
-      <recent name="C:\Users\h_smi\OneDrive\Documents\oneworkflow.automation\src\test\resources\features\IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3\BR-2866_SAO-427_Bulk_CI_Plugin\Change\Format_IncorrectDataLayout\ColumnLocation" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="runners" />
-      <recent name="rough" />
-      <recent name="Helpers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\h_smi\OneDrive\Documents\oneworkflow.automation\src\test\resources\features\IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3\BR-2866_SAO-427_Bulk_CI_Plugin\Change\IgnoreDuplicateCI's" />
       <recent name="C:\Temp\com.oneworkflow.automation\src\test\resources\features\IT_VAS_SPRINT_4.1\BR's_&amp;_Defect_Fixes_Sprint_4.1\Other_SAO's" />
       <recent name="C:\Temp\com.oneworkflow.automation\src\test\resources\features\IT_VAS_SPRINT_4.1" />
       <recent name="C:\Temp\com.oneworkflow.automation\src\test\resources\features" />
       <recent name="C:\Temp\com.oneworkflow.automation\src\test\resources\features\Problem" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="runners" />
+      <recent name="rough" />
+      <recent name="Helpers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\h_smi\OneDrive\Documents\oneworkflow.automation\src\test\resources\features\IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3\BR-2866_SAO-427_Bulk_CI_Plugin\Change\Format_50CI's" />
+      <recent name="C:\Users\h_smi\OneDrive\Documents\oneworkflow.automation\src\test\resources\features\IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3\BR-2866_SAO-427_Bulk_CI_Plugin\Change\Format_500CI's" />
+      <recent name="C:\Users\h_smi\OneDrive\Documents\oneworkflow.automation\src\test\resources\features\IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3\BR-2866_SAO-427_Bulk_CI_Plugin\Change\Format_DuplicateCI's" />
+      <recent name="C:\Users\h_smi\OneDrive\Documents\oneworkflow.automation\src\test\resources\features\IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3\BR-2866_SAO-427_Bulk_CI_Plugin\Change\Format_IncorrectCINames" />
+      <recent name="C:\Users\h_smi\OneDrive\Documents\oneworkflow.automation\src\test\resources\features\IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3\BR-2866_SAO-427_Bulk_CI_Plugin\Change\Format_IncorrectDataLayout\ColumnLocation" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -292,7 +290,6 @@
       <method v="2" />
     </configuration>
     <configuration name="Test_Runner" type="TestNG">
-      <module name="com.oneworkflow.automation" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="SUITE_NAME" value="" />

@@ -51,8 +51,6 @@ Feature: checking of bulk loading Location details
     And user validates Save is visible on bulk CI loading window
     And user validates Close is visible on bulk CI loading window
     When user clicks on Manual Input radio button
-    And user enters impact from date as current date midnight on bulk CI loading window
-    And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window
     And user selects impact level as "Degradation of Service"
     And user enters "abcdefghijklmnopqrstuvwxyz" in manual CI search box
     Then user clicks on save button under bulk import
@@ -65,7 +63,6 @@ Feature: checking of bulk loading Location details
     And user validates "Warning/Error Messages" as "No CI named 'abcdefghijklmnopqrstuvwxyz' was found!" in row 1
     And user validates "Status" as "With Warnings" in row 1
     Then user clicks on bulk loading close button
-
 
 
 

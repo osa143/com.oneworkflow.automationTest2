@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Denmark_Core.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Estonia_Core.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Finland_Core.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Lithuania_Core.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Norway_Core.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Sweden_Core.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/E2E_Denmark_RAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Denmark_RAN.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/E2E_Estonia_RAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Estonia_RAN.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/E2E_Finland_RAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Finland_RAN.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/E2E_Lithuania_RAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Lithuania_RAN.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/E2E_Norway_RAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Norway_RAN.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/E2E_Sweden_RAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Sweden_RAN.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Denmark_Core.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Denmark_Core.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Estonia_Core.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Estonia_Core.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Finland_Core.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Finland_Core.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Lithuania_Core.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Lithuania_Core.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Norway_Core.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Norway_Core.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Denmark_RAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Denmark_RAN.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Estonia_RAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Estonia_RAN.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Finland_RAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Finland_RAN.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Lithuania_RAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Lithuania_RAN.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Norway_RAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Norway_RAN.feature" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -459,20 +456,6 @@
       <workItem from="1565769538205" duration="54517000" />
       <workItem from="1565942134609" duration="22978000" />
     </task>
-    <task id="LOCAL-00036" summary="added feature for Linked_Items_&amp;_Change_To_KE">
-      <created>1561018706648</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1561018706649</updated>
-    </task>
-    <task id="LOCAL-00037" summary="added feature for life cycle known error">
-      <created>1561113683766</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1561113683767</updated>
-    </task>
     <task id="LOCAL-00038" summary="added features and steps for search, PMO Tab">
       <created>1561130886229</created>
       <option name="number" value="00038" />
@@ -802,7 +785,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565956967338</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Added features for E2E">
+      <created>1565969834903</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1565969834903</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Added features for E2E">
+      <created>1565970004788</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1565970004788</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TodoView">

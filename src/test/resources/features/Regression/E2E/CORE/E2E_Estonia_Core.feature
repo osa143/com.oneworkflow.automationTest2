@@ -1,7 +1,7 @@
 @E2E_Test_Estonia_RAN @E2E_Test_Cases
 
 Feature: E2E Scenarios
-  Scenario: E2E Scenarios for sweden trouble event
+  Scenario: E2E Scenarios for estonia trouble event
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"

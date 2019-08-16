@@ -1113,6 +1113,11 @@ public class OWF_TroubleEventPageSteps {
     public void userValidatesAttachmentVisibilityUnderInternal(int arg0) {
         troubleEventPage.validateAttachmentAvailability(arg0);
     }
+
+    @And("user gets event start time value")
+    public void userGetsEventStartTimeValue() {
+        CommonUtils.eventStartTime=troubleEventPage.getEventStartTime();
+    }
 }
 
 

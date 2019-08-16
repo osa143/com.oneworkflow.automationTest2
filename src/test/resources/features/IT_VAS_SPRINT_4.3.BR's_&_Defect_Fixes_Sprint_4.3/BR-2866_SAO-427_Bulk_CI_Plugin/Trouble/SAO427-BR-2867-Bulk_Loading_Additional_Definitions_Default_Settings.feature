@@ -1,4 +1,5 @@
 @Bulk_Loading_Additional_Definitions_Default_Settings_Trouble @SAO-427
+  #passed
 Feature: checking of bulk loading additional definitions default settings
   Scenario: user checks the bulk loading additional definitions default settings
 
@@ -14,7 +15,7 @@ Feature: checking of bulk loading additional definitions default settings
     And user enters description as "SAO-427 Test Bulk Loading Error Message - Structure"
     And user clicks on save button
     Then ticket should be created and status should be assigned
-    And user gets start time value
+    And user gets event start time value
     When user clicks on Diagnosis tab
     And user clicks on Add Bulk Import button
     And user switches to frame
@@ -29,7 +30,7 @@ Feature: checking of bulk loading additional definitions default settings
     #Blank default value for level
     And user validates Level default value is ""
     And user validates "From*" is visible on bulk CI loading window tagname "label"
-    Then user validates impact from time is same as incident start time
+    Then user validates impact from time is same as event start time
     And user validates "To+" is visible on bulk CI loading window tagname "label"
     And user validates "Upload File" is visible on bulk CI loading window tagname "label"
     And user validates "Manual Input" is visible on bulk CI loading window tagname "label"

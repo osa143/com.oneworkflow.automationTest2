@@ -1,4 +1,5 @@
 @SAO-427-BR2430_CI_not_found_prompt_for_CI_Search_Trouble @SAO-427
+  #passed
 Feature: checking of bulk loading Location details
   Scenario: user checks the bulk loading location details
 
@@ -31,8 +32,6 @@ Feature: checking of bulk loading Location details
     And user validates Save is visible on bulk CI loading window
     And user validates Close is visible on bulk CI loading window
     When user clicks on Manual Input radio button
-    And user enters impact from date as current date midnight on bulk CI loading window
-    And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window
     And user selects impact level as "Degradation of Service"
     And user enters "abcdefghijklmnopqrstuvwxyz" in manual CI search box
     Then user clicks on save button under bulk import

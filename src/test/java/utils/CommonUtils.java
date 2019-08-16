@@ -28,6 +28,7 @@ public class CommonUtils extends BasePage {
     public static String afterAnswering_riskScore;
     public static String requestStart;
     public static String requestEnd;
+    public static String eventStartTime;
 
     // 0 - parent window
     // 1 - first child and so on

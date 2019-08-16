@@ -3,6 +3,7 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -54,21 +55,76 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String txt_IMPORT_END_DATE= "arid_WIN_0_800038002";
     private static final String txt_IMPORT_DURATION="arid_WIN_0_800038004";
     private static final String txt_WITH_ERRORS="arid_WIN_0_800038070";
+    private static final String row3_BILK_LOADING_RELATED_JOBS="//*[@id='T800038059']/tbody/tr[4]";
+    private static final String txt_REQUEST_ID="arid_WIN_0_1";
+    private static final String txt_BIR_GUID="arid_WIN_0_179";
+    private static final String txt_SUBMITTER = "arid_WIN_0_2";
+    private static final String txt_CREATE_DATE= "arid_WIN_0_3";
+    private static final String txt_LAST_MODIFIED= "arid_WIN_0_5";
+    private static final String txt_MODIFIED_DATE= "arid_WIN_0_6";
+    private static final String txt_WITH_WARNINGS= "arid_WIN_0_800038069";
 
+    public String getWithWarnings(){
+        return getAttributeValueById(txt_WITH_WARNINGS);
+    }
+    public void verifyFieldsGotUpdated(){
+        Assert.assertNotEquals(getRequestId(), "");
+        Assert.assertNotEquals(getBIRGUID(), "");
+        Assert.assertNotEquals(getSubmitter(), "");
+        Assert.assertNotEquals(getCreateDate(), "");
+        Assert.assertNotEquals(getLastModified(), "");
+        Assert.assertNotEquals(getModifiedDate(), "");
+        Assert.assertNotEquals(getImportDuration(), "");
+        Assert.assertNotEquals(getImportStartTime(), "");
+        Assert.assertNotEquals(getImportEndTime(), "");
 
-    public String getWithErrors(){
-        return getAttributeValueById(txt_WITH_ERRORS);
+    }
+
+    public String getRequestId(){
+        return getAttributeValueById(txt_REQUEST_ID);
+    }
+
+    public String getBIRGUID(){
+        return getAttributeValueById(txt_BIR_GUID);
+    }
+    public String getSubmitter(){
+        return getAttributeValueById(txt_SUBMITTER);
+    }
+    public String getCreateDate(){
+        return getAttributeValueById(txt_CREATE_DATE);
+    }
+
+    public String getLastModified(){
+        return getAttributeValueById(txt_LAST_MODIFIED);
+    }
+    public String getModifiedDate(){
+        return getAttributeValueById(txt_MODIFIED_DATE);
     }
 
     public String getImportDuration(){
         return getAttributeValueById(txt_IMPORT_DURATION);
     }
+
     public String getImportStartTime(){
         return getAttributeValueById(txt_IMPORT_START_DATE);
     }
     public String getImportEndTime(){
         return getAttributeValueById(txt_IMPORT_END_DATE);
     }
+    public void clearTextManualCiSearchBox(){
+        findElement(By.id(txt_MANUAL_CI_SEARCH_BOX)).clear();
+    }
+   public String getImpactFrom(){
+       return getAttributeValueById(txt_IMPACT_FROM);
+   }
+    public void clickRow3(){
+        clickElement(By.xpath(row3_BILK_LOADING_RELATED_JOBS));
+    }
+    public String getWithErrors(){
+        return getAttributeValueById(txt_WITH_ERRORS);
+    }
+
+
 
 
     public boolean verifyRelatedCisTableValues(String columnName, String columnValue){
@@ -114,6 +170,7 @@ public class OWF_CiSearchPage extends BasePage {
     }
 
     public void enterImpactToPlus(String text){
+       findElement(By.id(txt_IMPACT_TO_PLUS)).clear();
         enterTextByElement(By.id(txt_IMPACT_TO_PLUS), text);
     }
 
@@ -137,6 +194,7 @@ public class OWF_CiSearchPage extends BasePage {
 
     public void clickOk_popUp(){
         clickElement(By.xpath("//*[@id='PopupMsgFooter']/a"));
+        wait(2000);
     }
 
     public boolean verifySaveButtonIsDisplayed(){
@@ -174,6 +232,7 @@ public class OWF_CiSearchPage extends BasePage {
     }
 
     public void enterManualCiSearch(String text){
+       findElement(By.id(txt_MANUAL_CI_SEARCH_BOX)).clear();
         enterTextByElement(By.id(txt_MANUAL_CI_SEARCH_BOX), text);
     }
 
@@ -195,6 +254,7 @@ public class OWF_CiSearchPage extends BasePage {
         findElement(By.id(txt_IMPACT_FROM)).sendKeys(Keys.ENTER);
     }
     public void enterImpactFrom(String text){
+       findElement(By.id(txt_IMPACT_FROM)).clear();
         findElement(By.id(txt_IMPACT_FROM)).sendKeys(text);
     }
 
@@ -215,6 +275,7 @@ public class OWF_CiSearchPage extends BasePage {
 
     public void clickOk_OnPop_up(){
         findElement(By.xpath("//a[@class='btn btn3d PopupBtn']")).click();
+        wait(1000);
     }
 
     public void clickClearedRadioButton_linkedItems(){

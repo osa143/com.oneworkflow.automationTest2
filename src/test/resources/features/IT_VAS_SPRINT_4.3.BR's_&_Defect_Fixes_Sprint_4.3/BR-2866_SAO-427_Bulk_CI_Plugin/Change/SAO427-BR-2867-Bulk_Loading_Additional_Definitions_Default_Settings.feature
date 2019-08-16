@@ -48,8 +48,9 @@ Feature: checking of bulk loading additional definitions default settings
     #Blank default value for level
     And user validates "Level" default value is ""
     And user validates "From*" is visible
+
     And user validates "To+" is visible
-    And user validates "To+" is visible
+
     And user validates "Hrs" is visible
     And user validates "Mins" is visible
     And user validates "Days" is visible

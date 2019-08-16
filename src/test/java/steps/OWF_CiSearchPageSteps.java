@@ -204,6 +204,7 @@ public class OWF_CiSearchPageSteps {
 
     @And("user enters impact from date as current date midnight on bulk CI loading window")
     public void userEntersImpactFromDateAsCurrentDateMidnightOnBulkCILoadingWindow() {
+
         ciSearchPage.enterImpactFrom(CommonUtils.getDateAsTodayMidnight(0));
 
     }
@@ -276,8 +277,8 @@ public class OWF_CiSearchPageSteps {
     @And("user validates Category default value is {string}")
     public void userValidatesCategoryDefaultValueIs(String arg0) {
         Assert.assertEquals(ciSearchPage.getImpactCategory(), arg0);
-        ciSearchPage.clickOk_popUp();
-        userSwitchesToDefault();
+        //ciSearchPage.clickOk_popUp();
+        //userSwitchesToDefault();
     }
 
     @And("user validates Level default value is {string}")
@@ -347,5 +348,50 @@ public class OWF_CiSearchPageSteps {
     @And("user validates with errors as {string}")
     public void userValidatesWithErrorsAs(String arg0) {
         Assert.assertEquals(ciSearchPage.getWithErrors(), arg0);
+    }
+
+    @Then("user highlights Completed under Status in row three")
+    public void userHighlightsCompletedUnderStatusInRowThree() {
+        ciSearchPage.clickRow3();
+    }
+
+    @Then("user validates impact from time is same as event start time")
+    public void userValidatesImpactFromTimeIsSameAsEventStartTime() {
+        Assert.assertEquals(CommonUtils.eventStartTime, ciSearchPage.getImpactFrom());
+    }
+
+    @And("user enters impact from date as current date midnight plus {int} hours on bulk CI loading window")
+    public void userEntersImpactFromDateAsCurrentDateMidnightPlusHoursOnBulkCILoadingWindow(int arg0) {
+        int newDelay= arg0*60;
+        ciSearchPage.enterImpactFrom(CommonUtils.getDateAsTodayMidnight(newDelay));
+    }
+
+
+    @And("user should see error message of {string} on bulk cI window")
+    public void userShouldSeeErrorMessageOfOnBulkCIWindow(String error) {
+      Assert.assertTrue(ciSearchPage.verifyErrorText1(error));
+    }
+
+    @And("user should see error message of {string} on bulk cI window and clicks ok")
+    public void userShouldSeeErrorMessageOfOnBulkCIWindowAndClicksOk(String error) {
+        Assert.assertTrue(ciSearchPage.verifyErrorText2(error));
+        ciSearchPage.clickOk_OnPop_up();
+
+    }
+
+    @And("user clears manual CI text field")
+    public void userClearsManualCITextField() {
+        ciSearchPage.clearTextManualCiSearchBox();
+    }
+
+    @Then("user validates Request ID, BIR_GUID, Submitter, Create Date, Last Modified, Modified Date, import start time, import end time, import duration fields are updated")
+    public void userValidatesRequestIDBIR_GUIDSubmitterCreateDateLastModifiedModifiedDateImportStartTimeImportEndTimeImportDurationFieldsAreUpdated() {
+
+        ciSearchPage.verifyFieldsGotUpdated();
+    }
+
+    @And("user validates with warnings as {string}")
+    public void userValidatesWithWarningsAs(String arg0) {
+        Assert.assertEquals(ciSearchPage.getWithWarnings(), arg0);
     }
 }

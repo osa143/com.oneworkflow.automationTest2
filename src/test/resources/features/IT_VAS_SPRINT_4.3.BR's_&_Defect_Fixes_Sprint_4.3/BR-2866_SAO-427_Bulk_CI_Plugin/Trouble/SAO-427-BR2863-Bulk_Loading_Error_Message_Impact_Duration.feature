@@ -30,6 +30,7 @@ Feature: checking of bulk loading error message impact duration
     And user closes warning message
     When user clears "To+" date field
     And user enters impact to date as current date midnight plus 12 hours on bulk CI loading window
+
     Then user should see error message of "Errors where found:  (300825): From date cannot be in the future for un-planned impact record.  Impact From date must be before Impact To date."
     And user closes warning message
     When user clears manual CI search box

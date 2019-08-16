@@ -39,7 +39,7 @@ Feature: checking of bulk loading additional definitions default settings
     And user switches to frame
     Then user should see bulk ci loading window
     And user validates "Impact Type*" is present
-    And user validates "Impact Type*" default value is "Un-Planned"
+    And user validates "Impact Type*" default value is "Planned"
     Then multiple statuses "Planned:Un-Planned:(clear)" should be available in "Impact Type*" dropdown
     And user validates "Category*" is present
     And user validates "Category*" default value is "Actual"

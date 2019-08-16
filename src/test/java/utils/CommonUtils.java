@@ -71,8 +71,13 @@ public class CommonUtils extends BasePage {
         LocalTime midnight = LocalTime.MIDNIGHT;
         LocalDate today = LocalDate.now(ZoneId.of("Europe/Stockholm"));
         LocalDateTime todayMidnight = LocalDateTime.of(today, midnight);
-        todayMidnight = todayMidnight.plusMinutes(delayMinutes);
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");
+
+        if (delayMinutes >= 0) {
+            todayMidnight = todayMidnight.plusMinutes(delayMinutes);
+        } else {
+            todayMidnight= todayMidnight.minusMinutes(Math.abs(delayMinutes));
+        }
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         return dateTimeFormatter.format(todayMidnight);
 
     }

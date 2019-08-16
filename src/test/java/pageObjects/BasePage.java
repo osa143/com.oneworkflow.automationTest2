@@ -531,7 +531,7 @@ public class BasePage {
         boolean columnDisplayed = false;
 
         //Get all web elements
-        List<WebElement> tableHeaders = findElement(By.className("BaseTableColHeaders")).findElements(By.className("BaseTableHeader"));
+        List<WebElement> tableHeaders = driver.findElement(By.className("BaseTableColHeaders")).findElements(By.className("BaseTableHeader"));
 
         for (int i = 0; i < tableHeaders.size(); i++) {
            // System.out.println("=== " + i + " === " + tableHeaders.get(i).getAttribute("innerHTML").trim() + " ===");

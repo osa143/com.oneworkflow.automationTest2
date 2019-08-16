@@ -47,8 +47,47 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String txt_IMPACT_LEVEL="arid_WIN_0_700009082";
     private static final String txt_TOTAL_ROWS= "arid_WIN_0_800038068";
     private static final String txt_ROWS_OK= "arid_WIN_0_800038071";
+    private static final String btn_UPLOAD_IMPORT_FILE="WIN_0_536870926";
+    private static final String rbtn_WITH_ERRORS= "WIN_0_rc4id7";
+    private static final String fld_DOCUMENT_AREA= "arid_WIN_0_800038110";
+    private static final String txt_IMPORT_START_DATE= "arid_WIN_0_800038001";
+    private static final String txt_IMPORT_END_DATE= "arid_WIN_0_800038002";
+    private static final String txt_IMPORT_DURATION="arid_WIN_0_800038004";
+    private static final String txt_WITH_ERRORS="arid_WIN_0_800038070";
 
 
+    public String getWithErrors(){
+        return getAttributeValueById(txt_WITH_ERRORS);
+    }
+
+    public String getImportDuration(){
+        return getAttributeValueById(txt_IMPORT_DURATION);
+    }
+    public String getImportStartTime(){
+        return getAttributeValueById(txt_IMPORT_START_DATE);
+    }
+    public String getImportEndTime(){
+        return getAttributeValueById(txt_IMPORT_END_DATE);
+    }
+
+
+    public boolean verifyRelatedCisTableValues(String columnName, String columnValue){
+        return verifyColumnValuesMultiple(By.id(table_BULK_CI_LOADING_RELATED_CIS), columnName, columnValue, false);
+    }
+
+    public boolean verifyWithErrorsIsDisplayed(){
+        return verifyElementIsDisplayed(By.id(rbtn_WITH_ERRORS));
+    }
+    public boolean verifyDocumentIsDisplayed(){
+        return verifyElementIsDisplayed(By.id(fld_DOCUMENT_AREA));
+    }
+
+   public void ClickBulkCiloadingTableElement(String columnName, String text){
+       ClickTableElementByText(By.id(table_BULK_CI_LOADING_RELATED_JOBS), columnName, text, false);
+   }
+    public void clickUploadImportFile(){
+        clickElement(By.id(btn_UPLOAD_IMPORT_FILE));
+    }
     public String getTotalRows(){
         return getAttributeValueById(txt_TOTAL_ROWS);
     }
@@ -126,6 +165,7 @@ public class OWF_CiSearchPage extends BasePage {
 
     public void clickShowBulkImport(){
         clickElement(By.id(btn_SHOW_BULK_IMPORT));
+        wait(1000);
     }
 
 

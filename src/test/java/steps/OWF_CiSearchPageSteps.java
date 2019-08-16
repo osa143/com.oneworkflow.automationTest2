@@ -276,6 +276,8 @@ public class OWF_CiSearchPageSteps {
     @And("user validates Category default value is {string}")
     public void userValidatesCategoryDefaultValueIs(String arg0) {
         Assert.assertEquals(ciSearchPage.getImpactCategory(), arg0);
+        ciSearchPage.clickOk_popUp();
+        userSwitchesToDefault();
     }
 
     @And("user validates Level default value is {string}")
@@ -288,11 +290,6 @@ public class OWF_CiSearchPageSteps {
         Assert.assertTrue(ciSearchPage.verifyImpactTypeDropdownValues(arg0, ""));
     }
 
-    @Then("user validates bulk ci loading table contains column names:{string}")
-    public void userValidatesBulkCiLoadingTableContainsColumnNames(String arg0) {
-        Assert.assertTrue(ciSearchPage.verifyBulkCILoadingColumnValues(arg0));
-    }
-
     @And("user validates total rows as {string}")
     public void userValidatesTotalRowsAs(String arg0) {
         Assert.assertEquals(ciSearchPage.getTotalRows(), arg0);
@@ -301,5 +298,54 @@ public class OWF_CiSearchPageSteps {
     @And("user validates Rows OK as {string}")
     public void userValidatesRowsOKAs(String arg0) {
         Assert.assertEquals(ciSearchPage.getRowsOk(), arg0);
+    }
+
+    @Then("user validates bulk ci loading table contains columns {string} {string} {string} {string}")
+    public void userValidatesBulkCiLoadingTableContainsColumn(String arg0, String arg1, String arg2, String arg3) {
+        Assert.assertTrue(ciSearchPage.isColumnDisplayed(arg0));
+        Assert.assertTrue(ciSearchPage.isColumnDisplayed(arg1));
+        Assert.assertTrue(ciSearchPage.isColumnDisplayed(arg2));
+        Assert.assertTrue(ciSearchPage.isColumnDisplayed(arg3));
+    }
+
+    @Then("user clicks on Upload Import File")
+    public void userClicksOnUploadImportFile() {
+        ciSearchPage.clickUploadImportFile();
+    }
+
+    @And("user validates With Errors is visible on bulk CI loading window")
+    public void userValidatesWithErrorsIsVisibleOnBulkCILoadingWindow() {
+    Assert.assertTrue(ciSearchPage.verifyWithErrorsIsDisplayed());
+    }
+
+    @Then("user highlights {string} under {string}")
+    public void userHighlightsUnder(String arg0, String arg1) {
+        ciSearchPage.ClickBulkCiloadingTableElement(arg1, arg0);
+    }
+
+    @And("user validates txt doc is visible")
+    public void userValidatesTxtDocIsVisible() {
+        Assert.assertTrue(ciSearchPage.verifyDocumentIsDisplayed());
+    }
+
+    @Then("user validates at least one CI has {string} under {string}")
+    public void userValidatesAtLeastOneCIHasUnder(String colValue, String colName) {
+       Assert.assertTrue(ciSearchPage.verifyRelatedCisTableValues(colName, colValue));
+    }
+
+    @Then("import Start Date and End date should be updated")
+    public void importStartDateAndEndDateShouldBeUpdated() {
+        Assert.assertNotEquals(ciSearchPage.getImportStartTime(), "");
+        Assert.assertNotEquals(ciSearchPage.getImportEndTime(), "");
+    }
+
+    @And("user validates import duration txt field is updated")
+    public void userValidatesImportDurationTxtFieldIsUpdated() {
+        Assert.assertNotEquals(ciSearchPage.getImportDuration(), "");
+    }
+
+    @And("user validates with errors as {string}")
+    public void userValidatesWithErrorsAs(String arg0) {
+        Assert.assertEquals(ciSearchPage.getWithErrors(), arg0);
     }
 }

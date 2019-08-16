@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="24" parent-id="1">
+<tr class="s-fail" test-id="76" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then user clicks on bulk update save button <br/><span class="text-muted text-sm">user checks the message structure of bulk loading error</span></td>
-	<td>0h 0m 30s+32msc</td>
+	<td class="_600">When user clicks on Show Bulk Import button <br/><span class="text-muted text-sm">user checks the message structure of bulk loading error</span></td>
+	<td>0h 0m 30s+77msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,22 +136,23 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: WIN_0_990000906 (tried for 30 second(s) with 500 milliseconds interval)
+		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: WIN_0_800038047 (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at pageObjects.BasePage.findElement(BasePage.java:54)
-	at pageObjects.OWF_TroubleEventPage.clickSave_bulkUpdate(OWF_TroubleEventPage.java:368)
-	at steps.OWF_TroubleEventPageSteps.userClicksOnBulkUpdateSaveButton(OWF_TroubleEventPageSteps.java:609)
-	at ✽.user clicks on bulk update save button(features/IT_VAS_SPRINT_4.3.BR's_&_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/SAO-427-BR2862-Bulk_Loading_Error_Message_Structure.feature:26)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#WIN_0_990000906"}
+	at pageObjects.BasePage.clickElement(BasePage.java:92)
+	at pageObjects.OWF_CiSearchPage.clickShowBulkImport(OWF_CiSearchPage.java:167)
+	at steps.OWF_CiSearchPageSteps.userClicksOnShowBulkImportButton(OWF_CiSearchPageSteps.java:230)
+	at ✽.user clicks on Show Bulk Import button(features/IT_VAS_SPRINT_4.3.BR's_&_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/SAO-427-BR2862-Bulk_Loading_Error_Message_Structure.feature:81)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#WIN_0_800038047"}
   (Session info: chrome=76.0.3809.100)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.241.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56050}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: d3addf22e06658e66804872cc70cf218
-*** Element info: {Using=id, value=WIN_0_990000906}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50980}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 575ecad6cf31c7d5ad68811a51f41e5a
+*** Element info: {Using=id, value=WIN_0_800038047}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -170,8 +171,9 @@ Session ID: d3addf22e06658e66804872cc70cf218
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	at pageObjects.BasePage.findElement(BasePage.java:54)
-	at pageObjects.OWF_TroubleEventPage.clickSave_bulkUpdate(OWF_TroubleEventPage.java:368)
-	at steps.OWF_TroubleEventPageSteps.userClicksOnBulkUpdateSaveButton(OWF_TroubleEventPageSteps.java:609)
+	at pageObjects.BasePage.clickElement(BasePage.java:92)
+	at pageObjects.OWF_CiSearchPage.clickShowBulkImport(OWF_CiSearchPage.java:167)
+	at steps.OWF_CiSearchPageSteps.userClicksOnShowBulkImportButton(OWF_CiSearchPageSteps.java:230)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -239,7 +241,7 @@ Session ID: d3addf22e06658e66804872cc70cf218
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 15, 2019 10:43:23 AM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 15, 2019 04:54:20 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

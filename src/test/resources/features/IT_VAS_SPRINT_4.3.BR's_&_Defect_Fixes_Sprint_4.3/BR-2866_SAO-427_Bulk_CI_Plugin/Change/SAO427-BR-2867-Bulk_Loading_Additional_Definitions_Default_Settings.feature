@@ -35,7 +35,7 @@ Feature: checking of bulk loading additional definitions default settings
     And user waits
     Then user validates availability of tabs "Timeline:Diagnosis:Risk:Schedule:Interested Parties:Approval:Notifications:Linked Items:Work Orders:Service Level:Related Project:Service Info:Telenor" on change record page
     When user clicks on Diagnosis tab
-    And user clicks on "Add Bulk Import" button
+    And user clicks on Add Bulk Import button
     And user switches to frame
     Then user should see bulk ci loading window
     And user validates "Impact Type*" is present
@@ -48,9 +48,9 @@ Feature: checking of bulk loading additional definitions default settings
     #Blank default value for level
     And user validates "Level" default value is ""
     And user validates "From*" is visible
-
+    And user validates "From*" time is same as change start time
     And user validates "To+" is visible
-
+    And user valdiates "To+" time is same as change end time
     And user validates "Hrs" is visible
     And user validates "Mins" is visible
     And user validates "Days" is visible

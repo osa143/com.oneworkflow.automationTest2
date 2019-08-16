@@ -60,3 +60,8 @@ Feature: checking of bulk loading CTI details
     And user validates "With Warnings" as 0
     And user validates "With Errors" as 0
     Then user clicks on bulk loading close button
+    And user clicks on ticket refresh button
+    When user clicks on CTI details under sections
+    Then user validates Category as "Access"
+    And user validates type as "WLAN"
+    And user validates item as "AP"

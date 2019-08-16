@@ -76,7 +76,7 @@
       When user clicks on Show Bulk Import button
       And user switches to frame
       Then user highlights "TXT" under "Import Type"
-      And user validates txt doc is visible
+      And user validates attached document is visible
       And user validates "Save Import File" is visible on bulk CI loading window tagname "div"
       When user clicks on "Related CIs" tab
       Then user validates at least one CI has "With Warnings" under "Status"

@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@CSV_Bulk_Loading_Primary_CI_Default_Settings"}
+        tags = {"@Bulk_Loading_Summary_Change"}
 )
 
 public class Test_Runner extends BaseTest {

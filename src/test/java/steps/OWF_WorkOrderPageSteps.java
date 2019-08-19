@@ -197,8 +197,8 @@ public class OWF_WorkOrderPageSteps {
 
 
     @And("user waits {int} secs")
-    public void userWaitsSecs(int arg0) {
-        int newDelay= arg0*1000;
+    public void userWaitsSecs(int seconds) {
+        int newDelay= seconds*1000;
         workOrderPage.wait(newDelay);
     }
 

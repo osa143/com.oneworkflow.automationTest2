@@ -63,6 +63,19 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String txt_LAST_MODIFIED= "arid_WIN_0_5";
     private static final String txt_MODIFIED_DATE= "arid_WIN_0_6";
     private static final String txt_WITH_WARNINGS= "arid_WIN_0_800038069";
+    private static final String PRIMARY_CI= "//*[@id='T700009087']/tbody/tr[2]/td[2]/nobr/span";
+    private static final String bulkCILoading_DIV_ID = "WIN_0_800038059";
+    private static final String rbtn_IGNORE_HANDLING_DUPLICATE_CIS= "WIN_0_rc0id800038013";
+
+    public void clickIgnoreHandlingDuplicateCis(){
+        clickElement(By.id(rbtn_IGNORE_HANDLING_DUPLICATE_CIS));
+    }
+
+    public String getPrimaryCI(){
+        String primaryCI= getTextByElement(By.xpath(PRIMARY_CI));
+        System.out.println("The primary CI is : " + primaryCI);
+        return primaryCI;
+    }
 
     public String getWithWarnings(){
         return getAttributeValueById(txt_WITH_WARNINGS);
@@ -78,6 +91,12 @@ public class OWF_CiSearchPage extends BasePage {
         Assert.assertNotEquals(getImportStartTime(), "");
         Assert.assertNotEquals(getImportEndTime(), "");
 
+    }
+
+    public String getImpactToPlus(){
+        String impactToPlus= getAttributeValueById(txt_IMPACT_TO_PLUS);
+        System.out.println(impactToPlus);
+        return impactToPlus;
     }
 
     public String getRequestId(){
@@ -115,7 +134,9 @@ public class OWF_CiSearchPage extends BasePage {
         findElement(By.id(txt_MANUAL_CI_SEARCH_BOX)).clear();
     }
    public String getImpactFrom(){
-       return getAttributeValueById(txt_IMPACT_FROM);
+       String impactFrom=getAttributeValueById(txt_IMPACT_FROM);
+       System.out.println(impactFrom);
+       return impactFrom;
    }
     public void clickRow3(){
         clickElement(By.xpath(row3_BILK_LOADING_RELATED_JOBS));
@@ -148,6 +169,10 @@ public class OWF_CiSearchPage extends BasePage {
         return getAttributeValueById(txt_TOTAL_ROWS);
     }
 
+    public boolean isColumnDisplayedByDivId(String columnName)
+    {
+        return isColumnDisplayedByDivId(columnName, bulkCILoading_DIV_ID);
+    }
     public String getRowsOk(){
         return getAttributeValueById(txt_ROWS_OK);
     }

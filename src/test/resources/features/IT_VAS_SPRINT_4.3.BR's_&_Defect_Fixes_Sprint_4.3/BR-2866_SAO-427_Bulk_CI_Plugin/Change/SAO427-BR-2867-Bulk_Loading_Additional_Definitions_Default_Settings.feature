@@ -1,4 +1,5 @@
-@SAO-427-BR2862-Bulk_Loading_Additional_Definitions_Default_Settings_Change @SAO-427
+@Bulk_Loading_Additional_Definitions_Default_Settings_Change @SAO-427
+  #passed
 Feature: checking of bulk loading additional definitions default settings
   Scenario: user checks the bulk loading additional definitions default settings
 
@@ -26,9 +27,8 @@ Feature: checking of bulk loading additional definitions default settings
     And user enters "Privacy Data: Just Testing" in the change builder field
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
     Then user enters request start time 24 hours ahead of current date
-    And user logs change start time
     And user enters request end time 28 hours ahead of current date
-    And user logs change end time
+    And user gets request start and end time on change record page
     And user enters impact duration as "45" minutes
     And user selects estimated impact dropdown as "Degradation of Service"
     And user clicks on save button
@@ -38,27 +38,23 @@ Feature: checking of bulk loading additional definitions default settings
     And user clicks on Add Bulk Import button
     And user switches to frame
     Then user should see bulk ci loading window
-    And user validates "Impact Type*" is present
-    And user validates "Impact Type*" default value is "Planned"
-    Then multiple statuses "Planned:Un-Planned:(clear)" should be available in "Impact Type*" dropdown
-    And user validates "Category*" is present
-    And user validates "Category*" default value is "Actual"
+    And user validates "Impact Type*" is visible on bulk CI loading window tagname "label"
+    And user validates Impact Type default value is "Planned"
+    Then multiple statuses "Planned:Un-Planned:(clear)" should be available in Impact Type dropdown
+    And user validates "Category*" is visible on bulk CI loading window tagname "label"
+    And user validates Category default value is "Actual"
     Then multiple statuses "Actual:Potential:(clear)" should be available in "Category*" dropdown
-    And user validates "Level*" is present
+    And user validates "Level*" is visible on bulk CI loading window tagname "label"
     #Blank default value for level
-    And user validates "Level" default value is ""
-    And user validates "From*" is visible
-    And user validates "From*" time is same as change start time
-    And user validates "To+" is visible
-    And user valdiates "To+" time is same as change end time
-    And user validates "Hrs" is visible
-    And user validates "Mins" is visible
-    And user validates "Days" is visible
-    And user validates "Secs" is visible
-    Then user validates CIs input type "Upload File" is present
-    And user validates CIs input type "Manual Input" is present
-    And user validates error handling contains "Ignore Duplicate CIs"
-    Then user clicks on close button under bulk loading
+    And user validates Level default value is ""
+    And user validates "From*" is visible on bulk CI loading window tagname "label"
+    Then user validates impact from time is same as request start time
+    Then user validates impact to time is same as request end time
+    And user validates "To+" is visible on bulk CI loading window tagname "label"
+    And user validates "Upload File" is visible on bulk CI loading window tagname "label"
+    And user validates "Manual Input" is visible on bulk CI loading window tagname "label"
+    And user validates "Ignore Duplicate CIs" is visible on bulk CI loading window tagname "label"
+    Then user clicks on bulk loading close button
     
 
 

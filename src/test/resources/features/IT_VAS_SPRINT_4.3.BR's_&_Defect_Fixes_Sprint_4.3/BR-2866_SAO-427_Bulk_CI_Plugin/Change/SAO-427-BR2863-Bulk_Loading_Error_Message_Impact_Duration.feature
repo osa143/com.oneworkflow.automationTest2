@@ -1,4 +1,4 @@
-@SAO-427-BR2863-Bulk_Loading_Error_Message_Impact_Duration_Change @SAO-427
+@Bulk_Loading_Error_Message_Impact_Duration_Change @SAO-427
 Feature: checking of bulk loading error message impact duration
   Scenario: user checks the impact duration message of bulk loading error
 
@@ -37,15 +37,15 @@ Feature: checking of bulk loading error message impact duration
     And user switches to frame
     Then user should see bulk ci loading window
     When user selects impact level as "No Impact"
-    And user enters impact from date as current date midnight plus 24 hours on bulk CI loading window
-    And user enters impact to date as current date midnight plus 30 hours on bulk CI loading window
+    And user enters impact from date as current date midnight plus 48 hours on bulk CI loading window
+    And user enters impact to date as current date midnight plus 54 hours on bulk CI loading window
     And user clicks on Manual Input radio button
     And user enters "One Workflow" in manual CI search box
     Then user clicks on save button under bulk import
     And user should see error message of "(300825): From date cannot be in the future for un-planned impact record." on bulk cI window
     And user should see error message of "To date cannot be in the future for un-planned impact record." on bulk cI window and clicks ok
     And user switches to frame
-    And user enters impact to date as current date midnight plus 12 hours on bulk CI loading window
+    And user enters impact to date as current date midnight plus 36 hours on bulk CI loading window
     And user clicks on save button under bulk import
     Then user should see error message of "(300825): From date cannot be in the future for un-planned impact record." on bulk cI window
     And user should see error message of "Impact From date must be before Impact To date." on bulk cI window and clicks ok

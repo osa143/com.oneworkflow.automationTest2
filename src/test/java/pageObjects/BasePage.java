@@ -140,6 +140,12 @@ public class BasePage {
     public String getAttributeValueById(String Id) {
         return findElement(By.id(Id)).getAttribute("value");
     }
+    public String getAttributeValueByElement(By element) {
+        return findElement(element).getAttribute("value");
+    }
+    public String getTextByElement(By element) {
+        return findElement(element).getText();
+    }
     public String getTextByID(String id){
         return findElement(By.id(id)).getText();
     }
@@ -502,10 +508,6 @@ public class BasePage {
         return cellData;
     }
 
-
-
-
-// TO-DO method should be removed. use below method instead by passing div id
     public boolean isColumnDisplayedByDivId(String columnName, String divId){
 //        left: 3508px; text-align: left; width: 89px;
         boolean columnDisplayed = false;

@@ -15,17 +15,9 @@ Feature: checking of bulk loading format
       And user clicks on save button
       Then ticket should be created and status should be assigned
       When user clicks on Diagnosis tab
-      And user clicks on "Add Bulk Import" button
+      And user clicks on Add Bulk Import button
       And user switches to frame
       Then user should see bulk ci loading window
-      And user validates "Impact Type*" is visible
-      And user validates "Category*" is visible
-      And user validates "Level*" is visible
-      And user validates "From*" is visible
-      And user validates "To+" is visible
-      And user validates "Ignore Duplicate CIs" is visible
-      And user validates "Upload File" radio button is visible
-      And user validates "Manual Input" radio button is visible
       And user validates "Download File Template" is visible
       And user validates "Upload Import File" is visible
       And user validates "Save" is visible

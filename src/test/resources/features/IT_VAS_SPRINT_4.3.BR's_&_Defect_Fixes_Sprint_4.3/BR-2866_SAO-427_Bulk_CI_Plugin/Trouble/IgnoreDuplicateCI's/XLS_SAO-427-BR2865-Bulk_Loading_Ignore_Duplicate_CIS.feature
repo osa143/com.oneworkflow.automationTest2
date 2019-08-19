@@ -1,4 +1,4 @@
-@SAO-427-BR2865-Bulk_Loading_Ignore_Duplicate_CI's_Trouble
+@Bulk_Loading_Ignore_Duplicate_CI's_Trouble_XLS @SAO-427
   Feature: Bulk Loading ignore duplicate CI's
     Scenario: Bulk Loading ignore duplicate CI's
 
@@ -22,9 +22,10 @@
       Then multiple statuses "Planned:Un-Planned:(clear)" should be available in Impact Type dropdown
       And user validates Category default value is "Actual"
       Then multiple statuses "Actual:Potential:(clear)" should be available in "Category*" dropdown
-    #Blank default value for level
+       #Blank default value for level
       And user validates Level default value is ""
       Then user selects impact level as "No Impact"
+      And user clicks on Ignore Duplicate CIs checkbox
       And user clicks on Upload Import File
       Then user clicks on choose file button
       #50CI's XLS with duplicate
@@ -35,7 +36,7 @@
       Then user clicks on save button under bulk import
       And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-      And user waits 3 secs
+      And user waits 10 secs
       When user clicks on Show Bulk Import button
       And user switches to frame
       When user clicks on "Related CIs" tab

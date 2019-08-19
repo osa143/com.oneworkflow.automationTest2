@@ -306,12 +306,14 @@ public class OWF_CiSearchPageSteps {
         Assert.assertEquals(ciSearchPage.getRowsOk(), arg0);
     }
 
-    @Then("user validates bulk ci loading table contains columns {string} {string} {string} {string}")
-    public void userValidatesBulkCiLoadingTableContainsColumn(String arg0, String arg1, String arg2, String arg3) {
-        Assert.assertTrue(ciSearchPage.isColumnDisplayed(arg0));
-        Assert.assertTrue(ciSearchPage.isColumnDisplayed(arg1));
-        Assert.assertTrue(ciSearchPage.isColumnDisplayed(arg2));
-        Assert.assertTrue(ciSearchPage.isColumnDisplayed(arg3));
+    @Then("user validates bulk ci loading table contains columns {string}")
+    public void userValidatesBulkCiLoadingTableContainsColumn(String columnValues) {
+
+        String[] values = columnValues.split(":");
+        for(int i = 0; i < values.length; i++)
+        {
+            Assert.assertTrue(ciSearchPage.isColumnDisplayedByDivId(values[i]));
+        }
     }
 
     @Then("user clicks on Upload Import File")
@@ -402,5 +404,27 @@ public class OWF_CiSearchPageSteps {
 
     @Then("user validates primary ci as {string}")
     public void userValidatesPrimaryCiAs(String arg0) {
+        Assert.assertEquals(ciSearchPage.getPrimaryCI(), arg0);
     }
+
+    @And("user clicks on Ignore Duplicate CIs checkbox")
+    public void userClicksOnIgnoreDuplicateCIsCheckbox() {
+        ciSearchPage.clickIgnoreHandlingDuplicateCis();
+    }
+
+    @And("user validates warning message as {string} in row {int}")
+    public void userValidatesWarningMessageAsInRow(String message, int rowNum) {
+        Assert.assertEquals(ciSearchPage.verifyRelatedCIs("Warning/Error Messages",rowNum), message);
+    }
+    @Then("user validates impact from time is same as request start time")
+    public void userValidatesImpactFromTimeIsSameAsRequestStartTime() {
+        Assert.assertEquals(ciSearchPage.getImpactFrom(), CommonUtils.requestStart);
+    }
+
+    @Then("user validates impact to time is same as request end time")
+    public void userValidatesImpactToTimeIsSameAsEventEndTime() {
+        Assert.assertEquals(ciSearchPage.getImpactToPlus(), CommonUtils.requestEnd);
+    }
+
+
 }

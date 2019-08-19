@@ -1,4 +1,5 @@
 @XLSX_Bulk_Loading_Primary_CI_Default_Settings @SAO-427
+  #passed
 Feature: checking of bulk loading additional definitions default settings
   Scenario: user checks the bulk loading additional definitions default settings
 
@@ -35,6 +36,7 @@ Feature: checking of bulk loading additional definitions default settings
     Then user clicks on save button under bulk import
     And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
     And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
+    And user waits 3 secs
     When user clicks on Show Bulk Import button
     And user switches to frame
     And user clicks on "Related CIs" tab
@@ -43,10 +45,9 @@ Feature: checking of bulk loading additional definitions default settings
     And user validates Rows OK as "10"
     And user validates with errors as "0"
     And user validates with warnings as "0"
-    And user waits 3 secs
     Then user validates at least one CI has "Completed" under "Status"
     Then user clicks on bulk loading close button
-    And user waits 10 secs
+    And user waits 5 secs
     When user clicks on ticket refresh button
     And user clicks on Diagnosis tab
     Then user validates primary ci as "SE_AP_alvesta-radmannen-ap1"

@@ -27,7 +27,8 @@
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
       When user clicks on Show Bulk Import button
       And user switches to frame
-      #Then user validates bulk ci loading table contains columns "Submitter" "Import Type" "Date" "Status"
+      And user waits 1 secs
+      Then user validates bulk ci loading table contains columns "Submitter:Import Type:Date:Status"
       When user clicks on "Related CIs" tab
       And user validates "CI Name" as "One Workflow" in row 1
       And user validates "Status" as "Completed" in row 1

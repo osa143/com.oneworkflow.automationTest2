@@ -479,4 +479,12 @@ public class OWF_ChangeRecordPageSteps {
     public void userLogsOutFromOneWorkflow() {
         changeRecordPage.selectDropDownNameAndValue("Nav-Username", "Logout", false);
     }
+
+    @And("user gets request start and end time on change record page")
+    public void userGetsRequestStartAndEndTimeOnChangeRecordPage() {
+        CommonUtils.requestStart=changeRecordPage.getRequestStart();
+        CommonUtils.requestEnd=changeRecordPage.getRequestEnd();
+        System.out.println("Event Start time is : " +CommonUtils.requestStart);
+        System.out.println("Event End time is : " + CommonUtils.requestEnd);
+    }
 }

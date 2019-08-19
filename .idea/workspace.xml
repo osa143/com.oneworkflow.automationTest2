@@ -459,13 +459,6 @@
       <workItem from="1566124357955" duration="8530000" />
       <workItem from="1566201057717" duration="6723000" />
     </task>
-    <task id="LOCAL-00037" summary="added feature for life cycle known error">
-      <created>1561113683766</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1561113683767</updated>
-    </task>
     <task id="LOCAL-00038" summary="added features and steps for search, PMO Tab">
       <created>1561130886229</created>
       <option name="number" value="00038" />
@@ -802,7 +795,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565967719085</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Added data driving of e2e test cases">
+      <created>1566217530037</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1566217530038</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -890,7 +890,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added new features and steps" />
     <MESSAGE value="modified features and added steps for profile permissions" />
     <MESSAGE value="updated features and steps for permissions-4" />
     <MESSAGE value="updated steps and features" />
@@ -915,7 +914,8 @@
     <MESSAGE value="updated features and steps for bulk CI loading" />
     <MESSAGE value="added steps for bulk CI loading" />
     <MESSAGE value="added steps for bulk CI loading trouble" />
-    <option name="LAST_COMMIT_MESSAGE" value="added steps for bulk CI loading trouble" />
+    <MESSAGE value="Added data driving of e2e test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added data driving of e2e test cases" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

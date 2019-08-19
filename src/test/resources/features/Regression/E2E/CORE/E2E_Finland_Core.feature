@@ -12,7 +12,7 @@ Feature: E2E Scenarios
     When user validates BU availability
     And user clicks on <Checked BU1> checkbox under affected BU's
     And user clicks on <Checked BU2> checkbox under affected BU's
-    Then user validates <Ticket BU1> and <Ticket BU2> checkboxes are selected
+    Then user validates <TickedBU1> and <TickedBU2> checkboxes are selected
     When user clicks on CTI details under sections
     And user validates availability of category dropdown
     Then multiple statuses "1:Access:Access|Transport:BSS:Computer Services:CORE:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:OSS:Packet_Transport:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:TV:VAS" should be available in "Category" dropdown

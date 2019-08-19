@@ -33,7 +33,7 @@
       And user waits
       Then user validates availability of tabs "Timeline:Diagnosis:Risk:Schedule:Interested Parties:Approval:Notifications:Linked Items:Work Orders:Service Level:Related Project:Service Info:Telenor" on change record page
       When user clicks on Diagnosis tab
-      And user clicks on "Add Bulk Import" button
+      And user clicks on Add Bulk Import button
       And user switches to frame
       Then user should see bulk ci loading window
       And user validates "Impact Type*" is visible
@@ -42,35 +42,31 @@
       And user validates "From*" is visible
       And user validates "To+" is visible
       And user validates "Ignore Duplicate CIs" is visible
-      And user validates "Upload File" radio button is visible
-      And user validates "Manual Input" radio button is visible
+      And user validates Upload File radio button is visible
+      And user validates Manual Input radio button is visible
       And user validates "Download File Template" is visible
       And user validates "Upload Import File" is visible
       And user validates "Save" is visible
       And user validates "Close" is visible
       When user selects impact level as "No Impact"
       And user enters impact from date as current date
-      And user enters impact to date as current date +4h
-      And user clicks on "Manual Input" radio button
-      And user enters "" in manual CI search box
+      And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window
+      And user clicks on Manual Input radio button
+      And user enters "SE_RNC_VRRRU115;SE_RNC_VRRRU126;SE_RNC_VRRRU135;SE_RNC_VRRRU136;SE_RNC_VRRRU155" in manual CI search box
       Then user clicks on save button under bulk import
       And user clicks on attachment ok button
       When user selects impact level as "No Impact"
-      And user enters impact from date as current date
-      And user enters impact to date as current date +4h
-      Then user clicks on save button under bulk ci
-      When user clicks on "Show Bulk Import" button
+      Then user clicks on save button under bulk import
+      And first error message should display as "The manually identified CIs are now being processed..." on bulk ci window
+      And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
+      And user clicks on Show Bulk Import button
       And user switches to frame
-      Then user validates uploaded file is visible
       And user clicks on "Related CIs" tab
-      Then user validates at least 1 CI has "completed" status
-      And user validates "Total Rows" as 1
-      And user validates "Rows Ok" as 1
-      And user validates "With Warnings" as 0
-      And user validates "With Errors" as 0
-      Then user clicks on bulk loading close button
-      When user clicks on "Other Fields" tab
-      Then user validates "Import Start Date" is not null
-      Then user validates "Import End Date" is not null
-      And user validates "Import Duration Text" is not null
-      And user clicks on bulk loading close button
+      And user validates "Status" as "Completed" in row 1
+      Then user validates at least one CI has "Completed" under "Status"
+      And user validates "CI Name" as "SE_RNC_VRRRU115" in row 1
+      And user validates "Dup. CIs" as "1" in row 1
+      And user validates total rows as "5"
+      And user validates Rows OK as "5"
+      And user validates with warnings as "0"
+      And user validates with errors as "0"

@@ -251,3 +251,9 @@
       And user enters closure info as "Test Ticket"
       And user clicks on save button
       Then user validates ticket status as "Closed"
+
+
+      |CI Name|TickedBU1|TickedBU2|Location|Title|Description|First CI|Second CI|Third CI|Validate CI|Validate BU|
+      |SE_    |Finland  |Denmark  |SE_Site_SE M1|Test case MT004 Sweden E2E|Test case MT004 Sweden E2E|SE_SGSN_VRRMME1|SE_SGSN_LDHMME1|DK_SGSN_AMBMME1|DK_SGSN_AMBMME1|Denmark|
+
+

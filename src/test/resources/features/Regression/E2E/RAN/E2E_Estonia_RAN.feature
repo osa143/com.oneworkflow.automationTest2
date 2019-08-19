@@ -10,9 +10,9 @@ Feature: E2E Scenarios
     And user switches to window 1
     Then trouble record form should appear in new tab
     When user validates BU availability
-    And user clicks on estonia checkbox under affected BU's
-    And user clicks on sweden checkbox under affected BU's
-    Then user validates estonia and sweden checkboxes are selected
+    And user clicks on <CheckedBU1> checkbox under affected BU's
+    And user clicks on <CheckedBU2> checkbox under affected BU's
+    Then user validates <TicketBU1> and <TicketBU2> checkboxes are selected
     When user clicks on CTI details under sections
     And user validates availability of category dropdown
     Then multiple statuses "1:Access:Access|Transport:BSS:Computer Services:CORE:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:OSS:Packet_Transport:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:TV:VAS" should be available in "Category" dropdown
@@ -26,14 +26,14 @@ Feature: E2E Scenarios
     And user validates event start time is present
     When user clicks on location under sections
     #To search for the location details you need to press enter after the text
-    And user enters "EE_" within the location ID+ field
+    And user enters "<Location>" within the location ID+ field
     And user switches to frame
     Then user should see list of estonia sites
     #Location Name,Location ID+,Region Name, Region ID, Latitude, Longitude
-    And user highlights location "EE- AUT0001" and clicks ok and validates location details
-    When user enters "Test case MT004 Estonia E2E" in Title field in Trouble event
+    And user highlights location <Location> and clicks ok and validates location details
+    When user enters "<Title>" in Title field in Trouble event
     And user selects request type as "Customer" on trouble event page
-    And user enters description as "Test case MT004 Estonia E2E"
+    And user enters description as "<Description>"
     Then user clicks on save button
     And ticket should be created and status should be assigned
       #Need to validate that Timeline, Diagnosis,Interested Parties, Notification, Linked Items, Work Orders, Service Level, Alarms, Recurring Incidents, Service Info are all present
@@ -45,9 +45,9 @@ Feature: E2E Scenarios
     And user selects Type as "Mobile PS Core Network"
     And user selects Item as "SGSN"
     Then user clicks on search button on CI search window
-    When user selects CI "EE_SGSN_EE-CSGN01MME"
-    And user selects CI "EE_SGSN_EE-CSGN02MME"
-    And user selects CI "FI_SGSN_FI-CSGN01MME"
+    When user selects CI "<CI Name>"
+    And user selects CI "<CI Name2"
+    And user selects CI "<CI Name3>"
     And user clicks on relate CI
     Then error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
       #And error message should display as "Please fill in all impact details in order to relate CI to the request. (ARERR 300825)"
@@ -59,10 +59,10 @@ Feature: E2E Scenarios
     And user clicks on close button on CI search window
     And CI should be listed and displayed under the Diagnosis tab
     Then user validates CI "Impact Status" is "Active"
-    And user validates "Primary" CI is equal to "EE_SGSN_EE-CSGN01MME"
+    And user validates "Primary" CI is equal to <Validate CI>
     Then user clicks on save button
       #Should be added automatically based on CI
-    And user validates "Finland" BU is added automatically
+    And user validates <Validate BU> BU is added automatically
     When user clicks on attachments under sections
     And user clicks on add button under internal
     Then user switches to frame

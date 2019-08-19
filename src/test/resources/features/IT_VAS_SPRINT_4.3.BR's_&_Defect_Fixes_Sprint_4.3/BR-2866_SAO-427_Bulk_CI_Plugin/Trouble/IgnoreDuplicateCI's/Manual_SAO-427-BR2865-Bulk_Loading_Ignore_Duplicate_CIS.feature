@@ -40,6 +40,11 @@
       And user validates warning message as "Multiple CIs named 'FI DNS Gi' were found, and the import job is configured to Ignore Duplicate CIs!" in row 3
       And user validates warning message as "Multiple CIs named 'FI DNS Gn' were found, and the import job is configured to Ignore Duplicate CIs!" in row 4
       And user validates warning message as "Multiple CIs named 'FI_AFG_AFG01FI' were found, and the import job is configured to Ignore Duplicate CIs!" in row 5
+      And user validates "Status" as "With Warnings" in row 1
+      And user validates "Status" as "With Warnings" in row 2
+      And user validates "Status" as "With Warnings" in row 3
+      And user validates "Status" as "With Warnings" in row 4
+      And user validates "Status" as "With Warnings" in row 5
       Then user clicks on bulk loading close button
 
 

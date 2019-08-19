@@ -1,4 +1,5 @@
-@Bulk_Loading_Ignore_Duplicate_CI's_Trouble @SAO-427
+@XLSX_Bulk_Loading_Ignore_Duplicate_CI's_Trouble @SAO-427
+  #passed
   Feature: Bulk Loading ignore duplicate CI's
     Scenario: Bulk Loading ignore duplicate CI's
 
@@ -42,6 +43,8 @@
       And user validates Rows OK as "24"
       And user validates with errors as "24"
       And user validates with warnings as "2"
-      And user validates warning message as "Multiple CIs named 'LT DNS SIP' were found, and the import job is configured to Ignore Duplicate CIs!"
-      And user validates status message as "Completed (With Warnings)"
-      Then user clicks on close button on bulk update window
+      And user validates warning message as "Multiple CIs named 'LT DNS SIP' were found, and the import job is configured to Ignore Duplicate CIs!" in row 12
+      And user validates warning message as "Multiple CIs named 'LT DNS SIP' were found, and the import job is configured to Ignore Duplicate CIs!" in row 37
+      And user validates "Status" as "With Warnings" in row 12
+      And user validates "Status" as "With Warnings" in row 37
+      Then user clicks on bulk loading close button

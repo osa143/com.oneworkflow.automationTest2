@@ -10,9 +10,9 @@
       And user switches to window 1
       Then trouble record form should appear in new tab
       When user validates BU availability
-      And user clicks on <CheckedBU1> checkbox under affected BU's
-      And user clicks on <CheckedBU2> checkbox under affected BU's
-      Then user validates <TickedBU1> and <TickedBU2> checkboxes are selected
+      And user clicks on "<CheckedBU1>" checkbox under affected BU's
+      And user clicks on "<CheckedBU2>" checkbox under affected BU's
+      Then user validates "<TickedBU1>" and "<TickedBU2>" checkboxes are selected
       When user clicks on CTI details under sections
       And user validates availability of category dropdown
       Then multiple statuses "1:Access:Access|Transport:BSS:Computer Services:CORE:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:OSS:Packet_Transport:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:TV:VAS" should be available in "Category" dropdown
@@ -253,13 +253,13 @@
       Then user validates ticket status as "Closed"
 
 
-      |CI Name|CI Name2|CI Name3|CheckedBU1|CheckedBU2|TickedBU1|TickedBU2|Location|Title|Description|First CI|Second CI|Third CI|Validate CI|Validate BU|
-      |SE_SGSN_VRRMME1|SE_SGSN_LDHMME1|DK_SGSN_AMBMME1|Sweden|Finland|Sweden|Finland|SE_Site_SE M1|Test case MT004 Sweden E2E|Test case MT004 Sweden E2E|SE_SGSN_VRRMME1|SE_SGSN_LDHMME1|DK_SGSN_AMBMME1|DK_SGSN_AMBMME1|Denmark|
-      |NO_SGSN_AKH902MME2|NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1|Norway|Finland|Norway|Finland|NO_Site_VSF087|Test case MT004 Norway E2E|Test case MT004 Norway E2E|NO_SGSN_AKH902MME2|NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1|DK_SGSN_AMBMME1|Denmark|
+      |CI Name             |CI Name2            |CI Name3|CheckedBU1|CheckedBU2|TickedBU1|TickedBU2|Location|Title|Description|First CI|Second CI|Third CI|Validate CI|Validate BU|
+      |SE_SGSN_VRRMME1     |SE_SGSN_LDHMME1     |DK_SGSN_AMBMME1|Sweden|Finland|Sweden|Finland|SE_Site_SE M1|Test case MT004 Sweden E2E|Test case MT004 Sweden E2E|SE_SGSN_VRRMME1|SE_SGSN_LDHMME1|DK_SGSN_AMBMME1|DK_SGSN_AMBMME1|Denmark|
+      |NO_SGSN_AKH902MME2  |NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1|Norway|Finland|Norway|Finland|NO_Site_VSF087|Test case MT004 Norway E2E|Test case MT004 Norway E2E|NO_SGSN_AKH902MME2|NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1|DK_SGSN_AMBMME1|Denmark|
       |LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME|Lithuania|Denmark|Lithuania|Denmark|LT_Site_888|Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E|LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME|LT_SGSN_LT-CSGN01MME|Sweden|
       |FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|Finland|Denmark|Finland|Denmark|FI_Site_riutula keskus|Test case MT004 Finland E2E|Test case MT004 Finland E2E|FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|FI_SGSN_FI-CSGN01MME|Lithuania|
       |EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|Estonia|Sweden|Estonia|Sweden|EE- AUT0001|Test case MT004 Estonia E2E|Test case MT004 Estonia E2E|EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|EE_SGSN_EE-CSGN01MME|Finland|
-      |DK_SGSN_AMBMME1|DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|Denmark|Sweden|Denmark|Sweden|DK_Site_S0001|Test case MT004 Denmark E2E|Test case MT004 Denmark E2E|DK_SGSN_AMBMME1|DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|DK_SGSN_AMBMME1|Finland|
+      |DK_SGSN_AMBMME1     |DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|Denmark|Sweden|Denmark|Sweden|DK_Site_S0001|Test case MT004 Denmark E2E|Test case MT004 Denmark E2E|DK_SGSN_AMBMME1|DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|DK_SGSN_AMBMME1|Finland|
 
 
 

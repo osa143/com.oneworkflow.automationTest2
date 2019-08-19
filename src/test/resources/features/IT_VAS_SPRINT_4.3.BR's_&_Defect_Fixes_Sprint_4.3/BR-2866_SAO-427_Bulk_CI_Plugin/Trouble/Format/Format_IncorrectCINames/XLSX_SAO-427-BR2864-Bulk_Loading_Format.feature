@@ -51,7 +51,7 @@ Feature: checking of bulk loading format
       And user validates "With Warnings" as 0
       And user validates warning message as "No CI named '	SE_AP_alvesta-radmannen-ap1' was found!"
       And user validates status message as "Completed (With Warnings)"
-      Then user clicks on bulk import close button
+      Then user clicks on bulk loading close button
 
 
 

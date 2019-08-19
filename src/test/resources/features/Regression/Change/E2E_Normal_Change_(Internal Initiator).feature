@@ -84,9 +84,9 @@
       When user clicks on Show CR Matching button
       Then user should see Show CR Matching table appear
       When user clicks on "Interested Parties" tab
-      And user enters email address as "Test@Test.com"
+      And user enters email address as "Test123xxx@Test123xxx.com"
       And user clicks on add email button
-      Then user should see new email "Test@Test.com" added in "Email Address" in row 2
+      Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
       When user clicks on Send button
       Then user validates ticket status as "Assigned"
       And user clicks on assignment under sections
@@ -127,7 +127,6 @@
       Then user validates ticket status as "Analysis"
       And user validates last ack by field has data present
       Then user enters "DC CS Core (Voice)_auto" in assignee
-      #Then user selects assignee as "DC CS Core (Voice)_auto" by using alphabet "D" key up 0 times
       And user clicks on save button
       When user clicks on Diagnosis tab
       And user clicks on Show CR Matching button
@@ -137,7 +136,7 @@
       And user clicks on details under sections
       Then user enters "New Communication plan" in the communication plan field
       And user clicks on save button
-      #Then change should also be reflected in the timeline as "Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) to TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) - Additional info."
+      Then change should also be reflected in the timeline as "Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) to TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) - Additional info."
       Then user clicks on "Schedule" tab
       Then user enters request start time 168 hours ahead of current date
       And user enters request end time 172 hours ahead of current date
@@ -148,8 +147,8 @@
       And user clicks on Diagnosis tab
       And user right clicks on primary CI and selects "Impact:Update"
       Then user switches to frame
-      And user enters impact from time as same value as request start time on impact deatils bulk update window
-      And user enters impact to time as same value as request end time on impact deatils bulk update window
+      And user enters impact from time as same value as request start time on impact details bulk update window
+      And user enters impact to time as same value as request end time on impact details bulk update window
       And user clicks confirm checkbox
       Then user clicks on bulk update save button
       When user clicks on "Interested Parties" tab
@@ -161,7 +160,7 @@
       #Then user should see "Acknowledged" email update
       When user changes status to "Approval Requested"
       And user clicks on save button
-     # And change should also be reflected in the timeline as "Processing of the following notification event(s) started: Approvals Notification messages will be displayed on the Notifications tab."
+      #And change should also be reflected in the timeline as "Processing of the following notification event(s) started: Approvals Notification messages will be displayed on the Notifications tab."
       #And change should also be reflected in the timeline as "Request Status has changed from Analysis to Approval Requested."
       Then user validates ticket status as "Approval Requested"
       And user validates availability of tabs "Approval"

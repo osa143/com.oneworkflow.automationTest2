@@ -1089,13 +1089,13 @@ public class OWF_TroubleEventPageSteps {
     public void userSelectsDropdownNameAsDropdownValueAndShouldSeeValues(String dropdownName, String readOnly, DataTable dropdownValues) {
         troubleEventPage.verifyMultipleDropdownValues(dropdownName,dropdownValues,readOnly);
     }
-    @And("user enters impact from time as same value as request start time on impact deatils bulk update window")
-    public void userEntersImpactFromTimeAsSameValueAsRequestStartTimeOnImpactDeatilsBulkUpdateWindow() {
+    @And("user enters impact from time as same value as request start time on impact details bulk update window")
+    public void userEntersImpactFromTimeAsSameValueAsRequestStartTimeOnImpactDetailsBulkUpdateWindow() {
      troubleEventPage.enterImpactFromPlus(CommonUtils.requestStart);
     }
 
-    @And("user enters impact to time as same value as request end time on impact deatils bulk update window")
-    public void userEntersImpactToTimeAsSameValueAsRequestEndTimeOnImpactDeatilsBulkUpdateWindow() {
+    @And("user enters impact to time as same value as request end time on impact details bulk update window")
+    public void userEntersImpactToTimeAsSameValueAsRequestEndTimeOnImpactDetailsBulkUpdateWindow() {
         troubleEventPage.enterImpactToPlus(CommonUtils.requestEnd);
     }
 

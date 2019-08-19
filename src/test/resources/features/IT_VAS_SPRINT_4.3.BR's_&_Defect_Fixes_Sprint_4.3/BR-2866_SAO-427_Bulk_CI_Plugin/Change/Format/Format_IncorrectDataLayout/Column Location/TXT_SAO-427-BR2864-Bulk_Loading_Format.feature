@@ -1,4 +1,4 @@
-@SAO-427-BR2864-Bulk_Loading_Format @427
+@SAO-427-BR2864-Bulk_Loading_Format_Location_Trouble @427
 Feature: checking of bulk loading format
   Scenario: user checks the format of bulk loading format
 
@@ -27,6 +27,7 @@ Feature: checking of bulk loading format
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
       Then user enters request start time 24 hours ahead of current date
       And user enters request end time 28 hours ahead of current date
+      And user gets request start and end time on change record page
       And user enters impact duration as "45" minutes
       And user selects estimated impact dropdown as "Degradation of Service"
       And user clicks on save button
@@ -51,7 +52,7 @@ Feature: checking of bulk loading format
       And user enters impact from date as current date midnight on bulk CI loading window
       And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window
       When user clicks on Upload Import File
-      #Need to change the file to correspond with correct file (Incorrect CI Names) TXT
+      #Need to change the file to correspond with correct file (Incorrect Column Location) TXT
       And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\10 CI's - Correct Names\BIR+Load+Template.xlsx" attachment and adds it
       And user clicks on attachment ok button
       Then user validates attached document is visible
@@ -69,6 +70,7 @@ Feature: checking of bulk loading format
       And user validates warning message as "Multiple CIs named 'No CI named '	SE_AP_alvesta-radmannen-ap1' was found!" in row 1
       Then user clicks on close button on bulk update window
       And user switches to window 1
+
 
 
 

@@ -18,23 +18,11 @@ Feature: checking of bulk loading format
       And user clicks on Add Bulk Import button
       And user switches to frame
       Then user should see bulk ci loading window
-      And user validates "Impact Type*" is visible
-      And user validates "Category*" is visible
-      And user validates "Level*" is visible
-      And user validates "From*" is visible
-      And user validates "To+" is visible
-      And user validates "Ignore Duplicate CIs" is visible
-      And user validates "Upload File" radio button is visible
-      And user validates "Manual Input" radio button is visible
-      And user validates "Download File Template" is visible
-      And user validates "Upload Import File" is visible
-      And user validates "Save" is visible
-      And user validates "Close" is visible
       And user enters impact from date as current date midnight on bulk CI loading window
       And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window
       When user clicks on Upload Import File
       #Need to change the file to correspond with correct file (Incorrect Column Location) CSV
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\10 CI's - Correct Names\BIR+Load+Template.xlsx" attachment and adds it
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\10 CI's - Correct Names\BIR+Load+Template.csv" attachment and adds it
       And user clicks on attachment ok button
       Then user validates attached document is visible
       Then user clicks on save button under bulk import

@@ -1,4 +1,4 @@
-@Bulk_Loading_Format_Trouble_CSV_500CIs @427
+@SAO-427-BR2864-Bulk_Loading_Format_Name_Trouble @427
 Feature: checking of bulk loading format
   Scenario: user checks the format of bulk loading format
 
@@ -20,11 +20,9 @@ Feature: checking of bulk loading format
       Then user should see bulk ci loading window
       And user enters impact from date as current date midnight on bulk CI loading window
       And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window
-      When user clicks on Upload Import File
-      #Need to change the file to correspond with correct file (Duplicate CI Names) CSV
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\500 CI's - Correct Names\BIR+Load+Template.csv" attachment and adds it
-      And user clicks on attachment ok button
-      Then user validates attached document is visible
+      And user clicks on Manual Input radio button
+      And user enters "         CI Name;SE_AP_alvesta-radmannen-ap1;SE_AP_alvesta-radmannen-ap2;SE_AP_alvesta-radmannen-ap3;SE_AP_alvesta-radmannen-ap4" in manual CI search box
+      Then user clicks on save button under bulk import
       Then user clicks on save button under bulk import
       And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
@@ -32,12 +30,13 @@ Feature: checking of bulk loading format
       When user clicks on Show Bulk Import button
       And user switches to frame
       When user clicks on "Related CIs" tab
-      And user validates total rows as "500"
-      And user validates Rows OK as "500"
+      And user validates total rows as "4"
+      And user validates Rows OK as "4"
       And user validates with errors as "0"
       And user validates with warnings as "0"
       Then user clicks on close button on bulk update window
       And user switches to window 1
+
 
 
 

@@ -37,7 +37,7 @@ Feature: checking of bulk loading additional definitions default settings
     And user validates Level default value is ""
     Then user selects impact level as "No Impact"
     When user clicks on Manual Input radio button
-    Then user enters "SE_AP_alvesta-radmannen-ap1;  SE_AP_alvesta-radmannen-ap2;  SE_AP_alvesta-radmannen-ap3;  SE_AP_alvesta-radmannen-ap4;" in manual CI search box
+    Then user enters "SE_AP_alvesta-radmannen-ap1;SE_AP_alvesta-radmannen-ap2;SE_AP_alvesta-radmannen-ap3;SE_AP_alvesta-radmannen-ap4;" in manual CI search box
     Then user clicks on save button under bulk import
     And first error message should display as "The manually identified CIs are now being processed..." on bulk ci window
     And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window

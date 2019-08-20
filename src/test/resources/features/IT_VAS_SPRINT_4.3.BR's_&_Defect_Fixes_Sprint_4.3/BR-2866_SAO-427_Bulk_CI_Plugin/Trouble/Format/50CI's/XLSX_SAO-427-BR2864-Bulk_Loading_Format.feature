@@ -37,12 +37,10 @@ Feature: checking of bulk loading format
       And user switches to frame
       When user clicks on "Related CIs" tab
       And user validates total rows as "50"
-      And user validates Rows OK as "49"
-      And user validates with errors as "1"
+      And user validates Rows OK as "50"
+      And user validates with errors as "0"
       When user clicks on "Related CIs" tab
       And user validates "" as "Completed" in row 1
-      And user validates "" as "With Error" in row 1
-      And user validates 1 CI has an error of "(33422): Impact record cannot be created. The entered From and To dates overlap with existing impact record for FI_AFG_AFG99FI (No Impact (2019-08-12 22:00:00 UTC - 2019-08-13 04:00:00 UTC ))."
       Then user clicks on bulk loading close button
 
 

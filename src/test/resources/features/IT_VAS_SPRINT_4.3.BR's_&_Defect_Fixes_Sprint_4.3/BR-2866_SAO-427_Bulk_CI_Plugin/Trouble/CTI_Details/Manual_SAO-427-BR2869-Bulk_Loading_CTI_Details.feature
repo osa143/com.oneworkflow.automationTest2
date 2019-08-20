@@ -1,4 +1,5 @@
-@SAO-427-BR2862-Bulk_Loading_CTI_Details @SAO-427
+@Manual_Bulk_Loading_CTI_Details_trouble @SAO-427
+  #passed
 Feature: checking of bulk loading CTI details
   Scenario: user checks the bulk loading CTI details
 
@@ -15,30 +16,22 @@ Feature: checking of bulk loading CTI details
     And user clicks on save button
     Then ticket should be created and status should be assigned
     When user clicks on Diagnosis tab
-    And user clicks on "Add Bulk Import" button
+    And user clicks on Add Bulk Import button
     And user switches to frame
     Then user should see bulk ci loading window
-    And user validates "From*" is visible
-    And user validates "To+" is visible
-    When user selects impact level as "No Impact"
-    And user enters impact from date as current date
-    And user enters impact to date as current date +4h
-    And user clicks on "Manual Input" radio button
+    And user validates Impact Type default value is "Un-Planned"
+    And user validates Category default value is "Actual"
+    #Blank default value for level
+    And user validates Level default value is ""
+    Then user selects impact level as "No Impact"
+    When user clicks on Manual Input radio button
     And user enters "One Workflow" in manual CI search box
     Then user clicks on save button under bulk import
-    And user clicks on attachment ok button
-    And user switches to window 1
-    When user clicks on "Show Bulk Import" button
-    And user switches to frame
-    Then user validates uploaded file is visible
-    And user clicks on "Related CIs" tab
-    Then user validates at least 1 CI has "completed" status
-    And user validates "Total Rows" as 1
-    And user validates "Rows Ok" as 1
-    And user validates "With Warnings" as 0
-    And user validates "With Errors" as 0
-    Then user clicks on bulk loading close button
-    And user clicks on ticket refresh button
+    And first error message should display as "The manually identified CIs are now being processed..." on bulk ci window
+    And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
+    And user waits 5 secs
+    When user clicks on ticket refresh button
+    And user clicks on Diagnosis tab
     When user clicks on CTI details under sections
     Then user validates Category as "Service"
     And user validates type as "Data Center"

@@ -131,6 +131,21 @@ public class BaseRecordPage extends BasePage {
     private static final String table_NOTIFICATIONS= "T700020677";
     private static final String dd_OWNER_PROFILE= "Owner Profile*";
     private static final String txt_SUMMARY= "arid_WIN_0_700500101";
+    private static final String txt_CATEGORY= "arid_WIN_0_200000003";
+    private static final String txt_TYPE= "arid_WIN_0_200000004";
+    private static final String txt_ITEM= "arid_WIN_0_200000005";
+
+
+
+    public String getCategory(){
+        return getAttributeValueById(txt_CATEGORY);
+    }
+    public String getType(){
+        return getAttributeValueById(txt_TYPE);
+    }
+    public String getItem(){
+        return getAttributeValueById(txt_ITEM);
+    }
 
 
 

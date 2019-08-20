@@ -973,5 +973,19 @@ public class OWF_ProblemRecordPageSteps {
         CommonUtils.uploadFile(arg0);
         problemRecordPage.wait(2000);
     }
+    @Then("user validates Category as {string}")
+    public void userValidatesCategoryAs(String arg0) {
+      Assert.assertEquals(problemRecordPage.getCategory(), arg0);
+    }
+
+    @And("user validates type as {string}")
+    public void userValidatesTypeAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getType(), arg0);
+    }
+
+    @And("user validates item as {string}")
+    public void userValidatesItemAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getItem(), arg0);
+    }
 }
 

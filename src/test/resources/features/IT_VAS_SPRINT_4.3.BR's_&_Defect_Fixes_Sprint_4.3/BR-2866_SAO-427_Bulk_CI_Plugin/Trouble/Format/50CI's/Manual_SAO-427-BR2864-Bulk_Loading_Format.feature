@@ -29,8 +29,8 @@ Feature: checking of bulk loading format
       And user switches to frame
       When user clicks on "Related CIs" tab
       Then user validates at least one CI has "Completed" under "Status"
-      And user validates total rows as "1"
-      And user validates Rows OK as "1"
+      And user validates total rows as "50"
+      And user validates Rows OK as "50"
       And user validates with errors as "0"
       And user validates with warnings as "0"
       Then user clicks on bulk loading close button

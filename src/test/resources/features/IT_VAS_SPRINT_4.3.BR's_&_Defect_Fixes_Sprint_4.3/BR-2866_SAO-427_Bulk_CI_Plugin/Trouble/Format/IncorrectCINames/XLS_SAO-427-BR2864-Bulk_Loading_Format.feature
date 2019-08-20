@@ -34,7 +34,7 @@ Feature: checking of bulk loading format
       And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window
       When user clicks on Upload Import File
       #Need to change the file to correspond with correct file (Incorrect CI Names) XLS
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\10 CI's - Correct Names\BIR+Load+Template.xlsx" attachment and adds it
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\10 CI's - Incorrect Names\BIR+Load+Template.xls" attachment and adds it
       And user clicks on attachment ok button
       Then user validates attached document is visible
       Then user clicks on save button under bulk import

@@ -22,7 +22,7 @@ Feature: checking of bulk loading format
       And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window
       When user clicks on Upload Import File
       #Need to change the file to correspond with correct file (Duplicate CI Names) TXT
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\10 CI's - Correct Names\BIR+Load+Template.txt" attachment and adds it
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\5 CIs - Duplicated CI's\BIR+Load+Template.txt" attachment and adds it
       And user clicks on attachment ok button
       Then user validates attached document is visible
       Then user clicks on save button under bulk import
@@ -32,10 +32,10 @@ Feature: checking of bulk loading format
       When user clicks on Show Bulk Import button
       And user switches to frame
       When user clicks on "Related CIs" tab
-      And user validates total rows as "10"
+      And user validates total rows as "5"
       And user validates Rows OK as "0"
       And user validates with errors as "0"
-      And user validates with warnings as "10"
+      And user validates with warnings as "5"
       And user validates warning message as "Multiple CIs named 'No CI named '	SE_AP_alvesta-radmannen-ap1' was found!" in row 1
       Then user clicks on close button on bulk update window
       And user switches to window 1

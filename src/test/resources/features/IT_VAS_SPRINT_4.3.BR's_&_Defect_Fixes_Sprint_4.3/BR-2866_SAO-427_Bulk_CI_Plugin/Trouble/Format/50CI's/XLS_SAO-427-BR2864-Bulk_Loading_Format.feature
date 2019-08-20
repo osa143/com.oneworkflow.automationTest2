@@ -37,8 +37,8 @@ Feature: checking of bulk loading format
       And user switches to frame
       When user clicks on "Related CIs" tab
       And user validates total rows as "50"
-      And user validates Rows OK as "49"
-      And user validates with errors as "1"
+      And user validates Rows OK as "50"
+      And user validates with errors as "0"
       When user clicks on "Related CIs" tab
       And user validates "" as "Completed" in row 1
       Then user clicks on bulk loading close button

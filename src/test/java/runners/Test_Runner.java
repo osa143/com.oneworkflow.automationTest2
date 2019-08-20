@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@XLSX_Bulk_Loading_Ignore_Duplicate_CI's_Trouble"}
+        tags = {"@CSV_Bulk_Loading_Format_Trouble"}
 )
 
 public class Test_Runner extends BaseTest {

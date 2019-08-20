@@ -426,5 +426,4 @@ public class OWF_CiSearchPageSteps {
         Assert.assertEquals(ciSearchPage.getImpactToPlus(), CommonUtils.requestEnd);
     }
 
-
 }

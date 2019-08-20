@@ -1,4 +1,4 @@
-@Bulk_Loading_Format_Trouble_XLSX_50CIs @427
+@Bulk_Loading_Format_Trouble_XLSX_50CIs @SAO-427
 Feature: checking of bulk loading format
   Scenario: user checks the format of bulk loading format
 
@@ -15,49 +15,35 @@ Feature: checking of bulk loading format
       And user clicks on save button
       Then ticket should be created and status should be assigned
       When user clicks on Diagnosis tab
-      And user clicks on "Add Bulk Import" button
+      And user clicks on Add Bulk Import button
       And user switches to frame
       Then user should see bulk ci loading window
-      And user validates "Impact Type*" is visible
-      And user validates "Category*" is visible
-      And user validates "Level*" is visible
-      And user validates "From*" is visible
-      And user validates "To+" is visible
-      And user validates "Ignore Duplicate CIs" is visible
-      And user validates "Upload File" radio button is visible
-      And user validates "Manual Input" radio button is visible
-      And user validates "Download File Template" is visible
-      And user validates "Upload Import File" is visible
-      And user validates "Save" is visible
-      And user validates "Close" is visible
-      And user enters impact from date as current date midnight on bulk CI loading window
-      And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window
-      When user clicks on "Add Bulk Import" button
-      And user switches to frame
-      Then user should see bulk ci loading window
-      And user clicks on "Upload Import File" button
-      Then user should see add attachment window
-      When user clicks on "Choose File" Button
-      #50 CI's with no duplicates XLSX file
-      Then user selects XLSX file with duplicates in it
+      And user validates Impact Type default value is "Un-Planned"
+      And user validates Category default value is "Actual"
+      Then user selects impact level as "No Impact"
+      And user clicks on Ignore Duplicate CIs checkbox
+      And user clicks on Upload Import File
+      Then user clicks on choose file button
+      #50CI's TXT with duplicate
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\50 CI's\50CIsXLSX" attachment and adds it
       And user clicks on attachment ok button
-      Then user should see 50 CI XLSX attachment within bulk loading window
-      Then user clicks on bulk import save button
-      And user clicks on ok button on popup
-      And user switches to window 1
-      When user clicks on "Show Bulk Import" button
       And user switches to frame
-      Then user validates uploaded file is visible
-      And user validates "Save Import File" button is visible
+      Then user validates attached document is visible
+      Then user clicks on save button under bulk import
+      And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
+      And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
+      And user waits 10 secs
+      When user clicks on Show Bulk Import button
+      And user switches to frame
       When user clicks on "Related CIs" tab
-      Then user validates "Total Rows" are 50
-      And user validates "Rows Ok" as 49
-      And user validates "With Errors" as 1
-      And user validates status message as "Completed"
-      And user validates status message as "With Error"
+      And user validates total rows as "50"
+      And user validates Rows OK as "49"
+      And user validates with errors as "1"
+      When user clicks on "Related CIs" tab
+      And user validates "" as "Completed" in row 1
+      And user validates "" as "With Error" in row 1
       And user validates 1 CI has an error of "(33422): Impact record cannot be created. The entered From and To dates overlap with existing impact record for FI_AFG_AFG99FI (No Impact (2019-08-12 22:00:00 UTC - 2019-08-13 04:00:00 UTC ))."
-      Then user clicks on bulk import close button
-      And user switches to window 1
+      Then user clicks on bulk loading close button
 
 
 

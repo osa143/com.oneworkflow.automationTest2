@@ -15,11 +15,7 @@ Feature: checking of bulk loading format
       And user clicks on save button
       Then ticket should be created and status should be assigned
       When user clicks on Diagnosis tab
-<<<<<<< HEAD
-      And user clicks on "Add Bulk Import" button
-=======
       And user clicks on Add Bulk Import button
->>>>>>> origin/master
       And user switches to frame
       Then user should see bulk ci loading window
       And user validates "Impact Type*" is visible
@@ -36,30 +32,8 @@ Feature: checking of bulk loading format
       And user validates "Close" is visible
       And user enters impact from date as current date midnight on bulk CI loading window
       And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window
-<<<<<<< HEAD
-      When user clicks on "Upload Import File" button
-      Then user should see add attachment window
-      When user clicks on "Choose File" Button
-      #10 CI's TXT with incorrect names
-      Then user selects TXT file with incorrect CI names
-      And user clicks on attachment ok button
-      Then user should see 10 CI's with incorrect names attachment within bulk loading window
-      Then user clicks on bulk import save button
-      And user clicks on ok button on popup
-      And user switches to window 1
-      When user clicks on "Show Bulk Import" button
-      And user switches to frame
-      Then user validates uploaded file is visible
-      And user validates "Save Import File" button is visible
-      When user clicks on "Related CIs" tab
-      Then user validates "Total Rows" are 10
-      And user validates "With Warnings" as 0
-      And user validates warning message as "No CI named '	SE_AP_alvesta-radmannen-ap1' was found!"
-      And user validates status message as "Completed (With Warnings)"
-      Then user clicks on bulk import close button
-=======
       When user clicks on Upload Import File
-      #Need to change the file to correspond with correct file (Incorrect CI Names) TXT
+      #Need to change the file to correspond with correct file (Incorrect CI Names) CSV
       And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\10 CI's - Correct Names\BIR+Load+Template.xlsx" attachment and adds it
       And user clicks on attachment ok button
       Then user validates attached document is visible
@@ -77,7 +51,7 @@ Feature: checking of bulk loading format
       And user validates warning message as "Multiple CIs named 'No CI named '	SE_AP_alvesta-radmannen-ap1' was found!" in row 1
       Then user clicks on close button on bulk update window
       And user switches to window 1
->>>>>>> origin/master
+
 
 
 

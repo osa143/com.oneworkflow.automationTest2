@@ -9,105 +9,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/exception.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/exception.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_CiSearchPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_CiSearchPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_CiSearchPageSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_CiSearchPageSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_CiSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_CiSearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_CiSearchPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_CiSearchPageSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Test_Attachments/TestCaseAttachments/Test Case Attachments 2/Test HTML FILE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Test_Attachments/TestCaseAttachments/Test Case Attachments 2/Test Image 2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Test_Attachments/TestCaseAttachments/Test Case Attachments 2/Test Image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Test_Attachments/TestCaseAttachments/Test Case Attachments 2/Test JPEG FILE.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Test_Attachments/TestCaseAttachments/Test Case Attachments 2/Test PDF FILE.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Test_Attachments/TestCaseAttachments/Test Case Attachments 2/Test PNG FILE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Test_Attachments/TestCaseAttachments/Test Case Attachments 2/Test PPT FILE.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Test_Attachments/TestCaseAttachments/Test Case Attachments 2/Test WORD FILE.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Test_Attachments/TestCaseAttachments/Test Case Attachments 2/Test XLS FILE.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Test_Attachments/TestCaseAttachments/Test Case Attachments 2/attachement.doc.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/CTI Details/CSV_SAO-427-BR2869-Bulk_Loading_CTI_Details.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/CTI Details/CSV_SAO-427-BR2869-Bulk_Loading_CTI_Details.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/500CI's/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/500CI's/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/500CI's/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/500CI's/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/500CI's/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/500CI's/XLSX_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/500CI's/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectCINames/CSV_TXT_XLS_XLSX_Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/50CI's/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/50CI's/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/50CI's/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/50CI's/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/50CI's/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/50CI's/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/50CI's/XLSX_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/50CI's/XLSX_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/50CI's/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/50CI's/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/DuplicateCI's/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/DuplicateCI's/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/DuplicateCI's/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/DuplicateCI's/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/DuplicateCI's/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/DuplicateCI's/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/DuplicateCI's/XLSX_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/DuplicateCI's/XLSX_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/DuplicateCI's/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/DuplicateCI's/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectCINames/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectCINames/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectCINames/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectCINames/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectCINames/XLSX_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectCINames/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Location/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Location/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Location/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Location/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Location/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Location/XLSX_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Location/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Name/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Name/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Name/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Name/XLSX_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Name/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/SAO-427-BR2430-CI_not_found_prompt_for_CI_Search.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Other_Change/SAO-427-BR2430-CI_not_found_prompt_for_CI_Search.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/SAO-427-BR2862-Bulk_Loading_Error_Message_Structure.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Other_Change/SAO-427-BR2862-Bulk_Loading_Error_Message_Structure.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/SAO-427-BR2863-Bulk_Loading_Error_Message_Impact_Duration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Other_Change/SAO-427-BR2863-Bulk_Loading_Error_Message_Impact_Duration.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/SAO-427-BR2866-Bulk_Loading_Summary.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Other_Change/SAO-427-BR2866-Bulk_Loading_Summary.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/SAO-427-BR2866-Tele2Notifications.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Other_Change/SAO-427-BR2866-Tele2Notifications.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/SAO427-BR-2867-Bulk_Loading_Additional_Definitions_Default_Settings.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Other_Change/SAO427-BR-2867-Bulk_Loading_Additional_Definitions_Default_Settings.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/CTI_Details/CSV_SAO-427-BR2869-Bulk_Loading_CTI_Details.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/CTI_Details/CSV_SAO-427-BR2869-Bulk_Loading_CTI_Details.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/CTI_Details/Manual_SAO-427-BR2869-Bulk_Loading_CTI_Details.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/CTI_Details/Manual_SAO-427-BR2869-Bulk_Loading_CTI_Details.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/CTI_Details/TXT_SAO-427-BR2869-Bulk_Loading_CTI_Details.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/CTI_Details/TXT_SAO-427-BR2869-Bulk_Loading_CTI_Details.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/CTI_Details/XLSX_SAO-427-BR2869-Bulk_Loading_CTI_Details.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/CTI_Details/XLSX_SAO-427-BR2869-Bulk_Loading_CTI_Details.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/CTI_Details/XLS_SAO-427-BR2869-Bulk_Loading_CTI_Details.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/CTI_Details/XLS_SAO-427-BR2869-Bulk_Loading_CTI_Details.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/500CI's/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/500CI's/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/500CI's/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/500CI's/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/500CI's/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/500CI's/XLSX_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Location/CSV_XLS_TXT_XLSX_IncorrectColumnLocation.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/500CI's/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Name/CSV_TXT_XLS_XLSX_Incorrect_ColumnName.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/50CI's/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/50CI's/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/50CI's/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/50CI's/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/50CI's/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/50CI's/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/50CI's/XLSX_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/50CI's/XLSX_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/50CI's/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/50CI's/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/DuplicateCI's/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/DuplicateCI's/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/DuplicateCI's/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/DuplicateCI's/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/DuplicateCI's/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/DuplicateCI's/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/DuplicateCI's/XLSX_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/DuplicateCI's/XLSX_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/DuplicateCI's/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/DuplicateCI's/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectCINames/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectCINames/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectCINames/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectCINames/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectCINames/XLSX_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectCINames/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Location/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Location/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Location/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Location/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectCINames/CSV_TXT_XLS_XLSX_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Location/XLSX_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Location/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Name/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Name/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Name/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Name/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Name/XLSX_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Name/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/SAO-427-BR2430-CI_not_found_prompt_for_CI_Search.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Other_Trouble/SAO-427-BR2430-CI_not_found_prompt_for_CI_Search.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/SAO-427-BR2862-Bulk_Loading_Error_Message_Structure.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Other_Trouble/SAO-427-BR2862-Bulk_Loading_Error_Message_Structure.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/SAO-427-BR2863-Bulk_Loading_Error_Message_Impact_Duration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Other_Trouble/SAO-427-BR2863-Bulk_Loading_Error_Message_Impact_Duration.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/SAO-427-BR2866-Bulk_Loading_Summary.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Other_Trouble/SAO-427-BR2866-Bulk_Loading_Summary.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/SAO427-BR-2867-Bulk_Loading_Additional_Definitions_Default_Settings.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Other_Trouble/SAO427-BR-2867-Bulk_Loading_Additional_Definitions_Default_Settings.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Sweden_RAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Sweden_RAN.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Sweden_Core.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Sweden_Core.feature" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -248,7 +153,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Sweden_Core.feature">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -322,7 +231,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Name/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Name/TXT_SAO-427-BR2864-Bulk_Loading_Format.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Name/XLS_SAO-427-BR2864-Bulk_Loading_Format.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Sweden_RAN.feature" />
@@ -373,6 +281,7 @@
         <option value="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/500CI's/CSV_SAO-427-BR2864-Bulk_Loading_Format.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/500CI's/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/500CI's/Manual_SAO-427-BR2864-Bulk_Loading_Format.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Sweden_Core.feature" />
       </list>
     </option>
   </component>
@@ -816,14 +725,7 @@
       <workItem from="1566123625801" duration="19000" />
       <workItem from="1566124357955" duration="8530000" />
       <workItem from="1566201057717" duration="31343000" />
-      <workItem from="1566287264675" duration="56278000" />
-    </task>
-    <task id="LOCAL-00041" summary="modified features and added steps for profile permissions">
-      <created>1561478531215</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1561478531215</updated>
+      <workItem from="1566287264675" duration="56570000" />
     </task>
     <task id="LOCAL-00042" summary="updated features and steps">
       <created>1561535554125</created>
@@ -1161,7 +1063,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566294622363</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="added steps for bulk CI loading change and trouble">
+      <created>1566463230102</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1566463230102</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1197,7 +1106,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1942408000" />
+    <option name="totallyTimeSpent" value="1942700000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1209,10 +1118,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2595949" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2595949" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -1221,7 +1130,7 @@
       <window_info id="Designer" order="6" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.15700142" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.032502707" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.08017335" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3347779" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50067025" side_tool="true" weight="0.50636494" />
       <window_info anchor="bottom" id="Database Changes" order="5" />
@@ -1816,7 +1725,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Sweden_Core.feature">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

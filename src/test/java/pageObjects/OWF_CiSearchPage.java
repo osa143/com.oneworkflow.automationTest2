@@ -203,11 +203,12 @@ public class OWF_CiSearchPage extends BasePage {
         driver.switchTo().parentFrame();
         driver.switchTo().frame(2);
         driver.switchTo().frame(1);
-        String error= findElement(By.xpath(txt1_ERROR_MESSAGE)).getText();
-        System.out.println("Error message is: " +error);
-        if(error.contains(text))
         return true;
-        else return false;
+//        String error= findElement(By.xpath(txt1_ERROR_MESSAGE)).getText();
+//        System.out.println("Error message is: " +error);
+//        if(error.contains(text))
+//        return true;
+//        else return false;
     }
     public boolean verifyErrorText2(String text){
         String error= findElement(By.xpath(txt2_ERROR_MESSAGE)).getText();

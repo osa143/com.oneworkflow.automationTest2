@@ -48,7 +48,6 @@ Feature: checking of bulk loading CTI details
     And user waits 5 secs
     And user clicks on ticket refresh button
     When user clicks on CTI details under sections
-    And user clicks on Diagnosis tab
     Then user validates Category as "Access"
     And user validates type as "WLAN"
     And user validates item as "AP"

@@ -35,7 +35,6 @@ Feature: checking of bulk loading format
       And user validates with errors as "0"
       And user validates with warnings as "0"
       Then user clicks on close button on bulk update window
-      And user switches to window 1
 
 
 

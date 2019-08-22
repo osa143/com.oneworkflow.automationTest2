@@ -1,6 +1,7 @@
-@Bulk_Loading_Format_Trouble_Manual_50CIs @427
-Feature: checking of bulk loading format
-  Scenario: user checks the format of bulk loading format
+@Manual_Bulk_Loading_Format_Trouble_50CIs @SAO-427
+    #passed
+   Feature: checking of bulk loading format
+  Scenario Outline: user checks the format of bulk loading format
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
@@ -20,11 +21,11 @@ Feature: checking of bulk loading format
       Then user should see bulk ci loading window
       When user selects impact level as "No Impact"
       And user clicks on Manual Input radio button
-      And user clicks on Ignore Duplicate CIs checkbox
-      And user enters "" in manual CI search box
+      And user enters "<50CIs>" in manual CI search box
       Then user clicks on save button under bulk import
       And first error message should display as "The manually identified CIs are now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
+      And user waits 20 secs
       When user clicks on Show Bulk Import button
       And user switches to frame
       When user clicks on "Related CIs" tab
@@ -34,3 +35,9 @@ Feature: checking of bulk loading format
       And user validates with errors as "0"
       And user validates with warnings as "0"
       Then user clicks on bulk loading close button
+
+
+      Examples:
+
+      |50CIs|
+      | FI_AS_hkpswbe03;FI_AS_hkpswbe04;SE;SE_99999_ID_MISSEDCI;SE OSS RC;SE_AAA_AAA01SE;SE_AAA_AAA02SE;SE_AAA_AAA03SE;SE_AAA_AAA04SE;SE_AAA_AAA98SE;SE_AAA_AAA99SE;SE_AAA_TestMartinx;SE_ActixOne;SE_AFG_AFG89FI;SE_AFG_AFG98SE;SE_AFG_REFAFG;SE_ALE_hogalid-ale2;SE_ALE_m-hyllie-ale1;SE_ALE_m-hyllie-ale2;SE_ALE_test-ale;SE_ALE_vrr-ale1;SE_AP_1246521-ap;SE_AP_1247809-ap;SE_AP_1255052-ap;SE_AP_1267993-ap;SE_AP_8028420-ap;SE_AP_ahus-cigarrkungenshus-ap1;SE_AP_ahus-cigarrkungenshus-ap2;SE_AP_akersberga-enebacken-ap1;SE_AP_akersberga-enebacken-ap10;SE_AP_akersberga-enebacken-ap11;SE_AP_akersberga-enebacken-ap12;SE_AP_akersberga-enebacken-ap13;SE_AP_akersberga-enebacken-ap14;SE_AP_akersberga-enebacken-ap15;SE_AP_akersberga-enebacken-ap16;SE_AP_akersberga-enebacken-ap17;SE_AP_akersberga-enebacken-ap18;SE_AP_akersberga-enebacken-ap2;SE_AP_akersberga-enebacken-ap3;SE_AP_akersberga-enebacken-ap4;SE_AP_akersberga-enebacken-ap5;SE_AP_akersberga-enebacken-ap6;SE_AP_akersberga-enebacken-ap7;SE_AP_akersberga-enebacken-ap8;SE_AP_akersberga-preem-ap;SE_AP_akersberga-preem-ap1;SE_AP_alem-preem-ap;LT_AC_AC-KONDIC_54_2;LT_AC_AC-KONDIC_610_1|

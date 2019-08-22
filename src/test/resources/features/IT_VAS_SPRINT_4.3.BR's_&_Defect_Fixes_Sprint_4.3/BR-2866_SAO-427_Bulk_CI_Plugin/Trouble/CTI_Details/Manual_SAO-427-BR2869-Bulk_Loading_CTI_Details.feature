@@ -31,7 +31,6 @@ Feature: checking of bulk loading CTI details
     And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
     And user waits 5 secs
     When user clicks on ticket refresh button
-    And user clicks on Diagnosis tab
     When user clicks on CTI details under sections
     Then user validates Category as "Service"
     And user validates type as "Data Center"

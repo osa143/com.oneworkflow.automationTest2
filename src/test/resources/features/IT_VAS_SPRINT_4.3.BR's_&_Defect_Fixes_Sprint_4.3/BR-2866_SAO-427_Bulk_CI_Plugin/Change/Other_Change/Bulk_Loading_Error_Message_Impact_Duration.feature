@@ -1,6 +1,7 @@
-@CSV_Bulk_Loading_CTI_Details_change @SAO-427
-Feature: checking of bulk loading CTI details
-  Scenario: user checks the bulk loading CTI details
+@Bulk_Loading_Error_Message_Impact_Duration_Change @SAO-427
+  #passed
+Feature: checking of bulk loading error message impact duration
+  Scenario: user checks the impact duration message of bulk loading error
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
@@ -31,31 +32,26 @@ Feature: checking of bulk loading CTI details
     And user switches to frame
     Then user should see bulk ci loading window
     When user selects impact level as "No Impact"
-    When user clicks on Upload Import File
-    And user clicks on choose file button
-      #10CI's CSV no duplicate
-    And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\10 CI's - Correct Names\BIR+Load+Template.csv" attachment and adds it
-    And user clicks on attachment ok button
+    And user clicks on Manual Input radio button
+#    And user enters impact from date as current date midnight plus 48 hours on bulk CI loading window
+#    And user enters impact to date as current date midnight plus 54 hours on bulk CI loading window
+#    And user enters "One Workflow" in manual CI search box
+#    Then user clicks on save button under bulk import
+#    And user should see error message of "(300825): From date cannot be in the future for planned impact record." on bulk cI window
+#    And user should see error message of "To date cannot be in the future for un-planned impact record." on bulk cI window and clicks ok
+#    And user switches to frame
+#    And user enters impact from date as current date midnight plus -20 hours on bulk CI loading window
+#    And user enters impact to date as current date midnight plus -24 hours on bulk CI loading window
+#    And user clicks on save button under bulk import
+#    Then user should see error message of "(300825): From date cannot be in the future for planned impact record." on bulk cI window
+#    And user should see error message of "Impact From date must be before Impact To date." on bulk cI window and clicks ok
+    And user clicks on save button under bulk import
+    Then user should see error message of "Please type in or paste the list of CIs you you want to relate. (ARERR 10000)" on bulk cI window
+    And user should see error message of "Please type in or paste the list of CIs you you want to relate. (ARERR 10000)" on bulk cI window and clicks ok
     And user switches to frame
-    Then user validates attached document is visible
-    Then user clicks on save button under bulk import
-    And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
-    And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-    And user waits 10 secs
-    When user clicks on Show Bulk Import button
-    And user switches to frame
-    Then user validates attached document is visible
-    And user clicks on "Related CIs" tab
-    And user validates "Dup. CIs" as "1" in row 1
-    And user validates total rows as "10"
-    And user validates Rows OK as "10"
-    And user validates with errors as "0"
-    And user validates with warnings as "0"
-    Then user validates at least one CI has "Completed" under "Status"
-    Then user clicks on bulk loading close button
-    And user clicks on ticket refresh button
-    #And user clicks on Diagnosis tab
-    When user clicks on CTI details under sections
-    Then user validates Category as "Access"
-    And user validates type as "WLAN"
-    And user validates item as "AP"
+    And user clicks on bulk loading close button
+
+
+
+
+

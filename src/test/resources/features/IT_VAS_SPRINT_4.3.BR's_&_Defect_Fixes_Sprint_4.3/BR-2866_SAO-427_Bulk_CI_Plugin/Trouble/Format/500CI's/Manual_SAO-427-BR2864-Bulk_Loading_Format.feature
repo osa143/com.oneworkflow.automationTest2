@@ -1,6 +1,6 @@
 @Bulk_Loading_Format_Trouble_Manual_500CI's @427
 Feature: checking of bulk loading format
-  Scenario: user checks the format of bulk loading format
+  Scenario Outline: user checks the format of bulk loading format
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
@@ -21,7 +21,7 @@ Feature: checking of bulk loading format
       When user selects impact level as "No Impact"
       And user clicks on Manual Input radio button
       And user clicks on Ignore Duplicate CIs checkbox
-      And user enters "" in manual CI search box
+      And user enters "<500CIs>" in manual CI search box
       Then user clicks on save button under bulk import
       And first error message should display as "The manually identified CIs are now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
@@ -35,6 +35,9 @@ Feature: checking of bulk loading format
       And user validates with warnings as "0"
       Then user clicks on bulk loading close button
 
+  Examples:
 
+      |500CIs|
+      |      |
 
 

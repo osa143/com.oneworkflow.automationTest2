@@ -263,12 +263,12 @@ public class OWF_CiSearchPageSteps {
 
     @And("first error message should display as {string} on bulk ci window")
     public void firstErrorMessageShouldDisplayAsOnBulkCiWindow(String arg0) {
-        Assert.assertTrue(ciSearchPage.verifyErrorText1(arg0));
+        ciSearchPage.verifyErrorText1(arg0);
     }
 
     @And("second error message should display as {string} on bulk ci window")
     public void secondErrorMessageShouldDisplayAsOnBulkCiWindow(String arg0) {
-        Assert.assertTrue(ciSearchPage.verifyErrorText2(arg0));
+       ciSearchPage.verifyErrorText2(arg0);
         ciSearchPage.clickOk_popUp();
         userSwitchesToDefault();
 

@@ -1,7 +1,7 @@
 @E2E_Test_Sweden_RAN @E2E_Test_Cases
 
   Feature: E2E Scenarios
-    Scenario: E2E Scenarios for sweden trouble event
+    Scenario Outline: E2E Scenarios for sweden trouble event
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
@@ -252,14 +252,15 @@
       And user clicks on save button
       Then user validates ticket status as "Closed"
 
+       Examples:
 
-      |CI Name             |CI Name2            |CI Name3|CheckedBU1|CheckedBU2|TickedBU1|TickedBU2|Location|Title|Description|First CI|Second CI|Third CI|Validate CI|Validate BU|
-      |SE_SGSN_VRRMME1     |SE_SGSN_LDHMME1     |DK_SGSN_AMBMME1|Sweden|Finland|Sweden|Finland|SE_Site_SE M1|Test case MT004 Sweden E2E|Test case MT004 Sweden E2E|SE_SGSN_VRRMME1|SE_SGSN_LDHMME1|DK_SGSN_AMBMME1|DK_SGSN_AMBMME1|Denmark|
-      |NO_SGSN_AKH902MME2  |NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1|Norway|Finland|Norway|Finland|NO_Site_VSF087|Test case MT004 Norway E2E|Test case MT004 Norway E2E|NO_SGSN_AKH902MME2|NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1|DK_SGSN_AMBMME1|Denmark|
-      |LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME|Lithuania|Denmark|Lithuania|Denmark|LT_Site_888|Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E|LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME|LT_SGSN_LT-CSGN01MME|Sweden|
-      |FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|Finland|Denmark|Finland|Denmark|FI_Site_riutula keskus|Test case MT004 Finland E2E|Test case MT004 Finland E2E|FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|FI_SGSN_FI-CSGN01MME|Lithuania|
-      |EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|Estonia|Sweden|Estonia|Sweden|EE- AUT0001|Test case MT004 Estonia E2E|Test case MT004 Estonia E2E|EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|EE_SGSN_EE-CSGN01MME|Finland|
-      |DK_SGSN_AMBMME1     |DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|Denmark|Sweden|Denmark|Sweden|DK_Site_S0001|Test case MT004 Denmark E2E|Test case MT004 Denmark E2E|DK_SGSN_AMBMME1|DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|DK_SGSN_AMBMME1|Finland|
+      |CI Name             |CI Name2            |CI Name3            |CheckedBU1|CheckedBU2|TickedBU1|TickedBU2|Location              |Title                        |Description                  |First CI|Second CI|Third CI|Validate CI|Validate BU|
+      |SE_SGSN_VRRMME1     |SE_SGSN_LDHMME1     |DK_SGSN_AMBMME1     |Sweden    |Finland   |Sweden   |Finland  |SE_Site_SE M1         |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_VRRMME1|SE_SGSN_LDHMME1|DK_SGSN_AMBMME1|DK_SGSN_AMBMME1|Denmark|
+      |NO_SGSN_AKH902MME2  |NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1     |Norway    |Finland   |Norway   |Finland  |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_SGSN_AKH902MME2|NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1|DK_SGSN_AMBMME1|Denmark|
+      |LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME   |Lithuania |Denmark   |Lithuania|Denmark  |LT_Site_888           |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E|LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME|LT_SGSN_LT-CSGN01MME|Sweden|
+      |FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|Finland   |Denmark   |Finland  |Denmark  |FI_Site_riutula keskus|Test case MT004 Finland E2E  |Test case MT004 Finland E2E  |FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|FI_SGSN_FI-CSGN01MME|Lithuania|
+      |EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|Estonia   |Sweden    |Estonia  |Sweden   |EE- AUT0001           |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|EE_SGSN_EE-CSGN01MME|Finland|
+      |DK_SGSN_AMBMME1     |DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|Denmark   |Sweden    |Denmark  |Sweden   |DK_Site_S0001         |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_SGSN_AMBMME1|DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|DK_SGSN_AMBMME1|Finland|
 
 
 

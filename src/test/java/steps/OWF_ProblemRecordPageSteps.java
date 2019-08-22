@@ -550,7 +550,8 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("user waits for {int} minutes")
     public void userWaitsForMinutes(int arg0) {
-        problemRecordPage.wait(240000);
+        int newDelay= arg0*60000;
+        problemRecordPage.wait(newDelay);
     }
     @Then("user waits for two minutes")
     public void userWaitsForTwoMinutes() {
@@ -987,5 +988,16 @@ public class OWF_ProblemRecordPageSteps {
     public void userValidatesItemAs(String arg0) {
         Assert.assertEquals(problemRecordPage.getItem(), arg0);
     }
+
+    @And("user adds attachment {string}")
+    public void userAddsAttachement(String filePath) {
+
+        String fullFilePath= System.getProperty("user.dir" + "\\src\\test\\resources\\TestAttachments\\TestCaseAttachments"+filePath);
+        System.out.println(fullFilePath);
+            CommonUtils.uploadFile(fullFilePath);
+            problemRecordPage.wait(2000);
+        }
+
 }
+
 

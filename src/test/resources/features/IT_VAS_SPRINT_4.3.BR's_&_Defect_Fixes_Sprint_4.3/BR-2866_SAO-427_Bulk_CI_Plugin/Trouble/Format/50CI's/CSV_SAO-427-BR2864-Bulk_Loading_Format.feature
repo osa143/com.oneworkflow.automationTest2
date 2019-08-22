@@ -1,5 +1,6 @@
-@CSV_Bulk_Loading_Format_change @SAO-427
-Feature: checking of bulk loading format
+@CSV_Bulk_Loading_Format_trouble_50 @SAO-427
+    #passed
+  Feature: checking of bulk loading format
   Scenario: user checks the format of bulk loading format
 
       Given user is on the OneWorkflow login page
@@ -21,26 +22,24 @@ Feature: checking of bulk loading format
       And user validates Impact Type default value is "Un-Planned"
       And user validates Category default value is "Actual"
       Then user selects impact level as "No Impact"
-      And user clicks on Ignore Duplicate CIs checkbox
       And user clicks on Upload Import File
       Then user clicks on choose file button
-      #50CI's TXT with duplicate
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\50 CI's\50CIsCSV" attachment and adds it
+      #50CI's CSV with No duplicate
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\50 CI's\50CIsCSV.csv" attachment and adds it
       And user clicks on attachment ok button
       And user switches to frame
       Then user validates attached document is visible
       Then user clicks on save button under bulk import
       And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-      And user waits 10 secs
+      And user waits 20 secs
       When user clicks on Show Bulk Import button
       And user switches to frame
       When user clicks on "Related CIs" tab
+      Then user validates at least one CI has "Completed" under "Status"
       And user validates total rows as "50"
       And user validates Rows OK as "50"
       And user validates with errors as "0"
-      When user clicks on "Related CIs" tab
-      And user validates "" as "Completed" in row 1
       Then user clicks on bulk loading close button
 
 

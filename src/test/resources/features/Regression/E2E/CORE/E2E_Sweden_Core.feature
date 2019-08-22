@@ -255,10 +255,10 @@
       And user clicks on save button
       Then user validates ticket status as "Closed"
 
-      |CI Name|CI Name2|CheckedBU1|CheckedBU2|TicketBU1|TicketBU2|Location|Title|Description|First CI|Validate CI|Validate BU|
-      |SE_SGSN_FREMME2|LT_SGSN_VLMMME02|Sweden|Finland|Sweden|Finland|SE_Site_SE M1|Test case MT004 Sweden E2E|Test case MT004 Sweden E2E|SE_SGSN_FREMME2|SE_SGSN_FREMME2|Lithuania|
-      |NO_EPG_OSL900EPG2|DK_EPG_AMBEPG1|Norway|Finland|Norway|Finland|NO_Site_VSF087|Test case MT004 Norway E2E|Test case MT004 Norway E2E|NO_EPG_OSL900EPG2|NO_EPG_OSL900EPG2|Denmark|
-      |LT_SGSN_VLMMME02|SE_SGSN_FREMME2|Lithuania|Denmark|Lithuania|Denmark|LT_Site_888|Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E|LT_SGSN_VLMMME02|LT_SGSN_VLMMME02|Sweden|
-      |FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1|Finland|Denmark|Finland|Denmark|FI_Site_riutula keskus|Test case MT004 Finland E2E|Test case MT004 Finland E2E|FI_SGSN_HKIMME02|FI_SGSN_HKIMME02|Estonia|
-      |EE_EPG_KOORTEPG1|FI_SGSN_HKIMME02|Estonia|Sweden|Estonia|Sweden|EE- AUT0001|Test case MT004 Estonia E2E|Test case MT004 Estonia E2E|EE_EPG_KOORTEPG1|EE_EPG_KOORTEPG1|Finland|
-      |DK_EPG_AMBEPG1|EE_EPG_KOORTEPG1|Denmark|Sweden|Denmark|Sweden|DK_Site_S0001|Test case MT004 Denmark E2E|Test case MT004 Denmark E2E|DK_EPG_AMBEPG1|DK_EPG_AMBEPG1|Estonia|
+      |CI Name          |CI Name2        |CheckedBU1|CheckedBU2|TicketBU1|TicketBU2|Location              |Title                        |Description                  |First CI            |Validate CI      |Validate BU |
+      |SE_SGSN_FREMME2  |LT_SGSN_VLMMME02|Sweden    |Finland   |Sweden   |Finland  |SE_Site_SE M1         |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_FREMME2     |SE_SGSN_FREMME2  |Lithuania   |
+      |NO_EPG_OSL900EPG2|DK_EPG_AMBEPG1  |Norway    |Finland   |Norway   |Finland  |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_EPG_OSL900EPG2   |NO_EPG_OSL900EPG2|Denmark     |
+      |LT_SGSN_VLMMME02 |SE_SGSN_FREMME2 |Lithuania |Denmark   |Lithuania|Denmark  |LT_Site_888           |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E|LT_SGSN_VLMMME02    |LT_SGSN_VLMMME02 |Sweden      |
+      |FI_SGSN_HKIMME02 |EE_EPG_KOORTEPG1|Finland   |Denmark   |Finland  |Denmark  |FI_Site_riutula keskus|Test case MT004 Finland E2E  |Test case MT004 Finland E2E  |FI_SGSN_HKIMME02    |FI_SGSN_HKIMME02 |Estonia     |
+      |EE_EPG_KOORTEPG1 |FI_SGSN_HKIMME02|Estonia   |Sweden    |Estonia  |Sweden   |EE- AUT0001           |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_EPG_KOORTEPG1    |EE_EPG_KOORTEPG1 |Finland     |
+      |DK_EPG_AMBEPG1   |EE_EPG_KOORTEPG1|Denmark   |Sweden    |Denmark  |Sweden   |DK_Site_S0001         |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_EPG_AMBEPG1      |DK_EPG_AMBEPG1   |Estonia     |

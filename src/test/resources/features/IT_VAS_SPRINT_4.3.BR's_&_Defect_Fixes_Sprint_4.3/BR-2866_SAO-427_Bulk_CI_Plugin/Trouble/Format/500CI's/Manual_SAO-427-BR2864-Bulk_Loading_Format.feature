@@ -38,6 +38,6 @@ Feature: checking of bulk loading format
   Examples:
 
       |500CIs|
-      |      |
+      |  Test    |
 
 

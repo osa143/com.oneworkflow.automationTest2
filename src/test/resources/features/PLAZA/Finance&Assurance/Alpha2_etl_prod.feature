@@ -12,12 +12,12 @@
       When user clicks on "Finance & Assurance" pebble
       Then user should see "Finance & Assurance" form
       When user selects Role dropdown as "Application Operation Engineer"
-      And user enters "" in the request field
+      And user enters "Test2 F&A/Request" in the request field
       And user selects system dropdown as "alpha2 etl prod"
       And user enters planned start time as current time
       And user enters planned end time as current time
-      And user enters plaza description as ""
-      And user enters additional comments as ""
+      And user enters plaza description as "Test2 F&A/Description"
+      And user enters additional comments as "Test2 F&A/AC"
       Then user clicks on submit button
       And user gets plaza request id
       And user clicks on plaza request id
@@ -35,4 +35,23 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Finance & Assurance"
       And user validates description contains: ""
-#
+      Then user clicks on owner under sections
+      And user clicks on assignment under sections
+      Then user validates owner profile as ""
+      And user validates owner as ""
+      And user validates assignee is ""
+      Then user clicks on "Interested Parties" tab
+      And user validates "PLAZA" is listed as an interested party
+      When user clicks on Ack button
+      And user changes status to "Cleared"
+      And user selects completed code as "Success"
+      And user clicks on "Schedule" tab
+      And user enters schedule end as current date
+      Then user clicks on save button
+      And user validates ticket status as "Cleared"
+      When user changes status to "Closed"
+      And user clicks on save button
+      Then ticket status should be closed
+
+
+

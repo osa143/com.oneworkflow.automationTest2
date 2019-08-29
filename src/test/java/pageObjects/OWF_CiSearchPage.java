@@ -351,6 +351,7 @@ public class OWF_CiSearchPage extends BasePage {
         selectDropDownNameAndValue(ddTARGET_APPLICATION_SECOND,value, false);
     }
     public void enterNamePlus(String name_plus) {
+        findElement(By.id(txtNAME_PLUS_ID)).clear();
         driver.findElement(By.id(txtNAME_PLUS_ID)).sendKeys(name_plus);
     }
 
@@ -369,15 +370,24 @@ public class OWF_CiSearchPage extends BasePage {
     }
 
     public void clickCloseButton() {
-        wait(1000);
+        wait(2000);
         driver.findElement(By.id(btnClOSE)).click();
 
     }
 
     public void closeWarningMessage()
     {
-        findElement(By.id(btnCLOSEOnWarningMessage)).click();
-        wait(1000);
+//        findElement(By.id(btnCLOSEOnWarningMessage)).click();
+//        wait(1000);
+        driver.switchTo().frame(1);
+        driver.switchTo().frame(0);
+        driver.switchTo().parentFrame();
+        driver.switchTo().frame(1);
+        clickElementByContainsTextAndTagName("a", "OK");
+        wait(2000);
+        driver.switchTo().defaultContent();
+        driver.switchTo().frame(2);
+        wait(2000);
     }
 
     public void clickClearButton() {
@@ -385,7 +395,8 @@ public class OWF_CiSearchPage extends BasePage {
     }
 
     public void clickRelateCiButton() {
-        driver.findElement(By.id(btnRELATE_CI)).click();
+        clickElementByContainsTextAndTagName("div", "Relate CI");
+        //driver.findElement(By.id(btnRELATE_CI)).click();
         wait(1500);
     }
 

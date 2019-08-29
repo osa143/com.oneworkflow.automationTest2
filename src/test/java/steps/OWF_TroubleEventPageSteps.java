@@ -380,8 +380,11 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("error message should display as {string}")
     public void errorMessageShouldDisplayAs(String arg0) {
-        Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
-        troubleEventPage.clickOkOnPopup();
+//        Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
+        //troubleEventPage.getErrorText();
+        //troubleEventPage.clickOkOnPopup();
+        troubleEventPage.clickOk();
+
     }
     @And("user accepts alert")
     public void userAcceptsAlert() {
@@ -1117,6 +1120,18 @@ public class OWF_TroubleEventPageSteps {
     @And("user gets event start time value")
     public void userGetsEventStartTimeValue() {
         CommonUtils.eventStartTime=troubleEventPage.getEventStartTime();
+    }
+
+
+    @And("user clicks on {string} checkbox under affected BU's")
+    public void userClicksOnCheckboxUnderAffectedBUS(String arg0) {
+        troubleEventPage.clickAffectedBu(arg0);
+    }
+
+    @Then("user validates {string} and {string} checkboxes are selected")
+    public void userValidatesAndCheckboxesAreSelected(String arg0, String arg1) {
+        Assert.assertTrue(troubleEventPage.checkAffectedBuIsSelected(arg0));
+        Assert.assertTrue(troubleEventPage.checkAffectedBuIsSelected(arg1));
     }
 }
 

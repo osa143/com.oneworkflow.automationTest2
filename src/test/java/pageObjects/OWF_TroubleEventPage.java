@@ -152,7 +152,20 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btn_ADD_TIMELINE= "WIN_0_777021404";
     private static final String rbtn_INTERNAL = "WIN_0_rc0id600001901";
     private static final String table_ATTACHMENT_INTERNAL= "T777000013";
+    private static final String div_AFFECTED_BU= "WIN_0_600002504";
 
+
+    public void clickAffectedBu(String textName){
+        String element = String.format("//input[@arvalue='%s']", textName);
+        System.out.println(element);
+        driver.findElement(By.id(div_AFFECTED_BU_ID)).findElement(By.xpath(element)).click();
+    }
+
+
+    public boolean checkAffectedBuIsSelected(String textName){
+        String element = String.format("//input[@arvalue='%s']", textName);
+        return driver.findElement(By.id(div_AFFECTED_BU_ID)).findElement(By.xpath(element)).isSelected();
+    }
     public boolean validateAttachmentAvailability(int attachmentsSize)
     {
         wait(1000);
@@ -302,7 +315,8 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         return mandatoryText;
     }
     public void clickOK_ImpactClear(){
-        clickElement(By.id(btn_YES_ON_FRAME_IMPACT_CLEAR));
+        //clickElement(By.id(btn_YES_ON_FRAME_IMPACT_CLEAR));
+        clickElementByContainsTextAndTagName("div", "Yes");
         wait(500);
     }
 
@@ -570,6 +584,16 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     {
         findElement(By.xpath(btn_OK_Popup)).click();
         driver.switchTo().frame(2);
+        wait(1500);
+    }
+    public void clickOk()
+    {
+        driver.switchTo().frame(1);
+        driver.switchTo().frame(0);
+        driver.switchTo().parentFrame();
+        driver.switchTo().frame(1);
+        wait(1000);
+        clickElementByContainsTextAndTagName("a", "OK");
         wait(1500);
     }
 
@@ -924,43 +948,5 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String ddIMPORTANCE_XPATH = "//div[@id='WIN_0_600001821']//a[@class='btn btn3d selectionbtn']";
     private static final String chkbxHEADER_XPATH_Diagnosis = "//div[@id='WIN_0_700009087']//input[@class='checkboxheader']";
 
-    private static final String ddValueSITE_ACCESS_REGISTRATION = "Site access registration";
-    private static final String ddValueWORKFORCE_ESCALATION_SE = "Workforce Escalation-SE";
-    private static final String ddValueCLEAR_TEMPLATE = "(clear)";
-
-    private static final String ddValueCUSTOMER = "Customer";
-    private static final String ddValueCUSTOMER_RECLAMATION = "Customer Reclamation";
-    private static final String ddValueEVENT = "Event";
-    private static final String ddValueINTERNAL_USER = "Internal User";
-    private static final String ddValuePREVENTIVE_MAINTENANCE = "Preventive Maintenance";
-    private static final String ddValueSTAKEHOLDER = "Stakeholder";
-    private static final String ddValueTHIRD_PARTY = "Third Party";
-    private static final String ddValueCLEAR_REQUEST_TYPE = "(clear)";
-
-    private static final String ddValueAPPLICATION_FAULT = "Application fault";
-    private static final String ddValueDATA_FAULT = "Data Fault";
-    private static final String ddValueNETWORK_FAULT = "Network Fault";
-    private static final String ddValueROAMING_DATA_FAULT = "Roaming-Data Fault";
-    private static final String ddValueROAMING_VOICE_FAULT = "Roaming-Voice Fault";
-    private static final String ddValueSITE_FAULT = "Site Fault";
-    private static final String ddValueTRANSMISSION_FAULT = "Transmission Fault";
-    private static final String ddValueTV_FAULT = "TV Fault";
-    private static final String ddValueVOICE_FAULT = "Voice Fault";
-    private static final String ddValueCLEAR_FAULT_TYPE = "(clear)";
-
-    private static final String ddValueCRITICAL_IMPORTANCE = "Critical";
-    private static final String ddValueHIGH = "High";
-    private static final String ddValueAVERAGE = "Average";
-    private static final String ddValueLOW = "Low";
-    private static final String ddValueCLEAR_IMPORTANCE = "(clear)";
-
-
-    private static final String ddValueNO = "NO";
-    private static final String ddValueMINOR = "Minor";
-    private static final String ddValueMEDIUM = "Medium";
-    private static final String ddValueMAJOR = "Major";
-    private static final String ddValueCRITICAL_IMPACT = "Critical";
-
-    private static final String ddValueCLEAR_ASIGNMENT_PROFILE = "(clear)";
 
 }

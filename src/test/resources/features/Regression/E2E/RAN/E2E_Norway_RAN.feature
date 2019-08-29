@@ -10,9 +10,9 @@ Feature: E2E Scenarios
     And user switches to window 1
     Then trouble record form should appear in new tab
     When user validates BU availability
-    And user clicks on <CheckedBU1> checkbox under affected BU's
-    And user clicks on <CheckedBU2> checkbox under affected BU's
-    Then user validates <TickedBU1> and <TickedBU2> checkboxes are selected
+    And user clicks on "<CheckedBU1>" checkbox under affected BU's
+    And user clicks on "<CheckedBU2>" checkbox under affected BU's
+    Then user validates "<TickedBU1>" and "<TickedBU2>" checkboxes are selected
     When user clicks on CTI details under sections
     And user validates availability of category dropdown
     Then multiple statuses "1:Access:Access|Transport:BSS:Computer Services:CORE:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:OSS:Packet_Transport:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:TV:VAS" should be available in "Category" dropdown
@@ -30,7 +30,7 @@ Feature: E2E Scenarios
     And user switches to frame
     Then user should see list of norway sites
     #Location Name,Location ID+,Region Name, Region ID, Latitude, Longitude
-    And user highlights location <Location> and clicks ok and validates location details
+    And user highlights location "<Location>" and clicks ok and validates location details
     When user enters "<Title>" in Title field in Trouble event
     And user selects request type as "Customer" on trouble event page
     And user enters description as "<Description>"

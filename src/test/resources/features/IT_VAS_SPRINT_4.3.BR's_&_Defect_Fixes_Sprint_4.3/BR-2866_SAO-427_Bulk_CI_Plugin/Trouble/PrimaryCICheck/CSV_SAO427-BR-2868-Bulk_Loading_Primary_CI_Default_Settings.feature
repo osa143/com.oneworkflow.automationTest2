@@ -29,7 +29,7 @@ Feature: checking of bulk loading additional definitions default settings
     And user clicks on Upload Import File
     Then user clicks on choose file button
       #10CI's CSV no duplicate
-    And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\10 CI's - Correct Names\BIR+Load+Template.csv" attachment and adds it
+    And user searches for "C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\Template.csv" attachment and adds it
     And user clicks on attachment ok button
     And user switches to frame
     Then user validates attached document is visible

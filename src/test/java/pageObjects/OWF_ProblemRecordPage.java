@@ -136,7 +136,8 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
     public void clickAssignments_underSections(){
-        driver.findElement(By.id(linkASSIGNMENTS)).click();
+        clickElementByContainsTextAndTagName("div", "Assignment");
+        //driver.findElement(By.id(linkASSIGNMENTS)).click();
     }
 
     public void clickRelease(){
@@ -212,8 +213,10 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     public void clickAckButton_problemRecord() {
         wait(3000);
         WebElement element= driver.findElement(By.id(btn_ACK_ID));
+
         try{
             waitUntilElementClickable(By.id(btn_ACK_ID)).click();
+
         }
         catch (Exception exception)
         {

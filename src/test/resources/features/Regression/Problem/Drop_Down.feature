@@ -4,7 +4,7 @@
     Scenario: user verifies available information
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "syvaptu1_auto" and password as "Telia@1234"
+      When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create problem record
       And user switches to window 1
@@ -15,36 +15,36 @@
       And user selects request type as "Core & Switching:CNDB" in problem form
       And user enters description as "Drop Down Verification"
       #Impact levels that should be available are: Extensive/Widespread, Significant/Large, Moderate Limited
-      Then multiple statuses "Extensive/Widespread:Significant/Large:Moderate Limited" should be available in "Impact" dropdown
+      Then multiple statuses "Extensive/Widespread:Significant/Large:Moderate/Limited:(clear)" should be available in "Impact" dropdown
       And user selects impact as "Extensive/Widespread"
       #urgency dropdown includes: Critical, High, Medium, low
-      And multiple statuses "Critical:High:Medium:Low" should be available in "Urgency" dropdown
+      And multiple statuses "Critical:High:Medium:Low:(clear)" should be available in "Urgency" dropdown
       Then user selects urgency as High
       When user clicks on save button on the problem form
       #status' available include: Assigned, Pending, Under investigation, Withdrawn
-      Then multiple statuses "Assigned:Pending:Under Investigation:Withdrawn" should be available in "Status*" dropdown
+      Then multiple statuses "Assigned:Pending:Under Investigation:Withdrawn:(clear)" should be available in "Status*" dropdown
       When user changes status to "Under Investigation" on problem record page
       And user clicks on save button on the problem form
       Then user validates ticket status as "Under Investigation"
       And change should also be reflected in the timeline as ""
       When user clicks on linked items tab
       #Target application that should be available are: Change, Known Error, Operations, Problem, Work Order
-      Then multiple statuses "OS3-Change:Os3-Known Error:OS3-Operations:Os3-Problem:OS3-Work Order:(Clear)" should be available in "Target Application" dropdown
+      Then multiple statuses "OS3 - Change:OS3 - Known Error:OS3 - Operations:OS3 - Problem:OS3 - Work Order:(clear)" should be available in "Target Application" dropdown
       When user selects target application first dropdown as "OS3 - Change"
       #Second dropdown should include: Caused by, is related to, is workaround for, solution for
-      Then multiple statuses "Caused by:Is related to:Is workaround for:Solution for" should be available in "Fld-SourceRelationshipType" dropdown
+      Then multiple statuses "Caused by:Is related to:Is workaround for:Solution for:(clear)" should be available in "Fld-SourceRelationshipType" dropdown
       When user selects target application first dropdown as "OS3 - Known Error"
       #Second dropdown should include: Caused by, is related to, is workaround for, solution for
-      Then multiple statuses "Caused by:Is related to:Is workaround for:Solution for" should be available in "Fld-SourceRelationshipType" dropdown
+      Then multiple statuses "Caused by:Related to:Solution for:Workaround for:(clear)" should be available in "Fld-SourceRelationshipType" dropdown
       When user selects target application first dropdown as "OS3 - Operations"
       #Second dropdown should include: Caused by, is related to, is workaround for, solution for
-      Then multiple statuses "Caused by:Is related to:Is workaround for:Solution for" should be available in "Fld-SourceRelationshipType" dropdown
+      Then multiple statuses "Caused by:Is related to:Is workaround for:Solution for:(clear)" should be available in "Fld-SourceRelationshipType" dropdown
       When user selects target application first dropdown as "OS3 - Problem"
       #Second dropdown should include: Caused by, is related to, is workaround for, solution for
-      Then multiple statuses "Caused by:Is related to:Is workaround for:Solution for" should be available in "Fld-SourceRelationshipType" dropdown
+      Then multiple statuses "Caused by:Related to:Solution for:Workaround for:(clear)" should be available in "Fld-SourceRelationshipType" dropdown
       When user selects target application first dropdown as "OS3 - Work Order"
       #Second dropdown should include: Caused by, is related to, is workaround for, solution for
-      Then multiple statuses "Caused by:Is related to:Is workaround for:Solution for" should be available in "Fld-SourceRelationshipType" dropdown
+      Then multiple statuses "Caused by:Is related to:Is workaround for:Solution for:(clear)" should be available in "Fld-SourceRelationshipType" dropdown
       When user changes status to investigation complete
       #Change Management:concurrent changes, poor execution or implementation plan, poor testing and validation - after implementation, poor testing and validation - before implementation, violation of approval flow.
       #New implementation: Design issues, Known error introduced in production upon launch, Unsupported elements
@@ -60,7 +60,7 @@
       And user enters RC found date as current date
       Then user clicks on save button on the problem form
       When user changes status to "Closed" on problem record page
-      Then multiple statuses "No solution identified:Not repeatable:Rejected:Risk accepted:Solved:Workaround:(clear)" should be available in "Closure Code" dropdown readonly
+      Then multiple statuses "No solution Identified:Not Repeatable:Rejected:Risk Accepted:Solved:Workaround:(clear)" should be available in "Closure Code" dropdown readonly
       And User selects "Root Cause Code" as dropdownValue and should see values for "notreadonly"
 
         | DropdownValue | DropdownValuesToBePresent|

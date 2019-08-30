@@ -73,7 +73,7 @@ public class BasePage {
     public void clickElementByContainsTextAndTagName(String tagName, String textName){
         String element = String.format("//%s[contains(text(),'%s')]", tagName, textName);
         System.out.println(element);
-         findElement(By.xpath(element)).click();
+        findElement(By.xpath(element)).click();
 
     }
     public boolean verifyElementIsEnabledByContainsTextAndTagName(String tagName, String textName){
@@ -312,7 +312,7 @@ public class BasePage {
             dropdownXpath = "//img[@alt='Menu for " + dropdownName + "']/..";
 
         driver.findElement(By.xpath(dropdownXpath)).click();
-        wait(1000);
+        wait(1200);
 
         String arr[] = dropdownValue.split(":");
         int index = getMenuTableBodyIndex(arr[0]);

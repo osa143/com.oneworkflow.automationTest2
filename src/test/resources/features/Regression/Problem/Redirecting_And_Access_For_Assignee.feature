@@ -30,13 +30,14 @@ Feature: Changing of assignee for problem ticket
     When user clicks on Ack button
     Then problem ticket status should be under investigation
     When user clicks on assignment under sections
-    Then user selects assigned profile dropdown as "Problem Initiator"
+    #Then user selects assigned profile dropdown as "Problem Initiator"
+    Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
     And user enters "Tohall_copy" in assignee
     #And user selects assignee as "Tohall_copy" by using alphabet "u" key up 16 times
     And user clicks on save button on the problem form
     Then change should also be reflected in the timeline "STATUS MODIFIED:mina09:Tohall_copy"
     When user clicks on assignment under sections
-    Then user selects assigned profile dropdown as "Problem Manager"
+    Then user selects assigned profile dropdown as "Problem Management:Problem Manager"
     And user enters "frvi96_auto" in assignee
     #And user selects assignee as "frvi96_auto" by using alphabet "g" key up 0 times
     And user clicks on save button on the problem form
@@ -75,7 +76,7 @@ Feature: Changing of assignee for problem ticket
     Then user clicks on "Additional Info" tab
     And user validates "Thgi00" is listed under analysis team member one field
     When user clicks on assignment under sections
-    Then user selects assigned profile dropdown as "Problem Initiator"
+    Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
     And user enters "Tohall_copy" in assignee
     #And user selects assignee as "mina09_auto" by using alphabet "n" key up 0 times
     And user clicks on save button on the problem form

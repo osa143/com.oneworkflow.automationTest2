@@ -23,7 +23,7 @@ public class OWF_ProblemRecordPageSteps {
     @When("user clicks on save button on the problem form")
     public void userClicksOnSaveButtonOnTheProblemForm() {
         problemRecordPage.clickSaveButton();
-        problemRecordPage.wait(4000);
+        problemRecordPage.wait(5000);
     }
 
     @Then("an error message should appear: {string}")
@@ -166,7 +166,8 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("change should also be reflected in the timeline as {string}")
     public void changeShouldAlsoBeReflectedInTheTimelineAs(String message) {
-        problemRecordPage.clickTimelineButton();
+        //problemRecordPage.clickTimelineButton();
+        problemRecordPage.selectTab("Timeline");
         problemRecordPage.clickRefresh_timeline();
         System.out.println("Actual Timeline Message is :" + message);
         boolean containsMessage = problemRecordPage.getTimelineStatus(1).contains(message);

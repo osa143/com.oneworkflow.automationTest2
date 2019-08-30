@@ -759,7 +759,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user validates {string} BU is added automatically")
     public void userValidatesBUIsAddedAutomatically(String arg0) {
-        troubleEventPage.verifyIsDenmarkSelected();
+        Assert.assertTrue(troubleEventPage.verifyIsDenmarkSelected());
     }
 
     @And("user clicks on close button on bulk update window")
@@ -1132,6 +1132,24 @@ public class OWF_TroubleEventPageSteps {
     public void userValidatesAndCheckboxesAreSelected(String arg0, String arg1) {
         Assert.assertTrue(troubleEventPage.checkAffectedBuIsSelected(arg0));
         Assert.assertTrue(troubleEventPage.checkAffectedBuIsSelected(arg1));
+    }
+
+    @Then("user should see error message on ci search window and clicks ok")
+    public void userShouldSeeErrorMessageOnCiSearchWindowAndClicksOk() {
+        troubleEventPage.getErrorText();
+        troubleEventPage.clickOkOnPopup();
+    }
+
+    @Then("user clicks on save button and closes warning messages")
+    public void userClicksOnSaveButtonAndClosesWarningMessages() {
+        troubleEventPage.clickSave();
+        troubleEventPage.switchToFrameByIndex(2);
+        troubleEventPage.clickElementByContainsTextAndTagName("a", "OK");
+        troubleEventPage.switchToDefault();
+        troubleEventPage.switchToFrameByIndex(2);
+        troubleEventPage.wait(3000);
+        troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
+        troubleEventPage.switchToDefault();
     }
 }
 

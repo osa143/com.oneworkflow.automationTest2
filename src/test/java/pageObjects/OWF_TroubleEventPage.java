@@ -592,8 +592,9 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         driver.switchTo().frame(0);
         driver.switchTo().parentFrame();
         driver.switchTo().frame(1);
-        wait(1000);
         clickElementByContainsTextAndTagName("a", "OK");
+        driver.switchTo().defaultContent();
+        switchToFrameByIndex(2);
         wait(1500);
     }
 

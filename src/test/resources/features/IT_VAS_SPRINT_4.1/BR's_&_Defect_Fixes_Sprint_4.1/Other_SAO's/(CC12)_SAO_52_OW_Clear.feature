@@ -1,4 +1,4 @@
-@SAO_52_OW_Clear
+@SAO_52_OW_Clear_feature
 # Test requires user to manually get ticket ID value from JMeter and enter ticket ID below//
 #UAT execution due to B2B needed
 
@@ -11,9 +11,9 @@ Feature: Closing of incident ticket that has linked WO
     When user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 1
     Then trouble record form should appear in new tab
-    And user enters ticket id as "OP-000001085771"
+    And user enters ticket id as "OP-000001284599"
     Then trouble ticket should appear related to TeMIP
-    When user clicks on work order tab
+    When user clicks on "Work Orders" tab
     And user clicks on create from ticket
     Then user switches to window 2
     And user validates ticket status as "New"
@@ -24,7 +24,7 @@ Feature: Closing of incident ticket that has linked WO
     Then user clicks on save button on the problem form
     When user switches to window 1
     And clicks on ticket refresh button
-    Then user clicks on work order tab
+    Then user clicks on "Work Orders" tab
     And user validates child WorkOrder availability
     And user validates WorkOrder status as "OPEN"
     When user switches to window 2
@@ -39,7 +39,7 @@ Feature: Closing of incident ticket that has linked WO
     When user clicks on "B2B Dispatch" tab
     And user enters header value as "Test"
     And user enters message value as "Automated Test"
-    And user clicks on save button on the problem form
+    And user clicks on save button
     Then user should see "Assignment" notification in outbound in row 1
     When user clicks on inbound events refresh button
     Then user should see "BTA:ExecutionStatusNotification" notification in inbound in row 1

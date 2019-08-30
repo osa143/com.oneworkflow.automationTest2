@@ -10,10 +10,10 @@
       When user clicks on create problem record
       And user switches to window 1
       Then problem record form should appear in new tab
-      When user clicks on save button on the problem form
+      When user clicks on save button
       Then an error message should appear: "Please select at least one country of impact for this problem. (ARERR 10000)"
       When user clicks on sweden checkbox under affected BU's
-      And user clicks on save button on the problem form
+      And user clicks save button
       Then multiple error messages should appear with red boarder around fields
       When user enters "proactive investigation of: frvi96_auto" in Title field
       And user selects request type as "Access Networks:RAN Optimization" on Problem record page

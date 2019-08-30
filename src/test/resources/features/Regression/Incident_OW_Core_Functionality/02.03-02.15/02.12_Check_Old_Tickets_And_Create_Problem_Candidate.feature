@@ -6,7 +6,7 @@
     Scenario: user is able to create a problem ticket from a past incident
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
+      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create trouble event
       And user switches to window 1
@@ -23,7 +23,6 @@
       And user selects Category as "Core"
       And user selects Type as "Mobile PS Core Network"
       And user selects Item as "SGSN"
-      And user clicks on search button on CI search window
       When user enters "SE_SGSN_FREMME2" in name field
       And user clicks on search button on CI search window
       And user selects a CI from list
@@ -54,13 +53,13 @@
       And user clicks on close button on CI search window
       And user switches to window 1
       And CI should be listed and displayed under the Diagnosis tab
-      Then user clicks on save button
+      Then user clicks on save button and closes warning messages
       When user clicks on "Linked Items" tab
       And user selects target application first dropdown as "OS3 - Problem"
       And user selects target application second dropdown as "Investigates"
       And user clicks on create button under linked items
       Then user switches to window 2
-      When user clicks on save button on the problem form
+      When user clicks save button
       Then multiple error messages should appear with red boarder around fields
       When user selects request type as "Product Services & Solutions:Mobile Data Platforms" in problem form
       And user selects impact as "Significant/Large"

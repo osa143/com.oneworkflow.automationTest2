@@ -36,9 +36,9 @@
       And user enters "No Risk" in the risk description field
       Then user clicks on "Schedule" tab
       And user enters as "Test ticket no impact" in service and customer impact
-      And user enters start time as some minutes fast from current sweden time
-      And user enters Request End time as some minutes fast from request start time
-      And user enters impact duration as "4" minutes
+      And user enters start time as 10 minutes fast from current sweden time
+      And user enters end time as 20 minutes fast from current sweden time
+      And user enters impact duration as "5" minutes
       And user selects estimated impact as "No Impact"
       And user clicks on save button
       And user gets change ticket value
@@ -46,7 +46,7 @@
       And user answers all risk questions as below
       And user selects answer as "Impact to other systems/technologies are unclear"
       And user selects answer as "No"
-      And user selects answer as "Tested successfully, this is a pilot"
+      And user selects answer as "Tested succesfully, this is a pilot"
       And user selects answer as "Yes (outcome of the change can be instantly verified)"
       And user selects answer as "Yes"
       And user selects answer as "Simple"

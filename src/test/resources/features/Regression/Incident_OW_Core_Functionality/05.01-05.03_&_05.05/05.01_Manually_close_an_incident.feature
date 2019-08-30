@@ -4,7 +4,7 @@
     Scenario: user can manually close an incident ticket
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
+      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create trouble event
       And user switches to window 1
@@ -34,7 +34,7 @@
       When user clicks on Diagnosis tab
       And user right clicks on CI "SE_EPG_FREEPG1" and selects "Impact:Clear All"
       And user should see confirmation message for impact clear and clicks ok
-      And user clicks on save button
+      And user clicks on save button and closes warning messages
       Then user validates ticket status as "Cleared"
       When user changes status to "Closed" on trouble event page second time
       And user clicks on save button

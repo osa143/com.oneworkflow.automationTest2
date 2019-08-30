@@ -73,6 +73,7 @@
 #      When user selects request type as "Risks & Failures:Lack of Business Continuity Management (BCM)"
 #      And user enters description as "Test"
       And user clicks on save button
+      And user waits 3 secs
       Then known error ticket status should be "Draft"
       And user switches to window 3
       When user changes status to "Closed" on problem record page
@@ -99,7 +100,7 @@
       And user clicks on save button
       Then user validates ticket status as "Published"
       When user changes status to "Closed" on problem record page
-      And user clicks on save button
+      And user clicks save button
       When user selects closure code as "Full Impact"
       And user clicks on save button
       Then user validates ticket status as "Closed"

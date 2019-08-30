@@ -4,7 +4,7 @@
     Scenario: user can search for known errors using quick search
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
+      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create trouble event
       And user switches to window 1
@@ -18,7 +18,6 @@
       When user clicks on Diagnosis tab
       And user clicks on CI search button
       Then user switches to frame
-      When user clicks on clear button
       And user enters "SE_SGSN_VRRMME1" in name field
       Then user clicks on search button on CI search window
       And user selects a CI from list
@@ -31,18 +30,19 @@
       And user selects Category as "Core"
       And user selects Type as "Other"
       And user selects Item as "BR"
-      Then user clicks on save button
+      Then user clicks on save button and closes warning messages
       When user clicks on linked items tab
       And user selects target application first dropdown as "OS3 - Known Error"
       And user selects target application second dropdown as "Has workaround"
       And user clicks on link button
       Then user switches to frame
+      And user clicks on the clear button
       And user selects Category as "Core"
       And user selects Type as "Other"
       And user selects Item as "BR"
       And user clicks on the search button
       And user should see known error ticket listed
-      And user clicks on accept button
+      And user clicks on cancel on select target window
 
 
 

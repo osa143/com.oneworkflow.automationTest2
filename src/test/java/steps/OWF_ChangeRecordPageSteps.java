@@ -66,7 +66,12 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user clicks on save button")
     public void userClicksOnSaveButton() {
-        changeRecordPage.clickSave();
+        try {
+            changeRecordPage.clickSave();
+        }
+        catch(Exception e){
+
+        }
         changeRecordPage.wait(6000);
 
     }
@@ -294,8 +299,8 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user enters {string} in the advanced search bar")
     public void userEntersInTheAdvancedSearchBar(String text) {
-        text = text.replace('|','"');
-        changeRecordPage.enterAdvancedSearch(text);
+        String text1 = text.replace('|','"');
+        changeRecordPage.enterAdvancedSearch(text1);
     }
 
     @Then("user enters request start time {int} hours ahead of current date")
@@ -487,4 +492,16 @@ public class OWF_ChangeRecordPageSteps {
         System.out.println("Event Start time is : " +CommonUtils.requestStart);
         System.out.println("Event End time is : " + CommonUtils.requestEnd);
     }
+
+    @And("user enters start time as {int} minutes fast from current sweden time")
+    public void userEntersStartTimeAsMinutesFastFromCurrentSwedenTime(int arg0) {
+        changeRecordPage.enterStartDate_format(arg0);
+    }
+
+    @And("user enters end time as {int} minutes fast from current sweden time")
+    public void userEntersEndTimeAsMinutesFastFromRequestStartTime(int arg0) {
+        changeRecordPage.enterEndDate_format(arg0);
+    }
+
+
 }

@@ -4,7 +4,7 @@
     Scenario: priority calculation
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "syvaptu1_auto" and password as "Telia@1234"
+      When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create problem record
       And user switches to window 1

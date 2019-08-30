@@ -403,6 +403,7 @@ public class OWF_CiSearchPage extends BasePage {
     public void clickToSelectCi() {
         wait(500);
         findElement(By.xpath(chkbxTO_SELECT_CI)).click();
+        wait(500);
 
     }
     public void selectLevel(String value){

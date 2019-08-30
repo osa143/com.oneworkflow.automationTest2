@@ -10,7 +10,7 @@
       And user switches to window 1
       Then problem record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
-      And user clicks on save button on the problem form
+      And user clicks save button
       Then multiple error messages should appear with red boarder around fields
       When user enters "proactive investigation of: frvi96_auto" in Title field
       And user selects request type as "Access Networks:RAN Optimization" on Problem record page
@@ -25,7 +25,7 @@
       Then user gets ticket value
       And user logsOut
       And user goes back to login page
-      When user logs in with valid username "syvaptu1_auto" and password as "Telia@1234"
+      When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
       Then user clicks on search and selects open search forms and problem record
       And user switches to window 2
       Then user enters Problem Ticket

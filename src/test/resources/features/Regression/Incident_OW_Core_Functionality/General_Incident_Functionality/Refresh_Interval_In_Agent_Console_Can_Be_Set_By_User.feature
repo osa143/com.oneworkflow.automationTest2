@@ -3,7 +3,7 @@
     Scenario: user can set the refresh interval
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
+      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user sets the preferences as "Set Refresh Interval"
       And user switches to frame

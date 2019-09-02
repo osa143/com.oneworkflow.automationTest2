@@ -1,5 +1,5 @@
-@01.09_Add_attachments_to_field_named_Internal_attachments #@Incident
-#Add Attachment can't do at the movement
+@01.09_Add_attachments_to_field_named_Internal_attachments @Incident
+
   Feature: Adding of Attachments to incident ticket
     Scenario: user is able to add an attachment to incident ticket
 
@@ -24,7 +24,8 @@
       And user enters attachment description as "Test JPEG"
       Then user clicks on add button in attachment window
       And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test JPEG FILE" attachment and adds it
+      And user searches for "<Full Path of attachment file >" attachment and adds it
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test JPEG FILE.jpg" attachment and adds it
       And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
@@ -40,7 +41,7 @@
       And user enters attachment description as "Test PNG"
       Then user clicks on add button in attachment window
       And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PNG FILE" attachment and adds it
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PNG FILE.png" attachment and adds it
       And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
@@ -53,7 +54,7 @@
       And user enters attachment description as "Test PDF"
       Then user clicks on add button in attachment window
       And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PDF FILE" attachment and adds it
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PDF FILE.pdf" attachment and adds it
       And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
@@ -66,7 +67,7 @@
       And user enters attachment description as "Test WORD"
       Then user clicks on add button in attachment window
       And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test WORD FILE" attachment and adds it
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test WORD FILE.pdf" attachment and adds it
       And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
@@ -79,7 +80,7 @@
       And user enters attachment description as "Test EXCEL"
       Then user clicks on add button in attachment window
       And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test XLS FILE" attachment and adds it
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test XLS FILE.xls" attachment and adds it
       And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
@@ -92,12 +93,12 @@
       And user enters attachment description as "Test PPT"
       Then user clicks on add button in attachment window
       And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PPT FILE" attachment and adds it
+      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PPT FILE.ppt" attachment and adds it
       And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
       And user selects attachment visibility as Internal
       Then user clicks on save button on attachment window
       And user validates 6 attachment visibility under internal
-#      Then user clicks on save button
+      Then user clicks on save button
 

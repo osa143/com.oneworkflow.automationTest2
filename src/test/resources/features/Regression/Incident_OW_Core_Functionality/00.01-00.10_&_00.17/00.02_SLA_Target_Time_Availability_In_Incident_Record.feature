@@ -17,6 +17,7 @@ Feature: Incident
     #And user enters ticket id as "OP-000000538992"
     #UAT
     When user clicks on advanced search button
+    And user waits 2 secs
     And user enters "'Cust. Remaining SLA' != |00:00:00|" in the advanced search bar
     And user clicks on search
     Then ticket with SLA should be opened

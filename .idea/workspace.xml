@@ -14,88 +14,18 @@
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/exception.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/exception.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_ChangeRecordPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_ChangeRecordPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_ProblemRecordPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_ProblemRecordPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_TroubleEventPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_TroubleEventPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_ChangeRecordPageSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_ChangeRecordPageSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_TroubleEventPageSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_TroubleEventPageSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_CiSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_CiSearchPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_TroubleEventPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_TroubleEventPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_TroubleEventPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_TroubleEventPageSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.1/BR's_&amp;_Defect_Fixes_Sprint_4.1/Other_SAO's/(CC12)_SAO_52_OW_Clear.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.1/BR's_&amp;_Defect_Fixes_Sprint_4.1/Other_SAO's/(CC12)_SAO_52_OW_Clear.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.01_Validate_incident_record_process_artifact.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.01_Validate_incident_record_process_artifact.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Core_Test_Cases.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Core_Test_Cases.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_RAN_Test_Cases.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_RAN_Test_Cases.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.02_SLA_Target_Time_Availability_In_Incident_Record.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.02_SLA_Target_Time_Availability_In_Incident_Record.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.03_OLA_Target_Time_Availability_In_Incident_Record.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.03_OLA_Target_Time_Availability_In_Incident_Record.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.04_Estimated_Ready_Date_Time_Availability.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.04_Estimated_Ready_Date_Time_Availability.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.05_Validate_Behaviour_And_Options_For_Data_Field_Priority.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.05_Validate_Behaviour_And_Options_For_Data_Field_Priority.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.06_Validate_Options_For_Data_Field_RequestType.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.06_Validate_Options_For_Data_Field_RequestType.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.07_Template_data_field_must_contain_valid_options.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.07_Template_data_field_must_contain_valid_options.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.08_Title_data_field_must_contain_valid_options.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.08_Title_data_field_must_contain_valid_options.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.09_Validate_Impact_field_availability_in_Incident_record.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.09_Validate_Impact_field_availability_in_Incident_record.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.10_Validate_Urgency_field_availability_in_Incident_record.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.10_Validate_Urgency_field_availability_in_Incident_record.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.17_Validate_Owner_field_structure.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.17_Validate_Owner_field_structure.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.02_Register_affected_BUs.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.02_Register_affected_BUs.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.03_Set_correct_categorization.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.03_Set_correct_categorization.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.04_Set_incident_start_time.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.04_Set_incident_start_time.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.05_Set_location_of_incident_origin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.05_Set_location_of_incident_origin.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.08_Set_the_service_impact.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.08_Set_the_service_impact.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.09_Add_attachments_to_field_named_Internal_attachments.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.09_Add_attachments_to_field_named_Internal_attachments.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.11_Add_CI_To_Incident_Ticket.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.11_Add_CI_To_Incident_Ticket.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.17_Create_a_new_incident_with_Event_start_time_in_history.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.17_Create_a_new_incident_with_Event_start_time_in_history.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.03_Check_impact_record.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.03_Check_impact_record.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.05_Acknowledge_the_functional_escalation_to_you_aka_incident_assignment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.05_Acknowledge_the_functional_escalation_to_you_aka_incident_assignment.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.07_Change_incident_start_time.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.07_Change_incident_start_time.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.08_Change_priority_level.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.08_Change_priority_level.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.11_Check_incident_OLA.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.11_Check_incident_OLA.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.12_Check_Old_Tickets_And_Create_Problem_Candidate.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.12_Check_Old_Tickets_And_Create_Problem_Candidate.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.13_Create_Multiple_Work_Orders_Internally_And_Dispatch_These_To_Different_Assignment_Groups.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.13_Create_Multiple_Work_Orders_Internally_And_Dispatch_These_To_Different_Assignment_Groups.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.14_Find_Newly_Created_Or_Implemented_Changes.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.14_Find_Newly_Created_Or_Implemented_Changes.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.15_Search_for_Known_Errors_using_quick_search_based_on_Category_Type_and_Item.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.15_Search_for_Known_Errors_using_quick_search_based_on_Category_Type_and_Item.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/03.02-03.04/03.02_Do_a_public_Timeline_update_on_OW_incident_ticket.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/03.02-03.04/03.02_Do_a_public_Timeline_update_on_OW_incident_ticket.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/03.02-03.04/03.03_Link_to_master_ticket.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/03.02-03.04/03.03_Link_to_master_ticket.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/03.02-03.04/03.04_Link_child_tickets_and_make_master_ticket.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/03.02-03.04/03.04_Link_child_tickets_and_make_master_ticket.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/04.01-04.05_&amp;_04.20/04.01_Document_the_service_restoration_actions_and_results.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/04.01-04.05_&amp;_04.20/04.01_Document_the_service_restoration_actions_and_results.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/04.01-04.05_&amp;_04.20/04.02_Set_Service_restored_timestamp_aka_Event_end_time.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/04.01-04.05_&amp;_04.20/04.02_Set_Service_restored_timestamp_aka_Event_end_time.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/04.01-04.05_&amp;_04.20/04.03_Do_a_functional_escalation_to_a_new_team_as_if_the_resolution_attempt_failed.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/04.01-04.05_&amp;_04.20/04.03_Do_a_functional_escalation_to_a_new_team_as_if_the_resolution_attempt_failed.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/04.01-04.05_&amp;_04.20/04.04_Create_change_from_incident_using_Create_button_in_Linked_Items_tab.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/04.01-04.05_&amp;_04.20/04.04_Create_change_from_incident_using_Create_button_in_Linked_Items_tab.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/04.01-04.05_&amp;_04.20/04.05_Create_problem_candidate_from_incident_using_Create_button_in_Linked_Items_tab.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/04.01-04.05_&amp;_04.20/04.05_Create_problem_candidate_from_incident_using_Create_button_in_Linked_Items_tab.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/04.01-04.05_&amp;_04.20/04.20_Create_a_new_incident_ticket_and_later_close_it_with_Event_End_time_in_history.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/04.01-04.05_&amp;_04.20/04.20_Create_a_new_incident_ticket_and_later_close_it_with_Event_End_time_in_history.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/05.01-05.03_&amp;_05.05/05.01_Manually_close_an_incident.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/05.01-05.03_&amp;_05.05/05.01_Manually_close_an_incident.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/05.01-05.03_&amp;_05.05/05.02_Incident_summary.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/05.01-05.03_&amp;_05.05/05.02_Incident_summary.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/05.01-05.03_&amp;_05.05/05.03_Service_Restored_date_and_time_field_is_mandatory_before_a_ticket_can_be_closed.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/05.01-05.03_&amp;_05.05/05.03_Service_Restored_date_and_time_field_is_mandatory_before_a_ticket_can_be_closed.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/05.01-05.03_&amp;_05.05/05.05_Validate_closure_codes_structure_and_availability.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/05.01-05.03_&amp;_05.05/05.05_Validate_closure_codes_structure_and_availability.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Choose_Or_Change_assignment_profile.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Choose_Or_Change_assignment_profile.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Core_Functionalaities_in_Agent_Console_Must_Be_Available.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Core_Functionalaities_in_Agent_Console_Must_Be_Available.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Filter_Agent_Console_on_Creator.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Filter_Agent_Console_on_Creator.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Filter_out_the_tickets_of_interest_for_you.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Filter_out_the_tickets_of_interest_for_you.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/It_should_not_be_possible_to_close_an_Incident_ticket.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/It_should_not_be_possible_to_close_an_Incident_ticket.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Refresh_Interval_In_Agent_Console_Can_Be_Set_By_User.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Refresh_Interval_In_Agent_Console_Can_Be_Set_By_User.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Remove_a_CI_from_Diagnosis_tab.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Remove_a_CI_from_Diagnosis_tab.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/SID_Console_CI_Search.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/SID_Console_CI_Search.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Search_for_closed_incidents_for_a_specific_Location.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Search_for_closed_incidents_for_a_specific_Location.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Search_for_open_incidents_for_a_specific_Location.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Search_for_open_incidents_for_a_specific_Location.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Set_WO_to_cleared,_add_End_date_and_time_and_close_WO.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Set_WO_to_cleared,_add_End_date_and_time_and_close_WO.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Validate_no_changes_can_be_done_to_ticket_in_Closed_status.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Validate_no_changes_can_be_done_to_ticket_in_Closed_status.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Verify_functionality_of_Service_Info_tab.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Verify_functionality_of_Service_Info_tab.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Verify_status_of_BU_receving_disturbance_information_in_Service_Info_tab.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Verify_status_of_BU_receving_disturbance_information_in_Service_Info_tab.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/WO's_Status.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/WO's_Status.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/When_creating_workorder,_a_proposal_of_default_technical_escalation_queue_should_Appear.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/When_creating_workorder,_a_proposal_of_default_technical_escalation_queue_should_Appear.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Drop_Down.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Drop_Down.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/E2E problem and known error.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/E2E problem and known error.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Initiator_Create_Ticket_And_Withdraw.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Initiator_Create_Ticket_And_Withdraw.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Linked_Items_&amp;_Change_To_KE.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Linked_Items_&amp;_Change_To_KE.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/PMO_Tab.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/PMO_Tab.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Pending_Status.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Pending_Status.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Priority_Calculation.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Priority_Calculation.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_1.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_1.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_2.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_2.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_3.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_3.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Verification_Of_Ownership.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Verification_Of_Ownership.feature" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -168,11 +98,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/runners/Test_Runner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -180,11 +110,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Remove_a_CI_from_Diagnosis_tab.feature">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Core_Test_Cases.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="31" />
+            <state relative-caret-position="-3401">
+              <caret line="63" column="52" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_RAN_Test_Cases.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4439">
+              <caret line="257" lean-forward="true" selection-start-line="257" selection-end-line="257" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_AgentConsolePageSteps.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2457">
+              <caret line="148" column="16" selection-start-line="148" selection-start-column="16" selection-end-line="148" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_AgentConsolePage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="425" column="16" selection-start-line="425" selection-start-column="16" selection-end-line="425" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -192,8 +149,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="31" column="53" lean-forward="true" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+            <state relative-caret-position="223">
+              <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -201,8 +158,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
+            <state relative-caret-position="191">
               <caret line="370" column="19" selection-start-line="370" selection-start-column="19" selection-end-line="370" selection-end-column="19" />
+              <folding>
+                <element signature="e#7193#7194#0" expanded="true" />
+                <element signature="e#7264#7265#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_TroubleEventPageSteps.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="1116" column="64" selection-start-line="1116" selection-start-column="64" selection-end-line="1116" selection-end-column="64" />
+              <folding>
+                <element signature="e#42663#42664#0" expanded="true" />
+                <element signature="e#42722#42723#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_TroubleEventPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="190" column="9" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -218,7 +201,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>btnACK</find>
       <find>T700027964</find>
       <find>WIN_6_700027904</find>
       <find>WIN_0_600002906</find>
@@ -248,6 +230,7 @@
       <find>WIN_0_800038059</find>
       <find>WIN_0_800038044</find>
       <find>WIN_0_600002504</find>
+      <find>WIN_0_rc1id600001901</find>
     </findStrings>
     <replaceStrings>
       <replace>.orElse(null).</replace>
@@ -269,13 +252,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.17_Create_a_new_incident_with_Event_start_time_in_history.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.03_Check_impact_record.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.05_Acknowledge_the_functional_escalation_to_you_aka_incident_assignment.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.07_Change_incident_start_time.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.08_Change_priority_level.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.11_Check_incident_OLA.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.14_Find_Newly_Created_Or_Implemented_Changes.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/03.02-03.04/03.02_Do_a_public_Timeline_update_on_OW_incident_ticket.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/03.02-03.04/03.03_Link_to_master_ticket.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/03.02-03.04/03.04_Link_child_tickets_and_make_master_ticket.feature" />
@@ -293,22 +269,17 @@
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Filter_out_the_tickets_of_interest_for_you.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/It_should_not_be_possible_to_close_an_Incident_ticket.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Refresh_Interval_In_Agent_Console_Can_Be_Set_By_User.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Remove_a_CI_from_Diagnosis_tab.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Search_for_closed_incidents_for_a_specific_Location.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Search_for_open_incidents_for_a_specific_Location.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Set_WO_to_cleared,_add_End_date_and_time_and_close_WO.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/SID_Console_CI_Search.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Validate_no_changes_can_be_done_to_ticket_in_Closed_status.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Verify_functionality_of_Service_Info_tab.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Verify_status_of_BU_receving_disturbance_information_in_Service_Info_tab.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/When_creating_workorder,_a_proposal_of_default_technical_escalation_queue_should_Appear.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/WO's_Status.feature" />
         <option value="$PROJECT_DIR$/src/test/java/cucumberHooks/Hooks.java" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.07_Template_data_field_must_contain_valid_options.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.02_SLA_Target_Time_Availability_In_Incident_Record.feature" />
         <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.03_Set_correct_categorization.feature" />
-        <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_TroubleEventPage.java" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.08_Set_the_service_impact.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.11_Add_CI_To_Incident_Ticket.feature" />
         <option value="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" />
@@ -316,10 +287,22 @@
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.13_Create_Multiple_Work_Orders_Internally_And_Dispatch_These_To_Different_Assignment_Groups.feature" />
         <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_CiSearchPage.java" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.15_Search_for_Known_Errors_using_quick_search_based_on_Category_Type_and_Item.feature" />
-        <option value="$PROJECT_DIR$/src/test/java/steps/OWF_TroubleEventPageSteps.java" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/05.01-05.03_&amp;_05.05/05.01_Manually_close_an_incident.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/05.01-05.03_&amp;_05.05/05.02_Incident_summary.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Remove_a_CI_from_Diagnosis_tab.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.02_SLA_Target_Time_Availability_In_Incident_Record.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Search_for_open_incidents_for_a_specific_Location.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/PrimaryCICheck/Manual_SAO427-BR-2868-Bulk_Loading_Primary_CI_Default_Settings.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/PrimaryCICheck/CSV_SAO427-BR-2868-Bulk_Loading_Primary_CI_Default_Settings.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/WO's_Status.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.09_Add_attachments_to_field_named_Internal_attachments.feature" />
         <option value="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/steps/OWF_TroubleEventPageSteps.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_TroubleEventPage.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_RAN_Test_Cases.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Core_Test_Cases.feature" />
       </list>
     </option>
   </component>
@@ -330,10 +313,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
+    <option name="x" value="-13" />
+    <option name="y" value="-13" />
     <option name="width" value="2420" />
-    <option name="height" value="1372" />
+    <option name="height" value="1373" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
@@ -344,6 +327,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -374,8 +359,7 @@
               <item name="com.oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumberHooks" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
@@ -383,6 +367,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="configs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
@@ -417,6 +402,27 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3" type="462c0819:PsiDirectoryNode" />
+              <item name="BR-2866_SAO-427_Bulk_CI_Plugin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3" type="462c0819:PsiDirectoryNode" />
+              <item name="BR-2866_SAO-427_Bulk_CI_Plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="Trouble" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
               <item name="Regression" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -427,7 +433,29 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="features" type="462c0819:PsiDirectoryNode" />
               <item name="Regression" type="462c0819:PsiDirectoryNode" />
-              <item name="Incident_OW_Core_Functionality" type="462c0819:PsiDirectoryNode" />
+              <item name="E2E" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="Regression" type="462c0819:PsiDirectoryNode" />
+              <item name="E2E" type="462c0819:PsiDirectoryNode" />
+              <item name="CORE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="com.oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="Regression" type="462c0819:PsiDirectoryNode" />
+              <item name="E2E" type="462c0819:PsiDirectoryNode" />
+              <item name="RAN" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
@@ -438,14 +466,11 @@
               <item name="features" type="462c0819:PsiDirectoryNode" />
               <item name="Regression" type="462c0819:PsiDirectoryNode" />
               <item name="Incident_OW_Core_Functionality" type="462c0819:PsiDirectoryNode" />
-              <item name="General_Incident_Functionality" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -765,14 +790,9 @@
       <workItem from="1566901877476" duration="6025000" />
       <workItem from="1566918906006" duration="5667000" />
       <workItem from="1566978604083" duration="51539000" />
-      <workItem from="1567168650402" duration="6096000" />
-    </task>
-    <task id="LOCAL-00048" summary="PMO Tab test Has passed">
-      <created>1561993766870</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1561993766870</updated>
+      <workItem from="1567168650402" duration="8265000" />
+      <workItem from="1567334291765" duration="4322000" />
+      <workItem from="1567410582277" duration="16089000" />
     </task>
     <task id="LOCAL-00049" summary="SAO-181 passed">
       <created>1562012796875</created>
@@ -1110,43 +1130,50 @@
       <option name="project" value="LOCAL" />
       <updated>1567068953317</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="updated steps for incident tes cases">
+      <created>1567175111315</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1567175111316</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_Runner - 2019.08.30 at 14h 44m 42s.xml">
+    <history-entry file="Test_Runner - 2019.09.02 at 12h 03m 00s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.08.30 at 14h 46m 26s.xml">
+    <history-entry file="Test_Runner - 2019.09.02 at 12h 06m 50s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.08.30 at 14h 49m 56s.xml">
+    <history-entry file="Test_Runner - 2019.09.02 at 12h 15m 14s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.08.30 at 14h 52m 30s.xml">
+    <history-entry file="Test_Runner - 2019.09.02 at 12h 35m 34s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.08.30 at 14h 54m 52s.xml">
+    <history-entry file="Test_Runner - 2019.09.02 at 12h 40m 35s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.08.30 at 14h 58m 07s.xml">
+    <history-entry file="Test_Runner - 2019.09.02 at 12h 48m 52s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.08.30 at 15h 01m 11s.xml">
+    <history-entry file="Test_Runner - 2019.09.02 at 12h 56m 20s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.08.30 at 15h 04m 20s.xml">
+    <history-entry file="Test_Runner - 2019.09.02 at 13h 03m 58s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.08.30 at 15h 09m 35s.xml">
+    <history-entry file="Test_Runner - 2019.09.02 at 13h 33m 05s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.08.30 at 15h 14m 29s.xml">
+    <history-entry file="Test_Runner - 2019.09.02 at 13h 38m 53s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2033546000" />
+    <option name="totallyTimeSpent" value="2056126000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1161,7 +1188,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26439232" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2707889" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -1170,7 +1197,7 @@
       <window_info id="Designer" order="6" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.15700142" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.38136512" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.3488624" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3479491" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50067025" side_tool="true" weight="0.50636494" />
       <window_info anchor="bottom" id="Database Changes" order="5" />
@@ -1284,7 +1311,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PMO Tab test Has passed" />
     <MESSAGE value="SAO-181 passed" />
     <MESSAGE value="modified features and steps for incident 02, 03, 04" />
     <MESSAGE value="modified features and steps for incident features" />
@@ -1309,7 +1335,8 @@
     <MESSAGE value="modified feature names" />
     <MESSAGE value="modified feature for 500 CIs manual" />
     <MESSAGE value="updated steps for CI search window" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated steps for CI search window" />
+    <MESSAGE value="updated steps for incident tes cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated steps for incident tes cases" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1328,58 +1355,89 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java</url>
-          <line>995</line>
+          <line>1001</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java</url>
+          <line>132</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="TestNG">
+        <watch expression="driver.findElement(By.id(&quot;arid1005&quot;))" language="JAVA" />
+        <watch expression="driver.findElement(By.id(&quot;arid1005&quot;)).sendKeys(&quot;mahesh&quot;)" language="JAVA" />
+        <watch expression="driver.findElement(By.id(&quot;arid1005&quot;)).sendKeys(&quot;mahesh&quot;)" language="JAVA" />
+        <watch expression="driver.findElement(By.id(&quot;arid1005&quot;)).click()" language="JAVA" />
+        <watch expression="driver.findElement(By.xpath(&quot;//*[@id='arid1005']&quot;))" language="JAVA" />
+        <watch expression="driver.findElement(By.xpath(&quot;//*[@id='arid1005']&quot;)).sendKeys(&quot;shdjahdfk&quot;)" language="JAVA" />
+        <watch expression="driver.findElement(By.className(&quot;SearchBarInput&quot;)).findElement(By.tagName(&quot;textarea&quot;))" language="JAVA" />
+        <watch expression="driver.findElement(By.className(&quot;SearchBarInput&quot;)).findElement(By.tagName(&quot;textarea&quot;)).sendKeys(&quot;text&quot;)" language="JAVA" />
+        <watch expression="driver.findElement(By.xpath(&quot;//*[@id=\&quot;WIN_0_999000479\&quot;]/fieldset/div/div/table[1]/tbody/tr/td[2]/a&quot;)).click()" language="JAVA" />
+        <watch expression="driver.findElement(By.id(&quot;arid1005&quot;)).sendKeys(&quot;mahesh&quot;)" language="JAVA" />
+        <watch expression="driver.findElement(By.id(&quot;arid1005&quot;)).clear()" language="JAVA" />
+        <watch expression="driver.findElement(By.id(&quot;arid1005&quot;)).click()" language="JAVA" />
+        <watch expression="driver.findElement(By.id(&quot;arid1005&quot;)).sendKeys(Keys.ARROW_DOWN)" language="JAVA" />
+        <watch expression="((JavascriptExecutor)driver).executeScript(&quot;arguments[0].value ='text';&quot;, driver.findElement(By.id(&quot;arid1005&quot;)))" language="JAVA" custom="org.openqa.selenium.JavascriptExecutor" />
+        <watch expression="((JavascriptExecutor)driver).executeScript(&quot;document.getElementById('arid1005').value='text';&quot;)" language="JAVA" custom="org.openqa.selenium.JavascriptExecutor" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
-        <expression-string>clickElementByContainsTextAndTagName(&quot;a&quot;,&quot;OK&quot;)</expression-string>
+        <expression-string>((JavascriptExecutor)driver).executeScript(&quot;document.getElementById('arid1005').value='text';&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>org.openqa.selenium.JavascriptExecutor</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>((JavascriptExecutor)driver).executeScript(&quot;arguments[0].value ='text';&quot;, driver.findElement(By.id(&quot;arid1005&quot;)))</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>org.openqa.selenium.JavascriptExecutor</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>driver.findElement(By.id(&quot;arid1005&quot;)).sendKeys(Keys.ARROW_DOWN)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>driver.switchTo().frame(1)</expression-string>
+        <expression-string>driver.findElement(By.id(&quot;arid1005&quot;)).click()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>driver.switchTo().parentFrame()</expression-string>
+        <expression-string>driver.findElement(By.id(&quot;arid1005&quot;)).clear()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>driver.switchTo().frame(0)</expression-string>
+        <expression-string>driver.findElement(By.id(&quot;arid1005&quot;)).sendKeys(&quot;mahesh&quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>driver.findElements(By.tagName(&quot;iframe&quot;)).size()</expression-string>
+        <expression-string>driver.findElement(By.xpath(&quot;//*[@id=\&quot;WIN_0_999000479\&quot;]/fieldset/div/div/table[1]/tbody/tr/td[2]/a&quot;)).click()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>driver.findElement(By.xpath(&quot;//*[@id=\&quot;PopupMsgFooter\&quot;]/a&quot;)).click()</expression-string>
+        <expression-string>driver.findElement(By.className(&quot;SearchBarInput&quot;)).findElement(By.tagName(&quot;textarea&quot;)).sendKeys(&quot;text&quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>driver.findElement(By.id(&quot;PopupMsgBox&quot;)).click()</expression-string>
+        <expression-string>driver.findElement(By.className(&quot;SearchBarInput&quot;)).findElement(By.tagName(&quot;textarea&quot;))</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>((ChromeDriver) driver).findElements(By.tagName(&quot;iframe&quot;)).size()</expression-string>
-        <language-id>JAVA</language-id>
-        <custom-info>org.openqa.selenium.chrome.ChromeDriver</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>clickElementByContainsTextAndTagName(&quot;a&quot;, &quot;OK&quot;)</expression-string>
+        <expression-string>driver.findElement(By.xpath(&quot;//*[@id='arid1005']&quot;)).sendKeys(&quot;shdjahdfk&quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -1399,239 +1457,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Choose_Or_Change_assignment_profile.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="87" selection-start-line="6" selection-start-column="87" selection-end-line="6" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Core_Functionalaities_in_Agent_Console_Must_Be_Available.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="87" selection-start-line="6" selection-start-column="87" selection-end-line="6" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Filter_Agent_Console_on_Creator.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="85" selection-start-line="6" selection-start-column="85" selection-end-line="6" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Refresh_Interval_In_Agent_Console_Can_Be_Set_By_User.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="87" selection-start-line="5" selection-start-column="87" selection-end-line="5" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/SID_Console_CI_Search.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="87" selection-start-line="6" selection-start-column="87" selection-end-line="6" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Verify_functionality_of_Service_Info_tab.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="87" selection-start-line="6" selection-start-column="87" selection-end-line="6" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Verify_status_of_BU_receving_disturbance_information_in_Service_Info_tab.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="87" selection-start-line="6" selection-start-column="87" selection-end-line="6" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/When_creating_workorder,_a_proposal_of_default_technical_escalation_queue_should_Appear.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="87" selection-start-line="6" selection-start-column="87" selection-end-line="6" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/WO's_Status.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="87" selection-start-line="6" selection-start-column="87" selection-end-line="6" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Validate_no_changes_can_be_done_to_ticket_in_Closed_status.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="87" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Set_WO_to_cleared,_add_End_date_and_time_and_close_WO.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="85" selection-start-line="6" selection-start-column="85" selection-end-line="6" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Search_for_open_incidents_for_a_specific_Location.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="85" selection-start-line="7" selection-start-column="85" selection-end-line="7" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Search_for_closed_incidents_for_a_specific_Location.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2920">
-          <caret line="7" column="87" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.01_Validate_incident_record_process_artifact.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="43" selection-start-column="43" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-testng/4.2.0/586a50c8f6af84370d6e482cf28559ae6fae2edf/cucumber-testng-4.2.0.jar!/cucumber/api/testng/AbstractTestNGCucumberTests.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cucumberHooks/Hooks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Initiator_Link_Tickets.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1200">
-          <caret selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.04_Estimated_Ready_Date_Time_Availability.feature">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.07_Template_data_field_must_contain_valid_options.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="81" selection-start-line="12" selection-start-column="81" selection-end-line="12" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="132" column="8" selection-start-line="132" selection-start-column="8" selection-end-line="132" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.02_SLA_Target_Time_Availability_In_Incident_Record.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="84" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.09_Validate_Impact_field_availability_in_Incident_record.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.03_Set_correct_categorization.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.04_Set_incident_start_time.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/3.141.59/e006ffd3aa7841e6e9125d9e6691b3a6b7592b05/selenium-api-3.141.59.jar!/org/openqa/selenium/WebDriver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="86" column="18" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.17_Create_a_new_incident_with_Event_start_time_in_history.feature">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.08_Set_the_service_impact.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="55" column="60" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.11_Add_CI_To_Incident_Ticket.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="31" column="145" selection-start-line="31" selection-start-column="145" selection-end-line="31" selection-end-column="145" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.12_Check_Old_Tickets_And_Create_Problem_Candidate.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="56" column="44" lean-forward="true" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.07_Change_incident_start_time.feature">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.08_Change_priority_level.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
-          <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.13_Create_Multiple_Work_Orders_Internally_And_Dispatch_These_To_Different_Assignment_Groups.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="37" column="63" lean-forward="true" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.14_Find_Newly_Created_Or_Implemented_Changes.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
-          <caret selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/03.02-03.04/03.04_Link_child_tickets_and_make_master_ticket.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1686,39 +1511,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_TroubleEventPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
-          <folding>
-            <element signature="e#29258#29259#0" expanded="true" />
-            <element signature="e#29336#29337#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.15_Search_for_Known_Errors_using_quick_search_based_on_Category_Type_and_Item.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="32" column="65" lean-forward="true" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_TroubleEventPageSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="1144" column="31" selection-start-line="1144" selection-start-column="31" selection-end-line="1144" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="679" column="16" selection-start-line="679" selection-start-column="16" selection-end-line="679" selection-end-column="16" />
-          <folding>
-            <element signature="e#10197#10198#0" expanded="true" />
-            <element signature="e#10264#10265#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1750,34 +1546,262 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="31" column="53" lean-forward="true" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+        <state relative-caret-position="-128">
+          <caret line="329" column="18" selection-start-line="329" selection-start-column="18" selection-end-line="329" selection-end-column="18" />
+          <folding>
+            <element signature="e#10197#10198#0" expanded="true" />
+            <element signature="e#10264#10265#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Add_CI_&amp;_Attachment.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="370" column="19" selection-start-line="370" selection-start-column="19" selection-end-line="370" selection-end-column="19" />
+        <state>
+          <caret selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3260">
+          <caret line="200" column="70" selection-start-line="200" selection-start-column="70" selection-end-line="200" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Remove_a_CI_from_Diagnosis_tab.feature">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-762">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Search_for_open_incidents_for_a_specific_Location.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1684">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Set_WO_to_cleared,_add_End_date_and_time_and_close_WO.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/configs/paths.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/CTI_Details/CSV_SAO-427-BR2869-Bulk_Loading_CTI_Details.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/PrimaryCICheck/CSV_SAO427-BR-2868-Bulk_Loading_Primary_CI_Default_Settings.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="85" selection-start-line="6" selection-start-column="85" selection-end-line="6" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/PrimaryCICheck/Manual_SAO427-BR-2868-Bulk_Loading_Primary_CI_Default_Settings.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="85" selection-start-line="6" selection-start-column="85" selection-end-line="6" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/WO's_Status.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/When_creating_workorder,_a_proposal_of_default_technical_escalation_queue_should_Appear.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="91" lean-forward="true" selection-start-line="7" selection-start-column="91" selection-end-line="7" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.01_Validate_incident_record_process_artifact.feature">
+      <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-column="31" />
+          <caret column="43" selection-start-column="43" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.02_SLA_Target_Time_Availability_In_Incident_Record.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.03_OLA_Target_Time_Availability_In_Incident_Record.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.04_Estimated_Ready_Date_Time_Availability.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.05_Validate_Behaviour_And_Options_For_Data_Field_Priority.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.06_Validate_Options_For_Data_Field_RequestType.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.07_Template_data_field_must_contain_valid_options.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="81" selection-start-line="12" selection-start-column="81" selection-end-line="12" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.08_Title_data_field_must_contain_valid_options.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.09_Validate_Impact_field_availability_in_Incident_record.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.10_Validate_Urgency_field_availability_in_Incident_record.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.03_Set_correct_categorization.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.02_Register_affected_BUs.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.17_Validate_Owner_field_structure.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1339" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.04_Set_incident_start_time.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.05_Set_location_of_incident_origin.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.08_Set_the_service_impact.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="55" column="60" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.09_Add_attachments_to_field_named_Internal_attachments.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/runners/Test_Runner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_TroubleEventPageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="1116" column="64" selection-start-line="1116" selection-start-column="64" selection-end-line="1116" selection-end-column="64" />
+          <folding>
+            <element signature="e#42663#42664#0" expanded="true" />
+            <element signature="e#42722#42723#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_TroubleEventPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="190" column="9" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="370" column="19" selection-start-line="370" selection-start-column="19" selection-end-line="370" selection-end-column="19" />
+          <folding>
+            <element signature="e#7193#7194#0" expanded="true" />
+            <element signature="e#7264#7265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_AgentConsolePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="425" column="16" selection-start-line="425" selection-start-column="16" selection-end-line="425" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_AgentConsolePageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2457">
+          <caret line="148" column="16" selection-start-line="148" selection-start-column="16" selection-end-line="148" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_Denmark_RAN.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4140" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_RAN_Test_Cases.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4439">
+          <caret line="257" lean-forward="true" selection-start-line="257" selection-end-line="257" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Core_Test_Cases.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3401">
+          <caret line="63" column="52" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
         </state>
       </provider>
     </entry>

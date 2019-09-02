@@ -15,17 +15,16 @@
       Then user validates "<TickedBU1>" and "<TickedBU2>" checkboxes are selected
       When user clicks on CTI details under sections
       And user validates availability of category dropdown
-      Then multiple statuses "1:Access:Access|Transport:BSS:Computer Services:CORE:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:OSS:Packet_Transport:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:TV:VAS" should be available in "Category" dropdown
+      #Then multiple statuses "1:Access:Access|Transport:BSS:Computer Services:CORE:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:OSS:Packet_Transport:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:TV:VAS" should be available in "Category" dropdown
       And user selects Category as "Core"
       Then user validates availability of type dropdown
-      And multiple statuses "Fixed_IMS:IP:MESSAGING:Mobile CS Core Network:Mobile IMS Core NetworkMobile PS Core Network:Mobile_CS:Mobile_PS:NFVI:Other:Performance:Planning:Presentation:Software:Sync:WLAN:Workflow" should be available in "Type" dropdown
+      #And multiple statuses "Fixed_IMS:IP:MESSAGING:Mobile CS Core Network:Mobile IMS Core NetworkMobile PS Core Network:Mobile_CS:Mobile_PS:NFVI:Other:Performance:Planning:Presentation:Software:Sync:WLAN:Workflow" should be available in "Type" dropdown
       Then user selects Type as "Mobile PS Core Network"
       When user validates availability of item dropdown
-      Then multiple statuses "DNS:EPG:GGSN:NAT:NLS:PCRF:PGW:PM:RADIUS:SGSN:SHAPERS:TPE-CMIPBB:TPE-CMIPBB_Mobile_PS" should be available in "Item" dropdown
+      #Then multiple statuses "DNS:EPG:GGSN:NAT:NLS:PCRF:PGW:PM:RADIUS:SGSN:SHAPERS:TPE-CMIPBB:TPE-CMIPBB_Mobile_PS" should be available in "Item" dropdown
       And user selects Item as "SGSN"
       And user validates event start time is present
       When user clicks on location under sections
-    #To search for the location details you need to press enter after the text
       And user enters "<Location>" within the location ID+ field
       And user switches to frame
       Then user should see list of swedish sites
@@ -36,7 +35,6 @@
       And user enters description as "<Description>"
       Then user clicks on save button
       And ticket should be created and status should be assigned
-      #Need to validate that Timeline, Diagnosis,Interested Parties, Notification, Linked Items, Work Orders, Service Level, Alarms, Recurring Incidents, Service Info are all present
       Then user validates availability of tabs "Timeline:Diagnosis:Interested Parties:Notifications:Linked Items:Work Orders:Service Level:Alarms:Recurring Incidents:Service Info"
       When user clicks on Diagnosis tab
       And user clicks on CI search button
@@ -50,8 +48,6 @@
       And user selects CI "<CI Name3>"
       And user clicks on relate CI
       Then error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
-      #And error message should display as "Please fill in all impact details in order to relate CI to the request. (ARERR 300825)"
-      #Need to validate the options under impact level: "Degradation of service, Loss of Service, No Impact, (clear)"
       Then multiple statuses "Degradation of service:Loss of Service:No Impact:(clear)" should be available in "Level*" dropdown
       And user selects impact level as "Degradation of Service"
       Then user clicks on relate CI
@@ -62,23 +58,17 @@
       And user validates "Primary" CI is equal to "<CI name>"
       Then user clicks on save button
       #Should be added automatically based on CI
-      And user validates "<BU Name>" BU is added automatically
+      #And user validates "<BU Name>" BU is added automatically
       When user clicks on attachments under sections
       And user clicks on add button under internal
       Then user switches to frame
-      #Then user clicks on save button on attachment window
-      #And an error message should appear: "Check for Mandatory fields - Summary,Description,Attachment,Visibility (ARERR 13034)"
       When user enters attachment summary as "Test JPEG"
       And user enters attachment description as "Test JPEG"
       Then user clicks on add button in attachment window
       And user clicks on choose file button
       And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test JPEG FILE" attachment and adds it
-      And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
-      #And user clicks on save button on attachment window
-      #And an error message should appear: "Check for Mandatory fields - Visibility (ARERR 13034)"
-      #Then user clicks on warning ok button
       And user selects attachment visibility as Internal
       Then user clicks on save button on attachment window
       And user validates 1 attachment visibility under internal
@@ -89,7 +79,6 @@
       Then user clicks on add button in attachment window
       And user clicks on choose file button
       And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PNG FILE" attachment and adds it
-      And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
       And user selects attachment visibility as Internal
@@ -102,7 +91,6 @@
       Then user clicks on add button in attachment window
       And user clicks on choose file button
       And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PDF FILE" attachment and adds it
-      And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
       And user selects attachment visibility as Internal
@@ -115,7 +103,6 @@
       Then user clicks on add button in attachment window
       And user clicks on choose file button
       And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test WORD FILE" attachment and adds it
-      And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
       And user selects attachment visibility as Internal
@@ -128,7 +115,6 @@
       Then user clicks on add button in attachment window
       And user clicks on choose file button
       And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test XLS FILE" attachment and adds it
-      And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
       And user selects attachment visibility as Internal
@@ -141,7 +127,6 @@
       Then user clicks on add button in attachment window
       And user clicks on choose file button
       And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PPT FILE" attachment and adds it
-      And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
       And user selects attachment visibility as Internal
@@ -156,22 +141,16 @@
       When user clicks on attachments under sections
       And user clicks on add button under internal
       Then user switches to frame
-      #Then user clicks on save button on attachment window
-      #And an error message should appear: "Check for Mandatory fields - Summary,Description,Attachment,Visibility (ARERR 13034)"
       When user enters attachment summary as "Test JPEG"
       And user enters attachment description as "Test JPEG"
       Then user clicks on add button in attachment window
       And user clicks on choose file button
       And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test JPEG FILE" attachment and adds it
-      And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
-      #And user clicks on save button on attachment window
-      #And an error message should appear: "Check for Mandatory fields - Visibility (ARERR 13034)"
-      #Then user clicks on warning ok button
-      And user selects attachment visibility as Internal
+      And user selects attachment visibility as external
       Then user clicks on save button on attachment window
-      And user validates 1 attachment visibility under internal
+      And user validates 7 attachment visibility under internal
       And user clicks on add button under internal
       Then user switches to frame
       When user enters attachment summary as "Test PNG"
@@ -179,12 +158,11 @@
       Then user clicks on add button in attachment window
       And user clicks on choose file button
       And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PNG FILE" attachment and adds it
-      And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
-      And user selects attachment visibility as Internal
+      And user selects attachment visibility as external
       Then user clicks on save button on attachment window
-      And user validates 2 attachment visibility under internal
+      And user validates 8 attachment visibility under internal
       And user clicks on add button under internal
       Then user switches to frame
       When user enters attachment summary as "Test PDF"
@@ -192,12 +170,11 @@
       Then user clicks on add button in attachment window
       And user clicks on choose file button
       And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PDF FILE" attachment and adds it
-      And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
       And user selects attachment visibility as Internal
       Then user clicks on save button on attachment window
-      And user validates 3 attachment visibility under internal
+      And user validates 9 attachment visibility under internal
       And user clicks on add button under internal
       Then user switches to frame
       When user enters attachment summary as "Test WORD"
@@ -205,12 +182,11 @@
       Then user clicks on add button in attachment window
       And user clicks on choose file button
       And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test WORD FILE" attachment and adds it
-      And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
-      And user selects attachment visibility as Internal
+      And user selects attachment visibility as external
       Then user clicks on save button on attachment window
-      And user validates 4 attachment visibility under internal
+      And user validates 10 attachment visibility under internal
       And user clicks on add button under internal
       Then user switches to frame
       When user enters attachment summary as "Test EXCEL"
@@ -218,12 +194,11 @@
       Then user clicks on add button in attachment window
       And user clicks on choose file button
       And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test XLS FILE" attachment and adds it
-      And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
       And user selects attachment visibility as Internal
       Then user clicks on save button on attachment window
-      And user validates 5 attachment visibility under internal
+      And user validates 11 attachment visibility under internal
       And user clicks on add button under internal
       Then user switches to frame
       When user enters attachment summary as "Test PPT"
@@ -231,18 +206,18 @@
       Then user clicks on add button in attachment window
       And user clicks on choose file button
       And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PPT FILE" attachment and adds it
-      And user waits 2 secs
       Then user clicks on attachment ok button
       And user switches to frame
-      And user selects attachment visibility as Internal
+      And user selects attachment visibility as external
       Then user clicks on save button on attachment window
-      And user validates 6 attachment visibility under internal
+      And user validates 12 attachment visibility under internal
+      And user clicks on "Timeline" tab
       When user enters "Test Update - Public" in the timeline text box
       And user clicks on public radio button
       And user clicks on add button
       Then change should also be reflected in the timeline as "Test Update - Public"
       When user clicks on Ack button
-      Then user changes status to "Cleared"
+      Then user changes status to "Cleared" on trouble event page
       And user enters "Test Resolution Result" in the timeline text box
       And user clicks on add button
       Then change should also be reflected in the timeline as "Test Resolution Result"
@@ -258,7 +233,7 @@
       And user should see confirmation message for impact clear and clicks ok
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on trouble event page
       And user clicks on save button
       Then an error message should appear: "Required field (without a default) not specified : Closure Info (ARERR 9424)"
       And an error message should appear: "Required field (without a default) not specified : Action (ARERR 9424)"
@@ -266,12 +241,14 @@
       And user enters closure info as "Test Ticket"
       And user clicks on save button
       Then user validates ticket status as "Closed"
+      And user logsOut and closes the browser
+      And user switches to window 0
 
        Examples:
 
       |CI Name1             |CI Name2            |CI Name3            |CheckedBU1|CheckedBU2|TickedBU1|TickedBU2|Location              |Title                        |Description                  |CI Name1            |CI Name2            |CI Name3           |CI name             |BU Name|
       |SE_SGSN_VRRMME1     |SE_SGSN_LDHMME1     |DK_SGSN_AMBMME1     |Sweden    |Finland   |Sweden   |Finland  |SE_Site_SE M1         |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_VRRMME1     |SE_SGSN_LDHMME1     |DK_SGSN_AMBMME1     |DK_SGSN_AMBMME1     |Denmark    |
-#      |NO_SGSN_AKH902MME2  |NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1     |Norway    |Finland   |Norway   |Finland  |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_SGSN_AKH902MME2  |NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1     |DK_SGSN_AMBMME1     |Denmark    |
+      |NO_SGSN_AKH902MME2  |NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1     |Norway    |Finland   |Norway   |Finland  |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_SGSN_AKH902MME2  |NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1     |DK_SGSN_AMBMME1     |Denmark    |
 #      |LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME   |Lithuania |Denmark   |Lithuania|Denmark  |LT_Site_888           |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E|LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME   |LT_SGSN_LT-CSGN01MME|Sweden     |
 #      |FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|Finland   |Denmark   |Finland  |Denmark  |FI_Site_riutula keskus|Test case MT004 Finland E2E  |Test case MT004 Finland E2E  |FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|FI_SGSN_FI-CSGN01MME|Lithuania  |
 #      |EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|Estonia   |Sweden    |Estonia  |Sweden   |EE- AUT0001           |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|EE_SGSN_EE-CSGN01MME|Finland    |

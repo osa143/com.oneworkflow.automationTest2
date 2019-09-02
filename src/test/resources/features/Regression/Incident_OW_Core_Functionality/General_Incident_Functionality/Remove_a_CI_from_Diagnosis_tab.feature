@@ -41,6 +41,6 @@
       Then user closes warning message
       And user clicks on close button on CI search window
       And user gets number of CI's
-      When user right clicks on secondary CI and selects "Detach"
-      And user clicks on save button
+      When user right clicks on CI "SE_EPG_LDHEPG1" and selects "Detach"
+      And user clicks on save button and closes warning messages
       Then CI should be detached from ticket

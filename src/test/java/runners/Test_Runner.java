@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@Remove_a_CI_from_Diagnosis_tab"}
+        tags = {"@E2E_Tests_Core"}
 )
 
 public class Test_Runner extends BaseTest {

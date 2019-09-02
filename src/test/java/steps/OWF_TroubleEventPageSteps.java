@@ -1114,7 +1114,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user validates {int} attachment visibility under internal")
     public void userValidatesAttachmentVisibilityUnderInternal(int arg0) {
-        troubleEventPage.validateAttachmentAvailability(arg0);
+        Assert.assertTrue(troubleEventPage.validateAttachmentAvailability(arg0));
     }
 
     @And("user gets event start time value")
@@ -1150,6 +1150,16 @@ public class OWF_TroubleEventPageSteps {
         troubleEventPage.wait(3000);
         troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
         troubleEventPage.switchToDefault();
+    }
+
+    @And("user selects attachment visibility as external")
+    public void userSelectsAttachmentVisibilityAsExternal() {
+        troubleEventPage.clickExternalRadioButton();
+    }
+
+    @And("user validates {int} attachment visibility under external")
+    public void userValidatesAttachmentVisibilityUnderExternal(int arg0) {
+        Assert.assertTrue(troubleEventPage.validateAttachmentAvailability_External(arg0));
     }
 }
 

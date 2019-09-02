@@ -264,19 +264,8 @@ Feature: External Normal Change E2E
     When user changes status to "Closed"
     And user selects resolved group as "Change Manager"
     And user selects resolved person as "ChangeManager1_Automation"
-    And user enters review details as "Random notes"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    And user enters review details as "Random Notes"
+    And user selects closure code as "Test Ticket"
+    Then user clicks on save button
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Completed to Closed."
+z

@@ -31,7 +31,7 @@
 #      And user closes change record window
 #      And user closes calendar window
       #When user clicks on sweden checkbox under affected BU's
-      And user selects request type as "Normal Change"
+      When user selects request type as "Normal Change"
       Then user selects title as "Mobile:CS Core (Voice)" on Change record page
       And user selects request category as "Software Installation" on change record page
       And user enters description as "TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator)"

@@ -1,6 +1,6 @@
-@CSV_Bulk_Loading_CTI_Details_change @SAO-427
+@All_File_Types_Bulk_Loading_CTI_Details_change @SAO-427
 Feature: checking of bulk loading CTI details
-  Scenario: user checks the bulk loading CTI details
+  Scenario Outline: user checks the bulk loading CTI details
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
@@ -10,7 +10,7 @@ Feature: checking of bulk loading CTI details
     And user selects request type as "Normal Change"
     Then user selects title as "Mobile:CS Core (Voice)" on Change record page
     And user selects request category as "Software Installation" on change record page
-    And user enters description as "TEST TICKET PLEASE IGNORE - SAO-427 Test Bulk Loading CI not found Prompt Change"
+    And user enters description as "TEST TICKET PLEASE IGNORE - SAO-427 Test Bulk Loading  CTI Details"
     And user enters reason field as "Regression"
     And user selects priority as "Critical"
     And user enters "Privacy Data: Just Testing" in the change builder field
@@ -33,18 +33,17 @@ Feature: checking of bulk loading CTI details
     When user selects impact level as "No Impact"
     When user clicks on Upload Import File
     And user clicks on choose file button
-      #10CI's CSV no duplicate
-    And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\10 CI's - Correct Names\BIR+Load+Template.csv" attachment and adds it
+      #10CI's no duplicate
+    And user searches for "<fileTypes>" attachment and adds it
     And user clicks on attachment ok button
     And user switches to frame
     Then user validates attached document is visible
     Then user clicks on save button under bulk import
     And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
     And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-    And user waits 10 secs
+    And user waits 30 secs
     When user clicks on Show Bulk Import button
     And user switches to frame
-    Then user validates attached document is visible
     And user clicks on "Related CIs" tab
     And user validates "Dup. CIs" as "1" in row 1
     And user validates total rows as "10"
@@ -53,9 +52,19 @@ Feature: checking of bulk loading CTI details
     And user validates with warnings as "0"
     Then user validates at least one CI has "Completed" under "Status"
     Then user clicks on bulk loading close button
-    And user clicks on ticket refresh button
-    #And user clicks on Diagnosis tab
+    And user waits 5 secs
+    When user clicks on ticket refresh button
     When user clicks on CTI details under sections
     Then user validates Category as "Access"
     And user validates type as "WLAN"
     And user validates item as "AP"
+    And user logsOut and closes the browser
+    And user switches to window 0
+
+
+    Examples:
+      |fileTypes                                                                                                  |
+      #|C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\Template.csv |
+      #|C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\BIR+Load+Template.xlsx|
+      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\BIR+Load+Template.xls|
+      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\TEXTDocForBulkCI.txt |

@@ -150,10 +150,6 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_IMPACT_FROM_pLUS= "arid_WIN_0_999000298";
     private static final String txt_IMPACT_TO_pLUS ="arid_WIN_0_999000299";
     private static final String btn_ADD_TIMELINE= "WIN_0_777021404";
-    private static final String rbtn_INTERNAL = "WIN_0_rc0id600001901";
-    private static final String rbtn_EXTERNAL= "WIN_0_rc1id600001901";
-    private static final String table_ATTACHMENT_INTERNAL= "T777000013";
-    private static final String table_ATTACHMENT_EXTERNAL= "T600002205";
     private static final String div_AFFECTED_BU= "WIN_0_600002504";
 
 
@@ -168,36 +164,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         String element = String.format("//input[@arvalue='%s']", textName);
         return driver.findElement(By.id(div_AFFECTED_BU_ID)).findElement(By.xpath(element)).isSelected();
     }
-    public boolean validateAttachmentAvailability(int attachmentsSize)
-    {
-        wait(1000);
-        int size = getTableRows(By.id(table_ATTACHMENT_INTERNAL)).size();
-        System.out.println("Number of table rows--:" + size);
-        System.out.println("Number of Attachments available --: " + (size-1));
-        if(attachmentsSize==(size-1)){
-            return true;
-        }
-        return false;
-    }
 
-    public boolean validateAttachmentAvailability_External(int attachmentsSize)
-    {
-        wait(1000);
-        int size = getTableRows(By.id(table_ATTACHMENT_EXTERNAL)).size();
-        System.out.println("Number of table rows--:" + size);
-        System.out.println("Number of Attachments available --: " + (size-1));
-        if(attachmentsSize==(size-1)){
-            return true;
-        }
-        return false;
-    }
-    public void clickInternalRadioButton(){
-        clickElement(By.id(rbtn_INTERNAL));
-    }
-
-    public void clickExternalRadioButton(){
-        clickElement(By.id(rbtn_EXTERNAL));
-    }
 
 
     public void clickAdd_timeline(){

@@ -1,9 +1,11 @@
-@CSV_TXT_XLS_XLXS_Bulk_Loading_Format_Location_Trouble @427
+@Bulk_Loading_Format_Location_Trouble @SAO-427
+  #passed
+  #Can't Test for Text file as it doesn't have columns
 Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_3" and password as "Test@1234"
+      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create trouble event
       And user switches to window 1
@@ -28,7 +30,7 @@ Feature: checking of bulk loading format
       Then user clicks on save button under bulk import
       And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-      And user waits 3 secs
+      And user waits 20 secs
       When user clicks on Show Bulk Import button
       And user switches to frame
       When user clicks on "Related CIs" tab
@@ -42,11 +44,11 @@ Feature: checking of bulk loading format
 
      Examples:
 
-         |fileTypes                                                                                                                                      |
-#         |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\TestCaseAttachments\IncorrectFormatColumnLocation\IncorrectLocation.csv |
-#         |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\TestCaseAttachments\IncorrectFormatColumnLocation\IncorrectLocation.xlsx|
-#         |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\TestCaseAttachments\IncorrectFormatColumnLocation\IncorrectLocation.xls |
-         |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\TestCaseAttachments\IncorrectFormatColumnLocation\IncorrectLocation.txt |
+         |fileTypes                                                                                                    |
+         |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnLocation\CSV.csv |
+         #|C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnLocation\TEXT.txt|
+         |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnLocation\XLS.xls|
+         |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnLocation\XLSX.xlsx|
 
 
 

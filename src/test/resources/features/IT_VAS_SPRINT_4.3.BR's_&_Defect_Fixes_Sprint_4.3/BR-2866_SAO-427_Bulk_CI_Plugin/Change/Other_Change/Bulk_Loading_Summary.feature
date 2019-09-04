@@ -1,6 +1,7 @@
-@CSV_Bulk_Loading_Format_duplicateCIs_change @427
-Feature: checking of bulk loading format
-  Scenario: user checks the format of bulk loading format
+@Bulk_Loading_Summary_Change @SAO_427
+  #passed
+  Feature: Bulk Loading Summary
+    Scenario: Bulk Loading Summary
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
@@ -31,31 +32,23 @@ Feature: checking of bulk loading format
       And user switches to frame
       Then user should see bulk ci loading window
       When user selects impact level as "No Impact"
-      When user clicks on Upload Import File
-      And user clicks on choose file button
-      And user searches for "C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\TestCaseAttachments\5DuplicateCIs\5CIsCSV.csv" attachment and adds it
-      And user clicks on attachment ok button
-      And user switches to frame
-      Then user validates attached document is visible
+      And user clicks on Manual Input radio button
+      And user enters "One Workflow" in manual CI search box
       Then user clicks on save button under bulk import
-      And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
+      And first error message should display as "The manually identified CIs are now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-      And user waits 3 secs
-      When user clicks on Show Bulk Import button
+      And user waits 20 secs
+      And user clicks on Show Bulk Import button
       And user switches to frame
-      When user clicks on "Related CIs" tab
-      And user validates total rows as "10"
-      And user validates Rows OK as "5"
-      And user validates with errors as "5"
+      And user clicks on "Related CIs" tab
+      And user validates "Status" as "Completed" in row 1
+      Then user validates at least one CI has "Completed" under "Status"
+      And user validates "CI Name" as "One Workflow" in row 1
+      And user validates "Dup. CIs" as "2" in row 1
+      And user validates total rows as "1"
+      And user validates Rows OK as "1"
       And user validates with warnings as "0"
-      And user validates "Status" as "With Errors" in row 6
-      And user validates "Status" as "With Errors" in row 7
-      And user validates "Status" as "With Errors" in row 8
-      And user validates "Status" as "With Errors" in row 9
-      And user validates "Status" as "With Errors" in row 10
+      And user validates with errors as "0"
+      When user clicks on "Other Fields" tab
+      Then user validates Request ID, BIR_GUID, Submitter, Create Date, Last Modified, Modified Date, import start time, import end time, import duration fields are updated
       And user clicks on bulk loading close button
-
-
-
-
-

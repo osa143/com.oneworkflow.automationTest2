@@ -1,4 +1,4 @@
-@SAO-427-BR2864-Bulk_Loading_Format_Name_Trouble @427
+@Bulk_Loading_Format_Name_change
 Feature: checking of bulk loading format
   Scenario: user checks the format of bulk loading format
 
@@ -23,10 +23,9 @@ Feature: checking of bulk loading format
       And user clicks on Manual Input radio button
       And user enters "TESTCOLUMNNAME;SE_AP_alvesta-radmannen-ap1;SE_AP_alvesta-radmannen-ap2;SE_AP_alvesta-radmannen-ap3;SE_AP_alvesta-radmannen-ap4" in manual CI search box
       Then user clicks on save button under bulk import
-      Then user clicks on save button under bulk import
       And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-      And user waits 3 secs
+      And user waits 5 secs
       When user clicks on Show Bulk Import button
       And user switches to frame
       When user clicks on "Related CIs" tab

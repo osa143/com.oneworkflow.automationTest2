@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@E2E_Tests_Core"}
+        tags = {"@Manual_Bulk_Loading_Format_duplicateCIs_change"}
 )
 
 public class Test_Runner extends BaseTest {

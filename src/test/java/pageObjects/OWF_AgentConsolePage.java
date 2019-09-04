@@ -78,6 +78,10 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String txt_TITLE_MORE_FILTERS= "arid_WIN_0_600001002";
 
 
+    public void doLogout(){
+        selectDropDownNameAndValue(menuForNAV_USERNAME, menuItemLOGOUT, false);
+    }
+
     public void enterTitle_moreFilter(String text){
         enterTextByElement(By.id(txt_TITLE_MORE_FILTERS), text);
     }
@@ -375,7 +379,7 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void clickNavUserMenu() {
         selectMainMenu(menuForNAV_USERNAME);
-        wait(1000);
+        wait(3000);
 
     }
 

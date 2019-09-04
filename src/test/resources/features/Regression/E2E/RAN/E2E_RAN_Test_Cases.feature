@@ -1,7 +1,7 @@
 @E2E_Test_RAN @E2E
 
   Feature: E2E Scenarios
-    Scenario Outline: E2E Scenarios for sweden trouble event
+    Scenario Outline: E2E Scenarios for trouble event
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
@@ -27,9 +27,9 @@
       When user clicks on location under sections
       And user enters "<Location>" within the location ID+ field
       And user switches to frame
-      Then user should see list of swedish sites
+      Then user should see list of CI's related to "<Location>"
     #Location Name,Location ID+,Region Name, Region ID, Latitude, Longitude
-      And user highlights location "<Location>" and clicks ok and validates location details
+      And user highlights location "<Location Name>" and clicks ok and validates location details
       When user enters "<Title>" in Title field in Trouble event
       And user selects request type as "Customer" on trouble event page
       And user enters description as "<Description>"
@@ -39,178 +39,49 @@
       When user clicks on Diagnosis tab
       And user clicks on CI search button
       Then user switches to frame
-      And user selects Category as "Core"
-      And user selects Type as "Mobile PS Core Network"
-      And user selects Item as "SGSN"
+      And user clicks on clear button
+      And user enters "<CI Name1>" in name field
       Then user clicks on search button on CI search window
-      When user selects CI "<CI Name1>"
-      And user selects CI "<CI Name2>"
-      And user selects CI "<CI Name3>"
-      And user clicks on relate CI
-      Then error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
-      Then multiple statuses "Degradation of service:Loss of Service:No Impact:(clear)" should be available in "Level*" dropdown
+      And user selects CI "<CI Name1>"
+      Then multiple statuses "Degradation of Service:Loss of Service:No Impact:(clear)" should be available in "Level*" dropdown
       And user selects impact level as "Degradation of Service"
+      Then user clicks on relate CI
+      And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
+      And user enters "<CI Name2>" in name field
+      Then user clicks on search button on CI search window
+      And user selects CI "<CI Name2>"
+      Then user clicks on relate CI
+      And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
+      And user enters "<CI Name3>" in name field
+      Then user clicks on search button on CI search window
+      And user selects CI "<CI Name3>"
       Then user clicks on relate CI
       And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
       And user clicks on close button on CI search window
       And CI should be listed and displayed under the Diagnosis tab
       Then user validates CI "Impact Status" is "Active"
       And user validates "Primary" CI is equal to "<CI name>"
-      Then user clicks on save button
+      Then user clicks on save button and closes warning messages
       #Should be added automatically based on CI
-      #And user validates "<BU Name>" BU is added automatically
+      And user validates "<BU Name>" BU is added automatically
       When user clicks on attachments under sections
-      And user clicks on add button under internal
-      Then user switches to frame
-      When user enters attachment summary as "Test JPEG"
-      And user enters attachment description as "Test JPEG"
-      Then user clicks on add button in attachment window
-      And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test JPEG FILE" attachment and adds it
-      Then user clicks on attachment ok button
-      And user switches to frame
-      And user selects attachment visibility as Internal
-      Then user clicks on save button on attachment window
-      And user validates 1 attachment visibility under internal
-      And user clicks on add button under internal
-      Then user switches to frame
-      When user enters attachment summary as "Test PNG"
-      And user enters attachment description as "Test PNG"
-      Then user clicks on add button in attachment window
-      And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PNG FILE" attachment and adds it
-      Then user clicks on attachment ok button
-      And user switches to frame
-      And user selects attachment visibility as Internal
-      Then user clicks on save button on attachment window
-      And user validates 2 attachment visibility under internal
-      And user clicks on add button under internal
-      Then user switches to frame
-      When user enters attachment summary as "Test PDF"
-      And user enters attachment description as "Test PDF"
-      Then user clicks on add button in attachment window
-      And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PDF FILE" attachment and adds it
-      Then user clicks on attachment ok button
-      And user switches to frame
-      And user selects attachment visibility as Internal
-      Then user clicks on save button on attachment window
-      And user validates 3 attachment visibility under internal
-      And user clicks on add button under internal
-      Then user switches to frame
-      When user enters attachment summary as "Test WORD"
-      And user enters attachment description as "Test WORD"
-      Then user clicks on add button in attachment window
-      And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test WORD FILE" attachment and adds it
-      Then user clicks on attachment ok button
-      And user switches to frame
-      And user selects attachment visibility as Internal
-      Then user clicks on save button on attachment window
-      And user validates 4 attachment visibility under internal
-      And user clicks on add button under internal
-      Then user switches to frame
-      When user enters attachment summary as "Test EXCEL"
-      And user enters attachment description as "Test EXCEL"
-      Then user clicks on add button in attachment window
-      And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test XLS FILE" attachment and adds it
-      Then user clicks on attachment ok button
-      And user switches to frame
-      And user selects attachment visibility as Internal
-      Then user clicks on save button on attachment window
-      And user validates 5 attachment visibility under internal
-      And user clicks on add button under internal
-      Then user switches to frame
-      When user enters attachment summary as "Test PPT"
-      And user enters attachment description as "Test PPT"
-      Then user clicks on add button in attachment window
-      And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PPT FILE" attachment and adds it
-      Then user clicks on attachment ok button
-      And user switches to frame
-      And user selects attachment visibility as Internal
-      Then user clicks on save button on attachment window
-      And user validates 6 attachment visibility under internal
-      Then user clicks on save button on attachment window
-      And an error message should appear: "Check for Mandatory fields - Summary,Description,Attachment,Visibility (ARERR 13034)"
-      Then user clicks on attachment ok button
-      When user enters attachment summary as "Test JPEG"
-      And user enters attachment description as "Test JPEG"
-      Then user clicks on add button in attachment window
-      When user clicks on attachments under sections
-      And user clicks on add button under internal
-      Then user switches to frame
-      When user enters attachment summary as "Test JPEG"
-      And user enters attachment description as "Test JPEG"
-      Then user clicks on add button in attachment window
-      And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test JPEG FILE" attachment and adds it
-      Then user clicks on attachment ok button
-      And user switches to frame
-      And user selects attachment visibility as external
-      Then user clicks on save button on attachment window
-      And user validates 7 attachment visibility under internal
-      And user clicks on add button under internal
-      Then user switches to frame
-      When user enters attachment summary as "Test PNG"
-      And user enters attachment description as "Test PNG"
-      Then user clicks on add button in attachment window
-      And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PNG FILE" attachment and adds it
-      Then user clicks on attachment ok button
-      And user switches to frame
-      And user selects attachment visibility as external
-      Then user clicks on save button on attachment window
-      And user validates 8 attachment visibility under internal
-      And user clicks on add button under internal
-      Then user switches to frame
-      When user enters attachment summary as "Test PDF"
-      And user enters attachment description as "Test PDF"
-      Then user clicks on add button in attachment window
-      And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PDF FILE" attachment and adds it
-      Then user clicks on attachment ok button
-      And user switches to frame
-      And user selects attachment visibility as Internal
-      Then user clicks on save button on attachment window
-      And user validates 9 attachment visibility under internal
-      And user clicks on add button under internal
-      Then user switches to frame
-      When user enters attachment summary as "Test WORD"
-      And user enters attachment description as "Test WORD"
-      Then user clicks on add button in attachment window
-      And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test WORD FILE" attachment and adds it
-      Then user clicks on attachment ok button
-      And user switches to frame
-      And user selects attachment visibility as external
-      Then user clicks on save button on attachment window
-      And user validates 10 attachment visibility under internal
-      And user clicks on add button under internal
-      Then user switches to frame
-      When user enters attachment summary as "Test EXCEL"
-      And user enters attachment description as "Test EXCEL"
-      Then user clicks on add button in attachment window
-      And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test XLS FILE" attachment and adds it
-      Then user clicks on attachment ok button
-      And user switches to frame
-      And user selects attachment visibility as Internal
-      Then user clicks on save button on attachment window
-      And user validates 11 attachment visibility under internal
-      And user clicks on add button under internal
-      Then user switches to frame
-      When user enters attachment summary as "Test PPT"
-      And user enters attachment description as "Test PPT"
-      Then user clicks on add button in attachment window
-      And user clicks on choose file button
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PPT FILE" attachment and adds it
-      Then user clicks on attachment ok button
-      And user switches to frame
-      And user selects attachment visibility as external
-      Then user clicks on save button on attachment window
-      And user validates 12 attachment visibility under internal
+      And  user adds attachment and verifies under "internal"
+        | summary   | description | fullFilePath                                                                   | attachments |
+        | Test JPEG | Test JPEG   | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test JPEG FILE.jpg | 1           |
+        | Test PNG  | Test PNG    | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PNG FILE.png  | 2           |
+        | Test PDF  | Test PDF    | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PDF FILE.pdf  | 3           |
+        | Test WORD | Test WORD   | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test WORD FILE.docx| 4           |
+        | Test EXCEL| Test EXCEL  | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test XLS FILE.xls  | 5           |
+        | Test PPT  | Test PPT    | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PPT FILE.pptx | 6           |
+      And  user adds attachment and verifies under "external"
+        | summary   | description | fullFilePath                                                                   | attachments |
+        | Test JPEG | Test JPEG   | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test JPEG FILE.jpg | 7           |
+        | Test PNG  | Test PNG    | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PNG FILE.png  | 8           |
+        | Test PDF  | Test PDF    | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PDF FILE.pdf  | 9           |
+        | Test WORD | Test WORD   | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test WORD FILE.docx| 10          |
+        | Test EXCEL| Test EXCEL  | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test XLS FILE.xls  | 11          |
+        | Test PPT  | Test PPT    | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PPT FILE.pptx | 12          |
+
       And user clicks on "Timeline" tab
       When user enters "Test Update - Public" in the timeline text box
       And user clicks on public radio button
@@ -246,13 +117,13 @@
 
        Examples:
 
-      |CI Name1             |CI Name2            |CI Name3            |CheckedBU1|CheckedBU2|TickedBU1|TickedBU2|Location              |Title                        |Description                  |CI Name1            |CI Name2            |CI Name3           |CI name             |BU Name|
-      |SE_SGSN_VRRMME1     |SE_SGSN_LDHMME1     |DK_SGSN_AMBMME1     |Sweden    |Finland   |Sweden   |Finland  |SE_Site_SE M1         |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_VRRMME1     |SE_SGSN_LDHMME1     |DK_SGSN_AMBMME1     |DK_SGSN_AMBMME1     |Denmark    |
-      |NO_SGSN_AKH902MME2  |NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1     |Norway    |Finland   |Norway   |Finland  |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_SGSN_AKH902MME2  |NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1     |DK_SGSN_AMBMME1     |Denmark    |
-#      |LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME   |Lithuania |Denmark   |Lithuania|Denmark  |LT_Site_888           |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E|LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME   |LT_SGSN_LT-CSGN01MME|Sweden     |
-#      |FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|Finland   |Denmark   |Finland  |Denmark  |FI_Site_riutula keskus|Test case MT004 Finland E2E  |Test case MT004 Finland E2E  |FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|FI_SGSN_FI-CSGN01MME|Lithuania  |
-#      |EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|Estonia   |Sweden    |Estonia  |Sweden   |EE- AUT0001           |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|EE_SGSN_EE-CSGN01MME|Finland    |
-#      |DK_SGSN_AMBMME1     |DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|Denmark   |Sweden    |Denmark  |Sweden   |DK_Site_S0001         |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_SGSN_AMBMME1     |DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|DK_SGSN_AMBMME1     |Finland    |
-#
+      |CI Name1            |CI Name2            |CI Name3            |CheckedBU1|CheckedBU2|TickedBU1|TickedBU2 |Location |Location Name         |Title                        |Description                  |CI Name1            |CI Name2            |CI Name3            |CI name             |BU Name    |
+      #|SE_SGSN_VRRMME1     |SE_SGSN_LDHMME1     |DK_SGSN_AMBMME1     |Sweden    |Finland   |Sweden   |Finland   |SE_      |SE_Site_SE M1         |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_VRRMME1     |SE_SGSN_LDHMME1     |DK_SGSN_AMBMME1     |SE_SGSN_VRRMME1     |Denmark    |
+      #|NO_SGSN_AKH902MME2  |NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1     |Norway    |Finland   |Norway   |Finland  |NO_      |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_SGSN_AKH902MME2  |NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1     |NO_SGSN_AKH902MME2     |Norway    |
+      #|LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME   |Lithuania |Denmark   |Lithuania|Denmark  |LT_      |LT_Site_888           |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E|LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME   |LT_SGSN_LT-CSGN01MME|Sweden     |
+      #|FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|Finland   |Denmark   |Finland  |Denmark  |FI_      |FI_Site_riutula keskus|Test case MT004 Finland E2E  |Test case MT004 Finland E2E  |FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|FI_SGSN_FI-CSGN01MME|Lithuania  |
+     |EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|Estonia   |Sweden    |Estonia  |Sweden   |EE_      |EE_Site_KARDL           |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|EE_SGSN_EE-CSGN01MME|Finland    |
+     |DK_SGSN_AMBMME1     |DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|Denmark   |Sweden    |Denmark  |Sweden   |DK_      |DK_Site_S0001         |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_SGSN_AMBMME1     |DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|DK_SGSN_AMBMME1     |Finland    |
+
 
 

@@ -1,6 +1,7 @@
-@XLSX_Bulk_Loading_CTI_Details_change @SAO-427
-Feature: checking of bulk loading CTI details
-  Scenario: user checks the bulk loading CTI details
+@Text_Bulk_Loading_Primary_CI_Default_Settings_change @SAO-427
+  #passed
+Feature: checking of bulk loading additional definitions default settings
+  Scenario Outline: user checks the bulk loading additional definitions default settings
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
@@ -37,15 +38,14 @@ Feature: checking of bulk loading CTI details
     Then user selects impact level as "No Impact"
     And user clicks on Upload Import File
     Then user clicks on choose file button
-      #10CI's XLS no duplicate
-    And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\10 CI's - Correct Names\BIR+Load+Template.xlsx" attachment and adds it
+    And user searches for "<fileTypes>" attachment and adds it
     And user clicks on attachment ok button
     And user switches to frame
     Then user validates attached document is visible
     Then user clicks on save button under bulk import
     And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
     And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-    And user waits 3 secs
+    And user waits 10 secs
     When user clicks on Show Bulk Import button
     And user switches to frame
     And user clicks on "Related CIs" tab
@@ -56,10 +56,17 @@ Feature: checking of bulk loading CTI details
     And user validates with warnings as "0"
     Then user validates at least one CI has "Completed" under "Status"
     Then user clicks on bulk loading close button
-    And user waits 3 secs
+    And user waits 5 secs
     When user clicks on ticket refresh button
     And user clicks on Diagnosis tab
-    When user clicks on CTI details under sections
-    Then user validates Category as "Access"
-    And user validates type as "WLAN"
-    And user validates item as "AP"
+    Then user validates primary ci as "SE_AP_alvesta-radmannen-ap1"
+    And user logsOut and closes the browser
+    And user switches to window 0
+
+      Examples:
+
+      |fileTypes                                                                                                 |
+      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\Template.csv|
+      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\BIR+Load+Template.xlsx|
+      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\BIR+Load+Template.xls|
+      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\TEXTDocForBulkCI.txt|

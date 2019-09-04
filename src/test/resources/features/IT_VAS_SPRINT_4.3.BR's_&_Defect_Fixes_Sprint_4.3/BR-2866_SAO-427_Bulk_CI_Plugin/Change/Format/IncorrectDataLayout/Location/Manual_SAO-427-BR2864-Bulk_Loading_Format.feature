@@ -1,4 +1,5 @@
-@SAO-427-BR2864-Bulk_Loading_Format_Name_Trouble @427
+@SAO-427-BR2864-Bulk_Loading_Format_Name_Trouble
+    #No need to Run
 Feature: checking of bulk loading format
   Scenario: user checks the format of bulk loading format
 

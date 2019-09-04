@@ -11,7 +11,7 @@ Feature: checking of bulk loading format
       And user selects request type as "Normal Change"
       Then user selects title as "Mobile:CS Core (Voice)" on Change record page
       And user selects request category as "Software Installation" on change record page
-      And user enters description as "TEST TICKET PLEASE IGNORE - SAO-427 Test Bulk Loading CI not found Prompt Change"
+      And user enters description as "TEST TICKET PLEASE IGNORE - SAO-427 Test Bulk Loading Incorrect CI names"
       And user enters reason field as "Regression"
       And user selects priority as "Critical"
       And user enters "Privacy Data: Just Testing" in the change builder field
@@ -41,7 +41,7 @@ Feature: checking of bulk loading format
       Then user clicks on save button under bulk import
       And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-      And user waits 3 secs
+      And user waits 5 secs
       When user clicks on Show Bulk Import button
       And user switches to frame
       When user clicks on "Related CIs" tab
@@ -56,11 +56,11 @@ Feature: checking of bulk loading format
 
       Examples:
 
-          |fileTypes|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\TestCaseAttachments\10 CI's - Incorrect Names\IncorrectCIs.csv|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\TestCaseAttachments\10 CI's - Incorrect Names\IncorrectCIs.txt|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\TestCaseAttachments\10 CI's - Incorrect Names\IncorrectCIs.xls|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\TestCaseAttachments\10 CI's - Incorrect Names\IncorrectCIs.xlsx|
+          |fileTypes                                                                                                 |
+          #|C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Incorrect Names\CSV.csv |
+          #|C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Incorrect Names\TEXT.txt|
+          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Incorrect Names\XLS.xls|
+          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Incorrect Names\file.xlsx|
 
 
 

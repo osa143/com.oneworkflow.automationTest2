@@ -1,7 +1,6 @@
-@Bulk_Loading_Ignore_Duplicate_CI's_Trouble_TXT @SAO-427
-  #passed
+@Bulk_Loading_Ignore_Duplicate_CI's_Trouble @SAO-427
   Feature: Bulk Loading ignore duplicate CI's
-    Scenario: Bulk Loading ignore duplicate CI's
+    Scenario Outline: Bulk Loading ignore duplicate CI's
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
@@ -10,9 +9,9 @@
       And user switches to window 1
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
-      And user enters "SAO-427 Test Bulk Loading CI not found Prompt" in Title field
+      And user enters "SAO-427 Test Bulk Loading Ignore duplicate CIs" in Title field
       And user selects request type as "Event" on trouble event page
-      And user enters description as "SAO-427 Test Bulk Loading CI not found Prompt"
+      And user enters description as "SAO-427 Test Bulk Loading Ignore duplicate CIs"
       And user clicks on save button
       Then ticket should be created and status should be assigned
       When user clicks on Diagnosis tab
@@ -25,15 +24,15 @@
       And user clicks on Ignore Duplicate CIs checkbox
       And user clicks on Upload Import File
       Then user clicks on choose file button
-      #50CI's TXT with duplicate
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\50 CI's (WithDuplicates)\50CIsTextDOC" attachment and adds it
+      #50CI's CSV with duplicate
+      And user searches for "<fileTypes>" attachment and adds it
       And user clicks on attachment ok button
       And user switches to frame
       Then user validates attached document is visible
       Then user clicks on save button under bulk import
       And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-      And user waits 10 secs
+      And user waits 20 secs
       When user clicks on Show Bulk Import button
       And user switches to frame
       When user clicks on "Related CIs" tab
@@ -46,5 +45,16 @@
       And user validates "Status" as "With Warnings" in row 12
       And user validates "Status" as "With Warnings" in row 37
       Then user clicks on bulk loading close button
+      And user logsOut and closes the browser
+      And user switches to window 0
+
+
+      Examples:
+        |fileTypes                                                                                                  |
+        |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\50 CI's (WithDuplicates)\50CIsCSV.csv|
+        |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\50 CI's (WithDuplicates)\50CIsTextDOC.txt|
+        |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\50 CI's (WithDuplicates)\50CIsXLS.xls|
+        |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\50 CI's (WithDuplicates)\50CIsXLSX.xlsx|
+
 
 

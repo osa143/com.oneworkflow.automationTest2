@@ -1,7 +1,7 @@
-@XLS_Bulk_Loading_Ignore_Duplicate_CI's_change @SAO-427
+@All_File_Types_Bulk_Loading_Ignore_Duplicate_CI's_change @SAO-427
   #passed
   Feature: Bulk Loading ignore duplicate CI's
-    Scenario: Bulk Loading ignore duplicate CI's
+    Scenario Outline: Bulk Loading ignore duplicate CI's
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
@@ -33,21 +33,21 @@
       Then user should see bulk ci loading window
       And user validates Impact Type default value is "Planned"
       And user validates Category default value is "Actual"
-      #Blank default value for level
+     #Blank default value for level
       And user validates Level default value is ""
       Then user selects impact level as "No Impact"
       And user clicks on Ignore Duplicate CIs checkbox
       And user clicks on Upload Import File
       Then user clicks on choose file button
-      #50CI's XLS with duplicate
-      And user searches for "C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\TemplatesForBulkCITests\50 CI's (WithDuplicates)\50CIsXLS" attachment and adds it
+      #50CI's with duplicate
+      And user searches for "<fileTypes>" attachment and adds it
       And user clicks on attachment ok button
       And user switches to frame
       Then user validates attached document is visible
       Then user clicks on save button under bulk import
       And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-      And user waits 10 secs
+      And user waits 40 secs
       When user clicks on Show Bulk Import button
       And user switches to frame
       When user clicks on "Related CIs" tab
@@ -60,5 +60,17 @@
       And user validates "Status" as "With Warnings" in row 12
       And user validates "Status" as "With Warnings" in row 37
       Then user clicks on bulk loading close button
+      And user logsOut and closes the browser
+      And user switches to window 0
+
+
+      Examples:
+        |fileTypes                                                                                                  |
+        #|C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\50 CI's (WithDuplicates)\50CIsCSV.csv|
+        |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\50 CI's (WithDuplicates)\50CIsTextDOC.txt|
+        |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\50 CI's (WithDuplicates)\50CIsXLS.xls|
+        |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\50 CI's (WithDuplicates)\50CIsXLSX.xlsx|
+
+
 
 

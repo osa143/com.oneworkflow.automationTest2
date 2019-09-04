@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.But;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.OWF_ProblemRecordPage;
@@ -1005,6 +1006,10 @@ public class OWF_ProblemRecordPageSteps {
             problemRecordPage.wait(2000);
         }
 
+    @And("user adds attachment and verifies under {string}")
+    public void userAddsAttachmentAndVerifies(String type, DataTable attachments) {
+        problemRecordPage.addAttachmentsAndVerify(attachments, type);
+    }
 }
 
 

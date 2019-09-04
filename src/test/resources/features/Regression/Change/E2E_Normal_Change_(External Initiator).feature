@@ -268,3 +268,4 @@ Feature: External Normal Change E2E
     And user selects closure code as "Test Ticket"
     Then user clicks on save button
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Completed to Closed."
+

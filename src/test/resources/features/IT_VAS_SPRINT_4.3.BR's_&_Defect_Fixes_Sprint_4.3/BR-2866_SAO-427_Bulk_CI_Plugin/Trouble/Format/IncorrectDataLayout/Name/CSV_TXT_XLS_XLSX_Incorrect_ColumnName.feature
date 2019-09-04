@@ -1,17 +1,18 @@
-@Bulk_Loading_Format_IncorrectColumnName_Trouble @427
+@Bulk_Loading_Format_IncorrectColumnName_Trouble @SAO-427
+    #passed
 Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_3" and password as "Test@1234"
+      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
-      And user enters "SAO-427 Test Bulk Loading Error Message - Structure" in Title field
+      And user enters "SAO-427 Test Bulk Loading Format- Incorrect column name" in Title field
       And user selects request type as "Event" on trouble event page
-      And user enters description as "SAO-427 Test Bulk Loading Error Message - Structure"
+      And user enters description as "SAO-427 Test Bulk Loading Format- Incorrect column name"
       And user clicks on save button
       Then ticket should be created and status should be assigned
       When user clicks on Diagnosis tab
@@ -28,7 +29,7 @@ Feature: checking of bulk loading format
       Then user clicks on save button under bulk import
       And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-      And user waits 3 secs
+      And user waits 20 secs
       When user clicks on Show Bulk Import button
       And user switches to frame
       When user clicks on "Related CIs" tab
@@ -42,10 +43,10 @@ Feature: checking of bulk loading format
 
       Examples:
 
-          |fileTypes                                                                                                                                   |
+          |fileTypes                                                                                              |
           |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnName\CSV.csv|
-#         |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\IncorrectFormatColumnName\TEXT.txt|
-#         |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\IncorrectFormatColumnName\XLS.xls|
-#         |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\IncorrectFormatColumnName\XLSX.xlsx|
+         |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnName\TEXT.txt|
+         |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnName\XLS.xls|
+         |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnName\XLSX.xlsx|
 
 

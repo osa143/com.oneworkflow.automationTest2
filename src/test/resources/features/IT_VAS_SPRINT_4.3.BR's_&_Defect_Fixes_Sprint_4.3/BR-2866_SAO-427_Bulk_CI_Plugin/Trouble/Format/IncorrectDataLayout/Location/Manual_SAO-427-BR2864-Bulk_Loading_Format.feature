@@ -1,4 +1,5 @@
-@Manual_Bulk_Loading_Format_IncorrectLocation_Trouble @427
+@Manual_Bulk_Loading_Format_IncorrectLocation_Trouble
+    #No need to Run
 Feature: checking of bulk loading format
   Scenario: user checks the format of bulk loading format
 

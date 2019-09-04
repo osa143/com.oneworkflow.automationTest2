@@ -1,4 +1,4 @@
-@SAO-427-BR2865-Bulk_Loading_Summary_Trouble @SAO_427
+@SAO-427-BR2865-Bulk_Loading_Summary_Trouble @SAO_427 @other_trouble
   #passed
   Feature: Bulk Loading Summary
     Scenario: Bulk Loading Summary
@@ -25,6 +25,7 @@
       Then user clicks on save button under bulk import
       And first error message should display as "The manually identified CIs are now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
+      And user waits 20 secs
       And user clicks on Show Bulk Import button
       And user switches to frame
       And user clicks on "Related CIs" tab

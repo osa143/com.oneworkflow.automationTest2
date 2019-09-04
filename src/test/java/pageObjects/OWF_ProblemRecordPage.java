@@ -1,10 +1,16 @@
 package pageObjects;
 
+import io.cucumber.datatable.DataTable;
+import org.apache.velocity.runtime.directive.Parse;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import utils.CommonUtils;
+
+import java.util.List;
 
 public class OWF_ProblemRecordPage extends BaseRecordPage {
 
@@ -181,6 +187,34 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
 
+    public void addAttachmentsAndVerify(DataTable attachment, String type)
+    {
+        List<List<String>> attachments = attachment.asLists(String.class);
+        for (int i = 1; i < attachments.size(); i ++) {
+            String summary = attachments.get(i).get(0);
+            String description = attachments.get(i).get(1);
+            String filePath = attachments.get(i).get(2);
+            int attachmentsCount = Integer.parseInt(attachments.get(i).get(3));
+            System.out.println("summary is: " + summary);
+            driver.findElement(By.id(btnADD_ID)).click();
+            switchToFrameByIndex(2);
+            enterSummary_attachments(summary);
+            enterDescription_Attachment_OnFrame(description);
+            clickAdd_AttachmentOnFrame();
+            clickonChooseFile_OnFrame();
+            CommonUtils.uploadFile(filePath);
+            wait(1000);
+            clickOk_AttachmentOnFrame();
+            switchToFrameByIndex(2);
+            if(type.equals("external"))
+            {
+                clickExternalRadioButton();
+            }
+            clickInternalRadioButton();
+            clickSave_AttachmentOnFrame();
+            Assert.assertTrue(validateAttachmentAvailability(attachmentsCount));
+        }
+    }
 
 
     public void clickAddButton() {

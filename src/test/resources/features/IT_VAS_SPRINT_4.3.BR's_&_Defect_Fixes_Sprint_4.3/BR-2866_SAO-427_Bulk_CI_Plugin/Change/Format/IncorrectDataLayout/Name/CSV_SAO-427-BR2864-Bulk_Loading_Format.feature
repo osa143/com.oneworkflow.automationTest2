@@ -1,4 +1,5 @@
-@Bulk_Loading_Format_Incorrect_ColumnName_change @427
+@Bulk_Loading_Format_Incorrect_ColumnName_change @SAO-427
+    #passed
 Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format
 
@@ -10,7 +11,7 @@ Feature: checking of bulk loading format
       And user selects request type as "Normal Change"
       Then user selects title as "Mobile:CS Core (Voice)" on Change record page
       And user selects request category as "Software Installation" on change record page
-      And user enters description as "TEST TICKET PLEASE IGNORE - SAO-427 Test Bulk Loading CI not found Prompt Change"
+      And user enters description as "TEST TICKET PLEASE IGNORE - SAO-427 Test Bulk Loading Format- Incorrect column name"
       And user enters reason field as "Regression"
       And user selects priority as "Critical"
       And user enters "Privacy Data: Just Testing" in the change builder field
@@ -40,26 +41,25 @@ Feature: checking of bulk loading format
       Then user clicks on save button under bulk import
       And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-      And user waits 3 secs
+      And user waits 20 secs
       When user clicks on Show Bulk Import button
       And user switches to frame
       When user clicks on "Related CIs" tab
       And user validates total rows as "10"
-      And user validates Rows OK as "0"
+      And user validates Rows OK as "10"
       And user validates with errors as "0"
-      And user validates with warnings as "10"
-      And user validates warning message as "Multiple CIs named 'No CI named '	SE_AP_alvesta-radmannen-ap1' was found!" in row 1
+      And user validates with warnings as "0"
       And user clicks on bulk loading close button
       And user logsOut and closes the browser
       And user switches to window 0
 
       Examples:
 
-          |fileTypes                                                                                                                                   |
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\IncorrectFormatColumnName\CSV.csv|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\IncorrectFormatColumnName\TEXT.txt|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\IncorrectFormatColumnName\XLS.xls|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\IncorrectFormatColumnName\XLSX.xlsx|
+          |fileTypes                                                                                              |
+          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnName\CSV.csv|
+          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnName\TEXT.txt|
+          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnName\XLS.xls|
+          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnName\XLSX.xlsx|
 
 
 

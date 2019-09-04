@@ -135,6 +135,11 @@ public class BaseRecordPage extends BasePage {
     private static final String txt_TYPE= "arid_WIN_0_200000004";
     private static final String txt_ITEM= "arid_WIN_0_200000005";
 
+    private static final String rbtn_INTERNAL = "WIN_0_rc0id600001901";
+    private static final String rbtn_EXTERNAL= "WIN_0_rc1id600001901";
+    private static final String table_ATTACHMENT_INTERNAL= "T777000013";
+    private static final String table_ATTACHMENT_EXTERNAL= "T600002205";
+
 
 
     public String getCategory(){
@@ -683,7 +688,8 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void clickDiagnosis() {
-        clickElement(By.xpath(btnDIAGNOSIS));
+        wait(1000);
+        selectTab("Diagnosis");
     }
 
     public void clickCiSearch() {
@@ -786,6 +792,36 @@ public class BaseRecordPage extends BasePage {
         return getAttributeValueById(txtTICKET_ID);
     }
 
+    public boolean validateAttachmentAvailability(int attachmentsSize)
+    {
+        wait(1000);
+        int size = getTableRows(By.id(table_ATTACHMENT_INTERNAL)).size();
+        System.out.println("Number of table rows--:" + size);
+        System.out.println("Number of Attachments available --: " + (size-1));
+        if(attachmentsSize==(size-1)){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean validateAttachmentAvailability_External(int attachmentsSize)
+    {
+        wait(1000);
+        int size = getTableRows(By.id(table_ATTACHMENT_EXTERNAL)).size();
+        System.out.println("Number of table rows--:" + size);
+        System.out.println("Number of Attachments available --: " + (size-1));
+        if(attachmentsSize==(size-1)){
+            return true;
+        }
+        return false;
+    }
+    public void clickInternalRadioButton(){
+        clickElement(By.id(rbtn_INTERNAL));
+    }
+
+    public void clickExternalRadioButton(){
+        clickElement(By.id(rbtn_EXTERNAL));
+    }
 
     public void selectImpact(String value){
         selectDropDownNameAndValue(ddIMPACT, value, false);

@@ -147,8 +147,9 @@ public class OWF_AgentConsolePageSteps {
 
     @And("user logsOut and closes the browser")
     public void userLogsOutsAndCloseTheBrowser() throws InterruptedException {
-        agentConsolePage.clickNavUserMenu();
-        agentConsolePage.clickMenuItemLogout();
+//        agentConsolePage.clickNavUserMenu();
+//        agentConsolePage.clickMenuItemLogout();
+        agentConsolePage.doLogout();
         agentConsolePage.getDriver().close();
 
 

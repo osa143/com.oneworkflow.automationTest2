@@ -1,4 +1,4 @@
-@Bulk_Loading_Additional_Definitions_Default_Settings_Trouble @SAO-427
+@Bulk_Loading_Additional_Definitions_Default_Settings_Trouble @SAO-427 @other_trouble
   #passed
 Feature: checking of bulk loading additional definitions default settings
   Scenario: user checks the bulk loading additional definitions default settings

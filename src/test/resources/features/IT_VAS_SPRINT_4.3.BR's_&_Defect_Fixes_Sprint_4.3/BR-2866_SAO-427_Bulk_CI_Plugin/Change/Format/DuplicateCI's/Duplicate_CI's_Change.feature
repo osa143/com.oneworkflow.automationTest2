@@ -1,4 +1,4 @@
-@CSV_Bulk_Loading_Format_duplicateCIs_change @427
+@duplicateCIs_change @SAO-427
 Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format
 
@@ -54,14 +54,16 @@ Feature: checking of bulk loading format
       And user validates "Status" as "With Errors" in row 9
       And user validates "Status" as "With Errors" in row 10
       And user clicks on bulk loading close button
+      And user logsOut and closes the browser
+      And user switches to window 0
 
       Examples:
 
           |fileTypes                                                                                       |
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\5DuplicateCIs\5CIsCSV.csv |
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\5DuplicateCIs\5CIsTextDOC.txt|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\5DuplicateCIs\5CIsXLS.xls|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\5DuplicateCIs\5CIsXLSX.xlsx|
+          |C:\Temp\oneworkflow.automation\src\test\resources\Test Attachments\5DuplicateCIs\5CIsCSV.csv |
+          |C:\Temp\oneworkflow.automation\src\test\resources\Test Attachments\5DuplicateCIs\5CIsTextDOC.txt|
+          |C:\Temp\oneworkflow.automation\src\test\resources\Test Attachments\5DuplicateCIs\5CIsXLS.xls|
+          |C:\Temp\oneworkflow.automation\src\test\resources\Test Attachments\5DuplicateCIs\5CIsXLSX.xlsx|
 
 
 

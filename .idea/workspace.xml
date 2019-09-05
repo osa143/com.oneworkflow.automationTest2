@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Change/E2E_Standard_Change_(Internal Initiator).feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Change/E2E_Standard_Change_(Internal Initiator).feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -81,7 +85,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/runners/Test_Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="168">
               <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -90,11 +94,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="279">
-              <caret line="986" column="37" lean-forward="true" selection-start-line="986" selection-start-column="37" selection-end-line="986" selection-end-column="37" />
+              <caret line="986" column="37" selection-start-line="986" selection-start-column="37" selection-end-line="986" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Change/E2E_Standard_Change_(Internal Initiator).feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Change/E2E_Normal_Change_(External Initiator).feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="92" column="47" lean-forward="true" selection-start-line="90" selection-start-column="4" selection-end-line="92" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -161,7 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/CORE/E2E_Core_Test_Cases.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/PrimaryCICheck/XLSX_SAO427-BR-2868-Bulk_Loading_Primary_CI_Default_Settings.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/PrimaryCICheck/XLS_SAO427-BR-2868-Bulk_Loading_Primary_CI_Default_Settings.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/PrimaryCICheck/TXT_SAO427-BR-2868-Bulk_Loading_Primary_CI_Default_Settings.feature" />
@@ -212,6 +233,7 @@
         <option value="$PROJECT_DIR$/src/test/resources/features/Sprint 4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/500CI's/AllFileTypes_Change.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Sprint 4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/500CI's/AllFileTypes_Trouble.feature" />
         <option value="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Change/E2E_Standard_Change_(Internal Initiator).feature" />
       </list>
     </option>
   </component>
@@ -222,10 +244,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="y" value="-7" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1550" />
-    <option name="height" value="846" />
+    <option name="height" value="847" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
@@ -236,6 +258,62 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OneWorkflowAutomationNEW" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OneWorkflowAutomationNEW" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OneWorkflowAutomationNEW" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OneWorkflowAutomationNEW" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OneWorkflowAutomationNEW" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OneWorkflowAutomationNEW" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="Regression" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OneWorkflowAutomationNEW" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="Regression" type="462c0819:PsiDirectoryNode" />
+              <item name="Change" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
@@ -353,43 +431,6 @@
               <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="IT_VAS_SPRINT_4.3" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="BR-2866_SAO-427_Bulk_CI_Plugin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -720,6 +761,7 @@
       <workItem from="1567583723142" duration="3555000" />
       <workItem from="1567611816198" duration="143000" />
       <workItem from="1567612148803" duration="8993000" />
+      <workItem from="1567679475893" duration="1273000" />
     </task>
     <task id="LOCAL-00053" summary="modified features and steps for incident features">
       <created>1562767664481</created>
@@ -1100,7 +1142,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2122038000" />
+    <option name="totallyTimeSpent" value="2123311000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1112,9 +1154,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35021323" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3552279" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -1128,7 +1171,7 @@
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50067025" side_tool="true" weight="0.50636494" />
       <window_info anchor="bottom" id="Database Changes" order="5" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.042432815" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.27193934" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.27157003" />
       <window_info anchor="bottom" id="Build" order="8" weight="0.417256" />
       <window_info anchor="bottom" id="Message" order="9" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.28602383" />
@@ -1380,8 +1423,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/resources/TestAttachments/10 CI's - Incorrect Names/TEXT.txt" />
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Other_Trouble/SAO-427-BR2862-Bulk_Loading_Error_Message_Structure.feature" />
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Other_Trouble/SAO-427-BR2866-Bulk_Loading_Summary.feature" />
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Other_Change/Bulk_Loading_Additional_Definitions_Default_Settings.feature" />
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Other_Change/SAO-427-BR2866-Tele2Notifications.feature" />
@@ -1446,20 +1487,8 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/DuplicateCI's/Duplicate_CI's_Change.feature" />
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Sprint 4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/500CI's/AllFileTypes_Change.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="59" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Sprint 4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/500CI's/AllFileTypes_Trouble.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="940">
-          <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Sprint 4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/500CI's/AllFileTypes_Change.feature" />
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Sprint 4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/500CI's/AllFileTypes_Trouble.feature" />
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1472,7 +1501,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/runners/Test_Runner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="168">
           <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1483,7 +1512,21 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
-          <caret line="986" column="37" lean-forward="true" selection-start-line="986" selection-start-column="37" selection-end-line="986" selection-end-column="37" />
+          <caret line="986" column="37" selection-start-line="986" selection-start-column="37" selection-end-line="986" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Change/E2E_Normal_Change_(External Initiator).feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="92" column="47" lean-forward="true" selection-start-line="90" selection-start-column="4" selection-end-line="92" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Change/E2E_Standard_Change_(Internal Initiator).feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
         </state>
       </provider>
     </entry>

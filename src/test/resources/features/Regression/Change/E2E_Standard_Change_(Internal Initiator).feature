@@ -61,6 +61,9 @@ Feature: E2E standard change internal initiator
     And user validates owner as "ChangeManager"
     And user should see assigned profile as "Change Implementation Control"
     Then change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Assigned to Scheduled. " on row 3
+    And user waits for 1 minutes
+    And user clicks on ticket refresh button
+    And user clicks on timeline tab
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Start has changed from  UTC to 2019-09-05 10:15:00 UTC. Request Status has changed from Scheduled to Implementation." on row 2
     And user validates Description* isn't readonly
     And user validates Project Code isn't readonly
@@ -73,6 +76,15 @@ Feature: E2E standard change internal initiator
     When user clicks on Diagnosis tab
     Then user validates CI Search is disabled
     And user validates save isnt readonly
+    When user waits for 5 minutes
+    And user clicks on ticket refresh button
+    Then change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Impact has changed from  to No Impact. Actual End has changed from  UTC to 2019-09-05 10:21:00 UTC. Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed. " on row 2
+    When user waits for 5 minutes
+    And user clicks on ticket refresh button
+    And user validates ticket status as "Closed"
+    And user clicks on timeline tab
+    Then change should also be reflected in the timeline as "STATUS MODIFIED.  Completed Code has changed from Successful to Completed Successfully. Request Status has changed from Completed to Closed. " on row 1
+
 
 
 

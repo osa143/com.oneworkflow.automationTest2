@@ -985,8 +985,8 @@ public class OWF_ProblemRecordPageSteps {
         System.out.println(fullFilePath);
         CommonUtils.uploadFile(fullFilePath);
         problemRecordPage.wait(2000);
-//        CommonUtils.uploadFile(arg0);
-//        problemRecordPage.wait(2000);
+        //CommonUtils.uploadFile(arg0);
+        //problemRecordPage.wait(2000);
     }
     @Then("user validates Category as {string}")
     public void userValidatesCategoryAs(String arg0) {

@@ -11,7 +11,7 @@
       And user selects request type as "Normal Change"
       Then user selects title as "Mobile:CS Core (Voice)" on Change record page
       And user selects request category as "Software Installation" on change record page
-      And user enters description as "TEST TICKET PLEASE IGNORE - SAO-427 Test Bulk Loading CI not found Prompt Change"
+      And user enters description as "TEST TICKET PLEASE IGNORE - SAO-427 Test Bulk Loading ignore duplicate CI's"
       And user enters reason field as "Regression"
       And user selects priority as "Critical"
       And user enters "Privacy Data: Just Testing" in the change builder field
@@ -66,10 +66,10 @@
 
       Examples:
         |fileTypes                                                                                                  |
-        #|C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\50 CI's (WithDuplicates)\50CIsCSV.csv|
-        |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\50 CI's (WithDuplicates)\50CIsTextDOC.txt|
-        |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\50 CI's (WithDuplicates)\50CIsXLS.xls|
-        |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\50 CI's (WithDuplicates)\50CIsXLSX.xlsx|
+        |Test Attachments\50 CI's (WithDuplicates)\50CIsCSV.csv|
+        |Test Attachments\50 CI's (WithDuplicates)\50CIsTextDOC.txt|
+        |Test Attachments\50 CI's (WithDuplicates)\50CIsXLS.xls|
+        |Test Attachments\50 CI's (WithDuplicates)\50CIsXLSX.xlsx|
 
 
 

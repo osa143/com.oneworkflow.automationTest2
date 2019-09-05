@@ -56,10 +56,10 @@ Feature: checking of bulk loading format
       Examples:
 
           |fileTypes                                                                                              |
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnName\CSV.csv|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnName\TEXT.txt|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnName\XLS.xls|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnName\XLSX.xlsx|
+          |Test Attachments\IncorrectFormatColumnName\CSV.csv|
+          |Test Attachments\IncorrectFormatColumnName\TEXT.txt|
+          |Test Attachments\IncorrectFormatColumnName\XLS.xls|
+          |Test Attachments\IncorrectFormatColumnName\XLSX.xlsx|
 
 
 

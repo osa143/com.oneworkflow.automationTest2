@@ -57,10 +57,10 @@ Feature: checking of bulk loading CTI details
 
     Examples:
       |fileTypes                                                                                                  |
-      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\Template.csv |
-      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\BIR+Load+Template.xlsx|
-      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\BIR+Load+Template.xls|
-      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\TEXTDocForBulkCI.txt |
+      |Test Attachments\10 CI's - Correct Names\BIR+Load+Template.csv|
+      |Test Attachments\10 CI's - Correct Names\BIR+Load+Template.xlsx|
+      |Test Attachments\10 CI's - Correct Names\BIR+Load+Template.xls|
+      |Test Attachments\10 CI's - Correct Names\TEXTDocForBulkCI.txt|
 
 
 

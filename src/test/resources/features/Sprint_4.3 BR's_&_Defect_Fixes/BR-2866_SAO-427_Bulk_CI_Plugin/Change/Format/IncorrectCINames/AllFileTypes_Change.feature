@@ -57,10 +57,10 @@ Feature: checking of bulk loading format
       Examples:
 
           |fileTypes                                                                                                 |
-          #|C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Incorrect Names\CSV.csv |
-          #|C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Incorrect Names\TEXT.txt|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Incorrect Names\XLS.xls|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Incorrect Names\file.xlsx|
+          |Test Attachments\10 CI's - Incorrect Names\CSV.csv|
+          |Test Attachments\10 CI's - Incorrect Names\TEXT.txt|
+          |Test Attachments\10 CI's - Incorrect Names\XLS.xls|
+          |Test Attachments\10 CI's - Incorrect Names\XLSX.xlsx|
 
 
 

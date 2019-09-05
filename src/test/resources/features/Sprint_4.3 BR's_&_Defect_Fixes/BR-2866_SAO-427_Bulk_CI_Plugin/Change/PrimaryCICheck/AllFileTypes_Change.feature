@@ -11,7 +11,7 @@ Feature: checking of bulk loading additional definitions default settings
     And user selects request type as "Normal Change"
     Then user selects title as "Mobile:CS Core (Voice)" on Change record page
     And user selects request category as "Software Installation" on change record page
-    And user enters description as "TEST TICKET PLEASE IGNORE - SAO-427 Test Bulk Loading CI not found Prompt Change"
+    And user enters description as "TEST TICKET PLEASE IGNORE - SAO-427 Test Bulk Loading Primary CI Check"
     And user enters reason field as "Regression"
     And user selects priority as "Critical"
     And user enters "Privacy Data: Just Testing" in the change builder field
@@ -66,7 +66,7 @@ Feature: checking of bulk loading additional definitions default settings
       Examples:
 
       |fileTypes                                                                                                 |
-      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\Template.csv|
-      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\BIR+Load+Template.xlsx|
-      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\BIR+Load+Template.xls|
-      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\TEXTDocForBulkCI.txt|
+      |Test Attachments\10 CI's - Correct Names\BIR+Load+Template.csv|
+      |Test Attachments\10 CI's - Correct Names\BIR+Load+Template.xlsx|
+      |Test Attachments\10 CI's - Correct Names\BIR+Load+Template.xls|
+      |Test Attachments\10 CI's - Correct Names\TEXTDocForBulkCI.txt|

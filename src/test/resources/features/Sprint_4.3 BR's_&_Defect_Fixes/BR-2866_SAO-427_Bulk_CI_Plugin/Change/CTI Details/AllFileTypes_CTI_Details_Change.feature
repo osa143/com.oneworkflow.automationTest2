@@ -65,6 +65,6 @@ Feature: checking of bulk loading CTI details
     Examples:
       |fileTypes                                                                                                  |
       |TestAttachments\10 CI's - Correct Names\Template.csv |
-      #|TestAttachments\10 CI's - Correct Names\BIR+Load+Template.xlsx|
+      |TestAttachments\10 CI's - Correct Names\BIR+Load+Template.xlsx|
       |TestAttachments\10 CI's - Correct Names\BIR+Load+Template.xls|
       |TestAttachments\10 CI's - Correct Names\TEXTDocForBulkCI.txt |

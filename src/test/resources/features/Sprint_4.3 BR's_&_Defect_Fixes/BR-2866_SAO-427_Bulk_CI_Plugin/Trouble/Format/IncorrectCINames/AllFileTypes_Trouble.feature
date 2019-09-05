@@ -9,9 +9,9 @@
       And user switches to window 1
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
-      And user enters "SAO-427 Test Bulk Loading Incorrect CI names" in Title field
+      And user enters "SAO-427 Test Bulk Loading Format Incorrect CI names" in Title field
       And user selects request type as "Event" on trouble event page
-      And user enters description as "SAO-427 Test Bulk Loading Incorrect CI names"
+      And user enters description as "SAO-427 Test Bulk Loading Format Incorrect CI names"
       And user clicks on save button
       Then ticket should be created and status should be assigned
       When user clicks on Diagnosis tab
@@ -48,10 +48,10 @@
      Examples:
 
       |fileTypes                                                                                                 |
-      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Incorrect Names\CSV.csv |
-      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Incorrect Names\TEXT.txt|
-      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Incorrect Names\XLS.xls|
-      |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Incorrect Names\file.xlsx|
+      |Test Attachments\10 CI's - Incorrect Names\CSV.csv|
+      |Test Attachments\10 CI's - Incorrect Names\TEXT.txt|
+      |Test Attachments\10 CI's - Incorrect Names\XLS.xls|
+      |Test Attachments\10 CI's - Incorrect Names\XLSX.xlsx|
 
 
 

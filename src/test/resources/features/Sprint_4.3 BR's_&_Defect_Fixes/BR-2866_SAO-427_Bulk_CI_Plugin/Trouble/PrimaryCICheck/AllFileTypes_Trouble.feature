@@ -10,9 +10,9 @@ Feature: checking of bulk loading additional definitions default settings
     And user switches to window 1
     Then trouble record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
-    And user enters "SAO-427 Test Bulk Loading Error Message - Structure" in Title field
+    And user enters "SAO-427 Test Bulk Loading Primary CI Check" in Title field
     And user selects request type as "Event" on trouble event page
-    And user enters description as "SAO-427 Test Bulk Loading Error Message - Structure"
+    And user enters description as "SAO-427 Test Bulk Loading Primary CI Check"
     And user clicks on save button
     Then ticket should be created and status should be assigned
     When user clicks on Diagnosis tab
@@ -55,7 +55,7 @@ Feature: checking of bulk loading additional definitions default settings
 
     Examples:
           |fileTypes                                                                                                  |
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\Template.csv |
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\BIR+Load+Template.xlsx|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\BIR+Load+Template.xls|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Correct Names\TEXTDocForBulkCI.txt |
+          |Test Attachments\10 CI's - Correct Names\BIR+Load+Template.csv|
+          |Test Attachments\10 CI's - Correct Names\BIR+Load+Template.xlsx|
+          |Test Attachments\10 CI's - Correct Names\BIR+Load+Template.xls|
+          |Test Attachments\10 CI's - Correct Names\TEXTDocForBulkCI.txt|

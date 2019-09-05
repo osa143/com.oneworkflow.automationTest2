@@ -1,4 +1,4 @@
-@Bulk_Loading_Format_change_500CIs @427
+@Bulk_Loading_Format_change_500CIs @SAO-427
 Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format
 
@@ -10,7 +10,7 @@ Feature: checking of bulk loading format
       And user selects request type as "Normal Change"
       Then user selects title as "Mobile:CS Core (Voice)" on Change record page
       And user selects request category as "Software Installation" on change record page
-      And user enters description as "TEST TICKET PLEASE IGNORE - SAO-427 Test Bulk Loading CI not found Prompt Change"
+      And user enters description as "TEST TICKET PLEASE IGNORE - SAO-427 Test Bulk Loading 500 CI's"
       And user enters reason field as "Regression"
       And user selects priority as "Critical"
       And user enters "Privacy Data: Just Testing" in the change builder field

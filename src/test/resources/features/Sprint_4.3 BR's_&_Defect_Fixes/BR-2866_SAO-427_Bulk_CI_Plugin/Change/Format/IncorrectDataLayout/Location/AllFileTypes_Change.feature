@@ -10,7 +10,7 @@ Feature: checking of bulk loading format
       And user selects request type as "Normal Change"
       Then user selects title as "Mobile:CS Core (Voice)" on Change record page
       And user selects request category as "Software Installation" on change record page
-      And user enters description as "TEST TICKET PLEASE IGNORE - SAO-427 Test Bulk Loading CI not found Prompt Change"
+      And user enters description as "TEST TICKET PLEASE IGNORE - SAO-427 Test Bulk Loading Incorrect Data Layout Location"
       And user enters reason field as "Regression"
       And user selects priority as "Critical"
       And user enters "Privacy Data: Just Testing" in the change builder field
@@ -55,10 +55,10 @@ Feature: checking of bulk loading format
       Examples:
 
           |fileTypes                                                                                                    |
-         |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnLocation\CSV.csv |
-         #|C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnLocation\TEXT.txt|
-         |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnLocation\XLS.xls|
-         |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnLocation\XLSX.xlsx|
+         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+TemplateCSV.csv|
+         |Test Attachments\IncorrectFormatColumnLocation\TEXTDocForBulkCI.txt|
+         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xls|
+         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xlsx|
 
 
 

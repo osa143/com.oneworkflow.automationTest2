@@ -10,9 +10,9 @@ Feature: checking of bulk loading format
       And user switches to window 1
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
-      And user enters "SAO-427 Test Bulk Loading Duplicate CI's" in Title field
+      And user enters "SAO-427 Test Bulk Loading Format Duplicate CI's" in Title field
       And user selects request type as "Event" on trouble event page
-      And user enters description as "SAO-427 Test Bulk Loading Duplicate CI's"
+      And user enters description as "SAO-427 Test Bulk Loading Format Duplicate CI's"
       And user clicks on save button
       Then ticket should be created and status should be assigned
       When user clicks on Diagnosis tab
@@ -53,10 +53,10 @@ Feature: checking of bulk loading format
       Examples:
 
           |fileTypes                                                                                       |
-          #|C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\5DuplicateCIs\5CIsCSV.csv |
-          #|C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\5DuplicateCIs\5CIsTextDOC.txt|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\5DuplicateCIs\5CIsXLS.xls|
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\5DuplicateCIs\5CIsXLSX.xlsx|
+          |Test Attachments\5DuplicateCIs\5CIsCSV.csv|
+          |Test Attachments\5DuplicateCIs\5CIsTextDOC.txt|
+          |Test Attachments\5DuplicateCIs\5CIsXLS.xls|
+          |Test Attachments\5DuplicateCIs\5CIsXLSX.xlsx|
 
 
 

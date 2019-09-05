@@ -51,10 +51,10 @@
 
       Examples:
         |fileTypes                                                                                                  |
-        |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\50 CI's (WithDuplicates)\50CIsCSV.csv|
-        |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\50 CI's (WithDuplicates)\50CIsTextDOC.txt|
-        |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\50 CI's (WithDuplicates)\50CIsXLS.xls|
-        |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\50 CI's (WithDuplicates)\50CIsXLSX.xlsx|
+        |Test Attachments\50 CI's (WithDuplicates)\50CIsCSV.csv|
+        |Test Attachments\50 CI's (WithDuplicates)\50CIsTextDOC.txt|
+        |Test Attachments\50 CI's (WithDuplicates)\50CIsXLS.xls|
+        |Test Attachments\50 CI's (WithDuplicates)\50CIsXLSX.xlsx|
 
 
 

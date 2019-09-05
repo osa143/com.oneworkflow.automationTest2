@@ -60,10 +60,10 @@ Feature: checking of bulk loading format
       Examples:
 
           |fileTypes                                                                                       |
-          |C:\Temp\oneworkflow.automation\src\test\resources\Test Attachments\5DuplicateCIs\5CIsCSV.csv |
-          |C:\Temp\oneworkflow.automation\src\test\resources\Test Attachments\5DuplicateCIs\5CIsTextDOC.txt|
-          |C:\Temp\oneworkflow.automation\src\test\resources\Test Attachments\5DuplicateCIs\5CIsXLS.xls|
-          |C:\Temp\oneworkflow.automation\src\test\resources\Test Attachments\5DuplicateCIs\5CIsXLSX.xlsx|
+          |Test Attachments\5DuplicateCIs\5CIsCSV.csv |
+          |Test Attachments\5DuplicateCIs\5CIsTextDOC.txt|
+          |Test Attachments\5DuplicateCIs\5CIsXLS.xls|
+          |Test Attachments\5DuplicateCIs\5CIsXLSX.xlsx|
 
 
 

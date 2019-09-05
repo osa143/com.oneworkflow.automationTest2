@@ -11,9 +11,9 @@ Feature: checking of bulk loading format
       And user switches to window 1
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
-      And user enters "SAO-427 Test Bulk Loading Error Message - Structure" in Title field
+      And user enters "SAO-427 Test Bulk Loading Incorrect data layout location" in Title field
       And user selects request type as "Event" on trouble event page
-      And user enters description as "SAO-427 Test Bulk Loading Error Message - Structure"
+      And user enters description as "SAO-427 Test Bulk Loading Incorrect data layout location"
       And user clicks on save button
       Then ticket should be created and status should be assigned
       When user clicks on Diagnosis tab
@@ -45,10 +45,10 @@ Feature: checking of bulk loading format
      Examples:
 
          |fileTypes                                                                                                    |
-         |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnLocation\CSV.csv |
-         #|C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnLocation\TEXT.txt|
-         |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnLocation\XLS.xls|
-         |C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\IncorrectFormatColumnLocation\XLSX.xlsx|
+         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+TemplateCSV.csv|
+         |Test Attachments\IncorrectFormatColumnLocation\TEXTDocForBulkCI.txt|
+         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xls|
+         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xlsx|
 
 
 

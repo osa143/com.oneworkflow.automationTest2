@@ -1,4 +1,4 @@
-@Bulk_Loading_Format_Trouble_CSV_500CIs @427
+@Bulk_Loading_Format_change_500CIs @427
 Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format
 
@@ -48,16 +48,15 @@ Feature: checking of bulk loading format
       And user validates Rows OK as "500"
       And user validates with errors as "0"
       And user validates with warnings as "0"
-      And user logsOut and closes the browser
+      Then user clicks on bulk loading close button
       And user switches to window 0
 
       Examples:
 
-          |fileTypes                                                                                                                                      |
-#         |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\TestCaseAttachments\IncorrectFormatColumnLocation\IncorrectLocation.csv |
-#         |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\TestCaseAttachments\IncorrectFormatColumnLocation\IncorrectLocation.xlsx|
-#         |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\TestCaseAttachments\IncorrectFormatColumnLocation\IncorrectLocation.xls |
-          |C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\TestCaseAttachments\IncorrectFormatColumnLocation\IncorrectLocation.txt |
-
+          |fileTypes                                                                                           |
+          |Test Attachments\500 CI's (No Duplicates)\CSV.csv|
+          |Test Attachments\500 CI's (No Duplicates)\TEXT.txt|
+          |Test Attachments\500 CI's (No Duplicates)\XLS.xls|
+          |Test Attachments\500 CI's (No Duplicates)\XLSX.xlsx|
 
 

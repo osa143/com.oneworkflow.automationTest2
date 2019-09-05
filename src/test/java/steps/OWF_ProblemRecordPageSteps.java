@@ -978,9 +978,15 @@ public class OWF_ProblemRecordPageSteps {
     }
 
     @And("user searches for {string} attachment and adds it")
-    public void userSearchesForAttachmentAndAddsIt(String arg0) {
-        CommonUtils.uploadFile(arg0);
+    public void userSearchesForAttachmentAndAddsIt(String filePath) {
+        String projectPath= System.getProperty("user.dir" );
+        System.out.println(projectPath);
+        String fullFilePath= projectPath+"\\src\\test\\resources\\"+filePath;
+        System.out.println(fullFilePath);
+        CommonUtils.uploadFile(fullFilePath);
         problemRecordPage.wait(2000);
+//        CommonUtils.uploadFile(arg0);
+//        problemRecordPage.wait(2000);
     }
     @Then("user validates Category as {string}")
     public void userValidatesCategoryAs(String arg0) {

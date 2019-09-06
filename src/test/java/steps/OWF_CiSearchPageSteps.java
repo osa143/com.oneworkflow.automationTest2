@@ -426,4 +426,8 @@ public class OWF_CiSearchPageSteps {
         Assert.assertEquals(ciSearchPage.getImpactToPlus(), CommonUtils.requestEnd);
     }
 
+    @Then("user selects all CI's that appear")
+    public void userSelectsAllCISThatAppear() {
+      ciSearchPage.clickCheckBoxHeader();
+    }
 }

@@ -243,6 +243,9 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     public void clickSaveButton() {
         driver.findElement(By.id(btnSAVE_ID)).click();
     }
+    public boolean isSaveButtonEnabled(){
+        return verifyElementIsEnabledByElement(By.id(btnSAVE_ID));
+    }
     WebDriverWait wait= new WebDriverWait(driver, 20);
     public void clickAckButton_problemRecord() {
         wait(3000);

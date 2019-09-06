@@ -201,7 +201,7 @@ public class OWF_AgentConsolePageSteps {
           agentConsolePage.selectTab(tabName);
       }
       catch (Exception e){
-          agentConsolePage.wait(1500);
+          agentConsolePage.wait(3000);
           agentConsolePage.selectTab(tabName);
         }
     }

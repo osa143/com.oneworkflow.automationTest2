@@ -67,6 +67,10 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String bulkCILoading_DIV_ID = "WIN_0_800038059";
     private static final String rbtn_IGNORE_HANDLING_DUPLICATE_CIS= "WIN_0_rc0id800038013";
 
+    public void clickCheckBoxHeader(){
+        clickElement(By.className("checkboxheader"));
+    }
+
     public void clickIgnoreHandlingDuplicateCis(){
         clickElement(By.id(rbtn_IGNORE_HANDLING_DUPLICATE_CIS));
     }

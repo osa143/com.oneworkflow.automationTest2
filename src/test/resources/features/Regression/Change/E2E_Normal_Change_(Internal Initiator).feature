@@ -39,8 +39,8 @@
       And user selects priority as "Critical"
       And user enters "Privacy Data: Just Testing" in the change builder field
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-      Then user enters request start time 24 hours ahead of current date
-      And user enters request end time 28 hours ahead of current date
+      And user enters start time as 24 hours fast from current sweden time
+      And user enters end time as 28 hours fast from current sweden time
       And user enters impact duration as "45" minutes
       And user selects estimated impact dropdown as "Degradation of Service"
       And user clicks on save button
@@ -56,7 +56,7 @@
       When user answers all risk questions as below
       And user selects answer as "Impact to other systems/technologies are unclear"
       And user selects answer as "No"
-      And user selects answer as "Tested successfully, this is a pilot"
+      And user selects answer as "Tested succesfully, this is a pilot"
       And user selects answer as "Yes (outcome of the change can be instantly verified)"
       And user selects answer as "Yes"
       And user selects answer as "Simple"
@@ -87,7 +87,7 @@
       And user enters email address as "Test123xxx@Test123xxx.com"
       And user clicks on add email button
       Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
-      When user clicks on Send button
+      When user clicks on Send button and closes warning message
       Then user validates ticket status as "Assigned"
       And user clicks on assignment under sections
       Then user should see assigned profile as "DC CS Core (Voice)"

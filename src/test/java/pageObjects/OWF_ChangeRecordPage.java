@@ -49,6 +49,13 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_ACTUAL_END ="arid_WIN_0_777021165";
     private static final String dd_ACTUAL_IMPACT ="Actual Impact";
     private static final String dd_COMPLETED_CODE ="Completed Code";
+    private static final String fld_TEMPLATE= "label777504501";
+
+    public String getTemplateText(){
+        String text= getTextByID(fld_TEMPLATE);
+        System.out.println(text);
+        return text;
+    }
 
 
 
@@ -233,6 +240,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         driver.findElement(By.id(btnSEND)).click();
         wait(1000);
     }
+
     public void clickDownButton(){
         driver.findElement(By.id(btnDOWN)).click();
     }

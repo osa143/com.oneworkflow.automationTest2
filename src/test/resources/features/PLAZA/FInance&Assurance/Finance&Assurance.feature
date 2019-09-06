@@ -7,12 +7,13 @@
       Then user should see the plaza home page
       When user clicks on "Facility Management" button
       And user clicks on "Order" button
-      And user clicks "Application" button
+      And user clicks on IT Infrastructure
+      And user clicks on " IT Infrastructure " button
       Then user should see "Application" IT Pebbles
       When user clicks on "Finance & Assurance" pebble
       Then user should see "Finance & Assurance" form
       When user selects Role dropdown as "Application Operation Engineer"
-      And user enters <Request> in the request field
+      And user enters "<Request>" in the request field
       And user selects system dropdown as <System>
       And user enters planned start time as current time
       And user enters planned end time as current time
@@ -53,8 +54,8 @@
       And user clicks on save button
       Then ticket status should be closed
 
+      Examples:
 
-Examples:
       |Request           |System                                  |Description           |AdditionalComments|DescValidation|
       |Test1 F&A/Request |addressmaster                           |Test1 F&A/Description |Test1 F&A/AC      |              |
       |Test2 F&A/Request |alpha2 etl prod                         |Test2 F&A/Description |Test2 F&A/AC      |              |

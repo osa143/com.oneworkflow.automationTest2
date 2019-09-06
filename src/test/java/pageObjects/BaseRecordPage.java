@@ -212,6 +212,7 @@ public class BaseRecordPage extends BasePage {
 
     public void clickRefresh_ticketFresh(){
         clickElement(By.id(btn_REFRESH));
+        wait(3000);
     }
 
     public boolean verifyIsFinlandSelected(){

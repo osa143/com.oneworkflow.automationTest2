@@ -17,8 +17,8 @@ Feature: External Normal Change E2E
     And user enters "Regression - Change Management Process" in the risk description field
     When user clicks save button
     And multiple error messages should appear with red boarder around fields
-    #  When user clicks on "Calendar" under actions
-#      #Need to check this as it appears in a different window not different Tab
+#      When user clicks on "Calendar" under actions
+       #Need to check this as it appears in a different window not different Tab
 #      And user switches to window 2
 #      When user enters "Change Record" in calendar search box
 #      And user clicks on ticket type "Change Record"
@@ -30,7 +30,7 @@ Feature: External Normal Change E2E
 #      Then user should see change record
 #      And user closes change record window
 #      And user closes calendar window
-      #When user clicks on sweden checkbox under affected BU's
+   # When user clicks on sweden checkbox under affected BU's
     And user selects request type as "Normal Change"
     Then user selects title as "Mobile:CS Core (Voice)" on Change record page
     And user selects request category as "Software Installation" on change record page
@@ -39,15 +39,15 @@ Feature: External Normal Change E2E
     And user selects priority as "Minor"
     And user enters "Privacy Data: Just Testing" in the change builder field
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-    Then user enters request start time 24 hours ahead of current date
-    And user enters request end time 28 hours ahead of current date
+    And user enters start time as 24 hours fast from current sweden time
+    And user enters end time as 28 hours fast from current sweden time
     And user enters impact duration as "45" minutes
     And user selects estimated impact dropdown as "Degradation of Service"
     And user clicks on save button
     And user waits
     Then user validates availability of tabs "Timeline:Diagnosis:Risk:Schedule:Interested Parties:Approval:Notifications:Linked Items:Work Orders:Service Level:Related Project:Service Info:Telenor" on change record page
     When user clicks on owner under sections
-    And user validates owner profile as "Change Initiator-External"
+    And user validates owner profile as "ChangeInitiator/Builder1"
     And user validates owner as "ChangeInitiator/Builder1"
     Then user clicks on Send button
     Then error message should display as "You must provide an answer to all the risk question outlined in the Risk tab before Send (ARERR 10000)" on change record page
@@ -56,7 +56,7 @@ Feature: External Normal Change E2E
     When user answers all risk questions as below
     And user selects answer as "Impact to other systems/technologies are unclear"
     And user selects answer as "No"
-    And user selects answer as "Tested successfully, this is a pilot"
+    And user selects answer as "Tested succesfully, this is a pilot"
     And user selects answer as "Yes (outcome of the change can be instantly verified)"
     And user selects answer as "Yes"
     And user selects answer as "Simple"
@@ -87,7 +87,7 @@ Feature: External Normal Change E2E
     Then user validates ticket status as "Assigned"
     And user clicks on timeline tab
     And user validates Timeline Text entry isn't readonly
-    And user validates no changes other changes can be made to the change ticket
+    #And user validates no changes other changes can be made to the change ticket
     And user clicks on owner under sections
     And user validates owner profile as "Change Manager"
     And user validates owner as "ChangeManager"

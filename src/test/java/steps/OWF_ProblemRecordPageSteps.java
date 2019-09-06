@@ -1016,6 +1016,52 @@ public class OWF_ProblemRecordPageSteps {
     public void userAddsAttachmentAndVerifies(String type, DataTable attachments) {
         problemRecordPage.addAttachmentsAndVerify(attachments, type);
     }
+
+    @Then("user validates Title is readonly")
+    public void userValidatesTitleIsReadonly() {
+        Assert.assertTrue(problemRecordPage.verifyTitleIsReadOnly());
+        }
+
+    @And("user validates Request Category is readonly")
+    public void userValidatesRequestCategoryIsReadonly() {
+        Assert.assertTrue(problemRecordPage.verifyRequestCategoryIsReadOnly());
+    }
+
+    @And("user validates Reason is readonly")
+    public void userValidatesReasonIsReadonly() {
+        Assert.assertTrue(problemRecordPage.verifyReasonIsReadOnly());
+    }
+
+    @And("user validates Priority is readonly")
+    public void userValidatesPriorityIsReadonly() {
+        Assert.assertTrue(problemRecordPage.verifyPriorityIsReadOnly());
+    }
+
+    @And("user validates Implementation is readonly")
+    public void userValidatesImplementationIsReadonly() {
+        Assert.assertTrue(problemRecordPage.verifyImplementationIsReadOnly());
+    }
+
+    @And("user validates Test Plan is readonly")
+    public void userValidatesTestPlanIsReadonly() {
+        Assert.assertTrue(problemRecordPage.verifyTestPlanIsReadOnly());
+    }
+
+    @And("user validates Rollback is readonly")
+    public void userValidatesRollbackIsReadonly() {
+        Assert.assertTrue(problemRecordPage.verifyRollbackIsReadOnly());
+    }
+
+    @And("user validates ack button is disabled")
+    public void userValidatesAckButtonIsDisabled() {
+        Assert.assertFalse(problemRecordPage.getAckButtonStatus(), "user is able to Ack Ticket");
+    }
+
+    @And("user validates save is enabled")
+    public void userValidatesSaveIsEnabled() {
+        Assert.assertTrue(problemRecordPage.isSaveButtonEnabled());
+    }
 }
+
 
 

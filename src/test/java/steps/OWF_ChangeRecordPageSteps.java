@@ -504,4 +504,41 @@ public class OWF_ChangeRecordPageSteps {
     }
 
 
+    @And("user enters start time as {int} hours fast from current sweden time")
+    public void userEntersStartTimeAsHoursFastFromCurrentSwedenTime(int delayMinutes) {
+        int newDelay= 60*delayMinutes;
+        changeRecordPage.enterStartDate_format(newDelay);
+    }
+
+    @And("user enters end time as {int} hours fast from current sweden time")
+    public void userEntersEndTimeAsHoursFastFromCurrentSwedenTime(int delayMinutes) {
+        int newDelay= 60*delayMinutes;
+        changeRecordPage.enterEndDate_format(newDelay);
+    }
+
+    @When("user clicks on Send button and closes warning message")
+    public void userClicksOnSendButtonAndClosesWarningMessage() {
+        try {
+            changeRecordPage.clickSendButton();
+        } catch (Exception e) {
+
+        }
+        changeRecordPage.switchToFrameByIndex(2);
+        try {
+            changeRecordPage.clickElementByContainsTextAndTagName("a", "OK");
+        } catch (Exception e) {
+            changeRecordPage.clickElementByContainsTextAndTagName("a", "Yes");
+        }
+    }
+
+    @And("user validates {string} is mandatory")
+    public void userValidatesIsMandatory(String arg0) {
+        Assert.assertEquals(changeRecordPage.getTemplateText(), arg0);
+    }
+
+
+    @Then("user validates send button is disabled")
+    public void userValidatesSendButtonIsDisabled() {
+        Assert.assertFalse(changeRecordPage.verifySendButtonIsEnable());
+    }
 }

@@ -14,7 +14,7 @@ Feature: Plaza C2B Cache form test
     When user selects Role dropdown as "Application Operation Engineer"
     And user selects C2B service request name as "<ServiceRequest>"
     And user enters C2B request as "<Request>"
-    And user selects C2B select request as "<SelectRequest>"
+    And user selects C2B select request as Database dump (Prod)
     And user selects C2B environment as "<Environment>"
     And user enters C2B description as "<Description>"
     And user enters additional comments as <AdditionalComments>
@@ -55,5 +55,11 @@ Feature: Plaza C2B Cache form test
 
 
     Examples:
-      |ServiceRequest   |Request               |SelectRequest       |Environment|Description               |AdditionalComments|DescValidation|
-      |General Request  |Test1 C2BCache/Request|Database dump (Prod)|AT         |Test1 C2BCache/Description|Test1 C2BCache/AC |              |
+      |ServiceRequest   |Request               |Environment  |Description               |AdditionalComments|DescValidation|
+      |General Request  |Test1 C2BCache/Request|AT           |Test1 C2BCache/Description|Test1 C2BCache/AC |              |
+      |General Request  |Test2 C2BCache/Request|DEV          |Test2 C2BCache/Description|Test2 C2BCache/AC |              |
+      |General Request  |Test3 C2BCache/Request|MITE         |Test3 C2BCache/Description|Test3 C2BCache/AC |              |
+      |General Request  |Test4 C2BCache/Request|Prod         |Test4 C2BCache/Description|Test4 C2BCache/AC |              |
+      |General Request  |Test5 C2BCache/Request|RATM         |Test5 C2BCache/Description|Test5 C2BCache/AC |              |
+      |General Request  |Test6 C2BCache/Request|SIT          |Test6 C2BCache/Description|Test6 C2BCache/AC |              |
+      |General Request  |Test7 C2BCache/Request|ST           |Test7 C2BCache/Description|Test7 C2BCache/AC |              |

@@ -31,6 +31,25 @@ Feature: Plaza C2B Cache form test
     And user clicks Search on ticket search
     Then user should see plaza ticket
     And user validates source field as "PLAZA"
+    And user validates title field as "Service Request | C2B Service"
+    And user validates description contains: <DescValidation>
+    Then user clicks on owner under sections
+    And user clicks on assignment under sections
+    Then user validates owner profile as ""
+    And user validates owner as ""
+    And user validates assignee is ""
+    Then user clicks on "Interested Parties" tab
+    And user validates "PLAZA" is listed as an interested party
+    When user clicks on Ack button
+    And user changes status to "Cleared"
+    And user selects completed code as "Success"
+    And user clicks on "Schedule" tab
+    And user enters schedule end as current date
+    Then user clicks on save button
+    And user validates ticket status as "Cleared"
+    When user changes status to "Closed"
+    And user clicks on save button
+    Then ticket status should be closed
 
 
     Examples:

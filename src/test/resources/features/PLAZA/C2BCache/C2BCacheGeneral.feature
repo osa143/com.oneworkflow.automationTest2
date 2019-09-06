@@ -12,7 +12,7 @@ Feature: Plaza C2B Cache form test
     When user clicks on "C2B Cache" pebble
     Then user should see "C2B Cache" form
     When user selects Role dropdown as "Application Operation Engineer"
-    And user selects C2B service request name as "<ServiceRequest>"
+    And user selects C2B service request name as General Request
     And user enters C2B request as "<Request>"
     And user selects C2B select request as Database dump (Prod)
     And user selects C2B environment as "<Environment>"
@@ -33,7 +33,7 @@ Feature: Plaza C2B Cache form test
     And user clicks Search on ticket search
     Then user should see plaza ticket
     And user validates source field as "PLAZA"
-    And user validates title field as "Service Request | CRM"
+    And user validates title field as "Service Request | C2B Cache"
     And user validates description contains: <DescValidation>
     Then user clicks on owner under sections
     And user clicks on assignment under sections
@@ -55,11 +55,11 @@ Feature: Plaza C2B Cache form test
 
 
     Examples:
-      |ServiceRequest   |Request               |Environment  |Description               |AdditionalComments|DescValidation|
-      |General Request  |Test1 C2BCache/Request|AT           |Test1 C2BCache/Description|Test1 C2BCache/AC |              |
-      |General Request  |Test2 C2BCache/Request|DEV          |Test2 C2BCache/Description|Test2 C2BCache/AC |              |
-      |General Request  |Test3 C2BCache/Request|MITE         |Test3 C2BCache/Description|Test3 C2BCache/AC |              |
-      |General Request  |Test4 C2BCache/Request|Prod         |Test4 C2BCache/Description|Test4 C2BCache/AC |              |
-      |General Request  |Test5 C2BCache/Request|RATM         |Test5 C2BCache/Description|Test5 C2BCache/AC |              |
-      |General Request  |Test6 C2BCache/Request|SIT          |Test6 C2BCache/Description|Test6 C2BCache/AC |              |
-      |General Request  |Test7 C2BCache/Request|ST           |Test7 C2BCache/Description|Test7 C2BCache/AC |              |
+      |Request               |Environment  |Description               |AdditionalComments|DescValidation|
+      |Test1 C2BCache/Request|AT           |Test1 C2BCache/Description|Test1 C2BCache/AC |              |
+      |Test2 C2BCache/Request|DEV          |Test2 C2BCache/Description|Test2 C2BCache/AC |              |
+      |Test3 C2BCache/Request|MITE         |Test3 C2BCache/Description|Test3 C2BCache/AC |              |
+      |Test4 C2BCache/Request|Prod         |Test4 C2BCache/Description|Test4 C2BCache/AC |              |
+      |Test5 C2BCache/Request|RATM         |Test5 C2BCache/Description|Test5 C2BCache/AC |              |
+      |Test6 C2BCache/Request|SIT          |Test6 C2BCache/Description|Test6 C2BCache/AC |              |
+      |Test7 C2BCache/Request|ST           |Test7 C2BCache/Description|Test7 C2BCache/AC |              |

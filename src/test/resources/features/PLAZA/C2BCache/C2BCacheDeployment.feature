@@ -32,7 +32,7 @@ Feature: Plaza C2B Cache form test
     And user clicks Search on ticket search
     Then user should see plaza ticket
     And user validates source field as "PLAZA"
-    And user validates title field as "Service Request | CRM"
+    And user validates title field as "Service Request | C2B Cache"
     And user validates description contains: <DescValidation>
     Then user clicks on owner under sections
     And user clicks on assignment under sections

@@ -5,7 +5,8 @@ Feature: Plaza C2B Cache form test
     Given user is on the Plaza login page
     When user enters username "testauto" and password as "test123" and clicks on login
     Then user should see the plaza home page
-    When user clicks on "Order Something" button
+    When user clicks on "Facility Management" button
+    And user clicks on "Order" button
     And user clicks "IT Infrastructure" button
     And user clicks "Application" button
     Then user should see "Application" IT Pebbles
@@ -57,7 +58,7 @@ Feature: Plaza C2B Cache form test
     |Request                |Environment|Description               |AdditionalComments|DescValidation|
     |Test1 C2BCache/Request |AT         |Test1 C2BCache/Description|Test1 C2BCache/AC |              |
     |Test2 C2BCache/Request |DEV        |Test2 C2BCache/Description|Test2 C2BCache/AC |              |
-    |Test3 C2BCache/Reqeust |MITE       |Test3 C2BCache/Description|Test3 C2BCache/AC |              |
+    |Test3 C2BCache/Request |MITE       |Test3 C2BCache/Description|Test3 C2BCache/AC |              |
     |Test4 C2BCache/Request |Prod       |Test4 C2BCache/Description|Test4 C2BCache/AC |              |
     |Test5 C2BCache/Request |RATM       |Test5 C2BCache/Description|Test5 C2BCache/AC |              |
     |Test6 C2BCache/Request |SIT        |Test6 C2BCache/Description|Test6 C2BCache/AC |              |

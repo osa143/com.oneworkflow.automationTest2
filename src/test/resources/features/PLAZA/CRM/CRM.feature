@@ -5,8 +5,8 @@ Feature: Plaza CRM form test
     Given user is on the Plaza login page
     When user enters username "testauto" and password as "test123" and clicks on login
     Then user should see the plaza home page
-    When user clicks on "Order Something" button
-    And user clicks "IT Infrastructure" button
+    When user clicks on "Facility Management" button
+    And user clicks on "Order" button
     And user clicks "Application" button
     Then user should see "Application" IT Pebbles
     When user clicks on "CRM" pebble

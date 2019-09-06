@@ -12,8 +12,8 @@ Feature: Plaza CRM form test
     When user clicks on "CRM" pebble
     Then user should see "CRM" form
     When user selects Role dropdown as "Application Operation Engineer"
-    And user selects service request name as <SRName>
-    And user enters CRM request as general request
+    And user selects service request name as general request
+    And user enters CRM request as <Request>
     And user enters CRM system as "<System>"
     And user enters CRM planned start date as current date
     And user enters CRM planned end date as current date

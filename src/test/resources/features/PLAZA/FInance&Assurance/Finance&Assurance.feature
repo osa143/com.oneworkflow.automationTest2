@@ -12,18 +12,12 @@
       When user clicks on "Finance & Assurance" pebble
       Then user should see "Finance & Assurance" form
       When user selects Role dropdown as "Application Operation Engineer"
-
       And user enters <Request> in the request field
-
       And user selects system dropdown as <System>
-
       And user enters planned start time as current time
       And user enters planned end time as current time
-
       And user enters plaza description as <Description>
-
       And user enters additional comments as <AdditionalComments>
-
       Then user clicks on submit button
       And user gets plaza request id
       And user clicks on plaza request id
@@ -31,7 +25,7 @@
       When user opens another window
       And user enters OW URL
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "frvi96_auto" and password as "Test@1234"
+      When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2

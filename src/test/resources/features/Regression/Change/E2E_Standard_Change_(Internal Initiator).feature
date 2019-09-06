@@ -1,4 +1,4 @@
-@E2E_Standard_Change_(Internal_Initiator) @Change
+@E2E_Standard_Change_Internal_Initiator @Change
 
 Feature: E2E standard change internal initiator
   Scenario: E2E standard change internal initiator

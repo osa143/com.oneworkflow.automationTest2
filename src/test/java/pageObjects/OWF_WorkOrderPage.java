@@ -36,8 +36,29 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_CONTACT_TELEPHONE_NUMBER= "arid_WIN_0_600001056";
     private static final String txt_CONTACT_MAIL_ADDRESS= "arid_WIN_0_600001064";
     private static final String dd_STATUS= "Status*";
+    private static final String txt_SOURCE_ID="arid_WIN_0_777021006";
+    private static final String txt_SOURCE_FLD= "arid_WIN_0_777777912";
+    private static final String txt_DESCRIPTION= "arid_WIN_0_777031007";
+    private static final String table_INTERESTED_PARTIES= "T705002015";
 
 
+    public String verifyPlazaIsListedUnderInterestedParties(String colName, int rowNum){
+        return getTableCellData(By.id(table_INTERESTED_PARTIES), colName, rowNum);
+    }
+    public String getDescription(){
+        return getTextByID(txt_DESCRIPTION);
+    }
+
+    public String getTitle(){
+        return getTextByID(txt_TITLE);
+    }
+    public String getSource(){
+        return getTextByID(txt_SOURCE_FLD);
+    }
+    public void enterSourceID(String text){
+        enterTextByElement(By.id(txt_SOURCE_ID), text);
+
+    }
     public void selectStatus_workOrderPage(String value){
         selectDropDownNameAndValue(dd_STATUS, value, false);
     }

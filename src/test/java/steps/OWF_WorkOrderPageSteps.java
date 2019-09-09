@@ -5,8 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
 import pageObjects.OWF_WorkOrderPage;
-
-import java.sql.Driver;
+import utils.CommonUtils;
 
 public class OWF_WorkOrderPageSteps {
 
@@ -220,6 +219,35 @@ public class OWF_WorkOrderPageSteps {
     @When("user changes status to {string} on work order page")
     public void userChangesStatusToOnWorkOrderPage(String arg0) {
         workOrderPage.selectStatus_workOrderPage(arg0);
+    }
+    @Then("user enters plaza request id in the source id field")
+    public void userEntersPlazaRequestIdInTheSourceIdField() {
+        workOrderPage.enterSourceID(CommonUtils.plazaRequestID);
+    }
+
+    @Then("user should see plaza ticket")
+    public void userShouldSeePlazaTicket() {
+        
+    }
+
+    @And("user validates source field as {string}")
+    public void userValidatesSourceFieldAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getSource(), arg0);
+    }
+
+    @And("user validates title field as {string}")
+    public void userValidatesTitleFieldAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getTitle(), arg0);
+    }
+
+    @And("user validates description as {string}")
+    public void userValidatesDescriptionAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getDescription(), arg0);
+    }
+
+    @And("user validates {string} is listed as an interested party")
+    public void userValidatesIsListedAsAnInterestedParty(String arg0) {
+        Assert.assertEquals(workOrderPage.verifyPlazaIsListedUnderInterestedParties("Last Name", 1), arg0);
     }
 }
 

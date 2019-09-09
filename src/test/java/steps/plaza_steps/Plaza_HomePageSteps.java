@@ -23,7 +23,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user clicks on IT Infrastructure dropdown")
     public void userClicksOnITInfrastructureDropdown() {
-        clickElement(By.className("pull-right glyphicon ng-scope glyphicon-chevron-down"));
+        clickElement(By.xpath("//*[@id=\"xcc61d55edb198b00b27fdb11ce961902\"]/div/div[2]/div[4]/a/span/i"));
     }
 
     @Then("user should see Finance & Assurance form")
@@ -70,4 +70,30 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userClicksOnOrder() {
         homePage.clickOrder();
     }
+
+    @When("user clicks on Finance & Assurance")
+    public void userClicksOnFinanceAssurance() {
+        clickElement(By.xpath("//img[@alt='Finance & Assurance']"));
+    }
+
+    @And("user gets plaza request id")
+    public void userGetsPlazaRequestId() {
+       CommonUtils.plazaRequestID=homePage.getPlazaRequestNum();
+    }
+
+    @And("user clicks on plaza request id")
+    public void userClicksOnPlazaRequestId() {
+        homePage.clickPlazaRequestNum();
+    }
+
+    @Then("user should see service request form")
+    public void userShouldSeeServiceRequestForm() {
+    }
+
+    @When("user opens new tab")
+    public void userOpensNewTab() {
+        homePage.openNewTab();
+    }
+
+
 }

@@ -9,7 +9,7 @@
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
       And user clicks on "Application"
-      When user clicks on "Finance & Assurance"
+      When user clicks on Finance & Assurance
       Then user should see Finance & Assurance form
       When user selects role dropdown as "Application Operation Engineer"
       And user enters "<Request>" in the request field
@@ -22,8 +22,7 @@
       And user gets plaza request id
       And user clicks on plaza request id
       Then user should see service request form
-      When user opens another window
-      And user enters OW URL
+      When user opens new tab
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -34,22 +33,22 @@
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Finance & Assurance"
-      And user validates description contains: <DescValidation>
+      And user validates description as "<DescValidation>"
       Then user clicks on owner under sections
       And user clicks on assignment under sections
-      Then user validates owner profile as ""
-      And user validates owner as ""
-      And user validates assignee is ""
+      Then user validates owner profile as "PLAZA"
+      And user validates owner as "PLAZA"
+      And user should see assigned profile as "Assurance"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
-      And user changes status to "Cleared"
+      And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
 
@@ -125,3 +124,4 @@
 #      |Test67 F&A/Request|wanoverview prod                        |Test67 F&A/Description|Test67 F&A/AC     |              |
 #      |Test68 F&A/Request|wikitsic prod                           |Test68 F&A/Description|Test68 F&A/AC     |              |
 #      |Test69 F&A/Request|x-pris web txn                          |Test69 F&A/Description|Test69 F&A/AC     |              |
+

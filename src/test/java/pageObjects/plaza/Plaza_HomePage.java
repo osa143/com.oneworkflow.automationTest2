@@ -1,20 +1,45 @@
 package pageObjects.plaza;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
 import pageObjects.BasePage;
 import utils.CommonUtils;
 
+import java.util.ArrayList;
+
 public class Plaza_HomePage extends BasePage {
 
-    public static final String dd_ROLE= "select2-choice";
-    public static final String txt_REQUEST= "form-control ng-pristine ng-valid ng-scope ng-empty ng-valid-maxlength ng-touched";
+    public static final String dd_ROLE_ID= "select2-chosen-9";
+    public static final String txt_REQUEST_ID= "sp_formfield_sr2_v_request";
     public static final String dd_SYSTEM_ID= "s2id_sp_formfield_sr2_v_system";
     public static final String txt_PLANNED_START= "sp_formfield_sr2_v_start_date";
-    public static final String txt_PLANNED_END= "sp_formfield_sr2_v_start_date";
+    public static final String txt_PLANNED_END= "sp_formfield_sr2_v_end_date";
     public static final String txt_DESCRIPTION= "sp_formfield_sr2_v_description";
     public static final String txt_ADDITIONAL_COMMENTS= "sp_formfield_additional_comments";
     public static final String btn_ORDER= "x016e0fdbdb854700b27fdb11ce9619e3";
+    public static final String txt_PLAZA_REQUEST_NUM_ID="reqnum";
+
+
+    public void openNewTab(){
+
+        ((JavascriptExecutor) driver).executeScript("window.open()");
+        ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
+
+    }
+
+    public void clickPlazaRequestNum(){
+        clickElement(By.id(txt_PLAZA_REQUEST_NUM_ID));
+    }
+
+
+    public String getPlazaRequestNum(){
+        String PlazaRequestId=getTextByID(txt_PLAZA_REQUEST_NUM_ID);
+        System.out.println("Plaza request ID is  : " + PlazaRequestId);
+        return PlazaRequestId;
+    }
 
     public void clickOrder(){
         clickElement(By.id(btn_ORDER));
@@ -41,20 +66,22 @@ public class Plaza_HomePage extends BasePage {
         return title;
 
     }
-    public void selectDropdown(By Element, String dropdownName){
-        Select role = new Select(findElement(Element));
-        role.selectByVisibleText(dropdownName);
+    public void selectDropdown(By Element, By dropdownValuesListID, String dropdownValue){
+        clickElement(Element);
+        wait(500);
+        driver.findElement((dropdownValuesListID)).findElements(By.tagName("li")).stream().filter(element -> element.getText().trim().equals(dropdownValue)).findFirst().orElse(null).click();
+
     }
     public void selectRoleDropdown(String dropdownName){
-        selectDropdown(By.className(dd_ROLE), dropdownName);
+        selectDropdown(By.id(dd_ROLE_ID), By.id("select2-results-9"), dropdownName);
 
     }
     public void selectSystemDropdown(String dropdownName)
     {
-        selectDropdown(By.id(dd_SYSTEM_ID), dropdownName);
+        selectDropdown(By.id(dd_SYSTEM_ID), By.id("select2-results-13"),  dropdownName);
     }
     public void enterRequest(String text){
-        enterTextByElement(By.className(txt_REQUEST), text);
+        enterTextByElement(By.id(txt_REQUEST_ID), text);
     }
 
 

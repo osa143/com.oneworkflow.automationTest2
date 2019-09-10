@@ -156,7 +156,7 @@ Feature: Internal Urgent Critical Change E2E
     And user enters email address as "Test2@Test2.com"
     And user clicks on add email button
     Then user should see new email "Test2@Test2.com" added in "Email Address" in row 3
-    When user changes status to "Approval Request"
+    When user changes status to "Approval Requested"
     And user clicks on save button
 
 

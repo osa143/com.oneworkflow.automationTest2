@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/BCCP.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/BDL.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/CEWS.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/EFS_BSS.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/IT_FI.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Managed_Voice.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/MegaDisc_Add_User.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/MegaDisc_Remove_User.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Splunk.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup_Reshedule.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/TCFP_General_Inquiry.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Splunk.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Splunk.feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -475,13 +469,6 @@
       <workItem from="1567937106761" duration="29170000" />
       <workItem from="1568102153519" duration="1189000" />
     </task>
-    <task id="LOCAL-00060" summary="New steps for incident test cases">
-      <created>1563957904295</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1563957904296</updated>
-    </task>
     <task id="LOCAL-00061" summary="modified features and added steps">
       <created>1563984705617</created>
       <option name="number" value="00061" />
@@ -818,7 +805,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568033691654</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="Created new feature files">
+      <created>1568124097193</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1568124097194</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -909,7 +903,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="modified features and added steps for incident test cases" />
     <MESSAGE value="refactored code, modified features and added steps for incident test cases" />
     <MESSAGE value="added steps for incident test cases" />
     <MESSAGE value="Updated steps" />
@@ -934,7 +927,8 @@
     <MESSAGE value="C2B update Feature files" />
     <MESSAGE value="Plaza new steps" />
     <MESSAGE value="completed plaza feature steps" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed plaza feature steps" />
+    <MESSAGE value="Created new feature files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new feature files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

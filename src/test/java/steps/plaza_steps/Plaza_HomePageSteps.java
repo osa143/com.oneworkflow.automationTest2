@@ -96,4 +96,43 @@ public class Plaza_HomePageSteps extends BasePage {
     }
 
 
+    @When("user clicks on {string} pebble")
+    public void userClicksOnPebble(String arg0) {
+        homePage.clickPebble(arg0);
+    }
+
+    @Then("user should see CRM form")
+    public void userShouldSeeCRMForm() {
+        
+    }
+
+    @And("user selects service request name as {string}")
+    public void userSelectsServiceRequestNameAs(String arg0) {
+        homePage.selectServiceRequestName(arg0);
+    }
+
+    @And("user enters CRM request as {string}")
+    public void userEntersCRMRequestAs(String arg0) {
+       homePage.enterCRMRequest(arg0);
+    }
+
+    @And("user enters CRM planned start date as current date")
+    public void userEntersCRMPlannedStartDateAsCurrentDate() {
+        homePage.enterCRMPlannedStart(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user enters CRM planned end date as current date")
+    public void userEntersCRMPlannedEndDateAsCurrentDate() {
+       homePage.enterCRMPlannedEnd(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user enters CRM description as {string}")
+    public void userEntersCRMDescriptionAs(String arg0) {
+        homePage.enterCRMDescription(arg0);
+    }
+
+    @And("user selects CRM system as {string}")
+    public void userSelectsCRMSystemAs(String arg0) {
+       homePage.selectCRMSystemDropdown(arg0);
+    }
 }

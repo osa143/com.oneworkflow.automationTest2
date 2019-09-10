@@ -5,11 +5,10 @@ Feature: Plaza C2B Cache form test
     Given user is on the Plaza login page
     When user enters username "testauto" and password as "test123" and clicks on login
     Then user should see the plaza home page
-    When user clicks on "Facility Management" button
-    And user clicks on "Order" button
-    And user clicks "IT Infrastructure" button
-    And user clicks "Application" button
-    Then user should see "Application" IT Pebbles
+    When user clicks on "Facility Management"
+    And user clicks on order
+    And user clicks on IT Infrastructure dropdown
+    And user clicks on "Application"
     When user clicks on "C2B Cache" pebble
     Then user should see "C2B Cache" form
     When user selects Role dropdown as "Application Operation Engineer"
@@ -18,12 +17,11 @@ Feature: Plaza C2B Cache form test
     And user selects C2B environment as "<Environment>"
     And user enters C2B description as "<Description>"
     And user enters additional comments as <AdditionalComments>
-    Then user clicks on submit button
+    Then user clicks on "Submit"
     And user gets plaza request id
     And user clicks on plaza request id
     Then user should see service request form
-    When user opens another window
-    And user enters OW URL
+    When user opens new tab
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -34,7 +32,7 @@ Feature: Plaza C2B Cache form test
     Then user should see plaza ticket
     And user validates source field as "PLAZA"
     And user validates title field as "Service Request | C2B Cache"
-    And user validates description contains: <DescValidation>
+    And user validates description as "<DescValidation>"
     Then user clicks on owner under sections
     And user clicks on assignment under sections
     Then user validates owner profile as ""

@@ -20,10 +20,38 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_ADDITIONAL_COMMENTS= "sp_formfield_additional_comments";
     public static final String btn_ORDER= "x016e0fdbdb854700b27fdb11ce9619e3";
     public static final String txt_PLAZA_REQUEST_NUM_ID="reqnum";
+    public static final String dd_SERVICE_REQUEST_NAME_ID= "select2-chosen-11";
+    public static final String txt_CRM_REQUEST_ID= "sp_formfield_sr46_v_request";
+    public static final String txt_CRM_PLANNED_START= "sp_formfield_sr46_v_planned_start_date";
+    public static final String txt_CRM_PLANNED_END= "sp_formfield_sr46_v_planned_end_date";
+    public static final String txt_CRM_DESCRIPTION= "sp_formfield_sr46_v_description";
+    public static final String dd_CRM_SYSTEM= "s2id_sp_formfield_sr46_v_system";
 
 
+    public void selectCRMSystemDropdown(String dropdownName)
+    {
+        selectDropdown(By.id(dd_CRM_SYSTEM), By.id("select2-results-29"),  dropdownName);
+    }
+    public void enterCRMRequest(String text){
+        enterTextByElement(By.id(txt_CRM_REQUEST_ID), text);
+    }
+    public void enterCRMDescription(String text){
+        enterTextByElement(By.id(txt_CRM_DESCRIPTION), text);
+    }
+
+    public void enterCRMPlannedStart(String text){
+        enterTextByElement(By.id(txt_CRM_PLANNED_START), text);
+    }
+    public void enterCRMPlannedEnd(String text){
+        enterTextByElement(By.id(txt_CRM_PLANNED_END), text);
+    }
+
+    public void clickPebble(String pebbleName) {
+        String element = String.format("//img[@alt='%s']", pebbleName);
+        System.out.println(element);
+        findElement(By.xpath(element)).click();
+    }
     public void openNewTab(){
-
         ((JavascriptExecutor) driver).executeScript("window.open()");
         ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
@@ -68,18 +96,24 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectDropdown(By Element, By dropdownValuesListID, String dropdownValue){
         clickElement(Element);
-        wait(500);
+        wait(1000);
         driver.findElement((dropdownValuesListID)).findElements(By.tagName("li")).stream().filter(element -> element.getText().trim().equals(dropdownValue)).findFirst().orElse(null).click();
 
     }
     public void selectRoleDropdown(String dropdownName){
         selectDropdown(By.id(dd_ROLE_ID), By.id("select2-results-9"), dropdownName);
+        clickEscButton();
 
     }
     public void selectSystemDropdown(String dropdownName)
     {
         selectDropdown(By.id(dd_SYSTEM_ID), By.id("select2-results-13"),  dropdownName);
     }
+    public void selectServiceRequestName(String dropdownName){
+        selectDropdown(By.id(dd_SERVICE_REQUEST_NAME_ID), By.id("select2-results-11"), dropdownName);
+
+    }
+
     public void enterRequest(String text){
         enterTextByElement(By.id(txt_REQUEST_ID), text);
     }

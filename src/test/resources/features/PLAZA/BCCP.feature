@@ -1,25 +1,25 @@
-@BCCP @PLAZA
-  Feature: Plaza BCCP form test
+@BCPP @PLAZA
+  Feature: Plaza BCPP form test
     Scenario Outline: user validates information sent to OW from Plaza
 
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      When user clicks on "Facility Management" button
-      And user clicks on "Order" button
-      And user clicks "Application" button
-      Then user should see "Application" IT Pebbles
-      When user clicks on "BCCP" pebble
-      Then user should see "BCCP" form
-      When user selects Role dropdown as "Application Operation Engineer"
+      When user clicks on "Facility Management"
+      And user clicks on order
+      And user clicks on IT Infrastructure dropdown
+      And user clicks on "Application"
+      When user clicks on "BCPP" pebble
+      Then user should see "BCPP" form
+      When user selects role dropdown as "Application Operation Engineer"
       And user enters BCCP request as "<Request>"
-      And user selects Account/Password in the request field
-      And user selects environment as "<Environment>"
-      And user enters ci as "aa187bcpp01"
-      And user enters description as "<Description>"
+      And user selects service request name as "Account/Password"
+      And user selects BCPP environment as "<Environment>"
+      And user selects Add ci as "aa187bcpp01"
+      And user enters BCPP description as "<Description>"
       And user enters additional comments as "<AdditionalComments>"
-      Then user clicks on submit button
+      Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
       Then user should see service request form
@@ -44,17 +44,17 @@
       And user validates assignee is ""
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
-      When user clicks on diagnosis tab
+      When user clicks on "Diagnosis" tab
       And user validates CI "aa187bcpp01" is listed
       And user right clicks on CI "aa187bcpp01" and selects "Impact:Update"
       Then user switches to frame
       And user enters impacted from date as date in past
       And user enters impacted to date as date in past
       Then user clicks confirm checkbox
-      And user clicks the save button
+      And user clicks on save button
       Then user switches to window 1
       When user right clicks on CI "aa187bcpp01" and selects "Impact:Clear All"
-      Then user selects yes and closes warning message
+      And user clicks on yes button on warning window
       When user clicks on Ack button
       And user changes status to "Cleared"
       And user selects completed code as "Success"
@@ -66,8 +66,10 @@
       And user clicks on save button
       Then ticket status should be closed
 
+      Examples:
+
         |Request                |Environment|Description                |Additional Comments|DescValidation|
         |BCPP-Prod/Request      |Prod       |BCPP-Prod/Description      |BCPP-Prod/AC       |              |
-        |Test2-BCPP-Prod/Request|Prod       |Test2-BCPP-Prod/Description|Test2-BCPP-Prod/AC |              |
-        |BCPP-Test/Request      |TEST       |BCPP-Test/Description      |BCPP-Test/AC       |              |
-        |Test2-BCPP-Test/Request|Test       |Test2-BCPP-Test/Description|Test2-BCPP-Test/AC |              |
+#        |Test2-BCPP-Prod/Request|Prod       |Test2-BCPP-Prod/Description|Test2-BCPP-Prod/AC |              |
+#        |BCPP-Test/Request      |TEST       |BCPP-Test/Description      |BCPP-Test/AC       |              |
+#        |Test2-BCPP-Test/Request|Test       |Test2-BCPP-Test/Description|Test2-BCPP-Test/AC |              |

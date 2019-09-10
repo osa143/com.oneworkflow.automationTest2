@@ -37,9 +37,9 @@ Feature: Plaza CRM form test
     And user validates description as "<DescValidation>"
     Then user clicks on owner under sections
     And user clicks on assignment under sections
-    Then user validates owner profile as ""
-    And user validates owner as ""
-    And user validates assignee is ""
+    Then user validates owner profile as "PLAZA"
+    And user validates owner as "PLAZA"
+    And user should see assigned profile as "CRM"
     Then user clicks on "Interested Parties" tab
     And user validates "PLAZA" is listed as an interested party
     When user clicks on Ack button

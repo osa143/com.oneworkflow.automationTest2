@@ -13,7 +13,7 @@
       Then user should see "BDL" form
       When user selects Role dropdown as "Application Operation Engineer"
       And user enters BDL request as "Request"
-      And user selects Configuration in the request field
+      And user selects "Configuration" in the select request field
       And user selects environment as "AT1"
       And user selects all CIs in the AT1 field
       And user enters "P100-000-000" in the WBS Code field

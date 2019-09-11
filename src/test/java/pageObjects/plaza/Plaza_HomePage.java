@@ -26,11 +26,69 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_CRM_PLANNED_END= "sp_formfield_sr46_v_planned_end_date";
     public static final String txt_CRM_DESCRIPTION= "sp_formfield_sr46_v_description";
     public static final String dd_CRM_SYSTEM= "s2id_sp_formfield_sr46_v_system";
+    public static final String txt_C2B_REQUEST_ID="sp_formfield_sr74_v_request";
+    public static final String dd_ENVIRONMENT="s2id_autogen15";
+    public static final String txt_C2B_DESCRIPTION="sp_formfield_sr74_v_description";
+    public static final String dd_SELECT_REQUEST_ID="select2-chosen-12";
+    public static final String txt_C2B_GENERAL_REQUEST_ID="sp_formfield_sr112_v_request";
+    public static final String dd_C2B_GENERAL_ENVIRONMENT="s2id_sp_formfield_sr112_v_enable_notification";
+    public static final String txt_C2B_GENERAL_DESCRIPTION="sp_formfield_sr112_v_description";
+    public static final String txt_C2B_SERVICE_REQUEST_ID="sp_formfield_sr109_v_request";
+    public static final String dd_C2B_SERVICE_ENVIRONMENT="s2id_autogen13";
+    public static final String txt_C2B_SERVICE_DESCRIPTION="sp_formfield_sr109_v_description";
+    public static final String txt_BCPP_REQUEST_ID="sp_formfield_sr107_v_request";
+    public static final String dd_BCPP_ENVIRONMENT="select2-chosen-12";
+    public static final String txt_ADD_CI="s2id_autogen15";
+    public static final String txt_BCPP_DESCRIPTION="sp_formfield_sr107_v_description";
 
 
+    public void enterBCPP_Description(String text){
+        enterTextByElement(By.id(txt_BCPP_DESCRIPTION), text);
+    }
+    public void selectsAddCi(String dropdownName){
+        selectDropdown(By.id(txt_ADD_CI), By.id("s2id_autogen15_results"),  dropdownName);
+    }
+
+    public void selectBCPP_Environment(String dropdownName){
+        selectDropdown(By.id(dd_BCPP_ENVIRONMENT), By.id("select2-results-12"),  dropdownName);
+    }
+    public void enterC2B_BCPP_Request(String text){
+        enterTextByElement(By.id(txt_BCPP_REQUEST_ID), text);
+    }
+    public void enterC2B_service_Description(String text){
+        enterTextByElement(By.id(txt_C2B_SERVICE_DESCRIPTION), text);
+    }
+    public void selectC2B_serviceEnvironment(String dropdownName){
+        selectDropdown(By.id(dd_C2B_SERVICE_ENVIRONMENT), By.id("s2id_autogen13_results"),  dropdownName);
+    }
+    public void enterC2B_serviceRequest(String text){
+        enterTextByElement(By.id(txt_C2B_SERVICE_REQUEST_ID), text);
+    }
+    public void enterC2B_general_Description(String text){
+        enterTextByElement(By.id(txt_C2B_GENERAL_DESCRIPTION), text);
+    }
+    public void selectC2B_GeneralEnvironment(String dropdownName){
+        selectDropdown(By.id(dd_C2B_GENERAL_ENVIRONMENT), By.id("s2id_autogen16_results"),  dropdownName);
+    }
+    public void enterC2B_generalRequest(String text){
+        enterTextByElement(By.id(txt_C2B_GENERAL_REQUEST_ID), text);
+    }
+    public void select_selectRequest(String dropdownName){
+        selectDropdown(By.id(dd_SELECT_REQUEST_ID), By.id("select2-results-12"),  dropdownName);
+    }
+    public void enterC2B_Description(String text){
+        enterTextByElement(By.id(txt_C2B_DESCRIPTION), text);
+    }
+    public void selectEnvironment(String dropdownName){
+        selectDropdown(By.id(dd_ENVIRONMENT), By.id("s2id_autogen15_results"),  dropdownName);
+    }
+
+    public void enterC2B_Request(String text){
+        enterTextByElement(By.id(txt_C2B_REQUEST_ID), text);
+    }
     public void selectCRMSystemDropdown(String dropdownName)
     {
-        selectDropdown(By.id(dd_CRM_SYSTEM), By.id("select2-results-29"),  dropdownName);
+        selectDropdown(By.id(dd_CRM_SYSTEM), By.id("select2-results-14"),  dropdownName);
     }
     public void enterCRMRequest(String text){
         enterTextByElement(By.id(txt_CRM_REQUEST_ID), text);
@@ -96,7 +154,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectDropdown(By Element, By dropdownValuesListID, String dropdownValue){
         clickElement(Element);
-        wait(1000);
+        wait(500);
         driver.findElement((dropdownValuesListID)).findElements(By.tagName("li")).stream().filter(element -> element.getText().trim().equals(dropdownValue)).findFirst().orElse(null).click();
 
     }

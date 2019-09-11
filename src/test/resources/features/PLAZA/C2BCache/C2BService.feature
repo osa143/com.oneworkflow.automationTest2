@@ -1,4 +1,4 @@
-@PLAZA @C2B
+@C2BService @PLAZA
 Feature: Plaza C2B Cache form test
   Scenario Outline: user validates information sent to OW from Plaza
 
@@ -9,13 +9,13 @@ Feature: Plaza C2B Cache form test
     And user clicks on order
     And user clicks on IT Infrastructure dropdown
     And user clicks on "Application"
-    When user clicks on "C2B Service" pebble
+    When user clicks on "C2BService" pebble
     Then user should see "C2B Service" form
-    When user selects Role dropdown as "Application Operation Engineer"
+    When user selects role dropdown as "Application Operation Engineer"
     And user enters C2B service request as "<Request>"
     And user enters C2B environment as "<Environment>"
-    And user enters C2B description as "<Description>"
-    And user enters additional comments as <AdditionalComments>
+    And user enters C2B service description as "<Description>"
+    And user enters additional comments as "<AdditionalComments>"
     Then user clicks on "Submit"
     And user gets plaza request id
     And user clicks on plaza request id
@@ -34,19 +34,19 @@ Feature: Plaza C2B Cache form test
     And user validates description as "<DescValidation>"
     Then user clicks on owner under sections
     And user clicks on assignment under sections
-    Then user validates owner profile as ""
-    And user validates owner as ""
-    And user validates assignee is ""
+    Then user validates owner profile as "PLAZA"
+    And user validates owner as "PLAZA"
+    And user validates assignee is "Portal"
     Then user clicks on "Interested Parties" tab
     And user validates "PLAZA" is listed as an interested party
     When user clicks on Ack button
-    And user changes status to "Cleared"
+    And user changes status to "Cleared" on work order page
     And user selects completed code as "Success"
     And user clicks on "Schedule" tab
     And user enters schedule end as current date
     Then user clicks on save button
     And user validates ticket status as "Cleared"
-    When user changes status to "Closed"
+    When user changes status to "Closed" on work order page
     And user clicks on save button
     Then ticket status should be closed
 
@@ -54,7 +54,7 @@ Feature: Plaza C2B Cache form test
     Examples:
     |Request                 |Environment|Description                 |AdditionalComments |
     |Test1 C2BService/Request|AT         |Test1 C2BService/Description|Test1 C2BService/AC|
-    |Test2 C2BService/Request|Prod       |Test2 C2BService/Description|Test1 C2BService/AC|
+#    |Test2 C2BService/Request|Prod       |Test2 C2BService/Description|Test1 C2BService/AC|
 
 
 

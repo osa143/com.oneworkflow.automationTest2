@@ -23,7 +23,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user clicks on IT Infrastructure dropdown")
     public void userClicksOnITInfrastructureDropdown() {
-        clickElement(By.xpath("//*[@id=\"xcc61d55edb198b00b27fdb11ce961902\"]/div/div[2]/div[4]/a/span/i"));
+        clickElement(By.xpath("//*[@id='xcc61d55edb198b00b27fdb11ce961902']/div/div[2]/div[4]/a/span/i"));
     }
 
     @Then("user should see Finance & Assurance form")
@@ -134,5 +134,80 @@ public class Plaza_HomePageSteps extends BasePage {
     @And("user selects CRM system as {string}")
     public void userSelectsCRMSystemAs(String arg0) {
        homePage.selectCRMSystemDropdown(arg0);
+    }
+
+    @Then("user should see {string} form")
+    public void userShouldSeeForm(String arg0) {
+
+    }
+
+    @And("user enters C2B request as {string}")
+    public void userEntersC2BRequestAs(String arg0) {
+        homePage.enterC2B_Request(arg0);
+    }
+
+    @And("user selects C2B environment as {string}")
+    public void userSelectsC2BEnvironmentAs(String arg0) {
+        homePage.selectEnvironment(arg0);
+    }
+
+    @And("user enters C2B description as {string}")
+    public void userEntersC2BDescriptionAs(String arg0) {
+        homePage.enterC2B_Description(arg0);
+    }
+
+    @And("user selects select request as {string}")
+    public void userSelectsSelectRequestAs(String arg0) {
+        homePage.select_selectRequest(arg0);
+    }
+
+    @And("user enters C2B general request as {string}")
+    public void userEntersCBGeneralRequestAs(String arg0) {
+        homePage.enterC2B_generalRequest(arg0);
+    }
+
+    @And("user selects C2B general environment as {string}")
+    public void userSelectsCBGeneralEnvironmentAs(String arg0) {
+        homePage.selectC2B_GeneralEnvironment(arg0);
+    }
+
+    @And("user enters C2B general description as {string}")
+    public void userEntersCBGeneralDescriptionAs(String arg0) {
+        homePage.enterC2B_general_Description(arg0);
+    }
+
+    @And("user enters C2B service request as {string}")
+    public void userEntersCBServiceRequestAs(String arg0) {
+        homePage.enterC2B_serviceRequest(arg0);
+    }
+
+    @And("user enters C2B environment as {string}")
+    public void userEntersCBEnvironmentAs(String arg0) {
+        homePage.selectC2B_serviceEnvironment(arg0);
+    }
+
+    @And("user enters C2B service description as {string}")
+    public void userEntersCBServiceDescriptionAs(String arg0) {
+        homePage.enterC2B_service_Description(arg0);
+    }
+
+    @And("user enters BCCP request as {string}")
+    public void userEntersBCCPRequestAs(String arg0) {
+        homePage.enterC2B_BCPP_Request(arg0);
+    }
+
+    @And("user selects BCPP environment as {string}")
+    public void userSelectsBCPPEnvironmentAs(String arg0) {
+        homePage.selectBCPP_Environment(arg0);
+    }
+
+    @And("user enters Add ci as {string}")
+    public void userEntersAddCiAs(String arg0) {
+        homePage.selectsAddCi(arg0);
+    }
+
+    @And("user selects BCPP description as {string}")
+    public void userEntersBCPPDescriptionAs(String arg0) {
+        homePage.enterBCPP_Description(arg0);
     }
 }

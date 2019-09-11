@@ -40,10 +40,45 @@
       And user validates "Technology" as ""
       And user validates "Model" as ""
       And user validates "Manufacturer" as ""
-      And user validates "" as ""
-      And user validates "" as ""
-      And user validates "" as ""
-
-
-
-
+      And user validates "Location ID+" as ""
+      And user validates "Location Name +" as ""
+      And user validates "Region ID" as ""
+      And user validates "Region Name" as ""
+      And user validates "Latitude" as ""
+      And user validates "Longitude" as ""
+      And user validates "Location Details" as ""
+      And user validates "Owner Profile*" as ""
+      And user validates "Owner*" as ""
+      And user validates "Assigned Profile" as ""
+      And user validates "Assignee" as ""
+      And user validates "Last Ack By" as ""
+      And user validates "Reassignment Count" as ""
+      And user validates "Implementation*" as ""
+      And user validates "Test Plan*" as ""
+      And user validates "Rollback*" as ""
+      And user validates "Communication Plan*" as ""
+      And user validates "Ver of Functionality*" as ""
+      And user validates "Risk Description*" as ""
+      And user validates "To Date" as ""
+      And user validates "Reason" as ""
+      And user validates "Vendor Name +" as ""
+      And user validates "Onsite Engineer(s)" as ""
+      And user validates "Account Number" as ""
+      And user validates "Telephone Number" as ""
+      And user validates "Hours of Operation" as ""
+      And user validates "Vendor Ref" as ""
+      And user validates "Onsite Contact" as ""
+      And user validates "Resolved Group" as ""
+      And user validates "Resolved Person" as ""
+      And user validates "Review Details" as ""
+      And user validates "Closure Code" as ""
+      And user validates "Failure Code" as ""
+      And user validates "Withdrawn Reason" as ""
+      When user clicks on timeline tab
+      Then user validates timeline entry is present
+      And user validates timeline entry has date present
+      When user clicks on Diagnosis tab
+      Then user validates CI availability
+      And user validates CI details
+      When user clicks on "Interested Parties" tab
+      Then user validates interested party is visible

@@ -4,7 +4,7 @@
     Scenario: Validate Status as new and verify owner/assignment
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+      When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
       And user enters ticket id as ""

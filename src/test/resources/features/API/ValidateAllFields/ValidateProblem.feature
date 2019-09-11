@@ -9,7 +9,6 @@ Feature: Validate all fields are correct from API created ticket
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user enters ticket id as ""
     Then user should see problem ticket
-    And user validates "" as ""
     When user clicks on CTI details under sections
     And user clicks on location under sections
     And user clicks on owner under sections

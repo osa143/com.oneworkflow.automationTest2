@@ -19,7 +19,7 @@ Feature: Validate all fields are correct from API created ticket
     And user clicks on attachments under sections
     And user clicks on root cause under sections
     And user clicks on closure under sections
-    Then user validates "Status" as "New"
+    Then user validates "Status" as "Closed"
     And user validates "Source*" as "One Workflow"
     And user validates "Source ID" as "OP_9"
     And user validates "Service Provider*" as "Telia Company"
@@ -78,6 +78,14 @@ Feature: Validate all fields are correct from API created ticket
     And user validates "Root Cause same as Primary Cause?" as ""
     And user validates "Root Cause" as ""
     And user validates "Description" as ""
+    And user validates "Fault Position" as ""
+    And user validates "Equipment" as ""
+    And user validates "Cause" as ""
+    And user validates "Action" as ""
+    And user validates "Closure Info" as ""
+    And user validates "Resolved Group" as ""
+    And user validates "Event End Time" as ""
+    And user validates "Withdrawn Reason" as ""
     When user clicks on timeline tab
     Then user validates timeline entry is present
     And user validates timeline entry has date present
@@ -86,10 +94,3 @@ Feature: Validate all fields are correct from API created ticket
     And user validates CI details
     When user clicks on "Interested Parties" tab
     Then user validates interested party is visible
-    
-
-
-
-
-
-

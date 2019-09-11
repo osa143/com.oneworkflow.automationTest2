@@ -1,4 +1,5 @@
 @Create_Closed_Problem
+  #passed
 Feature: try to create problem as closed
   Scenario: try to create problem as closed
 

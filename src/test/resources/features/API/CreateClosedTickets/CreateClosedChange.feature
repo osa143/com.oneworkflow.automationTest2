@@ -1,4 +1,5 @@
 @Create_Closed_Change
+  #passed
   Feature: try to create change as closed
     Scenario: try to create change as closed
 

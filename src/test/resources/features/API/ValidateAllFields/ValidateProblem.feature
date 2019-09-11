@@ -65,6 +65,13 @@ Feature: Validate all fields are correct from API created ticket
     And user validates "Vendor Ref" as "TestVendorRef"
     And user validates "Onsite Contact" as ""
     And user validates "Travel Time" as ""
+    And user validates "Resolving Group" as ""
+    And user validates "Resolving Person" as ""
+    And user validates "Review Details" as ""
+    And user validates "Closure Code" as ""
+    And user validates "Solution" as ""
+    And user validates "Withdrawn Reason" as ""
+    And user validates "Solution Found Date" as ""
     When user clicks on "timeline" tab
     Then user validates timeline entry is present
     And user validates timeline date present

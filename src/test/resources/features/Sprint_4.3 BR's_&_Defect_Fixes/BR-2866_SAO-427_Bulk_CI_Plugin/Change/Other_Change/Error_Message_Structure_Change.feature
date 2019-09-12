@@ -63,7 +63,7 @@
       Then user clicks on Upload Import File
       And user clicks on choose file button
       #Select 10CIs text file with incorrect names
-      And user searches for "C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Incorrect Names\IncorrectCIs.txt" attachment and adds it
+      And user searches for "Test Attachments\10 CI's - Incorrect Names\TEXT.txt" attachment and adds it
       And user clicks on attachment ok button
       And user switches to frame
       Then user clicks on save button under bulk import

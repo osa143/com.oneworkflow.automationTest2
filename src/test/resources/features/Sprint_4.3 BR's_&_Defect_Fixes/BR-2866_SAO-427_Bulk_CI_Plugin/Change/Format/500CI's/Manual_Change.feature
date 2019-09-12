@@ -1,4 +1,4 @@
-@Bulk_Loading_Format_Change_Manual_500CI's
+@Bulk_Loading_Format_Change_Manual_500CI's_1
 Feature: checking of bulk loading format
   Scenario: user checks the format of bulk loading format
 

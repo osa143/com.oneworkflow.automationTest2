@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.OWF_ChangeRecordPage;
 import utils.CommonUtils;
@@ -58,6 +59,7 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.enterEndDate(11);
 
     }
+
     @And("user enters impact duration as {string} minutes")
     public void userEntersImpactDurationAsMinutes(String impactDuration) {
         changeRecordPage.enterImpactDurationMins(impactDuration);
@@ -68,8 +70,7 @@ public class OWF_ChangeRecordPageSteps {
     public void userClicksOnSaveButton() {
         try {
             changeRecordPage.clickSave();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
 
         }
         changeRecordPage.wait(6000);
@@ -121,7 +122,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user enters reason field as {string}")
     public void userEntersReasonFieldAs(String Reason) {
-     changeRecordPage.enterReason(Reason);
+        changeRecordPage.enterReason(Reason);
     }
 
 
@@ -132,22 +133,22 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user enters {string} in the implementation field")
     public void userEntersInTheImplementationField(String implementation) {
-     changeRecordPage.enterImplementation(implementation);
+        changeRecordPage.enterImplementation(implementation);
     }
 
     @And("user enters {string} in the test plan field")
     public void userEntersInTheTestPlanField(String testPlan) {
-     changeRecordPage.enterTestPlan(testPlan);
+        changeRecordPage.enterTestPlan(testPlan);
     }
 
     @And("user enters {string} in the rollback field")
     public void userEntersInTheRollbackField(String rollBack) {
-      changeRecordPage.enterRollBack(rollBack);
+        changeRecordPage.enterRollBack(rollBack);
     }
 
     @And("user enters {string} in the communication plan field")
     public void userEntersInTheCommunicationPlanField(String arg0) {
-      changeRecordPage.enterCommunicationPlan(arg0);
+        changeRecordPage.enterCommunicationPlan(arg0);
     }
 
     @And("user enters {string} in the ver of functionality field")
@@ -157,13 +158,13 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user enters {string} in the risk description field")
     public void userEntersInTheRiskDescriptionField(String arg0) {
-       changeRecordPage.enterRiskDescriptionId(arg0);
+        changeRecordPage.enterRiskDescriptionId(arg0);
     }
 
 
     @And("user selects estimated impact dropdown as {string}")
     public void userSelectsEstimatedImpactDropdownAsNoImpact(String estimatedImpact) {
-    changeRecordPage.selectEstimatedImpact(estimatedImpact);
+        changeRecordPage.selectEstimatedImpact(estimatedImpact);
 
     }
 
@@ -284,7 +285,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user gets change ticket value")
     public void userGetsChangeTicketValue() {
-        CommonUtils.changeTicket= changeRecordPage.getTicketValue();
+        CommonUtils.changeTicket = changeRecordPage.getTicketValue();
     }
 
     @And("user enters change ticket in ticket ID+ field")
@@ -299,20 +300,20 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user enters {string} in the advanced search bar")
     public void userEntersInTheAdvancedSearchBar(String text) {
-        String text1 = text.replace('|','"');
+        String text1 = text.replace('|', '"');
         changeRecordPage.enterAdvancedSearch(text1);
     }
 
     @Then("user enters request start time {int} hours ahead of current date")
     public void userEntersRequestStartTimeHoursAheadOfCurrentDate(int arg0) {
-        int newDelay= arg0*60;
+        int newDelay = arg0 * 60;
         changeRecordPage.enterStartDate(newDelay);
 
     }
 
     @And("user enters request end time {int} hours ahead of current date")
     public void userEntersRequestEndTimeHoursAheadOfCurrentDate(int arg0) {
-        int newDelay= arg0*60;
+        int newDelay = arg0 * 60;
         changeRecordPage.enterEndDate(newDelay);
 
     }
@@ -325,15 +326,15 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user gets current risk score value")
     public void userGetsCurrentRiskScoreValue() {
-        CommonUtils.beforeAnswering_riskScore=changeRecordPage.getRiskScore();
-        System.out.println("Before Answers risk score is : "+ CommonUtils.beforeAnswering_riskScore);
+        CommonUtils.beforeAnswering_riskScore = changeRecordPage.getRiskScore();
+        System.out.println("Before Answers risk score is : " + CommonUtils.beforeAnswering_riskScore);
     }
 
     @Then("user validates risk score gets updated")
     public void userValidatesRiskScoreGetsUpdated() {
-        CommonUtils.afterAnswering_riskScore=changeRecordPage.getRiskScore();
-        System.out.println("After Answers risk score is : "+ CommonUtils.afterAnswering_riskScore);
-        Assert.assertNotEquals(CommonUtils.beforeAnswering_riskScore, CommonUtils.afterAnswering_riskScore );
+        CommonUtils.afterAnswering_riskScore = changeRecordPage.getRiskScore();
+        System.out.println("After Answers risk score is : " + CommonUtils.afterAnswering_riskScore);
+        Assert.assertNotEquals(CommonUtils.beforeAnswering_riskScore, CommonUtils.afterAnswering_riskScore);
 
     }
 
@@ -374,15 +375,14 @@ public class OWF_ChangeRecordPageSteps {
 
     @Then("user should see {string} email update")
     public void userShouldSeeEmailUpdate(String arg0) {
-        try{
+        try {
             Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 1), arg0);
-        }
-        catch (Exception e){
-         changeRecordPage.wait(5000);
-         changeRecordPage.selectTab("Linked Items");
-         changeRecordPage.selectTab("Notifications");
-         changeRecordPage.selectTab("Sent");
-         Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 1), arg0);
+        } catch (Exception e) {
+            changeRecordPage.wait(5000);
+            changeRecordPage.selectTab("Linked Items");
+            changeRecordPage.selectTab("Notifications");
+            changeRecordPage.selectTab("Sent");
+            Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 1), arg0);
         }
 
     }
@@ -425,13 +425,13 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user clicks on details under sections")
     public void userClicksOnDetailsUnderSections() {
-       changeRecordPage.clickDetails();
+        changeRecordPage.clickDetails();
     }
 
     @When("user gets the schedule time values")
     public void userGetsTheScheduleTimeValues() {
-        CommonUtils.requestStart=changeRecordPage.getRequestStart();
-        CommonUtils.requestEnd=changeRecordPage.getRequestEnd();
+        CommonUtils.requestStart = changeRecordPage.getRequestStart();
+        CommonUtils.requestEnd = changeRecordPage.getRequestEnd();
     }
 
 
@@ -487,9 +487,9 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user gets request start and end time on change record page")
     public void userGetsRequestStartAndEndTimeOnChangeRecordPage() {
-        CommonUtils.requestStart=changeRecordPage.getRequestStart();
-        CommonUtils.requestEnd=changeRecordPage.getRequestEnd();
-        System.out.println("Event Start time is : " +CommonUtils.requestStart);
+        CommonUtils.requestStart = changeRecordPage.getRequestStart();
+        CommonUtils.requestEnd = changeRecordPage.getRequestEnd();
+        System.out.println("Event Start time is : " + CommonUtils.requestStart);
         System.out.println("Event End time is : " + CommonUtils.requestEnd);
     }
 
@@ -506,13 +506,13 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user enters start time as {int} hours fast from current sweden time")
     public void userEntersStartTimeAsHoursFastFromCurrentSwedenTime(int delayMinutes) {
-        int newDelay= 60*delayMinutes;
+        int newDelay = 60 * delayMinutes;
         changeRecordPage.enterStartDate_format(newDelay);
     }
 
     @And("user enters end time as {int} hours fast from current sweden time")
     public void userEntersEndTimeAsHoursFastFromCurrentSwedenTime(int delayMinutes) {
-        int newDelay= 60*delayMinutes;
+        int newDelay = 60 * delayMinutes;
         changeRecordPage.enterEndDate_format(newDelay);
     }
 
@@ -541,4 +541,22 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesSendButtonIsDisabled() {
         Assert.assertFalse(changeRecordPage.verifySendButtonIsEnable());
     }
+
+    @And("user clicks on send button and clicks yes on warning window")
+    public void userClicksOnSendButtonAndClicksYesOnWarningWindow() {
+
+        try {
+            changeRecordPage.clickSendButton();
+        } catch (Exception e) {
+
+        }
+        try {
+            changeRecordPage.wait(5000);
+            changeRecordPage.switchToFrameByIndex(2);
+            changeRecordPage.clickElementByContainsTextAndTagName("a", "Yes");
+        }catch(Exception e){
+
+        }
 }
+}
+

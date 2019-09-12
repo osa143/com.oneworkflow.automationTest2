@@ -1,4 +1,4 @@
-@CSV_Bulk_Loading_Format_Trouble_500CIs @SAO-427
+@CSV_Bulk_Loading_Format_Trouble_500CIs #@SAO-427
 Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format
 

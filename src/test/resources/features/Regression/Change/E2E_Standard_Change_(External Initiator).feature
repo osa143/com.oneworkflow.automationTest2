@@ -30,7 +30,7 @@ Feature: E2E standard change external initiator
     Then user enters description as "Regression - Change Management Process"
     #Then user adds "Regression - Change Management Process" to current description
     And user clicks on save button
-    And user waits 5 secs
+    And user waits 10 secs
     And user clicks on "Timeline" tab
     Then change should also be reflected in the timeline as "Ticket Priority is set to Info. Request Status is set to New. " on row 2
     When user clicks on Send button
@@ -52,8 +52,7 @@ Feature: E2E standard change external initiator
     And user enters email address as "Test123xxx@Test123xxx.com"
     And user clicks on add email button
     Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
-    And user waits 30 secs
-    #When user clicks on Send button and closes warning message
+    And user clicks on send button and clicks yes on warning window
     Then user validates ticket status as "Assigned"
     And user clicks on owner under sections
     And user clicks on assignment under sections

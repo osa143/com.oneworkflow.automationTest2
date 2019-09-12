@@ -536,8 +536,13 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     public void clickLocation(){
         findElement(By.id(btn_LOCATION_UNDER_SECTIONS)).click();
     }
-    public void clickOwner(){
-        findElement(By.id(btn_OWNER_UNDER_SECTIONS)).click();
+    public void clickOwner() {
+        try {
+            clickElementByContainsTextAndTagName("div", "Owner");
+        } catch (Exception e) {
+            wait(1500);
+            findElement(By.id(btn_OWNER_UNDER_SECTIONS)).click();
+        }
     }
 
     public String getErrorText(){

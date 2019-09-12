@@ -689,8 +689,12 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void clickDiagnosis() {
-        wait(1000);
-        selectTab("Diagnosis");
+        try {
+            clickElementByContainsTextAndTagName("", "Diagnosis");
+        } catch (Exception e) {
+            wait(5000);
+            selectTab("Diagnosis");
+        }
     }
 
     public void clickCiSearch() {

@@ -201,12 +201,12 @@ public class Plaza_HomePageSteps extends BasePage {
         homePage.selectBCPP_Environment(arg0);
     }
 
-    @And("user enters Add ci as {string}")
+    @And("user selects Add ci as {string}")
     public void userEntersAddCiAs(String arg0) {
         homePage.selectsAddCi(arg0);
     }
 
-    @And("user selects BCPP description as {string}")
+    @And("user enters BCPP description as {string}")
     public void userEntersBCPPDescriptionAs(String arg0) {
         homePage.enterBCPP_Description(arg0);
     }

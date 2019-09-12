@@ -51,7 +51,7 @@ Feature: E2E standard change internal initiator
     And user enters email address as "Test123xxx@Test123xxx.com"
     And user clicks on add email button
     Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
-    When user clicks on Send button and closes warning message
+    And user clicks on send button and clicks yes on warning window
     Then user validates ticket status as "Assigned"
     And user clicks on owner under sections
     And user clicks on assignment under sections

@@ -1,4 +1,5 @@
 @Bulk_Loading_Format_Name_change
+    #no need to run
 Feature: checking of bulk loading format
   Scenario: user checks the format of bulk loading format
 

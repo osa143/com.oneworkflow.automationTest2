@@ -55,8 +55,8 @@ Feature: checking of bulk loading format
       Examples:
 
           |fileTypes                                                                                                    |
-         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+TemplateCSV.csv|
-         |Test Attachments\IncorrectFormatColumnLocation\TEXTDocForBulkCI.txt|
+          #|Test Attachments\IncorrectFormatColumnLocation\CSV.csv|
+         #|Test Attachments\IncorrectFormatColumnLocation\TEXTDocForBulkCI.txt|
          |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xls|
          |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xlsx|
 

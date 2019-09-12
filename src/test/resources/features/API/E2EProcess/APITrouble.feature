@@ -9,6 +9,8 @@ Feature: E2E flow for ticket created by API
     When user selects search menu as "Open Search Form:Trouble Event"
     And user enters ticket id as ""
     Then user should see trouble ticket
+    And user clicks on Ack button
+    And user validates ticket status as "Work In Progress"
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user switches to frame

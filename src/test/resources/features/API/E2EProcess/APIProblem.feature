@@ -6,7 +6,7 @@ Feature: E2E flow for ticket created by API
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
+    When user selects search menu as "Open Search Form:Problem Record"
     And user enters ticket id as ""
     Then user should see problem ticket
     Then user clicks on Ack button
@@ -32,7 +32,3 @@ Feature: E2E flow for ticket created by API
     Then user clicks on save button
     And user validates ticket status as "Closed"
     And change should also be reflected in the timeline as "Status has changed from Investigation Complete to Closed."
-    When user clicks on clone button
-    And user switches to window 2
-    Then problem record form should appear in new tab
-    And user validates ticket status as "Investigation Complete"

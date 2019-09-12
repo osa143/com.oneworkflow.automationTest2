@@ -1,25 +1,24 @@
-@Pollux-PROD @PLAZA
-  Feature: Pollux prod plaza form test
-    Scenario Outline: user validates information sent to OW from Plaza
+@BDL_Prod @PLAZA
+  Feature: BDL Prod plaza form test
+    Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
       When user clicks on "Facility Management" button
       And user clicks on "Order" button
-      And user clicks "Storage & Data Protection" button
-      Then user should see "Storage & Data Protection" IT Pebbles
-      When user clicks on "Pollux" pebble
-      Then user should see "Pollux" form
+      And user clicks "Application" button
+      Then user should see "Application" IT Pebbles
+      When user clicks on "BDL" pebble
+      Then user should see "BDL" form
       When user selects Role dropdown as "Application Operation Engineer"
-      And user enters Pollux request as "<Pollux-PROD - Test/Request>"
+      And user enters BDL request as "BDL-PROD- Test/Request"
       And user selects "Configuration" in the select request field
-      And user selects "<App - Prod>" in the Environment field
-      And user selects "<App/DB - AT>" in the Environment field
-      And user selects "<DB -Prod>" in the Environment field
-      Then user enters Pollux description as "<Pollux-PROD - Test/Description>"
-      And user enters WBS Code field as "P100-000-000"
-      And user enters additional comments as "<Pollux-PROD - Test/AC>"
+      And user selects environment as "PROD"
+      And user selects all CIs in the PROD field
+      And user enters "P100-000-000" in the WBS Code field
+      And user enters BDL description as "BDL-PROD - Test/Desc"
+      And user enters additional comments as "BDL-PROD - Test/AC"
       Then user clicks on submit button
       And user gets plaza request id
       And user clicks on plaza request id
@@ -35,7 +34,7 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | POLLUX"
+      And user validates title field as "Service Request | BDL"
       And user validates request type as "Service Request | PLAZA"
       #Not sure about description validation outside of a table
       And user validates description contains DescValidation
@@ -43,24 +42,16 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user validates assigned profile is "Billing"
+      And user should see assigned profile as "Billing"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
-      And user changes status to "Cleared"
+      And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
-
-
-      Examples:
-
-        |Request                   |Description                   |Additional Comments  |Desc Validation|
-        |Pollux-PROD - Test/Request|Pollux-PROD - Test/Description|Pollux-PROD - Test/AC|               |
-        |Pollux-AT - Test/Request  |Pollux-AT - Test/Description  |Pollux-AT - Test/AC  |               |
-      

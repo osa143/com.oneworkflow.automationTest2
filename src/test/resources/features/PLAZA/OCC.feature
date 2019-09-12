@@ -42,6 +42,18 @@
       And user validates assigned profile is "Enterprise"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
+      When user clicks on diagnosis tab
+      And user validates CI "spangisat" is listed
+      And user clicks on primary CI "spangisat" and selects "Impact:Update
+      Then user switches to frame
+      And user enters impacted from date as date in past
+      And user enters impacted to date as date in past
+      Then user clicks confirm checkbox
+      And user clicks the save button
+      Then user switches to window 1
+      When user selects CI present
+      And user right clicks on CI "aa789win01t" and selects "Impact:Clear All"
+      Then user selects yes and closes warning message
       When user clicks on Ack button
       And user changes status to "Cleared"
       And user selects completed code as "Success"

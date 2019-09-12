@@ -12,8 +12,8 @@
       When user clicks on "CEWS" pebble
       Then user should see "CEWS" form
       When user selects Role dropdown as "Application Operation Engineer"
-      Then user clicks on the contact textbox
-      And user then clicks on the name not found textbox
+      Then user clicks on the contact checkbox
+      And user then clicks on the name not found checkbox
       And user enters name field as "Test1234"
       Then user enters email address field as "Test@Test.com
       Then user enters phone field as "123456789"
@@ -50,15 +50,15 @@
       And user validates "PLAZA" is listed as an interested party
       When user clicks on diagnosis tab
       And user validates CI "cc100cgas001" is listed
-      And user clicks on primary CI "ef002appp1" and selects "Impact:Update
+      And user clicks on CI "cc100cgas001" and selects "Impact:Update
       Then user switches to frame
       And user enters impacted from date as date in past
       And user enters impacted to date as date in past
       Then user clicks confirm checkbox
       And user clicks the save button
       Then user switches to window 1
-      When user selects all CIs present
-      And user right clicks on primary CI "ef002appp1" and selects "Impact:Clear All"
+      When user selects CI present
+      And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
       Then user selects yes and closes warning message
       When user clicks on Ack button
       And user changes status to "Cleared"

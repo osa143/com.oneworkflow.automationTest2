@@ -9,8 +9,8 @@
       And user clicks on "Order" button
       And user clicks "Application" button
       Then user should see "Application" IT Pebbles
-      When user clicks on "TCFP Account Management" pebble
-      Then user should see "TCFP Account Management" form
+      When user clicks on "TCFP (Account Management)" pebble
+      Then user should see "TCFP (Account Management)" form
       When user selects Role dropdown as "Application Operation Engineer"
       And user selects service request name as "General Inquiry"
       And user enters TCFP general inquiry request as "Test1 TCFP General Inquiry/Request"

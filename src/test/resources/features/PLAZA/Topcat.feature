@@ -1,5 +1,5 @@
-@Pollux-PROD @PLAZA
-  Feature: Pollux prod plaza form test
+@Topcat @PLAZA
+  Feature: Topcat plaza form test
     Scenario Outline: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -7,19 +7,16 @@
       Then user should see the plaza home page
       When user clicks on "Facility Management" button
       And user clicks on "Order" button
-      And user clicks "Storage & Data Protection" button
-      Then user should see "Storage & Data Protection" IT Pebbles
-      When user clicks on "Pollux" pebble
-      Then user should see "Pollux" form
+      And user clicks "Application" button
+      Then user should see "Application" IT Pebbles
+      When user clicks on "Topcat" pebble
+      Then user should see "Topcat" form
       When user selects Role dropdown as "Application Operation Engineer"
-      And user enters Pollux request as "<Pollux-PROD - Test/Request>"
-      And user selects "Configuration" in the select request field
-      And user selects "<App - Prod>" in the Environment field
-      And user selects "<App/DB - AT>" in the Environment field
-      And user selects "<DB -Prod>" in the Environment field
-      Then user enters Pollux description as "<Pollux-PROD - Test/Description>"
-      And user enters WBS Code field as "P100-000-000"
-      And user enters additional comments as "<Pollux-PROD - Test/AC>"
+      And user selects Select service request name as "<General Request>"
+      And user enters Topcat request as "<Test2 Topcat/Request>"
+      And user enters CI as "aa789win01t"
+      And user enters Topcat description as "<Test2 Topcat/Description>"
+      And user enters additional comments as "<Test2 Topcat/AC>"
       Then user clicks on submit button
       And user gets plaza request id
       And user clicks on plaza request id
@@ -35,7 +32,7 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | POLLUX"
+      And user validates title field as "Service Request | Topcat"
       And user validates request type as "Service Request | PLAZA"
       #Not sure about description validation outside of a table
       And user validates description contains DescValidation
@@ -43,9 +40,21 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user validates assigned profile is "Billing"
+      And user should see assigned profile as "Enterprise"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
+      When user clicks on diagnosis tab
+      And user validates CI "aa789win01t" is listed
+      And user clicks on CI "aa789win01t" and selects "Impact:Update
+      Then user switches to frame
+      And user enters impacted from date as date in past
+      And user enters impacted to date as date in past
+      Then user clicks confirm checkbox
+      And user clicks the save button
+      Then user switches to window 1
+      When user selects CI present
+      And user right clicks on CI "aa789win01t" and selects "Impact:Clear All"
+      Then user selects yes and closes warning message
       When user clicks on Ack button
       And user changes status to "Cleared"
       And user selects completed code as "Success"
@@ -57,10 +66,8 @@
       And user clicks on save button
       Then ticket status should be closed
 
-
       Examples:
 
-        |Request                   |Description                   |Additional Comments  |Desc Validation|
-        |Pollux-PROD - Test/Request|Pollux-PROD - Test/Description|Pollux-PROD - Test/AC|               |
-        |Pollux-AT - Test/Request  |Pollux-AT - Test/Description  |Pollux-AT - Test/AC  |               |
-      
+      |Select Service Request Name|Request             |Description             |Additional Comments|Desc Validation|
+      |General Request            |Test2 Topcat/Request|Test2 Topcat/Description|Test2 Topcat/AC    |               |
+      |Restore Catalogue Database |Test1 Topcat/Request|Test1 Topcat/Description|Test1 Topcat/AC    |               |

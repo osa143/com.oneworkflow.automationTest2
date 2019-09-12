@@ -12,8 +12,8 @@
       When user clicks on "Managed Voice (HCS)" pebble
       Then user should see "Managed Voice (HCS)" form
       When user selects Role dropdown as "Application Operation Engineer"
-      Then user clicks on the contact textbox
-      And user then clicks on the name not found textbox
+      Then user clicks on the contact checkbox
+      And user then clicks on the name not found checkbox
       And user enters name field as "Test1234"
       Then user enters email address field as "Test@Test.com
       Then user enters phone field as "123456789"

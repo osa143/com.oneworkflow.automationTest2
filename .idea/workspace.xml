@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/BDL/BDL_AT2.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/BDL/BDL_AT3.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/BDL/BDL_Prod.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup/Backup_One_Time.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Cloud_One_Time_Snap.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/SPAN.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/TSPAN.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Topcat.feature" afterDir="false" />
+    <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="New PLAZA feature files">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Cabling_New.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Cabling_Remove.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Network_Equipment_New.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Network_Equipment_On_Site.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Network_Equipment_Remove.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Request.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Access_Request.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Backup_Or_Restore.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Configure_Database_Parameters.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Performance_Troubleshooting.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_CallGuide_Mail.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Clean_Mail.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Denmark_Mail.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_SMTP_Support.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/BDL.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/BDL/BDL.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup_Reshedule.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup/Backup_Reshedule.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup_Verify.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup/Backup_Verify.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup_restore.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup/Backup_restore.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/CEWS.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/CEWS.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/IT_FI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/IT_FI.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Managed_Voice.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Managed_Voice.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/OCC.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/OCC.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Pollux_PROD.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Pollux_PROD.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/TCFP_General_Inquiry.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/TCFP_General_Inquiry.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Cloud_One_Time_Snap.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Cloud_One_Time_Snap.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/SPAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/SPAN.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/TSPAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/TSPAN.feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -174,24 +179,24 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Temp\oneworkflow.automation\src\test\resources" />
-      <recent name="C:\Temp\oneworkflow.automation\src\test\resources\features" />
-      <recent name="C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\Test Case Attachments 2" />
-      <recent name="C:\Temp\com.oneworkflow.automation\src\test\resources\features\IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3\BR-2866_SAO-427_Bulk_CI_Plugin\Trouble\Format\IncorrectCINames" />
-      <recent name="C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Temp\src\test\resources\features\PLAZA\Data Center" />
+      <recent name="C:\Temp\src\test\resources\features\PLAZA\Backup" />
+      <recent name="C:\Temp\src\test\resources\features\PLAZA" />
+      <recent name="C:\Temp\src\test\resources\features\PLAZA\TCFP" />
+      <recent name="C:\Temp\src\test\resources\features\PLAZA\BDL" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="runners" />
       <recent name="rough" />
       <recent name="Helpers" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Temp\src\test\resources\features\PLAZA\Backup" />
-      <recent name="C:\Temp\src\test\resources\features\PLAZA" />
-      <recent name="C:\Temp\src\test\resources\features\PLAZA\TCFP" />
-      <recent name="C:\Temp\src\test\resources\features\PLAZA\BDL" />
-      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\PLAZA\FInance&amp;Assurance" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Temp\oneworkflow.automation\src\test\resources" />
+      <recent name="C:\Temp\oneworkflow.automation\src\test\resources\features" />
+      <recent name="C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments\Test Case Attachments 2" />
+      <recent name="C:\Temp\com.oneworkflow.automation\src\test\resources\features\IT_VAS_SPRINT_4.3.BR's_&amp;_Defect_Fixes_Sprint_4.3\BR-2866_SAO-427_Bulk_CI_Plugin\Trouble\Format\IncorrectCINames" />
+      <recent name="C:\Temp\com.oneworkflow.automation\src\test\resources\Test_Attachments" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -487,14 +492,8 @@
       <workItem from="1567937106761" duration="29170000" />
       <workItem from="1568102153519" duration="18344000" />
       <workItem from="1568274946313" duration="1306000" />
-      <workItem from="1568284777347" duration="17414000" />
-    </task>
-    <task id="LOCAL-00063" summary="modified features and added steps for incident test cases">
-      <created>1564148957245</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1564148957248</updated>
+      <workItem from="1568284777347" duration="17532000" />
+      <workItem from="1568361521401" duration="18340000" />
     </task>
     <task id="LOCAL-00064" summary="refactored code, modified features and added steps for incident test cases">
       <created>1564346004160</created>
@@ -832,40 +831,15 @@
       <option name="project" value="LOCAL" />
       <updated>1568276893965</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="New PLAZA feature files">
+      <created>1568303846597</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1568303846598</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="Test_Runner - 2019.09.11 at 22h 05m 36s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.11 at 22h 10m 13s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.11 at 22h 15m 09s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.11 at 22h 18m 20s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.11 at 22h 22m 53s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.11 at 22h 30m 35s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.11 at 22h 37m 12s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.12 at 08h 59m 34s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.12 at 09h 22m 21s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.12 at 09h 25m 21s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -923,7 +897,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated steps" />
     <MESSAGE value="updated problem features and steps" />
     <MESSAGE value="updated change features and steps" />
     <MESSAGE value="updated features and steps" />
@@ -948,7 +921,8 @@
     <MESSAGE value="updated plaza features and steps" />
     <MESSAGE value="Adding API test cases" />
     <MESSAGE value="updated Bulk CI and plaza features and steps" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated Bulk CI and plaza features and steps" />
+    <MESSAGE value="New PLAZA feature files" />
+    <option name="LAST_COMMIT_MESSAGE" value="New PLAZA feature files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

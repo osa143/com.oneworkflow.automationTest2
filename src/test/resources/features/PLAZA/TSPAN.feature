@@ -12,12 +12,12 @@
       When user clicks on "TSPAN" pebble
       Then user should see "TSPAN" form
       When user selects Role dropdown as "Application Operation Engineer"
-      And user enters BDL request as "<BDL-PROD- Test/Request>"
-      And user selects "<Account/Password>" in the select request field
-      And user selects environment as "<Prod>"
+      And user enters BDL request as "<Request>"
+      And user selects "<Select Request>" in the select request field
+      And user selects environment as "<Environment>"
       And user enters CI as "cc100cgas001"
-      And user enters BDL description as "<Test1 TSPAN/Description>"
-      And user enters additional comments as "<Test1 TSPAN/AC>"
+      And user enters BDL description as "<Description>"
+      And user enters additional comments as "<Additional Comments>"
       Then user clicks on submit button
       And user gets plaza request id
       And user clicks on plaza request id

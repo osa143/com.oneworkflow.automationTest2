@@ -1,6 +1,6 @@
-@Cloud_One_Time_Snap @PLAZA
-  Feature: Cloud one time snap plaza form test
-    #not checked in ow
+@Database_Backup_Or_Restore @PLAZA
+  Feature: Database Backup or Restore plaza form test
+   #Not checked in ow
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -8,22 +8,19 @@
       Then user should see the plaza home page
       When user clicks on "Facility Management" button
       And user clicks on "Order" button
-      And user clicks "Cloud" button
-      Then user should see "Application" IT Pebbles
-      When user clicks on "Order one-time Snapshot of VM" pebble
-      Then user should see "Order one-time Snapshot of VM" form
+      And user clicks "Database" button
+      Then user should see "Database" IT Pebbles
+      When user clicks on "Database Request" pebble
+      Then user should see "Database Request" form
       When user selects role dropdown as "Application Operation Engineer"
-      Then user clicks on the contact checkbox
-      And user then clicks on the name not found checkbox
-      And user enters name field as "Test1234"
-      Then user enters email address field as "Test@Test.com"
-      Then user enters phone field as "123456789"
-      And user enters Cloud one time snapshot request as "Test1 Cloud one time snapshot/Request"
+      And user selects service request name as "Backup/Restore"
+      And user enters Database Access request as "Test1 Database Backup/Request"
+      And user selects Choose Action as "Backup"
+      And user selects Database Type as "MSSQL"
       And user enters CI as "cc100cgas001"
-      Then user enters Cloud one time snapshot description as "Test1 Cloud one time snapshot/Description"
-      And user clicks the calendar and selects current date and time
-      And user enters additional comments as "Test1 Cloud one time snapshot/AC"
-      And user And searches for {string} attachment and adds it
+      And user enters Database CI as "TEST"
+      And user enters Database Name as "Test name"
+      And user selects Backup to standard location as "Yes"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -38,17 +35,15 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | CEWS"
+      And user validates title field as "Service Request | Database"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
       And user validates description contains DescValidation
       Then user clicks on owner under sections
       And user clicks on assignment under sections
-      And user clicks on attachments under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as "Billing"
-      And user validates 1 attachment visibility under external
+      And user should see assigned profile as ""
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on diagnosis tab
@@ -73,4 +68,5 @@
       When user changes status to "Closed"
       And user clicks on save button
       Then ticket status should be closed
+
 

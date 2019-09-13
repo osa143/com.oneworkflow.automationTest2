@@ -12,12 +12,12 @@
      When user clicks on "SPAN" pebble
      Then user should see "SPAN" form
      When user selects Role dropdown as "Application Operation Engineer"
-     And user enters SPAN request as "<SPAN - Test/Request>"
+     And user enters SPAN request as "<Request>"
      And user selects "Account/Password " in the select request field
-     And user selects "<Test>" in the Environment field
+     And user selects "<Environment>" in the Environment field
      And user enters CI as "spangisat"
-     Then user enters SPAN description as "<SPAN-Test/Description>"
-     And user enters additional comments as "<SPAN-Test/AC>"
+     Then user enters SPAN description as "<Description>"
+     And user enters additional comments as "<Additional Comments>"
      Then user clicks on submit button
      And user gets plaza request id
      And user clicks on plaza request id

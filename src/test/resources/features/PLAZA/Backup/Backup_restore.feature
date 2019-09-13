@@ -5,28 +5,27 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      When user clicks on "Facility Management" button
-      And user clicks on "Order" button
-      And user clicks "Storage & Data Protection" button
-      Then user should see "Storage & Data Protection" IT Pebbles
+      When user clicks on "Facility Management"
+      And user clicks on order
+      And user clicks on IT Infrastructure dropdown
+      And user clicks on "Storage & Data Protection"
       When user clicks on "Restore from Backup" pebble
       Then user should see "Restore from Backup" form
-      When user selects Role dropdown as "Application Operation Engineer"
-      And user enters Backup restore request as "Test1 Backup Restore/Request"
-      And user clicks the calendar and selects current date and time
-      And user enters CI as "cc100cgas001"
-      And user enters Backup restore UNC/Local path as "\\TESTING\This"
-      And user enters Backup restore restore files as "Test file"
-      Then user enters Backup Restore description as "Test1 Backup restore/Description"
+      When user selects role dropdown as "Application Operation Engineer"
+      And user enters Backup request as "Test1 Backup Restore/Request"
+      And user enters back up date and as current date and time
+      And user selects Add CI reschedule as "cc100cgas001"
+      And user enters Backup UNC Local path as "\\TESTING\This"
+      And user enters Backup restore files as "Test file"
+      Then user enters Backup description as "Test1 Backup restore/Description"
       And user enters additional comments as "Test1 Backup Restore/AC"
       And user searches for "Test Image" attachment and adds it
       And user searches for "Test Image 2" attachment and adds it
-      Then user clicks on submit button
+      Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
       Then user should see service request form
-      When user opens another window
-      And user enters OW URL
+      When user opens new tab
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed

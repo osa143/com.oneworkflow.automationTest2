@@ -40,8 +40,84 @@ public class Plaza_HomePage extends BasePage {
     public static final String dd_BCPP_ENVIRONMENT="select2-chosen-12";
     public static final String txt_ADD_CI="s2id_autogen15";
     public static final String txt_BCPP_DESCRIPTION="sp_formfield_sr107_v_description";
+    public static final String chkbx_CONTACT="sp_formfield_ext_contact";
+    public static final String chkbx_NAME_NOT_FOUND="sp_formfield_v_name_not_fund";
+    public static final String txt_NAME= "sp_formfield_name_other";
+    public static final String txt_EMAIL= "sp_formfield_email";
+    public static final String txt_PHONE= "sp_formfield_phone";
+    public static final String txt_RESCHEDULE_REQUEST= "sp_formfield_request";
+    public static final String txt_NEW_SCHEDULE="sp_formfield_new_schedule";
+    public static final String txt_UNC_LOCAL_PATH= "sp_formfield_include_exclude";
+    public static final String txt_Description= "sp_formfield_description";
+    public static final String dd_RESCHEDULE_ADD_CI= "s2id_autogen13";
+    public static final String btn_ADD_ATTACHMENT= "add_attachment_button";
+    public static final String txt_INCLUDE_CI="sp_formfield_include_ci";
+    public static final String txt_RETENTION_PERIOD="sp_formfield_retention_period";
+    public static final String txt_BACK_UP_DATE_TIME="sp_formfield_date_time";
+    public static final String txt_RESTORE_CI_UNC= "sp_formfield_restore";
+    public static final String txt_RESTORE_FILES="sp_formfield_restore_files";
+
+    public void enterRestore_Files(String text){
+        enterTextByElement(By.id(txt_RESTORE_FILES), text);
+    }
+
+    public void enterRestore_Ci_Unc(String text){
+        enterTextByElement(By.id(txt_RESTORE_CI_UNC), text);
+    }
 
 
+    public void enterBackUpDateTime(String text){
+        enterTextByElement(By.id(txt_BACK_UP_DATE_TIME), text);
+    }
+
+    public void enterRetentionPeriod(String text){
+        enterTextByElement(By.id(txt_RETENTION_PERIOD), text);
+    }
+    public void enterIncludeCI(String text){
+        enterTextByElement(By.id(txt_INCLUDE_CI), text);
+    }
+
+    public void clickAddAttachment(){
+        clickElement(By.id(btn_ADD_ATTACHMENT));
+    }
+
+    public void selectsAddCi_Reschedule(String dropdownName){
+        selectDropdown(By.id(dd_RESCHEDULE_ADD_CI), By.id("s2id_autogen13_results"),  dropdownName);
+    }
+
+    public void enterDescription_Reschedule(String text){
+        enterTextByElement(By.id(txt_Description), text);
+    }
+    public void enterUnc_Local(String text){
+        enterTextByElement(By.id(txt_UNC_LOCAL_PATH), text);
+    }
+    public void enterSchedule(String text){
+        enterTextByElement(By.id(txt_NEW_SCHEDULE), text);
+    }
+
+    public void enterReschedule_request(String text){
+        enterTextByElement(By.id(txt_RESCHEDULE_REQUEST), text);
+    }
+
+    public void enterPhone(String text){
+        enterTextByElement(By.id(txt_PHONE), text);
+    }
+
+
+    public void enterEmail(String text){
+        enterTextByElement(By.id(txt_EMAIL), text);
+    }
+
+
+    public void enterName(String text){
+        enterTextByElement(By.id(txt_NAME), text);
+    }
+    public void clickContact(){
+        clickElement(By.id(chkbx_CONTACT));
+    }
+    public void clickNameNotFound(){
+        clickElement(By.id(chkbx_NAME_NOT_FOUND));
+    }
     public void enterBCPP_Description(String text){
         enterTextByElement(By.id(txt_BCPP_DESCRIPTION), text);
     }

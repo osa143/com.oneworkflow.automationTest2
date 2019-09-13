@@ -1,35 +1,35 @@
-@Backup_(Re)Schedule @PLAZA
+@Backup_Re_Schedule @PLAZA
   Feature:Backup (Re)Schedule plaza form test
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      When user clicks on "Facility Management" button
-      And user clicks on "Order" button
-      And user clicks "Storage & Data Protection" button
-      Then user should see "Storage & Data Protection" IT Pebbles
+      When user clicks on "Facility Management"
+      And user clicks on order
+      And user clicks on IT Infrastructure dropdown
+      And user clicks on "Storage & Data Protection"
       When user clicks on "Re/Schedule Backup" pebble
       Then user should see "Re/Schedule Backup" form
-      When user selects Role dropdown as "Application Operation Engineer"
-      Then user clicks on the contact textbox
-      And user then clicks on the name not found textbox
+      When user selects role dropdown as "Application Operation Engineer"
+      Then user clicks on the contact checkbox
+      And user then clicks on the name not found checkbox
       And user enters name field as "Test1234"
       Then user enters email address field as "Test@Test.com"
       Then user enters phone field as "123456789"
-      And user enters Backup (Re)Schedule request as "Test1 Backup (Re)Schedule/Request"
+      And user enters Backup request as "Test1 Backup (Re)Schedule/Request"
       And user enters Backup (Re)Schedule schedule as "Test Schedule"
-      And user enters Backup (Re)Schedule UNC/Local path as "\\TESTING\This"
-      Then user enters Backup (Re)Schedule description as "Test1 Backup (Re)Schedule/Description"
+      And user enters Backup (Re)Schedule UNC Local path as "\\TESTING\This"
+      Then user enters Backup description as "Test1 Backup (Re)Schedule/Description"
       And user enters additional comments as "Test1 Backup (Re)Schedule/AC"
-      And user enters CI as "cc100cgas001"
-      And And user searches for "" attachment and adds it
-      Then user clicks on submit button
+      And user selects Add CI reschedule as "cc100cgas001"
+      And user clicks on add attachment in plaza
+      And user searches for "Test Attachments\other files\Test WORD FILE.docx" attachment and adds it
+      Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
       Then user should see service request form
-      When user opens another window
-      And user enters OW URL
+      When user opens new tab
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed

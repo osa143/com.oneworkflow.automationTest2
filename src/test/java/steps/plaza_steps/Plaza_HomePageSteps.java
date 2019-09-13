@@ -210,4 +210,86 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userEntersBCPPDescriptionAs(String arg0) {
         homePage.enterBCPP_Description(arg0);
     }
+
+    @Then("user clicks on the contact checkbox")
+    public void userClicksOnTheContactCheckbox() {
+        homePage.clickContact();
+    }
+
+
+    @And("user then clicks on the name not found checkbox")
+    public void userThenClicksOnTheNameNotFoundCheckbox() {
+        homePage.clickNameNotFound();
+    }
+
+    @And("user enters name field as {string}")
+    public void userEntersNameFieldAs(String arg0) {
+        homePage.enterName(arg0);
+    }
+
+    @Then("user enters email address field as {string}")
+    public void userEntersEmailAddressFieldAs(String text) {
+        homePage.enterEmail(text);
+    }
+
+    @Then("user enters phone field as {string}")
+    public void userEntersPhoneFieldAs(String arg0) {
+        homePage.enterPhone(arg0);
+    }
+
+    @And("user enters Backup request as {string}")
+    public void userEntersBackupReScheduleRequestAs(String arg0) {
+        homePage.enterReschedule_request(arg0);
+
+    }
+
+    @And("user enters Backup \\(Re)Schedule schedule as {string}")
+    public void userEntersBackupReScheduleScheduleAs(String arg0) {
+        homePage.enterSchedule(arg0);
+    }
+
+    @And("user enters Backup \\(Re)Schedule UNC Local path as {string}")
+    public void userEntersBackupReScheduleUNCLocalPathAs(String arg0) {
+        homePage.enterUnc_Local(arg0);
+    }
+
+    @Then("user enters Backup description as {string}")
+    public void userEntersBackupReScheduleDescriptionAs(String arg0) {
+      homePage.enterDescription_Reschedule(arg0);
+    }
+
+    @And("user selects Add CI reschedule as {string}")
+    public void userSelectsAddCIRescheduleAs(String arg0) {
+    homePage.selectsAddCi_Reschedule(arg0);
+    }
+
+    @And("user clicks on add attachment in plaza")
+    public void userClicksOnAddAttachmentInPlaza() {
+       homePage.clickAddAttachment();
+    }
+
+    @And("user enters Backup one time UNC Local path as {string}")
+    public void userEntersBackupOneTimeUNCLocalPathAs(String arg0) {
+        homePage.enterIncludeCI(arg0);
+    }
+
+    @And("user enters Retention period as {string}")
+    public void userEntersRetentionPeriodAs(String arg0) {
+        homePage.enterRetentionPeriod(arg0);
+    }
+
+    @And("user enters back up date and as current date and time")
+    public void userEntersBackUpDateAndAsCurrentDateAndTime() {
+        homePage.enterBackUpDateTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user enters Backup UNC Local path as {string}")
+    public void userEntersBackupUNCLocalPathAs(String arg0) {
+        homePage.enterRestore_Ci_Unc(arg0);
+    }
+
+    @And("user enters Backup restore files as {string}")
+    public void userEntersBackupRestoreFilesAs(String arg0) {
+        homePage.enterRestore_Files(arg0);
+    }
 }

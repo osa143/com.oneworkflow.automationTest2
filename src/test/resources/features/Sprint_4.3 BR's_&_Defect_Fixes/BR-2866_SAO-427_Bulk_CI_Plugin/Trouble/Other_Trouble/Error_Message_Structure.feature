@@ -4,7 +4,7 @@
     Scenario: user checks the message structure of bulk loading error
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+      When user logs in with valid username "Change_Automation_2" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create trouble event
       And user switches to window 1
@@ -25,7 +25,7 @@
       Then user clicks on save button under bulk import
       And first error message should display as "The manually identified CIs are now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-      And user waits 20 secs
+      And user waits 5 secs
       When user clicks on Show Bulk Import button
       And user switches to frame
       Then user validates bulk ci loading table contains columns "Submitter:Import Type:Date:Status"
@@ -51,13 +51,13 @@
       Then user clicks on Upload Import File
       And user clicks on choose file button
       #Select 10CIs text file with incorrect names
-      And user searches for "C:\Temp\com.oneworkflow.automation\src\test\resources\TestAttachments\10 CI's - Incorrect Names\IncorrectCIs.txt" attachment and adds it
+      And user searches for "Test Attachments\10 CI's - Incorrect Names\TEXT.txt" attachment and adds it
       And user clicks on attachment ok button
       And user switches to frame
       Then user clicks on save button under bulk import
       And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-      And user waits 10 secs
+      And user waits 20 secs
       When user clicks on Show Bulk Import button
       And user switches to frame
       Then user highlights "TXT" under "Import Type"

@@ -690,7 +690,7 @@ public class BaseRecordPage extends BasePage {
 
     public void clickDiagnosis() {
         try {
-            clickElementByContainsTextAndTagName("", "Diagnosis");
+            clickElementByContainsTextAndTagName("*", "Diagnosis");
         } catch (Exception e) {
             wait(5000);
             selectTab("Diagnosis");

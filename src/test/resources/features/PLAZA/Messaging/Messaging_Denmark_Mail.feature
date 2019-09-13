@@ -19,9 +19,7 @@
       Then user enters email address field as "Test@Test.com
       Then user enters phone field as "123456789"
       And user enters Denmark Mail request as "Test1 Messaging Mail/Request"
-
       And user selects System as "Mail SMTP Relay"
-
       And user enters Customer ID/Name as "Test Name"
       Then user enters Messaging Denmark Mail description as "Test1 Messaging/Description"
       And user enters additional comments as "Messaging - Test/AC"

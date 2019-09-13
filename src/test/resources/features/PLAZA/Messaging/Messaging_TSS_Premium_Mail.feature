@@ -1,6 +1,6 @@
-@Messaging_CallGuide_Mail @PLAZA
-  Feature: Messaging CallGuide Mail plaza form test
-    #Not checked in ow
+@Messaging_TSS_Premium_Mail @PLAZA
+  Feature: Messaging TSS Premium Mail plaza form test
+    #not found on ow
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -10,18 +10,18 @@
       And user clicks on "Order" button
       And user clicks "Messaging" button
       Then user should see "Messaging" IT Pebbles
-      When user clicks on "CallGuide Mail" pebble
-      Then user should see "CallGuide Mail" form
+      When user clicks on "TSS Mail Premium Support" pebble
+      Then user should see "TSS Mail Premium Support" form
       When user selects role dropdown as "Application Operation Engineer"
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox
       And user enters name field as "Test1234"
       Then user enters email address field as "Test@Test.com
       Then user enters phone field as "123456789"
-      And user enters CallGuide Mail request as "Test1 Messaging Mail/Request"
-      Then user selects System as "TSS Email"
-      Then user enters Customer ID/Name as "Test name"
-      Then user enters Messaging CallGuide Mail description as "Test1 Messaging/Description"
+      And user enters Messaging TSS Premium Mail request as "Test1 Messaging Mail/Request"
+      And user selects System as "DNS"
+      And user selects Customer ID/Name as "Test Name"
+      Then user enters TSS Premium Mail description as "Test1 Messaging/Description"
       And user enters additional comments as "Messaging - Test/AC"
       Then user clicks on "Submit"
       And user gets plaza request id

@@ -1,6 +1,6 @@
-@Messaging_CallGuide_Mail @PLAZA
-  Feature: Messaging CallGuide Mail plaza form test
-    #Not checked in ow
+@Network_Security_Add_Modify_Remove_DNS @PLAZA
+  Feature: Network Security Add Modify Remove DNS plaza form test
+    #not checked on ow
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -8,21 +8,18 @@
       Then user should see the plaza home page
       When user clicks on "Facility Management" button
       And user clicks on "Order" button
-      And user clicks "Messaging" button
-      Then user should see "Messaging" IT Pebbles
-      When user clicks on "CallGuide Mail" pebble
-      Then user should see "CallGuide Mail" form
+      And user clicks "Firewall & Network" button
+      Then user should see "Firewall & Network" IT Pebbles
+      When user clicks on "DNS/DHCP" pebble
+      Then user should see "DNS/DHCP" form
       When user selects role dropdown as "Application Operation Engineer"
-      Then user clicks on the contact checkbox
-      And user then clicks on the name not found checkbox
-      And user enters name field as "Test1234"
-      Then user enters email address field as "Test@Test.com
-      Then user enters phone field as "123456789"
-      And user enters CallGuide Mail request as "Test1 Messaging Mail/Request"
-      Then user selects System as "TSS Email"
-      Then user enters Customer ID/Name as "Test name"
-      Then user enters Messaging CallGuide Mail description as "Test1 Messaging/Description"
-      And user enters additional comments as "Messaging - Test/AC"
+      And user selects Service Request Name as "Add/Modify/Remove DNS entry"
+      And user enters Network Security Add Modify Remove DNS request as "Test1 Network Security DNS/Request"
+
+      And user selects Scheduled change as ""
+
+      Then user enters Network Security Add Modify Remove DNS description as "Test1 Network Security/Description"
+      And user enters additional comments as "Network Security - Test/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

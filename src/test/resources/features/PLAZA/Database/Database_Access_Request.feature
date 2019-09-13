@@ -20,9 +20,7 @@
       And user enters Database CI as "TEST"
       And user enters Database Name as "Test name"
       And user enters DNS/IP address as "Test address"
-      And user selects Account Type as "SQL"
-
-
+      And user selects Account Type as "<Account Type>"
       Then user enters Database Access Request description as "<Description>"
       And user enters additional comments as "<Additional Comments>"
       Then user selects Account Name as "New"
@@ -77,10 +75,10 @@
       Examples:
 
       |Request                      |Database Type|Description                      |Additional Comments  |Account Type|Desc Validation|
-      |Test1 Database Access/Request|MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL         |
-      |Test2 Database Access/Request|MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL         |
-      |Test3 Database Access/Request|Oracle       |Test3 Database Access/Description|Database - Test3/AC  |SQL         |
-      |Test4 Database Access/Request|PostgreSQL   |Test4 Database Access/Description|Database - Test4/AC  |SQL         |
+      |Test1 Database Access/Request|MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server  |               |
+      |Test2 Database Access/Request|MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |               |
+      |Test3 Database Access/Request|Oracle       |Test3 Database Access/Description|Database - Test3/AC  |SQL Server  |               |
+      |Test4 Database Access/Request|PostgreSQL   |Test4 Database Access/Description|Database - Test4/AC  |Local       |               |
 
 
 

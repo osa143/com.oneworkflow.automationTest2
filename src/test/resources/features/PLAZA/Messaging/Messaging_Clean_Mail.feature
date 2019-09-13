@@ -20,9 +20,7 @@
       Then user enters phone field as "123456789"
       And user enters Clean Mail request as "Test1 Messaging Mail/Request"
       And user enters Customer ID/Name as "Test Name
-
       And user selects Issue as "Other"
-
       Then user enters Messaging Clean Mail description as "Test1 Messaging/Description"
       And user clicks the calendar and selects current date and time
       And user enters the Sender email address as "Sender@Test.com"

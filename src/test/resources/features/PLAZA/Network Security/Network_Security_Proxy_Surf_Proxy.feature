@@ -1,7 +1,7 @@
-@Network_Security_Add_Modify_Remove_DNS @PLAZA
-  Feature: Network Security Add Modify Remove DNS plaza form test
-    #not checked on ow
+@Network_Security_Proxy_Surf_Proxy @PLAZA
+  Feature: Network Security Proxy Surf Proxy plaza form test
     Scenario Outline: user validates information sent to OW from Plaza
+      #not checked in ow
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -10,15 +10,25 @@
       And user clicks on "Order" button
       And user clicks "Firewall & Network" button
       Then user should see "Firewall & Network" IT Pebbles
-      When user clicks on "DNS/DHCP" pebble
-      Then user should see "DNS/DHCP" form
+      When user clicks on "Proxy" pebble
+      Then user should see "Proxy" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects Service Request Name as "Add/Modify/Remove DNS entry"
-      And user enters Network Security Add Modify Remove DNS request as "Test1 Network Security DNS/Request"
+      And user selects Service Request as "Surf proxy/URL filter"
+      And user enters Network Security Proxy Resource request as "Test1 Network Security Proxy/Request"
+      And user selects SurfProxy /URL filter as "No one can reach a certain URL"
+      And user clicks the calendar and selects current date and time
+      And user enters Source IP address as "Test address"
+      Then user enters URL as "Test.teliacompany.net"
 
-      And user selects Scheduled change as ""
+      Then user selects Internal/External website as ""
+      Then user enters Error Message as "Test Error Message"
+      And user enters Has it worked before as ""
+      Then user enters When did the problem occure as ""
+      And user enters What is your current proxy settings as ""
+      Then user enters ticket number as ""
 
-      Then user enters Network Security Add Modify Remove DNS description as "Test1 Network Security/Description"
+
+      Then user enters Network Security Proxy Surf description as "Test1 Network Security/Description"
       And user enters additional comments as "Network Security - Test/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
@@ -34,7 +44,7 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | DNS/DHCP"
+      And user validates title field as "Service Request | Proxy"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
       And user validates description contains DescValidation
@@ -42,9 +52,7 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-
-      And user should see assigned profile as "<>"
-
+      And user should see assigned profile as "Proxy L2"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
@@ -60,6 +68,6 @@
 
       Examples:
 
-      |Select Service Request Name|Request                              |Description                              |Additional Comments      |Desc Validation|
-      |Add/Modify/Remove DNS entry|Test1 Network Security Add/Request   |Test1 Network Security Add/Description   |Test1 Network Security/AC|               |
-      |DNS Sweden                 |Test2 Network Security Sweden/Request|Test2 Network Security Sweden/Description|Test2 Network Security/AC|               |
+      |Request                             |SurfProxy /URL filter                      |Description                       |Additional Comments       |Desc Validation|
+      |Test1 Network Security Proxy/Request|No one can reach a certain URL             |Test1 Network Security/Description|Network Security - Test/AC|               |
+      |Test2 Network Security Proxy/Request|One or few users cannot reach a certain URL|Test2 Network Security/Description|Network Security - Test/AC|               |

@@ -1,30 +1,34 @@
-@Network_Security_Add_Modify_Remove_DNS @PLAZA
-  Feature: Network Security Add Modify Remove DNS plaza form test
-    #not checked on ow
-    Scenario Outline: user validates information sent to OW from Plaza
+@Operating_System_Account_Management @PLAZA
+  Feature: Operating System Account Management plaza form test
+    Scenario: user validates information sent to OW from Plaza
+      #not checked in ow
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
       When user clicks on "Facility Management" button
       And user clicks on "Order" button
-      And user clicks "Firewall & Network" button
-      Then user should see "Firewall & Network" IT Pebbles
-      When user clicks on "DNS/DHCP" pebble
-      Then user should see "DNS/DHCP" form
-      When user selects role dropdown as "Application Operation Engineer"
-      And user selects Service Request Name as "Add/Modify/Remove DNS entry"
-      And user enters Network Security Add Modify Remove DNS request as "Test1 Network Security DNS/Request"
+      And user clicks "Compute & Operating System" button
+      Then user should see "Application" IT Pebbles
+      When user clicks on "Account Management - Server" pebble
+      Then user should see "Account Management - Server" form
+      When user selects Role dropdown as "Application Operation Engineer"
+      And user enters Operating System request as "Test1 Operating System Account/Request"
 
-      And user selects Scheduled change as ""
+      And user selects Select Request as ""
+      Then user selects Operating System as "Windows"
+      And user enters CI as "cc100cgas001"
+      Then user chooses Account Type as ""
 
-      Then user enters Network Security Add Modify Remove DNS description as "Test1 Network Security/Description"
-      And user enters additional comments as "Network Security - Test/AC"
-      Then user clicks on "Submit"
+      And user chooses Account Name as "Test name"
+      Then user enters Operating System description as "Test1 Operating System/Description"
+      And user enters additional comments as "Test1 Operating System/AC"
+      Then user clicks on submit button
       And user gets plaza request id
       And user clicks on plaza request id
       Then user should see service request form
-      When user opens new tab
+      When user opens another window
+      And user enters OW URL
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -34,7 +38,7 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | DNS/DHCP"
+      And user validates title field as "Service Request | Account Management - Server"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
       And user validates description contains DescValidation
@@ -42,9 +46,7 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-
-      And user should see assigned profile as "<>"
-
+      And user should see assigned profile as ""
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
@@ -57,9 +59,3 @@
       When user changes status to "Closed"
       And user clicks on save button
       Then ticket status should be closed
-
-      Examples:
-
-      |Select Service Request Name|Request                              |Description                              |Additional Comments      |Desc Validation|
-      |Add/Modify/Remove DNS entry|Test1 Network Security Add/Request   |Test1 Network Security Add/Description   |Test1 Network Security/AC|               |
-      |DNS Sweden                 |Test2 Network Security Sweden/Request|Test2 Network Security Sweden/Description|Test2 Network Security/AC|               |

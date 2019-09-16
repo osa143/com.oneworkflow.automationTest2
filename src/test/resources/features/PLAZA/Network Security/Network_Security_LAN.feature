@@ -1,7 +1,6 @@
-@Network_Security_Add_Modify_Remove_DNS @PLAZA
-  Feature: Network Security Add Modify Remove DNS plaza form test
-    #not checked on ow
-    Scenario Outline: user validates information sent to OW from Plaza
+@Network_Security_LAN @PLAZA
+  Feature: Network Security LAN plaza form test
+    Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -10,15 +9,11 @@
       And user clicks on "Order" button
       And user clicks "Firewall & Network" button
       Then user should see "Firewall & Network" IT Pebbles
-      When user clicks on "DNS/DHCP" pebble
-      Then user should see "DNS/DHCP" form
+      When user clicks on "LAN (Data Net LAN)" pebble
+      Then user should see "LAN (Data Net LAN)" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects Service Request Name as "Add/Modify/Remove DNS entry"
-      And user enters Network Security Add Modify Remove DNS request as "Test1 Network Security DNS/Request"
-
-      And user selects Scheduled change as ""
-
-      Then user enters Network Security Add Modify Remove DNS description as "Test1 Network Security/Description"
+      And user enters Network Security LAN request as "Test1 Network Security LAN/Request"
+      Then user enters Network Security LAN description as "Test1 Network Security/Description"
       And user enters additional comments as "Network Security - Test/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
@@ -34,7 +29,7 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | DNS/DHCP"
+      And user validates title field as "Service Request | LAN (Data Net LAN)"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
       And user validates description contains DescValidation
@@ -42,9 +37,7 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-
       And user should see assigned profile as "<>"
-
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
@@ -57,9 +50,3 @@
       When user changes status to "Closed"
       And user clicks on save button
       Then ticket status should be closed
-
-      Examples:
-
-      |Select Service Request Name|Request                              |Description                              |Additional Comments      |Desc Validation|
-      |Add/Modify/Remove DNS entry|Test1 Network Security Add/Request   |Test1 Network Security Add/Description   |Test1 Network Security/AC|               |
-      |DNS Sweden                 |Test2 Network Security Sweden/Request|Test2 Network Security Sweden/Description|Test2 Network Security/AC|               |

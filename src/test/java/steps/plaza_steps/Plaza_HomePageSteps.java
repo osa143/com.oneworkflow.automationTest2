@@ -258,9 +258,9 @@ public class Plaza_HomePageSteps extends BasePage {
       homePage.enterDescription_Reschedule(arg0);
     }
 
-    @And("user selects Add CI reschedule as {string}")
+    @And("user selects Add CI back up as {string}")
     public void userSelectsAddCIRescheduleAs(String arg0) {
-    homePage.selectsAddCi_Reschedule(arg0);
+    homePage.selectsAddCi_back_up(arg0);
     }
 
     @And("user clicks on add attachment in plaza")

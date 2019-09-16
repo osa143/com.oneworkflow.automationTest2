@@ -249,5 +249,12 @@ public class OWF_WorkOrderPageSteps {
     public void userValidatesIsListedAsAnInterestedParty(String arg0) {
         Assert.assertEquals(workOrderPage.verifyPlazaIsListedUnderInterestedParties("Last Name", 1), arg0);
     }
+
+    @And("user validates request type as {string}")
+    public void userValidatesRequestTypeAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getRequestType(), arg0);
+    }
+
+
 }
 

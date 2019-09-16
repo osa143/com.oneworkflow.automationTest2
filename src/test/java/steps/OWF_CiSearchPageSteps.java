@@ -430,4 +430,19 @@ public class OWF_CiSearchPageSteps {
     public void userSelectsAllCISThatAppear() {
       ciSearchPage.clickCheckBoxHeader();
     }
+
+    @And("user validates CI {string} is listed")
+    public void userValidatesCIIsListed(String arg0) {
+        Assert.assertEquals(ciSearchPage.getCI_Name("CI Name", 1), arg0);
+    }
+
+    @And("user enters impacted from date as date in past")
+    public void userEntersImpactedFromDateAsDateInPast() {
+        ciSearchPage.enterImpactFrom(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", -10));
+    }
+
+    @And("user enters impacted to date as date in past")
+    public void userEntersImpactedToDateAsDateInPast() {
+        ciSearchPage.enterImpactTo(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", -5));
+    }
 }

@@ -66,7 +66,12 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String PRIMARY_CI= "//*[@id='T700009087']/tbody/tr[2]/td[2]/nobr/span";
     private static final String bulkCILoading_DIV_ID = "WIN_0_800038059";
     private static final String rbtn_IGNORE_HANDLING_DUPLICATE_CIS= "WIN_0_rc0id800038013";
+    private static final String txt_IMPACT_TO_PLUS_BULK_UPDATE= "arid_WIN_0_999000299";
 
+    public void enterImpactTo(String text){
+        findElement(By.id(txt_IMPACT_TO_PLUS_BULK_UPDATE)).clear();
+        findElement(By.id(txt_IMPACT_TO_PLUS_BULK_UPDATE)).sendKeys(text);
+    }
     public void clickCheckBoxHeader(){
         clickElement(By.className("checkboxheader"));
     }
@@ -79,6 +84,10 @@ public class OWF_CiSearchPage extends BasePage {
         String primaryCI= getTextByElement(By.xpath(PRIMARY_CI));
         System.out.println("The primary CI is : " + primaryCI);
         return primaryCI;
+    }
+
+    public String getCI_Name(String columnName, int rowNum){
+        return getTableCellData(By.id(CI_DIAGNOSIS_TABLE_ID), columnName, rowNum);
     }
 
     public String getWithWarnings(){

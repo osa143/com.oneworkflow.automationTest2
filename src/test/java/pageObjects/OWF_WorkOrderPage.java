@@ -40,8 +40,11 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_SOURCE_FLD= "arid_WIN_0_777777912";
     private static final String txt_DESCRIPTION= "arid_WIN_0_777031007";
     private static final String table_INTERESTED_PARTIES= "T705002015";
+    private static final String txt_REQUEST_TYPE= "arid_WIN_0_777031002";
 
-
+    public String getRequestType(){
+        return getTextByID(txt_REQUEST_TYPE);
+    }
     public String verifyPlazaIsListedUnderInterestedParties(String colName, int rowNum){
         return getTableCellData(By.id(table_INTERESTED_PARTIES), colName, rowNum);
     }

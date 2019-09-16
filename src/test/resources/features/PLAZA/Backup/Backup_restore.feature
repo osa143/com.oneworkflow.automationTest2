@@ -14,13 +14,15 @@
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Backup request as "Test1 Backup Restore/Request"
       And user enters back up date and as current date and time
-      And user selects Add CI reschedule as "cc100cgas001"
+      And user selects Add CI back up as "cc100cgas001"
       And user enters Backup UNC Local path as "\\TESTING\This"
       And user enters Backup restore files as "Test file"
       Then user enters Backup description as "Test1 Backup restore/Description"
       And user enters additional comments as "Test1 Backup Restore/AC"
-      And user searches for "Test Image" attachment and adds it
-      And user searches for "Test Image 2" attachment and adds it
+      And user clicks on add attachment in plaza
+      And user searches for "Test Attachments\other files\Test Image.png" attachment and adds it
+      And user clicks on add attachment in plaza
+      And user searches for "Test Attachments\other files\Test Image 2.png" attachment and adds it
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -38,27 +40,27 @@
       And user validates title field as "Service Request | Restore from Backup"
       And user validates request type as "Service Request | PLAZA"
       #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates description as ""
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       And user clicks on attachments under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
       And user validates assignee is "Backup"
-      And user validates 2 attachments visibility under external
+      And user validates 2 attachment visibility under external
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
-      When user clicks on diagnosis tab
+      When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed
       And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
       Then user switches to frame
       And user enters impacted from date as date in past
       And user enters impacted to date as date in past
       Then user clicks confirm checkbox
-      And user clicks the save button
+      And user clicks save button
       Then user switches to window 1
       When user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
-      Then user selects yes and closes warning message
+      And user should see confirmation message and clicks on yes button
       When user clicks on Ack button
       And user changes status to "Cleared"
       And user selects completed code as "Success"

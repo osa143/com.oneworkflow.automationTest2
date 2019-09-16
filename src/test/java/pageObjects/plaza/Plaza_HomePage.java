@@ -49,7 +49,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_NEW_SCHEDULE="sp_formfield_new_schedule";
     public static final String txt_UNC_LOCAL_PATH= "sp_formfield_include_exclude";
     public static final String txt_Description= "sp_formfield_description";
-    public static final String dd_RESCHEDULE_ADD_CI= "s2id_autogen13";
+    public static final String dd_BACK_UP_ADD_CI= "s2id_autogen13";
     public static final String btn_ADD_ATTACHMENT= "add_attachment_button";
     public static final String txt_INCLUDE_CI="sp_formfield_include_ci";
     public static final String txt_RETENTION_PERIOD="sp_formfield_retention_period";
@@ -81,8 +81,9 @@ public class Plaza_HomePage extends BasePage {
         clickElement(By.id(btn_ADD_ATTACHMENT));
     }
 
-    public void selectsAddCi_Reschedule(String dropdownName){
-        selectDropdown(By.id(dd_RESCHEDULE_ADD_CI), By.id("s2id_autogen13_results"),  dropdownName);
+    public void selectsAddCi_back_up(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_BACK_UP_ADD_CI), By.id("s2id_autogen13_results"),  dropdownName);
+
     }
 
     public void enterDescription_Reschedule(String text){
@@ -226,6 +227,14 @@ public class Plaza_HomePage extends BasePage {
         String title= driver.getTitle();
         System.out.println("Plaza Homepage title is : "+title);
         return title;
+
+    }
+
+    public void selectDropdownWithMultipleValues(By Element, By dropdownValuesListID, String dropdownValue){
+        clickElement(Element);
+        driver.findElement(Element).sendKeys(dropdownValue);
+        wait(500);
+        driver.findElement((dropdownValuesListID)).findElements(By.tagName("div")).stream().filter(element -> element.getText().trim().equals(dropdownValue)).findFirst().orElse(null).click();
 
     }
     public void selectDropdown(By Element, By dropdownValuesListID, String dropdownValue){

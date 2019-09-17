@@ -1,30 +1,39 @@
-@BDL_AT3 @PLAZA
-  Feature: BDL AT3 plaza form test
+@BDL @PLAZA
+  Feature: Plaza BDL form test
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      When user clicks on "Facility Management" button
-      And user clicks on "Order" button
-      And user clicks "Application" button
-      Then user should see "Application" IT Pebbles
+      When user clicks on "Facility Management"
+      And user clicks on order
+      And user clicks on IT Infrastructure dropdown
+      And user clicks on "Application"
       When user clicks on "BDL" pebble
       Then user should see "BDL" form
-      When user selects Role dropdown as "Application Operation Engineer"
-      And user enters BDL request as "BDL-AT3- Test/Request"
-      And user selects "Configuration" in the select request field
-      And user selects environment as "AT3"
-      And user selects all CIs in the AT3 field
+      When user selects role dropdown as "Application Operation Engineer"
+      And user enters BDL request as "BDL-AT1 - Test/Request"
+      And user selects service request name as "Configuration"
+      And user selects BCPP environment as "AT1"
+      And user selects all CI's from AT1 field
+      |CI Name          |
+      |API              |
+      |AT1              |
+      |AT DB            |
+      |AT1_Store        |
+      |Databases        |
+      |E2V              |
+      #|eMessaging       |
+      #|Proofing         |
+      #|Netbill DB-loader|
       And user enters "P100-000-000" in the WBS Code field
-      And user enters BDL description as "BDL-AT3 - Test/Desc"
-      And user enters additional comments as "BDL-AT3 - Test/AC"
-      Then user clicks on submit button
+      And user enters BDL description as "BDL-AT1 - Test"
+      And user enters additional comments as "BDL-AT1 - Test/AC"
+      Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
       Then user should see service request form
-      When user opens another window
-      And user enters OW URL
+      When user opens new tab
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -37,7 +46,7 @@
       And user validates title field as "Service Request | BDL"
       And user validates request type as "Service Request | PLAZA"
       #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates description as ""
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -55,3 +64,15 @@
       When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
+
+      Examples:
+
+      |Request               |Environment|Description         |Additional Comments|Desc Validation|
+      |BDL-AT1 - Test/Request|AT1        |BDL-AT1 - Test/Desc |BDL-AT1 - Test/AC  |               |
+      |BDL-AT2- Test/Request |AT2        |BDL-AT2 - Test/Desc |BDL-AT2 - Test/AC  |               |
+      |BDL-AT3- Test/Request |AT3        |BDL-AT3 - Test/Desc |BDL-AT3 - Test/AC  |               |
+      |BDL-PROD- Test/Request|PROD       |BDL-PROD - Test/Desc|BDL-PROD - Test/AC |               |
+
+
+
+

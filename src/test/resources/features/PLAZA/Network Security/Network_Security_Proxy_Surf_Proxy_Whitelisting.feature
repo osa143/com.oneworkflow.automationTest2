@@ -13,16 +13,16 @@
       When user clicks on "Proxy" pebble
       Then user should see "Proxy" form
       When user selects role dropdown as "Application Operation Engineer"
-      Then user selects Select Request as "Surf proxy/URL filter"
-      And user enters Network Security Proxy Resource request as "Test1 Network Security Proxy Whitelisting/Request"
+      Then user selects Select Request as "<SurfProxy /URL filter>"
+      And user enters Network Security Proxy Resource request as "<Request>"
       Then user selects SurfProxy /URL filter as "Whitelisting DDC FI"
 
       And user enters the source IP address as ""
       And user enters the target URL as ""
       Then user enters the H2 Name as ""
 
-      Then user enters Network Security Surf Proxy description as "Test1 Network Security/Description"
-      And user enters additional comments as "Network Security - Test/AC"
+      Then user enters Network Security Surf Proxy description as "<Description>"
+      And user enters additional comments as "<Additional Comments>"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

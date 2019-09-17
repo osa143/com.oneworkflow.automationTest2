@@ -12,11 +12,11 @@
       When user clicks on "Topcat" pebble
       Then user should see "Topcat" form
       When user selects Role dropdown as "Application Operation Engineer"
-      And user selects Select service request name as "<General Request>"
-      And user enters Topcat request as "<Test2 Topcat/Request>"
+      And user selects Select service request name as "<Service Request Name>"
+      And user enters Topcat request as "<Request>"
       And user enters CI as "aa789win01t"
-      And user enters Topcat description as "<Test2 Topcat/Description>"
-      And user enters additional comments as "<Test2 Topcat/AC>"
+      And user enters Topcat description as "<Description>"
+      And user enters additional comments as "<Additional Comments>"
       Then user clicks on submit button
       And user gets plaza request id
       And user clicks on plaza request id
@@ -68,6 +68,6 @@
 
       Examples:
 
-      |Select Service Request Name|Request             |Description             |Additional Comments|Desc Validation|
+      |Service Request Name       |Request             |Description             |Additional Comments|Desc Validation|
       |General Request            |Test2 Topcat/Request|Test2 Topcat/Description|Test2 Topcat/AC    |               |
       |Restore Catalogue Database |Test1 Topcat/Request|Test1 Topcat/Description|Test1 Topcat/AC    |               |

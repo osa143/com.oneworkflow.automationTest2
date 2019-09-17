@@ -14,22 +14,22 @@
       Then user should see "Proxy" form
       When user selects role dropdown as "Application Operation Engineer"
       And user selects Service Request as "Surf proxy/URL filter"
-      And user enters Network Security Proxy Resource request as "Test1 Network Security Proxy/Request"
-      And user selects SurfProxy /URL filter as "No one can reach a certain URL"
+      And user enters Network Security Proxy Resource request as "<Request>"
+      And user selects SurfProxy /URL filter as "<SurfProxy /URL filter>"
       And user clicks the calendar and selects current date and time
       And user enters Source IP address as "Test address"
       Then user enters URL as "Test.teliacompany.net"
 
-      Then user selects Internal/External website as ""
+      Then user selects Internal/External website as "Yes"
       Then user enters Error Message as "Test Error Message"
       And user enters Has it worked before as ""
       Then user enters When did the problem occure as ""
-      And user enters What is your current proxy settings as ""
-      Then user enters ticket number as ""
+      And user enters What is your current proxy settings as "test proxy"
+      Then user enters ticket number as "Test ticket"
 
 
-      Then user enters Network Security Proxy Surf description as "Test1 Network Security/Description"
-      And user enters additional comments as "Network Security - Test/AC"
+      Then user enters Network Security Proxy Surf description as "<Description>"
+      And user enters additional comments as "<Additional Comments>"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

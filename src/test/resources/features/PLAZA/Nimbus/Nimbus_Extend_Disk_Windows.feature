@@ -1,34 +1,22 @@
-@BDL @PLAZA
-  Feature: Plaza BDL form test
+@Nimbus_Extend_Disk_Windows @PLAZA
+  Feature: Nimbus Extend Disk Windows plaza form test
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      When user clicks on "Facility Management"
-      And user clicks on order
-      And user clicks on IT Infrastructure dropdown
-      And user clicks on "Application"
-      When user clicks on "BDL" pebble
-      Then user should see "BDL" form
+      When user clicks on "Facility Management" button
+      And user clicks on "Order" button
+      And user clicks "Cloud" button
+      Then user should see "Cloud" IT Pebbles
+      When user clicks on "Skypoint - private cloud" pebble
+      Then user should see "Skypoint - private cloud" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user enters BDL request as "BDL-AT1 - Test/Request"
-      And user selects service request name as "Configuration"
-      And user selects BCPP environment as "AT1"
-      And user selects all CI's from AT1 field
-      |CI Name          |
-      |API              |
-      |AT1              |
-      |AT DB            |
-      |AT1_Store        |
-      |Databases        |
-      |E2V              |
-      #|eMessaging       |
-      #|Proofing         |
-      #|Netbill DB-loader|
-      And user enters "P100-000-000" in the WBS Code field
-      And user enters BDL description as "BDL-AT1 - Test"
-      And user enters additional comments as "BDL-AT1 - Test/AC"
+      And user selects Service Request Name as "Extend disk on VM - Windows"
+      And user enters CI as "cc100cgas001"
+      And user enters Volume(s)/Drive(s) as "Test Drive"
+      And user enters additional comments as "Test5 Nimbus/AC"
+
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -43,17 +31,26 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | BDL"
-      And user validates request type as "Service Request | PLAZA"
-      #Not sure about description validation outside of a table
-      And user validates description as ""
+      And user validates title field as "Service Request | Skypoint - private cloud"
+      And user validates description as "<DescValidation>"
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as "Billing"
+      And user should see assigned profile as "Windows L2"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
+      When user clicks on "Diagnosis" tab
+      And user validates CI availability
+      And user validates CI "cc100cgas001" is listed
+      And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
+      Then user switches to frame
+      And user enters impacted from date as date in past
+      And user enters impacted to date as date in past
+      Then user clicks confirm checkbox
+      And user clicks save button
+      When user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
+      And user should see confirmation message and clicks on yes button
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
@@ -64,6 +61,3 @@
       When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
-
-
-

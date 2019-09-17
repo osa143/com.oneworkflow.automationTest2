@@ -12,14 +12,14 @@
       When user clicks on "Pollux" pebble
       Then user should see "Pollux" form
       When user selects Role dropdown as "Application Operation Engineer"
-      And user enters Pollux request as "<Pollux-PROD - Test/Request>"
+      And user enters Pollux request as "<Request>"
       And user selects "Configuration" in the select request field
       And user selects "<App - Prod>" in the Environment field
       And user selects "<App/DB - AT>" in the Environment field
       And user selects "<DB -Prod>" in the Environment field
-      Then user enters Pollux description as "<Pollux-PROD - Test/Description>"
+      Then user enters Pollux description as "<Description>"
       And user enters WBS Code field as "P100-000-000"
-      And user enters additional comments as "<Pollux-PROD - Test/AC>"
+      And user enters additional comments as "<Additional Comments>"
       Then user clicks on submit button
       And user gets plaza request id
       And user clicks on plaza request id

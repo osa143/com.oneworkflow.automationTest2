@@ -19,13 +19,13 @@
       And user enters name field as "Test1234"
       Then user enters email address field as "Test@Test.com
       Then user enters phone field as "123456789"
-      And user enters Messaging TSS Mail request as "Test1 Messaging Mail/Request"
+      And user enters Messaging TSS Mail request as "Test5 Messaging Mail/Request"
 
       And user selects System as ""
 
       And user enters Customer ID/Name as "Test Name"
-      Then user enters TSS Mail description as "Test1 Messaging/Description"
-      And user enters additional comments as "Messaging - Test/AC"
+      Then user enters TSS Mail description as "Test5 Messaging/Description"
+      And user enters additional comments as "Messaging - Test5/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -61,3 +61,6 @@
       When user changes status to "Closed"
       And user clicks on save button
       Then ticket status should be closed
+      When user switches to window 0
+      And user clicks on main page refresh
+      Then user validates plaza request has completed

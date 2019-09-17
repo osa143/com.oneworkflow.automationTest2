@@ -13,40 +13,6 @@ Feature: E2E flow for ticket created by API
     When user clicks on owner under sections
     And user validates owner profile as "Change Initiator-Internal"
     And user validates owner as "ChangeInitiatorInternal1"
-    Then user clicks on Send button
-    Then error message should display as "You must provide an answer to all the risk question outlined in the Risk tab before Send (ARERR 10000)" on change record page
-    When user clicks on Risk tab
-    And user gets current risk score value
-    When user answers all risk questions as below
-    And user selects answer as "Impact to other systems/technologies are unclear"
-    And user selects answer as "No"
-    And user selects answer as "Tested succesfully, this is a pilot"
-    And user selects answer as "Yes (outcome of the change can be instantly verified)"
-    And user selects answer as "Yes"
-    And user selects answer as "Simple"
-    And user selects last answer as "No"
-    Then user validates risk score gets updated
-    Then user clicks on Send button
-    Then an error message should appear: "Please select at least one country of impact for this change. (ARERR 10000)"
-    When user clicks on estonia checkbox under affected BU's
-    And user clicks on Send button
-    Then error message should display as "You must select at least one CI in the Diagnosis Tab (ARERR 10000)" on change record page
-    And user clicks on Diagnosis tab
-    And user clicks on CI search button
-    Then user switches to frame
-    And CI search tab should be opened
-    And user selects Category as "Core"
-    And user selects Type as "Mobile CS Core Network"
-    Then user enters "FI_MGW_SMG03TRE" in the name+ field
-    Then user clicks on search button on CI search window
-    And user selects a CI from list
-    And user selects impact level as "Degradation of Service"
-    And user clicks on relate CI
-    Then user closes warning message
-    And user clicks on close button on CI search window
-    And CI should be listed and displayed under the Diagnosis tab
-    When user clicks on Show CR Matching button
-    Then user should see Show CR Matching table appear
     When user clicks on "Interested Parties" tab
     And user enters email address as "Test123xxx@Test123xxx.com"
     And user clicks on add email button

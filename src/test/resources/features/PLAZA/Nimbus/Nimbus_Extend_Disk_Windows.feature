@@ -16,7 +16,6 @@
       And user enters CI as "cc100cgas001"
       And user enters Volume(s)/Drive(s) as "Test Drive"
       And user enters additional comments as "Test5 Nimbus/AC"
-
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -61,3 +60,6 @@
       When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
+      When user switches to window 0
+      And user clicks on main page refresh
+      Then user validates plaza request has completed

@@ -18,14 +18,14 @@
       And user enters name field as "Test1234"
       Then user enters email address field as "Test@Test.com
       Then user enters phone field as "123456789"
-      And user enters Clean Mail request as "Test1 Messaging Mail/Request"
+      And user enters Clean Mail request as "Test2 Messaging Mail/Request"
       And user enters Customer ID/Name as "Test Name
       And user selects Issue as "Other"
-      Then user enters Messaging Clean Mail description as "Test1 Messaging/Description"
+      Then user enters Messaging Clean Mail description as "Test2 Messaging/Description"
       And user clicks the calendar and selects current date and time
       And user enters the Sender email address as "Sender@Test.com"
       And user enters the Reciever email address as "Reciever"
-      And user enters additional comments as "Messaging - Test/AC"
+      And user enters additional comments as "Messaging - Test2/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -61,3 +61,6 @@
       When user changes status to "Closed"
       And user clicks on save button
       Then ticket status should be closed
+      When user switches to window 0
+      And user clicks on main page refresh
+      Then user validates plaza request has completed

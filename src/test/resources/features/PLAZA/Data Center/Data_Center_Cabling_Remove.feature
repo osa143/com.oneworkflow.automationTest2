@@ -1,7 +1,7 @@
 @Data_Center_Cabling_Remove @PLAZA
   Feature: Data Center Cabling Remove plaza form test
-    #not checked in ow
     Scenario: user validates information sent to OW from Plaza
+
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -12,13 +12,13 @@
       And user clicks on "Data Center"
       When user clicks on "Cabling - Remove" pebble
       Then user should see "Cabling - Remove" form
-      And user enters Cabling - New request as "Test1 Cabling/Request"
+      And user enters Cabling - New request as "Test2 Cabling/Request"
       And user enters DC-site or address as "Test address"
       And user enters Room as "Test room"
       And user enters delivery date as current date
-      Then user enters Data Center description as "Test1 Data Center/Description"
+      Then user enters Data Center description as "Test2 Data Center/Description"
       And user enters WBS Code field as "P100-000-000"
-      And user enters additional comments as "Data Center - Test/AC"
+      And user enters additional comments as "Data Center - Test2/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -33,7 +33,7 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | Data Center"
+      And user validates title field as "Service Request | Cabling - Remove"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
       And user validates description as ""
@@ -41,7 +41,7 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as ""
+      And user should see assigned profile as "DC Sweden"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button

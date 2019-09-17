@@ -18,7 +18,7 @@
 
       And user selects Scheduled change as ""
 
-      Then user enters Network Security Add Modify Remove DNS description as "<Description>"
+      And user enters Network Security Add Modify Remove DNS description as "<Description>"
       And user enters additional comments as "<Additional Comments>"
       Then user clicks on "Submit"
       And user gets plaza request id

@@ -1,6 +1,5 @@
 @Database_Configure_Database_Parameters @PLAZA
   Feature: Database Configure Database Parameters plaza form test
-    #not checked in ow
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -14,14 +13,14 @@
       Then user should see "Database Request" form
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Configure Database Parameters"
-      And user enters Database Configure request as "Test1 Database Configure/Request"
+      And user enters Database Configure request as "Test4 Database Configure/Request"
       And user selects Database Type as "MSSQL"
       And user enters CI as "cc100cgas001"
       And user enters Database CI as "TEST"
       And user enters Database Name as "Test name"
       And user enters Parameters as "Test parameters"
-      Then user enters Database Configure Request description as "Test1 Database/Description"
-      And user enters additional comments as "Database - Test/AC"
+      Then user enters Database Configure Request description as "Test4 Database/Description"
+      And user enters additional comments as "Database - Test4/AC"
 
       Then user clicks on "Submit"
       And user gets plaza request id
@@ -37,7 +36,7 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | Database"
+      And user validates title field as "Service Request | Database Request"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
       And user validates description contains DescValidation
@@ -45,12 +44,13 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as ""
+      And user should see assigned profile as "Oracle/MSSQL/MySQL/PostgreSQL"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on diagnosis tab
       And user validates CI "cc100cgas001" is listed
-      And user clicks on CI "cc100cgas001" and selects "Impact:Update
+      And user validates CI "TEST" is listed
+      And user selects all CI's and selects "Impact:Update
       Then user switches to frame
       And user enters impacted from date as date in past
       And user enters impacted to date as date in past
@@ -70,3 +70,6 @@
       When user changes status to "Closed"
       And user clicks on save button
       Then ticket status should be closed
+      When user switches to window 0
+      And user clicks on main page refresh
+      Then user validates plaza request has completed

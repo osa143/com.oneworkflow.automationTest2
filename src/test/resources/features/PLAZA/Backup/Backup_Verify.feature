@@ -68,3 +68,6 @@
       When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
+      When user switches to window 0
+      And user clicks on main page refresh
+      Then user validates plaza request has completed

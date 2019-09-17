@@ -1,7 +1,7 @@
 @Nimbus_Modify_Onboarding @PLAZA
   Feature: Nimbus Modify Onboarding plaza form test
     Scenario: user validates information sent to OW from Plaza
-      #notchecked in ow
+
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login

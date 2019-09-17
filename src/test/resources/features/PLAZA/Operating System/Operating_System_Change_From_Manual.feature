@@ -5,10 +5,10 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      When user clicks on "Facility Management" button
-      And user clicks on "Order" button
-      And user clicks "Compute & Operating System" button
-      Then user should see "Compute & Operating System" IT Pebbles
+      When user clicks on "Facility Management"
+      And user clicks on order
+      And user clicks on IT Infrastructure dropdown
+      And user clicks "Compute & Operating System"
       When user clicks on "Change OS Patching" pebble
       Then user should see "Change OS Patching" form
       When user selects Role dropdown as "Application Operation Engineer"

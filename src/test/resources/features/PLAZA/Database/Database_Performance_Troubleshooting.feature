@@ -6,10 +6,10 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      When user clicks on "Facility Management" button
-      And user clicks on "Order" button
-      And user clicks "Database" button
-      Then user should see "Database" IT Pebbles
+      When user clicks on "Facility Management"
+      And user clicks on order
+      And user clicks on IT Infrastructure dropdown
+      And user clicks "Database"
       When user clicks on "Database Request" pebble
       Then user should see "Database Request" form
       When user selects role dropdown as "Application Operation Engineer"

@@ -5,10 +5,9 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      When user clicks on "Facility Management" button
-      And user clicks on "Order" button
-      And user clicks "Storage & Data Protection" button
-      Then user should see "Storage & Data Protection" IT Pebbles
+      When user clicks on "Facility Management"
+      And user clicks on order
+      And user clicks "Storage & Data Protection"
       When user clicks on "Volume Snapshot" pebble
       Then user should see "Volume Snapshot" form
       When user selects role dropdown as "Application Operation Engineer"

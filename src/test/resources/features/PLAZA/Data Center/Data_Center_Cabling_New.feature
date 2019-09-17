@@ -8,6 +8,7 @@
     Then user should see the plaza home page
     When user clicks on "Facility Management" button
     And user clicks on "Order" button
+    And user clicks on IT Infrastructure dropdown
     And user clicks "Data Center" button
     Then user should see "Data Center" IT Pebbles
     When user clicks on "Cabling - New" pebble

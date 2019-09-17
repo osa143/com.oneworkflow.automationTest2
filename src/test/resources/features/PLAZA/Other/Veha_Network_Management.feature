@@ -5,10 +5,10 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      When user clicks on "Facility Management" button
-      And user clicks on "Order" button
-      And user clicks "Firewall & Network" button
-      Then user should see "Firewall & Network" IT Pebbles
+      When user clicks on "Facility Management"
+      And user clicks on order
+      And user clicks on IT Infrastructure dropdown
+      And user clicks "Firewall & Network"
       When user clicks on "Network Management System Veha" pebble
       Then user should see "Network Management System Veha" form
       When user selects Role dropdown as "Application Operation Engineer"

@@ -5,10 +5,9 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      When user clicks on "Facility Management" button
-      And user clicks on "Order" button
-      And user clicks "Application" button
-      Then user should see "Application" IT Pebbles
+      When user clicks on "Facility Management"
+      And user clicks on order
+      And user clicks "Application"
       When user clicks on "TCFP (Account Management)" pebble
       Then user should see "TCFP (Account Management)" form
       When user selects Role dropdown as "Application Operation Engineer"

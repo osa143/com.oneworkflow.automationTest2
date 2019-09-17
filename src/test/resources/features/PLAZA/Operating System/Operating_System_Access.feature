@@ -5,10 +5,10 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      When user clicks on "Facility Management" button
-      And user clicks on "Order" button
-      And user clicks "Compute & Operating System" button
-      Then user should see "Application" IT Pebbles
+      When user clicks on "Facility Management"
+      And user clicks on order
+      And user clicks on IT Infrastructure dropdown
+      And user clicks "Compute & Operating System"
       When user clicks on "Access to Red Hat Knowledgebase" pebble
       Then user should see "Access to Red Hat Knowledgebase" form
       When user selects Role dropdown as "Application Operation Engineer"

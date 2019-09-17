@@ -1,6 +1,7 @@
-@Nimbus_Add_Modify_Remove @PLAZA
-  Feature: Nimbus Add Modify Remove plaza form test
+@Nimbus_Onboard_To_Skypoint
+  Feature: Nimbus Onboard To Skypoint plaza form test
     Scenario: user validates information sent to OW from Plaza
+      #not checked in ow
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -8,17 +9,24 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Cloud" button
+      And user clicks "Cloud"
       When user clicks on "Skypoint - private cloud" pebble
       Then user should see "Skypoint - private cloud" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects Service Request Name as "Add/Modify/Remove CPU/Memory/Disk to VM"
-      And user enters Nimbus Add Modify Remove request as "Test1 Nimbus/Request"
-      Then user enters CI as "cc100cgas001"
-      And user selects Type as "CPU"
-      And user enters Nimbus description as "Test1 Nimbus/Description"
-      And user enters additional comments as "Test1 Nimbus/AC"
+      And user selects Service Request Name as "Onboard to Skypoint"
+      And user enters Nimbus Onboard To Skypoint request as "Test9 Nimbus/Request"
 
+      Then user selects Cloud Services as ""
+      Then user selects Target countries for System Cloud Services as ""
+      And user selects Dual-site services as ""
+
+      Then user enters Approver Account(s) as "Test approver"
+      And user enters User Account(s) as "Test user"
+      Then user enters CMDB, Assigned to Application Team as "Test Application"
+      Then user enters CMDB, Local responsible Application as "Test Local"
+      And user enters H2 (Name/Hid) as "Test H2"
+      And user enters Nimbus description as "Test9 Nimbus/Description"
+      And user enters additional comments as "Test9 Nimbus/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -42,17 +50,6 @@
       And user should see assigned profile as "Nimbus/TSVP"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
-      When user clicks on "Diagnosis" tab
-      And user validates CI availability
-      And user validates CI "cc100cgas001" is listed
-      And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
-      Then user switches to frame
-      And user enters impacted from date as date in past
-      And user enters impacted to date as date in past
-      Then user clicks confirm checkbox
-      And user clicks save button
-      When user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
-      And user should see confirmation message and clicks on yes button
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
@@ -63,4 +60,3 @@
       When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
-

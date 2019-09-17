@@ -1,5 +1,5 @@
-@Nimbus_Add_Modify_Remove @PLAZA
-  Feature: Nimbus Add Modify Remove plaza form test
+@Nimbus_Restore_VM @PLAZA
+  Feature: Nimbus Restore VM plaza form test
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -8,17 +8,16 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Cloud" button
+      And user clicks "Cloud"
       When user clicks on "Skypoint - private cloud" pebble
       Then user should see "Skypoint - private cloud" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects Service Request Name as "Add/Modify/Remove CPU/Memory/Disk to VM"
-      And user enters Nimbus Add Modify Remove request as "Test1 Nimbus/Request"
+      And user selects Service Request Name as "Restore VM"
+      And user enters Nimbus Restore VM request as "Test10 Nimbus/Request"
+      And user clicks the calendar and selects current date and time
       Then user enters CI as "cc100cgas001"
-      And user selects Type as "CPU"
-      And user enters Nimbus description as "Test1 Nimbus/Description"
-      And user enters additional comments as "Test1 Nimbus/AC"
-
+      And user enters Nimbus description as "Test10 Nimbus/Description"
+      And user enters additional comments as "Test10 Nimbus/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -63,4 +62,3 @@
       When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
-

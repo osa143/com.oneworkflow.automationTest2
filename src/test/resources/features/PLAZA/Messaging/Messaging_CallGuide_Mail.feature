@@ -16,13 +16,13 @@
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox
       And user enters name field as "Test1234"
-      Then user enters email address field as "Test@Test.com
+      Then user enters email address field as "Test@Test.com"
       Then user enters phone field as "123456789"
       And user enters CallGuide Mail request as "Test1 Messaging Mail/Request"
       Then user selects System as "TSS Email"
       Then user enters Customer ID/Name as "Test name"
       Then user enters Messaging CallGuide Mail description as "Test1 Messaging/Description"
-      And user enters additional comments as "Messaging - Test/AC"
+      And user enters additional comments as "Messaging - Test1/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -37,7 +37,7 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | Messaging"
+      And user validates title field as "Service Request | CallGuide Mail"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
       And user validates description contains DescValidation
@@ -58,3 +58,6 @@
       When user changes status to "Closed"
       And user clicks on save button
       Then ticket status should be closed
+      When user switches to window 0
+      And user clicks on main page refresh
+      Then user validates plaza request has completed

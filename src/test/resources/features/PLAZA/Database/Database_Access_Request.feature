@@ -1,6 +1,5 @@
 @Database_Access_Request_MSSQL @PLAZA
   Feature: Database Access Request MSSQL plaza form test
-    #not checked in ow
     Scenario Outline: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -21,9 +20,11 @@
       And user enters Database Name as "Test name"
       And user enters DNS/IP address as "Test address"
       And user selects Account Type as "<Account Type>"
+      Then user selects New/Existing  Account as "New"
+      And user enters Account Name as "Test account"
+      Then user enters Permissions as "Test permission"
       Then user enters Database Access Request description as "<Description>"
       And user enters additional comments as "<Additional Comments>"
-      Then user selects Account Name as "New"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -38,7 +39,7 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | Database"
+      And user validates title field as "Service Request | Database Request"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
       And user validates description contains DescValidation
@@ -46,7 +47,7 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as ""
+      And user should see assigned profile as "Oracle/MSSQL/MySQL/PostgreSQL"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on diagnosis tab
@@ -71,14 +72,15 @@
       When user changes status to "Closed"
       And user clicks on save button
       Then ticket status should be closed
+      When user switches to window 0
+      And user clicks on main page refresh
+      Then user validates plaza request has completed
 
       Examples:
 
-      |Request                      |Database Type|Description                      |Additional Comments  |Account Type|Desc Validation|
-      |Test1 Database Access/Request|MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server  |               |
-      |Test2 Database Access/Request|MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |               |
-      |Test3 Database Access/Request|Oracle       |Test3 Database Access/Description|Database - Test3/AC  |SQL Server  |               |
-      |Test4 Database Access/Request|PostgreSQL   |Test4 Database Access/Description|Database - Test4/AC  |Local       |               |
+      |Request                                |Database Type|Description                      |Additional Comments  |Account Type|Desc Validation|
+      |Test1 Database AccessMSSQL/Request     |MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server  |               |
+      |Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |               |
 
 
 

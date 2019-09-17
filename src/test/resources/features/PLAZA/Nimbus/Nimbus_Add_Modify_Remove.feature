@@ -18,7 +18,6 @@
       And user selects Type as "CPU"
       And user enters Nimbus description as "Test1 Nimbus/Description"
       And user enters additional comments as "Test1 Nimbus/AC"
-
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -63,4 +62,6 @@
       When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
-
+      When user switches to window 0
+      And user clicks on main page refresh
+      Then user validates plaza request has completed

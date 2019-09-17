@@ -1,5 +1,5 @@
 @UrgentChangeStatusFlow
-  #Need API Created Ticket
+  #Need API Created Ticket in new status
 Feature: user validates status changes
   Scenario: user validates status changes
 
@@ -11,29 +11,8 @@ Feature: user validates status changes
     Then user should see change record ticket
     Then user validates availability of tabs "Timeline:Diagnosis:Risk:Schedule:Interested Parties:Approval:Notifications:Linked Items:Work Orders:Service Level:Related Project:Service Info:Telenor" on change record page
     When user clicks on owner under sections
-    And user validates owner profile as "Change Initiator-Internal"
-    And user validates owner as "ChangeInitiatorInternal1"
-    Then user clicks on Send button
-    Then error message should display as "You must provide an answer to all the risk question outlined in the Risk tab before Send (ARERR 10000)" on change record page
-    When user clicks on Risk tab
-    And user gets current risk score value
-    When user answers all risk questions as below
-    And user selects urgent answer as "A. No"
-    And user selects urgent answer as "B. Impact to other systems/technologies are unclear!"
-    And user selects urgent answer as "Tested successfully, this is a pilot"
-    And user selects urgent answer as "D. "Only" Consumer customers affected."
-    And user selects urgent answer as "A. Yes"
-    And user selects urgent answer as "A. Yes"
-    And user selects urgent answer as "A. Yes (outcome of the Change can be instantly verified)"
-    And user selects urgent answer as "B. No"
-    And user selects urgent answer as "A. No"
-    And user selects urgent last answer as "A. No"
-    Then user validates risk score gets updated
-    Then user clicks on Send button
-    Then an error message should appear: "Please select at least one country of impact for this change. (ARERR 10000)"
-    When user clicks on estonia checkbox under affected BU's
-    And user clicks on Send button
-    Then error message should display as "You must select at least one CI in the Diagnosis Tab (ARERR 10000)" on change record page
+    And user validates owner profile as "Change Manager"
+    And user validates owner as "ChangeManager"
     And user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user switches to frame
@@ -74,7 +53,7 @@ Feature: user validates status changes
     And user clicks on owner under sections
     And user clicks on assignment under sections
     And user validates owner profile as "Change Manager"
-    And user validates owner as "ChangeManager"
+    And user validates owner as "Change Manager"
     And user should see assigned profile as "Escalation Manager"
     And user clicks on timeline tab
     Then user validates Description* isn't readonly
@@ -119,8 +98,6 @@ Feature: user validates status changes
     And user clicks on details under sections
     Then user enters "New Communication plan" in the communication plan field
     And user clicks on save button
-    When user clicks on risk tab
-    And user selects urgent last answer as "B. Yes"
     Then user clicks on "Schedule" tab
     And user enters request start time 168 hours ahead of current date
     And user enters request end time 171 hours ahead of current date

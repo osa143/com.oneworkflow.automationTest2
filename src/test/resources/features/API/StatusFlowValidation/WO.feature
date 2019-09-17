@@ -52,6 +52,7 @@ Feature: user validates status changes
     Then user validates ticket status as "Cleared"
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Work In Progress to Cleared."
     Then user validates other status options available as "Work In Progress:Cleared:Closed:(Clear)"
+    And user validates "Assigned" is not a valid status at this stage
     When user changes status to "Closed" on work order page
     And user clicks on save button
     Then user validates ticket status as "Closed"

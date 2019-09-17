@@ -194,6 +194,15 @@
       Then change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approved to Schedule Requested."
       And user validates ticket status as "Scheduled"
       And user validates other status options available as "Pending;Approved;Scheduled;Implementation;Withdrawn;(Clear)"
+      When user changes status to "Pending"
+      And user enters on hold to date 2 minutes ahead of current time
+      Then user enters reason field as "Waiting for Customer Info"
+      And user clicks on save button
+      Then user validates ticket status as "Pending"
+      And user validates status cant be changed
+      Then user waits for 2 minutes
+      And user clicks on ticket refresh button
+      And user validates ticket status as "Scheduled"
       Then user clicks on assignment under sections
       And user should see assigned profile as "Change Implementation Control"
       And user enters "ChangeImplementationControl1" in assignee
@@ -220,6 +229,8 @@
       When user changes status to "Implementation"
       And user clicks on save button
       And user validates other status options available as "Implementation;Completed;(Clear)"
+      And user validates "Assigned" is not a valid status at this stage
+      And user validates "Pending" is not a valid status at this stage
   #Then change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Start has changed from  UTC to 2019-07-26 13:09:51 UTC. Request Status has changed from Scheduled to Implementation. "
       Then user clicks on "Schedule" tab
       Then user validates actual start time is updated

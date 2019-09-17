@@ -5,7 +5,7 @@ Feature: E2E flow for ticket created by API
   Scenario: E2E flow for ticket created by API
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "ChangeInitiatorInternal1" and password as "Test@1234"
+    When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user enters ticket id as ""

@@ -12,9 +12,9 @@
       When user clicks on "BDL" pebble
       Then user should see "BDL" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user enters BDL request as "BDL-AT1 - Test/Request"
+      And user enters BDL request as "<Request>"
       And user selects service request name as "Configuration"
-      And user selects BCPP environment as "AT1"
+      And user selects BCPP environment as "<Environment>"
       And user selects all CI's from AT1 field
       |CI Name          |
       |API              |
@@ -27,8 +27,8 @@
       #|Proofing         |
       #|Netbill DB-loader|
       And user enters "P100-000-000" in the WBS Code field
-      And user enters BDL description as "BDL-AT1 - Test"
-      And user enters additional comments as "BDL-AT1 - Test/AC"
+      And user enters BDL description as "<Description>"
+      And user enters additional comments as "<Additional Comments>"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

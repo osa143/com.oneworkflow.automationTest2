@@ -13,11 +13,10 @@
       Then user should see "Skypoint - private cloud" form
       When user selects role dropdown as "Application Operation Engineer"
       And user selects Service Request Name as "Skypoint -Failed request support"
-      And user enters Nimbus Restore VM request as "Test11 Nimbus/Request"
+      And user enters Nimbus Skypoint Failed request as "Test11 Nimbus/Request"
       Then user enters Skypoint request# as "Test Skypoint#"
       And user enters Nimbus description as "Test11 Nimbus/Description"
       And user enters additional comments as "Test11 Nimbus/AC"
-
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

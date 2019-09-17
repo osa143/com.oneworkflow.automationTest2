@@ -1,6 +1,5 @@
 @Data_Center_Request @PLAZA
   Feature: Data Center Request plaza form test
-   #not checked in ow
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -13,14 +12,14 @@
       When user clicks on "Datacenter Request" pebble
       Then user should see "Datacenter Request" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user enters Data Center Request as "Test1 Data Center/Request"
+      And user enters Data Center Request as "Test6 Data Center/Request"
       And user enters DC-site or address as "Test address"
       And user enters Room as "Test room"
       And user clicks the calendar and selects current date and time
       And user enters WBS Code field as "P100-000-000"
-      And user enters additional comments as "Data Center - Test/AC"
+      And user enters additional comments as "Data Center - Test6/AC"
       Then user clicks on "Submit"
-      Then user enters Data Center Request description as "Test1 Data Center/Description"
+      Then user enters Data Center Request description as "Test6 Data Center/Description"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -35,7 +34,7 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | Data Center"
+      And user validates title field as "Service Request | Datacenter Request"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
       And user validates description contains DescValidation
@@ -43,7 +42,7 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as ""
+      And user should see assigned profile as "DC Sweden"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button

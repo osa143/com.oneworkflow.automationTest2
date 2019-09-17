@@ -19,7 +19,6 @@
       Then user selects DDC Base Ruleset as "Yes"
       And user enters Nimbus description as "Test8 Nimbus/Description"
       And user enters additional comments as "Test8 Nimbus/AC"
-
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

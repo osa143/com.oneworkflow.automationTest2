@@ -1,13 +1,16 @@
 package pageObjects.plaza;
 
+import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import pageObjects.BasePage;
 import utils.CommonUtils;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Plaza_HomePage extends BasePage {
 
@@ -56,6 +59,31 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_BACK_UP_DATE_TIME="sp_formfield_date_time";
     public static final String txt_RESTORE_CI_UNC= "sp_formfield_restore";
     public static final String txt_RESTORE_FILES="sp_formfield_restore_files";
+    public static final String txt_BDL_REQUEST= "sp_formfield_sr108_v_request";
+    public static final String txt_BDL_DESCRIPTION= "sp_formfield_sr108_v_description";
+    public static final String txt_BDL_WBS_CODE="sp_formfield_sr108_v_wbs_code";
+
+
+    public void enterBDL_wbsCode(String text){
+        enterTextByElement(By.id(txt_BDL_WBS_CODE), text);
+    }
+    public void enterBDL_Description(String text){
+        enterTextByElement(By.id(txt_BDL_DESCRIPTION), text);
+    }
+    public void selectAllCINames(DataTable ciName) {
+        List<List<String>> ciNames = ciName.asLists(String.class);
+        for (int i = 1; i < ciNames.size(); i++) {
+            System.out.println("CI Name is: " + ciNames.get(i).get(0));
+            selectsAT1Ci(ciNames.get(i).get(0));
+            wait(500);
+        }
+    }
+    public void selectsAT1Ci(String dropdownName){
+        selectDropdown(By.id("s2id_sp_formfield_sr108_v_at1"), By.id("s2id_autogen16_results"),  dropdownName);
+    }
+    public void enterBDL_request(String text){
+        enterTextByElement(By.id(txt_BDL_REQUEST), text);
+    }
 
     public void enterRestore_Files(String text){
         enterTextByElement(By.id(txt_RESTORE_FILES), text);

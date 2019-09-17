@@ -12,10 +12,10 @@
       When user clicks on "BDL" pebble
       Then user should see "BDL" form
       When user selects Role dropdown as "Application Operation Engineer"
-      And user enters BDL request as "BDL-AT12- Test/Request"
+      And user enters BDL request as "BDL-AT2- Test/Request"
       And user selects "Configuration" in the select request field
       And user selects environment as "AT2"
-      And user selects all CIs in the AT2 field
+      And user selects all CIs in the AT field
       And user enters "P100-000-000" in the WBS Code field
       And user enters BDL description as "BDL-AT2 - Test/Desc"
       And user enters additional comments as "BDL-AT2 - Test/AC"

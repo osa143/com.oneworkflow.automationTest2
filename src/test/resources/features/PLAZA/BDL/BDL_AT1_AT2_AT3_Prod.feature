@@ -1,6 +1,6 @@
 @BDL @PLAZA
   Feature: Plaza BDL form test
-    Scenario: user validates information sent to OW from Plaza
+    Scenario Outline: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login

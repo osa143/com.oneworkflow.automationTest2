@@ -313,4 +313,34 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userEntersBDLDescriptionAs(String arg0) {
         homePage.enterBDL_Description(arg0);
     }
+
+    @And("user enters Cabling - New request as {string}")
+    public void userEntersCablingNewRequestAs(String arg0) {
+        homePage.enterCablingNew_request(arg0);
+    }
+
+    @And("user enters DC-site or address as {string}")
+    public void userEntersDCSiteOrAddressAs(String arg0) {
+        homePage.enterCablingNew_DC_Site(arg0);
+    }
+
+    @And("user enters Room as {string}")
+    public void userEntersRoomAs(String arg0) {
+        homePage.enterCablingNew_Room(arg0);
+    }
+
+    @And("user enters delivery date as current date")
+    public void userEntersDeliveryDateAsCurrentDate() {
+        homePage.enterCablingNew_deliveryDate(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @Then("user enters Data Center description as {string}")
+    public void userEntersDataCenterDescriptionAs(String arg0) {
+        homePage.enterCablingNew_description(arg0);
+    }
+
+    @And("user enters WBS Code field as {string}")
+    public void userEntersWBSCodeFieldAs(String arg0) {
+        homePage.enterCablingNew_wbsCode(arg0);
+    }
 }

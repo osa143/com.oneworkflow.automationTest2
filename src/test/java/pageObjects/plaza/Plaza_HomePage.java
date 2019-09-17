@@ -62,7 +62,31 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_BDL_REQUEST= "sp_formfield_sr108_v_request";
     public static final String txt_BDL_DESCRIPTION= "sp_formfield_sr108_v_description";
     public static final String txt_BDL_WBS_CODE="sp_formfield_sr108_v_wbs_code";
+    public static final String txt_CABLING_NEW_REQUEST= "sp_formfield_sr49_v_request";
+    public static final String txt_CABLING_NEW_DC_SITE="sp_formfield_sr49_v_dc_site";
+    public static final String txt_CABLING_NEW_ROOM="sp_formfield_sr49_v_room";
+    public static final String txt_CABLING_NEW_DELIVERY_DATE="sp_formfield_sr49_v_delivery_date";
+    public static final String txt_CABLING_NEW_DESCRIPTION= "sp_formfield_sr49_v_description";
+    public static final String txt_CABLING_NEW_WBS_CODE= "sp_formfield_sr49_v_wbs_code";
 
+    public void enterCablingNew_request(String text){
+        enterTextByElement(By.id(txt_CABLING_NEW_REQUEST), text);
+    }
+    public void enterCablingNew_DC_Site(String text){
+        enterTextByElement(By.id(txt_CABLING_NEW_DC_SITE), text);
+    }
+    public void enterCablingNew_Room(String text){
+        enterTextByElement(By.id(txt_CABLING_NEW_ROOM), text);
+    }
+    public void enterCablingNew_deliveryDate(String text){
+        enterTextByElement(By.id(txt_CABLING_NEW_DELIVERY_DATE), text);
+    }
+    public void enterCablingNew_description(String text){
+        enterTextByElement(By.id(txt_CABLING_NEW_DESCRIPTION), text);
+    }
+    public void enterCablingNew_wbsCode(String text){
+        enterTextByElement(By.id(txt_CABLING_NEW_WBS_CODE), text);
+    }
 
     public void enterBDL_wbsCode(String text){
         enterTextByElement(By.id(txt_BDL_WBS_CODE), text);

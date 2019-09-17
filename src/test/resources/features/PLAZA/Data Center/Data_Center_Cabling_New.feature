@@ -6,22 +6,20 @@
     Given user is on the Plaza login page
     When user enters username "testauto" and password as "test123" and clicks on login
     Then user should see the plaza home page
-    When user clicks on "Facility Management" button
-    And user clicks on "Order" button
+    When user clicks on "Facility Management"
+    And user clicks on order
     And user clicks on IT Infrastructure dropdown
-    And user clicks "Data Center" button
-    Then user should see "Data Center" IT Pebbles
+    And user clicks on "Data Center"
     When user clicks on "Cabling - New" pebble
     Then user should see "Cabling - New" form
     When user selects role dropdown as "Application Operation Engineer"
     And user enters Cabling - New request as "Test1 Cabling/Request"
     And user enters DC-site or address as "Test address"
     And user enters Room as "Test room"
-    And user clicks the calendar and selects current date and time
+    And user enters delivery date as current date
     Then user enters Data Center description as "Test1 Data Center/Description"
     And user enters WBS Code field as "P100-000-000"
     And user enters additional comments as "Data Center - Test/AC"
-
     Then user clicks on "Submit"
     And user gets plaza request id
     And user clicks on plaza request id
@@ -39,7 +37,7 @@
     And user validates title field as "Service Request | Data Center"
     And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-    And user validates description contains DescValidation
+    And user validates description as ""
     Then user clicks on owner under sections
     And user clicks on assignment under sections
     Then user validates owner profile as "PLAZA"
@@ -48,12 +46,12 @@
     Then user clicks on "Interested Parties" tab
     And user validates "PLAZA" is listed as an interested party
     When user clicks on Ack button
-    And user changes status to "Cleared"
+    And user changes status to "Cleared" on work order page
     And user selects completed code as "Success"
     And user clicks on "Schedule" tab
     And user enters schedule end as current date
     Then user clicks on save button
     And user validates ticket status as "Cleared"
-    When user changes status to "Closed"
+    When user changes status to "Closed" on work order page
     And user clicks on save button
     Then ticket status should be closed

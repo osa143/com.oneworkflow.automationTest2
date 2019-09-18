@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@Data_Center_Cabling_Remove"}
+        tags = {"@Database_Access_Request_Oracle"}
 )
 
 public class Test_Runner extends BaseTest {

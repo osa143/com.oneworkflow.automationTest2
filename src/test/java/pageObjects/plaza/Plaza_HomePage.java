@@ -68,7 +68,126 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_CABLING_NEW_DELIVERY_DATE="sp_formfield_sr49_v_delivery_date";
     public static final String txt_CABLING_NEW_DESCRIPTION= "sp_formfield_sr49_v_description";
     public static final String txt_CABLING_NEW_WBS_CODE= "sp_formfield_sr49_v_wbs_code";
+    public static final String txt_DATA_CENTRE_REQUEST= "sp_formfield_sr48_v_req";
+    public static final String txt_DATA_CENTRE_DC_SITE="sp_formfield_sr48_v_dc_site";
+    public static final String txt_DATA_CENTRE_ROOM="sp_formfield_sr48_v_room";
+    public static final String txt_DATA_CENTRE__DELIVERY_DATE="sp_formfield_sr48_v_deldate";
+    public static final String txt_DATA_CENTRE_DESCRIPTION= "sp_formfield_sr48_v_desc";
+    public static final String txt_DATA_CENTRE_WBS_CODE= "sp_formfield_sr48_v_wbs";
+    public static final String txt_NETWORK_EQUIPMENT_REQUEST="sp_formfield_sr51_v_request";
+    public static final String txt_NETWORK_EQUIPMENT_DC_SITE= "sp_formfield_sr51_v_dc_site";
+    public static final String txt_NETWORK_EQUIPMENT_ROOM= "sp_formfield_sr51_v_room";
+    public static final String dd_ADD_CI = "s2id_autogen13";
+    public static final String txt_NETWORK_EQUIPMENT_DNS_IP_ADRESS="sp_formfield_sr51_v_dns_ip_address";
+    public static final String txt_NETWORK_EQUIPMENT_DELIVERY="sp_formfield_sr51_v_date_for_delivery";
+    public static final String txt_NETWORK_EQUIPMENT_DATE_FOR_DECOMMISSION= "sp_formfield_sr51_v_date_for_decommission";
+    public static final String txt_NETWORK_EQUIPMENT_WBS_CODE="sp_formfield_sr51_v_wbs_code";
+    public static final String txt_NETWORK_EQUIPMENT_DESCRIPTION= "sp_formfield_sr51_v_description";
+    public static final String txt_ON_SITE_SERVICES_REQUEST = "sp_formfield_sr37_v_request";
+    public static final String txt_ON_SITE_SERVICES_DC_SITE= "sp_formfield_sr37_v_dc_site";
+    public static final String txt_ON_SITE_SERVICES_DESCRIPTION= "sp_formfield_sr37_v_description";
+    public static final String txt_DATABASE_REQUEST= "sp_formfield_sr21_v_request";
+    public static final String dd_ADD_DATABASE_CI= "s2id_autogen23";
+    public static final String dd_ADD_SERVER_CI = "s2id_autogen24";
+    public static final String txt_DATABASE_NAME= "sp_formfield_sr21_v_db_name";
+    public static final String dd_DATABASE_ACCOUNT_TYPE= "select2-chosen-13";
+    public static final String txt_DATABASE_ACCOUNT_NAME="sp_formfield_sr21_v_account_name";
+    public static final String txt_DATABASE_ACCOUNT_PERMISSIONS="sp_formfield_sr21_v_permissions";
+    public static final String txt_DATABASE_DESCRIPTION= "sp_formfield_sr21_v_description";
+    public static final String txt_DATABASE_DNS_IP_ADDRESS= "sp_formfield_sr21_v_source_dns";
+    public static final String dd_DATABASE_NEW_EXISTING_ACCOUNT=  "select2-chosen-14";
+    public static final String dd_DATABASE_DEFAULT_TABLE_SPACE= "sp_formfield_sr21_v_default_tablespace";
 
+    public void enterDatabase_defaultTableSpace(String text){
+        enterTextByElement(By.id(dd_DATABASE_DEFAULT_TABLE_SPACE), text);
+    }
+    public void selectDatabase_new_existing_account(String dropdownName){
+        selectDropdown(By.id(dd_DATABASE_NEW_EXISTING_ACCOUNT), By.id("select2-results-14"),  dropdownName);
+    }
+    public void enterDatabase_dnsIp_Address(String text){
+        enterTextByElement(By.id(txt_DATABASE_DNS_IP_ADDRESS), text);
+    }
+    public void selects_database_AddCi_multipleValues(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_ADD_DATABASE_CI), By.id("s2id_autogen23_results"),  dropdownName);
+
+    }
+    public void selects_database_AddServerCi_multipleValues(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_ADD_SERVER_CI), By.id("s2id_autogen24_results"),  dropdownName);
+
+    }
+    public void selectDatabaseAccountType(String dropdownName){
+        selectDropdown(By.id(dd_DATABASE_ACCOUNT_TYPE), By.id("select2-results-13"),  dropdownName);
+    }
+    public void enterDatabase_name(String text){
+        enterTextByElement(By.id(txt_DATABASE_NAME), text);
+    }
+    public void enterDatabase_accountName(String text){
+        enterTextByElement(By.id(txt_DATABASE_ACCOUNT_NAME), text);
+    }public void enterDatabase_permissions(String text){
+        enterTextByElement(By.id(txt_DATABASE_ACCOUNT_PERMISSIONS), text);
+    }public void enterDatabase_description(String text){
+        enterTextByElement(By.id(txt_DATABASE_DESCRIPTION), text);
+    }
+    public void enterDatabase_request(String text){
+        enterTextByElement(By.id(txt_DATABASE_REQUEST), text);
+    }
+
+    public void enterOnSiteServices_Request(String text){
+        enterTextByElement(By.id(txt_ON_SITE_SERVICES_REQUEST), text);
+    }
+    public void enterOnSiteServices_dc_site(String text){
+        enterTextByElement(By.id(txt_ON_SITE_SERVICES_DC_SITE), text);
+    }
+    public void enterOnSiteServices_Description(String text){
+        enterTextByElement(By.id(txt_ON_SITE_SERVICES_DESCRIPTION), text);
+    }
+    public void enterNetworkEquipment_dateFordecommission(String text){
+        enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_DATE_FOR_DECOMMISSION), text);
+    }
+    public void selectsAddCi_multipleValues(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_ADD_CI), By.id("s2id_autogen13_results"),  dropdownName);
+
+    }
+    public void enterNetworkEquipment_request(String text){
+        enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_REQUEST), text);
+    }
+    public void enterNetworkEquipment_dc_site(String text){
+        enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_DC_SITE), text);
+    }
+    public void enterNetworkEquipment_room(String text){
+        enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_ROOM), text);
+    }
+    public void enterNetworkEquipment_dnsIpAddress(String text){
+        enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_DNS_IP_ADRESS), text);
+    }
+    public void enterNetworkEquipment_delivery(String text){
+        enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_DELIVERY), text);
+    }
+    public void enterNetworkEquipment_wbsCode(String text){
+        enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_WBS_CODE), text);
+    }
+    public void enterNetworkEquipment_description(String text){
+        enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_DESCRIPTION), text);
+    }
+
+    public void enterDataCentre_request(String text){
+        enterTextByElement(By.id(txt_DATA_CENTRE_REQUEST), text);
+    }
+    public void enterDataCentre_DC_Site(String text){
+        enterTextByElement(By.id(txt_DATA_CENTRE_DC_SITE), text);
+    }
+    public void enterDataCentre_Room(String text){
+        enterTextByElement(By.id(txt_DATA_CENTRE_ROOM), text);
+    }
+    public void enterDataCentre_deliveryDate(String text){
+        enterTextByElement(By.id(txt_DATA_CENTRE__DELIVERY_DATE), text);
+    }
+    public void enterDataCentre_description(String text){
+        enterTextByElement(By.id(txt_DATA_CENTRE_DESCRIPTION), text);
+    }
+    public void enterDataCentre_wbsCode(String text){
+        enterTextByElement(By.id(txt_DATA_CENTRE_WBS_CODE), text);
+    }
     public void enterCablingNew_request(String text){
         enterTextByElement(By.id(txt_CABLING_NEW_REQUEST), text);
     }
@@ -284,6 +403,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectDropdownWithMultipleValues(By Element, By dropdownValuesListID, String dropdownValue){
         clickElement(Element);
+        wait(500);
         driver.findElement(Element).sendKeys(dropdownValue);
         wait(500);
         driver.findElement((dropdownValuesListID)).findElements(By.tagName("div")).stream().filter(element -> element.getText().trim().equals(dropdownValue)).findFirst().orElse(null).click();

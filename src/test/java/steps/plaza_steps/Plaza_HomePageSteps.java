@@ -343,4 +343,166 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userEntersWBSCodeFieldAs(String arg0) {
         homePage.enterCablingNew_wbsCode(arg0);
     }
+
+    @And("user enters Data Center Request WBS Code field as {string}")
+    public void userEntersDataCenterRequestWBSCodeFieldAs(String arg0) {
+        homePage.enterDataCentre_wbsCode(arg0);
+    }
+
+    @And("user enters Data Center Request request as {string}")
+    public void userEntersDataCenterRequestRequestAs(String arg0) {
+        homePage.enterDataCentre_request(arg0);
+    }
+
+    @And("user enters Data Center Request DC-site or address as {string}")
+    public void userEntersDataCenterRequestDCSiteOrAddressAs(String arg0) {
+        homePage.enterDataCentre_DC_Site(arg0);
+    }
+
+    @And("user enters Data Center Request Room as {string}")
+    public void userEntersDataCenterRequestRoomAs(String arg0) {
+        homePage.enterDataCentre_Room(arg0);
+    }
+
+    @And("user enters Data Center Request delivery date as current date")
+    public void userEntersDataCenterRequestDeliveryDateAsCurrentDate() {
+        homePage.enterDataCentre_deliveryDate(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user should see pop window with info about missing field")
+    public void userShouldSeePopWindowWithInfoAboutMissingField() {
+    }
+
+    @Then("user enters Data Center Request description as {string}")
+    public void userEntersDataCenterRequestDescriptionAs(String arg0) {
+        homePage.enterDataCentre_description(arg0);
+    }
+
+    @And("user enters Network Equipment Request as {string}")
+    public void userEntersNetworkEquipmentRequestAs(String arg0) {
+        homePage.enterNetworkEquipment_request(arg0);
+
+    }
+
+    @And("user enters Network Equipment DC-site or address as {string}")
+    public void userEntersNetworkEquipmentDCSiteOrAddressAs(String arg0) {
+        homePage.enterNetworkEquipment_dc_site(arg0);
+    }
+
+    @And("user enters Network Equipment Room as {string}")
+    public void userEntersNetworkEquipmentRoomAs(String arg0) {
+        homePage.enterNetworkEquipment_room(arg0);
+    }
+
+    @And("user selects Network Equipment CI as {string}")
+    public void userSelectsNetworkEquipmentCIAs(String arg0) {
+        homePage.selectsAddCi_multipleValues(arg0);
+    }
+
+    @And("user enters Network Equipment requested delivery date as current date and time")
+    public void userEntersNetworkEquipmentRequestedDeliveryDateAsCurrentDateAndTime() {
+        homePage.enterNetworkEquipment_delivery(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user enters Network Equipment WBS Code field as {string}")
+    public void userEntersNetworkEquipmentWBSCodeFieldAs(String arg0) {
+        homePage.enterNetworkEquipment_wbsCode(arg0);
+    }
+
+    @And("user enters Network Equipment description as {string}")
+    public void userEntersNetworkEquipmentDescriptionAs(String arg0) {
+        homePage.enterNetworkEquipment_description(arg0);
+    }
+
+    @And("user enters Network Equipment DNS IP Address as as {string}")
+    public void userEntersNetworkEquipmentDNSIPAddressAsAs(String arg0) {
+        homePage.enterNetworkEquipment_dnsIpAddress(arg0);
+    }
+
+    @And("user enters Network Equipment date for decommission as current date and time")
+    public void userEntersNetworkEquipmentDateForDecommissionAsCurrentDateAndTime() {
+        homePage.enterNetworkEquipment_dateFordecommission(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user enters on site services Request as {string}")
+    public void userEntersOnSiteServicesRequestAs(String arg0) {
+        homePage.enterOnSiteServices_Request(arg0);
+        
+    }
+
+    @And("user enters on site services DC-site or address as {string}")
+    public void userEntersOnSiteServicesDCSiteOrAddressAs(String arg0) {
+        homePage.enterOnSiteServices_dc_site(arg0);
+    }
+
+    @Then("user enters on site services description as {string}")
+    public void userEntersOnSiteServicesDescriptionAs(String arg0) {
+        homePage.enterOnSiteServices_Description(arg0);
+    }
+
+    @And("user clicks on Database")
+    public void userClicksOnDatabase() {
+        clickElement(By.xpath("//*[@id='xcc61d55edb198b00b27fdb11ce961902']/div/div[2]/div[5]/div[4]"));
+    }
+
+    @And("user selects Database Type as {string}")
+    public void userSelectsDatabaseTypeAs(String arg0) {
+        homePage.select_selectRequest(arg0);
+    }
+
+    @And("user enters Database Access request as {string}")
+    public void userEntersDatabaseAccessRequestAs(String arg0) {
+        homePage.enterDatabase_request(arg0);
+    }
+
+    @And("user selects add server CI as {string}")
+    public void userSelectsAddServerCIAs(String arg0) {
+        homePage.selects_database_AddCi_multipleValues(arg0);
+    }
+
+    @And("user selects add Database CI as {string}")
+    public void userSelectsAddDatabaseCIAs(String arg0) {
+        homePage.selects_database_AddServerCi_multipleValues(arg0);
+    }
+
+    @And("user enters Database Name as {string}")
+    public void userEntersDatabaseNameAs(String arg0) {
+        homePage.enterDatabase_name(arg0);
+    }
+
+
+    @And("user selects database Account Type as {string}")
+    public void userSelectsAccountTypeAs(String arg0) {
+        homePage.selectDatabaseAccountType(arg0);
+    }
+
+    @Then("user enters database Permissions as {string}")
+    public void userEntersPermissionsAs(String arg0) {
+        homePage.enterDatabase_permissions(arg0);
+    }
+
+    @Then("user enters Database Access Request description as {string}")
+    public void userEntersDatabaseAccessRequestDescriptionAs(String arg0) {
+        homePage.enterDatabase_description(arg0);
+    }
+
+    @And("user enters database Account Name as {string}")
+    public void userEntersDatabaseAccountNameAs(String arg0) {
+        homePage.enterDatabase_accountName(arg0);
+    }
+
+    @And("user enters DNS IP address as {string}")
+    public void userEntersDNSIPAddressAs(String arg0) {
+        homePage.enterDatabase_dnsIp_Address(arg0);
+    }
+
+    @Then("user selects New Existing Account as {string}")
+    public void userSelectsNewExistingAccountAs(String arg0) {
+        homePage.selectDatabase_new_existing_account(arg0);
+    }
+
+    @Then("user enters database Default tablespace as {string}")
+    public void userEntersDatabaseDefaultTablespaceAs(String arg0) {
+        homePage.enterDatabase_defaultTableSpace(arg0);
+    }
 }

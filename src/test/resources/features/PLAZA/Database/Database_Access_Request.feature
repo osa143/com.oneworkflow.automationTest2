@@ -8,21 +8,21 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Database"
+      And user clicks on Database
       When user clicks on "Database Request" pebble
       Then user should see "Database Request" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects service request name as "Access/Request"
+      And user selects service request name as "Access Request"
       And user enters Database Access request as "<Request>"
       And user selects Database Type as "<Database Type>"
-      And user enters CI as "cc100cgas001"
-      And user enters Database CI as "TEST"
+      And user selects add server CI as "cc100cgas001"
+      And user selects add Database CI as "TEST"
       And user enters Database Name as "Test name"
-      And user enters DNS/IP address as "Test address"
-      And user selects Account Type as "<Account Type>"
-      Then user selects New/Existing  Account as "New"
-      And user enters Account Name as "Test account"
-      Then user enters Permissions as "Test permission"
+      And user enters DNS IP address as "Test address"
+      And user selects database Account Type as "<Account Type>"
+      Then user selects New Existing Account as "New"
+      And user enters database Account Name as "Test account"
+      Then user enters database Permissions as "Test permission"
       Then user enters Database Access Request description as "<Description>"
       And user enters additional comments as "<Additional Comments>"
       Then user clicks on "Submit"
@@ -42,7 +42,7 @@
       And user validates title field as "Service Request | Database Request"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates description as ""
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -50,18 +50,18 @@
       And user should see assigned profile as "Oracle/MSSQL/MySQL/PostgreSQL"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
-      When user clicks on diagnosis tab
+      When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed
-      And user clicks on CI "cc100cgas001" and selects "Impact:Update
+      And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
       Then user switches to frame
       And user enters impacted from date as date in past
       And user enters impacted to date as date in past
       Then user clicks confirm checkbox
-      And user clicks the save button
+      And user clicks save button
       Then user switches to window 1
       When user selects CI present
       And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
-      Then user selects yes and closes warning message
+      And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
       And user changes status to "Cleared"
       And user selects completed code as "Success"
@@ -80,7 +80,7 @@
 
       |Request                                |Database Type|Description                      |Additional Comments  |Account Type|Desc Validation|
       |Test1 Database AccessMSSQL/Request     |MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server  |               |
-      |Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |               |
+#      |Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |               |
 
 
 

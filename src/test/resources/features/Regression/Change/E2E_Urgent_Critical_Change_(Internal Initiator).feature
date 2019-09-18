@@ -158,5 +158,107 @@ Feature: Internal Urgent Critical Change E2E
     Then user should see new email "Test2@Test2.com" added in "Email Address" in row 3
     When user changes status to "Approval Requested"
     And user clicks on save button
+    Then user validates ticket status as "Approval Requested"
+    And user validates availability of tabs "Approval"
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Requested Start has changed from 2019-09-18 20:30:00 UTC to 2019-09-25 20:30:00 UTC. Requested End has changed from 2019-09-18 23:30:00 UTC to 2019-09-25 23:30:00 UTC. Request Status has changed from Analysis to Approval Requested. " on row 86
+    When user clicks on "Approval" tab
+    And user clicks on request thats pending approval
+    And user clicks on view button
+    Then user switches to frame
+    And user clicks on approve button
+    Then user switches to window 2
+    And user clicks on save button
+    Then user switches to frame
+    And user clicks on yes on warning window
+    And user switches to window 2
+    Then user validates ticket status as "Approved"
+    And user waits for 1 minutes
+    Then user clicks on "Notifications" tab
+    And user should see "Approved" email update
+    And user should see "Approved-ChangeBuilder" email update
+    When user changes status to "Schedule Requested"
+    And user clicks on save button
+    Then user validates ticket status as "Scheduled"
+    And user clicks on "Schedule" tab
+    Then user validates actual start time is updated
+    And user validates actual end time is updated
+    Then user clicks on assignment under sections
+    And user clicks on owner under sections
+    Then user validates owner profile as "Escalation Manager"
+    And user validates owner as "EscalationManager1"
+    And user validates assigned profile is "Change Implementation Control"
+    And user validates assignee is "Change Impl Contr"
+    When user logsOut from One workflow
+    And user goes back to login page
+    Then user logs in with valid username "ChangeImplementationControl1" and password as "Test@1234"
+    And user successfully logged in to OneWorkflow and agent console should be displayed
+    When user clicks on more filters button
+    And user selects status as "Scheduled" on user more filters window
+    And user clicks on apply button on user more filters window
+    And user should see "CR" tickets with "Status" of "Scheduled"
+    When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
+    And user switches to window 2
+    Then user enters ticket previously created
+    And user clicks Search on ticket search
+    And user validates ticket status as "Scheduled"
+    When user changes status to "Implementation"
+    And user clicks on save button
+    Then user validates ticket status as "Implementation"
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Start has changed from  UTC to 2019-09-18 14:15:16 UTC. Request Status has changed from Scheduled to Implementation." on row 1
+    And change should also be reflected in the timeline as "EscalationManager1 - The Actual Start Date Time has been updated to : 2019-09-18 14:15:16 UTC" on row 2
+    And user gets time value of timeline entry
+    Then user clicks on "Schedule" tab
+    And user validates actual start time matches timeline entry time
+    Then user clicks on "Notifications" tab
+    And user should see "Implementation" email update
+    When user clicks on timeline tab
+    And user enters "Successful, no issues during implementation" in the timeline text box
+    And user clicks on add button on timeline
+    Then change should also be reflected in the timeline as "Successful, no issues during implementation"
+    When user changes status to "Completed"
+    And user clicks on save button
+    Then user validates actual end time is updated
+    And an error message should appear: "Required field (without a default) not specified : Actual Impact (ARERR 9424)"
+    And an error message should appear: "Required field (without a default) not specified : Completed Code (ARERR 9424)"
+    Then user selects closure code as "Successful"
+    And user selects actual impact as "No Impact"
+    And user clicks on save button
+    Then an error message should appear: "There are still outstanding active or pending impact records. Please clear them before clearing the request. (ARERR 999001210)"
+    When user clicks on Diagnosis tab
+    And user right clicks on primary CI and selects "Impact:Clear All"
+    And user closes warning message
+    Then user gets impact from time
+    And user gets impact to time
+    And user clicks on "Schedule" tab
+    And user validates "actual start" time matches "impact from" time
+    And user validates "actual end" time matches "impact to" time
+    Then user clicks on save button
+    And user clicks on timeline tab
+    And user validates ticket status as "Completed"
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Impact has changed from  to No Impact. Actual End has changed from  UTC to 2019-09-18 14:39:25 UTC. Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed" on row 1
+    And change should also be reflected in the timeline as "EscalationManager1 - The Actual End Date Time has been updated to : 2019-09-18 14:39:25 UTC" on row 2
+    When user logsOut
+    And user goes back to login page
+    Then user logs in with valid username "EscalationManager1" and password as "Test@1234"
+    And user successfully logged in to OneWorkflow and agent console should be displayed
+    When user clicks on more filters button
+    And user switches to frame
+    And user clicks on "Core" tab
+    Then user selects request type as "Urgent Change"
+    And user selects status as "Completed" on user more filters window
+    Then user clicks on apply button on user more filters window
+    And user should see "CR" tickets with "Status" of "Completed"
+    When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
+    And user switches to window 2
+    Then user enters ticket previously created
+    And user clicks Search on ticket search
+    When user changes status to "Closed"
+    And user enters review details as "Random Notes"
+    And user selects closure code as "Test Ticket"
+    And user selects resolved group as "Escalation Manager"
+    And user selects resolved person as "EscalationManager1"
+    Then user clicks on save button
+    And user validates ticket status as "Closed"
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Impact has changed from  to No Impact. Actual End has changed from  UTC to 2019-09-18 14:39:25 UTC. Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed. " on row 1
 
 

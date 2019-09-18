@@ -12,18 +12,15 @@
       When user clicks on "Change OS Patching" pebble
       Then user should see "Change OS Patching" form
       When user selects Role dropdown as "Application Operation Engineer"
-      And user enters Operating System request as "Test1 Operating System Account/Request"
+      And user enters Operating System request as "Test3 Operating System Account/Request"
       And user selects Select Request as "Changing from Auto to Manual patching"
       And user selects Operating System as "Windows"
       And user enters CI as "cc100cgas001"
       And user enters Justification as "Test justification"
       And user enters Plan to enable Automatic monthly patching as "Test plan"
       And user clicks on the Commitment checkbox
-      Then user enters Operating System description as "Test1 Operating System/Description"
-      And user enters additional comments as "Test1 Operating System/AC"
-
-      And user searches for "" attachment and adds it
-
+      Then user enters Operating System description as "Test3 Operating System/Description"
+      And user enters additional comments as "Test3 Operating System/AC"
       Then user clicks on submit button
       And user gets plaza request id
       And user clicks on plaza request id
@@ -45,11 +42,9 @@
       And user validates description contains DescValidation
       Then user clicks on owner under sections
       And user clicks on assignment under sections
-      And user clicks on attachments under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
       And user should see assigned profile as "Windows L2"
-      And user validates 1 attachment visibility under external
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on diagnosis tab

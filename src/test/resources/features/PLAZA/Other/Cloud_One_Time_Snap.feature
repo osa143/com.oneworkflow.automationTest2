@@ -1,6 +1,5 @@
 @Cloud_One_Time_Snap @PLAZA
   Feature: Cloud one time snap plaza form test
-    #not checked in ow
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -38,7 +37,7 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | CEWS"
+      And user validates title field as "Service Request | Order one-time Snapshot of VM"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
       And user validates description contains DescValidation
@@ -47,7 +46,7 @@
       And user clicks on attachments under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as "Billing"
+      And user should see assigned profile as "Linux/Unix L2"
       And user validates 1 attachment visibility under external
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party

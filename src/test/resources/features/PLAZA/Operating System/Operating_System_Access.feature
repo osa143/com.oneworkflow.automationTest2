@@ -1,4 +1,4 @@
-@Nimbus_Add_Modify_Remove @PLAZA
+@Operating_System_Access @PLAZA
   Feature: Nimbus Add Modify Remove plaza form test
     Scenario: user validates information sent to OW from Plaza
 

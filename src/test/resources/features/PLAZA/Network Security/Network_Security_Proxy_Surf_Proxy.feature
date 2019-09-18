@@ -1,7 +1,6 @@
 @Network_Security_Proxy_Surf_Proxy @PLAZA
   Feature: Network Security Proxy Surf Proxy plaza form test
     Scenario Outline: user validates information sent to OW from Plaza
-      #not checked in ow
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -19,15 +18,12 @@
       And user clicks the calendar and selects current date and time
       And user enters Source IP address as "Test address"
       Then user enters URL as "Test.teliacompany.net"
-
       Then user selects Internal/External website as "Yes"
       Then user enters Error Message as "Test Error Message"
-      And user enters Has it worked before as ""
-      Then user enters When did the problem occure as ""
+      And user enters Has it worked before as "Test Work"
+      Then user enters When did the problem occure as "Test occure"
       And user enters What is your current proxy settings as "test proxy"
       Then user enters ticket number as "Test ticket"
-
-
       Then user enters Network Security Proxy Surf description as "<Description>"
       And user enters additional comments as "<Additional Comments>"
       Then user clicks on "Submit"
@@ -71,6 +67,6 @@
 
       Examples:
 
-      |Request                             |SurfProxy /URL filter                      |Description                       |Additional Comments       |Desc Validation|
-      |Test1 Network Security Proxy/Request|No one can reach a certain URL             |Test1 Network Security/Description|Network Security - Test/AC|               |
-      |Test2 Network Security Proxy/Request|One or few users cannot reach a certain URL|Test2 Network Security/Description|Network Security - Test/AC|               |
+      |Request                             |SurfProxy /URL filter                      |Description                             |Additional Comments              |Desc Validation|
+      |Test4 Network Security Proxy/Request|No one can reach a certain URL             |Test4 Network Security Proxy/Description|Network Security Proxy - Test4/AC|               |
+      |Test5 Network Security Proxy/Request|One or few users cannot reach a certain URL|Test5 Network Security Proxy/Description|Network Security Proxy - Test5/AC|               |

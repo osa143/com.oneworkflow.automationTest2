@@ -12,9 +12,9 @@
       When user clicks on "LAN (Data Net LAN)" pebble
       Then user should see "LAN (Data Net LAN)" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user enters Network Security LAN request as "Test1 Network Security LAN/Request"
-      Then user enters Network Security LAN description as "Test1 Network Security/Description"
-      And user enters additional comments as "Network Security - Test/AC"
+      And user enters Network Security LAN request as "Test5 Network Security LAN/Request"
+      Then user enters Network Security LAN description as "Test5 Network Security/Description"
+      And user enters additional comments as "Network Security - Test5/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

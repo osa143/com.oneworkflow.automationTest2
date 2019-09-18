@@ -1,7 +1,6 @@
 @Network_Security_URL_Filter @PLAZA
   Feature: Network Security URL Filter plaza form test
     Scenario: user validates information sent to OW from Plaza
-      #not checked in ow
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -14,13 +13,13 @@
       Then user should see "Proxy" form
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects Select Request as "Surf proxy/URL filter"
-      And user enters Network Security Proxy Resource request as "Test1 Network Security Proxy Slow Surfing/Request"
+      And user enters Network Security Proxy Resource request as "Test6 Network Security Proxy/Request"
       Then user selects SurfProxy /URL filter as "Slow Surfing"
       And user enters user IP as "Test user IP"
       And user clicks the calendar and selects current date and time
-      Then user selects Internal/External sites as ""
-      Then user enters Network Security Surf Proxy description as "Test1 Network Security/Description"
-      And user enters additional comments as "Network Security - Test/AC"
+      Then user selects Internal/External sites as "Yes"
+      Then user enters Network Security Surf Proxy description as "Test6 Network Security Proxy/Description"
+      And user enters additional comments as "Network Security Proxy - Test6/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

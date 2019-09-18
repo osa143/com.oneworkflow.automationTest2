@@ -1,7 +1,6 @@
 @Operating_System_Account_Management @PLAZA
   Feature: Operating System Account Management plaza form test
     Scenario: user validates information sent to OW from Plaza
-      #not checked in ow
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -13,16 +12,14 @@
       When user clicks on "Account Management - Server" pebble
       Then user should see "Account Management - Server" form
       When user selects Role dropdown as "Application Operation Engineer"
-      And user enters Operating System request as "Test1 Operating System Account/Request"
-
-      And user selects Select Request as ""
+      And user enters Operating System request as "Test2 Operating System Account/Request"
+      And user selects Select Request as "Add Local Account"
       Then user selects Operating System as "Windows"
       And user enters CI as "cc100cgas001"
-      Then user chooses Account Type as ""
-
+      Then user chooses Account Type as "SuperUser/Administrator"
       And user chooses Account Name as "Test name"
-      Then user enters Operating System description as "Test1 Operating System/Description"
-      And user enters additional comments as "Test1 Operating System/AC"
+      Then user enters Operating System description as "Test2 Operating System/Description"
+      And user enters additional comments as "Test2 Operating System/AC"
       Then user clicks on submit button
       And user gets plaza request id
       And user clicks on plaza request id
@@ -46,7 +43,7 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as ""
+      And user should see assigned profile as "Windows L2"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button

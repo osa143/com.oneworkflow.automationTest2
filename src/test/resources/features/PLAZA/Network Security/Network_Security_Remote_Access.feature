@@ -1,7 +1,7 @@
 @Network_Security_Remote_Access @PLAZA
   Feature: Network Security Remote Access plaza form test
     Scenario: user validates information sent to OW from Plaza
-      #not checked in ow
+      #no assigned profile
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -13,12 +13,10 @@
       When user clicks on "Remote Access (VPN/ACS)" pebble
       Then user should see "Remote Access (VPN/ACS)" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user enters Network Security Remote Access request as "Test1 Network Security Remote Access/Request"
-
-      Then user selects Select Request as ""
-
-      Then user enters Network Security Remote Access description as "Test1 Network Security/Description"
-      And user enters additional comments as "Network Security - Test/AC"
+      And user enters Network Security Remote Access request as "Test9 Network Security/Request"
+      Then user selects Select Request as "General VPN"
+      Then user enters Network Security Remote Access description as "Test9 Network Security/Description"
+      And user enters additional comments as "Network Security - Test9/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -41,9 +39,7 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-
       And user should see assigned profile as ""
-
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button

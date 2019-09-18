@@ -13,9 +13,9 @@
       Then user should see "Proxy" form
       When user selects role dropdown as "Application Operation Engineer"
       And user selects Service Request as "Resource Request"
-      And user enters Network Security Proxy Resource request as "Test1 Network Security Proxy/Request"
-      Then user enters Network Security Proxy Resource description as "Test1 Network Security/Description"
-      And user enters additional comments as "Network Security - Test/AC"
+      And user enters Network Security Proxy Resource request as "Test2 Network Security Proxy/Request"
+      Then user enters Network Security Proxy Resource description as "Test2 Network Security Proxy/Description"
+      And user enters additional comments as "Network Security Proxy - Test2/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -38,7 +38,7 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as "<>"
+      And user should see assigned profile as "Proxy L2"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button

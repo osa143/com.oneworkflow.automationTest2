@@ -1,7 +1,6 @@
 @Network_Security_Proxy_Surf_Proxy_Whitelisting
   Feature: Network Security Proxy Surf Proxy Whitelisting plaza form test
     Scenario Outline: user validates information sent to OW from Plaza
-      #not checked in ow
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -16,11 +15,9 @@
       Then user selects Select Request as "<SurfProxy /URL filter>"
       And user enters Network Security Proxy Resource request as "<Request>"
       Then user selects SurfProxy /URL filter as "Whitelisting DDC FI"
-
-      And user enters the source IP address as ""
-      And user enters the target URL as ""
-      Then user enters the H2 Name as ""
-
+      And user enters the source IP address as "Test IP address"
+      And user enters the target URL as "Test URL"
+      Then user enters the H2 Name as "Test name"
       Then user enters Network Security Surf Proxy description as "<Description>"
       And user enters additional comments as "<Additional Comments>"
       Then user clicks on "Submit"
@@ -65,6 +62,6 @@
 
       Examples:
 
-      |Request                                          |SurfProxy /URL filter|Description                       |Additional Comments        |Desc Validation|
-      |Test1 Network Security Proxy Whitelisting/Request|Whitelisting DDC FI  |Test1 Network Security/Description|Network Security - Test1/AC|               |
-      |Test1 Network Security Proxy Whitelisting/Request|Whitelisting DDC SE  |Test2 Network Security/Description|Network Security - Test1/AC|               |
+      |Request                                          |SurfProxy /URL filter|Description                             |Additional Comments        |Desc Validation|
+      |Test7 Network Security Proxy Whitelisting/Request|Whitelisting DDC FI  |Test7 Network Security Proxy/Description|Network Security - Test7/AC|               |
+      |Test8 Network Security Proxy Whitelisting/Request|Whitelisting DDC SE  |Test8 Network Security Proxy/Description|Network Security - Test8/AC|               |

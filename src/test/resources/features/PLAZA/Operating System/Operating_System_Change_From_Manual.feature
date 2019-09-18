@@ -22,9 +22,6 @@
       And user clicks on the Commitment checkbox
       Then user enters Operating System description as "<Description>"
       And user enters additional comments as "<Additional Comments>"
-
-      And user searches for "" attachment and adds it
-
       Then user clicks on submit button
       And user gets plaza request id
       And user clicks on plaza request id
@@ -46,11 +43,9 @@
       And user validates description contains DescValidation
       Then user clicks on owner under sections
       And user clicks on assignment under sections
-      And user clicks on attachments under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
       And user should see assigned profile as "Windows L2"
-      And user validates 1 attachment visibility under external
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on diagnosis tab
@@ -82,5 +77,5 @@
       Examples:
 
       |Request                              |Select Request                                |Description                       |Additional Comments      |Desc Validation|
-      |Test1 Operating System Change/Request|Changing from Manual to Auto patching         |Test1 Operating System/Description|Test1 Operating System/AC|               |
-      |Test2 Operating System Change/Request|Changing patch window for server in auto patch|Test2 Operating System/Description|Test2 Operating System/AC|               |
+      |Test4 Operating System Change/Request|Changing from Manual to Auto patching         |Test4 Operating System/Description|Test4 Operating System/AC|               |
+      |Test5 Operating System Change/Request|Changing patch window for server in auto patch|Test5 Operating System/Description|Test5 Operating System/AC|               |

@@ -12,9 +12,9 @@
       When user clicks on "Network Load Balancing" pebble
       Then user should see "Network Load Balancing" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user enters Network Security Load request as "Test1 Network Security Load/Request"
-      Then user enters Network Security Load description as "Test1 Network Security/Description"
-      And user enters additional comments as "Network Security - Test/AC"
+      And user enters Network Security Load request as "Test6 Network Security/Request"
+      Then user enters Network Security Load description as "Test6 Network Security/Description"
+      And user enters additional comments as "Network Security - Test6/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

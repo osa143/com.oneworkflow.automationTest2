@@ -11,15 +11,13 @@
       When user clicks on "Volume Snapshot" pebble
       Then user should see "Volume Snapshot" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user enters Storage request as "Storage Volume Snapshot/Request"
-
-      And user selects Choose Option as ""
-
+      And user enters Storage request as "Test3 Storage/Request"
+      And user selects Choose Option as "Create Snapshot"
       And user enters CI as "cc100cgas001"
       And user enters Source WWN as "Test WWN"
       And user clicks the calendar and selects current date and time
-      And user enters Storage description as "Test1 Storage Volume Snapshot/Description"
-      And user enters additional comments as "Test1 Storage Volume Snapshot/AC"
+      And user enters Storage description as "Test3 Storage Volume Snapshot/Description"
+      And user enters additional comments as "Test3 Storage Volume Snapshot/AC"
       Then user clicks on submit button
       And user gets plaza request id
       And user clicks on plaza request id

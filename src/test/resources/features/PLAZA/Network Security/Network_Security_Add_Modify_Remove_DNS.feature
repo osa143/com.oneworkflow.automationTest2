@@ -1,6 +1,5 @@
 @Network_Security_Add_Modify_Remove_DNS @PLAZA
   Feature: Network Security Add Modify Remove DNS plaza form test
-    #not checked on ow
     Scenario Outline: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -15,9 +14,7 @@
       When user selects role dropdown as "Application Operation Engineer"
       And user selects Service Request Name as "<Service Request Name>"
       And user enters Network Security Add Modify Remove DNS request as "<Request>"
-
-      And user selects Scheduled change as ""
-
+      And user selects Scheduled change as "No"
       And user enters Network Security Add Modify Remove DNS description as "<Description>"
       And user enters additional comments as "<Additional Comments>"
       Then user clicks on "Submit"
@@ -42,9 +39,7 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-
-      And user should see assigned profile as "<>"
-
+      And user should see assigned profile as "DNS/DHCP"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
@@ -60,6 +55,6 @@
 
       Examples:
 
-      |Service Request Name       |Request                              |Description                              |Additional Comments      |Desc Validation|
-      |Add/Modify/Remove DNS entry|Test1 Network Security Add/Request   |Test1 Network Security Add/Description   |Test1 Network Security/AC|               |
-      |DNS Sweden                 |Test2 Network Security Sweden/Request|Test2 Network Security Sweden/Description|Test2 Network Security/AC|               |
+      |Service Request Name       |Request                              |Description                              |Additional Comments             |Desc Validation|
+      |Add/Modify/Remove DNS entry|Test1 Network Security Add/Request   |Test1 Network Security Add/Description   |Test1 Network Security Add/AC   |               |
+      |DNS Sweden                 |Test2 Network Security Sweden/Request|Test2 Network Security Sweden/Description|Test2 Network Security Sweden/AC|               |

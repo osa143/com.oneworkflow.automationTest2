@@ -13,15 +13,15 @@
       Then user should see "Network Routing/Switching" form
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects Service Request Name as "New Switch - Configure"
-      And user enters Network Security Routing New Switch request as "Test1 Network Security New Switch/Request"
+      And user enters Network Security Routing New Switch request as "Test7 Network Security New Switch/Request"
       Then user enters CI as "apoteket-fnt-137263"
       And user enters DC-site as "Test site"
       And user enters Data Room as "Test room"
       Then user enters Rack as "Test rack"
       And user enters usage of the switch as "Testing"
       And user enter Terminal server as "Test"
-      Then user enters Network Security Routing Switching description as "Test1 Network Security/Description"
-      And user enters additional comments as "Network Security - Test/AC"
+      Then user enters Network Security Routing Switching description as "Test7 Network Security/Description"
+      And user enters additional comments as "Network Security - Test7/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

@@ -1,7 +1,7 @@
 @Network_Security_Switch_Port_Config @PLAZA
   Feature: Network Security Switch Port Config plaza form test
     Scenario: user validates information sent to OW from Plaza
-      #not checked in ow
+      #no assigned profile
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -14,14 +14,12 @@
       Then user should see "Network Routing/Switching" form
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects Service Request Name as "Switch Port Configuration"
-      And user enters Network Security Switch Port request as "Test1 Network Security Switch Port/Request"
-
-      Then user selects Existing IP Net as ""
-      And user selects New IP Net as ""
-
+      And user enters Network Security Switch Port request as "Test10 Network Security Switch Port/Request"
+      Then user selects Existing IP Net as "Yes"
+      And user selects New IP Net as "Yes"
       And user enters CI as "cc100cgas001"
-      Then user enters Network Security Switch Port description as "Test1 Network Security/Description"
-      And user enters additional comments as "Network Security - Test/AC"
+      Then user enters Network Security Switch Port description as "Test10 Network Security/Description"
+      And user enters additional comments as "Network Security - Test10/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -36,7 +34,7 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | Proxy"
+      And user validates title field as "Service Request | Network Routing/Switching"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
       And user validates description contains DescValidation

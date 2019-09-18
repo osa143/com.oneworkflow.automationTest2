@@ -1,6 +1,5 @@
 @Operating_System_Manual_OS_Patching @PLAZA
   Feature: Operating System Manual OS Patching plaza form test
-   #not checked in ow
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -10,21 +9,20 @@
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
       And user clicks "Compute & Operating System"
-      When user clicks on "Change OS Patching" pebble
-      Then user should see "Change OS Patching" form
+      When user clicks on "Manual OS Patching" pebble
+      Then user should see "Manual OS Patching" form
       When user selects Role dropdown as "Application Operation Engineer"
-      And user enters Operating System request as "Test1 Operating System Manual/Request"
+      And user enters Operating System request as "Test6 Operating System Manual/Request"
+      And user enters CI as "cc001cgas001"
       And user selects Operating System as "Windows"
-
-      And user selects Server placed in Veha as ""
-
+      And user selects Server placed in Veha as "Yes"
       And user enters WBS Code as "P100-000-000"
       And user clicks the calendar and selects current date and time
       And user clicks the calendar and selects current date and time
       Then user enters Plan to enable Automatic monthly patching as "Test plan"
       And user enters H2 as "Test H2"
-      Then user enters Operating System description as "Test1 Operating System Manual/Description"
-      And user enters additional comments as "Test1 Operating System Manual/AC"
+      Then user enters Operating System description as "Test6 Operating System Manual/Description"
+      And user enters additional comments as "Test6 Operating System Manual/AC"
       Then user clicks on submit button
       And user gets plaza request id
       And user clicks on plaza request id

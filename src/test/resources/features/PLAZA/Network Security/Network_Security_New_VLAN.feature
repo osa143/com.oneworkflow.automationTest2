@@ -13,12 +13,12 @@
       Then user should see "Network Routing/Switching" form
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects Select Request Name as "New VLAN / Network Configuration
-      And user enters Network Security Routing New VLAN request as "Test1 Network Security New VLAN/Request"
+      And user enters Network Security Routing New VLAN request as "Test8 Network Security New VLAN/Request"
       And user enters IP Net as "Test IP Net"
       Then user enters VLAN number and name as "Test VLAN"
       Then user enter Purpose of VLAN as "Testing Purposes"
-      Then user enters Network Security New Vlan description as "Test1 Network Security/Description"
-      And user enters additional comments as "Network Security - Test/AC"
+      Then user enters Network Security New Vlan description as "Test8 Network Security/Description"
+      And user enters additional comments as "Network Security - Test8/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

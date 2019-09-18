@@ -1,7 +1,6 @@
 @Network_Security_Proxy_Reverse_Proxy @PLAZA
   Feature: Network Security Proxy Reverse Proxy form test
     Scenario: user validates information sent to OW from Plaza
-      #not checked in ow
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -14,19 +13,16 @@
       Then user should see "Proxy" form
       When user selects role dropdown as "Application Operation Engineer"
       And user selects Service Request as "Reverse Proxy"
-      And user enters Network Security Proxy Resource request as "Test1 Network Security Proxy/Request"
+      And user enters Network Security Proxy Resource request as "Test3 Network Security Proxy/Request"
       Then user enters Source IP as "Test 192.168.1.1"
       And user enters Reverseproxy DNS name as "Test.teliacompany.net"
       And user enters Reverseproxy Protocol/Port as "https/447.test"
-      And user enters Certificate as "Test certificate"
+      And user selects Certificate as "Order CSR"
       Then user enters Webserver address as "Test webserver"
-
       And user selects High Availability as "Yes"
-
-      And user selects Load balancing Method as ""
-
-      Then user enters Network Security Proxy Resource description as "Test1 Network Security/Description"
-      And user enters additional comments as "Network Security - Test/AC"
+      And user selects Load balancing Method as "Least Connections"
+      Then user enters Network Security Proxy Resource description as "Test3 Network Security Proxy/Description"
+      And user enters additional comments as "Network Security Proxy - Test3/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

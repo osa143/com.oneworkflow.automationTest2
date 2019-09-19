@@ -43,20 +43,28 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_REQUEST_TYPE= "arid_WIN_0_777031002";
 
     public String getRequestType(){
-        return getTextByID(txt_REQUEST_TYPE);
+        String requestType= getAttributeValueById(txt_REQUEST_TYPE);
+        System.out.println(requestType);
+        return requestType;
     }
     public String verifyPlazaIsListedUnderInterestedParties(String colName, int rowNum){
         return getTableCellData(By.id(table_INTERESTED_PARTIES), colName, rowNum);
     }
     public String getDescription(){
-        return getTextByID(txt_DESCRIPTION);
+        String description= getAttributeValueById(txt_DESCRIPTION);
+        System.out.println(description);
+        return description;
     }
 
     public String getTitle(){
-        return getTextByID(txt_TITLE);
+        String title=  getAttributeValueById(txt_TITLE);
+        System.out.println(title);
+        return title;
     }
     public String getSource(){
-        return getTextByID(txt_SOURCE_FLD);
+        String source = getAttributeValueById(txt_SOURCE_FLD);
+        System.out.println(source);
+        return source;
     }
     public void enterSourceID(String text){
         enterTextByElement(By.id(txt_SOURCE_ID), text);

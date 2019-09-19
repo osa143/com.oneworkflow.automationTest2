@@ -222,6 +222,7 @@ public class OWF_WorkOrderPageSteps {
     }
     @Then("user enters plaza request id in the source id field")
     public void userEntersPlazaRequestIdInTheSourceIdField() {
+        workOrderPage.wait(15000);
         workOrderPage.enterSourceID(CommonUtils.plazaRequestID);
     }
 

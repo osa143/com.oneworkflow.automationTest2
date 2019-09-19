@@ -97,7 +97,104 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_DATABASE_DNS_IP_ADDRESS= "sp_formfield_sr21_v_source_dns";
     public static final String dd_DATABASE_NEW_EXISTING_ACCOUNT=  "select2-chosen-14";
     public static final String dd_DATABASE_DEFAULT_TABLE_SPACE= "sp_formfield_sr21_v_default_tablespace";
+    public static final String txt_DATABASE_REQUEST_REQUEST= "sp_formfield_sr115_v_request";
+    public static final String dd_DATABASE_REQUEST_CHOOSE_ACTION= "select2-chosen-17";
+    public static final String dd_DATABASE_REQUEST_LOCATION= "select2-chosen-19";
+    public static final String txt_DATABASE_REQUEST_PLANNED_START_DATE_TIME= "sp_formfield_sr115_v_start_date";
+    public static final String dd_DATABASE_REQUEST_DATABASE_TYPE= "select2-chosen-18";
+    public static final String dd_DATABASE_REQUEST_ADD_CI= "s2id_autogen35";
+    public static final String dd_DATABASE_REQUEST_ADD_SERVER_CI= "s2id_autogen34";
+    public static final String txt_DATABASE_REQUEST_DATABASE_NAME= "sp_formfield_sr115_v_db_name";
+    public static final String txt_DATABASE_REQUEST_DESCRIPTION= "sp_formfield_sr115_v_desc";
+    public static final String txt_DATABASE_CONFIGURE_PARAMETER_REQUEST= "sp_formfield_sr116_v_request";
+    public static final String dd_DATABASE_CONFIGURE_PARAMETER_DATABASE_TYPE= "select2-chosen-20";
+    public static final String dd_DATABASE_CONFIGURE_PARAMETER_ADD_CI= "s2id_autogen37";
+    public static final String dd_DATABASE_CONFIGURE_PARAMETER_DB_ADD_CI= "s2id_autogen38";
+    public static final String txt_DATABASE_CONFIGURE_PARAMETER_DB_NAME= "sp_formfield_sr116_v_db_name";
+    public static final String txt_DATABASE_CONFIGURE_PARAMETER_PARAMETERS="sp_formfield_sr116_v_parameters";
+    public static final String txt_DATABASE_CONFIGURE_PARAMETER_DESCRIPTION= "sp_formfield_sr116_v_description";
+    public static final String txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_REQUEST= "sp_formfield_sr12_v_request";
+    public static final String dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_TYPE="select2-chosen-16";
+    public static final String dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_SERVER_CI="s2id_autogen32";
+    public static final String dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_CI= "s2id_autogen33";
+    public static final String txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_NAME="sp_formfield_sr12_v_db_name";
+    public static final String txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_DESCRIPTION= "sp_formfield_sr12_v_description";
 
+
+
+    public void selectDatabasePerformanceTroubleShooting_AddServerCi(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_SERVER_CI), By.id("s2id_autogen32_results"),  dropdownName);
+
+    }
+    public void selectDatabasePerformanceTroubleShooting_AddDbCi(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_CI), By.id("s2id_autogen33_results"),  dropdownName);
+
+    }
+    public void selectDatabasePerformanceTroubleShooting_databaseType(String dropdownName){
+        selectDropdown(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_TYPE), By.id("select2-results-16"),  dropdownName);
+    }
+
+    public void enterDatabasePerformamanceTroubleShooting_request(String text){
+        enterTextByElement(By.id(txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_REQUEST), text);
+    }
+    public void enterDatabasePerformamanceTroubleShooting_DB_name(String text){
+        enterTextByElement(By.id(txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_NAME), text);
+    }
+    public void enterDatabasePerformamanceTroubleShooting_description(String text){
+        enterTextByElement(By.id(txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_DESCRIPTION), text);
+    }
+    public void enterDatabaseConfigureParameter_request(String text){
+        enterTextByElement(By.id(txt_DATABASE_CONFIGURE_PARAMETER_REQUEST), text);
+    }
+    public void enterDatabaseConfigureParameter_databaseName(String text){
+        enterTextByElement(By.id(txt_DATABASE_CONFIGURE_PARAMETER_DB_NAME), text);
+    }
+    public void enterDatabaseConfigureParameter_parameters(String text){
+        enterTextByElement(By.id(txt_DATABASE_CONFIGURE_PARAMETER_PARAMETERS), text);
+    }
+    public void enterDatabaseConfigureParameter_description(String text){
+        enterTextByElement(By.id(txt_DATABASE_CONFIGURE_PARAMETER_DESCRIPTION), text);
+    }
+    public void selectDatabaseConfigureParameter_AddCi_multipleValues(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_DATABASE_CONFIGURE_PARAMETER_ADD_CI), By.id("s2id_autogen37_results"),  dropdownName);
+
+    }
+    public void selectDatabaseConfigureParameter_AddDbCi_multipleValues(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_DATABASE_CONFIGURE_PARAMETER_DB_ADD_CI), By.id("s2id_autogen38_results"),  dropdownName);
+
+    }
+    public void selectDatabaseConfigureParameter_databaseType(String dropdownName){
+        selectDropdown(By.id(dd_DATABASE_CONFIGURE_PARAMETER_DATABASE_TYPE), By.id("select2-results-20"),  dropdownName);
+    }
+    public void enterDatabaseRequest_description(String text){
+        enterTextByElement(By.id(txt_DATABASE_REQUEST_DESCRIPTION), text);
+    }
+    public void enterDatabaseRequest_databaseName(String text){
+        enterTextByElement(By.id(txt_DATABASE_REQUEST_DATABASE_NAME), text);
+    }
+    public void selects_databaseRequest_AddCi_multipleValues(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_DATABASE_REQUEST_ADD_CI), By.id("s2id_autogen35_results"),  dropdownName);
+
+    }
+    public void selects_databaseRequest_AddServerCi_multipleValues(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_DATABASE_REQUEST_ADD_SERVER_CI), By.id("s2id_autogen34_results"),  dropdownName);
+
+    }
+    public void selectDatabaseRequest_databaseType(String dropdownName){
+        selectDropdown(By.id(dd_DATABASE_REQUEST_DATABASE_TYPE), By.id("select2-results-18"),  dropdownName);
+    }
+    public void enterDatabaseRequest_plannedStartDateTime(String text){
+        enterTextByElement(By.id(txt_DATABASE_REQUEST_PLANNED_START_DATE_TIME), text);
+    }
+    public void selectDatabaseRequest_location(String dropdownName){
+        selectDropdown(By.id(dd_DATABASE_REQUEST_LOCATION), By.id("select2-results-19"),  dropdownName);
+    }
+    public void selectDatabaseRequest_chooseAction(String dropdownName){
+        selectDropdown(By.id(dd_DATABASE_REQUEST_CHOOSE_ACTION), By.id("select2-results-17"),  dropdownName);
+    }
+    public void enterDatabaseRequest_request(String text){
+        enterTextByElement(By.id(txt_DATABASE_REQUEST_REQUEST), text);
+    }
     public void enterDatabase_defaultTableSpace(String text){
         enterTextByElement(By.id(dd_DATABASE_DEFAULT_TABLE_SPACE), text);
     }

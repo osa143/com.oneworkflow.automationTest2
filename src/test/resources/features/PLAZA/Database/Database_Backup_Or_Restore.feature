@@ -8,20 +8,20 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Database"
+      And user clicks on Database
       When user clicks on "Database Request" pebble
       Then user should see "Database Request" form
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Backup/Restore"
-      And user enters Database Access request as "Test3 Database Backup/Request"
-      And user selects Choose Action as "Backup"
-      And user selects Database Type as "MSSQL"
-      And user enters CI as "cc100cgas001"
-      And user enters Database CI as "TEST"
-      And user enters Database Name as "Test name"
+      And user enters Database request as "Test3 Database Backup/Request"
+      And user selects database request Choose Action as "Backup"
+      And user selects database request Database Type as "MSSQL"
+      And user selects database request add server CI as "cc001cgas001"
+      And user selects database request add Database CI as "TEST"
+      And user enters database request Database Name as "Test name"
       And user selects Backup to standard location as "Yes"
       Then user enters Database Planned Start Date & Time as current date
-      Then user enters Database Access Request description as "Test3 Backup Restore/Description"
+      Then user enters Database Request description as "Test3 Backup Restore/Description"
       And user enters additional comments as "Database BR - Test3/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
@@ -33,6 +33,7 @@
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2
+      And user waits 10 secs
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
       Then user should see plaza ticket
@@ -40,7 +41,7 @@
       And user validates title field as "Service Request | Database Request"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates description as ""
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -48,18 +49,18 @@
       And user should see assigned profile as "Oracle/MSSQL/MySQL/PostgreSQL"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
-      When user clicks on diagnosis tab
+      When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed
       And user clicks on CI "cc100cgas001" and selects "Impact:Update
       Then user switches to frame
       And user enters impacted from date as date in past
       And user enters impacted to date as date in past
       Then user clicks confirm checkbox
-      And user clicks the save button
+      And user clicks save button
       Then user switches to window 1
       When user selects CI present
       And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
-      Then user selects yes and closes warning message
+      Then user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
       And user changes status to "Cleared"
       And user selects completed code as "Success"

@@ -11,7 +11,8 @@ import pageObjects.plaza.Plaza_HomePage;
 import utils.CommonUtils;
 
 public class Plaza_HomePageSteps extends BasePage {
-    Plaza_HomePage homePage= new Plaza_HomePage();
+    Plaza_HomePage homePage = new Plaza_HomePage();
+
     @Then("user should see the plaza home page")
     public void userShouldSeeThePlazaHomePage() {
         Assert.assertEquals(homePage.getTitle_plazaHomePage(), "Home - Plaza");
@@ -34,7 +35,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user selects role dropdown as {string}")
     public void userSelectsRoleDropdownAs(String arg0) {
-      homePage.selectRoleDropdown(arg0);
+        homePage.selectRoleDropdown(arg0);
     }
 
     @And("user enters {string} in the request field")
@@ -79,7 +80,8 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user gets plaza request id")
     public void userGetsPlazaRequestId() {
-       CommonUtils.plazaRequestID=homePage.getPlazaRequestNum();
+        homePage.wait(5000);
+        CommonUtils.plazaRequestID = homePage.getPlazaRequestNum();
     }
 
     @And("user clicks on plaza request id")
@@ -104,7 +106,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @Then("user should see CRM form")
     public void userShouldSeeCRMForm() {
-        
+
     }
 
     @And("user selects service request name as {string}")
@@ -114,7 +116,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user enters CRM request as {string}")
     public void userEntersCRMRequestAs(String arg0) {
-       homePage.enterCRMRequest(arg0);
+        homePage.enterCRMRequest(arg0);
     }
 
     @And("user enters CRM planned start date as current date")
@@ -124,7 +126,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user enters CRM planned end date as current date")
     public void userEntersCRMPlannedEndDateAsCurrentDate() {
-       homePage.enterCRMPlannedEnd(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+        homePage.enterCRMPlannedEnd(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
     }
 
     @And("user enters CRM description as {string}")
@@ -134,7 +136,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user selects CRM system as {string}")
     public void userSelectsCRMSystemAs(String arg0) {
-       homePage.selectCRMSystemDropdown(arg0);
+        homePage.selectCRMSystemDropdown(arg0);
     }
 
     @Then("user should see {string} form")
@@ -256,17 +258,17 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @Then("user enters Backup description as {string}")
     public void userEntersBackupReScheduleDescriptionAs(String arg0) {
-      homePage.enterDescription_Reschedule(arg0);
+        homePage.enterDescription_Reschedule(arg0);
     }
 
     @And("user selects Add CI back up as {string}")
     public void userSelectsAddCIRescheduleAs(String arg0) {
-    homePage.selectsAddCi_back_up(arg0);
+        homePage.selectsAddCi_back_up(arg0);
     }
 
     @And("user clicks on add attachment in plaza")
     public void userClicksOnAddAttachmentInPlaza() {
-       homePage.clickAddAttachment();
+        homePage.clickAddAttachment();
     }
 
     @And("user enters Backup one time UNC Local path as {string}")
@@ -301,7 +303,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user selects all CI's from AT1 field")
     public void userSelectsATFieldAs(DataTable CINames) {
-   homePage.selectAllCINames(CINames);
+        homePage.selectAllCINames(CINames);
     }
 
     @And("user enters {string} in the WBS Code field")
@@ -427,7 +429,7 @@ public class Plaza_HomePageSteps extends BasePage {
     @And("user enters on site services Request as {string}")
     public void userEntersOnSiteServicesRequestAs(String arg0) {
         homePage.enterOnSiteServices_Request(arg0);
-        
+
     }
 
     @And("user enters on site services DC-site or address as {string}")
@@ -505,4 +507,115 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userEntersDatabaseDefaultTablespaceAs(String arg0) {
         homePage.enterDatabase_defaultTableSpace(arg0);
     }
+
+    @And("user enters Database request as {string}")
+    public void userEntersDatabaseRequestAs(String arg0) {
+        homePage.enterDatabaseRequest_request(arg0);
+    }
+
+    @And("user selects database request Choose Action as {string}")
+    public void userSelectsDatabaseRequestChooseActionAs(String arg0) {
+        homePage.selectDatabaseRequest_chooseAction(arg0);
+    }
+
+    @And("user selects Backup to standard location as {string}")
+    public void userSelectsBackupToStandardLocationAs(String arg0) {
+        homePage.selectDatabaseRequest_location(arg0);
+    }
+
+    @Then("user enters Database Planned Start Date & Time as current date")
+    public void userEntersDatabasePlannedStartDateTimeAsCurrentDate() {
+        homePage.enterDatabaseRequest_plannedStartDateTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user selects database request Database Type as {string}")
+    public void userSelectsDatabaseRequestDatabaseTypeAs(String arg0) {
+        homePage.selectDatabaseRequest_databaseType(arg0);
+    }
+
+    @And("user selects database request add server CI as {string}")
+    public void userSelectsDatabaseRequestAddServerCIAs(String arg0) {
+        homePage.selects_databaseRequest_AddServerCi_multipleValues(arg0);
+    }
+
+    @And("user selects database request add Database CI as {string}")
+    public void userSelectsDatabaseRequestAddDatabaseCIAs(String arg0) {
+        homePage.selects_databaseRequest_AddCi_multipleValues(arg0);
+    }
+
+    @And("user enters database request Database Name as {string}")
+    public void userEntersDatabaseRequestDatabaseNameAs(String arg0) {
+        homePage.enterDatabaseRequest_databaseName(arg0);
+    }
+
+    @Then("user enters Database Request description as {string}")
+    public void userEntersDatabaseRequestDescriptionAs(String arg0) {
+        homePage.enterDatabaseRequest_description(arg0);
+    }
+
+    @And("user enters Database Configure request as {string}")
+    public void userEntersDatabaseConfigureRequestAs(String arg0) {
+        homePage.enterDatabaseConfigureParameter_request(arg0);
+    }
+
+    @And("user selects Database Configure Database Type as {string}")
+    public void userSelectsDatabaseConfigureDatabaseTypeAs(String arg0) {
+        homePage.selectDatabaseConfigureParameter_databaseType(arg0);
+    }
+
+    @And("user selects Database Configure server CI as {string}")
+    public void userSelectsDatabaseConfigureServerCIAs(String arg0) {
+        homePage.selectDatabaseConfigureParameter_AddCi_multipleValues(arg0);
+    }
+
+    @And("user selects Database Configure add Database CI as {string}")
+    public void userSelectsDatabaseConfigureAddDatabaseCIAs(String arg0) {
+        homePage.selectDatabaseConfigureParameter_AddDbCi_multipleValues(arg0);
+    }
+
+    @And("user enters Database Configure Database Name as {string}")
+    public void userEntersDatabaseConfigureDatabaseNameAs(String arg0) {
+        homePage.enterDatabaseConfigureParameter_databaseName(arg0);
+    }
+
+    @And("user enters Database Configure Parameters as {string}")
+    public void userEntersDatabaseConfigureParametersAs(String arg0) {
+        homePage.enterDatabaseConfigureParameter_parameters(arg0);
+    }
+
+    @Then("user enters Database Configure description as {string}")
+    public void userEntersDatabaseConfigureRequestDescriptionAs(String arg0) {
+        homePage.enterDatabaseConfigureParameter_description(arg0);
+    }
+
+    @And("user enters Database Performance Troubleshooting request as {string}")
+    public void userEntersDatabasePerformanceTroubleshootingRequestAs(String arg0) {
+       homePage.enterDatabasePerformamanceTroubleShooting_request(arg0);
+    }
+
+    @And("user selects Database Performance Troubleshooting Database Type as {string}")
+    public void userSelectsDatabasePerformanceTroubleshootingDatabaseTypeAs(String arg0) {
+       homePage.selectDatabasePerformanceTroubleShooting_databaseType(arg0);
+    }
+
+    @And("user enters Database Performance Troubleshooting CI as {string}")
+    public void userEntersDatabasePerformanceTroubleshootingCIAs(String arg0) {
+       homePage.selectDatabasePerformanceTroubleShooting_AddServerCi(arg0);
+    }
+
+    @And("user enters Database Performance Troubleshooting Database CI as {string}")
+    public void userEntersDatabasePerformanceTroubleshootingDatabaseCIAs(String arg0) {
+       homePage.selectDatabasePerformanceTroubleShooting_AddDbCi(arg0);
+    }
+
+    @And("user enters Database Performance Troubleshooting Database Name as {string}")
+    public void userEntersDatabasePerformanceTroubleshootingDatabaseNameAs(String arg0) {
+        homePage.enterDatabasePerformamanceTroubleShooting_DB_name(arg0);
+    }
+
+    @Then("user enters Database Performance Troubleshooting description as {string}")
+    public void userEntersDatabasePerformanceTroubleshootingDescriptionAs(String arg0) {
+      homePage.enterDatabasePerformamanceTroubleShooting_description(arg0);
+    }
+
 }

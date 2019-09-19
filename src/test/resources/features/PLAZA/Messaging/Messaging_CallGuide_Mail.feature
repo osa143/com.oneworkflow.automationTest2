@@ -1,6 +1,6 @@
 @Messaging_CallGuide_Mail @PLAZA
   Feature: Messaging CallGuide Mail plaza form test
-    #Not checked in ow
+
       #not able to Ack any of messaging tests
     Scenario: user validates information sent to OW from Plaza
 

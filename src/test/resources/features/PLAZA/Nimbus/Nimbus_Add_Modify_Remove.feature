@@ -8,15 +8,15 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Cloud" button
+      And user clicks on "Cloud"
       When user clicks on "Skypoint - private cloud" pebble
       Then user should see "Skypoint - private cloud" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects Service Request Name as "Add/Modify/Remove CPU/Memory/Disk to VM"
-      And user enters Nimbus Add Modify Remove request as "Test1 Nimbus/Request"
-      Then user enters CI as "cc100cgas001"
-      And user selects Type as "CPU"
-      And user enters Nimbus description as "Test1 Nimbus/Description"
+      And user selects service request name as "Add/Modify/Remove CPU/Memory/Disk to VM"
+      And user enters nimbus request as "Test1 Nimbus/Request"
+      Then user selects nimbus CI as "cc100cgas001"
+      And user selects nimbus type as "CPU"
+      And user enters nimbus mandatory description as "Test1 Nimbus/Description"
       And user enters additional comments as "Test1 Nimbus/AC"
       Then user clicks on "Submit"
       And user gets plaza request id

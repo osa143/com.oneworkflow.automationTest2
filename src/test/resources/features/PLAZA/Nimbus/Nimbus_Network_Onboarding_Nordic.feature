@@ -1,4 +1,4 @@
-@Nimbus_Network_Onboarding_Nordic @PLAZA
+@Nimbus_Network_OnBoarding_Nordic @PLAZA
   Feature: Nimbus Network Onboarding Nordic plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -8,16 +8,16 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Cloud"
+      And user clicks on "Cloud"
       When user clicks on "Skypoint - private cloud" pebble
       Then user should see "Skypoint - private cloud" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects Service Request Name as "Network onboarding Nordic Managed Lync"
-      And user enters Nimbus Network Onboarding Nordic request as "Test8 Nimbus/Request"
-      Then user enters Frontside network information as "Test frontside network information"
-      And user enters Mgmt network information as "Test Mgmt network information"
-      Then user selects DDC Base Ruleset as "Yes"
-      And user enters Nimbus description as "Test8 Nimbus/Description"
+      And user selects service request name as "Network onboarding Nordic Managed Lync"
+      And user enters nimbus request as "Test8 Nimbus/Request"
+      Then user enters frontside network information as "Test frontside network information"
+      And user enters mgmt network information as "Test Mgmt network information"
+      Then user selects DDC base ruleset applied as "Yes"
+      And user enters nimbus description as "Test8 Nimbus/Description"
       And user enters additional comments as "Test8 Nimbus/AC"
       Then user clicks on "Submit"
       And user gets plaza request id

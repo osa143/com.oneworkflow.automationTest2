@@ -8,13 +8,13 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Cloud"
+      And user clicks on "Cloud"
       When user clicks on "Skypoint - private cloud" pebble
       Then user should see "Skypoint - private cloud" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects Service Request Name as "Extend disk on VM - Red Hat Enterprise Linux"
-      Then user enters CI as "cc100cgas001"
-      And user enters Volume(s)/Drive(s) as "Test Drive"
+      And user selects service request name as "Extend disk on VM - Red Hat Enterprise Linux"
+      Then user selects nimbus extend disk CI as "cc100cgas001"
+      And user enters volumes drives as "Test Drive"
       And user enters additional comments as "Test4 Nimbus/AC"
       Then user clicks on "Submit"
       And user gets plaza request id

@@ -8,15 +8,15 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Cloud"
+      And user clicks on "Cloud"
       When user clicks on "Skypoint - private cloud" pebble
       Then user should see "Skypoint - private cloud" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects Service Request Name as "Expand Backup/Archive disk"
-      And user enters Nimbus Expand Backup Archive Disk request as "Test3 Nimbus/Request"
-      Then user enters Size (GB) as "Test GB"
-      Then user enters CI as "cc100cgas001"
-      And user enters Nimbus description as "Test3 Nimbus/Description"
+      And user selects service request name as "Expand Backup/Archive disk"
+      And user enters nimbus request as "Test3 Nimbus/Request"
+      Then user enters nimbus size GB as "Test GB"
+      Then user selects nimbus CI as "cc100cgas001"
+      And user enters nimbus description as "Test3 Nimbus/Description"
       And user enters additional comments as "Test3 Nimbus/AC"
       Then user clicks on "Submit"
       And user gets plaza request id

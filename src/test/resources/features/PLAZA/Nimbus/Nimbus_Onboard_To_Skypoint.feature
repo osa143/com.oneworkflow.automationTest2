@@ -1,4 +1,4 @@
-@Nimbus_Onboard_To_Skypoint
+@Nimbus_Onboard_To_SkyPoint @PLAZA
   Feature: Nimbus Onboard To Skypoint plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -8,21 +8,21 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Cloud"
+      And user clicks on "Cloud"
       When user clicks on "Skypoint - private cloud" pebble
       Then user should see "Skypoint - private cloud" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects Service Request Name as "Onboard to Skypoint"
-      And user enters Nimbus Onboard To Skypoint request as "Test9 Nimbus/Request"
+      And user selects service request name as "Onboard to Skypoint"
+      And user enters nimbus request as "Test9 Nimbus/Request"
       Then user selects Cloud Services as "Managed DB - MSSQL/Oracle/PostgreSQL/MySQL"
       Then user selects Target countries for System Cloud Services as "Finland"
-      And user selects Dual-site services as "Yes"
+      And user selects dual-site services as "Yes"
       Then user enters Approver Account(s) as "Test approver"
       And user enters User Account(s) as "Test user"
       Then user enters CMDB, Assigned to Application Team as "Test Application"
       Then user enters CMDB, Local responsible Application as "Test Local"
-      And user enters H2 (Name/Hid) as "Test H2"
-      And user enters Nimbus description as "Test9 Nimbus/Description"
+      And user enters nimbus skypoint H2 Name Hid as "Test H2"
+      And user enters nimbus description as "Test9 Nimbus/Description"
       And user enters additional comments as "Test9 Nimbus/AC"
       Then user clicks on "Submit"
       And user gets plaza request id

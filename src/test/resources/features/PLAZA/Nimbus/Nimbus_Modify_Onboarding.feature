@@ -1,4 +1,4 @@
-@Nimbus_Modify_Onboarding @PLAZA
+@Nimbus_Modify_OnBoarding @PLAZA
   Feature: Nimbus Modify Onboarding plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -9,14 +9,14 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Cloud"
+      And user clicks on "Cloud"
       When user clicks on "Skypoint - private cloud" pebble
       Then user should see "Skypoint - private cloud" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects Service Request Name as "Modify Onboarding in Skypoint"
-      And user enters Nimbus Modify Onboarding request as "Test7 Nimbus/Request"
-      Then user enters H2 (Name/Hid) as "Test name"
-      And user enters Nimbus description as "Test7 Nimbus/Description"
+      And user selects service request name as "Modify Onboarding in Skypoint"
+      And user enters nimbus request as "Test7 Nimbus/Request"
+      Then user enters H2 Name Hid as "Test name"
+      And user enters nimbus mandatory description as "Test7 Nimbus/Description"
       And user enters additional comments as "Test7 Nimbus/AC"
       Then user clicks on "Submit"
       And user gets plaza request id

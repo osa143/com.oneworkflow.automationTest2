@@ -8,14 +8,14 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Cloud"
+      And user clicks on "Cloud"
       When user clicks on "Skypoint - private cloud" pebble
       Then user should see "Skypoint - private cloud" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects Service Request Name as "Decommission VM"
-      And user enters Nimbus Decommission request as "Test2 Nimbus/Request"
-      Then user enters CI as "cc100cgas001"
-      And user enters Nimbus description as "Test2 Nimbus/Description"
+      And user selects service request name as "Decommission VM"
+      And user enters nimbus request as "Test2 Nimbus/Request"
+      Then user selects nimbus CI as "cc100cgas001"
+      And user enters nimbus description as "Test2 Nimbus/Description"
       And user enters additional comments as "Test2 Nimbus/AC"
       Then user clicks on "Submit"
       And user gets plaza request id

@@ -121,13 +121,109 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_DESCRIPTION= "sp_formfield_sr12_v_description";
     public static final String txt_CALL_GUIDE_CUSTOMER_ID_NAME= "sp_formfield_customer_id";
     private static final String txt_CALL_GUIDE_DESCRIPTION= "sp_formfield_description";
-    public static final String txt_CLEAN_MAIL_CUSTOMER_ID= "sp_formfield_custome_id";
-    public static final String txt_CLEAN_MAIL_TESTS_PERFORMED= "sp_formfield_date_time_cet";
+    private static final String txt_CLEAN_MAIL_CUSTOMER_ID= "sp_formfield_custome_id";
+    private static final String txt_CLEAN_MAIL_TESTS_PERFORMED= "sp_formfield_date_time_cet";
     private static final String txt_CLEAN_MAIL_SENDER_EMAIL= "sp_formfield_email_address";
     private static final String txt_CLEAN_MAIL_RECEIVER_EMAIL="sp_formfield_reciever_email";
     private static final String txt_CLEAN_MAIL_SENDER_DNS= "sp_formfield_sender_dns";
     private static final String txt_messaging_description= "sp_formfield_descrption";
+    private static final String txt_NIMBUS_REQUEST= "sp_formfield_request_nimbus";
+    private static final String dd_NIMBUS_ADD_CI= "s2id_autogen17";
+    private static final String dd_NIMBUS_TYPE= "select2-chosen-13";
+    private static final String txt_NIMBUS_DESCRIPTION_MANDATORY= "sp_formfield_description_mandatory";
+    private static final String txt_NIMBUS_DESCRIPTION= "sp_formfield_nimbus_description";
+    private static final String txt_NIMBUS_SIZE= "sp_formfield_expand_backup_size";
+    private static final String txt_NIMBUS_VOLUMES_DRIVES= "sp_formfield_extend_disk_volume";
+    private static final String dd_NIMBUS_EXTEND_DISK_ADD_CI= "s2id_autogen18";
+    private static final String txt_NIMBUS_SERVICE_WINDOW_DATE_TIME= "sp_formfield_hot_add_service_window";
+    private static final String txt_NIMBUS_H2_NAME_HID= "sp_formfield_modify_onboarding_hid";
+    private static final String txt_FRONTSIDE_NETWORK_INFO= "sp_formfield_network_onboard_frontside";
+    private static final String txt_MGMT_NETWORK_INFO= "sp_formfield_network_onboard_mgmt";
+    private static final String dd_NIMBUS_CLOUD_SERVICES= "s2id_autogen19";
+    private static final String dd_NIMBUS_TARGET_COUNTRIES= "s2id_autogen21";
+    private static final String txt_NIMBUS_ROLE_APPROVERS_ACCOUNT= "sp_formfield_onboard_skypoint_role";
+    private static final String txt_NIMBUS_ROLE_USERS_ACCOUNT= "sp_formfield_onboard_skypoint_role_user";
+    private static final String txt_NIMBUS_CMDB_ASSIGNED= "sp_formfield_onboard_skypoint_cmdb";
+    private static final String txt_NIMBUS_CMDB_LOCAL= "sp_formfield_onboard_skypoint_cmdb_local";
+    private static final String txt_NIMBUS_H2_HID="sp_formfield_onboard_skypoint_hid";
+    private static final String txt_NIMBUS_DATE_TO_RESTORE_FOM= "sp_formfield_restore_vm_date";
+    private static final String dd_NIMBUS_RESTORE_VM= "s2id_autogen20";
+    private static final String txt_NIMBUS_SKYPOINT_REQUEST= "sp_formfield_skypoint_request";
 
+
+
+    public void enterNimbus_skyPointRequest(String text){
+        enterTextByElement(By.id(txt_NIMBUS_SKYPOINT_REQUEST), text);
+    }
+    public void selectNimbus_restoreVm(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_NIMBUS_RESTORE_VM), By.id("s2id_autogen20_results"),  dropdownName);
+    }
+    public void enterNimbus_dateToRestoreFrom(String text){
+        enterTextByElement(By.id(txt_NIMBUS_DATE_TO_RESTORE_FOM), text);
+    }
+    public void enterNimbus_roleApproversAccount(String text){
+        enterTextByElement(By.id(txt_NIMBUS_ROLE_APPROVERS_ACCOUNT), text);
+    }
+    public void enterNimbus_roleUsersAccount(String text){
+        enterTextByElement(By.id(txt_NIMBUS_ROLE_USERS_ACCOUNT), text);
+    }
+    public void enterNimbus_CmdbAssigned(String text){
+        enterTextByElement(By.id(txt_NIMBUS_CMDB_ASSIGNED), text);
+    }
+    public void enterNimbus_cmdbLocal(String text){
+        enterTextByElement(By.id(txt_NIMBUS_CMDB_LOCAL), text);
+    }
+    public void enterNimbus_h2Hid(String text){
+        enterTextByElement(By.id(txt_NIMBUS_H2_HID), text);
+    }
+    public void selectNimbus_targetCountries(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_NIMBUS_TARGET_COUNTRIES), By.id("s2id_autogen21_results"),  dropdownName);
+    }
+    public void selectNimbus_cloudServices(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_NIMBUS_CLOUD_SERVICES), By.id("s2id_autogen19_results"),  dropdownName);
+    }
+    public void enterNimbus_frontSideNetworkInfo(String text){
+        enterTextByElement(By.id(txt_FRONTSIDE_NETWORK_INFO), text);
+    }
+    public void enterNimbus_mgmtNetworkInfo(String text){
+
+        enterTextByElement(By.id(txt_MGMT_NETWORK_INFO), text);
+    }
+    public void enterNimbus_h2NameHid(String text){
+
+        enterTextByElement(By.id(txt_NIMBUS_H2_NAME_HID), text);
+    }
+    public void enterNimbus_serviceWindowDateTime(String text){
+
+        enterTextByElement(By.id(txt_NIMBUS_SERVICE_WINDOW_DATE_TIME), text);
+    }
+    public void selectNimbusExtendDisk_AddCi(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_NIMBUS_EXTEND_DISK_ADD_CI), By.id("s2id_autogen18_results"),  dropdownName);
+
+    }
+    public void enterNimbus_volumesDrives(String text){
+        enterTextByElement(By.id(txt_NIMBUS_VOLUMES_DRIVES), text);
+    }
+
+    public void enterNimbus_size(String text){
+        enterTextByElement(By.id(txt_NIMBUS_SIZE), text);
+    }
+    public void enterNimbus_description(String text){
+        enterTextByElement(By.id(txt_NIMBUS_DESCRIPTION), text);
+    }
+    public void selectNimbus_AddCi(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_NIMBUS_ADD_CI), By.id("s2id_autogen17_results"),  dropdownName);
+
+    }
+    public void selectNimbus_Type(String dropdownName){
+        selectDropdown(By.id(dd_NIMBUS_TYPE), By.id("select2-results-13"),  dropdownName);
+    }
+    public void enterNimbus_request(String text){
+        enterTextByElement(By.id(txt_NIMBUS_REQUEST), text);
+    }
+    public void enterNimbus_descriptionMandatory(String text){
+        enterTextByElement(By.id(txt_NIMBUS_DESCRIPTION_MANDATORY), text);
+    }
 
     public void enterMessaging_description(String text){
         enterTextByElement(By.id(txt_messaging_description), text);
@@ -531,15 +627,15 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectDropdownWithMultipleValues(By Element, By dropdownValuesListID, String dropdownValue){
         clickElement(Element);
-        wait(500);
+        wait(300);
         driver.findElement(Element).sendKeys(dropdownValue);
-        wait(500);
+        wait(300);
         driver.findElement((dropdownValuesListID)).findElements(By.tagName("div")).stream().filter(element -> element.getText().trim().equals(dropdownValue)).findFirst().orElse(null).click();
 
     }
     public void selectDropdown(By Element, By dropdownValuesListID, String dropdownValue){
         clickElement(Element);
-        wait(500);
+        wait(300);
         driver.findElement((dropdownValuesListID)).findElements(By.tagName("li")).stream().filter(element -> element.getText().trim().equals(dropdownValue)).findFirst().orElse(null).click();
 
     }

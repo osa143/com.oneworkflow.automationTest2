@@ -8,14 +8,14 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Cloud"
+      And user clicks on "Cloud"
       When user clicks on "Skypoint - private cloud" pebble
       Then user should see "Skypoint - private cloud" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects Service Request Name as "Skypoint -Failed request support"
-      And user enters Nimbus Skypoint Failed request as "Test11 Nimbus/Request"
-      Then user enters Skypoint request# as "Test Skypoint#"
-      And user enters Nimbus description as "Test11 Nimbus/Description"
+      And user selects service request name as "Skypoint -Failed request support"
+      And user enters nimbus request as "Test11 Nimbus/Request"
+      Then user enters skypoint request as "Test Skypoint#"
+      And user enters nimbus description as "Test11 Nimbus/Description"
       And user enters additional comments as "Test11 Nimbus/AC"
       Then user clicks on "Submit"
       And user gets plaza request id

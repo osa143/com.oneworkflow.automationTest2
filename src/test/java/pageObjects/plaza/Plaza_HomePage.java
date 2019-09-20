@@ -119,9 +119,40 @@ public class Plaza_HomePage extends BasePage {
     public static final String dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_CI= "s2id_autogen33";
     public static final String txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_NAME="sp_formfield_sr12_v_db_name";
     public static final String txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_DESCRIPTION= "sp_formfield_sr12_v_description";
+    public static final String txt_CALL_GUIDE_CUSTOMER_ID_NAME= "sp_formfield_customer_id";
+    private static final String txt_CALL_GUIDE_DESCRIPTION= "sp_formfield_description";
+    public static final String txt_CLEAN_MAIL_CUSTOMER_ID= "sp_formfield_custome_id";
+    public static final String txt_CLEAN_MAIL_TESTS_PERFORMED= "sp_formfield_date_time_cet";
+    private static final String txt_CLEAN_MAIL_SENDER_EMAIL= "sp_formfield_email_address";
+    private static final String txt_CLEAN_MAIL_RECEIVER_EMAIL="sp_formfield_reciever_email";
+    private static final String txt_CLEAN_MAIL_SENDER_DNS= "sp_formfield_sender_dns";
+    private static final String txt_messaging_description= "sp_formfield_descrption";
 
 
-
+    public void enterMessaging_description(String text){
+        enterTextByElement(By.id(txt_messaging_description), text);
+    }
+    public void enterCleanMail_senderEmail(String text){
+        enterTextByElement(By.id(txt_CLEAN_MAIL_SENDER_EMAIL), text);
+    }
+    public void enterCleanMail_receiverEmail(String text){
+        enterTextByElement(By.id(txt_CLEAN_MAIL_RECEIVER_EMAIL), text);
+    }
+    public void enterCleanMail_senderDNS(String text){
+        enterTextByElement(By.id(txt_CLEAN_MAIL_SENDER_DNS), text);
+    }
+    public void enterCleanMail_testPerformed(String text){
+        enterTextByElement(By.id(txt_CLEAN_MAIL_TESTS_PERFORMED), text);
+    }
+    public void enterCleanMail_customerId(String text){
+        enterTextByElement(By.id(txt_CLEAN_MAIL_CUSTOMER_ID), text);
+    }
+    public void enterCallGuide_description(String text){
+        enterTextByElement(By.id(txt_CALL_GUIDE_DESCRIPTION), text);
+    }
+    public void enterCallGuide_customerIdName(String text){
+        enterTextByElement(By.id(txt_CALL_GUIDE_CUSTOMER_ID_NAME), text);
+    }
     public void selectDatabasePerformanceTroubleShooting_AddServerCi(String dropdownName){
         selectDropdownWithMultipleValues(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_SERVER_CI), By.id("s2id_autogen32_results"),  dropdownName);
 

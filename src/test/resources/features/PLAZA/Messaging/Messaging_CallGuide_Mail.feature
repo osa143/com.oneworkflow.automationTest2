@@ -10,7 +10,7 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Messaging"
+      And user clicks on "Messaging"
       When user clicks on "CallGuide Mail" pebble
       Then user should see "CallGuide Mail" form
       When user selects role dropdown as "Application Operation Engineer"
@@ -19,10 +19,10 @@
       And user enters name field as "Test1234"
       Then user enters email address field as "Test@Test.com"
       Then user enters phone field as "123456789"
-      And user enters CallGuide Mail request as "Test1 Messaging Mail/Request"
-      Then user selects System as "TSS Email"
-      Then user enters Customer ID/Name as "Test name"
-      Then user enters Messaging CallGuide Mail description as "Test1 Messaging/Description"
+      And user enters messaging request as "Test1 Messaging Mail/Request"
+      Then user selects messaging System as "TSSemail"
+      Then user enters messaging Customer ID Name as "Test name"
+      Then user enters messaging description as "Test1 Messaging/Description"
       And user enters additional comments as "Messaging - Test1/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
@@ -41,7 +41,7 @@
       And user validates title field as "Service Request | CallGuide Mail"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates description as ""
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -50,13 +50,13 @@
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
-      And user changes status to "Cleared"
+      And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
       When user switches to window 0

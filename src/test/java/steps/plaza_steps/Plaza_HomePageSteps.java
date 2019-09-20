@@ -21,6 +21,7 @@ public class Plaza_HomePageSteps extends BasePage {
     @When("user clicks on {string}")
     public void userClicksOnButton(String text) {
         homePage.clickElementByContainsTextAndTagName("*", text);
+
     }
 
     @And("user clicks on IT Infrastructure dropdown")
@@ -86,11 +87,13 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user clicks on plaza request id")
     public void userClicksOnPlazaRequestId() {
+        homePage.wait(5000);
         homePage.clickPlazaRequestNum();
     }
 
     @Then("user should see service request form")
     public void userShouldSeeServiceRequestForm() {
+        homePage.wait(5000);
     }
 
     @When("user opens new tab")
@@ -618,4 +621,73 @@ public class Plaza_HomePageSteps extends BasePage {
       homePage.enterDatabasePerformamanceTroubleShooting_description(arg0);
     }
 
+    @And("user enters messaging request as {string}")
+    public void userEntersCallGuideMailRequestAs(String arg0) {
+        homePage.enterReschedule_request(arg0);
+    }
+
+    @Then("user selects messaging System as {string}")
+    public void userSelectsCallGuideMailSystemAs(String arg0) {
+        homePage.selectServiceRequestName(arg0);
+    }
+
+    @Then("user enters messaging Customer ID Name as {string}")
+    public void userEntersCallGuideMailCustomerIDNameAs(String arg0) {
+        homePage.enterCallGuide_customerIdName(arg0);
+    }
+
+    @Then("user enters messaging description as {string}")
+    public void userEntersCallGuideMailDescriptionAs(String arg0) {
+        homePage.enterCallGuide_description(arg0);
+    }
+
+    @And("user enters clean mail Customer ID Name as {string}")
+    public void userEntersCleanMailCustomerIDNameAs(String arg0) {
+        homePage.enterCleanMail_customerId(arg0);
+    }
+
+    @And("user selects messaging Issue as {string}")
+    public void userSelectsCleanMailIssueAs(String arg0) {
+        homePage.selectServiceRequestName(arg0);
+    }
+
+    @Then("user enters Clean Mail description as {string}")
+    public void userEntersCleanMailDescriptionAs(String arg0) {
+        homePage.enterDescription_Reschedule(arg0);
+    }
+
+    @And("user date and time when tests performed as current date and time")
+    public void userDateAndTimeWhenTestsPerformedAsCurrentDateAndTime() {
+        homePage.enterCleanMail_testPerformed(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user enters messaging Sender DNS IP Address as {string}")
+    public void userEntersCleanMailSenderDnsAs(String arg0) {
+        homePage.enterCleanMail_senderDNS(arg0);
+    }
+
+    @And("user enters messaging Sender email address as {string}")
+    public void userEntersCleanMailSenderEmailAddressAs(String arg0) {
+        homePage.enterCleanMail_senderEmail(arg0);
+    }
+
+    @And("user enters messaging Receiver email address as {string}")
+    public void userEntersCleanMailRecieverEmailAddressAs(String arg0) {
+        homePage.enterCleanMail_receiverEmail(arg0);
+    }
+
+    @Then("user enters Messaging Denmark Mail description as {string}")
+    public void userEntersMessagingDenmarkMailDescriptionAs(String arg0) {
+        homePage.enterMessaging_description(arg0);
+    }
+
+    @And("user selects messaging SMTP relay as {string}")
+    public void userSelectsMessagingSMTPRelayAs(String arg0) {
+        homePage.select_selectRequest(arg0);
+    }
+
+    @And("user selects messaging CI as {string}")
+    public void userSelectsMessagingCIAs(String arg0) {
+        homePage.selectsAddCi_multipleValues(arg0);
+    }
 }

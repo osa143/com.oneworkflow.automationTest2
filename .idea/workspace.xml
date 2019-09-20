@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="Adding API test cases" />
+    <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/exception.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/exception.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_WorkOrderPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_WorkOrderPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_WorkOrderPageSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_WorkOrderPageSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_HomePageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_HomePageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_CallGuide_Mail.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_CallGuide_Mail.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Clean_Mail.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Clean_Mail.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Denmark_Mail.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Denmark_Mail.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_SMTP_Support.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_SMTP_Support.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSF_Mail.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSF_Mail.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSS_Mail.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSS_Mail.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSS_Premium_Mail.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSS_Premium_Mail.feature" afterDir="false" />
+    </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
     <list id="fdd5dcd5-8b51-46c5-a21c-717370c44d22" name="Revert &quot;Modified features and steps for bulk CI loading.&quot;" comment="Revert &quot;Modified features and steps for bulk CI loading.&quot;&#10;&#10;This reverts commit 2f56f3da" />
@@ -71,12 +97,135 @@
       </state>
     </system>
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/runners/Test_Runner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSS_Premium_Mail.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="1" column="53" lean-forward="true" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSS_Mail.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="858" column="16" selection-start-line="858" selection-start-column="16" selection-end-line="858" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="274" column="43" selection-start-line="274" selection-start-column="16" selection-end-line="274" selection-end-column="43" />
+              <folding>
+                <element signature="e#10317#10318#0" expanded="true" />
+                <element signature="e#10391#10392#0" expanded="true" />
+                <element signature="e#10497#10498#0" expanded="true" />
+                <element signature="e#10571#10572#0" expanded="true" />
+                <element signature="e#9868#9869#0" expanded="true" />
+                <element signature="e#9943#9944#0" expanded="true" />
+                <element signature="e#9780#9781#0" expanded="true" />
+                <element signature="e#9855#9856#0" expanded="true" />
+                <element signature="e#20754#20755#0" expanded="true" />
+                <element signature="e#20818#20819#0" expanded="true" />
+                <element signature="e#21094#21095#0" expanded="true" />
+                <element signature="e#21165#21166#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_HomePageSteps.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="693" selection-start-line="693" selection-end-line="693" />
+              <folding>
+                <element signature="e#3135#3136#0" expanded="true" />
+                <element signature="e#3170#3171#0" expanded="true" />
+                <element signature="e#7551#7552#0" expanded="true" />
+                <element signature="e#7592#7593#0" expanded="true" />
+                <element signature="e#22784#22785#0" expanded="true" />
+                <element signature="e#22838#22839#0" expanded="true" />
+                <element signature="e#22963#22964#0" expanded="true" />
+                <element signature="e#23018#23019#0" expanded="true" />
+                <element signature="e#23159#23160#0" expanded="true" />
+                <element signature="e#23219#23220#0" expanded="true" />
+                <element signature="e#23352#23353#0" expanded="true" />
+                <element signature="e#23409#23410#0" expanded="true" />
+                <element signature="e#23711#23712#0" expanded="true" />
+                <element signature="e#23734#23735#0" expanded="true" />
+                <element signature="e#23881#23882#0" expanded="true" />
+                <element signature="e#23904#23905#0" expanded="true" />
+                <element signature="e#24061#24062#0" expanded="true" />
+                <element signature="e#24084#24085#0" expanded="true" />
+                <element signature="e#24516#24517#0" expanded="true" />
+                <element signature="e#24540#24541#0" expanded="true" />
+                <element signature="e#24706#24707#0" expanded="true" />
+                <element signature="e#24729#24730#0" expanded="true" />
+                <element signature="e#24900#24901#0" expanded="true" />
+                <element signature="e#24955#24956#0" expanded="true" />
+                <element signature="e#24934#24935#0" expanded="true" />
+                <element signature="e#24957#24958#0" expanded="true" />
+                <element signature="e#25174#25175#0" expanded="true" />
+                <element signature="e#25197#25198#0" expanded="true" />
+                <element signature="e#25332#25333#0" expanded="true" />
+                <element signature="e#25355#25356#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>sp_formfield_email</find>
+      <find>sp_formfield_custome_id</find>
+      <find>select2-chosen-11</find>
+      <find>sp_formfield_sender_dns</find>
+      <find>sp_formfield_request</find>
+      <find>sp_formfield_customer_id</find>
+      <find>sp_formfield_descrption</find>
+      <find>sp_formfield_date_time_cet</find>
+      <find>sp_formfield_email_address</find>
+      <find>sp_formfield_description</find>
+      <find>select2-chosen-12</find>
+      <find>s2id_autogen13_results</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,15 +235,277 @@
       </map>
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Denmark_Mail.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Clean_Mail.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_CallGuide_Mail.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_SMTP_Support.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_HomePageSteps.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSF_Mail.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSS_Mail.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSS_Premium_Mail.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-25" />
-    <option name="y" value="-25" />
-    <option name="width" value="3790" />
-    <option name="height" value="2073" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1098" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
+          <expand>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="runners" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="IT_VAS_SPRINT_4.1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="IT_VAS_SPRINT_4.1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="BR's_&amp;_Defect_Fixes_Sprint_4.1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="IT_VAS_SPRINT_4.3" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="IT_VAS_SPRINT_4.3" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="BR-2866_SAO-427_Bulk_CI_Plugin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pageObjects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pageObjects" type="462c0819:PsiDirectoryNode" />
+              <item name="plaza" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="PLAZA" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="PLAZA" type="462c0819:PsiDirectoryNode" />
+              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="Regression" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="Sprint_4.1 BR's_&amp;_Defect_Fixes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="Sprint_4.3 BR's_&amp;_Defect_Fixes" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -433,6 +844,7 @@
       <workItem from="1568793447822" duration="8000" />
       <workItem from="1568793626954" duration="23562000" />
       <workItem from="1568879779301" duration="16654000" />
+      <workItem from="1568965804594" duration="9746000" />
     </task>
     <task id="LOCAL-00071" summary="updated features and steps">
       <created>1564756246138</created>
@@ -780,6 +1192,41 @@
     <option name="localTasksCounter" value="120" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Test_Runner - 2019.09.20 at 10h 23m 15s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.09.20 at 10h 25m 33s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.09.20 at 10h 26m 56s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.09.20 at 10h 29m 05s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.09.20 at 10h 48m 03s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.09.20 at 11h 08m 11s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.09.20 at 11h 23m 17s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.09.20 at 11h 29m 53s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.09.20 at 11h 30m 17s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.09.20 at 11h 34m 01s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="13615000" />
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -788,6 +1235,76 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32462686" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Designer" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.15700142" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.26435536" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4992928" />
+      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5010661" side_tool="true" weight="0.248104" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.04225352" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.09052334" />
+      <window_info anchor="bottom" id="Build" order="8" weight="0.4171181" />
+      <window_info anchor="bottom" id="Message" order="9" />
+      <window_info anchor="bottom" id="Find" order="10" weight="0.3726977" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.48090523" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Gradle" order="4" weight="0.18297587" />
+      <window_info anchor="right" id="Database" order="5" weight="0.3297587" />
+      <window_info anchor="right" id="Maven" order="6" weight="0.3297587" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Designer" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.15700142" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.283857" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4992928" />
+      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5010661" side_tool="true" weight="0.248104" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.04225352" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.09052334" />
+      <window_info anchor="bottom" id="Build" order="8" weight="0.4171181" />
+      <window_info anchor="bottom" id="Message" order="9" />
+      <window_info anchor="bottom" id="Find" order="10" weight="0.3726977" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.48090523" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Gradle" order="4" weight="0.18297587" />
+      <window_info anchor="right" id="Database" order="5" weight="0.3297587" />
+      <window_info anchor="right" id="Maven" order="6" weight="0.3297587" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -815,6 +1332,12 @@
           <value>
             <State>
               <option name="BEK_SORT_TYPE" value="1" />
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="HIGHLIGHTERS">
                 <map>
                   <entry key="CURRENT_BRANCH" value="false" />
@@ -875,16 +1398,19 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/steps/OWF_TroubleEventPageSteps.java</url>
           <line>142</line>
+          <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/steps/OWF_CiSearchPageSteps.java</url>
           <line>265</line>
+          <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java</url>
           <line>132</line>
+          <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
@@ -969,6 +1495,176 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Performance_Troubleshooting.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="19" column="87" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_AgentConsolePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2120">
+          <caret line="123" column="19" selection-start-line="123" selection-start-column="19" selection-end-line="123" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/FInance&amp;Assurance/Finance&amp;Assurance.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="88" selection-start-line="5" selection-start-column="88" selection-end-line="5" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_LoginPageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="224" column="29" selection-start-line="224" selection-start-column="29" selection-end-line="224" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Clean_Mail.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Denmark_Mail.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_SMTP_Support.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1240">
+          <caret line="62" column="61" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_CallGuide_Mail.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="274" column="43" selection-start-line="274" selection-start-column="16" selection-end-line="274" selection-end-column="43" />
+          <folding>
+            <element signature="e#10317#10318#0" expanded="true" />
+            <element signature="e#10391#10392#0" expanded="true" />
+            <element signature="e#10497#10498#0" expanded="true" />
+            <element signature="e#10571#10572#0" expanded="true" />
+            <element signature="e#9868#9869#0" expanded="true" />
+            <element signature="e#9943#9944#0" expanded="true" />
+            <element signature="e#9780#9781#0" expanded="true" />
+            <element signature="e#9855#9856#0" expanded="true" />
+            <element signature="e#20754#20755#0" expanded="true" />
+            <element signature="e#20818#20819#0" expanded="true" />
+            <element signature="e#21094#21095#0" expanded="true" />
+            <element signature="e#21165#21166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_HomePageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="693" selection-start-line="693" selection-end-line="693" />
+          <folding>
+            <element signature="e#3135#3136#0" expanded="true" />
+            <element signature="e#3170#3171#0" expanded="true" />
+            <element signature="e#7551#7552#0" expanded="true" />
+            <element signature="e#7592#7593#0" expanded="true" />
+            <element signature="e#22784#22785#0" expanded="true" />
+            <element signature="e#22838#22839#0" expanded="true" />
+            <element signature="e#22963#22964#0" expanded="true" />
+            <element signature="e#23018#23019#0" expanded="true" />
+            <element signature="e#23159#23160#0" expanded="true" />
+            <element signature="e#23219#23220#0" expanded="true" />
+            <element signature="e#23352#23353#0" expanded="true" />
+            <element signature="e#23409#23410#0" expanded="true" />
+            <element signature="e#23711#23712#0" expanded="true" />
+            <element signature="e#23734#23735#0" expanded="true" />
+            <element signature="e#23881#23882#0" expanded="true" />
+            <element signature="e#23904#23905#0" expanded="true" />
+            <element signature="e#24061#24062#0" expanded="true" />
+            <element signature="e#24084#24085#0" expanded="true" />
+            <element signature="e#24516#24517#0" expanded="true" />
+            <element signature="e#24540#24541#0" expanded="true" />
+            <element signature="e#24706#24707#0" expanded="true" />
+            <element signature="e#24729#24730#0" expanded="true" />
+            <element signature="e#24900#24901#0" expanded="true" />
+            <element signature="e#24955#24956#0" expanded="true" />
+            <element signature="e#24934#24935#0" expanded="true" />
+            <element signature="e#24957#24958#0" expanded="true" />
+            <element signature="e#25174#25175#0" expanded="true" />
+            <element signature="e#25197#25198#0" expanded="true" />
+            <element signature="e#25332#25333#0" expanded="true" />
+            <element signature="e#25355#25356#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="858" column="16" selection-start-line="858" selection-start-column="16" selection-end-line="858" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSF_Mail.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSS_Mail.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSS_Premium_Mail.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="53" lean-forward="true" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/runners/Test_Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

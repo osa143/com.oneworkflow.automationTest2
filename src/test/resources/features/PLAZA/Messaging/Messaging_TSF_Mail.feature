@@ -1,4 +1,4 @@
-@Messaging_TSF_Mail
+@Messaging_TSF_Mail  @PLAZA
   Feature: Messaging TSF Mail  plaza form test
     #not checked on ow
     Scenario: user validates information sent to OW from Plaza
@@ -9,18 +9,18 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Messaging"
+      And user clicks on "Messaging"
       When user clicks on "TSF Mail" pebble
       Then user should see "TSF Mail" form
       When user selects role dropdown as "Application Operation Engineer"
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox
       And user enters name field as "Test1234"
-      Then user enters email address field as "Test@Test.com
+      Then user enters email address field as "Test@Test.com"
       Then user enters phone field as "123456789"
-      And user enters Messaging TSF Mail request as "Test5 Messaging Mail/Request"
-      And user enters CI as "cc001cgas001"
-      Then user enters TSF Mail description as "Test5 Messaging/Description"
+      And user enters messaging request as "Test5 Messaging Mail/Request"
+      And user selects messaging CI as "cc001cgas001"
+      Then user enters messaging description as "Test5 Messaging/Description"
       And user enters additional comments as "Messaging - Test5/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
@@ -36,10 +36,10 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | Messaging"
+      And user validates title field as "Service Request | TSF Mail"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates description as ""
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -47,26 +47,26 @@
       And user should see assigned profile as ""
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
-      When user clicks on diagnosis tab
+      When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed
-      And user clicks on CI "cc100cgas001" and selects "Impact:Update
+      And user clicks on CI "cc100cgas001" and selects "Impact:Update"
       Then user switches to frame
       And user enters impacted from date as date in past
       And user enters impacted to date as date in past
       Then user clicks confirm checkbox
-      And user clicks the save button
+      And user clicks save button
       Then user switches to window 1
       When user selects CI present
       And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
-      Then user selects yes and closes warning message
+      And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
-      And user changes status to "Cleared"
+      And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
       When user switches to window 0

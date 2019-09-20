@@ -9,18 +9,18 @@
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
       And user clicks on "Firewall & Network"
-      When user clicks on "Firewall Routing Request" pebble
+      When user clicks on Firewall Routing Request pebble
       Then user should see "Firewall Routing Request" form
       When user selects role dropdown as "Application Operation Engineer"
-      Then user selects Service Request Name as "Troubleshoot Firewall order"
+      And user selects service request name as "Troubleshoot Firewall order"
       And user enters Network Security Firewall Troubleshoot request as "Test4 Network Security/Request"
-      Then user enters Ticket number as "Test ticket"
+      Then user enters FIRE Ticket number as "Test ticket"
       And user enters Source IP Address as "Test Source IP Address"
       And user enter Target IP Address as "Test Target IP Address"
       Then user selects Server connectivity verified as "Yes"
-      And user clicks the calendar and selects current date and time
+      And user enters date and time when tests performed as current date and time
       Then user selects Traffic return routing verified as "Yes"
-      And user enters Network Security Add Modify Remove DNS description as "Test4 Network Security/Description"
+      And user enters Network Security Troubleshoot description as "Test4 Network Security/Description"
       And user enters additional comments as "Test4 Network Security/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
@@ -39,7 +39,7 @@
       And user validates title field as "Service Request | Firewall Routing Request"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates description as ""
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -48,12 +48,12 @@
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
-      And user changes status to "Cleared"
+      And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed

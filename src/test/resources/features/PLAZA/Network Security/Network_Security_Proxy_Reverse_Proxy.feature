@@ -8,20 +8,20 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Firewall & Network"
-      When user clicks on "Proxy" pebble
+      And user clicks on "Firewall & Network"
+      When user clicks on Proxy pebble
       Then user should see "Proxy" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects Service Request as "Reverse Proxy"
-      And user enters Network Security Proxy Resource request as "Test3 Network Security Proxy/Request"
+      And user selects service request name as "Reverse proxy"
+      And user enters network security proxy request as "Test3 Network Security Proxy/Request"
       Then user enters Source IP as "Test 192.168.1.1"
       And user enters Reverseproxy DNS name as "Test.teliacompany.net"
-      And user enters Reverseproxy Protocol/Port as "https/447.test"
+      And user enters Reverseproxy Protocol Port as "https/447.test"
       And user selects Certificate as "Order CSR"
-      Then user enters Webserver address as "Test webserver"
-      And user selects High Availability as "Yes"
-      And user selects Load balancing Method as "Least Connections"
-      Then user enters Network Security Proxy Resource description as "Test3 Network Security Proxy/Description"
+      Then user enters webserver address as "Test webserver"
+      And user selects high availability as "Yes"
+      And user selects load balancing method as "Least Connections"
+      Then user enters network security proxy description as "Test3 Network Security Proxy/Description"
       And user enters additional comments as "Network Security Proxy - Test3/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
@@ -40,7 +40,7 @@
       And user validates title field as "Service Request | Proxy"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates description as ""
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -49,13 +49,13 @@
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
-      And user changes status to "Cleared"
+      And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
       When user switches to window 0

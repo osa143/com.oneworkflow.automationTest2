@@ -8,11 +8,11 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Firewall & Network"
-      When user clicks on "DNS/DHCP" pebble
+      And user clicks on "Firewall & Network"
+      When user clicks on DNS DHCP pebble
       Then user should see "DNS/DHCP" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects Service Request Name as "<Service Request Name>"
+      And user enters Service Request Name as "<Service Request Name>"
       And user enters Network Security Add Modify Remove DNS request as "<Request>"
       And user selects Scheduled change as "No"
       And user enters Network Security Add Modify Remove DNS description as "<Description>"
@@ -34,7 +34,7 @@
       And user validates title field as "Service Request | DNS/DHCP"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates description as ""
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -43,18 +43,21 @@
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
-      And user changes status to "Cleared"
+      And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
+      When user switches to window 0
+      And user clicks on main page refresh
+      Then user validates plaza request has completed
 
       Examples:
 
       |Service Request Name       |Request                              |Description                              |Additional Comments             |Desc Validation|
       |Add/Modify/Remove DNS entry|Test1 Network Security Add/Request   |Test1 Network Security Add/Description   |Test1 Network Security Add/AC   |               |
-      |DNS Sweden                 |Test2 Network Security Sweden/Request|Test2 Network Security Sweden/Description|Test2 Network Security Sweden/AC|               |
+     # |DNS Sweden                 |Test2 Network Security Sweden/Request|Test2 Network Security Sweden/Description|Test2 Network Security Sweden/AC|               |

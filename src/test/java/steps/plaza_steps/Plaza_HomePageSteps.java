@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.BasePage;
 import pageObjects.plaza.Plaza_HomePage;
-import sun.management.HotspotMemoryMBean;
 import utils.CommonUtils;
 
 public class Plaza_HomePageSteps extends BasePage {
@@ -22,7 +21,6 @@ public class Plaza_HomePageSteps extends BasePage {
     @When("user clicks on {string}")
     public void userClicksOnButton(String text) {
         homePage.clickElementByContainsTextAndTagName("*", text);
-
     }
 
     @And("user clicks on IT Infrastructure dropdown")
@@ -88,13 +86,11 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user clicks on plaza request id")
     public void userClicksOnPlazaRequestId() {
-        homePage.wait(5000);
         homePage.clickPlazaRequestNum();
     }
 
     @Then("user should see service request form")
     public void userShouldSeeServiceRequestForm() {
-        homePage.wait(5000);
     }
 
     @When("user opens new tab")
@@ -622,193 +618,319 @@ public class Plaza_HomePageSteps extends BasePage {
       homePage.enterDatabasePerformamanceTroubleShooting_description(arg0);
     }
 
-    @And("user enters messaging request as {string}")
-    public void userEntersCallGuideMailRequestAs(String arg0) {
-        homePage.enterReschedule_request(arg0);
+    @And("user enters Service Request Name as {string}")
+    public void userEntersNetworkSecurityServiceRequestNameAs(String arg0) {
+        homePage. entersNetworkSecurity_add_modify_remove_dns_service_request(arg0);
     }
 
-    @Then("user selects messaging System as {string}")
-    public void userSelectsCallGuideMailSystemAs(String arg0) {
-        homePage.selectServiceRequestName(arg0);
+    @And("user enters Network Security Add Modify Remove DNS request as {string}")
+    public void userEntersNetworkSecurityAddModifyRemoveDNSRequestAs(String arg0) {
+        homePage.enterNetworkSecurity_add_modify_remove_dns_request(arg0);
     }
 
-    @Then("user enters messaging Customer ID Name as {string}")
-    public void userEntersCallGuideMailCustomerIDNameAs(String arg0) {
-        homePage.enterCallGuide_customerIdName(arg0);
+    @And("user selects Scheduled change as {string}")
+    public void userSelectsScheduledChangeAs(String arg0) {
+        homePage.selectNetworkSecurity_add_modify_remove_dns_scheduled_change(arg0);
     }
 
-    @Then("user enters messaging description as {string}")
-    public void userEntersCallGuideMailDescriptionAs(String arg0) {
-        homePage.enterCallGuide_description(arg0);
+    @When("user clicks on DNS DHCP pebble")
+    public void userClicksOnDNSDHCPPebble() {
+        clickElement(By.xpath("//*[@id=\"x2723de4adb72cf006734f1eabf9619aa\"]/div/div/div[2]/div[6]/div/a/div/h2"));
     }
 
-    @And("user enters clean mail Customer ID Name as {string}")
-    public void userEntersCleanMailCustomerIDNameAs(String arg0) {
-        homePage.enterCleanMail_customerId(arg0);
+    @And("user enters Network Security Add Modify Remove DNS description as {string}")
+    public void userEntersNetworkSecurityAddModifyRemoveDNSDescriptionAs(String arg0) {
+        homePage.enterNetworkSecurity_add_modify_remove_dns_description(arg0);
     }
 
-    @And("user selects messaging Issue as {string}")
-    public void userSelectsCleanMailIssueAs(String arg0) {
-        homePage.selectServiceRequestName(arg0);
+    @When("user clicks on Firewall Routing Request pebble")
+    public void userClicksOnFirewallRoutingRequestPebble() {
+        clickElement(By.xpath("//*[@id=\"x2723de4adb72cf006734f1eabf9619aa\"]/div/div/div[2]/div[8]/div/a/div/h2"));
     }
 
-    @Then("user enters Clean Mail description as {string}")
-    public void userEntersCleanMailDescriptionAs(String arg0) {
-        homePage.enterDescription_Reschedule(arg0);
+    @Then("user selects New Change Service Request Name as {string}")
+    public void userSelectsNewChangeServiceRequestNameAs(String arg0) {
+        homePage.selectNetworkSecurity_firewall_new_change_service_request(arg0);
     }
 
-    @And("user date and time when tests performed as current date and time")
-    public void userDateAndTimeWhenTestsPerformedAsCurrentDateAndTime() {
-        homePage.enterCleanMail_testPerformed(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    @And("user enters Network Security Firewall New Change request as {string}")
+    public void userEntersNetworkSecurityFirewallNewChangeRequestAs(String arg0) {
+        homePage.enterNetworkSecurity_firewall_new_change_request(arg0);
     }
 
-    @And("user enters messaging Sender DNS IP Address as {string}")
-    public void userEntersCleanMailSenderDnsAs(String arg0) {
-        homePage.enterCleanMail_senderDNS(arg0);
+
+    @And("user enters Network Security Firewall New Change description as {string}")
+    public void userEntersNetworkSecurityFirewallNewChangeDescriptionAs(String arg0) {
+        homePage.enterNetworkSecurity_firewall_new_change_description(arg0);
     }
 
-    @And("user enters messaging Sender email address as {string}")
-    public void userEntersCleanMailSenderEmailAddressAs(String arg0) {
-        homePage.enterCleanMail_senderEmail(arg0);
+    @And("user selects Add CI as {string}")
+    public void userSelectsAddCIAs(String arg0) {
+        homePage.enterNetworkSecurity_firewall_new_change_add_ci_multipleValues(arg0);
     }
 
-    @And("user enters messaging Receiver email address as {string}")
-    public void userEntersCleanMailRecieverEmailAddressAs(String arg0) {
-        homePage.enterCleanMail_receiverEmail(arg0);
+    @And("user enters Network Security Firewall Troubleshoot request as {string}")
+    public void userEntersNetworkSecurityFirewallTroubleshootRequestAs(String arg0) {
+        homePage.enterNetworkSecurity_firewall_troubleshoot_request(arg0);
     }
 
-    @Then("user enters Messaging Denmark Mail description as {string}")
-    public void userEntersMessagingDenmarkMailDescriptionAs(String arg0) {
-        homePage.enterMessaging_description(arg0);
+    @Then("user enters FIRE Ticket number as {string}")
+    public void userEntersFIRETicketNumberAs(String arg0) {
+        homePage.enterNetworkSecurity_firewall_troubleshoot_ticket_number(arg0);
     }
 
-    @And("user selects messaging SMTP relay as {string}")
-    public void userSelectsMessagingSMTPRelayAs(String arg0) {
-        homePage.select_selectRequest(arg0);
+    @And("user enters Source IP Address as {string}")
+    public void userEntersSourceIPAddressAs(String arg0) {
+        homePage.enterNetworkSecurity_firewall_troubleshoot_source_id(arg0);
     }
 
-    @And("user selects messaging CI as {string}")
-    public void userSelectsMessagingCIAs(String arg0) {
-        homePage.selectsAddCi_multipleValues(arg0);
+    @And("user enter Target IP Address as {string}")
+    public void userEnterTargetIPAddressAs(String arg0) {
+        homePage.enterNetworkSecurity_firewall_troubleshoot_target_ip(arg0);
     }
 
-    @And("user enters nimbus mandatory description as {string}")
-    public void userEntersNimbusMandatoryDescriptionAs(String arg0) {
-        homePage.enterNimbus_descriptionMandatory(arg0);
+    @Then("user selects Server connectivity verified as {string}")
+    public void userSelectsServerConnectivityVerifiedAs(String arg0) {
+        homePage.selectNetworkSecurity_add_modify_remove_dns_scheduled_change(arg0);
     }
 
-    @And("user enters nimbus request as {string}")
-    public void userEntersNimbusRequestAs(String arg0) {
-        homePage.enterNimbus_request(arg0);
+    @And("user enters date and time when tests performed as current date and time")
+    public void userEntersDateAndTimeWhenTestsPerformedAsCurrentDateAndTime() {
+        homePage.enterNetworkSecurity_firewall_troubleshoot_date_and_time(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
     }
 
-    @Then("user selects nimbus CI as {string}")
-    public void userSelectsNimbusCIAs(String arg0) {
-      homePage.selectNimbus_AddCi(arg0);
+    @Then("user selects Traffic return routing verified as {string}")
+    public void userSelectsTrafficReturnRoutingVerifiedAs(String arg0) {
+        homePage.selectDatabaseAccountType(arg0);
     }
 
-    @And("user selects nimbus type as {string}")
-    public void userSelectsNimbusTypeAs(String arg0) {
-        homePage.selectNimbus_Type(arg0);
+    @And("user enters Network Security Troubleshoot description as {string}")
+    public void userEntersNetworkSecurityTroubleshootDescriptionAs(String arg0) {
+        homePage.enterNetworkSecurity_firewall_troubleshoot_description(arg0);
     }
 
-    @And("user enters nimbus description as {string}")
-    public void userEntersNimbusDescriptionAs(String arg0) {
-        homePage.enterNimbus_description(arg0);
+    @When("user clicks on LAN Data Net LAN pebble")
+    public void userClicksOnLANDataNetLANPebble() {
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[10]/div/a/div/h2"));
     }
 
-    @Then("user enters nimbus size GB as {string}")
-    public void userEntersNimbusSizeAs(String arg0) {
-        homePage.enterNimbus_size(arg0);
+    @And("user enters Network Security LAN request as {string}")
+    public void userEntersNetworkSecurityLANRequestAs(String arg0) {
+        homePage.enterNetworkSecurity_lan_request(arg0);
     }
 
-    @And("user enters volumes drives as {string}")
-    public void userEntersVolumesDrivesAs(String arg0) {
-        homePage.enterNimbus_volumesDrives(arg0);
+    @Then("user enters Network Security LAN description as {string}")
+    public void userEntersNetworkSecurityLANDescriptionAs(String arg0) {
+        homePage.enterNetworkSecurity_lan_description(arg0);
     }
 
-    @Then("user selects nimbus extend disk CI as {string}")
-    public void userSelectsNimbusExtendDiskCIAs(String arg0) {
-        homePage.selectNimbusExtendDisk_AddCi(arg0);
+    @When("user clicks on Network Load Balancing pebble")
+    public void userClicksOnNetworkLoadBalancingPebble() {
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[12]/div/a/div/h2"));
+
+
     }
 
-    @And("user enters nimbus service window as current date and time")
-    public void userEntersNimbusServiceWindowAsCurrentDateAndTime() {
-        homePage.enterNimbus_serviceWindowDateTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    @And("user enters Network Security Load request as {string}")
+    public void userEntersNetworkSecurityLoadRequestAs(String arg0) {
+        homePage.enterNetworkSecurity_load_balancing_request(arg0);
     }
 
-    @Then("user enters H2 Name Hid as {string}")
-    public void userEntersHNameHidAs(String arg0) {
-        homePage.enterNimbus_h2NameHid(arg0);
+    @Then("user enters Network Security Load description as {string}")
+    public void userEntersNetworkSecurityLoadDescriptionAs(String arg0) {
+        homePage.enterNetworkSecurity_load_balancing_description(arg0);
     }
 
-    @Then("user selects DDC base ruleset applied as {string}")
-    public void userSelectsDDCBaseRulesetAppliedAs(String arg0) {
+    @When("user clicks on Network Routing Switching pebble")
+    public void userClicksOnNetworkRoutingSwitchingPebble() {
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[16]/div/a/div/h2"));
+    }
+
+    @Then("user selects New Switch Service Request Name as {string}")
+    public void userSelectsNewSwitchServiceRequestNameAs(String arg0) {
+        homePage.selectNetworkSecurity_firewall_new_change_service_request(arg0);
+    }
+
+    @And("user enters Network Security Routing New Switch request as {string}")
+    public void userEntersNetworkSecurityRoutingNewSwitchRequestAs(String arg0) {
+        homePage.enterNetworkSecurity_new_switch_request(arg0);
+    }
+
+    @Then("user selects Network CI as {string}")
+    public void userSelectsNetworkCIAs(String arg0) {
+        homePage.selectNetworkSecurity_new_switch_network_ci(arg0);
+    }
+
+    @And("user enters DC-site as {string}")
+    public void userEntersDCSiteAs(String arg0) {
+        homePage.enterNetworkSecurity_new_switch_dc_site(arg0);
+    }
+
+    @And("user enters Data Room as {string}")
+    public void userEntersDataRoomAs(String arg0) {
+        homePage.enterNetworkSecurity_new_switch_data_room(arg0);
+    }
+
+    @Then("user enters Rack as {string}")
+    public void userEntersRackAs(String arg0) {
+        homePage.enterNetworkSecurity_new_switch_rack(arg0);
+    }
+
+    @And("user enters usage of the switch as {string}")
+    public void userEntersUsageOfTheSwitchAs(String arg0) {
+        homePage.enterNetworkSecurity_new_switch_usage(arg0);
+    }
+
+    @And("user enter Terminal server as {string}")
+    public void userEnterTerminalServerAs(String arg0) {
+        homePage.enterNetworkSecurity_new_switch_terminal(arg0);
+    }
+
+    @Then("user enters Network Security Routing Switching description as {string}")
+    public void userEntersNetworkSecurityRoutingSwitchingDescriptionAs(String arg0) {
+        homePage.enterNetworkSecurity_new_switch_description(arg0);
+    }
+
+    @And("user enters Network Security Routing New VLAN request as {string}")
+    public void userEntersNetworkSecurityRoutingNewVLANRequestAs(String arg0) {
+        homePage.enterNetworkSecurity_new_vlan_request(arg0);
+    }
+
+    @And("user enters IP Net as {string}")
+    public void userEntersIPNetAs(String arg0) {
+        homePage.enterNetworkSecurity_new_vlan_ip_net(arg0);
+    }
+
+    @Then("user enters VLAN number and name as {string}")
+    public void userEntersVLANNumberAndNameAs(String arg0) {
+        homePage.enterNetworkSecurity_new_vlan_number_and_name(arg0);
+    }
+
+    @Then("user enters Purpose of VLAN as {string}")
+    public void userEntersPurposeOfVLANAs(String arg0) {
+        homePage.enterNetworkSecurity_new_vlan_purpose(arg0);
+    }
+
+    @Then("user enters Network Security description as {string}")
+    public void userEntersNetworkSecurityDescriptionAs(String arg0) {
+        homePage.enterNetworkSecurity_new_vlan_description(arg0);
+    }
+
+    @When("user clicks on Proxy pebble")
+    public void userClicksOnProxyPebble() {
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[14]/div/a/div/h2"));
+    }
+
+
+    @And("user enters network security proxy request as {string}")
+    public void userEntersNetworkSecurityProxyRequestAs(String arg0) {
+        homePage.enterNetworkSecurity_proxy_general_request(arg0);
+    }
+
+    @Then("user enters network security proxy description as {string}")
+    public void userEntersNetworkSecurityProxyDescriptionAs(String arg0) {
+        homePage.enterNetworkSecurity_proxy_general_description(arg0);
+    }
+
+    @Then("user enters Source IP as {string}")
+    public void userEntersSourceIPAs(String arg0) {
+        homePage.enterNetworkSecurity_proxy_reverse_source_ip(arg0);
+    }
+
+    @And("user enters Reverseproxy DNS name as {string}")
+    public void userEntersReverseproxyDNSNameAs(String arg0) {
+        homePage.enterNetworkSecurity_proxy_reverse_dns_name(arg0);
+    }
+
+    @And("user enters Reverseproxy Protocol Port as {string}")
+    public void userEntersReverseproxyProtocolPortAs(String arg0) {
+        homePage.enterNetworkSecurity_proxy_reverse_protocol_port(arg0);
+    }
+
+    @And("user selects Certificate as {string}")
+    public void userSelectsCertificateAs(String arg0) {
+        homePage.selectNetworkSecurity_proxy_reverse_certificate(arg0);
+    }
+
+    @Then("user enters webserver address as {string}")
+    public void userEntersWebserverAddressAs(String arg0) {
+        homePage.enterNetworkSecurity_proxy_reverse_webserver_address(arg0);
+    }
+
+    @And("user selects high availability as {string}")
+    public void userSelectsHighAvailabilityAs(String arg0) {
+        homePage.selectNetworkSecurity_proxy_reverse_high_availibility(arg0);
+    }
+
+    @And("user selects load balancing method as {string}")
+    public void userSelectsLoadBalancingMethodAs(String arg0) {
+        homePage.selectNetworkSecurity_proxy_reverse_load_balancing(arg0);
+    }
+
+    @And("user selects SurfProxy /URL filter as {string}")
+    public void userSelectsSurfProxyURLFilterAs(String arg0) {
+        homePage.selectBCPP_Environment(arg0);
+    }
+
+    @Then("user enters URL as {string}")
+    public void userEntersURLAs(String arg0) {
+        homePage.enterNetworkSecurity_proxy_surf_proxy_url(arg0);
+    }
+
+    @Then("user selects internal external website as {string}")
+    public void userSelectsInternalExternalWebsiteAs(String arg0) {
         homePage.selectDatabase_new_existing_account(arg0);
     }
 
-    @Then("user enters frontside network information as {string}")
-    public void userEntersFrontsideNetworkInformationAs(String arg0) {
-        homePage.enterNimbus_frontSideNetworkInfo(arg0);
+    @Then("user enters error message as {string}")
+    public void userEntersErrorMessageAs(String arg0) {
+        homePage.enterNetworkSecurity_proxy_surf_proxy_error_message(arg0);
     }
 
-    @And("user enters mgmt network information as {string}")
-    public void userEntersMgmtNetworkInformationAs(String arg0) {
-        homePage.enterNimbus_mgmtNetworkInfo(arg0);
+    @And("user enters has it worked before as {string}")
+    public void userEntersHasItWorkedBeforeAs(String arg0) {
+        homePage.enterNetworkSecurity_proxy_surf_proxy_worked_before(arg0);
     }
 
-    @And("user selects dual-site services as {string}")
-    public void userSelectsDualSiteServicesAs(String arg0) {
-        homePage.select_selectRequest(arg0);
+    @Then("user enters when did the problem occure as {string}")
+    public void userEntersWhenDidTheProblemOccureAs(String arg0) {
+        homePage.enterNetworkSecurity_proxy_surf_proxy_problem_occure(arg0);
     }
 
-    @Then("user selects Cloud Services as {string}")
-    public void userSelectsCloudServicesAs(String arg0) {
-        homePage.selectNimbus_cloudServices(arg0);
+    @And("user enters what is your current proxy settings as {string}")
+    public void userEntersWhatIsYourCurrentProxySettingsAs(String arg0) {
+        homePage.enterNetworkSecurity_proxy_surf_proxy_settings(arg0);
     }
 
-    @Then("user selects Target countries for System Cloud Services as {string}")
-    public void userSelectsTargetCountriesForSystemCloudServicesAs(String arg0) {
-        homePage.selectNimbus_targetCountries(arg0);
+    @Then("user enters ticket number as {string}")
+    public void userEntersTicketNumberAs(String arg0) {
+        homePage.enterNetworkSecurity_proxy_surf_proxy_ticket_number(arg0);
     }
 
-    @Then("user enters Approver Account\\(s) as {string}")
-    public void userEntersApproverAccountSAs(String arg0) {
-        homePage.enterNimbus_roleApproversAccount(arg0);
+    @And("user selects SurfProxy url filter as {string}")
+    public void userSelectsSurfProxyUrlFilterAs(String arg0) {
+        homePage.selectBCPP_Environment(arg0);
     }
 
-    @And("user enters User Account\\(s) as {string}")
-    public void userEntersUserAccountSAs(String arg0) {
-        homePage.enterNimbus_roleUsersAccount(arg0);
+    @And("user enters proxy date and time when tests performed as current date and time")
+    public void userEntersProxyDateAndTimeWhenTestsPerformedAsCurrentDateAndTime() {
+        homePage.enterNetworkSecurity_proxy_surf_proxy_date_and_time(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
     }
 
-    @Then("user enters CMDB, Assigned to Application Team as {string}")
-    public void userEntersCMDBAssignedToApplicationTeamAs(String arg0) {
-        homePage.enterNimbus_CmdbAssigned(arg0);
+    @And("user enters proxy Source IP Address as {string}")
+    public void userEntersProxySourceIPAddressAs(String arg0) {
+        homePage.enterNetworkSecurity_proxy_surf_proxy_source_ip(arg0);
     }
 
-    @Then("user enters CMDB, Local responsible Application as {string}")
-    public void userEntersCMDBLocalResponsibleApplicationAs(String arg0) {
-       homePage.enterNimbus_cmdbLocal(arg0);
+    @And("user enters user IP as {string}")
+    public void userEntersUserIPAs(String arg0) {
+        homePage.enterNetworkSecurity_proxy_surf_proxy_slow_surfing_user_ip(arg0);
     }
 
-    @And("user enters nimbus skypoint H2 Name Hid as {string}")
-    public void userEntersNimbusSkypointHNameHidAs(String arg0) {
-       homePage.enterNimbus_h2Hid(arg0);
-    }
-
-    @And("user enters date to restore from as current date and time")
-    public void userEntersDateToRestoreFromAsCurrentDateAndTime() {
-        homePage.enterNimbus_dateToRestoreFrom(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
-    }
-
-    @Then("user enters restore vm CI as {string}")
-    public void userEntersRestoreVmCIAs(String arg0) {
-        homePage.selectNimbus_restoreVm(arg0);
-    }
-
-    @Then("user enters skypoint request as {string}")
-    public void userEntersSkypointRequestAs(String arg0) {
-        homePage.enterNimbus_skyPointRequest(arg0);
+    @Then("user selects internal external sites as {string}")
+    public void userSelectsInternalExternalSitesAs(String arg0) {
+        homePage.selectNetworkSecurity_proxy_surf_proxy_slow_surfing_sites(arg0);
     }
 }
+
+

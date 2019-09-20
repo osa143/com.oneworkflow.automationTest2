@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
@@ -14,20 +15,24 @@
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/exception.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/exception.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_WorkOrderPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_WorkOrderPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_WorkOrderPageSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_WorkOrderPageSteps.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_HomePageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_HomePageSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Add_Modify_Remove.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Add_Modify_Remove.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Decommision_VM.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Decommision_VM.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Expand_Backup_Archive_Disk.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Expand_Backup_Archive_Disk.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Extend_Disk_Red_Hat.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Extend_Disk_Red_Hat.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Extend_Disk_Windows.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Extend_Disk_Windows.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Hot_Add_CPU_Or_Ram.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Hot_Add_CPU_Or_Ram.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Modify_Onboarding.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Modify_Onboarding.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Network_Onboarding_Nordic.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Network_Onboarding_Nordic.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Onboard_To_Skypoint.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Onboard_To_Skypoint.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Restore_VM.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Restore_VM.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Skypoint_Failed_Request.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Skypoint_Failed_Request.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_CallGuide_Mail.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_CallGuide_Mail.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Add_Modify_Remove_DNS.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Add_Modify_Remove_DNS.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Firewall_New_Change.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Firewall_New_Change.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Firewall_Troubleshoot.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Firewall_Troubleshoot.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_LAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_LAN.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Load_Balancing.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Load_Balancing.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_New_Switch.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_New_Switch.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_New_VLAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_New_VLAN.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_General_Inquiry.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_General_Inquiry.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Resource_Request.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Resource_Request.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Reverse_Proxy.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Reverse_Proxy.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Surf_Proxy.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Surf_Proxy.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Surf_Proxy_Slow_Surfing.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Surf_Proxy_Slow_Surfing.feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -98,170 +103,12 @@
       </state>
     </system>
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/runners/Test_Runner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Skypoint_Failed_Request.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" column="59" lean-forward="true" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="154" column="43" selection-start-line="154" selection-start-column="16" selection-end-line="154" selection-end-column="43" />
-              <folding>
-                <element signature="e#12317#12318#0" expanded="true" />
-                <element signature="e#12390#12391#0" expanded="true" />
-                <element signature="e#12457#12458#0" expanded="true" />
-                <element signature="e#12527#12528#0" expanded="true" />
-                <element signature="e#12591#12592#0" expanded="true" />
-                <element signature="e#12657#12658#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_HomePageSteps.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="811" column="51" selection-start-line="811" selection-start-column="51" selection-end-line="811" selection-end-column="51" />
-              <folding>
-                <element signature="e#1222#1223#0" expanded="true" />
-                <element signature="e#1271#1272#0" expanded="true" />
-                <element signature="e#3135#3136#0" expanded="true" />
-                <element signature="e#3170#3171#0" expanded="true" />
-                <element signature="e#3556#3557#0" expanded="true" />
-                <element signature="e#3611#3612#0" expanded="true" />
-                <element signature="e#5242#5243#0" expanded="true" />
-                <element signature="e#5293#5294#0" expanded="true" />
-                <element signature="e#7551#7552#0" expanded="true" />
-                <element signature="e#7592#7593#0" expanded="true" />
-                <element signature="e#22784#22785#0" expanded="true" />
-                <element signature="e#22838#22839#0" expanded="true" />
-                <element signature="e#22963#22964#0" expanded="true" />
-                <element signature="e#23018#23019#0" expanded="true" />
-                <element signature="e#23159#23160#0" expanded="true" />
-                <element signature="e#23219#23220#0" expanded="true" />
-                <element signature="e#23352#23353#0" expanded="true" />
-                <element signature="e#23409#23410#0" expanded="true" />
-                <element signature="e#23711#23712#0" expanded="true" />
-                <element signature="e#23734#23735#0" expanded="true" />
-                <element signature="e#23881#23882#0" expanded="true" />
-                <element signature="e#23904#23905#0" expanded="true" />
-                <element signature="e#24061#24062#0" expanded="true" />
-                <element signature="e#24084#24085#0" expanded="true" />
-                <element signature="e#24516#24517#0" expanded="true" />
-                <element signature="e#24540#24541#0" expanded="true" />
-                <element signature="e#24706#24707#0" expanded="true" />
-                <element signature="e#24729#24730#0" expanded="true" />
-                <element signature="e#24900#24901#0" expanded="true" />
-                <element signature="e#24955#24956#0" expanded="true" />
-                <element signature="e#24934#24935#0" expanded="true" />
-                <element signature="e#24957#24958#0" expanded="true" />
-                <element signature="e#25174#25175#0" expanded="true" />
-                <element signature="e#25197#25198#0" expanded="true" />
-                <element signature="e#25332#25333#0" expanded="true" />
-                <element signature="e#25355#25356#0" expanded="true" />
-                <element signature="e#25507#25508#0" expanded="true" />
-                <element signature="e#25530#25531#0" expanded="true" />
-                <element signature="e#25670#25671#0" expanded="true" />
-                <element signature="e#25694#25695#0" expanded="true" />
-                <element signature="e#25822#25823#0" expanded="true" />
-                <element signature="e#25845#25846#0" expanded="true" />
-                <element signature="e#25976#25977#0" expanded="true" />
-                <element signature="e#25999#26000#0" expanded="true" />
-                <element signature="e#26167#26168#0" expanded="true" />
-                <element signature="e#26190#26191#0" expanded="true" />
-                <element signature="e#26325#26326#0" expanded="true" />
-                <element signature="e#26348#26349#0" expanded="true" />
-                <element signature="e#26484#26485#0" expanded="true" />
-                <element signature="e#26507#26508#0" expanded="true" />
-                <element signature="e#26664#26665#0" expanded="true" />
-                <element signature="e#26687#26688#0" expanded="true" />
-                <element signature="e#27096#27097#0" expanded="true" />
-                <element signature="e#27119#27120#0" expanded="true" />
-                <element signature="e#27320#27321#0" expanded="true" />
-                <element signature="e#27343#27344#0" expanded="true" />
-                <element signature="e#27716#27717#0" expanded="true" />
-                <element signature="e#27739#27740#0" expanded="true" />
-                <element signature="e#27892#27893#0" expanded="true" />
-                <element signature="e#27915#27916#0" expanded="true" />
-                <element signature="e#28055#28056#0" expanded="true" />
-                <element signature="e#28078#28079#0" expanded="true" />
-                <element signature="e#28455#28456#0" expanded="true" />
-                <element signature="e#28478#28479#0" expanded="true" />
-                <element signature="e#28629#28630#0" expanded="true" />
-                <element signature="e#28652#28653#0" expanded="true" />
-                <element signature="e#28834#28835#0" expanded="true" />
-                <element signature="e#28857#28858#0" expanded="true" />
-                <element signature="e#29038#29039#0" expanded="true" />
-                <element signature="e#29060#29061#0" expanded="true" />
-                <element signature="e#29220#29221#0" expanded="true" />
-                <element signature="e#29243#29244#0" expanded="true" />
-                <element signature="e#29638#29639#0" expanded="true" />
-                <element signature="e#29661#29662#0" expanded="true" />
-                <element signature="e#29805#29806#0" expanded="true" />
-                <element signature="e#29828#29829#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>sp_formfield_email</find>
-      <find>sp_formfield_custome_id</find>
-      <find>sp_formfield_sender_dns</find>
-      <find>sp_formfield_request</find>
-      <find>sp_formfield_customer_id</find>
-      <find>sp_formfield_descrption</find>
-      <find>sp_formfield_date_time_cet</find>
-      <find>sp_formfield_email_address</find>
-      <find>sp_formfield_description</find>
-      <find>s2id_autogen13_results</find>
-      <find>select2-chosen-11</find>
-      <find>select2-chosen-13</find>
-      <find>sp_formfield_nimbus_description</find>
-      <find>sp_formfield_expand_backup_size</find>
-      <find>s2id_autogen18_results</find>
-      <find>sp_formfield_extend_disk_volume</find>
-      <find>sp_formfield_hot_add_service_window</find>
-      <find>s2id_autogen17_results</find>
-      <find>sp_formfield_modify_onboarding_hid</find>
-      <find>select2-chosen-14</find>
-      <find>s2id_autogen19_results</find>
-      <find>select2-chosen-12</find>
-      <find>sp_formfield_onboard_skypoint_hid</find>
-      <find>s2id_autogen20</find>
-      <find>sp_formfield_skypoint_request</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -271,295 +118,20 @@
       </map>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_LoginPage.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Denmark_Mail.feature" />
-        <option value="$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Clean_Mail.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_CallGuide_Mail.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_SMTP_Support.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSF_Mail.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSS_Mail.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSS_Premium_Mail.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Decommision_VM.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Add_Modify_Remove.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Expand_Backup_Archive_Disk.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Extend_Disk_Red_Hat.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Extend_Disk_Windows.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Hot_Add_CPU_Or_Ram.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Modify_Onboarding.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Network_Onboarding_Nordic.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Onboard_To_Skypoint.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Restore_VM.feature" />
-        <option value="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Skypoint_Failed_Request.feature" />
-        <option value="$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_HomePageSteps.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1098" />
-  </component>
+  <component name="ProjectId" id="1R5o8VMfi1kId4tVA5CZwpAA1I2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
-          <expand>
-            <path>
-              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="runners" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="IT_VAS_SPRINT_4.1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="IT_VAS_SPRINT_4.1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="BR's_&amp;_Defect_Fixes_Sprint_4.1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="IT_VAS_SPRINT_4.3" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="IT_VAS_SPRINT_4.3" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="BR-2866_SAO-427_Bulk_CI_Plugin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pageObjects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pageObjects" type="462c0819:PsiDirectoryNode" />
-              <item name="plaza" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="runners" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="PLAZA" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="PLAZA" type="462c0819:PsiDirectoryNode" />
-              <item name="Nimbus" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="Regression" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="Sprint_4.1 BR's_&amp;_Defect_Fixes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="Sprint_4.3 BR's_&amp;_Defect_Fixes" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -891,14 +463,9 @@
       <workItem from="1568793447822" duration="8000" />
       <workItem from="1568793626954" duration="23562000" />
       <workItem from="1568879779301" duration="16654000" />
-      <workItem from="1568965804594" duration="21729000" />
-    </task>
-    <task id="LOCAL-00072" summary="updated problem features and steps">
-      <created>1564952528121</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1564952528122</updated>
+      <workItem from="1568966164809" duration="17074000" />
+      <workItem from="1568983670624" duration="895000" />
+      <workItem from="1568984643431" duration="5815000" />
     </task>
     <task id="LOCAL-00073" summary="updated problem features and steps">
       <created>1565167565307</created>
@@ -1229,50 +796,22 @@
       <option name="project" value="LOCAL" />
       <updated>1568822303298</updated>
     </task>
-    <task id="LOCAL-00120" summary="updated plaza messaging features and steps">
-      <created>1568976026663</created>
+    <task id="LOCAL-00120" summary="Added steps for plaza">
+      <created>1568902751682</created>
       <option name="number" value="00120" />
       <option name="presentableId" value="LOCAL-00120" />
       <option name="project" value="LOCAL" />
-      <updated>1568976026665</updated>
+      <updated>1568902751684</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="Added steps for plaza">
+      <created>1568902788226</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1568902788227</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="Test_Runner - 2019.09.20 at 13h 07m 09s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.20 at 13h 08m 50s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.20 at 13h 15m 01s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.20 at 13h 17m 13s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.20 at 14h 01m 32s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.20 at 14h 20m 55s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.20 at 15h 03m 13s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.20 at 15h 22m 33s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.20 at 15h 33m 53s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="Test_Runner - 2019.09.20 at 15h 35m 22s.xml">
-      <configuration name="Test_Runner" configurationId="TestNG" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25598000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1282,76 +821,6 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32462686" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Designer" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.15700142" />
-      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.26435536" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4992928" />
-      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5010661" side_tool="true" weight="0.248104" />
-      <window_info anchor="bottom" id="Database Changes" order="5" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.04225352" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.09052334" />
-      <window_info anchor="bottom" id="Build" order="8" weight="0.4171181" />
-      <window_info anchor="bottom" id="Message" order="9" />
-      <window_info anchor="bottom" id="Find" order="10" weight="0.3726977" />
-      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.48090523" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Gradle" order="4" weight="0.18297587" />
-      <window_info anchor="right" id="Database" order="5" weight="0.3297587" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.3297587" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32462686" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Designer" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.15700142" />
-      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.26435536" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4992928" />
-      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5010661" side_tool="true" weight="0.248104" />
-      <window_info anchor="bottom" id="Database Changes" order="5" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.04225352" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.09052334" />
-      <window_info anchor="bottom" id="Build" order="8" weight="0.4171181" />
-      <window_info anchor="bottom" id="Message" order="9" />
-      <window_info anchor="bottom" id="Find" order="10" weight="0.3726977" />
-      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.48090523" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Gradle" order="4" weight="0.18297587" />
-      <window_info anchor="right" id="Database" order="5" weight="0.3297587" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.3297587" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1379,12 +848,6 @@
           <value>
             <State>
               <option name="BEK_SORT_TYPE" value="1" />
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="HIGHLIGHTERS">
                 <map>
                   <entry key="CURRENT_BRANCH" value="false" />
@@ -1436,8 +899,8 @@
     <MESSAGE value="updated plaza Backup featuers and steps" />
     <MESSAGE value="updated plaza Backup features and steps" />
     <MESSAGE value="updated plaza database features and steps" />
-    <MESSAGE value="updated plaza messaging features and steps" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated plaza messaging features and steps" />
+    <MESSAGE value="Added steps for plaza" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added steps for plaza" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1445,19 +908,16 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/steps/OWF_TroubleEventPageSteps.java</url>
           <line>142</line>
-          <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/steps/OWF_CiSearchPageSteps.java</url>
           <line>265</line>
-          <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java</url>
           <line>132</line>
-          <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
@@ -1542,293 +1002,6 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Performance_Troubleshooting.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="19" column="87" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_AgentConsolePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2120">
-          <caret line="123" column="19" selection-start-line="123" selection-start-column="19" selection-end-line="123" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/FInance&amp;Assurance/Finance&amp;Assurance.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="88" selection-start-line="5" selection-start-column="88" selection-end-line="5" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_LoginPageSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="224" column="29" selection-start-line="224" selection-start-column="29" selection-end-line="224" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Clean_Mail.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Denmark_Mail.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_SMTP_Support.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1240">
-          <caret line="62" column="61" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_CallGuide_Mail.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="858" column="16" selection-start-line="858" selection-start-column="16" selection-end-line="858" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSF_Mail.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSS_Mail.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSS_Premium_Mail.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="53" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Decommision_VM.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Expand_Backup_Archive_Disk.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Extend_Disk_Windows.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="73" lean-forward="true" selection-start-line="13" selection-start-column="73" selection-end-line="13" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Extend_Disk_Red_Hat.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Hot_Add_CPU_Or_Ram.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="62" lean-forward="true" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Modify_Onboarding.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Network_Onboarding_Nordic.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="17" column="81" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Add_Modify_Remove.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Onboard_To_Skypoint.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="74" lean-forward="true" selection-start-line="22" selection-start-column="74" selection-end-line="22" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Restore_VM.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-449">
-          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/runners/Test_Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="154" column="43" selection-start-line="154" selection-start-column="16" selection-end-line="154" selection-end-column="43" />
-          <folding>
-            <element signature="e#12317#12318#0" expanded="true" />
-            <element signature="e#12390#12391#0" expanded="true" />
-            <element signature="e#12457#12458#0" expanded="true" />
-            <element signature="e#12527#12528#0" expanded="true" />
-            <element signature="e#12591#12592#0" expanded="true" />
-            <element signature="e#12657#12658#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_HomePageSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="811" column="51" selection-start-line="811" selection-start-column="51" selection-end-line="811" selection-end-column="51" />
-          <folding>
-            <element signature="e#1222#1223#0" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-            <element signature="e#3135#3136#0" expanded="true" />
-            <element signature="e#3170#3171#0" expanded="true" />
-            <element signature="e#3556#3557#0" expanded="true" />
-            <element signature="e#3611#3612#0" expanded="true" />
-            <element signature="e#5242#5243#0" expanded="true" />
-            <element signature="e#5293#5294#0" expanded="true" />
-            <element signature="e#7551#7552#0" expanded="true" />
-            <element signature="e#7592#7593#0" expanded="true" />
-            <element signature="e#22784#22785#0" expanded="true" />
-            <element signature="e#22838#22839#0" expanded="true" />
-            <element signature="e#22963#22964#0" expanded="true" />
-            <element signature="e#23018#23019#0" expanded="true" />
-            <element signature="e#23159#23160#0" expanded="true" />
-            <element signature="e#23219#23220#0" expanded="true" />
-            <element signature="e#23352#23353#0" expanded="true" />
-            <element signature="e#23409#23410#0" expanded="true" />
-            <element signature="e#23711#23712#0" expanded="true" />
-            <element signature="e#23734#23735#0" expanded="true" />
-            <element signature="e#23881#23882#0" expanded="true" />
-            <element signature="e#23904#23905#0" expanded="true" />
-            <element signature="e#24061#24062#0" expanded="true" />
-            <element signature="e#24084#24085#0" expanded="true" />
-            <element signature="e#24516#24517#0" expanded="true" />
-            <element signature="e#24540#24541#0" expanded="true" />
-            <element signature="e#24706#24707#0" expanded="true" />
-            <element signature="e#24729#24730#0" expanded="true" />
-            <element signature="e#24900#24901#0" expanded="true" />
-            <element signature="e#24955#24956#0" expanded="true" />
-            <element signature="e#24934#24935#0" expanded="true" />
-            <element signature="e#24957#24958#0" expanded="true" />
-            <element signature="e#25174#25175#0" expanded="true" />
-            <element signature="e#25197#25198#0" expanded="true" />
-            <element signature="e#25332#25333#0" expanded="true" />
-            <element signature="e#25355#25356#0" expanded="true" />
-            <element signature="e#25507#25508#0" expanded="true" />
-            <element signature="e#25530#25531#0" expanded="true" />
-            <element signature="e#25670#25671#0" expanded="true" />
-            <element signature="e#25694#25695#0" expanded="true" />
-            <element signature="e#25822#25823#0" expanded="true" />
-            <element signature="e#25845#25846#0" expanded="true" />
-            <element signature="e#25976#25977#0" expanded="true" />
-            <element signature="e#25999#26000#0" expanded="true" />
-            <element signature="e#26167#26168#0" expanded="true" />
-            <element signature="e#26190#26191#0" expanded="true" />
-            <element signature="e#26325#26326#0" expanded="true" />
-            <element signature="e#26348#26349#0" expanded="true" />
-            <element signature="e#26484#26485#0" expanded="true" />
-            <element signature="e#26507#26508#0" expanded="true" />
-            <element signature="e#26664#26665#0" expanded="true" />
-            <element signature="e#26687#26688#0" expanded="true" />
-            <element signature="e#27096#27097#0" expanded="true" />
-            <element signature="e#27119#27120#0" expanded="true" />
-            <element signature="e#27320#27321#0" expanded="true" />
-            <element signature="e#27343#27344#0" expanded="true" />
-            <element signature="e#27716#27717#0" expanded="true" />
-            <element signature="e#27739#27740#0" expanded="true" />
-            <element signature="e#27892#27893#0" expanded="true" />
-            <element signature="e#27915#27916#0" expanded="true" />
-            <element signature="e#28055#28056#0" expanded="true" />
-            <element signature="e#28078#28079#0" expanded="true" />
-            <element signature="e#28455#28456#0" expanded="true" />
-            <element signature="e#28478#28479#0" expanded="true" />
-            <element signature="e#28629#28630#0" expanded="true" />
-            <element signature="e#28652#28653#0" expanded="true" />
-            <element signature="e#28834#28835#0" expanded="true" />
-            <element signature="e#28857#28858#0" expanded="true" />
-            <element signature="e#29038#29039#0" expanded="true" />
-            <element signature="e#29060#29061#0" expanded="true" />
-            <element signature="e#29220#29221#0" expanded="true" />
-            <element signature="e#29243#29244#0" expanded="true" />
-            <element signature="e#29638#29639#0" expanded="true" />
-            <element signature="e#29661#29662#0" expanded="true" />
-            <element signature="e#29805#29806#0" expanded="true" />
-            <element signature="e#29828#29829#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Skypoint_Failed_Request.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="59" lean-forward="true" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

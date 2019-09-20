@@ -1,4 +1,4 @@
-@Network_Security_URL_Filter @PLAZA
+@Network_Security_Slow_Surfing @PLAZA
   Feature: Network Security URL Filter plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -8,17 +8,17 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Firewall & Network"
-      When user clicks on "Proxy" pebble
+      And user clicks on "Firewall & Network"
+      When user clicks on Proxy pebble
       Then user should see "Proxy" form
       When user selects role dropdown as "Application Operation Engineer"
-      Then user selects Select Request as "Surf proxy/URL filter"
-      And user enters Network Security Proxy Resource request as "Test6 Network Security Proxy/Request"
-      Then user selects SurfProxy /URL filter as "Slow Surfing"
+      Then user selects service request name as "Surf proxy/URL filter"
+      And user enters network security proxy request as "Test6 Network Security Proxy/Request"
+      Then user selects SurfProxy url filter as "Slow surfing"
       And user enters user IP as "Test user IP"
-      And user clicks the calendar and selects current date and time
-      Then user selects Internal/External sites as "Yes"
-      Then user enters Network Security Surf Proxy description as "Test6 Network Security Proxy/Description"
+      And user enters proxy date and time when tests performed as current date and time
+      Then user selects internal external sites as "Yes"
+      Then user enters network security proxy description as "Test6 Network Security Proxy/Description"
       And user enters additional comments as "Network Security Proxy - Test6/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
@@ -37,7 +37,7 @@
       And user validates title field as "Service Request | Proxy"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates description as ""
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -46,13 +46,13 @@
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
-      And user changes status to "Cleared"
+      And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
       When user switches to window 0

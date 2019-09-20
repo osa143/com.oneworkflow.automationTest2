@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@Nimbus_Skypoint_Failed_Request"}
+        tags = {"@Network_Security_Slow_Surfing"}
 )
 
 public class Test_Runner extends BaseTest {

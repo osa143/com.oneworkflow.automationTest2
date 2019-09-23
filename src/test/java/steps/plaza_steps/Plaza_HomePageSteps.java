@@ -622,6 +622,75 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userEntersNetworkSecurityServiceRequestNameAs (String arg0){
         homePage.entersNetworkSecurity_add_modify_remove_dns_service_request(arg0);
     }
+    @And("user enters messaging request as {string}")
+    public void userEntersCallGuideMailRequestAs(String arg0) {
+        homePage.enterReschedule_request(arg0);
+    }
+
+    @Then("user selects messaging System as {string}")
+    public void userSelectsCallGuideMailSystemAs(String arg0) {
+        homePage.selectServiceRequestName(arg0);
+    }
+
+    @Then("user enters messaging Customer ID Name as {string}")
+    public void userEntersCallGuideMailCustomerIDNameAs(String arg0) {
+        homePage.enterCallGuide_customerIdName(arg0);
+    }
+
+    @Then("user enters messaging description as {string}")
+    public void userEntersCallGuideMailDescriptionAs(String arg0) {
+        homePage.enterCallGuide_description(arg0);
+    }
+
+    @And("user enters clean mail Customer ID Name as {string}")
+    public void userEntersCleanMailCustomerIDNameAs(String arg0) {
+        homePage.enterCleanMail_customerId(arg0);
+    }
+
+    @And("user selects messaging Issue as {string}")
+    public void userSelectsCleanMailIssueAs(String arg0) {
+        homePage.selectServiceRequestName(arg0);
+    }
+
+    @Then("user enters Clean Mail description as {string}")
+    public void userEntersCleanMailDescriptionAs(String arg0) {
+        homePage.enterDescription_Reschedule(arg0);
+    }
+
+    @And("user date and time when tests performed as current date and time")
+    public void userDateAndTimeWhenTestsPerformedAsCurrentDateAndTime() {
+        homePage.enterCleanMail_testPerformed(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user enters messaging Sender DNS IP Address as {string}")
+    public void userEntersCleanMailSenderDnsAs(String arg0) {
+        homePage.enterCleanMail_senderDNS(arg0);
+    }
+
+    @And("user enters messaging Sender email address as {string}")
+    public void userEntersCleanMailSenderEmailAddressAs(String arg0) {
+        homePage.enterCleanMail_senderEmail(arg0);
+    }
+
+    @And("user enters messaging Receiver email address as {string}")
+    public void userEntersCleanMailRecieverEmailAddressAs(String arg0) {
+        homePage.enterCleanMail_receiverEmail(arg0);
+    }
+
+    @Then("user enters Messaging Denmark Mail description as {string}")
+    public void userEntersMessagingDenmarkMailDescriptionAs(String arg0) {
+        homePage.enterMessaging_description(arg0);
+    }
+
+    @And("user selects messaging SMTP relay as {string}")
+    public void userSelectsMessagingSMTPRelayAs(String arg0) {
+        homePage.select_selectRequest(arg0);
+    }
+
+    @And("user selects messaging CI as {string}")
+    public void userSelectsMessagingCIAs(String arg0) {
+        homePage.selectsAddCi_multipleValues(arg0);
+    }
 
     @And("user enters Network Security Add Modify Remove DNS request as {string}")
     public void userEntersNetworkSecurityAddModifyRemoveDNSRequestAs (String arg0){
@@ -1057,5 +1126,25 @@ public class Plaza_HomePageSteps extends BasePage {
     @Then("user enters skypoint request as {string}")
     public void userEntersSkypointRequestAs(String arg0) {
         homePage.enterNimbus_skyPointRequest(arg0);
+    }
+
+    @And("user enters Storage request as {string}")
+    public void userEntersStorageRequestAs(String arg0) {
+        homePage.enterStorageConfigure_request(arg0);
+    }
+
+    @And("user enters Network VLAN to use as {string}")
+    public void userEntersNetworkVLANToUseAs(String arg0) {
+        homePage.enterStorageConfigure_Network_VLAN(arg0);
+    }
+
+    @Then("user enters Storage description as {string}")
+    public void userEntersStorageDescriptionAs(String arg0) {
+        homePage.enterStorageConfigure_description(arg0);
+    }
+
+    @And("user selects storage configure trunk CI as {string}")
+    public void userSelectsStorageConfigureTrunkCIAs(String arg0) {
+        homePage.selectStorageConfigure_trunkCI(arg0);
     }
 }

@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@Profile_Permissions_Part_3"}
+        tags = {"@Storage_Configure_VLAN"}
 )
 
 public class Test_Runner extends BaseTest {

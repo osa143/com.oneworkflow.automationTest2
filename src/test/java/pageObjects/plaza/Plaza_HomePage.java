@@ -200,16 +200,33 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_SOURCE_IP= "sp_formfield_sr35_v_ip_add";
     private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_SLOW_SURFING_USER_IP= "sp_formfield_sr35_v_user_ip";
     private static final String dd_NETWORK_SECURITY_PROXY_SURF_PROXY_SLOW_SURFING_SITES= "select2-chosen-13";
+    private static final String txt_STORAGE_CONFIGURE_REQUEST= "sp_formfield_sr59_v_request";
+    private static final String txt_STORAGE_CONFIGURE_NETWORK_VLAN= "sp_formfield_sr59_v_network_vlan";
+    private static final String dd_STORAGE_CONFIGURE_TRUNK_CI= "s2id_autogen13";
+    private static final String txt_STORAGE_CONFIGURE_DESCRIPTION= "sp_formfield_sr59_v_description";
 
 
 
-
+    public void enterStorageConfigure_request(String text){
+        enterTextByElement(By.id(txt_STORAGE_CONFIGURE_REQUEST), text);
+    }
+    public void enterStorageConfigure_Network_VLAN(String text){
+        enterTextByElement(By.id(txt_STORAGE_CONFIGURE_NETWORK_VLAN), text);
+    }
+    public void enterStorageConfigure_description(String text){
+        enterTextByElement(By.id(txt_STORAGE_CONFIGURE_DESCRIPTION), text);
+    }
+    public void selectStorageConfigure_trunkCI(String dropdownName){
+        selectDropdown(By.id(dd_STORAGE_CONFIGURE_TRUNK_CI), By.id("s2id_autogen13_results"),  dropdownName);
+    }
 
     public String getPlazaMessage(){
         return getAttributeValueByElement(By.xpath("//*[@id='x917f1d33d7230200a9addd173e24d441']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p"));
     }
     public String getPlazaRequestStatus(){
         return getAttributeValueByElement(By.xpath("//*[@id='xcc316d33d7230200a9addd173e24d4f5']/div/div[2]/div/div/div[2]/span/div"));
+//=========================================================================================
+
     }
     public void selectNetworkSecurity_proxy_surf_proxy_slow_surfing_sites(String dropdownName){
         selectDropdown(By.id(dd_NETWORK_SECURITY_PROXY_SURF_PROXY_SLOW_SURFING_SITES), By.id("select2-results-13"),  dropdownName);

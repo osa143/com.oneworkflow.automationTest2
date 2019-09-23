@@ -8,21 +8,21 @@
       Then user should see the plaza home page
       When user clicks on "Facility Management"
       And user clicks on order
-      And user clicks "Storage & Data Protection"
+      And user clicks on IT Infrastructure dropdown
+      And user clicks on "Storage & Data Protection"
       When user clicks on "Configure VLAN Storage Node/NAS" pebble
       Then user should see "Configure VLAN Storage Node/NAS" form
-      When user selects Role dropdown as "Application Operation Engineer"
+      When user selects role dropdown as "Application Operation Engineer"
       And user enters Storage request as "Test1 Storage/Request"
-      And user enters Network / VLAN to use as "Test network"
-      And user enters CI as "cc100cgas001"
+      And user enters Network VLAN to use as "Test network"
+      And user selects storage configure trunk CI as "cc100cgas001"
       Then user enters Storage description as "Test1 Storage Configure/Description"
       And user enters additional comments as "Test1 Storage Configure/AC"
-      Then user clicks on submit button
+      Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
       Then user should see service request form
-      When user opens another window
-      And user enters OW URL
+      And user opens new tab
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -35,7 +35,7 @@
       And user validates title field as "Service Request | Configure VLAN Storage Node/NAS"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates description
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -43,18 +43,18 @@
       And user should see assigned profile as "Storage"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
-      When user clicks on diagnosis tab
+      When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed
-      And user clicks on CI "cc100cgas001" and selects "Impact:Update
+      And user clicks on CI "cc100cgas001" and selects "Impact:Update"
       Then user switches to frame
       And user enters impacted from date as date in past
       And user enters impacted to date as date in past
       Then user clicks confirm checkbox
-      And user clicks the save button
+      And user clicks save button
       Then user switches to window 1
       When user selects CI present
       And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
-      Then user selects yes and closes warning message
+      And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
       And user changes status to "Cleared"
       And user selects completed code as "Success"

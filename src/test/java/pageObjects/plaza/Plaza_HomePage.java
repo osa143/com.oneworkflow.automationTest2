@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import pageObjects.BasePage;
 import utils.CommonUtils;
+import utils.PlazaValidation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -204,6 +205,12 @@ public class Plaza_HomePage extends BasePage {
 
 
 
+    public String getPlazaMessage(){
+        return getAttributeValueByElement(By.xpath("//*[@id='x917f1d33d7230200a9addd173e24d441']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p"));
+    }
+    public String getPlazaRequestStatus(){
+        return getAttributeValueByElement(By.xpath("//*[@id='xcc316d33d7230200a9addd173e24d4f5']/div/div[2]/div/div/div[2]/span/div"));
+    }
     public void selectNetworkSecurity_proxy_surf_proxy_slow_surfing_sites(String dropdownName){
         selectDropdown(By.id(dd_NETWORK_SECURITY_PROXY_SURF_PROXY_SLOW_SURFING_SITES), By.id("select2-results-13"),  dropdownName);
     }
@@ -862,17 +869,21 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void enterAdditionalComments(String text){
+        PlazaValidation.AdditionalComments = text;
         enterTextByElement(By.id(txt_ADDITIONAL_COMMENTS), text);
     }
 
     public void enterDescription(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_DESCRIPTION), text);
     }
 
     public void enterPlannedStart(String text){
+        PlazaValidation.PlannedStartDate = text;
         enterTextByElement(By.id(txt_PLANNED_START), text);
     }
     public void enterPlannedEnd(String text){
+        PlazaValidation.PlannedEndDate = text;
         enterTextByElement(By.id(txt_PLANNED_END), text);
     }
 
@@ -897,14 +908,22 @@ public class Plaza_HomePage extends BasePage {
         driver.findElement((dropdownValuesListID)).findElements(By.tagName("li")).stream().filter(element -> element.getText().trim().equals(dropdownValue)).findFirst().orElse(null).click();
 
     }
+    public void selectDropdownByTagNameDiv(By Element, By dropdownValuesListID, String dropdownValue){
+        clickElement(Element);
+        wait(300);
+        driver.findElement((dropdownValuesListID)).findElements(By.tagName("div")).stream().filter(element -> element.getText().trim().equals(dropdownValue)).findFirst().orElse(null).click();
+
+    }
     public void selectRoleDropdown(String dropdownName){
+        PlazaValidation.Role = dropdownName;
         selectDropdown(By.id(dd_ROLE_ID), By.id("select2-results-9"), dropdownName);
         clickEscButton();
 
     }
     public void selectSystemDropdown(String dropdownName)
     {
-        selectDropdown(By.id(dd_SYSTEM_ID), By.id("select2-results-13"),  dropdownName);
+        PlazaValidation.System = dropdownName;
+        selectDropdownByTagNameDiv(By.id(dd_SYSTEM_ID), By.id("select2-results-13"),  dropdownName);
     }
     public void selectServiceRequestName(String dropdownName){
         selectDropdown(By.id(dd_SERVICE_REQUEST_NAME_ID), By.id("select2-results-11"), dropdownName);
@@ -912,6 +931,7 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void enterRequest(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_REQUEST_ID), text);
     }
 

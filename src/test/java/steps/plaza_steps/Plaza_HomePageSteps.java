@@ -932,4 +932,130 @@ public class Plaza_HomePageSteps extends BasePage {
         homePage.selectNetworkSecurity_proxy_surf_proxy_slow_surfing_sites(arg0);
 
     }
+
+    @Then("user validates plaza request has completed")
+    public void userValidatesPlazaRequestHasCompleted() {
+        Assert.assertEquals(homePage.getPlazaRequestStatus(), "Closed Complete");
+        Assert.assertEquals(homePage.getPlazaMessage(), "Order has been completed");
+    }
+
+    @And("user enters nimbus mandatory description as {string}")
+    public void userEntersNimbusMandatoryDescriptionAs(String arg0) {
+        homePage.enterNimbus_descriptionMandatory(arg0);
+    }
+
+    @And("user enters nimbus request as {string}")
+    public void userEntersNimbusRequestAs(String arg0) {
+        homePage.enterNimbus_request(arg0);
+    }
+
+    @Then("user selects nimbus CI as {string}")
+    public void userSelectsNimbusCIAs(String arg0) {
+        homePage.selectNimbus_AddCi(arg0);
+    }
+
+    @And("user selects nimbus type as {string}")
+    public void userSelectsNimbusTypeAs(String arg0) {
+        homePage.selectNimbus_Type(arg0);
+    }
+
+    @And("user enters nimbus description as {string}")
+    public void userEntersNimbusDescriptionAs(String arg0) {
+        homePage.enterNimbus_description(arg0);
+    }
+
+    @Then("user enters nimbus size GB as {string}")
+    public void userEntersNimbusSizeAs(String arg0) {
+        homePage.enterNimbus_size(arg0);
+    }
+
+    @And("user enters volumes drives as {string}")
+    public void userEntersVolumesDrivesAs(String arg0) {
+        homePage.enterNimbus_volumesDrives(arg0);
+    }
+
+    @Then("user selects nimbus extend disk CI as {string}")
+    public void userSelectsNimbusExtendDiskCIAs(String arg0) {
+        homePage.selectNimbusExtendDisk_AddCi(arg0);
+    }
+
+    @And("user enters nimbus service window as current date and time")
+    public void userEntersNimbusServiceWindowAsCurrentDateAndTime() {
+        homePage.enterNimbus_serviceWindowDateTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @Then("user enters H2 Name Hid as {string}")
+    public void userEntersHNameHidAs(String arg0) {
+        homePage.enterNimbus_h2NameHid(arg0);
+    }
+
+    @Then("user selects DDC base ruleset applied as {string}")
+    public void userSelectsDDCBaseRulesetAppliedAs(String arg0) {
+        homePage.selectDatabase_new_existing_account(arg0);
+    }
+
+    @Then("user enters frontside network information as {string}")
+    public void userEntersFrontsideNetworkInformationAs(String arg0) {
+        homePage.enterNimbus_frontSideNetworkInfo(arg0);
+    }
+
+    @And("user enters mgmt network information as {string}")
+    public void userEntersMgmtNetworkInformationAs(String arg0) {
+        homePage.enterNimbus_mgmtNetworkInfo(arg0);
+    }
+
+    @And("user selects dual-site services as {string}")
+    public void userSelectsDualSiteServicesAs(String arg0) {
+        homePage.select_selectRequest(arg0);
+    }
+
+    @Then("user selects Cloud Services as {string}")
+    public void userSelectsCloudServicesAs(String arg0) {
+        homePage.selectNimbus_cloudServices(arg0);
+    }
+
+    @Then("user selects Target countries for System Cloud Services as {string}")
+    public void userSelectsTargetCountriesForSystemCloudServicesAs(String arg0) {
+        homePage.selectNimbus_targetCountries(arg0);
+    }
+
+    @Then("user enters Approver Account\\(s) as {string}")
+    public void userEntersApproverAccountSAs(String arg0) {
+        homePage.enterNimbus_roleApproversAccount(arg0);
+    }
+
+    @And("user enters User Account\\(s) as {string}")
+    public void userEntersUserAccountSAs(String arg0) {
+        homePage.enterNimbus_roleUsersAccount(arg0);
+    }
+
+    @Then("user enters CMDB, Assigned to Application Team as {string}")
+    public void userEntersCMDBAssignedToApplicationTeamAs(String arg0) {
+        homePage.enterNimbus_CmdbAssigned(arg0);
+    }
+
+    @Then("user enters CMDB, Local responsible Application as {string}")
+    public void userEntersCMDBLocalResponsibleApplicationAs(String arg0) {
+        homePage.enterNimbus_cmdbLocal(arg0);
+    }
+
+    @And("user enters nimbus skypoint H2 Name Hid as {string}")
+    public void userEntersNimbusSkypointHNameHidAs(String arg0) {
+        homePage.enterNimbus_h2Hid(arg0);
+    }
+
+    @And("user enters date to restore from as current date and time")
+    public void userEntersDateToRestoreFromAsCurrentDateAndTime() {
+        homePage.enterNimbus_dateToRestoreFrom(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @Then("user enters restore vm CI as {string}")
+    public void userEntersRestoreVmCIAs(String arg0) {
+        homePage.selectNimbus_restoreVm(arg0);
+    }
+
+    @Then("user enters skypoint request as {string}")
+    public void userEntersSkypointRequestAs(String arg0) {
+        homePage.enterNimbus_skyPointRequest(arg0);
+    }
 }

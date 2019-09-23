@@ -2,6 +2,7 @@ package pageObjects.plaza;
 
 import org.openqa.selenium.By;
 import pageObjects.BasePage;
+import utils.PlazaValidation;
 
 public class Plaza_LoginPage extends BasePage {
 
@@ -24,8 +25,9 @@ public class Plaza_LoginPage extends BasePage {
         driver.get(url);
     }
     public void doLogin(String username, String password){
+        PlazaValidation.UserName = username;
         enterUsername(username);
-     enterPassword(password);
-     clickLoginButton();
+        enterPassword(password);
+        clickLoginButton();
     }
 }

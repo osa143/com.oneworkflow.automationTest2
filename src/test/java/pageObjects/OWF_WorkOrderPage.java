@@ -2,6 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import utils.CommonUtils;
+import utils.PlazaValidation;
 
 public class OWF_WorkOrderPage extends BasePage {
 
@@ -49,6 +50,18 @@ public class OWF_WorkOrderPage extends BasePage {
     }
     public String verifyPlazaIsListedUnderInterestedParties(String colName, int rowNum){
         return getTableCellData(By.id(table_INTERESTED_PARTIES), colName, rowNum);
+    }
+    public boolean verifyDescription()
+    {
+        String actualDescription = getDescription();
+        if(actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.AdditionalComments) && actualDescription.contains(PlazaValidation.Description)
+        && actualDescription.contains(PlazaValidation.PlannedEndDate) && actualDescription.contains(PlazaValidation.PlannedStartDate)
+        && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Role)
+        && actualDescription.contains(PlazaValidation.System))
+        {
+            return true;
+        }
+        return false;
     }
     public String getDescription(){
         String description= getAttributeValueById(txt_DESCRIPTION);
@@ -126,7 +139,7 @@ public class OWF_WorkOrderPage extends BasePage {
     }
 
     public void enterActualScheduleEnd(){
-        findElement(By.id(txt_SCHEDULE_END)).sendKeys(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+        findElement(By.id(txt_SCHEDULE_END)).sendKeys(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", -60));
         wait(2000);
     }
     public void selectCompletionCode(String value){

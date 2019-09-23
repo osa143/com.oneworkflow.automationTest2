@@ -222,7 +222,7 @@ public class OWF_WorkOrderPageSteps {
     }
     @Then("user enters plaza request id in the source id field")
     public void userEntersPlazaRequestIdInTheSourceIdField() {
-        workOrderPage.wait(5000);
+        workOrderPage.wait(7000);
         workOrderPage.enterSourceID(CommonUtils.plazaRequestID);
     }
 
@@ -241,9 +241,10 @@ public class OWF_WorkOrderPageSteps {
         Assert.assertEquals(workOrderPage.getTitle(), arg0);
     }
 
-    @And("user validates description as {string}")
-    public void userValidatesDescriptionAs(String arg0) {
-        Assert.assertEquals(workOrderPage.getDescription(), arg0);
+    @And("user validates description")
+    public void userValidatesDescriptionAs() {
+        Assert.assertTrue(workOrderPage.verifyDescription());
+
     }
 
     @And("user validates {string} is listed as an interested party")

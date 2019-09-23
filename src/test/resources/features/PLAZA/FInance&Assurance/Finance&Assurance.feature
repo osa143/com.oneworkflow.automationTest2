@@ -13,7 +13,7 @@
       Then user should see Finance & Assurance form
       When user selects role dropdown as "Application Operation Engineer"
       And user enters "<Request>" in the request field
-      And user selects system dropdown as "<DropdownValue>"
+      And user selects system dropdown as "<System>"
       And user enters planned start time as current time
       And user enters planned end time as current time
       And user enters plaza description as "<Description>"
@@ -27,13 +27,13 @@
       When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Work Order"
-      And user switches to window 1
+      And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Finance & Assurance"
-      #And user validates description as "<DescValidation>"
+      And user validates description
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -43,23 +43,25 @@
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
-      And user selects completed code as "Success"
+      And user selects completion code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
       When user changes status to "Closed" on work order page
-      And user clicks on save button
+      And user clicks on save button and closes warning messages
       Then ticket status should be closed
+      And user logsOut
       When user switches to window 0
       And user clicks on main page refresh
       Then user validates plaza request has completed
+      And user closes current tab
 
       Examples:
 
-      |Request           |DropdownValue                                  |Description           |AdditionalComments|DescValidation|
-      |Test1 F&A/Request |addressmaster                           |Test1 F&A/Description |Test1 F&A/AC      |              |
-#      |Test2 F&A/Request |alpha2 etl prod                         |Test2 F&A/Description |Test2 F&A/AC      |              |
+      |Request           |System                           |Description           |AdditionalComments|
+      |Test1 F&A/Request |addressmaster                           |Test1 F&A/Description |Test1 F&A/AC      |
+      |Test2 F&A/Request |alpha2 etl prod                         |Test2 F&A/Description |Test2 F&A/AC      |
 #      |Test3 F&A/Request |alpha2 etl test                         |Test3 F&A/Description |Test3 F&A/AC      |              |
 #      |Test4 F&A/Request |arkinet prod                            |Test4 F&A/Description |Test4 F&A/AC      |              |
 #      |Test5 F&A/Request |ars platform                            |Test5 F&A/Description |Test5 F&A/AC      |              |

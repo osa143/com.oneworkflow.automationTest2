@@ -173,8 +173,13 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("change should also be reflected in the timeline as {string}")
     public void changeShouldAlsoBeReflectedInTheTimelineAs(String message) {
-        //problemRecordPage.clickTimelineButton();
-        problemRecordPage.selectTab("Timeline");
+        try{
+            problemRecordPage.selectTab("Timeline");
+        }
+        catch(Exception e){
+
+        }
+
         problemRecordPage.clickRefresh_timeline();
         System.out.println("Actual Timeline Message is :" + message);
         boolean containsMessage = problemRecordPage.getTimelineStatus(1).contains(message);

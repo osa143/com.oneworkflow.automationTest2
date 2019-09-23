@@ -873,7 +873,12 @@ public class OWF_ProblemRecordPageSteps {
         }
         catch (Exception e){
             System.out.println("Not able to change the status... Try again");
-            problemRecordPage.selectStatus_problemRecord(arg0);
+            try{
+                problemRecordPage.selectStatus_problemRecord(arg0);
+            }
+            catch(Exception e2){
+
+            }
         }
 
     }

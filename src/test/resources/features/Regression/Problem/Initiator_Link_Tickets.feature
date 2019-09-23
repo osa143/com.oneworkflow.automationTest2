@@ -1,6 +1,5 @@
 @Initiator_Link_Tickets
-  #passed
-  #CI search window
+  #passed  #CI search window
 Feature: Verification of ability to link tickets
   Scenario: user should be able to link different types of tickets together
 
@@ -44,32 +43,21 @@ Feature: Verification of ability to link tickets
     And user switches to window 4
     Then change record form should open in a new tab
     When user clicks on sweden checkbox under affected BU's
-    And user selects request type as "Normal Change"
     And user selects template as "All:Mobile:Billing:Nobill - Customer refund (SE)"
-    And user selects title as "IT:Mobile:Billing" on Change record page
-    And user selects request category as "Cable splicing" on change record page
-    And user enters description as "Correcting error"
-    And user enters reason field as "none"
-    And user selects priority as "Major"
+    And user selects request type as "Normal Change"
     And user enters "Problem initiator" in the change builder field
-    And user enters "New implementation" in the implementation field
-    And user enters "Yes" in the test plan field
-    And user enters "Not possible" in the rollback field
-    And user enters "Comm plan" in the communication plan field
-    And user enters "Not possible" in the ver of functionality field
-    And user enters "No Risk" in the risk description field
     Then user clicks on "Schedule" tab
     And user enters as "Test Service and customer impact" in service and customer impact
-    And user enters start time as some minutes fast from current sweden time
-    And user enters Request End time as some minutes fast from request start time
-    And user enters impact duration as "3" minutes
+    And user enters start time as 5 minutes fast from current sweden time
+    And user enters end time as 11 minutes fast from current sweden time
+    And user enters impact duration as "6" minutes
     And user selects estimated impact as "No Impact"
     And user clicks on save button
-    And user waits
+    And user waits 3 secs
     Then user clicks on Risk tab
     And user selects answer as "Impact to other systems/technologies are unclear"
     And user selects answer as "No"
-    And user selects answer as "Tested successfully, this is a pilot"
+    And user selects answer as "Tested succesfully, this is a pilot"
     And user selects answer as "Yes (outcome of the change can be instantly verified)"
     And user selects answer as "Yes"
     And user selects answer as "Simple"

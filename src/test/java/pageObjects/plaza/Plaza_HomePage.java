@@ -204,9 +204,33 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_STORAGE_CONFIGURE_NETWORK_VLAN= "sp_formfield_sr59_v_network_vlan";
     private static final String dd_STORAGE_CONFIGURE_TRUNK_CI= "s2id_autogen13";
     private static final String txt_STORAGE_CONFIGURE_DESCRIPTION= "sp_formfield_sr59_v_description";
+    private static final String txt_STORAGE_EXPORT_REQUEST= "sp_formfield_sr63_v_request";
+    private static final String dd_STORAGE_EXPORT_SOURCE_CI= "s2id_autogen13";
+    private static final String txt_STORAGE_EXPORT_SOURCE_WWN= "sp_formfield_sr63_v_source_wwn";
+    private static final String txt_STORAGE_EXPORT_DATE_TIME= "sp_formfield_sr63_v_date";
+    private static final String dd_STORAGE_EXPORT_TARGET_CI= "s2id_autogen14";
+    private static final String txt_STORAGE_EXPORT_DESCRIPTION= "sp_formfield_sr63_v_description";
 
 
+    public void enterStorageExport_request(String text){
+        enterTextByElement(By.id(txt_STORAGE_EXPORT_REQUEST), text);
+    }
+    public void enterStorageExport_source_WWN(String text){
+        enterTextByElement(By.id(txt_STORAGE_EXPORT_SOURCE_WWN), text);
+    }
+    public void enterStorageExport_description(String text){
+        enterTextByElement(By.id(txt_STORAGE_EXPORT_DESCRIPTION), text);
+    }
+    public void enterStorageExport_dateTime(String text){
+        enterTextByElement(By.id(txt_STORAGE_EXPORT_DATE_TIME), text);
+    }
+    public void selectStorageExport_SourceCI(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_STORAGE_EXPORT_SOURCE_CI), By.id("s2id_autogen13_results"),  dropdownName);
+    }
 
+    public void selectStorageExport_TargetCI(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_STORAGE_EXPORT_TARGET_CI), By.id("s2id_autogen13_results"),  dropdownName);
+    }
     public void enterStorageConfigure_request(String text){
         enterTextByElement(By.id(txt_STORAGE_CONFIGURE_REQUEST), text);
     }
@@ -217,7 +241,7 @@ public class Plaza_HomePage extends BasePage {
         enterTextByElement(By.id(txt_STORAGE_CONFIGURE_DESCRIPTION), text);
     }
     public void selectStorageConfigure_trunkCI(String dropdownName){
-        selectDropdown(By.id(dd_STORAGE_CONFIGURE_TRUNK_CI), By.id("s2id_autogen13_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_STORAGE_CONFIGURE_TRUNK_CI), By.id("s2id_autogen13_results"),  dropdownName);
     }
 
     public String getPlazaMessage(){

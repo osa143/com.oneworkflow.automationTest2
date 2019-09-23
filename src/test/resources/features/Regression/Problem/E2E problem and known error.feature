@@ -45,7 +45,6 @@
       And user switches to window 3
       And user enters Problem Ticket
       And user clicks Search on ticket search
-      #And user enters "Investigation Complete" in status
       When user changes status as Investigation Complete on problem record page
       #Then mandatory fields should be indicated in bold
       When user selects root cause code as "Technical:HW error"

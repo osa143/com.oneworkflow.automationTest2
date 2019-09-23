@@ -590,22 +590,22 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user enters Database Performance Troubleshooting request as {string}")
     public void userEntersDatabasePerformanceTroubleshootingRequestAs(String arg0) {
-       homePage.enterDatabasePerformamanceTroubleShooting_request(arg0);
+        homePage.enterDatabasePerformamanceTroubleShooting_request(arg0);
     }
 
     @And("user selects Database Performance Troubleshooting Database Type as {string}")
     public void userSelectsDatabasePerformanceTroubleshootingDatabaseTypeAs(String arg0) {
-       homePage.selectDatabasePerformanceTroubleShooting_databaseType(arg0);
+        homePage.selectDatabasePerformanceTroubleShooting_databaseType(arg0);
     }
 
     @And("user enters Database Performance Troubleshooting CI as {string}")
     public void userEntersDatabasePerformanceTroubleshootingCIAs(String arg0) {
-       homePage.selectDatabasePerformanceTroubleShooting_AddServerCi(arg0);
+        homePage.selectDatabasePerformanceTroubleShooting_AddServerCi(arg0);
     }
 
     @And("user enters Database Performance Troubleshooting Database CI as {string}")
     public void userEntersDatabasePerformanceTroubleshootingDatabaseCIAs(String arg0) {
-       homePage.selectDatabasePerformanceTroubleShooting_AddDbCi(arg0);
+        homePage.selectDatabasePerformanceTroubleShooting_AddDbCi(arg0);
     }
 
     @And("user enters Database Performance Troubleshooting Database Name as {string}")
@@ -615,13 +615,14 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @Then("user enters Database Performance Troubleshooting description as {string}")
     public void userEntersDatabasePerformanceTroubleshootingDescriptionAs(String arg0) {
-      homePage.enterDatabasePerformamanceTroubleShooting_description(arg0);
+        homePage.enterDatabasePerformamanceTroubleShooting_description(arg0);
     }
 
     @And("user enters Service Request Name as {string}")
-    public void userEntersNetworkSecurityServiceRequestNameAs (String arg0){
+    public void userEntersNetworkSecurityServiceRequestNameAs(String arg0) {
         homePage.entersNetworkSecurity_add_modify_remove_dns_service_request(arg0);
     }
+
     @And("user enters messaging request as {string}")
     public void userEntersCallGuideMailRequestAs(String arg0) {
         homePage.enterReschedule_request(arg0);
@@ -693,311 +694,311 @@ public class Plaza_HomePageSteps extends BasePage {
     }
 
     @And("user enters Network Security Add Modify Remove DNS request as {string}")
-    public void userEntersNetworkSecurityAddModifyRemoveDNSRequestAs (String arg0){
+    public void userEntersNetworkSecurityAddModifyRemoveDNSRequestAs(String arg0) {
         homePage.enterNetworkSecurity_add_modify_remove_dns_request(arg0);
     }
 
     @And("user selects Scheduled change as {string}")
-    public void userSelectsScheduledChangeAs (String arg0){
+    public void userSelectsScheduledChangeAs(String arg0) {
         homePage.selectNetworkSecurity_add_modify_remove_dns_scheduled_change(arg0);
     }
 
     @When("user clicks on DNS DHCP pebble")
-    public void userClicksOnDNSDHCPPebble () {
+    public void userClicksOnDNSDHCPPebble() {
         clickElement(By.xpath("//*[@id=\"x2723de4adb72cf006734f1eabf9619aa\"]/div/div/div[2]/div[6]/div/a/div/h2"));
     }
 
     @And("user enters Network Security Add Modify Remove DNS description as {string}")
-    public void userEntersNetworkSecurityAddModifyRemoveDNSDescriptionAs (String arg0){
+    public void userEntersNetworkSecurityAddModifyRemoveDNSDescriptionAs(String arg0) {
         homePage.enterNetworkSecurity_add_modify_remove_dns_description(arg0);
     }
 
     @When("user clicks on Firewall Routing Request pebble")
-    public void userClicksOnFirewallRoutingRequestPebble () {
+    public void userClicksOnFirewallRoutingRequestPebble() {
         clickElement(By.xpath("//*[@id=\"x2723de4adb72cf006734f1eabf9619aa\"]/div/div/div[2]/div[8]/div/a/div/h2"));
     }
 
     @Then("user selects New Change Service Request Name as {string}")
-    public void userSelectsNewChangeServiceRequestNameAs (String arg0){
+    public void userSelectsNewChangeServiceRequestNameAs(String arg0) {
         homePage.selectNetworkSecurity_firewall_new_change_service_request(arg0);
     }
 
     @And("user enters Network Security Firewall New Change request as {string}")
-    public void userEntersNetworkSecurityFirewallNewChangeRequestAs (String arg0){
+    public void userEntersNetworkSecurityFirewallNewChangeRequestAs(String arg0) {
         homePage.enterNetworkSecurity_firewall_new_change_request(arg0);
     }
 
 
     @And("user enters Network Security Firewall New Change description as {string}")
-    public void userEntersNetworkSecurityFirewallNewChangeDescriptionAs (String arg0){
+    public void userEntersNetworkSecurityFirewallNewChangeDescriptionAs(String arg0) {
         homePage.enterNetworkSecurity_firewall_new_change_description(arg0);
     }
 
     @And("user selects Add CI as {string}")
-    public void userSelectsAddCIAs (String arg0){
+    public void userSelectsAddCIAs(String arg0) {
         homePage.enterNetworkSecurity_firewall_new_change_add_ci_multipleValues(arg0);
     }
 
     @And("user enters Network Security Firewall Troubleshoot request as {string}")
-    public void userEntersNetworkSecurityFirewallTroubleshootRequestAs (String arg0){
+    public void userEntersNetworkSecurityFirewallTroubleshootRequestAs(String arg0) {
         homePage.enterNetworkSecurity_firewall_troubleshoot_request(arg0);
     }
 
     @Then("user enters FIRE Ticket number as {string}")
-    public void userEntersFIRETicketNumberAs (String arg0){
+    public void userEntersFIRETicketNumberAs(String arg0) {
         homePage.enterNetworkSecurity_firewall_troubleshoot_ticket_number(arg0);
     }
 
     @And("user enters Source IP Address as {string}")
-    public void userEntersSourceIPAddressAs (String arg0){
+    public void userEntersSourceIPAddressAs(String arg0) {
         homePage.enterNetworkSecurity_firewall_troubleshoot_source_id(arg0);
     }
 
     @And("user enter Target IP Address as {string}")
-    public void userEnterTargetIPAddressAs (String arg0){
+    public void userEnterTargetIPAddressAs(String arg0) {
         homePage.enterNetworkSecurity_firewall_troubleshoot_target_ip(arg0);
     }
 
     @Then("user selects Server connectivity verified as {string}")
-    public void userSelectsServerConnectivityVerifiedAs (String arg0){
+    public void userSelectsServerConnectivityVerifiedAs(String arg0) {
         homePage.selectNetworkSecurity_add_modify_remove_dns_scheduled_change(arg0);
     }
 
     @And("user enters date and time when tests performed as current date and time")
-    public void userEntersDateAndTimeWhenTestsPerformedAsCurrentDateAndTime () {
+    public void userEntersDateAndTimeWhenTestsPerformedAsCurrentDateAndTime() {
         homePage.enterNetworkSecurity_firewall_troubleshoot_date_and_time(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
     }
 
     @Then("user selects Traffic return routing verified as {string}")
-    public void userSelectsTrafficReturnRoutingVerifiedAs (String arg0){
+    public void userSelectsTrafficReturnRoutingVerifiedAs(String arg0) {
         homePage.selectDatabaseAccountType(arg0);
     }
 
     @And("user enters Network Security Troubleshoot description as {string}")
-    public void userEntersNetworkSecurityTroubleshootDescriptionAs (String arg0){
+    public void userEntersNetworkSecurityTroubleshootDescriptionAs(String arg0) {
         homePage.enterNetworkSecurity_firewall_troubleshoot_description(arg0);
     }
 
     @When("user clicks on LAN Data Net LAN pebble")
-    public void userClicksOnLANDataNetLANPebble () {
+    public void userClicksOnLANDataNetLANPebble() {
         clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[10]/div/a/div/h2"));
     }
 
     @And("user enters Network Security LAN request as {string}")
-    public void userEntersNetworkSecurityLANRequestAs (String arg0){
+    public void userEntersNetworkSecurityLANRequestAs(String arg0) {
         homePage.enterNetworkSecurity_lan_request(arg0);
     }
 
     @Then("user enters Network Security LAN description as {string}")
-    public void userEntersNetworkSecurityLANDescriptionAs (String arg0){
+    public void userEntersNetworkSecurityLANDescriptionAs(String arg0) {
         homePage.enterNetworkSecurity_lan_description(arg0);
     }
 
     @When("user clicks on Network Load Balancing pebble")
-    public void userClicksOnNetworkLoadBalancingPebble () {
+    public void userClicksOnNetworkLoadBalancingPebble() {
         clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[12]/div/a/div/h2"));
 
 
     }
 
     @And("user enters Network Security Load request as {string}")
-    public void userEntersNetworkSecurityLoadRequestAs (String arg0){
+    public void userEntersNetworkSecurityLoadRequestAs(String arg0) {
         homePage.enterNetworkSecurity_load_balancing_request(arg0);
     }
 
     @Then("user enters Network Security Load description as {string}")
-    public void userEntersNetworkSecurityLoadDescriptionAs (String arg0){
+    public void userEntersNetworkSecurityLoadDescriptionAs(String arg0) {
         homePage.enterNetworkSecurity_load_balancing_description(arg0);
     }
 
     @When("user clicks on Network Routing Switching pebble")
-    public void userClicksOnNetworkRoutingSwitchingPebble () {
+    public void userClicksOnNetworkRoutingSwitchingPebble() {
         clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[16]/div/a/div/h2"));
     }
 
     @Then("user selects New Switch Service Request Name as {string}")
-    public void userSelectsNewSwitchServiceRequestNameAs (String arg0){
+    public void userSelectsNewSwitchServiceRequestNameAs(String arg0) {
         homePage.selectNetworkSecurity_firewall_new_change_service_request(arg0);
     }
 
     @And("user enters Network Security Routing New Switch request as {string}")
-    public void userEntersNetworkSecurityRoutingNewSwitchRequestAs (String arg0){
+    public void userEntersNetworkSecurityRoutingNewSwitchRequestAs(String arg0) {
         homePage.enterNetworkSecurity_new_switch_request(arg0);
     }
 
     @Then("user selects Network CI as {string}")
-    public void userSelectsNetworkCIAs (String arg0){
+    public void userSelectsNetworkCIAs(String arg0) {
         homePage.selectNetworkSecurity_new_switch_network_ci(arg0);
     }
 
     @And("user enters DC-site as {string}")
-    public void userEntersDCSiteAs (String arg0){
+    public void userEntersDCSiteAs(String arg0) {
         homePage.enterNetworkSecurity_new_switch_dc_site(arg0);
     }
 
     @And("user enters Data Room as {string}")
-    public void userEntersDataRoomAs (String arg0){
+    public void userEntersDataRoomAs(String arg0) {
         homePage.enterNetworkSecurity_new_switch_data_room(arg0);
     }
 
     @Then("user enters Rack as {string}")
-    public void userEntersRackAs (String arg0){
+    public void userEntersRackAs(String arg0) {
         homePage.enterNetworkSecurity_new_switch_rack(arg0);
     }
 
     @And("user enters usage of the switch as {string}")
-    public void userEntersUsageOfTheSwitchAs (String arg0){
+    public void userEntersUsageOfTheSwitchAs(String arg0) {
         homePage.enterNetworkSecurity_new_switch_usage(arg0);
     }
 
     @And("user enter Terminal server as {string}")
-    public void userEnterTerminalServerAs (String arg0){
+    public void userEnterTerminalServerAs(String arg0) {
         homePage.enterNetworkSecurity_new_switch_terminal(arg0);
     }
 
     @Then("user enters Network Security Routing Switching description as {string}")
-    public void userEntersNetworkSecurityRoutingSwitchingDescriptionAs (String arg0){
+    public void userEntersNetworkSecurityRoutingSwitchingDescriptionAs(String arg0) {
         homePage.enterNetworkSecurity_new_switch_description(arg0);
     }
 
     @And("user enters Network Security Routing New VLAN request as {string}")
-    public void userEntersNetworkSecurityRoutingNewVLANRequestAs (String arg0){
+    public void userEntersNetworkSecurityRoutingNewVLANRequestAs(String arg0) {
         homePage.enterNetworkSecurity_new_vlan_request(arg0);
     }
 
     @And("user enters IP Net as {string}")
-    public void userEntersIPNetAs (String arg0){
+    public void userEntersIPNetAs(String arg0) {
         homePage.enterNetworkSecurity_new_vlan_ip_net(arg0);
     }
 
     @Then("user enters VLAN number and name as {string}")
-    public void userEntersVLANNumberAndNameAs (String arg0){
+    public void userEntersVLANNumberAndNameAs(String arg0) {
         homePage.enterNetworkSecurity_new_vlan_number_and_name(arg0);
     }
 
     @Then("user enters Purpose of VLAN as {string}")
-    public void userEntersPurposeOfVLANAs (String arg0){
+    public void userEntersPurposeOfVLANAs(String arg0) {
         homePage.enterNetworkSecurity_new_vlan_purpose(arg0);
     }
 
     @Then("user enters Network Security description as {string}")
-    public void userEntersNetworkSecurityDescriptionAs (String arg0){
+    public void userEntersNetworkSecurityDescriptionAs(String arg0) {
         homePage.enterNetworkSecurity_new_vlan_description(arg0);
     }
 
     @When("user clicks on Proxy pebble")
-    public void userClicksOnProxyPebble () {
+    public void userClicksOnProxyPebble() {
         clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[14]/div/a/div/h2"));
     }
 
 
     @And("user enters network security proxy request as {string}")
-    public void userEntersNetworkSecurityProxyRequestAs (String arg0){
+    public void userEntersNetworkSecurityProxyRequestAs(String arg0) {
         homePage.enterNetworkSecurity_proxy_general_request(arg0);
     }
 
     @Then("user enters network security proxy description as {string}")
-    public void userEntersNetworkSecurityProxyDescriptionAs (String arg0){
+    public void userEntersNetworkSecurityProxyDescriptionAs(String arg0) {
         homePage.enterNetworkSecurity_proxy_general_description(arg0);
     }
 
     @Then("user enters Source IP as {string}")
-    public void userEntersSourceIPAs (String arg0){
+    public void userEntersSourceIPAs(String arg0) {
         homePage.enterNetworkSecurity_proxy_reverse_source_ip(arg0);
     }
 
     @And("user enters Reverseproxy DNS name as {string}")
-    public void userEntersReverseproxyDNSNameAs (String arg0){
+    public void userEntersReverseproxyDNSNameAs(String arg0) {
         homePage.enterNetworkSecurity_proxy_reverse_dns_name(arg0);
     }
 
     @And("user enters Reverseproxy Protocol Port as {string}")
-    public void userEntersReverseproxyProtocolPortAs (String arg0){
+    public void userEntersReverseproxyProtocolPortAs(String arg0) {
         homePage.enterNetworkSecurity_proxy_reverse_protocol_port(arg0);
     }
 
     @And("user selects Certificate as {string}")
-    public void userSelectsCertificateAs (String arg0){
+    public void userSelectsCertificateAs(String arg0) {
         homePage.selectNetworkSecurity_proxy_reverse_certificate(arg0);
     }
 
     @Then("user enters webserver address as {string}")
-    public void userEntersWebserverAddressAs (String arg0){
+    public void userEntersWebserverAddressAs(String arg0) {
         homePage.enterNetworkSecurity_proxy_reverse_webserver_address(arg0);
     }
 
     @And("user selects high availability as {string}")
-    public void userSelectsHighAvailabilityAs (String arg0){
+    public void userSelectsHighAvailabilityAs(String arg0) {
         homePage.selectNetworkSecurity_proxy_reverse_high_availibility(arg0);
     }
 
     @And("user selects load balancing method as {string}")
-    public void userSelectsLoadBalancingMethodAs (String arg0){
+    public void userSelectsLoadBalancingMethodAs(String arg0) {
         homePage.selectNetworkSecurity_proxy_reverse_load_balancing(arg0);
     }
 
     @And("user selects SurfProxy /URL filter as {string}")
-    public void userSelectsSurfProxyURLFilterAs (String arg0){
+    public void userSelectsSurfProxyURLFilterAs(String arg0) {
         homePage.selectBCPP_Environment(arg0);
     }
 
     @Then("user enters URL as {string}")
-    public void userEntersURLAs (String arg0){
+    public void userEntersURLAs(String arg0) {
         homePage.enterNetworkSecurity_proxy_surf_proxy_url(arg0);
     }
 
     @Then("user selects internal external website as {string}")
-    public void userSelectsInternalExternalWebsiteAs (String arg0){
+    public void userSelectsInternalExternalWebsiteAs(String arg0) {
         homePage.selectDatabase_new_existing_account(arg0);
     }
 
     @Then("user enters error message as {string}")
-    public void userEntersErrorMessageAs (String arg0){
+    public void userEntersErrorMessageAs(String arg0) {
         homePage.enterNetworkSecurity_proxy_surf_proxy_error_message(arg0);
     }
 
     @And("user enters has it worked before as {string}")
-    public void userEntersHasItWorkedBeforeAs (String arg0){
+    public void userEntersHasItWorkedBeforeAs(String arg0) {
         homePage.enterNetworkSecurity_proxy_surf_proxy_worked_before(arg0);
     }
 
     @Then("user enters when did the problem occure as {string}")
-    public void userEntersWhenDidTheProblemOccureAs (String arg0){
+    public void userEntersWhenDidTheProblemOccureAs(String arg0) {
         homePage.enterNetworkSecurity_proxy_surf_proxy_problem_occure(arg0);
     }
 
     @And("user enters what is your current proxy settings as {string}")
-    public void userEntersWhatIsYourCurrentProxySettingsAs (String arg0){
+    public void userEntersWhatIsYourCurrentProxySettingsAs(String arg0) {
         homePage.enterNetworkSecurity_proxy_surf_proxy_settings(arg0);
     }
 
     @Then("user enters ticket number as {string}")
-    public void userEntersTicketNumberAs (String arg0){
+    public void userEntersTicketNumberAs(String arg0) {
         homePage.enterNetworkSecurity_proxy_surf_proxy_ticket_number(arg0);
     }
 
     @And("user selects SurfProxy url filter as {string}")
-    public void userSelectsSurfProxyUrlFilterAs (String arg0){
+    public void userSelectsSurfProxyUrlFilterAs(String arg0) {
         homePage.selectBCPP_Environment(arg0);
     }
 
     @And("user enters proxy date and time when tests performed as current date and time")
-    public void userEntersProxyDateAndTimeWhenTestsPerformedAsCurrentDateAndTime () {
+    public void userEntersProxyDateAndTimeWhenTestsPerformedAsCurrentDateAndTime() {
         homePage.enterNetworkSecurity_proxy_surf_proxy_date_and_time(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
     }
 
     @And("user enters proxy Source IP Address as {string}")
-    public void userEntersProxySourceIPAddressAs (String arg0){
+    public void userEntersProxySourceIPAddressAs(String arg0) {
         homePage.enterNetworkSecurity_proxy_surf_proxy_source_ip(arg0);
     }
 
     @And("user enters user IP as {string}")
-    public void userEntersUserIPAs (String arg0){
+    public void userEntersUserIPAs(String arg0) {
         homePage.enterNetworkSecurity_proxy_surf_proxy_slow_surfing_user_ip(arg0);
     }
 
     @Then("user selects internal external sites as {string}")
-    public void userSelectsInternalExternalSitesAs (String arg0){
+    public void userSelectsInternalExternalSitesAs(String arg0) {
         homePage.selectNetworkSecurity_proxy_surf_proxy_slow_surfing_sites(arg0);
 
     }
@@ -1147,4 +1148,35 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userSelectsStorageConfigureTrunkCIAs(String arg0) {
         homePage.selectStorageConfigure_trunkCI(arg0);
     }
+
+    @And("user enters Storage export request as {string}")
+    public void userEntersStorageExportRequestAs(String arg0) {
+     homePage.enterStorageExport_request(arg0);
+    }
+
+    @And("user selects storage export CI as {string}")
+    public void userSelectsStorageExportCIAs(String arg0) {
+   homePage.selectStorageExport_SourceCI(arg0);
+    }
+
+    @And("user enters Source WWN as {string}")
+    public void userEntersSourceWWNAs(String arg0) {
+   homePage.enterStorageExport_source_WWN(arg0);
+    }
+
+    @And("user enters date time of snapshot as current date and time")
+    public void userEntersDateTimeOfSnapshotAsCurrentDateAndTime() {
+   homePage.enterStorageExport_dateTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user enters Target CI as {string}")
+    public void userEntersTargetCIAs(String arg0) {
+   homePage.selectStorageExport_TargetCI(arg0);
+    }
+
+    @And("user enters Storage export description as {string}")
+    public void userEntersStorageExportDescriptionAs(String arg0) {
+      homePage.enterStorageConfigure_description(arg0);
+    }
+
 }

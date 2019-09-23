@@ -1,4 +1,4 @@
-@Assignee
+@Assignee @problem
 #passed
 Feature: Changing of assignee for problem ticket
 

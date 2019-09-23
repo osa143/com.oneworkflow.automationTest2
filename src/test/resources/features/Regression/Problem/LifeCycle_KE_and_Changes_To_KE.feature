@@ -47,7 +47,7 @@
       And user clicks on save button
       Then known error ticket status should be "Published"
       When user enters description as "More information"
-      And user clicks on save button
+      And user clicks on save button and closes warning messages
       Then change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Draft to Published." on row 2
       When user clicks on timeline tab
       And user selects Auto text:Tech bridge closed
@@ -59,11 +59,11 @@
       And user clicks on Ok button
       Then change should also be reflected in the timeline as "Time Tracking: Working On Ticket (20 Minutes)"
       When user changes status to "Closed" on problem record page
-      And user clicks on save button
+      And user clicks save button
       #Then an error message should appear and a red border should be visible around the closure code field
       When user selects error code as "Full Impact"
       #When user selects closure code as "Full Impact"
-      When user clicks on Diagnosis tab
+      When user clicks on "Diagnosis" tab
       And user right clicks on CI "SE_CPE_FRECPE5" and selects "Impact:Clear All"
       And user should see confirmation message for impact clear and user clicks yes
       And user clicks on save button

@@ -1,4 +1,4 @@
-@Profile_Permissions_Part_4
+@Profile_Permissions_Part_4 @problem
   #passed
   #CI search window
   Feature: Validation of permissions

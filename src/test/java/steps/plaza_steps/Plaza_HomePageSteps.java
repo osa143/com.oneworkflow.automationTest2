@@ -1179,4 +1179,338 @@ public class Plaza_HomePageSteps extends BasePage {
       homePage.enterStorageConfigure_description(arg0);
     }
 
+    @And("user enters the target url as {string}")
+    public void userEntersTheTargetUrlAs(String arg0) {
+        homePage.enterNetworkSecurity_proxy_surf_proxy_whitelisting_target_url(arg0);
+    }
+
+
+    @Then("user enters the h2 Name {string}")
+    public void userEntersTheHName(String arg0) {
+        homePage.enterNetworkSecurity_proxy_surf_proxy_whitelisting_h2_name(arg0);
+    }
+
+    @Then("user selects select request {string}")
+    public void userSelectsSelectRequest(String arg0) {
+        homePage.selectNetworkSecurity_firewall_new_change_service_request(arg0);
+    }
+
+
+    @When("user clicks on Remote Access \\(VPN ACS)")
+    public void userClicksOnRemoteAccessVPNACS() {
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[15]/div/a/div/h2"));
+    }
+
+    @And("user enters network security remote request as {string}")
+    public void userEntersNetworkSecurityRemoteRequestAs(String arg0) {
+        homePage.enterNetworkSecurity_remote_access_request(arg0);
+    }
+
+    @Then("user enters Network Security Remote Access description as {string}")
+    public void userEntersNetworkSecurityRemoteAccessDescriptionAs(String arg0) {
+        homePage.enterNetworkSecurity_remote_access_description(arg0);
+    }
+
+    @Then("user selects remote access select request as {string}")
+    public void userSelectsRemoteAccessSelectRequestAs(String arg0) {
+        homePage.selectNetworkSecurity_firewall_new_change_service_request(arg0);
+    }
+
+    @When("user clicks on Network Routing Switching")
+    public void userClicksOnNetworkRoutingSwitching() {
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[16]/div/a/div/h2"));
+    }
+
+    @And("user enters network security switch port request as {string}")
+    public void userEntersNetworkSecuritySwitchPortRequestAs(String arg0) {
+        homePage.enterNetworkSecurity_switch_port_config_request(arg0);
+    }
+
+    @Then("user selects existing IP net as {string}")
+    public void userSelectsExistingIPNetAs(String arg0) {
+        homePage.selectNetworkSecurity_add_modify_remove_dns_scheduled_change(arg0);
+    }
+
+    @And("user selects new IP net as {string}")
+    public void userSelectsNewIPNetAs(String arg0) {
+        homePage.selectNetworkSecurity_proxy_surf_proxy_slow_surfing_sites(arg0);
+    }
+
+    @Then("user enters Network Security Switch Port description as {string}")
+    public void userEntersNetworkSecuritySwitchPortDescriptionAs(String arg0) {
+        homePage.enterNetworkSecurity_switch_port_config_description(arg0);
+    }
+
+    @And("user enters operating system request as {string}")
+    public void userEntersOperatingSystemRequestAs(String arg0) {
+        homePage.enterOperatingSystem_access_request(arg0);
+    }
+
+    @And("user enters justification as {string}")
+    public void userEntersJustificationAs(String arg0) {
+        homePage.enterOperatingSystem_access_justification(arg0);
+    }
+
+    @Then("user enters operating system description as {string}")
+    public void userEntersOperatingSystemDescriptionAs(String arg0) {
+        homePage.enterOperatingSystem_account_management_description(arg0);
+    }
+
+    @Then("user selects operating system as {string}")
+    public void userSelectsOperatingSystemAs(String arg0) {
+        homePage.selectNetworkSecurity_add_modify_remove_dns_scheduled_change(arg0);
+    }
+
+    @Then("user selects operating system account type as {string}")
+    public void userSelectsOperatingSystemAccountTypeAs(String arg0) {
+        homePage.selectNetworkSecurity_proxy_surf_proxy_slow_surfing_sites(arg0);
+    }
+
+    @And("user enters account name as {string}")
+    public void userEntersAccountNameAs(String arg0) {
+        homePage.enterOperatingSystem_account_management_account_name(arg0);
+    }
+
+    @And("user enters operating system account management request as {string}")
+    public void userEntersOperatingSystemAccountManagementRequestAs(String arg0) {
+        homePage.enterOperatingSystem_account_management_account_request(arg0);
+    }
+
+    @And("user selects compute and OS add server CI as {string}")
+    public void userSelectsComputeAndOSAddServerCIAs(String arg0) {
+        homePage.enterNetworkSecurity_firewall_new_change_add_ci_multipleValues(arg0);
+    }
+
+    @And("user clicks on the commitment checkbox")
+    public void userClicksOnTheCommitmentCheckbox() {
+        homePage.clickCommitment_change_from_auto();
+    }
+
+    @And("user enters plan to enable automatic monthly patching as {string}")
+    public void userEntersPlanToEnableAutomaticMonthlyPatchingAs(String arg0) {
+        homePage.enterOperatingSystem_change_from_auto_plan(arg0);
+    }
+
+    @And("user enters operating system change from auto request as {string}")
+    public void userEntersOperatingSystemChangeFromAutoRequestAs(String arg0) {
+        homePage.enterOperatingSystem_change_from_auto_request(arg0);
+    }
+
+    @And("user enters operating system justification as {string}")
+    public void userEntersOperatingSystemJustificationAs(String arg0) {
+        homePage.enterOperatingSystem_change_from_auto_justification(arg0);
+    }
+
+    @Then("user enters operating system change from auto description as {string}")
+    public void userEntersOperatingSystemChangeFromAutoDescriptionAs(String arg0) {
+        homePage.enterOperatingSystem_change_from_auto_description(arg0);
+    }
+
+    @When("user clicks on Change OS Patching")
+    public void userClicksOnChangeOSPatching() {
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[16]/div/a/div/h2"));
+    }
+
+    @And("user enters operating system manual request as {string}")
+    public void userEntersOperatingManualSystemRequestAs(String arg0) {
+        homePage.enterOperatingSystem_change_from_auto_request(arg0);
+    }
+
+    @Then("user enters operating system change from manual description as {string}")
+    public void userEntersOperatingSystemChangeFromManualDescriptionAs(String arg0) {
+        homePage.enterOperatingSystem_change_from_auto_description(arg0);
+    }
+
+    @And("user selects Service Window as {string}")
+    public void userSelectsServiceWindowAs(String arg0) {
+        homePage.selectNetworkSecurity_proxy_surf_proxy_slow_surfing_sites(arg0);
+    }
+
+    @And("user enters operating system change from manual request as {string}")
+    public void userEntersOperatingSystemChangeFromManualRequestAs(String arg0) {
+        homePage.enterOperatingSystem_change_from_auto_request(arg0);
+    }
+
+    @When("user clicks on Manual OS Patching")
+    public void userClicksOnManualOSPatching() {
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[17]/div/a/div/h2"));
+    }
+
+    @And("user enters operating system manual os patching request as {string}")
+    public void userEntersOperatingSystemManualOsPatchingRequestAs(String arg0) {
+        homePage.enterOperatingSystem_manual_os_patching_request(arg0);
+    }
+
+    @And("user selects Server placed in Veha as {string}")
+    public void userSelectsServerPlacedInVehaAs(String arg0) {
+        homePage.selectNetworkSecurity_add_modify_remove_dns_scheduled_change(arg0);
+    }
+
+    @And("user enters WBS Code as {string}")
+    public void userEntersWBSCodeAs(String arg0) {
+        homePage.enterOperatingSystem_manual_os_patching_wbs_code(arg0);
+    }
+
+    @And("user enters planned start date and time as current date and time")
+    public void userEntersPlannedStartDateAndTimeAsCurrentDateAndTime() {
+        homePage.enterOperatingSystem_manual_os_patching_start_date(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user enters planned end date and time as current date and time")
+    public void userEntersPlannedEndDateAndTimeAsCurrentDateAndTime() {
+        homePage.enterOperatingSystem_manual_os_patching_end_date(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @Then("user enters manual os patching Plan to enable automatic monthly patching as {string}")
+    public void userEntersManualOsPatchingPlanToEnableAutomaticMonthlyPatchingAs(String arg0) {
+        homePage.enterOperatingSystem_manual_os_patching_plan(arg0);
+    }
+
+    @And("user enters H2 as {string}")
+    public void userEntersHAs(String arg0) {
+        homePage.enterOperatingSystem_manual_os_patching_H2(arg0);
+    }
+
+    @Then("user enters manual os patching operating system description as {string}")
+    public void userEntersManualOsPatchingOperatingSystemDescriptionAs(String arg0) {
+        homePage.enterOperatingSystem_manual_os_patching_description(arg0);
+    }
+
+
+    @And("user selects manual os patching Add CI as {string}")
+    public void userSelectsManualOsPatchingAddCIAs(String arg0) {
+        homePage.selectOperatingSystem_manual_os_patching_add_ci(arg0);
+    }
+
+    @And("user selects manual os patching Operating System as {string}")
+    public void userSelectsManualOsPatchingOperatingSystemAs(String arg0) {
+        homePage.selectNetworkSecurity_firewall_new_change_service_request(arg0);
+    }
+
+    @And("user selects BCCP Add ci as {string}")
+    public void userSelectsBCCPAddCiAs(String arg0) {
+        homePage.selectOperatingSystem_manual_os_patching_add_ci(arg0);
+    }
+
+    @And("user enters CEWS request as {string}")
+    public void userEntersCEWSRequestAs(String arg0) {
+        homePage.enterCews_request(arg0);
+    }
+
+    @Then("user enters CEWS description as {string}")
+    public void userEntersCEWSDescriptionAs(String arg0) {
+        homePage.enterCews_description(arg0);
+    }
+
+    @And("user selects CEWS Add CI as {string}")
+    public void userSelectsCEWSAddCIAs(String arg0) {
+        homePage.selectCews_add_ci(arg0);
+    }
+
+    @And("user enters Cloud one time snapshot request as {string}")
+    public void userEntersCloudOneTimeSnapshotRequestAs(String arg0) {
+        homePage.enterReschedule_request(arg0);
+    }
+
+
+    @And("user enters Add CI as {string}")
+    public void userEntersAddCIAs(String arg0) {
+        homePage.selectCews_add_ci(arg0);
+    }
+
+    @Then("user enters cloud one time snapshot description as {string}")
+    public void userEntersCloudOneTimeSnapshotDescriptionAs(String arg0) {
+        homePage.enterDescription_Reschedule(arg0);
+    }
+
+    @And("user enters date and time for deletion as current date and time")
+    public void userEntersDateAndTimeForDeletionAsCurrentDateAndTime() {
+        homePage.enterBackUpDateTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user enters EBILL request as {string}")
+    public void userEntersEBILLRequestAs(String arg0) {
+        homePage.enterEbill_request(arg0);
+    }
+
+    @Then("user enters EBILL description as {string}")
+    public void userEntersEBILLDescriptionAs(String arg0) {
+        homePage.enterEbill_description(arg0);
+    }
+
+    @And("user enters account field as {string}")
+    public void userEntersAccountFieldAs(String arg0) {
+        homePage.enterEbill_account(arg0);
+    }
+
+    @And("user enters EFS-BSS request as {string}")
+    public void userEntersEFSBSSRequestAs(String arg0) {
+        homePage.enterCews_request(arg0);
+    }
+
+    @And("user enters CI as {string}")
+    public void userEntersCIAs(String arg0) {
+        homePage.selectCews_add_ci(arg0);
+    }
+
+    @And("user enters EFS description as {string}")
+    public void userEntersEFSDescriptionAs(String arg0) {
+        homePage.enterCews_description(arg0);
+    }
+
+    @And("user enters IT FI request as {string}")
+    public void userEntersITFIRequestAs(String arg0) {
+        homePage.enterItfi_request(arg0);
+    }
+
+    @Then("user enters IT FI description as {string}")
+    public void userEntersITFIDescriptionAs(String arg0) {
+        homePage.enterItfi_description(arg0);
+    }
+
+    @Then("user enters system dropdown as {string}")
+    public void userEntersSystemDropdownAs(String arg0) {
+        homePage.selectCews_add_ci(arg0);
+    }
+
+    @And("user enters managed voice request as {string}")
+    public void userEntersManagedVoiceRequestAs(String arg0) {
+        homePage.enterManagedvoice_request(arg0);
+    }
+
+    @Then("user enters managed voice description as {string}")
+    public void userEntersManagedVoiceDescriptionAs(String arg0) {
+        homePage.enterManagedvoice_description(arg0);
+    }
+
+    @Then("user enters managed voice delivery date as current date")
+    public void userEntersManagedVoiceDeliveryDateAsCurrentDate() {
+        homePage.enterManagedvoice_delivery_date(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user enters MegaDisc request as {string}")
+    public void userEntersMegaDiscRequestAs(String arg0) {
+        homePage.enterMegadisc_add_user_request(arg0);
+    }
+
+    @Then("user selects choose option as {string}")
+    public void userSelectsChooseOptionAs(String arg0) {
+        homePage.selectNetworkSecurity_firewall_new_change_service_request(arg0);
+    }
+
+    @And("user enters megadisc account name as {string}")
+    public void userEntersMegadiscAccountNameAs(String arg0) {
+        homePage.enterMegadisc_add_user_account_name(arg0);
+    }
+
+    @Then("user enters megadisc select group as {string}")
+    public void userEntersMegadiscSelectGroupAs(String arg0) {
+        homePage.selectMegadisc_add_user_select_group(arg0);
+    }
+
+    @Then("user selects requested person as {string}")
+    public void userSelectsRequestedPersonAs(String arg0) {
+        homePage.selectMegadisc_add_user_requested_person(arg0);
+    }
+
 }

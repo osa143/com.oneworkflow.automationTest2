@@ -8,26 +8,25 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Application"
+      And user clicks on "Application"
       When user clicks on "CEWS" pebble
       Then user should see "CEWS" form
-      When user selects Role dropdown as "Application Operation Engineer"
+      When user selects role dropdown as "Application Operation Engineer"
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox
       And user enters name field as "Test1234"
-      Then user enters email address field as "Test@Test.com
+      And user enters email address field as "Test@Test.com"
       Then user enters phone field as "123456789"
       And user enters CEWS request as "Test1 CEWS/Request"
       And user enters additional comments as "Test1 CEWS/AC"
-      Then user clicks on submit button
+      Then user clicks on "Submit"
       Then user enters CEWS description as "Test1 CEWS/Description"
-      And user enters CI as "cc100cgas001"
-      Then user clicks on submit button
+      And user selects CEWS Add CI as "cc100cgas001"
+      Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
       Then user should see service request form
-      When user opens another window
-      And user enters OW URL
+      When user opens new tab
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -40,7 +39,7 @@
       And user validates title field as "Service Request | CEWS"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates description as ""
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -48,18 +47,18 @@
       And user should see assigned profile as "Billing"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
-      When user clicks on diagnosis tab
+      When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed
-      And user clicks on CI "cc100cgas001" and selects "Impact:Update
+      And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
       Then user switches to frame
       And user enters impacted from date as date in past
       And user enters impacted to date as date in past
       Then user clicks confirm checkbox
-      And user clicks the save button
+      And user clicks save button
       Then user switches to window 1
       When user selects CI present
       And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
-      Then user selects yes and closes warning message
+      And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
       And user changes status to "Cleared"
       And user selects completed code as "Success"

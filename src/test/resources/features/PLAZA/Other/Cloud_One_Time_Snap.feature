@@ -1,4 +1,4 @@
-@Cloud_One_Time_Snap @PLAZA
+@Cloud_One_Time_Snap_Other @PLAZA
   Feature: Cloud one time snap plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -8,7 +8,7 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Cloud"
+      And user clicks on "Cloud"
       When user clicks on "Order one-time Snapshot of VM" pebble
       Then user should see "Order one-time Snapshot of VM" form
       When user selects role dropdown as "Application Operation Engineer"
@@ -18,11 +18,12 @@
       Then user enters email address field as "Test@Test.com"
       Then user enters phone field as "123456789"
       And user enters Cloud one time snapshot request as "Test1 Cloud one time snapshot/Request"
-      And user enters CI as "cc100cgas001"
-      Then user enters Cloud one time snapshot description as "Test1 Cloud one time snapshot/Description"
-      And user clicks the calendar and selects current date and time
+      And user enters Add CI as "cc100cgas001"
+      Then user enters cloud one time snapshot description as "Test1 Cloud one time snapshot/Description"
+      And user enters date and time for deletion as current date and time
       And user enters additional comments as "Test1 Cloud one time snapshot/AC"
-      And user And searches for {string} attachment and adds it
+      And user clicks on add attachment in plaza
+      And user searches for "Test Attachments\other files\Test WORD FILE.docx" attachment and adds it
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -40,7 +41,7 @@
       And user validates title field as "Service Request | Order one-time Snapshot of VM"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates description as ""
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       And user clicks on attachments under sections
@@ -50,26 +51,26 @@
       And user validates 1 attachment visibility under external
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
-      When user clicks on diagnosis tab
-      And user validates CI "cc100cgas001" is listed
-      And user clicks on CI "cc100cgas001" and selects "Impact:Update
+      When user clicks on "Diagnosis" tab
+      And user validates CI "cc001cgas001" is listed
+      And user right clicks on CI "cc001cgas001" and selects "Impact:Update"
       Then user switches to frame
       And user enters impacted from date as date in past
       And user enters impacted to date as date in past
       Then user clicks confirm checkbox
-      And user clicks the save button
+      And user clicks save button
       Then user switches to window 1
       When user selects CI present
-      And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
-      Then user selects yes and closes warning message
+      And user right clicks on CI "cc001cgas001" and selects "Impact:Clear All"
+      And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
-      And user changes status to "Cleared"
+      And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
       When user switches to window 0

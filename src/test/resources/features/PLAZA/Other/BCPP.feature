@@ -1,4 +1,4 @@
-@BCPP @PLAZA
+@BCPP_other @PLAZA
   Feature: Plaza BCPP form test
     Scenario Outline: user validates information sent to OW from Plaza
 
@@ -16,9 +16,9 @@
       And user enters BCCP request as "<Request>"
       And user selects service request name as "Account/Password"
       And user selects BCPP environment as "<Environment>"
-      And user selects Add ci as "aa187bcpp01"
+      And user selects BCCP Add ci as "aa187bcpp01"
       And user enters BCPP description as "<Description>"
-      And user enters additional comments as "<AdditionalComments>"
+      And user enters additional comments as "<Additional Comments>"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -35,7 +35,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | BCCP"
       And user validates request type as "Service Request | PLAZA"
-      And user validates description contains: "<DescValidation>"
+      And user validates description as ""
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as ""
@@ -55,13 +55,13 @@
       When user right clicks on CI "aa187bcpp01" and selects "Impact:Clear All"
       And user clicks on yes button on warning window
       When user clicks on Ack button
-      And user changes status to "Cleared"
+      And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
       When user switches to window 0

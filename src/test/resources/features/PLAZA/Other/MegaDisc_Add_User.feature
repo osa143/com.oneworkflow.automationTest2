@@ -1,4 +1,4 @@
-@MegaDisc_Add_User @PLAZA
+@MegaDisc_Add_User_other @PLAZA
   Feature: MegaDisc Add User PLAZA form test
     Scenario:user validates information sent to OW from Plaza
 
@@ -8,21 +8,22 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Application"
+      And user clicks on "Application"
       When user clicks on "MegaDisc (Account Management)" pebble
       Then user should see "MegaDisc (Account Management)" form
-      When user selects Role dropdown as "Application Operation Engineer"
-      Then user selects Choose Option as "Add User"
+      When user selects role dropdown as "Application Operation Engineer"
       And user enters MegaDisc request as "Test1 MegaDisc/Request"
-      And user enters Account Name as "Test1234"
+      Then user selects choose option as "Add User"
+      And user enters megadisc account name as "Test1234"
+      Then user enters megadisc select group as "App_Megadisc_Admin"
+      Then user selects requested person as "Anders Englund"
       And user enters description as "Test1 MegaDisc/Description"
       And user enters additional comments as "Test1 Megadisc/AC"
-      Then user clicks on submit button
+      Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
       Then user should see service request form
-      When user opens another window
-      And user enters OW URL
+      When user opens new tab
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -35,7 +36,7 @@
       And user validates title field as "Service Request | MegaDisc (Account Management)"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates description as ""
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -44,13 +45,13 @@
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
-      And user changes status to "Cleared"
+      And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
       When user switches to window 0

@@ -210,6 +210,212 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_STORAGE_EXPORT_DATE_TIME= "sp_formfield_sr63_v_date";
     private static final String dd_STORAGE_EXPORT_TARGET_CI= "s2id_autogen14";
     private static final String txt_STORAGE_EXPORT_DESCRIPTION= "sp_formfield_sr63_v_description";
+    private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_SLOW_WHITELISTING_TARGET_URL= "sp_formfield_sr35_v_target_url";
+    private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_SLOW_WHITELISTING_H2_NAME= "sp_formfield_sr35_v_hid";
+    private static final String txt_NETWORK_SECURITY_REMOTE_ACCESS_REQUEST= "sp_formfield_sr32_v_request";
+    private static final String txt_NETWORK_SECURITY_REMOTE_ACCESS_DESCRIPTION= "sp_formfield_sr32_v_description";
+    private static final String txt_NETWORK_SECURITY_SWITCH_PORT_CONFIG_REQUEST= "sp_formfield_sr103_v_request";
+    private static final String txt_NETWORK_SECURITY_SWITCH_PORT_CONFIG_DESCRIPTION= "sp_formfield_sr103_v_desc";
+    private static final String txt_OPERATING_SYSTEM_ACCESS_REQUEST= "sp_formfield_sr4_v_request";
+    private static final String txt_OPERATING_SYSTEM_ACCESS_JUSTIFICATION= "sp_formfield_sr4_v_justification";
+    private static final String txt_OPERATING_SYSTEM_ACCESS_DESCRIPTION= "sp_formfield_sr4_v_description";
+    private static final String txt_OPERATING_SYSTEM_ACCOUNT_MANAGEMENT_ACCOUNT_NAME= "sp_formfield_sr5_v_account_name";
+    private static final String txt_OPERATING_SYSTEM_ACCOUNT_MANAGEMENT_REQUEST= "sp_formfield_sr5_v_request";
+    private static final String txt_OPERATING_SYSTEM_ACCOUNT_MANAGEMENT_DESCRIPTION= "sp_formfield_sr5_v_description";
+    private static final String chkbx_OPERATING_SYSTEM_CHANGE_FROM_AUTO_COMMITMENT= "sp_formfield_sr6_v_commitment";
+    private static final String txt_OPERATING_SYSTEM_CHANGE_FROM_AUTO_PLAN= "sp_formfield_sr6_v_plan";
+    private static final String txt_OPERATING_SYSTEM_CHANGE_FROM_AUTO_REQUEST= "sp_formfield_sr6_v_request";
+    private static final String txt_OPERATING_SYSTEM_CHANGE_FROM_AUTO_JUSTIFICATION= "sp_formfield_sr6_v_justification";
+    private static final String txt_OPERATING_SYSTEM_CHANGE_FROM_AUTO_DESCRIPTION= "sp_formfield_sr6_v_description";
+    private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_REQUEST= "sp_formfield_sr7_v_request";
+    private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_WBS_CODE= "sp_formfield_sr7_v_wbs_code";
+    private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_START_DATE= "sp_formfield_sr7_v_start_date";
+    private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_END_DATE= "sp_formfield_sr7_v_end_date";
+    private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_PLAN= "sp_formfield_sr7_v_plan_audit";
+    private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_H2= "sp_formfield_sr7_v_hid";
+    private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_DESCRIPTION= "sp_formfield_sr7_v_description";
+    private static final String dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI= "s2id_autogen15";
+    private static final String txt_CEWS_REQUEST= "sp_formfield_sr65_v_request";
+    private static final String txt_CEWS_DESCRIPTION= "sp_formfield_sr65_v_description";
+    private static final String txt_CEWS_ADD_CI= "s2id_autogen13";
+    private static final String txt_EBILL_REQUEST= "sp_formfield_sr77_v_request";
+    private static final String txt_EBILL_DESCRIPTION= "sp_formfield_sr77_v_description";
+    private static final String txt_EBILL_ACCOUNT= "sp_formfield_sr77_v_account";
+    private static final String txt_IT_FI_REQUEST= "sp_formfield_sr99_v_request";
+    private static final String txt_IT_FI_DESCRIPTION= "sp_formfield_sr99_v_description";
+    private static final String txt_MANAGED_VOICE_REQUEST= "sp_formfield_sr36_v_request";
+    private static final String txt_MANAGED_VOICE_DESCRIPTION= "sp_formfield_sr36_v_description";
+    private static final String txt_MANAGED_VOICE_DELIVERY_DATE= "sp_formfield_sr36_v_delivery_date";
+    private static final String txt_MEGADISC_ADD_USER_REQUEST= "sp_formfield_sr75_v_request";
+    private static final String txt_MEGADISC_ADD_USER_ACCOUNT_NAME= "sp_formfield_sr75_v_account_name";
+    private static final String dd_MEGADISC_ADD_USER_SELECT_GROUP= "s2id_autogen14";
+    private static final String dd_MEGADISC_ADD_USER_REQUESTED_PERSON= "s2id_sp_formfield_sr75_v_requested_person";
+
+
+
+
+    public void selectMegadisc_add_user_requested_person(String dropdownName){
+        selectDropdownByTagNameDiv(By.id(dd_MEGADISC_ADD_USER_REQUESTED_PERSON), By.id("select2-results-15"),   dropdownName);
+    }
+
+    public void selectMegadisc_add_user_select_group(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_MEGADISC_ADD_USER_SELECT_GROUP), By.id("s2id_autogen14_results"),  dropdownName);
+
+    }
+
+    public void enterMegadisc_add_user_account_name(String text){
+        enterTextByElement(By.id(txt_MEGADISC_ADD_USER_ACCOUNT_NAME), text);
+    }
+
+    public void enterMegadisc_add_user_request(String text){
+        enterTextByElement(By.id(txt_MEGADISC_ADD_USER_REQUEST), text);
+    }
+
+    public void enterManagedvoice_delivery_date(String text){
+        enterTextByElement(By.id(txt_MANAGED_VOICE_DELIVERY_DATE), text);
+    }
+
+    public void enterManagedvoice_description(String text){
+        enterTextByElement(By.id(txt_MANAGED_VOICE_DESCRIPTION), text);
+    }
+
+    public void enterManagedvoice_request(String text){
+        enterTextByElement(By.id(txt_MANAGED_VOICE_REQUEST), text);
+    }
+
+    public void enterItfi_description(String text){
+        enterTextByElement(By.id(txt_IT_FI_DESCRIPTION), text);
+    }
+
+    public void enterItfi_request(String text){
+        enterTextByElement(By.id(txt_IT_FI_REQUEST), text);
+    }
+
+    public void enterEbill_account(String text){
+        enterTextByElement(By.id(txt_EBILL_ACCOUNT), text);
+    }
+
+    public void enterEbill_description(String text){
+        enterTextByElement(By.id(txt_EBILL_DESCRIPTION), text);
+    }
+
+    public void enterEbill_request(String text){
+        enterTextByElement(By.id(txt_EBILL_REQUEST), text);
+    }
+
+    public void selectCews_add_ci(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(txt_CEWS_ADD_CI), By.id("s2id_autogen13_results"),  dropdownName);
+
+    }
+
+    public void enterCews_description(String text){
+        enterTextByElement(By.id(txt_CEWS_DESCRIPTION), text);
+    }
+
+    public void enterCews_request(String text){
+        enterTextByElement(By.id(txt_CEWS_REQUEST), text);
+    }
+
+    public void selectOperatingSystem_manual_os_patching_add_ci(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI), By.id("s2id_autogen15_results"),  dropdownName);
+
+    }
+
+    public void enterOperatingSystem_manual_os_patching_description(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_DESCRIPTION), text);
+    }
+
+    public void enterOperatingSystem_manual_os_patching_H2(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_H2), text);
+    }
+
+    public void enterOperatingSystem_manual_os_patching_plan(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_PLAN), text);
+    }
+
+    public void enterOperatingSystem_manual_os_patching_end_date(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_END_DATE), text);
+    }
+
+    public void enterOperatingSystem_manual_os_patching_start_date(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_START_DATE), text);
+    }
+
+    public void enterOperatingSystem_manual_os_patching_wbs_code(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_WBS_CODE), text);
+    }
+
+    public void enterOperatingSystem_manual_os_patching_request(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_REQUEST), text);
+    }
+
+    public void enterOperatingSystem_change_from_auto_description(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_CHANGE_FROM_AUTO_DESCRIPTION), text);
+    }
+
+    public void enterOperatingSystem_change_from_auto_justification(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_CHANGE_FROM_AUTO_JUSTIFICATION), text);
+    }
+
+    public void enterOperatingSystem_change_from_auto_request(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_CHANGE_FROM_AUTO_REQUEST), text);
+    }
+
+    public void enterOperatingSystem_change_from_auto_plan(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_CHANGE_FROM_AUTO_PLAN), text);
+    }
+
+    public void clickCommitment_change_from_auto(){
+        clickElement(By.id(chkbx_OPERATING_SYSTEM_CHANGE_FROM_AUTO_COMMITMENT));
+    }
+
+    public void enterOperatingSystem_account_management_description(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_ACCOUNT_MANAGEMENT_DESCRIPTION), text);
+    }
+
+    public void enterOperatingSystem_account_management_account_request(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_ACCOUNT_MANAGEMENT_REQUEST), text);
+    }
+
+    public void enterOperatingSystem_account_management_account_name(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_ACCOUNT_MANAGEMENT_ACCOUNT_NAME), text);
+    }
+
+    public void enterOperatingSystem_access_description(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_ACCESS_DESCRIPTION), text);
+    }
+
+    public void enterOperatingSystem_access_justification(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_ACCESS_JUSTIFICATION), text);
+    }
+
+    public void enterOperatingSystem_access_request(String text){
+        enterTextByElement(By.id(txt_OPERATING_SYSTEM_ACCESS_REQUEST), text);
+    }
+
+    public void enterNetworkSecurity_switch_port_config_description(String text){
+        enterTextByElement(By.id(txt_NETWORK_SECURITY_SWITCH_PORT_CONFIG_DESCRIPTION), text);
+    }
+
+    public void enterNetworkSecurity_switch_port_config_request(String text){
+        enterTextByElement(By.id(txt_NETWORK_SECURITY_SWITCH_PORT_CONFIG_REQUEST), text);
+    }
+
+    public void enterNetworkSecurity_remote_access_description(String text){
+        enterTextByElement(By.id(txt_NETWORK_SECURITY_REMOTE_ACCESS_DESCRIPTION), text);
+    }
+
+    public void enterNetworkSecurity_remote_access_request(String text){
+        enterTextByElement(By.id(txt_NETWORK_SECURITY_REMOTE_ACCESS_REQUEST), text);
+    }
+
+    public void enterNetworkSecurity_proxy_surf_proxy_whitelisting_h2_name(String text){
+        enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_SLOW_WHITELISTING_H2_NAME), text);
+    }
+
+    public void enterNetworkSecurity_proxy_surf_proxy_whitelisting_target_url(String text){
+        enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_SLOW_WHITELISTING_TARGET_URL), text);
+    }
 
 
     public void enterStorageExport_request(String text){

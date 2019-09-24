@@ -39,6 +39,17 @@
       And user should see assigned profile as "Linux/Unix L2"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
+      When user clicks on "Diagnosis" tab
+      And user validates CI availability
+      And user validates CI "cc100cgas001" is listed
+      And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
+      Then user switches to frame
+      And user enters impacted from date as date in past
+      And user enters impacted to date as date in past
+      Then user clicks confirm checkbox
+      And user clicks save button
+      When user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
+      And user should see confirmation message and clicks on yes button
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
@@ -47,7 +58,7 @@
       Then user clicks on save button
       And user validates ticket status as "Cleared"
       When user changes status to "Closed" on work order page
-      And user clicks on save button
+      And user clicks on save button and closes warning messages
       Then ticket status should be closed
       When user switches to window 0
       And user clicks on main page refresh

@@ -56,13 +56,13 @@
       And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
       And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
-      And user changes status to "Cleared"
+      And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
       When user switches to window 0

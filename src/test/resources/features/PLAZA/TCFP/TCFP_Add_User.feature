@@ -7,33 +7,31 @@
       Then user should see the plaza home page
       When user clicks on "Facility Management"
       And user clicks on order
-      And user clicks "Application"
+      And user clicks on IT Infrastructure dropdown
+      And user clicks on "Application"
       When user clicks on "TCFP (Account Management)" pebble
       Then user should see "TCFP (Account Management)" form
-      When user selects Role dropdown as "Application Operation Engineer"
-      And user selects Service Request Name as "Account Management"
-      And user enters TCFP general inquiry request as "Test1 TCFP/Request"
-      Then user selects Choose Option as "Add User"
-      And user enters Account Name as "tcfpuser"
-      Then user selects  as select group "<select group Name>"
-      |select group Name            |
-      |App_Navet_TS-Employed        |
-      |App_Navet_TS-Finance_Consumer|
-      |App_Navet_TS-Finans_Appmgr   |
-      |App_Navet_TS-Finans_Bomgr    |
-      |App_Navet_TS-Finans_Credit   |
-      |App_Navet_TS-Finans_Finance  |
-      |App_Navet_TS-Finans_Handler  |
-      |App_Navet_TS-Finans_Sales    |
-      |App_Navet_TS-Finans_Superuser|
-      And user enters description as "Test1 TCFP/Description"
+      When user selects role dropdown as "Application Operation Engineer"
+      And user selects service request name as "Account Management"
+      And user enters TCFP request as "Test1 TCFP/Request"
+      Then user selects TCFP choose option as "Add User"
+      And user enters TCFP Account Name as "tcfpuser"
+      And user selects TCFP select group as "App_Navet_TS-Employed"
+      And user selects TCFP select group as "App_Navet_TS-Finance_Consumer"
+      And user selects TCFP select group as "App_Navet_TS-Finans_Appmgr"
+      And user selects TCFP select group as "App_Navet_TS-Finans_Bomgr"
+      And user selects TCFP select group as "App_Navet_TS-Finans_Credit"
+      And user selects TCFP select group as "App_Navet_TS-Finans_Finance"
+      And user selects TCFP select group as "App_Navet_TS-Finans_Handler"
+      And user selects TCFP select group as "App_Navet_TS-Finans_Sales"
+      And user selects TCFP select group as "App_Navet_TS-Finans_Superuser"
+      And user enters TCFP description as "Test1 TCFP/Description"
       And user enters additional comments as "Test1 TCFP/AC"
-      Then user clicks on submit button
+      Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
       Then user should see service request form
-      When user opens another window
-      And user enters OW URL
+      And user opens new tab
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -51,21 +49,34 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user validates assigned profile as "Enterprise"
+      And user should see assigned profile as "Enterprise"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
-      And user changes status to "Cleared"
+      And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
-      And user clicks on save button
+      When user changes status to "Closed" on work order page
+      And user clicks on save button and closes warning messages
       Then ticket status should be closed
       When user switches to window 0
       And user clicks on main page refresh
       Then user validates plaza request has completed
 
 
+
+
+      #Then user selects TCFP add user select group as below
+#      |select group Name            |
+#      |App_Navet_TS-Employed        |
+#      |App_Navet_TS-Finance_Consumer|
+#      |App_Navet_TS-Finans_Appmgr   |
+#      |App_Navet_TS-Finans_Bomgr    |
+#      |App_Navet_TS-Finans_Credit   |
+#      |App_Navet_TS-Finans_Finance  |
+#      |App_Navet_TS-Finans_Handler  |
+#      |App_Navet_TS-Finans_Sales    |
+#      |App_Navet_TS-Finans_Superuser|

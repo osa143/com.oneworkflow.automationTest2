@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import utils.CommonUtils;
 import utils.PlazaValidation;
 
@@ -139,7 +140,7 @@ public class OWF_WorkOrderPage extends BasePage {
     }
 
     public void enterActualScheduleEnd(){
-        findElement(By.id(txt_SCHEDULE_END)).sendKeys(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", -60));
+        findElement(By.id(txt_SCHEDULE_END)).sendKeys(Keys.ENTER);
         wait(2000);
     }
     public void selectCompletionCode(String value){

@@ -1151,32 +1151,32 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user enters Storage export request as {string}")
     public void userEntersStorageExportRequestAs(String arg0) {
-     homePage.enterStorageExport_request(arg0);
+        homePage.enterStorageExport_request(arg0);
     }
 
     @And("user selects storage export CI as {string}")
     public void userSelectsStorageExportCIAs(String arg0) {
-   homePage.selectStorageExport_SourceCI(arg0);
+        homePage.selectStorageExport_SourceCI(arg0);
     }
 
     @And("user enters Source WWN as {string}")
     public void userEntersSourceWWNAs(String arg0) {
-   homePage.enterStorageExport_source_WWN(arg0);
+        homePage.enterStorageExport_source_WWN(arg0);
     }
 
     @And("user enters date time of snapshot as current date and time")
     public void userEntersDateTimeOfSnapshotAsCurrentDateAndTime() {
-   homePage.enterStorageExport_dateTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+        homePage.enterStorageExport_dateTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
     }
 
     @And("user enters Target CI as {string}")
     public void userEntersTargetCIAs(String arg0) {
-   homePage.selectStorageExport_TargetCI(arg0);
+        homePage.selectStorageExport_TargetCI(arg0);
     }
 
     @And("user enters Storage export description as {string}")
     public void userEntersStorageExportDescriptionAs(String arg0) {
-      homePage.enterStorageConfigure_description(arg0);
+        homePage.enterStorageExport_description(arg0);
     }
 
     @And("user enters the target url as {string}")
@@ -1513,4 +1513,79 @@ public class Plaza_HomePageSteps extends BasePage {
         homePage.selectMegadisc_add_user_requested_person(arg0);
     }
 
+    @And("user enters Storage volume request as {string}")
+    public void userEntersStorageVolumeRequestAs(String arg0) {
+      homePage.enterStorageVolume_request(arg0);
+    }
+
+    @And("user selects storage volume add CI as {string}")
+    public void userSelectsStorageVolumeAddCIAs(String arg0) {
+       homePage.selectStorageExport_TargetCI(arg0);
+    }
+
+    @And("user enters storage volume Source WWN as {string}")
+    public void userEntersStorageVolumeSourceWWNAs(String arg0) {
+       homePage.enterStorageVolume_source_WWN(arg0);
+    }
+
+    @And("user clicks the calendar and selects current date and time")
+    public void userClicksTheCalendarAndSelectsCurrentDateAndTime() {
+           homePage.enterStorageVolume_dateTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user enters Storage volume  description as {string}")
+    public void userEntersStorageVolumeDescriptionAs(String arg0) {
+      homePage.enterStorageVolume_description(arg0);
+    }
+
+    @And("user selects storage volume Choose Option as {string}")
+    public void userSelectsStorageVolumeChooseOptionAs(String arg0) {
+        homePage.selectStorageVolume_chooseOption(arg0);
+    }
+
+    @And("user enters TCFP request as {string}")
+    public void userEntersTCFPAddUserRequestAs(String arg0) {
+        homePage.enterTCFP_addUser_request(arg0);
+    }
+
+    @Then("user selects TCFP choose option as {string}")
+    public void userSelectsTCFPAddUserChooseOptionAs(String arg0) {
+        homePage.selectTCFP_addUser_chooseOption(arg0);
+    }
+
+    @And("user enters TCFP Account Name as {string}")
+    public void userTCFPAddUserAccountNameAs(String arg0) {
+        homePage.enterTCFP_addUser_accountName(arg0);
+    }
+
+    @Then("user selects TCFP add user select group as below")
+    public void userSelectsTCFPAddUserSelectGroupAs(DataTable ddValues) {
+        homePage.selectAllSelectGroup(ddValues);
+    }
+
+    @And("user enters TCFP description as {string}")
+    public void userEntersTCFPAddUserDescriptionAs(String arg0) {
+        homePage.enterTCFP_addUser_description(arg0);
+    }
+
+
+    @And("user selects TCFP select group as {string}")
+    public void userSelectsTCFPAddUserSelectGroupAs(String arg0) {
+        homePage.selectTCFP_addUser_selectGroup(arg0);
+    }
+
+    @And("user enters TCFP general inquiry request as {string}")
+    public void userEntersTCFPGeneralInquiryRequestAs(String arg0) {
+        homePage.enterTCFP_generalEnquiry_request(arg0);
+    }
+
+    @And("user enters TCFP general inquiry description as {string}")
+    public void userEntersTCFPGeneralInquiryDescriptionAs(String arg0) {
+        homePage.enterTCFP_generalEnquiry_description(arg0);
+    }
+
+    @Then("user selects TCFP general inquiry CI as {string}")
+    public void userSelectsTCFPGeneralInquiryCIAs(String arg0) {
+        homePage.selectTCFP_generalEnquiry_addCI(arg0);
+    }
 }

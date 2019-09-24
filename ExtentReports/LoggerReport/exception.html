@@ -107,12 +107,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.TimeoutException</a>
+							<a href="#" class="item-title _500">org.openqa.selenium.WebDriverException</a>
 							<div class="item-except text-sm text-muted h-1x">
-								1 tests
+								2 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.TimeoutException</h5>
+								<h5 class="mb-4">org.openqa.selenium.WebDriverException</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="13" parent-id="1">
+<tr class="s-fail" test-id="33" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And user enters Storage request as "Test2 Storage/Request" <br/><span class="text-muted text-sm">user validates information sent to OW from Plaza</span></td>
-	<td>0h 0m 30s+63msc</td>
+	<td class="_600">Given user is on the OneWorkflow login page <br/><span class="text-muted text-sm">user validates information sent to OW from Plaza</span></td>
+	<td>0h 0m 3s+402msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,23 +136,14 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: sp_formfield_sr59_v_request (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.BasePage.findElement(BasePage.java:54)
-	at pageObjects.BasePage.enterTextByElement(BasePage.java:137)
-	at pageObjects.plaza.Plaza_HomePage.enterStorageConfigure_request(Plaza_HomePage.java:211)
-	at steps.plaza_steps.Plaza_HomePageSteps.userEntersStorageRequestAs(Plaza_HomePageSteps.java:1133)
-	at ✽.user enters Storage request as "Test2 Storage/Request"(features/PLAZA/Storage/Storage_Export_Volume.feature:15)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#sp_formfield_sr59_v_request"}
+		<textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
   (Session info: chrome=76.0.3809.132)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.241.122', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+System info: host: 'DESKTOP-P3NRUGT', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.132, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57985}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: af09084374f7c1a0c546eaf9ca438f4b
-*** Element info: {Using=id, value=sp_formfield_sr59_v_request}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.132, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64948}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c361f1cebe0b77d98ff1da1d7399984a
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -163,17 +154,47 @@ Session ID: af09084374f7c1a0c546eaf9ca438f4b
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at pageObjects.BasePage.findElement(BasePage.java:54)
-	at pageObjects.BasePage.enterTextByElement(BasePage.java:137)
-	at pageObjects.plaza.Plaza_HomePage.enterStorageConfigure_request(Plaza_HomePage.java:211)
-	at steps.plaza_steps.Plaza_HomePageSteps.userEntersStorageRequestAs(Plaza_HomePageSteps.java:1133)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at pageObjects.BasePage.getURL(BasePage.java:36)
+	at steps.OWF_LoginPageSteps.userIsOnTheOneWorkflowLoginPage(OWF_LoginPageSteps.java:13)
+	at ✽.user is on the OneWorkflow login page(features/PLAZA/TCFP/TCFP_Remove_User.feature:35)
+</textarea>
+	</td>
+</tr>
+	
+<tr class="s-fail" test-id="65" parent-id="1">
+	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
+	<td class="_600">Hooks.Teardown(Scenario) <br/><span class="text-muted text-sm">user validates information sent to OW from Plaza</span></td>
+	<td>0h 0m 6s+18msc</td>
+	<td></td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+<tr class="details">
+	<td colspan="5">
+		
+		<textarea disabled class="code-block">org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=76.0.3809.132)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-P3NRUGT', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.132, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64948}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c361f1cebe0b77d98ff1da1d7399984a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at pageObjects.BasePage.takeScreenShotAsByteArray(BasePage.java:797)
+	at cucumberHooks.Hooks.Teardown(Hooks.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -181,12 +202,11 @@ Session ID: af09084374f7c1a0c546eaf9ca438f4b
 	at cucumber.runtime.Utils$1.call(Utils.java:26)
 	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
 	at cucumber.runtime.Utils.invoke(Utils.java:20)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:49)
-	at cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)
 	at cucumber.runner.TestStep.executeStep(TestStep.java:63)
 	at cucumber.runner.TestStep.run(TestStep.java:49)
-	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)
-	at cucumber.runner.TestCase.run(TestCase.java:44)
+	at cucumber.runner.TestCase.run(TestCase.java:48)
 	at cucumber.runner.Runner.runPickle(Runner.java:40)
 	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:68)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
@@ -241,7 +261,7 @@ Session ID: af09084374f7c1a0c546eaf9ca438f4b
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Sep 23, 2019 04:15:32 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Sep 24, 2019 03:50:58 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

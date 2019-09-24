@@ -250,10 +250,76 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_MEGADISC_ADD_USER_ACCOUNT_NAME= "sp_formfield_sr75_v_account_name";
     private static final String dd_MEGADISC_ADD_USER_SELECT_GROUP= "s2id_autogen14";
     private static final String dd_MEGADISC_ADD_USER_REQUESTED_PERSON= "s2id_sp_formfield_sr75_v_requested_person";
+    private static final String txt_STORAGE_VOLUME_REQUEST= "sp_formfield_sr62_v_request";
+    private static final String txt_STORAGE_VOLUME_CHOOSE_OPTION= "select2-chosen-11";
+    private static final String txt_STORAGE_VOLUME_SOURCE_WWN= "sp_formfield_sr62_v_source_wwn";
+    private static final String txt_STORAGE_VOLUME_DATE_TIME= "sp_formfield_sr62_v_date";
+    private static final String txt_STORAGE_VOLUME_DESCRIPTION= "sp_formfield_sr62_v_description";
+    private static final String txt_TCFP_ADD_USER_REQUEST= "sp_formfield_sr68_v_request";
+    private static final String dd_TCFP_ADD_USER_CHOOSE_OPTION= "select2-chosen-12";
+    private static final String txt_TCFP_ADD_USER_ACCOUNT_NAME= "sp_formfield_sr68_v_account_name";
+    private static final String dd_TCFP_ADD_USER_SELECT_GROUP= "s2id_autogen15";
+    private static final String txt_TCFP_ADD_USER_DESCRIPION= "sp_formfield_sr68_v_description";
+    private static final String txt_TCFP_GENERAL_ENQUIRY_REQUEST= "sp_formfield_sr114_v_request";
+    private static final String txt_TCFP_GENERAL_ENQUIRY_DESCRIPTION= "sp_formfield_sr114_v_description";
+    private static final String dd_TCFP_GENERAL_ENQUIRY_ADD_CI="s2id_autogen16";
 
 
+    public void enterTCFP_generalEnquiry_request(String text){
+        enterTextByElement(By.id(txt_TCFP_GENERAL_ENQUIRY_REQUEST), text);
+    }
+    public void enterTCFP_generalEnquiry_description(String text){
+        enterTextByElement(By.id(txt_TCFP_GENERAL_ENQUIRY_DESCRIPTION), text);
+    }
+
+    public void selectTCFP_generalEnquiry_addCI(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_TCFP_GENERAL_ENQUIRY_ADD_CI), By.id("s2id_autogen16_results"),  dropdownName);
+
+    }
 
 
+    public void selectAllSelectGroup(DataTable ddValue) {
+        List<List<String>> ddValues = ddValue.asLists(String.class);
+        for (int i = 1; i < ddValues.size(); i++) {
+            System.out.println("Select group value is: " + ddValues.get(i).get(0));
+            selectTCFP_addUser_selectGroup(ddValues.get(i).get(0));
+            wait(500);
+        }
+    }
+    public void enterTCFP_addUser_request(String text){
+        enterTextByElement(By.id(txt_TCFP_ADD_USER_REQUEST), text);
+    }
+    public void enterTCFP_addUser_accountName(String text){
+        enterTextByElement(By.id(txt_TCFP_ADD_USER_ACCOUNT_NAME), text);
+    }
+    public void enterTCFP_addUser_description(String text){
+        enterTextByElement(By.id(txt_TCFP_ADD_USER_DESCRIPION), text);
+    }
+    public void selectTCFP_addUser_chooseOption(String dropdownName){
+        selectDropdown(By.id(dd_TCFP_ADD_USER_CHOOSE_OPTION), By.id("select2-results-12"),  dropdownName);
+    }
+
+    public void selectTCFP_addUser_selectGroup(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_TCFP_ADD_USER_SELECT_GROUP), By.id("s2id_autogen15_results"),  dropdownName);
+
+    }
+
+
+    public void enterStorageVolume_request(String text){
+        enterTextByElement(By.id(txt_STORAGE_VOLUME_REQUEST), text);
+    }
+    public void enterStorageVolume_source_WWN(String text){
+        enterTextByElement(By.id(txt_STORAGE_VOLUME_SOURCE_WWN), text);
+    }
+    public void enterStorageVolume_description(String text){
+        enterTextByElement(By.id(txt_STORAGE_VOLUME_DESCRIPTION), text);
+    }
+    public void enterStorageVolume_dateTime(String text){
+        enterTextByElement(By.id(txt_STORAGE_VOLUME_DATE_TIME), text);
+    }
+    public void selectStorageVolume_chooseOption(String dropdownName){
+        selectDropdown(By.id(txt_STORAGE_VOLUME_CHOOSE_OPTION), By.id("select2-results-11"),  dropdownName);
+    }
     public void selectMegadisc_add_user_requested_person(String dropdownName){
         selectDropdownByTagNameDiv(By.id(dd_MEGADISC_ADD_USER_REQUESTED_PERSON), By.id("select2-results-15"),   dropdownName);
     }
@@ -435,7 +501,7 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void selectStorageExport_TargetCI(String dropdownName){
-        selectDropdownWithMultipleValues(By.id(dd_STORAGE_EXPORT_TARGET_CI), By.id("s2id_autogen13_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_STORAGE_EXPORT_TARGET_CI), By.id("s2id_autogen14_results"),  dropdownName);
     }
     public void enterStorageConfigure_request(String text){
         enterTextByElement(By.id(txt_STORAGE_CONFIGURE_REQUEST), text);
@@ -455,7 +521,6 @@ public class Plaza_HomePage extends BasePage {
     }
     public String getPlazaRequestStatus(){
         return getAttributeValueByElement(By.xpath("//*[@id='xcc316d33d7230200a9addd173e24d4f5']/div/div[2]/div/div/div[2]/span/div"));
-//=========================================================================================
 
     }
     public void selectNetworkSecurity_proxy_surf_proxy_slow_surfing_sites(String dropdownName){

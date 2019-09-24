@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@Storage_Export_Volume"}
+        tags = {"@TCFP_Remove_User"}
 )
 
 public class Test_Runner extends BaseTest {

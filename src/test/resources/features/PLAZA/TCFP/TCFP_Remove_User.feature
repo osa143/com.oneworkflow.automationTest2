@@ -7,33 +7,31 @@
       Then user should see the plaza home page
       When user clicks on "Facility Management"
       And user clicks on order
-      And user clicks "Application"
+      And user clicks on IT Infrastructure dropdown
+      And user clicks on "Application"
       When user clicks on "TCFP (Account Management)" pebble
       Then user should see "TCFP (Account Management)" form
-      When user selects Role dropdown as "Application Operation Engineer"
-      And user selects Service Request Name as "Account Management"
-      And user enters TCFP general inquiry request as "Test2 TCFP Remove User/Request"
-      Then user selects Choose Option as "Remove User"
-      And user enters Account Name as "tcfpuser"
-      Then user enters Select Group as "<select group Name>"
-        |select group Name            |
-        |App_Navet_TS-Employed        |
-        |App_Navet_TS-Finance_Consumer|
-        |App_Navet_TS-Finans_Appmgr   |
-        |App_Navet_TS-Finans_Bomgr    |
-        |App_Navet_TS-Finans_Credit   |
-        |App_Navet_TS-Finans_Finance  |
-        |App_Navet_TS-Finans_Handler  |
-        |App_Navet_TS-Finans_Sales    |
-        |App_Navet_TS-Finans_Superuser|
-      And user enters description as "Test2 TCFP/Description"
+      When user selects role dropdown as "Application Operation Engineer"
+      And user selects service request name as "Account Management"
+      And user enters TCFP request as "Test2 TCFP Remove User/Request"
+      Then user selects TCFP choose option as "Remove User"
+      And user enters TCFP Account Name as "tcfpuser"
+      And user selects TCFP select group as "App_Navet_TS-Employed"
+      And user selects TCFP select group as "App_Navet_TS-Finance_Consumer"
+      And user selects TCFP select group as "App_Navet_TS-Finans_Appmgr"
+      And user selects TCFP select group as "App_Navet_TS-Finans_Bomgr"
+      And user selects TCFP select group as "App_Navet_TS-Finans_Credit"
+      And user selects TCFP select group as "App_Navet_TS-Finans_Finance"
+      And user selects TCFP select group as "App_Navet_TS-Finans_Handler"
+      And user selects TCFP select group as "App_Navet_TS-Finans_Sales"
+      And user selects TCFP select group as "App_Navet_TS-Finans_Superuser"
+      And user enters TCFP description as "Test2 TCFP/Description"
       And user enters additional comments as "Test2 TCFP/AC"
-      Then user clicks on submit button
+      Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
       Then user should see service request form
-      When user opens another window
-      And user enters OW URL
+      And user opens new tab
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed

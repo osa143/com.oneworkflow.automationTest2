@@ -7,23 +7,23 @@
       Then user should see the plaza home page
       When user clicks on "Facility Management"
       And user clicks on order
-      And user clicks "Storage & Data Protection"
+      And user clicks on IT Infrastructure dropdown
+      And user clicks on "Storage & Data Protection"
       When user clicks on "Volume Snapshot" pebble
       Then user should see "Volume Snapshot" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user enters Storage request as "Test3 Storage/Request"
-      And user selects Choose Option as "Create Snapshot"
-      And user enters CI as "cc100cgas001"
-      And user enters Source WWN as "Test WWN"
+      And user enters Storage volume request as "Test3 Storage/Request"
+      And user selects storage volume Choose Option as "Create Snapshot"
+      And user selects storage volume add CI as "cc100cgas001"
+      And user enters storage volume Source WWN as "Test WWN"
       And user clicks the calendar and selects current date and time
-      And user enters Storage description as "Test3 Storage Volume Snapshot/Description"
+      And user enters Storage volume  description as "Test3 Storage Volume Snapshot/Description"
       And user enters additional comments as "Test3 Storage Volume Snapshot/AC"
-      Then user clicks on submit button
+      Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
       Then user should see service request form
-      When user opens another window
-      And user enters OW URL
+      And user opens new tab
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -44,7 +44,7 @@
       And user should see assigned profile as "Storage"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
-      When user clicks on diagnosis tab
+      When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed
       And user validates CI "test" is listed
       And user clicks on CI "cc100cgas001" and selects "Impact:Update
@@ -52,19 +52,19 @@
       And user enters impacted from date as date in past
       And user enters impacted to date as date in past
       Then user clicks confirm checkbox
-      And user clicks the save button
+      And user clicks save button
       Then user switches to window 1
       When user selects CI present
       And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
-      Then user selects yes and closes warning message
+      Then user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
-      And user changes status to "Cleared"
+      And user changes status to "Cleared" on work order page
       And user selects completed code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
       When user switches to window 0

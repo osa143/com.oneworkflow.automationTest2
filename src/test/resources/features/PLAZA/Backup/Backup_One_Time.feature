@@ -30,7 +30,7 @@
       Then user should see service request form
       When user opens new tab
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
+      When user logs in with valid username "Change_Automation_3" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2
@@ -40,37 +40,35 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | One-time Backup"
       And user validates request type as "Service Request | PLAZA"
-      #Not sure about description validation outside of a table
-      And user validates description as ""
+      And user validates back up description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       And user clicks on attachments under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
       And user should see assigned profile as "Backup"
-      And user validates 1 attachment visibility under external
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed
       And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
-      Then user switches to frame
-      And user enters impacted from date as date in past
-      And user enters impacted to date as date in past
+      Then user switches to frame 3
+      And user enters impact from time as past on impact details bulk update window
+      And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
-      And user clicks save button
-      Then user switches to window 1
+      And user clicks on bulk update save button
+      And user clicks on "Diagnosis" tab
       When user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
       And user should see confirmation message and clicks on yes button
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
-      And user selects completed code as "Success"
+      And user selects completion code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
       When user changes status to "Closed" on work order page
-      And user clicks on save button
+      And user clicks on save button and closes warning messages
       Then ticket status should be closed
       When user switches to window 0
       And user clicks on main page refresh

@@ -196,8 +196,7 @@ public class OWF_AgentConsolePageSteps {
 
     @And("user clicks on {string} tab")
     public void userClicksOnAlarmTab(String tabName) {
-      try
-      {
+      try {
           agentConsolePage.selectTab(tabName);
       }
       catch (Exception e){

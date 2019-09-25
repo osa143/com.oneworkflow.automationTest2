@@ -87,10 +87,12 @@ public class Plaza_HomePageSteps extends BasePage {
     @And("user clicks on plaza request id")
     public void userClicksOnPlazaRequestId() {
         homePage.clickPlazaRequestNum();
+        homePage.wait(3000);
     }
 
     @Then("user should see service request form")
     public void userShouldSeeServiceRequestForm() {
+        homePage.wait(2000);
     }
 
     @When("user opens new tab")
@@ -273,6 +275,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user enters Backup one time UNC Local path as {string}")
     public void userEntersBackupOneTimeUNCLocalPathAs(String arg0) {
+
         homePage.enterIncludeCI(arg0);
     }
 
@@ -1588,4 +1591,150 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userSelectsTCFPGeneralInquiryCIAs(String arg0) {
         homePage.selectTCFP_generalEnquiry_addCI(arg0);
     }
+    @And("user enters NNM request as {string}")
+    public void userEntersNNMRequestAs(String arg0) {
+        homePage.enterNnm_no(arg0);
+    }
+    @And("user selects Glana as {string}")
+    public void userSelectsGlanaAs(String arg0) {
+        homePage.selectNetworkSecurity_firewall_new_change_service_request(arg0);
+    }
+    @And("user enters NNM DNS IP Address as {string}")
+    public void userEntersNNMDNSIPAddressAs(String arg0) {
+        homePage.enterNnmNoDnsIpAddress(arg0);
+    }
+    @Then("user enters NNM description as {string}")
+    public void userEntersNNMDescriptionAs(String arg0) {
+        homePage.enterNnmNoDescription(arg0);
+    }
+    @And("user enters OCC request as {string}")
+    public void userEntersOCCRequestAs(String arg0) {
+        homePage.enterCews_request(arg0);
+    }
+    @Then("user enters OCC description as {string}")
+    public void userEntersOCCDescriptionAs(String arg0) {
+        homePage.enterCews_description(arg0);
+    }
+    @And("user enters Pollux request as {string}")
+    public void userEntersPolluxRequestAs(String arg0) {
+        homePage.enterPolluxRequest(arg0);
+    }
+    @And("user selects Pollux select request as {string}")
+    public void userSelectsPolluxSelectRequestAs(String arg0) {
+        homePage.selectNetworkSecurity_firewall_new_change_service_request(arg0);
+    }
+    @And("user selects environment field as {string}")
+    public void userSelectsEnvironmentFieldAs(String arg0) {
+        homePage.selectPolluxEnvironment(arg0);
+    }
+    @Then("user enters Pollux description as {string}")
+    public void userEntersPolluxDescriptionAs(String arg0) {
+        homePage.enterPolluxDescription(arg0);
+    }
+    @And("user enters Pollux WBS Code field as {string}")
+    public void userEntersPolluxWBSCodeFieldAs(String arg0) {
+        homePage.enterPolluxWbsCode(arg0);
+    }
+    @And("user enters SPAN request as {string}")
+    public void userEntersSPANRequestAs(String arg0) {
+        homePage.enterC2B_BCPP_Request(arg0);
+    }
+    @And("user enters Customer ID name as {string}")
+    public void userEntersCustomerIDNameAs(String arg0) {
+        homePage.enterNetworkSecurityDnsSwedenCustomerIdName(arg0);
+    }
+    @Then("user enters user ID and ad group as {string}")
+    public void userEntersUserIDAndAdGroupAs(String arg0) {
+        homePage.enterNetworkSecurityProxySurfProxyUserId(arg0);
+    }
+    @And("user selects span select request as {string}")
+    public void userSelectsSpanSelectRequestAs(String arg0) {
+        homePage.entersNetworkSecurity_add_modify_remove_dns_service_request(arg0);
+    }
+    @And("user selects span environment field as {string}")
+    public void userSelectsSpanEnvironmentFieldAs(String arg0) {
+        homePage.selectNetworkSecurity_add_modify_remove_dns_scheduled_change(arg0);
+    }
+    @Then("user enters SPAN description as {string}")
+    public void userEntersSPANDescriptionAs(String arg0) {
+        homePage.enterSpanDescription(arg0);
+    }
+    @And("user selects span add CI as {string}")
+    public void userSelectsSpanAddCIAs(String arg0) {
+        homePage.selectSpanAddCi(arg0);
+    }
+    @And("user enters Splunk request as {string}")
+    public void userEntersSplunkRequestAs(String arg0) {
+        homePage.enterSplunkRequest(arg0);
+    }
+    @And("user enters in the H2 Name hid field {string}")
+    public void userEntersInTheHNameHidField(String arg0) {
+        homePage.enterSplunkH2(arg0);
+    }
+    @And("user enters splunk description as {string}")
+    public void userEntersSplunkDescriptionAs(String arg0) {
+        homePage.enterSplunkDescription(arg0);
+    }
+    @And("user selects Select service request name as {string}")
+    public void userSelectsSelectServiceRequestNameAs(String arg0) {
+        homePage.selectNetworkSecurity_firewall_new_change_service_request(arg0);
+    }
+    @And("user enters Topcat request as {string}")
+    public void userEntersTopcatRequestAs(String arg0) {
+        homePage.enterCews_request(arg0);
+    }
+    @And("user enters Topcat description as {string}")
+    public void userEntersTopcatDescriptionAs(String arg0) {
+        homePage.enterCews_description(arg0);
+    }
+    @And("user enters topcat add CI as {string}")
+    public void userEntersTopcatAddCIAs(String arg0) {
+        homePage.selectTopcatAddCi(arg0);
+    }
+    @And("user selects environment as {string}")
+    public void userSelectsEnvironmentAs(String arg0) {
+        homePage.selectNetworkSecurity_add_modify_remove_dns_scheduled_change(arg0);
+    }
+    @And("user enters TSPAN request as {string}")
+    public void userEntersTSPANRequestAs(String arg0) {
+        homePage.enterC2B_BCPP_Request(arg0);
+    }
+    @And("user selects tspan select request as {string}")
+    public void userSelectsTspanSelectRequestAs(String arg0) {
+        homePage.selectNetworkSecurity_firewall_new_change_service_request(arg0);
+    }
+    @And("user enters tspan add CI as {string}")
+    public void userEntersTspanAddCIAs(String arg0) {
+        homePage.selectSpanAddCi(arg0);
+    }
+    @And("user enters tspan description as {string}")
+    public void userEntersTspanDescriptionAs(String arg0) {
+        homePage.enterSpanDescription(arg0);
+    }
+    @And("user enters veha request as {string}")
+    public void userEntersVehaRequestAs(String arg0) {
+        homePage.enterReschedule_request(arg0);
+    }
+    @Then("user enters system as {string}")
+    public void userEntersSystemAs(String arg0) {
+        homePage.selectCews_add_ci(arg0);
+    }
+    @Then("user enters veha description as {string}")
+    public void userEntersVehaDescriptionAs(String arg0) {
+        homePage.enterCallGuide_description(arg0);
+    }
+    @And("user enters web tab request as {string}")
+    public void userEntersWebTabRequestAs(String arg0) {
+        homePage.enterCews_request(arg0);
+    }
+    @Then("user enters web tab description as {string}")
+    public void userEntersWebTabDescriptionAs(String arg0) {
+        homePage.enterCews_description(arg0);
+    }
+    @And("user enters megadisc description as {string}")
+    public void userEntersMegadiscDescriptionAs(String arg0) {
+        homePage.enterMegadisc_add_user_description(arg0);
+    }
+
+
 }

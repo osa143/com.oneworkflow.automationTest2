@@ -366,6 +366,8 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
 
     public void clickSave_bulkUpdate(){
         findElement(By.id(btn_SAVE_BULK_UPDATE_ID)).click();
+        wait(500);
+
     }
     public void selectImpactName(String value){
         selectDropDownNameAndValue(dd_IMPACT_NAME,value, false);

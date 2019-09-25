@@ -64,6 +64,35 @@ public class OWF_WorkOrderPage extends BasePage {
         }
         return false;
     }
+    public boolean verifyBackUpDescription()
+    {
+        String actualDescription = getDescription();
+        if(actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.AdditionalComments)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.RetentionPeriod)
+                && actualDescription.contains(PlazaValidation.DateTime) && actualDescription.contains(PlazaValidation.Name)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Email)&&actualDescription.contains(PlazaValidation.Phone)
+                &&actualDescription.contains(PlazaValidation.Email)&&actualDescription.contains(PlazaValidation.CI)
+                &&actualDescription.contains(PlazaValidation.UncLocalPath))
+        {
+            return true;
+        }
+        return false;
+    }
+    public boolean verifyBackUpReScheduleDescription()
+    {
+        String actualDescription = getDescription();
+        if(actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
+                && actualDescription.contains(PlazaValidation.Phone) && actualDescription.contains(PlazaValidation.AdditionalComments)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Schedule)
+                &&actualDescription.contains(PlazaValidation.UncLocalPath) &&actualDescription.contains(PlazaValidation.CI)
+                &&actualDescription.contains(PlazaValidation.Description))
+        {
+            return true;
+        }
+        return false;
+    }
     public String getDescription(){
         String description= getAttributeValueById(txt_DESCRIPTION);
         System.out.println(description);

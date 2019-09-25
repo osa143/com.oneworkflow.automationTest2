@@ -263,6 +263,72 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_TCFP_GENERAL_ENQUIRY_REQUEST= "sp_formfield_sr114_v_request";
     private static final String txt_TCFP_GENERAL_ENQUIRY_DESCRIPTION= "sp_formfield_sr114_v_description";
     private static final String dd_TCFP_GENERAL_ENQUIRY_ADD_CI="s2id_autogen16";
+    private static final String txt_NNM_NO_REQUEST= "sp_formfield_sr79_v_request";
+    private static final String txt_NNM_NO_DNS_IP_ADDRESS= "sp_formfield_sr79_v_dns";
+    private static final String txt_NNM_NO_DESCRIPTION= "sp_formfield_sr79_v_description";
+    private static final String txt_POLLUX_REQUEST= "sp_formfield_sr113_v_request";
+    private static final String dd_POLLUX_ENVIRONMENT= "s2id_sp_formfield_sr113_v_environment";
+    private static final String txt_POLLUX_DESCRIPTION= "sp_formfield_sr113_v_description";
+    private static final String txt_POLLUX_WBS_CODE= "sp_formfield_sr113_v_wbs_code";
+    private static final String txt_SPAN_DESCRIPTION= "sp_formfield_sr107_v_description";
+    private static final String dd_SPAN_CI= "s2id_autogen15";
+    private static final String txt_SPLUNK_REQUEST= "sp_formfield_sr38_v_request";
+    private static final String txt_SPLUNK_H2= "sp_formfield_sr38_v_h2";
+    private static final String txt_SPLUNK_DESCRIPTION= "sp_formfield_sr38_v_description";
+    private static final String txt_TOPCAT_ADD_CI= "s2id_autogen14";
+    private static final String txt_MEGADISC_ADD_USER_DESCRIPTION= "sp_formfield_sr75_v_description";
+    private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ONE_USER_ID= "";
+    private static final String dd_NETWORK_SECURITY_DNS_SWEDEN_CUSTOMER_ID_NAME= "";
+
+
+    public void enterMegadisc_add_user_description(String text){
+        enterTextByElement(By.id(txt_MEGADISC_ADD_USER_DESCRIPTION), text);
+    }
+    public void selectTopcatAddCi(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(txt_TOPCAT_ADD_CI), By.id("s2id_autogen14_results"),  dropdownName);
+    }
+    public void enterSplunkDescription(String text){
+        enterTextByElement(By.id(txt_SPLUNK_DESCRIPTION), text);
+    }
+    public void enterSplunkH2(String text){
+        enterTextByElement(By.id(txt_SPLUNK_H2), text);
+    }
+    public void enterSplunkRequest(String text){
+        enterTextByElement(By.id(txt_SPLUNK_REQUEST), text);
+    }
+    public void selectSpanAddCi(String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_SPAN_CI), By.id("s2id_autogen15_results"),  dropdownName);
+    }
+    public void enterSpanDescription(String text){
+        enterTextByElement(By.id(txt_SPAN_DESCRIPTION), text);
+    }
+    public void enterNetworkSecurityProxySurfProxyUserId(String text){
+        enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ONE_USER_ID), text);
+    }
+    public void enterNetworkSecurityDnsSwedenCustomerIdName(String text){
+        enterTextByElement(By.id(dd_NETWORK_SECURITY_DNS_SWEDEN_CUSTOMER_ID_NAME), text);
+    }
+    public void enterPolluxWbsCode(String text){
+        enterTextByElement(By.id(txt_POLLUX_WBS_CODE), text);
+    }
+    public void enterPolluxDescription(String text){
+        enterTextByElement(By.id(txt_POLLUX_DESCRIPTION), text);
+    }
+    public void selectPolluxEnvironment(String dropdownName){
+        selectDropdownByTagNameDiv(By.id(dd_POLLUX_ENVIRONMENT), By.id("s2id_autogen14_results"),   dropdownName);
+    }
+    public void enterPolluxRequest(String text){
+        enterTextByElement(By.id(txt_POLLUX_REQUEST), text);
+    }
+    public void enterNnmNoDescription(String text){
+        enterTextByElement(By.id(txt_NNM_NO_DESCRIPTION), text);
+    }
+    public void enterNnmNoDnsIpAddress(String text){
+        enterTextByElement(By.id(txt_NNM_NO_DNS_IP_ADDRESS), text);
+    }
+    public void enterNnm_no(String text){
+        enterTextByElement(By.id(txt_NNM_NO_REQUEST), text);
+    }
 
 
     public void enterTCFP_generalEnquiry_request(String text){
@@ -276,8 +342,6 @@ public class Plaza_HomePage extends BasePage {
         selectDropdownWithMultipleValues(By.id(dd_TCFP_GENERAL_ENQUIRY_ADD_CI), By.id("s2id_autogen16_results"),  dropdownName);
 
     }
-
-
     public void selectAllSelectGroup(DataTable ddValue) {
         List<List<String>> ddValues = ddValue.asLists(String.class);
         for (int i = 1; i < ddValues.size(); i++) {
@@ -303,8 +367,6 @@ public class Plaza_HomePage extends BasePage {
         selectDropdownWithMultipleValues(By.id(dd_TCFP_ADD_USER_SELECT_GROUP), By.id("s2id_autogen15_results"),  dropdownName);
 
     }
-
-
     public void enterStorageVolume_request(String text){
         enterTextByElement(By.id(txt_STORAGE_VOLUME_REQUEST), text);
     }
@@ -1039,13 +1101,17 @@ public class Plaza_HomePage extends BasePage {
 
 
     public void enterBackUpDateTime(String text){
+        PlazaValidation.DateTime=text;
         enterTextByElement(By.id(txt_BACK_UP_DATE_TIME), text);
     }
 
     public void enterRetentionPeriod(String text){
+        PlazaValidation.RetentionPeriod = text;
         enterTextByElement(By.id(txt_RETENTION_PERIOD), text);
     }
     public void enterIncludeCI(String text){
+        PlazaValidation.UncLocalPath= text;
+        PlazaValidation.IncludeCI= text;
         enterTextByElement(By.id(txt_INCLUDE_CI), text);
     }
 
@@ -1054,35 +1120,43 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void selectsAddCi_back_up(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_BACK_UP_ADD_CI), By.id("s2id_autogen13_results"),  dropdownName);
 
     }
 
     public void enterDescription_Reschedule(String text){
+        PlazaValidation.Description=text;
         enterTextByElement(By.id(txt_Description), text);
     }
     public void enterUnc_Local(String text){
+        PlazaValidation.UncLocalPath=text;
         enterTextByElement(By.id(txt_UNC_LOCAL_PATH), text);
     }
     public void enterSchedule(String text){
+        PlazaValidation.Schedule=text;
         enterTextByElement(By.id(txt_NEW_SCHEDULE), text);
     }
 
     public void enterReschedule_request(String text){
+        PlazaValidation.Request=text;
         enterTextByElement(By.id(txt_RESCHEDULE_REQUEST), text);
     }
 
     public void enterPhone(String text){
+        PlazaValidation.Phone=text;
         enterTextByElement(By.id(txt_PHONE), text);
     }
 
 
     public void enterEmail(String text){
+        PlazaValidation.Email=text;
         enterTextByElement(By.id(txt_EMAIL), text);
     }
 
 
     public void enterName(String text){
+        PlazaValidation.Name=text;
         enterTextByElement(By.id(txt_NAME), text);
     }
     public void clickContact(){
@@ -1162,6 +1236,7 @@ public class Plaza_HomePage extends BasePage {
         ((JavascriptExecutor) driver).executeScript("window.open()");
         ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
+        wait(1000);
 
     }
 

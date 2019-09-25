@@ -257,6 +257,14 @@ public class OWF_WorkOrderPageSteps {
         Assert.assertEquals(workOrderPage.getRequestType(), arg0);
     }
 
+    @And("user validates back up description same as plaza")
+    public void userValidatesBackUpOneTimeDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyBackUpDescription());
+    }
+    @And("user validates back up Reschedule description same as plaza")
+    public void userValidatesBackUpRescheduleDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyBackUpReScheduleDescription());
+    }
 
 }
 

@@ -12,4 +12,16 @@ public class PlazaValidation {
     public static String PlannedStartDate;
     public static String PlannedEndDate;
     public static String Description;
+    public static String Name;
+    public static String Email;
+    public static String Phone;
+    public static String CI;
+    public static String IncludeCI;
+    public static String RetentionPeriod;
+    public static String DateTime;
+    public static String UncLocalPath;
+    public static String Schedule;
+
+
+
 }

@@ -405,7 +405,7 @@ public class BasePage {
     //    preferences = "Menu1:Menu2"
     public void setPreferences(String preferences) {
 
-        wait(1500);
+        wait(500);
 
         String arr[] = preferences.split(":");
         for (int i = 0; i < arr.length; i++) {

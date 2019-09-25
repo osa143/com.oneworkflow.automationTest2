@@ -1161,6 +1161,16 @@ public class OWF_TroubleEventPageSteps {
     public void userValidatesAttachmentVisibilityUnderExternal(int arg0) {
         Assert.assertTrue(troubleEventPage.validateAttachmentAvailability_External(arg0));
     }
+
+    @And("user enters impact from time as past on impact details bulk update window")
+    public void userEntersImpactFromTimeAsPastOnImpactDetailsBulkUpdateWindow() {
+        troubleEventPage.enterImpactFromPlus(CommonUtils.getDateAsTodayMidnight(0));
+    }
+
+    @And("user enters impact to time as past on impact details bulk update window")
+    public void userEntersImpactToTimeAsPastOnImpactDetailsBulkUpdateWindow() {
+        troubleEventPage.enterImpactToPlus(CommonUtils.getDateAsTodayMidnight(1));
+    }
 }
 
 

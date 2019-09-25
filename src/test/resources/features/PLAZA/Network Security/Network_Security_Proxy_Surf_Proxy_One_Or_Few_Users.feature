@@ -1,5 +1,5 @@
-@Network_Security_Proxy_Resource_Request @PLAZA
-  Feature: Network Security Proxy General Inquiry plaza form test
+@Network_Security_Proxy_Surf_Proxy_One_Or_Few_Users @PLAZA
+  Feature: Network Security Proxy Surf Proxy One Or Few Users plaza form test
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -12,10 +12,19 @@
       When user clicks on Proxy pebble
       Then user should see "Proxy" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects service request name as "Resource Request"
-      And user enters network security proxy request as "Test2 Network Security Proxy/Request"
-      Then user enters network security proxy description as "Test2 Network Security Proxy/Description"
-      And user enters additional comments as "Network Security Proxy - Test2/AC"
+      And user selects service request name as "Surf proxy/URL filter"
+      And user enters network security proxy request as "Test5 Network Security Proxy/Request"
+      And user selects SurfProxy url filter as "One or few users cannot reach a certain URL"
+      And user enters proxy date and time when tests performed as current date and time
+      And user enters proxy Source IP Address as "Test address"
+      Then user enters URL as "Test.teliacompany.net"
+      Then user selects internal external website as "Yes"
+      Then user enters error message as "Test Error Message"
+      And user enters has it worked before as "Test Work"
+      Then user enters when did the problem occure as "Test occure"
+      And user enters user id as "Test user id"
+      Then user enters network security surf proxy description as "Test5 Network Security Proxy/Description"
+      And user enters additional comments as "Network Security Proxy - Test5/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

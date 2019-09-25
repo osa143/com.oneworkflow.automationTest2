@@ -718,7 +718,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Firewall Routing Request pebble")
     public void userClicksOnFirewallRoutingRequestPebble() {
-        clickElement(By.xpath("//*[@id=\"x2723de4adb72cf006734f1eabf9619aa\"]/div/div/div[2]/div[8]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa]/'div/div/div[2]/div[8]/div/a/div/h2"));
     }
 
     @Then("user selects New Change Service Request Name as {string}")
@@ -1735,6 +1735,26 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userEntersMegadiscDescriptionAs(String arg0) {
         homePage.enterMegadisc_add_user_description(arg0);
     }
+
+
+
+    @And("user enters dns sweden customer id name as {string}")
+    public void userEntersDnsSwedenCustomerIdNameAs(String arg0) {
+        homePage.enterNetworkSecurityDnsSwedenCustomerIdName(arg0);
+    }
+
+
+    @And("user enters user id as {string}")
+    public void userEntersUserIdAs(String arg0) {
+        homePage.enterNetworkSecurityProxySurfProxyUserId(arg0);
+    }
+
+    @Then("user enters network security surf proxy description as {string}")
+    public void userEntersNetworkSecuritySurfProxyDescriptionAs(String arg0) {
+        homePage.enterNetworkSecurityProxySurfProxyOneDescription(arg0);
+    }
+
+
 
 
 }

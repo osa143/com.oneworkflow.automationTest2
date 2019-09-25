@@ -67,7 +67,7 @@
       Then user clicks on save button
       And user validates ticket status as "Cleared"
       When user changes status to "Closed"
-      And user clicks on save button
+      And user clicks on save button and closes warning messages
       Then ticket status should be closed
       When user switches to window 0
       And user clicks on main page refresh

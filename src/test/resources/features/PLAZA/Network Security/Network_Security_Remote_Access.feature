@@ -39,7 +39,7 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as ""
+      And user should see assigned profile as "Remote Access L2"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
@@ -50,7 +50,7 @@
       Then user clicks on save button
       And user validates ticket status as "Cleared"
       When user changes status to "Closed" on work order page
-      And user clicks on save button
+      And user clicks on save button and closes warning messages
       Then ticket status should be closed
       When user switches to window 0
       And user clicks on main page refresh

@@ -8,21 +8,20 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks "Storage & Data Protection"
+      And user clicks on "Application"
       When user clicks on "NNM" pebble
       Then user should see "NNM" form
-      When user selects Role dropdown as "Application Operation Engineer"
+      When user selects role dropdown as "Application Operation Engineer"
       And user enters NNM request as "Test1 NNM/Request"
       And user selects Glana as "Yes"
-      And user enters DNS/IP Address as "example.teliacompany.net/192.168.1.1"
+      And user enters NNM DNS IP Address as "example.teliacompany.net/192.168.1.1"
       Then user enters NNM description as "Test1 NNM/Description"
       And user enters additional comments as "Test1 NNM/AC"
-      Then user clicks on submit button
+      Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
       Then user should see service request form
-      When user opens another window
-      And user enters OW URL
+      And user opens new tab
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -35,12 +34,12 @@
       And user validates title field as "Service Request | NNM"
       And user validates request type as "Service Request | PLAZA"
       #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates description as ""
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user validates assigned profile is "Billing"
+      And user should see assigned profile as "Billing"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button

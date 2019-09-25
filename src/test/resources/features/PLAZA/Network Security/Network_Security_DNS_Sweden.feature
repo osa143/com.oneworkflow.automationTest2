@@ -1,5 +1,5 @@
-@Network_Security_Proxy_Resource_Request @PLAZA
-  Feature: Network Security Proxy General Inquiry plaza form test
+@Network_Security_DNS_Sweden @PLAZA
+  Feature: Network Security DNS Sweden plaza form test
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -9,13 +9,14 @@
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
       And user clicks on "Firewall & Network"
-      When user clicks on Proxy pebble
-      Then user should see "Proxy" form
+      When user clicks on DNS DHCP pebble
+      Then user should see "DNS/DHCP" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user selects service request name as "Resource Request"
-      And user enters network security proxy request as "Test2 Network Security Proxy/Request"
-      Then user enters network security proxy description as "Test2 Network Security Proxy/Description"
-      And user enters additional comments as "Network Security Proxy - Test2/AC"
+      And user enters Service Request Name as "DNS Sweden"
+      And user enters Network Security Add Modify Remove DNS request as "Test2 Network Security Sweden/Request"
+      And user enters dns sweden customer id name as "Test name"
+      And user enters Network Security Add Modify Remove DNS description as "Test2 Network Security Sweden/Description"
+      And user enters additional comments as "Test2 Network Security Sweden/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -30,15 +31,15 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | Proxy"
+      And user validates title field as "Service Request | DNS/DHCP"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description as ""
+      #And user validates description as ""
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as "Proxy L2"
+      And user should see assigned profile as "DNS/DHCP"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button

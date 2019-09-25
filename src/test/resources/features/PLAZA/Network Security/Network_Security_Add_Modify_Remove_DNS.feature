@@ -1,6 +1,6 @@
 @Network_Security_Add_Modify_Remove_DNS @PLAZA
   Feature: Network Security Add Modify Remove DNS plaza form test
-    Scenario Outline: user validates information sent to OW from Plaza
+    Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -12,11 +12,11 @@
       When user clicks on DNS DHCP pebble
       Then user should see "DNS/DHCP" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user enters Service Request Name as "<Service Request Name>"
-      And user enters Network Security Add Modify Remove DNS request as "<Request>"
+      And user enters Service Request Name as "Add/Modify/Remove DNS entry"
+      And user enters Network Security Add Modify Remove DNS request as "Test1 Network Security Add/Request"
       And user selects Scheduled change as "No"
-      And user enters Network Security Add Modify Remove DNS description as "<Description>"
-      And user enters additional comments as "<Additional Comments>"
+      And user enters Network Security Add Modify Remove DNS description as "Test1 Network Security Add/Description"
+      And user enters additional comments as "Test1 Network Security Add/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -55,9 +55,3 @@
       When user switches to window 0
       And user clicks on main page refresh
       Then user validates plaza request has completed
-
-      Examples:
-
-      |Service Request Name       |Request                              |Description                              |Additional Comments             |Desc Validation|
-      |Add/Modify/Remove DNS entry|Test1 Network Security Add/Request   |Test1 Network Security Add/Description   |Test1 Network Security Add/AC   |               |
-     # |DNS Sweden                 |Test2 Network Security Sweden/Request|Test2 Network Security Sweden/Description|Test2 Network Security Sweden/AC|               |

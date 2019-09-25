@@ -277,8 +277,24 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_SPLUNK_DESCRIPTION= "sp_formfield_sr38_v_description";
     private static final String txt_TOPCAT_ADD_CI= "s2id_autogen14";
     private static final String txt_MEGADISC_ADD_USER_DESCRIPTION= "sp_formfield_sr75_v_description";
-    private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ONE_USER_ID= "";
-    private static final String dd_NETWORK_SECURITY_DNS_SWEDEN_CUSTOMER_ID_NAME= "";
+    private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ONE_USER_ID= "sp_formfield_sr35_v_userid";
+    private static final String txt_NETWORK_SECURITY_DNS_SWEDEN_CUSTOMER_ID_NAME= "sp_formfield_sr105_v_customer_id";
+    private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ONE_DESCRIPTION= "sp_formfield_sr35_v_description";
+
+
+
+    public void enterNetworkSecurityProxySurfProxyOneDescription(String text){
+        enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ONE_DESCRIPTION), text);
+    }
+
+
+    public void enterNetworkSecurityProxySurfProxyUserId(String text){
+        enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ONE_USER_ID), text);
+    }
+
+    public void enterNetworkSecurityDnsSwedenCustomerIdName(String text) {
+        enterTextByElement(By.id(txt_NETWORK_SECURITY_DNS_SWEDEN_CUSTOMER_ID_NAME), text);
+    }
 
 
     public void enterMegadisc_add_user_description(String text){
@@ -302,12 +318,7 @@ public class Plaza_HomePage extends BasePage {
     public void enterSpanDescription(String text){
         enterTextByElement(By.id(txt_SPAN_DESCRIPTION), text);
     }
-    public void enterNetworkSecurityProxySurfProxyUserId(String text){
-        enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ONE_USER_ID), text);
-    }
-    public void enterNetworkSecurityDnsSwedenCustomerIdName(String text){
-        enterTextByElement(By.id(dd_NETWORK_SECURITY_DNS_SWEDEN_CUSTOMER_ID_NAME), text);
-    }
+
     public void enterPolluxWbsCode(String text){
         enterTextByElement(By.id(txt_POLLUX_WBS_CODE), text);
     }
@@ -1324,3 +1335,4 @@ public class Plaza_HomePage extends BasePage {
 
 
 }
+

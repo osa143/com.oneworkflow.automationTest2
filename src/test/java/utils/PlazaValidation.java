@@ -21,6 +21,10 @@ public class PlazaValidation {
     public static String DateTime;
     public static String UncLocalPath;
     public static String Schedule;
+    public static String RestoreFiles;
+    public static String ServiceRequestName;
+    public static String Environment;
+    public static String WbsCodeField;
 
 
 

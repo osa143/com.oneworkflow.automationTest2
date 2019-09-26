@@ -93,6 +93,45 @@ public class OWF_WorkOrderPage extends BasePage {
         }
         return false;
     }
+    public boolean verifyBackUpRestoreDescription()
+    {
+        String actualDescription = getDescription();
+        if(actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.DateTime) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.UncLocalPath) && actualDescription.contains(PlazaValidation.RestoreFiles)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Description)
+                &&actualDescription.contains(PlazaValidation.AdditionalComments))
+        {
+            return true;
+        }
+        return false;
+    }
+    public boolean verifyBackUpVerifyDescription()
+    {
+        String actualDescription = getDescription();
+        if(actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.Email) && actualDescription.contains(PlazaValidation.Phone)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Description)
+                &&actualDescription.contains(PlazaValidation.AdditionalComments))
+        {
+            return true;
+        }
+        return false;
+    }
+    public boolean verify_BDL_Description()
+    {
+        String actualDescription = getDescription();
+        if(actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.ServiceRequestName)
+                && actualDescription.contains(PlazaValidation.Environment) && actualDescription.contains(PlazaValidation.WbsCodeField)
+                && actualDescription.contains(PlazaValidation.Description) &&actualDescription.contains(PlazaValidation.AdditionalComments))
+
+        {
+            return true;
+        }
+        return false;
+    }
     public String getDescription(){
         String description= getAttributeValueById(txt_DESCRIPTION);
         System.out.println(description);

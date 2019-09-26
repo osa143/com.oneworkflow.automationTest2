@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@Backup_Re_Schedule"}
+        tags = {"@Backup_Verify"}
 )
 
 public class Test_Runner extends BaseTest {

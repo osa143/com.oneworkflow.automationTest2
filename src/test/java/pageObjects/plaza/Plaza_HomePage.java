@@ -1082,9 +1082,11 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void enterBDL_wbsCode(String text){
+        PlazaValidation.WbsCodeField=text;
         enterTextByElement(By.id(txt_BDL_WBS_CODE), text);
     }
     public void enterBDL_Description(String text){
+        PlazaValidation.Description=text;
         enterTextByElement(By.id(txt_BDL_DESCRIPTION), text);
     }
     public void selectAllCINames(DataTable ciName) {
@@ -1096,17 +1098,20 @@ public class Plaza_HomePage extends BasePage {
         }
     }
     public void selectsAT1Ci(String dropdownName){
-        selectDropdown(By.id("s2id_sp_formfield_sr108_v_at1"), By.id("s2id_autogen16_results"),  dropdownName);
+        selectDropdownByTagNameDiv(By.id("s2id_sp_formfield_sr108_v_at1"), By.id("s2id_autogen16_results"),  dropdownName);
     }
     public void enterBDL_request(String text){
+        PlazaValidation.Request=text;
         enterTextByElement(By.id(txt_BDL_REQUEST), text);
     }
 
     public void enterRestore_Files(String text){
+        PlazaValidation.RestoreFiles=text;
         enterTextByElement(By.id(txt_RESTORE_FILES), text);
     }
 
     public void enterRestore_Ci_Unc(String text){
+        PlazaValidation.UncLocalPath=text;
         enterTextByElement(By.id(txt_RESTORE_CI_UNC), text);
     }
 
@@ -1184,6 +1189,7 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void selectBCPP_Environment(String dropdownName){
+        PlazaValidation.Environment=dropdownName;
         selectDropdown(By.id(dd_BCPP_ENVIRONMENT), By.id("select2-results-12"),  dropdownName);
     }
     public void enterC2B_BCPP_Request(String text){
@@ -1324,6 +1330,7 @@ public class Plaza_HomePage extends BasePage {
         selectDropdownByTagNameDiv(By.id(dd_SYSTEM_ID), By.id("select2-results-13"),  dropdownName);
     }
     public void selectServiceRequestName(String dropdownName){
+        PlazaValidation.ServiceRequestName=dropdownName;
         selectDropdown(By.id(dd_SERVICE_REQUEST_NAME_ID), By.id("select2-results-11"), dropdownName);
 
     }

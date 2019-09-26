@@ -15,17 +15,15 @@
       And user enters BDL request as "<Request>"
       And user selects service request name as "Configuration"
       And user selects BCPP environment as "<Environment>"
-      And user selects all CI's from AT1 field
-      |CI Name          |
-      |API              |
-      |AT1              |
-      |AT DB            |
-      |AT1_Store        |
-      |Databases        |
-      |E2V              |
-      #|eMessaging       |
-      #|Proofing         |
-      #|Netbill DB-loader|
+      And user selects AT1 CI as "API"
+      And user selects AT1 CI as "AT1"
+      And user selects AT1 CI as "AT DB"
+      And user selects AT1 CI as "AT1_Store"
+      And user selects AT1 CI as "Databases"
+      And user selects AT1 CI as "E2V"
+      And user selects AT1 CI as "eMessaging"
+      And user selects AT1 CI as "Proofing"
+      And user selects AT1 CI as "Netbill DB-loader"
       And user enters "P100-000-000" in the WBS Code field
       And user enters BDL description as "<Description>"
       And user enters additional comments as "<Additional Comments>"
@@ -45,8 +43,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | BDL"
       And user validates request type as "Service Request | PLAZA"
-      #Not sure about description validation outside of a table
-      And user validates description as ""
+      And user validates BDL description same as plaza description
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -62,7 +59,7 @@
       Then user clicks on save button
       And user validates ticket status as "Cleared"
       When user changes status to "Closed" on work order page
-      And user clicks on save button
+      And user clicks on save button and closes warning messages
       Then ticket status should be closed
       When user switches to window 0
       And user clicks on main page refresh
@@ -70,12 +67,25 @@
 
       Examples:
 
-      |Request               |Environment|Description         |Additional Comments|Desc Validation|
-      |BDL-AT1 - Test/Request|AT1        |BDL-AT1 - Test/Desc |BDL-AT1 - Test/AC  |               |
-      |BDL-AT2- Test/Request |AT2        |BDL-AT2 - Test/Desc |BDL-AT2 - Test/AC  |               |
-      |BDL-AT3- Test/Request |AT3        |BDL-AT3 - Test/Desc |BDL-AT3 - Test/AC  |               |
-      |BDL-PROD- Test/Request|PROD       |BDL-PROD - Test/Desc|BDL-PROD - Test/AC |               |
+      |Request               |Environment|Description         |Additional Comments|
+      |BDL-AT1 - Test/Request|AT1        |BDL-AT1 - Test/Desc |BDL-AT1 - Test/AC  |
+#      |BDL-AT2- Test/Request |AT2        |BDL-AT2 - Test/Desc |BDL-AT2 - Test/AC  |
+#      |BDL-AT3- Test/Request |AT3        |BDL-AT3 - Test/Desc |BDL-AT3 - Test/AC  |
+#      |BDL-PROD- Test/Request|PROD       |BDL-PROD - Test/Desc|BDL-PROD - Test/AC |
 
 
 
 
+
+#
+#      And user selects all CI's from AT1 field
+#        |CI Name          |
+#        |API              |
+#        |AT1              |
+#        |AT DB            |
+#        |AT1_Store        |
+#        |Databases        |
+#        |E2V              |
+#        |eMessaging       |
+#        |Proofing         |
+#        |Netbill DB-loader|

@@ -1755,6 +1755,10 @@ public class Plaza_HomePageSteps extends BasePage {
     }
 
 
+    @And("user selects AT1 CI as {string}")
+    public void userSelectsATCIAs(String arg0) {
+        homePage.selectsAT1Ci(arg0);
+    }
 
 
 }

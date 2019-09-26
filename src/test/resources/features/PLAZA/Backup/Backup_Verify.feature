@@ -17,7 +17,6 @@
       And user enters name field as "Test1234"
       Then user enters email address field as "Test@Test.com"
       Then user enters phone field as "123456789"
-      Then user selects role dropdown as "Application Operation Engineer"
       And user enters Backup request as "Test1 Backup Verify/Request"
       And user selects Add CI back up as "cc100cgas001"
       Then user enters Backup description as "Test1 Backup Verify/Description"
@@ -39,7 +38,7 @@
       And user validates title field as "Service Request | Verify Backup Configuration"
       And user validates request type as "Service Request | PLAZA"
       #Not sure about description validation outside of a table
-      And user validates description as ""
+      And user validates back up verify description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

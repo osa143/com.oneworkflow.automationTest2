@@ -42,7 +42,7 @@
       And user validates title field as "Service Request | Database Request"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description as ""
+      And user validates Database access request description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -63,13 +63,13 @@
       And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
       And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
-      And user changes status to "Cleared"
-      And user selects completed code as "Success"
+      And user changes status to "Cleared" on work order page
+      And user selects completion code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on work order page
       And user clicks on save button
       Then ticket status should be closed
       When user switches to window 0

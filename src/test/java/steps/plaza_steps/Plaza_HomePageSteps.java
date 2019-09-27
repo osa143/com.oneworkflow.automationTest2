@@ -3,12 +3,14 @@ package steps.plaza_steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.java8.Pl;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.BasePage;
 import pageObjects.plaza.Plaza_HomePage;
 import utils.CommonUtils;
+import utils.PlazaValidation;
 
 public class Plaza_HomePageSteps extends BasePage {
     Plaza_HomePage homePage = new Plaza_HomePage();

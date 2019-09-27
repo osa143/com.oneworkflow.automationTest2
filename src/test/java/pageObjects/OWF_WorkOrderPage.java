@@ -304,5 +304,432 @@ public class OWF_WorkOrderPage extends BasePage {
         else return false;
     }
 
+    public boolean verifyC2BCacheDeploymentDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.Environment) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyC2BCacheGeneralDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.GeneralRequest)
+                && actualDescription.contains(PlazaValidation.SelectRequest) && actualDescription.contains(PlazaValidation.Environment)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyC2BServiceDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Environment)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyCRMDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.System) && actualDescription.contains(PlazaValidation.PlannedStartDate)
+                && actualDescription.contains(PlazaValidation.PlannedEndDate) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+   //=======================================================================
+
+    public boolean verifyDataCenterCablingNewDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.DcSite)
+                && actualDescription.contains(PlazaValidation.Room) && actualDescription.contains(PlazaValidation.DeliveryDate)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.WbsCodeField)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyDataCenterCablingRemoveDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.DcSite)
+                && actualDescription.contains(PlazaValidation.Room) && actualDescription.contains(PlazaValidation.DeliveryDate)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.WbsCodeField)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyDataCenterNetworkEquipmentNewDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.DcSite)
+                && actualDescription.contains(PlazaValidation.Room) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.DnsIpAddress) && actualDescription.contains(PlazaValidation.DeliveryDate)
+                && actualDescription.contains(PlazaValidation.WbsCodeField) && actualDescription.contains(PlazaValidation.AdditionalComments)
+                && actualDescription.contains(PlazaValidation.Description)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyDataCenterNetworkEquipmentRemoveDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.DcSite)
+                && actualDescription.contains(PlazaValidation.Room) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.DnsIpAddress) && actualDescription.contains(PlazaValidation.DecommissionDate)
+                && actualDescription.contains(PlazaValidation.WbsCodeField) && actualDescription.contains(PlazaValidation.AdditionalComments)
+                && actualDescription.contains(PlazaValidation.Description)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyDataCenterOnSiteServicesDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.DcSite) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments) && actualDescription.contains(PlazaValidation.Request)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyDataCenterRequestDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.DcSite)
+                && actualDescription.contains(PlazaValidation.Room) && actualDescription.contains(PlazaValidation.DeliveryDate)
+                && actualDescription.contains(PlazaValidation.WbsCodeField) && actualDescription.contains(PlazaValidation.AdditionalComments)
+                && actualDescription.contains(PlazaValidation.Description)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyDatabaseAccessRequestDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.DatabaseType) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.DatabaseName)
+                && actualDescription.contains(PlazaValidation.DnsIpAddress) && actualDescription.contains(PlazaValidation.AccountType)
+                && actualDescription.contains(PlazaValidation.NewExistingAccount) && actualDescription.contains(PlazaValidation.AccountName)
+                && actualDescription.contains(PlazaValidation.Permissions) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyDatabaseAccessRequestOracleDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.DatabaseType) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.DatabaseName)
+                && actualDescription.contains(PlazaValidation.TableSpace) && actualDescription.contains(PlazaValidation.AccountType)
+                && actualDescription.contains(PlazaValidation.NewExistingAccount) && actualDescription.contains(PlazaValidation.AccountName)
+                && actualDescription.contains(PlazaValidation.Permissions) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyDatabaseAccessRequestPostgreDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.DatabaseType) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.DatabaseName)
+                && actualDescription.contains(PlazaValidation.AccountType) && actualDescription.contains(PlazaValidation.AccountName)
+                && actualDescription.contains(PlazaValidation.Permissions) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyDatabaseBackupOrRestoreDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.ChooseAction) && actualDescription.contains(PlazaValidation.DatabaseType)
+                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.DatabaseName) && actualDescription.contains(PlazaValidation.Location)
+                && actualDescription.contains(PlazaValidation.PlannedStartDate) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyDatabaseConfigureDatabaseParametersDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.DatabaseType) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.DatabaseName)
+                && actualDescription.contains(PlazaValidation.Parameters) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyDatabasePerformanceTroubleshootingDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.DatabaseType) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.DatabaseName)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyFinanceAndAssuranceDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.System)
+                && actualDescription.contains(PlazaValidation.PlannedStartDate) && actualDescription.contains(PlazaValidation.PlannedEndDate)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean MessagingCallGuideMailDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
+                && actualDescription.contains(PlazaValidation.Phone) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.System) && actualDescription.contains(PlazaValidation.CustomerIdName)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean MessagingCleanMailDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
+                && actualDescription.contains(PlazaValidation.Phone) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.CustomerIdName) && actualDescription.contains(PlazaValidation.Issue)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.DateTestsPerformed)
+                && actualDescription.contains(PlazaValidation.SenderEmailAddress) && actualDescription.contains(PlazaValidation.RecieveEmailAddress)
+                && actualDescription.contains(PlazaValidation.DnsIpAddress) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+
+            return true;
+        }
+        return false;
+    }
+
+    public boolean MessagingDenmarkMailDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
+                && actualDescription.contains(PlazaValidation.Phone) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.System) && actualDescription.contains(PlazaValidation.CustomerIdName)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+
+            return true;
+        }
+        return false;
+    }
+
+    public boolean MessagingSMTPSupportDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
+                && actualDescription.contains(PlazaValidation.Phone) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.CustomerIdName) && actualDescription.contains(PlazaValidation.Issue)
+                && actualDescription.contains(PlazaValidation.DateTestsPerformed) && actualDescription.contains(PlazaValidation.SenderEmailAddress)
+                && actualDescription.contains(PlazaValidation.DnsIpAddress) && actualDescription.contains(PlazaValidation.SmtpRelay)
+                && actualDescription.contains(PlazaValidation.RecieveEmailAddress) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean MessagingTsfMailDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
+                && actualDescription.contains(PlazaValidation.Phone) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean MessagingTssMailDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
+                && actualDescription.contains(PlazaValidation.Phone) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.System) && actualDescription.contains(PlazaValidation.CustomerIdName)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean MessagingTssPremiumMailDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
+                && actualDescription.contains(PlazaValidation.Phone) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.System) && actualDescription.contains(PlazaValidation.CustomerIdName)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean NetworkSecurityAddModifyRemoveDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.Schedule) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean NetworkSecurityDnsSwedenDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.CustomerIdName) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean NetworkSecurityFirewallNewChangeDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean NetworkSecurityFirewallTroubleshootDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.TicketNumber) && actualDescription.contains(PlazaValidation.SourceIpAddress)
+                && actualDescription.contains(PlazaValidation.TargetIpAddress) && actualDescription.contains(PlazaValidation.ServerConnectivityVerified)
+                && actualDescription.contains(PlazaValidation.DateTestsPerformed) && actualDescription.contains(PlazaValidation.TrafficReturnRoutingVerified)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+        return true;
+        }
+        return false;
+    }
+
+    public boolean NetworkSecurityLanDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean NetworkSecurityLoadBalancingDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean NetworkSecurityNewSwitchDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.DcSite)
+                && actualDescription.contains(PlazaValidation.Room) && actualDescription.contains(PlazaValidation.Rack)
+                && actualDescription.contains(PlazaValidation.SwitchUsage) && actualDescription.contains(PlazaValidation.TerminalServer)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean NetworkSecurityNewVlanDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.IpNet) && actualDescription.contains(PlazaValidation.VlanName)
+                && actualDescription.contains(PlazaValidation.VlanPurpose) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean NetworkSecurityProxyGeneralInquiryDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean NetworkSecurityProxyResourceRequestDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean NetworkSecurityProxyReverseProxyDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.SourceIpAddress) && actualDescription.contains(PlazaValidation.DnsName)
+                && actualDescription.contains(PlazaValidation.ProtocolPort) && actualDescription.contains(PlazaValidation.Certificate)
+                && actualDescription.contains(PlazaValidation.WebserverAddress) && actualDescription.contains(PlazaValidation.HighAvailibility)
+                && actualDescription.contains(PlazaValidation.LoadBalancingMethod) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
 
 }

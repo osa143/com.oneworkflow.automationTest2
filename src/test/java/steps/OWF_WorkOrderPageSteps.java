@@ -218,7 +218,17 @@ public class OWF_WorkOrderPageSteps {
 
     @When("user changes status to {string} on work order page")
     public void userChangesStatusToOnWorkOrderPage(String arg0) {
-        workOrderPage.selectStatus_workOrderPage(arg0);
+        try {
+            workOrderPage.selectStatus_workOrderPage(arg0);
+        }
+        catch (Exception e) {
+            try {
+                workOrderPage.selectStatus_workOrderPage(arg0);
+            }
+            catch (Exception e1){
+
+            }
+        }
     }
     @Then("user enters plaza request id in the source id field")
     public void userEntersPlazaRequestIdInTheSourceIdField() {
@@ -278,6 +288,181 @@ public class OWF_WorkOrderPageSteps {
     @And("user validates BDL description same as plaza description")
     public void userValidatesBDLDescriptionSameAsPlazaDescription() {
         Assert.assertTrue(workOrderPage.verify_BDL_Description());
+    }
+
+    @And("user validates C2B cache deployment description same as plaza")
+    public void userValidatesCBCacheDeploymentDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyC2BCacheDeploymentDescription());
+    }
+
+    @And("user validates C2B cache general description same as plaza")
+    public void userValidatesCBCacheGeneralDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyC2BCacheGeneralDescription());
+    }
+
+    @And("user validates C2B service description same as plaza")
+    public void userValidatesCBServiceDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyC2BServiceDescription());
+    }
+
+    @And("user validates CRM description same as plaza")
+    public void userValidatesCRMDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyCRMDescription());
+    }
+
+    @And("user validates Data center cabling new description same as plaza")
+    public void userValidatesDataCenterCablingNewDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyDataCenterCablingNewDescription());
+    }
+
+    @And("user validates Data center cabling remove description same as plaza")
+    public void userValidatesDataCenterCablingRemoveDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyDataCenterCablingRemoveDescription());
+    }
+
+    @And("user validates Data center network equipment new description same as plaza")
+    public void userValidatesDataCenterNetworkEquipmentNewDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyDataCenterNetworkEquipmentNewDescription());
+    }
+
+    @And("user validates Data center network equipment remove description same as plaza")
+    public void userValidatesDataCenterNetworkEquipmentRemoveDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyDataCenterNetworkEquipmentRemoveDescription());
+    }
+
+    @And("user validates Data center on site services description same as plaza")
+    public void userValidatesDataCenterOnSiteServicesDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyDataCenterOnSiteServicesDescription());
+    }
+
+    @And("user validates Data center request description same as plaza")
+    public void userValidatesDataCenterRequestDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyDataCenterRequestDescription());
+    }
+
+    @And("user validates Database access request description same as plaza")
+    public void userValidatesDatabaseAccessRequestDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyDatabaseAccessRequestDescription());
+    }
+
+    @And("user validates Database access request oracle description same as plaza")
+    public void userValidatesDatabaseAccessRequestOracleDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyDatabaseAccessRequestOracleDescription());
+    }
+
+    @And("user validates Database access request postgre description same as plaza")
+    public void userValidatesDatabaseAccessRequestPostgreDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyDatabaseAccessRequestPostgreDescription());
+    }
+
+    @And("user validates Database backup or restore description same as plaza")
+    public void userValidatesDatabaseBackupOrRestoreDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyDatabaseBackupOrRestoreDescription());
+    }
+
+    @And("user validates Database configure database parameters description same as plaza")
+    public void userValidatesDatabaseConfigureDatabaseParametersDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyDatabaseConfigureDatabaseParametersDescription());
+    }
+
+    @And("user validates Database performance troubleshooting description same as plaza")
+    public void userValidatesDatabasePerformanceTroubleshootingDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyDatabasePerformanceTroubleshootingDescription());
+    }
+
+    @And("user validates Finance & Assurance description same as plaza")
+    public void userValidatesFinanceAssuranceDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyFinanceAndAssuranceDescription());
+    }
+
+    @And("user validates Messaging callguide mail description same as plaza")
+    public void userValidatesMessagingCallguideMailDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.MessagingCallGuideMailDescription());
+    }
+
+    @And("user validates messaging clean mail description same as plaza")
+    public void userValidatesMessagingCleanMailDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.MessagingCleanMailDescription());
+    }
+
+    @And("user validates messaging denmark mail description same as plaza")
+    public void userValidatesMessagingDenmarkMailDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.MessagingDenmarkMailDescription());
+    }
+
+    @And("user validates messaging smtp support description same as plaza")
+    public void userValidatesMessagingSmtpSupportDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.MessagingSMTPSupportDescription());
+    }
+
+    @And("user validates messaging tsf mail description same as plaza")
+    public void userValidatesMessagingTsfMailDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.MessagingTsfMailDescription());
+    }
+
+    @And("user validates messaging tss mail description same as plaza")
+    public void userValidatesMessagingTssMailDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.MessagingTssMailDescription());
+    }
+
+    @And("user validates messaging tss premium mail description same as plaza")
+    public void userValidatesMessagingTssPremiumMailDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.MessagingTssPremiumMailDescription());
+    }
+
+    @And("user validates network security add modify remove description same as plaza")
+    public void userValidatesNetworkSecurityAddModifyRemoveDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.NetworkSecurityAddModifyRemoveDescription());
+    }
+
+    @And("user validates network security dns sweden description same as plaza")
+    public void userValidatesNetworkSecurityDnsSwedenDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.NetworkSecurityDnsSwedenDescription());
+    }
+
+    @And("user validates network security firewall new change description same as plaza")
+    public void userValidatesNetworkSecurityFirewallNewChangeDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.NetworkSecurityFirewallNewChangeDescription());
+    }
+
+    @And("user validates network security firewall troubleshoot description same as plaza")
+    public void userValidatesNetworkSecurityFirewallTroubleshootDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.NetworkSecurityFirewallTroubleshootDescription());
+    }
+
+    @And("user validates network security lan description same as plaza")
+    public void userValidatesNetworkSecurityLanDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.NetworkSecurityLanDescription());
+    }
+
+    @And("user validates network security load balancing description same as plaza")
+    public void userValidatesNetworkSecurityLoadBalancingDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.NetworkSecurityLoadBalancingDescription());
+    }
+
+    @And("user validates network security new switch description same as plaza")
+    public void userValidatesNetworkSecurityNewSwitchDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.NetworkSecurityNewSwitchDescription());
+    }
+
+    @And("user validates network security new vlan description same as plaza")
+    public void userValidatesNetworkSecurityNewVlanDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.NetworkSecurityNewVlanDescription());
+    }
+
+    @And("user validates network security proxy general inquiry description same as plaza")
+    public void userValidatesNetworkSecurityProxyGeneralInquiryDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.NetworkSecurityProxyGeneralInquiryDescription());
+    }
+
+    @And("user validates network security proxy resource request description same as plaza")
+    public void userValidatesNetworkSecurityProxyResourceRequestDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.NetworkSecurityProxyResourceRequestDescription());
+    }
+
+    @And("user validates network security proxy reverse proxy description same as plaza")
+    public void userValidatesNetworkSecurityProxyReverseProxyDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.NetworkSecurityProxyReverseProxyDescription());
     }
 }
 

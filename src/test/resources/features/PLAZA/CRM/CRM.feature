@@ -1,4 +1,4 @@
-@PLAZA @CRM
+@CRM @PLAZA
 Feature: Plaza CRM form test
   Scenario Outline: user validates information sent to OW from Plaza
 
@@ -34,7 +34,7 @@ Feature: Plaza CRM form test
     Then user should see plaza ticket
     And user validates source field as "PLAZA"
     And user validates title field as "Service Request | CRM"
-    And user validates description as "<DescValidation>"
+    And user validates CRM description same as plaza
     Then user clicks on owner under sections
     And user clicks on assignment under sections
     Then user validates owner profile as "PLAZA"
@@ -44,13 +44,13 @@ Feature: Plaza CRM form test
     And user validates "PLAZA" is listed as an interested party
     When user clicks on Ack button
     And user changes status to "Cleared" on work order page
-    And user selects completed code as "Success"
+    And user selects completion code as "Success"
     And user clicks on "Schedule" tab
     And user enters schedule end as current date
     Then user clicks on save button
     And user validates ticket status as "Cleared"
     When user changes status to "Closed" on work order page
-    And user clicks on save button
+    And user clicks on save button and closes warning messages
     Then ticket status should be closed
     When user switches to window 0
     And user clicks on main page refresh

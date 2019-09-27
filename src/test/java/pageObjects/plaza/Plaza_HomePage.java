@@ -1,5 +1,6 @@
 package pageObjects.plaza;
 
+import cucumber.api.java8.Pl;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -293,6 +294,7 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void enterNetworkSecurityDnsSwedenCustomerIdName(String text) {
+        PlazaValidation.CustomerIdName = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_DNS_SWEDEN_CUSTOMER_ID_NAME), text);
     }
 
@@ -637,166 +639,207 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void selectNetworkSecurity_proxy_reverse_load_balancing(String dropdownName){
+        PlazaValidation.LoadBalancingMethod = dropdownName;
         selectDropdown(By.id(dd_NETWORK_SECURITY_PROXY_REVERSE_LOAD_BALANCING_METHOD), By.id("s2id_autogen19_results"),  dropdownName);
     }
 
     public void selectNetworkSecurity_proxy_reverse_high_availibility(String dropdownName){
+        PlazaValidation.HighAvailibility = dropdownName;
         selectDropdown(By.id(dd_NETWORK_SECURITY_PROXY_REVERSE_HIGH_AVAILIBILITY), By.id("select2-results-15"),  dropdownName);
     }
 
     public void enterNetworkSecurity_proxy_reverse_webserver_address(String text){
+        PlazaValidation.WebserverAddress = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_REVERSE_WEBSERVER_ADDRESS), text);
     }
 
     public void selectNetworkSecurity_proxy_reverse_certificate(String dropdownName){
+        PlazaValidation.Certificate = dropdownName;
         selectDropdown(By.id(dd_NETWORK_SECURITY_PROXY_REVERSE_CERTIFICATE), By.id("s2id_autogen18_results"),  dropdownName);
     }
 
     public void enterNetworkSecurity_proxy_reverse_protocol_port(String text){
+        PlazaValidation.ProtocolPort = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_REVERSE_PROTOCOL_PORT), text);
     }
 
     public void enterNetworkSecurity_proxy_reverse_dns_name(String text){
+        PlazaValidation.DnsName = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_REVERSE_DNS_NAME), text);
     }
 
     public void enterNetworkSecurity_proxy_reverse_source_ip(String text){
+        PlazaValidation.SourceIpAddress = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_REVERSE_SOURCE_IP), text);
     }
 
     public void enterNetworkSecurity_proxy_general_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_GENERAL_DESCRIPTION), text);
     }
 
     public void enterNetworkSecurity_proxy_general_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_GENERAL_REQUEST), text);
     }
 
     public void enterNetworkSecurity_new_vlan_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_NEW_VLAN_DESCRIPTION), text);
     }
 
     public void enterNetworkSecurity_new_vlan_purpose(String text){
+        PlazaValidation.VlanPurpose = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_NEW_VLAN_PURPOSE), text);
     }
 
     public void enterNetworkSecurity_new_vlan_number_and_name(String text){
+        PlazaValidation.VlanName = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_NEW_NUMBER_AND_NAME), text);
     }
 
     public void enterNetworkSecurity_new_vlan_ip_net(String text){
+        PlazaValidation.IpNet = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_NEW_VLAN_IP_NET), text);
     }
 
     public void enterNetworkSecurity_new_vlan_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_NEW_VLAN_REQUEST), text);
     }
 
     public void enterNetworkSecurity_new_switch_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_NEW_SWITCH_DESCRIPTION), text);
     }
 
     public void enterNetworkSecurity_new_switch_terminal(String text){
+        PlazaValidation.TerminalServer = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_TERMINAL_SERVER), text);
     }
 
     public void enterNetworkSecurity_new_switch_usage(String text){
+        PlazaValidation.SwitchUsage = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_NEW_USAGE), text);
     }
 
     public void enterNetworkSecurity_new_switch_rack(String text){
+        PlazaValidation.Rack = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_NEW_SWITCH_RACK), text);
     }
 
     public void enterNetworkSecurity_new_switch_data_room(String text){
+        PlazaValidation.Room = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_NEW_SWITCH_DATA_ROOM), text);
     }
 
     public void enterNetworkSecurity_new_switch_dc_site(String text){
+        PlazaValidation.DcSite = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_NEW_SWITCH_DC_SITE), text);
     }
 
     public void selectNetworkSecurity_new_switch_network_ci(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_NETWORK_SECURITY_NEW_SWITCH_NETWORK_CI), By.id("s2id_autogen17_results"),  dropdownName);
 
     }
 
     public void enterNetworkSecurity_new_switch_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_NEW_SWITCH_REQUEST), text);
     }
 
     public void enterNetworkSecurity_load_balancing_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_LOAD_BALANCING_DESCRIPTION), text);
     }
 
     public void enterNetworkSecurity_load_balancing_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_LOAD_BALANCING_REQUEST), text);
     }
 
     public void enterNetworkSecurity_lan_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_LAN_DESCRIPTION), text);
     }
 
     public void enterNetworkSecurity_lan_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_LAN_REQUEST), text);
     }
 
     public void enterNetworkSecurity_firewall_troubleshoot_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_DESCRIPTION), text);
     }
 
     public void enterNetworkSecurity_firewall_troubleshoot_date_and_time(String text){
+        PlazaValidation.DateTestsPerformed = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_DATE_AND_TIME), text);
     }
 
     public void enterNetworkSecurity_firewall_troubleshoot_target_ip(String text){
+        PlazaValidation.TargetIpAddress = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_TARGET_IP_ADDRESS), text);
     }
 
     public void enterNetworkSecurity_firewall_troubleshoot_source_id(String text){
+        PlazaValidation.SourceIpAddress = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_SOURCE_IP_ADDRESS), text);
     }
 
     public void enterNetworkSecurity_firewall_troubleshoot_ticket_number(String text){
+        PlazaValidation.TicketNumber = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_TICKET_NUMBER), text);
     }
 
     public void enterNetworkSecurity_firewall_troubleshoot_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_REQUEST), text);
     }
 
     public void enterNetworkSecurity_firewall_new_change_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_DESCRIPTION), text);
     }
 
     public void enterNetworkSecurity_firewall_new_change_add_ci_multipleValues(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI), By.id("s2id_autogen16_results"),  dropdownName);
     }
 
     public void enterNetworkSecurity_firewall_new_change_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_REQUEST), text);
     }
 
     public void selectNetworkSecurity_firewall_new_change_service_request(String dropdownName){
+        PlazaValidation.ServiceRequestName = dropdownName;
         selectDropdown(By.id(dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_SERVICE_REQUEST), By.id("select2-results-11"),  dropdownName);
 
     }
 
     public void enterNetworkSecurity_add_modify_remove_dns_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_DESCRIPTION), text);
     }
 
     public void selectNetworkSecurity_add_modify_remove_dns_scheduled_change(String dropdownName){
+        PlazaValidation.Schedule = dropdownName;
+        PlazaValidation.ServerConnectivityVerified = dropdownName;
         selectDropdown(By.id(dd_NETWORK_SECURITY_ADD_MODIFY_REMOVE_SCHEDULED_CHANGE), By.id("select2-results-12"),  dropdownName);
 
     }
 
     public void enterNetworkSecurity_add_modify_remove_dns_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_DNS_REQUEST), text);
     }
 
 
     public void entersNetworkSecurity_add_modify_remove_dns_service_request(String dropdownName){
+        PlazaValidation.ServiceRequestName = dropdownName;
         selectDropdown(By.id(txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_DNS_SERVICE_REQUEST_NAME), By.id("select2-results-11"),  dropdownName);
     }
 
@@ -876,208 +919,271 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void enterMessaging_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_messaging_description), text);
     }
     public void enterCleanMail_senderEmail(String text){
+        PlazaValidation.SenderEmailAddress = text;
         enterTextByElement(By.id(txt_CLEAN_MAIL_SENDER_EMAIL), text);
     }
     public void enterCleanMail_receiverEmail(String text){
+        PlazaValidation.RecieveEmailAddress = text;
         enterTextByElement(By.id(txt_CLEAN_MAIL_RECEIVER_EMAIL), text);
     }
     public void enterCleanMail_senderDNS(String text){
+        PlazaValidation.DnsIpAddress = text;
         enterTextByElement(By.id(txt_CLEAN_MAIL_SENDER_DNS), text);
     }
     public void enterCleanMail_testPerformed(String text){
+        PlazaValidation.DateTestsPerformed = text;
         enterTextByElement(By.id(txt_CLEAN_MAIL_TESTS_PERFORMED), text);
     }
     public void enterCleanMail_customerId(String text){
+        PlazaValidation.CustomerIdName = text;
         enterTextByElement(By.id(txt_CLEAN_MAIL_CUSTOMER_ID), text);
     }
     public void enterCallGuide_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_CALL_GUIDE_DESCRIPTION), text);
     }
     public void enterCallGuide_customerIdName(String text){
+        PlazaValidation.CustomerIdName = text;
         enterTextByElement(By.id(txt_CALL_GUIDE_CUSTOMER_ID_NAME), text);
     }
     public void selectDatabasePerformanceTroubleShooting_AddServerCi(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_SERVER_CI), By.id("s2id_autogen32_results"),  dropdownName);
 
     }
     public void selectDatabasePerformanceTroubleShooting_AddDbCi(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_CI), By.id("s2id_autogen33_results"),  dropdownName);
 
     }
     public void selectDatabasePerformanceTroubleShooting_databaseType(String dropdownName){
+        PlazaValidation.DatabaseType = dropdownName;
         selectDropdown(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_TYPE), By.id("select2-results-16"),  dropdownName);
     }
 
     public void enterDatabasePerformamanceTroubleShooting_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_REQUEST), text);
     }
     public void enterDatabasePerformamanceTroubleShooting_DB_name(String text){
+        PlazaValidation.DatabaseName = text;
         enterTextByElement(By.id(txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_NAME), text);
     }
     public void enterDatabasePerformamanceTroubleShooting_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_DESCRIPTION), text);
     }
     public void enterDatabaseConfigureParameter_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_DATABASE_CONFIGURE_PARAMETER_REQUEST), text);
     }
     public void enterDatabaseConfigureParameter_databaseName(String text){
+        PlazaValidation.DatabaseName = text;
         enterTextByElement(By.id(txt_DATABASE_CONFIGURE_PARAMETER_DB_NAME), text);
     }
     public void enterDatabaseConfigureParameter_parameters(String text){
+        PlazaValidation.Parameters = text;
         enterTextByElement(By.id(txt_DATABASE_CONFIGURE_PARAMETER_PARAMETERS), text);
     }
     public void enterDatabaseConfigureParameter_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_DATABASE_CONFIGURE_PARAMETER_DESCRIPTION), text);
     }
     public void selectDatabaseConfigureParameter_AddCi_multipleValues(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_DATABASE_CONFIGURE_PARAMETER_ADD_CI), By.id("s2id_autogen37_results"),  dropdownName);
 
     }
     public void selectDatabaseConfigureParameter_AddDbCi_multipleValues(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_DATABASE_CONFIGURE_PARAMETER_DB_ADD_CI), By.id("s2id_autogen38_results"),  dropdownName);
 
     }
     public void selectDatabaseConfigureParameter_databaseType(String dropdownName){
+        PlazaValidation.DatabaseType = dropdownName;
         selectDropdown(By.id(dd_DATABASE_CONFIGURE_PARAMETER_DATABASE_TYPE), By.id("select2-results-20"),  dropdownName);
     }
     public void enterDatabaseRequest_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_DATABASE_REQUEST_DESCRIPTION), text);
     }
     public void enterDatabaseRequest_databaseName(String text){
+        PlazaValidation.DatabaseName = text;
         enterTextByElement(By.id(txt_DATABASE_REQUEST_DATABASE_NAME), text);
     }
     public void selects_databaseRequest_AddCi_multipleValues(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_DATABASE_REQUEST_ADD_CI), By.id("s2id_autogen35_results"),  dropdownName);
 
     }
     public void selects_databaseRequest_AddServerCi_multipleValues(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_DATABASE_REQUEST_ADD_SERVER_CI), By.id("s2id_autogen34_results"),  dropdownName);
 
     }
     public void selectDatabaseRequest_databaseType(String dropdownName){
+        PlazaValidation.DatabaseType = dropdownName;
         selectDropdown(By.id(dd_DATABASE_REQUEST_DATABASE_TYPE), By.id("select2-results-18"),  dropdownName);
     }
     public void enterDatabaseRequest_plannedStartDateTime(String text){
+        PlazaValidation.PlannedStartDate = text;
         enterTextByElement(By.id(txt_DATABASE_REQUEST_PLANNED_START_DATE_TIME), text);
     }
     public void selectDatabaseRequest_location(String dropdownName){
+        PlazaValidation.Location = dropdownName;
         selectDropdown(By.id(dd_DATABASE_REQUEST_LOCATION), By.id("select2-results-19"),  dropdownName);
     }
     public void selectDatabaseRequest_chooseAction(String dropdownName){
+        PlazaValidation.ChooseAction = dropdownName;
         selectDropdown(By.id(dd_DATABASE_REQUEST_CHOOSE_ACTION), By.id("select2-results-17"),  dropdownName);
     }
     public void enterDatabaseRequest_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_DATABASE_REQUEST_REQUEST), text);
     }
     public void enterDatabase_defaultTableSpace(String text){
+        PlazaValidation.TableSpace = text;
         enterTextByElement(By.id(dd_DATABASE_DEFAULT_TABLE_SPACE), text);
     }
     public void selectDatabase_new_existing_account(String dropdownName){
+        PlazaValidation.NewExistingAccount = dropdownName;
         selectDropdown(By.id(dd_DATABASE_NEW_EXISTING_ACCOUNT), By.id("select2-results-14"),  dropdownName);
     }
     public void enterDatabase_dnsIp_Address(String text){
+        PlazaValidation.DnsIpAddress = text;
         enterTextByElement(By.id(txt_DATABASE_DNS_IP_ADDRESS), text);
     }
     public void selects_database_AddCi_multipleValues(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_ADD_DATABASE_CI), By.id("s2id_autogen23_results"),  dropdownName);
 
     }
     public void selects_database_AddServerCi_multipleValues(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_ADD_SERVER_CI), By.id("s2id_autogen24_results"),  dropdownName);
 
     }
     public void selectDatabaseAccountType(String dropdownName){
+        PlazaValidation.AccountType = dropdownName;
+        PlazaValidation.TrafficReturnRoutingVerified = dropdownName;
         selectDropdown(By.id(dd_DATABASE_ACCOUNT_TYPE), By.id("select2-results-13"),  dropdownName);
     }
     public void enterDatabase_name(String text){
+        PlazaValidation.DatabaseName = text;
         enterTextByElement(By.id(txt_DATABASE_NAME), text);
     }
     public void enterDatabase_accountName(String text){
+        PlazaValidation.AccountName = text;
         enterTextByElement(By.id(txt_DATABASE_ACCOUNT_NAME), text);
     }public void enterDatabase_permissions(String text){
+        PlazaValidation.Permissions = text;
         enterTextByElement(By.id(txt_DATABASE_ACCOUNT_PERMISSIONS), text);
     }public void enterDatabase_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_DATABASE_DESCRIPTION), text);
     }
     public void enterDatabase_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_DATABASE_REQUEST), text);
     }
 
     public void enterOnSiteServices_Request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_ON_SITE_SERVICES_REQUEST), text);
     }
     public void enterOnSiteServices_dc_site(String text){
+        PlazaValidation.DcSite = text;
         enterTextByElement(By.id(txt_ON_SITE_SERVICES_DC_SITE), text);
     }
     public void enterOnSiteServices_Description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_ON_SITE_SERVICES_DESCRIPTION), text);
     }
     public void enterNetworkEquipment_dateFordecommission(String text){
+        PlazaValidation.DecommissionDate = text;
         enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_DATE_FOR_DECOMMISSION), text);
     }
     public void selectsAddCi_multipleValues(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_ADD_CI), By.id("s2id_autogen13_results"),  dropdownName);
 
     }
     public void enterNetworkEquipment_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_REQUEST), text);
     }
     public void enterNetworkEquipment_dc_site(String text){
+        PlazaValidation.DcSite = text;
         enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_DC_SITE), text);
     }
     public void enterNetworkEquipment_room(String text){
+        PlazaValidation.Room = text;
         enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_ROOM), text);
     }
     public void enterNetworkEquipment_dnsIpAddress(String text){
+        PlazaValidation.DnsIpAddress = text;
         enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_DNS_IP_ADRESS), text);
     }
     public void enterNetworkEquipment_delivery(String text){
+        PlazaValidation.DeliveryDate = text;
         enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_DELIVERY), text);
     }
     public void enterNetworkEquipment_wbsCode(String text){
+        PlazaValidation.WbsCodeField = text;
         enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_WBS_CODE), text);
     }
     public void enterNetworkEquipment_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_DESCRIPTION), text);
     }
 
     public void enterDataCentre_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_DATA_CENTRE_REQUEST), text);
     }
     public void enterDataCentre_DC_Site(String text){
+        PlazaValidation.DcSite = text;
         enterTextByElement(By.id(txt_DATA_CENTRE_DC_SITE), text);
     }
     public void enterDataCentre_Room(String text){
+        PlazaValidation.Room = text;
         enterTextByElement(By.id(txt_DATA_CENTRE_ROOM), text);
     }
     public void enterDataCentre_deliveryDate(String text){
+        PlazaValidation.DeliveryDate = text;
         enterTextByElement(By.id(txt_DATA_CENTRE__DELIVERY_DATE), text);
     }
     public void enterDataCentre_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_DATA_CENTRE_DESCRIPTION), text);
     }
     public void enterDataCentre_wbsCode(String text){
+        PlazaValidation.WbsCodeField = text;
         enterTextByElement(By.id(txt_DATA_CENTRE_WBS_CODE), text);
     }
     public void enterCablingNew_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_CABLING_NEW_REQUEST), text);
     }
-    public void enterCablingNew_DC_Site(String text){
-        enterTextByElement(By.id(txt_CABLING_NEW_DC_SITE), text);
-    }
+
     public void enterCablingNew_Room(String text){
+        PlazaValidation.Room = text;
         enterTextByElement(By.id(txt_CABLING_NEW_ROOM), text);
     }
     public void enterCablingNew_deliveryDate(String text){
+        PlazaValidation.DeliveryDate = text;
         enterTextByElement(By.id(txt_CABLING_NEW_DELIVERY_DATE), text);
     }
     public void enterCablingNew_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_CABLING_NEW_DESCRIPTION), text);
     }
     public void enterCablingNew_wbsCode(String text){
+        PlazaValidation.WbsCodeField = text;
         enterTextByElement(By.id(txt_CABLING_NEW_WBS_CODE), text);
     }
 
@@ -1198,32 +1304,23 @@ public class Plaza_HomePage extends BasePage {
     public void enterC2B_service_Description(String text){
         enterTextByElement(By.id(txt_C2B_SERVICE_DESCRIPTION), text);
     }
-    public void selectC2B_serviceEnvironment(String dropdownName){
-        selectDropdown(By.id(dd_C2B_SERVICE_ENVIRONMENT), By.id("s2id_autogen13_results"),  dropdownName);
-    }
+
     public void enterC2B_serviceRequest(String text){
         enterTextByElement(By.id(txt_C2B_SERVICE_REQUEST_ID), text);
     }
     public void enterC2B_general_Description(String text){
         enterTextByElement(By.id(txt_C2B_GENERAL_DESCRIPTION), text);
     }
-    public void selectC2B_GeneralEnvironment(String dropdownName){
-        selectDropdown(By.id(dd_C2B_GENERAL_ENVIRONMENT), By.id("s2id_autogen16_results"),  dropdownName);
-    }
-    public void enterC2B_generalRequest(String text){
-        enterTextByElement(By.id(txt_C2B_GENERAL_REQUEST_ID), text);
-    }
-    public void select_selectRequest(String dropdownName){
-        selectDropdown(By.id(dd_SELECT_REQUEST_ID), By.id("select2-results-12"),  dropdownName);
-    }
+
+
     public void enterC2B_Description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_C2B_DESCRIPTION), text);
     }
-    public void selectEnvironment(String dropdownName){
-        selectDropdown(By.id(dd_ENVIRONMENT), By.id("s2id_autogen15_results"),  dropdownName);
-    }
+
 
     public void enterC2B_Request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_C2B_REQUEST_ID), text);
     }
     public void selectCRMSystemDropdown(String dropdownName)
@@ -1329,16 +1426,56 @@ public class Plaza_HomePage extends BasePage {
         PlazaValidation.System = dropdownName;
         selectDropdownByTagNameDiv(By.id(dd_SYSTEM_ID), By.id("select2-results-13"),  dropdownName);
     }
-    public void selectServiceRequestName(String dropdownName){
-        PlazaValidation.ServiceRequestName=dropdownName;
-        selectDropdown(By.id(dd_SERVICE_REQUEST_NAME_ID), By.id("select2-results-11"), dropdownName);
 
-    }
 
     public void enterRequest(String text){
         PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_REQUEST_ID), text);
     }
+    public void selectServiceRequestName(String dropdownName){
+        PlazaValidation.Issue = dropdownName;
+        PlazaValidation.ServiceRequestName = dropdownName;
+        PlazaValidation.System = dropdownName;
+        selectDropdown(By.id(dd_SERVICE_REQUEST_NAME_ID), By.id("select2-results-11"), dropdownName);
+
+    }
+
+    public void enterC2B_generalRequest(String text){
+        PlazaValidation.GeneralRequest = text;
+        enterTextByElement(By.id(txt_C2B_GENERAL_REQUEST_ID), text);
+    }
+
+
+    public void select_selectRequest(String dropdownName){
+        PlazaValidation.SmtpRelay = dropdownName;
+        PlazaValidation.SelectRequest = dropdownName;
+        PlazaValidation.DatabaseType = dropdownName;
+        selectDropdown(By.id(dd_SELECT_REQUEST_ID), By.id("select2-results-12"),  dropdownName);
+    }
+
+    public void selectC2B_serviceEnvironment(String dropdownName){
+        PlazaValidation.Environment = dropdownName;
+        selectDropdown(By.id(dd_C2B_SERVICE_ENVIRONMENT), By.id("s2id_autogen13_results"),  dropdownName);
+    }
+
+    public void selectC2B_GeneralEnvironment(String dropdownName){
+        PlazaValidation.Environment = dropdownName;
+        selectDropdown(By.id(dd_C2B_GENERAL_ENVIRONMENT), By.id("s2id_autogen16_results"),  dropdownName);
+    }
+
+    public void selectEnvironment(String dropdownName){
+        PlazaValidation.Environment = dropdownName;
+        selectDropdown(By.id(dd_ENVIRONMENT), By.id("s2id_autogen15_results"),  dropdownName);
+    }
+
+    public void enterCablingNew_DC_Site(String text){
+        PlazaValidation.DcSite = text;
+        enterTextByElement(By.id(txt_CABLING_NEW_DC_SITE), text);
+    }
+
+
+
+
 
 
 }

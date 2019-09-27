@@ -14,6 +14,7 @@ Feature: Plaza C2B Cache form test
     When user selects role dropdown as "Application Operation Engineer"
     And user selects service request name as "Deployment"
     And user enters C2B request as "<Request>"
+    And user waits 5 secs
     And user selects C2B environment as "<Environment>"
     And user enters C2B description as "<Description>"
     And user enters additional comments as "<AdditionalComments>"
@@ -23,16 +24,17 @@ Feature: Plaza C2B Cache form test
     Then user should see service request form
     When user opens new tab
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
+    When user logs in with valid username "Change_Automation_3" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects search menu as "Open Search Form:Work Order"
     And user switches to window 2
     Then user enters plaza request id in the source id field
+    And user waits 5 secs
     And user clicks Search on ticket search
     Then user should see plaza ticket
     And user validates source field as "PLAZA"
-    And user validates title field as "Service Request | C2B Cache"
-    And user validates description as "<DescValidation>"
+    And user validates title field as "Service Request | C2Bcache"
+    And user validates C2B cache deployment description same as plaza
     Then user clicks on owner under sections
     And user clicks on assignment under sections
     Then user validates owner profile as "PLAZA"
@@ -42,14 +44,16 @@ Feature: Plaza C2B Cache form test
     And user validates "PLAZA" is listed as an interested party
     When user clicks on Ack button
     And user changes status to "Cleared" on work order page
-    And user selects completed code as "Success"
+    And user selects completion code as "Success"
     And user clicks on "Schedule" tab
     And user enters schedule end as current date
     Then user clicks on save button
+    And user waits 5 secs
     And user validates ticket status as "Cleared"
     When user changes status to "Closed" on work order page
-    And user clicks on save button
-    Then ticket status should be closed
+    And user clicks save button
+    #And user clicks on save button and closes warning messages
+    And user validates ticket status as "Closed"
     When user switches to window 0
     And user clicks on main page refresh
     Then user validates plaza request has completed

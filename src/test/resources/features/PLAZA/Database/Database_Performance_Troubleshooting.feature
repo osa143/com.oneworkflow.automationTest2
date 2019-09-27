@@ -37,7 +37,7 @@
       And user validates title field as "Service Request | Database Request"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description as ""
+      And user validates Database performance troubleshooting description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -48,7 +48,7 @@
       When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed
       And user validates CI "TEST" is listed
-      And user selects all CI's and selects "Impact:Update
+      And user selects all CI's and selects "Impact:Update"
       Then user switches to frame
       And user enters impacted from date as date in past
       And user enters impacted to date as date in past

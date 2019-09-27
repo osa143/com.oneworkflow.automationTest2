@@ -36,7 +36,7 @@
       And user validates title field as "Service Request | Cabling - Remove"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description as ""
+      And user validates Data center cabling remove description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -46,11 +46,14 @@
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
-      And user selects completed code as "Success"
+      And user selects completion code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
       When user changes status to "Closed" on work order page
-      And user clicks on save button
+      And user clicks on save button and closes warning messages
       Then ticket status should be closed
+      When user switches to window 0
+      And user clicks on main page refresh
+      Then user validates plaza request has completed

@@ -33,7 +33,7 @@
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Finance & Assurance"
-      And user validates description
+      And user validates Finance & Assurance description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -61,7 +61,7 @@
 
       |Request           |System                           |Description           |AdditionalComments|
       |Test1 F&A/Request |addressmaster                           |Test1 F&A/Description |Test1 F&A/AC      |
-      |Test2 F&A/Request |alpha2 etl prod                         |Test2 F&A/Description |Test2 F&A/AC      |
+      #|Test2 F&A/Request |alpha2 etl prod                         |Test2 F&A/Description |Test2 F&A/AC      |
 #      |Test3 F&A/Request |alpha2 etl test                         |Test3 F&A/Description |Test3 F&A/AC      |              |
 #      |Test4 F&A/Request |arkinet prod                            |Test4 F&A/Description |Test4 F&A/AC      |              |
 #      |Test5 F&A/Request |ars platform                            |Test5 F&A/Description |Test5 F&A/AC      |              |

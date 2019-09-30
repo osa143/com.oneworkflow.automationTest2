@@ -43,7 +43,6 @@
       And user validates back up description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
-      And user clicks on attachments under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
       And user should see assigned profile as "Backup"
@@ -52,13 +51,15 @@
       When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed
       And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
-      Then user switches to frame 3
+      Then user switches to frame
       And user enters impact from time as past on impact details bulk update window
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
+      And user waits 60 secs
       And user clicks on "Diagnosis" tab
-      When user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
+      And user waits 3 secs
+      When user right clicks on CI "cc100cgas001" and selects "Impact:Clear"
       And user should see confirmation message and clicks on yes button
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page

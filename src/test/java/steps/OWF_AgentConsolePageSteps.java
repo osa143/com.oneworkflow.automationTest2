@@ -1,6 +1,7 @@
 package steps;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
@@ -568,6 +569,48 @@ public class OWF_AgentConsolePageSteps {
     public void userShouldSeeTicketsWithOf(String colValue, String colName, String ticketStatus) {
         Assert.assertTrue(agentConsolePage.verifyTicketsAssignedToCurrentUserProfile("ID", colValue, true));
         Assert.assertTrue(agentConsolePage.verifyTicketsAssignedToCurrentUserProfile(colName, ticketStatus, true));
+    }
+
+    @When("user selects administration menu as {string}")
+    public void userSelectsAdministrationMenuAs(String arg0) {
+        agentConsolePage.selectAdministrationMenu(arg0);
+    }
+
+    @Given("user is on the assignment rules configuration form")
+    public void userIsOnTheAssignmentRulesConfigurationForm() {
+        CommonUtils.switchToChildWindow(driver, 1);
+        Assert.assertEquals(agentConsolePage.getPageTitle(), "OS3 Assignment Rules Console (New)");
+    }
+
+    @When("user clicks the new button on assignment rule window")
+    public void userClicksTheNewButtonOnAssignmentRuleWindow() {
+        agentConsolePage.clickNew_AssignmentRules();
+    }
+
+    @Then("the new assignment rule configuration form is displayed")
+    public void theNewAssignmentRuleConfigurationFormIsDisplayed() {
+       agentConsolePage.switchToFrameByIndex(2);
+    }
+    
+
+    @And("user clicks on open button")
+    public void userClicksOnModifyButton() {
+        agentConsolePage.clickOpen_AssignmentRules();
+    }
+
+    @When("user selects a record on assignment rules window")
+    public void userSelectsARecordOnAssignmentRulesWindow() {
+        agentConsolePage.clickRow1_AssignmentRulesTable();
+    }
+
+    @Then("the modify assignment rule configuration form is displayed")
+    public void theModifyAssignmentRuleConfigurationFormIsDisplayed() {
+
+    }
+
+    @And("multiple options {string} should be available in Title dropdown")
+    public void multipleOptionsShouldBeAvailableInTitleDropdown(String arg0) {
+        Assert.assertTrue(agentConsolePage.verifyTitleDropdownValues(arg0, ""));
     }
 }
 

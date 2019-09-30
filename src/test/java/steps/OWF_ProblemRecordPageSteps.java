@@ -333,7 +333,8 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user switches to frame")
     public void userSwitchesToFrame() {
-        problemRecordPage.switchToFrameByIndex(2);
+        int size= problemRecordPage.getDriver().findElements(By.tagName("iframe")).size();
+        problemRecordPage.switchToFrameByIndex(size-1);
     }
 
     @Then("user changes status to investigation complete")

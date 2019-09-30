@@ -1171,6 +1171,15 @@ public class OWF_TroubleEventPageSteps {
     public void userEntersImpactToTimeAsPastOnImpactDetailsBulkUpdateWindow() {
         troubleEventPage.enterImpactToPlus(CommonUtils.getDateAsTodayMidnight(1));
     }
+
+    @And("there are multiple assignment rules that match the incident details")
+    public void thereAreMultipleAssignmentRulesThatMatchTheIncidentDetails() {
+        
+    }
+
+    @And("the Assignment Profile is set based on the assignment rule with the highest priority sort order value")
+    public void theAssignmentProfileIsSetBasedOnTheAssignmentRuleWithTheHighestPrioritySortOrderValue() {
+    }
 }
 
 

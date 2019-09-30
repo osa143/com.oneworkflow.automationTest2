@@ -38,7 +38,9 @@ public class BasePage {
     }
 
     public String getPageTitle() {
-        return driver.getTitle();
+        String Title=driver.getTitle();
+        System.out.println(Title);
+        return Title;
     }
 
     public void wait(int mills) {

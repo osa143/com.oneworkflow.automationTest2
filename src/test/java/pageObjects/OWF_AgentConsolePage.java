@@ -13,6 +13,7 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String menuForCONSOLE = "Console";
     private static final String menuForCREATE = "Create";
     private static final String menuForSEARCH = "Search";
+    private static final String menuForADMINISTRATION = "Administration";
     private static final String menuForNAV_USERNAME = "Nav-Username";
     private static final String menuItemSID_CONSOLE = "SID Console";
     private static final String menuItemCHANGE_RECORD = "Change Record/Project/Freeze";
@@ -70,14 +71,30 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String fld_WIP= "WIN_3_999000110";
     private static final String fld_CLEARED= "WIN_3_999000112";
     private static final String btn_QUICK_SEARCH= "WIN_0_999000675";
-    private static  final String txt_LOCATION_ID_PLUS= "arid_WIN_0_777031006";
+    private static final String txt_LOCATION_ID_PLUS= "arid_WIN_0_777031006";
     private static final String table_SELECT_LOCATION= "T700024013";
     private static final String btn_CANCEL_SELECT_LOCATION= "WIN_0_700000105";
     private static final String btn_CLEAR_SELECT_LOCATION= "WIN_0_700010521";
     private static final String txt_LOCATION_NAME_PLUS= "arid_WIN_0_777031430";
     private static final String txt_TITLE_MORE_FILTERS= "arid_WIN_0_600001002";
+    private static final String btn_NEW= "WIN_0_700002008";
+    private static final String row1_AUTO_ASSIGNMENT_RULES_TABLE= "//*[@id='T700002001']/tbody/tr[2]/td[1]";
+    private static final String btn_OPEN= "WIN_0_700002009";
+    private static final String txt_TITLE= "arid_WIN_3_800038101";
 
 
+    public boolean verifyTitleDropdownValues(String options, String dropdownName ){
+        return verifyDropdownValues(options, dropdownName, txt_TITLE);
+    }
+    public void clickOpen_AssignmentRules(){
+        clickElement(By.id(btn_OPEN));
+    }
+    public void clickRow1_AssignmentRulesTable(){
+        clickElement(By.xpath(row1_AUTO_ASSIGNMENT_RULES_TABLE));
+    }
+    public void clickNew_AssignmentRules(){
+        clickElement(By.id(btn_NEW));
+    }
     public void doLogout(){
         selectDropDownNameAndValue(menuForNAV_USERNAME, menuItemLOGOUT, false);
     }
@@ -483,5 +500,7 @@ public class OWF_AgentConsolePage extends BasePage {
         enterSendKeys(By.id(txt_SEARCH));
     }
 
-
+    public void selectAdministrationMenu(String menuItem){
+        selectMainMenuAndMenuItem(menuForADMINISTRATION, menuItem);
+    }
 }

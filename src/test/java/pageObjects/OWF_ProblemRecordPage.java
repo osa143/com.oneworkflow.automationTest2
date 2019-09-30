@@ -142,8 +142,8 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
     public void clickAssignments_underSections(){
-        clickElementByContainsTextAndTagName("div", "Assignment");
-        //driver.findElement(By.id(linkASSIGNMENTS)).click();
+        //clickElementByContainsTextAndTagName("*", "Assignment");
+        driver.findElement(By.id(linkASSIGNMENTS)).click();
     }
 
     public void clickRelease(){

@@ -3,6 +3,7 @@ package steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.OWF_CiSearchPage;
 import utils.CommonUtils;
@@ -444,5 +445,10 @@ public class OWF_CiSearchPageSteps {
     @And("user enters impacted to date as date in past")
     public void userEntersImpactedToDateAsDateInPast() {
         ciSearchPage.enterImpactTo(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", -5));
+    }
+
+    @And("user clicks on refresh under diagnosis")
+    public void userClicksOnRefreshUnderDiagnosis() {
+        ciSearchPage.clickElement(By.xpath("//*[@id='WIN_0_700009087']/div[1]/table/tbody/tr/td[2]/a[2]"));
     }
 }

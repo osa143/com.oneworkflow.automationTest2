@@ -6,7 +6,7 @@ Feature: Adding of CI to incident ticket
   Scenario: user is able to add CI's to incident ticket
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+    When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create trouble event
     And user switches to window 1
@@ -49,7 +49,7 @@ Feature: Adding of CI to incident ticket
     And user clicks on relate CI
     Then user closes warning message
     And user clicks on close button on CI search window
-    And user switches to window 1
+    And user clicks on "Diagnosis" tab
     And CI should be listed and displayed under the Diagnosis tab
     And user validates "Primary" CI is equal to "SE_EPG_FREEPG1"
     And user validates CI "Impact Status" is "Active"

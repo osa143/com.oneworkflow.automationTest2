@@ -17,7 +17,7 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
     When user clicks on sweden checkbox under affected BU's
     And user enters "Functional Test" in Title field in Trouble event
     And user selects request type as "Customer" on trouble event page
-    And user enters description as "Auto Assignment to Highest Sort order"
+    And user enters description as "Trouble event Auto Assignment to Highest Sort order"
     And user clicks on save button
     Then ticket should be created and status should be assigned
     And there are multiple assignment rules that match the incident details
@@ -25,6 +25,8 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
     And user clicks on assignment under sections
     And user should see assigned profile as "Mobile Services-DS"
     And user validates assignee is "alex00"
+    And user logsOut and closes the browser
+    And user switches to window 0
 
   Scenario: Work order
     When user clicks on create work order
@@ -33,58 +35,67 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
     When user clicks on sweden checkbox under affected BU's
     And user enters "Functional Test1" in Title field
     And user selects request type as "Analysis" in work order page
-    And user enters description as "Auto Assignment to Highest Sort order"
+    And user enters description as " Work order Auto Assignment to Highest Sort order"
     And user selects priority as "Info"
     Then user clicks on save button
     Then ticket should be created and status should be assigned
     And there are multiple assignment rules that match the incident details
     And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
     And user clicks on assignment under sections
-    And user should see assigned profile as "Mobile Services-DS"
-    And user validates assignee is "alex00"
+    And user should see assigned profile as "Mob PS Core WEST"
+    And user validates assignee is "Change_Automation_2"
+    And user logsOut and closes the browser
+    And user switches to window 0
 
 
   Scenario: Known Error
     When user clicks on create known error
-    And user switches to window 3
+    And user switches to window 1
     Then known error form should appear in new tab
     And user enters "Functional Test2" in Title field
     And user selects request type as "Rejected:Ticket Rejected" on known error page
     And user enters description as "A known error Auto Assignment to Highest Sort order"
     And user selects priority as "Minor"
     And user clicks on save button
-    Then user validates ticket status as "Draft"
+    Then user validates ticket status as "Assigned"
     And there are multiple assignment rules that match the incident details
     And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
     And user clicks on assignment under sections
-    And user should see assigned profile as "Mobile Services-DS"
-    And user validates assignee is "alex00"
+    And user should see assigned profile as "Roaming Operations-Common"
+    And user validates assignee is "emar0548"
+    And user logsOut and closes the browser
+    And user switches to window 0
 
   Scenario: Problem Ticket
+    And user clicks on create problem record
+    And user switches to window 1
     Then trouble record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
-    When user enters "Problem test3" in Title field
-    And user selects request type as "Customer" on trouble event page
-    And user enters description as "Auto Assignment to Highest Sort order"
+    When user enters "Functional Test3" in Title field
+    And user selects request type as "Access Networks:RAN Optimization" on Problem record page
+    And user enters description as " Problem Ticket Auto Assignment to Highest Sort order"
+    And user selects impact type as moderate:limited
+    And user selects urgency as low
     And user clicks on save button
-    And user gets ticket value
     Then ticket should be created and status should be assigned
     And there are multiple assignment rules that match the incident details
     And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
     And user clicks on assignment under sections
-    And user should see assigned profile as "Mobile Services-DS"
-    And user validates assignee is "alex00"
+    And user should see assigned profile as "Problem Manager"
+    And user validates assignee is "frvi96_auto"
+    And user logsOut and closes the browser
+    And user switches to window 0
 
 
   Scenario: Change Ticket
     When user clicks on change record from agent console
-    And user switches to window 2
+    And user switches to window 1
     Then change record form should open in a new tab
     When user clicks on sweden checkbox under affected BU's
     And user selects request type as "Normal Change"
-    And user selects title as "IT:Mobile:Billing" on Change record page
+    And user selects title as "IT:Carrier" on Change record page
     And user selects request category as "Cable splicing" on change record page
-    And user enters description as "Correcting error"
+    And user enters description as "Change Record Auto Assignment to Highest Sort order"
     And user enters reason field as "none"
     And user selects priority as "Major"
     And user enters "Problem initiator" in the change builder field
@@ -96,16 +107,16 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
     And user enters "No Risk" in the risk description field
     Then user clicks on "Schedule" tab
     And user enters as "Test ticket no impact" in service and customer impact
-    And user enters start time as 10 minutes fast from current sweden time
-    And user enters end time as 20 minutes fast from current sweden time
-    And user enters impact duration as "5" minutes
+    And user enters start time as some minutes fast from current sweden time
+    And user enters Request End time as some minutes fast from request start time
+    And user enters impact duration as "6" minutes
     And user selects estimated impact as "No Impact"
     And user clicks on save button
     Then user clicks on Risk tab
     And user answers all risk questions as below
     And user selects answer as "Impact to other systems/technologies are unclear"
     And user selects answer as "No"
-    And user selects answer as "Tested succesfully, this is a pilot"
+    And user selects answer as "Tested successfully, this is a pilot"
     And user selects answer as "Yes (outcome of the change can be instantly verified)"
     And user selects answer as "Yes"
     And user selects answer as "Simple"
@@ -122,20 +133,21 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
     And user clicks on relate CI
     And user closes warning message
     And user clicks on close button on CI search window
-    Then CI should be listed and displayed under the Diagnosis tab
     When user clicks on Send button
     Then ticket should be created and status should be assigned
     And there are multiple assignment rules that match the incident details
     And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
     And user clicks on assignment under sections
-    And user should see assigned profile as "Mobile Services-DS"
-    And user validates assignee is "alex00"
+    And user should see assigned profile as "Change Manager"
+    And user validates assignee is "Change_Automation_2"
 
 
 
 
 
+#######################################
   #External system can't do automation
+#######################################
 
 #  Scenario: When there are multiple assignment rules that match an external system created incident the one with the highest priority sort order value will be used for assignment
 #    Given there an incident has not been created yet

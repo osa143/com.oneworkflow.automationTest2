@@ -31,5 +31,10 @@ public class OWF_LoginPageSteps extends BaseSteps {
     }
 
 
+    @When("user logs in with valid user and password")
+    public void userLogsInWithValidUserAndPassword() {
+        loginPage.doLogin(getProperties().getProperty("username"), getProperties().getProperty("password"));
+        loginPage.wait(3000);
+    }
 }
 

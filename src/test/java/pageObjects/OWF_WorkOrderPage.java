@@ -297,7 +297,7 @@ public class OWF_WorkOrderPage extends BasePage {
 
     public boolean getAssignedProfileStatus(String text1){
         String text = getAttributeValueById(ddASSIGNED_PROFILE);
-        System.out.println(text);
+        System.out.println("Assigned profile is -"+ text);
         if(text.contains(text1)) {
             return true;
         }

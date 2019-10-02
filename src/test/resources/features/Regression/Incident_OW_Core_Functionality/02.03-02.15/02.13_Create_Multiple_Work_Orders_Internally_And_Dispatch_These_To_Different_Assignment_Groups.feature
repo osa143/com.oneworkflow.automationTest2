@@ -4,7 +4,7 @@ Feature: creation of multiple WO's and dispatch
   Scenario: user can create multiple work orders and dispatch these to different assignent groups
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+    When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create trouble event
     And user switches to window 1
@@ -35,7 +35,7 @@ Feature: creation of multiple WO's and dispatch
     # And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
     Then user closes warning message
     And user clicks on close button on CI search window
-    Then user clicks on save button and closes warning messages
+    Then user clicks on save button
     When user clicks on "Work Orders" tab
     And user clicks on create from ticket
     Then user switches to window 2

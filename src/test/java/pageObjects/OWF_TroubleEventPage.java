@@ -361,7 +361,9 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
 
 
     public String getAssignee(){
-        return getAttributeValueById(txt_ASSIGNEE);
+        String Assignee= getAttributeValueById(txt_ASSIGNEE);
+        System.out.println("The Assignee is- " +Assignee);
+        return Assignee;
     }
 
     public void clickSave_bulkUpdate(){

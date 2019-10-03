@@ -45,7 +45,7 @@
       Then user gets ticket value
       And user logsOut
       Then user goes back to login page
-      And user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
+      And user logs in with valid username "syvaptu1_auto" and password as "Telia@1234"
       Then user clicks on search and selects open search forms and problem record
       And user switches to window 2
       Then user enters Problem Ticket

@@ -34,9 +34,10 @@ Feature: user enters closure info
     When user clicks on Diagnosis tab
     And user right clicks on primary CI and selects "Impact:Clear All"
     And user should see confirmation message for impact clear and clicks ok
-    And user clicks on save button and closes warning messages
+    And user clicks on save button
     Then user validates ticket status as "Cleared"
     When user changes status to "Closed" on trouble event page second time
     And user clicks on save button
     Then user validates ticket status as "Closed"
     And user validates closure info is present
+

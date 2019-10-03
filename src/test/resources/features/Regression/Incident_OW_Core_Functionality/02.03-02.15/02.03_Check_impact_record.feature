@@ -51,6 +51,7 @@
       Then user clicks on relate CI
       And user closes warning message
       And user clicks on close button on CI search window
+      And user clicks on "Diagnosis" tab
       Then user validates CI columns "Category:Type:Item:Site Name:Impact Type:Impact Category:Impact Level:Impact Status:Impact From:Impact To:CI Class Type" availability
       #Impact to and CI class, type wont have data - this is fine (based on ALM test)
       And user validates columns have data present

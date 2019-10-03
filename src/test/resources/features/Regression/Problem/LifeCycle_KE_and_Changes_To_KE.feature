@@ -47,7 +47,7 @@
       And user clicks on save button
       Then known error ticket status should be "Published"
       When user enters description as "More information"
-      And user clicks on save button and closes warning messages
+      And user clicks on save button
       Then change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Draft to Published." on row 2
       When user clicks on timeline tab
       And user selects Auto text:Tech bridge closed

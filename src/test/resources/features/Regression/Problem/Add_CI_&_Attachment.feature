@@ -3,8 +3,7 @@
     Scenario: user can create a problem record and add a CI and attachment to it
 
       Given user is on the OneWorkflow login page
-      #When user logs in with valid username "Tohall_copy" and password as "Test@1234"
-      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+      And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create problem record
       And user switches to window 1
@@ -29,6 +28,7 @@
       And user clicks on relate CI
       And user closes warning message
       And user clicks on close button on CI search window
+      And user clicks on "Diagnosis" tab
       Then CI should be listed and displayed under the Diagnosis tab
       Then user clicks on attachments under sections
       And user clicks on add button under internal

@@ -37,7 +37,7 @@ public class Hooks {
 //            agentConsolePage.clickNavUserMenu();
 //            agentConsolePage.clickMenuItemLogout();
 //            DriverFactory.getInstance().quit();
-
-        }
+//
+       }
     }
 

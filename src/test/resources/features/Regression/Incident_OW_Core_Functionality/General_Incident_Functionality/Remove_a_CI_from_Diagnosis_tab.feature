@@ -40,7 +40,8 @@
       And user clicks on relate CI
       Then user closes warning message
       And user clicks on close button on CI search window
+      And user clicks on "Diagnosis" tab
       And user gets number of CI's
       When user right clicks on CI "SE_EPG_LDHEPG1" and selects "Detach"
-      And user clicks on save button and closes warning messages
+      And user clicks on save button
       Then CI should be detached from ticket

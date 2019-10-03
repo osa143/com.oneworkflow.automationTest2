@@ -57,6 +57,7 @@
       Then user clicks on relate CI
       And user closes warning message
       And user clicks on close button on CI search window
+      And user clicks on "Diagnosis" tab
       And CI should be listed and displayed under the Diagnosis tab
       When user changes status to "Investigation Complete" on problem record page
       And user clicks on Diagnosis tab

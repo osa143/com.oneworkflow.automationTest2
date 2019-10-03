@@ -25,6 +25,7 @@
       And user clicks on relate CI
       Then user closes warning message
       And user clicks on close button on CI search window
+      And user clicks on "Diagnosis" tab
       Then CI should be listed and displayed under the Diagnosis tab
       Then user validates OLA value is set
       And user validates event start time is present

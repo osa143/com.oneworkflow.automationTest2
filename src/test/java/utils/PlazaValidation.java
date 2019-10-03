@@ -66,6 +66,14 @@ public class PlazaValidation {
     public static String WebserverAddress;
     public static String HighAvailibility;
     public static String LoadBalancingMethod;
+    public static String UrlFilter;
+    public static String Url;
+    public static String InternalExternalWebsite;
+    public static String ErrorMessage;
+    public static String WorkedBefore;
+    public static String ProblemOccure;
+    public static String ProxySettings;
+    public static String UserId;
 
 
 

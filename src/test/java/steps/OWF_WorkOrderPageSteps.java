@@ -377,92 +377,102 @@ public class OWF_WorkOrderPageSteps {
 
     @And("user validates Messaging callguide mail description same as plaza")
     public void userValidatesMessagingCallguideMailDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.MessagingCallGuideMailDescription());
+        Assert.assertTrue(workOrderPage.verifyMessagingCallGuideMailDescription());
     }
 
     @And("user validates messaging clean mail description same as plaza")
     public void userValidatesMessagingCleanMailDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.MessagingCleanMailDescription());
+        Assert.assertTrue(workOrderPage.verifyMessagingCleanMailDescription());
     }
 
     @And("user validates messaging denmark mail description same as plaza")
     public void userValidatesMessagingDenmarkMailDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.MessagingDenmarkMailDescription());
+        Assert.assertTrue(workOrderPage.verifyMessagingDenmarkMailDescription());
     }
 
     @And("user validates messaging smtp support description same as plaza")
     public void userValidatesMessagingSmtpSupportDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.MessagingSMTPSupportDescription());
+        Assert.assertTrue(workOrderPage.verifyMessagingSMTPSupportDescription());
     }
 
     @And("user validates messaging tsf mail description same as plaza")
     public void userValidatesMessagingTsfMailDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.MessagingTsfMailDescription());
+        Assert.assertTrue(workOrderPage.verifyMessagingTsfMailDescription());
     }
 
     @And("user validates messaging tss mail description same as plaza")
     public void userValidatesMessagingTssMailDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.MessagingTssMailDescription());
+        Assert.assertTrue(workOrderPage.verifyMessagingTssMailDescription());
     }
 
     @And("user validates messaging tss premium mail description same as plaza")
     public void userValidatesMessagingTssPremiumMailDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.MessagingTssPremiumMailDescription());
+        Assert.assertTrue(workOrderPage.verifyMessagingTssPremiumMailDescription());
     }
 
     @And("user validates network security add modify remove description same as plaza")
     public void userValidatesNetworkSecurityAddModifyRemoveDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.NetworkSecurityAddModifyRemoveDescription());
+        Assert.assertTrue(workOrderPage.verifyNetworkSecurityAddModifyRemoveDescription());
     }
 
     @And("user validates network security dns sweden description same as plaza")
     public void userValidatesNetworkSecurityDnsSwedenDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.NetworkSecurityDnsSwedenDescription());
+        Assert.assertTrue(workOrderPage.verifyNetworkSecurityDnsSwedenDescription());
     }
 
     @And("user validates network security firewall new change description same as plaza")
     public void userValidatesNetworkSecurityFirewallNewChangeDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.NetworkSecurityFirewallNewChangeDescription());
+        Assert.assertTrue(workOrderPage.verifyNetworkSecurityFirewallNewChangeDescription());
     }
 
     @And("user validates network security firewall troubleshoot description same as plaza")
     public void userValidatesNetworkSecurityFirewallTroubleshootDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.NetworkSecurityFirewallTroubleshootDescription());
+        Assert.assertTrue(workOrderPage.verifyNetworkSecurityFirewallTroubleshootDescription());
     }
 
     @And("user validates network security lan description same as plaza")
     public void userValidatesNetworkSecurityLanDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.NetworkSecurityLanDescription());
+        Assert.assertTrue(workOrderPage.verifyNetworkSecurityLanDescription());
     }
 
     @And("user validates network security load balancing description same as plaza")
     public void userValidatesNetworkSecurityLoadBalancingDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.NetworkSecurityLoadBalancingDescription());
+        Assert.assertTrue(workOrderPage.verifyNetworkSecurityLoadBalancingDescription());
     }
 
     @And("user validates network security new switch description same as plaza")
     public void userValidatesNetworkSecurityNewSwitchDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.NetworkSecurityNewSwitchDescription());
+        Assert.assertTrue(workOrderPage.verifyNetworkSecurityNewSwitchDescription());
     }
 
     @And("user validates network security new vlan description same as plaza")
     public void userValidatesNetworkSecurityNewVlanDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.NetworkSecurityNewVlanDescription());
+        Assert.assertTrue(workOrderPage.verifyNetworkSecurityNewVlanDescription());
     }
 
     @And("user validates network security proxy general inquiry description same as plaza")
     public void userValidatesNetworkSecurityProxyGeneralInquiryDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.NetworkSecurityProxyGeneralInquiryDescription());
+        Assert.assertTrue(workOrderPage.verifyNetworkSecurityProxyGeneralInquiryDescription());
     }
 
     @And("user validates network security proxy resource request description same as plaza")
     public void userValidatesNetworkSecurityProxyResourceRequestDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.NetworkSecurityProxyResourceRequestDescription());
+        Assert.assertTrue(workOrderPage.verifyNetworkSecurityProxyResourceRequestDescription());
     }
 
     @And("user validates network security proxy reverse proxy description same as plaza")
     public void userValidatesNetworkSecurityProxyReverseProxyDescriptionSameAsPlaza() {
-        Assert.assertTrue(workOrderPage.NetworkSecurityProxyReverseProxyDescription());
+        Assert.assertTrue(workOrderPage.verifyNetworkSecurityProxyReverseProxyDescription());
+    }
+
+    @And("user validates network security proxy surf proxy description same as plaza")
+    public void userValidatesNetworkSecurityProxySurfProxyDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNetworkSecurityProxySurfProxyDescription());
+    }
+
+    @And("user validates network security proxy surf proxy one or few users description same as plaza")
+    public void userValidatesNetworkSecurityProxySurfProxyOneOrFewUsersDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNetworkSecurityProxySurfProxyOneOrFewUsersDescription());
     }
 }
 

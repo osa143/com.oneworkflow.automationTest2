@@ -285,11 +285,13 @@ public class Plaza_HomePage extends BasePage {
 
 
     public void enterNetworkSecurityProxySurfProxyOneDescription(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ONE_DESCRIPTION), text);
     }
 
 
     public void enterNetworkSecurityProxySurfProxyUserId(String text){
+        PlazaValidation.UserId = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ONE_USER_ID), text);
     }
 
@@ -607,34 +609,42 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void enterNetworkSecurity_proxy_surf_proxy_source_ip(String text){
+        PlazaValidation.SourceIpAddress = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_SOURCE_IP), text);
     }
 
     public void enterNetworkSecurity_proxy_surf_proxy_date_and_time(String text){
+        PlazaValidation.DateTestsPerformed = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_DATE_AND_TIME), text);
     }
 
     public void enterNetworkSecurity_proxy_surf_proxy_ticket_number(String text){
+        PlazaValidation.TicketNumber = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_TICKET_NUMBER), text);
     }
 
     public void enterNetworkSecurity_proxy_surf_proxy_settings(String text){
+        PlazaValidation.ProxySettings = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_SETTINGS), text);
     }
 
     public void enterNetworkSecurity_proxy_surf_proxy_problem_occure(String text){
+        PlazaValidation.ProblemOccure = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_PROBLEM_OCCURE), text);
     }
 
     public void enterNetworkSecurity_proxy_surf_proxy_worked_before(String text){
+        PlazaValidation.WorkedBefore = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_WORKED_BEFORE), text);
     }
 
     public void enterNetworkSecurity_proxy_surf_proxy_error_message(String text){
+        PlazaValidation.ErrorMessage = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ERROR_MESSAGE), text);
     }
 
     public void enterNetworkSecurity_proxy_surf_proxy_url(String text){
+        PlazaValidation.Url = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_URL), text);
     }
 
@@ -1051,6 +1061,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectDatabase_new_existing_account(String dropdownName){
         PlazaValidation.NewExistingAccount = dropdownName;
+        PlazaValidation.InternalExternalWebsite = dropdownName;
         selectDropdown(By.id(dd_DATABASE_NEW_EXISTING_ACCOUNT), By.id("select2-results-14"),  dropdownName);
     }
     public void enterDatabase_dnsIp_Address(String text){
@@ -1296,6 +1307,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectBCPP_Environment(String dropdownName){
         PlazaValidation.Environment=dropdownName;
+        PlazaValidation.UrlFilter = dropdownName;
         selectDropdown(By.id(dd_BCPP_ENVIRONMENT), By.id("select2-results-12"),  dropdownName);
     }
     public void enterC2B_BCPP_Request(String text){

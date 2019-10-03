@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="78" parent-id="1">
+<tr class="s-fail" test-id="34" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then ticket should be created and status should be assigned <br/><span class="text-muted text-sm">user should be able to link different types of tickets together</span></td>
-	<td>0h 0m 2s+72msc</td>
+	<td class="_600">And user validates owner profile as "ChangeInitiator/Builder1" <br/><span class="text-muted text-sm">External user processes a normal change ticket</span></td>
+	<td>0h 0m 0s+44msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,14 +136,15 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">java.lang.AssertionError: ticket status is not assigned expected [Assigned] but found [New]
+		<textarea disabled class="code-block">java.lang.AssertionError: expected [ChangeInitiator/Builder1] but found [Change Initiator-External]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:453)
-	at steps.OWF_ChangeRecordPageSteps.ticketShouldBeCreatedAndStatusShouldBeAssigned(OWF_ChangeRecordPageSteps.java:27)
-	at ✽.ticket should be created and status should be assigned(features/Regression/Problem/Initiator_Link_Tickets.feature:81)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at steps.OWF_ChangeRecordPageSteps.userValidatesOwnerProfileAs(OWF_ChangeRecordPageSteps.java:343)
+	at ✽.user validates owner profile as "ChangeInitiator/Builder1"(features/Regression/Change/E2E_Normal_Change_(External Initiator).feature:50)
 </textarea>
 	</td>
 </tr>
@@ -171,7 +172,7 @@
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Oct 2, 2019 04:46:26 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Oct 2, 2019 02:01:03 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

@@ -516,7 +516,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean MessagingCallGuideMailDescription() {
+    public boolean verifyMessagingCallGuideMailDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
@@ -528,7 +528,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean MessagingCleanMailDescription() {
+    public boolean verifyMessagingCleanMailDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
@@ -543,7 +543,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean MessagingDenmarkMailDescription() {
+    public boolean verifyMessagingDenmarkMailDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
@@ -556,7 +556,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean MessagingSMTPSupportDescription() {
+    public boolean verifyMessagingSMTPSupportDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
@@ -571,7 +571,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean MessagingTsfMailDescription() {
+    public boolean verifyMessagingTsfMailDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
@@ -583,7 +583,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean MessagingTssMailDescription() {
+    public boolean verifyMessagingTssMailDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
@@ -595,7 +595,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean MessagingTssPremiumMailDescription() {
+    public boolean verifyMessagingTssPremiumMailDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
@@ -607,7 +607,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean NetworkSecurityAddModifyRemoveDescription() {
+    public boolean verifyNetworkSecurityAddModifyRemoveDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
@@ -618,7 +618,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean NetworkSecurityDnsSwedenDescription() {
+    public boolean verifyNetworkSecurityDnsSwedenDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
@@ -629,7 +629,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean NetworkSecurityFirewallNewChangeDescription() {
+    public boolean verifyNetworkSecurityFirewallNewChangeDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
@@ -640,7 +640,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean NetworkSecurityFirewallTroubleshootDescription() {
+    public boolean verifyNetworkSecurityFirewallTroubleshootDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
@@ -653,7 +653,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean NetworkSecurityLanDescription() {
+    public boolean verifyNetworkSecurityLanDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Description)
@@ -663,7 +663,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean NetworkSecurityLoadBalancingDescription() {
+    public boolean verifyNetworkSecurityLoadBalancingDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Description)
@@ -673,7 +673,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean NetworkSecurityNewSwitchDescription() {
+    public boolean verifyNetworkSecurityNewSwitchDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
@@ -686,7 +686,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean NetworkSecurityNewVlanDescription() {
+    public boolean verifyNetworkSecurityNewVlanDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
@@ -698,7 +698,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean NetworkSecurityProxyGeneralInquiryDescription() {
+    public boolean verifyNetworkSecurityProxyGeneralInquiryDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
@@ -708,7 +708,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean NetworkSecurityProxyResourceRequestDescription() {
+    public boolean verifyNetworkSecurityProxyResourceRequestDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
@@ -718,7 +718,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
-    public boolean NetworkSecurityProxyReverseProxyDescription() {
+    public boolean verifyNetworkSecurityProxyReverseProxyDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
@@ -726,6 +726,36 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.ProtocolPort) && actualDescription.contains(PlazaValidation.Certificate)
                 && actualDescription.contains(PlazaValidation.WebserverAddress) && actualDescription.contains(PlazaValidation.HighAvailibility)
                 && actualDescription.contains(PlazaValidation.LoadBalancingMethod) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyNetworkSecurityProxySurfProxyDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.UrlFilter) && actualDescription.contains(PlazaValidation.DateTestsPerformed)
+                && actualDescription.contains(PlazaValidation.SourceIpAddress) && actualDescription.contains(PlazaValidation.Url)
+                && actualDescription.contains(PlazaValidation.InternalExternalWebsite) && actualDescription.contains(PlazaValidation.ErrorMessage)
+                && actualDescription.contains(PlazaValidation.WorkedBefore) && actualDescription.contains(PlazaValidation.ProblemOccure)
+                && actualDescription.contains(PlazaValidation.ProxySettings) && actualDescription.contains(PlazaValidation.TicketNumber)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyNetworkSecurityProxySurfProxyOneOrFewUsersDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.UrlFilter) && actualDescription.contains(PlazaValidation.DateTestsPerformed)
+                && actualDescription.contains(PlazaValidation.SourceIpAddress) && actualDescription.contains(PlazaValidation.Url)
+                && actualDescription.contains(PlazaValidation.InternalExternalWebsite) && actualDescription.contains(PlazaValidation.ErrorMessage)
+                && actualDescription.contains(PlazaValidation.WorkedBefore) && actualDescription.contains(PlazaValidation.ProblemOccure)
+                && actualDescription.contains(PlazaValidation.UserId) && actualDescription.contains(PlazaValidation.Description)
                 && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }

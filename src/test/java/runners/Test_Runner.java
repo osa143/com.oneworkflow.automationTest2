@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@E2E_Normal_Change_External_Initiator"}
+        tags = {"@E2E_problem_and_known_error"}
 )
 
 public class Test_Runner extends BaseTest {

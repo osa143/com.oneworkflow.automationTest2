@@ -5,7 +5,7 @@
     Scenario Outline: user can cancel a work order sent to a field service before any work is carried out
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_4" and password as "Test@1234"
+      And user logs in with valid user and passwordb
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create work order
       Then user switches to window 1

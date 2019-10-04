@@ -4,7 +4,7 @@ Feature: checking of bulk loading additional definitions default settings
   Scenario: user checks the bulk loading additional definitions default settings
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_2" and password as "Test@1234"
+    And user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create trouble event
     And user switches to window 1

@@ -107,12 +107,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">java.lang.AssertionError</a>
+							<a href="#" class="item-title _500">org.openqa.selenium.UnhandledAlertException</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">java.lang.AssertionError</h5>
+								<h5 class="mb-4">org.openqa.selenium.UnhandledAlertException</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="78" parent-id="1">
+<tr class="s-fail" test-id="6" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then ticket should be created and status should be assigned <br/><span class="text-muted text-sm">user should be able to link different types of tickets together</span></td>
-	<td>0h 0m 2s+72msc</td>
+	<td class="_600">When user clicks on create problem record <br/><span class="text-muted text-sm">E2E problem and known error</span></td>
+	<td>0h 0m 0s+38msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,14 +136,31 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">java.lang.AssertionError: ticket status is not assigned expected [Assigned] but found [New]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at steps.OWF_ChangeRecordPageSteps.ticketShouldBeCreatedAndStatusShouldBeAssigned(OWF_ChangeRecordPageSteps.java:27)
-	at ✽.ticket should be created and status should be assigned(features/Regression/Problem/Initiator_Link_Tickets.feature:81)
+		<textarea disabled class="code-block">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : User is currently connected from another machine or incompatible session. (ARERR 9093)
+
+Do you wish to override?}
+  (Session info: chrome=77.0.3865.90): User is currently connected from another machine or incompatible session. (ARERR 9093)
+
+Do you wish to override?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.241.129', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49282}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 9d4422984c0307830958320702c5d864
+*** Element info: {Using=xpath, value=//img[@alt='Menu for Create']/..}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pageObjects.BasePage.selectMainMenu(BasePage.java:187)
+	at pageObjects.OWF_AgentConsolePage.clickCreateMenu(OWF_AgentConsolePage.java:386)
+	at steps.OWF_AgentConsolePageSteps.userClicksOnCreateProblemRecord(OWF_AgentConsolePageSteps.java:46)
+	at ✽.user clicks on create problem record(features/Regression/Problem/E2E problem and known error.feature:10)
 </textarea>
 	</td>
 </tr>
@@ -171,7 +188,7 @@
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Oct 2, 2019 04:46:26 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Oct 4, 2019 10:52:26 AM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

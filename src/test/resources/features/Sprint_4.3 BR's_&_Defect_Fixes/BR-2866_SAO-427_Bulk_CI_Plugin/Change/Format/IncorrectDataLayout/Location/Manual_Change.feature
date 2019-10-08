@@ -1,10 +1,10 @@
-@SAO-427-BR2864-Bulk_Loading_Format_Name_Trouble
+@SAO-427-BR2864-Bulk_Loading_Format_Name_change
     #No need to Run
 Feature: checking of bulk loading format
   Scenario: user checks the format of bulk loading format
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+      And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create change record
       Then user switches to window 1

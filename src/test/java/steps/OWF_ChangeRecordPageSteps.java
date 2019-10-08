@@ -307,14 +307,14 @@ public class OWF_ChangeRecordPageSteps {
     @Then("user enters request start time {int} hours ahead of current date")
     public void userEntersRequestStartTimeHoursAheadOfCurrentDate(int arg0) {
         int newDelay = arg0 * 60;
-        changeRecordPage.enterStartDate(newDelay);
+        changeRecordPage.enterStartDate_format(newDelay);
 
     }
 
     @And("user enters request end time {int} hours ahead of current date")
     public void userEntersRequestEndTimeHoursAheadOfCurrentDate(int arg0) {
         int newDelay = arg0 * 60;
-        changeRecordPage.enterEndDate(newDelay);
+        changeRecordPage.enterEndDate_format(newDelay);
 
     }
 

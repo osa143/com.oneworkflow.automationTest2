@@ -201,7 +201,8 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
             enterSummary_attachments(summary);
             enterDescription_Attachment_OnFrame(description);
             clickAdd_AttachmentOnFrame();
-            clickonChooseFile_OnFrame();
+            wait(5000);
+            //clickonChooseFile_OnFrame();
             CommonUtils.uploadFile(filePath);
             wait(1000);
             clickOk_AttachmentOnFrame();

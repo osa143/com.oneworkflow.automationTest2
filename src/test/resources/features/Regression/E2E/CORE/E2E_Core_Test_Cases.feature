@@ -4,7 +4,7 @@
     Scenario Outline: E2E Scenarios for trouble event
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+      And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create trouble event
       And user switches to window 1
@@ -57,8 +57,8 @@
       And CI should be listed and displayed under the Diagnosis tab
       Then user validates CI "Impact Status" is "Active"
       And user validates "Primary" CI is equal to "<CI Name>"
-      Then user clicks on save button and closes warning messages
-      And user validates "<Validate BU>" BU is added automatically
+      Then user clicks on save button
+      #And user validates "<Validate BU>" BU is added automatically
       When user clicks on attachments under sections
       And  user adds attachment and verifies under "internal"
         | summary   | description | fullFilePath                                                                   | attachments |
@@ -110,9 +110,9 @@
 
       Examples:
       |BU_Name1 |BU_Name2 |Location|Location Name         |Title                        |Description                  |CI Name1          |CI Name2        |CI Name         |Validate BU |
-      |Sweden   |Finland  |SE_     |SE_Site_126608         |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_FREMME2  |LT_SGSN_VLMMME02|SE_SGSN_FREMME2  |Lithuania   |
-#     |Norway   |Finland  |NO_     |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_EPG_OSL900EPG2|DK_EPG_AMBEPG1  |NO_EPG_OSL900EPG2|Denmark     |
+ #     |Sweden   |Finland  |SE_     |SE_Site_126608         |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_FREMME2  |LT_SGSN_VLMMME02|SE_SGSN_FREMME2  |Lithuania   |
+ #   |Norway   |Finland  |NO_     |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_EPG_OSL900EPG2|DK_EPG_AMBEPG1  |NO_EPG_OSL900EPG2|Denmark     |
 #     |Lithuania|Denmark  |LT_     |LT_Site_888           |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E| LT_SGSN_VLMMME02|SE_SGSN_FREMME2 |LT_SGSN_VLMMME02 |Sweden      |
 #     |Finland  |Denmark  |FI_     |FI_Site_riutula keskus|Test case MT004 Finland E2E  |Test case MT004 Finland E2E  | FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1|FI_SGSN_HKIMME02 |Estonia     |
 #     |Estonia  |Sweden   |EE_     |EE- AUT0001           |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_EPG_KOORTEPG1 |FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1 |Finland     |
-#     |Denmark  |Sweden   |DK_     |DK_Site_S0001         |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_EPG_AMBEPG1   |EE_EPG_KOORTEPG1|DK_EPG_AMBEPG1   |Estonia     |
+ #   |Denmark  |Sweden   |DK_     |DK_Site_S0001         |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_EPG_AMBEPG1   |EE_EPG_KOORTEPG1|DK_EPG_AMBEPG1   |Estonia     |

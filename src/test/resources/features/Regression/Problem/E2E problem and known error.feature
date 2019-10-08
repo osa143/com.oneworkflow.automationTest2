@@ -31,8 +31,8 @@
       Then problem ticket status should be under investigation
       Then change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation."
       And user clicks on assignment under sections
-      Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
       #Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
+      Then user selects assigned profile dropdown as "Problem Initiator"
       And user enters "Tohall_copy" in assignee
       #And user selects assignee as "Tohall_copy" by using alphabet "u" key up 16 times
       And user clicks on save button on the problem form

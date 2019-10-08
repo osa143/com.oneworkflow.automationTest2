@@ -112,7 +112,7 @@ public class BaseRecordPage extends BasePage {
     public static final String ddSUMMARY = "Summary*";
     public static final String txtDESCRIPTION_ON_FRAME_ID = "arid_WIN_0_700500102";
     public static final String btnADD_ATTACHMENT_ON_FRAME = "//a[contains(@class,'Add btn btn3d TableBtn')]";
-    public static final String btnCHOOSE_FILE_XPATH = "//input[@id='PopupAttInput']";
+    public static final String btnCHOOSE_FILE = "PopupAttInput";
     public static final String btnOK_ON_FRAME_XPATH = "//a[contains(text(),'OK')]";
     public static final String btnSAVE_ATTACHMENT_ON_FRAME = "WIN_0_700500109";
     public static final String btnOWNER_ID = "WIN_0_999000621";
@@ -478,7 +478,7 @@ public class BaseRecordPage extends BasePage {
         driver.switchTo().parentFrame();
         driver.switchTo().frame(2);
         driver.switchTo().frame(1);
-        clickElement(By.xpath(btnCHOOSE_FILE_XPATH));
+        driver.findElement(By.id(btnCHOOSE_FILE)).click();
     }
     public void clickOk_AttachmentOnFrame(){
         clickElement(By.xpath(btnOK_ON_FRAME_XPATH));

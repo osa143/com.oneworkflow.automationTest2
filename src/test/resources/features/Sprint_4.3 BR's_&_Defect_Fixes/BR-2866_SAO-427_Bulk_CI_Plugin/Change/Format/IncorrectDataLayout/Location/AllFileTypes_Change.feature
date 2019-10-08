@@ -1,9 +1,9 @@
 @Bulk_Loading_Format_Location_change @SAO-427
 Feature: checking of bulk loading format
-  Scenario Outline: user checks the format of bulk loading format
+  Scenario: user checks the format of bulk loading format
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+      And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create change record
       Then user switches to window 1
@@ -32,34 +32,34 @@ Feature: checking of bulk loading format
       Then user should see bulk ci loading window
       Then user selects impact level as "No Impact"
       And user clicks on Upload Import File
-      Then user clicks on choose file button
-      And user searches for "<fileTypes>" attachment and adds it
-      And user clicks on attachment ok button
-      And user switches to frame
-      Then user validates attached document is visible
-      Then user clicks on save button under bulk import
-      And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
-      And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-      And user waits 20 secs
-      When user clicks on Show Bulk Import button
-      And user switches to frame
-      When user clicks on "Related CIs" tab
-      And user validates total rows as "0"
-      And user validates Rows OK as "0"
-      And user validates with errors as "0"
-      And user validates with warnings as "0"
-      And user clicks on bulk loading close button
-      And user logsOut and closes the browser
-      And user switches to window 0
-
-      Examples:
-
-          |fileTypes                                                                                                    |
-          #|Test Attachments\IncorrectFormatColumnLocation\CSV.csv|
-         #|Test Attachments\IncorrectFormatColumnLocation\TEXTDocForBulkCI.txt|
-         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xls|
-         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xlsx|
-
+#      Then user clicks on choose file button
+#      And user searches for "<fileTypes>" attachment and adds it
+#      And user clicks on attachment ok button
+#      And user switches to frame
+#      Then user validates attached document is visible
+#      Then user clicks on save button under bulk import
+#      And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
+#      And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
+#      And user waits 20 secs
+#      When user clicks on Show Bulk Import button
+#      And user switches to frame
+#      When user clicks on "Related CIs" tab
+#      And user validates total rows as "0"
+#      And user validates Rows OK as "0"
+#      And user validates with errors as "0"
+#      And user validates with warnings as "0"
+#      And user clicks on bulk loading close button
+#      And user logsOut and closes the browser
+#      And user switches to window 0
+#
+#      Examples:
+#
+#          |fileTypes                                                                                                    |
+#          #|Test Attachments\IncorrectFormatColumnLocation\CSV.csv|
+#         #|Test Attachments\IncorrectFormatColumnLocation\TEXTDocForBulkCI.txt|
+#         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xls|
+#         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xlsx|
+#
 
 
 

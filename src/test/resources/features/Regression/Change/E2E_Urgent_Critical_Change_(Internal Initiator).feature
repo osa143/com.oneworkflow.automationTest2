@@ -99,7 +99,7 @@ Feature: Internal Urgent Critical Change E2E
     And user clicks on assignment under sections
     And user validates owner profile as "Change Manager"
     And user validates owner as "ChangeManager"
-    And user should see assigned profile as "Escalation Manager"
+    And user should see assigned profile as "Change Manager"
     And user clicks on timeline tab
     Then user validates Description* isn't readonly
     And user validates Project Code isn't readonly

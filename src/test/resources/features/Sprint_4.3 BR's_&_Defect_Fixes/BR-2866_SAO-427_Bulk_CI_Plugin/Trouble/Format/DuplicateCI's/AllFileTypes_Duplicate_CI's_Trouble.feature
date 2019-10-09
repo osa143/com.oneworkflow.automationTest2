@@ -1,7 +1,7 @@
 @Bulk_Loading_Format_5duplicateCIs_trouble_2 @SAO-427
     #passed
 Feature: checking of bulk loading format
-  Scenario Outline: user checks the format of bulk loading format
+  Scenario: user checks the format of bulk loading format
 
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
@@ -25,38 +25,38 @@ Feature: checking of bulk loading format
       And user validates Level default value is ""
       Then user selects impact level as "No Impact"
       And user clicks on Upload Import File
-      Then user clicks on choose file button
-      And user searches for "<fileTypes>" attachment and adds it
-      And user clicks on attachment ok button
-      And user switches to frame
-      Then user validates attached document is visible
-      Then user clicks on save button under bulk import
-      And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
-      And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-      And user waits 30 secs
-      When user clicks on Show Bulk Import button
-      And user switches to frame
-      When user clicks on "Related CIs" tab
-      And user validates total rows as "10"
-      And user validates Rows OK as "5"
-      And user validates with errors as "5"
-      And user validates with warnings as "0"
-      And user validates "Status" as "With Errors" in row 6
-      And user validates "Status" as "With Errors" in row 7
-      And user validates "Status" as "With Errors" in row 8
-      And user validates "Status" as "With Errors" in row 9
-      And user validates "Status" as "With Errors" in row 10
-      And user clicks on bulk loading close button
-      And user logsOut and closes the browser
-      And user switches to window 0
-
-      Examples:
-
-          |fileTypes                                                                                       |
-          |Test Attachments\5DuplicateCIs\5CIsCSV.csv|
-          |Test Attachments\5DuplicateCIs\5CIsTextDOC.txt|
-          |Test Attachments\5DuplicateCIs\5CIsXLS.xls|
-          |Test Attachments\5DuplicateCIs\5CIsXLSX.xlsx|
+#      Then user clicks on choose file button
+#      And user searches for "<fileTypes>" attachment and adds it
+#      And user clicks on attachment ok button
+#      And user switches to frame
+#      Then user validates attached document is visible
+#      Then user clicks on save button under bulk import
+#      And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
+#      And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
+#      And user waits 30 secs
+#      When user clicks on Show Bulk Import button
+#      And user switches to frame
+#      When user clicks on "Related CIs" tab
+#      And user validates total rows as "10"
+#      And user validates Rows OK as "5"
+#      And user validates with errors as "5"
+#      And user validates with warnings as "0"
+#      And user validates "Status" as "With Errors" in row 6
+#      And user validates "Status" as "With Errors" in row 7
+#      And user validates "Status" as "With Errors" in row 8
+#      And user validates "Status" as "With Errors" in row 9
+#      And user validates "Status" as "With Errors" in row 10
+#      And user clicks on bulk loading close button
+#      And user logsOut and closes the browser
+#      And user switches to window 0
+#
+#      Examples:
+#
+#          |fileTypes                                                                                       |
+#          |Test Attachments\5DuplicateCIs\5CIsCSV.csv|
+#          |Test Attachments\5DuplicateCIs\5CIsTextDOC.txt|
+#          |Test Attachments\5DuplicateCIs\5CIsXLS.xls|
+#          |Test Attachments\5DuplicateCIs\5CIsXLSX.xlsx|
 
 
 

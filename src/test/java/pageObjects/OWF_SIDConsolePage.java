@@ -38,7 +38,7 @@ public class OWF_SIDConsolePage extends BasePage {
     private static final String ddValueINTERNAL_SERVICES = "Internal Service";
 
     private static final String ddValueRADIO_ACCESS_NETWORK = "Radio Access Network";
-    private static final String ddValueRAN = "RAN";
+    private static final String ddValueRAN = "RAN_Telia_Wifi";
     private static final String ddValueTELIA_OWNED_CPE = "Telia Owned CPE";
     private static final String ddValueWLAN = "WLAN";
     private static final String ddValueWLAN_ACCESS = "WLAN ACCESS";

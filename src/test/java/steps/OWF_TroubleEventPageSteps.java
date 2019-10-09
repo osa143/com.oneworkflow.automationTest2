@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.OWF_TroubleEventPage;
 import pageObjects.OWF_WorkOrderPage;
@@ -1179,6 +1180,11 @@ public class OWF_TroubleEventPageSteps {
 
     @And("the Assignment Profile is set based on the assignment rule with the highest priority sort order value")
     public void theAssignmentProfileIsSetBasedOnTheAssignmentRuleWithTheHighestPrioritySortOrderValue() {
+    }
+
+    @And("user enters AM status details as {string}")
+    public void userEntersAMStatusDetailsAs(String arg0) {
+        troubleEventPage.enterTextByElement(By.id("arid_WIN_0_600001105"), arg0);
     }
 }
 

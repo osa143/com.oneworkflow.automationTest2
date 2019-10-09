@@ -253,16 +253,16 @@ public class OWF_ProblemRecordPageSteps {
     }
 
     // change to try catch if fails
-    @When("user tries to change request type as Access Networks:RAN NSN 2G:3G:4G")
+    @When("user tries to change request type as Access Networks:RAN_Telia_Wifi NSN 2G:3G:4G")
     public void userTriesToChangeRequestTypeAsAccessNetworksRANNSNGGG() {
 
         Assert.assertTrue(problemRecordPage.getRequestTypeDropDownStatus(), "user is able to change request type");
 
     }
 
-    @Then("request type should be RAN optimization")
+    @Then("request type should be RAN_Telia_Wifi optimization")
     public void requestTypeShouldBeRANOptimization() {
-        Assert.assertEquals(problemRecordPage.getRequestTypeText(), "Access Networks | RAN Optimization", "Request type is not RAN Optimization");
+        Assert.assertEquals(problemRecordPage.getRequestTypeText(), "Access Networks | RAN_Telia_Wifi Optimization", "Request type is not RAN_Telia_Wifi Optimization");
         System.out.println(problemRecordPage.getRequestTypeText());
 
     }
@@ -403,9 +403,9 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.clickCloneButton();
     }
 
-    @And("user selects request type as Access Networks:RAN NSN 2G:3G:4G")
+    @And("user selects request type as Access Networks:RAN_Telia_Wifi NSN 2G:3G:4G")
     public void userSelectsRequestTypeAsAccessNetworksRANNSNGGG() {
-        problemRecordPage.selectRequestType("Access Networks:RAN NSN 2G/3G/4G", false);
+        problemRecordPage.selectRequestType("Access Networks:RAN_Telia_Wifi NSN 2G/3G/4G", false);
     }
 
 

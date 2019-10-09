@@ -15,7 +15,7 @@
       Then user selects select request "Surf proxy/URL filter"
       And user enters network security proxy request as "<Request>"
       Then user selects SurfProxy url filter as "<SurfProxy /URL filter>"
-      And user enters the source IP address as "Test IP address"
+      And user enters Source IP Address as "Test IP address"
       And user enters the target url as "Test URL"
       Then user enters the h2 Name "Test name"
       Then user enters network security proxy description as "<Description>"
@@ -37,7 +37,7 @@
       And user validates title field as "Service Request | Proxy"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description as ""
+      And user validates network security proxy surf proxy whitelisting description
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -47,7 +47,7 @@
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
-      And user selects completed code as "Success"
+      And user selects completion code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button

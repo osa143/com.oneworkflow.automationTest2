@@ -74,6 +74,28 @@ public class PlazaValidation {
     public static String ProblemOccure;
     public static String ProxySettings;
     public static String UserId;
+    public static String UserIp;
+    public static String TargetUrl;
+    public static String H2Name;
+    public static String ExistingIpNet;
+    public static String NewIpNet;
+    public static String Type;
+    public static String Size;
+    public static String Drives;
+    public static String FrontsideNetworkInformation;
+    public static String MgmtNetworkInformation;
+    public static String Ruleset;
+    public static String CloudServices;
+    public static String TargetCountries;
+    public static String DualSiteServices;
+    public static String ApproverAccount;
+    public static String UserAccount;
+    public static String CmdbAssigned;
+    public static String CmdbLocal;
+    public static String Justification;
+    public static String OperatingSystem;
+    public static String MonthlyPatching;
+    public static String ServiceWindow;
 
 
 

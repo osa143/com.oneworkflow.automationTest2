@@ -33,7 +33,7 @@
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Skypoint - private cloud"
-      And user validates description as "<DescValidation>"
+      And user validates nimbus modify onboarding description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

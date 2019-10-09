@@ -493,18 +493,22 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void enterOperatingSystem_change_from_auto_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_CHANGE_FROM_AUTO_DESCRIPTION), text);
     }
 
     public void enterOperatingSystem_change_from_auto_justification(String text){
+        PlazaValidation.Justification = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_CHANGE_FROM_AUTO_JUSTIFICATION), text);
     }
 
     public void enterOperatingSystem_change_from_auto_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_CHANGE_FROM_AUTO_REQUEST), text);
     }
 
     public void enterOperatingSystem_change_from_auto_plan(String text){
+        PlazaValidation.MonthlyPatching = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_CHANGE_FROM_AUTO_PLAN), text);
     }
 
@@ -513,14 +517,17 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void enterOperatingSystem_account_management_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_ACCOUNT_MANAGEMENT_DESCRIPTION), text);
     }
 
     public void enterOperatingSystem_account_management_account_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_ACCOUNT_MANAGEMENT_REQUEST), text);
     }
 
     public void enterOperatingSystem_account_management_account_name(String text){
+        PlazaValidation.AccountName = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_ACCOUNT_MANAGEMENT_ACCOUNT_NAME), text);
     }
 
@@ -529,10 +536,12 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void enterOperatingSystem_access_justification(String text){
+        PlazaValidation.Justification = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_ACCESS_JUSTIFICATION), text);
     }
 
     public void enterOperatingSystem_access_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_ACCESS_REQUEST), text);
     }
 
@@ -541,22 +550,27 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void enterNetworkSecurity_switch_port_config_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_SWITCH_PORT_CONFIG_REQUEST), text);
     }
 
     public void enterNetworkSecurity_remote_access_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_REMOTE_ACCESS_DESCRIPTION), text);
     }
 
     public void enterNetworkSecurity_remote_access_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_REMOTE_ACCESS_REQUEST), text);
     }
 
     public void enterNetworkSecurity_proxy_surf_proxy_whitelisting_h2_name(String text){
+        PlazaValidation.H2Name = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_SLOW_WHITELISTING_H2_NAME), text);
     }
 
     public void enterNetworkSecurity_proxy_surf_proxy_whitelisting_target_url(String text){
+        PlazaValidation.TargetUrl = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_SLOW_WHITELISTING_TARGET_URL), text);
     }
 
@@ -601,10 +615,15 @@ public class Plaza_HomePage extends BasePage {
 
     }
     public void selectNetworkSecurity_proxy_surf_proxy_slow_surfing_sites(String dropdownName){
+        PlazaValidation.ServiceWindow = dropdownName;
+        PlazaValidation.AccountType = dropdownName;
+        PlazaValidation.NewIpNet = dropdownName;
+        PlazaValidation.InternalExternalWebsite = dropdownName;
         selectDropdown(By.id(dd_NETWORK_SECURITY_PROXY_SURF_PROXY_SLOW_SURFING_SITES), By.id("select2-results-13"),  dropdownName);
     }
 
     public void enterNetworkSecurity_proxy_surf_proxy_slow_surfing_user_ip(String text){
+        PlazaValidation.UserIp = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_SLOW_SURFING_USER_IP), text);
     }
 
@@ -825,6 +844,7 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void selectNetworkSecurity_firewall_new_change_service_request(String dropdownName){
+        PlazaValidation.SelectRequest = dropdownName;
         PlazaValidation.ServiceRequestName = dropdownName;
         selectDropdown(By.id(dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_SERVICE_REQUEST), By.id("select2-results-11"),  dropdownName);
 
@@ -836,6 +856,8 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void selectNetworkSecurity_add_modify_remove_dns_scheduled_change(String dropdownName){
+        PlazaValidation.OperatingSystem = dropdownName;
+        PlazaValidation.ExistingIpNet = dropdownName;
         PlazaValidation.Schedule = dropdownName;
         PlazaValidation.ServerConnectivityVerified = dropdownName;
         selectDropdown(By.id(dd_NETWORK_SECURITY_ADD_MODIFY_REMOVE_SCHEDULED_CHANGE), By.id("select2-results-12"),  dropdownName);
@@ -856,75 +878,94 @@ public class Plaza_HomePage extends BasePage {
 
 
     public void enterNimbus_skyPointRequest(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_NIMBUS_SKYPOINT_REQUEST), text);
     }
     public void selectNimbus_restoreVm(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_NIMBUS_RESTORE_VM), By.id("s2id_autogen20_results"),  dropdownName);
     }
     public void enterNimbus_dateToRestoreFrom(String text){
+        PlazaValidation.DateTime = text;
         enterTextByElement(By.id(txt_NIMBUS_DATE_TO_RESTORE_FOM), text);
     }
     public void enterNimbus_roleApproversAccount(String text){
+        PlazaValidation.ApproverAccount = text;
         enterTextByElement(By.id(txt_NIMBUS_ROLE_APPROVERS_ACCOUNT), text);
     }
     public void enterNimbus_roleUsersAccount(String text){
+        PlazaValidation.UserAccount = text;
         enterTextByElement(By.id(txt_NIMBUS_ROLE_USERS_ACCOUNT), text);
     }
     public void enterNimbus_CmdbAssigned(String text){
+        PlazaValidation.CmdbAssigned = text;
         enterTextByElement(By.id(txt_NIMBUS_CMDB_ASSIGNED), text);
     }
     public void enterNimbus_cmdbLocal(String text){
+        PlazaValidation.CmdbLocal = text;
         enterTextByElement(By.id(txt_NIMBUS_CMDB_LOCAL), text);
     }
     public void enterNimbus_h2Hid(String text){
+        PlazaValidation.H2Name = text;
         enterTextByElement(By.id(txt_NIMBUS_H2_HID), text);
     }
     public void selectNimbus_targetCountries(String dropdownName){
+        PlazaValidation.TargetCountries = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_NIMBUS_TARGET_COUNTRIES), By.id("s2id_autogen21_results"),  dropdownName);
     }
     public void selectNimbus_cloudServices(String dropdownName){
+        PlazaValidation.CloudServices = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_NIMBUS_CLOUD_SERVICES), By.id("s2id_autogen19_results"),  dropdownName);
     }
     public void enterNimbus_frontSideNetworkInfo(String text){
+        PlazaValidation.FrontsideNetworkInformation = text;
         enterTextByElement(By.id(txt_FRONTSIDE_NETWORK_INFO), text);
     }
     public void enterNimbus_mgmtNetworkInfo(String text){
-
+        PlazaValidation.MgmtNetworkInformation = text;
         enterTextByElement(By.id(txt_MGMT_NETWORK_INFO), text);
     }
     public void enterNimbus_h2NameHid(String text){
-
+        PlazaValidation.H2Name = text;
         enterTextByElement(By.id(txt_NIMBUS_H2_NAME_HID), text);
     }
     public void enterNimbus_serviceWindowDateTime(String text){
-
+        PlazaValidation.DateTime = text;
         enterTextByElement(By.id(txt_NIMBUS_SERVICE_WINDOW_DATE_TIME), text);
     }
     public void selectNimbusExtendDisk_AddCi(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_NIMBUS_EXTEND_DISK_ADD_CI), By.id("s2id_autogen18_results"),  dropdownName);
 
     }
     public void enterNimbus_volumesDrives(String text){
+        PlazaValidation.Drives = text;
         enterTextByElement(By.id(txt_NIMBUS_VOLUMES_DRIVES), text);
     }
 
     public void enterNimbus_size(String text){
+        PlazaValidation.Size = text;
         enterTextByElement(By.id(txt_NIMBUS_SIZE), text);
     }
     public void enterNimbus_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_NIMBUS_DESCRIPTION), text);
     }
     public void selectNimbus_AddCi(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_NIMBUS_ADD_CI), By.id("s2id_autogen17_results"),  dropdownName);
 
     }
     public void selectNimbus_Type(String dropdownName){
+        PlazaValidation.Type = dropdownName;
         selectDropdown(By.id(dd_NIMBUS_TYPE), By.id("select2-results-13"),  dropdownName);
     }
     public void enterNimbus_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_NIMBUS_REQUEST), text);
     }
     public void enterNimbus_descriptionMandatory(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_NIMBUS_DESCRIPTION_MANDATORY), text);
     }
 
@@ -1060,6 +1101,7 @@ public class Plaza_HomePage extends BasePage {
         enterTextByElement(By.id(dd_DATABASE_DEFAULT_TABLE_SPACE), text);
     }
     public void selectDatabase_new_existing_account(String dropdownName){
+        PlazaValidation.Ruleset = dropdownName;
         PlazaValidation.NewExistingAccount = dropdownName;
         PlazaValidation.InternalExternalWebsite = dropdownName;
         selectDropdown(By.id(dd_DATABASE_NEW_EXISTING_ACCOUNT), By.id("select2-results-14"),  dropdownName);
@@ -1459,6 +1501,7 @@ public class Plaza_HomePage extends BasePage {
 
 
     public void select_selectRequest(String dropdownName){
+        PlazaValidation.DualSiteServices = dropdownName;
         PlazaValidation.SmtpRelay = dropdownName;
         PlazaValidation.SelectRequest = dropdownName;
         PlazaValidation.DatabaseType = dropdownName;

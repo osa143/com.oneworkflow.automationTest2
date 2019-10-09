@@ -14,7 +14,7 @@
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Skypoint -Failed request support"
       And user enters nimbus request as "Test11 Nimbus/Request"
-      Then user enters skypoint request as "Test Skypoint#"
+      Then user enters skypoint request as "Test Skypoint"
       And user enters nimbus description as "Test11 Nimbus/Description"
       And user enters additional comments as "Test11 Nimbus/AC"
       Then user clicks on "Submit"
@@ -32,7 +32,7 @@
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Skypoint - private cloud"
-      And user validates description
+      And user validates nimbus skypoint failed request description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

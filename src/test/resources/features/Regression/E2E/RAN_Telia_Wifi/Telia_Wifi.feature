@@ -37,7 +37,7 @@
       Then user validates ticket status as "Assigned"
       And user waits 180 secs
       Then user clicks on notification tab
-      Then user clicks on Sent button
+      Then user clicks on sent button
       And user validates email notification is sent
 
 

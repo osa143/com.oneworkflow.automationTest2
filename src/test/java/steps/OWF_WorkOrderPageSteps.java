@@ -474,5 +474,102 @@ public class OWF_WorkOrderPageSteps {
     public void userValidatesNetworkSecurityProxySurfProxyOneOrFewUsersDescriptionSameAsPlaza() {
         Assert.assertTrue(workOrderPage.verifyNetworkSecurityProxySurfProxyOneOrFewUsersDescription());
     }
+
+    @And("user validates network security proxy surf proxy slow surfing description same as plaza")
+    public void userValidatesNetworkSecurityProxySurfProxySlowSurfingDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNetworkSecurityProxySurfProxySlowSurfingDescription());
+
+    }
+
+    @And("user validates network security proxy surf proxy whitelisting description")
+    public void userValidatesNetworkSecurityProxySurfProxyWhitelisting() {
+        Assert.assertTrue(workOrderPage.verifyNetworkSecurityProxySurfProxyWhitelistingDescription());
+    }
+
+    @And("user validates network security remote access description")
+    public void userValidatesNetworkSecurityRemoteAccessDescription() {
+        Assert.assertTrue(workOrderPage.verifyNetworkSecurityRemoteAccessDescription());
+    }
+
+    @And("user validates network security switch port config description same as plaza")
+    public void userValidatesNetworkSecuritySwitchPortConfigDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNetworkSecuritySwitchPortConfigDescription());
+    }
+
+    @And("user validates nimbus add modify remove description same as plaza")
+    public void userValidatesNimbusAddModifyRemoveDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNimbusAddModifyRemoveDescription());
+    }
+
+    @And("user validates nimbus decommision vm description same as plaza")
+    public void userValidatesNimbusDecommisionVmDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNimbusDecommisionVmDescription());
+    }
+
+    @And("user validates nimbus expand backup archive disk description same as plaza")
+    public void userValidatesNimbusExpandBackupArchiveDiskDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNimbusExpandBackupArchiveDiskDescription());
+    }
+
+    @And("user validates nimbus extend disk red hat description same as plaza")
+    public void userValidatesNimbusExtendDiskRedHatDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNimbusExtendDiskRedHatDescription());
+    }
+
+    @And("user validates nimbus extend disk windows description same as plaza")
+    public void userValidatesNimbusExtendDiskWindowsDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNimbusExtendDiskWindowsDescription());
+
+    }
+
+    @And("user validates nimbus hot add cpu or ram description same as plaza")
+    public void userValidatesNimbusHotAddCpuOrRamDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNimbusHotAddCpuOrRamDescription());
+    }
+
+    @And("user validates nimbus modify onboarding description same as plaza")
+    public void userValidatesNimbusModifyOnboardingDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNimbusModifyOnboardingDescription());
+    }
+
+    @And("user validates nimbus network onboarding nordic description same as plaza")
+    public void userValidatesNimbusNetworkOnboardingNordicDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNimbusNetworkOnboardingNordicDescription());
+    }
+
+    @And("user validates nimbus onboard to skypoint description same as plaza")
+    public void userValidatesNimbusOnboardToSkypointDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNimbusOnboardToSkypointDescription());
+    }
+
+    @And("user validates nimbus restore vm description same as plaza")
+    public void userValidatesNimbusRestoreVmDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNimbusRestoreVmDescription());
+    }
+
+    @And("user validates nimbus skypoint failed request description same as plaza")
+    public void userValidatesNimbusSkypointFailedRequestDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNimbusSkypointFailedRequestDescription());
+    }
+
+    @And("user validates operating system access description same as plaza")
+    public void userValidatesOperatingSystemAccessDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyOperatingSystemAccessDescription());
+    }
+
+    @And("user validates operating system account management description same as plaza")
+    public void userValidatesOperatingSystemAccountManagementDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyOperatingSystemAccountManagementDescription());
+    }
+
+    @And("user validates operating system change from auto description same as plaza")
+    public void userValidatesOperatingSystemChangeFromAutoDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyOperatingSystemChangeFromAutoDescription());
+    }
+
+    @And("user validates operating system change from manual description same as plaza")
+    public void userValidatesOperatingSystemChangeFromManualDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyOperatingSystemChangeFromManualDescription());
+    }
 }
 

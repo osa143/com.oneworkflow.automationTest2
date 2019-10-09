@@ -13,7 +13,6 @@
       Then user should see "Skypoint - private cloud" form
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Add/Modify/Remove CPU/Memory/Disk to VM"
-      And user selects service request name as "Add/Modify/Remove CPU/Memory/Disk to VM"
       And user enters nimbus request as "Test1 Nimbus/Request"
       Then user selects nimbus CI as "cc100cgas001"
       And user selects nimbus type as "CPU"
@@ -34,7 +33,7 @@
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Skypoint - private cloud"
-      And user validates description as "<DescValidation>"
+      And user validates nimbus add modify remove description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

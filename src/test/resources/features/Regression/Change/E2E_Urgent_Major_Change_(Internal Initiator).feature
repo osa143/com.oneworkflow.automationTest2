@@ -52,7 +52,7 @@
       And user selects urgent answer as "A. No"
       And user selects urgent last answer as "A. No"
       Then user validates risk score gets updated
-      Then user clicks on save button button
+      Then user clicks on save button
       Then an error message should appear: "Please select at least one country of impact for this change. (ARERR 10000)"
       When user clicks on estonia checkbox under affected BU's
       And user clicks on Send button
@@ -127,6 +127,15 @@
       Then user enters "New Communication plan" in the communication plan field
       And user clicks on save button
       When user clicks on risk tab
+      And user selects urgent answer as "A. No"
+      And user selects urgent answer as "B. Impact to other systems/technologies are unclear!"
+      And user selects urgent answer as "Tested successfully, this is a pilot"
+      And user selects urgent answer as "D. "Only" Consumer customers affected."
+      And user selects urgent answer as "A. Yes"
+      And user selects urgent answer as "A. Yes"
+      And user selects urgent answer as "A. Yes (outcome of the Change can be instantly verified)"
+      And user selects urgent answer as "B. No"
+      And user selects urgent answer as "A. No"
       And user selects urgent last answer as "B. Yes"
       Then user clicks on save button
       Then user clicks on "Schedule" tab
@@ -138,7 +147,7 @@
       And change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Urgent Major Change (Internal Initiator) to TEST TICKET PLEASE IGNORE - Automated Test for Urgent Major Change (Internal Initiator)- Additional Information. Requested Start has changed from 2019-09-09 13:00:00 UTC to 2019-09-16 13:00:00 UTC. Requested End has changed from 2019-09-09 16:00:00 UTC to 2019-09-16 16:00:00 UTC. " on row 1
       And user clicks on Diagnosis tab
       Then user selects all CI's that appear
-      And user right clicks on primary CI and selects Impact:Update
+      And user right clicks on primary CI and selects "Impact:Update"
       Then user change the impact from and to time to be the same as in schedule tab
       And user clicks ok on CI window pop up
       Then user clicks on save button
@@ -155,7 +164,7 @@
       And user clicks on request thats pending approval
       And user clicks on view button
       Then user switches to frame
-      And user clicks on approve button
+      And user clicks approve button
       Then user switches to window 2
       And user clicks on save button
       Then user switches to frame

@@ -1,5 +1,5 @@
 @TCFP_Remove_User @PLAZA
-  Feature: TCFP Remove User plaza form tesr
+  Feature: TCFP Remove User plaza form test
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -33,7 +33,7 @@
       Then user should see service request form
       And user opens new tab
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
+      When user logs in with valid username "Change_Automation_6" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2
@@ -44,17 +44,17 @@
       And user validates title field as "Service Request | TCFP (Account Management)"
       And user validates request type as "Service Request | PLAZA"
          #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates tcfp remove user description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user validates assigned profile as "Enterprise"
+      And user should see assigned profile as "Enterprise"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
       And user changes status to "Cleared"
-      And user selects completed code as "Success"
+      And user selects completion code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button

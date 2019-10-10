@@ -15,7 +15,6 @@
       Then user selects choose option as "Remove User"
       And user enters MegaDisc request as "Test1 MegaDisc/Request"
       And user enters megadisc account name as "Test1234"
-      And user enters megadisc account name as "Test"
       And user enters megadisc select group as "App_Megadisc_Admin"
       And user selects requested person as "Anders Englund"
       And user enters megadisc description as "Test1 MegaDisc/Description"
@@ -37,7 +36,7 @@
       And user validates title field as "Service Request | MegaDisc (Account Management)"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates megadisc remove user description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

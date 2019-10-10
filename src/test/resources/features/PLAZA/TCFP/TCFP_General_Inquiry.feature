@@ -34,7 +34,7 @@
       And user validates title field as "Service Request | TCFP (Account Management)"
       And user validates request type as "Service Request | PLAZA"
          #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates tcfp general inquiry description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

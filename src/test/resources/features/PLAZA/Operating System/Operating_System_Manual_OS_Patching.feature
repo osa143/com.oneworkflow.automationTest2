@@ -40,7 +40,7 @@
       And user validates title field as "Service Request | Manual OS Patching"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description as ""
+      And user validates operating system manual os patching description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

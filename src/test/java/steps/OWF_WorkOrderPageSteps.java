@@ -571,5 +571,135 @@ public class OWF_WorkOrderPageSteps {
     public void userValidatesOperatingSystemChangeFromManualDescriptionSameAsPlaza() {
         Assert.assertTrue(workOrderPage.verifyOperatingSystemChangeFromManualDescription());
     }
+
+    @And("user validates operating system manual os patching description same as plaza")
+    public void userValidatesOperatingSystemManualOsPatchingDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyOperatingSystemManualOSPatchingDescription());
+    }
+
+    @And("user validates bccp description same as plaza")
+    public void userValidatesBccpDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyBccpDescription());
+    }
+
+    @And("user validates cews description same as plaza")
+    public void userValidatesCewsDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyCewsDescription());
+    }
+
+    @And("user validates cloud one time snap description same as plaza")
+    public void userValidatesCloudOneTimeSnapDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyCloudOneTimeSnapDescription());
+    }
+
+    @And("user validates Ebill description same as plaza")
+    public void userValidatesEbillDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyEbillDescription());
+    }
+
+    @And("user validates efs-bss description same as plaza")
+    public void userValidatesEfsBssDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyEfsBssDescription());
+    }
+
+    @And("user validates it fi description same as plaza")
+    public void userValidatesItFiDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyItFiDescription());
+    }
+
+    @And("user validates managed voice description same as plaza")
+    public void userValidatesManagedVoiceDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyManagedVoiceDescription());
+    }
+
+    @And("user validates megadisc add user description same as plaza")
+    public void userValidatesMegadiscAddUserDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyMegadiscAddUserDescription());
+    }
+
+    @And("user validates megadisc remove user description same as plaza")
+    public void userValidatesMegadiscRemoveUserDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyMegadiscRemoveUserDescription());
+    }
+
+    @And("user validates nnm no description same as plaza")
+    public void userValidatesNnmNoDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNnmNoDescription());
+    }
+
+    @And("user validates nnm yes description same as plaza")
+    public void userValidatesNnmYesDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyNnmYesDescription());
+    }
+
+    @And("user validates occ description same as plaza")
+    public void userValidatesOccDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyOccDescription());
+    }
+
+    @And("user validates pollux prod description same as plaza")
+    public void userValidatesPolluxProdDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyPolluxProdDescription());
+    }
+
+    @And("user validates span description same as plaza")
+    public void userValidatesSpanDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifySpanDescription());
+    }
+
+    @And("user validates splunk description same as plaza")
+    public void userValidatesSplunkDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifySplunkDescription());
+    }
+
+    @And("user validates topcat description same as plaza")
+    public void userValidatesTopcatDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyTopcatDescription());
+    }
+
+    @And("user validates tspan description same as plaza")
+    public void userValidatesTspanDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyTspanDescription());
+    }
+
+    @And("user validates veha network management description same as plaza")
+    public void userValidatesVehaNetworkManagementDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyVehaNetworkManagementDescription());
+    }
+
+    @And("user validates web tab description same as plaza")
+    public void userValidatesWebTabDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyWebTabDescription());
+    }
+
+    @And("user validates storage configure description same as plaza")
+    public void userValidatesStorageConfigureDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyStorageConfigureDescription());
+    }
+
+    @And("user validates storage export volume description same as plaza")
+    public void userValidatesStorageExportVolumeDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyStorageExportVolumeDescription());
+    }
+
+    @And("user validates storage volume snapshot description same as plaza")
+    public void userValidatesStorageVolumeSnapshotDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyStorageVolumeSnapshotDescription());
+    }
+
+    @And("user validates tcfp add user description same as plaza")
+    public void userValidatesTcfpAddUserDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyTcfpAddUserDescription());
+    }
+
+    @And("user validates tcfp general inquiry description same as plaza")
+    public void userValidatesTcfpGeneralInquiryDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyTcfpGeneralInquiryDescription());
+    }
+
+    @And("user validates tcfp remove user description same as plaza")
+    public void userValidatesTcfpRemoveUserDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyTcfpRemoveUserDescription());
+    }
 }
 

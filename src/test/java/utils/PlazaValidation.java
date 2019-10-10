@@ -96,6 +96,13 @@ public class PlazaValidation {
     public static String OperatingSystem;
     public static String MonthlyPatching;
     public static String ServiceWindow;
+    public static String ServerPlaced;
+    public static String ChooseOption;
+    public static String SelectGroup;
+    public static String RequestedPerson;
+    public static String Glana;
+    public static String NetworkVlan;
+    public static String SourceWwn;
 
 
 

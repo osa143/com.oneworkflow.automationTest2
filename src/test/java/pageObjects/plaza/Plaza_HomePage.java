@@ -302,58 +302,75 @@ public class Plaza_HomePage extends BasePage {
 
 
     public void enterMegadisc_add_user_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_MEGADISC_ADD_USER_DESCRIPTION), text);
     }
     public void selectTopcatAddCi(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(txt_TOPCAT_ADD_CI), By.id("s2id_autogen14_results"),  dropdownName);
     }
     public void enterSplunkDescription(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_SPLUNK_DESCRIPTION), text);
     }
     public void enterSplunkH2(String text){
+        PlazaValidation.H2Name = text;
         enterTextByElement(By.id(txt_SPLUNK_H2), text);
     }
     public void enterSplunkRequest(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_SPLUNK_REQUEST), text);
     }
     public void selectSpanAddCi(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_SPAN_CI), By.id("s2id_autogen15_results"),  dropdownName);
     }
     public void enterSpanDescription(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_SPAN_DESCRIPTION), text);
     }
 
     public void enterPolluxWbsCode(String text){
+        PlazaValidation.WbsCodeField = text;
         enterTextByElement(By.id(txt_POLLUX_WBS_CODE), text);
     }
     public void enterPolluxDescription(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_POLLUX_DESCRIPTION), text);
     }
     public void selectPolluxEnvironment(String dropdownName){
+        PlazaValidation.Environment = dropdownName;
         selectDropdownByTagNameDiv(By.id(dd_POLLUX_ENVIRONMENT), By.id("s2id_autogen14_results"),   dropdownName);
     }
     public void enterPolluxRequest(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_POLLUX_REQUEST), text);
     }
     public void enterNnmNoDescription(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_NNM_NO_DESCRIPTION), text);
     }
     public void enterNnmNoDnsIpAddress(String text){
+        PlazaValidation.DnsIpAddress = text;
         enterTextByElement(By.id(txt_NNM_NO_DNS_IP_ADDRESS), text);
     }
     public void enterNnm_no(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_NNM_NO_REQUEST), text);
     }
 
 
     public void enterTCFP_generalEnquiry_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_TCFP_GENERAL_ENQUIRY_REQUEST), text);
     }
     public void enterTCFP_generalEnquiry_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_TCFP_GENERAL_ENQUIRY_DESCRIPTION), text);
     }
 
     public void selectTCFP_generalEnquiry_addCI(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_TCFP_GENERAL_ENQUIRY_ADD_CI), By.id("s2id_autogen16_results"),  dropdownName);
 
     }
@@ -366,51 +383,65 @@ public class Plaza_HomePage extends BasePage {
         }
     }
     public void enterTCFP_addUser_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_TCFP_ADD_USER_REQUEST), text);
     }
     public void enterTCFP_addUser_accountName(String text){
+        PlazaValidation.AccountName = text;
         enterTextByElement(By.id(txt_TCFP_ADD_USER_ACCOUNT_NAME), text);
     }
     public void enterTCFP_addUser_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_TCFP_ADD_USER_DESCRIPION), text);
     }
     public void selectTCFP_addUser_chooseOption(String dropdownName){
+        PlazaValidation.ChooseOption = dropdownName;
         selectDropdown(By.id(dd_TCFP_ADD_USER_CHOOSE_OPTION), By.id("select2-results-12"),  dropdownName);
     }
 
     public void selectTCFP_addUser_selectGroup(String dropdownName){
+        PlazaValidation.SelectGroup = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_TCFP_ADD_USER_SELECT_GROUP), By.id("s2id_autogen15_results"),  dropdownName);
 
     }
     public void enterStorageVolume_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_STORAGE_VOLUME_REQUEST), text);
     }
     public void enterStorageVolume_source_WWN(String text){
+        PlazaValidation.SourceWwn = text;
         enterTextByElement(By.id(txt_STORAGE_VOLUME_SOURCE_WWN), text);
     }
     public void enterStorageVolume_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_STORAGE_VOLUME_DESCRIPTION), text);
     }
     public void enterStorageVolume_dateTime(String text){
+        PlazaValidation.DateTime = text;
         enterTextByElement(By.id(txt_STORAGE_VOLUME_DATE_TIME), text);
     }
     public void selectStorageVolume_chooseOption(String dropdownName){
+        PlazaValidation.ChooseOption = dropdownName;
         selectDropdown(By.id(txt_STORAGE_VOLUME_CHOOSE_OPTION), By.id("select2-results-11"),  dropdownName);
     }
     public void selectMegadisc_add_user_requested_person(String dropdownName){
+        PlazaValidation.RequestedPerson = dropdownName;
         selectDropdownByTagNameDiv(By.id(dd_MEGADISC_ADD_USER_REQUESTED_PERSON), By.id("select2-results-15"),   dropdownName);
     }
 
     public void selectMegadisc_add_user_select_group(String dropdownName){
+        PlazaValidation.SelectGroup = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_MEGADISC_ADD_USER_SELECT_GROUP), By.id("s2id_autogen14_results"),  dropdownName);
 
     }
 
     public void enterMegadisc_add_user_account_name(String text){
+        PlazaValidation.AccountName = text;
         enterTextByElement(By.id(txt_MEGADISC_ADD_USER_ACCOUNT_NAME), text);
     }
 
     public void enterMegadisc_add_user_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_MEGADISC_ADD_USER_REQUEST), text);
     }
 
@@ -419,76 +450,95 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void enterManagedvoice_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_MANAGED_VOICE_DESCRIPTION), text);
     }
 
     public void enterManagedvoice_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_MANAGED_VOICE_REQUEST), text);
     }
 
     public void enterItfi_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_IT_FI_DESCRIPTION), text);
     }
 
     public void enterItfi_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_IT_FI_REQUEST), text);
     }
 
     public void enterEbill_account(String text){
+        PlazaValidation.AccountName = text;
         enterTextByElement(By.id(txt_EBILL_ACCOUNT), text);
     }
 
     public void enterEbill_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_EBILL_DESCRIPTION), text);
     }
 
     public void enterEbill_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_EBILL_REQUEST), text);
     }
 
     public void selectCews_add_ci(String dropdownName){
+        PlazaValidation.System = dropdownName;
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(txt_CEWS_ADD_CI), By.id("s2id_autogen13_results"),  dropdownName);
 
     }
 
     public void enterCews_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_CEWS_DESCRIPTION), text);
     }
 
     public void enterCews_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_CEWS_REQUEST), text);
     }
 
     public void selectOperatingSystem_manual_os_patching_add_ci(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI), By.id("s2id_autogen15_results"),  dropdownName);
 
     }
 
     public void enterOperatingSystem_manual_os_patching_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_DESCRIPTION), text);
     }
 
     public void enterOperatingSystem_manual_os_patching_H2(String text){
+        PlazaValidation.H2Name = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_H2), text);
     }
 
     public void enterOperatingSystem_manual_os_patching_plan(String text){
+        PlazaValidation.MonthlyPatching = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_PLAN), text);
     }
 
     public void enterOperatingSystem_manual_os_patching_end_date(String text){
+        PlazaValidation.PlannedEndDate = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_END_DATE), text);
     }
 
     public void enterOperatingSystem_manual_os_patching_start_date(String text){
+        PlazaValidation.PlannedStartDate = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_START_DATE), text);
     }
 
     public void enterOperatingSystem_manual_os_patching_wbs_code(String text){
+        PlazaValidation.WbsCodeField = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_WBS_CODE), text);
     }
 
     public void enterOperatingSystem_manual_os_patching_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_REQUEST), text);
     }
 
@@ -576,34 +626,44 @@ public class Plaza_HomePage extends BasePage {
 
 
     public void enterStorageExport_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_STORAGE_EXPORT_REQUEST), text);
     }
     public void enterStorageExport_source_WWN(String text){
+        PlazaValidation.SourceWwn = text;
         enterTextByElement(By.id(txt_STORAGE_EXPORT_SOURCE_WWN), text);
     }
     public void enterStorageExport_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_STORAGE_EXPORT_DESCRIPTION), text);
     }
     public void enterStorageExport_dateTime(String text){
+        PlazaValidation.DateTime = text;
         enterTextByElement(By.id(txt_STORAGE_EXPORT_DATE_TIME), text);
     }
     public void selectStorageExport_SourceCI(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_STORAGE_EXPORT_SOURCE_CI), By.id("s2id_autogen13_results"),  dropdownName);
     }
 
     public void selectStorageExport_TargetCI(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_STORAGE_EXPORT_TARGET_CI), By.id("s2id_autogen14_results"),  dropdownName);
     }
     public void enterStorageConfigure_request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_STORAGE_CONFIGURE_REQUEST), text);
     }
     public void enterStorageConfigure_Network_VLAN(String text){
+        PlazaValidation.NetworkVlan = text;
         enterTextByElement(By.id(txt_STORAGE_CONFIGURE_NETWORK_VLAN), text);
     }
     public void enterStorageConfigure_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_STORAGE_CONFIGURE_DESCRIPTION), text);
     }
     public void selectStorageConfigure_trunkCI(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_STORAGE_CONFIGURE_TRUNK_CI), By.id("s2id_autogen13_results"),  dropdownName);
     }
 
@@ -844,6 +904,9 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void selectNetworkSecurity_firewall_new_change_service_request(String dropdownName){
+        PlazaValidation.Glana = dropdownName;
+        PlazaValidation.ChooseOption = dropdownName;
+        PlazaValidation.OperatingSystem = dropdownName;
         PlazaValidation.SelectRequest = dropdownName;
         PlazaValidation.ServiceRequestName = dropdownName;
         selectDropdown(By.id(dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_SERVICE_REQUEST), By.id("select2-results-11"),  dropdownName);
@@ -856,6 +919,8 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void selectNetworkSecurity_add_modify_remove_dns_scheduled_change(String dropdownName){
+        PlazaValidation.Environment = dropdownName;
+        PlazaValidation.ServerPlaced = dropdownName;
         PlazaValidation.OperatingSystem = dropdownName;
         PlazaValidation.ExistingIpNet = dropdownName;
         PlazaValidation.Schedule = dropdownName;
@@ -871,6 +936,7 @@ public class Plaza_HomePage extends BasePage {
 
 
     public void entersNetworkSecurity_add_modify_remove_dns_service_request(String dropdownName){
+        PlazaValidation.SelectRequest = dropdownName;
         PlazaValidation.ServiceRequestName = dropdownName;
         selectDropdown(By.id(txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_DNS_SERVICE_REQUEST_NAME), By.id("select2-results-11"),  dropdownName);
     }
@@ -1341,6 +1407,7 @@ public class Plaza_HomePage extends BasePage {
         clickElement(By.id(chkbx_NAME_NOT_FOUND));
     }
     public void enterBCPP_Description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_BCPP_DESCRIPTION), text);
     }
     public void selectsAddCi(String dropdownName){
@@ -1353,6 +1420,7 @@ public class Plaza_HomePage extends BasePage {
         selectDropdown(By.id(dd_BCPP_ENVIRONMENT), By.id("select2-results-12"),  dropdownName);
     }
     public void enterC2B_BCPP_Request(String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_BCPP_REQUEST_ID), text);
     }
     public void enterC2B_service_Description(String text){
@@ -1528,6 +1596,15 @@ public class Plaza_HomePage extends BasePage {
         enterTextByElement(By.id(txt_CABLING_NEW_DC_SITE), text);
     }
 
+    public void selectAT2Ci(String dropdownName){
+        selectDropdownByTagNameDiv(By.id("s2id_sp_formfield_sr108_v_at2"), By.id("s2id_autogen17_results"),  dropdownName);
+    }
+    public void selectAT3Ci(String dropdownName){
+        selectDropdownByTagNameDiv(By.id("s2id_sp_formfield_sr108_v_at3"), By.id("s2id_autogen18_results"),  dropdownName);
+    }
+    public void selectProdCi(String dropdownName){
+        selectDropdownByTagNameDiv(By.id("s2id_autogen15"), By.id("s2id_autogen15_results"),  dropdownName);
+    }
 
 
 

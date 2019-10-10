@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import utils.CommonUtils;
+import utils.PlazaValidation;
 
 import java.util.List;
 
@@ -282,6 +283,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
     public void enterDescription(String description) {
+        PlazaValidation.Description = description;
         findElement(By.id(txtDESCRIPTION_ID)).clear();
         driver.findElement(By.id(txtDESCRIPTION_ID)).sendKeys(description);
     }

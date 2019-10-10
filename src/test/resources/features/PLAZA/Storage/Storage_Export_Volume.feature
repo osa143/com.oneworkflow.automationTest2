@@ -36,7 +36,7 @@
       And user validates title field as "Service Request | Export volume Snapshot to Host"
       And user validates request type as "Service Request | PLAZA"
      #Not sure about description validation outside of a table
-      And user validates description contains DescValidation
+      And user validates storage export volume description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -47,7 +47,7 @@
       When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed
       And user validates CI "test" is listed
-      And user clicks on CI "cc100cgas001" and selects "Impact:Update
+      And user clicks on CI "cc100cgas001" and selects "Impact:Update"
       Then user switches to frame
       And user enters impacted from date as date in past
       And user enters impacted to date as date in past

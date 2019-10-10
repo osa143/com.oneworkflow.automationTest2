@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
+    <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="Updated features and steps for plaza tests">
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
@@ -16,33 +16,39 @@
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_WorkOrderPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/pageObjects/OWF_WorkOrderPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_WorkOrderPageSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_WorkOrderPageSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_HomePageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_HomePageSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/utils/PlazaValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/PlazaValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/CRM/CRM.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/CRM/CRM.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Surf_Proxy_Slow_Surfing.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Surf_Proxy_Slow_Surfing.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Surf_Proxy_Whitelisting.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Surf_Proxy_Whitelisting.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Remote_Access.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Remote_Access.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Switch_Port_Config.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Switch_Port_Config.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Add_Modify_Remove.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Add_Modify_Remove.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Decommision_VM.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Decommision_VM.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Expand_Backup_Archive_Disk.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Expand_Backup_Archive_Disk.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Extend_Disk_Red_Hat.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Extend_Disk_Red_Hat.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Extend_Disk_Windows.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Extend_Disk_Windows.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Hot_Add_CPU_Or_Ram.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Hot_Add_CPU_Or_Ram.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Modify_Onboarding.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Modify_Onboarding.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Network_Onboarding_Nordic.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Network_Onboarding_Nordic.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Onboard_To_Skypoint.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Onboard_To_Skypoint.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Restore_VM.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Restore_VM.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Skypoint_Failed_Request.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Skypoint_Failed_Request.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Access.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Access.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Account_Management.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Account_Management.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Change_From_Auto.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Change_From_Auto.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Change_From_Manual.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Change_From_Manual.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Change/E2E_Urgent_Major_Change_(Internal Initiator).feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Change/E2E_Urgent_Major_Change_(Internal Initiator).feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN_Telia_Wifi/Telia_Wifi.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN_Telia_Wifi/Telia_Wifi.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Manual_OS_Patching.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Manual_OS_Patching.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/BCPP.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/BCPP.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/CEWS.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/CEWS.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Cloud_One_Time_Snap.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Cloud_One_Time_Snap.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/EBILL.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/EBILL.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/EFS_BSS.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/EFS_BSS.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/IT_FI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/IT_FI.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Managed_Voice.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Managed_Voice.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/MegaDisc_Add_User.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/MegaDisc_Add_User.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/MegaDisc_Remove_User.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/MegaDisc_Remove_User.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/NNM_No.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/NNM_No.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/NNM_Y.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/NNM_Y.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/OCC.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/OCC.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Pollux_PROD.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Pollux_PROD.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/SPAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/SPAN.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Splunk.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Splunk.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/TSPAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/TSPAN.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Topcat.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Topcat.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Veha_Network_Management.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Veha_Network_Management.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/WEB_TAB.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/WEB_TAB.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Storage/Storage_Configure.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Storage/Storage_Configure.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Storage/Storage_Export_Volume.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Storage/Storage_Export_Volume.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Storage/Storage_Volume_Snapshot.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Storage/Storage_Volume_Snapshot.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/TCFP/TCFP_Add_User.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/TCFP/TCFP_Add_User.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/TCFP/TCFP_General_Inquiry.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/TCFP/TCFP_General_Inquiry.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/TCFP/TCFP_Remove_User.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/TCFP/TCFP_Remove_User.feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -528,14 +534,8 @@
       <workItem from="1570521784199" duration="18460000" />
       <workItem from="1570560578760" duration="5695000" />
       <workItem from="1570607798436" duration="4393000" />
-      <workItem from="1570616100467" duration="9534000" />
-    </task>
-    <task id="LOCAL-00084" summary="added steps for bulk CI loading trouble">
-      <created>1565956967338</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1565956967338</updated>
+      <workItem from="1570616100467" duration="16789000" />
+      <workItem from="1570694738359" duration="8313000" />
     </task>
     <task id="LOCAL-00085" summary="added steps for bulk CI loading trouble">
       <created>1565967719085</created>
@@ -873,7 +873,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570543390215</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="Updated features and steps for plaza tests">
+      <created>1570628848250</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1570628848251</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TodoView">
@@ -938,7 +945,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Standard change feature" />
     <MESSAGE value="Standard change feature complete" />
     <MESSAGE value="Modified attatchments and description" />
     <MESSAGE value="CRM Feature files" />
@@ -963,7 +969,8 @@
     <MESSAGE value="Updated incident features" />
     <MESSAGE value="Updated problem features features" />
     <MESSAGE value="Updated features and steps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated features and steps" />
+    <MESSAGE value="Updated features and steps for plaza tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated features and steps for plaza tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1058,92 +1065,5 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>com.oneworkflow.automation</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Gradle: com.aventstack:extentreports-cucumber4-adapter:1.0.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

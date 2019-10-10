@@ -981,4 +981,298 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
+    public boolean verifyOperatingSystemManualOSPatchingDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.OperatingSystem) && actualDescription.contains(PlazaValidation.ServerPlaced)
+                && actualDescription.contains(PlazaValidation.WbsCodeField) && actualDescription.contains(PlazaValidation.PlannedStartDate)
+                && actualDescription.contains(PlazaValidation.PlannedEndDate) && actualDescription.contains(PlazaValidation.MonthlyPatching)
+                && actualDescription.contains(PlazaValidation.H2Name) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyBccpDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.ServiceRequestName)
+                && actualDescription.contains(PlazaValidation.Environment) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyCewsDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
+                && actualDescription.contains(PlazaValidation.Phone) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.AdditionalComments) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.CI)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyCloudOneTimeSnapDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
+                && actualDescription.contains(PlazaValidation.Phone) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.DateTime) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyEbillDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.SelectRequest)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AccountName)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyEfsBssDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyItFiDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
+                && actualDescription.contains(PlazaValidation.Phone) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyManagedVoiceDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
+                && actualDescription.contains(PlazaValidation.Phone) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyMegadiscAddUserDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.ChooseOption)
+                && actualDescription.contains(PlazaValidation.AccountName) && actualDescription.contains(PlazaValidation.SelectGroup)
+                && actualDescription.contains(PlazaValidation.RequestedPerson) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyMegadiscRemoveUserDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ChooseOption) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.AccountName) && actualDescription.contains(PlazaValidation.SelectGroup)
+                && actualDescription.contains(PlazaValidation.RequestedPerson) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyNnmNoDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Glana)
+                && actualDescription.contains(PlazaValidation.DnsIpAddress) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyNnmYesDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Glana)
+                && actualDescription.contains(PlazaValidation.DnsIpAddress) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyOccDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyPolluxProdDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.SelectRequest)
+                && actualDescription.contains(PlazaValidation.Environment) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.WbsCodeField) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifySpanDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.SelectRequest)
+                && actualDescription.contains(PlazaValidation.Environment) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifySplunkDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.H2Name) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyTopcatDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyTspanDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.SelectRequest)
+                && actualDescription.contains(PlazaValidation.Environment) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyVehaNetworkManagementDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.System)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyWebTabDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyStorageConfigureDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.NetworkVlan)
+                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyStorageExportVolumeDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.SourceWwn) && actualDescription.contains(PlazaValidation.DateTime)
+                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyStorageVolumeSnapshotDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.ChooseOption)
+                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.SourceWwn)
+                && actualDescription.contains(PlazaValidation.DateTime) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyTcfpAddUserDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.ChooseOption) && actualDescription.contains(PlazaValidation.AccountName)
+                && actualDescription.contains(PlazaValidation.SelectGroup) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyTcfpGeneralInquiryDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyTcfpRemoveUserDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.ChooseOption) && actualDescription.contains(PlazaValidation.AccountName)
+                && actualDescription.contains(PlazaValidation.SelectGroup) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+
 }

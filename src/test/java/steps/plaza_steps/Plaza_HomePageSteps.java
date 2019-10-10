@@ -25,10 +25,6 @@ public class Plaza_HomePageSteps extends BasePage {
         homePage.clickElementByContainsTextAndTagName("*", text);
     }
 
-    @And("user clicks on IT Infrastructure dropdown")
-    public void userClicksOnITInfrastructureDropdown() {
-        clickElement(By.xpath("//*[@id='xcc61d55edb198b00b27fdb11ce961902']/div/div[2]/div[4]/a/span/i"));
-    }
 
     @Then("user should see Finance & Assurance form")
     public void userShouldSeeFinanceAssuranceForm() {
@@ -1760,6 +1756,24 @@ public class Plaza_HomePageSteps extends BasePage {
     @And("user selects AT1 CI as {string}")
     public void userSelectsATCIAs(String arg0) {
         homePage.selectsAT1Ci(arg0);
+    }
+
+    @And("user selects BDL AT2 CI as {string}")
+    public void userSelectsBDLAT2CIAs(String arg0) {
+        homePage.selectAT2Ci(arg0);
+    }
+    @And("user selects BDL AT3 CI as {string}")
+    public void userSelectsBDLAT3CIAs(String arg0) {
+        homePage.selectAT3Ci(arg0);
+    }
+    @And("user selects BDL prod CI as {string}")
+    public void userSelectsBDLATProdCIAs(String arg0) {
+        homePage.selectProdCi(arg0);
+    }
+
+    @And("user clicks on IT Infrastructure dropdown")
+    public void userClicksOnITInfrastructureDropdown() {
+        clickElement(By.xpath("//*[@id='xcc61d55edb198b00b27fdb11ce961902']/div/div[2]/div[5]"));
     }
 
 

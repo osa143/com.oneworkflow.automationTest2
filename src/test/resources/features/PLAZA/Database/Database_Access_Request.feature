@@ -71,7 +71,7 @@
       And user validates ticket status as "Cleared"
       When user changes status to "Closed" on work order page
       And user clicks on save button
-      Then ticket status should be closed
+      And user validates ticket status as "Closed"
       When user switches to window 0
       And user clicks on main page refresh
       Then user validates plaza request has completed
@@ -79,8 +79,8 @@
       Examples:
 
       |Request                                |Database Type|Description                      |Additional Comments  |Account Type|Desc Validation|
-      |Test1 Database AccessMSSQL/Request     |MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server  |               |
-#      |Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |               |
+      #|Test1 Database AccessMSSQL/Request     |MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server  |               |
+      |Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |               |
 
 
 

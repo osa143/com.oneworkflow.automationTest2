@@ -23,7 +23,7 @@
       Then user should see service request form
       And user opens new tab
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
+      And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2
@@ -56,14 +56,14 @@
       And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
       And user changes status to "Cleared"
-      And user selects completed code as "Success"
+      And user selects completion code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
       When user changes status to "Closed"
       And user clicks on save button
-      Then ticket status should be closed
+      And user validates ticket status as "Closed"
       When user switches to window 0
       And user clicks on main page refresh
       Then user validates plaza request has completed
@@ -71,5 +71,5 @@
       Examples:
 
       |Service Request Name       |Request             |Description             |Additional Comments|Desc Validation|
-      |General Request            |Test2 Topcat/Request|Test2 Topcat/Description|Test2 Topcat/AC    |               |
+      #|General Request            |Test2 Topcat/Request|Test2 Topcat/Description|Test2 Topcat/AC    |               |
       |Restore Catalogue Database |Test1 Topcat/Request|Test1 Topcat/Description|Test1 Topcat/AC    |               |

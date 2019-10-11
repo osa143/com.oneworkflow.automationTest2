@@ -17,7 +17,7 @@
       And user enters megadisc account name as "Test1234"
       Then user enters megadisc select group as "App_Megadisc_Admin"
       Then user selects requested person as "Anders Englund"
-      And user enters description as "Test1 MegaDisc/Description"
+      And user enters megadisc description as "Test1 MegaDisc/Description"
       And user enters additional comments as "Test1 Megadisc/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
@@ -25,7 +25,7 @@
       Then user should see service request form
       When user opens new tab
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
+      And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2
@@ -53,7 +53,7 @@
       And user validates ticket status as "Cleared"
       When user changes status to "Closed" on work order page
       And user clicks on save button
-      Then ticket status should be closed
+      And user validates ticket status as "Closed"
       When user switches to window 0
       And user clicks on main page refresh
       Then user validates plaza request has completed

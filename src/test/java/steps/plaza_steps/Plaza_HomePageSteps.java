@@ -445,7 +445,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user clicks on Database")
     public void userClicksOnDatabase() {
-        clickElement(By.xpath("//*[@id='xcc61d55edb198b00b27fdb11ce961902']/div/div[2]/div[5]/div[4]"));
+        clickElement(By.xpath("//*[@id=\"xcc61d55edb198b00b27fdb11ce961902\"]/div/div[2]/div[6]/div[4]"));
     }
 
     @And("user selects Database Type as {string}")
@@ -1777,5 +1777,8 @@ public class Plaza_HomePageSteps extends BasePage {
     }
 
 
-
+    @Then("user enters operating system access description as {string}")
+    public void userEntersOperatingSystemAccessDescriptionAs(String arg0) {
+        homePage.enterOperatingSystem_access_description(arg0);
+    }
 }

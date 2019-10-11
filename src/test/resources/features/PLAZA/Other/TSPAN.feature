@@ -24,7 +24,7 @@
       Then user should see service request form
       When user opens new tab
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
+      And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2
@@ -57,14 +57,14 @@
       And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
-      And user selects completed code as "Success"
+      And user selects completion code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
       When user changes status to "Closed" on work order page
-      And user clicks on save button and closes warning messages
-      Then ticket status should be closed
+      And user clicks on save button
+      And user validates ticket status as "Closed"
       When user switches to window 0
       And user clicks on main page refresh
       Then user validates plaza request has completed
@@ -72,7 +72,7 @@
       Examples:
 
       |Request            |Select Request  |Environment|Description            |Additional Comments|DescValidation|
-      |Test1 TSPAN/Request|Account/Password|Prod       |Test1 TSPAN/Description|Test1 TSPAN/AC     |              |
+      #|Test1 TSPAN/Request|Account/Password|Prod       |Test1 TSPAN/Description|Test1 TSPAN/AC     |              |
       #|Test2 TSPAN/Request|Account/Password|Test       |Test2 TSPAN/Description|Test2 TSPAN/AC     |              |
       #|Test3 TSPAN/Request|Other          |Prod       |Test3 TSPAN/Description|Test3 TSPAN/AC     |              |
-      #|Test4 TSPAN/Request|Other          |Test       |Test4 TSPAN/Description|Test4 TSPAN/AC     |              |
+      |Test4 TSPAN/Request|Other          |Test       |Test4 TSPAN/Description|Test4 TSPAN/AC     |              |

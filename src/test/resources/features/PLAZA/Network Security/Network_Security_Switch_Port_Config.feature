@@ -1,7 +1,7 @@
 @Network_Security_Switch_Port_Config @PLAZA
   Feature: Network Security Switch Port Config plaza form test
     Scenario: user validates information sent to OW from Plaza
-      #no assigned profile
+
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -26,7 +26,7 @@
       Then user should see service request form
       When user opens new tab
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
+      And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2
@@ -53,20 +53,18 @@
       And user enters impacted to date as date in past
       Then user clicks confirm checkbox
       And user clicks save button
-      Then user switches to window 1
-      When user selects CI present
       And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
       And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
-      And user selects completed code as "Success"
+      And user selects completion code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
       When user changes status to "Closed" on work order page
       And user clicks on save button
-      Then ticket status should be closed
+      And user validates ticket status as "Closed"
       When user switches to window 0
       And user clicks on main page refresh
       Then user validates plaza request has completed

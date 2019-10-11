@@ -706,7 +706,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on DNS DHCP pebble")
     public void userClicksOnDNSDHCPPebble() {
-        clickElement(By.xpath("//*[@id=\"x2723de4adb72cf006734f1eabf9619aa\"]/div/div/div[2]/div[6]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[4]/div/a"));
     }
 
     @And("user enters Network Security Add Modify Remove DNS description as {string}")
@@ -716,7 +716,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Firewall Routing Request pebble")
     public void userClicksOnFirewallRoutingRequestPebble() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa]/'div/div/div[2]/div[8]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[8]/div/a/div/h2"));
     }
 
     @Then("user selects New Change Service Request Name as {string}")

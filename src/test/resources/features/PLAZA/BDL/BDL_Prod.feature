@@ -1,7 +1,6 @@
-@Data_Center_Cabling_Remove @PLAZA
-  Feature: Data Center Cabling Remove plaza form test
+@BDL_Prod @PLAZA
+  Feature: Plaza BDL form test
     Scenario: user validates information sent to OW from Plaza
-
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -9,16 +8,29 @@
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Data Center"
-      When user clicks on "Cabling - Remove" pebble
-      Then user should see "Cabling - Remove" form
-      And user enters Cabling - New request as "Test2 Cabling/Request"
-      And user enters DC-site or address as "Test address"
-      And user enters Room as "Test room"
-      And user enters delivery date as current date
-      Then user enters Data Center description as "Test2 Data Center/Description"
-      And user enters WBS Code field as "P100-000-000"
-      And user enters additional comments as "Data Center - Test2/AC"
+      And user clicks on "Application"
+      When user clicks on "BDL" pebble
+      Then user should see "BDL" form
+      When user selects role dropdown as "Application Operation Engineer"
+      And user enters BDL request as "BDL-PROD- Test/Request"
+      And user selects service request name as "Configuration"
+      And user selects BCPP environment as "Prod"
+      And user selects BDL prod CI as "API"
+      And user selects BDL prod CI as "DB - DFS"
+      And user selects BDL prod CI as "DB - Emessaging"
+      And user selects BDL prod CI as "DB - Netbill"
+      And user selects BDL prod CI as "DB-server"
+      And user selects BDL prod CI as "E2V"
+      And user selects BDL prod CI as "E2V-Front"
+      And user selects BDL prod CI as "eMessaging"
+      And user selects BDL prod CI as "Netbill DB-loader"
+      And user selects BDL prod CI as "Prod1"
+      And user selects BDL prod CI as "Prod2"
+      And user selects BDL prod CI as "Prod3"
+      And user selects BDL prod CI as "Proofing"
+      And user enters "P100-000-000" in the WBS Code field
+      And user enters BDL description as "BDL-PROD - Test/Desc"
+      And user enters additional comments as "BDL-PROD - Test/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -33,27 +45,31 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | Cabling - Remove"
+      And user validates title field as "Service Request | BDL"
       And user validates request type as "Service Request | PLAZA"
-     #Not sure about description validation outside of a table
-      And user validates Data center cabling remove description same as plaza
+      And user validates BDL description same as plaza description
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as "DC Sweden"
+      And user should see assigned profile as "Billing"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
+      And user enters AM status details as "Test"
       And user selects completion code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
       When user changes status to "Closed" on work order page
-      And user clicks on save button and closes warning messages
-      Then ticket status should be closed
+      And user enters AM status details as " Test2"
+      And user clicks on save button
+      And user validates ticket status as "Closed"
+      And user logsOut and closes the browser
+      When user switches to window 1
+      And user closes current tab
       When user switches to window 0
       And user clicks on main page refresh
       Then user validates plaza request has completed

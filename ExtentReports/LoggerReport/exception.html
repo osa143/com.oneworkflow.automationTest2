@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="8" parent-id="1">
+<tr class="s-fail" test-id="17" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And user clicks on IT Infrastructure dropdown <br/><span class="text-muted text-sm">user validates information sent to OW from Plaza</span></td>
-	<td>0h 0m 30s+85msc</td>
+	<td class="_600">And user enters Source IP Address as "Test IP address" <br/><span class="text-muted text-sm">user validates information sent to OW from Plaza</span></td>
+	<td>0h 0m 30s+142msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,22 +136,23 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='xcc61d55edb198b00b27fdb11ce961902']/div/div[2]/div[4]/a/span/i (tried for 30 second(s) with 500 milliseconds interval)
+		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: sp_formfield_sr34_v_source_ip_address (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at pageObjects.BasePage.findElement(BasePage.java:56)
-	at pageObjects.BasePage.clickElement(BasePage.java:94)
-	at steps.plaza_steps.Plaza_HomePageSteps.userClicksOnITInfrastructureDropdown(Plaza_HomePageSteps.java:30)
-	at ✽.user clicks on IT Infrastructure dropdown(features/PLAZA/TCFP/TCFP_Remove_User.feature:10)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='xcc61d55edb198b00b27fdb11ce961902']/div/div[2]/div[4]/a/span/i"}
+	at pageObjects.BasePage.enterTextByElement(BasePage.java:139)
+	at pageObjects.plaza.Plaza_HomePage.enterNetworkSecurity_firewall_troubleshoot_source_id(Plaza_HomePage.java:878)
+	at steps.plaza_steps.Plaza_HomePageSteps.userEntersSourceIPAddressAs(Plaza_HomePageSteps.java:755)
+	at ✽.user enters Source IP Address as "Test IP address"(features/PLAZA/Network Security/Network_Security_Proxy_Surf_Proxy_Whitelisting.feature:18)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#sp_formfield_sr34_v_source_ip_address"}
   (Session info: chrome=77.0.3865.90)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-6FQK1D6', ip: '10.85.240.154', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.240.53', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: C:\Users\jlm97\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54974}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 93073ec479a33471dacf8448088d2b6d
-*** Element info: {Using=xpath, value=//*[@id='xcc61d55edb198b00b27fdb11ce961902']/div/div[2]/div[4]/a/span/i}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64588}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3ce5602096f3f43e258d4c00424fa6e6
+*** Element info: {Using=id, value=sp_formfield_sr34_v_source_ip_address}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -163,15 +164,16 @@ Session ID: 93073ec479a33471dacf8448088d2b6d
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	at pageObjects.BasePage.findElement(BasePage.java:56)
-	at pageObjects.BasePage.clickElement(BasePage.java:94)
-	at steps.plaza_steps.Plaza_HomePageSteps.userClicksOnITInfrastructureDropdown(Plaza_HomePageSteps.java:30)
+	at pageObjects.BasePage.enterTextByElement(BasePage.java:139)
+	at pageObjects.plaza.Plaza_HomePage.enterNetworkSecurity_firewall_troubleshoot_source_id(Plaza_HomePage.java:878)
+	at steps.plaza_steps.Plaza_HomePageSteps.userEntersSourceIPAddressAs(Plaza_HomePageSteps.java:755)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -239,7 +241,7 @@ Session ID: 93073ec479a33471dacf8448088d2b6d
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Oct 10, 2019 11:20:49 AM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Oct 11, 2019 10:23:06 AM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

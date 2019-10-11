@@ -26,7 +26,7 @@
     Then user should see service request form
     When user opens new tab
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
+    And user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects search menu as "Open Search Form:Work Order"
     And user switches to window 2
@@ -36,7 +36,6 @@
     And user validates source field as "PLAZA"
     And user validates title field as "Service Request | Cabling - New"
     And user validates request type as "Service Request | PLAZA"
-     #Not sure about description validation outside of a table
     And user validates Data center cabling new description same as plaza
     Then user clicks on owner under sections
     And user clicks on assignment under sections

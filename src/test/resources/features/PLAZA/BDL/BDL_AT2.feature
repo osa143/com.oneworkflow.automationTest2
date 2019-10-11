@@ -1,6 +1,6 @@
-@BDL @PLAZA
+@BDL_AT2 @PLAZA
   Feature: Plaza BDL form test
-    Scenario Outline: user validates information sent to OW from Plaza
+    Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -12,21 +12,21 @@
       When user clicks on "BDL" pebble
       Then user should see "BDL" form
       When user selects role dropdown as "Application Operation Engineer"
-      And user enters BDL request as "<Request>"
+      And user enters BDL request as "BDL-AT2- Test/Request"
       And user selects service request name as "Configuration"
-      And user selects BCPP environment as "<Environment>"
-      And user selects AT1 CI as "API"
-      And user selects AT1 CI as "AT1"
-      And user selects AT1 CI as "AT DB"
-      And user selects AT1 CI as "AT1_Store"
-      And user selects AT1 CI as "Databases"
-      And user selects AT1 CI as "E2V"
-      And user selects AT1 CI as "eMessaging"
-      And user selects AT1 CI as "Proofing"
-      And user selects AT1 CI as "Netbill DB-loader"
+      And user selects BCPP environment as "AT2"
+      And user selects BDL AT2 CI as "API"
+      And user selects BDL AT2 CI as "AT2"
+      And user selects BDL AT2 CI as "AT DB"
+      And user selects BDL AT2 CI as "AT2_Store"
+      And user selects BDL AT2 CI as "Databases"
+      And user selects BDL AT2 CI as "E2V"
+      And user selects BDL AT2 CI as "eMessaging"
+      And user selects BDL AT2 CI as "Proofing"
+      And user selects BDL AT2 CI as "Netbill DB-loader"
       And user enters "P100-000-000" in the WBS Code field
-      And user enters BDL description as "<Description>"
-      And user enters additional comments as "<Additional Comments>"
+      And user enters BDL description as "BDL-AT2 - Test/Desc"
+      And user enters additional comments as "BDL-AT2 - Test/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -63,31 +63,10 @@
       And user enters AM status details as " Test2"
       And user clicks on save button
       And user validates ticket status as "Closed"
+      And user logsOut
+      When user switches to window 1
+      And user closes current tab
       When user switches to window 0
       And user clicks on main page refresh
       Then user validates plaza request has completed
 
-      Examples:
-
-      |Request               |Environment|Description         |Additional Comments|
-      |BDL-AT1 - Test/Request|AT1        |BDL-AT1 - Test/Desc |BDL-AT1 - Test/AC  |
-#      |BDL-AT2- Test/Request |AT2        |BDL-AT2 - Test/Desc |BDL-AT2 - Test/AC  |
-#      |BDL-AT3- Test/Request |AT3        |BDL-AT3 - Test/Desc |BDL-AT3 - Test/AC  |
-#      |BDL-PROD- Test/Request|PROD       |BDL-PROD - Test/Desc|BDL-PROD - Test/AC |
-
-
-
-
-
-#
-#      And user selects all CI's from AT1 field
-#        |CI Name          |
-#        |API              |
-#        |AT1              |
-#        |AT DB            |
-#        |AT1_Store        |
-#        |Databases        |
-#        |E2V              |
-#        |eMessaging       |
-#        |Proofing         |
-#        |Netbill DB-loader|

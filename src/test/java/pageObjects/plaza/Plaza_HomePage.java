@@ -161,7 +161,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_DESCRIPTION= "sp_formfield_sr114_v_description";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_REQUEST= "sp_formfield_sr34_v_request";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_TICKET_NUMBER= "sp_formfield_sr34_v_fire_ticket_number";
-    private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_SOURCE_IP_ADDRESS= "sp_formfield_sr34_v_source_ip_address";
+    private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_SOURCE_IP_ADDRESS= "sp_formfield_sr35_v_ip_add";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_TARGET_IP_ADDRESS= "sp_formfield_sr34_v_target_ip_address";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_DATE_AND_TIME= "sp_formfield_sr34_v_tests_performed";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_DESCRIPTION= "sp_formfield_sr34_v_description";
@@ -668,10 +668,10 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public String getPlazaMessage(){
-        return getAttributeValueByElement(By.xpath("//*[@id='x917f1d33d7230200a9addd173e24d441']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p"));
+        return getTextByElement(By.xpath("//*[@id='x917f1d33d7230200a9addd173e24d441']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p"));
     }
     public String getPlazaRequestStatus(){
-        return getAttributeValueByElement(By.xpath("//*[@id='xcc316d33d7230200a9addd173e24d4f5']/div/div[2]/div/div/div[2]/span/div"));
+        return getTextByElement(By.xpath("//*[@id='xcc316d33d7230200a9addd173e24d4f5']/div/div[2]/div/div/div[2]/span/div"));
 
     }
     public void selectNetworkSecurity_proxy_surf_proxy_slow_surfing_sites(String dropdownName){
@@ -1325,6 +1325,8 @@ public class Plaza_HomePage extends BasePage {
     public void selectsAT1Ci(String dropdownName){
         selectDropdownByTagNameDiv(By.id("s2id_sp_formfield_sr108_v_at1"), By.id("s2id_autogen16_results"),  dropdownName);
     }
+
+
     public void enterBDL_request(String text){
         PlazaValidation.Request=text;
         enterTextByElement(By.id(txt_BDL_REQUEST), text);

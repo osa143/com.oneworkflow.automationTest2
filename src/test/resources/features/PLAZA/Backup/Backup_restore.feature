@@ -58,7 +58,6 @@
       And user enters impacted to date as date in past
       Then user clicks confirm checkbox
       And user clicks save button
-      Then user switches to window 1
       When user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
       And user should see confirmation message and clicks on yes button
       When user clicks on Ack button
@@ -70,7 +69,7 @@
       And user validates ticket status as "Cleared"
       When user changes status to "Closed" on work order page
       And user clicks on save button
-      Then ticket status should be closed
+      And user validates ticket status as "Closed"
       When user switches to window 0
       And user clicks on main page refresh
       Then user validates plaza request has completed

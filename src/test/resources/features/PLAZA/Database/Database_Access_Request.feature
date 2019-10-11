@@ -52,6 +52,8 @@
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed
+      And user validates CI "TEST" is listed
+      And user selects all CI's that appear
       And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
       Then user switches to frame
       And user enters impacted from date as date in past
@@ -59,7 +61,7 @@
       Then user clicks confirm checkbox
       And user clicks save button
       Then user switches to window 1
-      When user selects CI present
+      When user selects all CI's that appear
       And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
       And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button

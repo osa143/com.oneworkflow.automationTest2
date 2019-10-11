@@ -50,7 +50,6 @@
       And user enters impacted to date as date in past
       Then user clicks confirm checkbox
       And user clicks save button
-      Then user switches to window 1
       When user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
       Then user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button

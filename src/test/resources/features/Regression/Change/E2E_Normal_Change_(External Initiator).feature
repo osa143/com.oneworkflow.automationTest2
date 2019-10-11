@@ -47,8 +47,8 @@ Feature: External Normal Change E2E
     And user waits
     Then user validates availability of tabs "Timeline:Diagnosis:Risk:Schedule:Interested Parties:Approval:Notifications:Linked Items:Work Orders:Service Level:Related Project:Service Info:Telenor" on change record page
     When user clicks on owner under sections
-    And user validates owner profile as "ChangeInitiator/Builder1"
-    And user validates owner as "ChangeInitiator/Builder1"
+    #And user validates owner profile as "ChangeInitiator/Builder1"
+    #And user validates owner as "ChangeInitiator/Builder1"
     Then user clicks on Send button
     Then error message should display as "You must provide an answer to all the risk question outlined in the Risk tab before Send (ARERR 10000)" on change record page
     When user clicks on Risk tab
@@ -56,7 +56,7 @@ Feature: External Normal Change E2E
     When user answers all risk questions as below
     And user selects answer as "Impact to other systems/technologies are unclear"
     And user selects answer as "No"
-    And user selects answer as "Tested succesfully, this is a pilot"
+    And user selects answer as "Tested successfully, this is a pilot"
     And user selects answer as "Yes (outcome of the change can be instantly verified)"
     And user selects answer as "Yes"
     And user selects answer as "Simple"
@@ -88,7 +88,7 @@ Feature: External Normal Change E2E
     And user clicks on timeline tab
     And user validates Timeline Text entry isn't readonly
     #And user validates no changes other changes can be made to the change ticket
-    And user clicks on owner under sections
+    #And user clicks on owner under sections
     And user validates owner profile as "Change Manager"
     And user validates owner as "ChangeManager"
     Then change should also be reflected in the timeline as "Assignee Profile has changed from  to DC IMS Core. Sweden Country has changed from  to Sweden. Request Status has changed from New to Assigned."

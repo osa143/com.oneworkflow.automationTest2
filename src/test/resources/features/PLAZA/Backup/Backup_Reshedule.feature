@@ -31,7 +31,7 @@
       Then user should see service request form
       When user opens new tab
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_4" and password as "Test@1234"
+      And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2
@@ -55,7 +55,7 @@
       When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed
       And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
-      Then user switches to frame 3
+      Then user switches to frame
       And user enters impact from time as past on impact details bulk update window
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox

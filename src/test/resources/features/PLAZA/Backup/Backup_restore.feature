@@ -29,7 +29,7 @@
       Then user should see service request form
       When user opens new tab
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
+      When user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2
@@ -46,7 +46,7 @@
       And user clicks on attachments under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user validates assignee is "Backup"
+      And user should see assigned profile as "Backup"
       And user validates 2 attachment visibility under external
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party

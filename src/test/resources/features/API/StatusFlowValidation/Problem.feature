@@ -26,7 +26,7 @@ Feature: user validates status changes
     And user validates ticket status as "Under Investigation"
     And user validates other status options available as "Pending:Under Investigation:Investigation Complete:(Clear)"
     And user validates "Closed" is not a valid status at this stage
-    Then user changes status to investigation complete
+    Then user changes status to "Investigation Complete"
     And user selects root cause code as Technical:HW error under route cause
     And user enters route cause details as "Bad Management"
     And user enters RC found date as current date

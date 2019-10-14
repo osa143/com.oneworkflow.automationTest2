@@ -39,7 +39,7 @@ Feature: user validates status changes
     And user clicks on ticket refresh button
     And user validates ticket status as "Assigned"
     Then change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Pending to Assigned."
-    Then user validates other status options available as "New:Pending:Withdrawn:(Clear)"
+    Then user validates other status options available as "Assigned:Pending:Withdrawn:(Clear)"
     When user clicks on Ack button
     Then user validates ticket status as "Work In Progress"
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Work In Progress."

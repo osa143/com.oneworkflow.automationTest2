@@ -259,10 +259,10 @@
       And user clicks on add button on timeline
       When user changes status to "Completed"
       And user clicks on save button
+      And error message should display as "Required field (without a default) not specified : Actual Impact (ARERR 9424)"
+      And error message should display as "Required field (without a default) not specified : Completed Code (ARERR 9424)"
       Then user clicks on "Schedule" tab
       Then user validates actual end time is updated
-      And error message should display as "	Required field (without a default) not specified : Actual Impact (ARERR 9424)"
-      And error message should display as "Required field (without a default) not specified : Completed Code (ARERR 9424)"
       Then user selects actual impact as "No Impact"
       And user selects completed code as "Successful"
       And user clicks on save button

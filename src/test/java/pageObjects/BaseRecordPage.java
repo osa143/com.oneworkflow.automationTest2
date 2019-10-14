@@ -478,7 +478,7 @@ public class BaseRecordPage extends BasePage {
         driver.switchTo().parentFrame();
         driver.switchTo().frame(2);
         driver.switchTo().frame(1);
-        driver.findElement(By.id(btnCHOOSE_FILE)).click();
+        findElement(By.id("PopupAttFileTable")).click();
     }
     public void clickOk_AttachmentOnFrame(){
         clickElement(By.xpath(btnOK_ON_FRAME_XPATH));

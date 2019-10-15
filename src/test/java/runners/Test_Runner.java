@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@All_File_Types_Bulk_Loading_CTI_Details_trouble"}
+        tags = {"@Messaging_CallGuide_Mail"}
 )
 
 public class Test_Runner extends BaseTest {

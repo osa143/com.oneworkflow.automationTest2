@@ -1,4 +1,4 @@
-@PLAZA_Reassign_Incident @PLAZA_Incident_Flow
+@PLAZA_PDB_Reassign_Incident @PLAZA_Incident_Flow
   #Ticket ID to come from Plaza
 Feature: Plaza creation of incident ticket - OW Reassigns to different assignment group/profile
   Scenario: user validates plaza incident ticket - OW Reassigns to different assignment group/profile

@@ -1,4 +1,4 @@
-@PLAZA_Pending_Incident @PLAZA_Incident_Flow
+@PLAZA_PDB_Pending_Incident @PLAZA_Incident_Flow
   #Ticket ID to come from Plaza
 Feature: Plaza creation of incident ticket - pending status
   Scenario: user validates plaza incident ticket - OW changes status to Pending

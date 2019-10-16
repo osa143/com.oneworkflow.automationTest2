@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Plaza_OW_Tieto/CO-TP.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Plaza_OW_Tieto/CO-TP_Alternative_process_flow.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
@@ -11,16 +9,31 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/exception.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/exception.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/test/configs/runtime_test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/configs/runtime_test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/CO-TP.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BCacheDeployment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BCacheDeployment.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/B2B/B2B_Test_Cases.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/B2B/B2B_Test_Cases.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/CTI Details/AllFileTypes_CTI_Details_Change.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/CTI Details/AllFileTypes_CTI_Details_Change.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/50CI's/AllFileTypes_Change.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/50CI's/AllFileTypes_Change.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectCINames/AllFileTypes_Change.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectCINames/AllFileTypes_Change.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Location/AllFileTypes_Change.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Location/AllFileTypes_Change.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Name/AllFileTypes_Change.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Name/AllFileTypes_Change.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/IgnoreDuplicateCI's/AllFileTypes_Change.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/IgnoreDuplicateCI's/AllFileTypes_Change.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/PrimaryCICheck/AllFileTypes_Change.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/PrimaryCICheck/AllFileTypes_Change.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/500CI's/AllFileTypes_Trouble.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/500CI's/AllFileTypes_Trouble.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/50CI's/AllFileTypes_Trouble.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/50CI's/AllFileTypes_Trouble.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/DuplicateCI's/AllFileTypes_Duplicate_CI's_Trouble.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/DuplicateCI's/AllFileTypes_Duplicate_CI's_Trouble.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectCINames/AllFileTypes_Trouble.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectCINames/AllFileTypes_Trouble.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Location/AllFileTypes_Trouble.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Location/AllFileTypes_Trouble.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Name/AllFileTypes_Trouble.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Name/AllFileTypes_Trouble.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/IgnoreDuplicateCI's/AllFileTypes_Trouble.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/IgnoreDuplicateCI's/AllFileTypes_Trouble.feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -93,38 +106,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/runners/Test_Runner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
-              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+              <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Plaza_OW_Tieto/CO-TP.feature">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Switch_Port_Config.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Plaza_OW_Tieto/CO-TP_Alternative_process_flow.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/FInance&amp;Assurance/Finance&amp;Assurance.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="27" selection-end-column="91" />
+            <state>
+              <caret selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -152,18 +147,38 @@
         <option value="$PROJECT_DIR$/src/test/resources/features/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/PrimaryCICheck/AllFileTypes_Trouble.feature" />
         <option value="$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/05.01-05.03_&amp;_05.05/05.01_Manually_close_an_incident.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" />
         <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/CO-TP.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Plaza_OW_Tieto/CO-TP_Alternative_process_flow.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Plaza_OW_Tieto/CO-TP.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/CTI Details/AllFileTypes_CTI_Details_Change.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/50CI's/AllFileTypes_Change.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectCINames/AllFileTypes_Change.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Location/AllFileTypes_Change.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/IncorrectDataLayout/Name/AllFileTypes_Change.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/IgnoreDuplicateCI's/AllFileTypes_Change.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/PrimaryCICheck/AllFileTypes_Change.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/50CI's/AllFileTypes_Trouble.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/500CI's/AllFileTypes_Trouble.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/DuplicateCI's/AllFileTypes_Duplicate_CI's_Trouble.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectCINames/AllFileTypes_Trouble.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Location/AllFileTypes_Trouble.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/Format/IncorrectDataLayout/Name/AllFileTypes_Trouble.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/IgnoreDuplicateCI's/AllFileTypes_Trouble.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/B2B/B2B_Test_Cases.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BCacheDeployment.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BCacheGeneral.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup/Backup_Reshedule.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-14" />
-    <option name="y" value="-14" />
-    <option name="width" value="2425" />
-    <option name="height" value="1325" />
+    <option name="x" value="-18" />
+    <option name="y" value="-18" />
+    <option name="width" value="3032" />
+    <option name="height" value="1657" />
   </component>
   <component name="ProjectId" id="1RxkNy8QV8sPCWly2aG204Glj9y" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -175,84 +190,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="SPRINTS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="SPRINTS" type="462c0819:PsiDirectoryNode" />
-              <item name="Sprint 4.4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="SPRINTS" type="462c0819:PsiDirectoryNode" />
-              <item name="Plaza-OW-Tieto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="test-output" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
@@ -370,6 +307,67 @@
               <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="IT_VAS_SPRINT_4.3" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="BR-2866_SAO-427_Bulk_CI_Plugin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="PLAZA" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="PLAZA" type="462c0819:PsiDirectoryNode" />
+              <item name="Network Security" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="test-output" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -743,14 +741,8 @@
       <workItem from="1570780656760" duration="5992000" />
       <workItem from="1571039678465" duration="4309000" />
       <workItem from="1571057978765" duration="4812000" />
-      <workItem from="1571126130503" duration="6168000" />
-    </task>
-    <task id="LOCAL-00087" summary="added steps for bulk CI loading change and trouble">
-      <created>1566222543061</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1566222543062</updated>
+      <workItem from="1571126130503" duration="19512000" />
+      <workItem from="1571212264534" duration="10370000" />
     </task>
     <task id="LOCAL-00088" summary="added steps for bulk CI loading change and trouble">
       <created>1566291436982</created>
@@ -1088,43 +1080,50 @@
       <option name="project" value="LOCAL" />
       <updated>1571046867766</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="Added features for Plaza-OW-Tieto">
+      <created>1571134496186</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1571134496186</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_Runner - 2019.10.14 at 14h 09m 25s.xml">
+    <history-entry file="Test_Runner - 2019.10.16 at 10h 45m 04s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.10.14 at 14h 10m 45s.xml">
+    <history-entry file="Test_Runner - 2019.10.16 at 10h 53m 23s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.10.14 at 17h 02m 31s.xml">
+    <history-entry file="Test_Runner - 2019.10.16 at 11h 00m 53s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.10.14 at 17h 04m 47s.xml">
+    <history-entry file="Test_Runner - 2019.10.16 at 11h 06m 01s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.10.14 at 17h 05m 24s.xml">
+    <history-entry file="Test_Runner - 2019.10.16 at 11h 28m 23s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.10.14 at 17h 07m 13s.xml">
+    <history-entry file="Test_Runner - 2019.10.16 at 12h 04m 52s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.10.14 at 17h 11m 20s.xml">
+    <history-entry file="Test_Runner - 2019.10.16 at 12h 20m 15s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.10.14 at 17h 16m 29s.xml">
+    <history-entry file="Test_Runner - 2019.10.16 at 12h 37m 13s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.10.14 at 17h 18m 59s.xml">
+    <history-entry file="Test_Runner - 2019.10.16 at 12h 55m 23s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Test_Runner - 2019.10.14 at 17h 37m 53s.xml">
+    <history-entry file="Test_Runner - 2019.10.16 at 12h 57m 51s.xml">
       <configuration name="Test_Runner" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22135000" />
+    <option name="totallyTimeSpent" value="45849000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1139,7 +1138,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3491471" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24040511" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -1148,7 +1147,7 @@
       <window_info id="Designer" order="6" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.15700142" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.261669" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.32502708" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38755304" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5010661" side_tool="true" weight="0.248104" />
       <window_info anchor="bottom" id="Database Changes" order="5" />
@@ -1231,7 +1230,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Standard change feature complete" />
     <MESSAGE value="Modified attatchments and description" />
     <MESSAGE value="CRM Feature files" />
     <MESSAGE value="C2B update Feature files" />
@@ -1256,7 +1254,8 @@
     <MESSAGE value="Updated problem features features" />
     <MESSAGE value="Updated features and steps" />
     <MESSAGE value="Updated features and steps for plaza tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated features and steps for plaza tests" />
+    <MESSAGE value="Added features for Plaza-OW-Tieto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added features for Plaza-OW-Tieto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1361,231 +1360,322 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Network_Onboarding_Nordic.feature">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup/Backup_One_Time.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+        <state relative-caret-position="-400">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Sprint_4.3 BR's_&amp;_Defect_Fixes/Tieto_OW_Integration/BR-2965_Tieto_Assignment.feature" />
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Sprint_4.3 BR's_&amp;_Defect_Fixes/Tieto_OW_Integration/BR-2965_Tieto-OneWorkflow_Resolve.feature" />
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/PrimaryCICheck/Manual_Trouble.feature" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_CiSearchPageSteps.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/BDL/BDL_AT1.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="266" column="30" lean-forward="true" selection-start-line="266" selection-start-column="30" selection-end-line="266" selection-end-column="30" />
-          <folding>
-            <element signature="e#8479#8480#0" expanded="true" />
-            <element signature="e#8530#8531#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-600">
+          <caret selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_CiSearchPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="223" column="28" lean-forward="true" selection-start-line="223" selection-start-column="28" selection-end-line="223" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="490" column="26" selection-start-line="490" selection-start-column="26" selection-end-line="490" selection-end-column="26" />
-          <folding>
-            <element signature="e#17715#17716#0" expanded="true" />
-            <element signature="e#17776#17777#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/PrimaryCICheck/AllFileTypes_Trouble.feature" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/3.141.59/8e9423038552821844ba5f7713cc4c1e6d9835b7/selenium-api-3.141.59-sources.jar!/org/openqa/selenium/By.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="e#2088#2089#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runner/TestCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runner/PickleStepTestStep.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runner/TestStep.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runner/PickleStepDefinitionMatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/4.2.0/2dd88e43460d3d17ca4fd404dd37acb4c3384872/cucumber-core-4.2.0-sources.jar!/cucumber/runtime/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-remote-driver/3.141.59/8950c1557ead2cdba4fdb9ba6f107dce3b5f1520/selenium-remote-driver-3.141.59-sources.jar!/org/openqa/selenium/remote/RemoteWebDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="602" selection-start-line="602" selection-end-line="602" />
-          <folding>
-            <element signature="e#11473#11474#0" expanded="true" />
-            <element signature="e#11510#11511#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/27.1-jre/5dfa313690a903560bf27478345780a607bf1e9b/guava-27.1-jre-sources.jar!/com/google/common/collect/ImmutableBiMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-          <folding>
-            <element signature="e#2907#2908#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/27.1-jre/5dfa313690a903560bf27478345780a607bf1e9b/guava-27.1-jre-sources.jar!/com/google/common/collect/ImmutableMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-          <folding>
-            <element signature="e#5147#5148#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-remote-driver/3.141.59/8950c1557ead2cdba4fdb9ba6f107dce3b5f1520/selenium-remote-driver-3.141.59-sources.jar!/org/openqa/selenium/remote/RemoteWebElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="284" selection-start-line="284" selection-end-line="284" />
-          <folding>
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3141#3142#0" expanded="true" />
-            <element signature="e#9678#9679#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7880">
-          <caret line="480" column="44" selection-start-line="480" selection-start-column="44" selection-end-line="480" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/05.01-05.03_&amp;_05.05/05.01_Manually_close_an_incident.feature">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/BDL/BDL_AT2.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Sprint 4.4/5G BR's/5G_Frontend_Verification.feature" />
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Sprint_4.3 BR's_&amp;_Defect_Fixes/Plaza_OW_Incident_Integration/PLAZA_Create_Incident.feature" />
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Trouble/CTI_Details/AllFileTypes_Trouble.feature" />
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Close_Ticket.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="13" />
+          <caret selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="120">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.3 BR's_&amp;_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/PrimaryCICheck/Manual_Change.feature">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/BDL/BDL_Prod.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-column="55" />
+          <caret selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BCacheDeployment.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BCacheGeneral.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BService.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="309" column="49" selection-start-line="309" selection-start-column="49" selection-end-line="309" selection-end-column="49" />
+          <folding>
+            <element signature="e#11604#11605#0" expanded="true" />
+            <element signature="e#11675#11676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="343" column="67" selection-start-line="343" selection-start-column="67" selection-end-line="343" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="1450" column="5" lean-forward="true" selection-start-line="1450" selection-start-column="5" selection-end-line="1450" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_HomePageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="138" column="30" lean-forward="true" selection-start-line="138" selection-start-column="30" selection-end-line="138" selection-end-column="30" />
+          <folding>
+            <element signature="e#3450#3451#0" expanded="true" />
+            <element signature="e#3505#3506#0" expanded="true" />
+            <element signature="e#3608#3609#0" expanded="true" />
+            <element signature="e#3654#3655#0" expanded="true" />
+            <element signature="e#4398#4399#0" expanded="true" />
+            <element signature="e#4452#4453#0" expanded="true" />
+            <element signature="e#4815#4816#0" expanded="true" />
+            <element signature="e#4863#4864#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/CRM/CRM.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-906">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_On_Site_Services.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-480" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Request.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-600" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Network_Equipment_Remove.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-480" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Network_Equipment_New.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-520">
+          <caret line="1" column="60" lean-forward="true" selection-start-line="1" selection-start-column="60" selection-end-line="1" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Cabling_Remove.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Cabling_New.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-246">
+          <caret line="19" column="79" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Access_Request.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Access_Request_Oracle.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Access_Request_Postgre.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Backup_Or_Restore.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Configure_Database_Parameters.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Performance_Troubleshooting.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSF_Mail.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSS_Mail.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-480" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_TSS_Premium_Mail.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-720" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_SMTP_Support.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-600" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Denmark_Mail.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Clean_Mail.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-825" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/FInance&amp;Assurance/Finance&amp;Assurance.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_CallGuide_Mail.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="25" />
+        <state relative-caret-position="-425">
+          <caret line="18" column="46" lean-forward="true" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/BDL/BDL_AT1.feature">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Add_Modify_Remove_DNS.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-205">
+          <caret line="22" column="47" lean-forward="true" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/05.01-05.03_&amp;_05.05/05.02_Incident_summary.feature">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_DNS_Sweden.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret selection-end-column="28" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/05.01-05.03_&amp;_05.05/05.03_Service_Restored_date_and_time_field_is_mandatory_before_a_ticket_can_be_closed.feature">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Firewall_New_Change.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-280">
+          <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Firewall_Troubleshoot.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-545" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_LAN.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup/Backup_Reshedule.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-625">
+          <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Load_Balancing.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="41" column="65" lean-forward="true" selection-start-line="41" selection-start-column="65" selection-end-line="41" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_New_Switch.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_General_Inquiry.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-205">
+          <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Resource_Request.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-100">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Reverse_Proxy.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Surf_Proxy.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Surf_Proxy_One_Or_Few_Users.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Surf_Proxy_Whitelisting.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-600" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Surf_Proxy_Slow_Surfing.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-480" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Remote_Access.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540">
+          <caret selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Switch_Port_Config.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-column="86" />
+          <caret selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/runners/Test_Runner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup/Backup_One_Time.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="6" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/FInance&amp;Assurance/Finance&amp;Assurance.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="27" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Plaza_OW_Tieto/CO-TP.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Plaza_OW_Tieto/CO-TP_Alternative_process_flow.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
         </state>
       </provider>
     </entry>

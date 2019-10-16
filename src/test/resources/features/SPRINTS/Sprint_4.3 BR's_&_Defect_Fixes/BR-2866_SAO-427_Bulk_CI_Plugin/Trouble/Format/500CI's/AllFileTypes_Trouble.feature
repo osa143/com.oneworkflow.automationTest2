@@ -28,16 +28,16 @@ Feature: checking of bulk loading format
       Then user clicks on save button under bulk import
       And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-#      And user waits for 5 minutes
-#      When user clicks on Show Bulk Import button
-#      And user switches to frame
-#      When user clicks on "Related CIs" tab
-#      And user validates total rows as "500"
-#      And user validates Rows OK as "500"
-#      And user validates with errors as "0"
-#      And user validates with warnings as "0"
-#      Then user clicks on bulk loading close button
-#      And user switches to window 0
+      And user waits for 5 minutes
+      When user clicks on Show Bulk Import button
+      And user switches to frame
+      When user clicks on "Related CIs" tab
+      And user validates total rows as "500"
+      And user validates Rows OK as "500"
+      And user validates with errors as "0"
+      And user validates with warnings as "0"
+      Then user clicks on bulk loading close button
+      And user switches to window 0
 
       Examples:
 

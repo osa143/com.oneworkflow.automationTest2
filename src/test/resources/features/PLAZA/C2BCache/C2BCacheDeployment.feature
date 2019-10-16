@@ -14,7 +14,6 @@ Feature: Plaza C2B Cache form test
     When user selects role dropdown as "Application Operation Engineer"
     And user selects service request name as "Deployment"
     And user enters C2B request as "<Request>"
-    And user waits 5 secs
     And user selects C2B environment as "<Environment>"
     And user enters C2B description as "<Description>"
     And user enters additional comments as "<AdditionalComments>"
@@ -48,11 +47,9 @@ Feature: Plaza C2B Cache form test
     And user clicks on "Schedule" tab
     And user enters schedule end as current date
     Then user clicks on save button
-    And user waits 5 secs
     And user validates ticket status as "Cleared"
     When user changes status to "Closed" on work order page
     And user clicks save button
-    #And user clicks on save button and closes warning messages
     And user validates ticket status as "Closed"
     When user switches to window 0
     And user clicks on main page refresh
@@ -61,7 +58,7 @@ Feature: Plaza C2B Cache form test
 
     Examples:
     |Request                |Environment|Description               |AdditionalComments|DescValidation|
-    |Test1 C2BCache/Request |AT         |Test1 C2BCache/Description|Test1 C2BCache/AC |              |
+#    |Test1 C2BCache/Request |AT         |Test1 C2BCache/Description|Test1 C2BCache/AC |              |
 #    |Test2 C2BCache/Request |DEV        |Test2 C2BCache/Description|Test2 C2BCache/AC |              |
 #    |Test3 C2BCache/Request |MITE       |Test3 C2BCache/Description|Test3 C2BCache/AC |              |
 #    |Test4 C2BCache/Request |Prod       |Test4 C2BCache/Description|Test4 C2BCache/AC |              |

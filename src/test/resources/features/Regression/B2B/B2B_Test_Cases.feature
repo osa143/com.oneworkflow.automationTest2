@@ -37,7 +37,7 @@
       Then user clicks on save button
       When user clicks on "B2B Dispatch" tab
       When user clicks on outbound events refresh button
-      And user waits
+      And user waits 3 secs
       Then user should see "Assignment" notification in outbound in row 1
       And user waits 30 secs
       When user clicks on inbound events refresh button

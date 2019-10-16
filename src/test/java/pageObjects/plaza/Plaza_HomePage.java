@@ -1452,6 +1452,7 @@ public class Plaza_HomePage extends BasePage {
         selectDropdown(By.id(dd_CRM_SYSTEM), By.id("select2-results-14"),  dropdownName);
     }
     public void enterCRMRequest(String text){
+        PlazaValidation.Request=text;
         enterTextByElement(By.id(txt_CRM_REQUEST_ID), text);
     }
     public void enterCRMDescription(String text){
@@ -1590,7 +1591,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectEnvironment(String dropdownName){
         PlazaValidation.Environment = dropdownName;
-        selectDropdown(By.id(dd_ENVIRONMENT), By.id("s2id_autogen15_results"),  dropdownName);
+        selectDropdownByTagNameDiv(By.id(dd_ENVIRONMENT), By.id("s2id_autogen15_results"),  dropdownName);
     }
 
     public void enterCablingNew_DC_Site(String text){

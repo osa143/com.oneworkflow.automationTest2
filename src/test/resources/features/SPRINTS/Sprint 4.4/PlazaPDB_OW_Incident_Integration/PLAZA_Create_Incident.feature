@@ -1,4 +1,4 @@
-@PLAZA_Create_Incident @PLAZA_Incident_Flow
+@PLAZA_PDB_Create_Incident @PLAZA_Incident_Flow
   #Ticket ID to come from Plaza
   Feature: Plaza creation of incident ticket
     Scenario: user validates plaza incident ticket
@@ -6,7 +6,16 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
+      When user clicks on "Security, Ethics & Compliance"
+      And user clicks on "Report a Personal Data Breach"
+      Then user validates PDB submit form opens
 
+      And user validates "*Service Area" as "Security, Ethics and Compliance"
+      And user validates "*Service" as "Personal Data Breach"
+      Then user enters date and time as current date and time
+      And user enters "Nature and content" as ""
+      And user selects "Yes" under "affected persons"
+      And user enters "Test Data" under Affected persons name and unique id
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
@@ -23,7 +32,7 @@
       Then change should also be reflected in the timeline as "Test Update"
       #Plaza should also see this timeline update
       When user clicks on attachments under sections
-      And user clicks on add button under external
+      And user clicks on add button under internal
       And user switches to frame 2
       Then user selects summary dropdown as "Decision"
       And user enters attachment description as "A Document Attached"
@@ -53,6 +62,9 @@
       When user changes status to "Closed" on trouble event page second time
       And user clicks on save button
       Then user validates ticket status as "Closed"
+
+
+
 
 
 

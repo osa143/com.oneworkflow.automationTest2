@@ -1,4 +1,4 @@
-@PLAZA_Reject_Incident @PLAZA_Incident_Flow
+@PLAZA_PDB_Reject_Incident @PLAZA_Incident_Flow
   #Ticket ID to come from Plaza
 Feature: Plaza creation of incident ticket - OW Rejects Incident
   Scenario: user validates plaza incident ticket - OW Rejects Incident

@@ -1,7 +1,7 @@
-@PLAZA_PDB_Withdraw @PLAZA_Incident_Flow
+@PLAZA_PDB_Pending_Incident @PLAZA_Incident_Flow
   #Ticket ID to come from Plaza
-Feature: Plaza creation/withdrawing of incident ticket
-  Scenario: user validates plaza incident ticket - Plaza withdraws
+Feature: Plaza creation of incident ticket - pending status
+  Scenario: user validates plaza incident ticket - OW changes status to Pending
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
@@ -11,8 +11,11 @@ Feature: Plaza creation/withdrawing of incident ticket
     Then user should see blank trouble search form
     When user enters ticket id as ""
     Then user should see plaza incident ticket
-      #will need to get the information plaza is sending to validate if its correct
+    #will need to get the information plaza is sending to validate if its correct
     And user validates ticket information
-    #Plaza will then send withdraw message and OW should receive
-    When user clicks on ticket refresh button
-    Then user validates ticket status as "Withdrawn"
+    When user changes status to "Pending"
+    And user enters on hold to date 2 minutes in the future
+    And user enters on hold reason as "Pending ticket test"
+    Then user clicks on save button
+    And user validates ticket status as "Pending"
+

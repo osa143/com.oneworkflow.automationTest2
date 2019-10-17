@@ -302,6 +302,31 @@ public class Plaza_HomePage extends BasePage {
         enterTextByElement(By.id(txt_BDL_WBS_CODE_AT2), text);
     }
 
+    public void enterAffectedPersons(String text){
+        enterTextByElement(By.id("sp_formfield_pdb_affPerDescCheck"), text);
+    }
+
+    public void selectNatureAndContent(String text){
+        selectDropdownWithMultipleValues(By.id("s2id_autogen27"),By.id("s2id_autogen27_results"), text );
+    }
+    public void selectAffectedPerson(String text){
+        selectDropdownByTagNameDiv(By.id("select2-chosen-17"),By.id("select2-results-17"), text );
+    }
+    public void enterDatetime_PDB(String text){
+        enterTextByElement(By.id("sp_formfield_pdb_eventStartTime"), text);
+    }
+    public String getServiceArea(){
+        return getTextByID("select2-chosen-1");
+    }
+    public String getService_CreateIncident(){
+        return getTextByID("select2-chosen-3");
+    }
+    public void selectService(String text){
+        selectDropdownByTagNameDiv(By.id("select2-chosen-3"), By.id("select2-results-3"), text);;
+    }
+    public String getManualNotification_plaza(){
+        return getTextByElement(By.xpath("//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p"));
+    }
     public void enterManualNotification_plaza(String text){
         enterTextByElement(By.id("post-input"), text);
     }
@@ -310,15 +335,15 @@ public class Plaza_HomePage extends BasePage {
     }
     public void enterSearchAndSelectIncident(String text){
         WebElement searchBox=findElement(By.xpath("//*[@name='q']"));
-            searchBox.sendKeys(text);
-            wait(2000);
-            searchBox.sendKeys(Keys.ARROW_DOWN);
-            searchBox.sendKeys(Keys.ENTER);
+        searchBox.sendKeys(text);
+        wait(2000);
+        searchBox.sendKeys(Keys.ARROW_DOWN);
+        searchBox.sendKeys(Keys.ENTER);
     }
 
-     public void enterRequest_LinuxUnixServer(String text){
+    public void enterRequest_LinuxUnixServer(String text){
         enterTextByElement(By.id("sp_formfield_sr_gen_v_request"), text);
-     }
+    }
 
     public void selectCI_LinuxUnixServer(String text){
         selectDropdownWithMultipleValues(By.id("s2id_autogen25"),By.id("s2id_autogen25_results"), text );
@@ -338,7 +363,7 @@ public class Plaza_HomePage extends BasePage {
     public void selectServiceAreaCategory(String text){
         selectDropdownByTagNameDiv(By.id("select2-chosen-2"), By.id("select2-results-2"), text);
     }
- //   =========================================================================================================================================================
+
     public void enterNetworkSecurityProxySurfProxyOneDescription(String text){
         PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ONE_DESCRIPTION), text);

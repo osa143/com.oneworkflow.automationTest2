@@ -1,4 +1,4 @@
-@PLAZA_PDB_Create_Incident @PLAZA_Incident_Flow
+@PLAZA_PDB_Create @PLAZA_Incident_Flow
   #Ticket ID to come from Plaza
   Feature: Plaza creation of incident ticket
     Scenario: user validates plaza incident ticket

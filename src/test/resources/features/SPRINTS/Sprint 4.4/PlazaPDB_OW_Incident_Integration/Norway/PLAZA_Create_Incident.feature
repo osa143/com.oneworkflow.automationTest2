@@ -1,7 +1,7 @@
 @PLAZA_PDB_Create_Incident @PLAZA_Incident_Flow
   #Ticket ID to come from Plaza
   Feature: Plaza creation of incident ticket
-    Scenario Outline: user validates plaza incident ticket
+    Scenario: user validates plaza incident ticket
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -9,32 +9,30 @@
       When user clicks on "Security, Ethics & Compliance"
       And user clicks on "Report a Personal Data Breach"
       Then user validates PDB submit form opens
-      And user validates "*Service Area" as "Security, Ethics and Compliance"
-      And user validates "*Service" as "Personal Data Breach"
-      Then user enters date and time as current date and time
-      And user selects "<Affected BU>"
-      And user enters "Nature and content" as "Address"
-      And user selects "Yes" under "affected persons"
+      And user validates Service area as "Security, Ethics and Compliance"
+      And user validates Service as "Personal Data Breach"
+      Then user enters PDB date and time as current date and time
+      #And user selects "<Affected BU>"
+      And user selects nature and content as "Address"
+      And user selects affected persons as "Yes"
       And user enters "Test Data" under Affected persons name and unique id
-      Then user clicks on the plaza submit button
-      And user should see ICM number and stores value
-      Then user clicks on ICM number
+      And user clicks on submit button on plaza form
+      And user gets plaza request id
+      And user clicks on plaza request id
       And user validates internal case management form opens
-      When user waits 10 secs
       And user clicks on main page refresh
-      Then user should see "OWF Work Order number is" timeline update in plaza ticket
+      Then user should see OWF Work Order number is timeline update in plaza ticket
       And user should see "The incident has been successfully assigned in OneWorkflow" timeline update in plaza ticket
-      And user enters plaza timeline entry as "Test Timeline Update"
-      And user clicks on send button on plaza form
+      When user enters "Test Update" in the ticket timeline
+      And user clicks on plaza send button
       Then user opens new tab
-      And user switches to window 1
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Trouble Event"
       And user switches to window 2
       Then user should see blank trouble search form
-      When user enters plaza incident ticket
+      When user enters plaza request id in the source id field
       Then user should see plaza incident ticket
       And user validates source field as "PLAZA"
       And user validates source ID field contains ICM number
@@ -120,7 +118,7 @@
 
 
 
-      Examples:
+#      Examples:
 #      |Affected BU                     |Number of Persons|Affected Person|Title                             |Priority|
 #      |Other (or more than one country)|                 |               |
 #      |Telia Carrier                   |                 |               |
@@ -130,8 +128,8 @@
 #      |Denmark                         |                 |               |Personal Data Breach \|\ Denmark  |
 #      |Estonia                         |                 |               |Personal Data Breach \|\ Estonia  |
 #      |Lithuania                       |                 |               |Personal Data Breach \|\ Lithuania|
-
-
+#
+#
 
 
 

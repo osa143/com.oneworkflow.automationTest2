@@ -1781,4 +1781,69 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userEntersOperatingSystemAccessDescriptionAs(String arg0) {
         homePage.enterOperatingSystem_access_description(arg0);
     }
+
+    @When("user enters {string} in plaza search box")
+    public void userEntersInPlazaSearchBox(String arg0) {
+        homePage.enterSearchAndSelectIncident(arg0);
+    }
+
+    @And("user opens internal case form")
+    public void userOpensInternalCaseForm() {
+        
+    }
+
+    @Then("user should see internal case form appear")
+    public void userShouldSeeInternalCaseFormAppear() {
+
+    }
+
+    @And("user selects {string} under Service area dropdown")
+    public void userSelectsUnderServiceAreaDropdown(String arg0) {
+        homePage.selectServiceArea(arg0);
+    }
+
+    @And("user selects {string} under Service area category dropdown")
+    public void userSelectsUnderServiceAreaCategoryDropdown(String arg0) {
+        homePage.selectServiceAreaCategory(arg0);
+    }
+
+    @And("user enters {string} in the plaza request field")
+    public void userEntersInThePlazaRequestField(String arg0) {
+        homePage.enterRequest_LinuxUnixServer(arg0);
+    }
+
+    @And("user enters {string} in the plaza CI field")
+    public void userEntersInThePlazaCIField(String arg0) {
+        homePage.selectCI_LinuxUnixServer(arg0);
+    }
+
+    @And("user selects {string} under type of server dropdown")
+    public void userSelectsUnderTypeOfServerDropdown(String arg0) {
+        homePage.selectTypeOfServer(arg0);
+    }
+
+    @And("user enters {string} in the plaza description field")
+    public void userEntersInThePlazaDescriptionField(String arg0) {
+        homePage.enterDescription_LinuxUnixServer(arg0);
+    }
+
+    @Then("user clicks on submit button on plaza form")
+    public void userClicksOnSubmitButtonOnPlazaForm() {
+        clickElement(By.xpath("//button[@name='submit']"));
+    }
+
+    @And("user validates internal case management form opens")
+    public void userValidatesInternalCaseManagementFormOpens() {
+        Assert.assertTrue(homePage.validateInternalCaseManagementIsOpened());
+    }
+
+    @When("user enters {string} in the ticket timeline")
+    public void userEntersInTheTicketTimeline(String arg0) {
+       homePage.enterManualNotification_plaza(arg0);
+    }
+
+    @And("user clicks on plaza send button")
+    public void userClicksOnPlazaSendButton() {
+        clickElement(By.xpath("//input[@value='Send']"));
+    }
 }

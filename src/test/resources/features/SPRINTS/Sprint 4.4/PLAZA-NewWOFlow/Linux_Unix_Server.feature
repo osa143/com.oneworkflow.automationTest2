@@ -16,14 +16,13 @@
       And user enters "cc100cgas001" in the plaza CI field
       And user selects "Linux/Unix Server" under type of server dropdown
       And user enters "Test Description" in the plaza description field
-      Then user clicks on the plaza submit button
-      And user should see ICM number and stores value
-      Then user clicks on ICM number
+      Then user clicks on submit button on plaza form
+      And user gets plaza request id
+      And user clicks on plaza request id
       And user validates internal case management form opens
       When user enters "Test update" in the ticket timeline
       And user clicks on plaza send button
       Then user validates plaza ticket has update to timeline
-
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed

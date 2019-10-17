@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@Network_Security_Switch_Port_Config"}
+        tags = {"@Linux/UnixServer"}
 )
 
 public class Test_Runner extends BaseTest {

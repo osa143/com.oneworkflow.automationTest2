@@ -48,7 +48,7 @@
       When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed
       And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
-      Then user switches to frame
+      Then user switches to frame 3
       And user enters impacted from date as date in past
       And user enters impacted to date as date in past
       Then user clicks confirm checkbox

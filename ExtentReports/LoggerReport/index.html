@@ -50,14 +50,6 @@
 							</a>
 						</li>
 						<li>
-							<a href="exception.html">
-							<span class="nav-icon">
-							<i class="fa fa-warning"></i>
-							</span>
-							<span class="nav-text">Exceptions</span>
-							</a>
-						</li>
-						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -102,7 +94,7 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
-										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
+										
 										
 										
 										
@@ -119,8 +111,8 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Network_Security_Switch_Port_Config</span></a>
-						    	        <a class="dropdown-item" href="#"><span class="cf">@PLAZA</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@Linux/UnixServer</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@PlazaWONew</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -137,40 +129,40 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="fail">
-											<div class="st fail test l0" 
-												tags="@Network_Security_Switch_Port_Config @PLAZA"
+											<div class="tsc" status="skip">
+											<div class="st skip test l0" 
+												tags="@Linux/UnixServer @PlazaWONew"
 												devices="">
-												<span class="tt">10.16.2019 12:56:43</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">[Network Security Switch Port Config plaza form test] started</span>
+												<span class="tt">10.17.2019 10:17:00</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">[New WO flow Plaza] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Network_Security_Switch_Port_Config</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @PLAZA</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Linux/UnixServer</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @PlazaWONew</span>
 												</span>
 												
 											</div>
-											<div class="st fail test l1" 
-												tags="@Network_Security_Switch_Port_Config @PLAZA"
+											<div class="st skip test l1" 
+												tags="@Linux/UnixServer @PlazaWONew"
 												devices="">
-												<span class="tt">10.16.2019 12:56:43</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">|---[user validates information sent to OW from Plaza] started</span>
+												<span class="tt">10.17.2019 10:17:00</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">|---[Linux/Unix Server - New WO flow Plaza] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Network_Security_Switch_Port_Config</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @PLAZA</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Linux/UnixServer</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @PlazaWONew</span>
 												</span>
 												
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:56:43</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:00</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the Plaza login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:56:49</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:06</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the Plaza login page]</span>
 													
@@ -180,12 +172,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:56:49</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:06</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters username "testauto" and password as "test123" and clicks on login] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:56:51</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:08</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters username "testauto" and password as "test123" and clicks on login]</span>
 													
@@ -195,12 +187,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:56:51</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:08</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see the plaza home page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:56:51</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:08</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see the plaza home page]</span>
 													
@@ -210,14 +202,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:56:51</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:08</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Facility Management"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters "Ask" in plaza search box] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:56:53</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:11</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Facility Management"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters "Ask" in plaza search box]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -225,14 +217,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:56:53</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:11</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on order] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user opens internal case form] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:56:53</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:11</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on order]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user opens internal case form]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -240,14 +232,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:56:53</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:11</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on IT Infrastructure dropdown] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see internal case form appear] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:56:54</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:11</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on IT Infrastructure dropdown]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see internal case form appear]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -255,14 +247,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:56:54</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:11</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on "Firewall & Network"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects "IT Infrastructure" under Service area dropdown] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:56:55</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:15</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on "Firewall & Network"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects "IT Infrastructure" under Service area dropdown]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -270,14 +262,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:56:55</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:15</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on Network Routing Switching] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects "Compute & Operating System" under Service area category dropdown] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:56:56</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:17</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on Network Routing Switching]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects "Compute & Operating System" under Service area category dropdown]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -285,14 +277,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:56:56</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:17</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see "Network Routing/Switching" form] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "Test Request" in the plaza request field] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:56:56</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:17</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see "Network Routing/Switching" form]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "Test Request" in the plaza request field]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -300,14 +292,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:56:56</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:17</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects role dropdown as "Application Operation Engineer"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "cc100cgas001" in the plaza CI field] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:00</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:20</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects role dropdown as "Application Operation Engineer"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "cc100cgas001" in the plaza CI field]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -315,14 +307,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:57:00</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:20</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user selects service request name as "Switch Port Configuration"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects "Linux/Unix Server" under type of server dropdown] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:00</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:21</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user selects service request name as "Switch Port Configuration"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects "Linux/Unix Server" under type of server dropdown]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -330,14 +322,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:57:00</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:21</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters network security switch port request as "Test10 Network Security Switch Port/Request"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "Test Description" in the plaza description field] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:01</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:21</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters network security switch port request as "Test10 Network Security Switch Port/Request"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "Test Description" in the plaza description field]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -345,14 +337,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:57:01</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:21</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user selects existing IP net as "Yes"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on submit button on plaza form] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:02</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:21</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user selects existing IP net as "Yes"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on submit button on plaza form]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -360,87 +352,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:57:02</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects new IP net as "Yes"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:02</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects new IP net as "Yes"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:02</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects Add CI as "cc100cgas001"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:04</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects Add CI as "cc100cgas001"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:04</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters Network Security Switch Port description as "Test10 Network Security/Description"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:05</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters Network Security Switch Port description as "Test10 Network Security/Description"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:05</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters additional comments as "Network Security - Test10/AC"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:05</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters additional comments as "Network Security - Test10/AC"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:05</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on "Submit"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:05</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on "Submit"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:05</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:21</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user gets plaza request id] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:10</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:26</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user gets plaza request id]</span>
 													
@@ -450,12 +367,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:57:10</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:26</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on plaza request id] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:13</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:29</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on plaza request id]</span>
 													
@@ -465,14 +382,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:57:13</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:29</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see service request form] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates internal case management form opens] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:15</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:29</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see service request form]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates internal case management form opens]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -480,14 +397,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:57:15</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:29</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user opens new tab] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters "Test update" in the ticket timeline] started</span>
 												
 												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:18</span>&nbsp;
+													<span class="tt">10.17.2019 10:17:29</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user opens new tab]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters "Test update" in the ticket timeline]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -495,654 +412,159 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:57:18</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:29</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on plaza send button] started</span>
+												
+												<div class="st pass">
+													<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on plaza send button]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates plaza ticket has update to timeline] started</span>
+												
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
 												
-												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:19</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st skip">
+													<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:57:19</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid user and password] started</span>
+												<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Change_Automation_1" and password as "Test@1234"] started</span>
 												
-												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:24</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid user and password]</span>
+												<div class="st skip">
+													<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Change_Automation_1" and password as "Test@1234"]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:57:24</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
 												
-												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:24</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st skip">
+													<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:57:24</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects search menu as "Open Search Form:Work Order"] started</span>
 												
-												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:31</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st skip">
+													<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects search menu as "Open Search Form:Work Order"]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
+												
+												<div class="st skip">
+													<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see blank work order form] started</span>
+												
+												<div class="st skip">
+													<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see blank work order form]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters ticket id as ""] started</span>
+												
+												<div class="st skip">
+													<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters ticket id as ""]</span>
+													
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:57:31</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:30</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 2] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see plaza work order] started</span>
 												
-												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:33</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 2]</span>
-													
-													<span class="td"></span>
-												</div>
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:57:33</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:30</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters plaza request id in the source id field] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates ticket information] started</span>
 												
-												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:43</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters plaza request id in the source id field]</span>
-													
-													<span class="td"></span>
-												</div>
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">10.16.2019 12:57:43</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search] started</span>
-												
-												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see plaza ticket] started</span>
-												
-												<div class="st pass">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see plaza ticket]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st fail test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates source field as "PLAZA"] started</span>
-												
-												<div class="st fail">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">fail</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates source field as "PLAZA"]</span>
-													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">java.lang.AssertionError: expected [PLAZA] but found []
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at steps.OWF_WorkOrderPageSteps.userValidatesSourceFieldAs(OWF_WorkOrderPageSteps.java:246)
-	at ✽.user validates source field as "PLAZA"(features/PLAZA/Network Security/Network_Security_Switch_Port_Config.feature:36)
-</textarea></span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates title field as "Service Request | Network Routing/Switching"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates title field as "Service Request | Network Routing/Switching"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates request type as "Service Request | PLAZA"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates request type as "Service Request | PLAZA"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates network security switch port config description same as plaza] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates network security switch port config description same as plaza]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on owner under sections] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on owner under sections]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on assignment under sections] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on assignment under sections]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates owner profile as "PLAZA"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates owner profile as "PLAZA"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates owner as "PLAZA"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates owner as "PLAZA"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user should see assigned profile as "Routing/Switching L2"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user should see assigned profile as "Routing/Switching L2"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on "Interested Parties" tab] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on "Interested Parties" tab]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "PLAZA" is listed as an interested party] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "PLAZA" is listed as an interested party]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Diagnosis" tab] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Diagnosis" tab]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates CI "cc100cgas001" is listed] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates CI "cc100cgas001" is listed]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user right clicks on CI "cc100cgas001" and selects "Impact:Update"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user right clicks on CI "cc100cgas001" and selects "Impact:Update"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to frame] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to frame]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters impacted from date as date in past] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters impacted from date as date in past]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters impacted to date as date in past] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters impacted to date as date in past]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks confirm checkbox] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks confirm checkbox]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks save button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks save button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user should see confirmation message for impact clear and user clicks yes] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user should see confirmation message for impact clear and user clicks yes]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on Ack button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on Ack button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user changes status to "Cleared" on work order page] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user changes status to "Cleared" on work order page]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects completion code as "Success"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects completion code as "Success"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on "Schedule" tab] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on "Schedule" tab]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters schedule end as current date] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters schedule end as current date]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates ticket status as "Cleared"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates ticket status as "Cleared"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to "Closed" on work order page] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to "Closed" on work order page]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates ticket status as "Closed"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates ticket status as "Closed"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user switches to window 0] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user switches to window 0]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on main page refresh] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on main page refresh]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates plaza request has completed] started</span>
-												
-												<div class="st skip">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates plaza request has completed]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">10.16.2019 12:57:50</span>&nbsp;
+												<span class="tt">10.17.2019 10:17:30</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
 												
-												<div class="st info">
-													<span class="tt">10.16.2019 12:57:50</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
+												<div class="st pass">
+													<span class="tt">10.17.2019 10:17:30</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
-													<span class="tm"><a href='#' class='indigo badge' data-featherlight='C:\Temp\oneworkflow.automation\ExtentReports\Screenshots\Screenshots_20191016_125642\embedded1.png'>img</a></span>
+													
 													<span class="td"></span>
 												</div>
 											</div>

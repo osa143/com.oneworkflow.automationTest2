@@ -20,12 +20,17 @@
       And user should see ICM number and stores value
       Then user clicks on ICM number
       And user validates internal case management form opens
-
+      When user waits 10 secs
+      And user clicks on main page refresh
+      Then user should see "OWF Work Order number is" timeline update in plaza ticket
+      And user should see "The incident has been successfully assigned in OneWorkflow" timeline update in plaza ticket
+      Then user opens new tab
+      And user switches to window 1
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Trouble Event"
-      And user switches to window 1
+      And user switches to window 2
       Then user should see blank trouble search form
       When user enters plaza incident ticket
       Then user should see plaza incident ticket
@@ -35,7 +40,10 @@
       When user enters "Test Update" in the timeline text box
       And user clicks on add button
       Then change should also be reflected in the timeline as "Test Update"
-      #Plaza should also see this timeline update
+      And user switches to window 1
+      And user clicks on main page refresh
+      And user should see "Test Update" timeline update in plaza ticket
+
       When user clicks on attachments under sections
       And user clicks on add button under internal
       And user switches to frame 2

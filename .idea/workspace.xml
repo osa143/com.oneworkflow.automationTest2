@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/BR-3074/Change_Requests_With_Active_Service_Information_Are_Sent_To_MBOSS.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/BR-3074/Service_Information_Is_Activated_For_Change_Requests.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/BR-3074/Timeline_Entries_To_Audit_Service_Information_Activation_And_Deactivation.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Login.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Sprint 4.4/Plaza_PDB_Incident_Integration/PLAZA_Create_Incident.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Sprint 4.4/Plaza_PDB_Incident_Integration/PLAZA_Pending_Incident.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Sprint 4.4/Plaza_PDB_Incident_Integration/PLAZA_Reassign_Incident.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Sprint 4.4/Plaza_PDB_Incident_Integration/PLAZA_Reject_Incident.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Sprint 4.4/Plaza_PDB_Incident_Integration/PLAZA_Withdraw.feature" afterDir="false" />
+    <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="Updated plaza feature files">
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
@@ -28,17 +19,56 @@
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_AgentConsolePageSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_AgentConsolePageSteps.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_TroubleEventPageSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_TroubleEventPageSteps.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_WorkOrderPageSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/steps/OWF_WorkOrderPageSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/test/configs/runtime_test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/configs/runtime_test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BCacheDeployment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BCacheDeployment.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BCacheGeneral.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BCacheGeneral.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_CiSearchPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_CiSearchPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_HomePageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/plaza_steps/Plaza_HomePageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/BDL/BDL_AT1.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/BDL/BDL_AT1.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/BDL/BDL_AT2.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/BDL/BDL_AT2.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/BDL/BDL_Prod.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/BDL/BDL_Prod.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup/Backup_Verify.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup/Backup_Verify.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup/Backup_restore.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup/Backup_restore.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BService.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BService.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/CRM/CRM.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/CRM/CRM.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Cabling_New.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Cabling_New.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Cabling_Remove.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Cabling_Remove.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Network_Equipment_New.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Network_Equipment_New.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Network_Equipment_Remove.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Network_Equipment_Remove.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_On_Site_Services.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_On_Site_Services.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Request.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Data Center/Data_Center_Request.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Access_Request.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Access_Request.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Access_Request_Oracle.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Access_Request_Oracle.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Access_Request_Postgre.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Access_Request_Postgre.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Backup_Or_Restore.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Backup_Or_Restore.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Configure_Database_Parameters.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Configure_Database_Parameters.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Performance_Troubleshooting.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Database/Database_Performance_Troubleshooting.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Firewall_New_Change.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Firewall_New_Change.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Load_Balancing.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Load_Balancing.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Surf_Proxy_Whitelisting.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Network Security/Network_Security_Proxy_Surf_Proxy_Whitelisting.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Add_Modify_Remove.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Add_Modify_Remove.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Decommision_VM.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Decommision_VM.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Expand_Backup_Archive_Disk.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Expand_Backup_Archive_Disk.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Extend_Disk_Red_Hat.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Extend_Disk_Red_Hat.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Extend_Disk_Windows.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Extend_Disk_Windows.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Hot_Add_CPU_Or_Ram.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Hot_Add_CPU_Or_Ram.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Restore_VM.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Restore_VM.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Access.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Access.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Account_Management.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Account_Management.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Change_From_Auto.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Change_From_Auto.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Change_From_Manual.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Change_From_Manual.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Manual_OS_Patching.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Manual_OS_Patching.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/BCPP.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/BCPP.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Cloud_One_Time_Snap.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Cloud_One_Time_Snap.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/EFS_BSS.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/EFS_BSS.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/OCC.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/OCC.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/SPAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/SPAN.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/TSPAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/TSPAN.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Topcat.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Topcat.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/WEB_TAB.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/WEB_TAB.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Storage/Storage_Configure.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Storage/Storage_Configure.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Storage/Storage_Export_Volume.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Storage/Storage_Export_Volume.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Storage/Storage_Volume_Snapshot.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Storage/Storage_Volume_Snapshot.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/TCFP/TCFP_Add_User.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/TCFP/TCFP_Add_User.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/TCFP/TCFP_General_Inquiry.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/TCFP/TCFP_General_Inquiry.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/Norway/PLAZA_Create_Incident.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/Norway/PLAZA_Create_Incident.feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -115,48 +145,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>WIN_0_600002906</find>
-      <find>arid_WIN_0_777031401</find>
-      <find>T705002015</find>
-      <find>T700020677</find>
-      <find>ownerprofile</find>
-      <find>assigned</find>
-      <find>arid_WIN_0_777021160</find>
-      <find>arid_WIN_0_777031000</find>
-      <find>arid_WIN_0_777021548</find>
-      <find>arid_WIN_0_705001003</find>
-      <find>arid_WIN_0_700025204</find>
-      <find>arid_WIN_0_700007008</find>
-      <find>arid_WIN_0_700007007</find>
-      <find>WIN_0_777021404</find>
-      <find>arid_WIN_0_777777103</find>
-      <find>arid_WIN_0_700500101</find>
-      <find>dd_STATUS</find>
-      <find>tagname</find>
-      <find>parse</find>
-      <find>c</find>
-      <find>table</find>
-      <find>WIN_0_777000001</find>
-      <find>WIN_0_700025244</find>
-      <find>arid_WIN_0_800038001</find>
-      <find>WIN_0_800038059</find>
-      <find>WIN_0_800038044</find>
-      <find>WIN_0_600002504</find>
-      <find>WIN_0_rc1id600001901</find>
-      <find>public static</find>
-      <find>select2-chosen-12</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>.orElse(null).</replace>
-      <replace>cucumber.jar.version</replace>
-      <replace>public</replace>
-      <replace>IT</replace>
-      <replace>IT%</replace>
-      <replace>&quot;IT%&quot;</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -287,23 +275,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.oneworkflow.automation [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Test_Runner" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="--tests &quot;runners.Test_Runner&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value=":cleanTest" />
+            <option value=":test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
     <configuration name="com.oneworkflow.automation [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -347,22 +336,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="SUITE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Test1" />
       <item itemvalue="Application.CalendarLoginTest" />
       <item itemvalue="Cucumber java.Scenario: user is able to clear alarms that have come from a FM system" />
       <item itemvalue="Cucumber java.Scenario: User logs into One workflow, creates a problem ticket, changes status to pending then checks ticket status" />
-      <item itemvalue="Gradle.com.oneworkflow.automation [clean]" />
       <item itemvalue="Gradle.com.oneworkflow.automation [test]" />
+      <item itemvalue="Gradle.Test_Runner" />
       <item itemvalue="TestNG.Test_Runner" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Test_Runner" />
         <item itemvalue="Cucumber java.Scenario: User logs into One workflow, creates a problem ticket, changes status to pending then checks ticket status" />
         <item itemvalue="Cucumber java.Scenario: user is able to clear alarms that have come from a FM system" />
         <item itemvalue="Gradle.com.oneworkflow.automation [test]" />
         <item itemvalue="Application.CalendarLoginTest" />
-        <item itemvalue="Gradle.com.oneworkflow.automation [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -526,6 +534,8 @@
       <workItem from="1570628389235" duration="4375000" />
       <workItem from="1571040833822" duration="8073000" />
       <workItem from="1571127493771" duration="7964000" />
+      <workItem from="1571216055667" duration="21648000" />
+      <workItem from="1571299237089" duration="24090000" />
     </task>
     <task id="LOCAL-00067" summary="added steps for incident test cases">
       <created>1564435380255</created>
@@ -929,7 +939,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated problem features and steps" />
     <MESSAGE value="updated change features and steps" />
     <MESSAGE value="updated features and steps" />
     <MESSAGE value="updated features and steps for Add attachments and bulk CI loading" />
@@ -954,7 +963,8 @@
     <MESSAGE value="Adding API test cases" />
     <MESSAGE value="Adding urgent change" />
     <MESSAGE value="Adding features for 4.5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding features for 4.5" />
+    <MESSAGE value="Updated plaza feature files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated plaza feature files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -974,6 +984,14 @@
           <line>132</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java</url>
+          <line>367</line>
+          <properties class="pageObjects.OWF_WorkOrderPage" method="verifyDataCenterCablingRemoveDescription">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -981,77 +999,9 @@
         <watch expression="driver.findElement(By.className(&quot;select2-choice&quot;)).click()" language="JAVA" />
         <watch expression="driver.findElement(By.id(&quot;select2-chosen-9&quot;)).click()" language="JAVA" />
         <watch expression="driver.findElement(By.id(&quot;select2-results-9&quot;)).findElements(By.tagName(&quot;li&quot;)).stream().filter(element -&gt; element.getText().trim().equals(&quot;Application Operation Engineer&quot;)).findFirst().orElse(null).click()" language="JAVA" />
+        <watch expression="getDescription();" language="JAVA" custom="org.w3c.dom.ls.LSOutput" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="watch">
-      <expression>
-        <expression-string>driver.findElement(By.id(&quot;select2-results-9&quot;)).findElements(By.tagName(&quot;li&quot;)).stream().filter(element -&gt; element.getText().trim().equals(&quot;Application Operation Engineer&quot;)).findFirst().orElse(null).click()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>driver.findElement(By.id(&quot;select2-chosen-9&quot;)).click()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>driver.findElement(By.className(&quot;select2-choice&quot;)).click()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>driver.findElement(By.id(&quot;select2-results-9&quot;)).click()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>findElement(Element)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Select select = new Select(findElement(Element))</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>((JavascriptExecutor)driver).executeScript(&quot;document.getElementById('arid1005').value='text';&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <custom-info>org.openqa.selenium.JavascriptExecutor</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>((JavascriptExecutor)driver).executeScript(&quot;arguments[0].value ='text';&quot;, driver.findElement(By.id(&quot;arid1005&quot;)))</expression-string>
-        <language-id>JAVA</language-id>
-        <custom-info>org.openqa.selenium.JavascriptExecutor</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>driver.findElement(By.id(&quot;arid1005&quot;)).sendKeys(Keys.ARROW_DOWN)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>driver.findElement(By.id(&quot;arid1005&quot;)).click()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-    <expressions id="evaluateExpression">
-      <expression>
-        <expression-string>tableHeader.getAttribute(&quot;innerHTML&quot;).trim()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>((WindowsPath)newPath).path</expression-string>
-        <language-id>JAVA</language-id>
-        <custom-info>sun.nio.fs.WindowsPath</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
   </component>
   <component name="masterDetails">
     <states>

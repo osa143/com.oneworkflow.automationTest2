@@ -38,7 +38,7 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as "Nimbus/TSVP"
+      And user should see assigned profile as "IT Cloud"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
@@ -46,10 +46,10 @@
       And user validates CI "cc100cgas001" is listed
       And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
       Then user switches to frame
-      And user enters impacted from date as date in past
-      And user enters impacted to date as date in past
+      And user enters impact from time as past on impact details bulk update window
+      And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
-      And user clicks save button
+      And user clicks on bulk update save button
       When user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
       And user should see confirmation message and clicks on yes button
       When user clicks on Ack button

@@ -451,4 +451,9 @@ public class OWF_CiSearchPageSteps {
     public void userClicksOnRefreshUnderDiagnosis() {
         ciSearchPage.clickElement(By.xpath("//*[@id='WIN_0_700009087']/div[1]/table/tbody/tr/td[2]/a[2]"));
     }
+
+    @And("user validates CI {string} is listed in row {int}")
+    public void userValidatesCIIsListedInRow(String arg0, int arg1) {
+        Assert.assertEquals(ciSearchPage.getCI_Name("CI Name", arg1), arg0);
+    }
 }

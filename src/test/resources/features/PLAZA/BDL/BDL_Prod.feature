@@ -28,7 +28,8 @@
       And user selects BDL prod CI as "Prod2"
       And user selects BDL prod CI as "Prod3"
       And user selects BDL prod CI as "Proofing"
-      And user enters "P100-000-000" in the WBS Code field
+      And user selects BDL prod CI as "DB - Proof"
+      And user enters "P100-000-000" in the Prod WBS Code field
       And user enters BDL description as "BDL-PROD - Test/Desc"
       And user enters additional comments as "BDL-PROD - Test/AC"
       Then user clicks on "Submit"

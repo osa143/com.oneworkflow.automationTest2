@@ -36,7 +36,7 @@ Feature: Plaza C2B Cache form test
     And user clicks on assignment under sections
     Then user validates owner profile as "PLAZA"
     And user validates owner as "PLAZA"
-    And user validates assignee is "Portal"
+    And user validates assigned profile is "Portal"
     Then user clicks on "Interested Parties" tab
     And user validates "PLAZA" is listed as an interested party
     When user clicks on Ack button

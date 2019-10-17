@@ -47,8 +47,8 @@
      And user validates CI "SPANGISAT" is listed
      And user right clicks on CI "SPANGISAT" and selects "Impact:Update"
      Then user switches to frame
-     And user enters impact from time as same value as request start time on impact details bulk update window
-     And user enters impact to time as same value as request end time on impact details bulk update window
+     And user enters impact from time as past on impact details bulk update window
+     And user enters impact to time as past on impact details bulk update window
      Then user clicks confirm checkbox
      And user clicks save button
      And user right clicks on CI "SPANGISAT" and selects "Impact:Clear All"

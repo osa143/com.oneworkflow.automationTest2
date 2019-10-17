@@ -1781,4 +1781,29 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userEntersOperatingSystemAccessDescriptionAs(String arg0) {
         homePage.enterOperatingSystem_access_description(arg0);
     }
+
+    @And("user enters {string} in the AT2 WBS Code field")
+    public void userEntersInTheATWBSCodeField(String arg0) {
+        homePage.enterBdlWbsCodeAt2(arg0);
+    }
+
+    @And("user enters {string} in the AT1 WBS Code field")
+    public void userEntersInTheAT1WBSCodeField(String arg0) {
+        homePage.enterBdlWbsCodeAt1(arg0);
+    }
+
+    @And("user enters {string} in the Prod WBS Code field")
+    public void userEntersInTheProdWBSCodeField(String arg0) {
+        homePage.enterBdlWbsCodeAt1(arg0);
+    }
+
+    @And("user enters whitelisting source IP Address as {string}")
+    public void userEntersWhitelistingSourceIPAddressAs(String arg0) {
+        homePage.enterWhitelistingSourceIpAddress(arg0);
+    }
+
+    @When("user clicks on Access to Red Hat Knowledgebase")
+    public void userClicksOnAccessToRedHatKnowledgebase() {
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[14]/div/a/div/h2"));
+    }
 }

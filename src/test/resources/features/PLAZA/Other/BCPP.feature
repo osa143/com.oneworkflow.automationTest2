@@ -33,14 +33,14 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | BCCP"
+      And user validates title field as "Service Request | BCPP"
       And user validates request type as "Service Request | PLAZA"
       And user validates bccp description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
-      Then user validates owner profile as ""
-      And user validates owner as ""
-      And user validates assignee is ""
+      Then user validates owner profile as "PLAZA"
+      And user validates owner as "PLAZA"
+      And user should see assigned profile as "Billing"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
@@ -50,7 +50,7 @@
       And user enters impacted from date as date in past
       And user enters impacted to date as date in past
       Then user clicks confirm checkbox
-      And user clicks on save button
+      And user clicks on bulk update save button
       Then user switches to window 1
       When user right clicks on CI "aa187bcpp01" and selects "Impact:Clear All"
       And user clicks on yes button on warning window

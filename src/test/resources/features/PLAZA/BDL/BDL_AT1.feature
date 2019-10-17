@@ -24,7 +24,7 @@
       And user selects AT1 CI as "eMessaging"
       And user selects AT1 CI as "Proofing"
       And user selects AT1 CI as "Netbill DB-loader"
-      And user enters "P100-000-000" in the WBS Code field
+      And user enters "P100-000-000" in the AT1 WBS Code field
       And user enters BDL description as "BDL-AT1 - Test/Desc"
       And user enters additional comments as "BDL-AT1 - Test/AC "
       Then user clicks on "Submit"

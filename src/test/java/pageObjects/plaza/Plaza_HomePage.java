@@ -161,7 +161,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_DESCRIPTION= "sp_formfield_sr114_v_description";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_REQUEST= "sp_formfield_sr34_v_request";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_TICKET_NUMBER= "sp_formfield_sr34_v_fire_ticket_number";
-    private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_SOURCE_IP_ADDRESS= "sp_formfield_sr35_v_ip_add";
+    private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_SOURCE_IP_ADDRESS= "sp_formfield_sr34_v_source_ip_address";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_TARGET_IP_ADDRESS= "sp_formfield_sr34_v_target_ip_address";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_DATE_AND_TIME= "sp_formfield_sr34_v_tests_performed";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_DESCRIPTION= "sp_formfield_sr34_v_description";
@@ -281,8 +281,25 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ONE_USER_ID= "sp_formfield_sr35_v_userid";
     private static final String txt_NETWORK_SECURITY_DNS_SWEDEN_CUSTOMER_ID_NAME= "sp_formfield_sr105_v_customer_id";
     private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ONE_DESCRIPTION= "sp_formfield_sr35_v_description";
+    private static final String txt_BDL_WBS_CODE_AT2= "sp_formfield_sr108_v_wbs_code";
+    private static final String txt_BDL_WBS_CODE_AT1= "sp_formfield_sr108_v_wbs_code";
+    private static final String txt_WHITELISTING_SOURCE_IP= "sp_formfield_sr35_v_ip_add";
 
 
+    public void enterWhitelistingSourceIpAddress(String text){
+        PlazaValidation.SourceIpAddress = text;
+        enterTextByElement(By.id(txt_WHITELISTING_SOURCE_IP), text);
+    }
+
+    public void enterBdlWbsCodeAt1(String text){
+        PlazaValidation.WbsCodeField = text;
+        enterTextByElement(By.id(txt_BDL_WBS_CODE_AT1), text);
+    }
+
+    public void enterBdlWbsCodeAt2(String text){
+        PlazaValidation.WbsCodeField = text;
+        enterTextByElement(By.id(txt_BDL_WBS_CODE_AT2), text);
+    }
 
     public void enterNetworkSecurityProxySurfProxyOneDescription(String text){
         PlazaValidation.Description = text;
@@ -582,6 +599,7 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void enterOperatingSystem_access_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_OPERATING_SYSTEM_ACCESS_DESCRIPTION), text);
     }
 
@@ -596,6 +614,7 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void enterNetworkSecurity_switch_port_config_description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_SWITCH_PORT_CONFIG_DESCRIPTION), text);
     }
 
@@ -1305,8 +1324,15 @@ public class Plaza_HomePage extends BasePage {
         PlazaValidation.WbsCodeField = text;
         enterTextByElement(By.id(txt_CABLING_NEW_WBS_CODE), text);
     }
-
+    public String getCIS(){
+        String CIs= getAttributeValueById("s2id_sp_formfield_sr108_v_at3");
+        String CIs2= getTextByID("s2id_sp_formfield_sr108_v_at3");
+        System.out.println(CIs2);
+        System.out.println(CIs);
+        return CIs;
+    }
     public void enterBDL_wbsCode(String text){
+             PlazaValidation.CI=getCIS();
         PlazaValidation.WbsCodeField=text;
         enterTextByElement(By.id(txt_BDL_WBS_CODE), text);
     }
@@ -1323,6 +1349,7 @@ public class Plaza_HomePage extends BasePage {
         }
     }
     public void selectsAT1Ci(String dropdownName){
+        PlazaValidation.CI = dropdownName;
         selectDropdownByTagNameDiv(By.id("s2id_sp_formfield_sr108_v_at1"), By.id("s2id_autogen16_results"),  dropdownName);
     }
 
@@ -1426,13 +1453,16 @@ public class Plaza_HomePage extends BasePage {
         enterTextByElement(By.id(txt_BCPP_REQUEST_ID), text);
     }
     public void enterC2B_service_Description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_C2B_SERVICE_DESCRIPTION), text);
     }
 
     public void enterC2B_serviceRequest(String text){
+        PlazaValidation.ServiceRequestName = text;
         enterTextByElement(By.id(txt_C2B_SERVICE_REQUEST_ID), text);
     }
     public void enterC2B_general_Description(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_C2B_GENERAL_DESCRIPTION), text);
     }
 
@@ -1447,8 +1477,8 @@ public class Plaza_HomePage extends BasePage {
         PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_C2B_REQUEST_ID), text);
     }
-    public void selectCRMSystemDropdown(String dropdownName)
-    {
+    public void selectCRMSystemDropdown(String dropdownName){
+            PlazaValidation.System = dropdownName;
         selectDropdown(By.id(dd_CRM_SYSTEM), By.id("select2-results-14"),  dropdownName);
     }
     public void enterCRMRequest(String text){
@@ -1456,13 +1486,16 @@ public class Plaza_HomePage extends BasePage {
         enterTextByElement(By.id(txt_CRM_REQUEST_ID), text);
     }
     public void enterCRMDescription(String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_CRM_DESCRIPTION), text);
     }
 
     public void enterCRMPlannedStart(String text){
+        PlazaValidation.PlannedStartDate = text;
         enterTextByElement(By.id(txt_CRM_PLANNED_START), text);
     }
     public void enterCRMPlannedEnd(String text){
+        PlazaValidation.PlannedEndDate = text;
         enterTextByElement(By.id(txt_CRM_PLANNED_END), text);
     }
 

@@ -121,15 +121,15 @@
 
 
       Examples:
-      |Affected BU                     |Number of Persons|Affected Person|Title                             |Priority|
-      |Other (or more than one country)|                 |               |
-      |Telia Carrier                   |                 |               |
-      |Sweden                          |                 |               |Personal Data Breach \|\ Sweden   |
-      |Finland                         |                 |               |Personal Data Breach \|\ Finland  |
-      |Norway                          |                 |               |Personal Data Breach \|\ Norway   |
-      |Denmark                         |                 |               |Personal Data Breach \|\ Denmark  |
-      |Estonia                         |                 |               |Personal Data Breach \|\ Estonia  |
-      |Lithuania                       |                 |               |Personal Data Breach \|\ Lithuania|
+#      |Affected BU                     |Number of Persons|Affected Person|Title                             |Priority|
+#      |Other (or more than one country)|                 |               |
+#      |Telia Carrier                   |                 |               |
+#      |Sweden                          |                 |               |Personal Data Breach \|\ Sweden   |
+#      |Finland                         |                 |               |Personal Data Breach \|\ Finland  |
+#      |Norway                          |                 |               |Personal Data Breach \|\ Norway   |
+#      |Denmark                         |                 |               |Personal Data Breach \|\ Denmark  |
+#      |Estonia                         |                 |               |Personal Data Breach \|\ Estonia  |
+#      |Lithuania                       |                 |               |Personal Data Breach \|\ Lithuania|
 
 
 

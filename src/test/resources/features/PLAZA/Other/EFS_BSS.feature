@@ -44,15 +44,15 @@ Feature: Plaza EFS-BSS form test
     Then user clicks on "Interested Parties" tab
     And user validates "PLAZA" is listed as an interested party
     When user clicks on "Diagnosis" tab
-    And user validates CI "ef002appp1" is listed
-    And user validates CI "ef002appp2" is listed
-    And user validates CI "ef002appp3" is listed
+    And user validates CI "ef002appp1" is listed in row 3
+    And user validates CI "ef002appp2" is listed in row 2
+    And user validates CI "ef002appp3" is listed in row 1
     And user right clicks on CI "ef002appp1" and selects "Impact:Update"
     Then user switches to frame
     And user enters impacted from date as date in past
     And user enters impacted to date as date in past
     Then user clicks confirm checkbox
-    And user clicks save button
+    And user clicks on bulk update save button
     Then user switches to window 1
     Then user selects all CI's that appear
     And user right clicks on CI "ef002appp1" and selects "Impact:Clear All"

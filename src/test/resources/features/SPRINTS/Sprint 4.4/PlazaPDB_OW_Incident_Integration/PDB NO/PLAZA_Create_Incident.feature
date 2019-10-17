@@ -9,13 +9,17 @@
       When user clicks on "Security, Ethics & Compliance"
       And user clicks on "Report a Personal Data Breach"
       Then user validates PDB submit form opens
-
       And user validates "*Service Area" as "Security, Ethics and Compliance"
       And user validates "*Service" as "Personal Data Breach"
       Then user enters date and time as current date and time
-      And user enters "Nature and content" as ""
+      And user selects affected bu as "norway"
+      And user enters "Nature and content" as "Address"
       And user selects "Yes" under "affected persons"
       And user enters "Test Data" under Affected persons name and unique id
+      Then user clicks on the plaza submit button
+      And user should see ICM number and stores value
+      Then user clicks on ICM number
+      And user validates internal case management form opens
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
@@ -23,10 +27,11 @@
       When user selects search menu as "Open Search Form:Trouble Event"
       And user switches to window 1
       Then user should see blank trouble search form
-      When user enters ticket id as ""
+      When user enters plaza incident ticket
       Then user should see plaza incident ticket
       #will need to get the information plaza is sending to validate if its correct
       And user validates ticket information
+
       When user enters "Test Update" in the timeline text box
       And user clicks on add button
       Then change should also be reflected in the timeline as "Test Update"

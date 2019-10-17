@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PLAZA-NewWOFlow/Cloud.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PLAZA-NewWOFlow/WindowsServer.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PDB NO/PLAZA_Create_Incident.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PDB NO/PLAZA_Pending_Incident.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PDB NO/PLAZA_Reassign_Incident.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PDB NO/PLAZA_Reject_Incident.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PDB NO/PLAZA_Withdraw.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PLAZA-NewWOFlow/Windows/Linux_Unix_Server.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PLAZA-NewWOFlow/Linux_Unix_Server.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PLAZA-NewWOFlow/Windows/WindowsServer.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PLAZA_Create_Incident.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PLAZA_Create_Incident.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Plaza_OW_Tieto/CO-TP.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/Plaza_OW_Tieto/CO-TP.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Plaza_OW_Tieto/CO-TP_Alternative_process_flow.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/Plaza_OW_Tieto/CO-TP_Alternative_process_flow.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Tieto_OW_Integration/BR-2965_Tieto-OneWorkflow_Resolve.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/Tieto_OW_Integration/BR-2965_Tieto-OneWorkflow_Resolve.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Tieto_OW_Integration/BR-2965_Tieto_Assignment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/Tieto_OW_Integration/BR-2965_Tieto_Assignment.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Tieto_OW_Integration/BR-2965_Tieto_Create.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/Tieto_OW_Integration/BR-2965_Tieto_Create.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Tieto_OW_Integration/BR-2965_Tieto_Inprogress.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/Tieto_OW_Integration/BR-2965_Tieto_Inprogress.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Tieto_OW_Integration/BR-2965_Tieto_Pending.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/Tieto_OW_Integration/BR-2965_Tieto_Pending.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Tieto_OW_Integration/BR-2965_Tieto_Reject.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/Tieto_OW_Integration/BR-2965_Tieto_Reject.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Tieto_OW_Integration/BR-2965_Tieto_Withdraw.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/Tieto_OW_Integration/BR-2965_Tieto_Withdraw.feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -79,13 +90,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PLAZA_Create_Incident.feature">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/Plaza_OW_Incident_Integration/PLAZA_Create_Incident.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+            <state relative-caret-position="84">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PLAZA_Create_Incident.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="75" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PDB NO/PLAZA_Create_Incident.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="76" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/CO-TP.feature">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -98,10 +132,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PLAZA_Reject_Incident.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="10" selection-start-column="10" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PLAZA-NewWOFlow/Cloud.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="357">
+              <caret line="20" column="58" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="20" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -109,22 +152,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PLAZA-NewWOFlow/Linux_Unix_Server.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="178">
+              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_CallGuide_Mail.feature">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PDB NO/PLAZA_Pending_Incident.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-63" />
+            <state relative-caret-position="315">
+              <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="19" selection-end-column="49" />
+            </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Messaging/Messaging_Clean_Mail.feature">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -134,29 +174,6 @@
               <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="60" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PLAZA_Pending_Incident.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="10" selection-start-column="10" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup/Backup_Reshedule.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="46" selection-start-line="4" selection-start-column="6" selection-end-line="6" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/Plaza_OW_Incident_Integration/PLAZA_Pending_Incident.feature">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -221,8 +238,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/resources/features/API/ValidateCIs/20CIsChange.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/API/ValidateCIs/20CIsProblem.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/API/ValidateCIs/20CIsTrouble.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/API/ValidateCIs/20CIsWO.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/API/TimelineInfo/Change.feature" />
@@ -272,6 +287,8 @@
         <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PLAZA-NewWOFlow/Cloud/Cloud.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PLAZA-NewWOFlow/Linux_Unix_Server.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PLAZA_Create_Incident.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PDB NO/PLAZA_Pending_Incident.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PDB NO/PLAZA_Create_Incident.feature" />
       </list>
     </option>
   </component>
@@ -353,6 +370,39 @@
               <item name="SPRINTS" type="462c0819:PsiDirectoryNode" />
               <item name="Sprint 4.4" type="462c0819:PsiDirectoryNode" />
               <item name="PLAZA-NewWOFlow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OneWorkflowAutomationNEW" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="SPRINTS" type="462c0819:PsiDirectoryNode" />
+              <item name="Sprint 4.4" type="462c0819:PsiDirectoryNode" />
+              <item name="PlazaPDB_OW_Incident_Integration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OneWorkflowAutomationNEW" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="SPRINTS" type="462c0819:PsiDirectoryNode" />
+              <item name="Sprint 4.4" type="462c0819:PsiDirectoryNode" />
+              <item name="PlazaPDB_OW_Incident_Integration" type="462c0819:PsiDirectoryNode" />
+              <item name="PDB NO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OneWorkflowAutomationNEW" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="SPRINTS" type="462c0819:PsiDirectoryNode" />
+              <item name="A" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
@@ -489,7 +539,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PLAZA-NewWOFlow/Cloud" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PDB NO" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -514,11 +564,11 @@
       <recent name="Helpers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PlazaPDB_OW_Incident_Integration\PDB NO" />
       <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PLAZA-NewWOFlow\Cloud" />
       <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PlazaPDB_OW_Incident_Integration" />
       <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PlazaPDB_OW_Incident_Integration\Denmark" />
       <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PlazaPDB_OW_Incident_Integration\Estonia" />
-      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PlazaPDB_OW_Incident_Integration\Finland" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -827,14 +877,7 @@
       <workItem from="1570628389235" duration="4375000" />
       <workItem from="1571040833822" duration="15059000" />
       <workItem from="1571126951908" duration="6761000" />
-      <workItem from="1571224751017" duration="8005000" />
-    </task>
-    <task id="LOCAL-00069" summary="updated features and steps">
-      <created>1564588729614</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1564588729614</updated>
+      <workItem from="1571224751017" duration="14018000" />
     </task>
     <task id="LOCAL-00070" summary="updated features and steps">
       <created>1564739938721</created>
@@ -1172,7 +1215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571235393158</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="Adding new WO flow for Plaza">
+      <created>1571236644203</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1571236644203</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1208,7 +1258,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241539000" />
+    <option name="totallyTimeSpent" value="247552000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1239,7 +1289,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.09052334" />
       <window_info anchor="bottom" id="Build" order="8" weight="0.4171181" />
       <window_info anchor="bottom" id="Message" order="9" />
-      <window_info anchor="bottom" id="Find" order="10" weight="0.11881188" />
+      <window_info anchor="bottom" id="Find" order="10" weight="0.145686" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.2036775" />
@@ -1469,15 +1519,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/E2E/RAN/E2E_RAN_Test_Cases.feature">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/Plaza_OW_Incident_Integration/PLAZA_Reject_Incident.feature">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/Plaza_OW_Incident_Integration/PLAZA_Withdraw.feature">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/Plaza_OW_Incident_Integration/PLAZA_Reassign_Incident.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1617,14 +1658,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/Tieto_OW_Integration/BR-2965_Tieto-OneWorkflow_Resolve.feature">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/Tieto_OW_Integration/BR-2965_Tieto-OneWorkflow_Resolve.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/Plaza-OW-Tieto/CO-TP.feature" />
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/Norway/PLAZA_Create_Incident.feature" />
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/Lithuania/PLAZA_Create_Incident.feature" />
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/Finland/PLAZA_Create_Incident.feature" />
@@ -1638,13 +1678,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/Sweden/PLAZA_Create_Incident.feature" />
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/Plaza_OW_Incident_Integration/PLAZA_Create_Incident.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Add_Modify_Remove.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -1653,13 +1686,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PLAZA_Reassign_Incident.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PLAZA_Reject_Incident.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="10" selection-start-column="10" selection-end-column="10" />
@@ -1714,13 +1740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PLAZA-NewWOFlow/Cloud.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PLAZA-NewWOFlow/WindowsServer.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -1728,17 +1747,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/Plaza_OW_Incident_Integration/PLAZA_Create_Incident.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PDB NO.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/CO-TP.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PLAZA-NewWOFlow/Cloud.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="20" column="58" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="20" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PLAZA-NewWOFlow/Linux_Unix_Server.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="178">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PLAZA_Create_Incident.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        <state relative-caret-position="357">
+          <caret line="17" column="75" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PLAZA_Reject_Incident.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PDB NO/PLAZA_Pending_Incident.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="19" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PlazaPDB_OW_Incident_Integration/PDB NO/PLAZA_Create_Incident.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="76" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="76" />
         </state>
       </provider>
     </entry>

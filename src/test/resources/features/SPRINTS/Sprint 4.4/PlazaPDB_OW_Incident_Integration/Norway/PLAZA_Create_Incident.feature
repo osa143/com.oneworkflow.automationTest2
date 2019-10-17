@@ -1,7 +1,7 @@
 @PLAZA_PDB_Create_Incident @PLAZA_Incident_Flow
   #Ticket ID to come from Plaza
   Feature: Plaza creation of incident ticket
-    Scenario: user validates plaza incident ticket
+    Scenario Outline: user validates plaza incident ticket
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -12,7 +12,7 @@
       And user validates "*Service Area" as "Security, Ethics and Compliance"
       And user validates "*Service" as "Personal Data Breach"
       Then user enters date and time as current date and time
-      And user selects affected bu as "norway"
+      And user selects "<Affected BU>"
       And user enters "Nature and content" as "Address"
       And user selects "Yes" under "affected persons"
       And user enters "Test Data" under Affected persons name and unique id
@@ -34,6 +34,13 @@
       Then user should see blank trouble search form
       When user enters plaza incident ticket
       Then user should see plaza incident ticket
+      And user validates source field as "PLAZA"
+      And user validates source ID field contains ICM number
+      And user validates service provider as "Data Breach"
+      And user validates "<Affected BU>"
+      And user validates title field as "<Title>"
+      And user validates PDB description same as Plaza
+      And user validates ticket priority as "<Priority>"
       #will need to get the information plaza is sending to validate if its correct
       And user validates ticket information
 
@@ -75,6 +82,21 @@
       When user changes status to "Closed" on trouble event page second time
       And user clicks on save button
       Then user validates ticket status as "Closed"
+
+
+
+      Examples:
+      |Affected BU                     |Number of Persons|Affected Person|Title                          |Priority|
+      |Other (or more than one country)|                 |               |
+      |Telia Carrier                   |                 |               |
+      |Sweden                          |                 |               |
+      |Finland                         |                 |               |
+      |Norway                          |                 |               |Personal Data Breach \|\ Norway|
+      |Denmark                         |                 |               |
+      |Estonia                         |                 |               |
+      |Lithuania                       |                 |               |
+
+
 
 
 

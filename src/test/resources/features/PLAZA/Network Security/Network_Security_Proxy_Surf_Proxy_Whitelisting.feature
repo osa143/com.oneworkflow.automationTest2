@@ -15,7 +15,7 @@
       Then user selects select request "Surf proxy/URL filter"
       And user enters network security proxy request as "<Request>"
       Then user selects SurfProxy url filter as "<SurfProxy /URL filter>"
-      And user enters Source IP Address as "Test IP address"
+      And user enters whitelisting source IP Address as "Test IP address"
       And user enters the target url as "Test URL"
       Then user enters the h2 Name "Test name"
       Then user enters network security proxy description as "<Description>"

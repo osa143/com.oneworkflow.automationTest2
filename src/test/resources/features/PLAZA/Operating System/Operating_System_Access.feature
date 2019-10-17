@@ -9,7 +9,7 @@
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
       And user clicks on "Compute & Operating System"
-      When user clicks on "Access to Red Hat Knowledgebase"
+      When user clicks on Access to Red Hat Knowledgebase
       Then user should see "Access to Red Hat Knowledgebase" form
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system request as "Test1 Operating System Access/Request"
@@ -43,7 +43,7 @@
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
-      And user selects completed code as "Success"
+      And user selects completion code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button

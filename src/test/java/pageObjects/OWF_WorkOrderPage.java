@@ -124,8 +124,9 @@ public class OWF_WorkOrderPage extends BasePage {
         String actualDescription = getDescription();
         if(actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.ServiceRequestName)
-                && actualDescription.contains(PlazaValidation.Environment) && actualDescription.contains(PlazaValidation.WbsCodeField)
-                && actualDescription.contains(PlazaValidation.Description) &&actualDescription.contains(PlazaValidation.AdditionalComments))
+                && actualDescription.contains(PlazaValidation.Environment)
+                && actualDescription.contains(PlazaValidation.WbsCodeField) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments))
 
         {
             return true;
@@ -331,7 +332,7 @@ public class OWF_WorkOrderPage extends BasePage {
     public boolean verifyC2BServiceDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
-                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Environment)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Environment)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
@@ -366,11 +367,11 @@ public class OWF_WorkOrderPage extends BasePage {
 
     public boolean verifyDataCenterCablingRemoveDescription() {
         String actualDescription = getDescription();
-        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
-                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.DcSite)
+        if (actualDescription.contains(PlazaValidation.AdditionalComments) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.DcSite)
                 && actualDescription.contains(PlazaValidation.Room) && actualDescription.contains(PlazaValidation.DeliveryDate)
-                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.WbsCodeField)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.WbsCodeField)) {
+
             return true;
         }
         return false;

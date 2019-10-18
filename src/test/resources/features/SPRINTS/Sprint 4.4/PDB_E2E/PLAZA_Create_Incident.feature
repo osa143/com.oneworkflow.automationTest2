@@ -122,6 +122,9 @@
       When user changes status to "Closed" on trouble event page second time
       And user clicks on save button
       Then user validates ticket status as "Closed"
+      Then user switches to window 1
+      And user clicks on main page refresh
+      Then user validates plaza request has completed
 
 
 
@@ -136,8 +139,8 @@
       |Denmark                         |No               |               |Personal Data Breach \|\ Denmark  |Minor   |
       |Estonia                         |No               |               |Personal Data Breach \|\ Estonia  |Minor   |
       |Lithuania                       |No               |               |Personal Data Breach \|\ Lithuania|Minor   |
-      |Other (or more than one country)|Yes              |               |                                  |Minor   |
-      |Telia Carrier                   |Yes              |               |                                  |Minor   |
+      |Other (or more than one country)|Yes              |               |                                  |Major   |
+      |Telia Carrier                   |Yes              |               |                                  |Major   |
       |Sweden                          |Yes              |               |Personal Data Breach \|\ Sweden   |Major   |
       |Finland (Enterprise)            |Yes              |               |Personal Data Breach \|\ Finland  |Major   |
       |Finland (Consumer)              |Yes              |               |Personal Data Breach \|\ Finland  |Major   |

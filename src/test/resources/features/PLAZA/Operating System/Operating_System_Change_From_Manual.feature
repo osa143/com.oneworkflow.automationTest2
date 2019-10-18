@@ -1,5 +1,5 @@
 @Operating_System_Change_From_Manual @PLAZA
-  Feature: Operating System change from manual
+  Feature: Operating System change from manual-
     Scenario Outline: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page

@@ -1899,6 +1899,7 @@ public class Plaza_HomePageSteps extends BasePage {
     @Then("user clicks on submit button on plaza form")
     public void userClicksOnSubmitButtonOnPlazaForm() {
         clickElement(By.xpath("//button[@name='submit']"));
+        homePage.wait(5000);
     }
 
     @And("user validates internal case management form opens")
@@ -1916,5 +1917,10 @@ public class Plaza_HomePageSteps extends BasePage {
         clickElement(By.xpath("//input[@value='Send']"));
     }
 
+
+    @Then("user should see incident ticket update in plaza")
+    public void userShouldSeeIncidentIdUpdateInPlazaTicket() {
+     Assert.assertTrue(homePage.verifyIncidentUpdate());
+    }
 
 }

@@ -151,8 +151,19 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_IMPACT_TO_pLUS ="arid_WIN_0_999000299";
     private static final String btn_ADD_TIMELINE= "WIN_0_777021404";
     private static final String div_AFFECTED_BU= "WIN_0_600002504";
+    private static final String txt_ID= "arid_WIN_0_777021006";
+    private static final String txt_SERVICE_PROVIDER= "arid_WIN_0_777031005";
 
 
+   public String getServiceProvider(){
+       return getTextByID(txt_SERVICE_PROVIDER);
+   }
+    public Boolean verifyIdHasICMNumber(){
+     String ID= getTextByID(txt_ID);
+     if(ID.contains("ICM"))
+         return true;
+     else return false;
+    }
     public void clickAffectedBu(String textName){
         String element = String.format("//input[@arvalue='%s']", textName);
         System.out.println(element);

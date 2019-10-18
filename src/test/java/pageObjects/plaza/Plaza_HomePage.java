@@ -15,6 +15,8 @@ import utils.PlazaValidation;
 import java.util.ArrayList;
 import java.util.List;
 
+import static utils.CommonUtils.OpTicket_plaza;
+
 public class Plaza_HomePage extends BasePage {
 
     public static final String dd_ROLE_ID= "select2-chosen-9";
@@ -287,6 +289,19 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_WHITELISTING_SOURCE_IP= "sp_formfield_sr35_v_ip_add";
 
 
+    public String getOpTicket_plaza(){
+        CommonUtils.OpTicket_plaza= getTextByElement(By.xpath("//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]"));
+        return OpTicket_plaza;
+    }
+    public Boolean verifyIncidentUpdate(){
+        String ticket=getOpTicket_plaza();
+        System.out.println("The PDB OP incident is" + ticket);
+        if(ticket.contains("OWF Incident number is:OP-00000"))
+            return true;
+        else return false;
+    }
+
+
     public void enterWhitelistingSourceIpAddress(String text){
         PlazaValidation.SourceIpAddress = text;
         enterTextByElement(By.id(txt_WHITELISTING_SOURCE_IP), text);
@@ -307,10 +322,10 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void selectNatureAndContent(String text){
-        selectDropdownWithMultipleValues(By.id("s2id_autogen27"),By.id("s2id_autogen27_results"), text );
+        selectDropdownWithMultipleValues(By.id("s2id_autogen28"),By.id("s2id_autogen28_results"), text );
     }
     public void selectAffectedPerson(String text){
-        selectDropdownByTagNameDiv(By.id("select2-chosen-17"),By.id("select2-results-17"), text );
+        selectDropdownByTagNameDiv(By.id("select2-chosen-18"),By.id("select2-results-18"), text );
     }
     public void enterDatetime_PDB(String text){
         enterTextByElement(By.id("sp_formfield_pdb_eventStartTime"), text);

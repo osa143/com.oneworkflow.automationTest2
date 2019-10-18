@@ -1188,6 +1188,26 @@ public class OWF_TroubleEventPageSteps {
     }
 
 
+    @When("user enters plaza incident ticket")
+    public void userEntersPlazaIncidentTicket() {
+        troubleEventPage.enterTroubleTicket(CommonUtils.OpTicket_plaza);
+    }
+
+    @And("user should see plaza incident ticket")
+    public void userShouldSeePlazaIncidentTicket() {
+        Assert.assertEquals(troubleEventPage.getTroubleTicket(), CommonUtils.OpTicket_plaza);
+    }
+
+    @And("user validates source ID field contains ICM number")
+    public void userValidatesSourceIDFieldContainsICMNumber() {
+      Assert.assertTrue(troubleEventPage.verifyIdHasICMNumber());
+    }
+
+    @And("user validates service provider as {string}")
+    public void userValidatesServiceProviderAs(String arg0) {
+        Assert.assertEquals(troubleEventPage.getServiceProvider(), arg0);
+
+    }
 }
 
 

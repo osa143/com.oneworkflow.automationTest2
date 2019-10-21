@@ -353,6 +353,14 @@ public class OWF_AgentConsolePage extends BasePage {
     public int getTableRowsCount() {
         return getTableRows(By.id(table_ID)).size();
     }
+
+    public Boolean verifyAgentConsoleHasData(){
+        int count= getTableRowsCount();
+        if(count>1)
+            return true;
+        else return false;
+    }
+
     public int getAlarmTableRowsCount(){
         return getTableRows(By.id(timeline_TABLE_ID)).size();
     }

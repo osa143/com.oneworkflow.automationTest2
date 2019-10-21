@@ -870,7 +870,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.DateTime) && actualDescription.contains(PlazaValidation.CI)
-                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;

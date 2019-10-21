@@ -10,10 +10,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.util.Iterator;
-import java.util.Properties;
-import java.util.Set;
-import java.util.TimeZone;
+import java.util.*;
 
 public class CommonUtils extends BasePage {
 
@@ -54,6 +51,16 @@ public class CommonUtils extends BasePage {
         }
     }
 
+    public static String getDate(String timeZone) {
+
+        if (timeZone.equals(""))
+            timeZone = ZoneId.systemDefault().getId();
+
+        LocalDate currentDate = LocalDate.now(TimeZone.getTimeZone(timeZone).toZoneId());
+
+        return currentDate.toString();
+
+    }
 
     public static String getDateTime(String pattern, String timeZone, int minutes) {
         if (timeZone.equals(""))

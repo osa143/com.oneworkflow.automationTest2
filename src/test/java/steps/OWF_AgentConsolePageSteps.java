@@ -612,6 +612,16 @@ public class OWF_AgentConsolePageSteps {
     public void multipleOptionsShouldBeAvailableInTitleDropdown(String arg0) {
         Assert.assertTrue(agentConsolePage.verifyTitleDropdownValues(arg0, ""));
     }
+
+    @Then("user validates availability of {string} tabs")
+    public void userValidatesAvailabilityOfTabs(String arg0) {
+        agentConsolePage.verifyTabValues(arg0);
+    }
+
+    @And("user validates agent console is displayed correctly")
+    public void userValidatesAgentConsoleIsDisplayedCorrectly() {
+       Assert.assertTrue(agentConsolePage.verifyAgentConsoleHasData());
+    }
 }
 
 

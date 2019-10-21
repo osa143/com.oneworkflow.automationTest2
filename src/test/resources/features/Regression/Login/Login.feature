@@ -1,11 +1,13 @@
 @Login
-  Feature: Login tests
-    Scenario Outline: Test to see if all logins works
+  Feature: Login test
+
+    Scenario Outline: Test to see if all user profiles are working correctly
 
       Given user is on the OneWorkflow login page
-      And user logs in with valid username "<User>" and password as "<Password>"
+      When user logs in with valid username "<User>" and password as "<Password>"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      And User validates agent console is displayed correctly
+      And user validates agent console is displayed correctly
+      Then user validates availability of "Timeline:Details:List:Search / Quick Create" tabs
       And user logsOut from One workflow
 
       Examples:

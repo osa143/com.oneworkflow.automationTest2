@@ -334,7 +334,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user enters delivery date as current date")
     public void userEntersDeliveryDateAsCurrentDate() {
-        homePage.enterCablingNew_deliveryDate(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+        homePage.enterCablingNew_deliveryDate(CommonUtils.getDate("Europe/Stockholm"));
     }
 
     @Then("user enters Data Center description as {string}")

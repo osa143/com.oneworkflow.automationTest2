@@ -5,12 +5,14 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
+      Then user clicks on plaza portal
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
       And user clicks on "Compute & Operating System"
       When user clicks on "Account Management - Server"
       Then user should see "Account Management - Server" form
+      #Then user selects "System Name in Haiti" as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system account management request as "Test2 Operating System Account/Request"
       And user selects select request "Add Local Account"

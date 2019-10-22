@@ -5,12 +5,14 @@
      Given user is on the Plaza login page
      When user enters username "testauto" and password as "test123" and clicks on login
      Then user should see the plaza home page
+     Then user clicks on plaza portal
      When user clicks on "Facility Management"
      And user clicks on order
      And user clicks on IT Infrastructure dropdown
      And user clicks on "Application"
      When user clicks on "SPAN" pebble
      Then user should see "SPAN" form
+     #Then user selects "System Name in Haiti" as "Other"
      When user selects role dropdown as "Application Operation Engineer"
      And user enters SPAN request as "<Request>"
      And user selects span select request as "Account/Password"

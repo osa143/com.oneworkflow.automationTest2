@@ -6,12 +6,14 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
+      Then user clicks on plaza portal
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
       And user clicks on "Firewall & Network"
       When user clicks on Remote Access (VPN ACS)
       Then user should see "Remote Access (VPN/ACS)" form
+      #Then user selects "System Name in Haiti" as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters network security remote request as "Test9 Network Security/Request"
       Then user selects remote access select request as "General VPN"

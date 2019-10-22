@@ -5,12 +5,14 @@ Feature: Plaza C2B Cache form test
     Given user is on the Plaza login page
     When user enters username "testauto" and password as "test123" and clicks on login
     Then user should see the plaza home page
+    Then user clicks on plaza portal
     When user clicks on "Facility Management"
     And user clicks on order
     And user clicks on IT Infrastructure dropdown
     And user clicks on "Application"
     When user clicks on "C2Bcache" pebble
     Then user should see "C2B Cache" form
+    #Then user selects "System Name in Haiti" as "Other"
     When user selects role dropdown as "Application Operation Engineer"
     And user selects service request name as "Deployment"
     And user enters C2B request as "<Request>"
@@ -58,7 +60,7 @@ Feature: Plaza C2B Cache form test
 
     Examples:
     |Request                |Environment|Description               |AdditionalComments|DescValidation|
-#    |Test1 C2BCache/Request |AT         |Test1 C2BCache/Description|Test1 C2BCache/AC |              |
+    |Test1 C2BCache/Request |AT         |Test1 C2BCache/Description|Test1 C2BCache/AC |              |
 #    |Test2 C2BCache/Request |DEV        |Test2 C2BCache/Description|Test2 C2BCache/AC |              |
 #    |Test3 C2BCache/Request |MITE       |Test3 C2BCache/Description|Test3 C2BCache/AC |              |
 #    |Test4 C2BCache/Request |Prod       |Test4 C2BCache/Description|Test4 C2BCache/AC |              |

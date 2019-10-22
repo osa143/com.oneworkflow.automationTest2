@@ -5,16 +5,18 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
+      Then user clicks on plaza portal
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
       And user clicks on "Storage & Data Protection"
       When user clicks on "Restore from Backup" pebble
       Then user should see "Restore from Backup" form
+     # Then user selects "System Name in Haiti" as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Backup request as "Test1 Backup Restore/Request"
       And user enters back up date and as current date and time
-      And user selects Add CI back up as "cc100cgas001"
+      #And user selects Add CI back up as "cc100cgas001"
       And user enters Backup UNC Local path as "\\TESTING\This"
       And user enters Backup restore files as "Test file"
       Then user enters Backup description as "Test1 Backup restore/Description"

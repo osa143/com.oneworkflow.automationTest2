@@ -5,12 +5,14 @@ Feature: Plaza EFS-BSS form test
     Given user is on the Plaza login page
     When user enters username "testauto" and password as "test123" and clicks on login
     Then user should see the plaza home page
+    Then user clicks on plaza portal
     When user clicks on "Facility Management"
     And user clicks on order
     And user clicks on IT Infrastructure dropdown
     And user clicks on "Application"
     When user clicks on "EFS-BSS" pebble
     Then user should see "EFS-BSS" form
+    #Then user selects "System Name in Haiti" as "Other"
     When user selects role dropdown as "Application Operation Engineer"
     And user enters EFS-BSS request as "Test1 EFS/Request"
     And user enters CI as "ef002appp1"

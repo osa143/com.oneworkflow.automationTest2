@@ -107,12 +107,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.UnhandledAlertException</a>
+							<a href="#" class="item-title _500">java.lang.AssertionError</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.UnhandledAlertException</h5>
+								<h5 class="mb-4">java.lang.AssertionError</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="30" parent-id="1">
+<tr class="s-fail" test-id="5" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">When user selects search menu as "Open Search Form:Trouble Event" <br/><span class="text-muted text-sm">user validates plaza incident ticket</span></td>
-	<td>0h 0m 0s+286msc</td>
+	<td class="_600">Then user should see the plaza home page <br/><span class="text-muted text-sm">user validates information sent to OW from Plaza</span></td>
+	<td>0h 0m 0s+15msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,28 +136,15 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : ARERR [9388] Authentication failed}
-  (Session info: chrome=77.0.3865.120): ARERR [9388] Authentication failed
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P3NRUGT', ip: '192.168.1.209', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.120, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57320}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 8a6a103338a170f1e7a176972ce3aa25
-*** Element info: {Using=xpath, value=//img[@alt='Menu for Search']/..}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.BasePage.selectMainMenu(BasePage.java:187)
-	at pageObjects.BasePage.selectMainMenuAndMenuItem(BasePage.java:208)
-	at pageObjects.OWF_AgentConsolePage.selectSearchMenu(OWF_AgentConsolePage.java:500)
-	at steps.OWF_AgentConsolePageSteps.userSelectsSearchMenuAs(OWF_AgentConsolePageSteps.java:195)
-	at ✽.user selects search menu as "Open Search Form:Trouble Event"(features/SPRINTS/Sprint 4.4/PDB_E2E/PLAZA_Create_Incident.feature:34)
+		<textarea disabled class="code-block">java.lang.AssertionError: expected [ServiceNow] but found [Home page loading... | ServiceNow]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at steps.plaza_steps.Plaza_HomePageSteps.userShouldSeeThePlazaHomePage(Plaza_HomePageSteps.java:20)
+	at ✽.user should see the plaza home page(features/PLAZA/Backup/Backup_One_Time.feature:7)
 </textarea>
 	</td>
 </tr>
@@ -185,7 +172,7 @@ Session ID: 8a6a103338a170f1e7a176972ce3aa25
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Oct 22, 2019 12:34:11 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Oct 22, 2019 04:30:14 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

@@ -12,6 +12,7 @@ import pageObjects.BasePage;
 import utils.CommonUtils;
 import utils.PlazaValidation;
 
+import java.security.Key;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -288,6 +289,18 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_BDL_WBS_CODE_AT1= "sp_formfield_sr108_v_wbs_code";
     private static final String txt_WHITELISTING_SOURCE_IP= "sp_formfield_sr35_v_ip_add";
     private static final String btn_PLAZA_hOME= "90c61d18db3fc7002b3cfc16bf961953";
+    private static final String dd_SYSTEM_NAME_IN_HAITI= "s2id_sp_formfield_h2_name";
+
+
+    public void selectSystemNameInHaiti(String dropdownName){
+        clickElement(By.id(dd_SYSTEM_NAME_IN_HAITI));
+        WebElement Element=findElement(By.id("s2id_autogen12_search"));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
+
+    }
 
     public void clickPlazaHome(){
         clickElement(By.id(btn_PLAZA_hOME));

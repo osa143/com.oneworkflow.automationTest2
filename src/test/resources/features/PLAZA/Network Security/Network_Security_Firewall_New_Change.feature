@@ -5,12 +5,14 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
+      Then user clicks on plaza portal
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
       And user clicks on "Firewall & Network"
       When user clicks on Firewall Routing Request pebble
       Then user should see "Firewall Routing Request" form
+      #Then user selects "System Name in Haiti" as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects New Change Service Request Name as "New/Change Routing"
       And user enters Network Security Firewall New Change request as "Test3 Network Security/Request"

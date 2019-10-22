@@ -5,12 +5,14 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
+      Then user clicks on plaza portal
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
       And user clicks on "Application"
       When user clicks on "Splunk (Splunk/TC Logging)" pebble
       Then user should see "Splunk (Splunk/TC Logging)" form
+      #Then user selects "System Name in Haiti" as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Splunk request as "Test1 Splunk/Request"
       And user enters splunk description as "Test1 Splunk/Description"

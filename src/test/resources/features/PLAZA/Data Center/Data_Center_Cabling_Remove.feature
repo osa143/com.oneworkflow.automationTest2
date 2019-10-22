@@ -6,12 +6,14 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
+      Then user clicks on plaza portal
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
       And user clicks on "Data Center"
       When user clicks on "Cabling - Remove" pebble
       Then user should see "Cabling - Remove" form
+      Then user selects System Name in Haiti as "Other"
       And user enters Cabling - New request as "Test2 Cabling/Request"
       And user enters DC-site or address as "Test address"
       And user enters Room as "Test room"

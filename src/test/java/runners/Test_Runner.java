@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@PLAZA_PDB_Create_Incident"}
+        tags = {"@Backup_One_Time"}
 )
 
 public class Test_Runner extends BaseTest {

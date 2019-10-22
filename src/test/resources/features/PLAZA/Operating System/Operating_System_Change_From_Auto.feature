@@ -5,12 +5,14 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
+      Then user clicks on plaza portal
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
       And user clicks on "Compute & Operating System"
       When user clicks on Change OS Patching
       Then user should see "Change OS Patching" form
+      #Then user selects "System Name in Haiti" as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system change from auto request as "Test3 Operating System Account/Request"
       And user selects select request "Changing from Auto to Manual patching"

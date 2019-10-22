@@ -5,12 +5,14 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
+      Then user clicks on plaza portal
       When user clicks on "Facility Management"
       And user clicks on order
       And user clicks on IT Infrastructure dropdown
       And user clicks on "Application"
       When user clicks on "MegaDisc (Account Management)" pebble
       Then user should see "MegaDisc (Account Management)" form
+      #Then user selects "System Name in Haiti" as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects choose option as "Remove User"
       And user enters MegaDisc request as "Test1 MegaDisc/Request"

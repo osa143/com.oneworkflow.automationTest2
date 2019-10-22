@@ -6,6 +6,7 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
+      And user clicks on plaza portal
       When user clicks on "Security, Ethics & Compliance"
       And user clicks on "Report a Personal Data Breach"
       Then user validates PDB submit form opens

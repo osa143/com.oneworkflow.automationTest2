@@ -287,6 +287,11 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_BDL_WBS_CODE_AT2= "sp_formfield_sr108_v_wbs_code";
     private static final String txt_BDL_WBS_CODE_AT1= "sp_formfield_sr108_v_wbs_code";
     private static final String txt_WHITELISTING_SOURCE_IP= "sp_formfield_sr35_v_ip_add";
+    private static final String btn_PLAZA_hOME= "90c61d18db3fc7002b3cfc16bf961953";
+
+    public void clickPlazaHome(){
+        clickElement(By.id(btn_PLAZA_hOME));
+    }
 
 
     public String getOpTicket_plaza(){
@@ -322,7 +327,7 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void selectNatureAndContent(String text){
-        selectDropdownWithMultipleValues(By.id("s2id_autogen28"),By.id("s2id_autogen28_results"), text );
+        selectDropdownWithMultipleValues(By.id("s2id_autogen29"),By.id("s2id_autogen29_results"), text );
     }
     public void selectAffectedPerson(String text){
         selectDropdownByTagNameDiv(By.id("select2-chosen-18"),By.id("select2-results-18"), text );

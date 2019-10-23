@@ -291,8 +291,23 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_WHITELISTING_SOURCE_IP= "sp_formfield_sr35_v_ip_add";
     private static final String btn_PLAZA_hOME= "90c61d18db3fc7002b3cfc16bf961953";
     private static final String dd_SYSTEM_NAME_IN_HAITI= "s2id_sp_formfield_h2_name";
+    private static final String div_PDB_Affected_COUNTRY= "sp_formfield_pdb_country";
+
+    public String getOW_ManualNotification_plaza(){
+        return getTextByElement(By.xpath("//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p"));
+    }
 
 
+    public String getOW_AttachmentNotification_plaza(){
+        String message= getTextByElement(By.xpath("//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p"));
+        String arr[] = message.split(":");
+        String AttachmentMessage= arr[2];
+        return AttachmentMessage;
+    }
+    public void clickPDB_AffectedCountry(String AffectedCountry) {
+
+        driver.findElement((By.id(div_PDB_Affected_COUNTRY))).findElements(By.tagName("span")).stream().filter(element -> element.getText().trim().equals(AffectedCountry)).findFirst().orElse(null).click();
+    }
     public void selectSystemNameInHaiti(String dropdownName){
         clickElement(By.id(dd_SYSTEM_NAME_IN_HAITI));
         WebElement Element=findElement(By.id("s2id_autogen12_search"));
@@ -302,9 +317,6 @@ public class Plaza_HomePage extends BasePage {
         Element.sendKeys(Keys.ENTER);
 
     }
-
-
-
     public String getOW_ManualUpdate(){
         return getTextByElement(By.id(""));
     }

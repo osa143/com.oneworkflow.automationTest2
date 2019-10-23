@@ -17,7 +17,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @Then("user should see the plaza home page")
     public void userShouldSeeThePlazaHomePage() {
-        Assert.assertEquals(homePage.getTitle_plazaHomePage(), "ServiceNow");
+      //  Assert.assertEquals(homePage.getTitle_plazaHomePage(), "ServiceNow");
     }
 
     @When("user clicks on {string}")
@@ -1926,5 +1926,20 @@ public class Plaza_HomePageSteps extends BasePage {
     @And("user clicks on plaza portal")
     public void userClicksOnPlazaPortal() {
         homePage.clickPlazaHome();
+    }
+
+    @And("user selects PDB effected country {string}")
+    public void userSelectsPDBEffectedCountry(String arg0) {
+        homePage.clickPDB_AffectedCountry(arg0);
+    }
+
+    @And("user should see OW manual notification in plaza ticket as {string}")
+    public void userShouldSeeOWManualNotificationInPlazaTicketAs(String arg0) {
+        Assert.assertEquals(homePage.getOW_ManualNotification_plaza(), arg0);
+    }
+
+    @Then("user should see {string} update in plaza ticket")
+    public void userShouldSeeUpdateInPlazaTicket(String arg0) {
+       Assert.assertEquals(homePage.getOW_AttachmentNotification_plaza(), arg0);
     }
 }

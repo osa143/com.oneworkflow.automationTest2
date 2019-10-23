@@ -32,16 +32,7 @@
       And user validates INC is present under internal case subtasks
       When user clicks on INC under internal case subtasks
       Then user should see INC form
-
-
-
-
-
-
-
-
       And user opens new tab
-
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed

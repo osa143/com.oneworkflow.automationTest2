@@ -13,9 +13,9 @@
       And user validates Service area as "Security, Ethics and Compliance"
       And user validates Service as "Personal Data Breach"
       Then user enters PDB date and time as current date and time
-      #And user selects "<Affected BU>"
+      And user selects PDB effected country "<PDB Affected Country>"
       And user selects nature and content as "Address"
-      And user selects affected persons as "Yes"
+      And user selects affected persons as "<Number of Persons>"
       And user enters "Test Data" under Affected persons name and unique id
       And user clicks on submit button on plaza form
       And user gets plaza request id
@@ -24,7 +24,6 @@
       And user waits 40 secs
       And user clicks on main page refresh
       Then user should see incident ticket update in plaza
-      #And user should see "The incident has been successfully assigned in OneWorkflow" timeline update in plaza ticket
       When user enters "Test Update" in the ticket timeline
       And user clicks on plaza send button
       Then user opens new tab
@@ -43,18 +42,20 @@
       And user validates title field as "<Title>"
       And user validates PDB description same as Plaza
       And user validates ticket priority as "<Priority>"
-      And change should also be reflected in the timeline as "Test Timeline Update" on row 1
-      Then user clicks on assignment under sections
-      And user clicks on owner under sections
-      And user validates owner profile as "PDB Control Center"
-      And user validates owner as "PDBCC"
-      And user validates assignee is "PDB Control Center"
+      #And change should also be reflected in the timeline as "Test Timeline Update" on row 1
+#      Then user clicks on assignment under sections
+#      And user clicks on owner under sections
+#      And user validates owner profile as "PDB Control Center"
+#      And user validates owner as "PDBCC"
+#      And user validates assignee is "PDB Control Center"
       When user enters "Test Update" in the timeline text box
+      And user clicks on public radio button
       And user clicks on add button
       Then change should also be reflected in the timeline as "Test Update"
-      And user switches to window 1
+      And user switches to window 0
       And user clicks on main page refresh
       And user should see OW manual notification in plaza ticket as "Test Update"
+      And user switches to window 2
       When user clicks on attachments under sections
       And user clicks on add button under internal
       And user switches to frame 2
@@ -69,39 +70,39 @@
       And user clicks on save button on attachment window
       Then user clicks on save button
       And change should also be reflected in the timeline as "Attachment has been added. File Name - attachment.doc"
-      Then user switches to window 1
+      Then user switches to window 0
       And user clicks on main page refresh
-      And user should see attachment on plaza ticket
-      #not sure what exact message is yet
-      Then user should see "attachment" timeline update in plaza ticket
+      #And user should see attachment on plaza ticket
+      Then user should see "Attachment has been added. File Name - attachement.doc.txt" update in plaza ticket
       And user switches to window 2
       When user changes status to "Pending"
       And user enters on hold to date 2 minutes in the future
-      And user enters on hold reason as "Pending ticket test"
+      And user selects on hold reason as "Waiting for Customer Info"
       Then user clicks on save button
       And user validates ticket status as "Pending"
-      And user switches to window 1
-      And user should see "pending" timeline update in plaza ticket
+      And user switches to window 0
+      And user should see "pending" update in plaza ticket
       And user switches to window 2
       Then user waits for 2 minutes
       And user clicks on ticket refresh button
       And user validates ticket status as "Assigned"
       Then user selects assignment profile dropdown as "Mobile:Mobile PS:MOB PS Core West"
-      And user selects assignee as "Change_Automation_1" by using alphabet "C" key up 0 times
+      And user enters "Change_Automation_1" in assignee
+      #And user selects assignee as "Change_Automation_1" by using alphabet "C" key up 0 times
       Then user clicks on save button
       And user "MOB PS Core WEST" is listed as the assigned profile
       And user validates assignee is "Change_Automation_1"
       Then user switches to window 1
       And user clicks on main page refresh
       #need to get the exact timeline message
-      And should see "Assignee update" timeline update in plaza ticket
+      And user should see "Assignee update" update in plaza ticket
       Then user switches to window 2
       When user clicks on Ack button
       Then user validates ticket status as "Work In Progress"
-      Then user switches to window 1
+      Then user switches to window 0
       And user clicks on main page refresh
       #need to get the exact timeline message
-      And should see "work in progress" timeline update in plaza ticket
+      And user should see "work in progress" update in plaza ticket
       Then user switches to window 2
       When user changes status to "Cleared" on trouble event page
       And user selects fault position as "N/A:N/A" on trouble event page
@@ -114,10 +115,10 @@
       And user should see confirmation message for impact clear and clicks ok
       And user clicks on save button
       Then user validates ticket status as "Cleared"
-      Then user switches to window 1
+      Then user switches to window 0
       And user clicks on main page refresh
       #need to get the exact timeline message (if applicable)
-      And should see "cleared" timeline update in plaza ticket
+      And user should see "cleared" update in plaza ticket
       Then user switches to window 2
       When user changes status to "Closed" on trouble event page second time
       And user clicks on save button
@@ -126,25 +127,25 @@
 
 
       Examples:
-      |Affected BU                     |Number of Persons|Affected Person|Title                             |Priority|
-      |Other (or more than one country)|No               |               |                                  |Minor   |
-#      |Telia Carrier                   |No               |               |                                  |Minor   |
-#      |Sweden                          |No               |               |Personal Data Breach \|\ Sweden   |Minor   |
-#      |Finland (Enterprise)            |No               |               |Personal Data Breach \|\ Finland  |Minor   |
-#      |Finland (Consumer)              |No               |               |Personal Data Breach \|\ Finland  |Minor   |
-#      |Norway                          |No               |               |Personal Data Breach \|\ Norway   |Minor   |
-#      |Denmark                         |No               |               |Personal Data Breach \|\ Denmark  |Minor   |
-#      |Estonia                         |No               |               |Personal Data Breach \|\ Estonia  |Minor   |
-#      |Lithuania                       |No               |               |Personal Data Breach \|\ Lithuania|Minor   |
-#      |Other (or more than one country)|Yes              |               |                                  |Major   |
-#      |Telia Carrier                   |Yes              |               |                                  |Major   |
-#      |Sweden                          |Yes              |               |Personal Data Breach \|\ Sweden   |Major   |
-#      |Finland (Enterprise)            |Yes              |               |Personal Data Breach \|\ Finland  |Major   |
-#      |Finland (Consumer)              |Yes              |               |Personal Data Breach \|\ Finland  |Major   |
-#      |Norway                          |Yes              |               |Personal Data Breach \|\ Norway   |Major   |
-#      |Denmark                         |Yes              |               |Personal Data Breach \|\ Denmark  |Major   |
-#      |Estonia                         |Yes              |               |Personal Data Breach \|\ Estonia  |Major   |
-#      |Lithuania                       |Yes              |               |Personal Data Breach \|\ Lithuania|Major   |
+      |PDB Affected Country             |Number of Persons|Title                                                           |Priority|
+      |Other (or more than one country)|No               |Other Other (or more than one country)|Minor   |
+#      |Telia Carrier                   |No              |Personal Data Breach \| Telia Carrier                          |Minor   |
+#      |Sweden                          |No              |Personal Data Breach \| Sweden                                 |Minor   |
+#      |Finland (Enterprise)            |No              |Personal Data Breach \| Finland                                |Minor   |
+#      |Finland (Consumer)              |No              |Personal Data Breach \| Finland                                |Minor   |
+#      |Norway                          |No              |Personal Data Breach \| Norway                                 |Minor   |
+#      |Denmark                         |No              |Personal Data Breach \| Denmark                                |Minor   |
+#      |Estonia                         |No              |Personal Data Breach \| Estonia                                |Minor   |
+#      |Lithuania                       |No              |Personal Data Breach \| Lithuania                              |Minor   |
+#      |Other (or more than one country)|Yes             |Personal Data Breach \| Other Other (or more than one country) |Major   |
+#      |Telia Carrier                   |Yes             |Personal Data Breach \| Telia Carrier                          |Major   |
+#      |Sweden                          |Yes             |Personal Data Breach \| Sweden                                 |Major   |
+#      |Finland (Enterprise)            |Yes             |Personal Data Breach \| Finland                                |Major   |
+#      |Finland (Consumer)              |Yes             |Personal Data Breach \| Finland                                |Major   |
+#      |Norway                          |Yes             |Personal Data Breach \| Norway                                 |Major   |
+#      |Denmark                         |Yes             |Personal Data Breach \| Denmark                                |Major   |
+#      |Estonia                         |Yes             |Personal Data Breach \| Estonia                                |Major   |
+#      |Lithuania                       |Yes             |Personal Data Breach \| Lithuania                              |Major   |
 
 
 

@@ -1208,6 +1208,16 @@ public class OWF_TroubleEventPageSteps {
         Assert.assertEquals(troubleEventPage.getServiceProvider(), arg0);
 
     }
+
+    @And("user enters on hold to date {int} minutes in the future")
+    public void userEntersOnHoldToDateMinutesInTheFuture(int arg0) {
+       troubleEventPage.enterHoldToDateAndTime(CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", arg0));
+    }
+
+    @And("user selects on hold reason as {string}")
+    public void userEntersOnHoldReasonAs(String arg0) {
+
+    }
 }
 
 

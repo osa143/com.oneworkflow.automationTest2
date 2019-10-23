@@ -248,7 +248,9 @@ public class OWF_WorkOrderPageSteps {
 
     @And("user validates title field as {string}")
     public void userValidatesTitleFieldAs(String arg0) {
-        Assert.assertEquals(workOrderPage.getTitle(), arg0);
+        String expectedTitle= " Personal Data Breach | "+arg0;
+        System.out.println("Expected plaza title is " +expectedTitle);
+        Assert.assertEquals(workOrderPage.getTitle(), expectedTitle);
     }
 
     @And("user validates description")

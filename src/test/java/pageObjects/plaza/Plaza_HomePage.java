@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static utils.CommonUtils.OpTicket_plaza;
+import static utils.CommonUtils.opTicket;
 
 public class Plaza_HomePage extends BasePage {
 
@@ -302,19 +303,28 @@ public class Plaza_HomePage extends BasePage {
 
     }
 
+
+
+    public String getOW_ManualUpdate(){
+        return getTextByElement(By.id(""));
+    }
     public void clickPlazaHome(){
         clickElement(By.id(btn_PLAZA_hOME));
     }
 
 
     public String getOpTicket_plaza(){
-        CommonUtils.OpTicket_plaza= getTextByElement(By.xpath("//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]"));
+        String ticket= getTextByElement(By.xpath("//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p"));
+        System.out.println(ticket);
+        String arr[] = ticket.split(":");
+        CommonUtils.OpTicket_plaza = arr[1];
+        System.out.println(OpTicket_plaza);
         return OpTicket_plaza;
     }
     public Boolean verifyIncidentUpdate(){
         String ticket=getOpTicket_plaza();
         System.out.println("The PDB OP incident is" + ticket);
-        if(ticket.contains("OWF Incident number is:OP-00000"))
+        if(ticket.contains("OP-00000"))
             return true;
         else return false;
     }
@@ -336,16 +346,20 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void enterAffectedPersons(String text){
+        PlazaValidation.AffectedPersonNameID = text;
         enterTextByElement(By.id("sp_formfield_pdb_affPerDescCheck"), text);
     }
 
     public void selectNatureAndContent(String text){
+        PlazaValidation.NatureAndContent=text;
         selectDropdownWithMultipleValues(By.id("s2id_autogen29"),By.id("s2id_autogen29_results"), text );
     }
     public void selectAffectedPerson(String text){
+        PlazaValidation.AffectedPersons=text;
         selectDropdownByTagNameDiv(By.id("select2-chosen-18"),By.id("select2-results-18"), text );
     }
     public void enterDatetime_PDB(String text){
+        PlazaValidation.DateTime=text;
         enterTextByElement(By.id("sp_formfield_pdb_eventStartTime"), text);
     }
     public String getServiceArea(){

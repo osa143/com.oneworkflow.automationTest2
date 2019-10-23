@@ -44,6 +44,16 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String table_INTERESTED_PARTIES= "T705002015";
     private static final String txt_REQUEST_TYPE= "arid_WIN_0_777031002";
 
+    public boolean verifyPlazaPDB_Description() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.DateTime)
+                && actualDescription.contains(PlazaValidation.NatureAndContent) && actualDescription.contains(PlazaValidation.AffectedPersons)
+                && actualDescription.contains(PlazaValidation.AffectedPersonNameID)){
+            return true;
+        }
+        return false;
+    }
+
     public String getRequestType(){
         String requestType= getAttributeValueById(txt_REQUEST_TYPE);
         System.out.println(requestType);

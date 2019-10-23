@@ -1927,9 +1927,4 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userClicksOnPlazaPortal() {
         homePage.clickPlazaHome();
     }
-
-    @Then("user selects System Name in Haiti as {string}")
-    public void userSelectsSystemNameInHaitiAs(String arg0) {
-        homePage.selectSystemNameInHaiti(arg0);
-    }
 }

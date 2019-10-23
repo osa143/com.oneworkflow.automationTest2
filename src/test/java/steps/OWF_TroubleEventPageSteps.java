@@ -1190,7 +1190,7 @@ public class OWF_TroubleEventPageSteps {
 
     @When("user enters plaza incident ticket")
     public void userEntersPlazaIncidentTicket() {
-        troubleEventPage.enterTroubleTicket(CommonUtils.plazaRequestID);
+        troubleEventPage.enterTroubleTicket(CommonUtils.OpTicket_plaza);
     }
 
     @And("user should see plaza incident ticket")

@@ -35,14 +35,13 @@
       And user switches to window 2
       Then user should see blank trouble search form
       When user enters plaza incident ticket
-      And user clicks on search
       And user should see plaza incident ticket
       And user validates source field as "PLAZA"
       And user validates source ID field contains ICM number
       And user validates service provider as "Data Breach"
       #And user validates "<Affected BU>"
       And user validates title field as "<Title>"
-      #And user validates PDB description same as Plaza
+      And user validates PDB description same as Plaza
       And user validates ticket priority as "<Priority>"
       And change should also be reflected in the timeline as "Test Timeline Update" on row 1
       Then user clicks on assignment under sections
@@ -55,11 +54,11 @@
       Then change should also be reflected in the timeline as "Test Update"
       And user switches to window 1
       And user clicks on main page refresh
-      And user should see "Test Update" timeline update in plaza ticket
+      And user should see OW manual notification in plaza ticket as "Test Update"
       When user clicks on attachments under sections
       And user clicks on add button under internal
       And user switches to frame 2
-      Then user selects summary dropdown as "Decision"
+      And user enters attachment summary as "Test Attachment"
       And user enters attachment description as "A Document Attached"
       And user selects attachment visibility as external
       Then user clicks on add button in attachment window

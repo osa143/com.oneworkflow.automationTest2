@@ -26,7 +26,6 @@ public class PlazaValidation {
     public static String Environment;
     public static String WbsCodeField;
     public static String GeneralRequest;
-    //==============================================
     public static String SelectRequest;
     public static String DcSite;
     public static String Room;
@@ -103,6 +102,9 @@ public class PlazaValidation {
     public static String Glana;
     public static String NetworkVlan;
     public static String SourceWwn;
+    public static String NatureAndContent;
+    public static String AffectedPersons;
+    public static String AffectedPersonNameID;
 
 
 

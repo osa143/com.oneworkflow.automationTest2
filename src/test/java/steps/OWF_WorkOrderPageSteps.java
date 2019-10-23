@@ -701,5 +701,10 @@ public class OWF_WorkOrderPageSteps {
     public void userValidatesTcfpRemoveUserDescriptionSameAsPlaza() {
         Assert.assertTrue(workOrderPage.verifyTcfpRemoveUserDescription());
     }
+
+    @And("user validates PDB description same as Plaza")
+    public void userValidatesPDBDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyPlazaPDB_Description());
+    }
 }
 

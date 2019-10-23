@@ -12,7 +12,7 @@
       And user clicks on "Compute & Operating System"
       When user clicks on Access to Red Hat Knowledgebase
       Then user should see "Access to Red Hat Knowledgebase" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system request as "Test1 Operating System Access/Request"
       And user enters justification as "Test justification"

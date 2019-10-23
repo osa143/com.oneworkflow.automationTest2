@@ -12,7 +12,7 @@
       And user clicks on "Application"
       When user clicks on "MegaDisc (Account Management)" pebble
       Then user should see "MegaDisc (Account Management)" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters MegaDisc request as "Test1 MegaDisc/Request"
       Then user selects choose option as "Add User"

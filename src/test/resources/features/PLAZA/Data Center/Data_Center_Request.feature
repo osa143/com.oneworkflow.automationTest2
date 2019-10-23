@@ -12,7 +12,7 @@
       And user clicks on "Data Center"
       When user clicks on "Datacenter Request" pebble
       Then user should see "Datacenter Request" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Data Center Request request as "Test6 Data Center/Request"
       And user enters Data Center Request DC-site or address as "Test address"

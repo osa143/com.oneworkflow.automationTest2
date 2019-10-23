@@ -59,7 +59,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_NEW_SCHEDULE="sp_formfield_new_schedule";
     public static final String txt_UNC_LOCAL_PATH= "sp_formfield_include_exclude";
     public static final String txt_Description= "sp_formfield_description";
-    public static final String dd_BACK_UP_ADD_CI= "s2id_autogen13";
+    public static final String dd_BACK_UP_ADD_CI= "s2id_autogen14";
     public static final String btn_ADD_ATTACHMENT= "add_attachment_button";
     public static final String txt_INCLUDE_CI="sp_formfield_include_ci";
     public static final String txt_RETENTION_PERIOD="sp_formfield_retention_period";
@@ -84,7 +84,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_NETWORK_EQUIPMENT_REQUEST="sp_formfield_sr51_v_request";
     public static final String txt_NETWORK_EQUIPMENT_DC_SITE= "sp_formfield_sr51_v_dc_site";
     public static final String txt_NETWORK_EQUIPMENT_ROOM= "sp_formfield_sr51_v_room";
-    public static final String dd_ADD_CI = "s2id_autogen13";
+    public static final String dd_ADD_CI = "s2id_autogen14";
     public static final String txt_NETWORK_EQUIPMENT_DNS_IP_ADRESS="sp_formfield_sr51_v_dns_ip_address";
     public static final String txt_NETWORK_EQUIPMENT_DELIVERY="sp_formfield_sr51_v_date_for_delivery";
     public static final String txt_NETWORK_EQUIPMENT_DATE_FOR_DECOMMISSION= "sp_formfield_sr51_v_date_for_decommission";
@@ -1369,7 +1369,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectsAddCi_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_ADD_CI), By.id("s2id_autogen13_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_ADD_CI), By.id("s2id_autogen14_results"),  dropdownName);
 
     }
     public void enterNetworkEquipment_request(String text){
@@ -1513,7 +1513,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectsAddCi_back_up(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_BACK_UP_ADD_CI), By.id("s2id_autogen13_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_BACK_UP_ADD_CI), By.id("s2id_autogen14_results"),  dropdownName);
 
     }
 
@@ -1601,7 +1601,12 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectCRMSystemDropdown(String dropdownName){
             PlazaValidation.System = dropdownName;
-        selectDropdown(By.id(dd_CRM_SYSTEM), By.id("select2-results-14"),  dropdownName);
+        WebElement searchBox=findElement(By.id(dd_CRM_SYSTEM));
+        searchBox.click();
+        findElement(By.id("s2id_autogen14_search")).sendKeys(dropdownName);
+        wait(2000);
+        findElement(By.id("s2id_autogen14_search")).sendKeys(Keys.ARROW_DOWN);
+        findElement(By.id("s2id_autogen14_search")).sendKeys(Keys.ENTER);
     }
     public void enterCRMRequest(String text){
         PlazaValidation.Request=text;

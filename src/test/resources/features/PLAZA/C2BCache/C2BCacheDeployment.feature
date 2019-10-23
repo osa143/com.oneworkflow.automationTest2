@@ -12,7 +12,7 @@ Feature: Plaza C2B Cache form test
     And user clicks on "Application"
     When user clicks on "C2Bcache" pebble
     Then user should see "C2B Cache" form
-    #Then user selects "System Name in Haiti" as "Other"
+    #Then user selects system name in haiti as "Other"
     When user selects role dropdown as "Application Operation Engineer"
     And user selects service request name as "Deployment"
     And user enters C2B request as "<Request>"

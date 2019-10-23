@@ -13,7 +13,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on Network Routing Switching
       Then user should see "Network Routing/Switching" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects service request name as "Switch Port Configuration"
       And user enters network security switch port request as "Test10 Network Security Switch Port/Request"

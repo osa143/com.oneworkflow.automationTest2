@@ -12,7 +12,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on Firewall Routing Request pebble
       Then user should see "Firewall Routing Request" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects New Change Service Request Name as "New/Change Routing"
       And user enters Network Security Firewall New Change request as "Test3 Network Security/Request"

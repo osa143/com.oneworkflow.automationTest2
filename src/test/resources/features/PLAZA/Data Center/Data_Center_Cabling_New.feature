@@ -13,7 +13,7 @@
     And user clicks on "Data Center"
     When user clicks on "Cabling - New" pebble
     Then user should see "Cabling - New" form
-     #Then user selects "System Name in Haiti" as "Other"
+    Then user selects system name in haiti as "Other"
     When user selects role dropdown as "Application Operation Engineer"
     And user enters Cabling - New request as "Test1 Cabling/Request"
     And user enters DC-site or address as "Test address"
@@ -51,7 +51,7 @@
     And user selects completion code as "Success"
     And user clicks on "Schedule" tab
     And user enters schedule end as current date
-    Then user clicks on save button and closes warning messages
+    Then user clicks on save button
     And user validates ticket status as "Cleared"
     When user changes status to "Closed" on work order page
     And user clicks on save button

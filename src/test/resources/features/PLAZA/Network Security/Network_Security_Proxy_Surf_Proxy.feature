@@ -12,7 +12,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on Proxy pebble
       Then user should see "Proxy" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Surf proxy/URL filter"
       And user enters network security proxy request as "Test4 Network Security Proxy/Request"

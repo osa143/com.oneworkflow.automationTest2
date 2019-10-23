@@ -12,7 +12,7 @@
       And user clicks on "Cloud"
       When user clicks on "Order one-time Snapshot of VM" pebble
       Then user should see "Order one-time Snapshot of VM" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox

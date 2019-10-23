@@ -12,7 +12,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on LAN Data Net LAN pebble
       Then user should see "LAN (Data Net LAN)" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Network Security LAN request as "Test5 Network Security LAN/Request"
       Then user enters Network Security LAN description as "Test5 Network Security/Description"

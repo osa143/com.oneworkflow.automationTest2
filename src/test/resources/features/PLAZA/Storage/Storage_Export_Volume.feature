@@ -12,7 +12,7 @@
       And user clicks on "Storage & Data Protection"
       When user clicks on "Export volume Snapshot to Host" pebble
       Then user should see "Export volume Snapshot to Host" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Storage export request as "Test2 Storage/Request"
       And user selects storage export CI as "cc100cgas002"

@@ -17,7 +17,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @Then("user should see the plaza home page")
     public void userShouldSeeThePlazaHomePage() {
-      //  Assert.assertEquals(homePage.getTitle_plazaHomePage(), "ServiceNow");
+        //Assert.assertEquals(homePage.getTitle_plazaHomePage(), "ServiceNow");
     }
 
     @When("user clicks on {string}")
@@ -369,7 +369,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user enters Data Center Request delivery date as current date")
     public void userEntersDataCenterRequestDeliveryDateAsCurrentDate() {
-        homePage.enterDataCentre_deliveryDate(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+        homePage.enterDataCentre_deliveryDate(CommonUtils.getDate("Europe/Stockholm"));
     }
 
     @And("user should see pop window with info about missing field")
@@ -404,7 +404,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user enters Network Equipment requested delivery date as current date and time")
     public void userEntersNetworkEquipmentRequestedDeliveryDateAsCurrentDateAndTime() {
-        homePage.enterNetworkEquipment_delivery(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+        homePage.enterNetworkEquipment_delivery(CommonUtils.getDate("Europe/Stockholm"));
     }
 
     @And("user enters Network Equipment WBS Code field as {string}")
@@ -424,7 +424,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user enters Network Equipment date for decommission as current date and time")
     public void userEntersNetworkEquipmentDateForDecommissionAsCurrentDateAndTime() {
-        homePage.enterNetworkEquipment_dateFordecommission(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+        homePage.enterNetworkEquipment_dateFordecommission(CommonUtils.getDate("Europe/Stockholm"));
     }
 
     @And("user enters on site services Request as {string}")
@@ -1928,18 +1928,8 @@ public class Plaza_HomePageSteps extends BasePage {
         homePage.clickPlazaHome();
     }
 
-    @And("user selects PDB effected country {string}")
-    public void userSelectsPDBEffectedCountry(String arg0) {
-        homePage.clickPDB_AffectedCountry(arg0);
-    }
-
-    @And("user should see OW manual notification in plaza ticket as {string}")
-    public void userShouldSeeOWManualNotificationInPlazaTicketAs(String arg0) {
-        Assert.assertEquals(homePage.getOW_ManualNotification_plaza(), arg0);
-    }
-
-    @Then("user should see {string} update in plaza ticket")
-    public void userShouldSeeUpdateInPlazaTicket(String arg0) {
-       Assert.assertEquals(homePage.getOW_AttachmentNotification_plaza(), arg0);
+    @Then("user selects system name in haiti as {string}")
+    public void userSelectsSystemNameInHaitiAs(String arg0) {
+        homePage.selectSystemNameInHaiti(arg0);
     }
 }

@@ -12,7 +12,7 @@
       And user clicks on Database
       When user clicks on "Database Request" pebble
       Then user should see "Database Request" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Access Request"
       And user enters Database Access request as "Test2 Database AccessOracle/Request"

@@ -12,7 +12,7 @@
       And user clicks on "Application"
       When user clicks on "POLLUX" pebble
       Then user should see "POLLUX" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Pollux request as "<Request>"
       And user selects select request "Configuration"

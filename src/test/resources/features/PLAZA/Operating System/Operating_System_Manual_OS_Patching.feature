@@ -12,7 +12,7 @@
       And user clicks on "Compute & Operating System"
       When user clicks on Manual OS Patching
       Then user should see "Manual OS Patching" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system manual os patching request as "Test6 Operating System Manual/Request"
       And user selects manual os patching Add CI as "cc001cgas001"

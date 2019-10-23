@@ -12,7 +12,7 @@
       And user clicks on "Storage & Data Protection"
       When user clicks on "Volume Snapshot" pebble
       Then user should see "Volume Snapshot" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Storage volume request as "Test3 Storage/Request"
       And user selects storage volume Choose Option as "Create Snapshot"

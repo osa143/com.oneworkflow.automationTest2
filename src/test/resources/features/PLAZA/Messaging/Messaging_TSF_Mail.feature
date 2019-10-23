@@ -13,7 +13,7 @@
       And user clicks on "Messaging"
       When user clicks on "TSF Mail" pebble
       Then user should see "TSF Mail" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox

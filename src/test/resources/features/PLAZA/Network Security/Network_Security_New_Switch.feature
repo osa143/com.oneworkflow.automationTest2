@@ -12,7 +12,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on Network Routing Switching pebble
       Then user should see "Network Routing Switching" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects New Switch Service Request Name as "New Switch - Configure"
       And user enters Network Security Routing New Switch request as "Test7 Network Security New Switch/Request"

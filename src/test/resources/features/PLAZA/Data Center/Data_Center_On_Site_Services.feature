@@ -12,7 +12,7 @@
       And user clicks on "Data Center"
       When user clicks on "On-site Services" pebble
       Then user should see "On-site Services" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters on site services DC-site or address as "Test address"
       Then user enters on site services description as "Test4 Data Center/Description"

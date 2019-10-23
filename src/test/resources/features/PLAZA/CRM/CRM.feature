@@ -12,7 +12,7 @@ Feature: Plaza CRM form test
     And user clicks on "Application"
     When user clicks on "CRM" pebble
     Then user should see CRM form
-    #Then user selects "System Name in Haiti" as "Other"
+   # Then user selects system name in haiti as "Other"
     When user selects role dropdown as "Application Operation Engineer"
     And user selects service request name as "General Request"
     And user enters CRM request as "<Request>"

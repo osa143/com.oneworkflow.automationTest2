@@ -12,7 +12,7 @@
       And user clicks on "Compute & Operating System"
       When user clicks on Change OS Patching
       Then user should see "Change OS Patching" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system change from auto request as "Test3 Operating System Account/Request"
       And user selects select request "Changing from Auto to Manual patching"

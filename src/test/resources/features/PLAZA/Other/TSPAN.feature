@@ -12,7 +12,7 @@
       And user clicks on "Application"
       When user clicks on "TSPAN" pebble
       Then user should see "TSPAN" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters TSPAN request as "<Request>"
       And user selects tspan select request as "<Select Request>"

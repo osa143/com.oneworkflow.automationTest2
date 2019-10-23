@@ -12,7 +12,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on "Network Management System Veha" pebble
       Then user should see "Network Management System Veha" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters veha request as "Test1 Veha/Request"
       Then user enters system as "sonera ca apache"

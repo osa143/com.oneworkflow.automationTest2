@@ -12,7 +12,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on Network Load Balancing pebble
       Then user should see "Network Load Balancing" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Network Security Load request as "Test6 Network Security/Request"
       Then user enters Network Security Load description as "Test6 Network Security/Description"

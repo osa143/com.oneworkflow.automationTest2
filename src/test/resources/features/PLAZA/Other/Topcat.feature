@@ -12,7 +12,7 @@
       And user clicks on "Application"
       When user clicks on "Topcat" pebble
       Then user should see "Topcat" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects Select service request name as "<Service Request Name>"
       And user enters Topcat request as "<Request>"

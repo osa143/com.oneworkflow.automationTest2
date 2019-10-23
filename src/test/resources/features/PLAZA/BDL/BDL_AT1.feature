@@ -12,7 +12,7 @@
       And user clicks on "Application"
       When user clicks on "BDL" pebble
       Then user should see "BDL" form
-      #Then user selects "System Name in Haiti" as "Other"
+      #Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters BDL request as "BDL-AT1 - Test/Request"
       And user selects service request name as "Configuration"
@@ -28,7 +28,7 @@
       And user selects AT1 CI as "Netbill DB-loader"
       And user enters "P100-000-000" in the AT1 WBS Code field
       And user enters BDL description as "BDL-AT1 - Test/Desc"
-      And user enters additional comments as "BDL-AT1 - Test/AC "
+      And user enters additional comments as "BDL-AT1 - Test/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

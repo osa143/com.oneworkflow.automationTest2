@@ -12,7 +12,7 @@
       And user clicks on "Application"
       When user clicks on "WEB TAB" pebble
       Then user should see "WEB TAB" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters web tab request as "Test1 Web Tab/Request"
       And user enters CI as "cc100cgas001"

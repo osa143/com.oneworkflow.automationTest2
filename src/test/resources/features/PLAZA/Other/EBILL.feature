@@ -12,7 +12,7 @@
       And user clicks on "Application"
       When user clicks on "EBILL" pebble
       Then user should see "EBILL" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters EBILL request as "EBILL-AT/Prod - Test/Request"
       And user selects select request "Password Reset"

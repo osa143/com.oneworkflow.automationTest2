@@ -12,7 +12,7 @@
      And user clicks on "Application"
      When user clicks on "SPAN" pebble
      Then user should see "SPAN" form
-     #Then user selects "System Name in Haiti" as "Other"
+     Then user selects system name in haiti as "Other"
      When user selects role dropdown as "Application Operation Engineer"
      And user enters SPAN request as "<Request>"
      And user selects span select request as "Account/Password"

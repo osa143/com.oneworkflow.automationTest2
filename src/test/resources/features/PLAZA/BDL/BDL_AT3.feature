@@ -12,7 +12,7 @@
       And user clicks on "Application"
       When user clicks on "BDL" pebble
       Then user should see "BDL" form
-      #Then user selects "System Name in Haiti" as "Other"
+      #Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters BDL request as "BDL-AT3- Test/Request"
       And user selects service request name as "Configuration"
@@ -65,7 +65,7 @@
       And user enters AM status details as " Test2"
       And user clicks on save button
       And user validates ticket status as "Closed"
-      And user logsOut and closes the browser
+      And user logsOut
       When user switches to window 1
       And user closes current tab
       When user switches to window 0

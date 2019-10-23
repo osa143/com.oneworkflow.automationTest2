@@ -12,7 +12,7 @@ Feature: Plaza C2B Cache form test
     And user clicks on "Application"
     When user clicks on "C2BService" pebble
     Then user should see "C2B Service" form
-    #Then user selects "System Name in Haiti" as "Other"
+    #Then user selects system name in haiti as "Other"
     When user selects role dropdown as "Application Operation Engineer"
     And user enters C2B service request as "<Request>"
     And user enters C2B environment as "<Environment>"
@@ -38,7 +38,7 @@ Feature: Plaza C2B Cache form test
     And user clicks on assignment under sections
     Then user validates owner profile as "PLAZA"
     And user validates owner as "PLAZA"
-    And user validates assigned profile is "Portal"
+    And user should see assigned profile as "Portal"
     Then user clicks on "Interested Parties" tab
     And user validates "PLAZA" is listed as an interested party
     When user clicks on Ack button

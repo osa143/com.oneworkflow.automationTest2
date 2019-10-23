@@ -12,7 +12,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on DNS DHCP pebble
       Then user should see "DNS/DHCP" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Service Request Name as "DNS Sweden"
       And user enters Network Security Add Modify Remove DNS request as "Test2 Network Security Sweden/Request"

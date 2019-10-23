@@ -12,7 +12,7 @@ Feature: Plaza EFS-BSS form test
     And user clicks on "Application"
     When user clicks on "EFS-BSS" pebble
     Then user should see "EFS-BSS" form
-    #Then user selects "System Name in Haiti" as "Other"
+    Then user selects system name in haiti as "Other"
     When user selects role dropdown as "Application Operation Engineer"
     And user enters EFS-BSS request as "Test1 EFS/Request"
     And user enters CI as "ef002appp1"

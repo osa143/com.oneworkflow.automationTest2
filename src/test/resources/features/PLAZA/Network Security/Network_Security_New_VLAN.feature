@@ -12,7 +12,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on Network Routing Switching pebble
       Then user should see "Network Routing Switching" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects service request name as "New VLAN / Network configuration"
       And user enters Network Security Routing New VLAN request as "Test8 Network Security New VLAN/Request"

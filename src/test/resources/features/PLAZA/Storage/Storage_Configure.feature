@@ -13,7 +13,7 @@
       And user clicks on "Storage & Data Protection"
       When user clicks on "Configure VLAN Storage Node/NAS" pebble
       Then user should see "Configure VLAN Storage Node/NAS" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Storage request as "Test1 Storage/Request"
       And user enters Network VLAN to use as "Test network"

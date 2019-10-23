@@ -12,7 +12,7 @@
       And user clicks on "Data Center"
       When user clicks on "Network Equipment - Remove" pebble
       Then user should see "Network Equipment - Remove" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Network Equipment Request as "Test5 Data Center/Request"
       And user enters Network Equipment DC-site or address as "Test address"
@@ -54,10 +54,10 @@
       And user validates CI "cc100cgas001" is listed
       And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
       Then user switches to frame
-      And user enters impacted from date as date in past
-      And user enters impacted to date as date in past
+      And user enters impact from time as past on impact details bulk update window
+      And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
-      And user clicks save button
+      And user clicks on bulk update save button
       And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
       And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button

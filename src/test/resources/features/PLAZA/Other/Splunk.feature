@@ -12,7 +12,7 @@
       And user clicks on "Application"
       When user clicks on "Splunk (Splunk/TC Logging)" pebble
       Then user should see "Splunk (Splunk/TC Logging)" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Splunk request as "Test1 Splunk/Request"
       And user enters splunk description as "Test1 Splunk/Description"

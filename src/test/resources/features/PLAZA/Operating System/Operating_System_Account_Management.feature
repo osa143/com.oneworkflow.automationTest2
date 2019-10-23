@@ -12,7 +12,7 @@
       And user clicks on "Compute & Operating System"
       When user clicks on "Account Management - Server"
       Then user should see "Account Management - Server" form
-      #Then user selects "System Name in Haiti" as "Other"
+      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system account management request as "Test2 Operating System Account/Request"
       And user selects select request "Add Local Account"

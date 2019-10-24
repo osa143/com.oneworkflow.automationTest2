@@ -253,6 +253,11 @@ public class OWF_WorkOrderPageSteps {
         Assert.assertEquals(workOrderPage.getTitle(), expectedTitle);
     }
 
+    @And("user validates PDB title field as {string}")
+    public void userValidatesPdbTitleFieldAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getTitle(), arg0);
+    }
+
     @And("user validates description")
     public void userValidatesDescriptionAs() {
         Assert.assertTrue(workOrderPage.verifyDescription());

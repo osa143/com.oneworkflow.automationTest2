@@ -1932,4 +1932,20 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userSelectsSystemNameInHaitiAs(String arg0) {
         homePage.selectSystemNameInHaiti(arg0);
     }
+
+    @And("user selects PDB effected country {string}")
+    public void userSelectsPDBEffectedCountry(String arg0) {
+        homePage.clickPDB_AffectedCountry(arg0);
+    }
+    @And("user should see OW manual notification in plaza ticket as {string}")
+    public void userShouldSeeOWManualNotificationInPlazaTicketAs(String arg0) {
+        Assert.assertEquals(homePage.getOW_ManualNotification_plaza(), arg0);
+    }
+    @Then("user should see {string} update in plaza ticket")
+    public void userShouldSeeUpdateInPlazaTicket(String arg0) {
+        Assert.assertEquals(homePage.getOW_AttachmentNotification_plaza(), arg0);
+    }
+
+
+
 }

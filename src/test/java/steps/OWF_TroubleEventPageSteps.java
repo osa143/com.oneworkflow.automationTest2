@@ -1216,7 +1216,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user selects on hold reason as {string}")
     public void userEntersOnHoldReasonAs(String arg0) {
-
+      troubleEventPage.selectHoldReason(arg0);
     }
 }
 

@@ -39,7 +39,7 @@
       And user validates source ID field contains ICM number
       And user validates service provider as "Data Breach"
       #And user validates "<Affected BU>"
-      And user validates title field as "<Title>"
+      And user validates PDB title field as "<Title>"
       And user validates PDB description same as Plaza
       And user validates ticket priority as "<Priority>"
       #And change should also be reflected in the timeline as "Test Timeline Update" on row 1

@@ -3,14 +3,12 @@ package steps.plaza_steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.api.java8.Pl;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.BasePage;
 import pageObjects.plaza.Plaza_HomePage;
 import utils.CommonUtils;
-import utils.PlazaValidation;
 
 public class Plaza_HomePageSteps extends BasePage {
     Plaza_HomePage homePage = new Plaza_HomePage();
@@ -1945,7 +1943,62 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userShouldSeeUpdateInPlazaTicket(String arg0) {
         Assert.assertEquals(homePage.getOW_AttachmentNotification_plaza(), arg0);
     }
+    @And("user selects {string} under plaza category dropdown")
+    public void userSelectsUnderPlazaCategoryDropdown(String arg0) {
+        homePage.selectCategory_plazaIncident(arg0);
+    }
 
+    @And("user selects {string} under plaza type of issue")
+    public void userSelectsUnderPlazaTypeOfIssue(String arg0) {
+        homePage.selectTypeOfIssue_plazaIncident(arg0);
+    }
 
+    @And("user enters {string} in the plaza subject field")
+    public void userEntersInThePlazaSubjectField(String arg0) {
+        homePage.enterSubject_PlazaIncident(arg0);
+    }
 
+    @And("user enters {string} in the plaza describe field")
+    public void userEntersInThePlazaDescribeField(String arg0) {
+        homePage.enterDescribeQuestionOrCase_plazaIncident(arg0);
+    }
+
+    @And("user selects No under access to email radio buttons")
+    public void userSelectsUnderAccessToEmailRadioButtons() {
+        homePage.clickNoAccessToMail();
+    }
+
+    @Then("user validates plaza first timeline message as {string}")
+    public void userValidatesPlazaTimelineMessageAs(String arg0) {
+        String ExpectedMessage= arg0+CommonUtils.plazaRequestID;
+        Assert.assertEquals(homePage.getFirstTimelineMessage(), ExpectedMessage);
+    }
+
+    @And("user validates plaza second timeline message as {string}")
+    public void userValidatesPlazaSecondTimelineMessageAs(String arg0) {
+        Assert.assertEquals(homePage.getSecondTimelineMessage(), arg0);
+    }
+
+    @When("user clicks on shown ICM number")
+    public void userClicksOnShownICMNumber() {
+      homePage.clickOn_ICM_number();
+    }
+
+    @Then("user should see ICM form")
+    public void userShouldSeeICMForm() {
+    }
+
+    @And("user validates INC is present under internal case subtasks")
+    public void userValidatesINCIsPresentUnderInternalCaseSubtasks() {
+      Assert.assertTrue(homePage.verifyINCisPresent());
+    }
+
+    @When("user clicks on INC under internal case subtasks")
+    public void userClicksOnINCUnderInternalCaseSubtasks() {
+        //clickElement("//*[@id='row_u_internal_case_management.REL:975cb40fdbd9db446734f1eabf961939_fa5aba77db200c509815227b4b9619f6']/td[3]/a");
+    }
+
+    @Then("user should see INC form")
+    public void userShouldSeeINCForm() {
+    }
 }

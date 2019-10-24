@@ -1,23 +1,18 @@
 package pageObjects.plaza;
 
-import cucumber.api.java8.Pl;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 import pageObjects.BasePage;
 import utils.CommonUtils;
 import utils.PlazaValidation;
 
-import java.security.Key;
 import java.util.ArrayList;
 import java.util.List;
 
-import static utils.CommonUtils.OpTicket_plaza;
-import static utils.CommonUtils.opTicket;
+import static utils.CommonUtils.*;
 
 public class Plaza_HomePage extends BasePage {
 
@@ -292,6 +287,49 @@ public class Plaza_HomePage extends BasePage {
     private static final String btn_PLAZA_hOME= "90c61d18db3fc7002b3cfc16bf961953";
     private static final String dd_SYSTEM_NAME_IN_HAITI= "s2id_sp_formfield_h2_name";
     private static final String div_PDB_Affected_COUNTRY= "sp_formfield_pdb_country";
+
+
+
+
+    public boolean verifyINCisPresent(){
+         int rows= getTableRows(By.id("u_internal_case_management.REL:975cb40fdbd9db446734f1eabf961939_table")).size();
+        System.out.println("table rows are :" + rows);
+        if(rows>0)
+            return true;
+        return false;
+
+    }
+
+    public void clickOn_ICM_number(){
+        clickElement(By.xpath("//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[5]/div[2]/div/div[2]/p/a"));
+    }
+    public String getFirstTimelineMessage(){
+        return getTextByElement(By.xpath("//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[4]/div[2]/div/div[2]/p"));
+    }
+
+    public String getSecondTimelineMessage(){
+        return getTextByElement(By.xpath("//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[3]/div[2]/div/div[2]/p"));
+    }
+    public void selectCategory_plazaIncident(String dropDownValue){
+        selectDropdown(By.id("select2-chosen-4"), By.id("select2-results-4"),  dropDownValue);
+    }
+    public void selectTypeOfIssue_plazaIncident(String dropDownValue){
+        selectDropdown(By.id("select2-chosen-5"), By.id("select2-results-5"),  dropDownValue);
+    }
+
+   public void enterSubject_PlazaIncident(String text){
+        enterTextByElement(By.id("sp_formfield_short_description"), text);
+   }
+    public void enterDescribeQuestionOrCase_plazaIncident(String text){
+        enterTextByElement(By.id("sp_formfield_description"), text);
+    }
+    public void clickNoAccessToMail(){
+        clickElement(By.xpath("//*[@id='sp_formfield_access_to_email']/label[2]/input"));
+    }
+
+
+
+
 
     public String getOW_ManualNotification_plaza(){
         return getTextByElement(By.xpath("//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p"));
@@ -1646,6 +1684,7 @@ public class Plaza_HomePage extends BasePage {
 
     public String getPlazaRequestNum(){
         String PlazaRequestId=getTextByID(txt_PLAZA_REQUEST_NUM_ID);
+        CommonUtils.plazaRequestID=PlazaRequestId;
         System.out.println("Plaza request ID is  : " + PlazaRequestId);
         return PlazaRequestId;
     }

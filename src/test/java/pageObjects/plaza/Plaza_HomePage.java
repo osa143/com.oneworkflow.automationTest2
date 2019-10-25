@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import pageObjects.BasePage;
 import utils.CommonUtils;
 import utils.PlazaValidation;
@@ -287,9 +288,22 @@ public class Plaza_HomePage extends BasePage {
     private static final String btn_PLAZA_hOME= "90c61d18db3fc7002b3cfc16bf961953";
     private static final String dd_SYSTEM_NAME_IN_HAITI= "s2id_sp_formfield_h2_name";
     private static final String div_PDB_Affected_COUNTRY= "sp_formfield_pdb_country";
+    private static final String txt_ASSIGNMENT_GROUP= "sys_display.incident.assignment_group";
+    private static final String txt_ASSIGNED_TO= "sys_display.incident.assigned_to";
+    private static final String txt_STATE= "incident.state";
+    private static final String btn_CLOSE_INCIDENT= "close_incident";
 
-
-
+   public void clickCloseIncident(){
+       clickElement(By.id(btn_CLOSE_INCIDENT));
+   }
+   public String getIncidentState(){
+       return getAttributeValueById(txt_STATE);
+   }
+    public void enterAssignmentGroup_PlazaIncident(String text){
+        enterTextByElement(By.id(txt_ASSIGNMENT_GROUP), text);
+    } public void enterAssignedTo_PlazaIncident(String text){
+        enterTextByElement(By.id(txt_ASSIGNED_TO), text);
+    }
 
     public boolean verifyINCisPresent(){
          int rows= getTableRows(By.id("u_internal_case_management.REL:975cb40fdbd9db446734f1eabf961939_table")).size();
@@ -301,7 +315,11 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void clickOn_ICM_number(){
-        clickElement(By.xpath("//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[5]/div[2]/div/div[2]/p/a"));
+        //driver.findElement(By.id("xba9dcc6fdb3ad7802b3cfc16bf96195f")).findElement(By.tagName("a")).click();
+        WebElement ICM = driver.findElement(By.xpath("//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[4]/div[2]/div/div[2]/p"));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(ICM).click();
+
     }
     public String getFirstTimelineMessage(){
         return getTextByElement(By.xpath("//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[4]/div[2]/div/div[2]/p"));

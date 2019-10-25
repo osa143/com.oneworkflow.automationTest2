@@ -493,7 +493,12 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("user searches for attachment and adds attachment to ticket")
     public void userSearchesForAttachmentAndAddsAttachmentToTicket() {
-        CommonUtils.uploadFile("C:\\Users\\mahesh vaddegani\\Documents\\attachment\\attachment.doc");
+        String projectPath= System.getProperty("user.dir" );
+        System.out.println("Project path is :" + projectPath);
+        String fullFilePath= projectPath+"\\src\\test\\resources\\Test Attachments\\other files\\attachement.doc.txt";
+        System.out.println("Full file path is : " + fullFilePath);
+        CommonUtils.uploadFile(fullFilePath);
+        problemRecordPage.wait(1000);
     }
 
     @Then("user clicks on attachment ok button")

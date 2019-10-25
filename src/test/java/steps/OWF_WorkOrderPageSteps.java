@@ -713,5 +713,20 @@ public class OWF_WorkOrderPageSteps {
     public void userValidatesPDBDescriptionSameAsPlaza() {
         Assert.assertTrue(workOrderPage.verifyPlazaPDB_Description());
     }
+
+    @And("user validates description as {string}")
+    public void userValidatesDescriptionAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getDescription(), arg0);
+    }
+
+    @And("user validates reassigned reason as {string}")
+    public void userValidatesReassignedReasonAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getReassignedReason(), arg0);
+    }
+
+    @And("user validates technology as {string}")
+    public void userValidatesTechnologyAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getTechnology(), arg0);
+    }
 }
 

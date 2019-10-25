@@ -1981,9 +1981,9 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on shown ICM number")
     public void userClicksOnShownICMNumber() {
-      homePage.clickOn_ICM_number();
-    }
+            homePage.clickOn_ICM_number();
 
+    }
     @Then("user should see ICM form")
     public void userShouldSeeICMForm() {
     }
@@ -1995,10 +1995,30 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on INC under internal case subtasks")
     public void userClicksOnINCUnderInternalCaseSubtasks() {
-        //clickElement("//*[@id='row_u_internal_case_management.REL:975cb40fdbd9db446734f1eabf961939_fa5aba77db200c509815227b4b9619f6']/td[3]/a");
+        clickElement(By.className("linked formlink"));
     }
 
     @Then("user should see INC form")
     public void userShouldSeeINCForm() {
+    }
+
+    @Then("user enters plaza assignment group as {string}")
+    public void userEntersPlazaAssignmentGroupAs(String arg0) {
+        homePage.enterAssignmentGroup_PlazaIncident(arg0);
+    }
+
+    @And("user enters plaza assignee as {string}")
+    public void userEntersPlazaAssigneeAs(String arg0) {
+        homePage.enterAssignedTo_PlazaIncident(arg0);
+    }
+
+    @Then("user clicks on plaza close incident button")
+    public void userClicksOnPlazaCloseIncidentButton() {
+       homePage.clickCloseIncident();
+    }
+
+    @And("user validates plaza ticket status as {string}")
+    public void userValidatesPlazaTicketStatusAs(String arg0) {
+        Assert.assertEquals(homePage.getIncidentState(), arg0);
     }
 }

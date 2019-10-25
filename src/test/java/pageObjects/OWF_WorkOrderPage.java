@@ -43,6 +43,19 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_DESCRIPTION= "arid_WIN_0_777031007";
     private static final String table_INTERESTED_PARTIES= "T705002015";
     private static final String txt_REQUEST_TYPE= "arid_WIN_0_777031002";
+    private static final String txt_REASSIGNED_REASON= "arid_WIN_0_600001026";
+    private static final String txt_TECHNOLOGY="arid_WIN_0_777020101";
+
+
+
+
+    public String getTechnology(){
+        return getAttributeValueById(txt_TECHNOLOGY);
+    }
+
+    public String getReassignedReason(){
+        return getAttributeValueById(txt_REASSIGNED_REASON);
+    }
 
     public boolean verifyPlazaPDB_Description() {
         String actualDescription = getDescription();

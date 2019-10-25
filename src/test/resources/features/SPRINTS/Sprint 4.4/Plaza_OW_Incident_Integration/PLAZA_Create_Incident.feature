@@ -16,9 +16,8 @@
       And user enters "Test OW OP Ticket" in the plaza subject field
       And user enters "Test OW OP Ticket" in the plaza describe field
       And user selects No under access to email radio buttons
-      Then user clicks on add attachment in plaza
-      #And user selects an attachment
-      #And user clicks on open button
+      #Then user clicks on add attachment in plaza
+      #And user searches for attachment and adds attachment to ticket
       Then user clicks on submit button on plaza form
       And user gets plaza request id
       And user clicks on plaza request id
@@ -112,8 +111,7 @@
       And user waits 4 secs
       And user validates plaza ticket status as "Closed"
       And user validates plaza first timeline message as "The incident has been closed successfully in OneWorkflow"
-      #Naveen will probs fix the spelling error soon, but for now, ive left it in our automation
-      And user validates plaza second timeline message as "An incident closeure has been forwarded to OWF successfully"
+      And user validates plaza second timeline message as "An incident closure has been forwarded to OWF successfully"
       Then user switches to window 2
       And user clicks on ticket refresh button
       And user validates ticket status as "Closed"

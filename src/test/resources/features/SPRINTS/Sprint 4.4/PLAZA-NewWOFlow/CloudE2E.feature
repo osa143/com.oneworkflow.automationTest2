@@ -55,6 +55,8 @@ Feature: New WO flow Plaza
     When user enters "Test Update" in the timeline text box
     And user clicks on add button
     And change should also be reflected in the timeline as "Test Update" on row 1
+    Then user clicks on Diagnosis tab
+    And user validates primary ci as "cc100cgas001"
     And user switches to window 0
     And user clicks on main page refresh
     And user validates plaza first timeline message as "Comments from OneWorkflow at 2019-10-25T14:01:20Z@Change_Automation_1: Test Update"

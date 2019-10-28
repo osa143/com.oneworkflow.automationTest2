@@ -11,6 +11,7 @@ Feature: New WO flow Plaza
     And user opens internal case form
     Then user should see internal case form appear
     And user selects "IT Infrastructure" under Service area dropdown
+    And user selects system name in haiti as "Other"
     And user selects "Compute & Operating System" under Service area category dropdown
     And user enters "Test Request" in the plaza request field
     And user enters "cc100cgas001" in the plaza CI field
@@ -54,6 +55,8 @@ Feature: New WO flow Plaza
     When user enters "Test Update" in the timeline text box
     And user clicks on add button
     And change should also be reflected in the timeline as "Test Update" on row 1
+    Then user clicks on Diagnosis tab
+    And user validates primary ci as "cc100cgas001"
     And user switches to window 0
     And user clicks on main page refresh
     And user validates plaza first timeline message as "Comments from OneWorkflow at 2019-10-25T14:01:20Z@Change_Automation_1: Test Update"

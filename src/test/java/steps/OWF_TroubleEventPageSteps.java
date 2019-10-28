@@ -1218,6 +1218,11 @@ public class OWF_TroubleEventPageSteps {
     public void userEntersOnHoldReasonAs(String arg0) {
       troubleEventPage.selectHoldReason(arg0);
     }
+
+    @And("user enters rejection reason as {string}")
+    public void userEntersRejectionReasonAs(String arg0) {
+        troubleEventPage.enterRejectReason(arg0);
+    }
 }
 
 

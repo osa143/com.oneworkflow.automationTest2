@@ -16,8 +16,8 @@
       And user enters "Test OW OP Ticket" in the plaza subject field
       And user enters "Test OW OP Ticket" in the plaza describe field
       And user selects No under access to email radio buttons
-      #Then user clicks on add attachment in plaza
-      #And user searches for attachment and adds attachment to ticket
+     #Then user clicks on add attachment in plaza
+     #And user searches for attachment and adds attachment to ticket
       Then user clicks on submit button on plaza form
       And user gets plaza request id
       And user clicks on plaza request id
@@ -28,7 +28,6 @@
       And user should see incident ticket update in plaza
       And user enters "Test Update" in the ticket timeline
       And user clicks on plaza send button
-      #Then user validates plaza ticket has update to timeline
       When user clicks on shown ICM number
       Then user should see ICM form
       And user validates INC is present under internal case subtasks
@@ -36,32 +35,30 @@
       Then user should see INC form
       And user opens new tab
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+      When user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Trouble Event"
       And user switches to window 2
       Then user should see blank trouble search form
       When user enters plaza incident ticket
       Then user should see plaza incident ticket
-      And user validates title field as "Test OW OP Ticket"
+      And user validates title field as " Test OW OP Ticket"
       And user validates request type as "Customer"
       And user validates description as "Test OW OP Ticket"
       And user validates ticket status as "Assigned"
       And user validates source field as "PLAZA"
       And user validates reassigned reason as "Assigned for Plaza Escalation to 2nd Level"
-      Then change should also be reflected in the timeline as "Synced comment from Internal Case:Test Update" on row 1
+      Then change should also be reflected in the timeline as "Test Update" on row 3
       Then user clicks on assignment under sections
       And user clicks on owner under sections
       And user clicks on CTI details under sections
-      And user clicks on attachments under sections
-      Then user validates 1 attachment visibility under external
       Then user validates Category as "OSS"
       And user validates type as "Presentation"
       And user validates item as "AlarmMap"
       And user validates technology as "Incident"
       And user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user "OSS Tech Mahindra" is listed as the assigned profile
+      And user should see assigned profile as "OSS Tech Mahindra"
       When user enters "Test Update" in the timeline text box
       And user clicks on add button
       Then change should also be reflected in the timeline as "Test Update"

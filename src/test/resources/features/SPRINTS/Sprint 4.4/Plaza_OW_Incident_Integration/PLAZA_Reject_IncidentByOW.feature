@@ -1,7 +1,7 @@
-@PLAZA_Withdraw @PLAZA_Incident_Flow
-  #Ticket ID to come from Plaza
-Feature: Plaza creation/withdrawing of incident ticket
-  Scenario: user validates plaza incident ticket - Plaza withdraws
+@PLAZA_Reject_Incident @PLAZA_Incident_Flow
+
+Feature: Plaza creation of incident ticket - OW Rejects Incident
+  Scenario: user validates plaza incident ticket - OW Rejects Incident
 
     Given user is on the Plaza login page
     When user enters username "testauto" and password as "test123" and clicks on login
@@ -26,12 +26,6 @@ Feature: Plaza creation/withdrawing of incident ticket
     And user should see incident ticket update in plaza
     And user enters "Test Update" in the ticket timeline
     And user clicks on plaza send button
-    And user waits 30 secs
-    When user clicks on shown ICM number
-    Then user should see ICM form
-    And user validates INC is present under internal case subtasks
-    When user clicks on INC under internal case subtasks
-    Then user should see INC form
     And user opens new tab
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password
@@ -58,14 +52,13 @@ Feature: Plaza creation/withdrawing of incident ticket
     And user validates owner profile as "PLAZA"
     And user validates owner as "PLAZA"
     And user should see assigned profile as "OSS Tech Mahindra"
-    And user switches to window 0
-    And user clicks on "Withdraw from OWF"
-    And user enters plaza assignment group as "IT Application Support"
-    And user clicks on "Withdraw from OWF"
-    And user validates plaza ticket status as "New"
-    And user switches to window 2
+    When user clicks on "Reject"
+    And user enters rejection reason as "Testing"
+    Then user clicks on save button
     And user clicks on ticket refresh button
-    And user validates ticket status as "Withdrawn"
     And user verifies status is read only
+    And user switches to window 0
+    And user clicks on main page refresh
+    Then user should see "The incident has been rejected assignment from OneWorkflow due to the reason: Testing" update in plaza ticket
 
 

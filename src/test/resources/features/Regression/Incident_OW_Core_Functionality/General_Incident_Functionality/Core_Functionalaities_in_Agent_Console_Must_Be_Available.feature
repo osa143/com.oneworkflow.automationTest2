@@ -1,4 +1,4 @@
-@Core_Functionalities_in_Agent_Console_Must_Be_Available @Incident
+@Core_Functionalities_in_Agent_Console_Must_Be_Available @Incident @Trouble1
   #passed
   Feature: functionality of the agent console
     Scenario: user validates functionality of the agent console

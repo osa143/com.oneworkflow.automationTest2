@@ -1,6 +1,6 @@
 @OLA_Target_Time_Availability @Incident
 #Passed
-Feature: Incident
+Feature: OLA target time availability
 
   Scenario: verify OLA target time availability in incident record
 

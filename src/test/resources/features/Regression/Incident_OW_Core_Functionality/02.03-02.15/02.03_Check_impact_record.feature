@@ -1,7 +1,7 @@
 @02.03_Check_impact_record #@Incident
   #CORE in ST, Core in SIT
   #passed
-  #manual execution needed from from step no-63
+  #manual execution needed from from step no-64
   Feature: checking of impact record
     Scenario: user checks impact record on CI
 
@@ -57,17 +57,11 @@
       And user validates columns have data present
       When user right clicks on CI "SE_SGSN_HYMME2" and selects "Impact:Update"
       And user switches to frame
-      And multiple statuses "Loss of Service, Degradation of Service, No Impact,(clear)" should be available in "Impact Name" dropdown
       Then user selects impact name as "Loss of Service"
       And user clicks confirm checkbox
       And user clicks on bulk update save button
       Then user validates CI "SE_SGSN_HYMME2" impact level is "Loss of Service"
+      And user right clicks on CI "SE_SGSN_LDHMME1" and selects "Impact:Clear"
+      And user validates CI "Impact Status" is "Inactive"
 
-#      When user right clicks on CI "SE_SGSN_VRRMME1" and selects Impact:Update
-#      Then user switches to frame
-#      And user selects impact from at least 1 day in the past
-#      And user clicks confirm checkbox
-#      Then user clicks on bulk update save button
-#      And user verifies date is updated for CI "SE_SGSN_VRRMME1" one day in the past
-#      And user right clicks on CI "SE_SGSN_LDHMME1" and selects "Impact:Clear"
-#      And user validates CI "Impact Status" is "Inactive"
+

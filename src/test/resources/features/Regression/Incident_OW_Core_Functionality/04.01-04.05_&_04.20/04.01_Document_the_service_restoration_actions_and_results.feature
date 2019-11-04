@@ -1,4 +1,4 @@
-@04.01_Document_the_service_restoration_actions_and_results @Incident
+@04.01_Document_the_service_restoration_actions_and_results  @Incident1
   #passed
   Feature: document service restoration
     Scenario: user documents service restoration and results

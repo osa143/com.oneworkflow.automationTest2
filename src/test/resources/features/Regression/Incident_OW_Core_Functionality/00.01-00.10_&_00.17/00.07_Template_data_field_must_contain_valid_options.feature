@@ -1,6 +1,6 @@
 @00.07_Template_data_field_must_contain_valid_options @Incident
 #passed
-  Feature: Validation of Trouble Template data field
+  Feature: Template data field  must contain valid options
     Scenario: user validates options given in Trouble data field
 
       Given user is on the OneWorkflow login page

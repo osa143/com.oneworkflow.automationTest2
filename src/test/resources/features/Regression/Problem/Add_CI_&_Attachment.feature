@@ -18,11 +18,13 @@
       Then ticket should be created and status should be assigned
       Then user enters description as "-More information"
       And user clicks on save button on the problem form
-      And change should also be reflected in the timeline as ""
+      And change should also be reflected in the timeline as "Ticket Description has changed from \"UAT Test 3 Add CI and attachment\" to \"-More information"
       Then user clicks on Diagnosis tab
-      And CI search tab should be opened
       Then user clicks on CI search button
+      And CI search tab should be opened
+      And user switches to frame
       And user enters "SE_CPE_FRECPE5" in name field
+      And user clicks on search button on CI search window
       And user selects a CI from list
       And user selects impact level as "No Impact"
       And user clicks on relate CI
@@ -30,7 +32,6 @@
       And user clicks on close button on CI search window
       And user clicks on "Diagnosis" tab
       Then CI should be listed and displayed under the Diagnosis tab
-      Then user clicks on attachments under sections
       And user clicks on add button under internal
       And user switches to frame 2
       Then user selects summary dropdown as "Decision"
@@ -42,19 +43,21 @@
       Then user clicks on attachment ok button
       And user clicks on save button on attachment window
       And change should also be reflected in the timeline as "Attachment has been added. File Name - attachment.doc"
-      When user clicks on the added attachment
-      And user clicks on open button
-      Then attachment form should open in new tab
-      When user clicks on the attachment listed
-      And clicks on display button
-      Then a new window should open with the attachment shown
-      When user closes the attachment window
-      And closes the attachment tab
-      Then problem form should be displayed
-      And user clicks on the attached document
-      And user clicks on the delete button under internal
-      And change should also be reflected in the timeline as "Attachment has been removed. File Name - attachment.doc"
-      Then attachment should no longer be visible
+
+  ##  Manual Run ##
+#      When user clicks on the added attachment
+#      And user clicks on open button
+#      Then attachment form should open in new tab
+#      When user clicks on the attachment listed
+#      And clicks on display button
+#      Then a new window should open with the attachment shown
+#      When user closes the attachment window
+#      And closes the attachment tab
+#      Then problem form should be displayed
+#      And user clicks on the attached document
+#      And user clicks on the delete button under internal
+#      And change should also be reflected in the timeline as "Attachment has been removed. File Name - attachment.doc"
+#      Then attachment should no longer be visible
 
 
 

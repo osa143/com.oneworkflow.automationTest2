@@ -213,8 +213,8 @@ public class OWF_ProblemRecordPageSteps {
         Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
     }
 
-    @And("change should also be reflected in the timeline as {string} for trouble ticket")
-    public void changeShouldAlsoBeReflectedInTheTimelineForOPTicketAs(String message) {
+    @And("change should also be reflected in the timeline as {string} for trouble ticket in row {int}")
+    public void changeShouldAlsoBeReflectedInTheTimelineForOPTicketAs(String message, int rowNum) {
         String[] str = message.split(";");
         str[0] += " " + CommonUtils.pbTicket;
 
@@ -235,7 +235,7 @@ public class OWF_ProblemRecordPageSteps {
             problemRecordPage.selectTab("Timeline");
         }
 
-        boolean containsMessage = problemRecordPage.getTimelineStatus(1).contains(newMessage);
+        boolean containsMessage = problemRecordPage.getTimelineStatus(rowNum).contains(newMessage);
         Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
     }
 
@@ -1076,6 +1076,11 @@ public class OWF_ProblemRecordPageSteps {
     @And("user validates save is enabled")
     public void userValidatesSaveIsEnabled() {
         Assert.assertTrue(problemRecordPage.isSaveButtonEnabled());
+    }
+
+    @Then("request type should be read only")
+    public void requestTypeShouldBeReadOnly() {
+        problemRecordPage.verifyRequestTypeDdIsReadonly();
     }
 }
 

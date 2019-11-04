@@ -1,4 +1,4 @@
-@04.02_Set_Service_restored_timestamp_aka_Event_end_time @Incident
+@04.02_Set_Service_restored_timestamp_aka_Event_end_time   @Incident1
   #passed
   Feature: setting of event end time
     Scenario: user can set the event end time

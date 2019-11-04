@@ -1,6 +1,6 @@
 @01.09_Add_attachments_to_field_named_Internal_attachments @Incident
 
-  Feature: Adding of Attachments to incident ticket
+  Feature: Add Attachments to field named internal attachments
     Scenario: user is able to add an attachment to incident ticket
 
       Given user is on the OneWorkflow login page
@@ -17,13 +17,13 @@
       Then ticket should be created and status should be assigned
       When user clicks on attachments under sections
       And  user adds attachment and verifies under "internal"
-        | summary   | description | fullFilePath                                                                   | attachments |
-        | Test JPEG | Test JPEG   | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test JPEG FILE.jpg | 1           |
-        | Test PNG  | Test PNG    | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PNG FILE.png  | 2           |
-        | Test PDF  | Test PDF    | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PDF FILE.pdf  | 3           |
-        | Test WORD | Test WORD   | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test WORD FILE.docx| 4           |
-        | Test EXCEL| Test EXCEL  | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test XLS FILE.xls  | 5           |
-        | Test PPT  | Test PPT    | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PPT FILE.pptx  | 6           |
+        | summary   | description | fullFilePath                                                                        | attachments |
+        | Test JPEG | Test JPEG   | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test JPEG FILE.jpg | 1           |
+        | Test PNG  | Test PNG    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PNG FILE.png  | 2           |
+        | Test PDF  | Test PDF    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PDF FILE.pdf  | 3           |
+        | Test WORD | Test WORD   | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test WORD FILE.docx| 4           |
+        | Test EXCEL| Test EXCEL  | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test XLS FILE.xls  | 5           |
+        | Test PPT  | Test PPT    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PPT FILE.pptx | 6           |
 
       Then user clicks on save button
 

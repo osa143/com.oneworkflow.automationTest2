@@ -1,5 +1,6 @@
 @Assignee @problem
 #passed
+#This feature covers 2 scenarios
 Feature: Changing of assignee for problem ticket
 
   Scenario: User is able to change assignment/assignee on problem ticket
@@ -12,7 +13,7 @@ Feature: Changing of assignee for problem ticket
     Then problem record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
     When user enters "proactive investigation of Tohall_Copy" in Title field
-    And user selects request type as Access Networks:RAN NSN 2G:3G:4G
+    And user selects request type as "Access Networks:RAN NSN 2G/3G/4G" in problem form
     And user enters description as "UAT Test4"
     And user selects impact type as moderate:limited
     And user selects urgency as low
@@ -77,7 +78,8 @@ Feature: Changing of assignee for problem ticket
     Then user clicks on "Additional Info" tab
     And user validates "Thgi00" is listed under analysis team member one field
     When user clicks on assignment under sections
-    Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
+    Then user selects assigned profile dropdown as "Problem Initiator"
+    #Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
     And user enters "Tohall_copy" in assignee
     #And user selects assignee as "mina09_auto" by using alphabet "n" key up 0 times
     And user clicks on save button on the problem form

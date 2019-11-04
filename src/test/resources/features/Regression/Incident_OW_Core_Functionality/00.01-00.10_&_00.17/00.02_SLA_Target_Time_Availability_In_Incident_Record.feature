@@ -18,7 +18,7 @@ Feature: SLA Target time availability
     #UAT
     When user clicks on advanced search button
     And user waits 2 secs
-    And user enters "'Cust. Remaining SLA' != |00:00:00|" in the advanced search bar
+    And user enters "'Cust. Remaining SLA' != \"00:00:00\"" in the advanced search bar
     And user clicks on search
     Then ticket with SLA should be opened
     And user validates Cust. Remaining SLA or SLA Target Time availability

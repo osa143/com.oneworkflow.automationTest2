@@ -1,4 +1,4 @@
-@When_creating_workorder_a_proposal_of_default_technical_escalation_queue_should_appear @Incident
+@When_creating_workorder_a_proposal_of_default_technical_escalation_queue_should_appear @Incident @Trouble1
   #passed
   Feature: Proposal of default technical escalation
     Scenario: Technical escalation to other assignment group

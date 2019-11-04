@@ -34,6 +34,6 @@
       And user clicks on the search button
       And user clicks on accept button
       Then user validates 1 linked ticket availability
-      Then change should also be reflected in the timeline as "Correlation to ticket;. Relationship Type: Is master of" for trouble ticket
+      Then change should also be reflected in the timeline as "Correlation to ticket;. Relationship Type: Is master of" for trouble ticket in row 1
 
 

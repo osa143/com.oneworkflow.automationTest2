@@ -1,4 +1,4 @@
-@Verify_status_of_BU_receiving_disturbance_information_in_Service_Info_tab @Incident
+@Verify_status_of_BU_receiving_disturbance_information_in_Service_Info_tab @Incident @Trouble1
   #passed
   Feature: Validate BU receives disturbance info
     Scenario: user validates BU receives disturbance information

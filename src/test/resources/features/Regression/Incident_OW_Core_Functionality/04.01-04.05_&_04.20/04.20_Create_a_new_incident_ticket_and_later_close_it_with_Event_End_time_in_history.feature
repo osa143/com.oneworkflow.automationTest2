@@ -1,4 +1,4 @@
-@04.20_Create_a_new_incident_ticket_and_later_close_it_with_Event_End_time_in_history @Incident
+@04.20_Create_a_new_incident_ticket_and_later_close_it_with_Event_End_time_in_history  @Incident1
   #passed
   Feature: closure of incident in past
     Scenario: user can create an incident and later close it with event end time in history

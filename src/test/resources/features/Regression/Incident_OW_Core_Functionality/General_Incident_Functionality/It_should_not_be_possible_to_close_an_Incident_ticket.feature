@@ -1,4 +1,4 @@
-@It_should_not_be_possible_to_close_an_Incident_ticket_with_an_open_and_acknowledged_work_order @Incident
+@It_should_not_be_possible_to_close_an_Incident_ticket_with_an_open_and_acknowledged_work_order @Incident @Trouble1
   #passed
    Feature: shouldn't be possible to close an incident with open WO
      Scenario: user validates you cant close an incident with open WO

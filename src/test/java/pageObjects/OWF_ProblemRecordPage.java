@@ -113,7 +113,9 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     public boolean verifyStatusDdIsReadonly(){
         return checkIfControlIsReadonly(ddSTATuS_ID);
     }
-
+    public boolean verifyRequestTypeDdIsReadonly(){
+        return checkIfControlIsReadonly(ddREQUEST_TYPE_ID);
+    }
     public void enterStatus(String text){
         findElement(By.id(ddSTATuS_ID)).clear();
        enterTextByElement(By.id(ddSTATuS_ID), text);
@@ -202,8 +204,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
             enterSummary_attachments(summary);
             enterDescription_Attachment_OnFrame(description);
             clickAdd_AttachmentOnFrame();
-            wait(5000);
-            //clickonChooseFile_OnFrame();
+            clickonChooseFile_OnFrame();
             CommonUtils.uploadFile(filePath);
             wait(1000);
             clickOk_AttachmentOnFrame();

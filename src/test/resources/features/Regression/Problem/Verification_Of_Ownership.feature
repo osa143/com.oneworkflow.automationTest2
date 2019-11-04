@@ -21,7 +21,8 @@ Feature: Verification of Problem ticket owner
     And user selects impact type as moderate:limited
     And user selects urgency as low
     And user clicks on assignment under sections
-    And user selects assigned profile dropdown as "Problem Management:Problem Initiator"
+    #And user selects assigned profile dropdown as "Problem Management:Problem Initiator"
+    And user selects assigned profile dropdown as "Problem Initiator"
     And user enters "Tohall_copy" in assignee
     And user clicks on save button on the problem form
     Then ticket should be created and status should be assigned
@@ -38,6 +39,5 @@ Feature: Verification of Problem ticket owner
     #When user tries to Ack the ticket but its shouldn't allow
     When user verifies status is read only
     Then problem ticket status should be assigned
-    When user tries to change request type as Access Networks:RAN NSN 2G:3G:4G
-    Then request type should be RAN optimization
+    Then request type should be read only
 

@@ -1,6 +1,6 @@
 @00.10_Validate_Urgency_field_availability_in_Incident_record @Incident
 #passed
-Feature: validation of impact field availability and structure
+Feature: validate urgency field availability in incident record
 
   Scenario: user validates impact field availability and structure
 

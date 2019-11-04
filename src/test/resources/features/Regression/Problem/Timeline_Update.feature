@@ -1,8 +1,8 @@
 @Timeline_Update @problem
 #passed
-Feature: User is able to update the timeline with entries
+Feature: Timeline update
 
-  Scenario: User logs into One workflow, creates a problem ticket and updates the timeline
+  Scenario: Timeline update.
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"

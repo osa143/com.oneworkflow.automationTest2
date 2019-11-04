@@ -1,4 +1,4 @@
-@04.05_Create_problem_candidate_from_incident_using_Create_button_in_Linked_Items_tab @Incident
+@04.05_Create_problem_candidate_from_incident_using_Create_button_in_Linked_Items_tab  @Incident1
   #passed
   Feature: create problem from incident
     Scenario: user can create a problem ticket using create button in incident ticket

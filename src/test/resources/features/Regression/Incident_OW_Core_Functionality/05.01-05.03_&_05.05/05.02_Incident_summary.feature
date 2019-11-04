@@ -1,4 +1,4 @@
-@05.02_Incident_summary @Incident
+@05.02_Incident_summary @Incident  @Incident1
 #passed
 Feature: user enters closure info
   Scenario: user enters closure information

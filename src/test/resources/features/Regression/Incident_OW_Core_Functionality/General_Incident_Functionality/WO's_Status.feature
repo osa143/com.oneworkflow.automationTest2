@@ -1,4 +1,4 @@
-@WO's_Status @Incident
+@WO's_Status @Incident @Trouble1
   #passed
   Feature: validation of WO's status'
     Scenario: user validates different work order status'

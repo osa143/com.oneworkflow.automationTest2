@@ -1,6 +1,6 @@
 @Validate_Behaviour_And_Options_For_Data_Field_RequestType @Incident
 #Passed
-Feature: Incident
+Feature: Validate behaviour and options for data field request type
 
   Scenario: user validates behaviour and options for data field request type
 

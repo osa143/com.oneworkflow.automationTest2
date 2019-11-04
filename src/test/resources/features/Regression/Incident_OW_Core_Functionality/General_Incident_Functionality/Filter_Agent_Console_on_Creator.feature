@@ -1,4 +1,4 @@
-@Filter_Agent_Console_on_Creator @Incident
+@Filter_Agent_Console_on_Creator @Incident @Trouble1
   #passed
 Feature: Filtering of Agent console
   Scenario: user can filter agent console on creator

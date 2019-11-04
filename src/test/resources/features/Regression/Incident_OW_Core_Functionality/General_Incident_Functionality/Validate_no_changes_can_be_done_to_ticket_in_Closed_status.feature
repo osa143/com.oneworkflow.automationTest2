@@ -1,4 +1,4 @@
-@Validate_no_changes_can_be_done_to_ticket_in_Closed_status @Incident
+@Validate_no_changes_can_be_done_to_ticket_in_Closed_status @Incident @Trouble1
   #passed
   #keep an eye while running this test whether all the buttons are disabled and grayed out
   Feature: validation of no changes being able to be made in closed incident

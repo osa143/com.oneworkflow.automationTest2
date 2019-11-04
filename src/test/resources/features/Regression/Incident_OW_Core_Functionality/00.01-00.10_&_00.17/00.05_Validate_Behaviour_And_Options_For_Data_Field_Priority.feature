@@ -1,6 +1,6 @@
 @Validate_Behaviour_And_Options_For_Data_Field_Priority @Incident
 #Passed
-  Feature: Incident
+  Feature: Validate Behaviour and options for data field called priority
 
     Scenario: user validates behaviour and options for data field priority
 

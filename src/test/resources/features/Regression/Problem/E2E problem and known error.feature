@@ -1,8 +1,8 @@
-@E2E_problem_and_known_error
+@E2E_problem_and_known_error @problem
 #passed
-  Feature: problem
+  Feature: LifeCycle KE and Changes to KE
 
-    Scenario: E2E problem and known error
+    Scenario: LifeCycle KE and Changes to KE
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Tohall_copy" and password as "Test@1234"

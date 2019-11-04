@@ -1,4 +1,4 @@
-@05.01_Manually_close_an_incident @Incident
+@05.01_Manually_close_an_incident @Incident  @Incident1
   #passed
   Feature: incident closure
     Scenario: user can manually close an incident ticket

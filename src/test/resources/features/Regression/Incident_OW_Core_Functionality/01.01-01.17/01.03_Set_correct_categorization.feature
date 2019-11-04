@@ -1,7 +1,7 @@
 @01.03_Set_correct_categorization @Incident
 #passed
 # CORE for ST, Core for SIT
-Feature: Setting of correct categorization
+Feature: Set correct categorization
 
   Scenario: user can set correct categorization
 

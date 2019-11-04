@@ -1,4 +1,4 @@
-@Filter_out_the_tickets_of_interest_for_you @Incident
+@Filter_out_the_tickets_of_interest_for_you @Incident @Trouble1
   #passed
   Feature: filtering of tickets
     Scenario: user can filter tickets of interest12

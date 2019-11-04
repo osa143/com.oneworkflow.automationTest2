@@ -1,6 +1,6 @@
 @02.15_Search_for_Known_Errors_using_quick_search_based_on_Category_Type_and_Item @Incident
 #passed
-  Feature: known error searches
+  Feature:Search for known error
     Scenario: user can search for known errors using quick search
 
       Given user is on the OneWorkflow login page
@@ -25,12 +25,13 @@
       Then user clicks on relate CI
       And user closes warning message
       And user clicks on close button on CI search window
+      And user clicks on "Diagnosis" tab
       Then CI should be listed and displayed under the Diagnosis tab
       When user clicks on CTI details under sections
       And user selects Category as "Core"
       And user selects Type as "Other"
       And user selects Item as "BR"
-      Then user clicks on save button and closes warning messages
+      Then user clicks on save button
       When user clicks on linked items tab
       And user selects target application first dropdown as "OS3 - Known Error"
       And user selects target application second dropdown as "Has workaround"

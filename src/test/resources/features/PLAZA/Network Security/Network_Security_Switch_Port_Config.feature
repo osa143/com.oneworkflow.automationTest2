@@ -13,7 +13,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on Network Routing Switching
       Then user should see "Network Routing/Switching" form
-      Then user selects system name in haiti as "Other"
+      Then user selects network security firewall system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects service request name as "Switch Port Configuration"
       And user enters network security switch port request as "Test10 Network Security Switch Port/Request"
@@ -51,10 +51,10 @@
       And user validates CI "cc100cgas001" is listed
       And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
       Then user switches to frame
-      And user enters impacted from date as date in past
-      And user enters impacted to date as date in past
+      And user enters impact from time as past on impact details bulk update window
+      And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
-      And user clicks save button
+      And user clicks on bulk update save button
       And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
       And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button

@@ -13,7 +13,7 @@
       And user clicks on "Messaging"
       When user clicks on "TSS Mail Premium Support" pebble
       Then user should see "TSS Mail Premium Support" form
-      Then user selects system name in haiti as "Other"
+      #Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox

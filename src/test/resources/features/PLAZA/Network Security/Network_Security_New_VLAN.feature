@@ -1,4 +1,5 @@
 @Network_Security_New_VLAN @PLAZA
+  #passed
   Feature: Network Security New VLAN plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -12,7 +13,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on Network Routing Switching pebble
       Then user should see "Network Routing Switching" form
-      Then user selects system name in haiti as "Other"
+      Then user selects network security firewall system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects service request name as "New VLAN / Network configuration"
       And user enters Network Security Routing New VLAN request as "Test8 Network Security New VLAN/Request"

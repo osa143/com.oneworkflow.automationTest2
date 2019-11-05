@@ -13,7 +13,7 @@
       And user clicks on "Messaging"
       When user clicks on "TSF Mail" pebble
       Then user should see "TSF Mail" form
-      Then user selects system name in haiti as "Other"
+      #Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox
@@ -53,10 +53,10 @@
       And user validates CI "cc001cgas001" is listed
       And user right clicks on CI "cc001cgas001" and selects "Impact:Update"
       Then user switches to frame
-      And user enters impacted from date as date in past
-      And user enters impacted to date as date in past
+      And user enters impact from time as past on impact details bulk update window
+      And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
-      And user clicks save button
+      And user clicks on bulk update save button
       And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
       And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button

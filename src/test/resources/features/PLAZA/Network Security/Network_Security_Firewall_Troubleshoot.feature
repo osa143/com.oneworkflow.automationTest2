@@ -1,4 +1,5 @@
 @Network_Security_Firewall_Troubleshoot @PLAZA
+  #passed
   Feature: Network Security Firewall Troubleshoot plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -12,7 +13,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on Firewall Routing Request pebble
       Then user should see "Firewall Routing Request" form
-      Then user selects system name in haiti as "Other"
+      Then user selects network security firewall system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Troubleshoot Firewall order"
       And user enters Network Security Firewall Troubleshoot request as "Test4 Network Security/Request"

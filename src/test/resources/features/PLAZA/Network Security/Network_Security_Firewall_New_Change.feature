@@ -1,4 +1,5 @@
 @Network_Security_Firewall_New_Change @PLAZA
+  #passed
   Feature: Network Security Firewall New Change plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -12,7 +13,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on Firewall Routing Request pebble
       Then user should see "Firewall Routing Request" form
-      Then user selects system name in haiti as "Other"
+      Then user selects network security system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects New Change Service Request Name as "New/Change Routing"
       And user enters Network Security Firewall New Change request as "Test3 Network Security/Request"

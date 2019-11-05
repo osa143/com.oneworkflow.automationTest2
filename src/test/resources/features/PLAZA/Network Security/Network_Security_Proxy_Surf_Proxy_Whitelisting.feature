@@ -1,4 +1,5 @@
 @Network_Security_Proxy_Surf_Proxy_Whitelisting @PLAZA
+  #passed
   Feature: Network Security Proxy Surf Proxy Whitelisting plaza form test
     Scenario Outline: user validates information sent to OW from Plaza
 
@@ -12,7 +13,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on Proxy pebble
       Then user should see "Proxy" form
-      Then user selects system name in haiti as "Other"
+      Then user selects proxy general inquiry system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects select request "Surf proxy/URL filter"
       And user enters network security proxy request as "<Request>"

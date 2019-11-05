@@ -2021,4 +2021,49 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userValidatesPlazaTicketStatusAs(String arg0) {
         Assert.assertEquals(homePage.getIncidentState(), arg0);
     }
+
+    @Then("user selects System name in haiti as {string}")
+    public void userSelectsSystemNameHaitiAs(String arg0) {
+        homePage.selectSystemNameHaiti(arg0);
+    }
+
+    @Then("user selects network security system name in haiti as {string}")
+    public void userSelectsNetworkSecuritySystemNameInHaitiAs(String arg0) {
+        homePage.selectNetworkSecuritySystemNameHaiti(arg0);
+    }
+
+    @Then("user selects network security firewall system name in haiti as {string}")
+    public void userSelectsNetworkSecurityFirewallSystemNameInHaitiAs(String arg0) {
+        homePage.selectNetworkSecurityFirewallSystemNameHaiti(arg0);
+    }
+
+    @Then("user selects proxy general inquiry system name in haiti as {string}")
+    public void userSelectsProxyGeneralInquirySystemNameInHaitiAs(String arg0) {
+        homePage.selectNetworkSecurityProxySystemNameHaiti(arg0);
+    }
+
+    @Then("user selects remote access system name in haiti as {string}")
+    public void userSelectsRemoteAccessSystemNameInHaitiAs(String arg0) {
+        homePage.selectNetworkSecurityRemoteAccessSystemNameHaiti(arg0);
+    }
+
+    @Then("user selects nimbus system name in haiti as {string}")
+    public void userSelectsNimbusSystemNameInHaitiAs(String arg0) {
+        homePage.selectNimbusSystemNameHaiti(arg0);
+    }
+
+    @And("user enters itfi system dropdown as {string}")
+    public void userEntersItfiSystemDropdownAs(String arg0) {
+        homePage.selectitfiSystem(arg0);
+    }
+
+    @And("user enters occ CI as {string}")
+    public void userEntersOccCIAs(String arg0) {
+        homePage.selectOccCi(arg0);
+    }
+
+    @And("user enters web tab CI as {string}")
+    public void userEntersWebTabCIAs(String arg0) {
+        homePage.selectWebtabCi(arg0);
+    }
 }

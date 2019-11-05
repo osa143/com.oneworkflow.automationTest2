@@ -131,7 +131,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_CLEAN_MAIL_SENDER_DNS= "sp_formfield_sender_dns";
     private static final String txt_messaging_description= "sp_formfield_descrption";
     private static final String txt_NIMBUS_REQUEST= "sp_formfield_request_nimbus";
-    private static final String dd_NIMBUS_ADD_CI= "s2id_autogen17";
+    private static final String dd_NIMBUS_ADD_CI= "s2id_sp_formfield_add_ci";
     private static final String dd_NIMBUS_TYPE= "select2-chosen-13";
     private static final String txt_NIMBUS_DESCRIPTION_MANDATORY= "sp_formfield_description_mandatory";
     private static final String txt_NIMBUS_DESCRIPTION= "sp_formfield_nimbus_description";
@@ -292,8 +292,125 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_ASSIGNED_TO= "sys_display.incident.assigned_to";
     private static final String txt_STATE= "incident.state";
     private static final String btn_CLOSE_INCIDENT= "close_incident";
+    private static final String dd_SYSTEMNAME_HAITI_DATABASE = "s2id_sp_formfield_h2_name";
+    private static final String dd_NETWORKSECURITY_HAITI= "s2id_sp_formfield_h2_name";
+    private static final String dd_NETWORKSECURITY_FIREWALL_HAITI= "s2id_sp_formfield_h2_name";
+    private static final String dd_PROXY_GENERAL_INQUIRY_HAITI= "s2id_sp_formfield_h2_name";
+    private static final String dd_REMOTE_ACCESS_HAITI= "s2id_sp_formfield_h2_name";
+    private static final String dd_NIMBUS_HAITI= "s2id_sp_formfield_h2_name";
+    private static final String dd_SYSTEM_ITFI= "s2id_sp_formfield_sr99_v_system";
+    private static final String dd_OCC_CI= "s2id_sp_formfield_sr65_v_add_ci";
+    private static final String dd_VEHA_SYSTEM= "s2id_sp_formfield_system";
+    private static final String dd_WEBTAB_CI = "s2id_sp_formfield_sr65_v_add_ci";
 
-   public void clickCloseIncident(){
+
+    public void selectWebtabCi(String dropdownName){
+        PlazaValidation.CI = dropdownName;
+        clickElement(By.id(dd_WEBTAB_CI));
+        WebElement Element=findElement(By.xpath("//input[@aria-owns='s2id_autogen13_results']"));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
+
+    }
+
+    public void selectVehaSystem(String dropdownName){
+        PlazaValidation.System = dropdownName;
+        clickElement(By.id(dd_VEHA_SYSTEM));
+        WebElement Element=findElement(By.xpath("//input[@aria-owns='s2id_autogen13_results']"));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
+
+    }
+
+    public void selectOccCi(String dropdownName){
+        PlazaValidation.CI = dropdownName;
+        clickElement(By.id(dd_OCC_CI));
+        WebElement Element=findElement(By.xpath("//input[@aria-owns='s2id_autogen13_results']"));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
+
+    }
+
+    public void selectitfiSystem(String dropdownName){
+        clickElement(By.id(dd_SYSTEM_ITFI));
+        WebElement Element=findElement(By.xpath("//input[@aria-owns='s2id_autogen13_results']"));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
+
+    }
+
+    public void selectNimbusSystemNameHaiti(String dropdownName){
+        clickElement(By.id(dd_NIMBUS_HAITI));
+        WebElement Element=findElement(By.xpath("//input[@aria-owns='select2-results-16']"));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
+
+    }
+
+    public void selectNetworkSecurityRemoteAccessSystemNameHaiti(String dropdownName){
+        clickElement(By.id(dd_REMOTE_ACCESS_HAITI));
+        WebElement Element=findElement(By.xpath("//input[@aria-owns='select2-results-13']"));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
+
+    }
+
+    public void selectNetworkSecurityProxySystemNameHaiti(String dropdownName){
+        clickElement(By.id(dd_PROXY_GENERAL_INQUIRY_HAITI));
+        WebElement Element=findElement(By.xpath("//input[@aria-owns='select2-results-17']"));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
+
+    }
+
+    public void selectNetworkSecurityFirewallSystemNameHaiti(String dropdownName){
+        clickElement(By.id(dd_NETWORKSECURITY_FIREWALL_HAITI));
+        WebElement Element=findElement(By.xpath("//input[@aria-owns='select2-results-15']"));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
+
+    }
+
+    public void selectNetworkSecuritySystemNameHaiti(String dropdownName){
+        clickElement(By.id(dd_NETWORKSECURITY_HAITI));
+        WebElement Element=findElement(By.xpath("//input[@aria-owns='select2-results-14']"));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
+
+    }
+
+    public void selectSystemNameHaiti(String dropdownName){
+        clickElement(By.id(dd_SYSTEMNAME_HAITI_DATABASE));
+        WebElement Element=findElement(By.xpath("//input[@aria-owns='select2-results-18']"));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
+
+    }
+
+
+
+
+    public void clickCloseIncident(){
        clickElement(By.id(btn_CLOSE_INCIDENT));
    }
    public String getIncidentState(){
@@ -1216,7 +1333,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectNimbus_AddCi(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_NIMBUS_ADD_CI), By.id("s2id_autogen17_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_NIMBUS_ADD_CI), By.id("s2id_autogen18_results"),  dropdownName);
 
     }
     public void selectNimbus_Type(String dropdownName){

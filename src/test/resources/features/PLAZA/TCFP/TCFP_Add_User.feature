@@ -1,4 +1,5 @@
 @TCFP_Add_User @PLAZA
+  #passed
   Feature: TCFP Add User plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -12,7 +13,7 @@
       And user clicks on "Application"
       When user clicks on "TCFP (Account Management)" pebble
       Then user should see "TCFP (Account Management)" form
-      Then user selects system name in haiti as "Other"
+     # Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Account Management"
       And user enters TCFP request as "Test1 TCFP/Request"

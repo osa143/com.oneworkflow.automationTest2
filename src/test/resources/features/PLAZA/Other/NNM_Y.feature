@@ -1,4 +1,5 @@
 @NNM_Y @PLAZA
+  #passed
   Feature: NNM yes plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -12,7 +13,7 @@
       And user clicks on "Application"
       When user clicks on "NNM" pebble
       Then user should see "NNM" form
-      Then user selects system name in haiti as "Other"
+     # Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters NNM request as "Test1 NNM/Request"
       And user selects Glana as "Yes"

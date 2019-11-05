@@ -12,7 +12,7 @@
       And user clicks on "Application"
       When user clicks on Finance & Assurance
       Then user should see Finance & Assurance form
-      Then user selects system name in haiti as "Other"
+      #Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters "<Request>" in the request field
       And user selects system dropdown as "<System>"

@@ -1,4 +1,5 @@
 @IT_FI @PLAZA
+  #passed
   Feature: IT FI form test
     Scenario:  user validates information sent to OW from Plaza
 
@@ -12,7 +13,7 @@
       And user clicks on "Application"
       When user clicks on "IT FI Services" pebble
       Then user should see "IT FI" form
-      Then user selects system name in haiti as "Other"
+      #Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox
@@ -23,9 +24,9 @@
       Then user enters IT FI description as "Test1 IT FI/Description"
       And user enters additional comments as "Test1 IT FI/AC"
       Then user clicks on "Submit"
-      Then user enters system dropdown as "AIDA"
-      And user enters system dropdown as "APM"
-      And user enters system dropdown as "ASOP2"
+      Then user enters itfi system dropdown as "AIDA"
+      And user enters itfi system dropdown as "APM"
+      And user enters itfi system dropdown as "ASOP2"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

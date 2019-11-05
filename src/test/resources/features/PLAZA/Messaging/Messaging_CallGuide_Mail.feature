@@ -1,7 +1,6 @@
 @Messaging_CallGuide_Mail @PLAZA
   Feature: Messaging CallGuide Mail plaza form test
-    #Not checked in ow
-      #not able to Ack any of messaging tests
+    #passed
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -14,7 +13,7 @@
       And user clicks on "Messaging"
       When user clicks on "CallGuide Mail" pebble
       Then user should see "CallGuide Mail" form
-      Then user selects system name in haiti as "Other"
+      #Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox

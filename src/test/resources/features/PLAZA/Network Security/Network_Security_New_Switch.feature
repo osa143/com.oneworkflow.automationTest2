@@ -12,7 +12,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on Network Routing Switching pebble
       Then user should see "Network Routing Switching" form
-      Then user selects system name in haiti as "Other"
+      Then user selects network security firewall system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects New Switch Service Request Name as "New Switch - Configure"
       And user enters Network Security Routing New Switch request as "Test7 Network Security New Switch/Request"
@@ -49,6 +49,19 @@
       And user should see assigned profile as "Routing/Switching L2"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
+      When user clicks on "Diagnosis" tab
+      And user validates CI "apoteket-fnt-137263" is listed
+      And user right clicks on CI "apoteket-fnt-137263" and selects "Impact:Update"
+      Then user switches to frame
+      And user enters impact from time as past on impact details bulk update window
+      And user enters impact to time as past on impact details bulk update window
+      Then user clicks confirm checkbox
+      And user clicks on bulk update save button
+      And user waits 60 secs
+      And user clicks on "Diagnosis" tab
+      And user waits 3 secs
+      When user right clicks on CI "apoteket-fnt-137263" and selects "Impact:Clear"
+      And user should see confirmation message and clicks on yes button
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

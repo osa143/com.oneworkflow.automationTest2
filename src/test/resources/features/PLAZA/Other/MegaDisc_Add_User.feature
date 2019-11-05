@@ -1,4 +1,5 @@
 @MegaDisc_Add_User_other @PLAZA
+  #passed
   Feature: MegaDisc Add User PLAZA form test
     Scenario:user validates information sent to OW from Plaza
 
@@ -12,7 +13,7 @@
       And user clicks on "Application"
       When user clicks on "MegaDisc (Account Management)" pebble
       Then user should see "MegaDisc (Account Management)" form
-      Then user selects system name in haiti as "Other"
+    #  Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters MegaDisc request as "Test1 MegaDisc/Request"
       Then user selects choose option as "Add User"
@@ -48,7 +49,7 @@
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
-      And user selects completed code as "Success"
+      And user selects completion code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button

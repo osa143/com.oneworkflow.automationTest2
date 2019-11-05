@@ -1,6 +1,6 @@
 @Messaging_TSS_Mail @PLAZA
   Feature: Messaging TSS Mail plaza form test
-    #not checked on ow
+    #passed
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -13,7 +13,7 @@
       And user clicks on "Messaging"
       When user clicks on "TSS Mail Support" pebble
       Then user should see "TSS Mail Support" form
-      Then user selects system name in haiti as "Other"
+     # Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox

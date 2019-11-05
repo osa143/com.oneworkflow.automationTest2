@@ -40,4 +40,5 @@
       |DC IMS Core_auto            |Test@1234|
       |mina09_auto                 |Test@1234|
       |syvaptu1_auto               |Test@1234|
+      |PlazaTest                   |Test@1234|
 

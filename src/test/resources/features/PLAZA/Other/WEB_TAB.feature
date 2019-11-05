@@ -15,7 +15,7 @@
       #Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters web tab request as "Test1 Web Tab/Request"
-      And user enters CI as "cc100cgas001"
+      And user enters web tab CI as "cc100cgas001"
       Then user enters web tab description as "Test1 Web Tab/Description"
       And user enters additional comments as "Test1 Web Tab/AC"
       Then user clicks on "Submit"

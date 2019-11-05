@@ -13,7 +13,7 @@
       And user clicks on "Application"
       When user clicks on "BCPP" pebble
       Then user should see "BCPP" form
-      Then user selects system name in haiti as "Other"
+      #Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters BCCP request as "<Request>"
       And user selects service request name as "Account/Password"
@@ -49,8 +49,8 @@
       And user validates CI "aa187bcpp01" is listed
       And user right clicks on CI "aa187bcpp01" and selects "Impact:Update"
       Then user switches to frame
-      And user enters impacted from date as date in past
-      And user enters impacted to date as date in past
+      And user enters impact from time as past on impact details bulk update window
+      And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
       Then user switches to window 1

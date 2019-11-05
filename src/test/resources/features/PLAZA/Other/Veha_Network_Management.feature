@@ -1,4 +1,5 @@
 @Veha_Network_Management @PLAZA
+  #passed
   Feature: Veha Network Management plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -12,7 +13,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on "Network Management System Veha" pebble
       Then user should see "Network Management System Veha" form
-      Then user selects system name in haiti as "Other"
+     # Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters veha request as "Test1 Veha/Request"
       Then user enters system as "sonera ca apache"

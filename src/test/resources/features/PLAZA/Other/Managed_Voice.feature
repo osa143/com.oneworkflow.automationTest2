@@ -1,4 +1,5 @@
 @ManagedVoice @PLAZA
+  #passed
   Feature:Managed Voice plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -12,7 +13,7 @@
       And user clicks on "Application"
       When user clicks on "Managed Voice (HCS)" pebble
       Then user should see "Managed Voice (HCS)" form
-      Then user selects system name in haiti as "Other"
+      #Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox

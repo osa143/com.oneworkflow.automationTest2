@@ -12,10 +12,10 @@
       And user clicks on "Application"
       When user clicks on "OCC" pebble
       Then user should see "OCC" form
-      Then user selects system name in haiti as "Other"
+     # Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters OCC request as "Test1 OCC/Request"
-      And user enters CI as "aa789win01t"
+      And user enters occ CI as "aa789win01t"
       Then user enters OCC description as "Test1 OCC/Description"
       And user enters additional comments as "Test1 OCC/AC"
       Then user clicks on "Submit"

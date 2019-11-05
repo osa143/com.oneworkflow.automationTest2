@@ -12,7 +12,7 @@
       And user clicks on Database
       When user clicks on "Database Request" pebble
       Then user should see "Database Request" form
-      Then user selects system name in haiti as "Other"
+      Then user selects System name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Access Request"
       And user enters Database Access request as "<Request>"
@@ -20,7 +20,6 @@
       And user selects add server CI as "cc100cgas001"
       And user selects add Database CI as "TEST"
       And user enters Database Name as "Test name"
-      And user enters DNS IP address as "Test address"
       And user selects database Account Type as "<Account Type>"
       Then user selects New Existing Account as "New"
       And user enters database Account Name as "Test account"
@@ -46,7 +45,7 @@
      #Not sure about description validation outside of a table
       And user validates Database access request description same as plaza
       Then user clicks on owner under sections
-      And user clicks on assignment under sections
+      #And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
       And user should see assigned profile as "Oracle/MSSQL/MySQL/PostgreSQL"

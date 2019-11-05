@@ -1,4 +1,5 @@
 @Network_Security_LAN @PLAZA
+  #passed
   Feature: Network Security LAN plaza form test
     Scenario: user validates information sent to OW from Plaza
 

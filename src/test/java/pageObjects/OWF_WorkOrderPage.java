@@ -454,7 +454,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.DatabaseType) && actualDescription.contains(PlazaValidation.CI)
                 && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.DatabaseName)
-                && actualDescription.contains(PlazaValidation.DnsIpAddress) && actualDescription.contains(PlazaValidation.AccountType)
+                && actualDescription.contains(PlazaValidation.AccountType)
                 && actualDescription.contains(PlazaValidation.NewExistingAccount) && actualDescription.contains(PlazaValidation.AccountName)
                 && actualDescription.contains(PlazaValidation.Permissions) && actualDescription.contains(PlazaValidation.Description)
                 && actualDescription.contains(PlazaValidation.AdditionalComments)) {
@@ -469,7 +469,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.DatabaseType) && actualDescription.contains(PlazaValidation.CI)
                 && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.DatabaseName)
-                && actualDescription.contains(PlazaValidation.TableSpace) && actualDescription.contains(PlazaValidation.AccountType)
+                && actualDescription.contains(PlazaValidation.AccountType)
                 && actualDescription.contains(PlazaValidation.NewExistingAccount) && actualDescription.contains(PlazaValidation.AccountName)
                 && actualDescription.contains(PlazaValidation.Permissions) && actualDescription.contains(PlazaValidation.Description)
                 && actualDescription.contains(PlazaValidation.AdditionalComments)) {

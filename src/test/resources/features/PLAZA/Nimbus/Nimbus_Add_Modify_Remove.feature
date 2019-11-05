@@ -12,7 +12,7 @@
       And user clicks on "Cloud"
       When user clicks on "Skypoint - private cloud" pebble
       Then user should see "Skypoint - private cloud" form
-      Then user selects system name in haiti as "Other"
+      Then user selects nimbus system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Add/Modify/Remove CPU/Memory/Disk to VM"
       And user enters nimbus request as "Test1 Nimbus/Request"
@@ -44,7 +44,6 @@
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
-      And user validates CI availability
       And user validates CI "cc100cgas001" is listed
       And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
       Then user switches to frame

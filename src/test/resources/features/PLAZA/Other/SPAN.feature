@@ -12,7 +12,7 @@
      And user clicks on "Application"
      When user clicks on "SPAN" pebble
      Then user should see "SPAN" form
-     Then user selects system name in haiti as "Other"
+    # Then user selects system name in haiti as "Other"
      When user selects role dropdown as "Application Operation Engineer"
      And user enters SPAN request as "<Request>"
      And user selects span select request as "Account/Password"
@@ -52,7 +52,7 @@
      And user enters impact from time as past on impact details bulk update window
      And user enters impact to time as past on impact details bulk update window
      Then user clicks confirm checkbox
-     And user clicks save button
+     And user clicks on bulk update save button
      And user right clicks on CI "SPANGISAT" and selects "Impact:Clear All"
      And user should see confirmation message for impact clear and user clicks yes
      When user clicks on Ack button

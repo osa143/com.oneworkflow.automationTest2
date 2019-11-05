@@ -1,6 +1,6 @@
 @Messaging_Denmark_Mail @PLAZA
   Feature: Messaging Denmark Mail plaza form test
-    #Not checked on ow
+    #passed
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -13,7 +13,7 @@
       And user clicks on "Messaging"
       When user clicks on "Denmark Mail" pebble
       Then user should see "Denmark Mail" form
-      Then user selects system name in haiti as "Other"
+      #Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox

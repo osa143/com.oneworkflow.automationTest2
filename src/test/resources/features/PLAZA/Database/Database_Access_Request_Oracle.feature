@@ -12,7 +12,7 @@
       And user clicks on Database
       When user clicks on "Database Request" pebble
       Then user should see "Database Request" form
-      Then user selects system name in haiti as "Other"
+      Then user selects System name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Access Request"
       And user enters Database Access request as "Test2 Database AccessOracle/Request"
@@ -20,7 +20,6 @@
       And user selects add server CI as "cc100cgas001"
       And user selects add Database CI as "TEST"
       And user enters Database Name as "Test name"
-      Then user enters database Default tablespace as "Test tablespace"
       And user selects database Account Type as "SQL Server"
       And user selects New Existing Account as "New"
       And user enters database Account Name as "Test account"

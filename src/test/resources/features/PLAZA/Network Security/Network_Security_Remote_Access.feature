@@ -1,4 +1,5 @@
 @Network_Security_Remote_Access @PLAZA
+  #passed
   Feature: Network Security Remote Access plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -13,7 +14,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on Remote Access (VPN ACS)
       Then user should see "Remote Access (VPN/ACS)" form
-      Then user selects system name in haiti as "Other"
+      Then user selects remote access system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters network security remote request as "Test9 Network Security/Request"
       Then user selects remote access select request as "General VPN"

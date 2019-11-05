@@ -1,4 +1,5 @@
 @Network_Security_Proxy_Reverse_Proxy @PLAZA
+  #passed
   Feature: Network Security Proxy Reverse Proxy form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -12,7 +13,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on Proxy pebble
       Then user should see "Proxy" form
-      Then user selects system name in haiti as "Other"
+      Then user selects proxy general inquiry system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Reverse proxy"
       And user enters network security proxy request as "Test3 Network Security Proxy/Request"

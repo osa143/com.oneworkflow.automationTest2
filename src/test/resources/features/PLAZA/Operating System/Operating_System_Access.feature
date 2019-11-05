@@ -1,4 +1,5 @@
 @Operating_System_Access @PLAZA
+  #passed
   Feature: Nimbus Add Modify Remove plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -12,7 +13,7 @@
       And user clicks on "Compute & Operating System"
       When user clicks on Access to Red Hat Knowledgebase
       Then user should see "Access to Red Hat Knowledgebase" form
-      Then user selects system name in haiti as "Other"
+      #Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system request as "Test1 Operating System Access/Request"
       And user enters justification as "Test justification"

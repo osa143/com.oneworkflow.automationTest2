@@ -1,4 +1,5 @@
 @Network_Security_DNS_Sweden @PLAZA
+  #passed
   Feature: Network Security DNS Sweden plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -12,7 +13,7 @@
       And user clicks on "Firewall & Network"
       When user clicks on DNS DHCP pebble
       Then user should see "DNS/DHCP" form
-      Then user selects system name in haiti as "Other"
+      Then user selects network security system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Service Request Name as "DNS Sweden"
       And user enters Network Security Add Modify Remove DNS request as "Test2 Network Security Sweden/Request"

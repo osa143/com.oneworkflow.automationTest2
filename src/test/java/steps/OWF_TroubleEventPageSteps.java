@@ -1223,6 +1223,12 @@ public class OWF_TroubleEventPageSteps {
     public void userEntersRejectionReasonAs(String arg0) {
         troubleEventPage.enterRejectReason(arg0);
     }
+
+    @Then("user selects the first three CI's")
+    public void userSelectsTheFirstThreeCIS() {
+        troubleEventPage.SelectFirstThreeCIs();
+    }
+
 }
 
 

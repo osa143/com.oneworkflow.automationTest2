@@ -159,6 +159,14 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_REJECT_REASON="arid_WIN_0_600001019";
 
 
+
+    public void SelectFirstThreeCIs(){
+        clickElement(By.xpath("//*[@id='T700009024']/tbody/tr[2]"));
+        clickElement(By.xpath("//*[@id='T700009024']/tbody/tr[3]"));
+        clickElement(By.xpath("//*[@id='T700009024']/tbody/tr[4]"));
+    }
+
+
     public void enterRejectReason(String reason){
         enterTextByElement(By.id(txt_REJECT_REASON), reason);
     }
@@ -453,6 +461,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         return ClickTableElementByText(By.id(table_SELECT_LOCATION),"Name",text, true);
 
     }
+
 
     public void clickOk_SelectLocation(){
         findElement(By.id(btn_OK_SELECT_LOCATION)).click();

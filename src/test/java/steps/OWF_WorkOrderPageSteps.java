@@ -728,5 +728,11 @@ public class OWF_WorkOrderPageSteps {
     public void userValidatesTechnologyAs(String arg0) {
         Assert.assertEquals(workOrderPage.getTechnology(), arg0);
     }
+
+    @And("user validates email notification is sent")
+    public void userValidatesEmailNotificationIsSent() {
+      workOrderPage.clickOnSent();
+      Assert.assertEquals(workOrderPage.getMethodText(), "Email HTML");
+    }
 }
 

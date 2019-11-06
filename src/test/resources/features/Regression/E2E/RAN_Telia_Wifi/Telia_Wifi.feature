@@ -17,27 +17,28 @@
       When user clicks on Diagnosis tab
       Then user clicks on CI search button
       And CI search tab should be opened
-      And user enters "TLÖ WLAN4" in the Location ID+ field
-      Then user clicks on CI search button
-      Then user selects the first 3 entries
+      And user switches to frame
+      And user enters "TLÖ WLAN4" in location field
+      Then user clicks on search button on CI search window
+      Then user selects the first three CI's
       And user selects impact level as "Degradation of Service"
-      And user clicks on "Relate CI"
-      And user clicks ok on CI window pop up
-      Then user clicks on close button
-      Then user clicks on save button
-      When user clicks on work order tab
+      And user clicks on relate CI
+      Then user closes warning message
+      Then user clicks on close button on CI search window
+      When user clicks on "Work Orders" tab
       And user clicks on create from ticket
       Then user switches to window 2
-      Then user validates ticket information is same as parent ticket
+     # Then user validates ticket information is same as parent ticket
       Then user clicks on save button
       Then user enters description as "Test WO send by email"
-      And user selects assigned profile dropdown as "WLAN Coverage"
-      Then user selects SLA class as "Default-3"
+      #And user clicks on assignment under sections
+      And user selects assigned profile dropdown as "Access network:Mobile:WLAN:WLAN Agreement"
+      Then user selects SLA class as "DEFAULT:3 weeks repair time"
       And user clicks on save button
       Then user validates ticket status as "Assigned"
-      And user waits 180 secs
-      Then user clicks on notification tab
-      Then user clicks on sent button
+      And user waits 45 secs
+      Then user clicks on "Notifications" tab
+      Then user clicks on "Sent/Received" tab
       And user validates email notification is sent
 
 

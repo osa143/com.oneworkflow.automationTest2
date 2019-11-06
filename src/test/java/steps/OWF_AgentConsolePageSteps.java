@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.OWF_AgentConsolePage;
 import utils.CommonUtils;
@@ -16,7 +17,7 @@ public class OWF_AgentConsolePageSteps {
 
     @Then("user successfully logged in to OneWorkflow and agent console should be displayed")
     public void userSuccessfullyLoggedInToOneworkflowAndAgentConsoleShouldBeDisplayed() {
-      // String AgentConsolePageTitle = agentConsolePage.getDriver().getTitle();
+      //String AgentConsolePageTitle = agentConsolePage.getDriver().getTitle();
         //System.out.println(AgentConsolePageTitle);
         //Assert.assertEquals(AgentConsolePageTitle, "Agent Console (New)");
     }
@@ -589,7 +590,8 @@ public class OWF_AgentConsolePageSteps {
 
     @Then("the new assignment rule configuration form is displayed")
     public void theNewAssignmentRuleConfigurationFormIsDisplayed() {
-       agentConsolePage.switchToFrameByIndex(2);
+       // int size= agentConsolePage.getDriver().findElements(By.tagName("iframe")).size();
+        //agentConsolePage.switchToFrameByIndex(size);
     }
     
 

@@ -121,7 +121,7 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
     And user clicks on assignment under sections
     And user should see assigned profile as "Change Process Manager"
     And user validates assignee is "pdr145"
-#
+
 #
 #
 #  Scenario: Problem Ticket

@@ -16,7 +16,6 @@
       When user clicks on CTI details under sections
       And user validates availability of category dropdown
       #Then multiple statuses "1:Access:Access|Transport:BSS:Computer Equipment:Computer Services:Core:Customer Service:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:Organization:OSS:Packet_Transport:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:Transport|Access:TV:VAS" should be available in "Category" dropdown
-      And user waits 1 secs
       And user selects Category as "Core"
       Then user validates availability of type dropdown
       #And multiple statuses "Fixed_IMS:IP:MESSAGING:Mobile CS Core Network:Mobile IMS Core Network:Mobile PS Core Network:Mobile_CS:Mobile_PS:NFVI:Other:Performance:Planning:Presentation:Software:WLAN:Workflow" should be available in "Type" dropdown
@@ -62,20 +61,20 @@
       When user clicks on attachments under sections
       And  user adds attachment and verifies under "internal"
         | summary   | description | fullFilePath                                                                   | attachments |
-        | Test JPEG | Test JPEG   | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test JPEG FILE.jpg | 1           |
-        | Test PNG  | Test PNG    | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PNG FILE.png  | 2           |
-        | Test PDF  | Test PDF    | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PDF FILE.pdf  | 3           |
-        | Test WORD | Test WORD   | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test WORD FILE.docx| 4           |
-        | Test EXCEL| Test EXCEL  | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test XLS FILE.xls  | 5           |
-        | Test PPT  | Test PPT    | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PPT FILE.pptx | 6           |
+        | Test JPEG | Test JPEG   | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test JPEG FILE.jpg | 1           |
+        | Test PNG  | Test PNG    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PNG FILE.png  | 2           |
+        | Test PDF  | Test PDF    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PDF FILE.pdf  | 3           |
+        | Test WORD | Test WORD   | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test WORD FILE.docx| 4           |
+        | Test EXCEL| Test EXCEL  | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test XLS FILE.xls  | 5           |
+        | Test PPT  | Test PPT    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PPT FILE.pptx | 6           |
       And  user adds attachment and verifies under "external"
         | summary   | description | fullFilePath                                                                   | attachments |
-        | Test JPEG | Test JPEG   | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test JPEG FILE.jpg | 7           |
-        | Test PNG  | Test PNG    | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PNG FILE.png  | 8           |
-        | Test PDF  | Test PDF    | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PDF FILE.pdf  | 9           |
-        | Test WORD | Test WORD   | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test WORD FILE.docx| 10          |
-        | Test EXCEL| Test EXCEL  | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test XLS FILE.xls  | 11          |
-        | Test PPT  | Test PPT    | C:\Users\mahesh vaddegani\Downloads\Test Case Attachments 2\Test PPT FILE.pptx | 12          |
+        | Test JPEG | Test JPEG   | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test JPEG FILE.jpg | 7           |
+        | Test PNG  | Test PNG    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PNG FILE.png  | 8           |
+        | Test PDF  | Test PDF    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PDF FILE.pdf  | 9           |
+        | Test WORD | Test WORD   | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test WORD FILE.docx| 10          |
+        | Test EXCEL| Test EXCEL  | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test XLS FILE.xls  | 11          |
+        | Test PPT  | Test PPT    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PPT FILE.pptx | 12          |
 
       And user clicks on "Timeline" tab
       When user enters "Test Update - Public" in the timeline text box
@@ -110,9 +109,9 @@
 
       Examples:
       |BU_Name1 |BU_Name2 |Location|Location Name         |Title                        |Description                  |CI Name1          |CI Name2        |CI Name         |Validate BU |
- #     |Sweden   |Finland  |SE_     |SE_Site_126608         |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_FREMME2  |LT_SGSN_VLMMME02|SE_SGSN_FREMME2  |Lithuania   |
- #   |Norway   |Finland  |NO_     |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_EPG_OSL900EPG2|DK_EPG_AMBEPG1  |NO_EPG_OSL900EPG2|Denmark     |
+#      |Sweden   |Finland  |SE_     |SE_Site_126608         |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_FREMME2  |LT_SGSN_VLMMME02|SE_SGSN_FREMME2  |Lithuania   |
+#    |Norway   |Finland  |NO_     |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_EPG_OSL900EPG2|DK_EPG_AMBEPG1  |NO_EPG_OSL900EPG2|Denmark     |
 #     |Lithuania|Denmark  |LT_     |LT_Site_888           |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E| LT_SGSN_VLMMME02|SE_SGSN_FREMME2 |LT_SGSN_VLMMME02 |Sweden      |
 #     |Finland  |Denmark  |FI_     |FI_Site_riutula keskus|Test case MT004 Finland E2E  |Test case MT004 Finland E2E  | FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1|FI_SGSN_HKIMME02 |Estonia     |
-#     |Estonia  |Sweden   |EE_     |EE- AUT0001           |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_EPG_KOORTEPG1 |FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1 |Finland     |
+     |Estonia  |Sweden   |EE_     |EE_Site_KARDL          |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_EPG_KOORTEPG1 |FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1 |Finland     |
  #   |Denmark  |Sweden   |DK_     |DK_Site_S0001         |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_EPG_AMBEPG1   |EE_EPG_KOORTEPG1|DK_EPG_AMBEPG1   |Estonia     |

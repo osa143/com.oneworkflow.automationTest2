@@ -22,11 +22,11 @@
       |Tohall_copy7                |Test@1234|
       |Change_Automation_1         |Test@1234|
       |Change_Automation_2         |Test@1234|
-      |Change_Automation_3         |Test@1234|
+     # |Change_Automation_3         |Test@1234|
       |Change_Automation_4         |Test@1234|
       |Change_Automation_5         |Test@1234|
       |Change_Automation_6         |Test@1234|
-      |Change_Automation_7         |Test@1234|
+     # |Change_Automation_7         |Test@1234|
       |Change_Automation_8         |Test@1234|
       |Change_Automation_9         |Test@1234|
       |Change_Automation_10        |Test@1234|
@@ -41,4 +41,15 @@
       |mina09_auto                 |Test@1234|
       |syvaptu1_auto               |Test@1234|
       |PlazaTest                   |Test@1234|
+      |ow_basic2_auto              |Test@1234|
+      |ow_CCMobAccess_auto         |Test@1234|
+      |cm_appadmin1_auto           |Test@1234|
+      |cm_adminaccess1_auto        |Test@1234|
+      |ow_windows_auto             |Test@1234|
+      |frvi96_auto4                |Test@1234|
+      |dc_itfi1_auto               |Test@1234|
+
+
+
+
 

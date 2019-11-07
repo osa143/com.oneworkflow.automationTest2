@@ -1,5 +1,5 @@
 @Bulk_Loading_Tele2Notifications @SAO_427
-  Feature: Bulk Loading Summary
+  Feature: Bulk Loading Tele2 Notifications
     Scenario: Bulk Loading Summary
 
       Given user is on the OneWorkflow login page

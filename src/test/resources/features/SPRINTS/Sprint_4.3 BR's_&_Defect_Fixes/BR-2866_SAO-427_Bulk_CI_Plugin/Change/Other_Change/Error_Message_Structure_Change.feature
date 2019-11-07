@@ -50,12 +50,8 @@
       When user clicks on "Other Fields" tab
       Then user validates Request ID, BIR_GUID, Submitter, Create Date, Last Modified, Modified Date, import start time, import end time, import duration fields are updated
       And user validates "Status" is visible on bulk CI loading window tagname "label"
-      And user validates "Pending" is visible on bulk CI loading window tagname "label"
-      And user validates "Checked" is visible on bulk CI loading window tagname "label"
-      And user validates "Importing" is visible on bulk CI loading window tagname "label"
-      And user validates "Completed" is visible on bulk CI loading window tagname "label"
-      And user validates With Errors is visible on bulk CI loading window
-      And user validates "Cancelled" is visible on bulk CI loading window tagname "label"
+      And user validates "Submitter" is visible on bulk CI loading window tagname "label"
+      And user validates "Import Description" is visible on bulk CI loading window tagname "label"
       Then user clicks on bulk loading close button
       When user clicks on Add Bulk Import button
       And user switches to frame

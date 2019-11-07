@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@SAO-427-BR2862-Bulk_Loading_Error_Message_Structure_Trouble"}
+        tags = {"@Bulk_Loading_Ignore_Duplicate_CI's_Trouble"}
 )
 
 public class Test_Runner extends BaseTest {

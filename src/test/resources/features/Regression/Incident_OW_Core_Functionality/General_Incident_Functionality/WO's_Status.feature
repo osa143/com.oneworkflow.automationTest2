@@ -1,7 +1,7 @@
 @WO's_Status @Incident @Trouble1
   #passed
-  Feature: validation of WO's status'
-    Scenario: user validates different work order status'
+  Feature: WO's status
+    Scenario: WO's status
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

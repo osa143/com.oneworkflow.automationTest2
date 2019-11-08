@@ -2,7 +2,7 @@
 #Passed
   Feature: Validate Behaviour and options for data field called priority
 
-    Scenario: user validates behaviour and options for data field priority
+    Scenario: Validate Behaviour and options for data field called priority
 
 
       Given user is on the OneWorkflow login page

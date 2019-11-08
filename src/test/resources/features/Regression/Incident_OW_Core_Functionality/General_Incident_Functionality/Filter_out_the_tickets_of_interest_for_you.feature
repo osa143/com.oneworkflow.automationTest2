@@ -1,7 +1,7 @@
 @Filter_out_the_tickets_of_interest_for_you @Incident @Trouble1
   #passed
-  Feature: filtering of tickets
-    Scenario: user can filter tickets of interest12
+  Feature: filter out the tickets of interest for you
+    Scenario: filter out the tickets of interest for you
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

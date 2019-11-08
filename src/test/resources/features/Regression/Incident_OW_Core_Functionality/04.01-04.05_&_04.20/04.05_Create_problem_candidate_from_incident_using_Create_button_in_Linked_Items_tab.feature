@@ -1,7 +1,7 @@
 @04.05_Create_problem_candidate_from_incident_using_Create_button_in_Linked_Items_tab  @Incident1
   #passed
-  Feature: create problem from incident
-    Scenario: user can create a problem ticket using create button in incident ticket
+  Feature: create problem candidate from incident using create button in linked items
+    Scenario: create problem candidate from incident using create button in linked items
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

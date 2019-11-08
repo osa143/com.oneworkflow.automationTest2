@@ -1,7 +1,7 @@
 @02.15_Search_for_Known_Errors_using_quick_search_based_on_Category_Type_and_Item @Incident
 #passed
-  Feature:Search for known error
-    Scenario: user can search for known errors using quick search
+  Feature: Search for known error using quick search based on category
+    Scenario: Search for known error using quick search based on category
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

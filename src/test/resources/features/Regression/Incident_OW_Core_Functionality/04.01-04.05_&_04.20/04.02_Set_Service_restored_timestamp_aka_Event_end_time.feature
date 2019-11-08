@@ -1,7 +1,7 @@
 @04.02_Set_Service_restored_timestamp_aka_Event_end_time   @Incident1
   #passed
-  Feature: setting of event end time
-    Scenario: user can set the event end time
+  Feature: Set service restored timestamp aka event end time
+    Scenario: Set service restored timestamp aka event end time
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

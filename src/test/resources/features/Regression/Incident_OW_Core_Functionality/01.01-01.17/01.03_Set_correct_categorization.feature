@@ -3,7 +3,7 @@
 # CORE for ST, Core for SIT
 Feature: Set correct categorization
 
-  Scenario: user can set correct categorization
+  Scenario: Set correct categorization
 
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password

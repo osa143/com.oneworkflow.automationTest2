@@ -1,8 +1,8 @@
 @02.11_Check_incident_OLA @Incident
   #passed
   #need to get a ticket for this test
-  Feature: user validates availability of OLA value
-    Scenario: user validates availability of OLA value
+  Feature: Check incident OLA feature
+    Scenario: Check incident OLA feature
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

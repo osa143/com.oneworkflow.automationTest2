@@ -1,7 +1,7 @@
 @01.09_Add_attachments_to_field_named_Internal_attachments @Incident
 
   Feature: Add Attachments to field named internal attachments
-    Scenario: user is able to add an attachment to incident ticket
+    Scenario: Add Attachments to field named internal attachments
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

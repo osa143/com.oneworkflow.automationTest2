@@ -88,8 +88,8 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
     And user enters "No Risk" in the risk description field
     Then user clicks on "Schedule" tab
     And user enters as "Test ticket no impact" in service and customer impact
-    And user enters start time as some minutes fast from current sweden time
-    And user enters Request End time as some minutes fast from request start time
+    Then user enters request start time 24 hours ahead of current date
+    And user enters request end time 28 hours ahead of current date
     And user enters impact duration as "6" minutes
     And user selects estimated impact as "No Impact"
     And user clicks on save button

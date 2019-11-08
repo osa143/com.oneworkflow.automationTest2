@@ -3,7 +3,7 @@
   #CORE for ST, Core for SIT
    #Mobile PS Core Network
 Feature: Adding of CI to incident ticket
-  Scenario: user is able to add CI's to incident ticket
+  Scenario: Adding of CI to incident ticket
 
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password

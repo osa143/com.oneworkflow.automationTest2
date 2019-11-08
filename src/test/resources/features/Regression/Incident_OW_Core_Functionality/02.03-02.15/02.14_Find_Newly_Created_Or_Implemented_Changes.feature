@@ -1,8 +1,8 @@
 @02.14_Find_Newly_Created_Or_Implemented_Changes @Incident
   #Passed
 
-  Feature: Searching for change tickets
-    Scenario: user can search for newly created or implemented changes
+  Feature: Find newly created or implemented changes
+    Scenario: Find newly created or implemented changes
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

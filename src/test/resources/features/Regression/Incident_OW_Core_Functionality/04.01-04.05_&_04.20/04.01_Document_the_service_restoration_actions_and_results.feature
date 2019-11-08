@@ -1,7 +1,7 @@
 @04.01_Document_the_service_restoration_actions_and_results  @Incident1
   #passed
-  Feature: document service restoration
-    Scenario: user documents service restoration and results
+  Feature: document the service restoration actions and results
+    Scenario: document the service restoration actions and results
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

@@ -15,17 +15,17 @@ Feature: Assignment rules can be configured with EQUAL and LIKE conditions on th
      Given user is on the assignment rules configuration form
 
 
-  Scenario: New assignment rules can be configured using EQUAL and LIKE conditions
-    When user clicks the new button on assignment rule window
-    Then the new assignment rule configuration form is displayed
-    And multiple options "=:LIKE" should be available in Title dropdown
-
-
-#  Scenario: Existing assignment rules can be configured using EQUAL and LIKE conditions
-#    When user selects a record on assignment rules window
-#    And user clicks on open button
-#    Then the modify assignment rule configuration form is displayed
+#  Scenario: New assignment rules can be configured using EQUAL and LIKE conditions
+#    When user clicks the new button on assignment rule window
+#    Then the new assignment rule configuration form is displayed
 #    And multiple options "=:LIKE" should be available in Title dropdown
+
+
+  Scenario: Existing assignment rules can be configured using EQUAL and LIKE conditions
+    When user selects a record on assignment rules window
+    And user clicks on open button
+    Then the modify assignment rule configuration form is displayed
+    And multiple options "=:LIKE" should be available in Title dropdown
 
 
 

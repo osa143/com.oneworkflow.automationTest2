@@ -1,7 +1,7 @@
 @04.04_Create_change_from_incident_using_Create_button_in_Linked_Items_tab  @Incident1
   #passed
-  Feature: Create change from incident
-    Scenario: user can create a change from an incident ticket
+  Feature: Create change from incident using create button in linked items tab
+    Scenario: Create change from incident using create button in linked items tab
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

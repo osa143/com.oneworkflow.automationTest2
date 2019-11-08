@@ -1,8 +1,8 @@
 @00.09_Validate_Impact_field_availability_in_Incident_record @Incident
 #passed
-  Feature: validation of impact field availability and structure
+  Feature: validation impact field availability in incident record
 
-    Scenario: user validates impact field availability and structure
+    Scenario: validation impact field availability in incident record
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

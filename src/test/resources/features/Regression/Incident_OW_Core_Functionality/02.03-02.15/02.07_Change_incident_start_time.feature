@@ -1,7 +1,7 @@
 @02.07_Change_incident_start_time @Incident
   #passed
-Feature: change incident start time to the past
-  Scenario: user can change the incident start time to a date in the past
+Feature: change incident start time
+  Scenario: user can change the incident start time
 
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password

@@ -247,25 +247,25 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And user validates assignee is "juniksa1"
 
 
-#  Scenario: Problem Ticket
-#    And user clicks on create problem record
-#    And user switches to window 1
-#    Then trouble record form should appear in new tab
-#    When user clicks on sweden checkbox under affected BU's
-#    When user enters "This ticket should be auto assigned to PB Auto Assignment LIKE Condition Automation Test Rule" in Title field
-#    And user selects request type as "Access Networks:RAN Optimization" on Problem record page
-#    And user enters description as "Problem Ticket Auto Assignment Test"
-#    And user selects impact type as moderate:limited
-#    And user selects urgency as low
-#    And user clicks on save button
-#    Then ticket should be created and status should be assigned
-#    And there are multiple assignment rules that match the incident details
-#    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
-#    And user clicks on assignment under sections
-#    And user should see assigned profile as "OSS Workflow Development"
-#    And user validates assignee is "scc223"
-#    And user logsOut and closes the browser
-#    And user switches to window 0
+  Scenario: Problem Ticket
+    And user clicks on create problem record
+    And user switches to window 1
+    Then trouble record form should appear in new tab
+    When user clicks on sweden checkbox under affected BU's
+    When user enters "This ticket should be auto assigned to PB Auto Assignment LIKE Condition Automation Test Rule" in Title field
+    And user selects request type as "Access Networks:RAN Optimization" on Problem record page
+    And user enters description as "Problem Ticket Auto Assignment Test"
+    And user selects impact type as moderate:limited
+    And user selects urgency as low
+    And user clicks on save button
+    Then ticket should be created and status should be assigned
+    And there are multiple assignment rules that match the incident details
+    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
+    And user clicks on assignment under sections
+    And user should see assigned profile as "OSS Workflow Development"
+    And user validates assignee is "scc223"
+    And user logsOut and closes the browser
+    And user switches to window 0
 
 
 

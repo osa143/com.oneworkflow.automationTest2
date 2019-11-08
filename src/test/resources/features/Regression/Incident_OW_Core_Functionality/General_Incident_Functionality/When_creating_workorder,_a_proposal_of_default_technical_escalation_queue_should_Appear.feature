@@ -1,7 +1,7 @@
 @When_creating_workorder_a_proposal_of_default_technical_escalation_queue_should_appear @Incident @Trouble1
   #passed
-  Feature: Proposal of default technical escalation
-    Scenario: Technical escalation to other assignment group
+  Feature: When creating workorder, a proposal of default technical escalation queue should appear
+    Scenario: When creating workorder, a proposal of default technical escalation queue should appear
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

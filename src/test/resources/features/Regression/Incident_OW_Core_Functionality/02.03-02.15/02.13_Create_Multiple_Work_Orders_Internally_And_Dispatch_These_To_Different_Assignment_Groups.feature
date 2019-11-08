@@ -1,7 +1,7 @@
 @02.13_Create_Multiple_Work_Orders_Internally_And_Dispatch @Incident
 #passed
-Feature: creation of multiple WO's and dispatch
-  Scenario: user can create multiple work orders and dispatch these to different assignent groups
+Feature: creation  multiple WO's internally and dispatch these to different assignment groups
+  Scenario: user can create multiple work orders and dispatch these to different assignment groups
 
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password

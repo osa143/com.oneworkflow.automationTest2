@@ -1,7 +1,7 @@
 @Verify_functionality_of_Service_Info_tab @Incident @Trouble1
   #passed
-  Feature: Verification of service info tab
-    Scenario: user validates service info tab
+  Feature: Verify functionality of service info tab
+    Scenario: Verify functionality of service info tab
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

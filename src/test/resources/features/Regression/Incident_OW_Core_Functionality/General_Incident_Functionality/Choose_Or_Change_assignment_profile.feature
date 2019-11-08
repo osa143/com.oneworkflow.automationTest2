@@ -1,7 +1,7 @@
 @Choose_Or_Change_assignment_profile  @Incident2
   #passed
-  Feature: changing of assignment
-    Scenario: user can change assignment profile on incident ticket
+  Feature: choose or change assignment profile
+    Scenario: choose or change assignment profile
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

@@ -1,7 +1,7 @@
 @Set_WO_to_cleared_add_End_date_and_time_and_close_WO @Incident @Trouble1
   #passed
-Feature: Work order closure
-  Scenario: user can manually close a Work order ticket
+Feature: Set WO to cleared, add end date and time and close WO
+  Scenario: Set WO to cleared, add end date and time and close WO
 
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password

@@ -1,8 +1,8 @@
 @01.05_Set_location_of_incident_origin @Incident
 #Passed
-Feature: Setting of incident start time
+Feature: Setting location of incident origin
 
-  Scenario: Incident start time is set when creating the ticket
+  Scenario: Setting location of incident origin
 
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password

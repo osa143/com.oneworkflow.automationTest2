@@ -1,7 +1,7 @@
 @05.01_Manually_close_an_incident @Incident  @Incident1
   #passed
-  Feature: incident closure
-    Scenario: user can manually close an incident ticket
+  Feature: manually close an incident
+    Scenario: manually close an incident
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

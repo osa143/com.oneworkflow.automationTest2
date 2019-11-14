@@ -49,7 +49,9 @@
       When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed in row 2
       And user validates CI "cc100cgas002" is listed in row 1
+      And user selects all CI's that appear
       And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
+      And user selects all CI's that appear
       Then user switches to frame
       And user enters impact from time as past on impact details bulk update window
       And user enters impact to time as past on impact details bulk update window

@@ -71,5 +71,5 @@
       Examples:
 
       |Service Request Name       |Request             |Description             |Additional Comments|Desc Validation|
-      #|General Request            |Test2 Topcat/Request|Test2 Topcat/Description|Test2 Topcat/AC    |               |
-      |Restore Catalogue Database |Test1 Topcat/Request|Test1 Topcat/Description|Test1 Topcat/AC    |               |
+      |General Request            |Test2 Topcat/Request|Test2 Topcat/Description|Test2 Topcat/AC    |               |
+      #|Restore Catalogue Database |Test1 Topcat/Request|Test1 Topcat/Description|Test1 Topcat/AC    |               |

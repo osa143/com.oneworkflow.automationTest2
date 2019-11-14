@@ -1,4 +1,4 @@
-@PLAZA_PDB_Create_Incident @PLAZA_Incident_Flow
+@PLAZA_PDB_E2E_Create_Incident @PLAZA_Incident_Flow
   #Ticket ID to come from Plaza
   Feature: Plaza creation of incident ticket
     Scenario Outline: user validates plaza incident ticket
@@ -128,9 +128,9 @@
 
       Examples:
       |PDB Affected Country             |Number of Persons|Title                                                           |Priority|
-      |Other (or more than one country)|No               |Other Other (or more than one country)|Minor   |
-#      |Telia Carrier                   |No              |Personal Data Breach \| Telia Carrier                          |Minor   |
-#      |Sweden                          |No              |Personal Data Breach \| Sweden                                 |Minor   |
+#      |Other (or more than one country)|No               |Other Other (or more than one country)|Minor   |
+ #     |Telia Carrier                   |No              |Personal Data Breach \| Telia Carrier                          |Minor   |
+      |Sweden                          |No              |Personal Data Breach \| Sweden                                 |Minor   |
 #      |Finland (Enterprise)            |No              |Personal Data Breach \| Finland                                |Minor   |
 #      |Finland (Consumer)              |No              |Personal Data Breach \| Finland                                |Minor   |
 #      |Norway                          |No              |Personal Data Breach \| Norway                                 |Minor   |

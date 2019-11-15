@@ -2,6 +2,7 @@ Feature: Timeline Entries to Audit Service Information Activation and Deactivati
   In order to provide better auditing of the sending and stopping of disturbance information
   As a Change Manager
   I want visibility of who has been activating and deactivating service information and when this occurred
+  #Test requires us to check that a timeline entry is created when activating and deactivating service deactivation
 
   Scenario: Service information is activated
     Given a change request has no active service information

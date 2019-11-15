@@ -2,6 +2,8 @@ Feature: Service information activation for change requests
   In order to improve brand reputation and satisfy local regulation
   As a Change Manager
   I want customers and authorities to be notified of service affecting changes
+  #Test requires us to check that service info is activated for all change types (test cases available)
+
   Scenario: Service information is activated for urgent change request
     Given 'Request Type' is 'Urgent'
     And 'Estimated Impact' is 'Loss of Service' Or 'Estimated Impact' is 'Degradation of Service'

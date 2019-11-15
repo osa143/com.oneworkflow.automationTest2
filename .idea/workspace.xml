@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Change_E2E.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Problem_E2E.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Trouble_E2E.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Work_Order.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-2931/MBOSS will be kept up to date with Nokia incidents with active service disturbances and an attached CI.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-2931/Service affecting incidents from Nokia should trigger the appropriate disturbance.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-2931/Users should be able to manually enable ordisable disturbances at any time.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-2931/When Nokia incidents are resolved then any disturbances should be de-activated.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3086/MBOSS will be kept up to date with QoS site alarm incidents with active service disturbances and active CI impact records.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3086/TeMIP appends an alarm to the existing site alarm incident.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3086/TeMIP creates an incident with a QoS fault code and service information is activated.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3086/TeMIP creates and incident for a site alarm with a QoS fault code and 2G, 3G, 4G and 5G nodes and cells are attached to the incident.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3105/Clear All message from TeMIP should clear the incident, de-activate the service information, and trigger the auto-closure.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3105/MBOSS will be kept up to date with 5G incidents with active service disturbances and active CI impact records.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3105/Users should be able to manually enable or disable disturbances at any time.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
@@ -14,26 +28,10 @@
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/exception.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/exception.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/test/configs/runtime_test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/configs/runtime_test.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumberHooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumberHooks/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/plaza/Plaza_HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BCacheDeployment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BCacheDeployment.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BCacheGeneral.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BCacheGeneral.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BService.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/C2BCache/C2BService.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Hot_Add_CPU_Or_Ram.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Nimbus/Nimbus_Hot_Add_CPU_Or_Ram.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Change_From_Manual.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Operating System/Operating_System_Change_From_Manual.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/BCPP.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/BCPP.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Pollux_PROD.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Pollux_PROD.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/SPAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/SPAN.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/TSPAN.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/TSPAN.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Topcat.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Other/Topcat.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Storage/Storage_Export_Volume.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PLAZA/Storage/Storage_Export_Volume.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Login/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Login/Login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PLAZA-PDB_E2E/PLAZA_PDB_E2E_Incident.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/PLAZA-PDB_E2E/PLAZA_PDB_E2E_Incident.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/Plaza_OW_Incident_Integration/PLAZA_Create_Incident.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/Plaza_OW_Incident_Integration/PLAZA_Create_Incident.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/Plaza_OW_Incident_Integration/PLAZA_Reject_IncidentByOW.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4/Plaza_OW_Incident_Integration/PLAZA_Reject_IncidentByOW.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3074/Change_Requests_With_Active_Service_Information_Are_Sent_To_MBOSS.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3074/Change_Requests_With_Active_Service_Information_Are_Sent_To_MBOSS.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3074/Service_Information_Is_Activated_For_Change_Requests.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3074/Service_Information_Is_Activated_For_Change_Requests.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3074/Timeline_Entries_To_Audit_Service_Information_Activation_And_Deactivation.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3074/Timeline_Entries_To_Audit_Service_Information_Activation_And_Deactivation.feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -189,24 +187,24 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint_4.5\A" />
-      <recent name="C:\Temp\oneworkflow.automation\src\test\resources\features\Regression\Login" />
-      <recent name="C:\Temp\oneworkflow.automation\src\test\resources\features\Regression" />
-      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PLAZA-NewWOFlow" />
-      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PLAZA-NewWOFlow\Unix" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="runners" />
-      <recent name="rough" />
-      <recent name="Helpers" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PlazaPDB_OW_Incident_Integration\PDB NO" />
       <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PLAZA-NewWOFlow\Cloud" />
       <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PlazaPDB_OW_Incident_Integration" />
       <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PlazaPDB_OW_Incident_Integration\Denmark" />
       <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PlazaPDB_OW_Incident_Integration\Estonia" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="runners" />
+      <recent name="rough" />
+      <recent name="Helpers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint_4.5\A" />
+      <recent name="C:\Temp\oneworkflow.automation\src\test\resources\features\Regression\Login" />
+      <recent name="C:\Temp\oneworkflow.automation\src\test\resources\features\Regression" />
+      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PLAZA-NewWOFlow" />
+      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PLAZA-NewWOFlow\Unix" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -535,14 +533,8 @@
       <workItem from="1573465625035" duration="27691000" />
       <workItem from="1573564743277" duration="8828000" />
       <workItem from="1573635173574" duration="9130000" />
-      <workItem from="1573722363788" duration="2501000" />
-    </task>
-    <task id="LOCAL-00079" summary="updated features and steps for bulk CI loading">
-      <created>1565793468637</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1565793468637</updated>
+      <workItem from="1573722363788" duration="4200000" />
+      <workItem from="1573808827132" duration="22978000" />
     </task>
     <task id="LOCAL-00080" summary="updated features and steps for bulk CI loading">
       <created>1565793563353</created>
@@ -880,7 +872,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573210091148</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="updated plaza features">
+      <created>1573726306394</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1573726306395</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TodoView">
@@ -939,7 +938,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="modified feature names" />
     <MESSAGE value="modified feature for 500 CIs manual" />
     <MESSAGE value="updated steps for CI search window" />
     <MESSAGE value="updated steps for incident tes cases" />
@@ -964,7 +962,8 @@
     <MESSAGE value="PLAZA WO E2E" />
     <MESSAGE value="Updates to WO E2E Test cases - need to update validations once UAT is back up and running" />
     <MESSAGE value="updated feature and scenario" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated feature and scenario" />
+    <MESSAGE value="updated plaza features" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated plaza features" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

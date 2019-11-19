@@ -1,8 +1,8 @@
 /build
-/ExtentReports
+ExtentReports
 /gradle
 /target
-/.idea
-/.gradle
-/.xml
-/.html
+.idea
+.gradle
+*.xml
+*.html

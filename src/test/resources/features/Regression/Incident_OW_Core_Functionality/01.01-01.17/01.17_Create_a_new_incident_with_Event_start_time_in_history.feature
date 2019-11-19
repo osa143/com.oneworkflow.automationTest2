@@ -1,4 +1,4 @@
-@01.17_Create_a_new_incident_with_Event_start_time_in_history @Incident
+@01.17_Create_a_new_incident_with_Event_start_time_in_history @Incident  @01
 #Passed
 Feature: Creation of incident with event start time in history
   Scenario: Creation of incident with event start time in history

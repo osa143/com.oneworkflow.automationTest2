@@ -7,15 +7,15 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
   As an Incident Manager
   I want to have incidents automatically assigned to an appropriate support groups
 
-
-  Background:
-    Given user is on the OneWorkflow login page
-    When user logs in with valid username "dwk298" and password as "Telia2018@@"
-    Then user successfully logged in to OneWorkflow and agent console should be displayed
+#
+#  Background:
+#    Given user is on the OneWorkflow login page
+#    When user logs in with valid user and password
+#    Then user successfully logged in to OneWorkflow and agent console should be displayed
 
 
 # An assignment rule with EQUAL condition on title field that matches title field on manually created incidents will be used to assign the incident
-
+#
 # Scenario: Trouble Event
 #    When user clicks on create trouble event
 #    And user switches to window 1
@@ -33,7 +33,7 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And user validates assignee is "chsi03"
 #    And user logsOut and closes the browser
 #    And user switches to window 0
-#
+
 #  Scenario: Work order
 #    When user clicks on create work order
 #    And user switches to window 1
@@ -55,6 +55,8 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 
 
 #  Scenario: Known Error
+#    Given user is on the OneWorkflow login page
+#    And user logs in with valid username "frvi96_auto" and password as "Test@1234"
 #    When user clicks on create known error
 #    And user switches to window 1
 #    Then known error form should appear in new tab
@@ -170,9 +172,11 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And user validates assignee is "miik00"
 #    And user logsOut and closes the browser
 #    And user switches to window 0
-#
-#
+
+
 #  Scenario: Known Error
+#    Given user is on the OneWorkflow login page
+#    And user logs in with valid username "frvi96_auto" and password as "Test@1234"
 #    When user clicks on create known error
 #    And user switches to window 1
 #    Then known error form should appear in new tab

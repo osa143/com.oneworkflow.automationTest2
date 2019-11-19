@@ -192,6 +192,12 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
     public void addAttachmentsAndVerify(DataTable attachment, String type)
     {
+
+//        String projectPath= System.getProperty("user.dir" );
+//        System.out.println(projectPath);
+//        String fullFilePath= projectPath+"\\src\\test\\resources\\"+filePath;
+//        System.out.println(fullFilePath);
+//        CommonUtils.uploadFile(fullFilePath);
         List<List<String>> attachments = attachment.asLists(String.class);
         for (int i = 1; i < attachments.size(); i ++) {
             String summary = attachments.get(i).get(0);
@@ -270,6 +276,11 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
             }
         }
 
+    }
+
+    public void clickOkOnWarningMessage(){
+       driver.switchTo().frame(2);
+       clickElementByContainsTextAndTagName("*", "Yes");
     }
 
     public void clickSearchButton() {

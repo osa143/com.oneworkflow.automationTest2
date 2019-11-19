@@ -12,7 +12,7 @@
       Then problem record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       And user enters "Proactive investigation of Automation Test" in Title field
-      And user selects request type as "Access Networks:RAN Optimization" on Problem record page
+      And user selects request type as "Carrier:IT:All" on Problem record page
       And user enters description as "E2E Test"
       And user selects impact type as moderate:limited
       And user selects urgency as low

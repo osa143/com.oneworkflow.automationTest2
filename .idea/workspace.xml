@@ -2,36 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Change_E2E.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Problem_E2E.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Trouble_E2E.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Work_Order.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-2931/MBOSS will be kept up to date with Nokia incidents with active service disturbances and an attached CI.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-2931/Service affecting incidents from Nokia should trigger the appropriate disturbance.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-2931/Users should be able to manually enable ordisable disturbances at any time.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-2931/When Nokia incidents are resolved then any disturbances should be de-activated.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3086/MBOSS will be kept up to date with QoS site alarm incidents with active service disturbances and active CI impact records.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3086/TeMIP appends an alarm to the existing site alarm incident.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3086/TeMIP creates an incident with a QoS fault code and service information is activated.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3086/TeMIP creates and incident for a site alarm with a QoS fault code and 2G, 3G, 4G and 5G nodes and cells are attached to the incident.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3105/Clear All message from TeMIP should clear the incident, de-activate the service information, and trigger the auto-closure.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3105/MBOSS will be kept up to date with 5G incidents with active service disturbances and active CI impact records.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3105/Users should be able to manually enable or disable disturbances at any time.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/exception.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/exception.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/LoggerReport/tag.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3074/Change_Requests_With_Active_Service_Information_Are_Sent_To_MBOSS.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3074/Change_Requests_With_Active_Service_Information_Are_Sent_To_MBOSS.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3074/Service_Information_Is_Activated_For_Change_Requests.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3074/Service_Information_Is_Activated_For_Change_Requests.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3074/Timeline_Entries_To_Audit_Service_Information_Activation_And_Deactivation.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.5/A/BR-3074/Timeline_Entries_To_Audit_Service_Information_Activation_And_Deactivation.feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -102,8 +73,59 @@
       </state>
     </system>
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="com.oneworkflow.automation" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/runners/Test_Runner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_1.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Change/E2E_Urgent_Major_Change_(Internal Initiator).feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-627" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Change/E2E_Normal_Change_(External Initiator).feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4622" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/E2E problem and known error.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -143,7 +165,7 @@
       <find>select2-chosen-12</find>
       <find>T777000002</find>
       <find>arid_WIN_0_777021006</find>
-      <find>Plaza</find>
+      <find>%s</find>
     </findStrings>
     <replaceStrings>
       <replace>.orElse(null).</replace>
@@ -153,6 +175,9 @@
       <replace>IT%</replace>
       <replace>&quot;IT%&quot;</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\Temp\oneworkflow.automation\src\test\resources\features\PLAZA\CRM</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -161,22 +186,279 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-    <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="ProjectId" id="1THrI1H8Xdd6oCFiy0mtZg12wYk" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.03_OLA_Target_Time_Availability_In_Incident_Record.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_AgentConsolePage.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Choose_Or_Change_assignment_profile.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Search_for_open_incidents_for_a_specific_Location.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.11_Check_incident_OLA.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.12_Check_Old_Tickets_And_Create_Problem_Candidate.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.13_Create_Multiple_Work_Orders_Internally_And_Dispatch_These_To_Different_Assignment_Groups.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.14_Find_Newly_Created_Or_Implemented_Changes.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.15_Search_for_Known_Errors_using_quick_search_based_on_Category_Type_and_Item.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.02_Register_affected_BUs.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.03_Set_correct_categorization.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.04_Set_incident_start_time.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.05_Set_location_of_incident_origin.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.08_Set_the_service_impact.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.09_Add_attachments_to_field_named_Internal_attachments.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.11_Add_CI_To_Incident_Ticket.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.17_Create_a_new_incident_with_Event_start_time_in_history.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.04_Estimated_Ready_Date_Time_Availability.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.05_Validate_Behaviour_And_Options_For_Data_Field_Priority.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.06_Validate_Options_For_Data_Field_RequestType.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.07_Template_data_field_must_contain_valid_options.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.08_Title_data_field_must_contain_valid_options.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.09_Validate_Impact_field_availability_in_Incident_record.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.10_Validate_Urgency_field_availability_in_Incident_record.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.17_Validate_Owner_field_structure.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/04.01-04.05_&amp;_04.20/04.05_Create_problem_candidate_from_incident_using_Create_button_in_Linked_Items_tab.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/B2B/B2B_Test_Cases.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4 BR's/Plaza_OW_Incident_Integration/PLAZA_Create_Incident.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Close_Ticket.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Drop_Down.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/E2E problem and known error.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Initiator_Change_Desciption_After_Ack.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Initiator_Create_Ticket_And_Withdraw.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Initiator_Link_Tickets.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Pending_Status.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/PMO_Tab.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Problem_Link_To_New_Known_Error_And_Withdraw.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Problem_Manager_Withdraws_Ticket_After_Ack.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Problem_Manager_Withdraws_Ticket_Before_Ack.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_1.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_2.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_3.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_4.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Redirecting_And_Access_For_Assignee.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Timeline_Update.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Verification_Of_Ownership.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/cucumberHooks/Hooks.java" />
+        <option value="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1299" />
+    <option name="height" value="1407" />
+  </component>
+  <component name="ProjectId" id="1TCFqd1bIQ4MC6V5PCoXZQIlpzU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="Regression" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="cucumber-reports" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oneworkflow.automation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="test-output" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
+          <expand>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="runners" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="IT_VAS_SPRINT_4.1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="IT_VAS_SPRINT_4.1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="BR's_&amp;_Defect_Fixes_Sprint_4.1" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="IT_VAS_SPRINT_4.3" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="com.oneworkflow.automation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="oneworkflow" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="automation" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="features" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="IT_VAS_SPRINT_4.3" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="BR-2866_SAO-427_Bulk_CI_Plugin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/calendar.automation" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="last_opened_file_path" value="$USER_HOME$/automation-api-testing-v3" />
     <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -187,24 +469,24 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PlazaPDB_OW_Incident_Integration\PDB NO" />
-      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PLAZA-NewWOFlow\Cloud" />
-      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PlazaPDB_OW_Incident_Integration" />
-      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PlazaPDB_OW_Incident_Integration\Denmark" />
-      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PlazaPDB_OW_Incident_Integration\Estonia" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Temp\oneworkflow.automation\src\test\resources\features\Regression\Login" />
+      <recent name="C:\Temp\oneworkflow.automation\src\test\resources\features\Regression" />
+      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PLAZA-NewWOFlow" />
+      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PLAZA-NewWOFlow\Unix" />
+      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="runners" />
       <recent name="rough" />
       <recent name="Helpers" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint_4.5\A" />
-      <recent name="C:\Temp\oneworkflow.automation\src\test\resources\features\Regression\Login" />
-      <recent name="C:\Temp\oneworkflow.automation\src\test\resources\features\Regression" />
-      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PLAZA-NewWOFlow" />
-      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PLAZA-NewWOFlow\Unix" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Temp\oneworkflow.automation\src\test\resources\features\PLAZA\CRM" />
+      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PlazaPDB_OW_Incident_Integration\PDB NO" />
+      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PLAZA-NewWOFlow\Cloud" />
+      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PlazaPDB_OW_Incident_Integration" />
+      <recent name="C:\Users\h_smi\OneDrive\Desktop\OneWorkflowAutomationNEW\src\test\resources\features\SPRINTS\Sprint 4.4\PlazaPDB_OW_Incident_Integration\Denmark" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -523,60 +805,18 @@
       <workItem from="1571655073201" duration="2267000" />
       <workItem from="1571666127113" duration="285000" />
       <workItem from="1571666754456" duration="21089000" />
-      <workItem from="1571756954321" duration="24284000" />
-      <workItem from="1571923622154" duration="37113000" />
-      <workItem from="1572603674215" duration="3587000" />
-      <workItem from="1573119248736" duration="880000" />
-      <workItem from="1573127780771" duration="13460000" />
-      <workItem from="1573203708366" duration="19625000" />
-      <workItem from="1573465597218" duration="3000" />
-      <workItem from="1573465625035" duration="27691000" />
-      <workItem from="1573564743277" duration="8828000" />
-      <workItem from="1573635173574" duration="9130000" />
-      <workItem from="1573722363788" duration="4200000" />
-      <workItem from="1573808827132" duration="22978000" />
-    </task>
-    <task id="LOCAL-00080" summary="updated features and steps for bulk CI loading">
-      <created>1565793563353</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1565793563353</updated>
-    </task>
-    <task id="LOCAL-00081" summary="added steps for bulk CI loading">
-      <created>1565860711172</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1565860711173</updated>
-    </task>
-    <task id="LOCAL-00082" summary="added steps for bulk CI loading">
-      <created>1565863887146</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1565863887146</updated>
-    </task>
-    <task id="LOCAL-00083" summary="added steps for bulk CI loading">
-      <created>1565942293008</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1565942293009</updated>
-    </task>
-    <task id="LOCAL-00084" summary="added steps for bulk CI loading trouble">
-      <created>1565956967338</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1565956967338</updated>
-    </task>
-    <task id="LOCAL-00085" summary="added steps for bulk CI loading trouble">
-      <created>1565967719085</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1565967719085</updated>
+      <workItem from="1571756954321" duration="24997000" />
+      <workItem from="1571903898882" duration="38114000" />
+      <workItem from="1572170427264" duration="14743000" />
+      <workItem from="1572551082471" duration="9994000" />
+      <workItem from="1572813767354" duration="124362000" />
+      <workItem from="1573386484813" duration="6858000" />
+      <workItem from="1573404776872" duration="49693000" />
+      <workItem from="1573575375130" duration="6494000" />
+      <workItem from="1573641405834" duration="22882000" />
+      <workItem from="1573807706816" duration="23507000" />
+      <workItem from="1573988602322" duration="4324000" />
+      <workItem from="1574017054737" duration="48021000" />
     </task>
     <task id="LOCAL-00086" summary="added steps for bulk CI loading change and trouble">
       <created>1566208300881</created>
@@ -844,43 +1084,120 @@
       <option name="project" value="LOCAL" />
       <updated>1571822616742</updated>
     </task>
-    <task id="LOCAL-00124" summary="PLAZA Incident E2E">
-      <created>1572007669084</created>
+    <task id="LOCAL-00124" summary="plaza PDB steps">
+      <created>1571844114415</created>
       <option name="number" value="00124" />
       <option name="presentableId" value="LOCAL-00124" />
       <option name="project" value="LOCAL" />
-      <updated>1572007669085</updated>
+      <updated>1571844114416</updated>
     </task>
-    <task id="LOCAL-00125" summary="PLAZA WO E2E">
-      <created>1572017216435</created>
+    <task id="LOCAL-00125" summary="plaza PDB steps">
+      <created>1571911069762</created>
       <option name="number" value="00125" />
       <option name="presentableId" value="LOCAL-00125" />
       <option name="project" value="LOCAL" />
-      <updated>1572017216435</updated>
+      <updated>1571911069763</updated>
     </task>
-    <task id="LOCAL-00126" summary="Updates to WO E2E Test cases - need to update validations once UAT is back up and running">
-      <created>1572256622732</created>
+    <task id="LOCAL-00126" summary="plaza PDB steps">
+      <created>1571911447539</created>
       <option name="number" value="00126" />
       <option name="presentableId" value="LOCAL-00126" />
       <option name="project" value="LOCAL" />
-      <updated>1572256622732</updated>
+      <updated>1571911447539</updated>
     </task>
-    <task id="LOCAL-00127" summary="updated feature and scenario">
-      <created>1573210091148</created>
+    <task id="LOCAL-00127" summary="plaza Incident create steps">
+      <created>1571924449144</created>
       <option name="number" value="00127" />
       <option name="presentableId" value="LOCAL-00127" />
       <option name="project" value="LOCAL" />
-      <updated>1573210091148</updated>
+      <updated>1571924449145</updated>
     </task>
-    <task id="LOCAL-00128" summary="updated plaza features">
-      <created>1573726306394</created>
+    <task id="LOCAL-00128" summary="plaza Incident create steps">
+      <created>1572017373486</created>
       <option name="number" value="00128" />
       <option name="presentableId" value="LOCAL-00128" />
       <option name="project" value="LOCAL" />
-      <updated>1573726306395</updated>
+      <updated>1572017373486</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="plaza Incident Reject, Withdraw features and steps">
+      <created>1572253435317</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1572253435319</updated>
+    </task>
+    <task id="LOCAL-00130" summary="updated incident and problem features and steps.">
+      <created>1572880295626</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1572880295630</updated>
+    </task>
+    <task id="LOCAL-00131" summary="updated RAN Telia Wifi feature and steps">
+      <created>1573034163751</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1573034163751</updated>
+    </task>
+    <task id="LOCAL-00132" summary="Bulk CI chnage features updated">
+      <created>1573036971044</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1573036971045</updated>
+    </task>
+    <task id="LOCAL-00133" summary="updated Bulk CI attachments">
+      <created>1573118001536</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1573118001538</updated>
+    </task>
+    <task id="LOCAL-00134" summary="updated Bulk CI attachments">
+      <created>1574176324820</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1574176324822</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Test_Runner - 2019.11.19 at 10h 51m 04s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.11.19 at 11h 08m 05s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.11.19 at 11h 10m 23s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.11.19 at 11h 12m 39s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.11.19 at 11h 41m 56s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.11.19 at 12h 49m 47s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.11.19 at 12h 52m 52s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.11.19 at 13h 02m 42s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.11.19 at 13h 04m 17s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="Test_Runner - 2019.11.19 at 13h 55m 14s.xml">
+      <configuration name="Test_Runner" configurationId="TestNG" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="685574000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -890,6 +1207,76 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1980" height="1080" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30301455" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Designer" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.38672286" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989605" weight="0.2792413" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.44889358" />
+      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50051975" side_tool="true" weight="0.7281349" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.042432815" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49948025" weight="0.7281349" />
+      <window_info anchor="bottom" id="Build" order="8" weight="0.41517857" />
+      <window_info anchor="bottom" id="Message" order="9" />
+      <window_info anchor="bottom" id="Find" order="10" weight="0.37091675" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.20337197" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Gradle" order="4" weight="0.18297587" />
+      <window_info anchor="right" id="Database" order="5" weight="0.3297587" />
+      <window_info anchor="right" id="Maven" order="6" weight="0.3297587" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30301455" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Designer" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.15625" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.031612225" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.44889358" />
+      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50067025" side_tool="true" weight="0.50636494" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.042432815" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.23958333" />
+      <window_info anchor="bottom" id="Build" order="8" weight="0.41517857" />
+      <window_info anchor="bottom" id="Message" order="9" />
+      <window_info anchor="bottom" id="Find" order="10" weight="0.37091675" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.20337197" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Gradle" order="4" weight="0.18297587" />
+      <window_info anchor="right" id="Database" order="5" weight="0.3297587" />
+      <window_info anchor="right" id="Maven" order="6" weight="0.3297587" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -916,7 +1303,26 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="COLUMN_ORDER" />
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_WIDTH">
+                <map>
+                  <entry key="2" value="129" />
+                  <entry key="3" value="93" />
+                </map>
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
             </State>
           </value>
         </entry>
@@ -938,7 +1344,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="modified feature for 500 CIs manual" />
     <MESSAGE value="updated steps for CI search window" />
     <MESSAGE value="updated steps for incident tes cases" />
     <MESSAGE value="Added steps for End2End test cases" />
@@ -958,12 +1363,13 @@
     <MESSAGE value="added new plaza steps for incident" />
     <MESSAGE value="PDB steps" />
     <MESSAGE value="plaza PDB steps" />
-    <MESSAGE value="PLAZA Incident E2E" />
-    <MESSAGE value="PLAZA WO E2E" />
-    <MESSAGE value="Updates to WO E2E Test cases - need to update validations once UAT is back up and running" />
-    <MESSAGE value="updated feature and scenario" />
-    <MESSAGE value="updated plaza features" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated plaza features" />
+    <MESSAGE value="plaza Incident create steps" />
+    <MESSAGE value="plaza Incident Reject, Withdraw features and steps" />
+    <MESSAGE value="updated incident and problem features and steps." />
+    <MESSAGE value="updated RAN Telia Wifi feature and steps" />
+    <MESSAGE value="Bulk CI chnage features updated" />
+    <MESSAGE value="updated Bulk CI attachments" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated Bulk CI attachments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -971,30 +1377,26 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/steps/OWF_TroubleEventPageSteps.java</url>
           <line>143</line>
+          <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/steps/OWF_CiSearchPageSteps.java</url>
           <line>266</line>
+          <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java</url>
           <line>132</line>
+          <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java</url>
-          <line>347</line>
+          <line>356</line>
+          <properties />
           <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java</url>
-          <line>868</line>
-          <properties class="pageObjects.OWF_WorkOrderPage" method="verifyNimbusExpandBackupArchiveDiskDescription">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1077,6 +1479,341 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.02_Register_affected_BUs.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.04_Set_incident_start_time.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="45" selection-start-column="45" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.09_Add_attachments_to_field_named_Internal_attachments.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="73" selection-start-column="73" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.11_Add_CI_To_Incident_Ticket.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="47" selection-start-column="47" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.17_Create_a_new_incident_with_Event_start_time_in_history.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="76" selection-start-column="76" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.08_Set_the_service_impact.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="44" selection-start-column="44" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.03_Set_correct_categorization.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.05_Set_location_of_incident_origin.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="53" selection-start-column="53" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.04_Estimated_Ready_Date_Time_Availability.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="37" selection-start-column="37" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.05_Validate_Behaviour_And_Options_For_Data_Field_Priority.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="69" selection-start-column="69" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.06_Validate_Options_For_Data_Field_RequestType.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="72" selection-start-column="72" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.09_Validate_Impact_field_availability_in_Incident_record.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="74" selection-start-column="74" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.10_Validate_Urgency_field_availability_in_Incident_record.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="75" selection-start-column="75" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.17_Validate_Owner_field_structure.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="48" selection-start-column="48" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.07_Template_data_field_must_contain_valid_options.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="67" selection-start-column="67" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.08_Title_data_field_must_contain_valid_options.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/FInance&amp;Assurance/Finance&amp;Assurance.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+          <folding>
+            <element signature="e#1083#1084#0" expanded="true" />
+            <element signature="e#1128#1129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="326" column="7" selection-start-line="326" selection-start-column="7" selection-end-line="326" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/PLAZA/Backup/Backup_One_Time.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Add_CI_&amp;_Attachment.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/04.01-04.05_&amp;_04.20/04.05_Create_problem_candidate_from_incident_using_Create_button_in_Linked_Items_tab.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/B2B/B2B_Test_Cases.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint 4.4 BR's/Plaza_OW_Incident_Integration/PLAZA_Create_Incident.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" column="68" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Close_Ticket.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/LifeCycle_KE_and_Changes_To_KE.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Initiator_Link_Tickets.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Initiator_Create_Ticket_And_Withdraw.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Initiator_Change_Desciption_After_Ack.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Linked_Items_&amp;_Change_To_KE.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Pending_Status.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/PMO_Tab.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Priority_Calculation.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Problem_Link_To_New_Known_Error_And_Withdraw.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Problem_Manager_Withdraws_Ticket_After_Ack.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Problem_Manager_Withdraws_Ticket_Before_Ack.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_2.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_3.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_4.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Redirecting_And_Access_For_Assignee.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Search.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Timeline_Update.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Verification_Of_Ownership.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Drop_Down.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cucumberHooks/Hooks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Change/E2E_Urgent_Major_Change_(Internal Initiator).feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-627" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/E2E problem and known error.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Change/E2E_Normal_Change_(External Initiator).feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4622" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_1.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/runners/Test_Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

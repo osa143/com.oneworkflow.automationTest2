@@ -36,7 +36,6 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | On-site Services"
       And user validates request type as "Service Request | PLAZA"
-     #Not sure about description validation outside of a table
       And user validates Data center on site services description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections

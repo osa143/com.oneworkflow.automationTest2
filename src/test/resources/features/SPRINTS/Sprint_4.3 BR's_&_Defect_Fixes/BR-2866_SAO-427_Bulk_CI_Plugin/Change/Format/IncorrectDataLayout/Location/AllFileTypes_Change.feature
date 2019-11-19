@@ -1,6 +1,7 @@
 @Bulk_Loading_Format_Location_change @SAO-427
-Feature: checking of bulk loading format
-  Scenario Outline: user checks the format of bulk loading format
+    #Don't need to test for txt file as it dosn't have columns
+Feature: Bulk Loading Incorrect Data layout- Location
+    Scenario Outline:Location-All files
 
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
@@ -55,8 +56,7 @@ Feature: checking of bulk loading format
       Examples:
 
           |fileTypes                                                                                                    |
-          #|Test Attachments\IncorrectFormatColumnLocation\CSV.csv|
-         #|Test Attachments\IncorrectFormatColumnLocation\TEXTDocForBulkCI.txt|
+          |Test Attachments\IncorrectFormatColumnLocation\CSV.csv|
          |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xls|
          |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xlsx|
 

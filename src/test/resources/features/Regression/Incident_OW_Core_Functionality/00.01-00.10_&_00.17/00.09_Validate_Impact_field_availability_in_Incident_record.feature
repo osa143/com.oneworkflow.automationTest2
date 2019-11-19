@@ -1,4 +1,4 @@
-@00.09_Validate_Impact_field_availability_in_Incident_record @Incident
+@00.09_Validate_Impact_field_availability_in_Incident_record @Incident @00
 #passed
   Feature: validation impact field availability in incident record
 

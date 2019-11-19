@@ -61,7 +61,7 @@
       Then user switches to window 2
       When user clicks save button
       Then multiple error messages should appear with red boarder around fields
-      When user selects request type as "Product Services & Solutions:Mobile Data Platforms" in problem form
+      When user selects request type as "Carrier:INFRA:Infrastructure" in problem form
       And user selects impact as "Significant/Large"
       And user selects urgency as "Medium"
       Then user clicks on save button on the problem form

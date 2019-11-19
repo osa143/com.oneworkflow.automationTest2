@@ -1,4 +1,4 @@
-@Choose_Or_Change_assignment_profile  @Incident2
+@Choose_Or_Change_assignment_profile  @Incident2 @Trouble1
   #passed
   Feature: choose or change assignment profile
     Scenario: choose or change assignment profile

@@ -1,5 +1,7 @@
 @Highest_SortOrder  @AutoAssignment
 
+  ## Auto assignment Rules created in SIT Env ##
+
 Feature: Incidents that meet the conditions of many assignment rules will use the one with the highest priority sort order value for assignment
   In order to more efficiently respond to incidents and provide a good customer service
   As an Incident Manager
@@ -7,7 +9,7 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
 
   Background:
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "dwk298" and password as "Telia2018@@"
+    When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
 
 #  Scenario: When there are multiple assignment rules that match a manually created incident the one with the highest priority sort order value will be used for assignment
@@ -46,9 +48,11 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
 #    And user validates assignee is "ciggok"
 #    And user logsOut and closes the browser
 #    And user switches to window 0
-#
-#
+
+
 #  Scenario: Known Error
+#    Given user is on the OneWorkflow login page
+#    And user logs in with valid username "frvi96_auto" and password as "Test@1234"
 #    When user clicks on create known error
 #    And user switches to window 1
 #    Then known error form should appear in new tab
@@ -65,65 +69,66 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
 #    And user validates assignee is "tvb913"
 #    And user logsOut and closes the browser
 #    And user switches to window 0
-#
-#
-#
-  Scenario: Change Ticket
-    When user clicks on change record from agent console
-    And user switches to window 1
-    Then change record form should open in a new tab
-    When user clicks on sweden checkbox under affected BU's
-    And user selects request type as "Normal Change"
-    And user selects title as "IT:EE:Billing" on Change record page
-    And user selects request category as "Cable splicing" on change record page
-    And user enters description as "Change Record Auto Assignment to Highest Sort order"
-    And user enters reason field as "none"
-    And user selects priority as "Major"
-    And user enters "Problem initiator" in the change builder field
-    And user enters "New implementation" in the implementation field
-    And user enters "Yes" in the test plan field
-    And user enters "Not possible" in the rollback field
-    And user enters "Comm plan" in the communication plan field
-    And user enters "Not possible" in the ver of functionality field
-    And user enters "No Risk" in the risk description field
-    Then user clicks on "Schedule" tab
-    And user enters as "Test ticket no impact" in service and customer impact
-    Then user enters request start time 24 hours ahead of current date
-    And user enters request end time 28 hours ahead of current date
-    And user enters impact duration as "6" minutes
-    And user selects estimated impact as "No Impact"
-    And user clicks on save button
-    Then user clicks on Risk tab
-    And user answers all risk questions as below
-    And user selects answer as "Impact to other systems/technologies are unclear"
-    And user selects answer as "No"
-    And user selects answer as "Tested successfully, this is a pilot"
-    And user selects answer as "Yes (outcome of the change can be instantly verified)"
-    And user selects answer as "Yes"
-    And user selects answer as "Simple"
-    And user selects last answer as "No"
-    And user clicks on save button
-    Then user clicks on Diagnosis tab
-    And user clicks on CI search button
-    And user switches to frame
-    And user selects search for as "All CIs"
-    And  user enters "SE_CPE_FRECPE5" in name field
-    And user clicks on search button on CI search window
-    And user selects a CI from list
-    And user selects impact level as "No Impact"
-    And user clicks on relate CI
-    And user closes warning message
-    And user clicks on close button on CI search window
-    When user clicks on Send button
-    Then ticket should be created and status should be assigned
-    And there are multiple assignment rules that match the incident details
-    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
-    And user clicks on assignment under sections
-    And user should see assigned profile as "Change Process Manager"
-    And user validates assignee is "pdr145"
 
+
+#### Enable this Rule before test run for change ####
+#  Scenario: Change Ticket
 #
-#
+#    When user clicks on change record from agent console
+#    And user switches to window 1
+#    Then change record form should open in a new tab
+#    When user clicks on sweden checkbox under affected BU's
+#    And user selects request type as "Normal Change"
+#    And user selects title as "IT:EE:Billing" on Change record page
+#    And user selects request category as "Cable splicing" on change record page
+#    And user enters description as "Change Record Auto Assignment to Highest Sort order"
+#    And user enters reason field as "none"
+#    And user selects priority as "Major"
+#    And user enters "Problem initiator" in the change builder field
+#    And user enters "New implementation" in the implementation field
+#    And user enters "Yes" in the test plan field
+#    And user enters "Not possible" in the rollback field
+#    And user enters "Comm plan" in the communication plan field
+#    And user enters "Not possible" in the ver of functionality field
+#    And user enters "No Risk" in the risk description field
+#    Then user clicks on "Schedule" tab
+#    And user enters as "Test ticket no impact" in service and customer impact
+#    And user enters start time as some minutes fast from current sweden time
+#    And user enters Request End time as some minutes fast from request start time
+#    And user enters impact duration as "6" minutes
+#    And user selects estimated impact as "No Impact"
+#    And user clicks on save button
+#    Then user clicks on Risk tab
+#    And user answers all risk questions as below
+#    And user selects answer as "Impact to other systems/technologies are unclear"
+#    And user selects answer as "No"
+#    And user selects answer as "Tested successfully, this is a pilot"
+#    And user selects answer as "Yes (outcome of the change can be instantly verified)"
+#    And user selects answer as "Yes"
+#    And user selects answer as "Simple"
+#    And user selects last answer as "No"
+#    And user clicks on save button
+#    Then user clicks on Diagnosis tab
+#    And user clicks on CI search button
+#    And user switches to frame
+#    And user selects search for as "All CIs"
+#    And  user enters "SE_CPE_FRECPE5" in name field
+#    And user clicks on search button on CI search window
+#    And user selects a CI from list
+#    And user selects impact level as "No Impact"
+#    And user clicks on relate CI
+#    And user closes warning message
+#    And user clicks on close button on CI search window
+#    When user clicks on Send button
+#    Then ticket should be created and status should be assigned
+#    And there are multiple assignment rules that match the incident details
+#    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
+#    And user clicks on assignment under sections
+#    And user should see assigned profile as "Change Process Manager"
+#    And user validates assignee is "pdr145"
+
+
+
 #  Scenario: Problem Ticket
 #    And user clicks on create problem record
 #    And user switches to window 1

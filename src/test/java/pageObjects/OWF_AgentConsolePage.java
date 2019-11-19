@@ -404,7 +404,7 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void clickNavUserMenu() {
         selectMainMenu(menuForNAV_USERNAME);
-        wait(3000);
+        wait(1000);
 
     }
 
@@ -454,7 +454,7 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void clickMenuItemLogout() {
         selectMenuItem(menuItemLOGOUT);
-        wait(5000);
+        wait(3000);
     }
 
     public boolean verifyFilteredStatus(String columnName, String columnValue)

@@ -8,6 +8,7 @@
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       And user validates agent console is displayed correctly
       Then user validates availability of "Timeline:Details:List:Search / Quick Create" tabs
+      #And user logsOut from One workflow
 
       Examples:
 
@@ -25,7 +26,7 @@
       |Change_Automation_4         |Test@1234|
       |Change_Automation_5         |Test@1234|
       |Change_Automation_6         |Test@1234|
-     # |Change_Automation_7         |Test@1234|
+      |Change_Automation_7         |Test@1234|
       |Change_Automation_8         |Test@1234|
       |Change_Automation_9         |Test@1234|
       |Change_Automation_10        |Test@1234|

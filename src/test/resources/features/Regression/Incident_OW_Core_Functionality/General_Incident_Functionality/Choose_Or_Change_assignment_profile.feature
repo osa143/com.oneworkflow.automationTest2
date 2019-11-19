@@ -1,4 +1,4 @@
-@Choose_Or_Change_assignment_profile  @Incident2
+@Choose_Or_Change_assignment_profile  @Incident2 @Trouble1
   #passed
   Feature: changing of assignment
     Scenario: user can change assignment profile on incident ticket

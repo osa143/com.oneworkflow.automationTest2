@@ -1,6 +1,6 @@
 @Messaging_TSS_Premium_Mail @PLAZA
   Feature: Messaging TSS Premium Mail plaza form test
-    #not found on ow
+
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -41,7 +41,6 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | TSS Mail Premium Support"
       And user validates request type as "Service Request | PLAZA"
-     #Not sure about description validation outside of a table
       And user validates messaging tss premium mail description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections

@@ -80,7 +80,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_NETWORK_EQUIPMENT_REQUEST="sp_formfield_sr51_v_request";
     public static final String txt_NETWORK_EQUIPMENT_DC_SITE= "sp_formfield_sr51_v_dc_site";
     public static final String txt_NETWORK_EQUIPMENT_ROOM= "sp_formfield_sr51_v_room";
-    public static final String dd_ADD_CI = "s2id_autogen14";
+    public static final String dd_ADD_CI = "s2id_autogen13";
     public static final String txt_NETWORK_EQUIPMENT_DNS_IP_ADRESS="sp_formfield_sr51_v_dns_ip_address";
     public static final String txt_NETWORK_EQUIPMENT_DELIVERY="sp_formfield_sr51_v_date_for_delivery";
     public static final String txt_NETWORK_EQUIPMENT_DATE_FOR_DECOMMISSION= "sp_formfield_sr51_v_date_for_decommission";
@@ -90,8 +90,8 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_ON_SITE_SERVICES_DC_SITE= "sp_formfield_sr37_v_dc_site";
     public static final String txt_ON_SITE_SERVICES_DESCRIPTION= "sp_formfield_sr37_v_description";
     public static final String txt_DATABASE_REQUEST= "sp_formfield_sr21_v_request";
-    public static final String dd_ADD_DATABASE_CI= "s2id_autogen23";
-    public static final String dd_ADD_SERVER_CI = "s2id_autogen24";
+    public static final String dd_ADD_DATABASE_CI= "s2id_autogen20";
+    public static final String dd_ADD_SERVER_CI = "s2id_autogen21";
     public static final String txt_DATABASE_NAME= "sp_formfield_sr21_v_db_name";
     public static final String dd_DATABASE_ACCOUNT_TYPE= "select2-chosen-13";
     public static final String txt_DATABASE_ACCOUNT_NAME="sp_formfield_sr21_v_account_name";
@@ -110,16 +110,16 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_DATABASE_REQUEST_DATABASE_NAME= "sp_formfield_sr115_v_db_name";
     public static final String txt_DATABASE_REQUEST_DESCRIPTION= "sp_formfield_sr115_v_desc";
     public static final String txt_DATABASE_CONFIGURE_PARAMETER_REQUEST= "sp_formfield_sr116_v_request";
-    public static final String dd_DATABASE_CONFIGURE_PARAMETER_DATABASE_TYPE= "select2-chosen-20";
-    public static final String dd_DATABASE_CONFIGURE_PARAMETER_ADD_CI= "s2id_autogen37";
-    public static final String dd_DATABASE_CONFIGURE_PARAMETER_DB_ADD_CI= "s2id_autogen38";
+    public static final String dd_DATABASE_CONFIGURE_PARAMETER_DATABASE_TYPE= "select2-chosen-12";
+    public static final String dd_DATABASE_CONFIGURE_PARAMETER_ADD_CI= "s2id_autogen34";
+    public static final String dd_DATABASE_CONFIGURE_PARAMETER_DB_ADD_CI= "s2id_autogen35";
     public static final String txt_DATABASE_CONFIGURE_PARAMETER_DB_NAME= "sp_formfield_sr116_v_db_name";
     public static final String txt_DATABASE_CONFIGURE_PARAMETER_PARAMETERS="sp_formfield_sr116_v_parameters";
     public static final String txt_DATABASE_CONFIGURE_PARAMETER_DESCRIPTION= "sp_formfield_sr116_v_description";
     public static final String txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_REQUEST= "sp_formfield_sr12_v_request";
-    public static final String dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_TYPE="select2-chosen-16";
-    public static final String dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_SERVER_CI="s2id_autogen32";
-    public static final String dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_CI= "s2id_autogen33";
+    public static final String dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_TYPE="select2-chosen-12";
+    public static final String dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_SERVER_CI="s2id_autogen29";
+    public static final String dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_CI= "s2id_autogen30";
     public static final String txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_NAME="sp_formfield_sr12_v_db_name";
     public static final String txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_DESCRIPTION= "sp_formfield_sr12_v_description";
     public static final String txt_CALL_GUIDE_CUSTOMER_ID_NAME= "sp_formfield_customer_id";
@@ -131,26 +131,26 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_CLEAN_MAIL_SENDER_DNS= "sp_formfield_sender_dns";
     private static final String txt_messaging_description= "sp_formfield_descrption";
     private static final String txt_NIMBUS_REQUEST= "sp_formfield_request_nimbus";
-    private static final String dd_NIMBUS_ADD_CI= "s2id_sp_formfield_add_ci";
+    private static final String dd_NIMBUS_ADD_CI= "s2id_autogen18";
     private static final String dd_NIMBUS_TYPE= "select2-chosen-13";
     private static final String txt_NIMBUS_DESCRIPTION_MANDATORY= "sp_formfield_description_mandatory";
     private static final String txt_NIMBUS_DESCRIPTION= "sp_formfield_nimbus_description";
     private static final String txt_NIMBUS_SIZE= "sp_formfield_expand_backup_size";
     private static final String txt_NIMBUS_VOLUMES_DRIVES= "sp_formfield_extend_disk_volume";
-    private static final String dd_NIMBUS_EXTEND_DISK_ADD_CI= "s2id_autogen18";
+    private static final String dd_NIMBUS_EXTEND_DISK_ADD_CI= "s2id_autogen19";
     private static final String txt_NIMBUS_SERVICE_WINDOW_DATE_TIME= "sp_formfield_hot_add_service_window";
     private static final String txt_NIMBUS_H2_NAME_HID= "sp_formfield_modify_onboarding_hid";
     private static final String txt_FRONTSIDE_NETWORK_INFO= "sp_formfield_network_onboard_frontside";
     private static final String txt_MGMT_NETWORK_INFO= "sp_formfield_network_onboard_mgmt";
-    private static final String dd_NIMBUS_CLOUD_SERVICES= "s2id_autogen19";
-    private static final String dd_NIMBUS_TARGET_COUNTRIES= "s2id_autogen21";
+    private static final String dd_NIMBUS_CLOUD_SERVICES= "s2id_autogen20";
+    private static final String dd_NIMBUS_TARGET_COUNTRIES= "s2id_autogen22";
     private static final String txt_NIMBUS_ROLE_APPROVERS_ACCOUNT= "sp_formfield_onboard_skypoint_role";
     private static final String txt_NIMBUS_ROLE_USERS_ACCOUNT= "sp_formfield_onboard_skypoint_role_user";
     private static final String txt_NIMBUS_CMDB_ASSIGNED= "sp_formfield_onboard_skypoint_cmdb";
     private static final String txt_NIMBUS_CMDB_LOCAL= "sp_formfield_onboard_skypoint_cmdb_local";
     private static final String txt_NIMBUS_H2_HID="sp_formfield_onboard_skypoint_hid";
     private static final String txt_NIMBUS_DATE_TO_RESTORE_FOM= "sp_formfield_restore_vm_date";
-    private static final String dd_NIMBUS_RESTORE_VM= "s2id_autogen20";
+    private static final String dd_NIMBUS_RESTORE_VM= "s2id_autogen21";
     private static final String txt_NIMBUS_SKYPOINT_REQUEST= "sp_formfield_skypoint_request";
     public static final String txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_DNS_SERVICE_REQUEST_NAME= "select2-chosen-11";
     public static final String txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_DNS_REQUEST= "sp_formfield_sr105_v_request";
@@ -158,7 +158,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_DESCRIPTION= "sp_formfield_sr105_v_description";
     public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_SERVICE_REQUEST= "select2-chosen-11";
     public static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_REQUEST= "sp_formfield_sr114_v_request";
-    public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI= "s2id_autogen16";
+    public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI= "s2id_autogen17";
     public static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_DESCRIPTION= "sp_formfield_sr114_v_description";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_REQUEST= "sp_formfield_sr34_v_request";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_TICKET_NUMBER= "sp_formfield_sr34_v_fire_ticket_number";
@@ -171,7 +171,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_NETWORK_SECURITY_LOAD_BALANCING_REQUEST= "sp_formfield_sr98_v_request";
     private static final String txt_NETWORK_SECURITY_LOAD_BALANCING_DESCRIPTION= "sp_formfield_sr98_v_description";
     private static final String txt_NETWORK_SECURITY_NEW_SWITCH_REQUEST= "sp_formfield_sr106_v_request";
-    private static final String dd_NETWORK_SECURITY_NEW_SWITCH_NETWORK_CI= "s2id_autogen17";
+    private static final String dd_NETWORK_SECURITY_NEW_SWITCH_NETWORK_CI= "s2id_autogen18";
     private static final String txt_NETWORK_SECURITY_NEW_SWITCH_DC_SITE= "sp_formfield_sr106_v_dcsite";
     private static final String txt_NETWORK_SECURITY_NEW_SWITCH_DATA_ROOM= "sp_formfield_sr106_v_data_room";
     private static final String txt_NETWORK_SECURITY_NEW_SWITCH_RACK= "sp_formfield_sr106_v_rack";
@@ -188,10 +188,10 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_NETWORK_SECURITY_PROXY_REVERSE_SOURCE_IP= "sp_formfield_sr35_v_source_ip";
     private static final String txt_NETWORK_SECURITY_PROXY_REVERSE_DNS_NAME= "sp_formfield_sr35_v_reverseproxy";
     private static final String txt_NETWORK_SECURITY_PROXY_REVERSE_PROTOCOL_PORT= "sp_formfield_sr35_v_port";
-    private static final String dd_NETWORK_SECURITY_PROXY_REVERSE_CERTIFICATE= "s2id_autogen18";
+    private static final String dd_NETWORK_SECURITY_PROXY_REVERSE_CERTIFICATE= "s2id_autogen19";
     private static final String txt_NETWORK_SECURITY_PROXY_REVERSE_WEBSERVER_ADDRESS= "sp_formfield_sr35_v_webserver";
     private static final String dd_NETWORK_SECURITY_PROXY_REVERSE_HIGH_AVAILIBILITY= "select2-chosen-15";
-    private static final String dd_NETWORK_SECURITY_PROXY_REVERSE_LOAD_BALANCING_METHOD= "s2id_autogen19";
+    private static final String dd_NETWORK_SECURITY_PROXY_REVERSE_LOAD_BALANCING_METHOD= "s2id_autogen20";
     private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_URL= "sp_formfield_sr35_v_url";
     private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ERROR_MESSAGE= "sp_formfield_sr35_v_error";
     private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_WORKED_BEFORE= "sp_formfield_sr35_v_before";
@@ -389,7 +389,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectNetworkSecuritySystemNameHaiti(String dropdownName){
         clickElement(By.id(dd_NETWORKSECURITY_HAITI));
-        WebElement Element=findElement(By.xpath("//input[@aria-owns='select2-results-14']"));
+        WebElement Element=findElement(By.id("s2id_autogen15_search"));
         Element.sendKeys(dropdownName);
         wait(1000);
         Element.sendKeys(Keys.ARROW_DOWN);
@@ -499,7 +499,7 @@ public class Plaza_HomePage extends BasePage {
 
 
     public String getOpTicket_plaza(){
-        String ticket= getTextByElement(By.xpath("//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p"));
+        String ticket= getTextByElement(By.xpath("//*[@id=\"xba9dcc6fdb3ad7802b3cfc16bf96195f\"]/div/div/div[2]/div/div/ul/li[2]/div[2]/div/div[2]/p"));
         System.out.println(ticket);
         String arr[] = ticket.split(":");
         CommonUtils.OpTicket_plaza = arr[1];
@@ -1043,7 +1043,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectNetworkSecurity_proxy_reverse_load_balancing(String dropdownName){
         PlazaValidation.LoadBalancingMethod = dropdownName;
-        selectDropdown(By.id(dd_NETWORK_SECURITY_PROXY_REVERSE_LOAD_BALANCING_METHOD), By.id("s2id_autogen19_results"),  dropdownName);
+        selectDropdown(By.id(dd_NETWORK_SECURITY_PROXY_REVERSE_LOAD_BALANCING_METHOD), By.id("s2id_autogen20_results"),  dropdownName);
     }
 
     public void selectNetworkSecurity_proxy_reverse_high_availibility(String dropdownName){
@@ -1058,7 +1058,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectNetworkSecurity_proxy_reverse_certificate(String dropdownName){
         PlazaValidation.Certificate = dropdownName;
-        selectDropdown(By.id(dd_NETWORK_SECURITY_PROXY_REVERSE_CERTIFICATE), By.id("s2id_autogen18_results"),  dropdownName);
+        selectDropdown(By.id(dd_NETWORK_SECURITY_PROXY_REVERSE_CERTIFICATE), By.id("s2id_autogen19_results"),  dropdownName);
     }
 
     public void enterNetworkSecurity_proxy_reverse_protocol_port(String text){
@@ -1143,7 +1143,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectNetworkSecurity_new_switch_network_ci(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_NETWORK_SECURITY_NEW_SWITCH_NETWORK_CI), By.id("s2id_autogen17_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_NETWORK_SECURITY_NEW_SWITCH_NETWORK_CI), By.id("s2id_autogen18_results"),  dropdownName);
 
     }
 
@@ -1209,7 +1209,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void enterNetworkSecurity_firewall_new_change_add_ci_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI), By.id("s2id_autogen16_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI), By.id("s2id_autogen17_results"),  dropdownName);
     }
 
     public void enterNetworkSecurity_firewall_new_change_request(String text){
@@ -1263,7 +1263,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectNimbus_restoreVm(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_NIMBUS_RESTORE_VM), By.id("s2id_autogen20_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_NIMBUS_RESTORE_VM), By.id("s2id_autogen21_results"),  dropdownName);
     }
     public void enterNimbus_dateToRestoreFrom(String text){
         PlazaValidation.DateTime = text;
@@ -1291,11 +1291,11 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectNimbus_targetCountries(String dropdownName){
         PlazaValidation.TargetCountries = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_NIMBUS_TARGET_COUNTRIES), By.id("s2id_autogen21_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_NIMBUS_TARGET_COUNTRIES), By.id("s2id_autogen22_results"),  dropdownName);
     }
     public void selectNimbus_cloudServices(String dropdownName){
         PlazaValidation.CloudServices = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_NIMBUS_CLOUD_SERVICES), By.id("s2id_autogen19_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_NIMBUS_CLOUD_SERVICES), By.id("s2id_autogen20_results"),  dropdownName);
     }
     public void enterNimbus_frontSideNetworkInfo(String text){
         PlazaValidation.FrontsideNetworkInformation = text;
@@ -1315,7 +1315,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectNimbusExtendDisk_AddCi(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_NIMBUS_EXTEND_DISK_ADD_CI), By.id("s2id_autogen18_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_NIMBUS_EXTEND_DISK_ADD_CI), By.id("s2id_autogen19_results"),  dropdownName);
 
     }
     public void enterNimbus_volumesDrives(String text){
@@ -1383,17 +1383,17 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectDatabasePerformanceTroubleShooting_AddServerCi(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_SERVER_CI), By.id("s2id_autogen32_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_SERVER_CI), By.id("s2id_autogen29_results"),  dropdownName);
 
     }
     public void selectDatabasePerformanceTroubleShooting_AddDbCi(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_CI), By.id("s2id_autogen33_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_CI), By.id("s2id_autogen30_results"),  dropdownName);
 
     }
     public void selectDatabasePerformanceTroubleShooting_databaseType(String dropdownName){
         PlazaValidation.DatabaseType = dropdownName;
-        selectDropdown(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_TYPE), By.id("select2-results-16"),  dropdownName);
+        selectDropdown(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_TYPE), By.id("select2-results-12"),  dropdownName);
     }
 
     public void enterDatabasePerformamanceTroubleShooting_request(String text){
@@ -1426,17 +1426,17 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectDatabaseConfigureParameter_AddCi_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_DATABASE_CONFIGURE_PARAMETER_ADD_CI), By.id("s2id_autogen37_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_DATABASE_CONFIGURE_PARAMETER_ADD_CI), By.id("s2id_autogen34_results"),  dropdownName);
 
     }
     public void selectDatabaseConfigureParameter_AddDbCi_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_DATABASE_CONFIGURE_PARAMETER_DB_ADD_CI), By.id("s2id_autogen38_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_DATABASE_CONFIGURE_PARAMETER_DB_ADD_CI), By.id("s2id_autogen35_results"),  dropdownName);
 
     }
     public void selectDatabaseConfigureParameter_databaseType(String dropdownName){
         PlazaValidation.DatabaseType = dropdownName;
-        selectDropdown(By.id(dd_DATABASE_CONFIGURE_PARAMETER_DATABASE_TYPE), By.id("select2-results-20"),  dropdownName);
+        selectDropdown(By.id(dd_DATABASE_CONFIGURE_PARAMETER_DATABASE_TYPE), By.id("select2-results-12"),  dropdownName);
     }
     public void enterDatabaseRequest_description(String text){
         PlazaValidation.Description = text;
@@ -1492,12 +1492,12 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selects_database_AddCi_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_ADD_DATABASE_CI), By.id("s2id_autogen23_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_ADD_DATABASE_CI), By.id("s2id_autogen20_results"),  dropdownName);
 
     }
     public void selects_database_AddServerCi_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_ADD_SERVER_CI), By.id("s2id_autogen24_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_ADD_SERVER_CI), By.id("s2id_autogen21_results"),  dropdownName);
 
     }
     public void selectDatabaseAccountType(String dropdownName){
@@ -1542,7 +1542,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectsAddCi_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_ADD_CI), By.id("s2id_autogen14_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_ADD_CI), By.id("s2id_autogen13_results"),  dropdownName);
 
     }
     public void enterNetworkEquipment_request(String text){

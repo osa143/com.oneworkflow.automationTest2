@@ -1,4 +1,4 @@
-@01.17_Create_a_new_incident_with_Event_start_time_in_history @Incident
+@01.17_Create_a_new_incident_with_Event_start_time_in_history @Incident  @01
 #Passed
 Feature: Creation of incident with event start time in the past
   Scenario: user is able create a ticket with event start time in past

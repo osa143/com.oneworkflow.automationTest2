@@ -1,4 +1,4 @@
-@01.09_Add_attachments_to_field_named_Internal_attachments @Incident
+@01.09_Add_attachments_to_field_named_Internal_attachments @Incident  @01
 
   Feature: Add Attachments to field named internal attachments
     Scenario: user is able to add an attachment to incident ticket

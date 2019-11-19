@@ -1,4 +1,4 @@
-@00.10_Validate_Urgency_field_availability_in_Incident_record @Incident
+@00.10_Validate_Urgency_field_availability_in_Incident_record @Incident @00
 #passed
 Feature: validate urgency field availability in incident record
 

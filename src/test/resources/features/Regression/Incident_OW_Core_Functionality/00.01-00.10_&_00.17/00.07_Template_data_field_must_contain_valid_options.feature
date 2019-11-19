@@ -1,4 +1,4 @@
-@00.07_Template_data_field_must_contain_valid_options @Incident
+@00.07_Template_data_field_must_contain_valid_options @Incident @00
 #passed
   Feature: Template data field  must contain valid options
     Scenario: user validates options given in Trouble data field

@@ -42,7 +42,6 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Database Request"
       And user validates request type as "Service Request | PLAZA"
-     #Not sure about description validation outside of a table
       And user validates Database access request description same as plaza
       Then user clicks on owner under sections
       #And user clicks on assignment under sections
@@ -81,9 +80,9 @@
 
       Examples:
 
-      |Request                                |Database Type|Description                      |Additional Comments  |Account Type|Desc Validation|
-      #|Test1 Database AccessMSSQL/Request     |MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server  |               |
-      |Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |               |
+      |Request                                |Database Type|Description                      |Additional Comments  |Account Type|
+     # |Test1 Database AccessMSSQL/Request     |MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server  |
+       |Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |
 
 
 

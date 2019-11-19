@@ -322,8 +322,8 @@ public class OWF_WorkOrderPage extends BasePage {
     }
 
     public void clickApplyB2B() {
-
-        clickElementByContainsTextAndTagName("div", "Apply B2B");
+        driver.switchTo().defaultContent();
+        //clickElementByContainsTextAndTagName("div", "Apply B2B");
         clickElement(By.id(btnAPPLY_B2B_ID));
     }
     public void selectSlaClass(String value){

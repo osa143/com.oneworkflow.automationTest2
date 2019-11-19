@@ -13,7 +13,7 @@
       Then problem record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       When user enters "proactive investigation of: frvi96_auto" in Title field
-      And user selects request type as "Access Networks:RAN Optimization" on Problem record page
+      And user selects request type as "Carrier:IT:All" on Problem record page
       And user enters description as "UAT Test Known Error linked items"
       And user selects impact type as moderate:limited
       And user selects urgency as low

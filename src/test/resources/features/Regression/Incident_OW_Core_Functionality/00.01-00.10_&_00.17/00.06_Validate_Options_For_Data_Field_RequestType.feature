@@ -1,4 +1,4 @@
-@Validate_Behaviour_And_Options_For_Data_Field_RequestType @Incident
+@Validate_Behaviour_And_Options_For_Data_Field_RequestType @Incident @00
 #Passed
 Feature: Validate behaviour and options for data field request type
 

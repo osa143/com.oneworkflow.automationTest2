@@ -123,6 +123,7 @@ public class OWF_ProblemRecordPageSteps {
     public void userClicksOnAckButton() {
         try{
             problemRecordPage.clickAckButton_problemRecord();
+            problemRecordPage.clickOkOnWarningMessage();
         }
         catch(Exception e){
 

@@ -21,7 +21,7 @@
       And user selects target application second dropdown as "Investigates"
       Then user clicks on create button under linked items
       And user switches to window 2
-      When user selects request type as "Access Networks:RAN Optimization" in problem form
+      When user selects request type as "Carrier:INFRA:Infrastructure" in problem form
       And user selects impact type as "Moderate/Limited"
       And user selects urgency as "Low"
       Then user clicks on save button

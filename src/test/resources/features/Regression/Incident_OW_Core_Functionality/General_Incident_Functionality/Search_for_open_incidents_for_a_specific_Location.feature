@@ -1,7 +1,7 @@
 @Search_for_open_incidents_for_a_specific_Location @Incident @Trouble1
   #passed
   #Needs to create 6 tickets for different countries if necessary
-Feature: open incident location search
+  Feature: open incident location search
   Scenario: user can search for all countries open incident tickets
 
     Given user is on the OneWorkflow login page

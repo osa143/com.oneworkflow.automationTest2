@@ -16,8 +16,6 @@
       And user enters "Test OW OP Ticket" in the plaza subject field
       And user enters "Test OW OP Ticket" in the plaza describe field
       And user selects No under access to email radio buttons
-     #Then user clicks on add attachment in plaza
-     #And user searches for attachment and adds attachment to ticket
       Then user clicks on submit button on plaza form
       And user gets plaza request id
       And user clicks on plaza request id

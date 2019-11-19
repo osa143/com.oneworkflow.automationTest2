@@ -1,4 +1,4 @@
-@01.05_Set_location_of_incident_origin @Incident
+@01.05_Set_location_of_incident_origin @Incident  @01
 #Passed
 Feature: Setting of incident start time
 

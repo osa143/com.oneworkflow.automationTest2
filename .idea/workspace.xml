@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="" />
+    <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
     <list id="fdd5dcd5-8b51-46c5-a21c-717370c44d22" name="Revert &quot;Modified features and steps for bulk CI loading.&quot;" comment="Revert &quot;Modified features and steps for bulk CI loading.&quot;&#10;&#10;This reverts commit 2f56f3da" />
@@ -73,11 +75,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/runners/Test_Runner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
               <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -179,7 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.01_Validate_incident_record_process_artifact.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&amp;_00.17/00.03_OLA_Target_Time_Availability_In_Incident_Record.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/configs/runtime_test.properties" />
         <option value="$PROJECT_DIR$/src/test/java/pageObjects/OWF_AgentConsolePage.java" />
@@ -230,6 +240,7 @@
         <option value="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Verification_Of_Ownership.feature" />
         <option value="$PROJECT_DIR$/src/test/java/cucumberHooks/Hooks.java" />
         <option value="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -805,14 +816,7 @@
       <workItem from="1573641405834" duration="22882000" />
       <workItem from="1573807706816" duration="23507000" />
       <workItem from="1573988602322" duration="4324000" />
-      <workItem from="1574017054737" duration="47755000" />
-    </task>
-    <task id="LOCAL-00085" summary="added steps for bulk CI loading trouble">
-      <created>1565967719085</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1565967719085</updated>
+      <workItem from="1574017054737" duration="48021000" />
     </task>
     <task id="LOCAL-00086" summary="added steps for bulk CI loading change and trouble">
       <created>1566208300881</created>
@@ -1150,7 +1154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573118001538</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="updated Bulk CI attachments">
+      <created>1574176324820</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1574176324822</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1186,7 +1197,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="685308000" />
+    <option name="totallyTimeSpent" value="685574000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1198,16 +1209,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="997" height="1080" extended-state="0" />
+    <frame x="-7" y="-7" width="1980" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.6195537" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30301455" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Designer" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.6311907" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.38672286" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989605" weight="0.2792413" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44889358" />
@@ -1469,13 +1481,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.15_Search_for_Known_Errors_using_quick_search_based_on_Category_Type_and_Item.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="91" selection-start-column="91" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.02_Register_affected_BUs.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1799,6 +1804,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>

@@ -22,7 +22,7 @@ Feature: Validate all fields are correct from API created ticket
     And user validates "Source Field" as "One Workflow"
     And user validates "Affected BU's" as "Sweden"
     And user validates "Title*" as "ProblemTitle"
-    And user validates "Request Type*" as "Xfunctional | Finland"
+    And user validates "Request Type*" as "CPS | IT | Other"
     And user validates "Description" as "ProblemAPIDescription"
     And user validates "Impact*" as "Moderate/Limited*"
     And user validates "Urgency*" as "Low*"

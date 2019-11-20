@@ -1,10 +1,11 @@
 @APIProblem_E2E
 Feature: E2E Validation of API created trouble ticket
   Scenario: user validates all information on API ticket and processes ticket E2E
+
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user selects search menu as "Open Search Form:Trouble Event"
+    When user selects search menu as "Open Search Form:Problem Record"
     And user enters ticket id as ""
     Then user should see trouble ticket
     And user validates ticket status as "Assigned"
@@ -13,7 +14,7 @@ Feature: E2E Validation of API created trouble ticket
     Then user validates source id as "123456789"
     And user validates all affected BU's are selected
     Then user validates title field as "Test Ticket"
-    And user validates request type as "Xfunctional | Sweden"
+    And user validates request type as "CPS | IT | Other"
     Then user validates description as "Test Ticket"
     And user validates Impact as "Extensive/Widespread"
     Then user validates urgency as "High"
@@ -67,7 +68,7 @@ Feature: E2E Validation of API created trouble ticket
     And change should also be reflected in the timeline as "Test Update - Private" for trouble ticket in row 1
     When user unticks all affected BU's
     And user clicks save button
-    Then user receives error message ""
+    Then error message should display as ""
     When user clicks on sweden checkbox under affected BU's
     And user clicks save button
     Then user validates Sweden is selected as Affected BU
@@ -145,20 +146,20 @@ Feature: E2E Validation of API created trouble ticket
     And user selects Item as "DNS"
     And user selects Technology as "Broadband"
     Then user clicks save button
-
-
-
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user switches to frame
+    And user clicks on clear button
     And user enters CI as "SE_AP_tylosand-first-camp-ap10b2"
-    And user clicks on CI search button
+    And user clicks on search button on CI search window
     Then user selects CI "SE_AP_tylosand-first-camp-ap10b2"
     And user selects impact level as "No Impact"
     And user clicks on relate CI
     Then user clicks on close button on CI search window
     And user switches to window 1
     And CI should be listed and displayed under the Diagnosis tab
+    Then user right clicks on CI "SE_AP_tylosand-first-camp-ap10b2" and selects "Detach Selected"
+    Then CI should be detached from ticket
     When user clicks on "Timeline" tab
     Then change should also be reflected in the timeline as "Impact record created for SE_AP_tylosand-first-camp-ap10b2" for problem ticket in row 1
     When user clicks on "Interested Parties" tab
@@ -170,10 +171,11 @@ Feature: E2E Validation of API created trouble ticket
     And user selects first entry
     Then user selects access radio button as read and write
     And user selects auto notify radio button as yes
+    Then user clicks on save button under interested parties frame
     And user clicks on "Timeline" tab
     Then change should also be reflected in the timeline as "The User Tomas Hallén has been added as interested parties."
     And user clicks on add email button
-    Then user validates "Change_Automation_1" is listed as an interested party
+    Then user validates "Tohall_Copy" is listed as an interested party
     When user clicks on timeline tab
     Then change should also be reflected in the timeline as "The User has been added as interested parties." for problem ticket in row 1
     When user clicks on linked items tab
@@ -229,7 +231,7 @@ Feature: E2E Validation of API created trouble ticket
     And user selects urgency as "Low"
     And user clicks save button
     And user switches to window 1
-    And user clicks refresh button
+    And user clicks refresh button on linked items
     Then user validates problem ticket is present
     When user selects target application first dropdown as "OS3 - Work Order"
     And user selects target application second dropdown as "Caused by"
@@ -243,7 +245,7 @@ Feature: E2E Validation of API created trouble ticket
     And user clicks on work order tab
     Then user clicks on create from ticket
     And user switches to window 2
-    Then user enters request type as "Analysis"
+    Then user selects request type as "Analysis"
     And user clicks save button
     Then user clicks refresh button under work order
     And user selects ticket in row 1
@@ -252,6 +254,18 @@ Feature: E2E Validation of API created trouble ticket
     When user switches to window 1
     Then user clicks additional info tab
     And user enters "Tohall_copy" in the analysis team member one field
+    And user clicks save button
+    Then user validates "Tohall_copy" is listed under analysis team member one field
+    Then user clicks on Ack button
+    And user validates ticket status as "Under Investigation"
+    Then user changes status to "Investigation Complete"
+    And user clicks save button
+    Then user changes status to "Closed"
+    And user selects completed code as "Workaround"
+    And user enters solution as "Test Solution"
+    And user enters solution found date as current date
+    Then user validates ticket status as "Closed" 
+
 
 
 

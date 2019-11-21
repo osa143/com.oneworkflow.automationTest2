@@ -164,6 +164,7 @@ Feature: E2E Validation of API created trouble ticket
     Then change should also be reflected in the timeline as "Impact record created for SE_AP_tylosand-first-camp-ap10b2" for problem ticket in row 1
     When user clicks on "Interested Parties" tab
     Then user clicks on add button under interested parties
+    And user switches to frame
     And user selects type as "Additional Access" under interested parties
     Then user selects search for radio button as "User"
     And user enters "Tohall_Copy" under interested parties
@@ -172,6 +173,7 @@ Feature: E2E Validation of API created trouble ticket
     Then user selects access radio button as read and write
     And user selects auto notify radio button as yes
     Then user clicks on save button under interested parties frame
+    And user switches to window 1
     And user clicks on "Timeline" tab
     Then change should also be reflected in the timeline as "The User Tomas Hallén has been added as interested parties."
     And user clicks on add email button

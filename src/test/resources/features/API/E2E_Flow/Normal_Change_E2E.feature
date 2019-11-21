@@ -1,9 +1,9 @@
-@APICHANGE_E2E
+@API_Change_E2E
   Feature: E2E Validation of API created change ticket
     Scenario: user validates all information on API ticket and processes ticket E2E
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Manager1" and password as "Test@1234"
+      When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
       And user enters ticket id as ""
@@ -87,13 +87,13 @@
       Then error message should display as "Required field (without a default) not specified : Description (ARERR 9424)"
       When user enters description as "New Test Description"
       Then user clicks save button
-      Then change record form should be saved
+      Then form should be saved
       When user enters project code as ""
       And user clicks save button
-      Then change record form should save
+      Then form should be saved
       When user enters project code as "New Project Code"
       And user clicks save button
-      Then change record form should be saved
+      Then form should be saved
       When user enters "" in the change builder field
       And user clicks save button
       Then error message should display as ""
@@ -107,7 +107,7 @@
         | Test EXCEL| Test EXCEL  | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test XLS FILE.xls  | 5           |
         | Test PPT  | Test PPT    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PPT FILE.pptx | 6           |
 
-      Then change should also be reflected in the timeline as "Attachment has been added. File Name - attachement.doc.txt" for change record ticket in row 1
+      Then change should also be reflected in the timeline as "Attachment has been added. File Name - attachement.doc.txt"
       And user selects Category as "Core"
       And user selects Type as "Other"
       And user selects Item as "BR"
@@ -126,14 +126,25 @@
       And user switches to window 1
       And CI should be listed and displayed under the Diagnosis tab
       When user clicks on timeline tab
-      Then change should also be reflected in the timeline as "Impact record created for "DK_BSC_ALG3B" for problem ticket in row 1
+      Then change should also be reflected in the timeline as "Impact record created for "DK_BSC_ALG3B"
       When user clicks on Diagnosis tab
       Then user right clicks on CI "DK_BSC_ALG3B" and selects "Detach Selected"
       Then CI should be detached from ticket
       When user clicks on risk tab
       And user answers all risk questions as below
+      And user selects urgent answer as "A. No"
+      And user selects urgent answer as "B. Impact to other systems/technologies are unclear!"
+      And user selects urgent answer as "Tested successfully, this is a pilot"
+      And user selects urgent answer as "D. "Only" Consumer customers affected."
+      And user selects urgent answer as "A. Yes"
+      And user selects urgent answer as "A. Yes"
+      And user selects urgent answer as "A. Yes (outcome of the Change can be instantly verified)"
+      And user selects urgent answer as "B. No"
+      And user selects urgent answer as "A. No"
+      And user selects urgent last answer as "A. No"
       When user clicks on "Schedule" tab
       Then user enters as "" in service and customer impact
+      And user clicks save button
       And error message should display as "Required field (without a default) not specified : Service And Customer Impact (ARERR 9424)"
       Then user enters as "New test ticket" in service and customer impact
       And user enters request start time 24 hours ahead of current date
@@ -149,13 +160,13 @@
       Then error message should display as "Value does not fall within the limits specified for the field : Range is 0-23 : Hrs* (ARERR 9272)"
       Then user enters impact duration as "30" minutes
       And user clicks save button
-      Then change record form should be saved
+      Then form should be saved
       When user enters actual start as "14/11/2019 00:00:00"
       And user enters actual end as "15/11/2019 00:00:00"
       Then user selects actual impact as "No Impact"
       And user selects completed code as "Successful"
       Then user clicks save button
-      Then change record form should be saved
+      Then form should be saved
       When user clicks on timeline tab
       Then user validates timeline message "ChangeManager1_Automation - The Actual Start Date Time has been updated to : 2019-11-14 00:00:00 UTC"
       Then user validates timeline message "ChangeManager1_Automation - The Actual End Date Time has been updated to : 2019-11-15 00:00:00 UTC"
@@ -169,6 +180,7 @@
       Then user selects access radio button as read and write
       And user selects auto notify radio button as yes
       Then user clicks on save button under interested parties frame
+      And user switches to window 1
       And user clicks on "Timeline" tab
       Then change should also be reflected in the timeline as "The User Tomas Hallén has been added as interested parties."
       When user clicked on the linked items tab
@@ -205,7 +217,7 @@
       And user selects Type as "RAN"
       And user selects Item as "SYNC"
       And user clicks on the search button
-      Then user selects first row
+      And user highlights first ticket listed
       And user clicks accept button
       Then user switches to window 1
       And user validates known error ticket is present
@@ -271,6 +283,7 @@
       And user enters actual end as current and time
       And user clicks save button
       Then user validates ticket status as "Completed"
+
 
 
 

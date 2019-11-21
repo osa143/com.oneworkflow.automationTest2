@@ -2,32 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Standard_Change_E2E.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Urgent_Change_E2E.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Change_E2E.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Change_E2E.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Change_E2E.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Normal_Change_E2E.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Problem_E2E.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Problem_E2E.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Trouble_E2E.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Trouble_E2E.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Work_Order.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Work_Order.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateProblem.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateProblem.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Change/E2E_Normal_Change_(Internal Initiator).feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Change/E2E_Normal_Change_(Internal Initiator).feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Add_CI_&amp;_Attachment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Add_CI_&amp;_Attachment.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Close_Ticket.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Close_Ticket.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Drop_Down.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Drop_Down.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/E2E problem and known error.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/E2E problem and known error.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Initiator_Change_Desciption_After_Ack.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Initiator_Change_Desciption_After_Ack.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Initiator_Create_Ticket_And_Withdraw.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Initiator_Create_Ticket_And_Withdraw.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Initiator_Link_Tickets.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Initiator_Link_Tickets.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/PMO_Tab.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/PMO_Tab.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Pending_Status.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Pending_Status.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Problem_Link_To_New_Known_Error_And_Withdraw.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Problem_Link_To_New_Known_Error_And_Withdraw.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Problem_Manager_Withdraws_Ticket_After_Ack.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Problem_Manager_Withdraws_Ticket_After_Ack.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Problem_Manager_Withdraws_Ticket_Before_Ack.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Problem_Manager_Withdraws_Ticket_Before_Ack.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_1.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_1.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_2.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_2.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_3.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_3.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_4.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Profile_Permissions_Part_4.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Redirecting_And_Access_For_Assignee.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Redirecting_And_Access_For_Assignee.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Timeline_Update.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Timeline_Update.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Verification_Of_Ownership.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Regression/Problem/Verification_Of_Ownership.feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -107,48 +92,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>T700020677</find>
-      <find>ownerprofile</find>
-      <find>assigned</find>
-      <find>arid_WIN_0_777021160</find>
-      <find>arid_WIN_0_777031000</find>
-      <find>arid_WIN_0_777021548</find>
-      <find>arid_WIN_0_705001003</find>
-      <find>arid_WIN_0_700025204</find>
-      <find>arid_WIN_0_700007008</find>
-      <find>arid_WIN_0_700007007</find>
-      <find>WIN_0_777021404</find>
-      <find>arid_WIN_0_777777103</find>
-      <find>arid_WIN_0_700500101</find>
-      <find>dd_STATUS</find>
-      <find>tagname</find>
-      <find>parse</find>
-      <find>c</find>
-      <find>table</find>
-      <find>WIN_0_777000001</find>
-      <find>WIN_0_700025244</find>
-      <find>arid_WIN_0_800038001</find>
-      <find>WIN_0_800038059</find>
-      <find>WIN_0_800038044</find>
-      <find>WIN_0_600002504</find>
-      <find>WIN_0_rc1id600001901</find>
-      <find>public static</find>
-      <find>select2-chosen-12</find>
-      <find>T777000002</find>
-      <find>arid_WIN_0_777021006</find>
-      <find>Plaza</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>.orElse(null).</replace>
-      <replace>cucumber.jar.version</replace>
-      <replace>public</replace>
-      <replace>IT</replace>
-      <replace>IT%</replace>
-      <replace>&quot;IT%&quot;</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -533,6 +476,8 @@
       <workItem from="1573808827132" duration="23191000" />
       <workItem from="1574069173458" duration="18819000" />
       <workItem from="1574155656287" duration="19216000" />
+      <workItem from="1574240930200" duration="43291000" />
+      <workItem from="1574350855534" duration="1234000" />
     </task>
     <task id="LOCAL-00081" summary="added steps for bulk CI loading">
       <created>1565860711172</created>
@@ -978,7 +923,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java</url>
-          <line>132</line>
+          <line>150</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

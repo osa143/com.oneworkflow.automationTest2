@@ -1,4 +1,4 @@
-@APITrouble
+@API_Trouble_E2E
 Feature: E2E Validation of API created trouble ticket
   Scenario: user validates all information on API ticket and processes ticket E2E
     Given user is on the OneWorkflow login page

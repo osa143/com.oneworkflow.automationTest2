@@ -181,6 +181,7 @@ public class OWF_CiSearchPageSteps {
     @Then("user clicks on Risk tab")
     public void userClicksOnRiskTab() {
         ciSearchPage.clickRiskTab();
+        //ciSearchPage.selectTab("Risk");
     }
 
     @And("user enters impact from date as current date")
@@ -455,5 +456,11 @@ public class OWF_CiSearchPageSteps {
     @And("user validates CI {string} is listed in row {int}")
     public void userValidatesCIIsListedInRow(String arg0, int arg1) {
         Assert.assertEquals(ciSearchPage.getCI_Name("CI Name", arg1), arg0);
+    }
+
+    @And("user closes warning message on CI search window")
+    public void userClosesWarningMessageOnCISearchWindow() {
+        ciSearchPage.clickElement(By.id("ardivpcl"));
+        ciSearchPage.switchToFrameByIndex(2);
     }
 }

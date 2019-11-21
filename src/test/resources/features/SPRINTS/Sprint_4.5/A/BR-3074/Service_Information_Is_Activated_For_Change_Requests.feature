@@ -88,6 +88,7 @@ Feature: Service information activation for change requests
 
 
 
+
   Scenario Outline: Service information is activated for Standard change request
 #    Given 'Request Type' is 'Urgent'
 #    And 'Estimated Impact' is 'Loss of Service' Or 'Estimated Impact' is 'Degradation of Service'

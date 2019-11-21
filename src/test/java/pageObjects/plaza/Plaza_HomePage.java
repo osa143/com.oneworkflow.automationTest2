@@ -537,11 +537,11 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectNatureAndContent(String text){
         PlazaValidation.NatureAndContent=text;
-        selectDropdownWithMultipleValues(By.id("s2id_autogen29"),By.id("s2id_autogen29_results"), text );
+        selectDropdownWithMultipleValues(By.id("s2id_autogen32"),By.id("s2id_autogen32_results"), text );
     }
     public void selectAffectedPerson(String text){
         PlazaValidation.AffectedPersons=text;
-        selectDropdownByTagNameDiv(By.id("select2-chosen-18"),By.id("select2-results-18"), text );
+        selectDropdownByTagNameDiv(By.id("select2-chosen-21"),By.id("select2-results-21"), text );
     }
     public void enterDatetime_PDB(String text){
         PlazaValidation.DateTime=text;

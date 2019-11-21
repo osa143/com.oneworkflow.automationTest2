@@ -50,6 +50,24 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String dd_ACTUAL_IMPACT ="Actual Impact";
     private static final String dd_COMPLETED_CODE ="Completed Code";
     private static final String fld_TEMPLATE= "label777504501";
+    private static final String table_SERVICE_INFO= "T600002223";
+
+
+    public boolean verifyServiceInfoActivatedTimelineUpdate(){
+        return findElement(By.xpath("//span[contains(text(), 'SERVICE INFORMATION ACTIVATED ')]")).isDisplayed();
+    }
+    public boolean verifyServiceInfoDeactivatedTimelineUpdate(){
+        return findElement(By.xpath("//span[contains(text(), 'SERVICE INFORMATION DEACTIVATED ')]")).isDisplayed();
+    }
+    public boolean verifyServiceInfoActivated(){
+        int rows= getTableRows(By.id(table_SERVICE_INFO)).size();
+        System.out.println("Service Info table rows :"+ rows);
+        String text= getTableCellData(By.id(table_SERVICE_INFO), "Status",1);
+        Assert.assertEquals(text, "Active");
+        if (rows>1)
+            return true;
+        else return false;
+    }
 
     public String getTemplateText(){
         String text= getTextByID(fld_TEMPLATE);

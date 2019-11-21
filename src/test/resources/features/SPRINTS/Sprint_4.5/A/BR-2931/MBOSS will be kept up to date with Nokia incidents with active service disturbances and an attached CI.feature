@@ -37,7 +37,7 @@ Feature: MBOSS will be kept up to date with Nokia incidents with active service 
   Scenario: Nokia Incidents with in closed, cleared and withdrawn should not be sent to MBOSS Denmark
     Given there is an incident with 'Source' equal to 'Nokia_TTN_DK'
     And the 'Status' is equal to 'Cleared'
-#   Or the 'Status' is equal to 'Closed'
-#  Or the 'Status' is equal to 'Withdrawn'
+ # Or the 'Status' is equal to 'Closed'
+ # Or the 'Status' is equal to 'Withdrawn'
     When the MBOSS file automation generates a new file to send to Denmark
     Then the incident and CIs will not be included in those files

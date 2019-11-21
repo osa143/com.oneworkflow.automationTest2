@@ -91,7 +91,7 @@ public class BasePage {
 
     // To click any element by locator and element
     public void clickElement(By element){
-        findElement(element).click();
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
 
 

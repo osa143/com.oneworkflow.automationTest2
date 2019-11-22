@@ -632,5 +632,35 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesRegionIdAs(String arg0) {
         Assert.assertEquals(changeRecordPage.getRegionId(),arg0);
     }
+
+    @And("user validates region name as {string}")
+    public void userValidatesRegionNameAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getRegionName(),arg0);
+    }
+
+    @Then("user validates latitude as {string}")
+    public void userValidatesLatitudeAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getLatitude(),arg0);
+    }
+
+    @Then("user validates longitude as {string}")
+    public void userValidatesLongitudeAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getLongitude(),arg0);
+    }
+
+    @And("user validates y degree as {string}")
+    public void userValidatesYDegreeAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getYDegree(),arg0);
+    }
+
+    @And("user validates location details as {string}")
+    public void userValidatesLocationDetailsAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getLocationDetails(),arg0);
+    }
+
+    @Then("user validates last ack by as {string}")
+    public void userValidatesLastAckByAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getLastAckBy(),arg0);
+    }
 }
 

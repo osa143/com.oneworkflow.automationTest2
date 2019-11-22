@@ -46,7 +46,6 @@
       And user validates x degree as "0"
       Then user validates longitude as "25.335010"
       And user validates y degree as "0"
-
       And user validates location details as ""
       Then user validates owner profile as "Change Manager"
       And user validates owner as "ChangeManager"

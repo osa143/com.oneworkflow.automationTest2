@@ -59,6 +59,12 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_REASON = "arid_WIN_0_705001003";
     private static final String txt_CHANGE_BUILDER = "arid_WIN_0_600001054";
     private static final String txt_REGION_ID = "arid_WIN_0_700009452";
+    private static final String txt_REGION_NAME = "arid_WIN_0_700009638";
+    private static final String txt_LATITUDE = "arid_WIN_0_700024008";
+    private static final String txt_LONGITUDE = "arid_WIN_0_700024009";
+    private static final String txt_Y_DEGREE = "arid_WIN_0_700024011";
+    private static final String txt_LOCATION_DETAILS = "arid_WIN_0_700024007";
+    private static final String txt_LAST_ACK_BY = "arid_WIN_0_777031402";
 
 
 
@@ -106,7 +112,24 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     public String getRegionId(){
         return getTextByID(txt_REGION_ID);
     }
-
+    public String getRegionName(){
+        return getTextByID(txt_REGION_NAME);
+    }
+    public String getLatitude(){
+        return getTextByID(txt_LATITUDE);
+    }
+    public String getLongitude(){
+        return getTextByID(txt_LONGITUDE);
+    }
+    public String getYDegree(){
+        return getTextByID(txt_Y_DEGREE);
+    }
+    public String getLocationDetails(){
+        return  getTextByID(txt_LOCATION_DETAILS);
+    }
+    public String getLastAckBy(){
+        return getTextByID(txt_LAST_ACK_BY);
+    }
 
 
 

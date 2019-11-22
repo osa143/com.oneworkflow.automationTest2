@@ -12,7 +12,7 @@
       Then user validates BU availability
       And user clicks on internal checkbox under affected BU's
       Then user enters "Reactive investigation of:Tohall_copy" in Title field
-      And user selects request type as "Carrier:IT:All" in problem form
+      And user selects request type as "CPS | IT | Other" in problem form
       And user enters description as "Drop Down Verification"
       Then multiple statuses "Extensive/Widespread:Significant/Large:Moderate/Limited:(clear)" should be available in "Impact" dropdown
       And user selects impact as "Extensive/Widespread"

@@ -580,5 +580,33 @@ public class OWF_ChangeRecordPageSteps {
         Assert.assertTrue(changeRecordPage.verifyServiceInfoDeactivatedTimelineUpdate());
 
     }
+
+    @And("user validates change type as {string}")
+    public void userValidatesChangeTypeAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getChange_Type(), arg0);
+    }
+
+    @Then("user validates source id as {string}")
+    public void userValidatesSourceIdAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getSource_Id(), arg0);
+
+    }
+
+    @Then("user clicks on approval tab")
+    public void userClicksOnApprovalTab() {
+    }
+
+    @And("user clicks approve button")
+    public void userClicksApproveButton() {
+    }
+
+    @Then("user clicks on schedule tab")
+    public void userClicksOnScheduleTab() {
+    }
+
+    @Then("user validates change initiator as {string}")
+    public void userValidatesChangeInitiatorAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getTxt_CHANGE_Initiator(), arg0);
+    }
 }
 

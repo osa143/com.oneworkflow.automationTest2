@@ -7,6 +7,7 @@ import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import pageObjects.BaseRecordPage;
 import pageObjects.OWF_ProblemRecordPage;
 import utils.CommonUtils;
 
@@ -121,11 +122,10 @@ public class OWF_ProblemRecordPageSteps {
 
     @When("user clicks on Ack button")
     public void userClicksOnAckButton() {
-        try{
+        try {
             problemRecordPage.clickAckButton_problemRecord();
             problemRecordPage.clickOkOnWarningMessage();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
 
         }
 
@@ -137,6 +137,7 @@ public class OWF_ProblemRecordPageSteps {
         Assert.assertEquals(problemRecordPage.getStatusText(), "Under Investigation", "Ticket status is not Under Investigation");
 
     }
+
     @When("user tries to change the status to {string}")
     public void userTriesToChangeTheStatusTo(String status) {
         try {
@@ -174,10 +175,9 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("change should also be reflected in the timeline as {string}")
     public void changeShouldAlsoBeReflectedInTheTimelineAs(String message) {
-        try{
+        try {
             problemRecordPage.selectTab("Timeline");
-        }
-        catch(Exception e){
+        } catch (Exception e) {
 
         }
 
@@ -189,7 +189,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("change should be reflected in the timeline {string}")
     public void changeShouldBeReflectedInTheTimeline(String message) {
-        message = message.replace('|','"');
+        message = message.replace('|', '"');
         problemRecordPage.clickTimelineButton();
         System.out.println("Actual Timeline Message is :" + message);
         boolean containsMessage = problemRecordPage.getTimelineStatus(1).contains(message);
@@ -220,17 +220,14 @@ public class OWF_ProblemRecordPageSteps {
         str[0] += " " + CommonUtils.pbTicket;
 
         String newMessage = "";
-        for(int i = 0; i< str.length; i++)
-        {
+        for (int i = 0; i < str.length; i++) {
             newMessage += str[i];
         }
         System.out.println("Expected timeline status is: " + newMessage);
         problemRecordPage.wait(1000);
-        try{
+        try {
             problemRecordPage.selectTab("Timeline");
-        }
-        catch(Exception e)
-        {
+        } catch (Exception e) {
             problemRecordPage.wait(1000);
             System.out.println("Try again to click on Timeline Tab");
             problemRecordPage.selectTab("Timeline");
@@ -324,7 +321,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user enters {string} under the minutes field")
     public void userEntersUnderTheMinutesField(String minutes) {
-    problemRecordPage.enterMins(minutes);
+        problemRecordPage.enterMins(minutes);
     }
 
     @And("user clicks on Ok button")
@@ -334,8 +331,8 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user switches to frame")
     public void userSwitchesToFrame() {
-        int size= problemRecordPage.getDriver().findElements(By.tagName("iframe")).size();
-        problemRecordPage.switchToFrameByIndex(size-1);
+        int size = problemRecordPage.getDriver().findElements(By.tagName("iframe")).size();
+        problemRecordPage.switchToFrameByIndex(size - 1);
     }
 
     @Then("user changes status to investigation complete")
@@ -346,18 +343,18 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user selects root cause code as Technical:HW error under route cause")
     public void userSelectsRootCauseCodeAsTechnicalHWErrorUnderRouteCause() {
-     problemRecordPage.selectRootCauseCodeAs_Technical_HwError();
+        problemRecordPage.selectRootCauseCodeAs_Technical_HwError();
     }
 
     @And("user enters route cause details as {string}")
     public void userEntersRouteCauseDetailsAs(String rootCauseDetails) {
         //problemRecordPage.enterText("rootCauseDetails", rootCauseDetails);
-    problemRecordPage.enterRootCauseDetails(rootCauseDetails);
+        problemRecordPage.enterRootCauseDetails(rootCauseDetails);
     }
 
     @And("user enters RC found date as current date")
     public void userEntersRCFoundDateAsCurrentDate() {
-    problemRecordPage.enterRcFoundDate();
+        problemRecordPage.enterRcFoundDate();
     }
 
     @When("user changes status to closed")
@@ -374,7 +371,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user enters decision go no go as current date")
     public void userEntersDecisionGoNoGoAsCurrentDate() {
-      problemRecordPage.enterDecisionGoNoGoDate();
+        problemRecordPage.enterDecisionGoNoGoDate();
     }
 
     @And("user selects solved under closure code")
@@ -384,17 +381,17 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user enters solution as {string}")
     public void userEntersSolutionAs(String Text) {
-    problemRecordPage.enterSolution(Text);
+        problemRecordPage.enterSolution(Text);
     }
 
     @And("user enters solution found date as current date")
     public void userEntersSolutionFoundDateAsCurrentDate() {
-     problemRecordPage.enterSolutionFoundDate();
+        problemRecordPage.enterSolutionFoundDate();
     }
 
     @And("ticket status should be closed")
     public void ticketStatusShouldBeClosed() {
-        String closed= problemRecordPage.getStatusText();
+        String closed = problemRecordPage.getStatusText();
         Assert.assertEquals(closed, "closed", "status is not closed");
 
     }
@@ -422,7 +419,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("user should see blank change record search form")
     public void userShouldSeeBlankChangeRecordSearchForm() {
-     //Assert.assertNull(problemRecordPage.verifyTicketIsBlank(), "Change record search form is not blank");
+        //Assert.assertNull(problemRecordPage.verifyTicketIsBlank(), "Change record search form is not blank");
     }
 
     @Then("user should see change record ticket")
@@ -474,7 +471,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("user selects summary dropdown as {string}")
     public void userSelectsSummaryDropdownAs(String arg0) {
-     problemRecordPage.selectSummaryDropDownAs(arg0);
+        problemRecordPage.selectSummaryDropDownAs(arg0);
     }
 
     @And("user enters attachment description as {string}")
@@ -494,9 +491,9 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("user searches for attachment and adds attachment to ticket")
     public void userSearchesForAttachmentAndAddsAttachmentToTicket() {
-        String projectPath= System.getProperty("user.dir" );
+        String projectPath = System.getProperty("user.dir");
         System.out.println("Project path is :" + projectPath);
-        String fullFilePath= projectPath+"\\src\\test\\resources\\Test Attachments\\other files\\attachement.doc.txt";
+        String fullFilePath = projectPath + "\\src\\test\\resources\\Test Attachments\\other files\\attachement.doc.txt";
         System.out.println("Full file path is : " + fullFilePath);
         CommonUtils.uploadFile(fullFilePath);
         problemRecordPage.wait(1000);
@@ -504,7 +501,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("user clicks on attachment ok button")
     public void userClicksOnAttachmentOkButton() {
-    problemRecordPage.clickOk_AttachmentOnFrame();
+        problemRecordPage.clickOk_AttachmentOnFrame();
     }
 
     @And("user clicks on save button on attachment window")
@@ -537,12 +534,12 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("an error message {string} should appear with red boarder around to date field")
     public void anErrorMessageShouldAppearWithRedBoarderAroundToDateField(String arg0) {
-       // Assert.assertTrue(problemRecordPage.validateErrorMessage(arg0));
+        // Assert.assertTrue(problemRecordPage.validateErrorMessage(arg0));
     }
 
     @And("an error message {string} should appear with red boarder around reason field")
     public void anErrorMessageShouldAppearWithRedBoarderAroundReasonField(String arg0) {
-      //  Assert.assertTrue(problemRecordPage.validateErrorMessage(arg0));
+        //  Assert.assertTrue(problemRecordPage.validateErrorMessage(arg0));
     }
 
     @And("user selects reason dropdown as {string}")
@@ -570,9 +567,10 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("user waits for {int} minutes")
     public void userWaitsForMinutes(int arg0) {
-        int newDelay= arg0*60000;
+        int newDelay = arg0 * 60000;
         problemRecordPage.wait(newDelay);
     }
+
     @Then("user waits for two minutes")
     public void userWaitsForTwoMinutes() {
         problemRecordPage.wait(120000);
@@ -707,12 +705,12 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("problem initiator user should be listed under interested parties tab")
     public void problemInitiatorUserShouldBeListedUnderInterestedPartiesTab() {
-    Assert.assertTrue(problemRecordPage.verifyUserListedUnderInterestedParty());
+        Assert.assertTrue(problemRecordPage.verifyUserListedUnderInterestedParty());
     }
 
     @Then("user should see problem initiator listed as analysis team member one as {string}")
     public void userShouldSeeProblemInitiatorListedAsAnalysisTeamMemberOneAs(String arg0) {
-        Assert.assertEquals(problemRecordPage.getAnalysisTeamMember1(),arg0);
+        Assert.assertEquals(problemRecordPage.getAnalysisTeamMember1(), arg0);
 
     }
 
@@ -786,13 +784,14 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user validates route cause code availability")
     public void userValidatesRouteCauseCodeAvailability() {
-       // Assert.assertTrue(false);
+        // Assert.assertTrue(false);
     }
 
     @Then("mandatory fields should be indicated in bold")
     public void mandatoryFieldsShouldBeIndicatedInBold() {
-       // Assert.assertTrue(false);
+        // Assert.assertTrue(false);
     }
+
     @Then("PM office tab should be visible")
     public void pmOfficeTabShouldBeVisible() {
         Assert.assertTrue(problemRecordPage.IsTabDisplayed("PM Office"));
@@ -839,14 +838,14 @@ public class OWF_ProblemRecordPageSteps {
 
     @Then("user validates sweden and finland checkboxes are selected")
     public void userValidatesSwedenAndFinlandCheckboxesAreSelected() {
-      Assert.assertTrue(problemRecordPage.verifyIsSwedenSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsSwedenSelected());
         Assert.assertTrue(problemRecordPage.verifyIsFinlandSelected());
 
     }
 
     @Then("user validates availability of tabs {string}")
     public void userValidatesAvailabilityOfTabs(String tabs) {
-            Assert.assertTrue(problemRecordPage.verifyTabValues(tabs));
+        Assert.assertTrue(problemRecordPage.verifyTabValues(tabs));
 
     }
 
@@ -857,10 +856,10 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("change should also be reflected in the timeline as {string} on row {int}")
     public void changeShouldAlsoBeReflectedInTheTimelineAsOnRow(String message, int row) {
-            problemRecordPage.clickTimelineButton();
-            boolean containsMessage = problemRecordPage.getTimelineStatus(row).contains(message);
-            Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
-        }
+        problemRecordPage.clickTimelineButton();
+        boolean containsMessage = problemRecordPage.getTimelineStatus(row).contains(message);
+        Assert.assertTrue(containsMessage, "Ticket Status is not displayed on timeline");
+    }
 
     @And("user clicks attachments under sections")
     public void userClicksAttachmentsUnderSections() {
@@ -875,15 +874,13 @@ public class OWF_ProblemRecordPageSteps {
 
     @When("user changes status to {string} on problem record page")
     public void userChangesStatusToOnProblemRecordPage(String arg0) {
-        try{
+        try {
             problemRecordPage.selectStatus_problemRecord(arg0);
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Not able to change the status... Try again");
-            try{
+            try {
                 problemRecordPage.selectStatus_problemRecord(arg0);
-            }
-            catch(Exception e2){
+            } catch (Exception e2) {
 
             }
         }
@@ -897,16 +894,17 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user enters {string} in status")
     public void userEntersInStatus(String arg0) {
-       problemRecordPage.enterStatus(arg0);
+        problemRecordPage.enterStatus(arg0);
     }
 
     @Then("user highlights {string} Gillgren")
     public void userHighlightsGillgren(String arg0) {
         problemRecordPage.clickTableElement_addInterestedParty("First Name", arg0);
     }
+
     @Then("user validates {string} Gillgren is listed as an interested party")
     public void userValidatesGillgrenIsListedAsAnInterestedParty(String arg0) {
-       Assert.assertEquals(problemRecordPage.getText("First Name", 2), arg0);
+        Assert.assertEquals(problemRecordPage.getText("First Name", 2), arg0);
     }
 
     @And("user waits")
@@ -933,10 +931,9 @@ public class OWF_ProblemRecordPageSteps {
 
     @When("user changes status as Investigation Complete on problem record page")
     public void userChangesStatusAsInvestigationCompleteOnProblemRecordPage() {
-        try{
+        try {
             problemRecordPage.selectStatus_problemRecord("Investigation Complete");
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             userWaits();
             problemRecordPage.selectStatus_problemRecord("Investigation Complete");
 
@@ -996,18 +993,19 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user searches for {string} attachment and adds it")
     public void userSearchesForAttachmentAndAddsIt(String filePath) {
-        String projectPath= System.getProperty("user.dir" );
+        String projectPath = System.getProperty("user.dir");
         System.out.println(projectPath);
-        String fullFilePath= projectPath+"\\src\\test\\resources\\"+filePath;
+        String fullFilePath = projectPath + "\\src\\test\\resources\\" + filePath;
         System.out.println(fullFilePath);
         CommonUtils.uploadFile(fullFilePath);
         problemRecordPage.wait(2000);
         //CommonUtils.uploadFile(arg0);
         //problemRecordPage.wait(2000);
     }
+
     @Then("user validates Category as {string}")
     public void userValidatesCategoryAs(String arg0) {
-      Assert.assertEquals(problemRecordPage.getCategory(), arg0);
+        Assert.assertEquals(problemRecordPage.getCategory(), arg0);
     }
 
     @And("user validates type as {string}")
@@ -1023,11 +1021,11 @@ public class OWF_ProblemRecordPageSteps {
     @And("user adds attachment {string}")
     public void userAddsAttachement(String filePath) {
 
-        String fullFilePath= System.getProperty("user.dir" + "\\src\\test\\resources\\TestAttachments\\TestCaseAttachments"+filePath);
+        String fullFilePath = System.getProperty("user.dir" + "\\src\\test\\resources\\TestAttachments\\TestCaseAttachments" + filePath);
         System.out.println(fullFilePath);
-            CommonUtils.uploadFile(fullFilePath);
-            problemRecordPage.wait(2000);
-        }
+        CommonUtils.uploadFile(fullFilePath);
+        problemRecordPage.wait(2000);
+    }
 
     @And("user adds attachment and verifies under {string}")
     public void userAddsAttachmentAndVerifies(String type, DataTable attachments) {
@@ -1037,7 +1035,7 @@ public class OWF_ProblemRecordPageSteps {
     @Then("user validates Title is readonly")
     public void userValidatesTitleIsReadonly() {
         Assert.assertTrue(problemRecordPage.verifyTitleIsReadOnly());
-        }
+    }
 
     @And("user validates Request Category is readonly")
     public void userValidatesRequestCategoryIsReadonly() {
@@ -1084,6 +1082,19 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.verifyRequestTypeDdIsReadonly();
     }
 
+
+    @And("user validates finland as affected BU")
+    public void userValidatesFinlandAsAffectedBU() {
+        Assert.assertTrue(problemRecordPage.verifyFinlandIsSelectedAsAffectedBu());
+    }
+
+    @Then("change should also be reflected in the timeline as {string} for change ticket in row {int}")
+    public void changeShouldAlsoBeReflectedInTheTimelineAsForChangeTicketInRow(String arg0, int arg1) {
+    }
+
+    @Then("change should also be reflected in the timeline as {string}DK_BSC_ALG{int}B\"")
+    public void changeShouldAlsoBeReflectedInTheTimelineAsDK_BSC_ALGB(String arg0, int arg1) throws Throwable {    // Write code here that turns the phrase above into concrete actions    throw new cucumber.api.PendingException();}
+    }
 
 }
 

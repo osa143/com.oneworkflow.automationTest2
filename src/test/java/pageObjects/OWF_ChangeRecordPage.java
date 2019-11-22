@@ -50,6 +50,25 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String dd_ACTUAL_IMPACT ="Actual Impact";
     private static final String dd_COMPLETED_CODE ="Completed Code";
     private static final String fld_TEMPLATE= "label777504501";
+    private static final String txt_CHANGE_TYPE = "arid_WIN_0_755000000";
+    private static final String txt_SOURCE_ID = "arid_WIN_0_777021006";
+    private static final String txt_CHANGE_INITIATOR = "arid_WIN_0_2";
+    private static final String dd_REQUEST_CATEGORY = "arid_WIN_0_777021548";
+
+
+
+
+    public String getTxt_CHANGE_Initiator(){
+        return getTextByID(txt_CHANGE_INITIATOR);
+    }
+
+    public String getSource_Id(){
+        return getTextByID(txt_SOURCE_ID);
+    }
+
+    public String getChange_Type(){
+        return getTextByID(txt_CHANGE_TYPE);
+    }
     private static final String table_SERVICE_INFO= "T600002223";
 
 

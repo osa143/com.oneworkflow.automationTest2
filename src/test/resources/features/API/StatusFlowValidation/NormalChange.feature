@@ -92,7 +92,7 @@
       And user clicks Search on ticket search
       When user clicks on Ack button
       Then user validates ticket status as "Analysis"
-      And user validates other status options available as "Analysis;Pending;Withdrawn;(Clear)"
+      And user validates other "status" options available as Analysis, Pending, Withdrawn and (Clear)
       And user validates last ack by field has data present
       Then user enters "DC CS Core (Voice)_auto" in assignee
       And user clicks on save button

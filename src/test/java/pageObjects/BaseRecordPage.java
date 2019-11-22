@@ -134,7 +134,6 @@ public class BaseRecordPage extends BasePage {
     private static final String txt_CATEGORY= "arid_WIN_0_200000003";
     private static final String txt_TYPE= "arid_WIN_0_200000004";
     private static final String txt_ITEM= "arid_WIN_0_200000005";
-
     private static final String rbtn_INTERNAL = "WIN_0_rc0id600001901";
     private static final String rbtn_EXTERNAL= "WIN_0_rc1id600001901";
     private static final String table_ATTACHMENT_INTERNAL= "T777000013";

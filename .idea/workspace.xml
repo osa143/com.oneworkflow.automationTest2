@@ -2,17 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Standard_Change_E2E.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Urgent_Change_E2E.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Change_E2E.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Normal_Change_E2E.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Problem_E2E.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Problem_E2E.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Trouble_E2E.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Trouble_E2E.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Work_Order.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Work_Order.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/StatusFlowValidation/NormalChange.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/StatusFlowValidation/NormalChange.feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -478,6 +482,7 @@
       <workItem from="1574155656287" duration="19216000" />
       <workItem from="1574240930200" duration="43291000" />
       <workItem from="1574350855534" duration="1234000" />
+      <workItem from="1574427236818" duration="4479000" />
     </task>
     <task id="LOCAL-00081" summary="added steps for bulk CI loading">
       <created>1565860711172</created>
@@ -920,11 +925,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/steps/OWF_CiSearchPageSteps.java</url>
           <line>266</line>
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java</url>
-          <line>150</line>
-          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java</url>

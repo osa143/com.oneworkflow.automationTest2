@@ -586,5 +586,22 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesChangeInitiatorAs(String arg0) {
         Assert.assertEquals(changeRecordPage.getTxt_CHANGE_Initiator(), arg0);
     }
+
+
+
+
+    @And("user validates request category as {string}")
+    public void userValidatesRequestCategoryAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getRequestCategory(), arg0);
+    }
+
+
+
+    @And("user validates template field as {string}")
+    public void userValidatesTemplateFieldAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getTemplate(),arg0);
+    }
+
+
 }
 

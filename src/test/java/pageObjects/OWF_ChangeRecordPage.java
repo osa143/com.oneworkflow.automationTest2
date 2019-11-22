@@ -54,6 +54,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_SOURCE_ID = "arid_WIN_0_777021006";
     private static final String txt_CHANGE_INITIATOR = "arid_WIN_0_2";
     private static final String dd_REQUEST_CATEGORY = "arid_WIN_0_777021548";
+    private static final String dd_TEMPLATE ="arid_WIN_0_777031002";
 
 
 
@@ -75,6 +76,17 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         System.out.println(text);
         return text;
     }
+
+    public String getRequestCategory(){
+        return getTextByID(dd_REQUEST_CATEGORY);
+
+    }
+
+    public String getTemplate(){
+        return getTextByID(dd_TEMPLATE);
+         }
+
+
 
 
 

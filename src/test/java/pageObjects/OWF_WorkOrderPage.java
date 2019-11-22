@@ -49,6 +49,7 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_METHOD= "arid_WIN_0_700020737";
 
 
+
     public String getMethodText(){
         return getAttributeValueById(txt_METHOD);
     }
@@ -57,6 +58,8 @@ public class OWF_WorkOrderPage extends BasePage {
         clickElement(By.xpath(fld_SENT));
 
     }
+
+
 
     public String getTechnology(){
         return getAttributeValueById(txt_TECHNOLOGY);

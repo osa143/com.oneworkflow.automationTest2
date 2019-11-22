@@ -65,6 +65,9 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_Y_DEGREE = "arid_WIN_0_700024011";
     private static final String txt_LOCATION_DETAILS = "arid_WIN_0_700024007";
     private static final String txt_LAST_ACK_BY = "arid_WIN_0_777031402";
+    private static final String txt_X_DEGREE = "arid_WIN_0_700024010";
+    private static final String txt_GET_RE_ASSIGNMENT_COUNT = "arid_WIN_0_777031450";
+    private static final String txt_TEST_PLAN = "arid_WIN_0_700007008";
 
 
 
@@ -85,6 +88,10 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         String text= getTextByID(fld_TEMPLATE);
         System.out.println(text);
         return text;
+    }
+
+    public String getTestPlan(){
+        return getTextByID(txt_TEST_PLAN);
     }
 
     public String getRequestCategory(){
@@ -129,6 +136,12 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     }
     public String getLastAckBy(){
         return getTextByID(txt_LAST_ACK_BY);
+    }
+    public String getXDegree(){
+        return getTextByID(txt_X_DEGREE);
+    }
+    public String getReassignmentCount(){
+        return getTextByID(txt_GET_RE_ASSIGNMENT_COUNT);
     }
 
 

@@ -662,5 +662,21 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesLastAckByAs(String arg0) {
         Assert.assertEquals(changeRecordPage.getLastAckBy(),arg0);
     }
+
+    @And("user validates x degree as {string}")
+    public void userValidatesXDegreeAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getXDegree(),arg0);
+    }
+
+    @And("user validates reassignment count as {string}")
+    public void userValidatesReassignmentCountAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getReassignmentCount(),arg0);
+    }
+
+    @And("user validates test plan as {string}")
+    public void userValidatesTestPlanAs(String arg0) {
+
+        Assert.assertEquals(changeRecordPage.getTestPlan());
+    }
 }
 

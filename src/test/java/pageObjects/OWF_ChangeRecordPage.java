@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import java.security.SecureRandom;
 import java.util.List;
 
 public class OWF_ChangeRecordPage extends BaseRecordPage {
@@ -55,6 +56,9 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_CHANGE_INITIATOR = "arid_WIN_0_2";
     private static final String dd_REQUEST_CATEGORY = "arid_WIN_0_777021548";
     private static final String dd_TEMPLATE ="arid_WIN_0_777031002";
+    private static final String txt_REASON = "arid_WIN_0_705001003";
+    private static final String txt_CHANGE_BUILDER = "arid_WIN_0_600001054";
+    private static final String txt_REGION_ID = "arid_WIN_0_700009452";
 
 
 
@@ -79,12 +83,30 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
 
     public String getRequestCategory(){
         return getTextByID(dd_REQUEST_CATEGORY);
-
     }
 
     public String getTemplate(){
         return getTextByID(dd_TEMPLATE);
-         }
+    }
+    public String getReason(){
+        return getTextByID(txt_REASON);
+    }
+    public String getProjectCode(){
+        return getTextByID(txt_PROJECT_CODE);
+    }
+    public String getChangeBuilder(){
+        return getTextByID(txt_CHANGE_BUILDER);
+    }
+    public String getLocationId(){
+        return getTextByID(txt_LOCATION_ID_PLUS);
+    }
+    public String getLocationName(){
+        return getTextByID(txt_LOCATION_NAME_PLUS);
+    }
+    public String getRegionId(){
+        return getTextByID(txt_REGION_ID);
+    }
+
 
 
 

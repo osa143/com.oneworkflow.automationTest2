@@ -603,5 +603,34 @@ public class OWF_ChangeRecordPageSteps {
     }
 
 
+    @And("user validates reason as {string}")
+    public void userValidatesReasonAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getReason(), arg0);
+    }
+
+    @And("user validates project code as {string}")
+    public void userValidatesProjectCodeAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getProjectCode(), arg0);
+    }
+
+    @And("user validates change builder+* as {string}")
+    public void userValidatesChangeBuilderAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getChangeBuilder(), arg0);
+    }
+
+    @Then("user validates location id as {string}")
+    public void userValidatesLocationIdAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getLocationId(),arg0);
+    }
+
+    @And("user validates location name as {string}")
+    public void userValidatesLocationNameAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getLocationName(),arg0);
+    }
+
+    @And("user validates region id as {string}")
+    public void userValidatesRegionIdAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getRegionId(),arg0);
+    }
 }
 

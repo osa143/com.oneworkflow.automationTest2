@@ -13,7 +13,7 @@
       And user clicks save button
       Then multiple error messages should appear with red boarder around fields
       When user enters "proactive investigation of: frvi96_auto" in Title field
-      And user selects request type as "Carrier:IT:All" on Problem record page
+      And user selects request type as "CPS | IT | Other" on Problem record page
       And user enters description as "E2E Test"
       And user selects impact type as moderate:limited
       And user selects urgency as low

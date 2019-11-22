@@ -90,7 +90,7 @@
       When user clicks on Send button and closes warning message
       Then user validates ticket status as "Assigned"
       And user clicks on assignment under sections
-      Then user should see assigned profile as "DC CS Core (Voice)"
+      Then user should see assigned profile as ""
       Then user validates owner profile as "Change Manager"
       And user validates owner as "ChangeManager"
       And user clicks on timeline tab

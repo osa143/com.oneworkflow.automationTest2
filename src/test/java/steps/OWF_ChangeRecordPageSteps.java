@@ -622,6 +622,8 @@ public class OWF_ChangeRecordPageSteps {
     @And("user validates template field as {string}")
     public void userValidatesTemplateFieldAs(String arg0) {
         Assert.assertEquals(changeRecordPage.getTemplate(),arg0);
+
+
     }
 
 
@@ -737,11 +739,10 @@ public class OWF_ChangeRecordPageSteps {
     }
 
     @When("user enters actual start as {string}")
-    public void userEntersActualStartAs(String arg0) {
-        changeRecordPage.enterActualStartDate(arg0);
+    public void userEntersActualStartAs(String actualStart) {
+        changeRecordPage.enterActualStartDate(actualStart);
 
-
-    }
+   }
 
 
 
@@ -755,8 +756,52 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.enterImpactDurationHrs(impactDuration);
     }
 
-    @And("user enters actual end as current and time")
-    public void userEntersActualEndAsCurrentAndTime() {
+
+    @Then("user validates assigned profile as {string}")
+    public void userValidatesAssignedProfileAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getAssignedProfile(),arg0);
+
     }
+
+    @And("change should also be reflected in the timeline as {string} for change ticket in row {int}")
+    public void changeShouldAlsoBeReflectedInTheTimelineAsForChangeTicketInRow(String message, int rowNum) {
+        String[] str = message.split(";");
+        str[0] += " " + CommonUtils.pbTicket;
+
+        String newMessage = "";
+        for (int i = 0; i < str.length; i++) {
+            newMessage += str[i];
+        }
+        System.out.println("Expected timeline status is: " + newMessage);
+        changeRecordPage.wait(1000);
+        try {
+            changeRecordPage.selectTab("Timeline");
+        } catch (Exception e) {
+            changeRecordPage.wait(1000);
+            System.out.println("Try again to click on Timeline Tab");
+            changeRecordPage.selectTab("Timeline");
+
+
+        }
+    }
+
+    @And("user enters actual end as {string}")
+    public void userEntersActualEndAs(String actualEnd) {
+        changeRecordPage.enterActualEndDate(actualEnd);
+
+    }
+
+
+    @Then("user validates timeline message Actual Start Date {string}")
+    public void userValidatesTimelineMessageActualStartDate(String arg0) {
+        Assert.assertEquals(changeRecordPage.validatesTimelineMessageStartDate(),arg0);
+    }
+
+    @Then("user validates timeline message Actual Start Date {string}")
+    public void userValidatesTimelineMessageActualEndDate(String arg0) {
+        Assert.assertEquals(changeRecordPage.validatesTimelineMessageStartDate(),arg0);
+    }
+
+
 }
 

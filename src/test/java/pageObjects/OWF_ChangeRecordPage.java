@@ -70,7 +70,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_ROLLBACK = "arid_WIN_0_700007009";
     private static final String txt_VENDOR_NAME = "arid_WIN_0_705001291";
     private static final String table_SERVICE_INFO = "T600002223";
-
+    private static final String dd_ASSIGNED_PROFILE = "arid_WIN_0_777031408";
 
     public String getTxt_CHANGE_Initiator() {
         return getTextByID(txt_CHANGE_INITIATOR);
@@ -100,6 +100,9 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     }
     public String getProjectCode(){
         return getTextByID(txt_PROJECT_CODE);
+    }
+    public String getAssignedProfile(){
+        return getTextByID(dd_ASSIGNED_PROFILE);
     }
 
     public String getValidatesVendorName() {
@@ -401,6 +404,14 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         else return false;
 
 
+    }
+    public String validatesTimelineMessageStartDate(){
+        String validatesTimelineMessage = String.valueOf(findElement(By.xpath("//span[contains(text(), 'ChangeManager1_Automation - The Actual Start Date Time has been updated to : 2019-11-14 00:00:00 UTC')]")));
+        return validatesTimelineMessage;
+    }
+    public String validatesTimelineMessageEndDate(){
+        String validatesTimelineMessage = String.valueOf(findElement(By.xpath("//span[contains(text(), 'ChangeManager1_Automation - The Actual End Date Time has been updated to : 2019-11-15 00:00:00 UTC')]")));
+        return validatesTimelineMessage;
     }
 
 

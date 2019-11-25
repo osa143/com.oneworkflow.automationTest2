@@ -69,14 +69,14 @@
       When user enters "Test Update - Public" in the timeline text box
       And user clicks on public radio button
       Then user clicks on add button on timeline
-      And change should also be reflected in the timeline as "Test Update - Public" for trouble ticket in row 1
+      And change should also be reflected in the timeline as "Test Update - Public" for change ticket in row 1
       And user enters "Test Update - Public" in the timeline text box
       And user clicks on private radio button
       Then user clicks on add button on timeline
-      And change should also be reflected in the timeline as "Test Update - Private" for trouble ticket in row 1
+      And change should also be reflected in the timeline as "Test Update - Private" for change ticket in row
       When user unticks all affected BU
       And user clicks save button
-      Then user validates all BU are unticked
+      Then error message should display as ""
       When user clicks on sweden checkbox under affected BU's
       And user clicks save button
       Then user validates Sweden is selected as Affected BU
@@ -123,9 +123,7 @@
       And user closes warning message
       And user switches to window 1
       And CI should be listed and displayed under the Diagnosis tab
-      When user clicks on timeline tab
-      Then change should also be reflected in the timeline as "Impact record created for DK_BSC_ALG3B" for Normal Change ticket in row 1
-
+      When user clicks on timeline tabAnd change should also be reflected in the timeline as "Impact record created for DK_BSC_ALG3B" for change ticket in row
       When user clicks on Diagnosis tab
       Then user right clicks on CI "DK_BSC_ALG3B" and selects "Detach Selected"
       Then CI should be detached from ticket
@@ -168,8 +166,8 @@
       Then user clicks save button
       Then form should be saved
       When user clicks on timeline tab
-      Then user validates timeline message "ChangeManager1_Automation - The Actual Start Date Time has been updated to : 2019-11-14 00:00:00 UTC"
-      Then user validates timeline message "ChangeManager1_Automation - The Actual End Date Time has been updated to : 2019-11-15 00:00:00 UTC"
+      Then user validates timeline message Actual Start Date "ChangeManager1_Automation - The Actual Start Date Time has been updated to : 2019-11-14 00:00:00 UTC"
+      Then user validates timeline message Actual End Date "ChangeManager1_Automation - The Actual End Date Time has been updated to : 2019-11-15 00:00:00 UTC"
       When user clicks on "Interested Parties" tab
       And user clicks on add button under interested parties
       And user selects type as "Additional Access" under interested parties

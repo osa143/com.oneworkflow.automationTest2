@@ -481,13 +481,6 @@
       <workItem from="1574427236818" duration="11547000" />
       <workItem from="1574671748028" duration="3063000" />
     </task>
-    <task id="LOCAL-00088" summary="added steps for bulk CI loading change and trouble">
-      <created>1566291436982</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1566291436984</updated>
-    </task>
     <task id="LOCAL-00089" summary="added steps for bulk CI loading change and trouble">
       <created>1566294622363</created>
       <option name="number" value="00089" />
@@ -824,7 +817,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574681794670</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="API E2E Normal change implementation updated">
+      <created>1574686369458</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1574686369458</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TodoView">

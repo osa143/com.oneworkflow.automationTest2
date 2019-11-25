@@ -765,6 +765,8 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("change should also be reflected in the timeline as {string} for change ticket in row {int}")
     public void changeShouldAlsoBeReflectedInTheTimelineAsForChangeTicketInRow(String message, int rowNum) {
+
+
         String[] str = message.split(";");
         str[0] += " " + CommonUtils.pbTicket;
 
@@ -797,11 +799,30 @@ public class OWF_ChangeRecordPageSteps {
         Assert.assertEquals(changeRecordPage.validatesTimelineMessageStartDate(),arg0);
     }
 
-    @Then("user validates timeline message Actual Start Date {string}")
+
+
+
+    @Then("user validates timeline message Actual End Date {string}")
     public void userValidatesTimelineMessageActualEndDate(String arg0) {
-        Assert.assertEquals(changeRecordPage.validatesTimelineMessageStartDate(),arg0);
+        Assert.assertEquals(changeRecordPage.validatesTimelineMessageEndDate(),arg0);
+    }
+
+    @And("user clicks first ticket listed under select target request")
+    public void userClicksFirstTicketListedUnderSelectTargetRequest() {
+        changeRecordPage.clickTableElement_SelectTargetRequest("Ticket ID",1);
+    }
+
+    @And("user validates linked tickets availability")
+    public void userValidatesLinkedTicketsAvailability() {
+        Assert.assertTrue(changeRecordPage.validateLinkedItemsAvailability(),"Linked items are not available");
     }
 
 
+
+
+//    @And("user selects first entry from the table under add interested party")
+//    public void userSelectsFirstEntryFromTheTableUnderAddInterestedParty() {
+//        changeRecordPage.clickTableElement_addInterestedParty(String divId, String columnName, int rowNum);
+//    }
 }
 

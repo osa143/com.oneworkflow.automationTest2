@@ -174,7 +174,7 @@
       And user clicks on radio button user
       Then user validates "Tohall_Copy" is listed as an interested party
       Then user clicks on search under add interested party
-      And user selects first entry
+      And user selects first entry from the table under add interested party
       Then user selects access radio button as read and write
       And user selects auto notify radio button as yes
       Then user clicks on save button under interested parties frame
@@ -215,10 +215,10 @@
       And user selects Type as "RAN"
       And user selects Item as "SYNC"
       And user clicks on the search button
-      And user highlights first ticket listed
+      And user clicks first ticket listed under select target request
       And user clicks accept button
       Then user switches to window 1
-      And user validates known error ticket is present
+      Then user validates linked tickets availability
       When user selects target application first dropdown as "OS3 - Operations"
       And user selects target application second dropdown as "Caused by"
       Then user clicks on create button under linked items
@@ -227,7 +227,7 @@
       And user clicks save button
       Then user switches to window 1
       Then user clicks refresh button under linked items
-      And user validates op ticket is present
+      Then user validates linked tickets availability
       When user selects target application first dropdown as "OS3 - Problem"
       Then user selects target application second dropdown as "Caused"
       And user clicks on create button under linked items
@@ -238,7 +238,7 @@
       Then user clicks save button
       And user switches to window 1
       Then user clicks refresh button under linked items
-      And user validates problem ticket is present
+      Then user validates linked tickets availability
       When user selects target application first dropdown as "OS3 - Work Order"
       And user selects target application second dropdown as "Fixed"
       Then user clicks on create button under linked items
@@ -247,7 +247,7 @@
       And user clicks save button
       Then user switches to window 0
       Then user clicks refresh button under linked items
-      And user validates work order ticket is present
+      Then user validates linked tickets availability
       And user clicks on work order tab
       Then user clicks on create from ticket
       And user switches to window 2
@@ -255,7 +255,7 @@
       And user clicks save button
       And user switches to window 0
       Then user clicks refresh button under linked items
-      And user selects ticket in row 1
+      And user selects ticket from the linked table
       Then user clicks on open button
       And user validates ticket opens
       And user switches to window 1
@@ -278,8 +278,8 @@
       Then error message should display as "Required field (without a default) not specified : Completed Code (ARERR 9424)"
       And user clicks "Schedule" tab
       Then user selects completed code as "Successful"
-      Then user enters actual end as current and time
-      And user clicks save button
+      Then user enters actual finish as current date
+          And user clicks save button
       Then user validates ticket status as "Completed"
 
 

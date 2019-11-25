@@ -93,7 +93,7 @@ Feature: E2E Validation of API created trouble ticket
     And user clicks on radio button user
     Then user validates "Tohall_Copy" is listed as an interested party
     Then user clicks on search under add interested party
-    And user selects first entry
+    And user selects first entry from the table under add interested party
     Then user selects access radio button as read and write
     And user selects auto notify radio button as yes
     Then user clicks on save button under interested parties frame
@@ -102,7 +102,7 @@ Feature: E2E Validation of API created trouble ticket
     And user clicks on "Timeline" tab
     Then change should also be reflected in the timeline as "The User Tomas Hallén has been added as interested parties."
     When user clicks on linked items tab
-    Then user clicks on interested parties tab
+    And user clicks on add button under interested parties
     Then user enters email address field as "Test1234@Test1234xxx.com"
     And user clicks on add email button
     Then user validates "Test1234@Test1234xxx.com" is listed as an interested party
@@ -115,7 +115,7 @@ Feature: E2E Validation of API created trouble ticket
     Then user selects request type as "Standard Change"
     And user selects template as "TEST TEMPLATE [UAT] - Standard Change"
     Then user enters "test" in the change builder field
-    And user enters request start time "24" hours ahead of current date
+    Then user enters request start time 24 hours ahead of current date
     Then user enters request end time 48 hours ahead of current date
     And user selects estimated impact as "No Impact"
     And user enters impact duration as "30" minutes
@@ -132,10 +132,10 @@ Feature: E2E Validation of API created trouble ticket
     Then user selects Type as "RAN"
     And user selects Item as "SYNC"
     Then user clicks on the search button
-    And user highlights first entry
+    And user clicks first ticket listed under select target request
     Then user clicks accept button
     Then user switches to window 1
-    And user clicks refresh button on linked items tab
+    Then user clicks refresh button under linked items
     Then user validates known error linked ticket availability
     When user selects target application first dropdown as "OS3 - Operations"
     And user selects target application second dropdown as "Caused by"
@@ -144,7 +144,7 @@ Feature: E2E Validation of API created trouble ticket
     Then user selects request type as "Customer"
     And user clicks save button
     Then user switches to window 1
-    And user clicks refresh button on linked items tab
+    Then user clicks refresh button under linked items
     Then trouble ticket should be in list of linked items
     When user selects target application first dropdown as "OS3 - Problem"
     And user selects target application second dropdown as "Caused"
@@ -190,7 +190,7 @@ Feature: E2E Validation of API created trouble ticket
     Then user changes status to "Completed"
     Then user selects actual impact as "Loss of Service"
     And user selects completed code as "Successful"
-    Then user enters actual end as current date and time
+    Then user enters actual finish as current date
     Then user clicks save button
     And user clicks on yes on warning window
     Then user changes status to "Closed"

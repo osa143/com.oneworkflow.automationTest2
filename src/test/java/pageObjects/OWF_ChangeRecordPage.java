@@ -6,7 +6,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import java.security.SecureRandom;
 import java.util.List;
 
 public class OWF_ChangeRecordPage extends BaseRecordPage {
@@ -99,6 +98,9 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         return getTextByID(txtVER_OF_FUNCTIONALITY_ID);
 
     }
+    public String getProjectCode(){
+        return getTextByID(txt_PROJECT_CODE);
+    }
 
     public String getValidatesVendorName() {
         return getTextByID(txt_VENDOR_NAME);
@@ -128,10 +130,10 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     public String getReason() {
         return getTextByID(txt_REASON);
     }
-
-    public String getProjectCode() {
-        return getTextByID(txt_PROJECT_CODE);
+    public String getRiskDescription(){
+        return getTextByID(txtRISK_DESCRIPTION_ID);
     }
+
 
     public String getChangeBuilder() {
         return getTextByID(txt_CHANGE_BUILDER);
@@ -400,4 +402,6 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
 
 
     }
+
+
 }

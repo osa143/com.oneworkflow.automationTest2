@@ -80,7 +80,6 @@
       When user clicks on sweden checkbox under affected BU's
       And user clicks save button
       Then user validates Sweden is selected as Affected BU
-
       When user enters description as ""
       And user clicks save button
       Then error message should display as "Required field (without a default) not specified : Description (ARERR 9424)"
@@ -110,7 +109,7 @@
       And user selects Category as "Core"
       And user selects Type as "Other"
       And user selects Item as "BR"
-      Then user selects technology as "Broadband"
+      And user selects "Technology" as "Broadband"
       Then user clicks save button
       When user clicks on Diagnosis tab
       Then user clicks on CI search button
@@ -125,22 +124,23 @@
       And user switches to window 1
       And CI should be listed and displayed under the Diagnosis tab
       When user clicks on timeline tab
-      Then change should also be reflected in the timeline as "Impact record created for "DK_BSC_ALG3B"
+      Then change should also be reflected in the timeline as "Impact record created for DK_BSC_ALG3B" for Normal Change ticket in row 1
+
       When user clicks on Diagnosis tab
       Then user right clicks on CI "DK_BSC_ALG3B" and selects "Detach Selected"
       Then CI should be detached from ticket
       When user clicks on risk tab
       And user answers all risk questions as below
-      And user selects urgent answer as "A. No"
-      And user selects urgent answer as "B. Impact to other systems/technologies are unclear!"
-      And user selects urgent answer as "Tested successfully, this is a pilot"
-      And user selects urgent answer as "D. "Only" Consumer customers affected."
-      And user selects urgent answer as "A. Yes"
-      And user selects urgent answer as "A. Yes"
-      And user selects urgent answer as "A. Yes (outcome of the Change can be instantly verified)"
-      And user selects urgent answer as "B. No"
-      And user selects urgent answer as "A. No"
-      And user selects urgent last answer as "A. No"
+      And user selects answer as "A. No"
+      And user selects answer as "B. Impact to other systems/technologies are unclear!"
+      And user selects answer as "A. Tested successfully, this is a pilot"
+      And user selects answer as "A. Only Consumer customers affected."
+      And user selects answer as "A. Yes"
+      And user selects answer as "A. Yes"
+      And user selects answer as "A. Yes (outcome of the Change can be instantly verified)"
+      And user selects answer as "B. No"
+      And user selects answer as "A. No"
+      And user selects answer as "A. No"
       When user clicks on "Schedule" tab
       Then user enters as "" in service and customer impact
       And user clicks save button
@@ -154,12 +154,13 @@
       And user enters impact duration as "60" seconds
       And user clicks save button
       Then error message should display as "Value does not fall within the limits specified for the field : Range is 0-59 : Secs* (ARERR 9272)"
-      When user enters impact duration as "24" hours
+      And user enters impact duration as "24" hours
       And user clicks save button
       Then error message should display as "Value does not fall within the limits specified for the field : Range is 0-23 : Hrs* (ARERR 9272)"
-      Then user enters impact duration as "30" minutes
+      And user enters impact duration as "30" minutes
       And user clicks save button
       Then form should be saved
+
       When user enters actual start as "14/11/2019 00:00:00"
       And user enters actual end as "15/11/2019 00:00:00"
       Then user selects actual impact as "No Impact"
@@ -172,8 +173,8 @@
       When user clicks on "Interested Parties" tab
       And user clicks on add button under interested parties
       And user selects type as "Additional Access" under interested parties
-      Then user selects search for radio button as "User"
-      And user enters "Tohall_Copy" under interested parties
+      And user clicks on radio button user
+      Then user validates "Tohall_Copy" is listed as an interested party
       Then user clicks on search under add interested party
       And user selects first entry
       Then user selects access radio button as read and write
@@ -182,7 +183,7 @@
       And user switches to window 1
       And user clicks on "Timeline" tab
       Then change should also be reflected in the timeline as "The User Tomas Hallén has been added as interested parties."
-      When user clicked on the linked items tab
+      When user clicks on linked items tab
       Then user selects target application first dropdown as "OS3 - Change"
       And user selects target application second dropdown as "Is related to"
       Then user clicks on create button under linked items
@@ -205,8 +206,8 @@
       Then user enters impact duration as "40" minutes
       And user clicks save button
       And user switches to window 1
-      Then user clicks refresh button on linked items tab
-      And user validates change record ticket present
+      Then user clicks refresh button under linked items
+      Then user validates 1 linked ticket availability
       When user selects target application first dropdown as "OS3 - Known Error"
       And user selects target application second dropdown as "Fixed"
       Then user clicks on link button under linked items tab
@@ -227,7 +228,7 @@
       Then user selects request type as "Customer"
       And user clicks save button
       Then user switches to window 1
-      And user clicks refresh button on linked items tab
+      Then user clicks refresh button under linked items
       And user validates op ticket is present
       When user selects target application first dropdown as "OS3 - Problem"
       Then user selects target application second dropdown as "Caused"
@@ -238,7 +239,7 @@
       And user selects urgency as "Low"
       Then user clicks save button
       And user switches to window 1
-      Then user clicks refresh button on linked items tsb
+      Then user clicks refresh button under linked items
       And user validates problem ticket is present
       When user selects target application first dropdown as "OS3 - Work Order"
       And user selects target application second dropdown as "Fixed"
@@ -247,7 +248,7 @@
       Then user selects request type as "Analysis"
       And user clicks save button
       Then user switches to window 0
-      And user clicks refresh button on linked items tab
+      Then user clicks refresh button under linked items
       And user validates work order ticket is present
       And user clicks on work order tab
       Then user clicks on create from ticket
@@ -255,7 +256,7 @@
       Then user selects request type as "Analysis"
       And user clicks save button
       And user switches to window 0
-      Then user clicks refresh button under work order
+      Then user clicks refresh button under linked items
       And user selects ticket in row 1
       Then user clicks on open button
       And user validates ticket opens
@@ -264,7 +265,7 @@
       And user changes status to "Approval Requested"
       And user clicks "Approval" tab
       Then user clicks on view button
-      And user clicks on approve button
+      And user clicks approve button
       And user clicks save button
       Then user validates ticket status as "Approved"
       Then user changes status to "Schedule Requested"
@@ -279,7 +280,7 @@
       Then error message should display as "Required field (without a default) not specified : Completed Code (ARERR 9424)"
       And user clicks "Schedule" tab
       Then user selects completed code as "Successful"
-      And user enters actual end as current and time
+      Then user enters actual end as current and time
       And user clicks save button
       Then user validates ticket status as "Completed"
 

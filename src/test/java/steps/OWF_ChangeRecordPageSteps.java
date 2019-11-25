@@ -725,5 +725,38 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesVendorNameAs(String arg0) {
         Assert.assertEquals(changeRecordPage.getValidatesVendorName(),arg0);
     }
+
+    @When("user enters project code as {string}")
+    public void userEntersProjectCodeAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getProjectCode(),arg0);
+    }
+
+    @And("user validates risk description* as {string}")
+    public void userValidatesRiskDescriptionAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getRiskDescription(),arg0);
+    }
+
+    @When("user enters actual start as {string}")
+    public void userEntersActualStartAs(String arg0) {
+        changeRecordPage.enterActualStartDate(arg0);
+
+
+    }
+
+
+
+    @And("user enters impact duration as {string} seconds")
+    public void userEntersImpactDurationAsSeconds(String impactDuration) {
+        changeRecordPage.enterImpactDurationSecs(impactDuration);
+    }
+
+    @And("user enters impact duration as {string} hours")
+    public void userEntersImpactDurationAsHours(String impactDuration) {
+        changeRecordPage.enterImpactDurationHrs(impactDuration);
+    }
+
+    @And("user enters actual end as current and time")
+    public void userEntersActualEndAsCurrentAndTime() {
+    }
 }
 

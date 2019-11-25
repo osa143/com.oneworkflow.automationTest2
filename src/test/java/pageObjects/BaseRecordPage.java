@@ -41,6 +41,7 @@ public class BaseRecordPage extends BasePage {
     public static final String txtDECISION_GO_NO_GO_ID = "arid_WIN_0_777504604";
     public static final String txtSERVICE_AND_CUSTOMER_IMPACT = "arid_WIN_0_730030000";
     public static final String txtANALYSIS_TEAM_MEMBER1_ID = "arid_WIN_0_600001015";
+    public static final String txtACTUAL_START_ID = "arid_WIN_0_777021162";
 
 
     public static final String btnYES = "WIN_4_700027904";
@@ -786,6 +787,11 @@ public class BaseRecordPage extends BasePage {
    public void enterActualFinishDate(){
         findElement(By.id(txtACTUAL_FINISH_ID)).sendKeys(Keys.ENTER);
    }
+    public void enterActualStartDate(String arg0){
+        findElement(By.id(txtACTUAL_START_ID)).sendKeys(Keys.ENTER);
+    }
+
+
    public void enterDecisionGoNoGoDate(){
         findElement(By.id(txtDECISION_GO_NO_GO_ID)).sendKeys(Keys.ENTER);
    }

@@ -676,7 +676,32 @@ public class OWF_ChangeRecordPageSteps {
     @And("user validates test plan as {string}")
     public void userValidatesTestPlanAs(String arg0) {
 
-        Assert.assertEquals(changeRecordPage.getTestPlan());
+        Assert.assertEquals(changeRecordPage.getTestPlan(), arg0);
+    }
+
+    @Then("user validates implementation as {string}")
+    public void userValidatesImplementationAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getImplementation(),arg0);
+    }
+
+    @And("user validates rollback as {string}")
+    public void userValidatesRollbackAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getRollback(),arg0);
+    }
+
+    @And("user validates communication plan as {string}")
+    public void userValidatesCommunicationPlanAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getCommunicationPlan(),arg0);
+    }
+
+    @And("user validates ver of functionality* as {string}")
+    public void userValidatesVerOfFunctionalityAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getVerOfFunctionality(),arg0);
+    }
+
+    @Then("user validates vendor name+ as {string}")
+    public void userValidatesVendorNameAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getValidatesVendorName(),arg0);
     }
 }
 

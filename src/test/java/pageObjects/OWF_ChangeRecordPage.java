@@ -68,6 +68,8 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_X_DEGREE = "arid_WIN_0_700024010";
     private static final String txt_GET_RE_ASSIGNMENT_COUNT = "arid_WIN_0_777031450";
     private static final String txt_TEST_PLAN = "arid_WIN_0_700007008";
+    private static final String txt_ROLLBACK = "arid_WIN_0_700007009";
+    private static final String txt_VENDOR_NAME = "arid_WIN_0_705001291";
 
 
 
@@ -89,9 +91,27 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         System.out.println(text);
         return text;
     }
+    public String getImplementation(){
+        return getTextByID(txtIMPLEMENTATION_ID);
+    }
+
+    public String getVerOfFunctionality(){
+        return getTextByID(txtVER_OF_FUNCTIONALITY_ID);
+
+    }
+    public String getValidatesVendorName(){
+        return getTextByID(txt_VENDOR_NAME);
+    }
+    public String getRollback(){
+        return getTextByID(txt_ROLLBACK);
+    }
 
     public String getTestPlan(){
         return getTextByID(txt_TEST_PLAN);
+    }
+    public String getCommunicationPlan(){
+        return getTextByID(txtCOMMUNICATION_PLAN_ID);
+
     }
 
     public String getRequestCategory(){

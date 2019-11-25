@@ -74,9 +74,9 @@
       And user clicks on private radio button
       Then user clicks on add button on timeline
       And change should also be reflected in the timeline as "Test Update - Private" for trouble ticket in row 1
-      When user unticks all affected BU's
+      When user unticks all affected BU
       And user clicks save button
-      Then user validates all BU's are unticked
+      Then user validates all BU are unticked
       When user clicks on sweden checkbox under affected BU's
       And user clicks save button
       Then user validates Sweden is selected as Affected BU

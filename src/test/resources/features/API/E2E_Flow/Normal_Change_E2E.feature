@@ -13,7 +13,7 @@
       Then user validates service provider as "Telia Company"
       And user validates source field as "One Workflow"
       Then user validates source id as "123456789"
-      And user validates all affected BU's are selected
+      And user validates finland as affected BU
       Then user validates request type as "Normal Change"
       And user validates change initiator as "apitester1"
       And user validates template field as "TEST TEMPLATE [UAT] - Normal Change"

@@ -28,7 +28,7 @@ Feature: E2E Validation of API created trouble ticket
     When user enters event start time as 5 mins past
     And user clicks on save button
     Then change should also be reflected in the timeline as "" for trouble ticket in row 1
-    When user unticks all affected BU's
+    When user unticks all affected BU
     And user clicks on sweden checkbox under affected BU's
     Then change should also be reflected in the timeline as "" for trouble ticket in row 1
     When user clicks on attachments under sections
@@ -72,7 +72,7 @@ Feature: E2E Validation of API created trouble ticket
     #think the below step needs implementing
     And user validates location details are updated
     When user clicks on "Interested Parties" tab
-    And user enters "Change_Automation_1" under interested parties
+    And user enters "Change_Automation_1" in login name plus field
     And user clicks on add email button
     Then user validates "Change_Automation_1" is listed as an interested party
     When user clicks on timeline tab

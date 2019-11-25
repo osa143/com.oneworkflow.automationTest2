@@ -2,7 +2,7 @@ package cucumberHooks;
 
 import com.aventstack.extentreports.ExtentTest;
 import driver.factory.DriverFactory;
-import extentreports.cucumber.adapter.ExtentCucumberAdapter;
+import extentreports_CucumberAdapter.cucumber.adapter.ExtentCucumberAdapter;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import pageObjects.BasePage;

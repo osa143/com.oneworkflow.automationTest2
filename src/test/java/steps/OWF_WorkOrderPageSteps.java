@@ -3,6 +3,7 @@ package steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.OWF_WorkOrderPage;
 import utils.CommonUtils;
@@ -733,6 +734,11 @@ public class OWF_WorkOrderPageSteps {
     public void userValidatesEmailNotificationIsSent() {
       workOrderPage.clickOnSent();
       Assert.assertEquals(workOrderPage.getMethodText(), "Email HTML");
+    }
+
+    @And("user highlights ticket under work order")
+    public void userHighlightsTicketUnderWorkOrder() {
+        workOrderPage.clickElement(By.xpath("//*[@id='T777504000']/tbody/tr[2]/td[1]"));
     }
 }
 

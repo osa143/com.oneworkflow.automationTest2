@@ -10,7 +10,7 @@
       And user enters ticket id as ""
       Then user should see change record ticket
       And user validates ticket status as "New"
-      And user validates other status options available as "Analysis;Pending;Withdrawn;(Clear)"
+      And multiple statuses "Analysis;Pending;Withdrawn;(Clear)" should be available in "Status" dropdown
       Then user validates availability of tabs "Timeline:Diagnosis:Risk:Schedule:Interested Parties:Approval:Notifications:Linked Items:Work Orders:Service Level:Related Project:Service Info:Telenor" on change record page
       When user clicks on owner under sections
       And user validates owner profile as "Change Initiator-Internal"
@@ -55,7 +55,7 @@
       Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
       When user clicks on Send button and closes warning message
       Then user validates ticket status as "Assigned"
-      And user validates other status options available as "Analysis;Pending;Withdrawn;(Clear)"
+      And multiple statuses "Analysis;Pending;Withdrawn;(Clear)" should be available in "Status" dropdown
       And user clicks on assignment under sections
       Then user should see assigned profile as "DC CS Core (Voice)"
       Then user validates owner profile as "Change Manager"
@@ -92,7 +92,7 @@
       And user clicks Search on ticket search
       When user clicks on Ack button
       Then user validates ticket status as "Analysis"
-      And user validates other "status" options available as Analysis, Pending, Withdrawn and (Clear)
+      And multiple statuses "Analysis;Pending;Withdrawn;(Clear)" should be available in "Status" dropdown
       And user validates last ack by field has data present
       Then user enters "DC CS Core (Voice)_auto" in assignee
       And user clicks on save button
@@ -131,7 +131,7 @@
       #And change should also be reflected in the timeline as "Processing of the following notification event(s) started: Approvals Notification messages will be displayed on the Notifications tab."
       #And change should also be reflected in the timeline as "Request Status has changed from Analysis to Approval Requested."
       Then user validates ticket status as "Approval Requested"
-      And user validates other status options available as "Analysis;Approval Requested;Withdrawn;(Clear)"
+      And multiple statuses "Analysis;Approval Requested;Withdrawn;(Clear)" should be available in "Status" dropdown
       And user validates availability of tabs "Approval"
       And user waits 2 secs
       When user logsOut from One workflow
@@ -184,7 +184,7 @@
       Then user switches to window 2
       And user clicks on ticket refresh button
       Then user validates ticket status as "Approved"
-      And user validates other status options available as "Analysis;Pending;Schedule Requested;Withdrawn;(Clear)"
+      And multiple statuses "Analysis;Pending;Schedule Requested;Withdrawn;(Clear)" should be available in "Status" dropdown
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab
       Then user should see "Approved Change-Builder" email update
@@ -193,7 +193,7 @@
       And user clicks on save button
       Then change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approved to Schedule Requested."
       And user validates ticket status as "Scheduled"
-      And user validates other status options available as "Pending;Approved;Scheduled;Implementation;Withdrawn;(Clear)"
+      And multiple statuses "Pending;Approved;Scheduled;Implementation;Withdrawn;(Clear)" should be available in "Status" dropdown
       When user changes status to "Pending"
       And user enters on hold to date 2 minutes ahead of current time
       Then user enters reason field as "Waiting for Customer Info"
@@ -228,7 +228,7 @@
       Then user enters ticket previously created
       When user changes status to "Implementation"
       And user clicks on save button
-      And user validates other status options available as "Implementation;Completed;(Clear)"
+      And multiple statuses "Implementation;Completed;(Clear)" should be available in "Status" dropdown
       And user validates "Assigned" is not a valid status at this stage
       And user validates "Pending" is not a valid status at this stage
   #Then change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Start has changed from  UTC to 2019-07-26 13:09:51 UTC. Request Status has changed from Scheduled to Implementation. "
@@ -242,7 +242,7 @@
       And user clicks on add button on timeline
       When user changes status to "Completed"
       And user clicks on save button
-      Then user validates other status options available as "Pending;Completed;Close;(Clear)"
+      And multiple statuses "Pending;Completed;Close;(Clear)" should be available in "Status" dropdown
       Then user clicks on "Schedule" tab
       Then user validates actual end time is updated
       And error message should display as "	Required field (without a default) not specified : Actual Impact (ARERR 9424)"
@@ -278,4 +278,4 @@
       And user selects closure code as "Test Ticket"
       Then user clicks on save button
       And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Completed to Closed."
-      Then user validates status cant be changed
+      Then user verifies status is read only

@@ -82,6 +82,123 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String chkbxSWEDEN = "WIN_0_rc0id600002001";
     private static final String txtTO_DATE = "arid_WIN_0_777031004";
     private static final String table_ADD_INTERESTED_PARTY= "T700027964";
+    private static final String txt_IMPACT= "arid_WIN_0_705002082";
+    private static final String txt_URGENCY= "arid_WIN_0_705002083";
+    private static final String txt_ROOTCAUSECODE= "arid_WIN_0_777031437";
+    private static final String rbtn_PRIVATE= "WIN_0_rc1id777021180";
+    private static final String btn_REFRESH= "//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
+    private static final String txt_SERVICEAFFECTED= "arid_WIN_0_600001014";
+    private static final String txt_ESTIMATED_READY= "arid_WIN_0_777504503";
+    private static final String txt_MODEL= "arid_WIN_0_240001002";
+    private static final String txt_LOCATION_ID_PLUS= "arid_WIN_0_777031006";
+    private static final String txt_LOCATION_NAME_PLUS= "arid_WIN_0_777031430";
+    private static final String txt_REGION_ID= "arid_WIN_0_700009452";
+    private static final String txt_REGION_NAME="arid_WIN_0_700009638";
+    private static final String txt_LATITUDE= "arid_WIN_0_700024008";
+    private static final String txt_LONGITUDE= "arid_WIN_0_700024009";
+    private static final String txt_X_DEGREE= "arid_WIN_0_700024010";
+    private static final String txt_Y_DEGREE= "arid_WIN_0_700024011";
+    private static final String txt_LOCATION_DETAILS_DEGREE= "arid_WIN_0_700024007";
+    private static final String txt_REASSIGNMENT_COUNT= "arid_WIN_0_777031450";
+    private static final String txt_VENDOR_NAME= "arid_WIN_0_705001291";
+    private static final String txt_ONSITE_ENGINEER= "arid_WIN_0_700027016";
+    private static final String txt_ACCOUNT_NUMBER= "arid_WIN_0_700310030";
+    private static final String txt_TELEPHONE_NUMBER= "arid_WIN_0_700310032";
+    private static final String txt_HOURS_OF_OPERATION= "arid_WIN_0_777777865";
+    private static final String txt_VENDOR_REF= "arid_WIN_0_705001290";
+    private static final String txt_ONSITE_CONTACT= "arid_WIN_0_705001292";
+    private static final String txt_TRAVEL_TIME= "arid_WIN_0_705001293";
+
+
+    public String getOnsiteEngineer(){
+        return getTextByID(txt_ONSITE_ENGINEER);
+    }
+    public String getAccountNumber(){
+        return getTextByID(txt_ACCOUNT_NUMBER);
+    }
+    public String getTelephoneNumber(){
+        return getTextByID(txt_TELEPHONE_NUMBER);
+    }
+    public String getHoursOfOperations(){
+        return getTextByID(txt_HOURS_OF_OPERATION);
+    }
+    public String getVendorRef(){
+        return getTextByID(txt_VENDOR_REF);
+    }
+    public String getOnsiteContact(){
+        return getTextByID(txt_ONSITE_CONTACT);
+    }
+    public String getTravelTime(){
+        return getTextByID(txt_TRAVEL_TIME);
+    }
+    public String getVendorName(){
+        return getTextByID(txt_VENDOR_NAME);
+    }
+    public String getReassignmentCount(){
+        return getTextByID(txt_REASSIGNMENT_COUNT);
+    }
+    public String get_X_Degree(){
+        return getTextByID(txt_X_DEGREE);
+    }
+    public String get_Y_Degree(){
+        return getTextByID(txt_Y_DEGREE);
+    }
+    public String getLocationDetails(){
+        return getTextByID(txt_LOCATION_DETAILS_DEGREE);
+    }
+
+
+    public String getLongitude(){
+        return getTextByID(txt_LONGITUDE);
+    }
+    public String getLatitude(){
+        return getTextByID(txt_LATITUDE);
+    }
+    public String getRegionName(){
+        return getTextByID(txt_REGION_NAME);
+    }
+    public String getRegionId(){
+        return getTextByID(txt_REGION_ID);
+    }
+    public String getLocationNamePlus(){
+        return getTextByID(txt_LOCATION_NAME_PLUS);
+    }
+    public String getLocationIdPlus(){
+        return getTextByID(txt_LOCATION_ID_PLUS);
+    }
+
+    public String getModel(){
+        return getTextByID(txt_MODEL);
+    }
+
+    public String getWorkaround(){
+        return getTextByID(txtWORK_AROUND);
+    }
+
+    public String getEstimatedReady(){
+        return getTextByID(txt_ESTIMATED_READY);
+    }
+    public String getServiceEffectedText(){
+        return getTextByID(txt_SERVICEAFFECTED);
+    }
+
+    public void clickRefresh(){
+        clickElement(By.xpath(btn_REFRESH));
+    }
+
+  public void clickPrivateRadioButton(){
+      clickElement(By.id(rbtn_PRIVATE));
+  }
+    public String getRootCauseCode(){
+        return getTextByID(txt_ROOTCAUSECODE);
+    }
+    public String getUrgency(){
+        return getTextByID(txt_URGENCY);
+    }
+
+    public String getImpact(){
+        return getTextByID(txt_IMPACT);
+    }
 
 
     public boolean verifyDescriptionIsReadOnly(){

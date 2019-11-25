@@ -1,12 +1,23 @@
 package cucumberHooks;
 
+import com.aventstack.extentreports.ExtentTest;
+import driver.factory.DriverFactory;
+import extentreports_CucumberAdapter.cucumber.adapter.ExtentCucumberAdapter;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import pageObjects.BasePage;
+import pageObjects.OWF_AgentConsolePage;
+import utils.CommonUtils;
+import utils.ReporterUtils;
 
+import javax.swing.plaf.basic.BasicEditorPaneUI;
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
-//import extentreports_CucumberAdapter.cucumber.adapter.ExtentCucumberAdapter;
+import static java.nio.file.Files.readAllBytes;
 
 public class Hooks {
 

@@ -136,7 +136,7 @@ Feature: E2E Validation of API created trouble ticket
     Then user clicks accept button
     Then user switches to window 1
     Then user clicks refresh button under linked items
-    Then user validates known error linked ticket availability
+    Then user validates linked tickets availability
     When user selects target application first dropdown as "OS3 - Operations"
     And user selects target application second dropdown as "Caused by"
     Then user clicks on create button under linked items
@@ -179,7 +179,7 @@ Feature: E2E Validation of API created trouble ticket
     Then user clicks save button
     Then user switches to window 1
     And user validates work order ticket is present
-    Then user highlights firsty entry
+    Then user highlights first entry
     And user clicks on open button
     Then user switches to window 2
     And user changes status to "Withdrawn"

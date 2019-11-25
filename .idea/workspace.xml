@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumberHooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumberHooks/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Standard_Change_E2E.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Standard_Change_E2E.feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -474,13 +475,7 @@
       <workItem from="1574350855534" duration="1234000" />
       <workItem from="1574427236818" duration="11547000" />
       <workItem from="1574671748028" duration="3063000" />
-    </task>
-    <task id="LOCAL-00090" summary="added steps for bulk CI loading change and trouble">
-      <created>1566463230102</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1566463230102</updated>
+      <workItem from="1574699222215" duration="317000" />
     </task>
     <task id="LOCAL-00091" summary="added steps for bulk CI loading change and trouble">
       <created>1566463295540</created>
@@ -818,7 +813,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574696783867</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="API E2E Standard/Normal Change implementation updated">
+      <created>1574699318289</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1574699318289</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="TodoView">

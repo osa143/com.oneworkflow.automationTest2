@@ -137,11 +137,12 @@ Feature: E2E flow for ticket created by API
     Then user changes status to "Approval Requested"
     And user clicks on save button
     When user clicks on "Approval" tab
+    Then user clicks on approval tab
     And user clicks on request thats pending approval
     And user clicks on view button
     Then user switches to frame
-    And user enters "Change can be approved right away" in comments field
-    And user clicks on approve button
+    And user enters "Change can be approved right away" in approval request comments field
+    And user clicks approve button
     Then user switches to window 2
     And user clicks on ticket refresh button
     Then user validates ticket status as "Approved"
@@ -201,6 +202,7 @@ Feature: E2E flow for ticket created by API
     And user right clicks on primary CI and selects "Impact:Clear"
     And user clicks on yes on CI warning window
     Then user validates CI "Impact Status" is "Inactive"
+    #TODO
     And user validates ci impact from time is updated
     And user validates ci impact to time is updated
     Then user clicks on save button

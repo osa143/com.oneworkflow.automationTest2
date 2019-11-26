@@ -823,5 +823,15 @@ public class OWF_ChangeRecordPageSteps {
     public void userSelectsFirstEntryFromTheTableUnderAddInterestedParty() {
         changeRecordPage.clickTableElement_clickTableElement_addInterestedParty("Organization", 1);
     }
+
+    @And("user clicks on request thats pending approval")
+    public void userClicksOnRequestThatsPendingApproval() {
+        changeRecordPage.clickTableElementRequestPendingApproval("Status",1);
+    }
+
+    @And("user enters {string} in approval request comments field")
+    public void userEntersInApprovalRequestCommentsField(String arg0) {
+        changeRecordPage.enterApprovalRequestComment(arg0);
+    }
 }
 

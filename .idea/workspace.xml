@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Change.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Change.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Problem.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Problem.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Trouble.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Trouble.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/WO.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/WO.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedChange.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedChange.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedProblem.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedProblem.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedTrouble.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedTrouble.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedWO.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedWO.feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -477,14 +482,7 @@
       <workItem from="1574427236818" duration="11547000" />
       <workItem from="1574671748028" duration="3063000" />
       <workItem from="1574699222215" duration="942000" />
-      <workItem from="1574759375491" duration="14725000" />
-    </task>
-    <task id="LOCAL-00096" summary="updated steps for CI search window">
-      <created>1567068953315</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1567068953317</updated>
+      <workItem from="1574759375491" duration="15682000" />
     </task>
     <task id="LOCAL-00097" summary="updated steps for incident tes cases">
       <created>1567175111315</created>
@@ -822,7 +820,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574778907375</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="API E2E WO Modify Status">
+      <created>1574781315346</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1574781315346</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TodoView">
@@ -883,7 +888,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Modified attatchments and description" />
     <MESSAGE value="CRM Feature files" />
     <MESSAGE value="C2B update Feature files" />
     <MESSAGE value="Plaza new steps" />
@@ -908,7 +912,8 @@
     <MESSAGE value="API E2E Standard/Normal Change implementation updated" />
     <MESSAGE value="API E2E Standardimplementation updated" />
     <MESSAGE value="API E2E CHange Ticket Modify Status" />
-    <option name="LAST_COMMIT_MESSAGE" value="API E2E CHange Ticket Modify Status" />
+    <MESSAGE value="API E2E WO Modify Status" />
+    <option name="LAST_COMMIT_MESSAGE" value="API E2E WO Modify Status" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -10,5 +10,5 @@
       Then user switches to window 1
       Then user validates "Status" is readonly
       When user tries to change the status to "Closed"
-      Then user shouldn't be able to change the status
+      Then user verifies status is read only
       Then user validates ticket status as "New"

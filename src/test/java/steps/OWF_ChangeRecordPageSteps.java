@@ -819,10 +819,9 @@ public class OWF_ChangeRecordPageSteps {
 
 
 
-
-//    @And("user selects first entry from the table under add interested party")
-//    public void userSelectsFirstEntryFromTheTableUnderAddInterestedParty() {
-//        changeRecordPage.clickTableElement_addInterestedParty(String divId, String columnName, int rowNum);
-//    }
+    @And("user selects first entry from the table under add interested party")
+    public void userSelectsFirstEntryFromTheTableUnderAddInterestedParty() {
+        changeRecordPage.clickTableElement_clickTableElement_addInterestedParty("Organization", 1);
+    }
 }
 

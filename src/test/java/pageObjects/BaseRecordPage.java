@@ -133,6 +133,7 @@ public class BaseRecordPage extends BasePage {
     private static final String table_ATTACHMENT_EXTERNAL= "T600002204";
     private static final String txt_ACTUAL_END_ID = "arid_WIN_0_777021165";
     private static final String table_SELECT_TARGET_REQUEST = "T700506101";
+    private static final String table_ADD_INTERESTED_PARTY = "T700027964";
 
 
 
@@ -223,6 +224,10 @@ public class BaseRecordPage extends BasePage {
     public void clickTableElement_SelectTargetRequest(String colName, int row){
         List<WebElement> element =getTableRows(By.id(table_SELECT_TARGET_REQUEST));
 
+    }
+
+    public void clickTableElement_clickTableElement_addInterestedParty(String colName, int row){
+        List<WebElement> element = getTableRows(By.id(table_ADD_INTERESTED_PARTY));
     }
 
 

@@ -139,7 +139,7 @@ Feature: E2E Validation of API created trouble ticket
       | Test EXCEL| Test EXCEL  | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test XLS FILE.xls  | 5           |
       | Test PPT  | Test PPT    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PPT FILE.pptx | 6           |
 
-    Then change should also be reflected in the timeline as "Attachment has been added. File Name - attachement.doc.txt" for trouble ticket in row 1
+    #git commitThen change should also be reflected in the timeline as "Attachment has been added. File Name - attachement.doc.txt" for trouble ticket in row 1
     When user clicks on CTI details under sections
     And user selects Category as "Core"
     And user selects Type as "IP"

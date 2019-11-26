@@ -73,7 +73,7 @@
       And user enters "Test Update - Public" in the timeline text box
       And user clicks on private radio button
       Then user clicks on add button on timeline
-      And change should also be reflected in the timeline as "Test Update - Private" for change ticket in row
+      And change should also be reflected in the timeline as "Test Update - Private" for change ticket in row 1
       When user unticks all affected BU
       And user clicks save button
       Then error message should display as ""
@@ -123,7 +123,8 @@
       And user closes warning message
       And user switches to window 1
       And CI should be listed and displayed under the Diagnosis tab
-      When user clicks on timeline tabAnd change should also be reflected in the timeline as "Impact record created for DK_BSC_ALG3B" for change ticket in row
+      When user clicks on timeline tab
+      And change should also be reflected in the timeline as "Impact record created for DK_BSC_ALG3B" for change ticket in row 1
       When user clicks on Diagnosis tab
       Then user right clicks on CI "DK_BSC_ALG3B" and selects "Detach Selected"
       Then CI should be detached from ticket
@@ -158,7 +159,6 @@
       And user enters impact duration as "30" minutes
       And user clicks save button
       Then form should be saved
-
       When user enters actual start as "14/11/2019 00:00:00"
       And user enters actual end as "15/11/2019 00:00:00"
       Then user selects actual impact as "No Impact"

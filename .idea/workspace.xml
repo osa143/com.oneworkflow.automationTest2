@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/APIModifyStatus/APINormalChange.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/APIModifyStatus/APINormalChange.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -478,14 +477,7 @@
       <workItem from="1574427236818" duration="11547000" />
       <workItem from="1574671748028" duration="3063000" />
       <workItem from="1574699222215" duration="942000" />
-      <workItem from="1574759375491" duration="12554000" />
-    </task>
-    <task id="LOCAL-00095" summary="modified feature for 500 CIs manual">
-      <created>1566465352268</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1566465352268</updated>
+      <workItem from="1574759375491" duration="14725000" />
     </task>
     <task id="LOCAL-00096" summary="updated steps for CI search window">
       <created>1567068953315</created>
@@ -823,7 +815,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574766700112</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="API E2E CHange Ticket Modify Status">
+      <created>1574778907368</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1574778907375</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TodoView">
@@ -884,7 +883,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Standard change feature complete" />
     <MESSAGE value="Modified attatchments and description" />
     <MESSAGE value="CRM Feature files" />
     <MESSAGE value="C2B update Feature files" />
@@ -909,7 +907,8 @@
     <MESSAGE value="API E2E Normal change implementation updated" />
     <MESSAGE value="API E2E Standard/Normal Change implementation updated" />
     <MESSAGE value="API E2E Standardimplementation updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="API E2E Standardimplementation updated" />
+    <MESSAGE value="API E2E CHange Ticket Modify Status" />
+    <option name="LAST_COMMIT_MESSAGE" value="API E2E CHange Ticket Modify Status" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -926,13 +925,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java</url>
-          <line>347</line>
+          <line>349</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java</url>
-          <line>868</line>
-          <properties class="pageObjects.OWF_WorkOrderPage" method="verifyNimbusExpandBackupArchiveDiskDescription">
+          <line>870</line>
+          <properties class="pageObjects.OWF_WorkOrderPage">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="26" />

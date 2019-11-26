@@ -740,5 +740,10 @@ public class OWF_WorkOrderPageSteps {
     public void userHighlightsTicketUnderWorkOrder() {
         workOrderPage.clickElement(By.xpath("//*[@id='T777504000']/tbody/tr[2]/td[1]"));
     }
+
+    @Then("user validates ci impact is inactive")
+    public void userValidatesCiImpactIsInactive() {
+        Assert.assertTrue(workOrderPage.verifyCiImpactIsInvalid());
+    }
 }
 

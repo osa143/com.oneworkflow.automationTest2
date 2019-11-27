@@ -627,10 +627,10 @@ public class OWF_ChangeRecordPageSteps {
     }
 
 
-    @And("user validates reason as {string}")
-    public void userValidatesReasonAs(String arg0) {
-        Assert.assertEquals(changeRecordPage.getReason(), arg0);
-    }
+//    @And("user validates reason as {string}")
+//    public void userValidatesReasonAs(String arg0) {
+//        Assert.assertEquals(changeRecordPage.getReason(), arg0);
+//    }
 
     @And("user validates project code as {string}")
     public void userValidatesProjectCodeAs(String arg0) {
@@ -642,60 +642,60 @@ public class OWF_ChangeRecordPageSteps {
         Assert.assertEquals(changeRecordPage.getChangeBuilder(), arg0);
     }
 
-    @Then("user validates location id as {string}")
-    public void userValidatesLocationIdAs(String arg0) {
-        Assert.assertEquals(changeRecordPage.getLocationId(),arg0);
-    }
+//    @Then("user validates location id as {string}")
+//    public void userValidatesLocationIdAs(String arg0) {
+//        Assert.assertEquals(changeRecordPage.getLocationId(),arg0);
+//    }
+//
+//    @And("user validates location name as {string}")
+//    public void userValidatesLocationNameAs(String arg0) {
+////        Assert.assertEquals(changeRecordPage.getLocationName(),arg0);
+//    }
 
-    @And("user validates location name as {string}")
-    public void userValidatesLocationNameAs(String arg0) {
-        Assert.assertEquals(changeRecordPage.getLocationName(),arg0);
-    }
+//    @And("user validates region id as {string}")
+//    public void userValidatesRegionIdAs(String arg0) {
+//        Assert.assertEquals(changeRecordPage.getRegionId(),arg0);
+//    }
 
-    @And("user validates region id as {string}")
-    public void userValidatesRegionIdAs(String arg0) {
-        Assert.assertEquals(changeRecordPage.getRegionId(),arg0);
-    }
+//    @And("user validates region name as {string}")
+//    public void userValidatesRegionNameAs(String arg0) {
+//        Assert.assertEquals(changeRecordPage.getRegionName(),arg0);
+//    }
+//
+//    @Then("user validates latitude as {string}")
+//    public void userValidatesLatitudeAs(String arg0) {
+//        Assert.assertEquals(changeRecordPage.getLatitude(),arg0);
+//    }
+//
+//    @Then("user validates longitude as {string}")
+//    public void userValidatesLongitudeAs(String arg0) {
+//        Assert.assertEquals(changeRecordPage.getLongitude(),arg0);
+//    }
+//
+//    @And("user validates y degree as {string}")
+//    public void userValidatesYDegreeAs(String arg0) {
+//        Assert.assertEquals(changeRecordPage.getYDegree(),arg0);
+//    }
+//
+//    @And("user validates location details as {string}")
+//    public void userValidatesLocationDetailsAs(String arg0) {
+//        Assert.assertEquals(changeRecordPage.getLocationDetails(),arg0);
+//    }
+//
+//    @Then("user validates last ack by as {string}")
+//    public void userValidatesLastAckByAs(String arg0) {
+//        Assert.assertEquals(changeRecordPage.getLastAckBy(),arg0);
+//    }
 
-    @And("user validates region name as {string}")
-    public void userValidatesRegionNameAs(String arg0) {
-        Assert.assertEquals(changeRecordPage.getRegionName(),arg0);
-    }
+//    @And("user validates x degree as {string}")
+//    public void userValidatesXDegreeAs(String arg0) {
+//        Assert.assertEquals(changeRecordPage.getXDegree(),arg0);
+//    }
 
-    @Then("user validates latitude as {string}")
-    public void userValidatesLatitudeAs(String arg0) {
-        Assert.assertEquals(changeRecordPage.getLatitude(),arg0);
-    }
-
-    @Then("user validates longitude as {string}")
-    public void userValidatesLongitudeAs(String arg0) {
-        Assert.assertEquals(changeRecordPage.getLongitude(),arg0);
-    }
-
-    @And("user validates y degree as {string}")
-    public void userValidatesYDegreeAs(String arg0) {
-        Assert.assertEquals(changeRecordPage.getYDegree(),arg0);
-    }
-
-    @And("user validates location details as {string}")
-    public void userValidatesLocationDetailsAs(String arg0) {
-        Assert.assertEquals(changeRecordPage.getLocationDetails(),arg0);
-    }
-
-    @Then("user validates last ack by as {string}")
-    public void userValidatesLastAckByAs(String arg0) {
-        Assert.assertEquals(changeRecordPage.getLastAckBy(),arg0);
-    }
-
-    @And("user validates x degree as {string}")
-    public void userValidatesXDegreeAs(String arg0) {
-        Assert.assertEquals(changeRecordPage.getXDegree(),arg0);
-    }
-
-    @And("user validates reassignment count as {string}")
-    public void userValidatesReassignmentCountAs(String arg0) {
-        Assert.assertEquals(changeRecordPage.getReassignmentCount(),arg0);
-    }
+//    @And("user validates reassignment count as {string}")
+//    public void userValidatesReassignmentCountAs(String arg0) {
+//        Assert.assertEquals(changeRecordPage.getReassignmentCount(),arg0);
+//    }
 
     @And("user validates test plan as {string}")
     public void userValidatesTestPlanAs(String arg0) {
@@ -811,11 +811,11 @@ public class OWF_ChangeRecordPageSteps {
     public void userClicksFirstTicketListedUnderSelectTargetRequest() {
         changeRecordPage.clickTableElement_SelectTargetRequest("Ticket ID",1);
     }
-
-    @And("user validates linked tickets availability")
-    public void userValidatesLinkedTicketsAvailability() {
-        Assert.assertTrue(changeRecordPage.validateLinkedItemsAvailability(),"Linked items are not available");
-    }
+//
+//    @And("user validates linked tickets availability")
+//    public void userValidatesLinkedTicketsAvailability() {
+//        Assert.assertTrue(changeRecordPage.validateLinkedItemsAvailability(),"Linked items are not available");
+//    }
 
 
 

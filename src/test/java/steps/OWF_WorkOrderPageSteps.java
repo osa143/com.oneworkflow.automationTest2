@@ -814,9 +814,9 @@ public class OWF_WorkOrderPageSteps {
         workOrderPage.enterActualScheduleEnd(arg0);
     }
 
-    @Then("user validates ci impact is inactive")
-    public void userValidatesCiImpactIsInactive() {
-        Assert.assertTrue(workOrderPage.verifyCiImpactIsInvalid());
-    }
+//    @Then("user validates ci impact is inactive")
+//    public void userValidatesCiImpactIsInactive() {
+//        Assert.assertTrue(workOrderPage.verifyCiImpactIsInvalid());
+//    }
 }
 

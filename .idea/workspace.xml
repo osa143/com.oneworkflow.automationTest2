@@ -2,50 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-2077/OW receives email when  no open integration down incident.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-2077/OW receives email when integration down incident.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-2077/One Workflow receives integration up email.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-2077/TrueSight sends OW  email when integration is up.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-2077/TrueSight sends OW email when integration is down.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-3115/Auto assignment of WO Ericsson based on CI.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-3115/Auto assignment of WO OneCo based on CI.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-3115/Auto assignment of WO Rejlers based on CI.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-3115/Auto assignment of WO Transtema based on CI.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-3115/Escalation of WO to Ericsson.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-3115/Escalation of work orders to OneCo.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-3115/Escalation of work orders to Rejlers.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-3115/Escalation of work orders to Transtema.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-3116/Create incident when CO system sends CI and  NO CTI.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-3116/Create incident when CO system sends CTI and CI.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-3116/Create incident when CO system sends CTI and No CI.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/SPRINTS/Sprint_4.6/BR-3116/Create incident when CO system sends NO CTI and CI.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BaseRecordPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ChangeRecordPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Test_Runner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_WorkOrderPageSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/APIModifyStatus/APINormalChange.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/APIModifyStatus/APINormalChange.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Change.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Change.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Problem.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Problem.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Trouble.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Trouble.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/WO.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/WO.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedChange.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedChange.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedProblem.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedProblem.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedTrouble.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedTrouble.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedWO.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedWO.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Normal_Change_E2E.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Normal_Change_E2E.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Standard_Change_E2E.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Standard_Change_E2E.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Urgent_Change_E2E.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Urgent_Change_E2E.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/StatusFlowValidation/NormalChange.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/StatusFlowValidation/NormalChange.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateChange.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateChange.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateProblem.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateProblem.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateTroubleClosed.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateTroubleClosed.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateTroubleOpen.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateTroubleOpen.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateWO.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateWO.feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -122,33 +84,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>arid_WIN_0_705002081</find>
-      <find>arid_WIN_0_705002082</find>
-      <find>arid_WIN_0_600001014</find>
-      <find>arid_WIN_0_777504503</find>
-      <find>arid_WIN_0_777504605</find>
-      <find>arid_WIN_0_777504604</find>
-      <find>arid_WIN_0_600001040</find>
-      <find>arid_WIN_0_600001041</find>
-      <find>arid_WIN_0_240001002</find>
-      <find>arid_WIN_0_777031006</find>
-      <find>arid_WIN_0_777031430</find>
-      <find>arid_WIN_0_700009452</find>
-      <find>arid_WIN_0_700024008</find>
-      <find>arid_WIN_0_700024009</find>
-      <find>arid_WIN_0_777031450</find>
-      <find>arid_WIN_0_705001291</find>
-      <find>arid_WIN_0_777504501</find>
-      <find>arid_WIN_0_777777653</find>
-      <find>arid_WIN_0_600001009</find>
-      <find>arid_WIN_0_600001301</find>
-      <find>arid_WIN_0_600001030</find>
-      <find>arid_WIN_0_600001302</find>
-      <find>arid_WIN_0_777021161</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -256,7 +191,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test1">
+  <component name="RunManager" selected="TestNG.TestRunner_New">
     <configuration name="CalendarLoginTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="rough.CalendarLoginTest" />
       <module name="com.oneworkflow.automation" />
@@ -606,13 +541,6 @@
       <workItem from="1574689845883" duration="37438000" />
       <workItem from="1574867061664" duration="2145000" />
     </task>
-    <task id="LOCAL-00089" summary="added steps for bulk CI loading change and trouble">
-      <created>1566294622363</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1566294622363</updated>
-    </task>
     <task id="LOCAL-00090" summary="added steps for bulk CI loading change and trouble">
       <created>1566463230102</created>
       <option name="number" value="00090" />
@@ -949,40 +877,15 @@
       <option name="project" value="LOCAL" />
       <updated>1574868345348</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="Merge branch 'working' of http://git.ani-dev.net/scm/oa/oneworkflow-automation&#10;&#10;# Conflicts:&#10;#&#9;.gradle/4.10.3/fileHashes/fileHashes.bin&#10;#&#9;.gradle/4.10.3/fileHashes/fileHashes.lock&#10;#&#9;.gradle/4.10.3/javaCompile/classAnalysis.bin&#10;#&#9;.gradle/4.10.3/javaCompile/javaCompile.lock&#10;#&#9;.gradle/4.10.3/javaCompile/taskHistory.bin&#10;#&#9;.gradle/4.10.3/taskHistory/taskHistory.bin&#10;#&#9;.gradle/4.10.3/taskHistory/taskHistory.lock&#10;#&#9;.gradle/buildOutputCleanup/buildOutputCleanup.lock&#10;#&#9;.gradle/buildOutputCleanup/outputFiles.bin&#10;#&#9;ExtentReports/LoggerReport/dashboard.html&#10;#&#9;ExtentReports/LoggerReport/exception.html&#10;#&#9;ExtentReports/LoggerReport/index.html&#10;#&#9;ExtentReports/LoggerReport/tag.html&#10;#&#9;build/classes/java/test/pageObjects/BasePage.class&#10;#&#9;src/test/java/pageObjects/OWF_ChangeRecordPage.java&#10;#&#9;src/test/java/steps/OWF_ChangeRecordPageSteps.java">
+      <created>1574870709996</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1574870710078</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="TestRunner_New - 2019.11.25 at 17h 00m 36s.xml">
-      <configuration name="TestRunner_New" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TestRunner_New - 2019.11.26 at 08h 56m 32s.xml">
-      <configuration name="TestRunner_New" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TestRunner_New - 2019.11.26 at 09h 10m 31s.xml">
-      <configuration name="TestRunner_New" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TestRunner_New - 2019.11.26 at 09h 33m 35s.xml">
-      <configuration name="TestRunner_New" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TestRunner_New - 2019.11.26 at 10h 05m 13s.xml">
-      <configuration name="TestRunner_New" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TestRunner_New - 2019.11.26 at 10h 20m 08s.xml">
-      <configuration name="TestRunner_New" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TestRunner_New - 2019.11.26 at 15h 20m 26s.xml">
-      <configuration name="TestRunner_New" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TestRunner_New - 2019.11.27 at 10h 19m 31s.xml">
-      <configuration name="TestRunner_New" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TestRunner_New - 2019.11.27 at 12h 30m 35s.xml">
-      <configuration name="TestRunner_New" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TestRunner_New - 2019.11.27 at 12h 37m 15s.xml">
-      <configuration name="TestRunner_New" configurationId="TestNG" />
-    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

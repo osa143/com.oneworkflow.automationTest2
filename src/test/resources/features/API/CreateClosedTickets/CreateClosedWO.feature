@@ -9,5 +9,5 @@ Feature: try to create Work Order as closed
     When user clicks on create work order
     And user switches to window 1
     When user tries to change the status to "Closed"
-    Then user shouldn't be able to change the status
+    Then user verifies status is read only
     Then user validates ticket status as "New"

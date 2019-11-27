@@ -2,7 +2,6 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import utils.CommonUtils;
 import utils.PlazaValidation;
 
 public class OWF_WorkOrderPage extends BasePage {
@@ -57,6 +56,9 @@ public class OWF_WorkOrderPage extends BasePage {
     {
         clickElement(By.xpath(fld_SENT));
 
+    }
+    public boolean verifyCiImpactIsInvalid(){
+        return findElement(By.xpath("//span[contains(text(), 'Inactive')]")).isDisplayed();
     }
 
 

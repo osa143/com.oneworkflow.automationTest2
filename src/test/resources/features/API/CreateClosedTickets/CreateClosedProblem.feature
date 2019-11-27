@@ -10,6 +10,6 @@ Feature: try to create problem as closed
     And user switches to window 1
     Then problem record form should appear in new tab
     When user tries to change the status to "Closed"
-    Then user shouldn't be able to change the status
+    Then user verifies status is read only
     Then user validates ticket status as "New"
 

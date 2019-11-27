@@ -819,10 +819,23 @@ public class OWF_ChangeRecordPageSteps {
 
 
 
+    @And("user selects first entry from the table under add interested party")
+    public void userSelectsFirstEntryFromTheTableUnderAddInterestedParty() {
+        changeRecordPage.clickTableElement_clickTableElement_addInterestedParty("Organization", 1);
+    }
 
-//    @And("user selects first entry from the table under add interested party")
-//    public void userSelectsFirstEntryFromTheTableUnderAddInterestedParty() {
-//        changeRecordPage.clickTableElement_addInterestedParty(String divId, String columnName, int rowNum);
-//    }
+    @And("user clicks on request thats pending approval")
+    public void userClicksOnRequestThatsPendingApproval() {
+        changeRecordPage.clickTableElementRequestPendingApproval("Status",1);
+    }
+
+    @And("user enters {string} in approval request comments field")
+    public void userEntersInApprovalRequestCommentsField(String arg0) {
+        changeRecordPage.enterApprovalRequestComment(arg0);
+    }
+
+    @Then("user validates {string} as {string}")
+    public void userValidatesAs(String arg0, String arg1) {
+    }
 }
 

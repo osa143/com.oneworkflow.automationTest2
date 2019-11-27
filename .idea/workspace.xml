@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
+    <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="API Create Closed Change&#10;API Create Closed Problem&#10;API Create Closed WO&#10;API Create CLosed PB&#10;ValidateALLFields&#10;Detach CI">
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cucumberHooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumberHooks/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Standard_Change_E2E.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Standard_Change_E2E.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Normal_Change_E2E.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Normal_Change_E2E.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/StatusFlowValidation/NormalChange.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/StatusFlowValidation/NormalChange.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateChange.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateChange.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateProblem.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateProblem.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateTroubleClosed.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateTroubleClosed.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateTroubleOpen.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateTroubleOpen.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateWO.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateWO.feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -475,56 +487,10 @@
       <workItem from="1574350855534" duration="1234000" />
       <workItem from="1574427236818" duration="11547000" />
       <workItem from="1574671748028" duration="3063000" />
-      <workItem from="1574699222215" duration="317000" />
-    </task>
-    <task id="LOCAL-00091" summary="added steps for bulk CI loading change and trouble">
-      <created>1566463295540</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1566463295540</updated>
-    </task>
-    <task id="LOCAL-00092" summary="modified feature names">
-      <created>1566463974299</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1566463974299</updated>
-    </task>
-    <task id="LOCAL-00093" summary="modified feature for 500 CIs manual">
-      <created>1566465279480</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1566465279480</updated>
-    </task>
-    <task id="LOCAL-00094" summary="modified feature for 500 CIs manual">
-      <created>1566465312298</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1566465312298</updated>
-    </task>
-    <task id="LOCAL-00095" summary="modified feature for 500 CIs manual">
-      <created>1566465352268</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1566465352268</updated>
-    </task>
-    <task id="LOCAL-00096" summary="updated steps for CI search window">
-      <created>1567068953315</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1567068953317</updated>
-    </task>
-    <task id="LOCAL-00097" summary="updated steps for incident tes cases">
-      <created>1567175111315</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1567175111316</updated>
+      <workItem from="1574699222215" duration="942000" />
+      <workItem from="1574759375491" duration="17911000" />
+      <workItem from="1574785020311" duration="2997000" />
+      <workItem from="1574846642103" duration="9649000" />
     </task>
     <task id="LOCAL-00098" summary="Added steps for End2End test cases">
       <created>1567429214509</created>
@@ -820,26 +786,63 @@
       <option name="project" value="LOCAL" />
       <updated>1574699318289</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="API E2E Standardimplementation updated">
+      <created>1574699584117</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1574699584117</updated>
+    </task>
+    <task id="LOCAL-00141" summary="API E2E Standardimplementation updated">
+      <created>1574760914021</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1574760914021</updated>
+    </task>
+    <task id="LOCAL-00142" summary="API E2E Standardimplementation updated">
+      <created>1574761010695</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1574761010695</updated>
+    </task>
+    <task id="LOCAL-00143" summary="API E2E Standardimplementation updated">
+      <created>1574766700067</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1574766700112</updated>
+    </task>
+    <task id="LOCAL-00144" summary="API E2E CHange Ticket Modify Status">
+      <created>1574778907368</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1574778907375</updated>
+    </task>
+    <task id="LOCAL-00145" summary="API E2E WO Modify Status">
+      <created>1574781315346</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1574781315346</updated>
+    </task>
+    <task id="LOCAL-00146" summary="1 APIModify Status&#10;2 CreateClosedTicket">
+      <created>1574782357659</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1574782357659</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
-  </component>
-  <component name="UpdateCopyrightCheckinHandler">
-    <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -881,10 +884,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Standard change feature" />
-    <MESSAGE value="Standard change feature complete" />
-    <MESSAGE value="Modified attatchments and description" />
-    <MESSAGE value="CRM Feature files" />
     <MESSAGE value="C2B update Feature files" />
     <MESSAGE value="Plaza new steps" />
     <MESSAGE value="completed plaza feature steps" />
@@ -906,7 +905,11 @@
     <MESSAGE value="Update from master" />
     <MESSAGE value="API E2E Normal change implementation updated" />
     <MESSAGE value="API E2E Standard/Normal Change implementation updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="API E2E Standard/Normal Change implementation updated" />
+    <MESSAGE value="API E2E Standardimplementation updated" />
+    <MESSAGE value="API E2E CHange Ticket Modify Status" />
+    <MESSAGE value="API E2E WO Modify Status" />
+    <MESSAGE value="1 APIModify Status&#10;2 CreateClosedTicket" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 APIModify Status&#10;2 CreateClosedTicket" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -923,13 +926,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java</url>
-          <line>347</line>
+          <line>349</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java</url>
-          <line>868</line>
-          <properties class="pageObjects.OWF_WorkOrderPage" method="verifyNimbusExpandBackupArchiveDiskDescription">
+          <line>870</line>
+          <properties class="pageObjects.OWF_WorkOrderPage">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="26" />

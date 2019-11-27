@@ -1229,6 +1229,15 @@ public class OWF_TroubleEventPageSteps {
         troubleEventPage.SelectFirstThreeCIs();
     }
 
+    @Then("user validates last ack by as {string}")
+    public void userValidatesLastAckByAs(String arg0) {
+        Assert.assertEquals(troubleEventPage.getLastAckBy(), arg0);
+    }
+
+    @And("user validates hierarchic escalation level as {string}")
+    public void userValidatesHierarchicEscalationLevelAs(String arg0) {
+        Assert.assertEquals(troubleEventPage.getHierarchicEscalationLevel(), arg0);
+    }
 }
 
 

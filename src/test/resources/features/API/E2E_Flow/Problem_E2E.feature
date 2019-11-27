@@ -1,4 +1,5 @@
 @APIProblem_E2E
+#Test needs ticket created from API
 Feature: E2E Validation of API created trouble ticket
   Scenario: user validates all information on API ticket and processes ticket E2E
 
@@ -10,9 +11,9 @@ Feature: E2E Validation of API created trouble ticket
     Then user should see trouble ticket
     And user validates ticket status as "Assigned"
     Then user validates service provider as "Telia Company"
-    And user validates source as "One Workflow"
+    And user validates source field as "One Workflow"
     Then user validates source id as "123456789"
-    And user validates all affected BU's are selected
+    And user validates finland as affected BU
     Then user validates title field as "Test Ticket"
     And user validates request type as "CPS | IT | Other"
     Then user validates description as "Test Ticket"
@@ -24,7 +25,7 @@ Feature: E2E Validation of API created trouble ticket
     Then user validates service affected as "Test"
     And user validates estimated ready time as "24/05/2019 17:49:50"
     Then user validates actual finish as "24/05/2019 17:49:50"
-    And user validates decision go/no go as "24/05/2019 17:49:50"
+    And user validates decision go no go as "24/05/2019 17:49:50"
     Then user validates workaround as "Testing"
     And user validates RC found date as "24/05/2019 17:49:50"
     Then user validates Category as "Hardware"
@@ -41,9 +42,7 @@ Feature: E2E Validation of API created trouble ticket
     And user validates x degree as "0"
     And user validates longitude as "12.482850"
     And user validates y degree as "0"
-
     Then user validates location details as ""
-
     And user validates owner profile as "Problem Manager"
     And user validates owner as "frvi96_auto"
     Then user should see assigned profile as "Problem Manager"
@@ -66,7 +65,7 @@ Feature: E2E Validation of API created trouble ticket
     And user clicks on private radio button
     Then user clicks on add button on timeline
     And change should also be reflected in the timeline as "Test Update - Private" for trouble ticket in row 1
-    When user unticks all affected BU's
+    When user unticks all affected BU
     And user clicks save button
     Then error message should display as ""
     When user clicks on sweden checkbox under affected BU's
@@ -138,13 +137,12 @@ Feature: E2E Validation of API created trouble ticket
       | Test WORD | Test WORD   | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test WORD FILE.docx| 4           |
       | Test EXCEL| Test EXCEL  | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test XLS FILE.xls  | 5           |
       | Test PPT  | Test PPT    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PPT FILE.pptx | 6           |
-
     Then change should also be reflected in the timeline as "Attachment has been added. File Name - attachement.doc.txt" for trouble ticket in row 1
     When user clicks on CTI details under sections
     And user selects Category as "Core"
     And user selects Type as "IP"
     And user selects Item as "DNS"
-    And user selects Technology as "Broadband"
+    And user selects "Technology" as "Broadband"
     Then user clicks save button
     When user clicks on Diagnosis tab
     And user clicks on CI search button
@@ -161,15 +159,15 @@ Feature: E2E Validation of API created trouble ticket
     Then user right clicks on CI "SE_AP_tylosand-first-camp-ap10b2" and selects "Detach Selected"
     Then CI should be detached from ticket
     When user clicks on "Timeline" tab
-    Then change should also be reflected in the timeline as "Impact record created for SE_AP_tylosand-first-camp-ap10b2" for problem ticket in row 1
+    Then change should also be reflected in the timeline as "Impact record created for SE_AP_tylosand-first-camp-ap10b2"
     When user clicks on "Interested Parties" tab
     Then user clicks on add button under interested parties
     And user switches to frame
     And user selects type as "Additional Access" under interested parties
-    Then user selects search for radio button as "User"
-    And user enters "Tohall_Copy" under interested parties
+    And user clicks on radio button user
+    And user enters "Tohall_copy" in login name plus field
     Then user clicks on search under add interested party
-    And user selects first entry
+    And user highlights present user under add interested party
     Then user selects access radio button as read and write
     And user selects auto notify radio button as yes
     Then user clicks on save button under interested parties frame
@@ -179,11 +177,11 @@ Feature: E2E Validation of API created trouble ticket
     And user clicks on add email button
     Then user validates "Tohall_Copy" is listed as an interested party
     When user clicks on timeline tab
-    Then change should also be reflected in the timeline as "The User has been added as interested parties." for problem ticket in row 1
+    Then change should also be reflected in the timeline as "The User has been added as interested parties."
     When user clicks on linked items tab
     And user selects target application first dropdown as "OS3 - Change"
     And user selects target application second dropdown as "Is workaround for"
-    Then user clicks on create button under linked items button
+    Then user clicks on create button under linked items
     And user switches to window 2
     Then user selects request type as "Normal Change"
     And user selects title as "IT | Automation API" on Change record page
@@ -205,16 +203,16 @@ Feature: E2E Validation of API created trouble ticket
     And user enters impact duration as "30" minutes
     Then user clicks save button
     And user switches to window 1
-    Then user clicks refresh button on linked items
-    Then user validates ticket is present
+    Then user clicks refresh button under linked items
+    Then user validates 1 linked ticket availability
     And user selects target application first dropdown as "OS3 - Known Error"
     And user selects target application second dropdown as "Solution for"
-    Then user clicks on create button under linked items button
+    And user clicks on create button under linked items
     And user switches to window 2
     Then user clicks save button
     And user switches to window 1
-    Then user clicks refresh button on linked items
-    Then user validates known error ticket is present
+    Then user clicks refresh button under linked items
+    Then user validates 2 linked ticket availability
     When user selects target application first dropdown as "OS3 - Operations"
     And user selects target application second dropdown as "Is related to"
     Then user clicks on create button under linked items
@@ -222,8 +220,8 @@ Feature: E2E Validation of API created trouble ticket
     Then user selects request type as "Customer"
     Then user clicks save button
     And user switches to window 1
-    And user clicks refresh button on linked items
-    Then user validates op ticket is present
+    Then user clicks refresh button under linked items
+    Then user validates 3 linked ticket availability
     When user selects target application first dropdown as "OS3 - Problem"
     And user selects target application second dropdown as "Caused by"
     Then user clicks on create button under linked items
@@ -233,8 +231,8 @@ Feature: E2E Validation of API created trouble ticket
     And user selects urgency as "Low"
     And user clicks save button
     And user switches to window 1
-    And user clicks refresh button on linked items
-    Then user validates problem ticket is present
+    Then user clicks refresh button under linked items
+    Then user validates 4 linked ticket availability
     When user selects target application first dropdown as "OS3 - Work Order"
     And user selects target application second dropdown as "Caused by"
     Then user clicks on create button under linked items
@@ -242,19 +240,20 @@ Feature: E2E Validation of API created trouble ticket
     Then user selects request type as "Analysis"
     And user clicks save button
     Then user switches to window 1
-    And user clicks refresh button under linked items
-    Then user validates work order ticket is present
+    And user clicks on main page refresh
+    And user clicks on ticket refresh button
+    Then user clicks refresh button under linked items
+    Then user validates 5 linked ticket availability
     And user clicks on work order tab
     Then user clicks on create from ticket
     And user switches to window 2
     Then user selects request type as "Analysis"
     And user clicks save button
-    Then user clicks refresh button under work order
-    And user selects ticket in row 1
+    Then user clicks refresh button
+    And user highlights ticket under work order
     Then user clicks on open button
-    And user validates ticket opens
-    When user switches to window 1
-    Then user clicks additional info tab
+    When user switches to window 3
+    Then user clicks "Additional Info" tab
     And user enters "Tohall_copy" in the analysis team member one field
     And user clicks save button
     Then user validates "Tohall_copy" is listed under analysis team member one field

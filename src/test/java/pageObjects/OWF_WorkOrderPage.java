@@ -47,8 +47,61 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_TECHNOLOGY="arid_WIN_0_777020101";
     private static final String fld_SENT= "//*[@id='T700020677']/tbody/tr[3]/td[1]/nobr/span";
     private static final String txt_METHOD= "arid_WIN_0_700020737";
+    private static final String txt_TEMPLATE= "arid_WIN_0_777504501";
+    private static final String txt_REASON= "arid_WIN_0_600001009";
+    private static final String txt_SLA_WITH_CUSTOMER= "arid_WIN_0_600001301";
+    private static final String txt_SLA_CLASS="arid_WIN_0_600001030";
+    private static final String dd_OWNER= "Owner*";
+    private static final String txt_REQUESTED_SCHEDULE_END= "arid_WIN_0_777021161";
+    private static final String txt_ESTIMATED_SCHEDULE_START= "arid_WIN_0_777021167";
+    private static final String txt_ESTIMATED_SCHEDULE_END= "arid_WIN_0_777021168";
+    private static final String txt_ACTUAL_SCHEDULE_START= "arid_WIN_0_777021164";
+    private static final String txt_ACTUAL_SCHEDULE_END= "arid_WIN_0_777021165";
 
 
+    public void enterRequestedScheduleEnd(String text){
+        clearText(By.id(txt_REQUESTED_SCHEDULE_END));
+        enterTextByElement(By.id(txt_REQUESTED_SCHEDULE_END), text);
+    }
+
+    public void enterEstimatedScheduleStart(String text){
+        clearText(By.id(txt_ESTIMATED_SCHEDULE_START));
+        enterTextByElement(By.id(txt_ESTIMATED_SCHEDULE_START), text);
+    }
+    public void enterEstimatedScheduleEnd(String text){
+        clearText(By.id(txt_ESTIMATED_SCHEDULE_END));
+        enterTextByElement(By.id(txt_ESTIMATED_SCHEDULE_END), text);
+    }
+    public void enterActualScheduleStart(String text){
+        clearText(By.id(txt_ACTUAL_SCHEDULE_START));
+        enterTextByElement(By.id(txt_ACTUAL_SCHEDULE_START), text);
+    }
+    public void enterActualScheduleEnd(String text){
+        clearText(By.id(txt_ACTUAL_SCHEDULE_END));
+        enterTextByElement(By.id(txt_ACTUAL_SCHEDULE_END), text);
+    }
+    public void selectOwner(String dropDownValue){
+        selectDropDownNameAndValue(dd_OWNER, dropDownValue, false);
+    }
+    public String getEventStartTime(){
+        return getAttributeValueById(txtEVENT_START_TIME);
+    }
+
+
+
+    public String getSlaClass(){
+        return getAttributeValueById(txt_SLA_CLASS);
+    }
+
+    public String getSlaWithCustomer(){
+        return getAttributeValueById(txt_SLA_WITH_CUSTOMER);
+    }
+    public String getReason(){
+        return getAttributeValueById(txt_REASON);
+    }
+    public String getTemplate(){
+        return getAttributeValueById(txt_TEMPLATE);
+    }
     public String getMethodText(){
         return getAttributeValueById(txt_METHOD);
     }
@@ -251,7 +304,13 @@ public class OWF_WorkOrderPage extends BasePage {
 
     public void enterEstimatedReady(String estimated_ready) {
         wait(1000);
+        driver.findElement(By.id(txtESTIMATED_READY)).clear();
         driver.findElement(By.id(txtESTIMATED_READY)).sendKeys(estimated_ready);
+    }
+    public void enterEstimatedReadyAsCurrentDateAndTime() {
+        wait(1000);
+        driver.findElement(By.id(txtESTIMATED_READY)).clear();
+        driver.findElement(By.id(txtESTIMATED_READY)).sendKeys(Keys.ENTER);
     }
 
     public boolean isEstimatedReadyDisplayed() {

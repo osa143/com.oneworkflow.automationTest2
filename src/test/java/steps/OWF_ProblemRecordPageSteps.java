@@ -1263,6 +1263,21 @@ public class OWF_ProblemRecordPageSteps {
     public void userClicksRefreshButton() {
         problemRecordPage.clickRefresh();
     }
+
+    @Then("user validates all affected BU are selected")
+    public void userValidatesAllAffectedBUAreSelected() {
+        Assert.assertTrue(problemRecordPage.verifyIsSwedenSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsDenmarkSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsFinlandSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsNorwaySelected());
+        Assert.assertTrue(problemRecordPage.verifyIsLithuniaSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsEstoniaSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsTeliaCarrierSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsInternalSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsUnknownSelected());
+
+
+    }
 }
 
 

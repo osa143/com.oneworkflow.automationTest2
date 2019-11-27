@@ -1233,6 +1233,11 @@ public class OWF_TroubleEventPageSteps {
     public void userValidatesLastAckByAs(String arg0) {
         Assert.assertEquals(troubleEventPage.getLastAckBy(), arg0);
     }
+
+    @And("user validates hierarchic escalation level as {string}")
+    public void userValidatesHierarchicEscalationLevelAs(String arg0) {
+        Assert.assertEquals(troubleEventPage.getHierarchicEscalationLevel(), arg0);
+    }
 }
 
 

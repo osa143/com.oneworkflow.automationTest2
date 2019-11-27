@@ -26,11 +26,11 @@
       And user should see incident ticket update in plaza
       And user enters "Test Update" in the ticket timeline
       And user clicks on plaza send button
-      When user clicks on shown ICM number
-      Then user should see ICM form
-      And user validates INC is present under internal case subtasks
-      When user clicks on INC under internal case subtasks
-      Then user should see INC form
+#      When user clicks on shown ICM number
+#      Then user should see ICM form
+#      And user validates INC is present under internal case subtasks
+#      When user clicks on INC under internal case subtasks
+#      Then user should see INC form
       And user opens new tab
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
@@ -40,11 +40,11 @@
       Then user should see blank trouble search form
       When user enters plaza incident ticket
       Then user should see plaza incident ticket
+      And user validates source field as "PLAZA"
       And user validates title field as " Test OW OP Ticket"
       And user validates request type as "Customer"
       And user validates description as "Test OW OP Ticket"
       And user validates ticket status as "Assigned"
-      And user validates source field as "PLAZA"
       And user validates reassigned reason as "Assigned for Plaza Escalation to 2nd Level"
       Then change should also be reflected in the timeline as "Test Update" on row 3
       Then user clicks on assignment under sections
@@ -65,7 +65,7 @@
       Then user validates plaza first timeline message as "Comments from OneWorkflow at 2019-10-25T09:11:25Z@Change_Automation_1: Test update"
       Then user switches to window 2
       When user selects assignment profile dropdown as "IT:Application:Application-NO"
-      Then user selects assignee as "dwk298" by using alphabet "d" key up 0 times
+      And user enters "dwk298" in assignee
       And user clicks on save button and closes warning messages
       Then change should also be reflected in the timeline as "ASSIGNMENT.  Trouble has been reassigned from user  >> dwk298" on row 2
       When user switches to window 0

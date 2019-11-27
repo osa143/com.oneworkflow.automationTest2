@@ -124,7 +124,9 @@ public class BasePage {
         }
         return valid;
     }
-
+    public void clearText(By element){
+        findElement(element).clear();
+    }
 
     public void clickEscButton()
     {

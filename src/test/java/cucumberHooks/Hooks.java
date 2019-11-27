@@ -6,8 +6,6 @@ import pageObjects.BasePage;
 
 import java.io.IOException;
 
-//import extentreports_CucumberAdapter.cucumber.adapter.ExtentCucumberAdapter;
-
 public class Hooks {
 
     @After

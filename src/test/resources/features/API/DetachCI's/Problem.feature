@@ -10,8 +10,8 @@
       And user enters ticket id as ""
       Then user should see problem ticket
       When user clicks on Diagnosis tab
-      Then user validates CI's are listed
+      Then user validates CI availability
       And user right clicks on secondary CI and selects "Detach"
       And user closes warning message
-      Then user validates CI gets removed from list
+      Then user validates CI availability
 

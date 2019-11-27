@@ -72,6 +72,7 @@
         | Test EXCEL| Test EXCEL  | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test XLS FILE.xls  | 5           |
         | Test PPT  | Test PPT    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PPT FILE.pptx | 6           |
 
+
       Then change should also be reflected in the timeline as "Attachment has been added. File Name - attachement.doc.txt" for change ticket in row 1
       When user clicks on Diagnosis tab
       Then user clicks on CI search button

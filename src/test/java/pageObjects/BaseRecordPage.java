@@ -41,6 +41,7 @@ public class BaseRecordPage extends BasePage {
     public static final String txtDECISION_GO_NO_GO_ID = "arid_WIN_0_777504604";
     public static final String txtSERVICE_AND_CUSTOMER_IMPACT = "arid_WIN_0_730030000";
     public static final String txtANALYSIS_TEAM_MEMBER1_ID = "arid_WIN_0_600001015";
+    public static final String txtACTUAL_START_ID = "arid_WIN_0_777021162";
 
 
     public static final String btnYES = "WIN_4_700027904";
@@ -69,10 +70,7 @@ public class BaseRecordPage extends BasePage {
     public static final String ddASSIGNED_PROFILE = "Assigned Profile";
     public static final String ddASSIGNEE = "Assignee";
     public static final String ddCLOSURE_CODE = "Closure Code";
-
     public static final String ddValueSOLVED = "Solved";
-
-
     public static final String chkbxSWEDEN = "WIN_0_rc0id600002001";
     public static final String chkbxFINLAND = "WIN_0_rc0id600002002";
     public static final String chkbxDENMARK = "WIN_0_rc0id600002003";
@@ -82,16 +80,12 @@ public class BaseRecordPage extends BasePage {
     public static final String chkbxTELIA_CARRIER = "WIN_0_rc0id600002008";
     public static final String chkbxUNKOWN = "WIN_0_rc0id600002010";
     public static final String chkbxINTERNAL = "WIN_0_rc0id600002009";
-
-
     public static final String chkbxFirstRow_Diagnosis = "//*[@id='T700009087']/tbody/tr[2]/td[1]/input";
     public static final String chkbx_ThirdRow_Diagnosis= "//*[@id='T700009087']/tbody/tr[5]/td[1]/input";
-
     public static final String txtSOLUTION_ID = "arid_WIN_0_705002080";
     public static final String txtSOLUTION_FOUND_DATE = "arid_WIN_0_600001042";
     public static final String btnCLONE_ID = "WIN_0_600002901";
     public static final String btnREMOVE = "WIN_0_705002008";
-
     public static final String div_AFFECTED_BU_ID = "WIN_0_600002504";
     public static final String chkbx_AFFECTED_BU_XPATH= "//input[type='checkbox']";
     public static final String ddAUTO_TEXT = "Auto Text";
@@ -100,13 +94,11 @@ public class BaseRecordPage extends BasePage {
     public static final String ddValueANALYSIS_ONGOING  = "Analysis ongoing";
     public static final String ddACTIONS = "Actions";
     public static final String ddValueTIME_TRACKING   = "Time Tracking";
-
     public static final String ddACTIVITY_IN_FRAME = "Activity";
     public static final String ddValueWORKING_ON_TICKET = "Working On Ticket";
     public static final String txtMINS_ID = "arid_WIN_0_900006507";
     public static final String btnOK_ID = "WIN_0_777777851";
     public static final String btn_REFRESH= "WIN_0_600003444";
-
     public static final String btnATTACHMENTS = "WIN_0_999000623";
     public static final String btn_ATTACHMENTS = "WIN_0_999000368";
     public static final String txtTICKET_ID = "arid_WIN_0_730000060";
@@ -118,7 +110,6 @@ public class BaseRecordPage extends BasePage {
     public static final String btnOK_ON_FRAME_XPATH = "//a[contains(text(),'OK')]";
     public static final String btnSAVE_ATTACHMENT_ON_FRAME = "WIN_0_700500109";
     public static final String btnOWNER_ID = "WIN_0_999000621";
-
     public static final String table_DIAGNOSIS_ID = "T700009087";
     public static final String table_ALARMS_ID = "T700508140";
     public static final String table_LINKED_ITEMS_ID = "T777506000";
@@ -136,11 +127,16 @@ public class BaseRecordPage extends BasePage {
     private static final String txt_CATEGORY= "arid_WIN_0_200000003";
     private static final String txt_TYPE= "arid_WIN_0_200000004";
     private static final String txt_ITEM= "arid_WIN_0_200000005";
-
     private static final String rbtn_INTERNAL = "WIN_0_rc0id600001901";
     private static final String rbtn_EXTERNAL= "WIN_0_rc1id600001901";
     private static final String table_ATTACHMENT_INTERNAL= "T777000013";
     private static final String table_ATTACHMENT_EXTERNAL= "T600002204";
+    private static final String txt_ACTUAL_END_ID = "arid_WIN_0_777021165";
+    private static final String table_SELECT_TARGET_REQUEST = "T700506101";
+    private static final String table_ADD_INTERESTED_PARTY = "T700027964";
+    private static final String table_APPROVAL_TABLE = "T777031442";
+    private static final String txt_APPROVAL_COMMENT = "arid_WIN_0_13001";
+
 
 
     public boolean verifyIsCheckBoxSelected(String checkBoxId){
@@ -226,6 +222,26 @@ public class BaseRecordPage extends BasePage {
         WebElement element=getTableCellElement(By.id(table_INTERESTED_PARTIES_ID), colName, cellData);
         element.click();
     }
+
+    public void clickTableElement_SelectTargetRequest(String colName, int row){
+        List<WebElement> element =getTableRows(By.id(table_SELECT_TARGET_REQUEST));
+
+    }
+
+    public void clickTableElement_clickTableElement_addInterestedParty(String colName, int row){
+        List<WebElement> element = getTableRows(By.id(table_ADD_INTERESTED_PARTY));
+    }
+
+    public void clickTableElementRequestPendingApproval(String colName, int row){
+        List<WebElement> element = getTableRows(By.id(table_APPROVAL_TABLE));
+    }
+
+    public void enterApprovalRequestComment(String approvalComment){
+        enterTextByElement(By.id(txt_APPROVAL_COMMENT), approvalComment );
+    }
+
+
+
     public boolean verifyReasonIsReadOnly(){
         return checkIfControlIsReadonly(txtREASON_ID);
     }
@@ -805,6 +821,15 @@ public class BaseRecordPage extends BasePage {
    public void enterActualFinishDate(){
         findElement(By.id(txtACTUAL_FINISH_ID)).sendKeys(Keys.ENTER);
    }
+   public void enterActualStartDate(String actualStart){
+        findElement(By.id(txtACTUAL_START_ID)).sendKeys(Keys.ENTER);
+    }
+    public void enterActualEndDate(String actualEnd){
+        findElement(By.id(txt_ACTUAL_END_ID)).sendKeys(Keys.ENTER);
+
+    }
+
+
    public void enterDecisionGoNoGoDate(){
         findElement(By.id(txtDECISION_GO_NO_GO_ID)).sendKeys(Keys.ENTER);
    }

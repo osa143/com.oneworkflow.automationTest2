@@ -17,7 +17,7 @@ Feature: Validate all fields are correct from API created ticket
     And user clicks on vendor under sections
     And user clicks on attachments under sections
     And user clicks on closure under sections
-    Then user validates "Change Type"as "Work Order"
+    And user validates "Change Type"as "Work Order"
     Then user validates "Status*" as "New"
     Then user validates "Service Provider*" as "Telia Company"
     Then user validates "Source" as "One Workflow"
@@ -42,8 +42,8 @@ Feature: Validate all fields are correct from API created ticket
     Then user validates "Item" as "DNS"
     Then user validates "Technology" as "Broadband"
     Then user validates "Model" as ""
-    Then user validates "Manufacturer as ""
-    Then user validates "Location ID+ as ""
+    Then user validates "Manufacturer" as ""
+    Then user validates "Location ID+" as ""
     Then user validates "Location Name +" as ""
     Then user validates "Region ID" as ""
     Then user validates "Region Name" as ""
@@ -70,7 +70,7 @@ Feature: Validate all fields are correct from API created ticket
     Then user validates "Resolved Group" as ""
     Then user validates "Resolved Person" as ""
     Then user validates "Actual Impact" as ""
-    Then user validates "Completion Code as ""
+    Then user validates "Completion Code" as ""
     Then user validates "Withdrawn Reason" as ""
     When user clicks on "Timeline" tab
     Then user validates timeline entry is present

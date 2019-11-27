@@ -20,7 +20,7 @@ Feature: try to create trouble as closed
     And user enters closure info as "Test Ticket"
     Then user enters event end time as current time
     When user clicks on save button
-    Then ticket should be created as closed
+    Then user verifies status is read only
     And user validates ticket status as "Closed"
 
 

@@ -157,9 +157,12 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_HOLD_TO_DATE= "arid_WIN_0_777031004";
     private static final String dd_HOLD_REASON= "Reason";
     private static final String txt_REJECT_REASON="arid_WIN_0_600001019";
+    private static final String txt_HIERARCHIC_ESCLATION_LEVEL="arid_WIN_0_700025204";
 
 
-
+    public String getHierarchicEscalationLevel(){
+        return getTextByID(txt_HIERARCHIC_ESCLATION_LEVEL);
+    }
     public void SelectFirstThreeCIs(){
         clickElement(By.xpath("//*[@id='T700009024']/tbody/tr[2]"));
         clickElement(By.xpath("//*[@id='T700009024']/tbody/tr[3]"));

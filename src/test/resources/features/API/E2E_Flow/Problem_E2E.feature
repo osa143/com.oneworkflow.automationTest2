@@ -1,5 +1,5 @@
 @APIProblem_E2E
-//Test needs ticket created from API
+#Test needs ticket created from API
 Feature: E2E Validation of API created trouble ticket
   Scenario: user validates all information on API ticket and processes ticket E2E
 

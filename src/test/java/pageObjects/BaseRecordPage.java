@@ -82,6 +82,8 @@ public class BaseRecordPage extends BasePage {
     public static final String chkbxTELIA_CARRIER = "WIN_0_rc0id600002008";
     public static final String chkbxUNKOWN = "WIN_0_rc0id600002010";
     public static final String chkbxINTERNAL = "WIN_0_rc0id600002009";
+
+
     public static final String chkbxFirstRow_Diagnosis = "//*[@id='T700009087']/tbody/tr[2]/td[1]/input";
     public static final String chkbx_ThirdRow_Diagnosis= "//*[@id='T700009087']/tbody/tr[5]/td[1]/input";
 
@@ -140,6 +142,43 @@ public class BaseRecordPage extends BasePage {
     private static final String table_ATTACHMENT_INTERNAL= "T777000013";
     private static final String table_ATTACHMENT_EXTERNAL= "T600002204";
 
+
+    public boolean verifyIsCheckBoxSelected(String checkBoxId){
+        return findElement(By.id(checkBoxId)).isSelected();
+    }
+    public void unTickCheckBox(String checkBoxId){
+        boolean result= verifyIsCheckBoxSelected(checkBoxId);
+        if(result==true){
+            clickElement(By.id(checkBoxId));
+        }
+    }
+    public void unTickAllEffectedBu(){
+        unTickCheckBox(chkbxSWEDEN);
+        unTickCheckBox(chkbxFINLAND);
+        unTickCheckBox(chkbxDENMARK);
+        unTickCheckBox(chkbxNORWAY);
+        unTickCheckBox(chkbxLITHUANIA);
+        unTickCheckBox(chkbxESTONIA);
+        unTickCheckBox(chkbxTELIA_CARRIER);
+        unTickCheckBox(chkbxUNKOWN);
+        unTickCheckBox(chkbxINTERNAL);
+    }
+    public boolean verifySwedenBuIsSelected(){
+        return verifyIsCheckBoxSelected(chkbxSWEDEN);
+    }
+
+    public String getRcFoundDate(){
+        return getTextByID(txtRC_FOUND_DATE_ID);
+    }
+    public String getDecisionGoNoGo(){
+        return getTextByID(txtDECISION_GO_NO_GO_ID);
+    }
+    public String getActualFinish(){
+        return getTextByID(txtACTUAL_FINISH_ID);
+    }
+    public String getRootCauseDetails(){
+        return getTextByID(txtROOT_CAUSE_DETAILS_ID);
+    }
     public boolean verifyFinlandIsSelectedAsAffectedBu() {
         return findElement(By.id(chkbxFINLAND)).isSelected();
     }
@@ -159,7 +198,7 @@ public class BaseRecordPage extends BasePage {
     public void enterSummary_attachments(String text){
         enterTextByElement(By.id(txt_SUMMARY), text);
     }
-   public String getRequestStart(){
+    public String getRequestStart(){
        return getAttributeValueById(txt_REQUEST_START);
    }
     public String getRequestEnd(){
@@ -211,18 +250,36 @@ public class BaseRecordPage extends BasePage {
     public boolean verifyIsDenmarkSelected(){
         return verifyIsElementSelected(By.id(chkbxDENMARK));
     }
-
-    public void clickRefresh_ticketFresh(){
-        clickElement(By.id(btn_REFRESH));
-        wait(3000);
-    }
-
     public boolean verifyIsFinlandSelected(){
         return findElement(By.id(chkbxFINLAND)).isSelected();
     }
     public boolean verifyIsSwedenSelected(){
         return findElement(By.id(chkbxSWEDEN)).isSelected();
     }
+    public boolean verifyIsNorwaySelected(){
+        return verifyIsElementSelected(By.id(chkbxNORWAY));
+    }
+    public boolean verifyIsLithuniaSelected(){
+        return findElement(By.id(chkbxLITHUANIA)).isSelected();
+    }
+    public boolean verifyIsEstoniaSelected(){
+        return findElement(By.id(chkbxESTONIA)).isSelected();
+    }
+    public boolean verifyIsUnknownSelected(){
+        return findElement(By.id(chkbxUNKOWN)).isSelected();
+    }
+    public boolean verifyIsTeliaCarrierSelected(){
+        return findElement(By.id(chkbxTELIA_CARRIER)).isSelected();
+    }
+    public boolean verifyIsInternalSelected(){
+        return findElement(By.id(chkbxINTERNAL)).isSelected();
+    }
+
+    public void clickRefresh_ticketFresh(){
+        clickElement(By.id(btn_REFRESH));
+        wait(3000);
+    }
+
     public boolean verifySwedenEnable(){
         return verifyElementIsEnabledByElement(By.id(chkbxSWEDEN));
     }

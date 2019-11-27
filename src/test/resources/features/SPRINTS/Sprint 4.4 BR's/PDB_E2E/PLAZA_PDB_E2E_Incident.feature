@@ -88,7 +88,6 @@
       And user validates ticket status as "Assigned"
       Then user selects assignment profile dropdown as "Mobile:Mobile PS:MOB PS Core West"
       And user enters "Change_Automation_1" in assignee
-      #And user selects assignee as "Change_Automation_1" by using alphabet "C" key up 0 times
       Then user clicks on save button
       And user "MOB PS Core WEST" is listed as the assigned profile
       And user validates assignee is "Change_Automation_1"

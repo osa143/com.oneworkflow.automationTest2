@@ -833,5 +833,9 @@ public class OWF_ChangeRecordPageSteps {
     public void userEntersInApprovalRequestCommentsField(String arg0) {
         changeRecordPage.enterApprovalRequestComment(arg0);
     }
+
+    @Then("user validates {string} as {string}")
+    public void userValidatesAs(String arg0, String arg1) {
+    }
 }
 

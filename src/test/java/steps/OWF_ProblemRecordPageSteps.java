@@ -7,7 +7,6 @@ import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import pageObjects.BaseRecordPage;
 import pageObjects.OWF_ProblemRecordPage;
 import utils.CommonUtils;
 
@@ -1262,6 +1261,34 @@ public class OWF_ProblemRecordPageSteps {
     @Then("user clicks refresh button")
     public void userClicksRefreshButton() {
         problemRecordPage.clickRefresh();
+    }
+
+    @Then("user validates timeline entry is present")
+    public void userValidatesTimelineEntryIsPresent() {
+        Assert.assertTrue(problemRecordPage.verifyTimelineIsPresent());
+    }
+
+    @And("user validates timeline date present")
+    public void userValidatesTimelineDatePresent() {
+        Assert.assertTrue(problemRecordPage.verifyTimelineDateIsPresent());
+
+    }
+
+    @Then("user validates Interested Parties entry is present")
+    public void userValidatesInterestedPartiesEntryIsPresent() {
+        Assert.assertTrue(problemRecordPage.verifyUserListedUnderInterestedParty());
+    }
+
+    @Then("user validates Linked Items entry is present")
+    public void userValidatesLinkedItemsEntryIsPresent() {
+    }
+
+    @Then("user validates Additional Info entry is present")
+    public void userValidatesAdditionalInfoEntryIsPresent() {
+    }
+
+    @Then("user validates TCAD Info entry is present")
+    public void userValidatesTCADInfoEntryIsPresent() {
     }
 }
 

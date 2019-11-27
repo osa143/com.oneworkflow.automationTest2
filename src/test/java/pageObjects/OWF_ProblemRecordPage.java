@@ -1,11 +1,8 @@
 package pageObjects;
 
 import io.cucumber.datatable.DataTable;
-import org.apache.velocity.runtime.directive.Parse;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import utils.CommonUtils;
@@ -108,6 +105,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txt_VENDOR_REF= "arid_WIN_0_705001290";
     private static final String txt_ONSITE_CONTACT= "arid_WIN_0_705001292";
     private static final String txt_TRAVEL_TIME= "arid_WIN_0_705001293";
+    private static final String table_TIMELINE = "T999000510";
 
 
     public String getOnsiteEngineer(){
@@ -579,6 +577,21 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
     public void selectPriority(String value) {
         selectDropDownNameAndValue(ddPRIORITY_ID, value, false);
+
+    }
+    public boolean verifyTimelineIsPresent(){
+        int size =getTableRows(By.id(table_TIMELINE)).size();
+        if(size > 0){
+            return true;
+        }
+        return false;
+    }
+    public boolean verifyTimelineDateIsPresent(){
+        String timelineDate = getTableCellData(By.id(table_TIMELINE),"Date",1);
+        if (timelineDate.isEmpty()){
+            return false;
+        }
+        return true;
 
     }
 

@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Change.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Change.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Problem.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Problem.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Trouble.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/Trouble.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/WO.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/AppendModifyCI/WO.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedChange.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedChange.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedProblem.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedProblem.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedTrouble.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedTrouble.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedWO.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/CreateClosedTickets/CreateClosedWO.feature" afterDir="false" />
+    <list default="true" id="94ef0c9f-40f3-4a48-8f4d-dc088a0f7f0d" name="Default Changelist" comment="API Create Closed Change&#10;API Create Closed Problem&#10;API Create Closed WO&#10;API Create CLosed PB&#10;ValidateALLFields&#10;Detach CI">
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumberHooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumberHooks/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/OWF_ProblemRecordPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_ChangeRecordPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/OWF_ProblemRecordPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Normal_Change_E2E.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/E2E_Flow/Normal_Change_E2E.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/StatusFlowValidation/NormalChange.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/StatusFlowValidation/NormalChange.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateChange.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateChange.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateProblem.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateProblem.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateTroubleClosed.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateTroubleClosed.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateTroubleOpen.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateTroubleOpen.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateWO.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/API/ValidateAllFields/ValidateWO.feature" afterDir="false" />
     </list>
     <list id="fb9a46ad-6cb6-467e-809a-296e48978a1b" name="Modified features for bulk loading" comment="faile commit" />
     <list id="f3f577b5-4836-418d-9d1e-c7dea43edd71" name="Revert &quot;B2B Tests&quot;" comment="Revert &quot;B2B Tests&quot;&#10;&#10;This reverts commit d582e3ce" />
@@ -482,14 +488,9 @@
       <workItem from="1574427236818" duration="11547000" />
       <workItem from="1574671748028" duration="3063000" />
       <workItem from="1574699222215" duration="942000" />
-      <workItem from="1574759375491" duration="15682000" />
-    </task>
-    <task id="LOCAL-00097" summary="updated steps for incident tes cases">
-      <created>1567175111315</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1567175111316</updated>
+      <workItem from="1574759375491" duration="17911000" />
+      <workItem from="1574785020311" duration="2997000" />
+      <workItem from="1574846642103" duration="9649000" />
     </task>
     <task id="LOCAL-00098" summary="Added steps for End2End test cases">
       <created>1567429214509</created>
@@ -827,26 +828,21 @@
       <option name="project" value="LOCAL" />
       <updated>1574781315346</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="1 APIModify Status&#10;2 CreateClosedTicket">
+      <created>1574782357659</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1574782357659</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
-  </component>
-  <component name="UpdateCopyrightCheckinHandler">
-    <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -888,7 +884,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="CRM Feature files" />
     <MESSAGE value="C2B update Feature files" />
     <MESSAGE value="Plaza new steps" />
     <MESSAGE value="completed plaza feature steps" />
@@ -913,7 +908,8 @@
     <MESSAGE value="API E2E Standardimplementation updated" />
     <MESSAGE value="API E2E CHange Ticket Modify Status" />
     <MESSAGE value="API E2E WO Modify Status" />
-    <option name="LAST_COMMIT_MESSAGE" value="API E2E WO Modify Status" />
+    <MESSAGE value="1 APIModify Status&#10;2 CreateClosedTicket" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 APIModify Status&#10;2 CreateClosedTicket" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

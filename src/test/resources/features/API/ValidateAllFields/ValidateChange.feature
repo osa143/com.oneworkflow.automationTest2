@@ -18,7 +18,7 @@
       And user clicks on vendor under sections
       And user clicks on attachments under sections
       And user clicks on closure under sections
-      Then user validates "Change Type" as "Change Record"
+      And user validates "Change Type" as "Change Record"
       And user validates ticket status as "New"
       And user validates "Service Provider*" as "Telia Company"
       And user validates source field as "One Workflow"

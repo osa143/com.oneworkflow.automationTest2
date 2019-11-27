@@ -26,7 +26,7 @@ Feature: Validate all fields are correct from API created ticket
     And user validates "Affected BU" as "Sweden"
     And user validates "Cust. Remaining SLA" as ""
     And user validates "OLA Target Time" as ""
-    And user validates "Template" as Null
+    And user validates "Template" as "Null"
     And user validates "Title*" as "TroubleTitleAPI"
     And user validates "Request Type*" as "Stakeholder"
     And user validates "Description*" as ""
@@ -89,12 +89,13 @@ Feature: Validate all fields are correct from API created ticket
     And user validates "Withdrawn Reason" as ""
     When user clicks on timeline tab
     Then user validates timeline entry is present
-    And user validates timeline entry has date present
+    And user validates timeline date present
     When user clicks on Diagnosis tab
     Then user validates CI availability
+    #TODO
     And user validates CI details
     When user clicks on "Interested Parties" tab
-    Then user validates interested party is visible
+    Then user validates Linked Items entry is present
     
 
 

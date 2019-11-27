@@ -279,7 +279,7 @@
       And user clicks "Schedule" tab
       Then user selects completed code as "Successful"
       Then user enters actual finish as current date
-          And user clicks save button
+      And user clicks save button
       Then user validates ticket status as "Completed"
 
 

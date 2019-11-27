@@ -44,7 +44,7 @@ Feature: Validate all fields are correct from API created ticket
     And user validates "Location ID+" as ""
     And user validates "Location Name +" as ""
     And user validates "Region ID" as ""
-    And user validates "Region Name as ""
+    And user validates "Region Name" as ""
     And user validates "Latitude" as ""
     And user validates "Longitude" as ""
     And user validates "Location Details" as ""
@@ -77,7 +77,7 @@ Feature: Validate all fields are correct from API created ticket
     When user clicks on "Interested Parties" tab
     Then user validates Interested Parties entry is present
     When user clicks on "Linked Items" tab
-    Then user validates Linked Items entry is present
+    Then user validates Linked Items entry is present 
     When user clicks on "Additional Info" tab
     Then user validates Additional Info entry is present
     When user clicks on "TCAD Info" tab

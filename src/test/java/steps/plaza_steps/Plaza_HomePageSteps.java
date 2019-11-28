@@ -1771,7 +1771,8 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user clicks on IT Infrastructure dropdown")
     public void userClicksOnITInfrastructureDropdown() {
-        clickElement(By.xpath("//*[@id='xcc61d55edb198b00b27fdb11ce961902']/div/div[2]/div[5]"));
+        clickElement(By.xpath("//*[@id=\"x3755759edb598b00b27fdb11ce96199f\"]/div/div[2]/div[5]/a"));
+
     }
 
 
@@ -2065,5 +2066,15 @@ public class Plaza_HomePageSteps extends BasePage {
     @And("user enters web tab CI as {string}")
     public void userEntersWebTabCIAs(String arg0) {
         homePage.selectWebtabCi(arg0);
+    }
+
+    @When("user clicks on Products & Services")
+    public void userClicksOnProductsServices() {
+        homePage.clickElement(By.xpath("//*[contains(text(),'Products & Services')]"));
+    }
+
+    @And("user clicks on {string} under IT Infrastructure")
+    public void userClicksOnUnderITInfrastructure(String arg0) {
+        homePage.selectDropdownValueUnderItInfrastructure(arg0);
     }
 }

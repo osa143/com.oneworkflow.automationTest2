@@ -6,10 +6,9 @@
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
       Then user clicks on plaza portal
-      When user clicks on "Facility Management"
-      And user clicks on order
+      When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on Database
+      And user clicks on "Database" under IT Infrastructure
       When user clicks on "Database Request" pebble
       Then user should see "Database Request" form
       Then user selects System name in haiti as "Other"

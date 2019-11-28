@@ -6,10 +6,9 @@ Feature: Plaza CRM form test
     When user enters username "testauto" and password as "test123" and clicks on login
     Then user should see the plaza home page
     Then user clicks on plaza portal
-    When user clicks on "Facility Management"
-    And user clicks on order
+    When user clicks on Products & Services
     And user clicks on IT Infrastructure dropdown
-    And user clicks on "Application"
+    And user clicks on "Application" under IT Infrastructure
     When user clicks on "CRM" pebble
     Then user should see CRM form
    # Then user selects system name in haiti as "Other"
@@ -61,7 +60,7 @@ Feature: Plaza CRM form test
     Examples:
 
     |Request           |System       |Description           |AdditionalComments|
-#    |Test2 CRM/Request |1B           |Test2 CRM/Description |Test2 CRM/AC      |
+    |Test2 CRM/Request |1B           |Test2 CRM/Description |Test2 CRM/AC      |
 #    |Test3 CRM/Request |ALPHA1       |Test3 CRM/Description |Test3 CRM/AC      |
 #    |Test4 CRM/Request |ALPHA2       |Test4 CRM/Description |Test4 CRM/AC      |
 #    |Test5 CRM/Request |EMU          |Test5 CRM/Description |Test5 CRM/AC      |

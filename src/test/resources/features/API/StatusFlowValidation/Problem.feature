@@ -16,7 +16,7 @@ Feature: user validates status changes
     And user validates other status options available as "Pending:Under Investigation:Investigation Complete:(Clear)"
     And user validates "Closed" is not a valid status at this stage
     When user changes status to "Pending"
-    And user enters on hold to date 2 minutes ahead of current time
+    And user enters on hold to date 2 minutes in the future
     Then user enters reason field as "Waiting for Customer Info"
     And user clicks on save button
     Then user validates ticket status as "Pending"
@@ -49,7 +49,7 @@ Feature: user validates status changes
     Then user clicks on save button
     And user validates ticket status as "Closed"
     And change should also be reflected in the timeline as "Status has changed from Investigation Complete to Closed."
-    Then user validates status cant be changed
+    Then user verifies status is read only
 
 
 

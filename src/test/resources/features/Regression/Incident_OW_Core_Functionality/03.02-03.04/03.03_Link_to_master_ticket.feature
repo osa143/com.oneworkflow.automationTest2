@@ -1,7 +1,7 @@
 @03.03_Link_To_Master_Ticket @Incident
   #passed
-  Feature: Link tickets to master
-    Scenario: user can link tickets to a master ticket
+  Feature: Link to master ticket
+    Scenario: Link to master ticket
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

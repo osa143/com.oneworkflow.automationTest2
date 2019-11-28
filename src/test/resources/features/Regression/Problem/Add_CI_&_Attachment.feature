@@ -10,7 +10,7 @@
       Then problem record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       When user enters "proactive investigation of Tohall_Copy" in Title field
-      And user selects request type as "Access Networks:RAN Optimization" in problem form
+      And user selects request type as "CPS | IT | Other" in problem form
       And user enters description as "UAT Test 3 Add CI and attachment"
       And user selects impact type as moderate:limited
       And user selects urgency as low

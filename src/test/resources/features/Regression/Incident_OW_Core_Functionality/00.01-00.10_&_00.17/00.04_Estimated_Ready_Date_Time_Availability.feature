@@ -1,7 +1,7 @@
 @Estimated_Ready_Date_Time @Incident @00
 #Passed
-Feature: Estimated ready date and time
-  Scenario: verify estimated ready date and time availability in incident record
+Feature: Estimated ready date and time availability
+  Scenario: Estimated ready date and time availability
 
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password

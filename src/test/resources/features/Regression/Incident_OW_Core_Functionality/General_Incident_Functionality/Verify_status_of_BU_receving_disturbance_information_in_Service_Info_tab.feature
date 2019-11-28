@@ -1,7 +1,7 @@
 @Verify_status_of_BU_receiving_disturbance_information_in_Service_Info_tab @Incident @Trouble1
   #passed
-  Feature: Validate BU receives disturbance info
-    Scenario: user validates BU receives disturbance information
+  Feature: Verify status of BU receiving disturbance information in service info tab
+    Scenario: Verify status of BU receiving disturbance information in service info tab
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

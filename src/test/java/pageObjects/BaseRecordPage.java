@@ -140,7 +140,9 @@ public class BaseRecordPage extends BasePage {
     private static final String table_ATTACHMENT_INTERNAL= "T777000013";
     private static final String table_ATTACHMENT_EXTERNAL= "T600002204";
 
-
+    public boolean verifyFinlandIsSelectedAsAffectedBu() {
+        return findElement(By.id(chkbxFINLAND)).isSelected();
+    }
 
     public String getCategory(){
         return getAttributeValueById(txt_CATEGORY);

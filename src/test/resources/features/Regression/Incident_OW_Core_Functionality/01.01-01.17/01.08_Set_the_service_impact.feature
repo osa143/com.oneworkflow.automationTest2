@@ -3,7 +3,7 @@
 #CORE for ST, Core for SIT
   #Mobile PS Core Network
   Feature: Set the service impact
-    Scenario: user can set the service impact
+    Scenario: Set the service impact
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

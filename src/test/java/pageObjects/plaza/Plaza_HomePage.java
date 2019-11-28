@@ -204,13 +204,13 @@ public class Plaza_HomePage extends BasePage {
     private static final String dd_NETWORK_SECURITY_PROXY_SURF_PROXY_SLOW_SURFING_SITES= "select2-chosen-13";
     private static final String txt_STORAGE_CONFIGURE_REQUEST= "sp_formfield_sr59_v_request";
     private static final String txt_STORAGE_CONFIGURE_NETWORK_VLAN= "sp_formfield_sr59_v_network_vlan";
-    private static final String dd_STORAGE_CONFIGURE_TRUNK_CI= "s2id_autogen13";
+    private static final String dd_STORAGE_CONFIGURE_TRUNK_CI= "s2id_autogen14";
     private static final String txt_STORAGE_CONFIGURE_DESCRIPTION= "sp_formfield_sr59_v_description";
     private static final String txt_STORAGE_EXPORT_REQUEST= "sp_formfield_sr63_v_request";
-    private static final String dd_STORAGE_EXPORT_SOURCE_CI= "s2id_autogen13";
+    private static final String dd_STORAGE_EXPORT_SOURCE_CI= "s2id_autogen14";
     private static final String txt_STORAGE_EXPORT_SOURCE_WWN= "sp_formfield_sr63_v_source_wwn";
     private static final String txt_STORAGE_EXPORT_DATE_TIME= "sp_formfield_sr63_v_date";
-    private static final String dd_STORAGE_EXPORT_TARGET_CI= "s2id_autogen14";
+    private static final String dd_STORAGE_EXPORT_TARGET_CI= "s2id_autogen15";
     private static final String txt_STORAGE_EXPORT_DESCRIPTION= "sp_formfield_sr63_v_description";
     private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_SLOW_WHITELISTING_TARGET_URL= "sp_formfield_sr35_v_target_url";
     private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_SLOW_WHITELISTING_H2_NAME= "sp_formfield_sr35_v_hid";
@@ -236,7 +236,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_PLAN= "sp_formfield_sr7_v_plan_audit";
     private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_H2= "sp_formfield_sr7_v_hid";
     private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_DESCRIPTION= "sp_formfield_sr7_v_description";
-    private static final String dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI= "s2id_autogen15";
+    private static final String dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI= "s2id_autogen16";
     private static final String txt_CEWS_REQUEST= "sp_formfield_sr65_v_request";
     private static final String txt_CEWS_DESCRIPTION= "sp_formfield_sr65_v_description";
     private static final String txt_CEWS_ADD_CI= "s2id_autogen13";
@@ -540,11 +540,11 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectNatureAndContent(String text){
         PlazaValidation.NatureAndContent=text;
-        selectDropdownWithMultipleValues(By.id("s2id_autogen29"),By.id("s2id_autogen29_results"), text );
+        selectDropdownWithMultipleValues(By.id("s2id_autogen32"),By.id("s2id_autogen32_results"), text );
     }
     public void selectAffectedPerson(String text){
         PlazaValidation.AffectedPersons=text;
-        selectDropdownByTagNameDiv(By.id("select2-chosen-18"),By.id("select2-results-18"), text );
+        selectDropdownByTagNameDiv(By.id("select2-chosen-21"),By.id("select2-results-21"), text );
     }
     public void enterDatetime_PDB(String text){
         PlazaValidation.DateTime=text;
@@ -818,7 +818,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectOperatingSystem_manual_os_patching_add_ci(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI), By.id("s2id_autogen15_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI), By.id("s2id_autogen16_results"),  dropdownName);
 
     }
 
@@ -960,12 +960,12 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectStorageExport_SourceCI(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_STORAGE_EXPORT_SOURCE_CI), By.id("s2id_autogen13_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_STORAGE_EXPORT_SOURCE_CI), By.id("s2id_autogen14_results"),  dropdownName);
     }
 
     public void selectStorageExport_TargetCI(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_STORAGE_EXPORT_TARGET_CI), By.id("s2id_autogen14_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_STORAGE_EXPORT_TARGET_CI), By.id("s2id_autogen15_results"),  dropdownName);
     }
     public void enterStorageConfigure_request(String text){
         PlazaValidation.Request = text;
@@ -981,7 +981,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectStorageConfigure_trunkCI(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_STORAGE_CONFIGURE_TRUNK_CI), By.id("s2id_autogen13_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_STORAGE_CONFIGURE_TRUNK_CI), By.id("s2id_autogen14_results"),  dropdownName);
     }
 
     public String getPlazaMessage(){

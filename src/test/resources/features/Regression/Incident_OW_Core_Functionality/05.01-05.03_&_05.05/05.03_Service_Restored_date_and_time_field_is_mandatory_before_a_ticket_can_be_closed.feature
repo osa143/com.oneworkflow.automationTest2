@@ -1,7 +1,7 @@
 @05.03_Service_Restored_date_and_time_field_is_mandatory_before_a_ticket_can_be_closed  @Incident1
   #passed
-  Feature: event end time is mandatory field
-    Scenario: user validates event end time is a mandatory field
+  Feature: Service restored date and time field is mandatory before a ticket can be closed
+    Scenario: Service restored date and time field is mandatory before a ticket can be closed
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

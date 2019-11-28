@@ -1,8 +1,8 @@
 @SLA_Target_Time_Availability #@Incident
 #Passed
-Feature: SLA Target time availability
+Feature: SLA Target time availability in Incident Record
 
-  Scenario: verify SLA target time availability in incident record
+  Scenario: SLA Target time availability in Incident Record
 
 
     Given user is on the OneWorkflow login page

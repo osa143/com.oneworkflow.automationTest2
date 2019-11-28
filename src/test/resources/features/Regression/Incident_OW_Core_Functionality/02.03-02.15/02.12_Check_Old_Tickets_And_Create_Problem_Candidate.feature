@@ -2,8 +2,8 @@
   #Passed
   #CORE in ST, Core in SIT
   #Mobile PS Core Network different for ST
-  Feature: create a problem ticket from older incident
-    Scenario: user is able to create a problem ticket from a past incident
+  Feature: Check old tickets and create problem candidate
+    Scenario: Check old tickets and create problem candidate
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

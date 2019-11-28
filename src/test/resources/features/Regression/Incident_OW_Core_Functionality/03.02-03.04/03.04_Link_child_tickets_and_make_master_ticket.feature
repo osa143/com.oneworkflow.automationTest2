@@ -1,7 +1,7 @@
 @03.04_Link_child_tickets_and_make_master_ticket @Incident
   #passed
-  Feature: user can link child tickets and make master
-    Scenario: user can link child tickets and make master
+  Feature: Link child tickets and make master ticket
+    Scenario: Link child tickets and make master ticket
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

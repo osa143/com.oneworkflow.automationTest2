@@ -1,7 +1,7 @@
 @02.08_Change_priority_level @Incident
   #passed
-  Feature: user verifies priority changes
-    Scenario: user verifies priority calculation
+  Feature: user change priority level
+    Scenario: user change priority level
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

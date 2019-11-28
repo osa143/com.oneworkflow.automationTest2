@@ -71,5 +71,5 @@
      Examples:
 
      |Request            |Environment|Description          |Additional Comments|Desc Validation|
-    # |SPAN - Test/Request|Test       |SPAN-Test/Description|SPAN-Test/AC       |               |
-     |SPAN - Prod Request|Prod       |SPAN-Test/Description|SPAN-Test/AC       |               |
+     |SPAN - Test/Request|Test       |SPAN-Test/Description|SPAN-Test/AC       |               |
+     #|SPAN - Prod Request|Prod       |SPAN-Test/Description|SPAN-Test/AC       |               |

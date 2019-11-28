@@ -1,8 +1,8 @@
 @Search_for_closed_incidents_for_a_specific_Location @Incident @Trouble1
   #passed
   #needs to create 6 tickets for different countries if necessary
-  Feature: closed incident location search
-    Scenario: user can search for all countries closed incident tickets
+  Feature: search for closed incidents for a specific location
+    Scenario: search for closed incidents for a specific location
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

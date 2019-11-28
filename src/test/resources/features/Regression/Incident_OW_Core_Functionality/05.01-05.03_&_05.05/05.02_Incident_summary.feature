@@ -1,7 +1,7 @@
 @05.02_Incident_summary @Incident  @Incident1
 #passed
-Feature: user enters closure info
-  Scenario: user enters closure information
+Feature: Incident summary
+  Scenario: Incident summary
 
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password

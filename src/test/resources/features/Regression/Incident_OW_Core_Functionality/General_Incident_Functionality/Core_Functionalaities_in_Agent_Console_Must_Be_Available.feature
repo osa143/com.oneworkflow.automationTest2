@@ -1,7 +1,7 @@
 @Core_Functionalities_in_Agent_Console_Must_Be_Available @Incident @Trouble1
   #passed
-  Feature: functionality of the agent console
-    Scenario: user validates functionality of the agent console
+  Feature: core functionality in agent console must be available
+    Scenario: core functionality in agent console must be available
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

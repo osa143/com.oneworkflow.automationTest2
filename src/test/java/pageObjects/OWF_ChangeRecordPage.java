@@ -50,6 +50,43 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String dd_ACTUAL_IMPACT ="Actual Impact";
     private static final String dd_COMPLETED_CODE ="Completed Code";
     private static final String fld_TEMPLATE= "label777504501";
+    private static final String txt_CHANGE_TYPE = "arid_WIN_0_755000000";
+    private static final String txt_SOURCE_ID = "arid_WIN_0_777021006";
+    private static final String txt_CHANGE_INITIATOR = "arid_WIN_0_2";
+    private static final String dd_REQUEST_CATEGORY = "arid_WIN_0_777021548";
+
+
+
+
+    public String getTxt_CHANGE_Initiator(){
+        return getTextByID(txt_CHANGE_INITIATOR);
+    }
+
+    public String getSource_Id(){
+        return getTextByID(txt_SOURCE_ID);
+    }
+
+    public String getChange_Type(){
+        return getTextByID(txt_CHANGE_TYPE);
+    }
+    private static final String table_SERVICE_INFO= "T600002223";
+
+
+    public boolean verifyServiceInfoActivatedTimelineUpdate(){
+        return findElement(By.xpath("//span[contains(text(), 'SERVICE INFORMATION ACTIVATED ')]")).isDisplayed();
+    }
+    public boolean verifyServiceInfoDeactivatedTimelineUpdate(){
+        return findElement(By.xpath("//span[contains(text(), 'SERVICE INFORMATION DEACTIVATED ')]")).isDisplayed();
+    }
+    public boolean verifyServiceInfoActivated(){
+        int rows= getTableRows(By.id(table_SERVICE_INFO)).size();
+        System.out.println("Service Info table rows :"+ rows);
+        String text= getTableCellData(By.id(table_SERVICE_INFO), "Status",1);
+        Assert.assertEquals(text, "Active");
+        if (rows>1)
+            return true;
+        else return false;
+    }
 
     public String getTemplateText(){
         String text= getTextByID(fld_TEMPLATE);

@@ -1,8 +1,8 @@
 @Register_affected_BUs @Incident @01
 #passed
-Feature: validation of BU availability and structure
+Feature: Register affected BU's
 
-  Scenario: user validates BU availability and structure
+  Scenario: Register affected BU's
 
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password

@@ -1,8 +1,8 @@
 @00.08_Title_data_field_must_contain_valid_options @Incident @00
  #Passed
-  Feature: validation of title field availability and structure
+  Feature: Title data field must contain valid options
 
-    Scenario: user validates title field availability and structure
+    Scenario: Title data field must contain valid options
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

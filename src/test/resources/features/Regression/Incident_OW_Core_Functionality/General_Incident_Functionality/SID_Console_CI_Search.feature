@@ -1,7 +1,7 @@
 @SID_Console_CI_Search @Incident @Trouble1
   #passed
-  Feature: using SID console to search for CI's
-    Scenario: user can use the SID console to search for CI's
+  Feature: SID console CI search
+    Scenario: SID console CI search
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

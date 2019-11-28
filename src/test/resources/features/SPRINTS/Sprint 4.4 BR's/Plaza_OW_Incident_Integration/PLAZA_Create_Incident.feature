@@ -20,7 +20,7 @@
       And user gets plaza request id
       And user clicks on plaza request id
       And user validates internal case management form opens
-      Then user validates plaza first timeline message as "This Incident was raised on behalf of testauto  from "
+      Then user validates plaza first timeline message as "This Incident was raised on behalf of testauto auto from "
       And user validates plaza second timeline message as "An incident copy creation has been forwarded to OWF successfully"
       And user waits 10 secs
       And user should see incident ticket update in plaza

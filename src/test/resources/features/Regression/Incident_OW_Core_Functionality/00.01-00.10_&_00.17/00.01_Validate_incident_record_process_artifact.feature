@@ -1,8 +1,8 @@
 @Validate_Incident_Record_Process_Artifact @Incident
   #Passed
-  Feature: user validates incident record fields availability
+  Feature: Validate incident record process artifact
 
-    Scenario: user validates incident record fields availability
+    Scenario: Validate incident record process artifact
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

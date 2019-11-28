@@ -52,7 +52,7 @@
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      Then user switches to window 1
+      Then user switches to window 2
       When user right clicks on CI "aa187bcpp01" and selects "Impact:Clear All"
       And user clicks on yes button on warning window
       When user clicks on Ack button
@@ -72,7 +72,7 @@
       Examples:
 
         |Request                |Environment|Description                |Additional Comments|DescValidation|
-        |BCPP-Prod/Request      |Prod       |BCPP-Prod/Description      |BCPP-Prod/AC       |              |
+#        |BCPP-Prod/Request      |Prod       |BCPP-Prod/Description      |BCPP-Prod/AC       |              |
 #        |Test2-BCPP-Prod/Request|Prod       |Test2-BCPP-Prod/Description|Test2-BCPP-Prod/AC |              |
-#        |BCPP-Test/Request      |TEST       |BCPP-Test/Description      |BCPP-Test/AC       |              |
-#        |Test2-BCPP-Test/Request|Test       |Test2-BCPP-Test/Description|Test2-BCPP-Test/AC |              |
+#        |BCPP-Test/Request      |Test       |BCPP-Test/Description      |BCPP-Test/AC       |              |
+        |Test2-BCPP-Test/Request|Test       |Test2-BCPP-Test/Description|Test2-BCPP-Test/AC |              |

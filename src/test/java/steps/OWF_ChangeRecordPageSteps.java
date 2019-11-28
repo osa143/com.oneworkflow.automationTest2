@@ -558,5 +558,55 @@ public class OWF_ChangeRecordPageSteps {
 
         }
 }
+
+    @And("user validates change type as {string}")
+    public void userValidatesChangeTypeAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getChange_Type(), arg0);
+    }
+
+    @Then("user validates source id as {string}")
+    public void userValidatesSourceIdAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getSource_Id(), arg0);
+
+    }
+
+    @Then("user clicks on approval tab")
+    public void userClicksOnApprovalTab() {
+    }
+
+    @And("user clicks approve button")
+    public void userClicksApproveButton() {
+    }
+
+    @Then("user clicks on schedule tab")
+    public void userClicksOnScheduleTab() {
+    }
+
+    @Then("user validates change initiator as {string}")
+    public void userValidatesChangeInitiatorAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getTxt_CHANGE_Initiator(), arg0);
+    }
+
+    @Then("Service Information should be Activated")
+    public void serviceInformationShouldBeActivated() {
+     Assert.assertTrue(changeRecordPage.verifyServiceInfoActivated());
+    }
+
+    @And("timeline should updated for service info activation")
+    public void timelineShouldUpdatedForServiceInfoActivation() {
+       Assert.assertTrue(changeRecordPage.verifyServiceInfoActivatedTimelineUpdate());
+    }
+
+    @When("user clicks on disable on service info")
+    public void userClicksOnDisableOnServiceInfo() {
+       changeRecordPage.clickElement(By.xpath("//*[@id='T600002223']/tbody/tr[2]/td[1]"));
+       changeRecordPage.clickElementByContainsTextAndTagName("div", "Disable");
+    }
+
+    @Then("timeline should be updated for service info deactivation")
+    public void timelineShouldBeUpdatedForServiceInfoDeactivation() {
+        Assert.assertTrue(changeRecordPage.verifyServiceInfoDeactivatedTimelineUpdate());
+
+    }
 }
 

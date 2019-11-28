@@ -1,7 +1,7 @@
 @02.05_Acknowledge_the_functional_escalation_to_you_aka_incident_assignment @Incident
   #passed
-  Feature: user can ack ticket assigned to them
-    Scenario: user acknowledges ticket that's been assigned to them
+  Feature: user can acknowledge the functional escalation to you aka incident assignment
+    Scenario: user can acknowledge the functional escalation to you aka incident assignment
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

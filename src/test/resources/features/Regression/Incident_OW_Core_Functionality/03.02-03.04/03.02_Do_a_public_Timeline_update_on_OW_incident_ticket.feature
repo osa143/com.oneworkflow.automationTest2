@@ -1,7 +1,7 @@
 @03.02_Do_a_public_Timeline_update_on_OW_incident_ticket @Incident
 #passed
-  Feature: public timeline update
-    Scenario: user can send a public timeline update on a ticket
+  Feature: Do a public timeline update on OW incident ticket
+    Scenario: Do a public timeline update on OW incident ticket
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

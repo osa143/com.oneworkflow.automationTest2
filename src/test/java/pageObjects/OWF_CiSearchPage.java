@@ -299,7 +299,7 @@ public class OWF_CiSearchPage extends BasePage {
 
 
     public void clickRiskTab(){
-        findElement(By.xpath("//a[contains(text(), 'Risk')]")).click();
+        clickElement(By.xpath("//a[contains(text(), 'Risk')]"));
     }
 
     public void selectCi(String text)
@@ -390,8 +390,6 @@ public class OWF_CiSearchPage extends BasePage {
 
     public void closeWarningMessage()
     {
-//        findElement(By.id(btnCLOSEOnWarningMessage)).click();
-//        wait(1000);
         driver.switchTo().frame(1);
         driver.switchTo().frame(0);
         driver.switchTo().parentFrame();

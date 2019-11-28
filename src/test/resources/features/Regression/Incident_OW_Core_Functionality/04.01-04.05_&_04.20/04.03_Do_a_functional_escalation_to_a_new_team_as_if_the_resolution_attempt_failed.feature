@@ -1,7 +1,7 @@
 @04.03_Do_a_functional_escalation_to_a_new_team_as_if_the_resolution_attempt_failed  @Incident1
   #passed
-  Feature: assigning ticket to new team
-    Scenario: user can assign ticket to new assignee
+  Feature: Do a functional escalation to a new team as if the resolution attempt failed
+    Scenario: Do a functional escalation to a new team as if the resolution attempt failed
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

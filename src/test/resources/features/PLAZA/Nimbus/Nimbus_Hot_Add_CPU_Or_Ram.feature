@@ -19,7 +19,7 @@
       And user selects nimbus CI as "cc100cgas001"
       And user enters nimbus description as "Test6 Nimbus/Description"
       And user enters additional comments as "Test6 Nimbus/AC"
-      Then user clicks on "Submit"
+      #Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
       Then user should see service request form

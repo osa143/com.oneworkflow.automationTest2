@@ -1,7 +1,7 @@
 @01.17_Create_a_new_incident_with_Event_start_time_in_history @Incident  @01
 #Passed
-Feature: Creation of incident with event start time in the past
-  Scenario: user is able create a ticket with event start time in past
+Feature: Creation of incident with event start time in history
+  Scenario: Creation of incident with event start time in history
 
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password

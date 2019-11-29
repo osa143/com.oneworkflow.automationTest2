@@ -31,25 +31,14 @@ Feature: E2E Validation of API created trouble ticket
     When user unticks all affected BU
     And user clicks on sweden checkbox under affected BU's
     Then change should also be reflected in the timeline as ""
-    When user clicks on attachments under sections
-    And user clicks on add button under internal
-    Then user switches to frame
-    And user enters attachment summary as "Test Attachment"
-    And user enters attachment description as "Test Attachment"
-    Then user adds attachment "attachement.doc"
-    And user selects attachment visibility as Internal
-    And user clicks on save button on attachment window
-    And user switches to window 1
-    Then change should also be reflected in the timeline as "Attachment has been added. File Name - attachement.doc.txt"
-    And user clicks on add button under internal
-    Then user switches to frame
-    And user enters attachment summary as "Test Attachment"
-    And user enters attachment description as "Test Attachment"
-    Then user adds attachment "attachement.doc"
-    And user selects attachment visibility as external
-    And user clicks on save button on attachment window
-    And user switches to window 1
-    Then change should also be reflected in the timeline as "Attachment has been added. File Name - attachement.doc.txt"
+    And  user adds attachment and verifies under "internal"
+      | summary   | description | FileType           | attachments |
+      | Test JPEG | Test JPEG   | Test JPEG FILE.jpg | 1           |
+      | Test PNG  | Test PNG    | Test PNG FILE.png  | 2           |
+      | Test PDF  | Test PDF    | Test PDF FILE.pdf  | 3           |
+      | Test WORD | Test WORD   | Test WORD FILE.docx| 4           |
+      | Test EXCEL| Test EXCEL  | Test XLS FILE.xls  | 5           |
+      | Test PPT  | Test PPT    | Test PPT FILE.pptx | 6           |
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user switches to frame

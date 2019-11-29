@@ -51,6 +51,7 @@ public class BasePage {
             e.printStackTrace();
         }
     }
+
     // To find element using webdriver wait
     public WebElement findElement(By element){
         return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(element));

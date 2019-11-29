@@ -222,12 +222,6 @@ public class OWF_TroubleEventPageSteps {
 
     }
 
-
-    @Then("user validates linked tickets availability")
-    public void userValidatesLinkedTicketsAvailability() {
-        Assert.assertTrue(troubleEventPage.validateLinkedItemsAvailability(), "Linked items are not available");
-    }
-
     @Then("user should see child alarms present in alarms tab")
     public void userShouldSeeChildAlarmsPresentInAlarmsTab() {
         Assert.assertTrue(troubleEventPage.validateChildAlarmsAvailability(), "Child alarms are not available");

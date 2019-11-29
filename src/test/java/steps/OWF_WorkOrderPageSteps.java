@@ -804,19 +804,20 @@ public class OWF_WorkOrderPageSteps {
         workOrderPage.enterEstimatedScheduleEnd(arg0);
     }
 
-    @And("user enters actual schedule start date as {string}")
-    public void userEntersActualScheduleStartDateAs(String arg0) {
-        workOrderPage.enterActualScheduleStart(arg0);
+        @And("user enters actual schedule start date as {string}")
+        public void userEntersActualScheduleStartDateAs (String arg0){
+            workOrderPage.enterActualScheduleStart(arg0);
+        }
+
+        @And("user enters actual schedule end date as {string}")
+        public void userEntersActualScheduleEndDateAs (String arg0){
+            workOrderPage.enterActualScheduleEnd(arg0);
+        }
     }
 
-    @And("user enters actual schedule end date as {string}")
-    public void userEntersActualScheduleEndDateAs(String arg0) {
-        workOrderPage.enterActualScheduleEnd(arg0);
+    @Then("user validates ci impact is inactive")
+    public void userValidatesCiImpactIsInactive() {
+        Assert.assertTrue(workOrderPage.verifyCiImpactIsInvalid());
     }
-
-//    @Then("user validates ci impact is inactive")
-//    public void userValidatesCiImpactIsInactive() {
-//        Assert.assertTrue(workOrderPage.verifyCiImpactIsInvalid());
-//    }
 }
 

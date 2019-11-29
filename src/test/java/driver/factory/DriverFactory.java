@@ -86,10 +86,8 @@ public class DriverFactory {
 
             driver.manage().window().maximize();
             driver.manage().deleteAllCookies();
-             driver.manage().timeouts().pageLoadTimeout(WaitUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+            driver.manage().timeouts().pageLoadTimeout(WaitUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
             driver.manage().timeouts().implicitlyWait(WaitUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-            //JavascriptExecutor executor = (JavascriptExecutor)driver;
-            //executor.executeScript("document.body.style.zoom = '0.9'");
 
         }
 
@@ -97,7 +95,7 @@ public class DriverFactory {
     }
 
     public void quit(){
-        if(driver!= null){
+            if(driver!= null){
             driver.quit();
             driver = null;
         }

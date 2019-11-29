@@ -1278,6 +1278,12 @@ public class OWF_ProblemRecordPageSteps {
 
 
     }
+
+    @When("user creates problem ticket with following details")
+    public void userCreatesProblemTicketWithFollowingDetails(DataTable dataTable) {
+      problemRecordPage.createProblemTicket(dataTable);
+
+    }
 }
 
 

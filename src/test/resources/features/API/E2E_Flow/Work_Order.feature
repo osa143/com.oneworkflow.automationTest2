@@ -20,7 +20,7 @@
       Then user validates service provider as "Telia Company"
       And user validates source field as "One Workflow"
       And user validates source id as "sourceID"
-      Then user validates all affected BU's are selected
+      Then user validates all affected BU are selected
       And user validates template as "Fokus operation (DK)"
       Then user validates title field as "title"
       And user validates request type as "Service Request"
@@ -41,7 +41,7 @@
       Then user validates region name as "SE"
       And user validates owner profile as "IT CC"
       Then user validates owner as "tvb913"
-      And user validates assigned profile as "AOFokus-DK"
+      And user should see assigned profile as "AOFokus-DK"
       Then user validates assignee is "masc72"
       And user validates vendor name as "vendorName"
       Then user validates onsite engineers as "onSiteEngineers"
@@ -117,14 +117,13 @@
       Then form should be saved
       When user clicks on attachments under sections
       And  user adds attachment and verifies under "internal"
-        | summary   | description | fullFilePath                                                                        | attachments |
-        | Test JPEG | Test JPEG   | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test JPEG FILE.jpg | 1           |
-        | Test PNG  | Test PNG    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PNG FILE.png  | 2           |
-        | Test PDF  | Test PDF    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PDF FILE.pdf  | 3           |
-        | Test WORD | Test WORD   | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test WORD FILE.docx| 4           |
-        | Test EXCEL| Test EXCEL  | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test XLS FILE.xls  | 5           |
-        | Test PPT  | Test PPT    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PPT FILE.pptx | 6           |
-
+        | summary   | description | FileType           | attachments |
+        | Test JPEG | Test JPEG   | Test JPEG FILE.jpg | 1           |
+        | Test PNG  | Test PNG    | Test PNG FILE.png  | 2           |
+        | Test PDF  | Test PDF    | Test PDF FILE.pdf  | 3           |
+        | Test WORD | Test WORD   | Test WORD FILE.docx| 4           |
+        | Test EXCEL| Test EXCEL  | Test XLS FILE.xls  | 5           |
+        | Test PPT  | Test PPT    | Test PPT FILE.pptx | 6           |
       Then change should also be reflected in the timeline as "Attachment has been added. File Name - attachement.doc.txt" for trouble ticket in row 1
       When user clicks on Diagnosis tab
       And user clicks on CI search button
@@ -152,32 +151,31 @@
       When user right clicks on CI "One Workflow" and selects "Impact:Clear All"
       And user should see confirmation message and clicks on yes button
       When user clicks on schedule tab
-      Then user enters request scheduled end time as "2019-11-28 00:00:00"
-      Then user selects estimated schedule start date as "2019-11-21 00:00:00"
-      And user selects estimated schedule end date as "2019-11-27 00:00:00"
-      Then user selects actual schedule start date as "2019-11-18 00:00:00"
-      And user selects actual schedule end date as "2019-11-20 00:00:00"
+      And user enters request scheduled end time as "2019-11-28 00:00:00"
+      And user enters estimated schedule start date as "2019-11-21 00:00:00"
+      And user enters estimated schedule end date as "2019-11-27 00:00:00"
+      And user enters actual schedule start date as "2019-11-18 00:00:00"
+      And user enters actual schedule end date as "2019-11-20 00:00:00"
       Then user clicks save button
       Then form should be saved
       When user clicks on "Interested Parties" tab
       Then user clicks on add button under interested parties
       And user switches to frame
       And user selects type as "Additional Access" under interested parties
-      Then user selects search for radio button as "User"
-      And user enters "Change_Automation_1" under interested parties
+      Then user clicks on radio button user
+      And user enters "Change_Automation_1" in login name plus field
       Then user clicks on search under add interested party
-      And user highlights first ticket listed
+      And user highlights present user under add interested party
       Then user selects access radio button as read and write
       And user selects auto notify radio button as yes
       Then user clicks on save button under interested parties frame
       And user switches to window 1
-      Then user clicks on add email button
-      And user enters "Change_Automation_2" under interested parties
+      And user clicks on "Interested Parties" tab
+      And user enters email address as "Change_Automation_2"
       And user clicks on add email button
       Then user validates "Change_Automation_2" is listed as an interested party
       When user clicks on timeline tab
       Then change should also be reflected in the timeline as "The User   has been added as interested parties."
-      And user switches to window 0
       Then user clicks on create change record
       And user switches to window 2
       Then user selects request type as "Normal Change"
@@ -208,10 +206,8 @@
       Then user clicks on clear button
       And user enters ticket id as "CR-000000072354"
       And user clicks on the search button
-      And user highlights first ticket listed
       And user clicks accept button
-      Then user switches to window 1
-      And user validates ticket "CR-000000072354" is present under linked items tab
+      And user validates 1 linked ticket availability
       When user selects target application first dropdown as "OS3 - Known Error"
       And user selects target application second dropdown as "Caused"
       Then user clicks on link button under linked items tab
@@ -220,10 +216,9 @@
       Then user selects Type as "RAN"
       And user selects Item as "SYNC"
       Then user clicks on the search button
-      And user highlights first ticket listed
       And user clicks accept button
-      Then user clicks refresh button on linked items tab
-      And user validates ticket "KE-000000007201" is present under linked items tab
+      Then user clicks refresh button under linked items
+      And user validates 2 linked ticket availability
       Then user selects target application first dropdown as "OS3 - Operations"
       And user selects target application second dropdown as "Caused"
       Then user clicks on link button under linked items tab
@@ -231,10 +226,9 @@
       Then user clicks on clear button
       Then user enters ticket id as "OP-000000686157"
       And user clicks on the search button
-      And user highlights first ticket listed
       And user clicks accept button
-      Then user clicks refresh button on linked items tab
-      And user validates ticket "OP-000000686157" is present under linked items tab
+      Then user clicks refresh button under linked items
+      And user validates 3 linked ticket availability
       Then user selects target application first dropdown as "OS3 - Problem"
       And user selects target application second dropdown as "Caused"
       Then user clicks on link button under linked items tab
@@ -242,10 +236,9 @@
       Then user clicks on clear button
       And user enters ticket id as "PB-000000038037"
       And user clicks on the search button
-      And user highlights first ticket listed
       And user clicks accept button
-      Then user clicks refresh button on linked items tab
-      And user validates ticket "PB-000000038037" is present under linked items tab
+      Then user clicks refresh button under linked items
+      And user validates 4 linked ticket availability
       When user clicks on Ack button
       Then user validates ticket status as "Work In Progress"
       And user changes status to "Cleared"

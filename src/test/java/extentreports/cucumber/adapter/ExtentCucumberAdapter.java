@@ -1,5 +1,21 @@
 package extentreports.cucumber.adapter;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.GherkinKeyword;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.gherkin.model.Asterisk;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import cucumber.api.HookTestStep;
+import cucumber.api.PickleStepTestStep;
+import cucumber.api.Result;
+import cucumber.api.TestCase;
+import cucumber.api.event.*;
+import cucumber.runtime.CucumberException;
+import extentreports.service.ExtentService;
+import gherkin.ast.*;
+import gherkin.pickles.*;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -12,46 +28,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.GherkinKeyword;
-import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.gherkin.model.Asterisk;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
-import extentreports.service.ExtentService;
-
-import cucumber.api.HookTestStep;
-import cucumber.api.PickleStepTestStep;
-import cucumber.api.Result;
-import cucumber.api.TestCase;
-import cucumber.api.event.ConcurrentEventListener;
-import cucumber.api.event.EmbedEvent;
-import cucumber.api.event.EventHandler;
-import cucumber.api.event.EventPublisher;
-import cucumber.api.event.TestCaseStarted;
-import cucumber.api.event.TestRunFinished;
-import cucumber.api.event.TestSourceRead;
-import cucumber.api.event.TestStepFinished;
-import cucumber.api.event.TestStepStarted;
-import cucumber.api.event.WriteEvent;
-import cucumber.runtime.CucumberException;
-import gherkin.ast.DataTable;
-import gherkin.ast.DocString;
-import gherkin.ast.Examples;
-import gherkin.ast.Feature;
-import gherkin.ast.Node;
-import gherkin.ast.ScenarioDefinition;
-import gherkin.ast.ScenarioOutline;
-import gherkin.ast.Step;
-import gherkin.ast.TableCell;
-import gherkin.ast.TableRow;
-import gherkin.ast.Tag;
-import gherkin.pickles.Argument;
-import gherkin.pickles.PickleCell;
-import gherkin.pickles.PickleRow;
-import gherkin.pickles.PickleString;
-import gherkin.pickles.PickleTable;
 
 /**
  * A port of Cucumber-JVM (MIT licensed) HtmlFormatter for Extent Framework 

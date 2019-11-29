@@ -51,6 +51,7 @@ public class BasePage {
             e.printStackTrace();
         }
     }
+
     // To find element using webdriver wait
     public WebElement findElement(By element){
         return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(element));
@@ -124,7 +125,9 @@ public class BasePage {
         }
         return valid;
     }
-
+    public void clearText(By element){
+        findElement(element).clear();
+    }
 
     public void clickEscButton()
     {
@@ -938,6 +941,7 @@ public class BasePage {
         }
         return true;
     }
+
 
 }
 

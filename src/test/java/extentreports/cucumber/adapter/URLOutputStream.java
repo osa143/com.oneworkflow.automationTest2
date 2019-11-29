@@ -2,12 +2,8 @@ package extentreports.cucumber.adapter;
 
 import cucumber.util.FixJava;
 import gherkin.deps.com.google.gson.Gson;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
+
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Collections;
@@ -15,7 +11,7 @@ import java.util.Map;
 
 /**
  * A stream that can write to both file and http URLs. If it's a file URL, writes with a {@link
- * java.io.FileOutputStream}, if it's a http or https URL, writes with a HTTP PUT (by default) or with the specified
+ * FileOutputStream}, if it's a http or https URL, writes with a HTTP PUT (by default) or with the specified
  * method.
  */
 class URLOutputStream extends OutputStream {

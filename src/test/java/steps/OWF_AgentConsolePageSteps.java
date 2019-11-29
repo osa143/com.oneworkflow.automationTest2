@@ -46,7 +46,7 @@ public class OWF_AgentConsolePageSteps {
     public void userClicksOnCreateProblemRecord() {
         agentConsolePage.clickCreateMenu();
         agentConsolePage.clickMenuItemProblemRecord();
-        agentConsolePage.wait(5000);
+        //agentConsolePage.wait(3000);
         //CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
     }
 

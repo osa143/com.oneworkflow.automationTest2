@@ -1,5 +1,9 @@
 package extentreports.service;
 
+import com.aventstack.extentreports.ExtentReporter;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.*;
+
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.Serializable;
@@ -7,18 +11,7 @@ import java.util.Arrays;
 import java.util.Optional;
 import java.util.Properties;
 
-import com.aventstack.extentreports.ExtentReporter;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.reporter.ConfigurableReporter;
-import com.aventstack.extentreports.reporter.ExtentAventReporter;
-import com.aventstack.extentreports.reporter.ExtentBDDReporter;
-import com.aventstack.extentreports.reporter.ExtentCardsReporter;
-import com.aventstack.extentreports.reporter.ExtentEmailReporter;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.ExtentKlovReporter;
-import com.aventstack.extentreports.reporter.ExtentLoggerReporter;
 //import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.aventstack.extentreports.reporter.ExtentTabularReporter;
 
 public class ExtentService 
     implements Serializable {

@@ -1088,14 +1088,202 @@ public class OWF_ProblemRecordPageSteps {
         Assert.assertTrue(problemRecordPage.verifyFinlandIsSelectedAsAffectedBu());
     }
 
-    @Then("change should also be reflected in the timeline as {string} for change ticket in row {int}")
-    public void changeShouldAlsoBeReflectedInTheTimelineAsForChangeTicketInRow(String arg0, int arg1) {
+
+    @And("user validates Impact as {string}")
+    public void userValidatesImpactAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getImpact(), arg0);
     }
 
-    @Then("change should also be reflected in the timeline as {string}DK_BSC_ALG{int}B\"")
-    public void changeShouldAlsoBeReflectedInTheTimelineAsDK_BSC_ALGB(String arg0, int arg1) throws Throwable {    // Write code here that turns the phrase above into concrete actions    throw new cucumber.api.PendingException();}
+    @Then("user validates urgency as {string}")
+    public void userValidatesUrgencyAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getUrgency(), arg0);
     }
 
+    @Then("user validates root cause code is {string}")
+    public void userValidatesRootCauseCodeIs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getRootCauseCode(), arg0);
+    }
+
+    @And("user clicks on private radio button")
+    public void userClicksOnPrivateRadioButton() {
+        problemRecordPage.clickPrivateRadioButton();
+    }
+
+    @And("user clicks refresh button under linked items")
+    public void userClicksRefreshButtonUnderLinkedItems() {
+        problemRecordPage.clickRefresh();
+    }
+
+    @And("user validates root cause details as {string}")
+    public void userValidatesRootCauseDetailsAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getRootCauseDetails(), arg0);
+    }
+
+    @Then("user validates service affected as {string}")
+    public void userValidatesServiceAffectedAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getServiceEffectedText(), arg0);
+    }
+
+    @And("user validates estimated ready time as {string}")
+    public void userValidatesEstimatedReadyTimeAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getEstimatedReady(),arg0);
+    }
+
+    @Then("user validates actual finish as {string}")
+    public void userValidatesActualFinishAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getActualFinish(),arg0);
+    }
+
+    @And("user validates decision go no go as {string}")
+    public void userValidatesDecisionGoNoGoAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getDecisionGoNoGo(),arg0);
+    }
+
+    @Then("user validates workaround as {string}")
+    public void userValidatesWorkaroundAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getWorkaround(),arg0);
+    }
+
+    @And("user validates RC found date as {string}")
+    public void userValidatesRCFoundDateAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getRcFoundDate(),arg0);
+    }
+
+    @Then("user validates model as {string}")
+    public void userValidatesModelAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getModel(),arg0);
+    }
+
+    @Then("user validates location id as {string}")
+    public void userValidatesLocationIdAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getLocationIdPlus(),arg0);
+    }
+
+    @And("user validates location name as {string}")
+    public void userValidatesLocationNameAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getLocationNamePlus(),arg0);
+    }
+
+    @Then("user validates region id as {string}")
+    public void userValidatesRegionIdAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getRegionId(),arg0);
+    }
+
+    @And("user validates region name as {string}")
+    public void userValidatesRegionNameAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getRegionName(),arg0);
+    }
+
+    @Then("user validates latitude as {string}")
+    public void userValidatesLatitudeAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getLatitude(),arg0);
+    }
+
+    @And("user validates longitude as {string}")
+    public void userValidatesLongitudeAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getLongitude(),arg0);  
+    }
+
+    @And("user validates x degree as {string}")
+    public void userValidatesXDegreeAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.get_X_Degree(),arg0);
+    }
+
+    @And("user validates y degree as {string}")
+    public void userValidatesYDegreeAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.get_Y_Degree(),arg0);  
+    }
+
+    @Then("user validates location details as {string}")
+    public void userValidatesLocationDetailsAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getLocationDetails(),arg0);
+    }
+
+    @And("user validates reassignment count as {string}")
+    public void userValidatesReassignmentCountAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getReassignmentCount(),arg0);
+    }
+
+    @Then("user validates vendor name as {string}")
+    public void userValidatesVendorNameAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getVendorName(),arg0);
+    }
+
+    @And("user validates onsite engineers as {string}")
+    public void userValidatesOnsiteEngineersAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getOnsiteEngineer(),arg0);
+    }
+
+    @Then("user validates account number as {string}")
+    public void userValidatesAccountNumberAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getAccountNumber(),arg0);
+    }
+
+    @And("user validates telephone number as {string}")
+    public void userValidatesTelephoneNumberAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getTelephoneNumber(),arg0);
+    }
+
+    @Then("user validates hours of operation as {string}")
+    public void userValidatesHoursOfOperationAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getHoursOfOperations(),arg0);
+    }
+
+    @And("user validates vendor ref as {string}")
+    public void userValidatesVendorRefAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getVendorRef(),arg0);
+    }
+
+    @And("user validates onsite contact as {string}")
+    public void userValidatesOnsiteContactAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getOnsiteContact(),arg0);
+    }
+
+    @Then("user validates travel time as {string}")
+    public void userValidatesTravelTimeAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getTravelTime(),arg0);
+    }
+
+    @When("user unticks all affected BU")
+    public void userUnticksAllAffectedBUS() {
+        problemRecordPage.unTickAllEffectedBu();
+    }
+
+    @Then("user validates Sweden is selected as Affected BU")
+    public void userValidatesSwedenIsSelectedAsAffectedBU() {
+        Assert.assertTrue(problemRecordPage.verifySwedenBuIsSelected());
+    }
+
+    @And("user selects {string} as {string}")
+    public void userSelectsAs(String DdName, String DdValue) {
+        problemRecordPage.selectDropDownNameAndValue(DdName,DdValue, false);
+    }
+
+    @Then("user clicks refresh button")
+    public void userClicksRefreshButton() {
+        problemRecordPage.clickRefresh();
+    }
+
+    @Then("user validates all affected BU are selected")
+    public void userValidatesAllAffectedBUAreSelected() {
+        Assert.assertTrue(problemRecordPage.verifyIsSwedenSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsDenmarkSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsFinlandSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsNorwaySelected());
+        Assert.assertTrue(problemRecordPage.verifyIsLithuniaSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsEstoniaSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsTeliaCarrierSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsInternalSelected());
+        Assert.assertTrue(problemRecordPage.verifyIsUnknownSelected());
+
+
+    }
+
+    @When("user creates problem ticket with following details")
+    public void userCreatesProblemTicketWithFollowingDetails(DataTable dataTable) {
+      problemRecordPage.createProblemTicket(dataTable);
+
+    }
 }
 
 

@@ -3,6 +3,7 @@ package steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.OWF_WorkOrderPage;
 import utils.CommonUtils;
@@ -733,6 +734,90 @@ public class OWF_WorkOrderPageSteps {
     public void userValidatesEmailNotificationIsSent() {
       workOrderPage.clickOnSent();
       Assert.assertEquals(workOrderPage.getMethodText(), "Email HTML");
+    }
+
+    @And("user highlights ticket under work order")
+    public void userHighlightsTicketUnderWorkOrder() {
+        workOrderPage.clickElement(By.xpath("//*[@id='T777504000']/tbody/tr[2]/td[1]"));
+    }
+
+    @And("user validates template as {string}")
+    public void userValidatesTemplateAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getMethodText(), arg0);
+
+    }
+
+    @And("user validates parent ticket id as {string}")
+    public void userValidatesParentTicketIdAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getParentTicketId(), arg0);
+    }
+
+    @Then("user validates reason as {string}")
+    public void userValidatesReasonAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getReason(), arg0);
+    }
+
+    @And("user validates sla with customer as {string}")
+    public void userValidatesSlaWithCustomerAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getSlaWithCustomer(), arg0);
+    }
+
+    @Then("user validates sla class as {string}")
+    public void userValidatesSlaClassAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getSlaClass(), arg0);
+
+    }
+
+    @And("user validates event start time as {string}")
+    public void userValidatesEventStartTimeAs(String arg0) {
+        Assert.assertEquals(workOrderPage.getEventStartTime(), arg0);
+    }
+
+    @When("user enters estimated ready as {string}")
+    public void userEntersEstimatedReadyAs(String arg0) {
+        workOrderPage.enterEstimatedReady(arg0);
+    }
+
+    @When("user enters estimated ready as current date and time")
+    public void userEntersEstimatedReadyAsCurrentDateAndTime() {
+        workOrderPage.enterEstimatedReadyAsCurrentDateAndTime();
+
+    }
+
+    @Then("user selects owner profile as {string}")
+    public void userSelectsOwnerProfileAs(String arg0) {
+        workOrderPage.selectOwner(arg0);
+    }
+
+    @And("user enters request scheduled end time as {string}")
+    public void userEntersRequestScheduledEndTimeAs(String arg0) {
+        workOrderPage.enterRequestedScheduleEnd(arg0);
+    }
+
+    @And("user enters estimated schedule start date as {string}")
+    public void userEntersEstimatedScheduleStartDateAs(String arg0) {
+        workOrderPage.enterEstimatedScheduleStart(arg0);
+    }
+
+    @And("user enters estimated schedule end date as {string}")
+    public void userEntersEstimatedScheduleEndDateAs(String arg0) {
+        workOrderPage.enterEstimatedScheduleEnd(arg0);
+    }
+
+        @And("user enters actual schedule start date as {string}")
+        public void userEntersActualScheduleStartDateAs (String arg0){
+            workOrderPage.enterActualScheduleStart(arg0);
+        }
+
+        @And("user enters actual schedule end date as {string}")
+        public void userEntersActualScheduleEndDateAs (String arg0){
+            workOrderPage.enterActualScheduleEnd(arg0);
+        }
+    }
+
+    @Then("user validates ci impact is inactive")
+    public void userValidatesCiImpactIsInactive() {
+        Assert.assertTrue(workOrderPage.verifyCiImpactIsInvalid());
     }
 }
 

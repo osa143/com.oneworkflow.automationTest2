@@ -13,7 +13,7 @@
       Then user validates service provider as "Telia Company"
       And user validates source field as "One Workflow"
       Then user validates source id as "123456789"
-      And user validates all affected BU's are selected
+      And user validates finland as affected BU
       Then user validates request type as "Normal Change"
       And user validates change initiator as "apitester1"
       And user validates template field as "TEST TEMPLATE [UAT] - Normal Change"
@@ -46,7 +46,6 @@
       And user validates x degree as "0"
       Then user validates longitude as "25.335010"
       And user validates y degree as "0"
-
       And user validates location details as ""
       Then user validates owner profile as "Change Manager"
       And user validates owner as "ChangeManager"
@@ -70,18 +69,17 @@
       When user enters "Test Update - Public" in the timeline text box
       And user clicks on public radio button
       Then user clicks on add button on timeline
-      And change should also be reflected in the timeline as "Test Update - Public" for trouble ticket in row 1
+      And change should also be reflected in the timeline as "Test Update - Public" for change ticket in row 1
       And user enters "Test Update - Public" in the timeline text box
       And user clicks on private radio button
       Then user clicks on add button on timeline
-      And change should also be reflected in the timeline as "Test Update - Private" for trouble ticket in row 1
-      When user unticks all affected BU's
+      And change should also be reflected in the timeline as "Test Update - Private" for change ticket in row 1
+      When user unticks all affected BU
       And user clicks save button
-      Then user validates all BU's are unticked
+      Then error message should display as ""
       When user clicks on sweden checkbox under affected BU's
       And user clicks save button
       Then user validates Sweden is selected as Affected BU
-
       When user enters description as ""
       And user clicks save button
       Then error message should display as "Required field (without a default) not specified : Description (ARERR 9424)"
@@ -99,19 +97,19 @@
       Then error message should display as ""
       When user clicks on attachments under sections
       And  user adds attachment and verifies under "internal"
-        | summary   | description | fullFilePath                                                                        | attachments |
-        | Test JPEG | Test JPEG   | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test JPEG FILE.jpg | 1           |
-        | Test PNG  | Test PNG    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PNG FILE.png  | 2           |
-        | Test PDF  | Test PDF    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PDF FILE.pdf  | 3           |
-        | Test WORD | Test WORD   | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test WORD FILE.docx| 4           |
-        | Test EXCEL| Test EXCEL  | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test XLS FILE.xls  | 5           |
-        | Test PPT  | Test PPT    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PPT FILE.pptx | 6           |
+        | summary   | description | FileType       | attachments |
+        | Test JPEG | Test JPEG   | Test JPEG FILE.jpg | 1           |
+        | Test PNG  | Test PNG    | Test PNG FILE.png  | 2           |
+        | Test PDF  | Test PDF    | Test PDF FILE.pdf  | 3           |
+        | Test WORD | Test WORD   | Test WORD FILE.docx| 4           |
+        | Test EXCEL| Test EXCEL  | Test XLS FILE.xls  | 5           |
+        | Test PPT  | Test PPT    | Test PPT FILE.pptx | 6           |
 
       Then change should also be reflected in the timeline as "Attachment has been added. File Name - attachement.doc.txt"
       And user selects Category as "Core"
       And user selects Type as "Other"
       And user selects Item as "BR"
-      Then user selects technology as "Broadband"
+      And user selects "Technology" as "Broadband"
       Then user clicks save button
       When user clicks on Diagnosis tab
       Then user clicks on CI search button
@@ -126,22 +124,22 @@
       And user switches to window 1
       And CI should be listed and displayed under the Diagnosis tab
       When user clicks on timeline tab
-      Then change should also be reflected in the timeline as "Impact record created for "DK_BSC_ALG3B"
+      And change should also be reflected in the timeline as "Impact record created for DK_BSC_ALG3B" for change ticket in row 1
       When user clicks on Diagnosis tab
       Then user right clicks on CI "DK_BSC_ALG3B" and selects "Detach Selected"
       Then CI should be detached from ticket
       When user clicks on risk tab
       And user answers all risk questions as below
-      And user selects urgent answer as "A. No"
-      And user selects urgent answer as "B. Impact to other systems/technologies are unclear!"
-      And user selects urgent answer as "Tested successfully, this is a pilot"
-      And user selects urgent answer as "D. "Only" Consumer customers affected."
-      And user selects urgent answer as "A. Yes"
-      And user selects urgent answer as "A. Yes"
-      And user selects urgent answer as "A. Yes (outcome of the Change can be instantly verified)"
-      And user selects urgent answer as "B. No"
-      And user selects urgent answer as "A. No"
-      And user selects urgent last answer as "A. No"
+      And user selects answer as "A. No"
+      And user selects answer as "B. Impact to other systems/technologies are unclear!"
+      And user selects answer as "A. Tested successfully, this is a pilot"
+      And user selects answer as "A. Only Consumer customers affected."
+      And user selects answer as "A. Yes"
+      And user selects answer as "A. Yes"
+      And user selects answer as "A. Yes (outcome of the Change can be instantly verified)"
+      And user selects answer as "B. No"
+      And user selects answer as "A. No"
+      And user selects answer as "A. No"
       When user clicks on "Schedule" tab
       Then user enters as "" in service and customer impact
       And user clicks save button
@@ -155,10 +153,10 @@
       And user enters impact duration as "60" seconds
       And user clicks save button
       Then error message should display as "Value does not fall within the limits specified for the field : Range is 0-59 : Secs* (ARERR 9272)"
-      When user enters impact duration as "24" hours
+      And user enters impact duration as "24" hours
       And user clicks save button
       Then error message should display as "Value does not fall within the limits specified for the field : Range is 0-23 : Hrs* (ARERR 9272)"
-      Then user enters impact duration as "30" minutes
+      And user enters impact duration as "30" minutes
       And user clicks save button
       Then form should be saved
       When user enters actual start as "14/11/2019 00:00:00"
@@ -168,22 +166,22 @@
       Then user clicks save button
       Then form should be saved
       When user clicks on timeline tab
-      Then user validates timeline message "ChangeManager1_Automation - The Actual Start Date Time has been updated to : 2019-11-14 00:00:00 UTC"
-      Then user validates timeline message "ChangeManager1_Automation - The Actual End Date Time has been updated to : 2019-11-15 00:00:00 UTC"
+      Then user validates timeline message Actual Start Date "ChangeManager1_Automation - The Actual Start Date Time has been updated to : 2019-11-14 00:00:00 UTC"
+      Then user validates timeline message Actual End Date "ChangeManager1_Automation - The Actual End Date Time has been updated to : 2019-11-15 00:00:00 UTC"
       When user clicks on "Interested Parties" tab
       And user clicks on add button under interested parties
       And user selects type as "Additional Access" under interested parties
-      Then user selects search for radio button as "User"
-      And user enters "Tohall_Copy" under interested parties
+      And user clicks on radio button user
+      Then user validates "Tohall_Copy" is listed as an interested party
       Then user clicks on search under add interested party
-      And user selects first entry
+      And user selects first entry from the table under add interested party
       Then user selects access radio button as read and write
       And user selects auto notify radio button as yes
       Then user clicks on save button under interested parties frame
       And user switches to window 1
       And user clicks on "Timeline" tab
       Then change should also be reflected in the timeline as "The User Tomas Hallén has been added as interested parties."
-      When user clicked on the linked items tab
+      When user clicks on linked items tab
       Then user selects target application first dropdown as "OS3 - Change"
       And user selects target application second dropdown as "Is related to"
       Then user clicks on create button under linked items
@@ -206,8 +204,8 @@
       Then user enters impact duration as "40" minutes
       And user clicks save button
       And user switches to window 1
-      Then user clicks refresh button on linked items tab
-      And user validates change record ticket present
+      Then user clicks refresh button under linked items
+      Then user validates 1 linked ticket availability
       When user selects target application first dropdown as "OS3 - Known Error"
       And user selects target application second dropdown as "Fixed"
       Then user clicks on link button under linked items tab
@@ -217,10 +215,10 @@
       And user selects Type as "RAN"
       And user selects Item as "SYNC"
       And user clicks on the search button
-      And user highlights first ticket listed
+      And user clicks first ticket listed under select target request
       And user clicks accept button
       Then user switches to window 1
-      And user validates known error ticket is present
+      Then user validates linked tickets availability
       When user selects target application first dropdown as "OS3 - Operations"
       And user selects target application second dropdown as "Caused by"
       Then user clicks on create button under linked items
@@ -228,8 +226,8 @@
       Then user selects request type as "Customer"
       And user clicks save button
       Then user switches to window 1
-      And user clicks refresh button on linked items tab
-      And user validates op ticket is present
+      Then user clicks refresh button under linked items
+      Then user validates linked tickets availability
       When user selects target application first dropdown as "OS3 - Problem"
       Then user selects target application second dropdown as "Caused"
       And user clicks on create button under linked items
@@ -239,8 +237,8 @@
       And user selects urgency as "Low"
       Then user clicks save button
       And user switches to window 1
-      Then user clicks refresh button on linked items tsb
-      And user validates problem ticket is present
+      Then user clicks refresh button under linked items
+      Then user validates linked tickets availability
       When user selects target application first dropdown as "OS3 - Work Order"
       And user selects target application second dropdown as "Fixed"
       Then user clicks on create button under linked items
@@ -248,16 +246,16 @@
       Then user selects request type as "Analysis"
       And user clicks save button
       Then user switches to window 0
-      And user clicks refresh button on linked items tab
-      And user validates work order ticket is present
+      Then user clicks refresh button under linked items
+      Then user validates linked tickets availability
       And user clicks on work order tab
       Then user clicks on create from ticket
       And user switches to window 2
       Then user selects request type as "Analysis"
       And user clicks save button
       And user switches to window 0
-      Then user clicks refresh button under work order
-      And user selects ticket in row 1
+      Then user clicks refresh button under linked items
+      And user selects ticket from the linked table
       Then user clicks on open button
       And user validates ticket opens
       And user switches to window 1
@@ -265,7 +263,7 @@
       And user changes status to "Approval Requested"
       And user clicks "Approval" tab
       Then user clicks on view button
-      And user clicks on approve button
+      And user clicks approve button
       And user clicks save button
       Then user validates ticket status as "Approved"
       Then user changes status to "Schedule Requested"
@@ -280,7 +278,7 @@
       Then error message should display as "Required field (without a default) not specified : Completed Code (ARERR 9424)"
       And user clicks "Schedule" tab
       Then user selects completed code as "Successful"
-      And user enters actual end as current and time
+      Then user enters actual finish as current date
       And user clicks save button
       Then user validates ticket status as "Completed"
 

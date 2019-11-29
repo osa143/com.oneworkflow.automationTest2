@@ -16,10 +16,10 @@ Feature: user validates status changes
     Then user enters reason field as "Waiting for Customer Info"
     And user clicks on save button
     Then error message should display as "Please ensure that the On Hold Until To Date is a future date. (ARERR 999001260)"
-    And user enters on hold to date 5 minutes ahead of current time
+    And user enters on hold to date 5 minutes in the future
     And user clicks on save button
     Then user validates ticket status as "Pending"
-    And user validates status cant be changed
+    And user verifies status is read only
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from New to Pending. "
     And change should also be reflected in the timeline as "PENDING INFORMATION: 2019-09-11 21:46:00 UTC - Waiting for Customer Info" on row 2
     When user clicks on release button
@@ -30,11 +30,11 @@ Feature: user validates status changes
     And user validates ticket status as "Assigned"
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from New to Assigned. "
     When user changes status to "Pending"
-    And user enters on hold to date 2 minutes ahead of current time
+    And user enters on hold to date 2 minutes in the future
     Then user enters reason field as "Waiting for Customer Info"
     And user clicks on save button
     Then user validates ticket status as "Pending"
-    And user validates status cant be changed
+    And user verifies status is read only
     Then user waits for 2 minutes
     And user clicks on ticket refresh button
     And user validates ticket status as "Assigned"
@@ -57,7 +57,7 @@ Feature: user validates status changes
     And user clicks on save button
     Then user validates ticket status as "Closed"
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Cleared to Closed. "
-    Then user validates status cant be changed
+    Then user verifies status is read only
 
 
 

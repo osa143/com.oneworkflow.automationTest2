@@ -8,10 +8,9 @@
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
       Then user clicks on plaza portal
-      When user clicks on "Facility Management"
-      And user clicks on order
+      When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Firewall & Network"
+      And user clicks on "Firewall & Network" under IT Infrastructure
       When user clicks on Remote Access (VPN ACS)
       Then user should see "Remote Access (VPN/ACS)" form
       Then user selects remote access system name in haiti as "Other"

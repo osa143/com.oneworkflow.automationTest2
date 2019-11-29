@@ -15,11 +15,11 @@ Feature: user validates status changes
     Then user validates ticket status as "Work In Progress"
     Then user validates other status options available as "Cleared:Pending:Withdrawn:Work In Progress:(Clear)"
     When user changes status to "Pending"
-    And user enters on hold to date 2 minutes ahead of current time
+    And user enters on hold to date 2 minutes in the future
     Then user enters reason field as "Waiting for Customer Info"
     And user clicks on save button
     Then user validates ticket status as "Pending"
-    And user validates status cant be changed
+    And user verifies status is read only
     Then user waits for 2 minutes
     And user clicks on ticket refresh button
     And user validates ticket status as "Work In Progress"
@@ -45,4 +45,4 @@ Feature: user validates status changes
     When user changes status to "Closed" on trouble event page second time
     And user clicks on save button
     Then user validates ticket status as "Closed"
-    Then user validates status cant be changed
+    Then user verifies status is read only

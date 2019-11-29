@@ -7,10 +7,9 @@
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
       Then user clicks on plaza portal
-      When user clicks on "Facility Management"
-      And user clicks on order
+      When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Compute & Operating System"
+      And user clicks on "Compute & Operating System" under IT Infrastructure
       When user clicks on Access to Red Hat Knowledgebase
       Then user should see "Access to Red Hat Knowledgebase" form
       #Then user selects system name in haiti as "Other"

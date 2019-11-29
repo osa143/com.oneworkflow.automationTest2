@@ -7,10 +7,9 @@
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
       Then user clicks on plaza portal
-      When user clicks on "Facility Management"
-      And user clicks on order
+      When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Data Center"
+      And user clicks on "Data Center" under IT Infrastructure
       When user clicks on "Cabling - Remove" pebble
       Then user should see "Cabling - Remove" form
       Then user selects system name in haiti as "Other"

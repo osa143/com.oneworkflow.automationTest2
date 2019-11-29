@@ -303,6 +303,9 @@ public class Plaza_HomePage extends BasePage {
     private static final String dd_VEHA_SYSTEM= "s2id_sp_formfield_system";
     private static final String dd_WEBTAB_CI = "s2id_sp_formfield_sr65_v_add_ci";
 
+    public void selectDropdownValueUnderItInfrastructure(String DropdownValue){
+        driver.findElement(By.id("xcc61d55edb198b00b27fdb11ce961902")).findElements(By.tagName("a")).stream().filter(element -> element.getText().equals(DropdownValue)).findFirst().orElse(null).click();
+    }
 
     public void selectWebtabCi(String dropdownName){
         PlazaValidation.CI = dropdownName;

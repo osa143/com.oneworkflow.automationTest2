@@ -52,7 +52,6 @@ public class CommonUtils extends BasePage {
     }
 
     public static String getDate(String timeZone) {
-
         if (timeZone.equals(""))
             timeZone = ZoneId.systemDefault().getId();
 

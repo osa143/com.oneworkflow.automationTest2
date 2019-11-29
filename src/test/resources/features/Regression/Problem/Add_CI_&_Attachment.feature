@@ -8,13 +8,9 @@
       When user clicks on create problem record
       And user switches to window 1
       Then problem record form should appear in new tab
-      When user clicks on sweden checkbox under affected BU's
-      When user enters "proactive investigation of Tohall_Copy" in Title field
-      And user selects request type as "CPS | IT | Other" in problem form
-      And user enters description as "UAT Test 3 Add CI and attachment"
-      And user selects impact type as moderate:limited
-      And user selects urgency as low
-      And user clicks on save button on the problem form
+      When user creates problem ticket with following details
+        |Title                                  |RequestType |Description                    |ImpactType      |Urgency|
+        |proactive investigation of Tohall_Copy|CPS:IT:Other|UAT Test 3 Add CI and attachment|Moderate/Limited|Low    |
       Then ticket should be created and status should be assigned
       Then user enters description as "-More information"
       And user clicks on save button on the problem form
@@ -30,14 +26,12 @@
       And user clicks on relate CI
       And user closes warning message
       And user clicks on close button on CI search window
-      And user clicks on "Diagnosis" tab
+      Then user clicks on Diagnosis tab
       Then CI should be listed and displayed under the Diagnosis tab
       And user clicks on add button under internal
       And user switches to frame 2
       Then user selects summary dropdown as "Decision"
       And user enters attachment description as "A Document Attached"
-      Then user clicks on add button in attachment window
-      And user switches to frame 2
       When user clicks on choose file button
       Then user searches for attachment and adds attachment to ticket
       Then user clicks on attachment ok button

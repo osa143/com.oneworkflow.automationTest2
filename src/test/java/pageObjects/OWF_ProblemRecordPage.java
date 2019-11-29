@@ -8,7 +8,9 @@ import org.testng.Assert;
 import utils.CommonUtils;
 import utils.PlazaValidation;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class OWF_ProblemRecordPage extends BaseRecordPage {
 
@@ -107,6 +109,20 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txt_TRAVEL_TIME= "arid_WIN_0_705001293";
     private static final String table_TIMELINE = "T999000510";
 
+
+
+
+    public void createProblemTicket(DataTable dataTable){
+        clickSwedenCheckBox();
+        List<Map<String, String>> list=dataTable.asMaps(String.class, String.class);
+        enterTitle(list.get(0).get("Title"));
+        selectRequestType(list.get(0).get("RequestType"), false);
+        enterDescription(list.get(0).get("Description"));
+        selectImpactType(list.get(0).get("ImpactType"));
+        selectUrgency(list.get(0).get("Urgency"));
+        clickSave();
+
+    }
 
     public String getOnsiteEngineer(){
         return getTextByID(txt_ONSITE_ENGINEER);
@@ -307,17 +323,15 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
     public void addAttachmentsAndVerify(DataTable attachment, String type)
     {
-
-//        String projectPath= System.getProperty("user.dir" );
-//        System.out.println(projectPath);
-//        String fullFilePath= projectPath+"\\src\\test\\resources\\"+filePath;
-//        System.out.println(fullFilePath);
-//        CommonUtils.uploadFile(fullFilePath);
         List<List<String>> attachments = attachment.asLists(String.class);
         for (int i = 1; i < attachments.size(); i ++) {
             String summary = attachments.get(i).get(0);
             String description = attachments.get(i).get(1);
             String filePath = attachments.get(i).get(2);
+            String projectPath= System.getProperty("user.dir" );
+            System.out.println(projectPath);
+            String fullFilePath= projectPath+"\\src\\test\\resources\\Test Attachments\\other files\\"+filePath;
+            System.out.println(fullFilePath);
             int attachmentsCount = Integer.parseInt(attachments.get(i).get(3));
             System.out.println("summary is: " + summary);
             driver.findElement(By.id(btnADD_ID)).click();
@@ -326,7 +340,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
             enterDescription_Attachment_OnFrame(description);
             clickAdd_AttachmentOnFrame();
             clickonChooseFile_OnFrame();
-            CommonUtils.uploadFile(filePath);
+            CommonUtils.uploadFile(fullFilePath);
             wait(1000);
             clickOk_AttachmentOnFrame();
             switchToFrameByIndex(2);

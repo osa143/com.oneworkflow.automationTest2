@@ -69,6 +69,13 @@
     <excluded-from-favorite>
       <branch-storage>
         <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
           <entry type="REMOTE">
             <value>
               <list>
@@ -85,8 +92,7 @@
           <entry type="LOCAL">
             <value>
               <list>
-                <branch-info repo="$PROJECT_DIR$" source="Jordan" />
-                <branch-info repo="$PROJECT_DIR$" source="JordanMurphy" />
+                <branch-info repo="$PROJECT_DIR$" source="JordanM" />
               </list>
             </value>
           </entry>
@@ -512,14 +518,7 @@
       <workItem from="1574778462016" duration="5753000" />
       <workItem from="1574855936838" duration="906000" />
       <workItem from="1574864702016" duration="32566000" />
-      <workItem from="1575026049762" duration="54000" />
-    </task>
-    <task id="LOCAL-00085" summary="added steps for bulk CI loading trouble">
-      <created>1565967719085</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1565967719085</updated>
+      <workItem from="1575026049762" duration="333000" />
     </task>
     <task id="LOCAL-00086" summary="added steps for bulk CI loading change and trouble">
       <created>1566208300881</created>
@@ -857,7 +856,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574959259052</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="plaza changes">
+      <created>1575026147878</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1575026147879</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -954,12 +960,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java</url>
-          <line>347</line>
+          <line>406</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/pageObjects/OWF_WorkOrderPage.java</url>
-          <line>868</line>
+          <line>927</line>
           <properties class="pageObjects.OWF_WorkOrderPage" method="verifyNimbusExpandBackupArchiveDiskDescription">
             <option name="EMULATED" value="true" />
           </properties>

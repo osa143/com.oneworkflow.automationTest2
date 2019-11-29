@@ -6,10 +6,9 @@
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
       Then user clicks on plaza portal
-      When user clicks on "Facility Management"
-      And user clicks on order
+      When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Compute & Operating System"
+      And user clicks on "Compute & Operating System" under IT Infrastructure
       When user clicks on Change OS Patching
       Then user should see "Change OS Patching" form
       Then user selects network security firewall system name in haiti as "Other"

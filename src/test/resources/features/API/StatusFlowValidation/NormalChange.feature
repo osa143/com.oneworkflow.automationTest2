@@ -195,7 +195,7 @@
       And user validates ticket status as "Scheduled"
       And multiple statuses "Pending;Approved;Scheduled;Implementation;Withdrawn;(Clear)" should be available in "Status" dropdown
       When user changes status to "Pending"
-      And user enters on hold to date 2 minutes ahead of current time
+      And user enters on hold to date 2 minutes in the future
       Then user enters reason field as "Waiting for Customer Info"
       And user clicks on save button
       Then user validates ticket status as "Pending"

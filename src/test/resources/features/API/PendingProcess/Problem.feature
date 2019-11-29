@@ -11,5 +11,6 @@ Feature: user validates status change after pending time passes
     Then user should see problem ticket
     And user validates ticket status as "Pending"
     When user waits for to date to pass
+    When user waits for 5 minutes
     Then user clicks on ticket refresh button
     Then user validates ticket status as "Assigned"

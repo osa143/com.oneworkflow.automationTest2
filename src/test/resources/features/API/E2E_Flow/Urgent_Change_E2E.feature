@@ -25,14 +25,14 @@
       And user validates finland as affected BU
       And user validates request type as "Urgent Change"
       Then user validates change initiator as "apitester1"
-      And user validates template as "TEST TEMPLATE [UAT] - Normal Change"
+      And user validates template field as "TEST TEMPLATE [UAT] - Normal Change"
       Then user validates title field as "IT | Other"
       And user validates request category as "Configuration"
       Then user validates description as "Test Ticket"
       And user validates reason as "Testing"
       Then user validates ticket priority as "Critical"
       And user validates project code as "string"
-      Then user validates change builder as "TestBuilder"
+      Then user validates change builder+* as "TestBuilder"
       And user validates Category as "Access"
       Then user validates type as "Radio Access Network"
       And user validates item as "UMTSCell"
@@ -53,12 +53,12 @@
       And user validates test plan as "AATestplan"
       Then user validates rollback as "AArollback"
       And user validates communication plan as "AAComm"
-      Then user validates ver of functionality as "AAVerOfFunc"
-      And user validates risk description as "AARiskDesc"
+      Then user validates ver of functionality* as "AAVerOfFunc"
+      And user validates risk description* as "AARiskDesc"
       Then user validates vendor name as "Test Name"
-      And user validates onsite engineer as "Test Engineer"
+      And user validates onsite engineers as "Test Engineer"
       Then user validates account number as "12345"
-      And user validates phone number as "123456789"
+      And user enters phone field as "123456789"
       Then user validates hours of operation as "8"
       And user validates vendor ref as "123456789"
       Then user validates onsite contact as "Test Contact"
@@ -71,6 +71,7 @@
         | Test WORD | Test WORD   | Test WORD FILE.docx| 4           |
         | Test EXCEL| Test EXCEL  | Test XLS FILE.xls  | 5           |
         | Test PPT  | Test PPT    | Test PPT FILE.pptx | 6           |
+
 
 
       Then change should also be reflected in the timeline as "Attachment has been added. File Name - attachement.doc.txt" for change ticket in row 1
@@ -92,17 +93,16 @@
       Then user right clicks on CI "DK_BSC_ALG3B" and selects "Detach Selected"
       Then CI should be detached from ticket
       When user clicks on risk tab
-      And user validates all risk questions as below
-      And user selects urgent answer as "A. No"
-      And user selects urgent answer as "B. Impact to other systems/technologies are unclear!"
-      And user selects urgent answer as "High number of SLA customers."
-      And user selects urgent answer as "D. "Only" Consumer customers affected."
-      And user selects urgent answer as "A. Yes"
-      And user selects urgent answer as "A. Yes"
-      And user selects urgent answer as "A. Yes (outcome of the Change can be instantly verified)"
-      And user selects urgent answer as "B. No"
-      And user selects urgent answer as "A. No"
-      And user selects urgent last answer as "A. No"
+      And user selects answer as "A. No"
+      And user selects answer as "B. Impact to other systems/technologies are unclear!"
+      And user selects answer as "A. Tested successfully, this is a pilot"
+      And user selects answer as "A. Only Consumer customers affected."
+      And user selects answer as "A. Yes"
+      And user selects answer as "A. Yes"
+      And user selects answer as "A. Yes (outcome of the Change can be instantly verified)"
+      And user selects answer as "B. No"
+      And user selects answer as "A. No"
+      And user selects answer as "A. No"
       When user clicks on "Schedule" tab
       Then user enters as "" in service and customer impact
       And user clicks save button
@@ -125,7 +125,7 @@
       When user enters impact duration as "10" minutes
       And user clicks save button
       Then form should be saved
-      When user clicks on interested parties tab
+      When user clicks on "Interested Parties" tab
       And user clicks on add button under interested parties
       And user selects type as "Additional Access" under interested parties
       Then user selects search for radio button as "User"

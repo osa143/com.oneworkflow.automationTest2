@@ -143,3 +143,7 @@ Feature: E2E Validation of API created trouble ticket
     And change should also be reflected in the timeline as "ASSIGNMENT.  Trouble has been reassigned from user  >> Change_Automation_1"
     And change should also be reflected in the timeline as "STATUS MODIFIED.  The trouble Status has changed: Work In Progress >> Assigned."
     When user changes status to "Cleared"
+    And user clicks save button
+    Then user changes status to closed
+    And user clicks save button
+

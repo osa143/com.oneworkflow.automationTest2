@@ -12,7 +12,7 @@ Feature: Validate Status as new and verify owner/assignment
     And user validates ticket status as "New"
     When user clicks on assignment under sections
     And user clicks on owner under sections
-    Then user validates owner profile is blank
-    And user validates owner is blank
-    And user validates assignee profile is blank
-    And user validates assignee is blank
+    Then user validates owner profile as ""
+    And user validates owner as ""
+    And user validates assigned profile as ""
+    And user validates assignee is ""

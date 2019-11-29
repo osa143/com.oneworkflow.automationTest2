@@ -10,6 +10,6 @@ Feature: user validates status change after pending time passes
     And user enters ticket id as ""
     Then user should see change record ticket
     And user validates ticket status as "Pending"
-    When user waits for to date to pass
+    When user waits for 5 minutes
     Then user clicks on ticket refresh button
     Then user validates ticket status as "Assigned"

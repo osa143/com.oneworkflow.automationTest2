@@ -1,3 +1,7 @@
 /build
+/gradle
 /target
 .idea
+.gradle
+*.xml
+*.html

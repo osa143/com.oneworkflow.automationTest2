@@ -584,7 +584,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @Then("user validates change initiator as {string}")
     public void userValidatesChangeInitiatorAs(String arg0) {
-        Assert.assertEquals(changeRecordPage.getTxt_CHANGE_Initiator(), arg0);
+        Assert.assertEquals(changeRecordPage.getChangeInitiator(), arg0);
     }
 
     @Then("Service Information should be Activated")
@@ -607,6 +607,11 @@ public class OWF_ChangeRecordPageSteps {
     public void timelineShouldBeUpdatedForServiceInfoDeactivation() {
         Assert.assertTrue(changeRecordPage.verifyServiceInfoDeactivatedTimelineUpdate());
 
+    }
+
+    @When("user creates change ticket with following details")
+    public void userCreatesChangeTicketWithFollowingDetails(DataTable dataTable) {
+        changeRecordPage.createChangeTicket(dataTable);
     }
 }
 

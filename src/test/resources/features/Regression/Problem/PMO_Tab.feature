@@ -10,20 +10,16 @@ Feature: PMO Tab
     When user clicks on create problem record
     And user switches to window 1
     Then problem record form should appear in new tab
-    When user clicks on sweden checkbox under affected BU's
-    And user enters "Proactive investigation of Automation Test" in Title field
-    And user selects request type as "CPS | IT | Other" on Problem record page
-    And user enters description as "UAT Test1 withdraw after Ack"
-    And user selects impact type as moderate:limited
-    And user selects urgency as low
-    And user clicks on save button on the problem form
+    When user creates problem ticket with following details
+      |Title                                     |RequestType     |Description  |ImpactType      |Urgency|
+      |Proactive investigation of Automation Test|CPS:IT:Other    |UAT Test7    |Moderate/Limited|Low    |
     Then ticket should be created and status should be assigned
     And user gets ticket value
     When user verifies PM office tab visibility
     Then PM office tab should not be visible
     Then user logsOut
     And user goes back to login page
-    When user logs in with valid username "syvaptu1_auto" and password as "Telia@1234"
+    When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
     And user switches to window 2
@@ -51,7 +47,7 @@ Feature: PMO Tab
     And user logsOut
     And user switches to window 1
     And user goes back to login page
-    When user logs in with valid username "syvaptu1_auto" and password as "Telia@1234"
+    When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
     And user switches to window 2

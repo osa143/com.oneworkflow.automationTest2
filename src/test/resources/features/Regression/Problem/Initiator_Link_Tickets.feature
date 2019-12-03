@@ -9,24 +9,16 @@ Feature: Verification of ability to link tickets
     When user clicks on create problem record
     And user switches to window 1
     Then problem record form should appear in new tab
-    When user clicks on sweden checkbox under affected BU's
-    When user enters "proactive investigation of Tohall_Copy" in Title field
-    And user selects request type as "CPS | IT | Other" in problem form
-    And user enters description as "UAT Test2 Linked items"
-    And user selects impact type as moderate:limited
-    And user selects urgency as low
-    And user clicks on save button on the problem form
+    When user creates problem ticket with following details
+      |Title                                 |RequestType |Description           |ImpactType      |Urgency|
+      |Proactive investigation of Tohall_Copy|CPS:IT:Other|UAT Test2 Linked items|Moderate/Limited|Low    |
     Then ticket should be created and status should be assigned
     When user clicks on create problem record
     And user switches to window 2
     Then problem record form should appear in new tab
-    When user clicks on sweden checkbox under affected BU's
-    When user enters "proactive investigation of Tohall_Copy" in Title field
-    And user selects request type as "Access Networks:RAN NSN 2G/3G/4G" in problem form
-    And user enters description as "UAT Test2 Linked items - Linked problem"
-    And user selects impact type as moderate:limited
-    And user selects urgency as low
-    And user clicks on save button on the problem form
+    When user creates problem ticket with following details
+      |Title                                 |RequestType |Description                            |ImpactType      |Urgency|
+      |Proactive investigation of Tohall_Copy|Carrier:IT:All|UAT Test2 Linked items - Linked problem|Moderate/Limited|Low    |
     Then ticket should be created and status should be assigned
     And user gets ticket value
     When user clicks on create trouble event

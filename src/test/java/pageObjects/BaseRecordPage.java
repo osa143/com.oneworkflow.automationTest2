@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import utils.CommonUtils;
+import utils.PlazaValidation;
 
 import java.util.List;
 
@@ -136,8 +137,21 @@ public class BaseRecordPage extends BasePage {
     private static final String table_ADD_INTERESTED_PARTY = "T700027964";
     private static final String table_APPROVAL_TABLE = "T777031442";
     private static final String txt_APPROVAL_COMMENT = "arid_WIN_0_13001";
+    private static final String txtDESCRIPTION_ID = "arid_WIN_0_777031007";
+    private static final String ddPRIORITY_ID = "Priority";
 
 
+    public void selectPriority(String value) {
+        selectDropDownNameAndValue(ddPRIORITY_ID, value, false);
+
+    }
+    public void enterDescription(String description) {
+        PlazaValidation.Description = description;
+        findElement(By.id(txtDESCRIPTION_ID)).clear();
+        driver.findElement(By.id(txtDESCRIPTION_ID)).sendKeys(description);
+    }public void clickSwedenCheckBox() {
+        driver.findElement(By.id(chkbxSWEDEN)).click();
+    }
 
     public boolean verifyIsCheckBoxSelected(String checkBoxId){
         return findElement(By.id(checkBoxId)).isSelected();

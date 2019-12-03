@@ -1,8 +1,8 @@
-@E2E_problem_and_known_error @problem
+@E2E_problem_and_known_error #@problem
 #passed
-  Feature: LifeCycle KE and Changes to KE
+  Feature: E2E problem and known error
 
-    Scenario: LifeCycle KE and Changes to KE
+    Scenario: E2E problem and known error
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Tohall_copy" and password as "Test@1234"
@@ -10,13 +10,9 @@
       When user clicks on create problem record
       And user switches to window 1
       Then problem record form should appear in new tab
-      When user clicks on sweden checkbox under affected BU's
-      And user enters "Proactive investigation of Automation Test" in Title field
-      And user selects request type as "CPS | IT | Other" on Problem record page
-      And user enters description as "E2E Test"
-      And user selects impact type as moderate:limited
-      And user selects urgency as low
-      And user clicks on save button on the problem form
+      When user creates problem ticket with following details
+        |Title                                  |RequestType |Description   |ImpactType      |Urgency|
+        |Proactive investigation of Automation Test|CPS:IT:Other|E2E Test|Moderate/Limited|Low    |
       Then ticket should be created and status should be assigned
       And user gets ticket value
       Then user logsOut
@@ -31,10 +27,9 @@
       Then problem ticket status should be under investigation
       Then change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation."
       And user clicks on assignment under sections
-      #Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
-      Then user selects assigned profile dropdown as "Problem Initiator"
+      Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
+      #Then user selects assigned profile dropdown as "Problem Initiator"
       And user enters "Tohall_copy" in assignee
-      #And user selects assignee as "Tohall_copy" by using alphabet "u" key up 16 times
       And user clicks on save button on the problem form
       Then change should also be reflected in the timeline "Request has been reassigned from Assignee user :frvi96_auto:Tohall_copy"
       Then user logsOut
@@ -46,7 +41,6 @@
       And user enters Problem Ticket
       And user clicks Search on ticket search
       When user changes status as Investigation Complete on problem record page
-      #Then mandatory fields should be indicated in bold
       When user selects root cause code as "Technical:HW error"
       And user enters route cause details as "Bad management"
       And user enters RC found date as current date

@@ -133,6 +133,7 @@ Feature: Service information activation for change requests
     Then user switches to frame
     And CI search tab should be opened
     And user clicks on clear button
+    And user selects Category as ""
     And user enters "FI_Site_stenhaga" in location field
     Then user clicks on search button on CI search window
     And user selects a CI from list
@@ -157,7 +158,7 @@ Feature: Service information activation for change requests
 
     Examples:
       |RequestType  |Priority|EstimatedImpact       |
-#  |Normal Change|Critical|Degradation of Service|
+  |Normal Change|Critical|Degradation of Service|
 #  |Normal Change|Critical|Loss of Service       |
 #  |Normal Change|Major   |Degradation of Service|
 #  |Normal Change|Major   |Loss of Service       |

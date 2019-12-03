@@ -5,6 +5,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import java.util.List;
+import java.util.Map;
+
 public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String btnSEND = "WIN_0_600002905";
     private static final String ddANSWER= "Answer";
@@ -49,7 +51,34 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_SOURCE_ID = "arid_WIN_0_777021006";
     private static final String txt_CHANGE_INITIATOR = "arid_WIN_0_2";
     private static final String dd_REQUEST_CATEGORY = "arid_WIN_0_777021548";
-    public String getTxt_CHANGE_Initiator(){
+
+
+    public void createChangeTicket(DataTable dataTable){
+        clickSwedenCheckBox();
+        List<Map<String, String>> listMap=dataTable.asMaps(String.class, String.class);
+        selectRequestType(listMap.get(0).get("RequestType"), true);
+        selectTitleAs(listMap.get(0).get("Title"));
+        selectRequestCategoryOnChangeRecordPage(listMap.get(0).get("RequestCategory"));
+        enterDescription(listMap.get(0).get("Description"));
+        enterReason(listMap.get(0).get("Reason"));
+        selectPriority(listMap.get(0).get("Priority"));
+        enterChangeBuilder(listMap.get(0).get("ChangeBuilder"));
+        enterImplementation(listMap.get(0).get("Implementation"));
+        enterTestPlan(listMap.get(0).get("TestPlan"));
+        enterRollBack(listMap.get(0).get("RollBack"));
+        enterCommunicationPlan(listMap.get(0).get("CommPlan"));
+        enterVerOfFunctionality(listMap.get(0).get("VerOfFunctionality"));
+        enterRiskDescriptionId(listMap.get(0).get("Risk"));
+        enterServiceAndCustomerImpact(listMap.get(0).get("ServiceCustomerImpact"));
+        selectEstimatedImpact(listMap.get(0).get("EstimatedImpact"));
+        enterStartDate_format(10);
+        enterEndDate_format(20);
+        enterImpactDurationMins(listMap.get(0).get("ImpactDuration"));
+        clickSave();
+    }
+
+
+    public String getChangeInitiator(){
         return getTextByID(txt_CHANGE_INITIATOR);
     }
     public String getSource_Id(){

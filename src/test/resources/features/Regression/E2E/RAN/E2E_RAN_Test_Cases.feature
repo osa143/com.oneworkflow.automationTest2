@@ -66,21 +66,21 @@
       #And user validates "<BU Name>" BU is added automatically
       When user clicks on attachments under sections
       And  user adds attachment and verifies under "internal"
-        | summary   | description | fullFilePath                                                                   | attachments |
-        | Test JPEG | Test JPEG   | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test JPEG FILE.jpg | 1           |
-        | Test PNG  | Test PNG    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PNG FILE.png  | 2           |
-        | Test PDF  | Test PDF    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PDF FILE.pdf  | 3           |
-        | Test WORD | Test WORD   | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test WORD FILE.docx| 4           |
-        | Test EXCEL| Test EXCEL  | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test XLS FILE.xls  | 5           |
-        | Test PPT  | Test PPT    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PPT FILE.pptx | 6           |
+        | summary   | description | fullFilePath       | attachments |
+        | Test JPEG | Test JPEG   | Test JPEG FILE.jpg | 1           |
+        | Test PNG  | Test PNG    | Test PNG FILE.png  | 2           |
+        | Test PDF  | Test PDF    | Test PDF FILE.pdf  | 3           |
+        | Test WORD | Test WORD   | Test WORD FILE.docx| 4           |
+        | Test EXCEL| Test EXCEL  | Test XLS FILE.xls  | 5           |
+        | Test PPT  | Test PPT    | Test PPT FILE.pptx | 6           |
       And  user adds attachment and verifies under "external"
-        | summary   | description | fullFilePath                                                                   | attachments |
-        | Test JPEG | Test JPEG   | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test JPEG FILE.jpg | 7           |
-        | Test PNG  | Test PNG    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PNG FILE.png  | 8           |
-        | Test PDF  | Test PDF    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PDF FILE.pdf  | 9           |
-        | Test WORD | Test WORD   | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test WORD FILE.docx| 10          |
-        | Test EXCEL| Test EXCEL  | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test XLS FILE.xls  | 11          |
-        | Test PPT  | Test PPT    | C:\Users\mahesh vaddegani\Downloads\Test Attachments\other files\Test PPT FILE.pptx | 12          |
+        | summary   | description | fullFilePath       | attachments |
+        | Test JPEG | Test JPEG   | Test JPEG FILE.jpg | 7           |
+        | Test PNG  | Test PNG    | Test PNG FILE.png  | 8           |
+        | Test PDF  | Test PDF    | Test PDF FILE.pdf  | 9           |
+        | Test WORD | Test WORD   | Test WORD FILE.docx| 10          |
+        | Test EXCEL| Test EXCEL  | Test XLS FILE.xls  | 11          |
+        | Test PPT  | Test PPT    | Test PPT FILE.pptx | 12          |
 
       And user clicks on "Timeline" tab
       When user enters "Test Update - Public" in the timeline text box

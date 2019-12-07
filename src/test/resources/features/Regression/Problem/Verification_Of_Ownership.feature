@@ -16,7 +16,7 @@ Feature: Verification of Problem ticket owner
     And  user clicks save button
     Then multiple error messages should appear with red boarder around fields
     When user enters "proactive investigation of Tohall_Copy" in Title field
-    And user selects request type as "CPS | IT | Other" on Problem record page
+    And user selects request type as "CPS:IT:Other" on Problem record page
     And user enters description as "UAT Test3"
     And user selects impact type as moderate:limited
     And user selects urgency as low

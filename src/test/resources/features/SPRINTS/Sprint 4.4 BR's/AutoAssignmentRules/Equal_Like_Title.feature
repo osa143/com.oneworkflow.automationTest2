@@ -1,5 +1,9 @@
 @Equal_Like_On_Title  @AutoAssignment
 
+#Use below credentials to create new rules
+#User-Demo
+#Password= 7044_ICoE!
+
 
 Feature: Assignment rules can be configured with EQUAL and LIKE conditions on the title field
   In order to more efficiently respond to changing business needs
@@ -22,6 +26,7 @@ Feature: Assignment rules can be configured with EQUAL and LIKE conditions on th
 
 
   Scenario: Existing assignment rules can be configured using EQUAL and LIKE conditions
+
     When user selects a record on assignment rules window
     And user clicks on open button
     Then the modify assignment rule configuration form is displayed

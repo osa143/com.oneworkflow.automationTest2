@@ -1,8 +1,8 @@
 @Profile_Permissions_Part_4 @problem
   #passed
   #CI search window
-  Feature: Validation of permissions
-    Scenario: user permission testing
+  Feature:  profile permissions part 4
+    Scenario:  profile permissions part 4
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"

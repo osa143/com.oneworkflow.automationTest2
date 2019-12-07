@@ -1,8 +1,8 @@
 @Profile_Permissions_Part_1 @problem
 #Passed
 
-  Feature: Validation of permissions part 1
-    Scenario: user permission testing
+  Feature:  profile permissions part 1
+    Scenario:  profile permissions part 1
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"
@@ -37,7 +37,7 @@
       Then user gets ticket value
       And user logsOut
       Then user goes back to login page
-      And user logs in with valid username "syvaptu1_auto" and password as "Telia@1234"
+      And user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
       Then user clicks on search and selects open search forms and problem record
       And user switches to window 2
       Then user enters Problem Ticket

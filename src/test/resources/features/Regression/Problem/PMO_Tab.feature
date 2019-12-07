@@ -1,4 +1,4 @@
-@PMO_Tab @problem
+@PMO_Tab #@problem
 #passed
 Feature: PMO Tab
 

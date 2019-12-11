@@ -590,28 +590,28 @@ public class OWF_ChangeRecordPageSteps {
     @Then("Service Information should be Activated")
     public void serviceInformationShouldBeActivated() {
         Assert.assertTrue(changeRecordPage.verifyServiceInfoActivated());
-    }
 
-    @And("timeline should updated for service info activation")
-    public void timelineShouldUpdatedForServiceInfoActivation() {
-        Assert.assertTrue(changeRecordPage.verifyServiceInfoActivatedTimelineUpdate());
-    }
+        }
 
-    @When("user clicks on disable on service info")
-    public void userClicksOnDisableOnServiceInfo() {
-        changeRecordPage.clickElement(By.xpath("//*[@id='T600002223']/tbody/tr[2]/td[1]"));
-        changeRecordPage.clickElementByContainsTextAndTagName("div", "Disable");
-    }
+        @And("timeline should updated for service info activation")
+        public void timelineShouldUpdatedForServiceInfoActivation () {
+            Assert.assertTrue(changeRecordPage.verifyServiceInfoActivatedTimelineUpdate());
+        }
 
-    @Then("timeline should be updated for service info deactivation")
-    public void timelineShouldBeUpdatedForServiceInfoDeactivation() {
-        Assert.assertTrue(changeRecordPage.verifyServiceInfoDeactivatedTimelineUpdate());
+        @When("user clicks on disable on service info")
+        public void userClicksOnDisableOnServiceInfo () {
+            changeRecordPage.clickElement(By.xpath("//*[@id='T600002223']/tbody/tr[2]/td[1]"));
+            changeRecordPage.clickElementByContainsTextAndTagName("div", "Disable");
+        }
 
-    }
+        @Then("timeline should be updated for service info deactivation")
+        public void timelineShouldBeUpdatedForServiceInfoDeactivation () {
+            Assert.assertTrue(changeRecordPage.verifyServiceInfoDeactivatedTimelineUpdate());
+        }
+            @When("user creates change ticket with following details")
+            public void userCreatesChangeTicketWithFollowingDetails (DataTable dataTable){
+                changeRecordPage.createChangeTicket(dataTable);
+            }
+        }
 
-    @When("user creates change ticket with following details")
-    public void userCreatesChangeTicketWithFollowingDetails(DataTable dataTable) {
-        changeRecordPage.createChangeTicket(dataTable);
-    }
-}
 

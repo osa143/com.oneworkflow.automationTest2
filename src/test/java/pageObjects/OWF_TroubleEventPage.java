@@ -90,6 +90,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String ddIMPORTANCE_ID = "arid_WIN_0_600001821";
     private static final String table_WORKORDERS_ID = "T777504000";
     private static final String ddTEMPLATE_Field_ID = "WIN_0_777504501";
+    private static final String dd_FAULT_TYPE_Field_ID="arid_WIN_0_777020103";
     private static final String ddIMPACT_Field_ID = "WIN_0_705002082";
     private static final String ddTITLE_Field_ID= "WIN_0_777031000";
     private static final String ddIMPORTANCE_Field_ID= "WIN_0_600001821";
@@ -686,6 +687,9 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
     public boolean verifyTemplateIsAvailable(){
          return verifyElementIsDisplayed(By.id(ddTEMPLATE_Field_ID));
+    }
+    public boolean verifyFaultTypeIsAvailable(){
+        return verifyElementIsDisplayed(By.id(dd_FAULT_TYPE_Field_ID));
     }
     public boolean verifyTitleAvailability(){
          return verifyElementIsDisplayed(By.id(ddTITLE_Field_ID));

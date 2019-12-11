@@ -1232,6 +1232,12 @@ public class OWF_TroubleEventPageSteps {
     public void userValidatesHierarchicEscalationLevelAs(String arg0) {
         Assert.assertEquals(troubleEventPage.getHierarchicEscalationLevel(), arg0);
     }
+
+    @When("user validates fault type dropdown availability")
+    public void userValidatesFaultTypeDropdownAvailability() {
+        Assert.assertTrue(troubleEventPage.verifyFaultTypeIsAvailable());
+
+    }
 }
 
 

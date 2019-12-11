@@ -16,13 +16,13 @@ Feature: Verification of Problem ticket owner
     And  user clicks save button
     Then multiple error messages should appear with red boarder around fields
     When user enters "proactive investigation of Tohall_Copy" in Title field
-    And user selects request type as "CPS | IT | Other" on Problem record page
+    And user selects request type as "CPS:IT:Other" on Problem record page
     And user enters description as "UAT Test3"
     And user selects impact type as moderate:limited
     And user selects urgency as low
     And user clicks on assignment under sections
-    #And user selects assigned profile dropdown as "Problem Management:Problem Initiator"
-    And user selects assigned profile dropdown as "Problem Initiator"
+    And user selects assigned profile dropdown as "Problem Management:Problem Initiator"
+    #And user selects assigned profile dropdown as "Problem Initiator"
     And user enters "Tohall_copy" in assignee
     And user clicks on save button on the problem form
     Then ticket should be created and status should be assigned

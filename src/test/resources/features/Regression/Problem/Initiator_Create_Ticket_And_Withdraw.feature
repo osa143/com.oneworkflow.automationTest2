@@ -1,8 +1,8 @@
-@Initiator_Create_Ticket @problem
+@Initiator_Create_Ticket #@problem
   #Passed
 Feature: initiator create ticket and withdraw
 
-  Scenario: user should be able to create a problem ticket and withdraw it
+  Scenario: initiator create ticket and withdraw
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
@@ -16,7 +16,7 @@ Feature: initiator create ticket and withdraw
     And user clicks save button
     Then multiple error messages should appear with red boarder around fields
     When user enters "proactive investigation of Tohall_Copy" in Title field
-    And user selects request type as "CPS | IT | Other" on Problem record page
+    And user selects request type as "CPS:IT:Other" on Problem record page
     And user enters description as "UAT Test1"
     And user selects impact type as moderate:limited
     And user selects urgency as low

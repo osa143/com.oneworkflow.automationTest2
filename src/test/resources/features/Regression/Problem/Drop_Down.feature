@@ -4,7 +4,7 @@
     Scenario: user verifies available information
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "syvaptu1_auto" and password as "Telia@1234"
+      When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create problem record
       And user switches to window 1
@@ -12,7 +12,7 @@
       Then user validates BU availability
       And user clicks on internal checkbox under affected BU's
       Then user enters "Reactive investigation of:Tohall_copy" in Title field
-      And user selects request type as "CPS | IT | Other" in problem form
+      And user selects request type as "CPS:IT:Other" in problem form
       And user enters description as "Drop Down Verification"
       Then multiple statuses "Extensive/Widespread:Significant/Large:Moderate/Limited:(clear)" should be available in "Impact" dropdown
       And user selects impact as "Extensive/Widespread"

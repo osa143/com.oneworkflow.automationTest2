@@ -20,33 +20,15 @@
       When user clicks on change record from agent console
       And user switches to window 2
       Then change record form should open in a new tab
-      When user clicks on sweden checkbox under affected BU's
-      And user selects request type as "Normal Change"
-      And user selects title as "IT:Mobile:Billing" on Change record page
-      And user selects request category as "Cable splicing" on change record page
-      And user enters description as "Correcting error"
-      And user enters reason field as "none"
-      And user selects priority as "Major"
-      And user enters "Problem initiator" in the change builder field
-      And user enters "New implementation" in the implementation field
-      And user enters "Yes" in the test plan field
-      And user enters "Not possible" in the rollback field
-      And user enters "Comm plan" in the communication plan field
-      And user enters "Not possible" in the ver of functionality field
-      And user enters "No Risk" in the risk description field
-      Then user clicks on "Schedule" tab
-      And user enters as "Test ticket no impact" in service and customer impact
-      And user enters start time as 10 minutes fast from current sweden time
-      And user enters end time as 20 minutes fast from current sweden time
-      And user enters impact duration as "5" minutes
-      And user selects estimated impact as "No Impact"
-      And user clicks on save button
+      When user creates change ticket with following details
+      |RequestType  |Title            |RequestCategory|Description     |Reason|Priority|ChangeBuilder    |Implementation    |TestPlan|RollBack    |CommPlan|VerOfFunctionality|Risk   |ServiceCustomerImpact|ImpactDuration|EstimatedImpact|
+      |Normal Change|IT:Mobile:Billing|Cable splicing |Correcting error|none  |Major   |Problem initiator|New implementation|Yes     |Not possible|CommPlan|Not possible      |No Risk|Test ticket no impact|5             |No Impact      |
       And user gets change ticket value
       Then user clicks on Risk tab
       And user answers all risk questions as below
       And user selects answer as "Impact to other systems/technologies are unclear"
       And user selects answer as "No"
-      And user selects answer as "Tested successfully, this is a pilot"
+      And user selects answer as "Tested succesfully, this is a pilot"
       And user selects answer as "Yes (outcome of the change can be instantly verified)"
       And user selects answer as "Yes"
       And user selects answer as "Simple"

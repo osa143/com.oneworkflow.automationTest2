@@ -65,7 +65,7 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String txt_WITH_WARNINGS= "arid_WIN_0_800038069";
     private static final String PRIMARY_CI= "//*[@id='T700009087']/tbody/tr[2]/td[2]/nobr/span";
     private static final String bulkCILoading_DIV_ID = "WIN_0_800038059";
-    private static final String rbtn_IGNORE_HANDLING_DUPLICATE_CIS= "WIN_0_rc0id800038013";
+    private static final String rbtn_IGNORE_HANDLING_DUPLICATE_CIS= "WIN_0_RCGroup800038013";
     private static final String txt_IMPACT_TO_PLUS_BULK_UPDATE= "arid_WIN_0_999000299";
 
     public void enterImpactTo(String text){
@@ -77,7 +77,7 @@ public class OWF_CiSearchPage extends BasePage {
     }
 
     public void clickIgnoreHandlingDuplicateCis(){
-        clickElement(By.id(rbtn_IGNORE_HANDLING_DUPLICATE_CIS));
+        clickElement(By.name(rbtn_IGNORE_HANDLING_DUPLICATE_CIS));
     }
 
     public String getPrimaryCI(){

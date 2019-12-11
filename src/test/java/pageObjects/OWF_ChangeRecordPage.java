@@ -1,16 +1,13 @@
 package pageObjects;
-
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
 import java.util.List;
+import java.util.Map;
 
 public class OWF_ChangeRecordPage extends BaseRecordPage {
-
-
     private static final String btnSEND = "WIN_0_600002905";
     private static final String ddANSWER= "Answer";
     private static final String dd_OWNER= "Owner*";
@@ -56,22 +53,41 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String dd_REQUEST_CATEGORY = "arid_WIN_0_777021548";
 
 
-
-
-    public String getTxt_CHANGE_Initiator(){
-        return getTextByID(txt_CHANGE_INITIATOR);
+    public void createChangeTicket(DataTable dataTable){
+        clickSwedenCheckBox();
+        List<Map<String, String>> listMap=dataTable.asMaps(String.class, String.class);
+        selectRequestType(listMap.get(0).get("RequestType"), true);
+        selectTitleAs(listMap.get(0).get("Title"));
+        selectRequestCategoryOnChangeRecordPage(listMap.get(0).get("RequestCategory"));
+        enterDescription(listMap.get(0).get("Description"));
+        enterReason(listMap.get(0).get("Reason"));
+        selectPriority(listMap.get(0).get("Priority"));
+        enterChangeBuilder(listMap.get(0).get("ChangeBuilder"));
+        enterImplementation(listMap.get(0).get("Implementation"));
+        enterTestPlan(listMap.get(0).get("TestPlan"));
+        enterRollBack(listMap.get(0).get("RollBack"));
+        enterCommunicationPlan(listMap.get(0).get("CommPlan"));
+        enterVerOfFunctionality(listMap.get(0).get("VerOfFunctionality"));
+        enterRiskDescriptionId(listMap.get(0).get("Risk"));
+        enterServiceAndCustomerImpact(listMap.get(0).get("ServiceCustomerImpact"));
+        selectEstimatedImpact(listMap.get(0).get("EstimatedImpact"));
+        enterStartDate_format(10);
+        enterEndDate_format(20);
+        enterImpactDurationMins(listMap.get(0).get("ImpactDuration"));
+        clickSave();
     }
 
+
+    public String getChangeInitiator(){
+        return getTextByID(txt_CHANGE_INITIATOR);
+    }
     public String getSource_Id(){
         return getTextByID(txt_SOURCE_ID);
     }
-
     public String getChange_Type(){
         return getTextByID(txt_CHANGE_TYPE);
     }
     private static final String table_SERVICE_INFO= "T600002223";
-
-
     public boolean verifyServiceInfoActivatedTimelineUpdate(){
         return findElement(By.xpath("//span[contains(text(), 'SERVICE INFORMATION ACTIVATED ')]")).isDisplayed();
     }
@@ -87,28 +103,20 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
             return true;
         else return false;
     }
-
     public String getTemplateText(){
         String text= getTextByID(fld_TEMPLATE);
         System.out.println(text);
         return text;
     }
-
-
-
     public void selectActualImpact_scheduleTab(String value){
         selectDropDownNameAndValue(dd_ACTUAL_IMPACT, value, false);
     }
-
     public void selectCompletedCode_scheduleTab(String value){
         selectDropDownNameAndValue(dd_COMPLETED_CODE, value, false);
     }
-
-
     public void clickView_approvalTab(){
         clickElement(By.id(btn_VIEW));
     }
-
     public String getActualStart(){
         return getTextByID(txt_ACTUAL_START);
     }
@@ -118,88 +126,68 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     public void enterReviewDetails(String text){
         enterTextByElement(By.id(txt_REVIEW_DETAILS), text);
     }
-
     public void selectResolvedGroup(String value){
         selectDropDownNameAndValue(dd_RESOLVED_GROUP, value, true);
     }
     public void selectResolvedPerson(String value){
         selectDropDownNameAndValue(dd_RESOLVED_PERSON, value, true);
     }
-
     public void selectOwner(String value){
         selectDropDownNameAndValue(dd_OWNER, value, false);
     }
     public void clickDetails(){
         clickElement(By.id(btn_DETAILS));
     }
-
     public boolean verifyProjectCodeIsReadOnly(){
         return checkIfControlIsReadonly(txt_PROJECT_CODE);
     }
     public boolean verifyTimelineTextEntryIsReadOnly(){
         return checkIfControlIsReadonly(txt_TIMELINE_TEXT_ENTRY);
     }
-
-
     public boolean verifySendButtonIsEnable(){
         return verifyElementIsEnabledByElement(By.id(btnSEND));
     }
     public void clickAddEmail(){
         clickElement(By.id(btn_ADD_EMAIL));
     }
-
     public void enterEmail(String text){
         enterTextByElement(By.id(txt_EMAIL_ADDRESS), text);
     }
-
     public boolean verifyShowCrDivIsDisplayed(){
         return verifyElementIsDisplayed(By.id(div_SHOW_CR_MATCHING));
     }
-
     public void clickShowCrMatching(){
         clickElement(By.id(btn_SHOW_CR_MATCHING));
     }
-
-
     public String getOwnerProfile(){
         return getAttributeValueById(txt_OWNER_PROFILE);
     }
     public String getOwner(){
         return getAttributeValueById(txt_OWNER);
     }
-
     public String getRiskScore(){
         return getAttributeValueById(txt_RISK_SCORE);
     }
-
     public void enterAdvancedSearch(String text){
         //enterTextByElement(By.id(txt_ADVANCED_SEARCH), text);
         findElement(By.xpath("//*[@id='arid1005']")).sendKeys(text);
     }
-
     public void clickAdvancedSearch(){
         clickElement(By.id(btn_ADVANCED_SEARCH));
         wait(2000);
     }
-
     public void clickCancel(){
         clickElement(By.id(btn_CANCEL_LOCATION));
     }
-
-
     public void enterLocationNamePlus_selectTarget(String text){
         enterTextByElement(By.id(txt_LOCATION_NAME_PLUS), text);
     }
-
-
     public void clickCancel_selectTarget(){
         clickElement(By.id(btn_CANCEL));
     }
-
     public void enterLocationIDPlus_SelectTarget(String text){
         enterTextByElement(By.id(txt_LOCATION_ID_PLUS), text);
     }
-
     public void clickSearch_selectTarget(){
         clickElement(By.id(btn_SEARCH));
     }
@@ -227,10 +215,8 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
             clickCancel();
             switchToFrameByIndex(2);
             wait(1000);
-
         }
     }
-
     public void validateCiDetailsForMultipleLocationsID(DataTable locationIdPlus)
     {
         List<List<String>> locations = locationIdPlus.asLists(String.class);
@@ -250,40 +236,31 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
             wait(1000);
         }
     }
-
     public void selectStatus(String value){
         selectDropDownNameAndValue(dd_STATUS, value, false);
     }
-
     public void enterSearch_calendar(String text){
         enterTextByElement(By.xpath(txt_SEARCH_FILTER_CALENDAR_XPATH), text);
         findElement(By.xpath(txt_SEARCH_FILTER_CALENDAR_XPATH)).sendKeys(Keys.ENTER);
     }
-
     public void clickChange_Record(){
         clickElement(By.id(btn_CHANGE_RECORD));
     }
-
-     public void selectChangeType(String value){
-         findElement(By.id(dd_CHANGE_TYPE)).click();
-         wait(500);
-         selectDropDownValue(value);
-     }
+    public void selectChangeType(String value){
+        findElement(By.id(dd_CHANGE_TYPE)).click();
+        wait(500);
+        selectDropDownValue(value);
+    }
     public void selectAnswer(String value){
         selectDropDownNameAndValue(ddANSWER,value,false);
     }
-
     public void clickSendButton() {
         clickElement(By.id(btnSEND));
     }
-
     public void clickDownButton(){
         driver.findElement(By.id(btnDOWN)).click();
     }
     public void selectRequestCategoryOnChangeRecordPage(String value){
         selectDropDownNameAndValue(ddREQUEST_CATEGORY, value, false);
-
     }
-
-
 }

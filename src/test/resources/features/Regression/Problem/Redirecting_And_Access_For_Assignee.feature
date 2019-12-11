@@ -11,13 +11,9 @@ Feature: Changing of assignee for problem ticket
     When user clicks on create problem record
     And user switches to window 1
     Then problem record form should appear in new tab
-    When user clicks on sweden checkbox under affected BU's
-    When user enters "proactive investigation of Tohall_Copy" in Title field
-    And user selects request type as "CPS | IT | Other" in problem form
-    And user enters description as "UAT Test4"
-    And user selects impact type as moderate:limited
-    And user selects urgency as low
-    And user clicks on save button on the problem form
+    When user creates problem ticket with following details
+      |               Title                  |RequestType |Description|ImpactType      |Urgency|
+      |Proactive investigation of frvi96_auto|CPS:IT:Other|UAT Test4  |Moderate/Limited|Low    |
     Then ticket should be created and status should be assigned
     And user gets ticket value
     Then user logsOut
@@ -31,17 +27,15 @@ Feature: Changing of assignee for problem ticket
     When user clicks on Ack button
     Then problem ticket status should be under investigation
     When user clicks on assignment under sections
-    Then user selects assigned profile dropdown as "Problem Initiator"
-    #Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
+    #Then user selects assigned profile dropdown as "Problem Initiator"
+    Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
     And user enters "Tohall_copy" in assignee
-    #And user selects assignee as "Tohall_copy" by using alphabet "u" key up 16 times
     And user clicks on save button on the problem form
     Then change should also be reflected in the timeline "STATUS MODIFIED:mina09:Tohall_copy"
     When user clicks on assignment under sections
-    #Then user selects assigned profile dropdown as "Problem Management:Problem Manager"
-    Then user selects assigned profile dropdown as "Problem Manager"
+    Then user selects assigned profile dropdown as "Problem Management:Problem Manager"
+    #Then user selects assigned profile dropdown as "Problem Manager"
     And user enters "frvi96_auto" in assignee
-    #And user selects assignee as "frvi96_auto" by using alphabet "g" key up 0 times
     And user clicks on save button on the problem form
     And change should also be reflected in the timeline "STATUS MODIFIED:Tohall_copy:frvi96_auto"
     And user clicks on assignment under sections
@@ -78,10 +72,9 @@ Feature: Changing of assignee for problem ticket
     Then user clicks on "Additional Info" tab
     And user validates "Thgi00" is listed under analysis team member one field
     When user clicks on assignment under sections
-    Then user selects assigned profile dropdown as "Problem Initiator"
-    #Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
+    #Then user selects assigned profile dropdown as "Problem Initiator"
+    Then user selects assigned profile dropdown as "Problem Management:Problem Initiator"
     And user enters "Tohall_copy" in assignee
-    #And user selects assignee as "mina09_auto" by using alphabet "n" key up 0 times
     And user clicks on save button on the problem form
     And change should be reflected in the timeline "Request has been reassigned from Assignee user |frvi96_auto| to  Assignee  user |Tohall_copy|."
     Then user logsOut

@@ -18,7 +18,7 @@ import java.util.List;
 
 public class BasePage {
 
-    private static final String txtEVENT_START_TIME = "arid_WIN_0_600001302";
+
 
     public static WebDriver driver;
     WebDriverWait webDriverWait = new WebDriverWait(DriverFactory.getInstance().getDriver(), 30);
@@ -94,7 +94,9 @@ public class BasePage {
     public void clickElement(By element){
         webDriverWait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
+public void clickElement(){
 
+}
 
     public boolean verifyMenuItems(String items){
         String [] menuItems = items.split(":");
@@ -179,6 +181,7 @@ public class BasePage {
     }
 
     public String getEventStartTime(){
+        String txtEVENT_START_TIME = "arid_WIN_0_600001302";
         String eventStartTime=  getAttributeValueById(txtEVENT_START_TIME);
         System.out.println(eventStartTime);
         return eventStartTime;

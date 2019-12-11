@@ -36,7 +36,6 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String ddREQUEST_TYPE_ID = "arid_WIN_0_777031002";
     private static final String ddURGENCY = "Urgency";
     private static final String ddWITHDRAWN_REASON = "Withdrawn Reason";
-    private static final String ddPRIORITY_ID = "Priority";
 
     private static final String ddValueDUPLICATE_ENTRIES = "Duplicate Entries";
     private static final String ddValueFALSE_ALARM = "False Alarm";
@@ -423,11 +422,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         return getAttributeValueById(ddREQUEST_TYPE_ID);
     }
 
-    public void enterDescription(String description) {
-        PlazaValidation.Description = description;
-        findElement(By.id(txtDESCRIPTION_ID)).clear();
-        driver.findElement(By.id(txtDESCRIPTION_ID)).sendKeys(description);
-    }
+
 
     public String getDescriptionText() {
         return getAttributeValueById(txtDESCRIPTION_ID);
@@ -545,10 +540,6 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
 
-    public void clickSwedenCheckBox() {
-        driver.findElement(By.id(chkbxSWEDEN)).click();
-    }
-
     public boolean validateErrorMessage(){
         int size=getTableRows(By.id(errorTABLE_ID)).size();
         if(size>0){
@@ -589,10 +580,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
 
-    public void selectPriority(String value) {
-        selectDropDownNameAndValue(ddPRIORITY_ID, value, false);
 
-    }
     public boolean verifyTimelineIsPresent(){
         int size =getTableRows(By.id(table_TIMELINE)).size();
         if(size > 0){

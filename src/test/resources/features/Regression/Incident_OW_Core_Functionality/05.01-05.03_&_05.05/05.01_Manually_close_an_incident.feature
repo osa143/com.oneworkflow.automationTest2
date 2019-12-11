@@ -32,7 +32,7 @@
       And user enters closure info as "Test Ticket"
       Then user enters event end time as current time
       When user clicks on Diagnosis tab
-      And user right clicks on CI "SE_EPG_FREEPG1" and selects "Impact:Clear All"
+      And user right clicks on CI "SE_EPG_FREEPG1" and selects "Impact:Clear"
       And user should see confirmation message for impact clear and clicks ok
       And user clicks on save button
       Then user validates ticket status as "Cleared"

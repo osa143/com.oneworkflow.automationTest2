@@ -70,8 +70,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       And user logsOut and closes the browser
-      When user switches to window 1
-      And user closes current tab
       When user switches to window 0
       And user clicks on main page refresh
       Then user validates plaza request has completed

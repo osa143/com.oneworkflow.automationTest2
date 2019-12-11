@@ -17,7 +17,7 @@
       Then ticket should be created and status should be assigned
       When user clicks on assignment under sections
       And user selects assignment profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
-      And user selects assignee as "Change_Automation_1" by using alphabet "c" key up 0 times
+      And user enters "Change_Automation_1" in assignee
       And user clicks on save button
       When user enters "Test Resolution Update" in the timeline text box
       And user clicks on public radio button

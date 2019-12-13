@@ -1,5 +1,6 @@
 package pageObjects.plaza;
 
+import cucumber.api.java8.Pl;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -37,7 +38,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_C2B_DESCRIPTION="sp_formfield_sr74_v_description";
     public static final String dd_SELECT_REQUEST_ID="select2-chosen-12";
     public static final String txt_C2B_GENERAL_REQUEST_ID="sp_formfield_sr112_v_request";
-    public static final String dd_C2B_GENERAL_ENVIRONMENT="s2id_autogen13";
+    public static final String dd_C2B_GENERAL_ENVIRONMENT="s2id_sp_formfield_sr112_v_enable_notification";
     public static final String txt_C2B_GENERAL_DESCRIPTION="sp_formfield_sr112_v_description";
     public static final String txt_C2B_SERVICE_REQUEST_ID="sp_formfield_sr109_v_request";
     public static final String dd_C2B_SERVICE_ENVIRONMENT="s2id_autogen13";
@@ -80,7 +81,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_NETWORK_EQUIPMENT_REQUEST="sp_formfield_sr51_v_request";
     public static final String txt_NETWORK_EQUIPMENT_DC_SITE= "sp_formfield_sr51_v_dc_site";
     public static final String txt_NETWORK_EQUIPMENT_ROOM= "sp_formfield_sr51_v_room";
-    public static final String dd_ADD_CI = "s2id_autogen14";
+    public static final String dd_ADD_CI = "s2id_autogen13";
     public static final String txt_NETWORK_EQUIPMENT_DNS_IP_ADRESS="sp_formfield_sr51_v_dns_ip_address";
     public static final String txt_NETWORK_EQUIPMENT_DELIVERY="sp_formfield_sr51_v_date_for_delivery";
     public static final String txt_NETWORK_EQUIPMENT_DATE_FOR_DECOMMISSION= "sp_formfield_sr51_v_date_for_decommission";
@@ -90,36 +91,36 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_ON_SITE_SERVICES_DC_SITE= "sp_formfield_sr37_v_dc_site";
     public static final String txt_ON_SITE_SERVICES_DESCRIPTION= "sp_formfield_sr37_v_description";
     public static final String txt_DATABASE_REQUEST= "sp_formfield_sr21_v_request";
-    public static final String dd_ADD_DATABASE_CI= "s2id_autogen20";
-    public static final String dd_ADD_SERVER_CI = "s2id_autogen21";
+    public static final String dd_ADD_DATABASE_CI= "s2id_autogen25";
+    public static final String dd_ADD_SERVER_CI = "s2id_autogen26";
     public static final String txt_DATABASE_NAME= "sp_formfield_sr21_v_db_name";
-    public static final String dd_DATABASE_ACCOUNT_TYPE= "select2-chosen-13";
+    public static final String dd_DATABASE_ACCOUNT_TYPE= "select2-chosen-14";
     public static final String txt_DATABASE_ACCOUNT_NAME="sp_formfield_sr21_v_account_name";
     public static final String txt_DATABASE_ACCOUNT_PERMISSIONS="sp_formfield_sr21_v_permissions";
     public static final String txt_DATABASE_DESCRIPTION= "sp_formfield_sr21_v_description";
     public static final String txt_DATABASE_DNS_IP_ADDRESS= "sp_formfield_sr21_v_source_dns";
-    public static final String dd_DATABASE_NEW_EXISTING_ACCOUNT=  "select2-chosen-14";
+    public static final String dd_DATABASE_NEW_EXISTING_ACCOUNT=  "select2-chosen-15";
     public static final String dd_DATABASE_DEFAULT_TABLE_SPACE= "sp_formfield_sr21_v_default_tablespace";
     public static final String txt_DATABASE_REQUEST_REQUEST= "sp_formfield_sr115_v_request";
-    public static final String dd_DATABASE_REQUEST_CHOOSE_ACTION= "select2-chosen-17";
+    public static final String dd_DATABASE_REQUEST_CHOOSE_ACTION= "select2-chosen-18";
     public static final String dd_DATABASE_REQUEST_LOCATION= "select2-chosen-19";
     public static final String txt_DATABASE_REQUEST_PLANNED_START_DATE_TIME= "sp_formfield_sr115_v_start_date";
-    public static final String dd_DATABASE_REQUEST_DATABASE_TYPE= "select2-chosen-18";
+    public static final String dd_DATABASE_REQUEST_DATABASE_TYPE= "select2-chosen-6";
     public static final String dd_DATABASE_REQUEST_ADD_CI= "s2id_autogen35";
     public static final String dd_DATABASE_REQUEST_ADD_SERVER_CI= "s2id_autogen34";
     public static final String txt_DATABASE_REQUEST_DATABASE_NAME= "sp_formfield_sr115_v_db_name";
     public static final String txt_DATABASE_REQUEST_DESCRIPTION= "sp_formfield_sr115_v_desc";
     public static final String txt_DATABASE_CONFIGURE_PARAMETER_REQUEST= "sp_formfield_sr116_v_request";
     public static final String dd_DATABASE_CONFIGURE_PARAMETER_DATABASE_TYPE= "select2-chosen-12";
-    public static final String dd_DATABASE_CONFIGURE_PARAMETER_ADD_CI= "s2id_autogen34";
-    public static final String dd_DATABASE_CONFIGURE_PARAMETER_DB_ADD_CI= "s2id_autogen35";
+    public static final String dd_DATABASE_CONFIGURE_PARAMETER_ADD_CI= "s2id_autogen39";
+    public static final String dd_DATABASE_CONFIGURE_PARAMETER_DB_ADD_CI= "s2id_autogen40";
     public static final String txt_DATABASE_CONFIGURE_PARAMETER_DB_NAME= "sp_formfield_sr116_v_db_name";
     public static final String txt_DATABASE_CONFIGURE_PARAMETER_PARAMETERS="sp_formfield_sr116_v_parameters";
     public static final String txt_DATABASE_CONFIGURE_PARAMETER_DESCRIPTION= "sp_formfield_sr116_v_description";
     public static final String txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_REQUEST= "sp_formfield_sr12_v_request";
     public static final String dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_TYPE="select2-chosen-12";
-    public static final String dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_SERVER_CI="s2id_autogen29";
-    public static final String dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_CI= "s2id_autogen30";
+    public static final String dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_SERVER_CI="s2id_autogen34";
+    public static final String dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_CI= "s2id_autogen35";
     public static final String txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_NAME="sp_formfield_sr12_v_db_name";
     public static final String txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_DESCRIPTION= "sp_formfield_sr12_v_description";
     public static final String txt_CALL_GUIDE_CUSTOMER_ID_NAME= "sp_formfield_customer_id";
@@ -239,7 +240,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI= "s2id_autogen16";
     private static final String txt_CEWS_REQUEST= "sp_formfield_sr65_v_request";
     private static final String txt_CEWS_DESCRIPTION= "sp_formfield_sr65_v_description";
-    private static final String txt_CEWS_ADD_CI= "s2id_autogen13";
+    private static final String txt_CEWS_ADD_CI= "s2id_autogen14";
     private static final String txt_EBILL_REQUEST= "sp_formfield_sr77_v_request";
     private static final String txt_EBILL_DESCRIPTION= "sp_formfield_sr77_v_description";
     private static final String txt_EBILL_ACCOUNT= "sp_formfield_sr77_v_account";
@@ -302,12 +303,144 @@ public class Plaza_HomePage extends BasePage {
     private static final String dd_OCC_CI= "s2id_sp_formfield_sr65_v_add_ci";
     private static final String dd_VEHA_SYSTEM= "s2id_sp_formfield_system";
     private static final String dd_WEBTAB_CI = "s2id_sp_formfield_sr65_v_add_ci";
-    private static final String txt_CRM_RESOURCE_SERVICE_REQUEST= "sp_formfield_sr1_v_request";
+    private static final String txt_APPWATCH_REQUEST = "sp_formfield_sr81_v_request";
+    private static final String dd_ON_CALL_TEAM = "s2id_sp_formfield_{{::field.name}}";
+    private static final String txt_SERVICEGROUPNAME = "sp_formfield_sr81_v_host_name";
+    private static final String dd_NOTIFICATIONS = "s2id_sp_formfield_{{::field.name}}";
+    private static final String txt_IBS_REQUEST = "sp_formfield_sr85_v_request";
+    private static final String dd_SERVICE_LEVEL_MANAGEMENT = "select2-chosen-977";
+    private static final String dd_PATCH_WINDOW = "select2-chosen-978";
+    private static final String dd_MICROSOFT_SECURITY_PATCHING = "select2-chosen-979";
+    private static final String txt_MONITORING_APP_WATCH = "sp_formfield_sr85_v_monitoring_in_appwatch";
+    private static final String txt_VCPU_AND_RAM = "sp_formfield_sr85_v_vcpu_and_ram";
+    private static final String dd_CSM_MONITORING = "select2-chosen-15";
+    private static final String dd_DDC_SITE = "select2-chosen-17";
+    private static final String dd_SERVER_TYPE = "select2-chosen-19";
+    private static final String dd_VLAN = "select2-chosen-20";
+    private static final String dd_NUMBER_OF_SERVERS = "select2-chosen-21";
+    private static final String txt_TOUCHPOINT_REQUEST = "sp_formfield_sr41_v_request";
+    private static final String txt_ORGANISATION_NAME = "sp_formfield_sr44_v_organization_name";
+    private static final String txt_SERVICE_ID = "sp_formfield_sr44_v_service_id";
+    private static final String link_GENERALLY = "//button[@title='generally']";
+    private static final String dd_NAME = "select2-chosen-181";
+    private static final String txt_TOUCHPOINT_UPDATE_SUPPORT_PAGES_REQUEST = "sp_formfield_sr45_v_request";
+    private static final String txt_TOUCHPOINT_SMS_REQUEST = "sp_formfield_sr44_v_request";
+    private static final String txt_TOUCHPOINT_DESCRIPTION = "sp_formfield_sr44_v_description";
+    private static final String txt_TOUCHPOINT_USERID = "sp_formfield_sr44_v_userid";
+    private static final String txt_TOUCHPOINTPLUS_DESCRIPTION = "sp_formfield_sr41_v_description";
+    private static final String dd_SPLUNK_ROLE = "select2-chosen-3";
+    private static final String txt_SPLUNK_H2NAME = "sp_formfield_sr38_v_h2";
 
-
-    public void enterCRMResourceServiceRequest(String text){
-        enterTextByElement(By.id(txt_CRM_RESOURCE_SERVICE_REQUEST), text);
+    public void enterSplunkH2Name (String text){
+        PlazaValidation.H2Name = text;
+        enterTextByElement(By.id(txt_SPLUNK_H2NAME), text);
     }
+
+    public void selectSplunkRole (String dropdownName){
+        PlazaValidation.Role = dropdownName;
+        selectDropdown(By.id(dd_SPLUNK_ROLE), By.id("select2-results-3"), dropdownName);
+    }
+
+    public void enterTouchpointPlusDescription (String text){
+        enterTextByElement(By.id(txt_TOUCHPOINTPLUS_DESCRIPTION), text);
+    }
+
+    public void enterTouchpointUserId (String text){
+        enterTextByElement(By.id(txt_TOUCHPOINT_USERID), text);
+    }
+
+    public void enterTouchpointDescription (String text){
+        enterTextByElement(By.id(txt_TOUCHPOINT_DESCRIPTION), text);
+    }
+
+    public void enterTouchpointSmsRequest (String text){
+        enterTextByElement(By.id(txt_TOUCHPOINT_SMS_REQUEST), text);
+    }
+
+    public void enterUpdateSupportPagesRequest (String text){
+        enterTextByElement(By.id(txt_TOUCHPOINT_UPDATE_SUPPORT_PAGES_REQUEST), text);
+    }
+
+    public void selectName (String dropdownName){
+        selectDropdownWithMultipleValues(By.id(dd_NAME), By.id("select2-results-181"), dropdownName);
+    }
+
+    public void clickGenerally (){
+        clickElement(By.xpath(link_GENERALLY));
+    }
+
+    public void enterServiceId (String text){
+        enterTextByElement(By.id(txt_SERVICE_ID), text);
+    }
+
+    public void enterOrganisationName (String text){
+        enterTextByElement(By.id(txt_ORGANISATION_NAME), text);
+    }
+
+    public void enterTouchpointRequest (String text){
+        enterTextByElement(By.id(txt_TOUCHPOINT_REQUEST), text);
+    }
+
+    public void selectNumberOfServers (String dropdownName){
+        selectDropdown(By.id(dd_NUMBER_OF_SERVERS), By.id("select2-results-21"), dropdownName);
+    }
+
+    public void selectVlan (String dropdownName){
+        selectDropdown(By.id(dd_VLAN), By.id("select2-results-20"), dropdownName);
+    }
+
+    public void selectServerType (String dropdownName){
+        selectDropdown(By.id(dd_SERVER_TYPE), By.id("select2-results-19"), dropdownName);
+    }
+
+    public void selectDdcSite (String dropdownName){
+        selectDropdown(By.id(dd_DDC_SITE), By.id("select2-results-17"), dropdownName);
+    }
+
+    public void selectCsmMonitoring (String dropdownName){
+        selectDropdown(By.id(dd_CSM_MONITORING), By.id("select2-results-15"), dropdownName);
+    }
+
+    public void  enterVcpuAndRam (String text){
+        enterTextByElement(By.id(txt_VCPU_AND_RAM), text);
+    }
+
+    public void enterMonitoringAppWatch (String text){
+        enterTextByElement(By.id(txt_MONITORING_APP_WATCH), text);
+    }
+
+    public void selectMicrosoftSecurityPatching (String dropdownName){
+        selectDropdown(By.id(dd_MICROSOFT_SECURITY_PATCHING), By.id("select2-results-979"), dropdownName);
+    }
+
+    public void selectPatchWindow (String dropdownName){
+        selectDropdown(By.id(dd_PATCH_WINDOW), By.id("select2-results-978"), dropdownName);
+    }
+
+    public void selectServiceLevelManagement (String dropdownName){
+        selectDropdown(By.id(dd_SERVICE_LEVEL_MANAGEMENT), By.id("select2-results-977"), dropdownName);
+    }
+
+    public void enterIbsRequest (String text){
+        enterTextByElement(By.id(txt_IBS_REQUEST), text);
+    }
+
+    public void selectEnableNotifications (String dropdownName){
+        selectDropdown(By.id(dd_NOTIFICATIONS), By.id("select2-results-935"), dropdownName);
+    }
+
+    public void enterAppwatchServiceGroupName (String text){
+        enterTextByElement(By.id(txt_SERVICEGROUPNAME), text);
+    }
+
+    public void selectOnCallTeam (String dropdownName){
+        selectDropdown(By.id(dd_ON_CALL_TEAM), By.id ("select2-results-934"),  dropdownName);
+    }
+
+    public void enterAppwatchRequest (String text){
+        enterTextByElement(By.id(txt_APPWATCH_REQUEST), text);
+    }
+
     public void selectDropdownValueUnderItInfrastructure(String DropdownValue){
         driver.findElement(By.id("xcc61d55edb198b00b27fdb11ce961902")).findElements(By.tagName("a")).stream().filter(element -> element.getText().equals(DropdownValue)).findFirst().orElse(null).click();
     }
@@ -397,7 +530,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectNetworkSecuritySystemNameHaiti(String dropdownName){
         clickElement(By.id(dd_NETWORKSECURITY_HAITI));
-        WebElement Element=findElement(By.id("s2id_autogen15_search"));
+        WebElement Element=findElement(By.id("s2id_autogen14_search"));
         Element.sendKeys(dropdownName);
         wait(1000);
         Element.sendKeys(Keys.ARROW_DOWN);
@@ -407,7 +540,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectSystemNameHaiti(String dropdownName){
         clickElement(By.id(dd_SYSTEMNAME_HAITI_DATABASE));
-        WebElement Element=findElement(By.xpath("//input[@aria-owns='select2-results-18']"));
+        WebElement Element=findElement(By.xpath("//input[@aria-owns='select2-results-23']"));
         Element.sendKeys(dropdownName);
         wait(1000);
         Element.sendKeys(Keys.ARROW_DOWN);
@@ -807,7 +940,7 @@ public class Plaza_HomePage extends BasePage {
     public void selectCews_add_ci(String dropdownName){
         PlazaValidation.System = dropdownName;
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(txt_CEWS_ADD_CI), By.id("s2id_autogen13_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(txt_CEWS_ADD_CI), By.id("s2id_autogen14_results"),  dropdownName);
 
     }
 
@@ -1391,12 +1524,12 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectDatabasePerformanceTroubleShooting_AddServerCi(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_SERVER_CI), By.id("s2id_autogen29_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_SERVER_CI), By.id("s2id_autogen34_results"),  dropdownName);
 
     }
     public void selectDatabasePerformanceTroubleShooting_AddDbCi(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_CI), By.id("s2id_autogen30_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_CI), By.id("s2id_autogen35_results"),  dropdownName);
 
     }
     public void selectDatabasePerformanceTroubleShooting_databaseType(String dropdownName){
@@ -1434,12 +1567,12 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectDatabaseConfigureParameter_AddCi_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_DATABASE_CONFIGURE_PARAMETER_ADD_CI), By.id("s2id_autogen34_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_DATABASE_CONFIGURE_PARAMETER_ADD_CI), By.id("s2id_autogen39_results"),  dropdownName);
 
     }
     public void selectDatabaseConfigureParameter_AddDbCi_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_DATABASE_CONFIGURE_PARAMETER_DB_ADD_CI), By.id("s2id_autogen35_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_DATABASE_CONFIGURE_PARAMETER_DB_ADD_CI), By.id("s2id_autogen40_results"),  dropdownName);
 
     }
     public void selectDatabaseConfigureParameter_databaseType(String dropdownName){
@@ -1466,7 +1599,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectDatabaseRequest_databaseType(String dropdownName){
         PlazaValidation.DatabaseType = dropdownName;
-        selectDropdown(By.id(dd_DATABASE_REQUEST_DATABASE_TYPE), By.id("select2-results-18"),  dropdownName);
+        selectDropdown(By.id(dd_DATABASE_REQUEST_DATABASE_TYPE), By.id("select2-results-12"),  dropdownName);
     }
     public void enterDatabaseRequest_plannedStartDateTime(String text){
         PlazaValidation.PlannedStartDate = text;
@@ -1478,7 +1611,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectDatabaseRequest_chooseAction(String dropdownName){
         PlazaValidation.ChooseAction = dropdownName;
-        selectDropdown(By.id(dd_DATABASE_REQUEST_CHOOSE_ACTION), By.id("select2-results-17"),  dropdownName);
+        selectDropdown(By.id(dd_DATABASE_REQUEST_CHOOSE_ACTION), By.id("select2-results-18"),  dropdownName);
     }
     public void enterDatabaseRequest_request(String text){
         PlazaValidation.Request = text;
@@ -1492,7 +1625,7 @@ public class Plaza_HomePage extends BasePage {
         PlazaValidation.Ruleset = dropdownName;
         PlazaValidation.NewExistingAccount = dropdownName;
         PlazaValidation.InternalExternalWebsite = dropdownName;
-        selectDropdown(By.id(dd_DATABASE_NEW_EXISTING_ACCOUNT), By.id("select2-results-14"),  dropdownName);
+        selectDropdown(By.id(dd_DATABASE_NEW_EXISTING_ACCOUNT), By.id("select2-results-15"),  dropdownName);
     }
     public void enterDatabase_dnsIp_Address(String text){
         PlazaValidation.DnsIpAddress = text;
@@ -1500,18 +1633,18 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selects_database_AddCi_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_ADD_DATABASE_CI), By.id("s2id_autogen20_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_ADD_DATABASE_CI), By.id("s2id_autogen25_results"),  dropdownName);
 
     }
     public void selects_database_AddServerCi_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_ADD_SERVER_CI), By.id("s2id_autogen21_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_ADD_SERVER_CI), By.id("s2id_autogen26_results"),  dropdownName);
 
     }
     public void selectDatabaseAccountType(String dropdownName){
         PlazaValidation.AccountType = dropdownName;
         PlazaValidation.TrafficReturnRoutingVerified = dropdownName;
-        selectDropdown(By.id(dd_DATABASE_ACCOUNT_TYPE), By.id("select2-results-13"),  dropdownName);
+        selectDropdown(By.id(dd_DATABASE_ACCOUNT_TYPE), By.id("select2-results-14"),  dropdownName);
     }
     public void enterDatabase_name(String text){
         PlazaValidation.DatabaseName = text;
@@ -1550,7 +1683,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectsAddCi_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_ADD_CI), By.id("s2id_autogen14_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_ADD_CI), By.id("s2id_autogen13_results"),  dropdownName);
 
     }
     public void enterNetworkEquipment_request(String text){

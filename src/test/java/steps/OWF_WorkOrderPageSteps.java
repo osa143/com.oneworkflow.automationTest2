@@ -81,7 +81,7 @@ public class OWF_WorkOrderPageSteps {
     }
     @Then("user should see assigned profile as {string}")
     public void userShouldSeeAssignedProfileAs(String arg0) {
-     Assert.assertEquals(workOrderPage.getAssignedProfileStatus(), arg0);
+     Assert.assertTrue(workOrderPage.getAssignedProfileStatus(arg0));
 
     }
 
@@ -813,7 +813,10 @@ public class OWF_WorkOrderPageSteps {
         public void userEntersActualScheduleEndDateAs (String arg0){
             workOrderPage.enterActualScheduleEnd(arg0);
         }
+
+    @Then("user validates check profile in ow description same as plaza")
+    public void userValidatesCheckProfileInOwDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyCheckProfilesInOwDescription());
     }
-
-
+}
 

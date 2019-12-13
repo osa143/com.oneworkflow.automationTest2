@@ -1363,5 +1363,17 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
+    public boolean verifyCheckProfilesInOwDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.ChooseOption) && actualDescription.contains(PlazaValidation.AccountName)
+                && actualDescription.contains(PlazaValidation.SelectGroup) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
 
 }

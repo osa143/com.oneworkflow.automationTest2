@@ -21,7 +21,7 @@
       And user selects action dropdown as "N/A:N/A" on trouble event page
       And user enters closure info as "Test Ticket"
       And user enters event start time as -65 mins past
-      And user enters event end time as -55 mins past
+      And user enters event end time as -60 mins past
       Then user clicks on save button
       And user validates ticket status as "Cleared"
       When user changes status to "Closed" on trouble event page

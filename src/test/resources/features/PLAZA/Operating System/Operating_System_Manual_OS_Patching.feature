@@ -15,7 +15,7 @@
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system manual os patching request as "Test6 Operating System Manual/Request"
       And user selects manual os patching Add CI as "cc001cgas001"
-      And user selects manual os patching Operating System as "Windows"
+      And user selects manual os patching Operating System as "Solaris"
       And user selects Server placed in Veha as "Yes"
       And user enters WBS Code as "P100-000-000"
       And user enters planned start date and time as current date and time

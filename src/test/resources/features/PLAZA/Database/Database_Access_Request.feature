@@ -46,7 +46,7 @@
       #And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as "Oracle/MSSQL/MySQL/PostgreSQL"
+      And user should see assigned profile as "<Assigned Profile>"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
@@ -79,9 +79,9 @@
 
       Examples:
 
-      |Request                                |Database Type|Description                      |Additional Comments  |Account Type|
-     # |Test1 Database AccessMSSQL/Request     |MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server  |
-       |Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |
+      |Request                                |Database Type|Description                      |Additional Comments  |Account Type|Assigned Profile|
+      #|Test1 Database AccessMSSQL/Request     |MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server |MSSQL L3       |
+       |Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |MySQL L3        |
 
 
 

@@ -81,7 +81,7 @@ public class OWF_WorkOrderPageSteps {
     }
     @Then("user should see assigned profile as {string}")
     public void userShouldSeeAssignedProfileAs(String arg0) {
-     Assert.assertTrue(workOrderPage.getAssignedProfileStatus(arg0));
+     Assert.assertEquals(workOrderPage.getAssignedProfileStatus(), arg0);
 
     }
 

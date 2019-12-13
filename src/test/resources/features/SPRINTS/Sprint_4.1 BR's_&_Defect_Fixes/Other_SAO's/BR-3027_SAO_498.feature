@@ -56,7 +56,7 @@
       Then user selects ticket under select target request
       And user selects relationship type as "Is master of"
       And user clicks on accept button
-      Then user validates linked tickets availability
+      Then user validates 5 linked ticket availability
       When user clicks on alarms tab
       And user clicks on display active child alarms radio button
       Then user should see child alarms present in alarms tab

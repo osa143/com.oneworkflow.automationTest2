@@ -13,6 +13,7 @@ Feature: user validates status changes
     Then user validates other status options available as "New:Pending:Withdrawn:(Clear)"
     When user changes status to "Pending"
     And user enters on hold to date as current date
+    #And user enters on hold to date 0 minutes in the future
     Then user enters reason field as "Waiting for Customer Info"
     And user clicks on save button
     Then error message should display as "Please ensure that the On Hold Until To Date is a future date. (ARERR 999001260)"

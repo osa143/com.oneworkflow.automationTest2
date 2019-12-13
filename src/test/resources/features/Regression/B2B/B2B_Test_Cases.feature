@@ -67,12 +67,12 @@
       Examples:
          |title                                |Description                       |CIName                 |AssignmentProfile        |Manufacturer|ContactName            |ContactMailAddress           |
 #        |B2B Automated Test - Sweden Transtema|B2B Automation, Sweden, Transtema |SE_LTECell_100895010   |Transtema - FS - SE - B2B|Ericsson   |Transtema SOC          |support.tns@transtema.com    |
-#        |B2B Automated Test - Sweden Eltel    |B2B Automation, Sweden, Eltel     |SE_LTECell_103392011   |Eltel - FS - SE - B2B    |Nokia      |Team Sundsvall Serv/Lev|NMC-MESSAGES@eltelnetworks.se|
+        |B2B Automated Test - Sweden Eltel    |B2B Automation, Sweden, Eltel     |SE_LTECell_103392011   |Eltel - FS - SE - B2B    |Nokia      |Team Sundsvall Serv/Lev|NMC-MESSAGES@eltelnetworks.se|
 #        |B2B Automated Test - Finland Eltel   |B2B Automation, Finland, Eltel    |FI_LTECell_Valpe4H     |Eltel - FS - FIN - B2B   |Nokia      |ELTEL ContactCenter    |nmc-messages@eltelnetworks.se|
 #        |B2B Automated Test - Finland Empower |B2B Automation, Finland, Empower  |FI_LTECell_Hauci1L     |Empower - FS - FI - B2B  |Nokia      |Empower Switchboard    |SCTyonohjaus@empower.fi      |
 #        |B2B Automated Test - Norway Oneco    |B2B Automation, Norway, Oneco     |NO_LTECell_TLM150_L18-1|Oneco - FS - NO - B2B    |Huawei     |                       |                             |
-#        |B2B Automated Test - Lithuania Eltel |B2B Automation, Lithuania, Eltel  |LT_LTECell_2C16B011    |Eltel - FS - LT - B2B    |Huawei     |B2B Mobile Litauen     |lars.bergh@eltelnetworks.se  |
-        |B2B Automated Test - Estonia Boftel  |B2B Automation, Estonia, Boftel   |EE_LTECell_AABLAK2     |Boftel - FS - EE - B2B   |Ericsson   |Boftel Estonia NOC      |ee.noc@boftel.com            |
+ #       |B2B Automated Test - Lithuania Eltel |B2B Automation, Lithuania, Eltel  |LT_LTECell_2C16B011    |Eltel - FS - LT - B2B    |Huawei     |B2B Mobile Litauen     |lars.bergh@eltelnetworks.se  |
+ #       |B2B Automated Test - Estonia Boftel  |B2B Automation, Estonia, Boftel   |EE_LTECell_AABLAK2     |Boftel - FS - EE - B2B   |Ericsson   |Boftel Estonia NOC      |ee.noc@boftel.com            |
 
 
 

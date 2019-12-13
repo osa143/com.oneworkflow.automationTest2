@@ -7,11 +7,11 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
   As an Incident Manager
   I want to have incidents automatically assigned to an appropriate support groups
 
-#
-#  Background:
-#    Given user is on the OneWorkflow login page
-#    When user logs in with valid user and password
-#    Then user successfully logged in to OneWorkflow and agent console should be displayed
+##
+  Background:
+    Given user is on the OneWorkflow login page
+    When user logs in with valid user and password
+    Then user successfully logged in to OneWorkflow and agent console should be displayed
 
 
 # An assignment rule with EQUAL condition on title field that matches title field on manually created incidents will be used to assign the incident
@@ -149,8 +149,12 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And there are multiple assignment rules that match the incident details
 #    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
 #    And user clicks on assignment under sections
-#    And user should see assigned profile as "Network Design Rejlers PRA-SE"
-#    And user validates assignee is "erda07"
+#  ###################################################################################################
+##    And user should see assigned profile as "Network"
+##    And user validates assignee is "erda07"
+#  ###################################################################################################
+#      And user should see assigned profile as "Enterprise"
+#    And user validates assignee is "chga14"
 #    And user logsOut and closes the browser
 #    And user switches to window 0
 
@@ -168,8 +172,12 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And there are multiple assignment rules that match the incident details
 #    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
 #    And user clicks on assignment under sections
-#    And user should see assigned profile as "RAN Ericsson NEMS-Common"
-#    And user validates assignee is "miik00"
+#  ###########################################################################################
+##    And user should see assigned profile as "RAN Ericsson NEMS-Common"
+##    And user validates assignee is "miik00"
+#  ###########################################################################################
+#    And user should see assigned profile as "SOC-Common-L1"
+#    And user validates assignee is "aoa424"
 #    And user logsOut and closes the browser
 #    And user switches to window 0
 
@@ -189,8 +197,12 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And there are multiple assignment rules that match the incident details
 #    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
 #    And user clicks on assignment under sections
-#    And user should see assigned profile as "DC CS Core (Voice)"
-#    And user validates assignee is "tompoh"
+#  #############################################################################################
+##    And user should see assigned profile as "DC CS Core (Voice)"
+##    And user validates assignee is "tompoh"
+#  ###############################################################################################
+#      And user should see assigned profile as "Billing L2-FI"
+#    And user validates assignee is "ale8563"
 #    And user logsOut and closes the browser
 #    And user switches to window 0
 
@@ -225,7 +237,7 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And user answers all risk questions as below
 #    And user selects answer as "Impact to other systems/technologies are unclear"
 #    And user selects answer as "No"
-#    And user selects answer as "Tested successfully, this is a pilot"
+#    And user selects answer as "Tested succesfully, this is a pilot"
 #    And user selects answer as "Yes (outcome of the change can be instantly verified)"
 #    And user selects answer as "Yes"
 #    And user selects answer as "Simple"
@@ -247,29 +259,38 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And there are multiple assignment rules that match the incident details
 #    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
 #    And user clicks on assignment under sections
-#    And user should see assigned profile as "CAB"
-#    And user validates assignee is "juniksa1"
+#  ########################################################################################
+##    And user should see assigned profile as "CAB"
+##    And user validates assignee is "juniksa1"
+#  #########################################################################################
+#      And user should see assigned profile as "DC Billing"
+#    And user validates assignee is "andmal"
 
 
-  Scenario: Problem Ticket
-    And user clicks on create problem record
-    And user switches to window 1
-    Then trouble record form should appear in new tab
-    When user clicks on sweden checkbox under affected BU's
-    When user enters "This ticket should be auto assigned to PB Auto Assignment LIKE Condition Automation Test Rule" in Title field
-    And user selects request type as "Access Networks:RAN Optimization" on Problem record page
-    And user enters description as "Problem Ticket Auto Assignment Test"
-    And user selects impact type as moderate:limited
-    And user selects urgency as low
-    And user clicks on save button
-    Then ticket should be created and status should be assigned
-    And there are multiple assignment rules that match the incident details
-    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
-    And user clicks on assignment under sections
-    And user should see assigned profile as "OSS Workflow Development"
-    And user validates assignee is "scc223"
-    And user logsOut and closes the browser
-    And user switches to window 0
+
+#  Scenario: Problem Ticket
+#    And user clicks on create problem record
+#    And user switches to window 1
+#    Then trouble record form should appear in new tab
+#    When user clicks on sweden checkbox under affected BU's
+#    When user enters "This ticket should be auto assigned to PB Auto Assignment LIKE Condition Automation Test Rule" in Title field
+#    And user selects request type as "Access Networks:RAN Optimization" on Problem record page
+#    And user enters description as "Problem Ticket Auto Assignment Test"
+#    And user selects impact type as moderate:limited
+#    And user selects urgency as low
+#    And user clicks on save button
+#    Then ticket should be created and status should be assigned
+#    And there are multiple assignment rules that match the incident details
+#    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
+#    And user clicks on assignment under sections
+#    ###################################################################################
+##    And user should see assigned profile as "OSS Workflow Development"
+##    And user validates assignee is "scc223"
+#    ####################################################################################
+#    And user should see assigned profile as "DNS/DHCP"
+#    And user validates assignee is "eyj3278"
+#    And user logsOut and closes the browser
+#    And user switches to window 0
 
 
 

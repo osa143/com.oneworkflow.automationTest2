@@ -2,7 +2,10 @@ package cucumberHooks;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
+import driver.factory.DriverFactory;
 import pageObjects.BasePage;
+import pageObjects.OWF_AgentConsolePage;
+import utils.CommonUtils;
 
 import java.io.IOException;
 
@@ -18,6 +21,7 @@ public class Hooks {
 //        Path p = Paths.get("Screenshots\\" + file.getName());
             scenario.embed(screenshot, "image/png");
         }
+
 
 //            OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
 //            CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 0);

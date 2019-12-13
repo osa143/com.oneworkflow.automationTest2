@@ -813,11 +813,10 @@ public class OWF_WorkOrderPageSteps {
         public void userEntersActualScheduleEndDateAs (String arg0){
             workOrderPage.enterActualScheduleEnd(arg0);
         }
-    }
 
-    @Then("user validates ci impact is inactive")
-    public void userValidatesCiImpactIsInactive() {
-        Assert.assertTrue(workOrderPage.verifyCiImpactIsInvalid());
+    @Then("user validates check profile in ow description same as plaza")
+    public void userValidatesCheckProfileInOwDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyCheckProfilesInOwDescription());
     }
 }
 

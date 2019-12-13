@@ -54,8 +54,8 @@
         | TV:Terminal | RGW (Residential Gateway):STB (Set-Top Box) |
         | TV:TV Applications | End User Application |
         | Undefined Telia | Undefined Telia |
-        | VAS:ioT | Backend (incl DCP):Mobile App:Other:Unclear |
-        | VAS:Service Nodes | Charging:email:IN Node:IVR:Messaging:NSEE:OTA:Other:Roaming:UC:Unclear |
+        | VAS:IoT | Backend (incl DCP):Mobile App:Other:Unclear |
+        | VAS:Service Nodes | Charging:Email:IN Node:IVR:Messaging:NSEE:OTA:Other:Roaming:UC:Unclear |
 
       And User selects "Cause" as dropdownValue and should see values for "readonly"
 

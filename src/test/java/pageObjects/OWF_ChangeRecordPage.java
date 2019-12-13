@@ -54,9 +54,223 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_SOURCE_ID = "arid_WIN_0_777021006";
     private static final String txt_CHANGE_INITIATOR = "arid_WIN_0_2";
     private static final String dd_REQUEST_CATEGORY = "arid_WIN_0_777021548";
+    private static final String txt_TEMPLATE = "arid_WIN_0_777504501";
+    private static final String txt_REQUEST_CATEGORY = "arid_WIN_0_777021548";
+    private static final String txt_PROJECTCODE = "arid_WIN_0_700007053";
+    private static final String txt_CHANGE_BUILDER = "arid_WIN_0_600001054";
+    private static final String dd_ASSIGNED_PROFILE = "arid_WIN_0_777031408";
+    private static final String txt_IMPLEMENTATION = "arid_WIN_0_700007007";
+    private static final String txt_TEST_PLAN = "arid_WIN_0_700007008";
+    private static final String txt_ROLLBACK = "arid_WIN_0_700007009";
+    private static final String txt_COMMUNICATION_PLAN = "arid_WIN_0_600001053";
+    private static final String txt_VER_OF_FUNCTIONALITY = "arid_WIN_0_600001055";
+    private static final String txt_RISK_DESCRIPTION = "arid_WIN_0_600001065";
+    private static final String dd_WITHDRAWN_REASON = "arid_WIN_0_777031390";
+    private static final String btn_SEARCH_FOR = "WIN_0_rc0id700027222";
+    private static final String txt_LOGIN_NAME = "arid_WIN_0_700027012";
+    private static final String txt_ADD_EMAIL_ADDRESS = "arid_WIN_0_700027017";
+    private static final String txt_CHANGE_BUILDER_EMAIL = "arid_WIN_0_999100105";
+    private static final String txt_CHANGE_BUILDER_PHONE = "arid_WIN_0_999100104";
+    private static final String txt_TO_DATE = "arid_WIN_0_777031004";
+    private static final String txt_RESOLVED_GROUP = "arid_WIN_0_777031382";
+    private static final String txt_RESOLVED_PERSON = "arid_WIN_0_777031383";
+    private static final String txt_REVIEWDETAILS = "arid_WIN_0_705002084";
+    private static final String txt_CLOSURE_CODE = "arid_WIN_0_777031380";
+    private static final String txt_FAILURE_CODE = "arid_WIN_0_777507017";
+    private static final String txt_WITHDRAWN_REASON = "arid_WIN_0_777031390";
+    private static final String txt_SERVICE_AND_CUSTOMER_IMPACT = "arid_WIN_0_730030000";
+    private static final String txt_REQUESTSTART = "arid_WIN_0_777021160";
+    private static final String txt_REQUESTEND = "arid_WIN_0_777021161";
+    private static final String txt_ESTIMATED_IMPACT = "arid_WIN_0_777031437";
+    private static final String txt_EXPECTED_ALARMS = "arid_WIN_0_705001002";
+    private static final String txt_IMPACT_DAYS = "arid_WIN_0_990001006";
+    private static final String txt_IMPACT_HOURS = "arid_WIN_0_900000018";
+    private static final String txt_IMPACT_MINS = "arid_WIN_0_900000019";
+    private static final String txt_IMPACT_SECS = "arid_WIN_0_990001007";
+    private static final String txt_AGREED_START = "arid_WIN_0_777021162";
+    private static final String txt_AGREED_END = "arid_WIN_0_777021163";
+    private static final String txt_ACTUALSTART = "arid_WIN_0_777021164";
+    private static final String txt_ACTUALEND = "arid_WIN_0_777021165";
+    private static final String txt_ACTUALIMPACT = "arid_WIN_0_777031429";
+    private static final String txt_COMPLETEDCODE = "arid_WIN_0_777021166";
+    private static final String txt_EXTERNALPARENTTICKETID = "arid_WIN_0_600001020";
+    private static final String txt_ACTUALDOWNTIME = "arid_WIN_0_600001501";
+    private static final String txt_SUBSCRIPTIONID = "arid_WIN_0_600002012";
+    private static final String txt_ADDRESSOFISSUE = "arid_WIN_0_600002023";
+
+    public String getAddressOfIssue(){
+        return getTextByID(txt_ADDRESSOFISSUE);
+    }
+
+    public String getSubscriptionID(){
+        return getTextByID(txt_SUBSCRIPTIONID);
+    }
+
+    public String getActualDowntime(){
+        return getTextByID(txt_ACTUALDOWNTIME);
+    }
+
+    public String getExternalParentTicketId(){
+        return getTextByID(txt_EXTERNALPARENTTICKETID);
+    }
+
+    public String getCompleted_code(){
+        return getTextByID(txt_COMPLETEDCODE);
+    }
+
+    public String get_ActualImpact(){
+        return getTextByID(txt_ACTUALIMPACT);
+    }
+
+    public String getActual_end(){
+        return getTextByID(txt_ACTUALEND);
+    }
+
+    public String getActual_start(){
+        return getTextByID(txt_ACTUALSTART);
+    }
+
+    public String getAgreedEnd(){
+        return getTextByID(txt_AGREED_END);
+    }
+
+    public String getAgreedStart(){
+        return getTextByID(txt_AGREED_START);
+    }
+
+    public String getImpactSecs(){
+        return getTextByID(txt_IMPACT_SECS);
+    }
+
+    public String getImpactMins(){
+        return getTextByID(txt_IMPACT_MINS);
+    }
+
+    public String getImpactHours(){
+        return getTextByID(txt_IMPACT_HOURS);
+    }
+
+    public String getImpactDays(){
+        return getTextByID(txt_IMPACT_DAYS);
+    }
+
+    public String getExpectedAlarms(){
+        return getTextByID(txt_EXPECTED_ALARMS);
+    }
+
+    public String getEstimatedImpact(){
+        return getTextByID(txt_ESTIMATED_IMPACT);
+    }
+
+    public String getRequestEnd(){
+        return getTextByID(txt_REQUESTEND);
+    }
+
+    public String getRequestStart(){
+        return getTextByID(txt_REQUESTSTART);
+    }
+
+    public String getServiceAndCustomerImpact(){
+        return getTextByID(txt_SERVICE_AND_CUSTOMER_IMPACT);
+    }
+
+    public String getWithdrawn_reason(){
+        return getTextByID(txt_WITHDRAWN_REASON);
+    }
+
+    public String getFailureCode(){
+        return getTextByID(txt_FAILURE_CODE);
+    }
+
+    public String getClosureCode(){
+        return getTextByID(txt_CLOSURE_CODE);
+    }
 
 
+    public String getReviewDetails(){
+        return getTextByID(txt_REVIEWDETAILS);
+    }
 
+    public String getResolvedPerson(){
+        return getTextByID(txt_RESOLVED_PERSON);
+    }
+
+    public String getResolvedGroup(){
+        return getTextByID(txt_RESOLVED_GROUP);
+    }
+
+    public String getToDate(){
+        return getTextByID(txt_TO_DATE);
+    }
+
+    public String getChangeBuilderPhone(){
+        return getTextByID(txt_CHANGE_BUILDER_PHONE);
+    }
+
+    public String getChangeBuilderEmail(){
+        return getTextByID(txt_CHANGE_BUILDER_EMAIL);
+    }
+
+    public void enterEmailAddress(String text) {
+        enterTextByElement(By.id(txt_ADD_EMAIL_ADDRESS), text);
+    }
+
+    public void enterLoginName(String text) {
+        enterTextByElement(By.id(txt_LOGIN_NAME), text);
+    }
+
+    public void  selectSearchForRadioButton(){
+        clickElement(By.id(btn_SEARCH_FOR));
+    }
+
+    public String getWithdrawnReason(){
+        return getTextByID(dd_WITHDRAWN_REASON);
+    }
+
+    public String getRiskDescription(){
+        return getTextByID(txt_RISK_DESCRIPTION);
+    }
+
+    public String getVerOfFunctionality(){
+        return getTextByID(txt_VER_OF_FUNCTIONALITY);
+    }
+
+    public String getCommunicationPlan(){
+        return getTextByID(txt_COMMUNICATION_PLAN);
+    }
+
+    public String getRollback(){
+        return getTextByID(txt_ROLLBACK);
+    }
+
+    public String getTestPlan(){
+        return getTextByID(txt_TEST_PLAN);
+    }
+
+    public String getImplementation(){
+        return getTextByID(txt_IMPLEMENTATION);
+    }
+
+
+    public String getAssignedProfile(){
+        return getTextByID(dd_ASSIGNED_PROFILE);
+    }
+
+    public String getChangeBuilder(){
+        return getTextByID(txt_CHANGE_BUILDER);
+    }
+
+   public String getProjectCode(){
+       return getTextByID(txt_PROJECTCODE);
+   }
+
+    public String getRequestCategory(){
+       return getTextByID(txt_REQUEST_CATEGORY);
+   }
+
+    public String getTemplate(){
+        return getTextByID(txt_TEMPLATE);
+    }
 
     public String getTxt_CHANGE_Initiator(){
         return getTextByID(txt_CHANGE_INITIATOR);

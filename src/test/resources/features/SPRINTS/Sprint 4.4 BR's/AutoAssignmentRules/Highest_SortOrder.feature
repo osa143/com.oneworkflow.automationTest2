@@ -44,8 +44,12 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
 #    And there are multiple assignment rules that match the incident details
 #    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
 #    And user clicks on assignment under sections
-#    And user should see assigned profile as "Transport Mobile-Common"
-#    And user validates assignee is "ciggok"
+  ##############################################################################
+#    And user should see assigned profile as "Core Production-Common"
+#    And user validates assignee is "Change_Automation_4"
+ ###############################################################################
+#    And user should see assigned profile as "Acc Mob RAN Ericsson-SE"
+#    And user validates assignee is "anbl04"
 #    And user logsOut and closes the browser
 #    And user switches to window 0
 
@@ -65,8 +69,12 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
 #    And there are multiple assignment rules that match the incident details
 #    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
 #    And user clicks on assignment under sections
-#    And user should see assigned profile as "IT CC"
-#    And user validates assignee is "tvb913"
+#    #################################################################
+##    And user should see assigned profile as "IT CC"
+##    And user validates assignee is "tvb913"
+#    ###################################################################
+#    And user should see assigned profile as "IT Cloud"
+#    And user validates assignee is "bjkn03"
 #    And user logsOut and closes the browser
 #    And user switches to window 0
 
@@ -102,7 +110,7 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
 #    And user answers all risk questions as below
 #    And user selects answer as "Impact to other systems/technologies are unclear"
 #    And user selects answer as "No"
-#    And user selects answer as "Tested successfully, this is a pilot"
+#    And user selects answer as "Tested succesfully, this is a pilot"
 #    And user selects answer as "Yes (outcome of the change can be instantly verified)"
 #    And user selects answer as "Yes"
 #    And user selects answer as "Simple"
@@ -124,8 +132,12 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
 #    And there are multiple assignment rules that match the incident details
 #    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
 #    And user clicks on assignment under sections
-#    And user should see assigned profile as "Change Process Manager"
-#    And user validates assignee is "pdr145"
+#  ###########################################################################################
+##    And user should see assigned profile as "Change Process Manager"
+##    And user validates assignee is "pdr145"
+#  ###########################################################################################
+#    And user should see assigned profile as "DC CS Core (Voice)"
+#    And user validates assignee is "DC CS Core (Voice)_auto"
 
 
 
@@ -144,8 +156,12 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
 #    And there are multiple assignment rules that match the incident details
 #    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
 #    And user clicks on assignment under sections
-#    And user should see assigned profile as "Problem Manager"
-#    And user validates assignee is "frvi96_auto"
+#  ################################################################################
+##    And user should see assigned profile as "Problem Manager"
+##    And user validates assignee is "frvi96_auto"
+#  ##################################################################################
+#    And user should see assigned profile as "IT-Application-OSS"
+#    And user validates assignee is "dano17"
 #    And user logsOut and closes the browser
 #    And user switches to window 0
 

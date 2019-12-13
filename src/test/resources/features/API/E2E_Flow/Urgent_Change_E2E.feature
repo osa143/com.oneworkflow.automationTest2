@@ -1,4 +1,4 @@
-@API_Known_Error_E2E
+@API_Urgent_Change_E2E
   Feature: E2E Validation of API created trouble ticket
     Scenario: user validates all information on API ticket and processes ticket E2E
 
@@ -72,9 +72,8 @@
         | Test EXCEL| Test EXCEL  | Test XLS FILE.xls  | 5           |
         | Test PPT  | Test PPT    | Test PPT FILE.pptx | 6           |
 
-
-
-      Then change should also be reflected in the timeline as "Attachment has been added. File Name - attachement.doc.txt" for change ticket in row 1
+      
+      Then change should also be reflected in the timeline as "Attachment has been added. File Name - attachement.doc.txt"
       When user clicks on Diagnosis tab
       Then user clicks on CI search button
       And user switches to frame
@@ -88,7 +87,7 @@
       And user switches to window 1
       And CI should be listed and displayed under the Diagnosis tab
       When user clicks on timeline tab
-      Then change should also be reflected in the timeline as "Impact record created for "DK_BSC_ALG3B"
+      Then change should also be reflected in the timeline as "Impact record created for "DK_BSC_ALG3B" on row 1
       When user clicks on Diagnosis tab
       Then user right clicks on CI "DK_BSC_ALG3B" and selects "Detach Selected"
       Then CI should be detached from ticket
@@ -110,8 +109,8 @@
       When user enters as "New Test Ticket" in service and customer impact
       And user clicks save button
       Then form should be saved
-      When user enters request start date as ""
-      And user enters request end date as ""
+      When user enters request start time 2 hours ahead of current date
+      When user enters request end time 3 hours ahead of current date
       And user clicks save button
       Then error message should display as "Required field (without a default) not specified : Request Start (ARERR 9424)"
       And error message should display as "Required field (without a default) not specified : Request End (ARERR 9424)"
@@ -131,7 +130,7 @@
       Then user selects search for radio button as "User"
       And user enters "Tohall_Copy" under interested parties
       Then user clicks on search under add interested party
-      And user selects first entry
+      And user highlights user "Tohall_Copy" under interested parties
       Then user selects access radio button as read and write
       And user selects auto notify radio button as yes
       Then user clicks on save button under interested parties frame
@@ -139,7 +138,7 @@
       And user clicks on "Timeline" tab
       Then change should also be reflected in the timeline as "The User Tomas Hallén has been added as interested parties."
       Then user clicks on add email button
-      And user enters "Change_Automation_2" under interested parties
+      And user enters "Change_Automation_2" in email address field
       And user clicks on add email button
       Then user validates "Change_Automation_2" is listed as an interested party
       When user clicks on timeline tab
@@ -167,8 +166,9 @@
       Then user enters impact duration as "20" minutes
       And user clicks save button
       Then user switches to window 1
-      And user clicks refresh button on linked items tab
-      Then user validates change record ticket is present
+      Then user clicks on timeline tab
+      And change should be reflected in the timeline ""
+      Then user clicks on linked items tab
       When user selects target application first dropdown as "OS3 - Operations"
       And user selects target application second dropdown as "Caused"
       Then user clicks on create button under linked items
@@ -176,8 +176,9 @@
       Then user selects request type as "Customer"
       And user clicks save button
       Then user switches to window 1
-      And user clicks refresh button on linked items tab
-      Then user validates op ticket is present
+      Then user clicks on timeline tab
+      And change should be reflected in the timeline ""
+      Then user clicks on linked items tab
       When user selects target application first dropdown as "OS3 - Work Order"
       And user selects target application second dropdown as "Fixed"
       Then user clicks on create button under linked items
@@ -185,15 +186,16 @@
       Then user selects request type as "Analysis"
       And user clicks save button
       And user switches to window 1
-      And user clicks refresh button on linked items tab
-      Then user validates work order ticket is present
+      Then user clicks on timeline tab
+      And change should be reflected in the timeline ""
+      Then user clicks on linked items tab
       When user double clicks on work order ticket under linked items tab
       Then user switches to window 2
       And user changes status to "Withdrawn"
       Then user selects withdrawn reason as "Training"
       Then user clicks save button
       And user switches to window 1
-      Then user clicks on refresh button on linked items tab
+      Then user clicks refresh button under linked items
       And user validates work order ticket is unlinked from the change ticket
       When user clicks on work order tab
       And user clicks on create from ticket

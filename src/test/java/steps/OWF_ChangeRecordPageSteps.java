@@ -604,6 +604,232 @@ public class OWF_ChangeRecordPageSteps {
             changeRecordPage.clickElementByContainsTextAndTagName("div", "Disable");
         }
 
+    @Then("timeline should be updated for service info deactivation")
+    public void timelineShouldBeUpdatedForServiceInfoDeactivation() {
+        Assert.assertTrue(changeRecordPage.verifyServiceInfoDeactivatedTimelineUpdate());
+
+    }
+
+    @And("user validates template field as {string}")
+    public void userValidatesTemplateFieldAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getTemplate(), arg0);
+    }
+
+    @And("user validates request category as {string}")
+    public void userValidatesRequestCategoryAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getRequestCategory(), arg0);
+    }
+
+    @And("user validates project code as {string}")
+    public void userValidatesProjectCodeAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getProjectCode(), arg0);
+    }
+
+    @Then("user validates change builder+* as {string}")
+    public void userValidatesChangeBuilderAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getChangeBuilder(), arg0);
+    }
+
+    @And("user validates assigned profile as {string}")
+    public void userValidatesAssignedProfileAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getAssignedProfile(), arg0);
+    }
+
+    @Then("user validates implementation as {string}")
+    public void userValidatesImplementationAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getImplementation(), arg0);
+    }
+
+    @And("user validates test plan as {string}")
+    public void userValidatesTestPlanAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getTestPlan(), arg0);
+    }
+
+    @Then("user validates rollback as {string}")
+    public void userValidatesRollbackAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getRollback(), arg0);
+    }
+
+    @And("user validates communication plan as {string}")
+    public void userValidatesCommunicationPlanAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getCommunicationPlan(), arg0);
+    }
+
+    @Then("user validates ver of functionality* as {string}")
+    public void userValidatesVerOfFunctionalityAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getVerOfFunctionality(), arg0);
+    }
+
+    @And("user validates risk description* as {string}")
+    public void userValidatesRiskDescriptionAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getRiskDescription(), arg0);
+    }
+
+    @And("user validates state as {string}")
+    public void userValidatesStateAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getWithdrawnReason(), arg0);
+    }
+
+    @Then("user selects search for radio button as {string}")
+    public void userSelectsSearchForRadioButtonAs(String arg0) {
+        changeRecordPage.selectSearchForRadioButton();
+    }
+
+    @And("user enters {string} under interested parties")
+    public void userEntersUnderInterestedParties(String arg0) {
+        changeRecordPage.enterLoginName(arg0);
+    }
+
+    @And("user enters {string} in email address field")
+    public void userEntersInEmailAddressField(String arg0) {
+        changeRecordPage.enterEmailAddress(arg0);
+    }
+
+    @Then("user selects withdrawn reason as {string}")
+    public void userSelectsWithdrawnReasonAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getWithdrawnReason(), arg0);
+    }
+
+    @And("user validates change builder email as {string}")
+    public void userValidatesChangeBuilderEmailAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getChangeBuilderEmail(), arg0);
+    }
+
+    @And("user validates change builder phone as {string}")
+    public void userValidatesChangeBuilderPhoneAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getChangeBuilderPhone(), arg0);
+    }
+
+    @And("user validates to date as {string}")
+    public void userValidatesToDateAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getToDate(), arg0);
+    }
+
+    @And("user validates resolved group as {string}")
+    public void userValidatesResolvedGroupAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getResolvedGroup(), arg0);
+    }
+
+    @And("user validates resolved person as {string}")
+    public void userValidatesResolvedPersonAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getResolvedPerson(), arg0);
+    }
+
+    @And("user validates review details as {string}")
+    public void userValidatesReviewDetailsAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getReviewDetails(), arg0);
+    }
+
+    @And("user validates closure code as {string}")
+    public void userValidatesClosureCodeAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getClosureCode(), arg0);
+    }
+
+    @And("user validates failure code as {string}")
+    public void userValidatesFailureCodeAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getFailureCode(), arg0);
+    }
+
+    @And("user validates withdrawn reason as {string}")
+    public void userValidatesWithdrawnReasonAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getWithdrawn_reason(), arg0);
+    }
+
+    @And("user validates service and customer impact as {string}")
+    public void userValidatesServiceAndCustomerImpactAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getServiceAndCustomerImpact(), arg0);
+    }
+
+    @And("user validates request start as {string}")
+    public void userValidatesRequestStartAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getRequestStart(), arg0);
+    }
+
+    @And("user validates request end as {string}")
+    public void userValidatesRequestEndAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getRequestEnd(), arg0);
+    }
+
+    @And("user validates estimated impact as {string}")
+    public void userValidatesEstimatedImpactAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getEstimatedImpact(), arg0);
+    }
+
+    @And("user validates expected alarms as {string}")
+    public void userValidatesExpectedAlarmsAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getExpectedAlarms(), arg0);
+    }
+
+    @And("user validates impact duration days as {string}")
+    public void userValidatesImpactDurationDaysAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getImpactDays(), arg0);
+    }
+
+    @And("user validates impact duration hours as {string}")
+    public void userValidatesImpactDurationHoursAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getImpactHours(), arg0);
+    }
+
+    @And("user validates impact duration minutes as {string}")
+    public void userValidatesImpactDurationMinutesAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getImpactMins(), arg0);
+    }
+
+    @And("user validates impact duration seconds as {string}")
+    public void userValidatesImpactDurationSecondsAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getImpactSecs(), arg0);
+    }
+
+    @And("user validates agreed start as {string}")
+    public void userValidatesAgreedStartAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getAgreedStart(), arg0);
+    }
+
+    @And("user validates agreed end as {string}")
+    public void userValidatesAgreedEndAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getAgreedEnd(), arg0);
+    }
+
+    @And("user validates actual start as {string}")
+    public void userValidatesActualStartAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getActual_start(), arg0);
+    }
+
+    @And("user validates actual end as {string}")
+    public void userValidatesActualEndAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getActual_end(), arg0);
+    }
+
+    @And("user validates actual impact as {string}")
+    public void userValidatesActualImpactAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.get_ActualImpact(), arg0);
+    }
+
+    @And("user validates completed code as {string}")
+    public void userValidatesCompletedCodeAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getCompleted_code(), arg0);
+    }
+
+    @And("user validates external parent ticket id as {string}")
+    public void userValidatesExternalParentTicketIdAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getExternalParentTicketId(), arg0);
+    }
+
+    @And("user validates actual downtime as {string}")
+    public void userValidatesActualDowntimeAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getActualDowntime(), arg0);
+    }
+
+    @And("user validates subscription id as {string}")
+    public void userValidatesSubscriptionIdAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getSubscriptionID(), arg0);
+    }
+
+    @And("user validates address of issue as {string}")
+    public void userValidatesAddressOfIssueAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getAddressOfIssue(), arg0);
+    }
+}
         @Then("timeline should be updated for service info deactivation")
         public void timelineShouldBeUpdatedForServiceInfoDeactivation () {
             Assert.assertTrue(changeRecordPage.verifyServiceInfoDeactivatedTimelineUpdate());

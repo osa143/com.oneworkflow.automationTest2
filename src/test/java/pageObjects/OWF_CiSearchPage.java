@@ -7,7 +7,7 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class OWF_CiSearchPage extends BasePage {
+public class OWF_CiSearchPage extends BaseRecordPage {
 
     private static final String btnRELATE_CI = "WIN_0_700009085";
     private static final String btnClOSE =  "WIN_0_777000001";
@@ -20,7 +20,7 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String txtLOCATION_ID = "arid_WIN_0_700009015";
     private static final String btnCREATE_linked_items = "WIN_4_777506020";
     private static final String btn_CREATE_linked_items= "WIN_5_777506020";
-    private static final String chkbxTO_SELECT_CI = "//*[@id=\"T700009024\"]/tbody/tr[2]";
+    private static final String chkbxTO_SELECT_CI = "//*[@id='T700009024']/tbody/tr[2]";
     private static final String rbtn_CLEARED_ID = "WIN_4_rc1id730011091";
     private static final String ddCATEGORY= "Category*";
     private static final String txtNAME_PLUS_ID = "arid_WIN_0_700009016";
@@ -68,6 +68,20 @@ public class OWF_CiSearchPage extends BasePage {
     private static final String rbtn_IGNORE_HANDLING_DUPLICATE_CIS= "WIN_0_RCGroup800038013";
     private static final String txt_IMPACT_TO_PLUS_BULK_UPDATE= "arid_WIN_0_999000299";
 
+    public void addCI(String CIName, String CI_Impact){
+        clickDiagnosis();
+        clickCiSearch();
+        switchToFrameByIndex(2);
+        clickClearButton();
+        enterNamePlus(CIName);
+        clickCiSearchButton();
+        clickToSelectCi();
+        selectLevel(CI_Impact);
+        clickRelateCiButton();
+        closeWarningMessage();
+        clickCloseButton();
+
+    }
     public void enterImpactTo(String text){
         findElement(By.id(txt_IMPACT_TO_PLUS_BULK_UPDATE)).clear();
         findElement(By.id(txt_IMPACT_TO_PLUS_BULK_UPDATE)).sendKeys(text);
@@ -289,8 +303,8 @@ public class OWF_CiSearchPage extends BasePage {
         clickElement(By.id(btn_ADD_BULK_IMPORT));
     }
 
-    public void enterImpactFrom(){
-        findElement(By.id(txt_IMPACT_FROM)).sendKeys(Keys.ENTER);
+    public static void enterImpactFrom(){
+        driver.findElement(By.id(txt_IMPACT_FROM)).sendKeys(Keys.ENTER);
     }
     public void enterImpactFrom(String text){
        findElement(By.id(txt_IMPACT_FROM)).clear();
@@ -363,9 +377,10 @@ public class OWF_CiSearchPage extends BasePage {
     public void selectTargetApplicationSecond(String value){
         selectDropDownNameAndValue(ddTARGET_APPLICATION_SECOND,value, false);
     }
-    public void enterNamePlus(String name_plus) {
-        findElement(By.id(txtNAME_PLUS_ID)).clear();
-        driver.findElement(By.id(txtNAME_PLUS_ID)).sendKeys(name_plus);
+    public static void enterNamePlus(String name_plus) {
+        WebElement NamePlusField= driver.findElement(By.id(txtNAME_PLUS_ID));
+        NamePlusField.clear();
+        NamePlusField.sendKeys(name_plus);
     }
 
     public void clickSearchForDropdown() {
@@ -395,13 +410,13 @@ public class OWF_CiSearchPage extends BasePage {
         driver.switchTo().parentFrame();
         driver.switchTo().frame(1);
         clickElementByContainsTextAndTagName("a", "OK");
-        wait(2000);
+        wait(1000);
         driver.switchTo().defaultContent();
         driver.switchTo().frame(2);
-        wait(2000);
+        wait(1000);
     }
 
-    public void clickClearButton() {
+    public static void clickClearButton() {
         driver.findElement(By.id(btnCLEAR)).click();
     }
 
@@ -411,10 +426,9 @@ public class OWF_CiSearchPage extends BasePage {
         wait(1500);
     }
 
-    public void clickToSelectCi() {
-        wait(500);
-        findElement(By.xpath(chkbxTO_SELECT_CI)).click();
-        wait(500);
+    public static void clickToSelectCi() {
+        driver.findElement(By.xpath(chkbxTO_SELECT_CI)).click();
+
 
     }
     public void selectLevel(String value){

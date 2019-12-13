@@ -463,4 +463,9 @@ public class OWF_CiSearchPageSteps {
         ciSearchPage.clickElement(By.id("ardivpcl"));
         ciSearchPage.switchToFrameByIndex(2);
     }
+
+    @And("user adds {string} to the ticket")
+    public void userAddsToTheTicket(String CIName) {
+        ciSearchPage.addCI(CIName, "No Impact");
+    }
 }

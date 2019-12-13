@@ -1,0 +1,98 @@
+@ValidateChange
+  #API Created Ticket needed
+  Feature: Validate all fields are correct from API created ticket
+    Scenario: Validate all fields are correct from API created ticket
+
+      Given user is on the OneWorkflow login page
+      When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
+      Then user successfully logged in to OneWorkflow and agent console should be displayed
+      When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
+      And user enters ticket id as ""
+      Then user should see change record ticket
+      When user clicks on CTI details under sections
+      And user clicks on location under sections
+      And user clicks on owner under sections
+      And user clicks on assignment under sections
+      And user clicks on details under sections
+      And user clicks on On Hold under sections
+      And user clicks on vendor under sections
+      And user clicks on attachments under sections
+      And user clicks on closure under sections
+      And user validates "Change Type" as "Change Record"
+      And user validates ticket status as "New"
+      And user validates "Service Provider*" as "Telia Company"
+      And user validates source field as "One Workflow"
+      And user validates "Source ID" as "CM_002"
+      And user validates "Affected BU's" as "Sweden"
+      And user validates "Request Type*" as "Standard Change"
+      And user validates "Change Initiator" as ""
+      And user validates "Template" as "RAN Swap"
+      And user validates "Title*" as "IT | Mobile | BSS"
+      And user validates "Request Category" as "Configuration"
+      And user validates "Description*" as "AutomationAPIDescription"
+      And user validates "Reason*" as "AutomationAPIReason"
+      And user validates "Priority*" as "Critical"
+      And user validates "Project Code" as ""
+      And user validates "Change Builder+*" as ""
+      And user validates "Change Builder Email" as ""
+      And user validates "Change Builder Phone" as ""
+      And user validates "Category" as "Core"
+      And user validates "Type" as "Mobile CS Core Network"
+      And user validates "Item" as "MSC"
+      And user validates "Technology" as "DTTV"
+      And user validates "Model" as ""
+      And user validates "Manufacturer" as ""
+      And user validates "Location ID+" as ""
+      And user validates "Location Name +" as ""
+      And user validates "Region ID" as ""
+      And user validates "Region Name" as ""
+      And user validates "Latitude" as ""
+      And user validates "Longitude" as ""
+      And user validates "Location Details" as ""
+      And user validates "Owner Profile*" as "DC DK Billing"
+      And user validates "Owner*" as "dc_itdk2"
+      And user validates "Assigned Profile" as "OSS Monitoring Mob"
+      And user validates "Assignee" as "daxe00"
+      And user validates "Last Ack By" as ""
+      And user validates "Reassignment Count" as ""
+      And user validates "Implementation*" as "ImplementationAPI"
+      And user validates "Test Plan*" as "APITestPlan"
+      And user validates "Rollback*" as "APIRollback"
+      And user validates "Communication Plan*" as "APICommPlan"
+      And user validates "Ver of Functionality*" as "${verificationOfFunctionality}"
+      And user validates "Risk Description*" as "APIRiskDesc"
+      And user validates "To Date" as ""
+      And user validates "Reason" as ""
+      And user validates "Vendor Name +" as "TestVendor"
+      And user validates "Onsite Engineer(s)" as "Testengineer"
+      And user validates "Account Number" as ""
+      And user validates "Telephone Number" as ""
+      And user validates "Hours of Operation" as "2"
+      And user validates "Vendor Ref" as "TestVendorRef"
+      And user validates "Onsite Contact" as ""
+      And user validates "Resolved Group" as ""
+      And user validates "Resolved Person" as ""
+      And user validates "Review Details" as ""
+      And user validates "Closure Code" as ""
+      And user validates "Failure Code" as ""
+      And user validates "Withdrawn Reason" as ""
+      And user validates "Service & Customer Impact" as "Service And Customer Impact"
+      And user validates "Request Start" as "2019-09-06T09:16:53Z"
+      And user validates "Request End" as "2019-09-10T09:16:53Z"
+      And user validates "Estimated Impact" as "Loss of Service"
+      And user validates "Expected Alarms" as "TestExpectedAlarm"
+      And user validates "Impact Duration Days" as "1"
+      And user validates "Impact Duration Hours" as ""
+      And user validates "Impact Duration Minutes" as ""
+      And user validates "Impact Duration Seconds" as ""
+      And user validates "Agreed Start" as "2019-09-06T09:16:53Z"
+      And user validates "Agreed End" as "2019-09-10T09:16:53Z"
+      And user validates "Actual Start +" as "2019-09-05T09:16:53Z"
+      And user validates "Actual End +" as "2019-09-10T09:16:53Z"
+      And user validates "Actual Impact" as ""
+      And user validates "Completed Code" as ""
+      And user validates "External Parent Ticket ID" as ""
+      And user validates "Actual downtime" as ""
+      And user validates "Subscription id" as ""
+      And user validates "Address of Issue" as ""
+

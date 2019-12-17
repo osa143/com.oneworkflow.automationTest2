@@ -13,6 +13,7 @@
       And user clicks on "Firewall & Network" under IT Infrastructure
       When user clicks on Remote Access (VPN ACS)
       Then user should see "Remote Access (VPN/ACS)" form
+      Then user selects select request as "General VPN"
       Then user selects remote access system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters network security remote request as "Test9 Network Security/Request"

@@ -15,8 +15,8 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String btnB2B_DISPATCH_XPATH = "//a[contains(text(),'B2B Dispatch')]";
     private static final String txtHEADER_ID = "arid_WIN_0_600001032";
     private static final String txtMESSAGE_ID = "arid_WIN_0_600001033";
-    private static final String btnREFRESH_INBOUND = "//div[@id='WIN_0_600002301']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')] ";
-    private static final String btn_REFRESH_OUTBOUND= "//div[@id='WIN_0_600002302']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
+    private static final String btnREFRESH_INBOUND = "//*[@id='WIN_0_600002301']/div[1]/table/tbody/tr/td[2]/a[2]";
+    private static final String btn_REFRESH_OUTBOUND= "//*[@id='WIN_0_600002302']/div[1]/table/tbody/tr/td[2]/a[2]";
     private static final String txtWFM_TIKCET_ID  = "arid_WIN_0_777504105";
     private static final String txtDISPATCH_STATUS_ID  = "arid_WIN_0_777504105";
     private static final String btnAPPLY_B2B_ID = "WIN_0_600002903";
@@ -57,7 +57,6 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_ESTIMATED_SCHEDULE_END= "arid_WIN_0_777021168";
     private static final String txt_ACTUAL_SCHEDULE_START= "arid_WIN_0_777021164";
     private static final String txt_ACTUAL_SCHEDULE_END= "arid_WIN_0_777021165";
-
 
     public void enterRequestedScheduleEnd(String text){
         clearText(By.id(txt_REQUESTED_SCHEDULE_END));
@@ -343,6 +342,7 @@ public class OWF_WorkOrderPage extends BasePage {
     }
 
     public void clickRefresh_Inbound(){
+        wait(8000);
         driver.findElement(By.xpath(btnREFRESH_INBOUND)).click();
         wait(1500);
     }
@@ -389,13 +389,10 @@ public class OWF_WorkOrderPage extends BasePage {
         selectDropDownNameAndValue(ddSLA_CLASS, value, false);
     }
 
-    public boolean getAssignedProfileStatus(String text1){
+    public String getAssignedProfileStatus(){
         String text = getAttributeValueById(ddASSIGNED_PROFILE);
         System.out.println("Assigned profile is -"+ text);
-        if(text.contains(text1)) {
-            return true;
-        }
-        else return false;
+        return text;
     }
 
     public boolean verifyC2BCacheDeploymentDescription() {
@@ -1355,6 +1352,18 @@ public class OWF_WorkOrderPage extends BasePage {
     }
 
     public boolean verifyTcfpRemoveUserDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.ChooseOption) && actualDescription.contains(PlazaValidation.AccountName)
+                && actualDescription.contains(PlazaValidation.SelectGroup) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyCheckProfilesInOwDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)

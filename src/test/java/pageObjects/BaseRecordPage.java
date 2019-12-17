@@ -32,7 +32,7 @@ public class BaseRecordPage extends BasePage {
     public static final String txtREASON_ID = "arid_WIN_0_705001003";
     public static final String txtASSIGNEE_ID = "arid_WIN_0_4";
 
-    public static final String txtEXPECTED_ALARMS = "arid_WIN_0_705001002";
+    private static final String txtEXPECTED_ALARMS = "arid_WIN_0_705001002";
     public static final String txtIMPACT_DURATION_DAYS = "arid_WIN_0_990001006";
     public static final String txtIMPACT_DURATION_HRS = "arid_WIN_0_900000018";
     public static final String txtIMPACT_DURATION_MINS = "arid_WIN_0_900000019";

@@ -1,13 +1,14 @@
 package pageObjects;
 
+import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import utils.CommonUtils;
 import utils.PlazaValidation;
 import utils.Ticket;
-
 import java.util.List;
+import java.util.Map;
 
 public class OWF_TroubleEventPage extends BaseRecordPage {
 
@@ -25,7 +26,6 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txtLAST_ACK_BY_ID = "arid_WIN_0_777031402";
     private static final String txtRESPONSE_REASON_ID = "arid_WIN_0_700048055";
     private static final String txtRE_ASIGNMENT_COUNT_ID = "arid_WIN_0_777031450";
-
     private static final String txtEVENT_START_TIME ="arid_WIN_0_703001000";
 
     private static final String txtAUTO_CLOSE_DATE = "arid_WIN_0_600001305";
@@ -161,6 +161,27 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_HIERARCHIC_ESCLATION_LEVEL="arid_WIN_0_700025204";
 
 
+
+    public void createTroubleTicket(DataTable dataTable){
+        clickSwedenCheckBox();
+        List<Map<String, String>> list=dataTable.asMaps(String.class, String.class);
+        enterTitle(list.get(0).get("Title"));
+        selectRequestType(list.get(0).get("RequestType"), false);
+        enterDescription(list.get(0).get("Description"));
+        clickSave();
+    }
+    public void createWorkOrderFromTroubleTicket(){
+        selectTab("Work Orders");
+        clickCreateFromTicket();
+        CommonUtils.switchToChildWindow(driver,2);
+        clickSave();
+        wait(3000);
+    }
+
+    public void selectImpactLevel(String value){
+        wait(500);
+        selectDropDownNameAndValue("Level*", value, false);
+    }
     public String getHierarchicEscalationLevel(){
         return getTextByID(txt_HIERARCHIC_ESCLATION_LEVEL);
     }
@@ -836,7 +857,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     public void clickWorkOrder(){
         waitUntilElementClickable(By.xpath("//a[contains(text(), 'Work Orders')]")).click();
     }
-    public void enterLevel(String level){
+    public void enterTitle(String level){
         driver.findElement(By.id(txtTITLE_ID)).sendKeys(level);
     }
 

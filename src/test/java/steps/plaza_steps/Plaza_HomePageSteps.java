@@ -2078,8 +2078,138 @@ public class Plaza_HomePageSteps extends BasePage {
         homePage.selectDropdownValueUnderItInfrastructure(arg0);
     }
 
-    @And("user enters CRM resource request as {string}")
-    public void userEntersCRMResourceRequestAs(String arg0) {
-        homePage.enterCRMResourceServiceRequest(arg0);
+    @And("user enters appwatch request as {string}")
+    public void userEntersAppwatchRequestAs(String arg0) {
+        homePage.enterAppwatchRequest(arg0);
+    }
+
+    @Then("user selects on call team as {string}")
+    public void userSelectsOnCallTeamAs(String arg0) {
+        homePage.selectOnCallTeam(arg0);
+    }
+
+    @Then("user enters service group name as {string}")
+    public void userEntersServiceGroupNameAs(String arg0) {
+        homePage.enterAppwatchServiceGroupName(arg0);
+    }
+
+    @And("user selects enable notifications as {string}")
+    public void userSelectsEnableNotificationsAs(String arg0) {
+        homePage.selectEnableNotifications(arg0);
+    }
+
+    @Then("user enters ibs request as {string}")
+    public void userEntersIbsRequestAs(String arg0) {
+        homePage.enterIbsRequest(arg0);
+    }
+
+    @Then("user selects service level management as {string}")
+    public void userSelectsServiceLevelManagementAs(String arg0) {
+        homePage.selectServiceLevelManagement(arg0);
+    }
+
+    @And("user selects patch window as {string}")
+    public void userSelectsPatchWindowAs(String arg0) {
+        homePage.selectPatchWindow(arg0);
+    }
+
+    @Then("user selects microsoft security patching as {string}")
+    public void userSelectsMicrosoftSecurityPatchingAs(String arg0) {
+        homePage.selectMicrosoftSecurityPatching(arg0);
+    }
+
+    @And("user enters monitoring in appwatch as {string}")
+    public void userEntersMonitoringInAppwatchAs(String arg0) {
+        homePage.enterMonitoringAppWatch(arg0);
+    }
+
+    @And("user enters vcpu and ram as {string}")
+    public void userEntersVcpuAndRamAs(String arg0) {
+        homePage.enterVcpuAndRam(arg0);
+    }
+
+    @And("user selects csm monitoring as {string}")
+    public void userSelectsCsmMonitoringAs(String arg0) {
+        homePage.selectCsmMonitoring(arg0);
+    }
+
+    @And("user selects ddc site as {string}")
+    public void userSelectsDdcSiteAs(String arg0) {
+        homePage.selectDdcSite(arg0);
+    }
+
+    @And("user selects server type as {string}")
+    public void userSelectsServerTypeAs(String arg0) {
+        homePage.selectServerType(arg0);
+    }
+
+    @Then("user selects vlan as {string}")
+    public void userSelectsVlanAs(String arg0) {
+        homePage.selectVlan(arg0);
+    }
+
+    @Then("user selects number of servers as {string}")
+    public void userSelectsNumberOfServersAs(String arg0) {
+        homePage.selectNumberOfServers(arg0);
+    }
+
+    @Then("user enters touchpoint plus request as {string}")
+    public void userEntersTouchpointPlusRequestAs(String arg0) {
+        homePage.enterTouchpointRequest(arg0);
+    }
+
+    @Then("user enters organisation name as {string}")
+    public void userEntersOrganisationNameAs(String arg0) {
+        homePage.enterOrganisationName(arg0);
+    }
+
+    @Then("user enters service id as {string}")
+    public void userEntersServiceIdAs(String arg0) {
+        homePage.enterServiceId(arg0);
+    }
+
+    @And("user clicks on generally button")
+    public void userClicksOnGenerallyButton() {
+        homePage.clickGenerally();
+    }
+
+    @Then("user selects name as {string}")
+    public void userSelectsNameAs(String arg0) {
+        homePage.selectName(arg0);
+    }
+
+    @Then("user enters touchpoint request as {string}")
+    public void userEntersTouchpointRequestAs(String arg0) {
+        homePage.enterUpdateSupportPagesRequest(arg0);
+    }
+
+    @And("user enters touchpoint plus sms provider request as {string}")
+    public void userEntersTouchpointPlusSmsProviderRequestAs(String arg0) {
+        homePage.enterTouchpointSmsRequest(arg0);
+    }
+
+    @And("user enters touchpoint description as {string}")
+    public void userEntersTouchpointDescriptionAs(String arg0) {
+        homePage.enterTouchpointDescription(arg0);
+    }
+
+    @And("user enters touchpoint user id as {string}")
+    public void userEntersTouchpointUserIdAs(String arg0) {
+        homePage.enterTouchpointUserId(arg0);
+    }
+
+    @And("user enters touchpoint plus description as {string}")
+    public void userEntersTouchpointPlusDescriptionAs(String arg0) {
+        homePage.enterTouchpointPlusDescription(arg0);
+    }
+
+    @When("user selects splunk role dropdown as {string}")
+    public void userSelectsSplunkRoleDropdownAs(String arg0) {
+        homePage.selectSplunkRole(arg0);
+    }
+
+    @And("user enters splunk H2 Name Hid as {string}")
+    public void userEntersSplunkHNameHidAs(String arg0) {
+        homePage.enterSplunkH2Name(arg0);
     }
 }

@@ -2078,6 +2078,11 @@ public class Plaza_HomePageSteps extends BasePage {
         homePage.selectDropdownValueUnderItInfrastructure(arg0);
     }
 
+    @And("user enters CRM resource request as {string}")
+    public void userEntersCRMResourceRequestAs(String arg0) {
+        homePage.enterCRMResourceServiceRequest(arg0);
+    }
+
     @And("user enters appwatch request as {string}")
     public void userEntersAppwatchRequestAs(String arg0) {
         homePage.enterAppwatchRequest(arg0);

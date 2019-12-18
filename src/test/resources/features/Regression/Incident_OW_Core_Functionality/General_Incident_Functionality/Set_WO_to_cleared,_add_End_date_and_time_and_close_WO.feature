@@ -16,7 +16,7 @@ Feature: Set WO to cleared, add end date and time and close WO
     And user selects priority as "Info"
     Then user clicks on save button
     When user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
-    And user selects assignee as "Change_Automation_1" by using alphabet "C" key up 0 times
+    And user enters "Change_Automation_1" in assignee
     Then user clicks on save button
     And user clicks on Ack button
     Then user validates ticket status as "Work In Progress"

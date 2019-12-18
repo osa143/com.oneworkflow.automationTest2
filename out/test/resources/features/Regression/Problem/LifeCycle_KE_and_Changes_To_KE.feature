@@ -30,18 +30,7 @@
       And user clicks on save button under interested parties frame
       Then problem initiator user should be listed under interested parties tab
       And user clicks on save button
-      When user clicks on Diagnosis tab
-      And user clicks on CI search button
-      And user switches to frame
-      Then CI search panel should open
-      And  user enters "SE_CPE_FRECPE5" in name field
-      And user clicks on search button on CI search window
-      And user selects a CI from list
-      And user selects impact level as "No Impact"
-      And user enters impact from date as current date
-      And user clicks on relate CI
-      And user closes warning message
-      And user clicks on close button on CI search window
+      And user adds CI "SE_CPE_FRECPE5" to the ticket
       Then CI should be listed and displayed under the Diagnosis tab
       When user changes status to "Published" on problem record page
       And user clicks on save button
@@ -60,7 +49,7 @@
       Then change should also be reflected in the timeline as "Time Tracking: Working On Ticket (20 Minutes)"
       When user changes status to "Closed" on problem record page
       And user clicks save button
-      #Then an error message should appear and a red border should be visible around the closure code field
+      Then an error message should appear: "Required field (without a default) not specified : Closure Code (ARERR 9424)"
       When user selects error code as "Full Impact"
       #When user selects closure code as "Full Impact"
       When user clicks on "Diagnosis" tab

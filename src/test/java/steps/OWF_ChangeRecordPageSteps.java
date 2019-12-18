@@ -829,13 +829,8 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesAddressOfIssueAs(String arg0) {
         Assert.assertEquals(changeRecordPage.getAddressOfIssue(), arg0);
     }
-}
-        @Then("timeline should be updated for service info deactivation")
-        public void timelineShouldBeUpdatedForServiceInfoDeactivation () {
-            Assert.assertTrue(changeRecordPage.verifyServiceInfoDeactivatedTimelineUpdate());
-        }
-            @When("user creates change ticket with following details")
-            public void userCreatesChangeTicketWithFollowingDetails (DataTable dataTable){
+    @When("user creates change ticket with following details")
+    public void userCreatesChangeTicketWithFollowingDetails (DataTable dataTable){
                 changeRecordPage.createChangeTicket(dataTable);
             }
         }

@@ -15,17 +15,7 @@
       Then user enters description as "-More information"
       And user clicks on save button on the problem form
       And change should also be reflected in the timeline as "Ticket Description has changed from \"UAT Test 3 Add CI and attachment\" to \"-More information"
-      Then user clicks on Diagnosis tab
-      Then user clicks on CI search button
-      And CI search tab should be opened
-      And user switches to frame
-      And user enters "SE_CPE_FRECPE5" in name field
-      And user clicks on search button on CI search window
-      And user selects a CI from list
-      And user selects impact level as "No Impact"
-      And user clicks on relate CI
-      And user closes warning message
-      And user clicks on close button on CI search window
+      And user adds CI "SE_CPE_FRECPE5" to the ticket
       Then user clicks on Diagnosis tab
       Then CI should be listed and displayed under the Diagnosis tab
       And user clicks on add button under internal

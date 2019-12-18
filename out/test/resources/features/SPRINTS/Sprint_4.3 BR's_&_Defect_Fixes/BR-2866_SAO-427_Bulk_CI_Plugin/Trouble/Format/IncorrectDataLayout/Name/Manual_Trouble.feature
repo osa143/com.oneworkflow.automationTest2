@@ -21,6 +21,7 @@ Feature: checking of bulk loading format
       Then user should see bulk ci loading window
       And user enters impact from date as current date midnight on bulk CI loading window
       And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window
+      And user selects impact level as "No Impact"
       And user clicks on Manual Input radio button
       And user enters "TESTCOLUMNNAME;SE_AP_alvesta-radmannen-ap1;SE_AP_alvesta-radmannen-ap2;SE_AP_alvesta-radmannen-ap3;SE_AP_alvesta-radmannen-ap4" in manual CI search box
       Then user clicks on save button under bulk import

@@ -384,7 +384,9 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     }
     public void enterAdvancedSearch(String text){
         //enterTextByElement(By.id(txt_ADVANCED_SEARCH), text);
-        findElement(By.xpath("//*[@id='arid1005']")).sendKeys(text);
+        WebElement advanceSearchTextBox= findElement(By.xpath("//textarea[@class='sr']"));
+        advanceSearchTextBox.click();
+        advanceSearchTextBox.sendKeys(text);
     }
     public void clickAdvancedSearch(){
         clickElement(By.id(btn_ADVANCED_SEARCH));

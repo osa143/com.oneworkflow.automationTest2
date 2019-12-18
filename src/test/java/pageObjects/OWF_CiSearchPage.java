@@ -1,5 +1,6 @@
 package pageObjects;
 
+import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -67,6 +68,27 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String bulkCILoading_DIV_ID = "WIN_0_800038059";
     private static final String rbtn_IGNORE_HANDLING_DUPLICATE_CIS= "WIN_0_RCGroup800038013";
     private static final String txt_IMPACT_TO_PLUS_BULK_UPDATE= "arid_WIN_0_999000299";
+
+
+
+
+    public void addCIsToTicket(DataTable CiName, String CI_Impact) {
+        clickDiagnosis();
+        clickCiSearch();
+        switchToFrameByIndex(2);
+        List<List<String>> Cis = CiName.asLists(String.class);
+        for (int i = 1; i < Cis.size(); i++) {
+            System.out.println("CI Name is: " + Cis.get(i).get(0));
+            clickClearButton();
+            enterNamePlus(Cis.get(i).get(0));
+            clickCiSearchButton();
+            clickToSelectCi();
+            selectLevel(CI_Impact);
+            clickRelateCiButton();
+            closeWarningMessage();
+        }
+        clickCloseButton();
+    }
 
     public void addCI(String CIName, String CI_Impact){
         clickDiagnosis();

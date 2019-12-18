@@ -1,7 +1,5 @@
 @02.12_Check_Old_Tickets_And_Create_Problem_Candidate @Incident
   #Passed
-  #CORE in ST, Core in SIT
-  #Mobile PS Core Network different for ST
   Feature: Check old tickets and create problem candidate
     Scenario: Check old tickets and create problem candidate
 
@@ -29,28 +27,12 @@
       Then user selects impact level as "Degradation of Service"
       And user clicks on relate CI
       And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
-      And user clicks on clear button
-      When user enters "SE_SGSN_HYMME2" in name field
-      And user clicks on search button on CI search window
-      And user selects a CI from list
-      Then user selects impact level as "Degradation of Service"
-      And user clicks on relate CI
-      Then user closes warning message
-      And user clicks on clear button
-      When user enters "SE_SGSN_LDHMME1" in name field
-      And user clicks on search button on CI search window
-      And user selects a CI from list
-      Then user selects impact level as "Degradation of Service"
-      And user clicks on relate CI
-      Then user closes warning message
-      And user clicks on clear button
-      When user enters "SE_SGSN_VRRMME1" in name field
-      And user clicks on search button on CI search window
-      And user selects a CI from list
-      Then user selects impact level as "Degradation of Service"
-      And user clicks on relate CI
-      Then user closes warning message
       And user clicks on close button on CI search window
+      When user adds below CI's to the ticket
+        |   CI Name     |
+        |SE_SGSN_HYMME2|
+        |SE_SGSN_LDHMME1 |
+        |SE_SGSN_VRRMME1|
       And user clicks on "Diagnosis" tab
       And CI should be listed and displayed under the Diagnosis tab
       Then user clicks on save button

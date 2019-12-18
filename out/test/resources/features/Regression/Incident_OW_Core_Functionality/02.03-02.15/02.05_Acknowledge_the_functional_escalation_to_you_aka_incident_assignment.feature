@@ -1,4 +1,4 @@
-@02.05_Acknowledge_the_functional_escalation_to_you_aka_incident_assignment @Incident
+@02.05 @Incident
   #passed
   Feature: user can acknowledge the functional escalation to you aka incident assignment
     Scenario: user can acknowledge the functional escalation to you aka incident assignment
@@ -21,7 +21,7 @@
       Then user validates last ack by field has data present
       When user selects assignment profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
       #assignee needs to be the same as the user who last ack'd ticket (in this case will be ticket creator)
-      Then user selects assignee as "Change_Automation_1" by using alphabet "C" key up 0 times
+      Then user enters "Change_Automation_1" in assignee
       And user clicks on save button
       When user clicks on assignment under sections
       Then user validates assignee is "Change_Automation_1"

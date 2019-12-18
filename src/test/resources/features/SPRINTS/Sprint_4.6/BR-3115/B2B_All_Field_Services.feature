@@ -14,7 +14,7 @@ Feature: Automatic assignment of work orders Ericsson based on CI
     When user creates an incident with following details
       |Title           |RequestType|Description     |
       |BR-3115-B2B Test|Customer   |BR-3115-B2B Test|
-    And user adds "<CIName>" to the ticket
+    And user adds CI "<CIName>" to the ticket
     And user creates a work order from the incident
     And user clicks on apply BtwoB button
     Then user should see assigned profile as "<AssignedProfile>"

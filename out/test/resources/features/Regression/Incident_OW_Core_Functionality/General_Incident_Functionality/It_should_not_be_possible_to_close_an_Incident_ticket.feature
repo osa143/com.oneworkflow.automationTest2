@@ -20,7 +20,7 @@
        Then user switches to window 2
        Then user clicks on save button
        And user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
-       And user selects assignee as "Change_Automation_1" by using alphabet "C" key up 0 times
+       And user enters "Change_Automation_1" in assignee
        Then user clicks on save button
        And user validates ticket status as "Assigned"
        When user switches to window 1

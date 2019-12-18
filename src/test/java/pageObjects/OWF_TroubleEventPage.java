@@ -4,11 +4,14 @@ import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import utils.CommonUtils;
 import utils.PlazaValidation;
 import utils.Ticket;
 import java.util.List;
 import java.util.Map;
+
+import static pageObjects.OWF_CiSearchPage.*;
 
 public class OWF_TroubleEventPage extends BaseRecordPage {
 
@@ -159,7 +162,6 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String dd_HOLD_REASON= "Reason";
     private static final String txt_REJECT_REASON="arid_WIN_0_600001019";
     private static final String txt_HIERARCHIC_ESCLATION_LEVEL="arid_WIN_0_700025204";
-
 
 
     public void createTroubleTicket(DataTable dataTable){

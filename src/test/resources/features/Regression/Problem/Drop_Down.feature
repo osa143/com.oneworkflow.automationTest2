@@ -23,7 +23,6 @@
       When user changes status to "Under Investigation" on problem record page
       And user clicks on save button on the problem form
       Then user validates ticket status as "Under Investigation"
-      #And change should also be reflected in the timeline as ""
       When user clicks on linked items tab
       Then multiple statuses "OS3 - Change:OS3 - Known Error:OS3 - Operations:OS3 - Problem:OS3 - Work Order:(clear)" should be available in "Target Application" dropdown
       When user selects target application first dropdown as "OS3 - Change"

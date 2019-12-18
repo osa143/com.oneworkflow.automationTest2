@@ -15,16 +15,7 @@
       And user enters description as "Test case proposal of default technical escalation"
       And user clicks on save button
       Then ticket should be created and status should be assigned
-      When user clicks on Diagnosis tab
-      And user clicks on CI search button
-      Then user switches to frame
-      When user enters "FI_LTECell_Valpe4H" in name field
-      And user clicks on search button on CI search window
-      And user selects a CI from list
-      Then user selects impact level as "Degradation of Service"
-      And user clicks on relate CI
-      And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
-      And user clicks on close button on CI search window
+      And user adds CI "FI_LTECell_Valpe4H" to the ticket with impact level "Degradation of Service"
       When user clicks on "Work Orders" tab
       And user clicks on create from ticket
       Then user switches to window 2

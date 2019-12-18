@@ -47,7 +47,7 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as "Oracle/MSSQL/MySQL/PostgreSQL"
+      And user should see assigned profile as "Oracle L3"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab

@@ -22,7 +22,8 @@ Feature: checking of bulk loading format
       And user enters impact from date as current date midnight on bulk CI loading window
       And user enters impact to date as current date midnight plus 4 hours on bulk CI loading window
       And user clicks on Manual Input radio button
-      And user enters "TESTCOLUMNNAME;SE_AP_alvesta-radmannen-ap1;SE_AP_alvesta-radmannen-ap2;SE_AP_alvesta-radmannen-ap3;SE_AP_alvesta-radmannen-ap4" in manual CI search box
+      And user selects impact level as "Degradation of Service"
+      And user enters "SE_AP_alvesta-radmannen-ap1;SE_AP_alvesta-radmannen-ap2;SE_AP_alvesta-radmannen-ap3;SE_AP_alvesta-radmannen-ap4" in manual CI search box
       Then user clicks on save button under bulk import
       And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window

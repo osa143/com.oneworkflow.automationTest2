@@ -34,17 +34,7 @@
       And user selects answer as "Simple"
       And user selects last answer as "No"
       And user clicks on save button
-      Then user clicks on Diagnosis tab
-      And user clicks on CI search button
-      And user switches to frame
-      And user selects search for as "All CIs"
-      And  user enters "SE_CPE_FRECPE5" in name field
-      And user clicks on search button on CI search window
-      And user selects a CI from list
-      And user selects impact level as "No Impact"
-      And user clicks on relate CI
-      And user closes warning message
-      And user clicks on close button on CI search window
+      And user adds CI "SE_CPE_FRECPE5" to the ticket
       Then CI should be listed and displayed under the Diagnosis tab
       When user clicks on Send button
       Then ticket should be created and status should be assigned

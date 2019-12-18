@@ -41,23 +41,11 @@
       And user clicks Search on ticket search
       When user enters description as "Some new information"
       And user clicks on save button on the problem form
-      When user clicks on Diagnosis tab
-      And user clicks on CI search button
-      And CI search panel should open
-      And user switches to frame
-      Then user clicks on clear button
-      And user enters "SE_CPE_FRECPE5" in name field
-      And user clicks on search button on CI search window
-      When user selects a CI from list
-      And user selects impact level as "No Impact"
-      Then user clicks on relate CI
-      And user closes warning message
-      And user clicks on close button on CI search window
+      And user adds CI "SE_CPE_FRECPE5" to the ticket
       And user clicks on "Diagnosis" tab
       And CI should be listed and displayed under the Diagnosis tab
       When user changes status to "Investigation Complete" on problem record page
       And user clicks on Diagnosis tab
-      #right click CI and then choose impact:clear all
       Then user right clicks on CI "SE_CPE_FRECPE5" and selects "Impact:Clear All"
       And user should see confirmation message for impact clear and clicks ok
       And user validates CI SE_CPE_FRECPE5 "Impact Status" is "Inactive" in row 1

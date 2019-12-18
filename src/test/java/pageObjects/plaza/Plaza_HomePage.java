@@ -38,7 +38,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_C2B_DESCRIPTION="sp_formfield_sr74_v_description";
     public static final String dd_SELECT_REQUEST_ID="select2-chosen-12";
     public static final String txt_C2B_GENERAL_REQUEST_ID="sp_formfield_sr112_v_request";
-    public static final String dd_C2B_GENERAL_ENVIRONMENT="s2id_sp_formfield_sr112_v_enable_notification";
+    public static final String dd_C2B_GENERAL_ENVIRONMENT="s2id_autogen13";
     public static final String txt_C2B_GENERAL_DESCRIPTION="sp_formfield_sr112_v_description";
     public static final String txt_C2B_SERVICE_REQUEST_ID="sp_formfield_sr109_v_request";
     public static final String dd_C2B_SERVICE_ENVIRONMENT="s2id_autogen13";
@@ -81,7 +81,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_NETWORK_EQUIPMENT_REQUEST="sp_formfield_sr51_v_request";
     public static final String txt_NETWORK_EQUIPMENT_DC_SITE= "sp_formfield_sr51_v_dc_site";
     public static final String txt_NETWORK_EQUIPMENT_ROOM= "sp_formfield_sr51_v_room";
-    public static final String dd_ADD_CI = "s2id_autogen13";
+    public static final String dd_ADD_CI = "s2id_autogen14";
     public static final String txt_NETWORK_EQUIPMENT_DNS_IP_ADRESS="sp_formfield_sr51_v_dns_ip_address";
     public static final String txt_NETWORK_EQUIPMENT_DELIVERY="sp_formfield_sr51_v_date_for_delivery";
     public static final String txt_NETWORK_EQUIPMENT_DATE_FOR_DECOMMISSION= "sp_formfield_sr51_v_date_for_decommission";
@@ -303,6 +303,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String dd_OCC_CI= "s2id_sp_formfield_sr65_v_add_ci";
     private static final String dd_VEHA_SYSTEM= "s2id_sp_formfield_system";
     private static final String dd_WEBTAB_CI = "s2id_sp_formfield_sr65_v_add_ci";
+    private static final String txt_CRM_RESOURCE_SERVICE_REQUEST= "sp_formfield_sr1_v_request";
     private static final String txt_APPWATCH_REQUEST = "sp_formfield_sr81_v_request";
     private static final String dd_ON_CALL_TEAM = "s2id_sp_formfield_{{::field.name}}";
     private static final String txt_SERVICEGROUPNAME = "sp_formfield_sr81_v_host_name";
@@ -441,6 +442,10 @@ public class Plaza_HomePage extends BasePage {
         enterTextByElement(By.id(txt_APPWATCH_REQUEST), text);
     }
 
+
+    public void enterCRMResourceServiceRequest(String text){
+        enterTextByElement(By.id(txt_CRM_RESOURCE_SERVICE_REQUEST), text);
+    }
     public void selectDropdownValueUnderItInfrastructure(String DropdownValue){
         driver.findElement(By.id("xcc61d55edb198b00b27fdb11ce961902")).findElements(By.tagName("a")).stream().filter(element -> element.getText().equals(DropdownValue)).findFirst().orElse(null).click();
     }
@@ -1683,7 +1688,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectsAddCi_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_ADD_CI), By.id("s2id_autogen13_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_ADD_CI), By.id("s2id_autogen14_results"),  dropdownName);
 
     }
     public void enterNetworkEquipment_request(String text){

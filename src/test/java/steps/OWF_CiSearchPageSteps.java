@@ -3,6 +3,7 @@ package steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.OWF_CiSearchPage;
@@ -464,8 +465,18 @@ public class OWF_CiSearchPageSteps {
         ciSearchPage.switchToFrameByIndex(2);
     }
 
-    @And("user adds {string} to the ticket")
+    @And("user adds CI {string} to the ticket")
     public void userAddsToTheTicket(String CIName) {
         ciSearchPage.addCI(CIName, "No Impact");
+    }
+
+    @When("user adds below CI's to the ticket")
+    public void userAddsBelowCISToTheTicket(DataTable dataTable) {
+        ciSearchPage.addCIsToTicket(dataTable, "Degradation of Service");
+    }
+
+    @And("user adds CI {string} to the ticket with impact level {string}")
+    public void userAddsCIToTheTicketWithImpactLevel(String CIName, String impactLevel) {
+        ciSearchPage.addCI(CIName, impactLevel);
     }
 }

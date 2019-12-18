@@ -281,7 +281,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_TOPCAT_ADD_CI= "s2id_autogen14";
     private static final String txt_MEGADISC_ADD_USER_DESCRIPTION= "sp_formfield_sr75_v_description";
     private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ONE_USER_ID= "sp_formfield_sr35_v_userid";
-    private static final String txt_NETWORK_SECURITY_DNS_SWEDEN_CUSTOMER_ID_NAME= "sp_formfield_sr105_v_customer_id";
+    private static final String txt_NETWORK_SECURITY_DNS_SWEDEN_CUSTOMER_ID_NAME= "sp_formfield_sr85_v_customer_id";
     private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_ONE_DESCRIPTION= "sp_formfield_sr35_v_description";
     private static final String txt_BDL_WBS_CODE_AT2= "sp_formfield_sr108_v_wbs_code";
     private static final String txt_BDL_WBS_CODE_AT1= "sp_formfield_sr108_v_wbs_code";
@@ -304,13 +304,13 @@ public class Plaza_HomePage extends BasePage {
     private static final String dd_VEHA_SYSTEM= "s2id_sp_formfield_system";
     private static final String dd_WEBTAB_CI = "s2id_sp_formfield_sr65_v_add_ci";
     private static final String txt_APPWATCH_REQUEST = "sp_formfield_sr81_v_request";
-    private static final String dd_ON_CALL_TEAM = "s2id_sp_formfield_{{::field.name}}";
+    private static final String dd_ON_CALL_TEAM = "select2-chosen-11";
     private static final String txt_SERVICEGROUPNAME = "sp_formfield_sr81_v_host_name";
-    private static final String dd_NOTIFICATIONS = "s2id_sp_formfield_{{::field.name}}";
+    private static final String dd_NOTIFICATIONS = "select2-chosen-12";
     private static final String txt_IBS_REQUEST = "sp_formfield_sr85_v_request";
-    private static final String dd_SERVICE_LEVEL_MANAGEMENT = "select2-chosen-977";
-    private static final String dd_PATCH_WINDOW = "select2-chosen-978";
-    private static final String dd_MICROSOFT_SECURITY_PATCHING = "select2-chosen-979";
+    private static final String dd_SERVICE_LEVEL_MANAGEMENT = "select2-chosen-12";
+    private static final String dd_PATCH_WINDOW = "select2-chosen-13";
+    private static final String dd_MICROSOFT_SECURITY_PATCHING = "select2-chosen-14";
     private static final String txt_MONITORING_APP_WATCH = "sp_formfield_sr85_v_monitoring_in_appwatch";
     private static final String txt_VCPU_AND_RAM = "sp_formfield_sr85_v_vcpu_and_ram";
     private static final String dd_CSM_MONITORING = "select2-chosen-15";
@@ -330,6 +330,61 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_TOUCHPOINTPLUS_DESCRIPTION = "sp_formfield_sr41_v_description";
     private static final String dd_SPLUNK_ROLE = "select2-chosen-3";
     private static final String txt_SPLUNK_H2NAME = "sp_formfield_sr38_v_h2";
+    private static final String txt_APPWATCH_DESCRIPTION = "sp_formfield_sr81_v_description";
+    private static final String dd_SERVICE_NAME_IBS = "select2-chosen-11";
+    private static final String dd_IBS_CI = "s2id_autogen24";
+    private static final String txt_IBS_DESCRIPTION = "sp_formfield_sr85_v_description";
+    private static final String txt_IBS_ORDER_REQUEST = "sp_formfield_sr82_v_request";
+    private static final String txt_IBS_SYSTEM = "select2-chosen-18";
+    private static final String txt_IBS_ORDER_DESCRIPTION = "sp_formfield_sr82_v_description";
+    private static final String txt_TOUCHPOINT_UPDATE_DESCRIPTION = "sp_formfield_sr45_v_description";
+    private static final String txt_TOUCHPOINT_PLANNED_START_AND_TIME = "sp_formfield_sr45_v_planned_start_date";
+
+    public void enterTouchpointStartDateAndTime (String text){
+        PlazaValidation.PlannedStartDate = text;
+        enterTextByElement(By.id(txt_TOUCHPOINT_PLANNED_START_AND_TIME), text);
+    }
+
+    public void enterTouchpointUpdateDescription (String text){
+        PlazaValidation.Description = text;
+        enterTextByElement(By.id(txt_TOUCHPOINT_UPDATE_DESCRIPTION), text);
+    }
+
+    public void enterIbsOrderDescription (String text){
+        PlazaValidation.Description = text;
+        enterTextByElement(By.id(txt_IBS_ORDER_DESCRIPTION), text);
+    }
+
+    public void enterIbsSystem (String dropdownName){
+        PlazaValidation.System = dropdownName;
+        selectDropdown(By.id(txt_IBS_SYSTEM), By.id("select2-results-18"), dropdownName);
+    }
+
+    public void enterIbsOrderRequest (String text){
+        PlazaValidation.Request = text;
+        enterTextByElement(By.id(txt_IBS_ORDER_REQUEST), text);
+    }
+
+    public void enterIbsDescription (String text){
+        PlazaValidation.Description = text;
+        enterTextByElement(By.id(txt_IBS_DESCRIPTION), text);
+    }
+
+    public void selectsAddIbsCi(String dropdownName){
+        PlazaValidation.CI = dropdownName;
+        selectDropdownWithMultipleValues(By.id(dd_IBS_CI), By.id("s2id_autogen24_results"),  dropdownName);
+
+    }
+
+    public void selectIbsServiceRequestName (String dropdownName){
+        PlazaValidation.ServiceRequestName = dropdownName;
+        selectDropdown(By.id(dd_SERVICE_NAME_IBS), By.id("select2-results-11"), dropdownName);
+    }
+
+    public void enterAppwatchDescription (String text){
+        PlazaValidation.Description = text;
+        enterTextByElement(By.id(txt_APPWATCH_DESCRIPTION), text);
+    }
 
     public void enterSplunkH2Name (String text){
         PlazaValidation.H2Name = text;
@@ -342,22 +397,27 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void enterTouchpointPlusDescription (String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_TOUCHPOINTPLUS_DESCRIPTION), text);
     }
 
     public void enterTouchpointUserId (String text){
+        PlazaValidation.UserId = text;
         enterTextByElement(By.id(txt_TOUCHPOINT_USERID), text);
     }
 
     public void enterTouchpointDescription (String text){
+        PlazaValidation.Description = text;
         enterTextByElement(By.id(txt_TOUCHPOINT_DESCRIPTION), text);
     }
 
     public void enterTouchpointSmsRequest (String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_TOUCHPOINT_SMS_REQUEST), text);
     }
 
     public void enterUpdateSupportPagesRequest (String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_TOUCHPOINT_UPDATE_SUPPORT_PAGES_REQUEST), text);
     }
 
@@ -370,30 +430,37 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void enterServiceId (String text){
+        PlazaValidation.ServiceId = text;
         enterTextByElement(By.id(txt_SERVICE_ID), text);
     }
 
     public void enterOrganisationName (String text){
+        PlazaValidation.OrganisationName = text;
         enterTextByElement(By.id(txt_ORGANISATION_NAME), text);
     }
 
     public void enterTouchpointRequest (String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_TOUCHPOINT_REQUEST), text);
     }
 
     public void selectNumberOfServers (String dropdownName){
+        PlazaValidation.NumberOfServers = dropdownName;
         selectDropdown(By.id(dd_NUMBER_OF_SERVERS), By.id("select2-results-21"), dropdownName);
     }
 
     public void selectVlan (String dropdownName){
+        PlazaValidation.VlanName = dropdownName;
         selectDropdown(By.id(dd_VLAN), By.id("select2-results-20"), dropdownName);
     }
 
     public void selectServerType (String dropdownName){
+        PlazaValidation.ServerType = dropdownName;
         selectDropdown(By.id(dd_SERVER_TYPE), By.id("select2-results-19"), dropdownName);
     }
 
     public void selectDdcSite (String dropdownName){
+        PlazaValidation.DdcSite = dropdownName;
         selectDropdown(By.id(dd_DDC_SITE), By.id("select2-results-17"), dropdownName);
     }
 
@@ -402,42 +469,52 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void  enterVcpuAndRam (String text){
+        PlazaValidation.VcpuAndRam = text;
         enterTextByElement(By.id(txt_VCPU_AND_RAM), text);
     }
 
     public void enterMonitoringAppWatch (String text){
+        PlazaValidation.MonitoringAppwatch = text;
         enterTextByElement(By.id(txt_MONITORING_APP_WATCH), text);
     }
 
     public void selectMicrosoftSecurityPatching (String dropdownName){
-        selectDropdown(By.id(dd_MICROSOFT_SECURITY_PATCHING), By.id("select2-results-979"), dropdownName);
+        PlazaValidation.SecurityPatching = dropdownName;
+        selectDropdown(By.id(dd_MICROSOFT_SECURITY_PATCHING), By.id("select2-results-14"), dropdownName);
     }
 
     public void selectPatchWindow (String dropdownName){
-        selectDropdown(By.id(dd_PATCH_WINDOW), By.id("select2-results-978"), dropdownName);
+        PlazaValidation.PatchWindow = dropdownName;
+        selectDropdown(By.id(dd_PATCH_WINDOW), By.id("select2-results-13"), dropdownName);
     }
 
     public void selectServiceLevelManagement (String dropdownName){
-        selectDropdown(By.id(dd_SERVICE_LEVEL_MANAGEMENT), By.id("select2-results-977"), dropdownName);
+        PlazaValidation.ServiceLevelManagement = dropdownName;
+        selectDropdown(By.id(dd_SERVICE_LEVEL_MANAGEMENT), By.id("select2-results-12"), dropdownName);
     }
 
     public void enterIbsRequest (String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_IBS_REQUEST), text);
     }
 
     public void selectEnableNotifications (String dropdownName){
-        selectDropdown(By.id(dd_NOTIFICATIONS), By.id("select2-results-935"), dropdownName);
+        PlazaValidation.Notifications = dropdownName;
+        selectDropdown(By.id(dd_NOTIFICATIONS), By.id("select2-results-12"), dropdownName);
     }
 
     public void enterAppwatchServiceGroupName (String text){
+        PlazaValidation.ServiceGroupName = text;
         enterTextByElement(By.id(txt_SERVICEGROUPNAME), text);
     }
 
     public void selectOnCallTeam (String dropdownName){
-        selectDropdown(By.id(dd_ON_CALL_TEAM), By.id ("select2-results-934"),  dropdownName);
+        PlazaValidation.OnCallTeam = dropdownName;
+        selectDropdown(By.id(dd_ON_CALL_TEAM), By.id ("select2-results-11"),  dropdownName);
     }
 
     public void enterAppwatchRequest (String text){
+        PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_APPWATCH_REQUEST), text);
     }
 

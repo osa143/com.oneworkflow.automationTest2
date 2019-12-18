@@ -2212,4 +2212,50 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userEntersSplunkHNameHidAs(String arg0) {
         homePage.enterSplunkH2Name(arg0);
     }
+
+    @Then("user enters appwatch description as {string}")
+    public void userEntersAppwatchDescriptionAs(String arg0) {
+        homePage.enterAppwatchDescription(arg0);
+    }
+
+    @And("user selects ibs service request name as {string}")
+    public void userSelectsIbsServiceRequestNameAs(String arg0) {
+        homePage.selectIbsServiceRequestName(arg0);
+    }
+
+    @And("user enters ibs CI as {string}")
+    public void userEntersIbsCIAs(String arg0) {
+        homePage.selectsAddIbsCi(arg0);
+    }
+
+    @Then("user enters ibs description as {string}")
+    public void userEntersIbsDescriptionAs(String arg0) {
+        homePage.enterIbsDescription(arg0);
+    }
+
+    @Then("user enters ibs order request as {string}")
+    public void userEntersIbsOrderRequestAs(String arg0) {
+        homePage.enterIbsOrderRequest(arg0);
+    }
+
+    @Then("user selects ibs system dropdown as {string}")
+    public void userSelectsIbsSystemDropdownAs(String arg0) {
+        homePage.enterIbsSystem(arg0);
+    }
+
+    @Then("user enters ibs order description as {string}")
+    public void userEntersIbsOrderDescriptionAs(String arg0) {
+        homePage.enterIbsOrderDescription(arg0);
+    }
+
+    @Then("user enters touchpoint update description as {string}")
+    public void userEntersTouchpointUpdateDescriptionAs(String arg0) {
+        homePage.enterTouchpointUpdateDescription(arg0);
+    }
+
+
+    @And("user enters touchpoint planned start date and time as current time")
+    public void userEntersTouchpointPlannedStartDateAndTimeAsCurrentTime() {
+        homePage.enterTouchpointStartDateAndTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
 }

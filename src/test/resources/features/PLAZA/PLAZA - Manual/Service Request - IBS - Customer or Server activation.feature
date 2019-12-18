@@ -12,16 +12,16 @@
       Then user clicks on "IBS" pebble
       And user should see "IBS" form
       Then user selects role dropdown as "Application Operation Engineer"
-      And user selects service request name as "Customer/Server activation"
+      And user selects ibs service request name as "Customer/Server activiation"
       Then user enters ibs request as "Test Request"
       And user enters Customer ID name as "Test customer id name"
       Then user selects service level management as "Mo-Fri 7:00-18:00"
       And user selects patch window as "MW - Last Saturday 01:00-04:00"
       Then user selects microsoft security patching as "app_wsus_maintenance (patch info only)"
       And user enters monitoring in appwatch as "Test Monitoring"
-      And user selects CI "cc100cgas001"
+      And user enters ibs CI as "cc100cgas001"
       And user enters vcpu and ram as "Test cpu"
-      Then user enters description as "Test Description"
+      Then user enters ibs description as "Test Description"
       And user enters additional comments as "Test Additional Comments"
       Then user clicks on "Submit"
       Then error message should display as "Some fields are incomplete: CSM-Monitoring"
@@ -40,14 +40,14 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      Then user validates title field as ""
-      And user validates request type as ""
-      And user validates ibs customer or server activcation description same as plaza
+      Then user validates title field as "Service Request | IBS"
+      And user validates request type as "Service Request | PLAZA"
+      And user validates ibs customer or server activation description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
-      Then user validates owner profile as ""
-      And user validates owner as ""
-      Then user should see assigned profile as ""
+      Then user validates owner profile as "PLAZA"
+      And user validates owner as "PLAZA"
+      Then user should see assigned profile as "VAS MAS Windows"
       And user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       Then user clicks on Diagnosis tab

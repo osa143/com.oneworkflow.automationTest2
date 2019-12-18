@@ -7,7 +7,7 @@
       Then user should see the plaza home page
       Then user clicks on plaza portal
       And user enters "Splunk" in plaza search box
-      And user clicks on "Splunk (Splunk/TC Logging)"
+      #And user clicks on "Splunk (Splunk/TC Logging)"
       Then user should see "Splunk (Splunk/TC Logging)" form
       When user selects splunk role dropdown as "Application Operation Engineer"
       And user enters Splunk request as "Test Request"

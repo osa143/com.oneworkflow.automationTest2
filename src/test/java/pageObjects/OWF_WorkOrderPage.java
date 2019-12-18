@@ -1366,14 +1366,106 @@ public class OWF_WorkOrderPage extends BasePage {
     public boolean verifyCheckProfilesInOwDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
-                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
-                && actualDescription.contains(PlazaValidation.ChooseOption) && actualDescription.contains(PlazaValidation.AccountName)
-                && actualDescription.contains(PlazaValidation.SelectGroup) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.H2Name)
                 && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
     }
 
+    public boolean verifyAppwatchDescription() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.OnCallTeam)
+                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.ServiceGroupName)
+                && actualDescription.contains(PlazaValidation.Notifications) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyIbsCustomerOrServerActivation() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.CustomerIdName) && actualDescription.contains(PlazaValidation.ServiceLevelManagement)
+                && actualDescription.contains(PlazaValidation.PatchWindow) && actualDescription.contains(PlazaValidation.SecurityPatching)
+                && actualDescription.contains(PlazaValidation.MonitoringAppwatch) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.VcpuAndRam) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyIbsOrderVirtualServerToDdc() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.DdcSite) && actualDescription.contains(PlazaValidation.System)
+                && actualDescription.contains(PlazaValidation.ServerType) && actualDescription.contains(PlazaValidation.VlanName)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)
+                && actualDescription.contains(PlazaValidation.NumberOfServers )) {
+            return true;
+        }
+        return false;
+    }
+
+
+    public boolean verifyTouchpointPlusAddDnsEntry() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments )) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyTouchpointPlusAddSmsProvider() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
+                && actualDescription.contains(PlazaValidation.Phone) && actualDescription.contains(PlazaValidation.ServiceRequestName)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.OrganisationName)
+                && actualDescription.contains(PlazaValidation.UserId) && actualDescription.contains(PlazaValidation.ServiceId)
+                && actualDescription.contains(PlazaValidation.AdditionalComments) && actualDescription.contains(PlazaValidation.Description )) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyTouchpointPlusAddSslCertificate() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.UserName)
+                && actualDescription.contains(PlazaValidation.Role) && actualDescription.contains(PlazaValidation.ServiceRequestName)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments )) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyTouchpointPlusNewExportOrImport() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.ServiceRequestName)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments )) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyTouchpointPlusUpdateSupportPages() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.PlannedStartDate) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments )) {
+            return true;
+        }
+        return false;
+    }
 
 }

@@ -240,7 +240,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI= "s2id_autogen16";
     private static final String txt_CEWS_REQUEST= "sp_formfield_sr65_v_request";
     private static final String txt_CEWS_DESCRIPTION= "sp_formfield_sr65_v_description";
-    private static final String txt_CEWS_ADD_CI= "s2id_autogen14";
+    private static final String txt_CEWS_ADD_CI= "s2id_autogen13";
     private static final String txt_EBILL_REQUEST= "sp_formfield_sr77_v_request";
     private static final String txt_EBILL_DESCRIPTION= "sp_formfield_sr77_v_description";
     private static final String txt_EBILL_ACCOUNT= "sp_formfield_sr77_v_account";
@@ -1022,7 +1022,7 @@ public class Plaza_HomePage extends BasePage {
     public void selectCews_add_ci(String dropdownName){
         PlazaValidation.System = dropdownName;
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(txt_CEWS_ADD_CI), By.id("s2id_autogen14_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(txt_CEWS_ADD_CI), By.id("s2id_autogen13_results"),  dropdownName);
 
     }
 

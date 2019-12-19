@@ -1,4 +1,4 @@
-@ServiceRequestNewExportorImportToolTemplate
+@ServiceRequestNewExportorImportToolTemplate+
   Feature: Service Request - Touchpoint Plus - New Export or Import Tool Template plaza test
     Scenario: Service Request - Touchpoint Plus - New Export or Import Tool Template plaza test
 
@@ -36,7 +36,7 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      Then user should see assigned profile as ""
+      Then user should see assigned profile as "VAS MAS Linux"
       And user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button

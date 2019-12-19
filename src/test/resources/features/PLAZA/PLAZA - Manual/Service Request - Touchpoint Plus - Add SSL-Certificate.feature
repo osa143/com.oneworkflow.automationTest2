@@ -1,4 +1,4 @@
-@ServiceRequestAddSSL-Certificate
+@ServiceRequestAddSSL_Certificate
   Feature: Service Request - Touchpoint Plus - Add SSL-Certificate plaza test
     Scenario: Service Request - Touchpoint Plus - Add SSL-Certificate plaza test
 
@@ -11,8 +11,8 @@
       And user clicks on "Application" under IT Infrastructure
       Then user clicks on "Touchpoint Plus" pebble
       Then user should see "Touchpoint Plus" form
-      #And user clicks on the contact checkbox
-      #Then user selects name as "Aaditya Raj"
+      And user clicks on the contact checkbox
+      Then user selects name as "Aaditya Raj"
       And user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Add SSL-Certificate"
       Then user enters touchpoint plus request as "test request"

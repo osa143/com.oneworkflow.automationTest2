@@ -105,6 +105,19 @@ public class PlazaValidation {
     public static String NatureAndContent;
     public static String AffectedPersons;
     public static String AffectedPersonNameID;
+    public static String OnCallTeam;
+    public static String ServiceGroupName;
+    public static String Notifications;
+    public static String ServiceLevelManagement;
+    public static String PatchWindow;
+    public static String SecurityPatching;
+    public static String MonitoringAppwatch;
+    public static String VcpuAndRam;
+    public static String DdcSite;
+    public static String ServerType;
+    public static String NumberOfServers;
+    public static String OrganisationName;
+    public static String ServiceId;
 
 
 

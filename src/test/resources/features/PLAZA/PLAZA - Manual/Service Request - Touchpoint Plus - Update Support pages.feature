@@ -14,8 +14,8 @@
       And user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Update Support pages"
       Then user enters touchpoint request as "Test Request"
-      And user enters planned start date and time as current date and time
-      Then user enters touchpoint description as "Test Description"
+      And user enters touchpoint planned start date and time as current time
+      Then user enters touchpoint update description as "Test Description"
       And user enters additional comments as "Test Additional Comments"
       Then user clicks on "Submit"
       And user gets plaza request id
@@ -38,7 +38,7 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      Then user should see assigned profile as ""
+      Then user should see assigned profile as "VAS MAS Linux"
       And user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button

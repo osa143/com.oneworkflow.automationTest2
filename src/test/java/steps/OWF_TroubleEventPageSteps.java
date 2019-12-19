@@ -379,7 +379,7 @@ public class OWF_TroubleEventPageSteps {
 //        Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
         //troubleEventPage.getErrorText();
         //troubleEventPage.clickOkOnPopup();
-        troubleEventPage.clickOk();
+        //troubleEventPage.clickOk();
 
     }
     @And("user accepts alert")

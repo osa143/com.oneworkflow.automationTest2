@@ -1,4 +1,4 @@
-@EFS_BSS @PLAZA
+@EFSBSS @PLAZA
 Feature: Plaza EFS-BSS form test
   Scenario: user validates information sent to OW from Plaza
 

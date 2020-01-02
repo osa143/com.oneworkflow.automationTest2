@@ -99,7 +99,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_DATABASE_ACCOUNT_PERMISSIONS="sp_formfield_sr21_v_permissions";
     public static final String txt_DATABASE_DESCRIPTION= "sp_formfield_sr21_v_description";
     public static final String txt_DATABASE_DNS_IP_ADDRESS= "sp_formfield_sr21_v_source_dns";
-    public static final String dd_DATABASE_NEW_EXISTING_ACCOUNT=  "select2-chosen-15";
+    public static final String dd_DATABASE_NEW_EXISTING_ACCOUNT=  "select2-chosen-14";
     public static final String dd_DATABASE_DEFAULT_TABLE_SPACE= "sp_formfield_sr21_v_default_tablespace";
     public static final String txt_DATABASE_REQUEST_REQUEST= "sp_formfield_sr115_v_request";
     public static final String dd_DATABASE_REQUEST_CHOOSE_ACTION= "select2-chosen-18";
@@ -423,7 +423,7 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void selectName (String dropdownName){
-        selectDropdownWithMultipleValues(By.id(dd_NAME), By.id("select2-results-181"), dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_NAME), By.id("select2-results-13"), dropdownName);
     }
 
     public void clickGenerally (){
@@ -1707,7 +1707,7 @@ public class Plaza_HomePage extends BasePage {
         PlazaValidation.Ruleset = dropdownName;
         PlazaValidation.NewExistingAccount = dropdownName;
         PlazaValidation.InternalExternalWebsite = dropdownName;
-        selectDropdown(By.id(dd_DATABASE_NEW_EXISTING_ACCOUNT), By.id("select2-results-15"),  dropdownName);
+        selectDropdown(By.id(dd_DATABASE_NEW_EXISTING_ACCOUNT), By.id("select2-results-14"),  dropdownName);
     }
     public void enterDatabase_dnsIp_Address(String text){
         PlazaValidation.DnsIpAddress = text;

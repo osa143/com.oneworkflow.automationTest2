@@ -1,4 +1,4 @@
-@MegaDisc-Add_User_other @PLAZA
+@MegaDisc_Add_User_other @PLAZA
   #passed
   Feature: MegaDisc Add User PLAZA form test
     Scenario:user validates information sent to OW from Plaza

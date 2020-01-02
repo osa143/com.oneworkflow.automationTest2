@@ -237,7 +237,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_PLAN= "sp_formfield_sr7_v_plan_audit";
     private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_H2= "sp_formfield_sr7_v_hid";
     private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_DESCRIPTION= "sp_formfield_sr7_v_description";
-    private static final String dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI= "s2id_autogen16";
+    private static final String dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI= "s2id_autogen15";
     private static final String txt_CEWS_REQUEST= "sp_formfield_sr65_v_request";
     private static final String txt_CEWS_DESCRIPTION= "sp_formfield_sr65_v_description";
     private static final String txt_CEWS_ADD_CI= "s2id_autogen13";
@@ -331,6 +331,13 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_TOUCHPOINTPLUS_DESCRIPTION = "sp_formfield_sr41_v_description";
     private static final String dd_SPLUNK_ROLE = "select2-chosen-3";
     private static final String txt_SPLUNK_H2NAME = "sp_formfield_sr38_v_h2";
+    private static final String txt_ADD_CI_TEXT_BOX="//input[@type='text']";
+    private static final String txt_ONE_Time_ADD_CI="s2id_sp_formfield_add_ci";
+
+    public void selectAddOneTimeCi(String CiName){
+        PlazaValidation.CI = CiName;
+        addCi(txt_ONE_Time_ADD_CI, txt_ADD_CI_TEXT_BOX, CiName);
+    }
     private static final String txt_APPWATCH_DESCRIPTION = "sp_formfield_sr81_v_description";
     private static final String dd_SERVICE_NAME_IBS = "select2-chosen-11";
     private static final String dd_IBS_CI = "s2id_autogen24";
@@ -562,7 +569,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectitfiSystem(String dropdownName){
         clickElement(By.id(dd_SYSTEM_ITFI));
-        WebElement Element=findElement(By.xpath("//input[@aria-owns='s2id_autogen13_results']"));
+        WebElement Element=findElement(By.xpath("//input[@type='text']"));
         Element.sendKeys(dropdownName);
         wait(1000);
         Element.sendKeys(Keys.ARROW_DOWN);
@@ -1019,7 +1026,22 @@ public class Plaza_HomePage extends BasePage {
         enterTextByElement(By.id(txt_EBILL_REQUEST), text);
     }
 
-    public void selectCews_add_ci(String dropdownName){
+    public void addCi(String id, String xPath, String CiName ){
+        clickElementById(id);
+        enterTextByElement(By.xpath(xPath), CiName);
+        wait(1000);
+        WebElement element=driver.switchTo().activeElement();
+        element.sendKeys(Keys.ENTER);
+        wait(1000);
+    }
+
+    public void selectCews_add_ci(String CiName){
+        PlazaValidation.System = CiName;
+        PlazaValidation.CI = CiName;
+       addCi(dd_OCC_CI, txt_ADD_CI_TEXT_BOX, CiName);
+
+    }
+    public void select_add_ci(String dropdownName){
         PlazaValidation.System = dropdownName;
         PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(txt_CEWS_ADD_CI), By.id("s2id_autogen13_results"),  dropdownName);
@@ -1038,7 +1060,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectOperatingSystem_manual_os_patching_add_ci(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI), By.id("s2id_autogen16_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI), By.id("s2id_autogen15_results"),  dropdownName);
 
     }
 

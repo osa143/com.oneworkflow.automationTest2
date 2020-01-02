@@ -95,7 +95,6 @@
       When user selects fault position as "N/A:N/A" on trouble event page
       And user selects cause as "Test Ticket:N/A:N/A" on trouble event page
       When user clicks on "Diagnosis" tab
-      And user waits 10 secs
       And user right clicks on primary CI and selects "Impact:Clear All"
       And user should see confirmation message for impact clear and clicks ok
       Then user clicks on save button

@@ -32,7 +32,7 @@
       Then user switches to window 2
       And user waits 2 secs
       And user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
-      And user selects assignee as "Change_Automation_1" by using alphabet "C" key up 0 times
+      And user enters "Change_Automation_1" in assignee
       Then user clicks on save button
       And user validates ticket status as "Assigned"
       Then user clicks on Ack button
@@ -50,7 +50,7 @@
       Then user validates WO's Status is "OPEN"
       When user switches to window 3
       And user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
-      And user selects assignee as "Change_Automation_1" by using alphabet "C" key up 0 times
+      And user enters "Change_Automation_1" in assignee
       Then user clicks on save button
       And user validates ticket status as "Assigned"
       Then user clicks on Ack button

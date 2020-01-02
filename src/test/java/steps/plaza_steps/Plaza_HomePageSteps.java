@@ -1414,7 +1414,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user enters Add CI as {string}")
     public void userEntersAddCIAs(String arg0) {
-        homePage.selectCews_add_ci(arg0);
+        homePage.select_add_ci(arg0);
     }
 
     @Then("user enters cloud one time snapshot description as {string}")
@@ -1449,7 +1449,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user enters CI as {string}")
     public void userEntersCIAs(String arg0) {
-        homePage.selectCews_add_ci(arg0);
+        homePage.select_add_ci(arg0);
     }
 
     @And("user enters EFS description as {string}")
@@ -1469,7 +1469,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @Then("user enters system dropdown as {string}")
     public void userEntersSystemDropdownAs(String arg0) {
-        homePage.selectCews_add_ci(arg0);
+        homePage.select_add_ci(arg0);
     }
 
     @And("user enters managed voice request as {string}")
@@ -1713,7 +1713,7 @@ public class Plaza_HomePageSteps extends BasePage {
     }
     @Then("user enters system as {string}")
     public void userEntersSystemAs(String arg0) {
-        homePage.selectCews_add_ci(arg0);
+        homePage.select_add_ci(arg0);
     }
     @Then("user enters veha description as {string}")
     public void userEntersVehaDescriptionAs(String arg0) {
@@ -2262,5 +2262,11 @@ public class Plaza_HomePageSteps extends BasePage {
     @And("user enters touchpoint planned start date and time as current time")
     public void userEntersTouchpointPlannedStartDateAndTimeAsCurrentTime() {
         homePage.enterTouchpointStartDateAndTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user selects order one time Add CI as {string}")
+    public void userSelectsOrderOneTimeAddCIAs(String arg0) {
+       homePage.selectAddOneTimeCi(arg0);
+
     }
 }

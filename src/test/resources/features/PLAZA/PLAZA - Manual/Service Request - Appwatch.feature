@@ -36,6 +36,9 @@
       Then user validates title field as "Service Request | AppWatch"
       And user validates request type as "Service Request | PLAZA"
       Then user validates appwatch description same as plaza
+      Then user validates title field as ""
+      And user validates request type as ""
+      Then user validates app watch description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

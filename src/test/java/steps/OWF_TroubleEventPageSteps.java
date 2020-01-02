@@ -796,6 +796,7 @@ public class OWF_TroubleEventPageSteps {
         troubleEventPage.setPreferences(preferences);
     }
 
+
     @Then("user validates CI {string} impact level is {string}")
     public void userValidatesCIImpactLevelIs(String arg0, String cellValue) {
         Assert.assertEquals(cellValue, troubleEventPage.verifyColumnStatus("Impact Level", 2));
@@ -1249,8 +1250,23 @@ public class OWF_TroubleEventPageSteps {
     public void userCreatesAWorkOrderFromTheIncident() {
         troubleEventPage.createWorkOrderFromTroubleTicket();
 
+    }
 
+    @When("user right clicks on CI {string} and clears impact")
+    public void userRightClicksOnCIAndClearsImpact(String CiName) {
+        troubleEventPage.doImpactClear(CiName);
+    }
+
+    @And("user right clicks on CI {string} and clears impact for all CI's")
+    public void userRightClicksOnCIAndClearsImpactForAllCIS(String arg0) {
+        troubleEventPage.doImpactClearForAllCIs(arg0);
+    }
+
+    @And("user right clicks on CI {string} and update impact from as past time")
+    public void userRightClicksOnCIAndUpdateImpactFromAsPastTime(String arg0) {
+       troubleEventPage.impactFromUpdateAsPastTime(arg0);
     }
 }
+
 
 

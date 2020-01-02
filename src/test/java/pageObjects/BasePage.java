@@ -94,8 +94,8 @@ public class BasePage {
     public void clickElement(By element){
         webDriverWait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
-public void clickElement(){
-
+public void clickElementById(String Id){
+    webDriverWait.until(ExpectedConditions.elementToBeClickable(By.id(Id))).click();
 }
 
     public boolean verifyMenuItems(String items){

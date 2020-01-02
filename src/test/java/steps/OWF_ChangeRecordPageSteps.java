@@ -32,7 +32,7 @@ public class OWF_ChangeRecordPageSteps {
     @When("user changes status to {string}")
     public void userChangeStatusTo(String status) {
         changeRecordPage.selectStatus(status);
-        changeRecordPage.wait(2000);
+        changeRecordPage.wait(1000);
     }
 
     @Then("problem ticket should be withdrawn")

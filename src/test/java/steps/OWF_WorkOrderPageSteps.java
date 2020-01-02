@@ -81,7 +81,7 @@ public class OWF_WorkOrderPageSteps {
     }
     @Then("user should see assigned profile as {string}")
     public void userShouldSeeAssignedProfileAs(String arg0) {
-     Assert.assertTrue(workOrderPage.getAssignedProfileStatus(arg0));
+     Assert.assertEquals(workOrderPage.getAssignedProfileStatus(),arg0);
 
     }
 
@@ -180,9 +180,10 @@ public class OWF_WorkOrderPageSteps {
       Assert.assertEquals(actual, arg0);
     }
 
-    @Then("user should see {string} notification in inbound in row {int}")
-    public void userShouldSeeNotificationInInboundInRow(String arg0, int arg1) {
-        Assert.assertEquals(workOrderPage.getInboundText("Operation", arg1), arg0);
+    @Then("user should see {string} notification in inbound in row {string}")
+    public void userShouldSeeNotificationInInboundInRow(String arg0, String rowNum) {
+        int row= Integer.parseInt(rowNum);
+        Assert.assertEquals(workOrderPage.getInboundText("Operation", row), arg0);
     }
 
     @When("user selects dispatch status as {string}")

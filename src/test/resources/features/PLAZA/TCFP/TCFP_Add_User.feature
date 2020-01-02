@@ -1,6 +1,6 @@
 @TCFP_Add_User @PLAZA
   #passed
-  Feature: TCFP Add User plaza form test
+    Feature: TCFP Add User plaza form test
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page

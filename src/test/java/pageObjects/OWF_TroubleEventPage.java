@@ -164,6 +164,23 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_HIERARCHIC_ESCLATION_LEVEL="arid_WIN_0_700025204";
 
 
+    public void impactFromUpdateAsPastTime(String cellData){
+        selectAndRightClickOnTableElement(cellData);
+        WebElement element = driver.switchTo().activeElement();
+        element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.ARROW_RIGHT);
+        element.sendKeys(Keys.DOWN);
+        element.sendKeys(Keys.ENTER);
+        int size =driver.findElements(By.tagName("iframe")).size();
+        switchToFrameByIndex(size - 1);
+        enterImpactFromPlus(CommonUtils.getDateAsTodayMidnight(0));
+        enterImpactToPlus(CommonUtils.getDateAsTodayMidnight(1));
+        clickConfirmCheckBox();
+        clickSave_bulkUpdate();
+    }
+
     public void createTroubleTicket(DataTable dataTable){
         clickSwedenCheckBox();
         List<Map<String, String>> list=dataTable.asMaps(String.class, String.class);

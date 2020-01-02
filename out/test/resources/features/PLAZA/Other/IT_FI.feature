@@ -22,7 +22,6 @@
       And user enters IT FI request as "Test1 IT FI/Request"
       Then user enters IT FI description as "Test1 IT FI/Description"
       And user enters additional comments as "Test1 IT FI/AC"
-      Then user clicks on "Submit"
       Then user enters itfi system dropdown as "AIDA"
       And user enters itfi system dropdown as "APM"
       And user enters itfi system dropdown as "ASOP2"
@@ -42,7 +41,6 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | IT FI Services"
       And user validates request type as "Service Request | PLAZA"
-        #Not sure about description validation outside of a table
       And user validates it fi description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections

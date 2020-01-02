@@ -13,15 +13,15 @@
       And user should see "IBS" form
       Then user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Order virtual server to DDC"
-      Then user enters ibs request as "Test Request"
-      And user selects ddc site as "Haninge (Default, non DR  servers)"
-      Then user selects system dropdown as "cc100 - Callguide-Windows (P1-02118-01040, Hid100003938)"
+      Then user enters ibs order request as "Test Request"
+      And user selects ddc site as "Haninge (Default, non DR servers)"
+      Then user selects ibs system dropdown as "cc100 - Callguide-Windows (P1-02118-01040, Hid100003938)"
       And user selects server type as "cc100cgas - CCS-Callguide-Core (Windows)"
       Then user selects vlan as "IBS-DDC"
-      Then user enters description as "Test Description"
+      Then user enters ibs order description as "Test Description"
       And user enters additional comments as "Test A/C"
       Then user clicks on "Submit"
-      And an error message should appear: "Some fields are incomplete: No of servers"
+      Then error message should display as "Some fields are incomplete: No of servers"
       Then user selects number of servers as "1"
       And user clicks on "Submit"
       And user gets plaza request id
@@ -37,14 +37,14 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      Then user validates title field as ""
-      And user validates request type as ""
-      And user validates ibs customer or server activcation description same as plaza
+      Then user validates title field as "Service Request | IBS"
+      And user validates request type as "Service Request | PLAZA"
+      And user validates ibs order virtual server description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
-      Then user validates owner profile as ""
-      And user validates owner as ""
-      Then user should see assigned profile as ""
+      Then user validates owner profile as "PLAZA"
+      And user validates owner as "PLAZA"
+      Then user should see assigned profile as "VAS MAS Windows"
       And user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button

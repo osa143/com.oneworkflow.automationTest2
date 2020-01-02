@@ -1,4 +1,4 @@
-@Pollux-PROD @PLAZA
+@Pollux_PROD @PLAZA
   #passed
   Feature: Pollux prod plaza form test
     Scenario Outline: user validates information sent to OW from Plaza
@@ -65,6 +65,6 @@
       Examples:
 
         |Request                   |Description                   |Additional Comments  |Desc Validation|
-        #|Pollux-PROD - Test/Request|Pollux-PROD - Test/Description|Pollux-PROD - Test/AC|               |
-        |Pollux-AT - Test/Request  |Pollux-AT - Test/Description  |Pollux-AT - Test/AC  |               |
+        |Pollux-PROD - Test/Request|Pollux-PROD - Test/Description|Pollux-PROD - Test/AC|               |
+        #|Pollux-AT - Test/Request  |Pollux-AT - Test/Description  |Pollux-AT - Test/AC  |               |
       

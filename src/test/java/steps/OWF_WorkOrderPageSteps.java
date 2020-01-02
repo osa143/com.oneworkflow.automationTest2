@@ -819,6 +819,46 @@ public class OWF_WorkOrderPageSteps {
     public void userValidatesCheckProfileInOwDescriptionSameAsPlaza() {
         Assert.assertTrue(workOrderPage.verifyCheckProfilesInOwDescription());
     }
+
+    @Then("user validates appwatch description same as plaza")
+    public void userValidatesAppwatchDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyAppwatchDescription());
+    }
+
+    @And("user validates ibs customer or server activation description same as plaza")
+    public void userValidatesIbsCustomerOrServerActivationDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyIbsCustomerOrServerActivation());
+    }
+
+    @And("user validates ibs order virtual server description same as plaza")
+    public void userValidatesIbsOrderVirtualServerDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyIbsOrderVirtualServerToDdc());
+    }
+
+    @And("user validates touchpoint plus add dns entry description same as plaza")
+    public void userValidatesTouchpointPlusAddDnsEntryDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyTouchpointPlusAddDnsEntry());
+    }
+
+    @Then("user validates touchpoint plus add sms provider same as plaza")
+    public void userValidatesTouchpointPlusAddSmsProviderSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyTouchpointPlusAddSmsProvider());
+    }
+
+    @Then("user validates touchpoint plus add ssl certificate description same as plaza")
+    public void userValidatesTouchpointPlusAddSslCertificateDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyTouchpointPlusAddSslCertificate());
+    }
+
+    @Then("user validates touchpoint plus new export or import tool template same as plaza")
+    public void userValidatesTouchpointPlusNewExportOrImportToolTemplateSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyTouchpointPlusNewExportOrImport());
+    }
+
+    @Then("user validates touchpoint plus update support pages same as plaza")
+    public void userValidatesTouchpointPlusUpdateSupportPagesSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyTouchpointPlusUpdateSupportPages());
+    }
 }
 
 

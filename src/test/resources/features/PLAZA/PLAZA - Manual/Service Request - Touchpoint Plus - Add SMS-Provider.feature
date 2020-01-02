@@ -1,4 +1,4 @@
-@ServiceRequestAddSMS-Provider
+@ServiceRequestAddSMS_Provider
   Feature: Service Request - Touchpoint Plus - Add SMS-Provider test
     Scenario: Service Request - Touchpoint Plus - Add SMS-Provider test
 
@@ -47,7 +47,7 @@
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      Then user should see assigned profile as ""
+      Then user should see assigned profile as "VAS MAS Linux"
       And user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button

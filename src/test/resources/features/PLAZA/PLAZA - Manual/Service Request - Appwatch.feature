@@ -1,4 +1,4 @@
-@ServiceRequest-Appwatch
+@ServiceRequest_Appwatch
   Feature: Service Request - Appwatch
     Scenario: Service Request - Appwatch
 
@@ -14,10 +14,10 @@
       Then user selects role dropdown as "Application Operation Engineer"
       And user enters appwatch request as "Test Request"
       Then user selects on call team as "ITOP-Billing (525590)"
-      And user enters CI as "cc100cgas001"
+      And user selects span add CI as "cc100cgas001"
       Then user enters service group name as "Test group name"
       And user selects enable notifications as "No"
-      Then user enters description as "Test Description"
+      Then user enters appwatch description as "Test Description"
       And user enters additional comments as "Test A/C"
       Then user clicks on "Submit"
       And user gets plaza request id
@@ -33,16 +33,29 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
+      Then user validates title field as "Service Request | AppWatch"
+      And user validates request type as "Service Request | PLAZA"
+      Then user validates appwatch description same as plaza
       Then user validates title field as ""
       And user validates request type as ""
       Then user validates app watch description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
-      Then user validates owner profile as ""
-      And user validates owner as ""
-      Then user should see assigned profile as ""
+      Then user validates owner profile as "PLAZA"
+      And user validates owner as "PLAZA"
+      Then user should see assigned profile as "VAS MAS Windows"
       And user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
+      Then user clicks on Diagnosis tab
+      And user validates CI "cc100cgas001" is listed
+      And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
+      Then user switches to frame
+      And user enters impact from time as past on impact details bulk update window
+      And user enters impact to time as past on impact details bulk update window
+      Then user clicks confirm checkbox
+      And user clicks on bulk update save button
+      And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
+      And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

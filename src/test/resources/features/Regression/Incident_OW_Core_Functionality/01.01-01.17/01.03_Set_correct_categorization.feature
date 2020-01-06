@@ -1,4 +1,6 @@
-@01.03_Set_correct_categorization @Incident  @01
+@01.03
+@Incident
+@01
 #passed
 # CORE for ST, Core for SIT
 Feature: Set correct categorization

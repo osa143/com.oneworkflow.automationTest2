@@ -1,4 +1,6 @@
-@01.11_Add_CI_To_Incident_Ticket @Incident  @01
+@01.11
+@Incident
+@01
 #passed
   #CORE for ST, Core for SIT
    #Mobile PS Core Network

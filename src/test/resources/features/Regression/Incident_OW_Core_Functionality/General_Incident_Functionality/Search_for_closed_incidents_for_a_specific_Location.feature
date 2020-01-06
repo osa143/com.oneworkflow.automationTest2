@@ -1,4 +1,6 @@
-@Search_for_closed_incidents_for_a_specific_Location @Incident @Trouble1
+@Search_for_closed_incidents_for_a_specific_Location
+@Incident
+@TroubleGeneral
   #passed
   #needs to create 6 tickets for different countries if necessary
   Feature: search for closed incidents for a specific location

@@ -123,7 +123,7 @@
 #      |LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME   |Lithuania |Denmark   |Lithuania|Denmark  |LT_      |LT_Site_888           |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E|LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME   |LT_SGSN_LT-CSGN01MME|Sweden     |
 #      |FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|Finland   |Denmark   |Finland  |Denmark  |FI_      |FI_Site_riutula keskus|Test case MT004 Finland E2E  |Test case MT004 Finland E2E  |FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|FI_SGSN_FI-CSGN01MME|Lithuania  |
 #     |EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|Estonia   |Sweden    |Estonia  |Sweden   |EE_      |EE_Site_KARDL           |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|EE_SGSN_EE-CSGN01MME|Finland    |
-#     |DK_SGSN_AMBMME1     |DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|Denmark   |Sweden    |Denmark  |Sweden   |DK_      |DK_Site_S0001         |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_SGSN_AMBMME1     |DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|DK_SGSN_AMBMME1     |Finland    |
+     |DK_SGSN_AMBMME1     |DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|Denmark   |Sweden    |Denmark  |Sweden   |DK_      |DK_Site_S0001         |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_SGSN_AMBMME1     |DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|DK_SGSN_AMBMME1     |Finland    |
 
 
 

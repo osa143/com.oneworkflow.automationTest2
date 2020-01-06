@@ -1,4 +1,6 @@
-@01.09AddAttachments @Incident  @01
+@01.09
+@Incident
+@01
 
   Feature: Add Attachments to field named internal attachments
     Scenario: Add Attachments to field named internal attachments

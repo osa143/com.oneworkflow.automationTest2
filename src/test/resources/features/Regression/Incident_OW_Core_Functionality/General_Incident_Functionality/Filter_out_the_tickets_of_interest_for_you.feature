@@ -1,4 +1,6 @@
-@Filter_out_the_tickets_of_interest_for_you @Incident @Trouble1
+@Filter_out_the_tickets_of_interest_for_you
+@Incident
+@TroubleGeneral
   #passed
   Feature: filter out the tickets of interest for you
     Scenario: filter out the tickets of interest for you

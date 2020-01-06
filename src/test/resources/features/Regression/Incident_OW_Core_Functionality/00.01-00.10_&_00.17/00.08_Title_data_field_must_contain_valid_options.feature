@@ -1,4 +1,6 @@
-@00.08_Title_data_field_must_contain_valid_options @Incident @00
+@00.08
+@Incident
+@00
  #Passed
   Feature: Title data field must contain valid options
 

@@ -1,4 +1,6 @@
-@Validate_Incident_Record_Process_Artifact @Incident
+@00.01
+@Incident
+@00
   #Passed
   Feature: Validate incident record process artifact
 

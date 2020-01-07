@@ -54,11 +54,13 @@
       Then user clicks on relate CI
       And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
       And user clicks on close button on CI search window
+      And user waits 3 secs
       And CI should be listed and displayed under the Diagnosis tab
       Then user validates CI "Impact Status" is "Active"
       And user validates "Primary" CI is equal to "<CI Name>"
       Then user clicks on save button
-      #And user validates "<Validate BU>" BU is added automatically
+      And user waits 5 secs
+      And user validates "<Validate BU>" BU is added automatically
       When user clicks on attachments under sections
       And  user adds attachment and verifies under "internal"
         | summary   | description | fullFilePath       | attachments |
@@ -76,7 +78,6 @@
         | Test WORD | Test WORD   | Test WORD FILE.docx| 10          |
         | Test EXCEL| Test EXCEL  | Test XLS FILE.xls  | 11          |
         | Test PPT  | Test PPT    | Test PPT FILE.pptx | 12          |
-
       And user clicks on "Timeline" tab
       When user enters "Test Update - Public" in the timeline text box
       And user clicks on public radio button
@@ -111,9 +112,9 @@
 
       Examples:
       |BU_Name1 |BU_Name2 |Location|Location Name         |Title                        |Description                  |CI Name1          |CI Name2        |CI Name         |Validate BU |
-#      |Sweden   |Finland  |SE_     |SE_Site_126608         |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_FREMME2  |LT_SGSN_VLMMME02|SE_SGSN_FREMME2  |Lithuania   |
-#    |Norway   |Finland  |NO_     |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_EPG_OSL900EPG2|DK_EPG_AMBEPG1  |NO_EPG_OSL900EPG2|Denmark     |
-#     |Lithuania|Denmark  |LT_     |LT_Site_888           |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E| LT_SGSN_VLMMME02|SE_SGSN_FREMME2 |LT_SGSN_VLMMME02 |Sweden      |
-#     |Finland  |Denmark  |FI_     |FI_Site_riutula keskus|Test case MT004 Finland E2E  |Test case MT004 Finland E2E  | FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1|FI_SGSN_HKIMME02 |Estonia     |
-#    |Estonia  |Sweden   |EE_     |EE_Site_KARDL          |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_EPG_KOORTEPG1 |FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1 |Finland     |
-#    |Denmark  |Sweden   |DK_     |DK_Site_S0001         |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_EPG_AMBEPG1   |EE_EPG_KOORTEPG1|DK_EPG_AMBEPG1   |Estonia     |
+      |Sweden   |Finland  |SE_     |SE_Site_126608         |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_FREMME2  |LT_SGSN_VLMMME02|SE_SGSN_FREMME2  |Lithuania   |
+#      |Norway   |Finland  |NO_     |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_EPG_OSL900EPG2|DK_EPG_AMBEPG1  |NO_EPG_OSL900EPG2|Denmark     |
+#      |Lithuania|Denmark  |LT_     |LT_Site_888           |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E| LT_SGSN_VLMMME02|SE_SGSN_FREMME2 |LT_SGSN_VLMMME02 |Sweden      |
+#      |Finland  |Denmark  |FI_     |FI_Site_riutula keskus|Test case MT004 Finland E2E  |Test case MT004 Finland E2E  | FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1|FI_SGSN_HKIMME02 |Estonia     |
+#      |Estonia  |Sweden   |EE_     |EE_Site_KARDL         |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_EPG_KOORTEPG1 |FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1 |Finland    |
+#      |Denmark  |Sweden   |DK_     |DK_Site_S0001         |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_EPG_AMBEPG1   |EE_EPG_KOORTEPG1|DK_EPG_AMBEPG1   |Estonia     |

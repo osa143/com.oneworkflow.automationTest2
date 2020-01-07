@@ -733,7 +733,7 @@ public class OWF_WorkOrderPageSteps {
     @And("user validates email notification is sent")
     public void userValidatesEmailNotificationIsSent() {
       workOrderPage.clickOnSent();
-      Assert.assertEquals(workOrderPage.getMethodText(), "Email HTML");
+      Assert.assertEquals(workOrderPage.getMethodText(), "Email - HTML");
     }
 
     @And("user highlights ticket under work order")

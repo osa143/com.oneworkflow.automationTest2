@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="121" parent-id="108">
+<tr class="s-fail" test-id="38" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And user validates agent console is refreshed <br/><span class="text-muted text-sm">refresh interval in agent console can be set by user</span></td>
-	<td>0h 0m 0s+695msc</td>
+	<td class="_600">And user validates email notification is sent <br/><span class="text-muted text-sm">Telia Wifi</span></td>
+	<td>0h 0m 0s+480msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,126 +136,15 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">java.lang.AssertionError: null
+		<textarea disabled class="code-block">java.lang.AssertionError: expected [Email HTML] but found [Email - HTML]
 	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.assertNotEquals(Assert.java:1157)
-	at org.testng.Assert.assertNotEquals(Assert.java:1162)
-	at steps.OWF_AgentConsolePageSteps.userValidatesAgentConsoleIsRefreshed(OWF_AgentConsolePageSteps.java:519)
-	at ✽.user validates agent console is refreshed(features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Refresh_Interval_In_Agent_Console_Can_Be_Set_By_User.feature:18)
-</textarea>
-	</td>
-</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-					<div class="list-item attr">
-						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.ElementNotInteractableException</a>
-							<div class="item-except text-sm text-muted h-1x">
-								1 tests
-							</div>
-							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.ElementNotInteractableException</h5>
-								<table class="table">
-									<thead><tr>
-										<th id="status-col"></th>
-										<th>Test</th>
-										<th>Duration</th>
-										<th>Attributes</th>
-										<th>Media</th>
-										<th>Source</th>
-									</tr></thead>
-									<tbody>
-	
-<tr class="s-fail" test-id="264" parent-id="244">
-	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And user selects completion code as "Success" <br/><span class="text-muted text-sm">Set WO to cleared, add end date and time and close WO</span></td>
-	<td>0h 0m 30s+100msc</td>
-	<td></td>
-	<td>
-	</td>
-	<td class="static"><i class="static fa fa-external-link"></i></td>
-</tr>
-<tr class="details">
-	<td colspan="5">
-		
-		<textarea disabled class="code-block">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=78.0.3904.108)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-I92010A', ip: '10.238.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55188}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: a5487da34568561b739ea09e79ef76ac
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at pageObjects.BasePage.selectDropDownNameAndValue(BasePage.java:322)
-	at pageObjects.OWF_WorkOrderPage.selectCompletionCode(OWF_WorkOrderPage.java:300)
-	at steps.OWF_WorkOrderPageSteps.userSelectsCompletionCodeAs(OWF_WorkOrderPageSteps.java:135)
-	at ✽.user selects completion code as "Success"(features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Set_WO_to_cleared,_add_End_date_and_time_and_close_WO.feature:26)
-</textarea>
-	</td>
-</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-					<div class="list-item attr">
-						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.TimeoutException</a>
-							<div class="item-except text-sm text-muted h-1x">
-								1 tests
-							</div>
-							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.TimeoutException</h5>
-								<table class="table">
-									<thead><tr>
-										<th id="status-col"></th>
-										<th>Test</th>
-										<th>Duration</th>
-										<th>Attributes</th>
-										<th>Media</th>
-										<th>Source</th>
-									</tr></thead>
-									<tbody>
-	
-<tr class="s-fail" test-id="377" parent-id="363">
-	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And user adds CI "SE_LTECell_100000012" to the ticket with impact level "No Impact" <br/><span class="text-muted text-sm">Verify status of BU receiving disturbance information in service info tab</span></td>
-	<td>0h 0m 35s+392msc</td>
-	<td></td>
-	<td>
-	</td>
-	<td class="static"><i class="static fa fa-external-link"></i></td>
-</tr>
-<tr class="details">
-	<td colspan="5">
-		
-		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: WIN_0_999000229 (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-I92010A', ip: '10.238.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55949}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 10b6bb82a39ebd7610b9a26a9cd171d5
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.BasePage.clickElement(BasePage.java:95)
-	at pageObjects.BaseRecordPage.clickCiSearch(BaseRecordPage.java:790)
-	at pageObjects.OWF_CiSearchPage.addCI(OWF_CiSearchPage.java:95)
-	at steps.OWF_CiSearchPageSteps.userAddsCIToTheTicketWithImpactLevel(OWF_CiSearchPageSteps.java:480)
-	at ✽.user adds CI "SE_LTECell_100000012" to the ticket with impact level "No Impact"(features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/Verify_status_of_BU_receving_disturbance_information_in_Service_Info_tab.feature:20)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at steps.OWF_WorkOrderPageSteps.userValidatesEmailNotificationIsSent(OWF_WorkOrderPageSteps.java:736)
+	at ✽.user validates email notification is sent(features/Regression/E2E/RAN_Telia_Wifi/Telia_Wifi.feature:42)
 </textarea>
 	</td>
 </tr>
@@ -283,7 +172,7 @@ Session ID: 10b6bb82a39ebd7610b9a26a9cd171d5
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Jan 6, 2020 11:30:12 AM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jan 7, 2020 03:48:54 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

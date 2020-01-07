@@ -1029,6 +1029,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user adds attachment and verifies under {string}")
     public void userAddsAttachmentAndVerifies(String type, DataTable attachments) {
+        problemRecordPage.wait(2000);
         problemRecordPage.addAttachmentsAndVerify(attachments, type);
     }
 

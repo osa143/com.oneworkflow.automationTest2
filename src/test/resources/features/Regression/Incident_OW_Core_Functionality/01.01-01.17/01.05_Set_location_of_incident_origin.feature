@@ -1,5 +1,5 @@
 @01.05
-@Incident
+@Incident1
 @01
 #Passed
 Feature: Setting location of incident origin

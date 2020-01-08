@@ -1,4 +1,6 @@
-@Estimated_Ready_Date_Time @Incident @00
+@00.04
+@Incident
+@00
 #Passed
 Feature: Estimated ready date and time availability
   Scenario: Estimated ready date and time availability

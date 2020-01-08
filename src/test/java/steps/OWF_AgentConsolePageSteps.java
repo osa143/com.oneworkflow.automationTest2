@@ -624,6 +624,12 @@ public class OWF_AgentConsolePageSteps {
     public void userValidatesAgentConsoleIsDisplayedCorrectly() {
        Assert.assertTrue(agentConsolePage.verifyAgentConsoleHasData());
     }
+
+    @And("user logsOut and accepts alert")
+    public void userLogsOutAndAcceptsAlert() {
+        agentConsolePage.doLogout();
+        //agentConsolePage.getDriver().switchTo().alert().accept();
+    }
 }
 
 

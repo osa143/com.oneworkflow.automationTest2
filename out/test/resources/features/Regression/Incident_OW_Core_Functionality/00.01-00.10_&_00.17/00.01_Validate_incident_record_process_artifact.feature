@@ -1,4 +1,4 @@
-@Validate_Incident_Record_Process_Artifact @Incident
+@Validate_Incident_Record_Process_Artifact @Incident1
   #Passed
   Feature: Validate incident record process artifact
 
@@ -16,7 +16,6 @@
       And user validates "ID" is present
       And user validates "Service Provider" is present
       And user validates BU availability
-      #ALM step 10 - check availability of create by light GUI?
       And user validates "Created by Light GUI" is present
       And user validates "Cust. Remaining SLA" is present
       And user validates "OLA Target Time" is present
@@ -114,4 +113,5 @@
       And user validates "Event End Time" is present
       And user validates "Withdrawn Reason" is present
       And user validates Save is present
+      And user logsOut and accepts alert
 

@@ -35,7 +35,6 @@
      And user validates source field as "PLAZA"
      And user validates title field as "Service Request | SPAN"
      And user validates request type as "Service Request | PLAZA"
-      #Not sure about description validation outside of a table
      And user validates span description same as plaza
      Then user clicks on owner under sections
      And user clicks on assignment under sections
@@ -52,8 +51,7 @@
      And user enters impact to time as past on impact details bulk update window
      Then user clicks confirm checkbox
      And user clicks on bulk update save button
-     And user right clicks on CI "SPANGISAT" and selects "Impact:Clear All"
-     And user should see confirmation message for impact clear and user clicks yes
+     And user right clicks on CI "SPANGISAT" and clears impact
      When user clicks on Ack button
      And user changes status to "Cleared" on work order page
      And user selects completion code as "Success"
@@ -70,6 +68,6 @@
 
      Examples:
 
-     |Request            |Environment|Description          |Additional Comments|Desc Validation|
-     #|SPAN - Test/Request|Test       |SPAN-Test/Description|SPAN-Test/AC       |               |
-     |SPAN - Prod Request|Prod       |SPAN-Test/Description|SPAN-Test/AC       |               |
+     |Request            |Environment|Description          |Additional Comments|
+     #|SPAN - Test/Request|Test       |SPAN-Test/Description|SPAN-Test/AC       |
+     |SPAN - Prod Request|Prod       |SPAN-Test/Description|SPAN-Test/AC       |

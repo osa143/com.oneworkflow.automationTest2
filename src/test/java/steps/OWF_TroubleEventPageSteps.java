@@ -1266,6 +1266,12 @@ public class OWF_TroubleEventPageSteps {
     public void userRightClicksOnCIAndUpdateImpactFromAsPastTime(String arg0) {
        troubleEventPage.impactFromUpdateAsPastTime(arg0);
     }
+
+    @And("user right clicks on CI {string} and clears impact for check impact record")
+    public void userRightClicksOnCIAndClearsImpactForCheckImpactRecord(String arg0) {
+        troubleEventPage.doImpactClear_checkImpactRecord(arg0);
+        //troubleEventPage.clickElement(By.xpath("//*[@id=\"WIN_0_700009087\"]/div[1]/table/tbody/tr/td[2]/a[2]"));
+    }
 }
 
 

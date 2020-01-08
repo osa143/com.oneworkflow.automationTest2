@@ -20,3 +20,4 @@ Feature: Setting location of incident origin
     And user highlights location "SE_Site_SE M1" and clicks ok and validates location details
 
 
+

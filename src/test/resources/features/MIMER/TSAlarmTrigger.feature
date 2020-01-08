@@ -5,7 +5,7 @@
 
       Given user has triggered manually a truesight alarm into One Workflow
       And user is logged into OneWorkflow
-      When user has got the ticket ID from the integraion form
+      When user has got the ticket ID from the integration form
       And user searches for OP ID on trouble search form
       Then user should see Truesight OP ticket
       And user validates source field as "TrueSight"

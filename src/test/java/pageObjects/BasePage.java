@@ -77,7 +77,6 @@ public class BasePage {
         String element = String.format("//%s[contains(text(),'%s')]", tagName, textName);
         System.out.println(element);
         findElement(By.xpath(element)).click();
-
     }
     public boolean verifyElementIsEnabledByContainsTextAndTagName(String tagName, String textName){
         String element = String.format("//%s[contains(text(),'%s')]", tagName, textName);
@@ -320,7 +319,7 @@ public void clickElementById(String Id){
             dropdownXpath = "//img[@alt='Menu for " + dropdownName + "']/..";
 
         driver.findElement(By.xpath(dropdownXpath)).click();
-        wait(1200);
+        wait(900);
 
         String arr[] = dropdownValue.split(":");
         int index = getMenuTableBodyIndex(arr[0]);
@@ -335,7 +334,7 @@ public void clickElementById(String Id){
 
                 elements.get(i + index).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
             }
-            wait(800);
+            wait(900);
         }
 
     }

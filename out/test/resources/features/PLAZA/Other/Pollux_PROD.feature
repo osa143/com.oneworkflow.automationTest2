@@ -1,4 +1,4 @@
-@Pollux-PROD @PLAZA
+@Pollux_PROD @PLAZA
   #passed
   Feature: Pollux prod plaza form test
     Scenario Outline: user validates information sent to OW from Plaza
@@ -38,7 +38,6 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | POLLUX"
       And user validates request type as "Service Request | PLAZA"
-      #Not sure about description validation outside of a table
       And user validates pollux prod description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
@@ -65,6 +64,6 @@
       Examples:
 
         |Request                   |Description                   |Additional Comments  |Desc Validation|
-        #|Pollux-PROD - Test/Request|Pollux-PROD - Test/Description|Pollux-PROD - Test/AC|               |
-        |Pollux-AT - Test/Request  |Pollux-AT - Test/Description  |Pollux-AT - Test/AC  |               |
+        |Pollux-PROD - Test/Request|Pollux-PROD - Test/Description|Pollux-PROD - Test/AC|               |
+        #|Pollux-AT - Test/Request  |Pollux-AT - Test/Description  |Pollux-AT - Test/AC  |               |
       

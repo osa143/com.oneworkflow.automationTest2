@@ -18,7 +18,7 @@ Feature: Verification of ability to link tickets
     Then problem record form should appear in new tab
     When user creates problem ticket with following details
       |Title                                 |RequestType |Description                            |ImpactType      |Urgency|
-      |Proactive investigation of Tohall_Copy|Carrier:IT:All|UAT Test2 Linked items - Linked problem|Moderate/Limited|Low    |
+      |Proactive investigation of Tohall_Copy|CPS:IT:Other|UAT Test2 Linked items - Linked problem|Moderate/Limited|Low    |
     Then ticket should be created and status should be assigned
     And user gets ticket value
     When user clicks on create trouble event
@@ -55,18 +55,7 @@ Feature: Verification of ability to link tickets
     And user selects answer as "Simple"
     And user selects last answer as "No"
     And user clicks on save button
-    Then user clicks on Diagnosis tab
-    And user clicks on CI search button
-    And user switches to frame
-    When user clicks on clear button
-    And user selects search for as "All CIs"
-    And  user enters "SE_CPE_FRECPE5" in name field
-    And user clicks on search button on CI search window
-    And user selects a CI from list
-    And user selects impact level as "No Impact"
-    And user clicks on relate CI
-    And user closes warning message
-    And user clicks on close button on CI search window
+    Then user adds CI "SE_CPE_FRECPE5" to change ticket with impact level "No Impact"
     Then CI should be listed and displayed under the Diagnosis tab
     When user clicks on Send button
     And user waits

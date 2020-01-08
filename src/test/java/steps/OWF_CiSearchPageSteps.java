@@ -479,4 +479,9 @@ public class OWF_CiSearchPageSteps {
     public void userAddsCIToTheTicketWithImpactLevel(String CIName, String impactLevel) {
         ciSearchPage.addCI(CIName, impactLevel);
     }
+
+    @And("user adds CI {string} to change ticket with impact level {string}")
+    public void userAddsCIToChangeTicketWithImpactLevel(String CiName, String impactLevel) {
+        ciSearchPage.addCI_ToChangeTicket(CiName, impactLevel);
+    }
 }

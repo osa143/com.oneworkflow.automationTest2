@@ -10,7 +10,7 @@
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on "Compute & Operating System" under IT Infrastructure
-      When user clicks on "Account Management - Server"
+      When user clicks on account management and server form
       Then user should see "Account Management - Server" form
       Then user selects network security firewall system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
@@ -38,7 +38,6 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Account Management - Server"
       And user validates request type as "Service Request | PLAZA"
-     #Not sure about description validation outside of a table
       And user validates operating system account management description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
@@ -55,8 +54,7 @@
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
-      And user should see confirmation message for impact clear and user clicks yes
+      And user right clicks on CI "cc100cgas001" and clears impact
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

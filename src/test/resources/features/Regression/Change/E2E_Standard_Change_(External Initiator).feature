@@ -23,6 +23,7 @@ Feature: E2E standard change external initiator
     And user validates Rollback is readonly
     When user clicks save button
     And multiple error messages should appear with red boarder around fields
+    And user enters as "Test" in service and customer impact
     When user enters "CI B2" in the change builder field
     And user enters start time as 10 minutes fast from current sweden time
     And user enters end time as 16 minutes fast from current sweden time
@@ -77,9 +78,11 @@ Feature: E2E standard change external initiator
     Then user validates CI Search is disabled
     And user validates save is enabled
     When user waits for 5 minutes
+    #13 minute wait when tested
     And user clicks on ticket refresh button
     Then change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Impact has changed from  to No Impact. Actual End has changed from  UTC to 2019-09-05 10:21:00 UTC. Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed. " on row 2
     When user waits for 5 minutes
+    #7 minute wait when tested
     And user clicks on ticket refresh button
     And user validates ticket status as "Closed"
     And user clicks on timeline tab

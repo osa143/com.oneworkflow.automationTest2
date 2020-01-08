@@ -1,4 +1,4 @@
-@E2E_Urgent_Critical_Change_(Internal_Initiator)
+@E2E_Urgent_Critical_Change_Internal_Initiator
 
 Feature: Internal Urgent Critical Change E2E
   Scenario: Internal user processes a normal change ticket
@@ -28,7 +28,8 @@ Feature: Internal Urgent Critical Change E2E
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
     Then user enters request start time 2 hours ahead of current date
     And user enters request end time 5 hours ahead of current date
-    And user enters impact duration as "3" hours
+    #request start and end time in sit format need to be implemented
+    And user enters impact duration as "40" minutes
     And user selects estimated impact dropdown as "Loss of Service"
     And user enters as "Regression - Change Management Process" in service and customer impact
     And user clicks on save button
@@ -42,16 +43,15 @@ Feature: Internal Urgent Critical Change E2E
     When user clicks on Risk tab
     And user gets current risk score value
     When user answers all risk questions as below
-    And user selects urgent answer as "A. No"
-    And user selects urgent answer as "B. Impact to other systems/technologies are unclear!"
-    And user selects urgent answer as "Tested successfully, this is a pilot"
-    And user selects urgent answer as "D. "Only" Consumer customers affected."
-    And user selects urgent answer as "A. Yes"
-    And user selects urgent answer as "A. Yes"
-    And user selects urgent answer as "A. Yes (outcome of the Change can be instantly verified)"
-    And user selects urgent answer as "B. No"
-    And user selects urgent answer as "A. No"
-    And user selects urgent last answer as "A. No"
+    And user selects answer as "No"
+    And user selects answer as "Impact to other systems/technologies are unclear!"
+    And user selects answer as "\"Only\" Consumer customers affected."
+    And user selects answer as "Yes"
+    And user selects answer as "Yes"
+    And user selects answer as "Yes (outcome of the Change can be instantly verified)"
+    And user selects answer as "No"
+    And user selects answer as "No"
+    And user selects answer as "No"
     Then user validates risk score gets updated
     Then user clicks on Send button
     Then an error message should appear: "Please select at least one country of impact for this change. (ARERR 10000)"
@@ -65,13 +65,14 @@ Feature: Internal Urgent Critical Change E2E
     And user clicks on clear button
     And user selects Category as "Access"
     Then user enters "SE_BSC%" in the name+ field
-    And user selects "All CI's" under search for dropdown
+#    And user selects "All CI's" under search for dropdown
     Then user clicks on search button on CI search window
     And user selects all CI's that appear
     And user selects impact level as "Loss of Service"
     And user clicks on relate CI
     Then user closes warning message
     And user clicks on close button on CI search window
+    And user waits 30 secs
     And CI should be listed and displayed under the Diagnosis tab
     And user clicks on Diagnosis tab
     And user clicks on CI search button
@@ -99,7 +100,7 @@ Feature: Internal Urgent Critical Change E2E
     And user clicks on assignment under sections
     And user validates owner profile as "Change Manager"
     And user validates owner as "ChangeManager"
-    And user should see assigned profile as "Change Manager"
+    And user should see assigned profile as "Escalation Manager"
     And user clicks on timeline tab
     Then user validates Description* isn't readonly
     And user validates Project Code isn't readonly
@@ -144,7 +145,16 @@ Feature: Internal Urgent Critical Change E2E
     Then user enters "New Communication plan" in the communication plan field
     And user clicks on save button
     When user clicks on risk tab
-    And user selects urgent last answer as "B. Yes"
+    When user answers all risk questions as below
+    And user selects answer as "No"
+    And user selects answer as "Impact to other systems/technologies are unclear!"
+    And user selects answer as "\"Only\" Consumer customers affected."
+    And user selects answer as "Yes"
+    And user selects answer as "Yes"
+    And user selects answer as "Yes (outcome of the Change can be instantly verified)"
+    And user selects answer as "No"
+    And user selects answer as "No"
+    And user selects answer as "Yes"
     Then user clicks on "Schedule" tab
     And user enters request start time 168 hours ahead of current date
     And user enters request end time 171 hours ahead of current date
@@ -165,7 +175,7 @@ Feature: Internal Urgent Critical Change E2E
     And user clicks on request thats pending approval
     And user clicks on view button
     Then user switches to frame
-    And user clicks on approve button
+    And user clicks approve button
     Then user switches to window 2
     And user clicks on save button
     Then user switches to frame
@@ -180,19 +190,20 @@ Feature: Internal Urgent Critical Change E2E
     And user clicks on save button
     Then user validates ticket status as "Scheduled"
     And user clicks on "Schedule" tab
-    Then user validates actual start time is updated
-    And user validates actual end time is updated
+#    Then user validates actual start time is updated
+#    And user validates actual end time is updated
     Then user clicks on assignment under sections
     And user clicks on owner under sections
-    Then user validates owner profile as "Escalation Manager"
-    And user validates owner as "EscalationManager1"
-    And user validates assigned profile is "Change Implementation Control"
+    Then user validates owner profile as "Change Manager"
+    And user validates owner as "Change Manager"
+    And user validates assigned profile as "Change Implementation Control"
     And user validates assignee is "Change Impl Contr"
     When user logsOut from One workflow
     And user goes back to login page
     Then user logs in with valid username "ChangeImplementationControl1" and password as "Test@1234"
     And user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on more filters button
+    Then user clicks core tab
     And user selects status as "Scheduled" on user more filters window
     And user clicks on apply button on user more filters window
     And user should see "CR" tickets with "Status" of "Scheduled"

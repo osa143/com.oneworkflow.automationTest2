@@ -12,7 +12,7 @@ Feature: SLA Target time availability in Incident Record
     When user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 1
     #SIT ENV
-#    And user enters ticket id as "OP-000000538992"
+    #And user enters ticket id as "OP-000000538992"
     #UAT
     When user clicks on advanced search button
     And user waits 2 secs

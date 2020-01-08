@@ -61,9 +61,10 @@
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
       Then user switches to window 1
-      When user selects all CI's that appear
-      And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
-      Then user should see confirmation message for impact clear and user clicks yes
+#      When user selects all CI's that appear
+#      When user right clicks on CI "cc100cgas001" and clears impact
+      And user right clicks on CI "cc100cgas001" and update impact from as past time
+      And user right clicks on CI "TEST" and clears impact for all CI's
       When user clicks on Ack button
       And user changes status to "Cleared"
       And user selects completion code as "Success"

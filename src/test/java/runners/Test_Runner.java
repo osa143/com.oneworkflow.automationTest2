@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@Network_Security_Add_Modify_Remove_DNS"}
+        tags = {"@E2E_Normal_Change_Internal_Initiator"}
 )
 public class Test_Runner extends BaseTest {
 }

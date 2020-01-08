@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@Telia_Wifi"}
+        tags = {"@499"}
 )
 public class Test_Runner extends BaseTest {
 }

@@ -99,7 +99,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_DATABASE_ACCOUNT_PERMISSIONS="sp_formfield_sr21_v_permissions";
     public static final String txt_DATABASE_DESCRIPTION= "sp_formfield_sr21_v_description";
     public static final String txt_DATABASE_DNS_IP_ADDRESS= "sp_formfield_sr21_v_source_dns";
-    public static final String dd_DATABASE_NEW_EXISTING_ACCOUNT=  "select2-chosen-14";
+    public static final String dd_DATABASE_NEW_EXISTING_ACCOUNT=  "select2-chosen-15";
     public static final String dd_DATABASE_DEFAULT_TABLE_SPACE= "sp_formfield_sr21_v_default_tablespace";
     public static final String txt_DATABASE_REQUEST_REQUEST= "sp_formfield_sr115_v_request";
     public static final String dd_DATABASE_REQUEST_CHOOSE_ACTION= "select2-chosen-18";
@@ -159,7 +159,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_DESCRIPTION= "sp_formfield_sr105_v_description";
     public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_SERVICE_REQUEST= "select2-chosen-11";
     public static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_REQUEST= "sp_formfield_sr114_v_request";
-    public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI= "s2id_autogen17";
+    public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI= "s2id_autogen15";
     public static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_DESCRIPTION= "sp_formfield_sr114_v_description";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_REQUEST= "sp_formfield_sr34_v_request";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_TICKET_NUMBER= "sp_formfield_sr34_v_fire_ticket_number";
@@ -333,6 +333,23 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_SPLUNK_H2NAME = "sp_formfield_sr38_v_h2";
     private static final String txt_ADD_CI_TEXT_BOX="//input[@type='text']";
     private static final String txt_ONE_Time_ADD_CI="s2id_sp_formfield_add_ci";
+    private static final String txt_NETWORK_SWITCH_PORT_CI = "s2id_sp_formfield_sr103_v_add_ci";
+
+    public void addCiSwitchPortConfig(String dropdownName){
+        PlazaValidation.CI = dropdownName;
+        selectDropdownWithMultipleValuesByTagNameLi(By.id(txt_NETWORK_SWITCH_PORT_CI),  dropdownName);
+    }
+
+
+    public void selectDropdownWithMultipleValuesByTagNameLi(By Element, String dropdownValue){
+        clickElement(Element);
+        wait(300);
+        driver.findElement(By.id("s2id_autogen17")).sendKeys(dropdownValue);
+        wait(300);
+        driver.findElement((By.id("s2id_autogen17_results"))).findElements(By.tagName("div")).stream().filter(element -> element.getText().trim().equals(dropdownValue)).findFirst().orElse(null).click();
+
+    }
+
 
     public void selectAddOneTimeCi(String CiName){
         PlazaValidation.CI = CiName;
@@ -619,7 +636,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectNetworkSecuritySystemNameHaiti(String dropdownName){
         clickElement(By.id(dd_NETWORKSECURITY_HAITI));
-        WebElement Element=findElement(By.id("s2id_autogen14_search"));
+        WebElement Element=findElement(By.id("s2id_autogen13_search"));
         Element.sendKeys(dropdownName);
         wait(1000);
         Element.sendKeys(Keys.ARROW_DOWN);
@@ -1454,7 +1471,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void enterNetworkSecurity_firewall_new_change_add_ci_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI), By.id("s2id_autogen17_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI), By.id("s2id_autogen15_results"),  dropdownName);
     }
 
     public void enterNetworkSecurity_firewall_new_change_request(String text){
@@ -1730,7 +1747,7 @@ public class Plaza_HomePage extends BasePage {
         PlazaValidation.Ruleset = dropdownName;
         PlazaValidation.NewExistingAccount = dropdownName;
         PlazaValidation.InternalExternalWebsite = dropdownName;
-        selectDropdown(By.id(dd_DATABASE_NEW_EXISTING_ACCOUNT), By.id("select2-results-14"),  dropdownName);
+        selectDropdown(By.id(dd_DATABASE_NEW_EXISTING_ACCOUNT), By.id("select2-results-15"),  dropdownName);
     }
     public void enterDatabase_dnsIp_Address(String text){
         PlazaValidation.DnsIpAddress = text;

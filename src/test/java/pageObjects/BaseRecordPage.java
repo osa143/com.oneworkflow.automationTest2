@@ -452,7 +452,6 @@ public class BaseRecordPage extends BasePage {
         WebElement element = driver.switchTo().activeElement();
         element.sendKeys(Keys.UP);
         element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
         element.sendKeys(Keys.ARROW_RIGHT);
         element.sendKeys(Keys.ENTER);
     }

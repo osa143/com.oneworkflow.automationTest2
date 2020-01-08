@@ -1,12 +1,12 @@
 #passed
-@SAO_499_known-Error_Name
+@SAO_499_known-Error_Name1
 Feature: data searching using wildcards
   Scenario: user is able to search for data using wildcards
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user selects search menu as "Open Search Form:Problem Record"
+    When user selects search menu as "Open Search Form:Known Error"
     And user switches to window 1
     When user enters ticket id as "KE-000000009715"
     And user clicks Search on ticket search

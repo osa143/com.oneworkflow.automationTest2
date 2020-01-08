@@ -1,4 +1,6 @@
-@Validate_no_changes_can_be_done_to_ticket_in_Closed_status @Incident @Trouble1
+@Validate_no_changes_can_be_done_to_ticket_in_Closed_status
+@Incident
+@TroubleGeneral
   #passed
   #keep an eye while running this test whether all the buttons are disabled and grayed out
   Feature: Validate no changes can be done to ticket in closed status

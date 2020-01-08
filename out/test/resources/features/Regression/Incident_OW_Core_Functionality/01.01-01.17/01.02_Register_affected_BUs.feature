@@ -1,4 +1,6 @@
-@Register_affected_BUs @Incident1 @01
+@01.02
+@Incident1
+@01
 #passed
 Feature: Register affected BU's
 

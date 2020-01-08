@@ -1,4 +1,6 @@
-@05.01_Manually_close_an_incident @Incident  @Incident1
+@05.01
+@Incident
+@05
   #passed
   Feature: manually close an incident
     Scenario: manually close an incident

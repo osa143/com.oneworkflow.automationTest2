@@ -1,4 +1,6 @@
-@SID_Console_CI_Search @Incident @Trouble1
+@SID_Console_CI_Search
+@Incident
+@TroubleGeneral
   #passed
   Feature: SID console CI search
     Scenario: SID console CI search

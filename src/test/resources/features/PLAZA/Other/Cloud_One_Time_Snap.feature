@@ -19,7 +19,7 @@
       Then user enters email address field as "Test@Test.com"
       Then user enters phone field as "123456789"
       And user enters Cloud one time snapshot request as "Test1 Cloud one time snapshot/Request"
-      And user enters Add CI as "cc100cgas001"
+      And user selects order one time Add CI as "cc100cgas001"
       Then user enters cloud one time snapshot description as "Test1 Cloud one time snapshot/Description"
       And user enters date and time for deletion as current date and time
       And user enters additional comments as "Test1 Cloud one time snapshot/AC"
@@ -41,27 +41,25 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Order one-time Snapshot of VM"
       And user validates request type as "Service Request | PLAZA"
-     #Not sure about description validation outside of a table
       And user validates cloud one time snap description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       And user clicks on attachments under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as "Linux/Unix L2"
+      And user should see assigned profile as "Windows L2"
       And user validates 1 attachment visibility under external
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
-      And user validates CI "cc001cgas001" is listed
-      And user right clicks on CI "cc001cgas001" and selects "Impact:Update"
+      And user validates CI "cc100cgas001" is listed
+      And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
       Then user switches to frame
-      And user enters impacted from date as date in past
-      And user enters impacted to date as date in past
+      And user enters impact from time as past on impact details bulk update window
+      And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      And user right clicks on CI "cc001cgas001" and selects "Impact:Clear All"
-      And user should see confirmation message for impact clear and user clicks yes
+      When user right clicks on CI "cc100cgas001" and clears impact
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

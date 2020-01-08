@@ -33,7 +33,7 @@
       And user clicks confirm checkbox
       And user clicks on bulk update save button
       Then user validates CI "SE_SGSN_HYMME2" impact level is "Loss of Service"
-      And user right clicks on CI "SE_SGSN_LDHMME1" and selects "Impact:Clear"
+      And user right clicks on CI "SE_SGSN_FREMME2" and clears impact for check impact record
       And user validates CI "Impact Status" is "Inactive"
 
 

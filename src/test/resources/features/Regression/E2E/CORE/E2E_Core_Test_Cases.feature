@@ -78,6 +78,7 @@
         | Test WORD | Test WORD   | Test WORD FILE.docx| 10          |
         | Test EXCEL| Test EXCEL  | Test XLS FILE.xls  | 11          |
         | Test PPT  | Test PPT    | Test PPT FILE.pptx | 12          |
+
       And user clicks on "Timeline" tab
       When user enters "Test Update - Public" in the timeline text box
       And user clicks on public radio button
@@ -96,7 +97,6 @@
       When user selects fault position as "N/A:N/A" on trouble event page
       And user selects cause as "Test Ticket:N/A:N/A" on trouble event page
       When user clicks on "Diagnosis" tab
-      And user waits 10 secs
       And user right clicks on primary CI and selects "Impact:Clear All"
       And user should see confirmation message for impact clear and clicks ok
       Then user clicks on save button

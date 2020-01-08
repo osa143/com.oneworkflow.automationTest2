@@ -13,4 +13,5 @@
       Then trouble record form should appear in new tab
       When user validates template dropdown availability
       Then multiple statuses "Site access registration:Workforce Escalation-SE:(clear)" should be available in "Template" dropdown readonly
+      And user logsOut and accepts alert
 

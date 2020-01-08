@@ -379,7 +379,7 @@ public class OWF_TroubleEventPageSteps {
 //        Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
         //troubleEventPage.getErrorText();
         //troubleEventPage.clickOkOnPopup();
-        troubleEventPage.clickOk();
+        //troubleEventPage.clickOk();
 
     }
     @And("user accepts alert")
@@ -795,6 +795,7 @@ public class OWF_TroubleEventPageSteps {
         troubleEventPage.selectAndRightClickOnTableElement(cellData);
         troubleEventPage.setPreferences(preferences);
     }
+
 
     @Then("user validates CI {string} impact level is {string}")
     public void userValidatesCIImpactLevelIs(String arg0, String cellValue) {
@@ -1249,8 +1250,29 @@ public class OWF_TroubleEventPageSteps {
     public void userCreatesAWorkOrderFromTheIncident() {
         troubleEventPage.createWorkOrderFromTroubleTicket();
 
+    }
 
+    @When("user right clicks on CI {string} and clears impact")
+    public void userRightClicksOnCIAndClearsImpact(String CiName) {
+        troubleEventPage.doImpactClear(CiName);
+    }
+
+    @And("user right clicks on CI {string} and clears impact for all CI's")
+    public void userRightClicksOnCIAndClearsImpactForAllCIS(String arg0) {
+        troubleEventPage.doImpactClearForAllCIs(arg0);
+    }
+
+    @And("user right clicks on CI {string} and update impact from as past time")
+    public void userRightClicksOnCIAndUpdateImpactFromAsPastTime(String arg0) {
+       troubleEventPage.impactFromUpdateAsPastTime(arg0);
+    }
+
+    @And("user right clicks on CI {string} and clears impact for check impact record")
+    public void userRightClicksOnCIAndClearsImpactForCheckImpactRecord(String arg0) {
+        troubleEventPage.doImpactClear_checkImpactRecord(arg0);
+        //troubleEventPage.clickElement(By.xpath("//*[@id=\"WIN_0_700009087\"]/div[1]/table/tbody/tr/td[2]/a[2]"));
     }
 }
+
 
 

@@ -446,6 +446,43 @@ public class BaseRecordPage extends BasePage {
         wait(1000);
 
     }
+
+    public void doImpactClear(String cellData){
+        selectAndRightClickOnTableElement(cellData);
+        WebElement element = driver.switchTo().activeElement();
+        element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.ARROW_RIGHT);
+        element.sendKeys(Keys.ENTER);
+    }
+    public void doImpactClear_checkImpactRecord(String cellData){
+        selectAndRightClickOnTableElement(cellData);
+        WebElement element = driver.switchTo().activeElement();
+        element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.ARROW_RIGHT);
+        element.sendKeys(Keys.ENTER);
+    }
+
+    public void doImpactClearForAllCIs(String cellData){
+        selectAndRightClickOnTableElement(cellData);
+        WebElement element = driver.switchTo().activeElement();
+        element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.ARROW_RIGHT);
+        element.sendKeys(Keys.DOWN);
+        element.sendKeys(Keys.DOWN);
+        element.sendKeys(Keys.ENTER);
+        wait(1000);
+    }
+
+
+
+
     public String getTicketValue() {
         return getAttributeValueById(txtTICKET_ID);
     }

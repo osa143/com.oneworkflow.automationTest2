@@ -1,6 +1,6 @@
-@WEB_TAB @PLAZA
-  Feature: Web Tab plaza form test
-    Scenario: user validates information sent to OW from Plaza
+@ServiceRequestAddDNSEntry
+  Feature: Service Request - Touchpoint Plus - Add DNS Entry
+    Scenario: Service Request - Touchpoint Plus - Add DNS Entry
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
@@ -9,19 +9,18 @@
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on "Application" under IT Infrastructure
-      When user clicks on "WEB TAB" pebble
-      Then user should see "WEB TAB" form
-      #Then user selects system name in haiti as "Other"
-      When user selects role dropdown as "Application Operation Engineer"
-      And user enters web tab request as "Test1 Web Tab/Request"
-      And user enters web tab CI as "cc100cgas001"
-      Then user enters web tab description as "Test1 Web Tab/Description"
-      And user enters additional comments as "Test1 Web Tab/AC"
+      Then user clicks on "Touchpoint Plus" pebble
+      Then user should see "Touchpoint Plus" form
+      And user selects role dropdown as "Application Operation Engineer"
+      And user selects service request name as "Add DNS entry"
+      Then user enters touchpoint plus request as "Test Request"
+      And user enters touchpoint plus description as "Test Description"
+      Then user enters additional comments as "Test Additional Comments"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
       Then user should see service request form
-      When user opens new tab
+      And user opens new tab
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -31,35 +30,27 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | WEB TAB"
+      Then user validates title field as "Service Request | Touchpoint Plus"
       And user validates request type as "Service Request | PLAZA"
-      And user validates web tab description same as plaza
+      And user validates touchpoint plus add dns entry description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as "Enterprise"
-      Then user clicks on "Interested Parties" tab
+      Then user should see assigned profile as "VAS MAS Linux"
+      And user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
-      When user clicks on "Diagnosis"
-      And user validates CI "cc100cgas001" is listed
-      And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
-      Then user switches to frame
-      And user enters impact from time as past on impact details bulk update window
-      And user enters impact to time as past on impact details bulk update window
-      Then user clicks confirm checkbox
-      And user clicks on bulk update save button
-      When user right clicks on CI "cc100cgas001" and clears impact
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
-      And user selects completion code as "Success"
+      Then user selects completion code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
       When user changes status to "Closed" on work order page
-      And user clicks on save button
+      And user clicks save button
       And user validates ticket status as "Closed"
-      When user switches to window 0
+      Then user switches to window 0
       And user clicks on main page refresh
       Then user validates plaza request has completed
+

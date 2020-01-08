@@ -105,6 +105,7 @@ public class CommonUtils extends BasePage {
         return prop.getProperty(property);
     }
 
+
 //    filename - full path of the file
     public static void uploadFile(String filename){
 

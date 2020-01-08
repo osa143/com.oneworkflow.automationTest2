@@ -95,7 +95,6 @@
       When user selects fault position as "N/A:N/A" on trouble event page
       And user selects cause as "Test Ticket:N/A:N/A" on trouble event page
       When user clicks on "Diagnosis" tab
-      And user waits 10 secs
       And user right clicks on primary CI and selects "Impact:Clear All"
       And user should see confirmation message for impact clear and clicks ok
       Then user clicks on save button
@@ -111,7 +110,7 @@
 
       Examples:
       |BU_Name1 |BU_Name2 |Location|Location Name         |Title                        |Description                  |CI Name1          |CI Name2        |CI Name         |Validate BU |
-#      |Sweden   |Finland  |SE_     |SE_Site_126608         |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_FREMME2  |LT_SGSN_VLMMME02|SE_SGSN_FREMME2  |Lithuania   |
+      |Sweden   |Finland  |SE_     |SE_Site_126608         |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_FREMME2  |LT_SGSN_VLMMME02|SE_SGSN_FREMME2  |Lithuania   |
 #    |Norway   |Finland  |NO_     |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_EPG_OSL900EPG2|DK_EPG_AMBEPG1  |NO_EPG_OSL900EPG2|Denmark     |
 #     |Lithuania|Denmark  |LT_     |LT_Site_888           |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E| LT_SGSN_VLMMME02|SE_SGSN_FREMME2 |LT_SGSN_VLMMME02 |Sweden      |
 #     |Finland  |Denmark  |FI_     |FI_Site_riutula keskus|Test case MT004 Finland E2E  |Test case MT004 Finland E2E  | FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1|FI_SGSN_HKIMME02 |Estonia     |

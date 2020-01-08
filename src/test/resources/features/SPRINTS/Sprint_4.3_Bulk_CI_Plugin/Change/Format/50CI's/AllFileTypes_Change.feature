@@ -60,10 +60,10 @@ Feature: checking of bulk loading format
       Examples:
 
           |fileTypes                                                                                       |
-          |Test Attachments\50 CI's\50CIsCSV.csv|
+         # |Test Attachments\50 CI's\50CIsCSV.csv|
          # |Test Attachments\50 CI's\50CIsTextDOC.txt|
-          #|Test Attachments\50 CI's\50CIsXLS.xls|
-         # |Test Attachments\50 CI's\50CIsXLSX.xlsx|
+        #  |Test Attachments\50 CI's\50CIsXLS.xls|
+          |Test Attachments\50 CI's\50CIsXLSX.xlsx|
 
 
 

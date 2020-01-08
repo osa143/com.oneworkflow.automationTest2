@@ -704,7 +704,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on DNS DHCP pebble")
     public void userClicksOnDNSDHCPPebble() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[4]/div/a"));
+        clickElement(By.xpath("//h2[contains(text(),'DNS/DHCP')]"));
     }
 
     @And("user enters Network Security Add Modify Remove DNS description as {string}")
@@ -1414,7 +1414,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user enters Add CI as {string}")
     public void userEntersAddCIAs(String arg0) {
-        homePage.selectCews_add_ci(arg0);
+        homePage.select_add_ci(arg0);
     }
 
     @Then("user enters cloud one time snapshot description as {string}")
@@ -1449,7 +1449,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user enters CI as {string}")
     public void userEntersCIAs(String arg0) {
-        homePage.selectCews_add_ci(arg0);
+        homePage.select_add_ci(arg0);
     }
 
     @And("user enters EFS description as {string}")
@@ -1469,7 +1469,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @Then("user enters system dropdown as {string}")
     public void userEntersSystemDropdownAs(String arg0) {
-        homePage.selectCews_add_ci(arg0);
+        homePage.select_add_ci(arg0);
     }
 
     @And("user enters managed voice request as {string}")
@@ -1713,7 +1713,7 @@ public class Plaza_HomePageSteps extends BasePage {
     }
     @Then("user enters system as {string}")
     public void userEntersSystemAs(String arg0) {
-        homePage.selectCews_add_ci(arg0);
+        homePage.select_add_ci(arg0);
     }
     @Then("user enters veha description as {string}")
     public void userEntersVehaDescriptionAs(String arg0) {
@@ -2216,5 +2216,62 @@ public class Plaza_HomePageSteps extends BasePage {
     @And("user enters splunk H2 Name Hid as {string}")
     public void userEntersSplunkHNameHidAs(String arg0) {
         homePage.enterSplunkH2Name(arg0);
+    }
+
+    @Then("user enters appwatch description as {string}")
+    public void userEntersAppwatchDescriptionAs(String arg0) {
+        homePage.enterAppwatchDescription(arg0);
+    }
+
+    @And("user selects ibs service request name as {string}")
+    public void userSelectsIbsServiceRequestNameAs(String arg0) {
+        homePage.selectIbsServiceRequestName(arg0);
+    }
+
+    @And("user enters ibs CI as {string}")
+    public void userEntersIbsCIAs(String arg0) {
+        homePage.selectsAddIbsCi(arg0);
+    }
+
+    @Then("user enters ibs description as {string}")
+    public void userEntersIbsDescriptionAs(String arg0) {
+        homePage.enterIbsDescription(arg0);
+    }
+
+    @Then("user enters ibs order request as {string}")
+    public void userEntersIbsOrderRequestAs(String arg0) {
+        homePage.enterIbsOrderRequest(arg0);
+    }
+
+    @Then("user selects ibs system dropdown as {string}")
+    public void userSelectsIbsSystemDropdownAs(String arg0) {
+        homePage.enterIbsSystem(arg0);
+    }
+
+    @Then("user enters ibs order description as {string}")
+    public void userEntersIbsOrderDescriptionAs(String arg0) {
+        homePage.enterIbsOrderDescription(arg0);
+    }
+
+    @Then("user enters touchpoint update description as {string}")
+    public void userEntersTouchpointUpdateDescriptionAs(String arg0) {
+        homePage.enterTouchpointUpdateDescription(arg0);
+    }
+
+
+    @And("user enters touchpoint planned start date and time as current time")
+    public void userEntersTouchpointPlannedStartDateAndTimeAsCurrentTime() {
+        homePage.enterTouchpointStartDateAndTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user selects order one time Add CI as {string}")
+    public void userSelectsOrderOneTimeAddCIAs(String arg0) {
+       homePage.selectAddOneTimeCi(arg0);
+
+    }
+
+    @When("user clicks on account management and server form")
+    public void userClicksOnAccountManagementAndServerForm() {
+        clickElement(By.xpath("//h2[contains(text(),'Account Management - Server')]"));
     }
 }

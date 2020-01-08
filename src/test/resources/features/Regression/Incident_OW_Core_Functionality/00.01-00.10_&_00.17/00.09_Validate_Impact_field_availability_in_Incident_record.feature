@@ -1,5 +1,5 @@
 @00.09
-@Incident
+@Incident1
 @00
 #passed
   Feature: validation impact field availability in incident record
@@ -14,6 +14,7 @@
       Then trouble record form should appear in new tab
       When user validates impact field availability
       Then multiple statuses "No:Minor:Medium:Major:Critical" should be available in "Impact" dropdown readonly
+      And user logsOut and accepts alert
 
 
 

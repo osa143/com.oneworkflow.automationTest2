@@ -1,5 +1,5 @@
 @00.10
-@Incident
+@Incident1
 @00
 #passed
 Feature: validate urgency field availability in incident record
@@ -14,3 +14,4 @@ Feature: validate urgency field availability in incident record
     Then trouble record form should appear in new tab
     When user validates importance field
     Then multiple statuses "Critical:High:Average:Low:(clear)" should be available in Importance dropdown
+    And user logsOut and accepts alert

@@ -1,4 +1,4 @@
-@EFS-BSS @PLAZA
+@EFS_BSS @PLAZA
 Feature: Plaza EFS-BSS form test
   Scenario: user validates information sent to OW from Plaza
 
@@ -35,7 +35,6 @@ Feature: Plaza EFS-BSS form test
     And user validates source field as "PLAZA"
     And user validates title field as "Service Request | EFS-BSS"
     And user validates request type as "Service Request | PLAZA"
-     #Not sure about description validation outside of a table
     And user validates efs-bss description same as plaza
     Then user clicks on owner under sections
     And user clicks on assignment under sections
@@ -50,13 +49,11 @@ Feature: Plaza EFS-BSS form test
     And user validates CI "ef002appp3" is listed in row 1
     And user right clicks on CI "ef002appp1" and selects "Impact:Update"
     Then user switches to frame
-    And user enters impacted from date as date in past
-    And user enters impacted to date as date in past
+    And user enters impact from time as past on impact details bulk update window
+    And user enters impact to time as past on impact details bulk update window
     Then user clicks confirm checkbox
     And user clicks on bulk update save button
-    Then user switches to window 1
-    Then user selects all CI's that appear
-    And user right clicks on CI "ef002appp1" and selects "Impact:Clear All"
+    And user right clicks on CI "ef002appp1" and clears impact for all CI's
     And user should see confirmation message for impact clear and user clicks yes
     When user clicks on Ack button
     And user changes status to "Cleared" on work order page

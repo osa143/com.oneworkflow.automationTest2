@@ -36,7 +36,6 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Export volume Snapshot to Host"
       And user validates request type as "Service Request | PLAZA"
-     #Not sure about description validation outside of a table
       And user validates storage export volume description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
@@ -48,15 +47,14 @@
       When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed in row 2
       And user validates CI "cc100cgas002" is listed in row 1
-      And user selects all CI's that appear
       And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
-      And user selects all CI's that appear
       Then user switches to frame
       And user enters impact from time as past on impact details bulk update window
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
+      And user right clicks on CI "cc100cgas002" and update impact from as past time
+      And user right clicks on CI "cc100cgas001" and clears impact for all CI's
       And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page

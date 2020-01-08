@@ -28,13 +28,13 @@
       And user answers all risk questions as below
       And user selects answer as "Impact to other systems/technologies are unclear"
       And user selects answer as "No"
-      And user selects answer as "Tested succesfully, this is a pilot"
+      And user selects answer as "Tested successfully, this is a pilot"
       And user selects answer as "Yes (outcome of the change can be instantly verified)"
       And user selects answer as "Yes"
       And user selects answer as "Simple"
       And user selects last answer as "No"
       And user clicks on save button
-      And user adds CI "SE_CPE_FRECPE5" to the ticket
+      And user adds CI "SE_CPE_FRECPE5" to change ticket with impact level "No Impact"
       Then CI should be listed and displayed under the Diagnosis tab
       When user clicks on Send button
       Then ticket should be created and status should be assigned

@@ -15,3 +15,4 @@ Feature: Validate options for data field request type
     Then trouble record form should appear in new tab
     And user verifies request type field is visible
     Then multiple statuses "Customer Reclamation:Event:Stakeholder:Third Party:(clear)" should be available in "Request Type" dropdown
+    And user logsOut and accepts alert

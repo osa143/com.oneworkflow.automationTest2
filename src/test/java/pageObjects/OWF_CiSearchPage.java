@@ -104,6 +104,21 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         clickCloseButton();
 
     }
+
+    public void addCI_ToChangeTicket(String CIName, String CI_ImpactLevel){
+        clickDiagnosis();
+        clickCiSearch();
+        switchToFrameByIndex(2);
+        clickClearButton();
+        enterNamePlus(CIName);
+        clickCiSearchButton();
+        clickToSelectCi();
+        selectLevel(CI_ImpactLevel);
+        clickRelateCiButton();
+        closeWarningMessage_changeTicket();
+        clickCloseButton();
+
+    }
     public void enterImpactTo(String text){
         findElement(By.id(txt_IMPACT_TO_PLUS_BULK_UPDATE)).clear();
         findElement(By.id(txt_IMPACT_TO_PLUS_BULK_UPDATE)).sendKeys(text);
@@ -423,6 +438,32 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         wait(2000);
         driver.findElement(By.id(btnClOSE)).click();
 
+    }
+
+    public void closeWarningMessage_changeTicket()
+    {
+        try {
+            clickElementById("ardivpcl");
+            wait(1000);
+            driver.switchTo().frame(1);
+
+            clickElementByContainsTextAndTagName("a", "OK");
+            wait(1000);
+            driver.switchTo().defaultContent();
+            driver.switchTo().frame(2);
+            wait(1000);
+        }
+        catch (Exception ex)
+        {
+            driver.switchTo().frame(1);
+            driver.switchTo().parentFrame();
+            driver.switchTo().frame(1);
+            clickElementByContainsTextAndTagName("a", "OK");
+            wait(1000);
+            driver.switchTo().defaultContent();
+            driver.switchTo().frame(2);
+            wait(1000);
+        }
     }
 
     public void closeWarningMessage()

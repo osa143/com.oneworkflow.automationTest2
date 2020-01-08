@@ -1,6 +1,6 @@
 @TCFP_Add_User @PLAZA
   #passed
-  Feature: TCFP Add User plaza form test
+    Feature: TCFP Add User plaza form test
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -45,7 +45,6 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | TCFP (Account Management)"
       And user validates request type as "Service Request | PLAZA"
-         #Not sure about description validation outside of a table
       And user validates tcfp add user description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections

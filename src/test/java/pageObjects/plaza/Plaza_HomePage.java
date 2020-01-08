@@ -237,7 +237,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_PLAN= "sp_formfield_sr7_v_plan_audit";
     private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_H2= "sp_formfield_sr7_v_hid";
     private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_DESCRIPTION= "sp_formfield_sr7_v_description";
-    private static final String dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI= "s2id_autogen15";
+    private static final String dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI= "s2id_autogen16";
     private static final String txt_CEWS_REQUEST= "sp_formfield_sr65_v_request";
     private static final String txt_CEWS_DESCRIPTION= "sp_formfield_sr65_v_description";
     private static final String txt_CEWS_ADD_CI= "s2id_autogen13";
@@ -1077,7 +1077,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectOperatingSystem_manual_os_patching_add_ci(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI), By.id("s2id_autogen15_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI), By.id("s2id_autogen16_results"),  dropdownName);
 
     }
 
@@ -1508,6 +1508,7 @@ public class Plaza_HomePage extends BasePage {
     public void enterNetworkSecurity_add_modify_remove_dns_request(String text){
         PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_DNS_REQUEST), text);
+        wait(300);
     }
 
 

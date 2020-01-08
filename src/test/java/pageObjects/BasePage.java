@@ -77,12 +77,18 @@ public class BasePage {
         String element = String.format("//%s[contains(text(),'%s')]", tagName, textName);
         System.out.println(element);
         findElement(By.xpath(element)).click();
-
     }
     public boolean verifyElementIsEnabledByContainsTextAndTagName(String tagName, String textName){
         String element = String.format("//%s[contains(text(),'%s')]", tagName, textName);
         System.out.println(element);
         return findElement(By.xpath(element)).isEnabled();
+
+    }
+
+    public boolean verifyElementIsSelectedByText(String textName){
+        String element = String.format("//input[@arvalue='%s']", textName);
+        System.out.println(element);
+        return findElement(By.xpath(element)).isSelected();
 
     }
 
@@ -320,7 +326,7 @@ public void clickElementById(String Id){
             dropdownXpath = "//img[@alt='Menu for " + dropdownName + "']/..";
 
         driver.findElement(By.xpath(dropdownXpath)).click();
-        wait(1200);
+        wait(900);
 
         String arr[] = dropdownValue.split(":");
         int index = getMenuTableBodyIndex(arr[0]);
@@ -335,7 +341,7 @@ public void clickElementById(String Id){
 
                 elements.get(i + index).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
             }
-            wait(800);
+            wait(900);
         }
 
     }
@@ -842,11 +848,12 @@ public void clickElementById(String Id){
     public void switchToFrameByIndex(int frame_index) {
         int size= driver.findElements(By.tagName("iframe")).size();
         System.out.println("Number of frames are: " +size);
+        wait(2000);
         driver.switchTo().frame(frame_index);
     }
 
     public void switchToFrameByName(String frameName){
-        wait(1000);
+        wait(2000);
         driver.switchTo().frame(frameName);
     }
 

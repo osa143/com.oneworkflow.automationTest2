@@ -33,7 +33,6 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | OCC"
       And user validates request type as "Service Request | PLAZA"
-      #Not sure about description validation outside of a table
       And user validates occ description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
@@ -50,8 +49,7 @@
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      And user right clicks on CI "aa789win01t" and selects "Impact:Clear All"
-      And user should see confirmation message for impact clear and user clicks yes
+      And user right clicks on CI "aa789win01t" and clears impact
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

@@ -105,6 +105,7 @@ public class CommonUtils extends BasePage {
         return prop.getProperty(property);
     }
 
+
 //    filename - full path of the file
     public static void uploadFile(String filename){
 
@@ -113,13 +114,13 @@ public class CommonUtils extends BasePage {
 
         try {
             Robot robot = new Robot();
-            robot.delay(250);
+            robot.delay(2500);
             robot.keyPress(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_V);
             robot.keyRelease(KeyEvent.VK_V);
             robot.keyRelease(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_ENTER);
-            robot.delay(50);
+            robot.delay(500);
             robot.keyRelease(KeyEvent.VK_ENTER);
         } catch (AWTException e) {
             e.printStackTrace();

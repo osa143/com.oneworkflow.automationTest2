@@ -1,4 +1,6 @@
-@00.07_Template_data_field_must_contain_valid_options @Incident @00
+@00.07
+@Incident1
+@00
 #passed
   Feature: Template data field  must contain valid options
     Scenario: Template data field  must contain valid options
@@ -11,4 +13,5 @@
       Then trouble record form should appear in new tab
       When user validates template dropdown availability
       Then multiple statuses "Site access registration:Workforce Escalation-SE:(clear)" should be available in "Template" dropdown readonly
+      And user logsOut and accepts alert
 

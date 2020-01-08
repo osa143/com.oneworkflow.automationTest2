@@ -1,4 +1,6 @@
-@SLA_Target_Time_Availability #@Incident
+@00.02
+@Incident
+@00
 #Passed
 Feature: SLA Target time availability in Incident Record
 
@@ -14,10 +16,11 @@ Feature: SLA Target time availability in Incident Record
     #SIT ENV
     #And user enters ticket id as "OP-000000538992"
     #UAT
-    When user clicks on advanced search button
-    And user waits 2 secs
-    And user enters "'Cust. Remaining SLA' != \"00:00:00\"" in the advanced search bar
-    And user clicks on search
+    And user enters ticket id as "OP-000000039407"
+#    When user clicks on advanced search button
+#    And user waits 2 secs
+#    And user enters "'Cust. Remaining SLA' != \"00:00:00\"" in the advanced search bar
+#    And user clicks on search
     Then ticket with SLA should be opened
     And user validates Cust. Remaining SLA or SLA Target Time availability
     Then customer SLA field must be greyed out and not possible for user to alter

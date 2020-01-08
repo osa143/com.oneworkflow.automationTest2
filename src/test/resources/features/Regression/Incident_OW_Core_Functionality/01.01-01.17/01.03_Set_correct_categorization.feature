@@ -1,4 +1,6 @@
-@01.03_Set_correct_categorization @Incident  @01
+@01.03
+@Incident1
+@01
 #passed
 # CORE for ST, Core for SIT
 Feature: Set correct categorization
@@ -21,3 +23,4 @@ Feature: Set correct categorization
     When user validates availability of item dropdown
     Then multiple statuses "DNS:EPG::GGSN:NAT::NLS:PCRF:PGW::PM:RADIUS:SGSN:SHAPERS:TPE-CMIPBB" should be available in "Item" dropdown
     And user selects Item as "SGSN"
+    And user logsOut and accepts alert

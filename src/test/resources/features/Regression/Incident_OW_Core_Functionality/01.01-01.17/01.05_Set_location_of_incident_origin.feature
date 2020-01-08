@@ -1,4 +1,6 @@
-@01.05_Set_location_of_incident_origin @Incident  @01
+@01.05
+@Incident1
+@01
 #Passed
 Feature: Setting location of incident origin
 
@@ -18,5 +20,6 @@ Feature: Setting location of incident origin
     When user clicks on the next chunk button
     #Location Name,Location ID+,Region Name, Region ID, Latitude, Longitude
     And user highlights location "SE_Site_SE M1" and clicks ok and validates location details
+
 
 

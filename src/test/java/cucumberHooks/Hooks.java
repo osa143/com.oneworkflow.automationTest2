@@ -3,6 +3,7 @@ package cucumberHooks;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import driver.factory.DriverFactory;
+import org.openqa.selenium.Keys;
 import pageObjects.BasePage;
 import pageObjects.OWF_AgentConsolePage;
 import utils.CommonUtils;
@@ -23,11 +24,11 @@ public class Hooks {
         }
 
 
-//            OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
-//            CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 0);
-//            agentConsolePage.clickNavUserMenu();
-//            agentConsolePage.clickMenuItemLogout();
-//            DriverFactory.getInstance().quit();
+            OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
+            CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 0);
+            agentConsolePage.clickNavUserMenu();
+            agentConsolePage.clickMenuItemLogout();
+            DriverFactory.getInstance().quit();
 
        }
     }

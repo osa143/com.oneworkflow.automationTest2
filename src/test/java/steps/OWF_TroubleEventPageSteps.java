@@ -755,7 +755,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user validates {string} BU is added automatically")
     public void userValidatesBUIsAddedAutomatically(String arg0) {
-        Assert.assertTrue(troubleEventPage.verifyIsDenmarkSelected());
+        Assert.assertTrue(troubleEventPage.verifyElementIsSelectedByText(arg0));
     }
 
     @And("user clicks on close button on bulk update window")
@@ -1265,6 +1265,12 @@ public class OWF_TroubleEventPageSteps {
     @And("user right clicks on CI {string} and update impact from as past time")
     public void userRightClicksOnCIAndUpdateImpactFromAsPastTime(String arg0) {
        troubleEventPage.impactFromUpdateAsPastTime(arg0);
+    }
+
+    @And("user right clicks on CI {string} and clears impact for check impact record")
+    public void userRightClicksOnCIAndClearsImpactForCheckImpactRecord(String arg0) {
+        troubleEventPage.doImpactClear_checkImpactRecord(arg0);
+        //troubleEventPage.clickElement(By.xpath("//*[@id=\"WIN_0_700009087\"]/div[1]/table/tbody/tr/td[2]/a[2]"));
     }
 }
 

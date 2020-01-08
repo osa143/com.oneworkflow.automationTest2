@@ -1,4 +1,6 @@
-@03.04_Link_child_tickets_and_make_master_ticket @Incident
+@03.04
+@Incident
+@03
   #passed
   Feature: Link child tickets and make master ticket
     Scenario: Link child tickets and make master ticket
@@ -25,6 +27,7 @@
       And user enters description as "Test Case 03.03 Make Master Ticket(ticket 2)"
       And user clicks on save button
       Then ticket should be created and status should be assigned
+      #And user clicks on Ack button
       When user clicks on linked items tab
       And user selects target application first dropdown as "OS3 - Operations"
       And user selects target application second dropdown as "Is child of"

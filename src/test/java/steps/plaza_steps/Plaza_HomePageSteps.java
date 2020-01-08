@@ -2270,6 +2270,11 @@ public class Plaza_HomePageSteps extends BasePage {
 
     }
 
+    @When("user clicks on account management and server form")
+    public void userClicksOnAccountManagementAndServerForm() {
+        clickElement(By.xpath("//h2[contains(text(),'Account Management - Server')]"));
+    }
+
     @And("user selects network security add CI as {string}")
     public void userSelectsNetworkSecurityAddCIAs(String arg0) {
         homePage.addCiSwitchPortConfig(arg0);

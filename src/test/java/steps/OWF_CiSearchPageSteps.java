@@ -116,6 +116,7 @@ public class OWF_CiSearchPageSteps {
 
     @Then("CI should be listed and displayed under the Diagnosis tab")
     public void ciShouldBeListedAndDisplayedUnderTheDiagnosisTab() {
+        ciSearchPage.wait(3000);
         int size = ciSearchPage.ciDiagnosisTableRows().size();
         Assert.assertNotEquals(size, 1, "CI details are not displayed");
     }
@@ -478,5 +479,10 @@ public class OWF_CiSearchPageSteps {
     @And("user adds CI {string} to the ticket with impact level {string}")
     public void userAddsCIToTheTicketWithImpactLevel(String CIName, String impactLevel) {
         ciSearchPage.addCI(CIName, impactLevel);
+    }
+
+    @And("user adds CI {string} to change ticket with impact level {string}")
+    public void userAddsCIToChangeTicketWithImpactLevel(String CiName, String impactLevel) {
+        ciSearchPage.addCI_ToChangeTicket(CiName, impactLevel);
     }
 }

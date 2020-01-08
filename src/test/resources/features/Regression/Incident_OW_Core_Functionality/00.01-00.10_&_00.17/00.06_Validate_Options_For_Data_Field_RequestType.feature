@@ -1,4 +1,6 @@
-@Validate_Behaviour_And_Options_For_Data_Field_RequestType @Incident @00
+@00.06
+@Incident1
+@00
 #Passed
 Feature: Validate options for data field request type
 
@@ -13,3 +15,4 @@ Feature: Validate options for data field request type
     Then trouble record form should appear in new tab
     And user verifies request type field is visible
     Then multiple statuses "Customer Reclamation:Event:Stakeholder:Third Party:(clear)" should be available in "Request Type" dropdown
+    And user logsOut and accepts alert

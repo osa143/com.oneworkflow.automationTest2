@@ -1,4 +1,6 @@
-@Refresh_Interval_In_Agent_Console_Can_Be_Set_By_User #@Incident
+@Refresh_Interval_In_Agent_Console_Can_Be_Set_By_User
+@Incident
+@TroubleGeneral
   Feature: refresh interval in agent console can be set by user
     Scenario: refresh interval in agent console can be set by user
 

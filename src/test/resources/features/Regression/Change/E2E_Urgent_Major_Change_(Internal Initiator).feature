@@ -1,4 +1,4 @@
-@E2E_Urgent_Major_Change_(Internal_Initiator) @Change
+@E2E_Urgent_Major_Change_Internal_Initiator @Change
   Feature: E2E Urgent Major Change Internal Initiator
     Scenario: E2E Urgent Major Change Internal Initiator
 
@@ -25,9 +25,11 @@
       And user selects priority as "Major"
       And user enters "CI I2" in the change builder field
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-      Then user enters request start time 24 hours ahead of current date
-      And user enters request end time 28 hours ahead of current date
-      And user enters impact duration as "1" hours "15" minutes
+#      Then user enters request start time 24 hours ahead of current date
+#      And user enters request end time 28 hours ahead of current date
+      And user enters start time as 10 minutes fast from current sweden time
+      And user enters end time as 59 minutes fast from current sweden time
+      And user enters impact duration as "45" minutes
       And user selects estimated impact dropdown as "Loss of Service"
       And user enters as "Regression - Change Management Process" in service and customer impact
       And user clicks on save button
@@ -41,19 +43,18 @@
       When user clicks on Risk tab
       And user gets current risk score value
       When user answers all risk questions as below
-      And user selects urgent answer as "A. No"
-      And user selects urgent answer as "B. Impact to other systems/technologies are unclear!"
-      And user selects urgent answer as "Tested successfully, this is a pilot"
-      And user selects urgent answer as "D. "Only" Consumer customers affected."
-      And user selects urgent answer as "A. Yes"
-      And user selects urgent answer as "A. Yes"
-      And user selects urgent answer as "A. Yes (outcome of the Change can be instantly verified)"
-      And user selects urgent answer as "B. No"
-      And user selects urgent answer as "A. No"
-      And user selects urgent last answer as "A. No"
+      And user selects answer as "No"
+      And user selects answer as "Impact to other systems/technologies are unclear"
+      And user selects answer as "\"Only\" Consumer customers affected."
+      And user selects answer as "Yes"
+      And user selects answer as "Yes"
+      And user selects answer as "Yes (outcome of the Change can be instantly verified)"
+      And user selects answer as "No"
+      And user selects answer as "No"
+      And user selects answer as "No"
       Then user validates risk score gets updated
       Then user clicks on save button
-      Then an error message should appear: "Please select at least one country of impact for this change. (ARERR 10000)"
+#      Then an error message should appear: "Please select at least one country of impact for this change. (ARERR 10000)"
       When user clicks on estonia checkbox under affected BU's
       And user clicks on Send button
       Then error message should display as "You must select at least one CI in the Diagnosis Tab (ARERR 10000)" on change record page
@@ -64,13 +65,15 @@
       And user clicks on clear button
       And user selects Category as "Access"
       Then user enters "SE_BSC%" in the name+ field
-      And user selects "All CI's" under search for dropdown
+#      And user selects "All CI's" under search for dropdown
       Then user clicks on search button on CI search window
       And user selects all CI's that appear
       And user selects impact level as "Loss of Service"
       And user clicks on relate CI
       Then user closes warning message
       And user clicks on close button on CI search window
+      And user waits 30 secs
+      And user clicks on refresh under diagnosis
       And CI should be listed and displayed under the Diagnosis tab
       When user clicks on "Interested Parties" tab
       And user enters email address as "Test123xxx@Test123xxx.com"
@@ -127,24 +130,24 @@
       Then user enters "New Communication plan" in the communication plan field
       And user clicks on save button
       When user clicks on risk tab
-      And user selects urgent answer as "A. No"
-      And user selects urgent answer as "B. Impact to other systems/technologies are unclear!"
-      And user selects urgent answer as "Tested successfully, this is a pilot"
-      And user selects urgent answer as "D. "Only" Consumer customers affected."
-      And user selects urgent answer as "A. Yes"
-      And user selects urgent answer as "A. Yes"
-      And user selects urgent answer as "A. Yes (outcome of the Change can be instantly verified)"
-      And user selects urgent answer as "B. No"
-      And user selects urgent answer as "A. No"
-      And user selects urgent last answer as "B. Yes"
+      And user selects answer as "No"
+      And user selects answer as "Impact to other systems/technologies are unclear!"
+      And user selects answer as "D. \"Only\" Consumer customers affected."
+      And user selects answer as "A. Yes"
+      And user selects answer as "A. Yes"
+      And user selects answer as "A. Yes (outcome of the Change can be instantly verified)"
+      And user selects answer as "B. No"
+      And user selects answer as "A. No"
+      And user selects answer as "B. Yes"
       Then user clicks on save button
       Then user clicks on "Schedule" tab
       And user enters request start time 168 hours ahead of current date
       And user enters request end time 171 hours ahead of current date
       Then user clicks on save button
       And user clicks on timeline tab
-      And change should also be reflected in the timeline as "STATUS MODIFIED.  Assignment User has changed from  to ChangeManager1. Request Status has changed from Assigned to Analysis. " on row 2
-      And change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Urgent Major Change (Internal Initiator) to TEST TICKET PLEASE IGNORE - Automated Test for Urgent Major Change (Internal Initiator)- Additional Information. Requested Start has changed from 2019-09-09 13:00:00 UTC to 2019-09-16 13:00:00 UTC. Requested End has changed from 2019-09-09 16:00:00 UTC to 2019-09-16 16:00:00 UTC. " on row 1
+      And change should also be reflected in the timeline as "STATUS MODIFIED.  Assignment User has changed from  to ChangeManager1." on row 3
+      And change should also be reflected in the timeline as "Request Status has changed from Assigned to Analysis. " on row 4
+      And change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Urgent Major Change (Internal Initiator) to TEST TICKET PLEASE IGNORE - Automated Test for Urgent Major Change (Internal Initiator)- Additional Information. Requested Start has changed from 2019-09-09 13:00:00 UTC to 2019-09-16 13:00:00 UTC. Requested End has changed from 2019-09-09 16:00:00 UTC to 2019-09-16 16:00:00 UTC. " on row 2
       And user clicks on Diagnosis tab
       Then user selects all CI's that appear
       And user right clicks on primary CI and selects "Impact:Update"
@@ -173,19 +176,21 @@
       Then user validates ticket status as "Approved"
       And user waits for 1 minutes
       Then user clicks on "Notifications" tab
+      Then user clicks on sent tab
+      And user clicks on "Sent"
       And user should see "Approved" email update
       And user should see "Approved-ChangeBuilder" email update
       When user changes status to "Schedule Requested"
       And user clicks on save button
       Then user validates ticket status as "Scheduled"
       And user clicks on "Schedule" tab
-      Then user validates actual start time is updated
-      And user validates actual end time is updated
+#      Then user validates actual start time is updated
+#      And user validates actual end time is updated
       Then user clicks on assignment under sections
       And user clicks on owner under sections
       Then user validates owner profile as "Change Manager"
       And user validates owner as "ChangeManager1"
-      And user validates assigned profile is "Change Implementation Control"
+      And user validates assigned profile as "Change Implementation Control"
       And user validates assignee is "Change Impl Contr"
       When user logsOut from One workflow
       And user goes back to login page

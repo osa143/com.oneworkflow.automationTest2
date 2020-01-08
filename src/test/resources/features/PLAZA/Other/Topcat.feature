@@ -51,16 +51,15 @@
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      And user right clicks on CI "aa789win01t" and selects "Impact:Clear All"
-      And user should see confirmation message for impact clear and user clicks yes
+      And user right clicks on CI "aa789win01t" and clears impact
       When user clicks on Ack button
-      And user changes status to "Cleared"
+      And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
       And user validates ticket status as "Cleared"
-      When user changes status to "Closed"
+      When user changes status to "Closed" on work order page
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
@@ -69,6 +68,6 @@
 
       Examples:
 
-      |Service Request Name       |Request             |Description             |Additional Comments|Desc Validation|
-      |General Request            |Test2 Topcat/Request|Test2 Topcat/Description|Test2 Topcat/AC    |               |
-      #|Restore Catalogue Database |Test1 Topcat/Request|Test1 Topcat/Description|Test1 Topcat/AC    |               |
+      |Service Request Name       |Request             |Description             |Additional Comments|
+      |General Request            |Test2 Topcat/Request|Test2 Topcat/Description|Test2 Topcat/AC    |
+      #|Restore Catalogue Database |Test1 Topcat/Request|Test1 Topcat/Description|Test1 Topcat/AC    |

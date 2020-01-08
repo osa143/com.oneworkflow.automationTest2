@@ -1,4 +1,4 @@
-@MegaDisc_Add_User_other @PLAZA
+@MegaDisc-Add_User_other @PLAZA
   #passed
   Feature: MegaDisc Add User PLAZA form test
     Scenario:user validates information sent to OW from Plaza
@@ -37,7 +37,6 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | MegaDisc (Account Management)"
       And user validates request type as "Service Request | PLAZA"
-     #Not sure about description validation outside of a table
       And user validates megadisc add user description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections

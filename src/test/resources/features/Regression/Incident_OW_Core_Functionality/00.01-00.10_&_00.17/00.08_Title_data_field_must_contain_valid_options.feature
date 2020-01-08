@@ -1,4 +1,4 @@
-@00.08_Title_data_field_must_contain_valid_options @Incident @00
+@00.08_Title_data_field_must_contain_valid_options @Incident1 @00
  #Passed
   Feature: Title data field must contain valid options
 
@@ -12,3 +12,4 @@
       Then trouble record form should appear in new tab
       When user validates Title availability
       Then multiple statuses "(no entries in menu)" should be available in "Title" dropdown
+      And user logsOut and accepts alert

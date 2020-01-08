@@ -39,7 +39,6 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Change OS Patching"
       And user validates request type as "Service Request | PLAZA"
-     #Not sure about description validation outside of a table
       And user validates operating system change from manual description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
@@ -56,11 +55,10 @@
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
-      And user should see confirmation message for impact clear and user clicks yes
+      And user right clicks on CI "cc100cgas001" and clears impact
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
-      And user selects completed code as "Success"
+      And user selects completion code as "Success"
       And user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks on save button
@@ -74,6 +72,6 @@
 
       Examples:
 
-      |Request                              |Select Request                                |Description                       |Additional Comments      |Desc Validation|
-      #|Test4 Operating System Change/Request|Changing from Manual to Auto patching         |Test4 Operating System/Description|Test4 Operating System/AC|               |
-      |Test5 Operating System Change/Request|Changing patch window for server in auto patch|Test5 Operating System/Description|Test5 Operating System/AC|               |
+      |Request                              |Select Request                                |Description                       |Additional Comments      |
+      #|Test4 Operating System Change/Request|Changing from Manual to Auto patching         |Test4 Operating System/Description|Test4 Operating System/AC|
+      |Test5 Operating System Change/Request|Changing patch window for server in auto patch|Test5 Operating System/Description|Test5 Operating System/AC|

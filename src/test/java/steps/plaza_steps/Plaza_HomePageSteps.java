@@ -704,7 +704,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on DNS DHCP pebble")
     public void userClicksOnDNSDHCPPebble() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[4]/div/a"));
+        clickElement(By.xpath("//h2[contains(text(),'DNS/DHCP')]"));
     }
 
     @And("user enters Network Security Add Modify Remove DNS description as {string}")
@@ -2268,5 +2268,10 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userSelectsOrderOneTimeAddCIAs(String arg0) {
        homePage.selectAddOneTimeCi(arg0);
 
+    }
+
+    @When("user clicks on account management and server form")
+    public void userClicksOnAccountManagementAndServerForm() {
+        clickElement(By.xpath("//h2[contains(text(),'Account Management - Server')]"));
     }
 }

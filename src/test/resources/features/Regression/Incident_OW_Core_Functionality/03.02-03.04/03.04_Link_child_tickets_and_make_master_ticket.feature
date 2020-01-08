@@ -1,5 +1,5 @@
 @03.04_Link_child_tickets_and_make_master_ticket @Incident
-  #passed
+  #passed...
   Feature: Link child tickets and make master ticket
     Scenario: Link child tickets and make master ticket
 

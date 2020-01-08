@@ -1,4 +1,4 @@
-@ServiceRequestNewExportorImportToolTemplate+
+@ServiceRequestNewExportorImportToolTemplate
   Feature: Service Request - Touchpoint Plus - New Export or Import Tool Template plaza test
     Scenario: Service Request - Touchpoint Plus - New Export or Import Tool Template plaza test
 

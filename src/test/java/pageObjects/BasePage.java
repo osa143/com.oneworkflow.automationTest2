@@ -85,6 +85,13 @@ public class BasePage {
 
     }
 
+    public boolean verifyElementIsSelectedByText(String textName){
+        String element = String.format("//input[@arvalue='%s']", textName);
+        System.out.println(element);
+        return findElement(By.xpath(element)).isSelected();
+
+    }
+
     public boolean verifyIsElementSelected(By element){
         return findElement(element).isSelected();
     }
@@ -841,11 +848,12 @@ public void clickElementById(String Id){
     public void switchToFrameByIndex(int frame_index) {
         int size= driver.findElements(By.tagName("iframe")).size();
         System.out.println("Number of frames are: " +size);
+        wait(2000);
         driver.switchTo().frame(frame_index);
     }
 
     public void switchToFrameByName(String frameName){
-        wait(1000);
+        wait(2000);
         driver.switchTo().frame(frameName);
     }
 

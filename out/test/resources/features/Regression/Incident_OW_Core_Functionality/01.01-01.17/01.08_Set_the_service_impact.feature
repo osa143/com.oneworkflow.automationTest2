@@ -1,4 +1,6 @@
-@01.08_Set_the_service_impact @Incident  @01
+@01.08
+@Incident
+@01
   #Passed
 #CORE for ST, Core for SIT
   #Mobile PS Core Network

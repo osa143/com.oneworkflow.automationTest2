@@ -1,4 +1,6 @@
-@Filter_Agent_Console_on_Creator @Incident @Trouble1
+@Filter_Agent_Console_on_Creator
+@Incident
+@TroubleGeneral
   #passed
 Feature: Filter Agent console on creator
   Scenario: Filter Agent console on creator

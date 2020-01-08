@@ -1,4 +1,6 @@
-@02.07_Change_incident_start_time @Incident
+@02.07
+@Incident
+@02
   #passed
 Feature: change incident start time
   Scenario: user can change the incident start time

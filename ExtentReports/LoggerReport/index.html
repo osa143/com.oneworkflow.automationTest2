@@ -50,6 +50,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -94,11 +102,11 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
+										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
-										
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="skip"><i class="fa fa-dot-circle-o text-blue"></i>Skip</span></a>
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 									</div>
@@ -112,8 +120,18 @@
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 						    	        <a class="dropdown-item" href="#"><span class="cf">@00.01</span></a>
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Incident</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@Incident1</span></a>
 						    	        <a class="dropdown-item" href="#"><span class="cf">@00</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@00.06</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@00.07</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@00.08</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@00.09</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@00.10</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@00.20</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@01.02</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@01</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@01.03</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@01.05</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -132,27 +150,27 @@
 										<h6 class="mb-3 ml-1">Test Logs</h6>
 											<div class="tsc" status="pass">
 											<div class="st pass test l0" 
-												tags="@00.01 @Incident @00"
+												tags="@00.01 @Incident1 @00"
 												devices="">
-												<span class="tt">01.08.2020 12:48:49</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:19</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">[Validate incident record process artifact] started</span>
 												<span class="category-list">
 													<span class="category badge"><i class="fa fa-tag"></i> @00.01</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @Incident</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
 													<span class="category badge"><i class="fa fa-tag"></i> @00</span>
 												</span>
 												
 											</div>
 											<div class="st pass test l1" 
-												tags="@00.01 @Incident @00"
+												tags="@00.01 @Incident1 @00"
 												devices="">
-												<span class="tt">01.08.2020 12:48:49</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:19</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">|---[Validate incident record process artifact] started</span>
 												<span class="category-list">
 													<span class="category badge"><i class="fa fa-tag"></i> @00.01</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @Incident</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
 													<span class="category badge"><i class="fa fa-tag"></i> @00</span>
 												</span>
 												
@@ -160,12 +178,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:48:49</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:19</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:01</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:32</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
 													
@@ -175,12 +193,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:01</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:32</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:07</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:36</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password]</span>
 													
@@ -190,12 +208,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:07</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:36</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:07</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:36</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
 													
@@ -205,12 +223,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:07</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:36</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:23</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:45</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event]</span>
 													
@@ -220,12 +238,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:23</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:45</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:24</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:45</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
 													
@@ -235,12 +253,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:24</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:45</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:31</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:49</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab]</span>
 													
@@ -250,12 +268,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:31</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:49</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Ticket Number" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:31</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:50</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Ticket Number" is present]</span>
 													
@@ -265,12 +283,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:31</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:50</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Status" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:31</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:50</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Status" is present]</span>
 													
@@ -280,12 +298,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:31</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:50</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Source" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:31</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:50</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Source" is present]</span>
 													
@@ -295,12 +313,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:31</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:50</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "ID" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:31</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:50</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "ID" is present]</span>
 													
@@ -310,12 +328,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:31</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:50</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Service Provider" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:31</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:50</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Service Provider" is present]</span>
 													
@@ -325,12 +343,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:31</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:50</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates BU availability] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates BU availability]</span>
 													
@@ -340,12 +358,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Created by Light GUI" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Created by Light GUI" is present]</span>
 													
@@ -355,12 +373,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Cust. Remaining SLA" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Cust. Remaining SLA" is present]</span>
 													
@@ -370,12 +388,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "OLA Target Time" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "OLA Target Time" is present]</span>
 													
@@ -385,12 +403,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Template" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Template" is present]</span>
 													
@@ -400,12 +418,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Title" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Title" is present]</span>
 													
@@ -415,12 +433,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Request Type" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Request Type" is present]</span>
 													
@@ -430,12 +448,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Description" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Description" is present]</span>
 													
@@ -445,12 +463,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Priority" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Priority" is present]</span>
 													
@@ -460,12 +478,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Event Start Time" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Event Start Time" is present]</span>
 													
@@ -475,12 +493,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:51</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Estimated Ready" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Estimated Ready" is present]</span>
 													
@@ -490,12 +508,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Fault Type" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Fault Type" is present]</span>
 													
@@ -505,12 +523,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates WO's Status is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates WO's Status is present]</span>
 													
@@ -520,12 +538,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Fault Domain" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Fault Domain" is present]</span>
 													
@@ -535,12 +553,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Rejection Reason" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Rejection Reason" is present]</span>
 													
@@ -550,12 +568,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Re-Assigned Reason" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Re-Assigned Reason" is present]</span>
 													
@@ -565,12 +583,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Auto Close Date" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Auto Close Date" is present]</span>
 													
@@ -580,12 +598,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Do Not AutoClose" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Do Not AutoClose" is present]</span>
 													
@@ -595,12 +613,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Auto Close" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Auto Close" is present]</span>
 													
@@ -610,12 +628,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Request sent to FM" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Request sent to FM" is present]</span>
 													
@@ -625,12 +643,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Servicedesk Escalated Incidents" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Servicedesk Escalated Incidents" is present]</span>
 													
@@ -640,12 +658,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:32</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Customer Escalated Incidents" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Customer Escalated Incidents" is present]</span>
 													
@@ -655,12 +673,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Hierarchic escalation level" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Hierarchic escalation level" is present]</span>
 													
@@ -670,12 +688,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Importance" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Importance" is present]</span>
 													
@@ -685,12 +703,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Impact" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Impact" is present]</span>
 													
@@ -700,12 +718,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Priority Check" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Priority Check" is present]</span>
 													
@@ -715,12 +733,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Creator" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Creator" is present]</span>
 													
@@ -730,12 +748,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Assignment" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Assignment" is present]</span>
 													
@@ -745,12 +763,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Assignment Profile" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Assignment Profile" is present]</span>
 													
@@ -760,12 +778,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Assignee" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Assignee" is present]</span>
 													
@@ -775,12 +793,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Last Ack By" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Last Ack By" is present]</span>
 													
@@ -790,12 +808,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Response Time" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Response Time" is present]</span>
 													
@@ -805,12 +823,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Response Reason" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Response Reason" is present]</span>
 													
@@ -820,12 +838,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Reassignment Count" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Reassignment Count" is present]</span>
 													
@@ -835,12 +853,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates CTI Details is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates CTI Details is present]</span>
 													
@@ -850,12 +868,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on CTI details under sections] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on CTI details under sections]</span>
 													
@@ -865,12 +883,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Category" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Category" is present]</span>
 													
@@ -880,12 +898,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Type" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Type" is present]</span>
 													
@@ -895,12 +913,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Item" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Item" is present]</span>
 													
@@ -910,12 +928,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Technology" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Technology" is present]</span>
 													
@@ -925,12 +943,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Model" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Model" is present]</span>
 													
@@ -940,12 +958,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Manufacturer" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Manufacturer" is present]</span>
 													
@@ -955,12 +973,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on location under sections] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on location under sections]</span>
 													
@@ -970,12 +988,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:33</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Location Information is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Location Information is present]</span>
 													
@@ -985,12 +1003,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Location ID+" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Location ID+" is present]</span>
 													
@@ -1000,12 +1018,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Location Name +" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Location Name +" is present]</span>
 													
@@ -1015,12 +1033,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Region ID" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Region ID" is present]</span>
 													
@@ -1030,12 +1048,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Region Name" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Region Name" is present]</span>
 													
@@ -1045,12 +1063,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Latitude" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Latitude" is present]</span>
 													
@@ -1060,12 +1078,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Longitude" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Longitude" is present]</span>
 													
@@ -1075,12 +1093,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Location Details" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Location Details" is present]</span>
 													
@@ -1090,12 +1108,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "X Degree" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "X Degree" is present]</span>
 													
@@ -1105,12 +1123,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Y Degree" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Y Degree" is present]</span>
 													
@@ -1120,12 +1138,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on owner under sections] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on owner under sections]</span>
 													
@@ -1135,12 +1153,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Owner is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Owner is present]</span>
 													
@@ -1150,12 +1168,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Owner Profile" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Owner Profile" is present]</span>
 													
@@ -1165,12 +1183,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Owner*" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Owner*" is present]</span>
 													
@@ -1180,12 +1198,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on On Hold under sections] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on On Hold under sections]</span>
 													
@@ -1195,12 +1213,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates On Hold Until is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates On Hold Until is present]</span>
 													
@@ -1210,12 +1228,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "To Date" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "To Date" is present]</span>
 													
@@ -1225,12 +1243,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Reason" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Reason" is present]</span>
 													
@@ -1240,12 +1258,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:34</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on vendor under sections] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on vendor under sections]</span>
 													
@@ -1255,12 +1273,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Vendor is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Vendor is present]</span>
 													
@@ -1270,12 +1288,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Vendor Name +" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Vendor Name +" is present]</span>
 													
@@ -1285,12 +1303,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Onsite Engineer(s)" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Onsite Engineer(s)" is present]</span>
 													
@@ -1300,12 +1318,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Account Number" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Account Number" is present]</span>
 													
@@ -1315,12 +1333,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Telephone Number" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Telephone Number" is present]</span>
 													
@@ -1330,12 +1348,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Hours of Operation" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Hours of Operation" is present]</span>
 													
@@ -1345,12 +1363,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Hours of Operation" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Hours of Operation" is present]</span>
 													
@@ -1360,12 +1378,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Vendor Ref" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Vendor Ref" is present]</span>
 													
@@ -1375,12 +1393,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on attachments under sections on trouble event page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on attachments under sections on trouble event page]</span>
 													
@@ -1390,12 +1408,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Internal is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Internal is present]</span>
 													
@@ -1405,12 +1423,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Add is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Add is present]</span>
 													
@@ -1420,12 +1438,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates internal Open is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates internal Open is present]</span>
 													
@@ -1435,12 +1453,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Delete is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Delete is present]</span>
 													
@@ -1450,12 +1468,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates internal Preferences is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates internal Preferences is present]</span>
 													
@@ -1465,12 +1483,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates internal Refresh is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates internal Refresh is present]</span>
 													
@@ -1480,12 +1498,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates External is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates External is present]</span>
 													
@@ -1495,12 +1513,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates external Open is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates external Open is present]</span>
 													
@@ -1510,12 +1528,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates external Preferences is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates external Preferences is present]</span>
 													
@@ -1525,12 +1543,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates external Refresh is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates external Refresh is present]</span>
 													
@@ -1540,12 +1558,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:35</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:57</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on root cause under sections] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:58</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on root cause under sections]</span>
 													
@@ -1555,12 +1573,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:58</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates root cause is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:58</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates root cause is present]</span>
 													
@@ -1570,12 +1588,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:58</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Root Cause same as Primary Cause?" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:58</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Root Cause same as Primary Cause?" is present]</span>
 													
@@ -1585,12 +1603,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:58</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Root Cause" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:58</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Root Cause" is present]</span>
 													
@@ -1600,12 +1618,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:58</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Description" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Description" is present]</span>
 													
@@ -1615,12 +1633,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on closure under sections] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on closure under sections]</span>
 													
@@ -1630,12 +1648,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Closure Codes is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Closure Codes is present]</span>
 													
@@ -1645,12 +1663,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Fault Position" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Fault Position" is present]</span>
 													
@@ -1660,12 +1678,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Equipment" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Equipment" is present]</span>
 													
@@ -1675,12 +1693,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Cause is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Cause is present]</span>
 													
@@ -1690,12 +1708,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Action" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Action" is present]</span>
 													
@@ -1705,12 +1723,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:36</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Closure Info" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:37</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Closure Info" is present]</span>
 													
@@ -1720,12 +1738,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:37</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Resolved Group" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:37</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Resolved Group" is present]</span>
 													
@@ -1735,12 +1753,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:37</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Resolved Person" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:37</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Resolved Person" is present]</span>
 													
@@ -1750,12 +1768,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:37</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Event End Time" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:37</span>&nbsp;
+													<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Event End Time" is present]</span>
 													
@@ -1765,12 +1783,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:37</span>&nbsp;
+												<span class="tt">01.08.2020 15:20:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Withdrawn Reason" is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:37</span>&nbsp;
+													<span class="tt">01.08.2020 15:21:00</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates "Withdrawn Reason" is present]</span>
 													
@@ -1780,12 +1798,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:37</span>&nbsp;
+												<span class="tt">01.08.2020 15:21:00</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Save is present] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:37</span>&nbsp;
+													<span class="tt">01.08.2020 15:21:00</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Save is present]</span>
 													
@@ -1795,12 +1813,2013 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.08.2020 12:49:37</span>&nbsp;
+												<span class="tt">01.08.2020 15:21:00</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.08.2020 15:21:02</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:02</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.08.2020 12:49:51</span>&nbsp;
+													<span class="tt">01.08.2020 15:21:02</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											</div>
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@00.06 @Incident1 @00"
+												devices="">
+												<span class="tt">01.08.2020 15:21:02</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[Validate options for data field request type] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @00.06</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l1" 
+												tags="@00.06 @Incident1 @00"
+												devices="">
+												<span class="tt">01.08.2020 15:21:02</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[Validate options for data field request type] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @00.06</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:02</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
+												
+												<div class="st fail">
+													<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
+  (Session info: chrome=78.0.3904.108)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I92010A', ip: '10.238.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 453f4fcb754d68222e42d01d21fa169d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at pageObjects.BasePage.getURL(BasePage.java:36)
+	at steps.OWF_LoginPageSteps.userIsOnTheOneWorkflowLoginPage(OWF_LoginPageSteps.java:13)
+	at ✽.user is on the OneWorkflow login page(features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&_00.17/00.06_Validate_Options_For_Data_Field_RequestType.feature:10)
+</textarea></span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user verifies request type field is visible] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user verifies request type field is visible]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Customer Reclamation:Event:Stakeholder:Third Party:(clear)" should be available in "Request Type" dropdown] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Customer Reclamation:Event:Stakeholder:Third Party:(clear)" should be available in "Request Type" dropdown]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											</div>
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@00.07 @Incident1 @00"
+												devices="">
+												<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[Template data field  must contain valid options] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @00.07</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l1" 
+												tags="@00.07 @Incident1 @00"
+												devices="">
+												<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[Template data field  must contain valid options] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @00.07</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:06</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
+												
+												<div class="st fail">
+													<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
+  (Session info: chrome=78.0.3904.108)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I92010A', ip: '10.238.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 453f4fcb754d68222e42d01d21fa169d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at pageObjects.BasePage.getURL(BasePage.java:36)
+	at steps.OWF_LoginPageSteps.userIsOnTheOneWorkflowLoginPage(OWF_LoginPageSteps.java:13)
+	at ✽.user is on the OneWorkflow login page(features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&_00.17/00.07_Template_data_field_must_contain_valid_options.feature:8)
+</textarea></span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates template dropdown availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates template dropdown availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Site access registration:Workforce Escalation-SE:(clear)" should be available in "Template" dropdown readonly] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Site access registration:Workforce Escalation-SE:(clear)" should be available in "Template" dropdown readonly]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											</div>
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@00.08 @Incident1 @00"
+												devices="">
+												<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[Title data field must contain valid options] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @00.08</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l1" 
+												tags="@00.08 @Incident1 @00"
+												devices="">
+												<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[Title data field must contain valid options] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @00.08</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:10</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
+												
+												<div class="st fail">
+													<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
+  (Session info: chrome=78.0.3904.108)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I92010A', ip: '10.238.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 453f4fcb754d68222e42d01d21fa169d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at pageObjects.BasePage.getURL(BasePage.java:36)
+	at steps.OWF_LoginPageSteps.userIsOnTheOneWorkflowLoginPage(OWF_LoginPageSteps.java:13)
+	at ✽.user is on the OneWorkflow login page(features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&_00.17/00.08_Title_data_field_must_contain_valid_options.feature:9)
+</textarea></span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates Title availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates Title availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "(no entries in menu)" should be available in "Title" dropdown] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "(no entries in menu)" should be available in "Title" dropdown]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											</div>
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@00.09 @Incident1 @00"
+												devices="">
+												<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[validation impact field availability in incident record] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @00.09</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l1" 
+												tags="@00.09 @Incident1 @00"
+												devices="">
+												<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[validation impact field availability in incident record] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @00.09</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:14</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
+												
+												<div class="st fail">
+													<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
+  (Session info: chrome=78.0.3904.108)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I92010A', ip: '10.238.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 453f4fcb754d68222e42d01d21fa169d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at pageObjects.BasePage.getURL(BasePage.java:36)
+	at steps.OWF_LoginPageSteps.userIsOnTheOneWorkflowLoginPage(OWF_LoginPageSteps.java:13)
+	at ✽.user is on the OneWorkflow login page(features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&_00.17/00.09_Validate_Impact_field_availability_in_Incident_record.feature:9)
+</textarea></span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates impact field availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates impact field availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "No:Minor:Medium:Major:Critical" should be available in "Impact" dropdown readonly] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "No:Minor:Medium:Major:Critical" should be available in "Impact" dropdown readonly]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											</div>
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@00.10 @Incident1 @00"
+												devices="">
+												<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[validate urgency field availability in incident record] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @00.10</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l1" 
+												tags="@00.10 @Incident1 @00"
+												devices="">
+												<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[validate urgency field availability in incident record] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @00.10</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:18</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
+												
+												<div class="st fail">
+													<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
+  (Session info: chrome=78.0.3904.108)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I92010A', ip: '10.238.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 453f4fcb754d68222e42d01d21fa169d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at pageObjects.BasePage.getURL(BasePage.java:36)
+	at steps.OWF_LoginPageSteps.userIsOnTheOneWorkflowLoginPage(OWF_LoginPageSteps.java:13)
+	at ✽.user is on the OneWorkflow login page(features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&_00.17/00.10_Validate_Urgency_field_availability_in_Incident_record.feature:9)
+</textarea></span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates importance field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates importance field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Critical:High:Average:Low:(clear)" should be available in Importance dropdown] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Critical:High:Average:Low:(clear)" should be available in Importance dropdown]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											</div>
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@00.20 @Incident1 @00"
+												devices="">
+												<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[validation Fault type field availability in incident record] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @00.20</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l1" 
+												tags="@00.20 @Incident1 @00"
+												devices="">
+												<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[validation Fault type field availability in incident record] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @00.20</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:22</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
+												
+												<div class="st fail">
+													<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
+  (Session info: chrome=78.0.3904.108)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I92010A', ip: '10.238.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 453f4fcb754d68222e42d01d21fa169d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at pageObjects.BasePage.getURL(BasePage.java:36)
+	at steps.OWF_LoginPageSteps.userIsOnTheOneWorkflowLoginPage(OWF_LoginPageSteps.java:13)
+	at ✽.user is on the OneWorkflow login page(features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&_00.17/00.20_Validate_fault_type_field_availability.feature:9)
+</textarea></span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates fault type dropdown availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates fault type dropdown availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Application fault:Data Fault:Network Fault:Roaming-Data Fault:Roaming-Voice Fault:Site Fault:Power Fault:Infra Fault:Transmission Fault:Access Fault:TV Fault:Voice Fault:(clear)" should be available in "Fault Type" dropdown] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Application fault:Data Fault:Network Fault:Roaming-Data Fault:Roaming-Voice Fault:Site Fault:Power Fault:Infra Fault:Transmission Fault:Access Fault:TV Fault:Voice Fault:(clear)" should be available in "Fault Type" dropdown]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											</div>
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@01.02 @Incident1 @01"
+												devices="">
+												<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[Register affected BU's] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @01.02</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @01</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l1" 
+												tags="@01.02 @Incident1 @01"
+												devices="">
+												<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[Register affected BU's] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @01.02</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @01</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:26</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
+												
+												<div class="st fail">
+													<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
+  (Session info: chrome=78.0.3904.108)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I92010A', ip: '10.238.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 453f4fcb754d68222e42d01d21fa169d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at pageObjects.BasePage.getURL(BasePage.java:36)
+	at steps.OWF_LoginPageSteps.userIsOnTheOneWorkflowLoginPage(OWF_LoginPageSteps.java:13)
+	at ✽.user is on the OneWorkflow login page(features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.02_Register_affected_BUs.feature:9)
+</textarea></span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates BU availability] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates BU availability]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on sweden checkbox under affected BU's] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on sweden checkbox under affected BU's]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on finland checkbox under affected BU's] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on finland checkbox under affected BU's]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates sweden and finland checkboxes are selected] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates sweden and finland checkboxes are selected]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											</div>
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@01.03 @Incident1 @01"
+												devices="">
+												<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[Set correct categorization] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @01.03</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @01</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l1" 
+												tags="@01.03 @Incident1 @01"
+												devices="">
+												<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[Set correct categorization] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @01.03</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @01</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:30</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
+												
+												<div class="st fail">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
+  (Session info: chrome=78.0.3904.108)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I92010A', ip: '10.238.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 453f4fcb754d68222e42d01d21fa169d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at pageObjects.BasePage.getURL(BasePage.java:36)
+	at steps.OWF_LoginPageSteps.userIsOnTheOneWorkflowLoginPage(OWF_LoginPageSteps.java:13)
+	at ✽.user is on the OneWorkflow login page(features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.03_Set_correct_categorization.feature:10)
+</textarea></span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on CTI details under sections] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on CTI details under sections]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates availability of category dropdown] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates availability of category dropdown]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "1:Access:BSS:Computer Equipment:Computer Services:Core:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:OSS:Packet_Transport:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:TV:VAS" should be available in "Category" dropdown] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "1:Access:BSS:Computer Equipment:Computer Services:Core:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:OSS:Packet_Transport:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:TV:VAS" should be available in "Category" dropdown]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects Category as "Core"] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects Category as "Core"]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates availability of type dropdown] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates availability of type dropdown]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And multiple statuses "Fixed_IMS:IP:MESSAGING:Mobile CS Core Network:Mobile IMS Core Network:Mobile PS Core Network:Mobile_CS:Mobile_PS:NFVI:Other:Presentation:Software:Sync:WLAN:Workflow" should be available in "Type" dropdown] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And multiple statuses "Fixed_IMS:IP:MESSAGING:Mobile CS Core Network:Mobile IMS Core Network:Mobile PS Core Network:Mobile_CS:Mobile_PS:NFVI:Other:Presentation:Software:Sync:WLAN:Workflow" should be available in "Type" dropdown]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user selects Type as "Mobile PS Core Network"] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user selects Type as "Mobile PS Core Network"]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates availability of item dropdown] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user validates availability of item dropdown]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "DNS:EPG::GGSN:NAT::NLS:PCRF:PGW::PM:RADIUS:SGSN:SHAPERS:TPE-CMIPBB" should be available in "Item" dropdown] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "DNS:EPG::GGSN:NAT::NLS:PCRF:PGW::PM:RADIUS:SGSN:SHAPERS:TPE-CMIPBB" should be available in "Item" dropdown]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects Item as "SGSN"] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects Item as "SGSN"]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and accepts alert]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											</div>
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@01.05 @Incident1 @01"
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[Setting location of incident origin] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @01.05</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @01</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l1" 
+												tags="@01.05 @Incident1 @01"
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[Setting location of incident origin] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @01.05</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @01</span>
+												</span>
+												
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:34</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
+												
+												<div class="st fail">
+													<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
+  (Session info: chrome=78.0.3904.108)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-I92010A', ip: '10.238.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 453f4fcb754d68222e42d01d21fa169d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at pageObjects.BasePage.getURL(BasePage.java:36)
+	at steps.OWF_LoginPageSteps.userIsOnTheOneWorkflowLoginPage(OWF_LoginPageSteps.java:13)
+	at ✽.user is on the OneWorkflow login page(features/Regression/Incident_OW_Core_Functionality/01.01-01.17/01.05_Set_location_of_incident_origin.feature:9)
+</textarea></span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on location under sections] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on location under sections]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "SE_" within the location ID+ field] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "SE_" within the location ID+ field]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to frame] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to frame]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see list of swedish sites] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see list of swedish sites]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on the next chunk button] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on the next chunk button]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st skip test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user highlights location "SE_Site_SE M1" and clicks ok and validates location details] started</span>
+												
+												<div class="st skip">
+													<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user highlights location "SE_Site_SE M1" and clicks ok and validates location details]</span>
+													
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.08.2020 15:21:38</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.08.2020 15:21:38</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
 													

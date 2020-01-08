@@ -1,4 +1,4 @@
-@Add_CI_&_Attachment
+@Add_CI_&_Attachment  @Reg_Problem
   Feature: User is able to add a CI and attachment to a problem ticket
     Scenario: user can create a problem record and add a CI and attachment to it
 

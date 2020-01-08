@@ -1,5 +1,5 @@
 #Need to check ticket status manually after 30 mins
-@Pending_Status
+@Pending_Status @Reg_Problem
 Feature: User is able to change status to pending
 
   Scenario: User logs into One workflow, creates a problem ticket, changes status to pending then checks ticket status

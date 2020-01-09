@@ -6,7 +6,7 @@
     Scenario: user is able to see child alarms present on parent ticket alarms tab
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_3" and password as "Test@1234"
+      When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects search menu as "Open Search Form:Trouble Event"
       Then trouble record form should appear in new tab

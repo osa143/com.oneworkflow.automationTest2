@@ -114,13 +114,13 @@ public class CommonUtils extends BasePage {
 
         try {
             Robot robot = new Robot();
-            robot.delay(2500);
+            robot.delay(250);
             robot.keyPress(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_V);
             robot.keyRelease(KeyEvent.VK_V);
             robot.keyRelease(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_ENTER);
-            robot.delay(500);
+            robot.delay(50);
             robot.keyRelease(KeyEvent.VK_ENTER);
         } catch (AWTException e) {
             e.printStackTrace();

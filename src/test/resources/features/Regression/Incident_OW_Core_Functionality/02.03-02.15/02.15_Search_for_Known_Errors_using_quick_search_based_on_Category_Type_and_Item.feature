@@ -1,6 +1,4 @@
-@02.15
-@Incident
-@02
+@02.15 @Incident
 #passed
   Feature: Search for known error using quick search based on category
     Scenario: Search for known error using quick search based on category

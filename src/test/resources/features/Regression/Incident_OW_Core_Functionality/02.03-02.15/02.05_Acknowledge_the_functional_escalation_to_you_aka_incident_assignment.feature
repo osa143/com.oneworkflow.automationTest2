@@ -1,6 +1,4 @@
-@02.05
-@Incident
-@02
+@02.05 @Incident
   #passed
   Feature: user can acknowledge the functional escalation to you aka incident assignment
     Scenario: user can acknowledge the functional escalation to you aka incident assignment

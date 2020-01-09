@@ -1,6 +1,4 @@
-@00.03
-@Incident
-@00
+@OLA_Target_Time_Availability @Incident
 #Passed
 Feature: OLA target time availability in Incident Record
 

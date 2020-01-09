@@ -55,7 +55,8 @@
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      When user right clicks on CI "cc001cgas001" and clears impact
+      And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
+      And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

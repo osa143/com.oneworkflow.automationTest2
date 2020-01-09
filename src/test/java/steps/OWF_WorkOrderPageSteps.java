@@ -81,7 +81,7 @@ public class OWF_WorkOrderPageSteps {
     }
     @Then("user should see assigned profile as {string}")
     public void userShouldSeeAssignedProfileAs(String arg0) {
-     Assert.assertEquals(workOrderPage.getAssignedProfileStatus(), arg0);
+     Assert.assertEquals(workOrderPage.getAssignedProfileStatus(),arg0);
 
     }
 
@@ -734,7 +734,7 @@ public class OWF_WorkOrderPageSteps {
     @And("user validates email notification is sent")
     public void userValidatesEmailNotificationIsSent() {
       workOrderPage.clickOnSent();
-      Assert.assertEquals(workOrderPage.getMethodText(), "Email - HTML");
+      Assert.assertEquals(workOrderPage.getMethodText(), "Email HTML");
     }
 
     @And("user highlights ticket under work order")

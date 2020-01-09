@@ -1,4 +1,4 @@
-@Timeline_Update @problem
+@Timeline_Update @problem @Reg_Problem
 #passed
 Feature: Timeline update
 

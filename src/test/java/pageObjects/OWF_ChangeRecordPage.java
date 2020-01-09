@@ -479,4 +479,10 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     public void selectRequestCategoryOnChangeRecordPage(String value){
         selectDropDownNameAndValue(ddREQUEST_CATEGORY, value, false);
     }
+
+    public boolean verifyImpactAvailability() {
+        Boolean availability= verifyElementIsDisplayed(By.id(dd_CHANGE_TYPE));
+        System.out.println(availability);
+        return availability;
+    }
 }

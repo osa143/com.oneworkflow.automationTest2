@@ -107,12 +107,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.SessionNotCreatedException</a>
+							<a href="#" class="item-title _500">org.openqa.selenium.TimeoutException</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.SessionNotCreatedException</h5>
+								<h5 class="mb-4">org.openqa.selenium.TimeoutException</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="4" parent-id="1">
+<tr class="s-fail" test-id="11" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Given user is on the OneWorkflow login page <br/><span class="text-muted text-sm">user checks the format of bulk loading format</span></td>
-	<td>0h 0m 18s+52msc</td>
+	<td class="_600">Then multiple statuses "New" should be available in "Status" dropdown <br/><span class="text-muted text-sm">validation of status field structure</span></td>
+	<td>0h 0m 30s+999msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,85 +136,51 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.SessionNotCreatedException: session not created
-from chrome not reachable
+		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.className: MenuTableBody (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.BasePage.findElement(BasePage.java:57)
+	at pageObjects.BasePage.getDropdownValues(BasePage.java:256)
+	at pageObjects.BasePage.verifyDropdownValues(BasePage.java:899)
+	at steps.OWF_ProblemRecordPageSteps.multipleStatusesShouldBeAvailableInDropdown(OWF_ProblemRecordPageSteps.java:618)
+	at ✽.multiple statuses "New" should be available in "Status" dropdown(features/Regression/Change/Change_Field_Validation/Status_field_validation.feature:14)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".MenuTableBody"}
   (Session info: chrome=79.0.3945.117)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-5UILU0B', ip: '10.85.240.88', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: driver.version: ChromeDriver
-remote stacktrace: Backtrace:
-	Ordinal0 [0x0030A113+1548563]
-	Ordinal0 [0x0028DDA1+1039777]
-	Ordinal0 [0x0020E32E+516910]
-	Ordinal0 [0x00208012+491538]
-	Ordinal0 [0x002086EB+493291]
-	Ordinal0 [0x00209855+497749]
-	Ordinal0 [0x00205885+481413]
-	Ordinal0 [0x0020F0D0+520400]
-	Ordinal0 [0x001BC030+180272]
-	Ordinal0 [0x001BB59D+177565]
-	Ordinal0 [0x001B95FB+169467]
-	Ordinal0 [0x001A160A+71178]
-	Ordinal0 [0x001A2690+75408]
-	Ordinal0 [0x001A2629+75305]
-	Ordinal0 [0x002A71B7+1143223]
-	GetHandleVerifier [0x003A2B46+507814]
-	GetHandleVerifier [0x003A2864+507076]
-	GetHandleVerifier [0x003A9F47+537511]
-	GetHandleVerifier [0x003A3402+510050]
-	Ordinal0 [0x0029F29C+1110684]
-	Ordinal0 [0x002A938B+1151883]
-	Ordinal0 [0x002A94F3+1152243]
-	Ordinal0 [0x002A83F5+1147893]
-	BaseThreadInitThunk [0x76DA6359+25]
-	RtlGetAppContainerNamedObjectPath [0x77077B74+228]
-	RtlGetAppContainerNamedObjectPath [0x77077B44+180]
-
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\drmay\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58762}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 199ad70020c9afb9bca330d2df780268
+*** Element info: {Using=class name, value=MenuTableBody}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
-	at driver.factory.DriverFactory.getDriver(DriverFactory.java:58)
-	at pageObjects.BasePage.<init>(BasePage.java:24)
-	at pageObjects.OWF_LoginPage.<init>(OWF_LoginPage.java:5)
-	at steps.OWF_LoginPageSteps.<init>(OWF_LoginPageSteps.java:9)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.picocontainer.injectors.AbstractInjector.newInstance(AbstractInjector.java:145)
-	at org.picocontainer.injectors.ConstructorInjector$1.run(ConstructorInjector.java:342)
-	at org.picocontainer.injectors.AbstractInjector$ThreadLocalCyclicDependencyGuard.observe(AbstractInjector.java:270)
-	at org.picocontainer.injectors.ConstructorInjector.getComponentInstance(ConstructorInjector.java:364)
-	at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.getComponentInstance(AbstractInjectionFactory.java:56)
-	at org.picocontainer.behaviors.AbstractBehavior.getComponentInstance(AbstractBehavior.java:64)
-	at org.picocontainer.behaviors.Stored.getComponentInstance(Stored.java:91)
-	at org.picocontainer.DefaultPicoContainer.getInstance(DefaultPicoContainer.java:699)
-	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:647)
-	at org.picocontainer.DefaultPicoContainer.getComponent(DefaultPicoContainer.java:678)
-	at cucumber.runtime.java.picocontainer.PicoFactory.getInstance(PicoFactory.java:40)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
+	at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at pageObjects.BasePage.findElement(BasePage.java:57)
+	at pageObjects.BasePage.getDropdownValues(BasePage.java:256)
+	at pageObjects.BasePage.verifyDropdownValues(BasePage.java:899)
+	at steps.OWF_ProblemRecordPageSteps.multipleStatusesShouldBeAvailableInDropdown(OWF_ProblemRecordPageSteps.java:618)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
 	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:49)
 	at cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
 	at cucumber.runner.TestStep.executeStep(TestStep.java:63)
@@ -248,7 +214,6 @@ remote stacktrace: Backtrace:
 	at org.testng.TestNG.run(TestNG.java:1017)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)
-	at ✽.user is on the OneWorkflow login page(features/SPRINTS/Sprint_4.3 BR's_&_Defect_Fixes/BR-2866_SAO-427_Bulk_CI_Plugin/Change/Format/50CI's/Manual_Change.feature:6)
 </textarea>
 	</td>
 </tr>
@@ -276,7 +241,7 @@ remote stacktrace: Backtrace:
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Jan 9, 2020 09:26:19 AM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jan 9, 2020 01:59:41 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

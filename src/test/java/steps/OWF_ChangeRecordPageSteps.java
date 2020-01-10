@@ -840,6 +840,8 @@ public class OWF_ChangeRecordPageSteps {
         Assert.assertTrue(changeRecordPage.verifyImpactAvailability());
     }
 
+
 }
+
 
 

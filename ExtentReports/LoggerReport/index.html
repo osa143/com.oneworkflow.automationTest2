@@ -50,6 +50,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -94,7 +102,7 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
@@ -112,7 +120,7 @@
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 						    	        <a class="dropdown-item" href="#"><span class="cf">@changes</span></a>
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Template_Field_Structure_validation</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@Title_Field_Structure_Validation</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -129,40 +137,40 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="pass">
-											<div class="st pass test l0" 
-												tags="@changes @Template_Field_Structure_validation"
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@changes @Title_Field_Structure_Validation"
 												devices="">
-												<span class="tt">01.10.2020 09:12:11</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">[Validation of change template field structure] started</span>
+												<span class="tt">01.10.2020 10:39:50</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[Validation of change Title field structure] started</span>
 												<span class="category-list">
 													<span class="category badge"><i class="fa fa-tag"></i> @changes</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @Template_Field_Structure_validation</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Title_Field_Structure_Validation</span>
 												</span>
 												
 											</div>
-											<div class="st pass test l1" 
-												tags="@changes @Template_Field_Structure_validation"
+											<div class="st fail test l1" 
+												tags="@changes @Title_Field_Structure_Validation"
 												devices="">
-												<span class="tt">01.10.2020 09:12:11</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">|---[Validation of change template field structure] started</span>
+												<span class="tt">01.10.2020 10:39:50</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[Validation of change Title field structure] started</span>
 												<span class="category-list">
 													<span class="category badge"><i class="fa fa-tag"></i> @changes</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @Template_Field_Structure_validation</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Title_Field_Structure_Validation</span>
 												</span>
 												
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.10.2020 09:12:11</span>&nbsp;
+												<span class="tt">01.10.2020 10:39:50</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.10.2020 09:12:24</span>&nbsp;
+													<span class="tt">01.10.2020 10:40:02</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
 													
@@ -172,12 +180,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.10.2020 09:12:24</span>&nbsp;
+												<span class="tt">01.10.2020 10:40:02</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid user and password] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.10.2020 09:12:28</span>&nbsp;
+													<span class="tt">01.10.2020 10:40:08</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid user and password]</span>
 													
@@ -187,12 +195,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.10.2020 09:12:28</span>&nbsp;
+												<span class="tt">01.10.2020 10:40:08</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.10.2020 09:12:28</span>&nbsp;
+													<span class="tt">01.10.2020 10:40:08</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
 													
@@ -202,12 +210,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.10.2020 09:12:28</span>&nbsp;
+												<span class="tt">01.10.2020 10:40:08</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create change record] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.10.2020 09:12:37</span>&nbsp;
+													<span class="tt">01.10.2020 10:40:16</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create change record]</span>
 													
@@ -217,12 +225,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.10.2020 09:12:37</span>&nbsp;
+												<span class="tt">01.10.2020 10:40:16</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to window 1] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.10.2020 09:12:37</span>&nbsp;
+													<span class="tt">01.10.2020 10:40:16</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to window 1]</span>
 													
@@ -232,42 +240,55 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.10.2020 09:12:37</span>&nbsp;
+												<span class="tt">01.10.2020 10:40:16</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then change record page should be opened and Change form is displayed] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.10.2020 09:12:37</span>&nbsp;
+													<span class="tt">01.10.2020 10:40:16</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then change record page should be opened and Change form is displayed]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
+											<div class="st fail test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.10.2020 09:12:37</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User selects "Template" as dropdownValue and should see values for "readonly"] started</span>
+												<span class="tt">01.10.2020 10:40:16</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User selects "Title" as dropdownValue and should see values for "notreadonly"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.10.2020 09:12:37</span>&nbsp;
+													<span class="tt">01.10.2020 10:40:16</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User selects "Template" as dropdownValue and should see values for "readonly"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User selects "Title" as dropdownValue and should see values for "notreadonly"]</span>
 													
-													<span class="td"><table class='runtime-table table-striped table'><tr><td>DropdownValue</td><td>DropdownValuesToBePresent</td></tr><tr><td>All:IT:Carrier</td><td>Telia Carrier PROD and UAT Database Changes:Telia Carrier UAT Changes</td></tr><tr><td>All:IT:CES | Billing | Invoicing & Customer Interaction</td><td>BDL Std change</td></tr><tr><td>All:IT:CES | Channels | Platforms & Architecture</td><td>Installation Agora-TSE</td></tr><tr><td>All:IT:DK | Data Insight</td><td>Deploy to AWS</td></tr><tr><td>All:IT:FI | Online & Sales</td><td>New Feature or User Story to AccessManager:New Feature or User Story to Billarchive:New Feature or User Story to Omat Sivut:New Feature or User Story to Selleri:New Feature or User Story to Sokudo:New Feature or User Story to Säilä</td></tr><tr><td>All:IT:FI | Provisioning & Service Management</td><td>OSS application parameter change</td></tr><tr><td>All:IT:FI | VAS</td><td>Viprion security patch</td></tr></table></span>
+													<span class="td"><table class='runtime-table table-striped table'><tr><td>DropdownValue</td><td>DropdownValuesToBePresent</td></tr><tr><td>IT:BSS</td><td>Examples</td></tr><tr><td>IT:CIO:Data & Information Management</td><td>IT | CIO | Data & Information Management</td></tr></table></span>
+												</div>
+												<div class="st fail">
+													<span class="tt">01.10.2020 10:40:29</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User selects "Title" as dropdownValue and should see values for "notreadonly"]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">java.lang.NullPointerException
+	at pageObjects.BasePage.openDropdownAndGetValues(BasePage.java:295)
+	at pageObjects.BaseRecordPage.verifyDropdownValuesByName(BaseRecordPage.java:575)
+	at pageObjects.BaseRecordPage.verifyMultipleDropdownValues(BaseRecordPage.java:586)
+	at steps.OWF_TroubleEventPageSteps.userSelectsDropdownNameAsDropdownValueAndShouldSeeValues(OWF_TroubleEventPageSteps.java:1090)
+	at ✽.User selects "Title" as dropdownValue and should see values for "notreadonly"(features/Regression/Change/Change_Field_Validation/Title_Field_Structure_Validation.feature:11)
+</textarea></span>
 												</div>
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.10.2020 09:13:28</span>&nbsp;
+												<span class="tt">01.10.2020 10:40:29</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.10.2020 09:13:28</span>&nbsp;
+													<span class="tt">01.10.2020 10:40:29</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
 													

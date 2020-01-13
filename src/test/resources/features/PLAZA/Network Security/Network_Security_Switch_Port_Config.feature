@@ -18,7 +18,7 @@
       And user enters network security switch port request as "Test10 Network Security Switch Port/Request"
       Then user selects existing IP net as "Yes"
       And user selects new IP net as "Yes"
-      And user selects network security add CI as "cc100cgas001"
+      And user selects Add CI as "cc100cgas001"
       Then user enters Network Security Switch Port description as "Test10 Network Security/Description"
       And user enters additional comments as "Network Security - Test10/AC"
       Then user clicks on "Submit"
@@ -37,6 +37,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Network Routing/Switching"
       And user validates request type as "Service Request | PLAZA"
+     #Not sure about description validation outside of a table
       And user validates network security switch port config description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
@@ -53,7 +54,8 @@
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      When user right clicks on CI "cc100cgas001" and clears impact
+      And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
+      And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

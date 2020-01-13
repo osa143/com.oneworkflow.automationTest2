@@ -4,7 +4,7 @@ Feature: clearing of alarms within OW
   Scenario: user is able to clear alarms that have come from a FM system
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_3" and password as "Test@1234"
+    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 1

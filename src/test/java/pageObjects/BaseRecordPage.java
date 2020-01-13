@@ -140,7 +140,18 @@ public class BaseRecordPage extends BasePage {
     private static final String txtDESCRIPTION_ID = "arid_WIN_0_777031007";
     private static final String ddPRIORITY_ID = "Priority";
 
-
+    private static final String ddCATEGORY = "Category";
+    private static final String ddTYPE = "Type";
+    private static final String ddITEM = "Item";
+    public void selectCategory(String value){
+        selectDropDownNameAndValue(ddCATEGORY, value, false);
+    }
+    public void selectType(String value){
+        selectDropDownNameAndValue(ddTYPE, value, false);
+    }
+    public void selectsItem(String value){
+        selectDropDownNameAndValue(ddITEM, value, false);
+    }
     public void selectPriority(String value) {
         selectDropDownNameAndValue(ddPRIORITY_ID, value, false);
 
@@ -452,6 +463,7 @@ public class BaseRecordPage extends BasePage {
         WebElement element = driver.switchTo().activeElement();
         element.sendKeys(Keys.UP);
         element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.UP);
         element.sendKeys(Keys.ARROW_RIGHT);
         element.sendKeys(Keys.ENTER);
     }
@@ -586,6 +598,23 @@ public class BaseRecordPage extends BasePage {
             clickEscButton();
             wait(500);
         }
+    }
+    public void verifyCTI_dropdownValues(DataTable dataTable){
+        List<List<String>> dropdownValues = dataTable.asLists(String.class);
+        for (int i = 1; i < dropdownValues.size(); i ++) {
+
+            String category = dropdownValues.get(i).get(0);
+            selectCategory(category);
+            String typeDropdownValues = dropdownValues.get(i).get(1);
+            Assert.assertTrue(verifyDropdownValues(typeDropdownValues,ddTYPE, "notreadonly"));
+            wait(500);
+            String type = dropdownValues.get(i).get(2);
+            selectType(type);
+            String itemDropdownValues = dropdownValues.get(i).get(3);
+            Assert.assertTrue(verifyDropdownValues(itemDropdownValues,ddITEM, "notreadonly"));
+            wait(500);
+        }
+
     }
 
 

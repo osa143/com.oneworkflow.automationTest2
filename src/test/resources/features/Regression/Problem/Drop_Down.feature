@@ -1,4 +1,4 @@
-@Drop_Down
+@Drop_Down @Reg_Problem
   #passed
   Feature: user validates drop-downs for problem record
     Scenario: user verifies available information

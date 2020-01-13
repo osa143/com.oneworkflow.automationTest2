@@ -340,16 +340,14 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
             clickAdd_AttachmentOnFrame();
             clickonChooseFile_OnFrame();
             CommonUtils.uploadFile(fullFilePath);
-            wait(2000);
+            wait(1000);
             clickOk_AttachmentOnFrame();
             switchToFrameByIndex(2);
             if(type.equals("external"))
             {
                 clickExternalRadioButton();
             }
-            if(type.equals("internal")) {
-                clickInternalRadioButton();
-            }
+            clickInternalRadioButton();
             clickSave_AttachmentOnFrame();
             Assert.assertTrue(validateAttachmentAvailability(attachmentsCount));
         }

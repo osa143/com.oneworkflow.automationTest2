@@ -54,9 +54,9 @@ Feature: checking of bulk loading format
       Examples:
 
           |fileTypes                                                                                           |
-         # |Test Attachments\500 CI's (No Duplicates)\CSV.csv|
-        #  |Test Attachments\500 CI's (No Duplicates)\TEXT.txt|
-          |Test Attachments\500 CI's (No Duplicates)\XLS.xls|
-         # |Test Attachments\500 CI's (No Duplicates)\XLSX.xlsx|
+          |Test Attachments\500 CI's (No Duplicates)\CSV.csv|
+          #|Test Attachments\500 CI's (No Duplicates)\TEXT.txt|
+          #|Test Attachments\500 CI's (No Duplicates)\XLS.xls|
+         #|Test Attachments\500 CI's (No Duplicates)\XLSX.xlsx|
 
 

@@ -7,9 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@Bulk_Loading_Format_change_50CIs_Manual"}
+        tags = {"@00.21"}
 )
 public class Test_Runner extends BaseTest {
 }
-
-

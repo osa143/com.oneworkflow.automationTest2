@@ -1,5 +1,5 @@
 @00.07
-@Incident
+@Incident1
 @00
 #passed
   Feature: Template data field  must contain valid options

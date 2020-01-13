@@ -1286,6 +1286,12 @@ public class OWF_ProblemRecordPageSteps {
       problemRecordPage.createProblemTicket(dataTable);
 
     }
+
+    @Then("user selects category and verifies Type dropdown values then selects Type and verifies item dropdown values")
+    public void userSelectsCategoryAndVerifiesTypeDropdownValuesThenSelectsTypeAndVerifiesItemDropdownValues(DataTable dataTable) {
+     problemRecordPage.verifyCTI_dropdownValues(dataTable);
+
+    }
 }
 
 

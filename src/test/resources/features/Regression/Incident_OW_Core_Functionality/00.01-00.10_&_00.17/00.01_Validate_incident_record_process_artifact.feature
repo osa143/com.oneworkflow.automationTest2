@@ -1,6 +1,4 @@
-@00.01
-@Incident1
-@00
+@Validate_Incident_Record_Process_Artifact @Incident1
   #Passed
   Feature: Validate incident record process artifact
 
@@ -115,5 +113,5 @@
       And user validates "Event End Time" is present
       And user validates "Withdrawn Reason" is present
       And user validates Save is present
-      #And user logsOut and accepts alert
+      And user logsOut and accepts alert
 

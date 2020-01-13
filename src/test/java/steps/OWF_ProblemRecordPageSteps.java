@@ -331,7 +331,6 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user switches to frame")
     public void userSwitchesToFrame() {
-        problemRecordPage.wait(3000);
         int size = problemRecordPage.getDriver().findElements(By.tagName("iframe")).size();
         problemRecordPage.switchToFrameByIndex(size - 1);
     }
@@ -1030,7 +1029,6 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user adds attachment and verifies under {string}")
     public void userAddsAttachmentAndVerifies(String type, DataTable attachments) {
-        problemRecordPage.wait(2000);
         problemRecordPage.addAttachmentsAndVerify(attachments, type);
     }
 

@@ -9,10 +9,13 @@ Feature: verify the functionality of 5G from frontend
      Then user successfully logged in to OneWorkflow and agent console should be displayed
      And user opens temip ticket which created from external
 
+
+
   Scenario: verify temip ticket details
     Given user is on temip ticket window
      Then user validates source field as "Temip"
     And user verifies all ticket details are correct
+
 
   Scenario: Existing assignment rules can be configured using EQUAL and LIKE conditions
     When user clicks on "Service Info" tab

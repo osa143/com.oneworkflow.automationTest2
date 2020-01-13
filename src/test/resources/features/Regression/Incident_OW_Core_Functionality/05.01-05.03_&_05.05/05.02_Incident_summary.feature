@@ -1,6 +1,4 @@
-@05.02
-@Incident
-@05
+@05.02_Incident_summary @Incident  @Incident1
 #passed
 Feature: Incident summary
   Scenario: Incident summary

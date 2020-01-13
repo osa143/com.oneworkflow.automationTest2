@@ -1,6 +1,4 @@
-@00.20
-@Incident1
-@00
+@00.20 @Incident1 @00
 #passed
   Feature: validation Fault type field availability in incident record
 

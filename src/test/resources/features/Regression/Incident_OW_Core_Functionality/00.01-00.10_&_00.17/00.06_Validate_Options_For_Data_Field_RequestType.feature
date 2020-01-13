@@ -14,5 +14,9 @@ Feature: Validate options for data field request type
     And user switches to window 1
     Then trouble record form should appear in new tab
     And user verifies request type field is visible
-    Then multiple statuses "Customer Reclamation:Event:Stakeholder:Third Party:(clear)" should be available in "Request Type" dropdown
+    Then multiple statuses "Customer:Customer Reclamation:Event:Internal User:Preventive Maintenance:Stakeholder:Third Party:(clear)" should be available in "Request Type" dropdown
+    And User selects "Request Type" as dropdownValue and should see values for "notreadonly"
+      | DropdownValue | DropdownValuesToBePresent|
+      | Service Request | Service Request:Improvement|
     And user logsOut and accepts alert
+

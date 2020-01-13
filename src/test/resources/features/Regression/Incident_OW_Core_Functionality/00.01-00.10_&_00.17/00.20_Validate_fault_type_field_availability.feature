@@ -13,7 +13,7 @@
       And user switches to window 1
       Then trouble record form should appear in new tab
       When user validates fault type dropdown availability
-      Then multiple statuses "Application fault:Data Fault:Network Fault:Roaming-Data Fault:Roaming-Voice Fault:Site Fault:Power Fault:Infra Fault:Transmission Fault:Access Fault:TV Fault:Voice Fault:(clear)" should be available in "Fault Type" dropdown
+      Then multiple statuses "Access Fault:Application fault:Data Fault:Infra Fault:Network Fault:Power Fault:Roaming-Data Fault:Roaming-Voice Fault:Site Fault:Transmission Fault:TV Fault:Voice Fault:(clear)" should be available in "Fault Type" dropdown
       And user logsOut and accepts alert
 
 

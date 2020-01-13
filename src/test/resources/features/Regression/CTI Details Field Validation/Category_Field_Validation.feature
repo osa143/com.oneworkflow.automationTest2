@@ -1,4 +1,4 @@
-@CTI_FieldValidations
+@CTI_FieldValidations1
 
   Feature: CTI field validation
     Scenario: validation CTI fields

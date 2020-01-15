@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="10" parent-id="1">
+<tr class="s-fail" test-id="9" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then user selects category and verifies Type dropdown values then selects Type and verifies item dropdown values <br/><span class="text-muted text-sm">validation CTI fields</span></td>
-	<td>0h 0m 14s+373msc</td>
+	<td class="_600">Then user validates impact duration days as "0" <br/><span class="text-muted text-sm">Validation of change Completed Code field structure</span></td>
+	<td>0h 0m 5s+134msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -135,17 +135,16 @@
 </tr>
 <tr class="details">
 	<td colspan="5">
-		<textarea disabled class="code-block"><table class='runtime-table table-striped table'><tr><td>category</td><td>TypeDropdownValues</td><td>Type</td><td>ItemDropdownValues</td></tr><tr><td>Access</td><td>Radio Access Network:RAN:Telia Owned CPE:WLAN:WLAN Access</td><td>Radio Access Network</td><td>BSC:eNodeB:GSMCell:MFNCell:nodeB:Repeater:RNP</td></tr></table></textarea>
 		
-		
-		<textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
+		<textarea disabled class="code-block">java.lang.AssertionError: expected [0] but found []
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at pageObjects.BaseRecordPage.verifyCTI_dropdownValues(BaseRecordPage.java:614)
-	at steps.OWF_ProblemRecordPageSteps.userSelectsCategoryAndVerifiesTypeDropdownValuesThenSelectsTypeAndVerifiesItemDropdownValues(OWF_ProblemRecordPageSteps.java:1292)
-	at ✽.user selects category and verifies Type dropdown values then selects Type and verifies item dropdown values(features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&_00.17/00.20_Validate_fault_type_field_availability.feature:29)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at steps.OWF_ChangeRecordPageSteps.userValidatesImpactDurationDaysAs(OWF_ChangeRecordPageSteps.java:765)
+	at ✽.user validates impact duration days as "0"(features/Regression/Change/Change_Validation/Impact_Duration_Field_Structure Validation.feature:13)
 </textarea>
 	</td>
 </tr>
@@ -173,7 +172,7 @@
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Jan 12, 2020 12:20:54 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jan 15, 2020 02:51:36 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

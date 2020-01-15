@@ -1,5 +1,5 @@
 @00.06
-@Incident
+@Incident1
 @00
 #Passed
 Feature: Validate options for data field request type

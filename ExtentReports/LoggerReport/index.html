@@ -106,7 +106,7 @@
 										
 										
 										
-										<a class="dropdown-item" href="#"><span class="tf" status="skip"><i class="fa fa-dot-circle-o text-blue"></i>Skip</span></a>
+										
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 									</div>
@@ -119,8 +119,10 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@changes</span></a>
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Template_Field_Structure_validation</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@00.20</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@Incident1</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@00</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@00.21</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -139,40 +141,133 @@
 										<h6 class="mb-3 ml-1">Test Logs</h6>
 											<div class="tsc" status="fail">
 											<div class="st fail test l0" 
-												tags="@changes @Template_Field_Structure_validation"
+												tags="@00.20 @Incident1 @00"
 												devices="">
-												<span class="tt">01.14.2020 15:23:12</span>&nbsp;
+												<span class="tt">01.12.2020 12:20:54</span>&nbsp;
 												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">[Validation of change template field structure] started</span>
+												<span class="tn">[validation Fault type field availability in incident record] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @changes</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @Template_Field_Structure_validation</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00.20</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00</span>
 												</span>
 												
 											</div>
 											<div class="st fail test l1" 
-												tags="@changes @Template_Field_Structure_validation"
+												tags="@00.20 @Incident1 @00 @00.21"
 												devices="">
-												<span class="tt">01.14.2020 15:23:12</span>&nbsp;
+												<span class="tt">01.12.2020 12:20:54</span>&nbsp;
 												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">|---[Validation of change template field structure] started</span>
+												<span class="tn">|---[validation CTI fields] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @changes</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @Template_Field_Structure_validation</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00.20</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Incident1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @00.21</span>
 												</span>
 												
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.14.2020 15:23:12</span>&nbsp;
+												<span class="tt">01.12.2020 12:20:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.14.2020 15:23:25</span>&nbsp;
+													<span class="tt">01.12.2020 12:21:09</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.12.2020 12:21:09</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.12.2020 12:21:15</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.12.2020 12:21:15</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.12.2020 12:21:15</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.12.2020 12:21:15</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.12.2020 12:21:56</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create trouble event]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.12.2020 12:21:56</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.12.2020 12:21:56</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.12.2020 12:21:56</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.12.2020 12:22:10</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then trouble record form should appear in new tab]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.12.2020 12:22:10</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on CTI details under sections] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.12.2020 12:22:10</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on CTI details under sections]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -180,132 +275,42 @@
 											<div class="st fail test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.14.2020 15:23:25</span>&nbsp;
+												<span class="tt">01.12.2020 12:22:10</span>&nbsp;
 												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid user and password] started</span>
-												
-												<div class="st fail">
-													<span class="tt">01.14.2020 15:23:55</span>&nbsp;
-													<span class="ts">fail</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid user and password]</span>
-													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.TimeoutException: timeout
-  (Session info: chrome=79.0.3945.117)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-5UILU0B', ip: '10.85.242.28', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\drmay\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52426}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 07b6a66cd49a6e7c4322e3aa76442a8c
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at pageObjects.OWF_LoginPage.clickLogin(OWF_LoginPage.java:22)
-	at pageObjects.OWF_LoginPage.doLogin(OWF_LoginPage.java:28)
-	at steps.OWF_LoginPageSteps.userLogsInWithValidUserAndPassword(OWF_LoginPageSteps.java:36)
-	at ✽.user logs in with valid user and password(features/Regression/Change/Change_Validation/Template_Field_Structures_Validation.feature:8)
-</textarea></span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.14.2020 15:23:55</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.14.2020 15:23:55</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.14.2020 15:23:55</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create change record] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.14.2020 15:23:55</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create change record]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.14.2020 15:23:55</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to window 1] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.14.2020 15:23:55</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to window 1]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.14.2020 15:23:55</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then change record page should be opened and Change form is displayed] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.14.2020 15:23:55</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then change record page should be opened and Change form is displayed]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.14.2020 15:23:55</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User selects "Template" as dropdownValue and should see values for "readonly"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user selects category and verifies Type dropdown values then selects Type and verifies item dropdown values] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.14.2020 15:23:55</span>&nbsp;
+													<span class="tt">01.12.2020 12:22:10</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User selects "Template" as dropdownValue and should see values for "readonly"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user selects category and verifies Type dropdown values then selects Type and verifies item dropdown values]</span>
 													
-													<span class="td"><table class='runtime-table table-striped table'><tr><td>DropdownValue</td><td>DropdownValuesToBePresent</td></tr><tr><td>All:IT:Carrier</td><td>Telia Carrier PROD and UAT Database Changes:Telia Carrier UAT Changes</td></tr><tr><td>All:IT:CES | Billing | Invoicing & Customer Interaction</td><td>BDL Std change</td></tr><tr><td>All:IT:CES | Channels | Platforms & Architecture</td><td>Installation Agora-COTS:Installation Agora-TSE</td></tr><tr><td>All:IT:DK | Data Insight</td><td>Deploy to AWS</td></tr><tr><td>All:IT:FI | Provisioning & Service Management</td><td>OSS application parameter change</td></tr><tr><td>All:IT:FI | VAS</td><td>Viprion security patch</td></tr><tr><td>All:IT:Group | SEO | TV</td><td>Telia Play Standard Change</td></tr><tr><td>All:IT:INF | Network | Data Center Networks</td><td>Routing and Switching</td></tr><tr><td>All:IT:INF | Network | Functionalities & Security</td><td>Firewall Orchestration Platform</td></tr><tr><td>All:IT:INF | Network | Internal Networks</td><td>Implemenation of configuration changes in ManageLan Equipment:Implementation of configuration changes in TSRU-VPN-servers</td></tr><tr><td>All:IT:NO | Product & Production Mobile</td><td>Standard change for Product & Production Mobile NO</td></tr><tr><td>All:IT:PRO | Resources Management |Planning</td><td>CDDS standard deployment:Database service (Fenix):Installing a new build of Atoll software</td></tr><tr><td>All:IT:SE | Enterprise|CIS</td><td>CCS-CALLGUIDE-RECORDING:CCS-TSCC-IVR</td></tr><tr><td>All:IT:SE | Enterprise|TP Family</td><td>Touchpoint Family Standard</td></tr><tr><td>All:Mobile:3rd Parties</td><td>RPA (Robotic Process Automation) - Email to CR</td></tr><tr><td>All:Mobile:Billing</td><td>Nobill - Customer refund (SE):Nobill - Customer refund (SE):Nobill - Price and parameter change, new campaign, configuration updates (SE)</td></tr><tr><td>All:Mobile:Construction Small premises</td><td>Femto GW security Audit and Hardening (NO)</td></tr><tr><td>All:Mobile:CS Core (Voice)</td><td>Administration Licenses:Administration User accounts:Blocking MVNO & SP services:CELLdata in CS Core:Configuration Interfaces & circuits:Configuration Number ranges:Configuration Signaling routing:CS Core Parameter change:Delivery Enterprise Services:Implementation Q&S, IN trigger:Measurements, logs and macros:Reboot of node, server, process:Replacement of faulty HW</td></tr><tr><td>All:Mobile:IMS Core</td><td>Administration Licenses IMS:Administration User accounts IMS:Blocking MVNO & SP services IMS:Configuration Interfaces & circuits IMS:Configuration Number ranges IMS:Configuration Signaling routing IMS:Delivery Enterprise Services IMS:Implementation Q&S, IN trigger IMS:Measurements, logs and macros IMS:Parameter change IMS:Reboot of node, server, process IMS:Replacement of faulty HW IMS</td></tr><tr><td>All:Mobile:IP Transport</td><td>Access lists / prefix lists / route policies/ QoS policies:Preparation/tests IP Transport:Standard Interface configuration:Preparation/tests IP Transport:Standard Interface configuration</td></tr><tr><td>All:Mobile:PS Core (Data)</td><td>Corporate Access single customer change:EPG parameter change:F5 NAT parameter change:Gn DNS Add, modify or remove data:LRF Zone File Update in GMLC Nodes:Preparation/tests PS Core:SACC IP change:SGSN/MME parameter change</td></tr><tr><td>All:Mobile:RAN - Externals</td><td>RAN Connectivity:RAN Decommissioning:RAN Integration:RAN Modification:RAN Swap</td></tr><tr><td>All:Mobile:RAN Ericsson</td><td>Parameter Change</td></tr><tr><td>All:Mobile:RAN Huawei</td><td>RAN Huawei Configuration change (limited area):TCH for NB-IoT (NO)</td></tr><tr><td>All:Mobile:RAN NSN</td><td>RAN NSN Configuration change (limited area)</td></tr><tr><td>All:Mobile:Service systems</td><td>Change SMS routing via HUB:SGW Standard change (FI):SIG Standard change (FI)</td></tr></table></span>
+													<span class="td"><table class='runtime-table table-striped table'><tr><td>category</td><td>TypeDropdownValues</td><td>Type</td><td>ItemDropdownValues</td></tr><tr><td>Access</td><td>Radio Access Network:RAN:Telia Owned CPE:WLAN:WLAN Access</td><td>Radio Access Network</td><td>BSC:eNodeB:GSMCell:MFNCell:nodeB:Repeater:RNP</td></tr></table></span>
 												</div>
-												<div class="st skip">
-													<span class="tt">01.14.2020 15:23:55</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User selects "Template" as dropdownValue and should see values for "readonly"]</span>
+												<div class="st fail">
+													<span class="tt">01.12.2020 12:22:25</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user selects category and verifies Type dropdown values then selects Type and verifies item dropdown values]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td">threw an exception<br><textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at pageObjects.BaseRecordPage.verifyCTI_dropdownValues(BaseRecordPage.java:614)
+	at steps.OWF_ProblemRecordPageSteps.userSelectsCategoryAndVerifiesTypeDropdownValuesThenSelectsTypeAndVerifiesItemDropdownValues(OWF_ProblemRecordPageSteps.java:1292)
+	at ✽.user selects category and verifies Type dropdown values then selects Type and verifies item dropdown values(features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&_00.17/00.20_Validate_fault_type_field_availability.feature:29)
+</textarea></span>
 												</div>
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.14.2020 15:23:55</span>&nbsp;
+												<span class="tt">01.12.2020 12:22:25</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.14.2020 15:23:55</span>&nbsp;
+													<span class="tt">01.12.2020 12:22:25</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
 													

@@ -32,3 +32,16 @@ Feature: MBOSS will be kept up to date with QoS site alarm incidents with active
     Given there is an incident with a 'Status' is equal to 'Cleared' 'Closed' or 'Withdrawn'
     When the MBOSS file automation generates a new file to send to MBOSS
     Then the incident and CIs will not be included in those files
+
+    Scenario Outline: validate CTI details
+
+      Given user selects Category as "<category>"
+      And multiple statuses "<TypeDropdownValues>" should be available in "Type" dropdown
+      When user selects Type as "<Type>"
+      And multiple statuses "<ItemDropdownValues>" should be available in "Item" dropdown
+
+
+      Examples:
+
+      |category|TypeDropdownValues|Type|ItemDropdownValues|
+       |Access  |Radio Access Network:RAN:Telia Owned CPE:WLAN:WLAN Access|Radio Access Network|BSC:eNodeB:GSMCell:MFNCell:nodeB:Repeater:RNC|

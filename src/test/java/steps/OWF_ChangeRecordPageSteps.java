@@ -841,6 +841,12 @@ public class OWF_ChangeRecordPageSteps {
     }
 
 
+    @And("user verifies actual impact is visible" )
+    public void userVerifiesActualImpactIsVisible() {
+        Assert.assertTrue(changeRecordPage.verifyActualImpactAvailability());
+    }
+
+
 }
 
 

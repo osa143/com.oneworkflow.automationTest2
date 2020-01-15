@@ -12,8 +12,6 @@
       Then change record page should be opened and Change form is displayed
       When user validates change type field availability
       Then multiple statuses "Change Project:Change Record:Change Freeze:(clear)" should be available in "Change Type" dropdown
-#      Then multiple statuses "Customer Reclamation:Event:Stakeholder:Third Party:(clear)" should be available in "Request Type" dropdown
-#      Then multiple options "string" should be available in Title dropdown
       And user logsOut and accepts alert
 
 

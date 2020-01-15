@@ -17,6 +17,8 @@
       |IT:BSS         |Examples                  |
 #      |IT:Carrier     |IT \| Carrier               |
       |IT:CIO:Data & Information Management         |IT \| CIO \| Data & Information Management             |
+      |IT:CIO:Data & Information Management         |IT \| CIO \| IT Management             |
+      |IT:CIO:Data & Information Management         |IT \| CIO \| Operational Governance             |
 
 
 

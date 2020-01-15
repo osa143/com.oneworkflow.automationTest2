@@ -833,6 +833,21 @@ public class OWF_ChangeRecordPageSteps {
     public void userCreatesChangeTicketWithFollowingDetails (DataTable dataTable){
                 changeRecordPage.createChangeTicket(dataTable);
             }
-        }
+
+    @When("user validates change type field availability")
+    public void userValidatesChangeTypeFieldAvailability() {
+
+        Assert.assertTrue(changeRecordPage.verifyImpactAvailability());
+    }
+
+
+    @And("user verifies actual impact is visible" )
+    public void userVerifiesActualImpactIsVisible() {
+        Assert.assertTrue(changeRecordPage.verifyActualImpactAvailability());
+    }
+
+
+}
+
 
 

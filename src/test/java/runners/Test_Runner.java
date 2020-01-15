@@ -7,7 +7,9 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@00.21"}
+        tags = {"@Template_Field_Structure_validation"}
 )
 public class Test_Runner extends BaseTest {
 }
+
+

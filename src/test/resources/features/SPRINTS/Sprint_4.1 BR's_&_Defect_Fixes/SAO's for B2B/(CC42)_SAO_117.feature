@@ -37,9 +37,8 @@ Feature: SLA class wrongly calculated
     #And user validates child ticket details are same as parent ticket
     Then user clicks save button
     When user switches to window 1
-    And user waits 5 secs
     And clicks on ticket refresh button
-   # And user accepts alert
+    And user accepts alert
     And user waits
     Then user clicks on work order tab
     And user validates child WorkOrder availability

@@ -755,7 +755,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user validates {string} BU is added automatically")
     public void userValidatesBUIsAddedAutomatically(String arg0) {
-        Assert.assertTrue(troubleEventPage.verifyElementIsSelectedByText(arg0));
+        Assert.assertTrue(troubleEventPage.verifyIsDenmarkSelected());
     }
 
     @And("user clicks on close button on bulk update window")

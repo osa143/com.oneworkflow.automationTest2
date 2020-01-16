@@ -331,7 +331,6 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user switches to frame")
     public void userSwitchesToFrame() {
-        problemRecordPage.wait(3000);
         int size = problemRecordPage.getDriver().findElements(By.tagName("iframe")).size();
         problemRecordPage.switchToFrameByIndex(size - 1);
     }
@@ -1030,7 +1029,6 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user adds attachment and verifies under {string}")
     public void userAddsAttachmentAndVerifies(String type, DataTable attachments) {
-        problemRecordPage.wait(2000);
         problemRecordPage.addAttachmentsAndVerify(attachments, type);
     }
 
@@ -1284,6 +1282,12 @@ public class OWF_ProblemRecordPageSteps {
     @When("user creates problem ticket with following details")
     public void userCreatesProblemTicketWithFollowingDetails(DataTable dataTable) {
       problemRecordPage.createProblemTicket(dataTable);
+
+    }
+
+    @Then("user selects category and verifies Type dropdown values then selects Type and verifies item dropdown values")
+    public void userSelectsCategoryAndVerifiesTypeDropdownValuesThenSelectsTypeAndVerifiesItemDropdownValues(DataTable dataTable) {
+     problemRecordPage.verifyCTI_dropdownValues(dataTable);
 
     }
 }

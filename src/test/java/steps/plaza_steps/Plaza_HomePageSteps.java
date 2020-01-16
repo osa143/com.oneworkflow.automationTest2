@@ -714,7 +714,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Firewall Routing Request pebble")
     public void userClicksOnFirewallRoutingRequestPebble() {
-        clickElement(By.xpath("//h2[contains(text(),'Firewall Routing Request')]"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[8]/div/a/div/h2"));
     }
 
     @Then("user selects New Change Service Request Name as {string}")
@@ -1217,7 +1217,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Network Routing Switching")
     public void userClicksOnNetworkRoutingSwitching() {
-        clickElement(By.xpath("//h2[contains(text(),'Network Routing/Switching')]"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[16]/div/a/div/h2"));
     }
 
     @And("user enters network security switch port request as {string}")

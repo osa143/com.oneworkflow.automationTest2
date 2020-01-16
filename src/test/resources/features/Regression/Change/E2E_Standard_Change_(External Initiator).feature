@@ -23,7 +23,6 @@ Feature: E2E standard change external initiator
     And user validates Rollback is readonly
     When user clicks save button
     And multiple error messages should appear with red boarder around fields
-    And user enters as "Test" in service and customer impact
     When user enters "CI B2" in the change builder field
     And user enters start time as 10 minutes fast from current sweden time
     And user enters end time as 16 minutes fast from current sweden time

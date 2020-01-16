@@ -23,7 +23,6 @@ Feature: E2E standard change internal initiator
     And user validates Rollback is readonly
     When user clicks save button
     And multiple error messages should appear with red boarder around fields
-    Then user enters as "Test" in service and customer impact
     When user enters "CI B2" in the change builder field
     And user enters start time as 10 minutes fast from current sweden time
     And user enters end time as 16 minutes fast from current sweden time
@@ -60,7 +59,7 @@ Feature: E2E standard change internal initiator
     And user validates owner as "Change Manager"
     And user should see assigned profile as "Change Implementation Control"
     Then change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Assigned to Scheduled. " on row 1
-    And user waits for 2 minutes
+    And user waits for 1 minutes
     And user clicks on ticket refresh button
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Start has changed from  UTC to 2019-09-05 10:15:00 UTC. Request Status has changed from Scheduled to Implementation." on row 2
     And user validates Description* isn't readonly
@@ -79,7 +78,6 @@ Feature: E2E standard change internal initiator
     And user clicks on ticket refresh button
     Then change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Impact has changed from  to No Impact. Actual End has changed from  UTC to 2019-09-05 10:21:00 UTC. Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed. " on row 2
     When user waits for 5 minutes
-    #21 minute wait when tested
     And user clicks on ticket refresh button
     And user validates ticket status as "Closed"
     And user clicks on timeline tab

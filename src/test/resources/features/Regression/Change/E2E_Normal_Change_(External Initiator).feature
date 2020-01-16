@@ -32,7 +32,7 @@ Feature: External Normal Change E2E
 #      And user closes calendar window
    # When user clicks on sweden checkbox under affected BU's
     And user selects request type as "Normal Change"
-    Then user selects title as "Mobile:IMS Core" on Change record page
+    Then user selects title as "Mobile:CS Core (Voice)" on Change record page
     And user selects request category as "Software Installation" on change record page
     And user enters description as "TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (External Initiator)"
     And user enters reason field as "Regression"
@@ -47,8 +47,8 @@ Feature: External Normal Change E2E
     And user waits
     Then user validates availability of tabs "Timeline:Diagnosis:Risk:Schedule:Interested Parties:Approval:Notifications:Linked Items:Work Orders:Service Level:Related Project:Service Info:Telenor" on change record page
     When user clicks on owner under sections
-    And user validates owner profile as "Change Initiator-External"
-    And user validates owner as "ChangeInitiator/Builder1"
+    #And user validates owner profile as "ChangeInitiator/Builder1"
+    #And user validates owner as "ChangeInitiator/Builder1"
     Then user clicks on Send button
     Then error message should display as "You must provide an answer to all the risk question outlined in the Risk tab before Send (ARERR 10000)" on change record page
     When user clicks on Risk tab
@@ -177,7 +177,7 @@ Feature: External Normal Change E2E
     And user clicks on view button
     Then user switches to frame
     And user enters "Change can be approved right away" in comments field
-    And user clicks approve button
+    And user clicks on approve button
     Then user switches to window 2
     And user clicks on ticket refresh button
     Then user validates ticket status as "Approved"
@@ -189,6 +189,7 @@ Feature: External Normal Change E2E
     Then user validates changes can be made on the ticket
     And user clicks on timeline tab
     And change should also be reflected in the timeline as ""
+    When user clears description field
     And user enters description as "TEST TICKET - New Description"
     And user clicks on save button
     Then change should also be reflected in the timeline as ""

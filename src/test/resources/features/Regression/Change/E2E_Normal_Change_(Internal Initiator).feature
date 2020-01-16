@@ -56,7 +56,7 @@
       When user answers all risk questions as below
       And user selects answer as "Impact to other systems/technologies are unclear"
       And user selects answer as "No"
-      And user selects answer as "Tested successfully, this is a pilot"
+      And user selects answer as "Tested succesfully, this is a pilot"
       And user selects answer as "Yes (outcome of the change can be instantly verified)"
       And user selects answer as "Yes"
       And user selects answer as "Simple"
@@ -90,7 +90,7 @@
       When user clicks on Send button and closes warning message
       Then user validates ticket status as "Assigned"
       And user clicks on assignment under sections
-      Then user should see assigned profile as "DC CS Core (Voice)"
+      Then user should see assigned profile as ""
       Then user validates owner profile as "Change Manager"
       And user validates owner as "ChangeManager"
       And user clicks on timeline tab
@@ -211,7 +211,7 @@
       And user clicks on view button
       Then user switches to frame
       And user enters "Change can be approved right away" in comments field
-      And user clicks approve button
+      And user clicks on approve button
       Then user switches to window 2
       And user clicks on ticket refresh button
       Then user validates ticket status as "Approved"

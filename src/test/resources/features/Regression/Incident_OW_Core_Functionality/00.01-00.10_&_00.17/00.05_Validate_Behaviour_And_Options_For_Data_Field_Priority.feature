@@ -1,6 +1,4 @@
-@00.05
-@Incident
-@00
+@Validate_Behaviour_And_Options_For_Data_Field_Priority @Incident @00
 #Passed
   Feature: Validate Behaviour and options for data field called priority
 

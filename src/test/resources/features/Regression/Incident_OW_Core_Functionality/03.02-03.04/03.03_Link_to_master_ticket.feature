@@ -1,6 +1,4 @@
-@03.03
-@Incident
-@03
+@03.03_Link_To_Master_Ticket @Incident
   #passed
   Feature: Link to master ticket
     Scenario: Link to master ticket

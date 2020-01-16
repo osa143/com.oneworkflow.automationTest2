@@ -1,6 +1,4 @@
-@05.03
-@Incident
-@05
+@05.03_Service_Restored_date_and_time_field_is_mandatory_before_a_ticket_can_be_closed  @Incident1
   #passed
   Feature: Service restored date and time field is mandatory before a ticket can be closed
     Scenario: Service restored date and time field is mandatory before a ticket can be closed

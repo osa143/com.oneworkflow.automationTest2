@@ -85,13 +85,14 @@ public class OWF_ChangeRecordPageSteps {
     @When("user clicks on Diagnosis tab")
     public void userClicksOnDiagnosisTab() {
         changeRecordPage.clickDiagnosis();
+        changeRecordPage.wait(1500);
 
     }
 
     @And("user clicks on CI search button")
     public void userClicksOnCISearchButton() {
         changeRecordPage.clickCiSearch();
-        changeRecordPage.wait(1500);
+        changeRecordPage.wait(2000);
     }
 
 
@@ -239,6 +240,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @When("user selects change type as {string}")
     public void userSelectsChangeTypeAs(String arg0) {
+        changeRecordPage.wait(2000);
         changeRecordPage.selectChangeType(arg0);
     }
 
@@ -262,8 +264,8 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.selectStatus(arg0);
     }
 
-    @When("user searches below in the location+ field and verifies CI information")
-    public void userSearchesBelowInTheLocationFieldAndVerifiesCIInformation(DataTable locationIdPlus) {
+    @When("user searches below in the location+ field and verifies Ticket information")
+    public void userSearchesBelowInTheLocationFieldAndVerifiesTicketInformation(DataTable locationIdPlus) {
         changeRecordPage.validateCiDetailsForMultipleLocationsID(locationIdPlus);
     }
 
@@ -272,8 +274,8 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.clickCancel_selectTarget();
     }
 
-    @When("user searches below in the Name plus field and verifies CI information")
-    public void userSearchesBelowInTheNamePlusFieldAndVerifiesCIInformation(DataTable locationNamePlus) {
+    @When("user searches below in the Name plus field and verifies Ticket information")
+    public void userSearchesBelowInTheNamePlusFieldAndVerifiesTicketInformation(DataTable locationNamePlus) {
         changeRecordPage.validateCiDetailsForMultipleLocationsName(locationNamePlus);
     }
 

@@ -1,6 +1,4 @@
-@Add_CI_&_Attachment
-  #SIT Request Type-Access Networks:RAN Optimization
-  #UAT Request  CPS:IT:Other
+@Add_CI_&_Attachment  @Reg_Problem
   Feature: User is able to add a CI and attachment to a problem ticket
     Scenario: user can create a problem record and add a CI and attachment to it
 
@@ -18,7 +16,7 @@
       And user clicks on save button on the problem form
       And change should also be reflected in the timeline as "Ticket Description has changed from \"UAT Test 3 Add CI and attachment\" to \"-More information"
       And user adds CI "SE_CPE_FRECPE5" to the ticket
-      Then user clicks on "Diagnosis" tab
+      Then user clicks on Diagnosis tab
       Then CI should be listed and displayed under the Diagnosis tab
       And user clicks on add button under internal
       And user switches to frame 2

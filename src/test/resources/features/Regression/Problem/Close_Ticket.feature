@@ -1,4 +1,4 @@
-@Close_Ticket #@problem
+@Close_Ticket #@problem @Reg_Problem
  #passed
 Feature: User is able to close and clone a problem ticket
 

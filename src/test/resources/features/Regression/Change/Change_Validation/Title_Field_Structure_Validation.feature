@@ -70,7 +70,7 @@
       |IT:Platforms & Infrastructure:Digital Platform & Identity Mgmnt   |IT \| INF \| Digital Platform & IAM \| Automation:IT \| INF \| Digital Platform & IAM \| Connections:IT \| INF \| Digital Platform & IAM \| Customer IAM:IT \| INF \| Digital Platform & IAM \| Workforce IAM                          |
       |IT:Platforms & Infrastructure:Network Services   |IT \| INF \| Network \| Data Center Facilities:IT \| INF \| Network \| Data Center Networks:IT \| INF \| Network \| Functionalities & Security:IT \| INF \| Network \| Internal Networks                          |
       |IT:Product & Production Services:Assurance Services   |IT \| PRO \| Assurance \| Data Mediation & Acquistion:IT \| PRO \| Assurance \| Monitoring:IT \| PRO \| Assurance \| Presentation:IT \| PRO \| Assurance \| Workflow                          |
-      |IT:Product & Production Services:Resources Management Services   | IT | PRO | Resources Management | City Networks:IT | PRO | Resources Management | Inventories:IT | PRO | Resources Management | Operations:IT | PRO | Resources Management | Planning:IT | PRO | Resources Management | Provisioning                         |
+      |IT:Product & Production Services:Resources Management Services   | IT \| PRO \| Resources Management \| City Networks:IT \| PRO \| Resources Management \| Inventories:IT \| PRO \| Resources Management \| Operations:IT \| PRO \| Resources Management \| Planning:IT \| PRO \| Resources Management \| Provisioning                         |
 
 
 

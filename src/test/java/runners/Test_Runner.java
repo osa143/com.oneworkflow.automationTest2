@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@impact_duration_Field_Validation"}
+        tags = {"@Drop_Down"}
 )
 public class Test_Runner extends BaseTest {
 }

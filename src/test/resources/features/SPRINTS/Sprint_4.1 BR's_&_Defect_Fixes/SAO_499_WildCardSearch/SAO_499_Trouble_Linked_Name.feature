@@ -1,45 +1,31 @@
-@Trouble_Linked_Name
+@SAO_499_Trouble_Linked_Name
+@499
 Feature: data searching using wildcards
-  Scenario: user is able to search for data using wildcards
+  Scenario: Trouble_Linked_Name
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+    When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user clicks on search and selects open search forms and problem record
+    When user clicks on create trouble event
     And user switches to window 1
-    Then user should see blank problem search form
-    When user enters ticket id as "OP-000000899105"
-    And user clicks Search on ticket search
-    Then user should see trouble ticket
+    Then trouble record form should appear in new tab
+    When user clicks on sweden checkbox under affected BU's
+    And user enters "Test case SAO_499 Wild Card Search" in Title field in Trouble event
+    And user selects request type as "Customer" on trouble event page
+    And user enters description as "Test case SAO_499 Wild Card Search"
+    And user clicks on save button
+    Then ticket should be created and status should be assigned
     When user clicks on linked items tab
-    And user selects target application second dropdown as "OS3 - Operations"
+    And user selects target application first dropdown as "OS3 - Operations"
     And user clicks on link button
     Then user switches to frame
     And user clicks on the clear button
-    When user enters "SE_" in the linked name field
-    And user clicks on the search button
-    Then user should see ticket related to Sweden
-    And user clicks on the clear button
-    When user enters "FI_" in the linked name field
-    And user clicks on the search button
-    Then user should see ticket related to Finland
-    And user clicks on the clear button
-    When user enters "EE_" in the linked name field
-    And user clicks on the search button
-    Then user should see ticket related to Estonia
-    And user clicks on the clear button
-    When user enters "DK_" in the linked name field
-    And user clicks on the search button
-    Then user should see ticket related to Denmark
-    And user clicks on the clear button
-    When user enters "NO_" in the linked name field
-    And user clicks on the search button
-    Then user should see ticket related to Norway
-    And user clicks on the clear button
-    When user enters "LT_" in the linked name field
-    And user clicks on the search button
-    Then user should see ticket related to Lithuania
-
-
-
-
+    When user searches below in the Name plus field and verifies Ticket information
+      |locationIdPlus |
+      |SE_            |
+      |FI_            |
+      |EE_            |
+      |DK_            |
+      |NO_            |
+      |LT_            |
+    And user clicks on cancel on select target window

@@ -1,10 +1,11 @@
 @SAO_499_SID_Location
+@499
   #Passed
   Feature: data searching using wildcards
-  Scenario: user is able to search for data using wildcards
+  Scenario: SID_Location
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
+    When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects SID console from agent console
     Then SID console page should be opened
@@ -19,7 +20,7 @@
       | %_Site_BSK   |
       | SE_%_a       |
       | FI_%_a       |
-      | DK_Site_%    |
+      | DK_%_a       |
       | EE_%_a       |
       | LT_%_a       |
       | NO_%_a       |

@@ -1,9 +1,10 @@
 @SAO_499_Work_Order_source
+@499
 Feature: data searching using wildcards
-  Scenario: user is able to search for data using wildcards
+  Scenario: Work_Order_source
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
+    When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects search menu as "Open Search Form:Work Order"
     And user switches to window 1

@@ -384,7 +384,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     }
     public void enterAdvancedSearch(String text){
         //enterTextByElement(By.id(txt_ADVANCED_SEARCH), text);
-        WebElement advanceSearchTextBox= findElement(By.xpath("//textarea[@class='sr']"));
+        WebElement advanceSearchTextBox= findElement(By.xpath("//div[@class='AdvancedSearchBarField arfid1005 ardbnFld-AdvanceQuery']//textarea[@id='arid1005']"));
         advanceSearchTextBox.click();
         advanceSearchTextBox.sendKeys(text);
     }
@@ -427,7 +427,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
             int size = TableRows().size();
             System.out.println("table size is : "+size);
             boolean ciDetailsDisplayed = size > 1 ? true: false;
-            Assert.assertTrue(ciDetailsDisplayed, "CI details are not displayed");
+            Assert.assertTrue(ciDetailsDisplayed, "Ticket details are not displayed");
             clickCancel();
             switchToFrameByIndex(2);
             wait(1000);
@@ -446,7 +446,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
             switchToFrameByIndex(1);
             int size = TableRows().size();
             boolean ciDetailsDisplayed = size > 1 ? true: false;
-            Assert.assertTrue(ciDetailsDisplayed, "CI details are not displayed");
+            Assert.assertTrue(ciDetailsDisplayed, "Ticket details are not displayed");
             clickCancel();
             switchToFrameByIndex(2);
             wait(1000);

@@ -1,7 +1,8 @@
- @SAO_499_Change_Ticket_Title @499
+@SAO_499_Change_Ticket_Title
+@499
    #passed
 Feature: data searching using wildcards
-  Scenario: user is able to search for data using wildcards
+  Scenario: Change_Ticket_Title
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"

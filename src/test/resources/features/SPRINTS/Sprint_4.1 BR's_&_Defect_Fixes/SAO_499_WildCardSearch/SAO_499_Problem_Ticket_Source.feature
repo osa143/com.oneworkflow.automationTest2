@@ -1,9 +1,10 @@
 #passed
-# @SAO_499_Problem_Ticket_Source
-  #we might not need this one as the source field for problem, change and known errors will always come from OW
+#@SAO_499_Problem_Ticket_Source
+#@499
+#we might not need this one as the source field for problem, change and known errors will always come from OW
 
 Feature: data searching using wildcards
-  Scenario: user is able to search for data using wildcards
+  Scenario: Problem_Ticket_Source
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"

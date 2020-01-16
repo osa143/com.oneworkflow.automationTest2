@@ -41,7 +41,7 @@ Feature: Plaza creation/withdrawing of incident ticket
     Then user should see blank trouble search form
     When user enters plaza incident ticket
     Then user should see plaza incident ticket
-    And user validates title field as " Test OW OP Ticket"
+    And user validates title field as "Test OW OP Ticket"
     And user validates request type as "Customer"
     And user validates description as "Test OW OP Ticket"
     And user validates ticket status as "Assigned"

@@ -25,7 +25,7 @@
       Then user enters Clean Mail description as "Test2 Messaging/Description"
       And user date and time when tests performed as current date and time
       And user enters messaging Sender email address as "Sender@Test.com"
-      And user enters messaging Receiver email address as "Reciever"
+      And user enters messaging Receiver email address as "Reciever@test.com"
       And user enters messaging Sender DNS IP Address as "Test"
       And user enters additional comments as "Messaging - Test2/AC"
       Then user clicks on "Submit"
@@ -44,7 +44,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Clean Mail"
       And user validates request type as "Service Request | PLAZA"
-      And user validates messaging clean mail description same as plaza
+#      And user validates messaging clean mail description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

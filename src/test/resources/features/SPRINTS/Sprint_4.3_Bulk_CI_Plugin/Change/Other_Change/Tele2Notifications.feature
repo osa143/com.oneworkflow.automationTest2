@@ -1,4 +1,4 @@
-@Bulk_Loading_Tele2Notifications @SAO_427
+@Bulk_Loading_Tele2Notifications @SAO_427 @other_change*
   Feature: Bulk Loading Tele2 Notifications
     Scenario: Bulk Loading Summary
 

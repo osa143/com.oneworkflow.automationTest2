@@ -18,7 +18,7 @@ import static utils.CommonUtils.*;
 
 public class Plaza_HomePage extends BasePage {
 
-    public static final String dd_ROLE_ID= "select2-chosen-9";
+    public static final String dd_ROLE_ID= "select2-chosen-13";
     public static final String txt_REQUEST_ID= "sp_formfield_sr2_v_request";
     public static final String dd_SYSTEM_ID= "s2id_sp_formfield_sr2_v_system";
     public static final String txt_PLANNED_START= "sp_formfield_sr2_v_start_date";
@@ -27,7 +27,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_ADDITIONAL_COMMENTS= "sp_formfield_additional_comments";
     public static final String btn_ORDER= "x016e0fdbdb854700b27fdb11ce9619e3";
     public static final String txt_PLAZA_REQUEST_NUM_ID="reqnum";
-    public static final String dd_SERVICE_REQUEST_NAME_ID= "select2-chosen-11";
+    public static final String dd_SERVICE_REQUEST_NAME_ID= "select2-chosen-15";
     public static final String txt_CRM_REQUEST_ID= "sp_formfield_sr46_v_request";
     public static final String txt_CRM_PLANNED_START= "sp_formfield_sr46_v_planned_start_date";
     public static final String txt_CRM_PLANNED_END= "sp_formfield_sr46_v_planned_end_date";
@@ -36,7 +36,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_C2B_REQUEST_ID="sp_formfield_sr74_v_request";
     public static final String dd_ENVIRONMENT="s2id_autogen15";
     public static final String txt_C2B_DESCRIPTION="sp_formfield_sr74_v_description";
-    public static final String dd_SELECT_REQUEST_ID="select2-chosen-12";
+    public static final String dd_SELECT_REQUEST_ID="select2-chosen-16";
     public static final String txt_C2B_GENERAL_REQUEST_ID="sp_formfield_sr112_v_request";
     public static final String dd_C2B_GENERAL_ENVIRONMENT="s2id_autogen13";
     public static final String txt_C2B_GENERAL_DESCRIPTION="sp_formfield_sr112_v_description";
@@ -44,7 +44,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String dd_C2B_SERVICE_ENVIRONMENT="s2id_autogen13";
     public static final String txt_C2B_SERVICE_DESCRIPTION="sp_formfield_sr109_v_description";
     public static final String txt_BCPP_REQUEST_ID="sp_formfield_sr107_v_request";
-    public static final String dd_BCPP_ENVIRONMENT="select2-chosen-12";
+    public static final String dd_BCPP_ENVIRONMENT="select2-chosen-16";
     public static final String txt_ADD_CI="s2id_autogen15";
     public static final String txt_BCPP_DESCRIPTION="sp_formfield_sr107_v_description";
     public static final String chkbx_CONTACT="sp_formfield_ext_contact";
@@ -81,7 +81,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_NETWORK_EQUIPMENT_REQUEST="sp_formfield_sr51_v_request";
     public static final String txt_NETWORK_EQUIPMENT_DC_SITE= "sp_formfield_sr51_v_dc_site";
     public static final String txt_NETWORK_EQUIPMENT_ROOM= "sp_formfield_sr51_v_room";
-    public static final String dd_ADD_CI = "s2id_autogen14";
+    public static final String dd_ADD_CI = "s2id_autogen17";
     public static final String txt_NETWORK_EQUIPMENT_DNS_IP_ADRESS="sp_formfield_sr51_v_dns_ip_address";
     public static final String txt_NETWORK_EQUIPMENT_DELIVERY="sp_formfield_sr51_v_date_for_delivery";
     public static final String txt_NETWORK_EQUIPMENT_DATE_FOR_DECOMMISSION= "sp_formfield_sr51_v_date_for_decommission";
@@ -91,7 +91,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_ON_SITE_SERVICES_DC_SITE= "sp_formfield_sr37_v_dc_site";
     public static final String txt_ON_SITE_SERVICES_DESCRIPTION= "sp_formfield_sr37_v_description";
     public static final String txt_DATABASE_REQUEST= "sp_formfield_sr21_v_request";
-    public static final String dd_ADD_DATABASE_CI= "s2id_autogen25";
+    public static final String dd_ADD_DATABASE_CI= "s2id_autogen29";
     public static final String dd_ADD_SERVER_CI = "s2id_autogen26";
     public static final String txt_DATABASE_NAME= "sp_formfield_sr21_v_db_name";
     public static final String dd_DATABASE_ACCOUNT_TYPE= "select2-chosen-14";
@@ -629,7 +629,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectSystemNameHaiti(String dropdownName){
         clickElement(By.id(dd_SYSTEMNAME_HAITI_DATABASE));
-        WebElement Element=findElement(By.xpath("//input[@aria-owns='select2-results-23']"));
+        WebElement Element=findElement(By.xpath("//input[@aria-owns='select2-results-27']"));
         Element.sendKeys(dropdownName);
         wait(1000);
         Element.sendKeys(Keys.ARROW_DOWN);
@@ -713,7 +713,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectSystemNameInHaiti(String dropdownName){
         clickElement(By.id(dd_SYSTEM_NAME_IN_HAITI));
-        WebElement Element=findElement(By.id("s2id_autogen12_search"));
+        WebElement Element=findElement(By.id("select2-results-16"));
         Element.sendKeys(dropdownName);
         wait(1000);
         Element.sendKeys(Keys.ARROW_DOWN);
@@ -1738,12 +1738,19 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selects_database_AddCi_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_ADD_DATABASE_CI), By.id("s2id_autogen25_results"),  dropdownName);
+
+        WebElement searchBox=findElement(By.id(dd_ADD_DATABASE_CI));
+        searchBox.click();
+        findElement(By.id("s2id_autogen26_results")).sendKeys(dropdownName);
+        wait(2000);
+        findElement(By.id("s2id_autogen26_results")).sendKeys(Keys.ARROW_DOWN);
+        findElement(By.id("s2id_autogen26_results")).sendKeys(Keys.ENTER);
+//        selectDropdownWithMultipleValues(By.id(dd_ADD_DATABASE_CI), By.id("s2id_autogen26_results"),  dropdownName);
 
     }
     public void selects_database_AddServerCi_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_ADD_SERVER_CI), By.id("s2id_autogen26_results"),  dropdownName);
+        selectDropdownByTagNameDiv(By.id(dd_ADD_SERVER_CI), By.id("s2id_autogen26_results"),  dropdownName);
 
     }
     public void selectDatabaseAccountType(String dropdownName){
@@ -1788,7 +1795,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectsAddCi_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_ADD_CI), By.id("s2id_autogen14_results"),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_ADD_CI), By.id("s2id_autogen17_results"),  dropdownName);
 
     }
     public void enterNetworkEquipment_request(String text){
@@ -1891,7 +1898,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectsAT1Ci(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownByTagNameDiv(By.id("s2id_sp_formfield_sr108_v_at1"), By.id("s2id_autogen16_results"),  dropdownName);
+        selectDropdownByTagNameDiv(By.id("s2id_sp_formfield_sr108_v_at1"), By.id("s2id_autogen20_results"),  dropdownName);
     }
 
 
@@ -1987,7 +1994,7 @@ public class Plaza_HomePage extends BasePage {
     public void selectBCPP_Environment(String dropdownName){
         PlazaValidation.Environment=dropdownName;
         PlazaValidation.UrlFilter = dropdownName;
-        selectDropdown(By.id(dd_BCPP_ENVIRONMENT), By.id("select2-results-12"),  dropdownName);
+        selectDropdown(By.id(dd_BCPP_ENVIRONMENT), By.id("select2-results-16"),  dropdownName);
     }
     public void enterC2B_BCPP_Request(String text){
         PlazaValidation.Request = text;
@@ -2128,7 +2135,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectRoleDropdown(String dropdownName){
         PlazaValidation.Role = dropdownName;
-        selectDropdown(By.id(dd_ROLE_ID), By.id("select2-results-9"), dropdownName);
+        selectDropdown(By.id(dd_ROLE_ID), By.id("select2-results-13"), dropdownName);
         clickEscButton();
 
     }
@@ -2147,7 +2154,7 @@ public class Plaza_HomePage extends BasePage {
         PlazaValidation.Issue = dropdownName;
         PlazaValidation.ServiceRequestName = dropdownName;
         PlazaValidation.System = dropdownName;
-        selectDropdown(By.id(dd_SERVICE_REQUEST_NAME_ID), By.id("select2-results-11"), dropdownName);
+        selectDropdown(By.id(dd_SERVICE_REQUEST_NAME_ID), By.id("select2-results-15"), dropdownName);
 
     }
 
@@ -2162,7 +2169,7 @@ public class Plaza_HomePage extends BasePage {
         PlazaValidation.SmtpRelay = dropdownName;
         PlazaValidation.SelectRequest = dropdownName;
         PlazaValidation.DatabaseType = dropdownName;
-        selectDropdown(By.id(dd_SELECT_REQUEST_ID), By.id("select2-results-12"),  dropdownName);
+        selectDropdown(By.id(dd_SELECT_REQUEST_ID), By.id("select2-results-16"),  dropdownName);
     }
 
     public void selectC2B_serviceEnvironment(String dropdownName){
@@ -2186,13 +2193,13 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void selectAT2Ci(String dropdownName){
-        selectDropdownByTagNameDiv(By.id("s2id_sp_formfield_sr108_v_at2"), By.id("s2id_autogen17_results"),  dropdownName);
+        selectDropdownByTagNameDiv(By.id("s2id_sp_formfield_sr108_v_at2"), By.id("s2id_autogen21_results"),  dropdownName);
     }
     public void selectAT3Ci(String dropdownName){
-        selectDropdownByTagNameDiv(By.id("s2id_sp_formfield_sr108_v_at3"), By.id("s2id_autogen18_results"),  dropdownName);
+        selectDropdownByTagNameDiv(By.id("s2id_sp_formfield_sr108_v_at3"), By.id("s2id_autogen22_results"),  dropdownName);
     }
     public void selectProdCi(String dropdownName){
-        selectDropdownByTagNameDiv(By.id("s2id_autogen15"), By.id("s2id_autogen15_results"),  dropdownName);
+        selectDropdownByTagNameDiv(By.id("s2id_autogen19"), By.id("s2id_autogen19_results"),  dropdownName);
     }
 
 

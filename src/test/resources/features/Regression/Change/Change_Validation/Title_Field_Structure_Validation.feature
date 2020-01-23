@@ -9,6 +9,7 @@
       Then user switches to window 1
       Then change record page should be opened and Change form is displayed
       And User selects "Title" as dropdownValue and should see values for "notreadonly"
+      Then multiple statuses "IT:Mobile:(clear)" should be available in "Title" dropdown
 
 
 
@@ -71,6 +72,29 @@
       |IT:Platforms & Infrastructure:Network Services   |IT \| INF \| Network \| Data Center Facilities:IT \| INF \| Network \| Data Center Networks:IT \| INF \| Network \| Functionalities & Security:IT \| INF \| Network \| Internal Networks                          |
       |IT:Product & Production Services:Assurance Services   |IT \| PRO \| Assurance \| Data Mediation & Acquistion:IT \| PRO \| Assurance \| Monitoring:IT \| PRO \| Assurance \| Presentation:IT \| PRO \| Assurance \| Workflow                          |
       |IT:Product & Production Services:Resources Management Services   | IT \| PRO \| Resources Management \| City Networks:IT \| PRO \| Resources Management \| Inventories:IT \| PRO \| Resources Management \| Operations:IT \| PRO \| Resources Management \| Planning:IT \| PRO \| Resources Management \| Provisioning                         |
+      |IT:SE:Resources Management Services:Enterprise    |CIS:Cygate:Managed Voice Solutions:TP Family:UC:Voice     |
+      |IT:SE    |Infra Product & Business    |
+      |IT:UC    |Voice&Com Solutions   |
+      |Mobile   |Construction Large premises  |
+      |Mobile   |Construction Small premises   |
+      |Mobile   | CS Core (Voice)              |
+      |Mobile   | IMS Core                       |
+      |Mobile  | IP Transport                   |
+      |Mobile   |NEMS  |
+      |Mobile | Provisioning Mobility   |
+      |Mobile | PS Core (Data)   |
+      |Mobile | RAN - Externals  |
+      |Mobile | RAN Ericsson   |
+      |Mobile | RAN Huawei   |
+      |Mobile | RAN NSN  |
+      |Mobile | RAN Wifi   |
+      |Mobile | SAMI - mobile impact   |
+      |Mobile | Transmission   |
+      |Mobile:NEMS   |Ericsson:Ericsson:Ericsson:  |
+
+
+
+
 
 
 

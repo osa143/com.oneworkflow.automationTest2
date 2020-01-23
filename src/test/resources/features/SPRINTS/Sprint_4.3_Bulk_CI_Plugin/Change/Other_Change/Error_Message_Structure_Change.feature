@@ -1,4 +1,4 @@
-@Bulk_Loading_Error_Message_Structure_Change @SAO-427
+@Bulk_Loading_Error_Message_Structure_Change @SAO-427 @other_change*
   #passed
   Feature: checking of bulk loading error message structure
     Scenario: user checks the message structure of bulk loading error

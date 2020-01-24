@@ -50,14 +50,6 @@
 							</a>
 						</li>
 						<li>
-							<a href="exception.html">
-							<span class="nav-icon">
-							<i class="fa fa-warning"></i>
-							</span>
-							<span class="nav-text">Exceptions</span>
-							</a>
-						</li>
-						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -102,11 +94,11 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
-										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
-										<a class="dropdown-item" href="#"><span class="tf" status="skip"><i class="fa fa-dot-circle-o text-blue"></i>Skip</span></a>
+										
+										
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 									</div>
@@ -119,8 +111,8 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Auto_Assignment_For_Appropriate_Assignment_Group</span></a>
-						    	        <a class="dropdown-item" href="#"><span class="cf">@AutoAssignment</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@workorder_field_validation</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@workorder_title_field_validation</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -137,40 +129,40 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="fail">
-											<div class="st fail test l0" 
-												tags="@Auto_Assignment_For_Appropriate_Assignment_Group @AutoAssignment"
+											<div class="tsc" status="pass">
+											<div class="st pass test l0" 
+												tags="@workorder_field_validation @workorder_title_field_validation"
 												devices="">
-												<span class="tt">01.22.2020 14:55:05</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">[Incidents that match an assignment rule will be assigned to the appropriate assignment group] started</span>
+												<span class="tt">01.24.2020 13:03:37</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">[Work Order Title field validation] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Auto_Assignment_For_Appropriate_Assignment_Group</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @AutoAssignment</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @workorder_field_validation</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @workorder_title_field_validation</span>
 												</span>
 												
 											</div>
-											<div class="st fail test l1" 
-												tags="@Auto_Assignment_For_Appropriate_Assignment_Group @AutoAssignment"
+											<div class="st pass test l1" 
+												tags="@workorder_field_validation @workorder_title_field_validation"
 												devices="">
-												<span class="tt">01.22.2020 14:55:05</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">|---[Known Error] started</span>
+												<span class="tt">01.24.2020 13:03:37</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">|---[Work Order field validation] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Auto_Assignment_For_Appropriate_Assignment_Group</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @AutoAssignment</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @workorder_field_validation</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @workorder_title_field_validation</span>
 												</span>
 												
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:05</span>&nbsp;
+												<span class="tt">01.24.2020 13:03:37</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.22.2020 14:55:18</span>&nbsp;
+													<span class="tt">01.24.2020 13:03:48</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
 													
@@ -180,14 +172,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:18</span>&nbsp;
+												<span class="tt">01.24.2020 13:03:48</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid user and password] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.22.2020 14:55:22</span>&nbsp;
+													<span class="tt">01.24.2020 13:03:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid user and password]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -195,273 +187,72 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:22</span>&nbsp;
+												<span class="tt">01.24.2020 13:03:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.22.2020 14:55:22</span>&nbsp;
+													<span class="tt">01.24.2020 13:03:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st fail test l2" 
+											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:22</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create known error] started</span>
+												<span class="tt">01.24.2020 13:03:53</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create work order] started</span>
 												
-												<div class="st fail">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-													<span class="ts">fail</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create known error]</span>
+												<div class="st pass">
+													<span class="tt">01.24.2020 13:04:00</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create work order]</span>
 													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">java.lang.NullPointerException
-	at pageObjects.BasePage.selectMenuItemSplit(BasePage.java:208)
-	at pageObjects.BasePage.selectMainMenuAndMenuItem(BasePage.java:214)
-	at pageObjects.OWF_AgentConsolePage.selectCreateAsKnownError(OWF_AgentConsolePage.java:244)
-	at steps.OWF_AgentConsolePageSteps.userClicksOnCreateKnownError(OWF_AgentConsolePageSteps.java:355)
-	at ✽.user clicks on create known error(features/SPRINTS/Sprint 4.4 BR's/AutoAssignmentRules/Appropriate_Assignment_Group.feature:189)
-</textarea></span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then known error form should appear in new tab] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then known error form should appear in new tab]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "This ticket should be auto assigned to KE Auto Assignment SIT Rule" in Title field] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "This ticket should be auto assigned to KE Auto Assignment SIT Rule" in Title field]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Rejected:Ticket Rejected" on known error page] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Rejected:Ticket Rejected" on known error page]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "A known error Auto Assignment Test"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "A known error Auto Assignment Test"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects priority as "Minor"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects priority as "Minor"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates ticket status as "Assigned"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates ticket status as "Assigned"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And there are multiple assignment rules that match the incident details] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And there are multiple assignment rules that match the incident details]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And the Assignment Profile is set based on the assignment rule with the highest priority sort order value] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And the Assignment Profile is set based on the assignment rule with the highest priority sort order value]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on assignment under sections] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on assignment under sections]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user should see assigned profile as "DC CS Core (Voice)"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user should see assigned profile as "DC CS Core (Voice)"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates assignee is "tompoh"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates assignee is "tompoh"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and closes the browser] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and closes the browser]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 0] started</span>
-												
-												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 0]</span>
-													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 13:04:00</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to window 1] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 13:04:00</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to window 1]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 13:04:00</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User selects "Title" as dropdownValue and should see values for "notreadonly"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 13:04:00</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User selects "Title" as dropdownValue and should see values for "notreadonly"]</span>
+													
+													<span class="td"><table class='runtime-table table-striped table'><tr><td>DropdownValue</td><td>DropdownValuesToBePresent</td></tr><tr><td>Core Voice</td><td>Roaming:Test</td></tr></table></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 13:04:09</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 13:04:09</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
 													

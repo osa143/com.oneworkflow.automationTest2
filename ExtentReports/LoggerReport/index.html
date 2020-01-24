@@ -119,8 +119,8 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Auto_Assignment_For_Appropriate_Assignment_Group</span></a>
-						    	        <a class="dropdown-item" href="#"><span class="cf">@AutoAssignment</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@workorder_field_validation</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@workorder_Status_field_validation</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -139,38 +139,38 @@
 										<h6 class="mb-3 ml-1">Test Logs</h6>
 											<div class="tsc" status="fail">
 											<div class="st fail test l0" 
-												tags="@Auto_Assignment_For_Appropriate_Assignment_Group @AutoAssignment"
+												tags="@workorder_field_validation @workorder_Status_field_validation"
 												devices="">
-												<span class="tt">01.22.2020 14:55:05</span>&nbsp;
+												<span class="tt">01.24.2020 15:16:12</span>&nbsp;
 												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">[Incidents that match an assignment rule will be assigned to the appropriate assignment group] started</span>
+												<span class="tn">[Work Order Status field validation] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Auto_Assignment_For_Appropriate_Assignment_Group</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @AutoAssignment</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @workorder_field_validation</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @workorder_Status_field_validation</span>
 												</span>
 												
 											</div>
 											<div class="st fail test l1" 
-												tags="@Auto_Assignment_For_Appropriate_Assignment_Group @AutoAssignment"
+												tags="@workorder_field_validation @workorder_Status_field_validation"
 												devices="">
-												<span class="tt">01.22.2020 14:55:05</span>&nbsp;
+												<span class="tt">01.24.2020 15:16:12</span>&nbsp;
 												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">|---[Known Error] started</span>
+												<span class="tn">|---[Work Order Status validation] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Auto_Assignment_For_Appropriate_Assignment_Group</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @AutoAssignment</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @workorder_field_validation</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @workorder_Status_field_validation</span>
 												</span>
 												
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:05</span>&nbsp;
+												<span class="tt">01.24.2020 15:16:12</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.22.2020 14:55:18</span>&nbsp;
+													<span class="tt">01.24.2020 15:16:25</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
 													
@@ -180,14 +180,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:18</span>&nbsp;
+												<span class="tt">01.24.2020 15:16:25</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid user and password] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.22.2020 14:55:22</span>&nbsp;
+													<span class="tt">01.24.2020 15:16:30</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid user and password]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid user and password]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -195,14 +195,404 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:22</span>&nbsp;
+												<span class="tt">01.24.2020 15:16:30</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.22.2020 14:55:22</span>&nbsp;
+													<span class="tt">01.24.2020 15:16:30</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:16:30</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create work order] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:16:37</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create work order]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:16:37</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to window 1] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:16:37</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to window 1]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:16:37</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user verifies status is read only] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:16:41</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user verifies status is read only]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:16:41</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates ticket status as "New"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:16:41</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates ticket status as "New"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:16:41</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters title as "<title>"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:16:42</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters title as "<title>"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:16:42</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Maintenance" on work order page] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:16:44</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Maintenance" on work order page]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:16:44</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "Description"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:16:44</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "Description"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:16:44</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects priority as "Info"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:16:46</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects priority as "Info"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:16:46</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:16:54</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:16:54</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "New:Pending:Withdrawn:(clear)" should be available in "Status*" dropdown] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:16:57</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "New:Pending:Withdrawn:(clear)" should be available in "Status*" dropdown]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:16:57</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user selects assigned profile dropdown as "PLAZA"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:17:00</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user selects assigned profile dropdown as "PLAZA"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:17:00</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "PLAZA" in assignee] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:17:00</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "PLAZA" in assignee]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:17:00</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on Diagnosis tab] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:17:02</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on Diagnosis tab]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:17:02</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on CI search button] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:17:04</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on CI search button]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:17:04</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to frame] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:17:04</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to frame]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:17:04</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And CI search tab should be opened] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:17:04</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And CI search tab should be opened]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:17:04</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects Category as "Core"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:17:07</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects Category as "Core"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:17:07</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects Type as "Mobile CS Core Network"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:17:09</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects Type as "Mobile CS Core Network"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:17:09</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters "FI_MGW_SMG03TRE" in the name+ field] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:17:10</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters "FI_MGW_SMG03TRE" in the name+ field]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:17:10</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on search button on CI search window] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:17:11</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on search button on CI search window]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:17:11</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects a CI from list] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:17:11</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects a CI from list]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:17:11</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects impact level as "Degradation of Service"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:17:15</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects impact level as "Degradation of Service"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:17:15</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on relate CI] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:17:16</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on relate CI]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:17:16</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user closes warning message] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:17:19</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user closes warning message]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:17:19</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user waits] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:17:22</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user waits]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">01.24.2020 15:17:22</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button] started</span>
+												
+												<div class="st pass">
+													<span class="tt">01.24.2020 15:18:00</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -210,35 +600,57 @@
 											<div class="st fail test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:22</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:00</span>&nbsp;
 												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create known error] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Assigned:Pending:Withdrawn:(clear)" should be available in "Status*" dropdown] started</span>
 												
 												<div class="st fail">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">fail</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create known error]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Assigned:Pending:Withdrawn:(clear)" should be available in "Status*" dropdown]</span>
 													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">java.lang.NullPointerException
-	at pageObjects.BasePage.selectMenuItemSplit(BasePage.java:208)
-	at pageObjects.BasePage.selectMainMenuAndMenuItem(BasePage.java:214)
-	at pageObjects.OWF_AgentConsolePage.selectCreateAsKnownError(OWF_AgentConsolePage.java:244)
-	at steps.OWF_AgentConsolePageSteps.userClicksOnCreateKnownError(OWF_AgentConsolePageSteps.java:355)
-	at ✽.user clicks on create known error(features/SPRINTS/Sprint 4.4 BR's/AutoAssignmentRules/Appropriate_Assignment_Group.feature:189)
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@alt='Menu for Status*']/.."}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-5UILU0B', ip: '10.85.242.35', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\drmay\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63543}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 08005ec691c76de56a13002055f14ac0
+*** Element info: {Using=xpath, value=//img[@alt='Menu for Status*']/..}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pageObjects.BasePage.selectDropDownMenu(BasePage.java:221)
+	at pageObjects.BasePage.getDropdownValues(BasePage.java:252)
+	at pageObjects.BasePage.verifyDropdownValues(BasePage.java:899)
+	at steps.OWF_ProblemRecordPageSteps.multipleStatusesShouldBeAvailableInDropdown(OWF_ProblemRecordPageSteps.java:618)
+	at ✽.multiple statuses "Assigned:Pending:Withdrawn:(clear)" should be available in "Status*" dropdown(features/Regression/WorkOrder/Field_Validation/Status_Field_Validation.feature:35)
 </textarea></span>
 												</div>
 											</div>
 											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on Ack button] started</span>
 												
 												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on Ack button]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
@@ -246,14 +658,14 @@
 											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then known error form should appear in new tab] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Pending:Work In Progress:Cleared:Withdrawn:(clear)" should be available in "Status*" dropdown] started</span>
 												
 												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then known error form should appear in new tab]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Pending:Work In Progress:Cleared:Withdrawn:(clear)" should be available in "Status*" dropdown]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
@@ -261,14 +673,14 @@
 											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "This ticket should be auto assigned to KE Auto Assignment SIT Rule" in Title field] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects status as "Cleared"] started</span>
 												
 												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "This ticket should be auto assigned to KE Auto Assignment SIT Rule" in Title field]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects status as "Cleared"]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
@@ -276,14 +688,14 @@
 											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Rejected:Ticket Rejected" on known error page] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects resolved group as "PLAZA"] started</span>
 												
 												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Rejected:Ticket Rejected" on known error page]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects resolved group as "PLAZA"]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
@@ -291,14 +703,14 @@
 											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "A known error Auto Assignment Test"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects resolved person as "PLAZA"] started</span>
 												
 												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "A known error Auto Assignment Test"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects resolved person as "PLAZA"]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
@@ -306,14 +718,14 @@
 											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects priority as "Minor"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects completion code as "Success"] started</span>
 												
 												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects priority as "Minor"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects completion code as "Success"]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
@@ -321,14 +733,14 @@
 											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on schedule tab] started</span>
 												
 												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on schedule tab]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
@@ -336,14 +748,14 @@
 											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates ticket status as "Assigned"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters actual schedule start date as "2020-01-23 15:37:2"] started</span>
 												
 												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates ticket status as "Assigned"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters actual schedule start date as "2020-01-23 15:37:2"]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
@@ -351,14 +763,14 @@
 											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And there are multiple assignment rules that match the incident details] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters actual schedule end date as "2020-01-24 00:00:00"] started</span>
 												
 												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And there are multiple assignment rules that match the incident details]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters actual schedule end date as "2020-01-24 00:00:00"]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
@@ -366,14 +778,14 @@
 											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And the Assignment Profile is set based on the assignment rule with the highest priority sort order value] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button] started</span>
 												
 												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And the Assignment Profile is set based on the assignment rule with the highest priority sort order value]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
@@ -381,14 +793,14 @@
 											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on assignment under sections] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Work In Progress:Cleared:Closed:(clear)" should be available in "Status*" dropdown] started</span>
 												
 												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on assignment under sections]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Work In Progress:Cleared:Closed:(clear)" should be available in "Status*" dropdown]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
@@ -396,14 +808,14 @@
 											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user should see assigned profile as "DC CS Core (Voice)"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects status as "Closed"] started</span>
 												
 												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user should see assigned profile as "DC CS Core (Voice)"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects status as "Closed"]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
@@ -411,14 +823,14 @@
 											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates assignee is "tompoh"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button] started</span>
 												
 												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates assignee is "tompoh"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
@@ -426,14 +838,14 @@
 											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and closes the browser] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user verifies status is read only] started</span>
 												
 												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut and closes the browser]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user verifies status is read only]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
@@ -441,14 +853,14 @@
 											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 0] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates ticket status as "Closed"] started</span>
 												
 												<div class="st skip">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 0]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates ticket status as "Closed"]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
@@ -456,12 +868,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+												<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
 												
 												<div class="st pass">
-													<span class="tt">01.22.2020 14:55:28</span>&nbsp;
+													<span class="tt">01.24.2020 15:18:31</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
 													

@@ -376,10 +376,10 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("error message should display as {string}")
     public void errorMessageShouldDisplayAs(String arg0) {
-//        Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
-        //troubleEventPage.getErrorText();
-        //troubleEventPage.clickOkOnPopup();
-        //troubleEventPage.clickOk();
+        Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
+        troubleEventPage.getErrorText();
+        troubleEventPage.clickOkOnPopup();
+        troubleEventPage.clickOk();
 
     }
     @And("user accepts alert")
@@ -885,6 +885,7 @@ public class OWF_TroubleEventPageSteps {
     @Then("error message should display as {string} on change record page")
     public void errorMessageShouldDisplayAsOnChangeRecordPage(String arg0) {
         Assert.assertEquals(troubleEventPage.getErrorText_change_recordPage(), arg0);
+        troubleEventPage.wait(3000);
 
     }
 

@@ -1,10 +1,11 @@
-Feature: Today in the customer operations interface,
-when a create incident message is sent to one workflow with both the CTI values and a CI,
-then the incident is created with the CTI values first (and assignment rules trigger)
-but then the CTI values get updated based on the CI attached.
-It is requested that if a customer operations send CTI values that they do not get overwritten.
+@CTI_and_CI
 
-  @CTI_and_CI
+Feature:  Today in the customer operations interface,
+          when a create incident message is sent to one workflow with both the CTI values and a CI,
+          then the incident is created with the CTI values first (and assignment rules trigger)
+          but then the CTI values get updated based on the CI attached.
+          It is requested that if a customer operations send CTI values that they do not get overwritten.
+
   Scenario: Create work order when CO system sends CTI and CI
 
   Given user is on the Plaza login page

@@ -7,32 +7,31 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
   As an Incident Manager
   I want to have incidents automatically assigned to an appropriate support groups
 
-#
-#  Background:
-#    Given user is on the OneWorkflow login page
-#    When user logs in with valid user and password
-#    Then user successfully logged in to OneWorkflow and agent console should be displayed
 
+  Background:
+    Given user is on the OneWorkflow login page
+    When user logs in with valid user and password
+    Then user successfully logged in to OneWorkflow and agent console should be displayed
 
 # An assignment rule with EQUAL condition on title field that matches title field on manually created incidents will be used to assign the incident
 
- Scenario: Trouble Event
-    When user clicks on create trouble event
-    And user switches to window 1
-    Then trouble record form should appear in new tab
-    When user clicks on sweden checkbox under affected BU's
-    And user enters "OP EQUAL Condition Auto Assignment Automation Test" in Title field in Trouble event
-    And user selects request type as "Customer" on trouble event page
-    And user enters description as "Trouble event Auto Assignment to Appropriate Group"
-    And user clicks on save button
-    Then ticket should be created and status should be assigned
-    And there are multiple assignment rules that match the incident details
-    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
-    And user clicks on assignment under sections
-    And user should see assigned profile as "Mob PS Core WEST"
-    And user validates assignee is "Change_Automation_10"
-    And user logsOut and closes the browser
-    And user switches to window 0
+# Scenario: Trouble Event
+#    When user clicks on create trouble event
+#    And user switches to window 1
+#    Then trouble record form should appear in new tab
+#    When user clicks on sweden checkbox under affected BU's
+#    And user enters "OP EQUAL Condition Auto Assignment Automation Test" in Title field in Trouble event
+#    And user selects request type as "Customer" on trouble event page
+#    And user enters description as "Trouble event Auto Assignment to Appropriate Group"
+#    And user clicks on save button
+#    Then ticket should be created and status should be assigned
+#    And there are multiple assignment rules that match the incident details
+#    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
+#    And user clicks on assignment under sections
+#    And user should see assigned profile as "Mob PS Core WEST"
+#    And user validates assignee is "Change_Automation_10"
+#    And user logsOut and closes the browser
+#    And user switches to window 0
 
 #  Scenario: Work order
 #    When user clicks on create work order
@@ -48,15 +47,14 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And there are multiple assignment rules that match the incident details
 #    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
 #    And user clicks on assignment under sections
-  ###########################################################################
-#    And user should see assigned profile as "OSS Distribution-Common"
-#    And user validates assignee is "jeer05"
-  ############################################################################
+#  #SIT###########################SIT################################SIT#
+##    And user should see assigned profile as "OSS Distribution-Common"
+##    And user validates assignee is "jeer05"
+#  #SIT###########################SIT################################SIT#
 #    And user should see assigned profile as "OSS CGI"
 #    And user validates assignee is "josj17"
 #    And user logsOut and closes the browser
 #    And user switches to window 0
-
 
 #  Scenario: Known Error
 #    Given user is on the OneWorkflow login page
@@ -73,25 +71,24 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And there are multiple assignment rules that match the incident details
 #    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
 #    And user clicks on assignment under sections
-   ##############################################################
-#    And user should see assigned profile as "SOC-Common-L1"
-#    And user validates assignee is "ieg961"
-   ##############################################################
-
-#   And user should see assigned profile as "Billing"
+#   #SIT##########################SIT################################SIT#
+##    And user should see assigned profile as "SOC-Common-L1"
+##    And user validates assignee is "ieg961"
+#   #SIT##########################SIT################################SIT#
+#    And user should see assigned profile as "Billing"
 #    And user validates assignee is "eros10"
 #    And user logsOut and closes the browser
 #    And user switches to window 0
-#
-#
-#
+
 #  Scenario: Change Ticket
+#    Given user is on the OneWorkflow login page
+#    And user logs in with valid username "ChangeInitiatorInternal1" and password as "Test@1234"
 #    When user clicks on change record from agent console
 #    And user switches to window 1
 #    Then change record form should open in a new tab
 #    When user clicks on sweden checkbox under affected BU's
 #    And user selects request type as "Normal Change"
-#    And user selects title as "Mobile:IMS Core" on Change record page
+#    And user selects title as "IT:Other" on Change record page
 #    And user selects request category as "Cable splicing" on change record page
 #    And user enters description as "Change Record Auto Assignment Test"
 #    And user enters reason field as "none"
@@ -105,16 +102,16 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And user enters "No Risk" in the risk description field
 #    Then user clicks on "Schedule" tab
 #    And user enters as "Test ticket no impact" in service and customer impact
-#    And user enters start time as some minutes fast from current sweden time
-#    And user enters Request End time as some minutes fast from request start time
-#    And user enters impact duration as "6" minutes
+#    And user enters request start date as "00:00:00" one day in the future
+#    And user enters request end date as "04:00:00" one day in the future
+#    And user enters impact duration as "10" minutes
 #    And user selects estimated impact as "No Impact"
 #    And user clicks on save button
 #    Then user clicks on Risk tab
 #    And user answers all risk questions as below
 #    And user selects answer as "Impact to other systems/technologies are unclear"
 #    And user selects answer as "No"
-#    And user selects answer as "Tested successfully, this is a pilot"
+#    And user selects answer as "Tested succesfully, this is a pilot"
 #    And user selects answer as "Yes (outcome of the change can be instantly verified)"
 #    And user selects answer as "Yes"
 #    And user selects answer as "Simple"
@@ -139,11 +136,9 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And user should see assigned profile as "DC Billing"
 #    And user validates assignee is "andmal"
 
-
-
 ###########################################################################################################################################################
  # An assignment rule with LIKE condition on title field that matches part of title field on manually created incidents will be used to assign the incident
-#############################################################################################################################################################
+###########################################################################################################################################################
 
 # Scenario: Trouble Event
 #    When user clicks on create trouble event
@@ -182,7 +177,6 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And user logsOut and closes the browser
 #    And user switches to window 0
 
-
 #  Scenario: Known Error
 #    Given user is on the OneWorkflow login page
 #    And user logs in with valid username "frvi96_auto" and password as "Test@1234"
@@ -202,8 +196,6 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And user validates assignee is "tompoh"
 #    And user logsOut and closes the browser
 #    And user switches to window 0
-
-
 
 #  Scenario: Change Ticket
 #    When user clicks on change record from agent console
@@ -259,7 +251,6 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And user should see assigned profile as "CAB"
 #    And user validates assignee is "juniksa1"
 
-
 #  Scenario: Problem Ticket
 #    And user clicks on create problem record
 #    And user switches to window 1
@@ -280,10 +271,6 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And user logsOut and closes the browser
 #    And user switches to window 0
 
-
-
-
-#
 #  Scenario: An assignment rule with EQUAL condition on title field that matches title field on manually created incidents will be used to assign the incident
 #    Given I am on the create incident screen
 #    And all mandatory information has been populated including the title field
@@ -292,7 +279,7 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    Then the incident is saved to the database
 #    And the 'Status' is 'Assigned'
 #    And the 'Assignment Profile' is set based on the 'Assignment Profile' of the matching assignment rule
-#
+
 #  Scenario: An assignment rule with EQUAL condition on title field that matches title field on external system created incidents will be used to assign the incident
 #    Given there an incident has not been created yet
 #    And there is an existing active assignment rule with an EQUAL condition on the title field
@@ -303,7 +290,7 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    Then the incident is saved to the database
 #    And the 'Status' is 'Assigned'
 #    And the 'Assignment Profile' is set based on the 'Assignment Profile' of the matching assignment rule
-#
+
 #  Scenario: An assignment rule with LIKE condition on title field that matches part of title field on manually created incidents will be used to assign the incident
 #    Given I am on the create incident screen
 #    And all mandatory information has been populated including the title field
@@ -312,7 +299,7 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    Then the incident is saved to the database
 #    And the 'Status' is 'Assigned'
 #    And the 'Assignment Profile' is set based on the 'Assignment Profile' of the matching assignment rule
-#
+
 #  Scenario: An assignment rule with LIKE condition on title field that matches part of title field on external system created incidents will be used to assign the incident
 #    Given there an incident has not been created yet
 #    And there is an existing active assignment rule with a LIKE condition on the title field
@@ -323,7 +310,7 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    Then the incident is saved to the database
 #    And the 'Status' is 'Assigned'
 #    And the 'Assignment Profile' is set based on the 'Assignment Profile' of the matching assignment rule
-#
+
 #  Scenario: When no matching assignment rules exist then manually created incidents will not be automatically assigned
 #    Given I am on the create incident screen
 #    And all mandatory information has been populated including the title field
@@ -332,7 +319,7 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    Then the incident is saved to the database
 #    And the 'Status' is 'New'
 #    And the 'Assignment Profile' is empty
-#
+
 #  Scenario: When no matching assignment rules exist then external system created incidents will not be automatically assigned
 #    Given there an incident has not been created yet
 #    When a create incident message is received from another system

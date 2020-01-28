@@ -28,7 +28,7 @@ Feature: Automatic assignment of work orders Ericsson based on CI
     When user clicks on outbound events refresh button
     Then user should see "Assignment" notification in outbound in row 1
     When user clicks on inbound events refresh button
-    And user should see "BTA:OrderAcknowledgmentBySupplier" notification in inbound in row 1
+    And user should see "BTA:OrderAcknowledgmentBySupplier" notification in inbound in row "1"
     Then user clicks on ticket refresh button
     When user clicks on "B2B Dispatch" tab
     Then user should see WFM ticket ID
@@ -41,7 +41,7 @@ Feature: Automatic assignment of work orders Ericsson based on CI
     When user clicks on outbound events refresh button
     Then user should see "Withdrawn" notification in outbound in row 2
     When user clicks on inbound events refresh button
-    Then user should see "BTA:OrderCancellation" notification in inbound in row 2
+    Then user should see "BTA:OrderCancellation" notification in inbound in row "2"
     When user clicks on ticket refresh button
     Then user validates ticket status as "Withdrawn"
 

@@ -109,7 +109,7 @@
 						<div class="list-body">
 							<a href="#" class="item-title _500">org.openqa.selenium.TimeoutException</a>
 							<div class="item-except text-sm text-muted h-1x">
-								2 tests
+								1 tests
 							</div>
 							<div class="tc d-none">
 								<h5 class="mb-4">org.openqa.selenium.TimeoutException</h5>
@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="10" parent-id="1">
+<tr class="s-fail" test-id="66" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then ticket should be created and status should be assigned <br/><span class="text-muted text-sm">E2E problem and known error</span></td>
-	<td>0h 0m 35s+17msc</td>
+	<td class="_600">And user clicks on owner under sections <br/><span class="text-muted text-sm">External user processes a normal change ticket</span></td>
+	<td>0h 1m 1s+666msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,114 +136,18 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: timeout
-  (Session info: chrome=78.0.3904.108)
+		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: WIN_0_999000347 (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-I92010A', ip: '10.238.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+System info: host: 'DESKTOP-I92010A', ip: '192.168.14.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59698}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 42da6a8f7541f564784aef4b2407b518
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:326)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51084}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6ed3965ffdc96c8afec82e23035aa909
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at pageObjects.BasePage.findElement(BasePage.java:57)
-	at pageObjects.BaseRecordPage.getStatusText(BaseRecordPage.java:779)
-	at steps.OWF_ChangeRecordPageSteps.ticketShouldBeCreatedAndStatusShouldBeAssigned(OWF_ChangeRecordPageSteps.java:27)
-	at ✽.ticket should be created and status should be assigned(features/Regression/Problem/E2E problem and known error.feature:16)
-</textarea>
-	</td>
-</tr>
-	
-<tr class="s-fail" test-id="91" parent-id="1">
-	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Hooks.Teardown(Scenario) <br/><span class="text-muted text-sm">E2E problem and known error</span></td>
-	<td>0h 0m 30s+58msc</td>
-	<td></td>
-	<td>
-	</td>
-	<td class="static"><i class="static fa fa-external-link"></i></td>
-</tr>
-<tr class="details">
-	<td colspan="5">
-		
-		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: timeout
-  (Session info: chrome=78.0.3904.108)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-I92010A', ip: '10.238.1.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59698}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 42da6a8f7541f564784aef4b2407b518
-*** Element info: {Using=xpath, value=//img[@alt='Menu for Nav-Username']/..}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.BasePage.selectMainMenu(BasePage.java:199)
-	at pageObjects.OWF_AgentConsolePage.clickNavUserMenu(OWF_AgentConsolePage.java:406)
-	at cucumberHooks.Hooks.Teardown(Hooks.java:29)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:26)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:20)
-	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
-	at cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)
-	at cucumber.runner.TestStep.executeStep(TestStep.java:63)
-	at cucumber.runner.TestStep.run(TestStep.java:49)
-	at cucumber.runner.TestCase.run(TestCase.java:48)
-	at cucumber.runner.Runner.runPickle(Runner.java:40)
-	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:68)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)
-	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+	at pageObjects.OWF_TroubleEventPage.clickOwner(OWF_TroubleEventPage.java:635)
+	at steps.OWF_TroubleEventPageSteps.userClicksOnOwnerUnderSections(OWF_TroubleEventPageSteps.java:369)
+	at ✽.user clicks on owner under sections(features/Regression/Change/E2E_Normal_Change_(External Initiator).feature:83)
 </textarea>
 	</td>
 </tr>
@@ -271,7 +175,7 @@ Session ID: 42da6a8f7541f564784aef4b2407b518
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Jan 15, 2020 04:40:47 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jan 27, 2020 03:51:43 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

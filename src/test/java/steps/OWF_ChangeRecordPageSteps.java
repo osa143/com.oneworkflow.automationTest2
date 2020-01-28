@@ -205,6 +205,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user selects answer as {string}")
     public void userSelectsAnswerAs(String arg0) {
+        changeRecordPage.wait(500);
         changeRecordPage.selectAnswer(arg0);
         changeRecordPage.clickDownButton();
         changeRecordPage.wait(500);

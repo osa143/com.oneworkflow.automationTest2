@@ -44,19 +44,19 @@
 #      |ow_basic2_auto              |Test@1234|
 #      |ow_CCMobAccess_auto         |Test@1234|
 #      |ow_CCMobAccess1_auto        |Test@1234|
-      #|cm_appadmin1_auto           |Test@1234|
-      #|cm_adminaccess1_auto        |Test@1234|
+#      |cm_appadmin1_auto           |Test@1234|
+#      |cm_adminaccess1_auto        |Test@1234|
 #      |ow_windows_auto             |Test@1234|
 #      |frvi96_auto4                |Test@1234|
 #      |dc_itfi1_auto               |Test@1234|
 #      |ow_external0                |Test@1234|
 #      |ow_external1                |Test@1234|
-      |ow_external2                |Test@1234|
+#      |ow_external2                |Test@1234|
 #      |ow_basic1                   |Test@1234|
 #      |ow_basic2                   |Test@1234|
 #      |ow_basic3                   |Test@1234|
 #      |Assignment_admin            |Test@1234|
-
+#      |lammipe4                    |Test@1234|
 
 
 

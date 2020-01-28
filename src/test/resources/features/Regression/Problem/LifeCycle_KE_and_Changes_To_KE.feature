@@ -1,4 +1,4 @@
-@LifeCycle_KE_and_Changes_To_KE @Reg_Problem
+@LifeCycle_KE_and_Changes_To_KE @Reg_Problem  @problem
   #passed
 #CI search window
     Feature: life cycle known error and change known error

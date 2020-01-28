@@ -107,12 +107,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.NoSuchElementException</a>
+							<a href="#" class="item-title _500">org.openqa.selenium.UnhandledAlertException</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.NoSuchElementException</h5>
+								<h5 class="mb-4">org.openqa.selenium.UnhandledAlertException</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="32" parent-id="1">
+<tr class="s-fail" test-id="6" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then multiple statuses "Assigned:Pending:Withdrawn:(clear)" should be available in "Status*" dropdown <br/><span class="text-muted text-sm">Work Order Status validation</span></td>
-	<td>0h 0m 31s+376msc</td>
+	<td class="_600">When user clicks on create trouble event <br/><span class="text-muted text-sm">When creating workorder, a proposal of default technical escalation queue should appear</span></td>
+	<td>0h 0m 0s+44msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,21 +136,19 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@alt='Menu for Status*']/.."}
-  (Session info: chrome=79.0.3945.130)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+		<textarea disabled class="code-block">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : User is currently connected from another machine or incompatible session. (ARERR 9093)
+
+Do you wish to override?}
+  (Session info: chrome=79.0.3945.130): User is currently connected from another machine or incompatible session. (ARERR 9093)
+
+Do you wish to override?
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-5UILU0B', ip: '10.85.242.35', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.241.224', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\drmay\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63543}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 08005ec691c76de56a13002055f14ac0
-*** Element info: {Using=xpath, value=//img[@alt='Menu for Status*']/..}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55482}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 15688686defcebdd07143a52a52e5a70
+*** Element info: {Using=xpath, value=//img[@alt='Menu for Create']/..}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
@@ -159,11 +157,10 @@ Session ID: 08005ec691c76de56a13002055f14ac0
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.BasePage.selectDropDownMenu(BasePage.java:221)
-	at pageObjects.BasePage.getDropdownValues(BasePage.java:252)
-	at pageObjects.BasePage.verifyDropdownValues(BasePage.java:899)
-	at steps.OWF_ProblemRecordPageSteps.multipleStatusesShouldBeAvailableInDropdown(OWF_ProblemRecordPageSteps.java:618)
-	at ✽.multiple statuses "Assigned:Pending:Withdrawn:(clear)" should be available in "Status*" dropdown(features/Regression/WorkOrder/Field_Validation/Status_Field_Validation.feature:35)
+	at pageObjects.BasePage.selectMainMenu(BasePage.java:192)
+	at pageObjects.OWF_AgentConsolePage.clickCreateMenu(OWF_AgentConsolePage.java:394)
+	at steps.OWF_AgentConsolePageSteps.userClicksOnCreateTroubleEvent(OWF_AgentConsolePageSteps.java:181)
+	at ✽.user clicks on create trouble event(features/Regression/Incident_OW_Core_Functionality/General_Incident_Functionality/When_creating_workorder,_a_proposal_of_default_technical_escalation_queue_should_Appear.feature:9)
 </textarea>
 	</td>
 </tr>
@@ -191,7 +188,7 @@ Session ID: 08005ec691c76de56a13002055f14ac0
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Jan 24, 2020 03:16:12 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jan 28, 2020 12:26:55 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

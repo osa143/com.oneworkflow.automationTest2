@@ -1,6 +1,4 @@
-@02.03
-@Incident
-@02
+@02.03_Check_impact_record @Incident @02
   #CORE in ST, Core in SIT
   #passed
   #manual execution needed from from step no-34

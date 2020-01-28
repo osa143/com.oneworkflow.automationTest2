@@ -60,8 +60,7 @@
       And user waits 60 secs
       And user clicks on "Diagnosis" tab
       And user waits 3 secs
-      When user right clicks on CI "cc100cgas001" and selects "Impact:Clear"
-      And user should see confirmation message and clicks on yes button
+      When user right clicks on CI "cc100cgas001" and clears impact
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

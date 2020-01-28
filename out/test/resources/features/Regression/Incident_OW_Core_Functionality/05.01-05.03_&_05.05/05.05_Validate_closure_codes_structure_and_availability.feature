@@ -1,6 +1,4 @@
-@05.05
-@Incident
-@05
+@05.05_Validate_closure_codes_structure_and_availability  @Incident1
   #passed
   Feature: validation closure codes structure and availability
     Scenario: user validates fault position, cause and action fields on incident ticket

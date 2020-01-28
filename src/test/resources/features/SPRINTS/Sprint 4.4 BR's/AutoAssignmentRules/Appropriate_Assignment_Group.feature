@@ -7,7 +7,7 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
   As an Incident Manager
   I want to have incidents automatically assigned to an appropriate support groups
 
-
+#
   Background:
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password
@@ -30,7 +30,7 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
 #    And user clicks on assignment under sections
 #    And user should see assigned profile as "Mob PS Core WEST"
-#    And user validates assignee is "Change_Automation_10"
+#    And user validates assignee is "Change_Automation_1"
 #    And user logsOut and closes the browser
 #    And user switches to window 0
 
@@ -145,23 +145,23 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
  # An assignment rule with LIKE condition on title field that matches part of title field on manually created incidents will be used to assign the incident
 #############################################################################################################################################################
 
-# Scenario: Trouble Event
-#    When user clicks on create trouble event
-#    And user switches to window 1
-#    Then trouble record form should appear in new tab
-#    When user clicks on sweden checkbox under affected BU's
-#    And user enters "This ticket should be auto assigned to Auto Assignment SIT Rule" in Title field in Trouble event
-#    And user selects request type as "Customer" on trouble event page
-#    And user enters description as "Trouble event Auto Assignment to Appropriate Group"
-#    And user clicks on save button
-#    Then ticket should be created and status should be assigned
-#    And there are multiple assignment rules that match the incident details
-#    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
-#    And user clicks on assignment under sections
-#    And user should see assigned profile as "Mob PS Core WEST"
-#    And user validates assignee is "Change_Automation_2"
-#    And user logsOut and closes the browser
-#    And user switches to window 0
+ Scenario: Trouble Event
+    When user clicks on create trouble event
+    And user switches to window 1
+    Then trouble record form should appear in new tab
+    When user clicks on sweden checkbox under affected BU's
+    And user enters "This ticket should be auto assigned to Auto Assignment SIT Rule" in Title field in Trouble event
+    And user selects request type as "Customer" on trouble event page
+    And user enters description as "Trouble event Auto Assignment to Appropriate Group"
+    And user clicks on save button
+    Then ticket should be created and status should be assigned
+    And there are multiple assignment rules that match the incident details
+    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
+    And user clicks on assignment under sections
+    And user should see assigned profile as "Amdocs-DK"
+    And user validates assignee is "aspa05"
+    And user logsOut and closes the browser
+    And user switches to window 0
 
 #  Scenario: Work order
 #    When user clicks on create work order
@@ -182,25 +182,27 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And user logsOut and closes the browser
 #    And user switches to window 0
 
-  Scenario: Known Error
-    Given user is on the OneWorkflow login page
-    And user logs in with valid username "frvi96_auto" and password as "Test@1234"
-    When user clicks on create known error
-    And user switches to window 1
-    Then known error form should appear in new tab
-    And user enters "This ticket should be auto assigned to KE Auto Assignment SIT Rule" in Title field
-    And user selects request type as "Rejected:Ticket Rejected" on known error page
-    And user enters description as "A known error Auto Assignment Test"
-    And user selects priority as "Minor"
-    And user clicks on save button
-    Then user validates ticket status as "Assigned"
-    And there are multiple assignment rules that match the incident details
-    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
-    And user clicks on assignment under sections
-    And user should see assigned profile as "DC CS Core (Voice)"
-    And user validates assignee is "tompoh"
-    And user logsOut and closes the browser
-    And user switches to window 0
+
+#  Scenario: Known Error
+#    Given user is on the OneWorkflow login page
+#    And user logs in with valid username "frvi96_auto" and password as "Test@1234"
+#    When user clicks on create known error
+#    And user switches to window 1
+#    Then known error form should appear in new tab
+#    And user enters "This ticket should be auto assigned to KE Auto
+#    " in Title field
+#    And user selects request type as "Rejected:Ticket Rejected" on known error page
+#    And user enters description as "A known error Auto Assignment Test"
+#    And user selects priority as "Minor"
+#    And user clicks on save button
+#    Then user validates ticket status as "Assigned"
+#    And there are multiple assignment rules that match the incident details
+#    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
+#    And user clicks on assignment under sections
+#    And user should see assigned profile as "DC CS Core (Voice)"
+#    And user validates assignee is "tompoh"
+#    And user logsOut and closes the browser
+#    And user switches to window 0
 
 
 
@@ -257,8 +259,8 @@ Feature: Incidents that match an assignment rule will be assigned to the appropr
 #    And user clicks on assignment under sections
 #    And user should see assigned profile as "CAB"
 #    And user validates assignee is "juniksa1"
-#
-#
+
+
 #  Scenario: Problem Ticket
 #    And user clicks on create problem record
 #    And user switches to window 1

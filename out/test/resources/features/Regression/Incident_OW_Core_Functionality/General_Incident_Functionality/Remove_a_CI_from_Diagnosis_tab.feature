@@ -1,6 +1,4 @@
-@Remove_a_CI_from_Diagnosis_tab
-@Incident
-@TroubleGeneral
+@Remove_a_CI_from_Diagnosis_tab @Incident @Trouble1
   #passed
   Feature: Removal of CI from diagnosis tab
     Scenario: Removal of CI from diagnosis tab

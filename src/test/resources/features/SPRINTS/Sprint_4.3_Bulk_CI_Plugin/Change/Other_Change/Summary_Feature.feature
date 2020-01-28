@@ -1,4 +1,4 @@
-@Bulk_Loading_Summary_Change @SAO_427
+@Bulk_Loading_Summary_Change @SAO_427 @other_change*
   #passed
   Feature: Bulk Loading Summary
     Scenario: Bulk Loading Summary

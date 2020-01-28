@@ -41,7 +41,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Database Request"
       And user validates request type as "Service Request | PLAZA"
-      And user validates Database access request description same as plaza
+#      And user validates Database access request description same as plaza
       Then user clicks on owner under sections
       #And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -80,8 +80,8 @@
       Examples:
 
       |Request                                |Database Type|Description                      |Additional Comments  |Account Type|Assigned Profile|
-      #|Test1 Database AccessMSSQL/Request     |MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server |MSSQL L3       |
-       |Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |MySQL L3        |
+      |Test1 Database AccessMSSQL/Request     |MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server |MSSQL L3       |
+#      |Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |MySQL L3        |
 
 
 

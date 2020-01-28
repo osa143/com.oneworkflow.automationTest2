@@ -1,4 +1,4 @@
-@Profile_Permissions_Part_3 @problem
+@Profile_Permissions_Part_3 @problem @Reg_Problem
   #Passed
   Feature:  profile permissions part 3
     Scenario:  profile permissions part 3

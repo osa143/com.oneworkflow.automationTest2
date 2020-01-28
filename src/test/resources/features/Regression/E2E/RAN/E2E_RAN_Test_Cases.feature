@@ -65,7 +65,6 @@
       Then user validates CI "Impact Status" is "Active"
       And user validates "Primary" CI is equal to "<CI name>"
       Then user clicks on save button
-          #Should be added automatically based on CI
       #And user validates "<BU Name>" BU is added automatically
       When user clicks on attachments under sections
       And  user adds attachment and verifies under "internal"

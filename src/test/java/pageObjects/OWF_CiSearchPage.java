@@ -439,6 +439,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     public void clickCloseButton() {
         wait(2000);
         driver.findElement(By.id(btnClOSE)).click();
+        driver.switchTo().defaultContent();
 
     }
 

@@ -1,6 +1,4 @@
-@01.04
-@Incident
-@01
+@01.04_Set_incident_start_time @Incident  @01
 Feature: Setting of incident start time
 #passed
   Scenario: Incident start time is set when creating the ticket

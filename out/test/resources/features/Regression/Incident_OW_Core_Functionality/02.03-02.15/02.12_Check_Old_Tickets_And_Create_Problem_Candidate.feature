@@ -1,6 +1,4 @@
-@02.12
-@Incident
-@02
+@02.12_Check_Old_Tickets_And_Create_Problem_Candidate @Incident @02
   #Passed
   Feature: Check old tickets and create problem candidate
     Scenario: Check old tickets and create problem candidate

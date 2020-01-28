@@ -1,4 +1,4 @@
-@04.03_Do_a_functional_escalation_to_a_new_team_as_if_the_resolution_attempt_failed  @Incident1
+@04.03_Do_a_functional_escalation_to_a_new_team_as_if_the_resolution_attempt_failed  @Incident1 @04
   #passed
   Feature: Do a functional escalation to a new team as if the resolution attempt failed
     Scenario: Do a functional escalation to a new team as if the resolution attempt failed

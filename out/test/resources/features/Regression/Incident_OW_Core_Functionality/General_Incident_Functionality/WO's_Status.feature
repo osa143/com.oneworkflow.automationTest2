@@ -1,6 +1,4 @@
-@WO's_Status
-@Incident
-@TroubleGeneral
+@WO's_Status @Incident @Trouble1
   #passed
   Feature: WO's status
     Scenario: WO's status

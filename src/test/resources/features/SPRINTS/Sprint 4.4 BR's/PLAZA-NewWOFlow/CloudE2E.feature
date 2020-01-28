@@ -10,7 +10,7 @@ Feature: New WO flow Plaza
     When user enters "Ask" in plaza search box
     And user opens internal case form
     Then user should see internal case form appear
-    And user selects "IT Infrastructure" under Service area dropdown
+    And user clicks on IT Infrastructure dropdown
     And user selects system name in haiti as "Other"
     And user selects "Cloud" under Service area category dropdown
     And user selects service as "Skypoint - private cloud"
@@ -18,8 +18,6 @@ Feature: New WO flow Plaza
     And user enters "cc100cgas001" in the plaza CI field
     And user enters "Test Description" in the plaza description field
     Then user clicks on add attachment in plaza
-      #And user selects an attachment
-      #And user clicks on open button
     Then user clicks on submit button on plaza form
     And user clicks on shown ICM number
     Then user waits 30 secs

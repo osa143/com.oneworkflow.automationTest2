@@ -1,6 +1,4 @@
-@02.13
-@Incident
-@02
+@02.13 @Incident @02
 #passed
 Feature: creation  multiple WO's internally and dispatch these to different assignment groups
   Scenario: user can create multiple work orders and dispatch these to different assignment groups

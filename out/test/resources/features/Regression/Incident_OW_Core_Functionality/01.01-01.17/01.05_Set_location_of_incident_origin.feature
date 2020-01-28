@@ -1,6 +1,4 @@
-@01.05
-@Incident1
-@01
+@01.05_Set_location_of_incident_origin @Incident  @01
 #Passed
 Feature: Setting location of incident origin
 

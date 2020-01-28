@@ -1,4 +1,4 @@
-@CI_not_found_prompt_for_CI_Search_change @SAO-427
+@CI_not_found_prompt_for_CI_Search_change @SAO-427 @other_change*
  #passed
 
 Feature: checking of bulk loading Location details

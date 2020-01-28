@@ -46,11 +46,11 @@ Feature: Automatic assignment of work orders Ericsson based on CI
     Then user validates ticket status as "Withdrawn"
 
     Examples:
-     |CIName                 |AssignedProfile           |ContactName                            |ContactMailAddress       |
-     |SE_UMTSCell_8888882    |Transtema2 - FS - SE - B2B|Transtema SOC                          |support.tns@transtema.com|
-#    |NO_LTECell_OSL894_L7-27|Oneco2 - FS - NO - B2B    |OneCo SPOC (Single Point Of Contact)   |spoc@oneco.no            |
-#    |SE_LTECell_100895010   |Transtema - FS - SE - B2B |OneCo SPOC (Single Point Of Contact)   |telecom.spoc@oneco.no    |                                    |                     |
-#    |NO_LTECell_TLM150_L18-1|Oneco - FS - NO - B2B     |OneCo SPOC (Single Point Of Contact)   |telecom.spoc@oneco.no    |
+      |CIName                 |AssignedProfile           |ContactName                            |ContactMailAddress       |
+#     |SE_UMTSCell_8888882    |Transtema2 - FS - SE - B2B|Transtema SOC                          |support.tns@transtema.com|
+#     |NO_LTECell_OSL894_L7-27|Oneco2 - FS - NO - B2B    |OneCo SPOC (Single Point Of Contact)   |spoc@oneco.no            |
+#     |SE_LTECell_100895010   |Transtema - FS - SE - B2B |Transtema SOC                          |support.tns@transtema.com|
+#     |NO_LTECell_TLM150_L18-1|Oneco - FS - NO - B2B     |OneCo SPOC (Single Point Of Contact)   |telecom.spoc@oneco.no    |
 
 
 

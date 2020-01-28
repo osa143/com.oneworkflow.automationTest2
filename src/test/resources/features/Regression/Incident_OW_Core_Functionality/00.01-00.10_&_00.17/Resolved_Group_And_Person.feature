@@ -1,4 +1,4 @@
-@Resolved_Group_And_Persons
+@Resolved_Group_And_Person
 
   Feature: Resolved Group And Person
     Scenario: Resolved Group And Person

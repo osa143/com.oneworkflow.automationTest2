@@ -35,7 +35,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | EBILL"
       And user validates request type as "Service Request | PLAZA"
-      And user validates Ebill description same as plaza
+#      And user validates Ebill description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

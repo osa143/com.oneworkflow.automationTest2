@@ -12,24 +12,24 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
     When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
 
-#  Scenario: When there are multiple assignment rules that match a manually created incident the one with the highest priority sort order value will be used for assignment
-#    When user clicks on create trouble event
-#    And user switches to window 1
-#    Then trouble record form should appear in new tab
-#    When user clicks on sweden checkbox under affected BU's
-#    And user enters "Auto Assignment to Highest sort order" in Title field in Trouble event
-#    And user selects request type as "Customer" on trouble event page
-#    And user enters description as "Trouble event Auto Assignment to Highest Sort order"
-#    And user clicks on save button
-#    Then ticket should be created and status should be assigned
-#    And there are multiple assignment rules that match the incident details
-#    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
-#    And user clicks on assignment under sections
-#    And user should see assigned profile as "Mob PS Core WEST"
-#    And user validates assignee is "Change_Automation_2"
-#    And user logsOut and closes the browser
-#    And user switches to window 0
-#
+  Scenario: When there are multiple assignment rules that match a manually created incident the one with the highest priority sort order value will be used for assignment
+    When user clicks on create trouble event
+    And user switches to window 1
+    Then trouble record form should appear in new tab
+    When user clicks on sweden checkbox under affected BU's
+    And user enters "Auto Assignment to Highest sort order" in Title field in Trouble event
+    And user selects request type as "Customer" on trouble event page
+    And user enters description as "Trouble event Auto Assignment to Highest Sort order"
+    And user clicks on save button
+    Then ticket should be created and status should be assigned
+    And there are multiple assignment rules that match the incident details
+    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
+    And user clicks on assignment under sections
+    And user should see assigned profile as "Core Production-Common"
+    And user validates assignee is "bjmo11"
+    And user logsOut and closes the browser
+    And user switches to window 0
+
 #  Scenario: Work order
 #    When user clicks on create work order
 #    And user switches to window 1
@@ -44,16 +44,16 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
 #    And there are multiple assignment rules that match the incident details
 #    And the Assignment Profile is set based on the assignment rule with the highest priority sort order value
 #    And user clicks on assignment under sections
-#  #############################################################################
-##    And user should see assigned profile as "Core Production-Common"
-##    And user validates assignee is "Change_Automation_4"
-# ##############################################################################
+  ##############################################################################
+#    And user should see assigned profile as "Core Production-Common"
+#    And user validates assignee is "Change_Automation_4"
+ ###############################################################################
 #    And user should see assigned profile as "Acc Mob RAN Ericsson-SE"
 #    And user validates assignee is "anbl04"
 #    And user logsOut and closes the browser
 #    And user switches to window 0
 
-#
+
 #  Scenario: Known Error
 #    Given user is on the OneWorkflow login page
 #    And user logs in with valid username "frvi96_auto" and password as "Test@1234"
@@ -79,7 +79,7 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
 #    And user switches to window 0
 
 
-### Enable this Rule before test run for change ####
+#### Enable this Rule before test run for change ####
 #  Scenario: Change Ticket
 #
 #    When user clicks on change record from agent console
@@ -138,9 +138,9 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
 #  ###########################################################################################
 #    And user should see assigned profile as "DC CS Core (Voice)"
 #    And user validates assignee is "DC CS Core (Voice)_auto"
-#
-#
-#
+
+
+
 #  Scenario: Problem Ticket
 #    And user clicks on create problem record
 #    And user switches to window 1
@@ -165,9 +165,9 @@ Feature: Incidents that meet the conditions of many assignment rules will use th
 #    And user logsOut and closes the browser
 #    And user switches to window 0
 
-######################################
-#  External system can't do automation
-######################################
+#######################################
+  #External system can't do automation
+#######################################
 
 #  Scenario: When there are multiple assignment rules that match an external system created incident the one with the highest priority sort order value will be used for assignment
 #    Given there an incident has not been created yet

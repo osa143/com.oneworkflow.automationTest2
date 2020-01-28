@@ -35,7 +35,7 @@
       And user validates title field as "Service Request | Topcat"
       And user validates request type as "Service Request | PLAZA"
       #Not sure about description validation outside of a table
-      And user validates topcat description same as plaza
+#      And user validates topcat description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -69,5 +69,5 @@
       Examples:
 
       |Service Request Name       |Request             |Description             |Additional Comments|
-      |General Request            |Test2 Topcat/Request|Test2 Topcat/Description|Test2 Topcat/AC    |
-      #|Restore Catalogue Database |Test1 Topcat/Request|Test1 Topcat/Description|Test1 Topcat/AC    |
+      #|General Request            |Test2 Topcat/Request|Test2 Topcat/Description|Test2 Topcat/AC    |
+      |Restore Catalogue Database |Test1 Topcat/Request|Test1 Topcat/Description|Test1 Topcat/AC    |

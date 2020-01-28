@@ -1308,7 +1308,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Change OS Patching")
     public void userClicksOnChangeOSPatching() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[16]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[19]/div/a/div"));
     }
 
     @And("user enters operating system manual request as {string}")
@@ -1333,7 +1333,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Manual OS Patching")
     public void userClicksOnManualOSPatching() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[17]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[20]/div/a"));
     }
 
     @And("user enters operating system manual os patching request as {string}")
@@ -1804,7 +1804,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Access to Red Hat Knowledgebase")
     public void userClicksOnAccessToRedHatKnowledgebase() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[14]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[17]/div/a/div/h2"));
     }
 
     @Then("user validates plaza ticket has update to timeline")
@@ -2273,5 +2273,10 @@ public class Plaza_HomePageSteps extends BasePage {
     @When("user clicks on account management and server form")
     public void userClicksOnAccountManagementAndServerForm() {
         clickElement(By.xpath("//h2[contains(text(),'Account Management - Server')]"));
+    }
+
+    @And("user enters host service group name as {string}")
+    public void userEntersHostServiceGroupNameAs(String arg0) {
+        homePage.enterAppwatchHostGroupName(arg0);
     }
 }

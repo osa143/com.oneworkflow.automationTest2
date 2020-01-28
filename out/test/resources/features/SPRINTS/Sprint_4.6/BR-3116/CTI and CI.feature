@@ -16,7 +16,8 @@ It is requested that if a customer operations send CTI values that they do not g
   And user clicks on "Cloud" under IT Infrastructure
   When user clicks on "Skypoint - private cloud" pebble
   Then user should see "Skypoint - private cloud" form
-  Then user selects nimbus system name in haiti as "Other"
+  #Then user selects nimbus system name in haiti as "Other"
+  Then user selects system name in haiti as "Other"
   When user selects role dropdown as "Application Operation Engineer"
   And user selects service request name as "Add/Modify/Remove CPU/Memory/Disk to VM"
   And user enters nimbus request as "Test1 Nimbus/Request"

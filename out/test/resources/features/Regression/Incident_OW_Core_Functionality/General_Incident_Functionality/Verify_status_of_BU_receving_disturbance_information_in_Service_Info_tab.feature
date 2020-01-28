@@ -1,6 +1,4 @@
-@Verify_status_of_BU_receiving_disturbance_information_in_Service_Info_tab
-@Incident
-@TroubleGeneral
+@Verify_status_of_BU_receiving_disturbance_information_in_Service_Info_tab @Incident @Trouble1
   #passed
   Feature: Verify status of BU receiving disturbance information in service info tab
     Scenario: Verify status of BU receiving disturbance information in service info tab

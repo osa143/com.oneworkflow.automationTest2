@@ -1,6 +1,4 @@
-@04.04
-@Incident
-@04
+@04.04_Create_change_from_incident_using_Create_button_in_Linked_Items_tab  @Incident1
   #passed
   Feature: Create change from incident using create button in linked items tab
     Scenario: Create change from incident using create button in linked items tab

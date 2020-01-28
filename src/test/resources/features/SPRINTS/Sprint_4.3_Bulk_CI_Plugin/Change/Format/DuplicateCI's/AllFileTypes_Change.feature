@@ -61,9 +61,9 @@ Feature: checking of bulk loading format
 
           |fileTypes                                                                                       |
           |Test Attachments\5DuplicateCIs\5CIsCSV.csv |
-          #|Test Attachments\5DuplicateCIs\5CIsTextDOC.txt|
-          #|Test Attachments\5DuplicateCIs\5CIsXLS.xls|
-         # |Test Attachments\5DuplicateCIs\5CIsXLSX.xlsx|
+#          |Test Attachments\5DuplicateCIs\5CIsTextDOC.txt|
+#          |Test Attachments\5DuplicateCIs\5CIsXLS.xls|
+#          |Test Attachments\5DuplicateCIs\5CIsXLSX.xlsx|
 
 
 

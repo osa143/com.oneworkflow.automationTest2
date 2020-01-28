@@ -1,4 +1,4 @@
-@Linked_Items_&_Change_To_KE
+@Linked_Items_&_Change_To_KE @Reg_Problem  @problem
   #Passed
   #CI search window
   Feature: linking of trouble and change ticket to KE

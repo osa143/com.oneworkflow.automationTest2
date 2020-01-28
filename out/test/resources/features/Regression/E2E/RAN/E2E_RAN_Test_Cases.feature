@@ -28,7 +28,7 @@
       And user enters "<Location>" within the location ID+ field
       And user switches to frame
       Then user should see list of CI's related to "<Location>"
-      #Location Name,Location ID+,Region Name, Region ID, Latitude, Longitude
+    #Location Name,Location ID+,Region Name, Region ID, Latitude, Longitude
       And user highlights location "<Location Name>" and clicks ok and validates location details
       When user enters "<Title>" in Title field in Trouble event
       And user selects request type as "Customer" on trouble event page
@@ -47,22 +47,25 @@
       And user selects impact level as "Degradation of Service"
       Then user clicks on relate CI
       And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
+      And user closes warning message
       And user enters "<CI Name2>" in name field
       Then user clicks on search button on CI search window
       And user selects CI "<CI Name2>"
       Then user clicks on relate CI
       And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
+      And user closes warning message
       And user enters "<CI Name3>" in name field
       Then user clicks on search button on CI search window
       And user selects CI "<CI Name3>"
       Then user clicks on relate CI
       And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
+      And user closes warning message
       And user clicks on close button on CI search window
       And CI should be listed and displayed under the Diagnosis tab
       Then user validates CI "Impact Status" is "Active"
       And user validates "Primary" CI is equal to "<CI name>"
       Then user clicks on save button
-      And user validates "<BU Name>" BU is added automatically
+      #And user validates "<BU Name>" BU is added automatically
       When user clicks on attachments under sections
       And  user adds attachment and verifies under "internal"
         | summary   | description | fullFilePath       | attachments |
@@ -80,6 +83,7 @@
         | Test WORD | Test WORD   | Test WORD FILE.docx| 10          |
         | Test EXCEL| Test EXCEL  | Test XLS FILE.xls  | 11          |
         | Test PPT  | Test PPT    | Test PPT FILE.pptx | 12          |
+
       And user clicks on "Timeline" tab
       When user enters "Test Update - Public" in the timeline text box
       And user clicks on public radio button
@@ -111,15 +115,17 @@
       And user clicks on save button
       Then user validates ticket status as "Closed"
 
+    #SE_Site_SE M1
+
        Examples:
 
       |CI Name1            |CI Name2            |CI Name3            |CheckedBU1|CheckedBU2|TickedBU1|TickedBU2 |Location |Location Name         |Title                        |Description                  |CI Name1            |CI Name2            |CI Name3            |CI name             |BU Name    |
-      |SE_SGSN_VRRMME1     |SE_SGSN_LDHMME1     |DK_SGSN_AMBMME1     |Sweden    |Finland   |Sweden   |Finland   |SE_      |SE_Site_126608       |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_VRRMME1     |SE_SGSN_LDHMME1     |DK_SGSN_AMBMME1     |SE_SGSN_VRRMME1     |Denmark    |
-#      |NO_SGSN_AKH902MME2  |NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1     |Norway    |Finland   |Norway   |Finland   |NO_      |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_SGSN_AKH902MME2  |NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1     |NO_SGSN_AKH902MME2  |Norway     |
-#      |LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME   |Lithuania |Denmark   |Lithuania|Denmark   |LT_      |LT_Site_888           |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E|LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME   |LT_SGSN_LT-CSGN01MME|Sweden     |
-#      |FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|Finland   |Denmark   |Finland  |Denmark   |FI_      |FI_Site_riutula keskus|Test case MT004 Finland E2E  |Test case MT004 Finland E2E  |FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|FI_SGSN_FI-CSGN01MME|Lithuania  |
-#      |EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|Estonia   |Sweden    |Estonia  |Sweden    |EE_      |EE_Site_KARDL         |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|EE_SGSN_EE-CSGN01MME|Finland    |
-#      |DK_SGSN_AMBMME1     |DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|Denmark   |Sweden    |Denmark  |Sweden    |DK_      |DK_Site_S0001         |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_SGSN_AMBMME1     |DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|DK_SGSN_AMBMME1     |Finland    |
+ #     |SE_SGSN_VRRMME1     |SE_SGSN_LDHMME1     |DK_SGSN_AMBMME1     |Sweden    |Finland   |Sweden   |Finland   |SE_      | SE_Site_128052         |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_VRRMME1     |SE_SGSN_LDHMME1     |DK_SGSN_AMBMME1     |SE_SGSN_VRRMME1     |Denmark    |
+#      |NO_SGSN_AKH902MME2  |NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1     |Norway    |Finland   |Norway   |Finland  |NO_      |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_SGSN_AKH902MME2  |NO_SGSN_NO-CSGN01MME|DK_SGSN_AMBMME1     |NO_SGSN_AKH902MME2     |Norway    |
+#      |LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_SE-CSGN98LABMME|Lithuania |Denmark   |Lithuania|Denmark  |LT_      |LT_Site_888           |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E|LT_SGSN_LT-CSGN01MME|LT_SGSN_LT-CSGN02MME|SE_SGSN_AKH902MME   |LT_SGSN_LT-CSGN01MME|Sweden     |
+#      |FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|Finland   |Denmark   |Finland  |Denmark  |FI_      |FI_Site_riutula keskus|Test case MT004 Finland E2E  |Test case MT004 Finland E2E  |FI_SGSN_FI-CSGN01MME|FI_SGSN_FI-CSGN02MME|LT_SGSN_LT-CSGN01MME|FI_SGSN_FI-CSGN01MME|Lithuania  |
+     |EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|Estonia   |Sweden    |Estonia  |Sweden   |EE_      |EE_Site_KARDL           |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_SGSN_EE-CSGN01MME|EE_SGSN_EE-CSGN02MME|FI_SGSN_FI-CSGN01MME|EE_SGSN_EE-CSGN01MME|Finland    |
+#     |DK_SGSN_AMBMME1     |DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|Denmark   |Sweden    |Denmark  |Sweden   |DK_      |DK_Site_S0001         |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_SGSN_AMBMME1     |DK_SGSN_DK-CSGN01MME|FI_SGSN_FI-CSGN01MME|DK_SGSN_AMBMME1     |Finland    |
 
 
 

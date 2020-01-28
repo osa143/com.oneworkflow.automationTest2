@@ -1,4 +1,4 @@
-@Bulk_Loading_Error_Message_impact_duration_Change @SAO-427
+@Bulk_Loading_Error_Message_impact_duration_Change @SAO-427 @other_change*
   #passed
 Feature: checking of bulk loading error message impact duration
   Scenario: user checks the impact duration message of bulk loading error

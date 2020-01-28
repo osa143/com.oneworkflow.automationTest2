@@ -1,4 +1,4 @@
-@Pm_Withdraw_Ticket_Before_Ack @problem
+@Pm_Withdraw_Ticket_Before_Ack @problem @Reg_Problem
   #passed
 
 Feature: problem record

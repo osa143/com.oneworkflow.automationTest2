@@ -50,8 +50,8 @@
         | External:3rd Party Failure | External value chains:Interference:Mobile terminals |
         | External:External factor | Digging:Fire:Power outage:Weather |
         | External | Other |
-        | People | Emotional stress:Lack of competence:Missing training:Other:Poor Judgement:Time pressure:Too much over time,too tired |
-        | Process and Organisation | Caused by Delivery (project or customer deliveries:Caused by Maintenance:Caused by Trouble shooting:Lack of resources:Other:Process misssing or inadequate:Process not followed in organisation:Process not fully implemented:Too complex organisation,unclear RACI |
+        | People | Emotional stress:Lack of competence:Missing training:Other:Poor Judgement:Time pressure:Too much over time, too tired |
+        | Process and Organisation | Caused by Delivery (project or customer deliveries):Caused by Maintenance:Caused by Trouble shooting:Lack of resources:Other:Process misssing or inadequate:Process not followed in organisation:Process not fully implemented:Too complex organisation,unclear RACI |
         | Process and Organisation:Caused by Change | Approval flow violated:Inadequate risk assessment:Parallel Changes:Poor testing:Poor Verification |
         | Process and Organisation:Documentation missing or inadequate | Checks list and procedures:CI inadequately documented:CI not documented in inventory |
         | Process and Organisation:Vendor | Lack of documentation:Lack of unclear SLA, WLA, RACI:Not complying to vendor recommendations / requirements:Use of non approved contractor |

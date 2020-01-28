@@ -1,6 +1,4 @@
-@04.05
-@Incident
-@04
+@04.05 @04.05_Create_problem_candidate_from_incident_using_Create_button_in_Linked_Items_tab  @Incident1
   #passed
   Feature: create problem candidate from incident using create button in linked items
     Scenario: create problem candidate from incident using create button in linked items

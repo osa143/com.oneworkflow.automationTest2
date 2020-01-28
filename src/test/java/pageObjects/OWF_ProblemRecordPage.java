@@ -120,6 +120,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         selectImpactType(list.get(0).get("ImpactType"));
         selectUrgency(list.get(0).get("Urgency"));
         clickSave();
+        wait(3000);
 
     }
 

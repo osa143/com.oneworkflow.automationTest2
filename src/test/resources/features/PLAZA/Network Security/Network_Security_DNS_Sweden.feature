@@ -35,13 +35,12 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | DNS/DHCP"
       And user validates request type as "Service Request | PLAZA"
-     #Not sure about description validation outside of a table
       And user validates network security dns sweden description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
-      And user should see assigned profile as "Application Services"
+      And user should see assigned profile as "DNS/DHCP"
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on Ack button

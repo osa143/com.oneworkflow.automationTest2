@@ -1,6 +1,4 @@
-@00.20
-@Incident1
-@00
+@00.20 @Incident1 @00
 #passed
   Feature: validation Fault type field availability in incident record
 
@@ -28,4 +26,4 @@
       When user clicks on CTI details under sections
       Then user selects category and verifies Type dropdown values then selects Type and verifies item dropdown values
         |category|                     TypeDropdownValues                  |       Type         |               ItemDropdownValues            |
-        |Access  |Radio Access Network:RAN:Telia Owned CPE:WLAN:WLAN Access|Radio Access Network|BSC:eNodeB:GSMCell:MFNCell:nodeB:Repeater:RNP|
+        |Access  |Radio Access Network:RAN:Telia Owned CPE:WLAN:WLAN Access|Radio Access Network|BSC:eNodeB:GSMCell:MFNCell:nodeB:Repeater:RNC|

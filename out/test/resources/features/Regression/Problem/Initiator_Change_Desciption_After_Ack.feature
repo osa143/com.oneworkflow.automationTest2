@@ -1,4 +1,4 @@
-@Initiator_Change_Description_After_Ack #@problem
+@Initiator_Change_Description_After_Ack @problem @Reg_Problem
   #passed
 Feature:Initiator change description
 

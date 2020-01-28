@@ -1004,7 +1004,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         String location = "";
         WebElement affectedBus = driver.findElement(By.xpath("//fieldset[@class =' pnl ']"));
         List<WebElement> elements = affectedBus.findElements(By.xpath("//input[@type='checkbox']"));
-        wait(3000);
+        wait(1000);
         for (int i = 0; i < elements.size(); i++) {
             if (elements.get(i).isSelected())
                 //location = elements.get(i).getAttribute("arvalue");
@@ -1020,6 +1020,40 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
 
         Ticket ticket = new Ticket(title, requestType, priority, location, description);
         return ticket;
+    }
+    public static String ParentTicketTitle;
+    public static String ParentTicketRequestType;
+    public static String ParentTicketDescription;
+    public static String ParentTicketPriority;
+    public static String ChildTicketTitle;
+    public static String ChildTicketRequestType;
+    public static String ChildTicketDescription;
+    public static String ChildTicketPriority;
+    public void getParentTicket(){
+        ParentTicketTitle = getAttributeValueById(txtTITLE_ID);
+        ParentTicketRequestType = getAttributeValueById(ddREQUEST_TYPE_ID);
+        ParentTicketDescription = getAttributeValueById(txtDESCRIPTION_ID);
+        ParentTicketPriority = getAttributeValueById(ddPRIORITY_ID);
+
+    }
+    public void getChildTicket(){
+        ChildTicketTitle = getAttributeValueById(txtTITLE_ID);
+        ChildTicketRequestType = getAttributeValueById(ddREQUEST_TYPE_ID);
+        ChildTicketDescription = getAttributeValueById(txtDESCRIPTION_ID);
+        ChildTicketPriority = getAttributeValueById(ddPRIORITY_ID);
+
+    }
+    public boolean verifyChildTicketSameAsParent() {
+        getChildTicket();
+
+        Assert.assertTrue(verifyFinlandIsSelectedAsAffectedBu());
+
+        if (ChildTicketTitle.equals(ParentTicketTitle) && ChildTicketRequestType.equals(ParentTicketRequestType)
+            && ChildTicketDescription.equals(ParentTicketDescription) && ChildTicketPriority.equals(ParentTicketPriority))
+        {
+         return true;
+        }
+        return false;
     }
     public void refreshPage(){
         driver.navigate().refresh();

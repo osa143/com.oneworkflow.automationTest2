@@ -1,6 +1,4 @@
-@02.11
-@Incident
-@02
+@02.11_Check_incident_OLA @Incident @02
   #passed
   #need to get a ticket for this test
   Feature: Check incident OLA feature

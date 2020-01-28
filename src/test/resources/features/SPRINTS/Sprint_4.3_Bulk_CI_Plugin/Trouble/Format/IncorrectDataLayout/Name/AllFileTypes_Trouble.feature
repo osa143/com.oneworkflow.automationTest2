@@ -45,8 +45,8 @@ Feature: checking of bulk loading format
 
           |fileTypes                                                                                              |
           |Test Attachments\IncorrectFormatColumnName\CSV.csv|
-         |Test Attachments\IncorrectFormatColumnName\TEXT.txt|
+          |Test Attachments\IncorrectFormatColumnName\TEXT.txt|
          |Test Attachments\IncorrectFormatColumnName\XLS.xls|
-         |Test Attachments\IncorrectFormatColumnName\XLSX.xlsx|
+#         |Test Attachments\IncorrectFormatColumnName\XLSX.xlsx|
 
 

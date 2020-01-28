@@ -60,7 +60,7 @@ Feature: checking of bulk loading CTI details
 #      |Test Attachments\10 CI's - Correct Names\CSV.csv |
 #      |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
 #      |Test Attachments\10 CI's - Correct Names\XLS.xls|
- #     |Test Attachments\10 CI's - Correct Names\TEXT.txt |
+#      |Test Attachments\10 CI's - Correct Names\TEXT.txt |
 
 
 

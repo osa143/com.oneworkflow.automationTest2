@@ -1,4 +1,4 @@
-@E2E_Urgent_Major_Change_(Internal_Initiator) @Change
+@E2E_Urgent_Major_Change_Internal_Initiator @Change
   Feature: E2E Urgent Major Change Internal Initiator
     Scenario: E2E Urgent Major Change Internal Initiator
 
@@ -25,9 +25,9 @@
       And user selects priority as "Major"
       And user enters "CI I2" in the change builder field
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-      Then user enters request start time 24 hours ahead of current date
-      And user enters request end time 28 hours ahead of current date
-      And user enters impact duration as "1" hours "15" minutes
+      And user enters start time as 24 hours fast from current sweden time
+      And user enters end time as 28 hours fast from current sweden time
+      And user enters impact duration as "50" minutes
       And user selects estimated impact dropdown as "Loss of Service"
       And user enters as "Regression - Change Management Process" in service and customer impact
       And user clicks on save button
@@ -41,16 +41,16 @@
       When user clicks on Risk tab
       And user gets current risk score value
       When user answers all risk questions as below
-      And user selects urgent answer as "A. No"
-      And user selects urgent answer as "B. Impact to other systems/technologies are unclear!"
-      And user selects urgent answer as "Tested successfully, this is a pilot"
-      And user selects urgent answer as "D. "Only" Consumer customers affected."
-      And user selects urgent answer as "A. Yes"
-      And user selects urgent answer as "A. Yes"
-      And user selects urgent answer as "A. Yes (outcome of the Change can be instantly verified)"
-      And user selects urgent answer as "B. No"
-      And user selects urgent answer as "A. No"
-      And user selects urgent last answer as "A. No"
+      And user selects answer as "A. No"
+      And user selects answer as "B. Impact to other systems/technologies are unclear!"
+      And user selects answer as "Tested successfully, this is a pilot"
+      And user selects answer as "D. \"Only\" Consumer customers affected."
+      And user selects answer as "A. Yes"
+      And user selects answer as "A. Yes"
+      And user selects answer as "A. Yes (outcome of the Change can be instantly verified)"
+      And user selects answer as "B. No"
+      And user selects answer as "A. No"
+      And user selects answer as "A. No"
       Then user validates risk score gets updated
       Then user clicks on save button
       Then an error message should appear: "Please select at least one country of impact for this change. (ARERR 10000)"
@@ -127,16 +127,16 @@
       Then user enters "New Communication plan" in the communication plan field
       And user clicks on save button
       When user clicks on risk tab
-      And user selects urgent answer as "A. No"
-      And user selects urgent answer as "B. Impact to other systems/technologies are unclear!"
-      And user selects urgent answer as "Tested successfully, this is a pilot"
-      And user selects urgent answer as "D. "Only" Consumer customers affected."
-      And user selects urgent answer as "A. Yes"
-      And user selects urgent answer as "A. Yes"
-      And user selects urgent answer as "A. Yes (outcome of the Change can be instantly verified)"
-      And user selects urgent answer as "B. No"
-      And user selects urgent answer as "A. No"
-      And user selects urgent last answer as "B. Yes"
+      And user selects answer as "A. No"
+      And user selects answer as "B. Impact to other systems/technologies are unclear!"
+      And user selects answer as "Tested successfully, this is a pilot"
+      And user selects answer as "D. \"Only\" Consumer customers affected."
+      And user selects answer as "A. Yes"
+      And user selects answer as "A. Yes"
+      And user selects answer as "A. Yes (outcome of the Change can be instantly verified)"
+      And user selects answer as "B. No"
+      And user selects answer as "A. No"
+      And user selects answer as "B. Yes"
       Then user clicks on save button
       Then user clicks on "Schedule" tab
       And user enters request start time 168 hours ahead of current date
@@ -185,7 +185,7 @@
       And user clicks on owner under sections
       Then user validates owner profile as "Change Manager"
       And user validates owner as "ChangeManager1"
-      And user validates assigned profile is "Change Implementation Control"
+      And user validates assigned profile as "Change Implementation Control"
       And user validates assignee is "Change Impl Contr"
       When user logsOut from One workflow
       And user goes back to login page

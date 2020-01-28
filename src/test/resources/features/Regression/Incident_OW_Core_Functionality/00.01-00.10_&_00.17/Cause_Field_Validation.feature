@@ -9,6 +9,9 @@
       When user clicks on create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
+      And user clicks on Ack button
+      Then user validates ticket status as "Work In Progress"
+
       And user clicks on closure under sections
       #Then user validates fault position availbility
       Then multiple values should be available in "Cause" dropdown

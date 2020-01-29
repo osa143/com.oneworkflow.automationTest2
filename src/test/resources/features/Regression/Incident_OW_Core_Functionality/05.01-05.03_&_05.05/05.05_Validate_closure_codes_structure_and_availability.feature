@@ -1,6 +1,6 @@
-@05.05_Validate_closure_codes_structure_and_availability  @Incident1
+@05.05  @Incident1
   #passed
-  Feature: validation closure codes structure and availability
+  Feature: validate closure code structure and availability
     Scenario: user validates fault position, cause and action fields on incident ticket
 
       Given user is on the OneWorkflow login page

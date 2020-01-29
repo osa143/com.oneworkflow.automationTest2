@@ -1,4 +1,4 @@
-@02.12_Check_Old_Tickets_And_Create_Problem_Candidate @Incident @02
+@02.12 @Incident @02
   #Passed
   Feature: Check old tickets and create problem candidate
     Scenario: Check old tickets and create problem candidate
@@ -27,6 +27,7 @@
       Then user selects impact level as "Degradation of Service"
       And user clicks on relate CI
       And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
+      And user closes warning message
       And user clicks on close button on CI search window
       When user adds below CI's to the ticket
         |   CI Name     |

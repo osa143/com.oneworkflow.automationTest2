@@ -1,4 +1,4 @@
-@Linked_Items_&_Change_To_KE @Reg_Problem
+@Linked_Items_&_Change_To_KE @Reg_Problem  @problem
   #Passed
   #CI search window
   Feature: linking of trouble and change ticket to KE
@@ -28,7 +28,7 @@
       And user answers all risk questions as below
       And user selects answer as "Impact to other systems/technologies are unclear"
       And user selects answer as "No"
-      And user selects answer as "Tested successfully, this is a pilot"
+      And user selects answer as "Tested succesfully, this is a pilot"
       And user selects answer as "Yes (outcome of the change can be instantly verified)"
       And user selects answer as "Yes"
       And user selects answer as "Simple"

@@ -1,4 +1,4 @@
-@Initiator_Create_Ticket #@problem @Reg_Problem
+@Initiator_Create_Ticket @problem @Reg_Problem
   #Passed
 Feature: initiator create ticket and withdraw
 

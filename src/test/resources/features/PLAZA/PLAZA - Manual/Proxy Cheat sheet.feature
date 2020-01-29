@@ -9,4 +9,4 @@
       And user enters "Proxy" in plaza search box
       And user clicks on the search button
       And user clicks on generally button
-      Then user validates "Forward proxy for servers cheat sheet" form opens
+#      Then user validates "Forward proxy for servers cheat sheet" form opens

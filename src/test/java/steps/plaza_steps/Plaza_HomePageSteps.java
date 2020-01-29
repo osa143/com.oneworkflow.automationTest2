@@ -266,7 +266,8 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user clicks on add attachment in plaza")
     public void userClicksOnAddAttachmentInPlaza() {
-        homePage.clickAddAttachment();
+        //homePage.clickAddAttachment();
+        homePage.clickElementByContainsTextAndTagName("*", "Add attachments");
     }
 
     @And("user enters Backup one time UNC Local path as {string}")
@@ -714,7 +715,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Firewall Routing Request pebble")
     public void userClicksOnFirewallRoutingRequestPebble() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[8]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id=\"x2723de4adb72cf006734f1eabf9619aa\"]/div/div/div[2]/div[11]/div/a/div/h2"));
     }
 
     @Then("user selects New Change Service Request Name as {string}")
@@ -795,7 +796,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Network Load Balancing pebble")
     public void userClicksOnNetworkLoadBalancingPebble() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[12]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id=\"x2723de4adb72cf006734f1eabf9619aa\"]/div/div/div[2]/div[14]/div/a/div/h2"));
 
 
     }
@@ -812,7 +813,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Network Routing Switching pebble")
     public void userClicksOnNetworkRoutingSwitchingPebble() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[16]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id=\"x2723de4adb72cf006734f1eabf9619aa\"]/div/div/div[2]/div[16]/div/a/div/h2"));
     }
 
     @Then("user selects New Switch Service Request Name as {string}")
@@ -887,7 +888,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Proxy pebble")
     public void userClicksOnProxyPebble() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[14]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id=\"x2723de4adb72cf006734f1eabf9619aa\"]/div/div/div[2]/div[17]/div/a/div/h2"));
     }
 
 
@@ -1197,7 +1198,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Remote Access \\(VPN ACS)")
     public void userClicksOnRemoteAccessVPNACS() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[15]/div/a/div/h2"));
+        clickElement(By.xpath("/html/body/div[1]/section/main/div[3]/div/sp-page-row/div/div[2]/span/div/div/div/div[2]/div[18]/div/a/div/h2"));
     }
 
     @And("user enters network security remote request as {string}")
@@ -1307,7 +1308,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Change OS Patching")
     public void userClicksOnChangeOSPatching() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[16]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[19]/div/a/div"));
     }
 
     @And("user enters operating system manual request as {string}")
@@ -1332,7 +1333,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Manual OS Patching")
     public void userClicksOnManualOSPatching() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[17]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[20]/div/a"));
     }
 
     @And("user enters operating system manual os patching request as {string}")
@@ -1771,7 +1772,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user clicks on IT Infrastructure dropdown")
     public void userClicksOnITInfrastructureDropdown() {
-        clickElement(By.xpath("//span[@id='ddddd28bdb8197042b3cfc16bf961980']"));
+        clickElement(By.xpath("//*[@id=\"ddddd28bdb8197042b3cfc16bf961980\"]"));
 
     }
 
@@ -1803,7 +1804,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Access to Red Hat Knowledgebase")
     public void userClicksOnAccessToRedHatKnowledgebase() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[14]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[17]/div/a/div/h2"));
     }
 
     @Then("user validates plaza ticket has update to timeline")
@@ -2273,5 +2274,10 @@ public class Plaza_HomePageSteps extends BasePage {
     @When("user clicks on account management and server form")
     public void userClicksOnAccountManagementAndServerForm() {
         clickElement(By.xpath("//h2[contains(text(),'Account Management - Server')]"));
+    }
+
+    @And("user enters host service group name as {string}")
+    public void userEntersHostServiceGroupNameAs(String arg0) {
+        homePage.enterAppwatchHostGroupName(arg0);
     }
 }

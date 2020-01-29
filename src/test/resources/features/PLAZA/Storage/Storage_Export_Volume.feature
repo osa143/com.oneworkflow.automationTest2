@@ -8,7 +8,7 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Storage & Data Protection" under IT Infrastructure
+      And user clicks on "Storage & Data Protection"
       When user clicks on "Export volume Snapshot to Host" pebble
       Then user should see "Export volume Snapshot to Host" form
       Then user selects system name in haiti as "Other"
@@ -36,7 +36,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Export volume Snapshot to Host"
       And user validates request type as "Service Request | PLAZA"
-      And user validates storage export volume description same as plaza
+#      And user validates storage export volume description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

@@ -14,4 +14,4 @@ Feature: Register affected BU's
     And user clicks on sweden checkbox under affected BU's
     And user clicks on finland checkbox under affected BU's
     Then user validates sweden and finland checkboxes are selected
-    And user logsOut and accepts alert
+

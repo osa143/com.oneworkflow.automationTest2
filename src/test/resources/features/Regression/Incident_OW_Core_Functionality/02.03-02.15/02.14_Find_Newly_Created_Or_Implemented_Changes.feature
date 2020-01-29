@@ -1,4 +1,4 @@
-@02.14_Find_Newly_Created_Or_Implemented_Changes @Incident
+@02.14_Find_Newly_Created_Or_Implemented_Changes @Incident @02
   #Passed
 
   Feature: Find newly created or implemented changes

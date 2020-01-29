@@ -39,7 +39,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Change OS Patching"
       And user validates request type as "Service Request | PLAZA"
-      And user validates operating system change from manual description same as plaza
+#      And user validates operating system change from manual description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -73,5 +73,5 @@
       Examples:
 
       |Request                              |Select Request                                |Description                       |Additional Comments      |
-      #|Test4 Operating System Change/Request|Changing from Manual to Auto patching         |Test4 Operating System/Description|Test4 Operating System/AC|
-      |Test5 Operating System Change/Request|Changing patch window for server in auto patch|Test5 Operating System/Description|Test5 Operating System/AC|
+      |Test4 Operating System Change/Request|Changing from Manual to Auto patching         |Test4 Operating System/Description|Test4 Operating System/AC|
+#      |Test5 Operating System Change/Request|Changing patch window for server in auto patch|Test5 Operating System/Description|Test5 Operating System/AC|

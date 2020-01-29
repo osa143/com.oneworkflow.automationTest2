@@ -1,6 +1,4 @@
-@01.11
-@Incident
-@01
+@01.11_Add_CI_To_Incident_Ticket @Incident  @01
 #passed
   #CORE for ST, Core for SIT
    #Mobile PS Core Network
@@ -31,7 +29,7 @@ Feature: Adding of CI to incident ticket
     And user selects a CI from list
     Then user selects impact level as "Degradation of Service"
     And user clicks on relate CI
-    And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
+    And user closes warning message
     When user enters "SE_EPG_HYEPG1" in name field
     And user clicks on search button on CI search window
     And user selects a CI from list

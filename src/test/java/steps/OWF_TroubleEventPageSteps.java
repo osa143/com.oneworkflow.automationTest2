@@ -89,10 +89,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user validates child ticket details are same as parent ticket")
     public void userValidatesChildAffectedBUIsSameAsParentTicket() {
-        troubleEventPage.wait(3000);
-        Ticket childTicket = troubleEventPage.getTicket();
-        if (childTicket.isEqual(parentTicket))
-            System.out.println("ticket details match");
+       Assert.assertTrue(troubleEventPage.verifyChildTicketSameAsParent());
     }
 
     @And("User waits for alarms to be cleared")
@@ -380,7 +377,6 @@ public class OWF_TroubleEventPageSteps {
         //troubleEventPage.getErrorText();
         //troubleEventPage.clickOkOnPopup();
         //troubleEventPage.clickOk();
-
     }
     @And("user accepts alert")
     public void userAcceptsAlert() {
@@ -1271,6 +1267,11 @@ public class OWF_TroubleEventPageSteps {
     public void userRightClicksOnCIAndClearsImpactForCheckImpactRecord(String arg0) {
         troubleEventPage.doImpactClear_checkImpactRecord(arg0);
         //troubleEventPage.clickElement(By.xpath("//*[@id=\"WIN_0_700009087\"]/div[1]/table/tbody/tr/td[2]/a[2]"));
+    }
+
+    @And("user gets parent ticket details")
+    public void userGetsParentTicketDetails() {
+        troubleEventPage.getParentTicket();
     }
 }
 

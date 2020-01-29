@@ -1,6 +1,4 @@
-@03.02
-@Incident
-@03
+@03.02_Do_a_public_Timeline_update_on_OW_incident_ticket @Incident
 #passed
   Feature: Do a public timeline update on OW incident ticket
     Scenario: Do a public timeline update on OW incident ticket

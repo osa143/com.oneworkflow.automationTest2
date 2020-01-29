@@ -1,4 +1,4 @@
-@Problem_Link_To_New_Known_Error_And_Withdraw @problem
+@Problem_Link_To_New_Known_Error_And_Withdraw @problem @Reg_Problem
   #Passed
 
   Feature: user is able to link problem to new known error and withdraw

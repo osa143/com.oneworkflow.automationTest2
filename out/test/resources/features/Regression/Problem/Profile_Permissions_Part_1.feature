@@ -1,4 +1,4 @@
-@Profile_Permissions_Part_1 @problem
+@Profile_Permissions_Part_1 @problem @Reg_Problem
 #Passed
 
   Feature:  profile permissions part 1

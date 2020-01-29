@@ -617,6 +617,24 @@ public class BaseRecordPage extends BasePage {
         }
 
     }
+    private static final String dd_RESOLVED_GROUP= "Resolved Group";
+    public void selectResolvedGroup(String value){
+        selectDropDownNameAndValue(dd_RESOLVED_GROUP, value, true);
+    }
+    public void verifyResolvedGroupAndPerson_dropdownValues(DataTable dataTable){
+        List<List<String>> dropdownValues = dataTable.asLists(String.class);
+        for (int i = 1; i < dropdownValues.size(); i ++) {
+
+            String resolvedGroup = dropdownValues.get(i).get(0);
+            selectResolvedGroup(resolvedGroup);
+
+            String ResolvedPerson = dropdownValues.get(i).get(1);
+            Assert.assertTrue(verifyDropdownValues(ResolvedPerson,"Resolved Person", "readonly"));
+            wait(500);
+
+        }
+
+    }
 
 
     public String getAssigneeText(){

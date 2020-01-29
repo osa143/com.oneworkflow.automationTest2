@@ -1,6 +1,7 @@
 @Bulk_Loading_Ignore_Duplicate_CI's_Trouble @SAO-427
   Feature: Bulk Loading ignore duplicate CI's
     Scenario Outline: Bulk Loading ignore duplicate CI's
+      #retest
 
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
@@ -51,10 +52,10 @@
 
       Examples:
         |fileTypes                                             |
-        |Test Attachments\50 CI's (WithDuplicates)\50CIsCSV.csv|
+#        |Test Attachments\50 CI's (WithDuplicates)\50CIsCSV.csv|
 #        |Test Attachments\50 CI's (WithDuplicates)\50CIsTextDOC.txt|
-#        |Test Attachments\50 CI's (WithDuplicates)\50CIsXLS.xls|
-#        |Test Attachments\50 CI's (WithDuplicates)\50CIsXLSX.xlsx|
+        |Test Attachments\50 CI's (WithDuplicates)\50CIsXLS.xls|
+ #       |Test Attachments\50 CI's (WithDuplicates)\50CIsXLSX.xlsx|
 
 
 

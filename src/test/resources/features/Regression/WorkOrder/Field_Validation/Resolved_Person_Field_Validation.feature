@@ -1,7 +1,7 @@
-@workorder_field_validation @workorder_Status_field_validation
+@workorder_field_validation @workorder_Resolved_Person_field_validation
 
-Feature:Work Order Status field validation
-  Scenario: Work Order Status validation
+Feature:Work Order Resolved Person field validation
+  Scenario: Work Order Resolved Person  validation
 
     Given user is on the OneWorkflow login page
     And user logs in with valid user and password
@@ -15,7 +15,6 @@ Feature:Work Order Status field validation
     And user enters description as "Description"
     And user selects priority as "Info"
     Then user clicks on save button
-    Then multiple statuses "New:Pending:Withdrawn:(clear)" should be available in "Status*" dropdown
     Then user selects assigned profile dropdown as "PLAZA"
     And user enters "PLAZA" in assignee
     And user clicks on Diagnosis tab
@@ -32,10 +31,7 @@ Feature:Work Order Status field validation
     Then user closes warning message
     And user clicks on close button on CI search window
     And user waits
-    Then user clicks on save button
-    Then multiple statuses "Assigned:Pending:Withdrawn:(clear)" should be available in "Status*" dropdown
     And user clicks on Ack button
-    Then multiple statuses "Pending:Work In Progress:Cleared:Withdrawn:(clear)" should be available in "Status*" dropdown
     And user selects status as "Cleared"
     And user selects resolved group as "PLAZA"
     And user selects resolved person as "PLAZA"

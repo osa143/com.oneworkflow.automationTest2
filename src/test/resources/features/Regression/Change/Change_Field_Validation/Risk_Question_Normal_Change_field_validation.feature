@@ -34,7 +34,7 @@
       And user waits
       And user clicks on Risk tab
       Then multiple statuses "Impact to other systems/technologies are unclear:Relations to other systems/technologies are clear in order to assess the change impact:(Clear)" should be available in "Answer" dropdown
-      And user clicks Risk Question down arrow
+      And user clicks Risk Question dowb n arrow
       Then multiple statuses "No:Yes:(Clear)" should be available in "Answer" dropdown
       And user clicks Risk Question down arrow
       Then multiple statuses "Change is a common change that has been implemented successfully many times:Implemented successfully before, some problems during implementation:No testing has made or the outcome of the test was failure:Similar changes have been implemented successfully few times:Tested successfully, this is a pilot:(Clear)" should be available in "Answer" dropdown

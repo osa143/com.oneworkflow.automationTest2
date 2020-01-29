@@ -8,7 +8,7 @@ import runners.BaseTest;
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
 
-        tags = {"@"}
+        tags = {"@Resolved_Group_And_Person"}
 
 )
 public class Test_Runner extends BaseTest {

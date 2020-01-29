@@ -32,6 +32,7 @@
       And user selects estimated impact dropdown as "Degradation of Service"
       And user clicks on save button
       And user waits
+
       And user clicks on Risk tab
       Then multiple statuses "Impact to other systems/technologies are unclear:Relations to other systems/technologies are clear in order to assess the change impact:(Clear)" should be available in "Answer" dropdown
       And user clicks Risk Question dowb n arrow

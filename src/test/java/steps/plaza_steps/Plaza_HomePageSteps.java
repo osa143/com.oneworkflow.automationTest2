@@ -1771,7 +1771,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user clicks on IT Infrastructure dropdown")
     public void userClicksOnITInfrastructureDropdown() {
-        clickElement(By.xpath("//*[@id='x3755759edb598b00b27fdb11ce96199f']/div/div[2]/div[3]"));
+        clickElement(By.xpath("//span[@id='ddddd28bdb8197042b3cfc16bf961980']"));
 
     }
 

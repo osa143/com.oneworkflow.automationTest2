@@ -592,7 +592,6 @@ public class BaseRecordPage extends BasePage {
         List<List<String>> dropdownValues = dataTable.asLists(String.class);
         for (int i = 1; i < dropdownValues.size(); i ++) {
             System.out.println(dropdownValues.get(i).get(1));
-
             String selectedValue = dropdownValues.get(i).get(0);
             String valuesToBePresent = dropdownValues.get(i).get(1);
             Assert.assertTrue(verifyDropdownValuesByName(dropdownName,selectedValue, valuesToBePresent, readOnly));

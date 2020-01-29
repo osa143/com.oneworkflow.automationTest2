@@ -849,6 +849,11 @@ public class OWF_ChangeRecordPageSteps {
     }
 
 
+    @And("user clicks Risk Question down arrow")
+    public void userClicksRiskQuestionDownArrow() {
+        changeRecordPage.clickDownButton();
+        changeRecordPage.wait(500);
+    }
 }
 
 

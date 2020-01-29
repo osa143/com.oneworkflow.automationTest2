@@ -25,30 +25,31 @@
       And user selects priority as "Critical"
       And user enters "Privacy Data: Just Testing" in the change builder field
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-      And user enters start time as 24 hours fast from current sweden time
-      And user enters end time as 28 hours fast from current sweden time
-      And user enters impact duration as "45" minutes
+      And user enters start time as some minutes fast from current sweden time
+      And user enters Request End time as some minutes fast from request start time
+      And user enters impact duration as "2" minutes
+
       And user selects estimated impact dropdown as "Degradation of Service"
       And user clicks on save button
       And user waits
       And user clicks on Risk tab
-      Then multiple statuses "A. No:A.Yes:(Clear)" should be available in "Answer" dropdown
+      Then multiple statuses "A. No:B. Yes:(Clear)" should be available in "Answer" dropdown
       And user clicks Risk Question down arrow
       Then multiple statuses "A. Relations to other systems/technologies are clear in order to assess the Change impact.:B. Impact to other systems/technologies are unclear!:(Clear)" should be available in "Answer" dropdown
       And user clicks Risk Question down arrow
       Then multiple statuses "A. High number of SLA customers.:B. Considerable amount of SLA customers.:C. Small number of SLA customers.:D. Only Consumer customers affected.:E. No impact on any customer.:(Clear)" should be available in "Answer" dropdown
       And user clicks Risk Question down arrow
-      Then multiple statuses "A. No:A.Yes:(Clear)" should be available in "Answer" dropdown
+      Then multiple statuses "A. No:B. Yes:(Clear)" should be available in "Answer" dropdown
       And user clicks Risk Question down arrow
-      Then multiple statuses "A. No:A.Yes:(Clear)" should be available in "Answer" dropdown
+      Then multiple statuses "A. No:B. Yes:(Clear)" should be available in "Answer" dropdown
       And user clicks Risk Question down arrow
       Then multiple statuses "A. Yes (outcome of the Change can be instantly verified):B. No (longer period of time is required to verify the Change):(Clear)" should be available in "Answer" dropdown
       And user clicks Risk Question down arrow
-      Then multiple statuses "A. No:A.Yes:(Clear)" should be available in "Answer" dropdown
+      Then multiple statuses "A. No:B. Yes:(Clear)" should be available in "Answer" dropdown
       And user clicks Risk Question down arrow
-      Then multiple statuses "A. No:A.Yes:(Clear)" should be available in "Answer" dropdown
+      Then multiple statuses "A. No:B. Yes:(Clear)" should be available in "Answer" dropdown
       And user clicks Risk Question down arrow
-      Then multiple statuses "A. No:A.Yes:(Clear)" should be available in "Answer" dropdown
+      Then multiple statuses "A. No:B. Yes:(Clear)" should be available in "Answer" dropdown
 
       And user logsOut and accepts alert
 

@@ -1,4 +1,4 @@
-@04.04_Create_change_from_incident_using_Create_button_in_Linked_Items_tab  @Incident1
+@04.04  @Incident1 @04
   #passed
   Feature: Create change from incident using create button in linked items tab
     Scenario: Create change from incident using create button in linked items tab
@@ -26,29 +26,13 @@
       Then user clicks on create button under linked items
       And user switches to window 2
       When user selects change type as "Change Record"
-      And user selects request type as "Normal Change"
-      And user selects title as "IT:Other" on Change record page
-      And user selects request category as "Cable splicing" on change record page
-      And user enters reason field as "Test Ticket"
-      And user selects priority as "Info"
-      And user enters "Change_Automation_1" in the change builder field
-      And user enters "Test Ticket" in the implementation field
-      And user enters "Test Ticket" in the test plan field
-      And user enters "Test Ticket" in the rollback field
-      And user enters "Test Ticket" in the communication plan field
-      And user enters "Test Ticket" in the ver of functionality field
-      And user enters "Test Ticket" in the risk description field
-      And user enters as "Test Ticket" in service and customer impact
-      And user selects estimated impact as "Degradation of Service"
-      Then user enters request start date as "" one day in the future
-      And user enters request end date as "" one day in the future
-      And user enters impact duration as "4" minutes
-      Then user clicks on save button
+      When user creates change ticket with following details
+        |RequestType  |Title            |RequestCategory|Description     |Reason       |Priority|ChangeBuilder      |Implementation|TestPlan   |RollBack   |CommPlan   |VerOfFunctionality|Risk   |ServiceCustomerImpact|ImpactDuration|EstimatedImpact       |
+        |Normal Change|IT:Other         |Cable splicing |Correcting error|Test Ticket  |Info    |Change_Automation_1|Test Ticket   |Test Ticket|Test Ticket|Test Ticket|Test Ticket       |No Risk|Test ticket no impact|      5       |Degradation of Service|
       And user gets ticket value
       When user switches to window 1
       And user clicks on linked items tab
       Then user validates 1 linked ticket availability
-      #Ticket number will change every test
       Then change should also be reflected in the timeline as "Correlation to ticket;. Relationship Type: Caused" for trouble ticket in row 1
 
 

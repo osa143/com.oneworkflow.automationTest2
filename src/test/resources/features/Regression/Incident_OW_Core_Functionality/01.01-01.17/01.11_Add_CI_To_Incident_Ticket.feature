@@ -57,8 +57,8 @@ Feature: Adding of CI to incident ticket
     When user right clicks on CI SE_EPG_VRREPG1 and user selects "Impact:Update"
     And user switches to frame
     Then user selects impact name as "Loss of Service"
-#    And user clicks on close button on bulk update window
-#    And user validates no changes were made on the chosen CI
+    And user clicks on close button on bulk update window
+    And user validates no changes were made on the chosen CI
 #    When user right clicks on CI SE_EPG_VRREPG1 and user selects "Impact:Update" without selecting checkbox
 #    And user switches to frame
 #    Then user selects impact name as "Loss of Service"

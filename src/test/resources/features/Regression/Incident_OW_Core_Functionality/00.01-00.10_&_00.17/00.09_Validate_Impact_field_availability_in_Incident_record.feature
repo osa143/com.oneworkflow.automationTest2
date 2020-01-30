@@ -1,4 +1,4 @@
-@00.09_Validate_Impact_field_availability_in_Incident_record @Incident1 @00
+@00.09 @Incident1 @00
 #passed
   Feature: validation impact field availability in incident record
 
@@ -13,7 +13,7 @@
       When user validates impact field availability
       Then multiple statuses "No:Minor:Medium:Major:Critical" should be available in "Impact" dropdown readonly
       And user logsOut and accepts alert
-      And user selects resolved group as ""
+
 
 
 

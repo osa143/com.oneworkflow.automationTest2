@@ -1,4 +1,4 @@
-@04.01_Document_the_service_restoration_actions_and_results  @Incident1 @04
+@04.01  @Incident1 @04
   #passed
   Feature: document the service restoration actions and results
     Scenario: document the service restoration actions and results

@@ -33,7 +33,7 @@
       And user validates source field as "PLAZA"
       Then user validates title field as "Service Request | Touchpoint Plus"
       And user validates request type as "Service Request | PLAZA"
-      Then user validates touchpoint plus update support pages same as plaza
+#      Then user validates touchpoint plus update support pages same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

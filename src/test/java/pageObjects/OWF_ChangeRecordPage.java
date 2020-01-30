@@ -217,8 +217,8 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         enterRiskDescriptionId(listMap.get(0).get("Risk"));
         enterServiceAndCustomerImpact(listMap.get(0).get("ServiceCustomerImpact"));
         selectEstimatedImpact(listMap.get(0).get("EstimatedImpact"));
-        enterStartDate_format(10);
-        enterEndDate_format(20);
+        enterStartDate(10);
+        enterEndDate(20);
         enterImpactDurationMins(listMap.get(0).get("ImpactDuration"));
         clickSave();
     }

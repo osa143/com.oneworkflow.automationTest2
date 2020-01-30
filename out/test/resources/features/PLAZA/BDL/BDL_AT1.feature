@@ -11,7 +11,7 @@
       And user clicks on "Application" under IT Infrastructure
       When user clicks on "BDL" pebble
       Then user should see "BDL" form
-      #Then user selects system name in haiti as "Other"
+#      Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters BDL request as "BDL-AT1 - Test/Request"
       And user selects service request name as "Configuration"
@@ -44,7 +44,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | BDL"
       And user validates request type as "Service Request | PLAZA"
-      And user validates BDL description same as plaza description
+#      And user validates BDL description same as plaza description
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

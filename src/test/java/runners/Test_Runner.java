@@ -7,10 +7,9 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@01.08"}
+        tags = {"@E2E_Standard_Change_External_Initiator"}
 
 )
 public class Test_Runner extends BaseTest {
 }
-
 

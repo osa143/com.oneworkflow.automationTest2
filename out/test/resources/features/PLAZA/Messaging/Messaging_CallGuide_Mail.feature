@@ -9,7 +9,7 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Messaging" under IT Infrastructure
+      And user clicks on "Messaging"
       When user clicks on "CallGuide Mail" pebble
       Then user should see "CallGuide Mail" form
 #      Then user selects system name in haiti as "Other"

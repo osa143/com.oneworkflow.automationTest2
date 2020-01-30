@@ -15,7 +15,7 @@
 
 
      | DropdownValue | DropdownValuesToBePresent|
-     |Core Voice |Roaming:Test|
+     |Core Voice     |Roaming:Test|
 
 
 

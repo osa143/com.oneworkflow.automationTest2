@@ -42,16 +42,16 @@ Feature: Internal Urgent Critical Change E2E
     When user clicks on Risk tab
     And user gets current risk score value
     When user answers all risk questions as below
-    And user selects urgent answer as "A. No"
-    And user selects urgent answer as "B. Impact to other systems/technologies are unclear!"
-    And user selects urgent answer as "Tested successfully, this is a pilot"
-    And user selects urgent answer as "D. "Only" Consumer customers affected."
-    And user selects urgent answer as "A. Yes"
-    And user selects urgent answer as "A. Yes"
-    And user selects urgent answer as "A. Yes (outcome of the Change can be instantly verified)"
-    And user selects urgent answer as "B. No"
-    And user selects urgent answer as "A. No"
-    And user selects urgent last answer as "A. No"
+    And user selects answer as "A. No"
+    And user selects answer as "B. Impact to other systems/technologies are unclear!"
+    And user selects answer as "Tested successfully, this is a pilot"
+    And user selects answer as "D. "Only" Consumer customers affected."
+    And user selects answer as "A. Yes"
+    And user selects answer as "A. Yes"
+    And user selects answer as "A. Yes (outcome of the Change can be instantly verified)"
+    And user selects answer as "B. No"
+    And user selects answer as "A. No"
+    And user selects answer as "A. No"
     Then user validates risk score gets updated
     Then user clicks on Send button
     Then an error message should appear: "Please select at least one country of impact for this change. (ARERR 10000)"

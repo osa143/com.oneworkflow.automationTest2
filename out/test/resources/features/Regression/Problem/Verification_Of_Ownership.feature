@@ -30,7 +30,7 @@ Feature: Verification of Problem ticket owner
     Then user logsOut
     And user goes back to login page
     #username and password are not correct for below step, replace credentials
-    And user logs in with valid username "mina09_auto" and password as "Test@1234"
+    And user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
     And user switches to window 2

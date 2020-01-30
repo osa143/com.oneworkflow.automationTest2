@@ -41,9 +41,9 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Database Request"
       And user validates request type as "Service Request | PLAZA"
-      And user validates Database access request description same as plaza
+#      And user validates Database access request description same as plaza
       Then user clicks on owner under sections
-      And user clicks on assignment under sections
+      #And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
       And user should see assigned profile as "<Assigned Profile>"
@@ -61,7 +61,8 @@
       And user clicks on bulk update save button
       Then user switches to window 1
       When user selects all CI's that appear
-      And user right clicks on CI "cc100cgas001" and clears impact for all CI's
+      And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
+      And user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
@@ -80,7 +81,7 @@
 
       |Request                                |Database Type|Description                      |Additional Comments  |Account Type|Assigned Profile|
       |Test1 Database AccessMSSQL/Request     |MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server |MSSQL L3       |
-      # |Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |MySQL L3        |
+#      |Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |MySQL L3        |
 
 
 

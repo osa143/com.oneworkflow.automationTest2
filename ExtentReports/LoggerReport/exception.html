@@ -107,12 +107,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.TimeoutException</a>
+							<a href="#" class="item-title _500">java.lang.NullPointerException</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.TimeoutException</h5>
+								<h5 class="mb-4">java.lang.NullPointerException</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="66" parent-id="1">
+<tr class="s-fail" test-id="128" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And user clicks on owner under sections <br/><span class="text-muted text-sm">External user processes a normal change ticket</span></td>
-	<td>0h 1m 1s+666msc</td>
+	<td class="_600">When user clicks on "Interested Parties" tab <br/><span class="text-muted text-sm">Internal user processes a normal change ticket</span></td>
+	<td>0h 1m 9s+132msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,18 +136,10 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: WIN_0_999000347 (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-I92010A', ip: '192.168.14.52', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51084}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 6ed3965ffdc96c8afec82e23035aa909
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.BasePage.findElement(BasePage.java:57)
-	at pageObjects.OWF_TroubleEventPage.clickOwner(OWF_TroubleEventPage.java:635)
-	at steps.OWF_TroubleEventPageSteps.userClicksOnOwnerUnderSections(OWF_TroubleEventPageSteps.java:369)
-	at ✽.user clicks on owner under sections(features/Regression/Change/E2E_Normal_Change_(External Initiator).feature:83)
+		<textarea disabled class="code-block">java.lang.NullPointerException
+	at pageObjects.BasePage.selectTab(BasePage.java:811)
+	at steps.OWF_AgentConsolePageSteps.userClicksOnAlarmTab(OWF_AgentConsolePageSteps.java:206)
+	at ✽.user clicks on "Interested Parties" tab(features/Regression/Change/E2E_Normal_Change_(Internal Initiator).feature:148)
 </textarea>
 	</td>
 </tr>
@@ -175,7 +167,7 @@ Session ID: 6ed3965ffdc96c8afec82e23035aa909
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Jan 27, 2020 03:51:43 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jan 31, 2020 02:18:45 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

@@ -99,6 +99,7 @@ public class OWF_ChangeRecordPageSteps {
     @When("user clicks on Send button")
     public void userClicksOnSendButton() {
         changeRecordPage.clickSendButton();
+        changeRecordPage.wait(3000);
 
     }
 

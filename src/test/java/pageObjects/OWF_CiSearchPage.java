@@ -116,7 +116,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         clickToSelectCi();
         selectLevel(CI_ImpactLevel);
         clickRelateCiButton();
-        wait(1500);
+        wait(1000);
         closeWarningMessage_changeTicket();
         clickCloseButton();
 

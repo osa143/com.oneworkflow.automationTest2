@@ -592,7 +592,6 @@ public class BaseRecordPage extends BasePage {
         List<List<String>> dropdownValues = dataTable.asLists(String.class);
         for (int i = 1; i < dropdownValues.size(); i ++) {
             System.out.println(dropdownValues.get(i).get(1));
-
             String selectedValue = dropdownValues.get(i).get(0);
             String valuesToBePresent = dropdownValues.get(i).get(1);
             Assert.assertTrue(verifyDropdownValuesByName(dropdownName,selectedValue, valuesToBePresent, readOnly));
@@ -614,6 +613,24 @@ public class BaseRecordPage extends BasePage {
             String itemDropdownValues = dropdownValues.get(i).get(3);
             Assert.assertTrue(verifyDropdownValues(itemDropdownValues,ddITEM, "notreadonly"));
             wait(500);
+        }
+
+    }
+    private static final String dd_RESOLVED_GROUP= "Resolved Group";
+    public void selectResolvedGroup(String value){
+        selectDropDownNameAndValue(dd_RESOLVED_GROUP, value, true);
+    }
+    public void verifyResolvedGroupAndPerson_dropdownValues(DataTable dataTable){
+        List<List<String>> dropdownValues = dataTable.asLists(String.class);
+        for (int i = 1; i < dropdownValues.size(); i ++) {
+
+            String resolvedGroup = dropdownValues.get(i).get(0);
+            selectResolvedGroup(resolvedGroup);
+
+            String ResolvedPerson = dropdownValues.get(i).get(1);
+            Assert.assertTrue(verifyDropdownValues(ResolvedPerson,"Resolved Person", "readonly"));
+            wait(500);
+
         }
 
     }

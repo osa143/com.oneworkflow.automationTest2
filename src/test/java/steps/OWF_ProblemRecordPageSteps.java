@@ -1291,6 +1291,12 @@ public class OWF_ProblemRecordPageSteps {
      problemRecordPage.verifyCTI_dropdownValues(dataTable);
 
     }
+
+    @Then("user selects resolved group and verifies resolved person dropdown values")
+    public void userSelectsResolvedGroupAndVerifiesResolvedPersonDropdownValues(DataTable dataTable) {
+        problemRecordPage.verifyResolvedGroupAndPerson_dropdownValues(dataTable);
+
+    }
 }
 
 

@@ -23,12 +23,12 @@ public class Hooks {
            // scenario.embed(screenshot, "image/png");
         }
 
-//
-//            OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
-//            CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 0);
-//            agentConsolePage.clickNavUserMenu();
-//            agentConsolePage.clickMenuItemLogout();
-//              DriverFactory.getInstance().quit();
+
+            OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
+            CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 0);
+            agentConsolePage.clickNavUserMenu();
+            agentConsolePage.clickMenuItemLogout();
+              DriverFactory.getInstance().quit();
 
        }
     }

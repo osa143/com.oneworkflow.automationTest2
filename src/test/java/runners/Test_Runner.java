@@ -8,7 +8,7 @@ import runners.BaseTest;
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
 
-        tags = {"@Cleared_time_change_to_closed"}
+        tags = {"@Nimbus_Skypoint_Failed_Request"}
 
 )
 public class Test_Runner extends BaseTest {

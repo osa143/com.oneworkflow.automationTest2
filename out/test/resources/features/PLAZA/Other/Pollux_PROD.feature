@@ -38,7 +38,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | POLLUX"
       And user validates request type as "Service Request | PLAZA"
-      And user validates pollux prod description same as plaza
+#      And user validates pollux prod description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -64,6 +64,6 @@
       Examples:
 
         |Request                   |Description                   |Additional Comments  |Desc Validation|
-        |Pollux-PROD - Test/Request|Pollux-PROD - Test/Description|Pollux-PROD - Test/AC|               |
-        #|Pollux-AT - Test/Request  |Pollux-AT - Test/Description  |Pollux-AT - Test/AC  |               |
+#        |Pollux-PROD - Test/Request|Pollux-PROD - Test/Description|Pollux-PROD - Test/AC|               |
+        |Pollux-AT - Test/Request  |Pollux-AT - Test/Description  |Pollux-AT - Test/AC  |               |
       

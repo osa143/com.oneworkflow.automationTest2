@@ -153,7 +153,7 @@
       And user enters impact duration as "60" seconds
       And user clicks save button
       Then error message should display as "Value does not fall within the limits specified for the field : Range is 0-59 : Secs* (ARERR 9272)"
-      And user enters impact duration as "24" hours
+      And user enters impact dur
       And user clicks save button
       Then error message should display as "Value does not fall within the limits specified for the field : Range is 0-23 : Hrs* (ARERR 9272)"
       And user enters impact duration as "30" minutes

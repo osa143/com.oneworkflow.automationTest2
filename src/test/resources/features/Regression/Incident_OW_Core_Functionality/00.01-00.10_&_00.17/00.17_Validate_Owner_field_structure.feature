@@ -1,4 +1,4 @@
-@00.17_Validate_Owner_field_structure #@Incident
+@00.17 #@Incident
 
 Feature: validation owner field structure
 

@@ -4,7 +4,7 @@ Feature: B2B Error handling
   Scenario: user should see error message and created ticket
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Change_Automation_1" and password as "Telia@1234"
+    When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create trouble event
     Then trouble record form should appear in new tab

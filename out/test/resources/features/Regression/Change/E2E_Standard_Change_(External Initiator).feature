@@ -28,7 +28,6 @@ Feature: E2E standard change external initiator
     And user enters end time as 16 minutes fast from current sweden time
     And user enters impact duration as "5" minutes
     Then user enters description as "Regression - Change Management Process"
-    #Then user adds "Regression - Change Management Process" to current description
     And user clicks on save button
     And user waits 10 secs
     And user clicks on "Timeline" tab

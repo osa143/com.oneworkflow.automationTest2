@@ -536,7 +536,7 @@ public class Plaza_HomePage extends BasePage {
         enterTextByElement(By.id(txt_CRM_RESOURCE_SERVICE_REQUEST), text);
     }
     public void selectDropdownValueUnderItInfrastructure(String DropdownValue){
-        driver.findElement(By.id("ddddd28bdb8197042b3cfc16bf961980")).findElements(By.tagName("span")).stream().filter(element -> element.getAttribute("value").equals(DropdownValue)).findFirst().orElse(null).click();
+        driver.findElement(By.id("xcc61d55edb198b00b27fdb11ce961902")).findElements(By.tagName("span")).stream().filter(element -> element.getAttribute("value").equals(DropdownValue)).findFirst().orElse(null).click();
     }
 
     public void selectWebtabCi(String dropdownName){

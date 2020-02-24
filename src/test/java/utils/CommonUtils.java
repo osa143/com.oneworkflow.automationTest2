@@ -61,6 +61,8 @@ public class CommonUtils extends BasePage {
 
     }
 
+
+
     public static String getDateTime(String pattern, String timeZone, int minutes) {
         if (timeZone.equals(""))
             timeZone = ZoneId.systemDefault().getId();
@@ -126,6 +128,8 @@ public class CommonUtils extends BasePage {
             e.printStackTrace();
         }
     }
+
+
 
 
 }

@@ -19,7 +19,7 @@
       Then user clicks on Diagnosis tab
       Then CI should be listed and displayed under the Diagnosis tab
       And user clicks on add button under internal
-      And user switches to frame 2
+      And user switches to frame
       Then user selects summary dropdown as "Decision"
       And user enters attachment description as "A Document Attached"
       When user clicks on choose file button

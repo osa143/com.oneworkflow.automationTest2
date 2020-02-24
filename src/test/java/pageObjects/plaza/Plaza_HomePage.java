@@ -18,7 +18,7 @@ import static utils.CommonUtils.*;
 
 public class Plaza_HomePage extends BasePage {
 
-    public static final String dd_ROLE_ID= "select2-chosen-13";
+    public static final String dd_ROLE_ID= "select2-chosen-9";
     public static final String txt_REQUEST_ID= "sp_formfield_sr2_v_request";
     public static final String dd_SYSTEM_ID= "s2id_sp_formfield_sr2_v_system";
     public static final String txt_PLANNED_START= "sp_formfield_sr2_v_start_date";
@@ -2136,14 +2136,14 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectRoleDropdown(String dropdownName){
         PlazaValidation.Role = dropdownName;
-        selectDropdown(By.id(dd_ROLE_ID), By.id("select2-results-13"), dropdownName);
+        selectDropdown(By.id(dd_ROLE_ID), By.id("select2-results-9"), dropdownName);
         clickEscButton();
 
     }
     public void selectSystemDropdown(String dropdownName)
     {
         PlazaValidation.System = dropdownName;
-        selectDropdownByTagNameDiv(By.id(dd_SYSTEM_ID), By.id("select2-results-17"),  dropdownName);
+        selectDropdownByTagNameDiv(By.id(dd_SYSTEM_ID), By.id("select2-results-13"),  dropdownName);
     }
 
 

@@ -12,12 +12,12 @@
       And User selects "Template" as dropdownValue and should see values for "readonly"
      | DropdownValue | DropdownValuesToBePresent|
      |Core Voice     |Core Voice \| Roaming:Core Voice│Blocking MVNO & SP services:Core Voice│CELLdata in CS Core:Core Voice│Configuration Number ranges:Core Voice│Delivery Enterprise Services|
-     |Fokus     |Changes in Fokus Security Profiles (DK):Dealers in Fokus (DK):Fokus Batch Runs:Fokus discounts (DK):Fokus letters (DK):Fokus operation (DK):Fokus price and parameter changes (DK):Fokus visitor roaming prices (DK)|
-     |IP Transport  |  IP Transport \| Roaming:IP Transport│Firewall │Openings        |
-     |OSS:Workflow     |Assignment Profile Request OW|
+     |Fokus          |Changes in Fokus Security Profiles (DK):Dealers in Fokus (DK):Fokus Batch Runs:Fokus discounts (DK):Fokus letters (DK):Fokus operation (DK):Fokus price and parameter changes (DK):Fokus visitor roaming prices (DK)|
+     |IP Transport   |  IP Transport \| Roaming:IP Transport│Firewall │Openings        |
+     |OSS:Workflow   |Assignment Profile Request OW|
      |Problem Management     |Data Collection:Resource Allocation Request:Root Cause Analysis:Root Cause Analysis - TASK:Work Around Analysis|
      |SA Process:Improvement/Automation     |SA Process Improvement|
-     |VAS:Large Account     |SMS Large Account - DK|
+     |VAS:Large Account      |SMS Large Account - DK|
 
       And user logsOut and accepts alert
 

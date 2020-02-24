@@ -854,6 +854,17 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.clickDownButton();
         changeRecordPage.wait(500);
     }
+
+    @And("user enters request start time as {int} minutes past from {string} timezone {string} format")
+    public void userEntersRequestStartTimeAsMinutesPastFromTimezoneFormat(int delay, String timezone, String pattern) {
+        changeRecordPage.enterStartDate_DateFormat_Timezone_Delay(pattern, timezone, delay);
+    }
+    @And("user enters request end time as {int} minutes past from {string} timezone {string} format")
+    public void userEntersRequestEndTimeAsMinutesPastFromTimezoneFormat(int delay, String timezone, String pattern) {
+        changeRecordPage.enterEndDate_DateFormat_Timezone_Delay(pattern, timezone, delay);
+    }
+
+
 }
 
 

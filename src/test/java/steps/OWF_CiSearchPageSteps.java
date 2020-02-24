@@ -489,4 +489,9 @@ public class OWF_CiSearchPageSteps {
     public void userAddsBelowCISToTheTicketWithImpactLevel(DataTable dataTable, String impactLevel) {
         ciSearchPage.addCIsToTicket(dataTable, impactLevel);
     }
+
+    @Then("user closes warning message on CI search window for change ticket")
+    public void userClosesWarningMessageOnCISearchWindowForChangeTicket() {
+        ciSearchPage.closeWarningMessage_changeTicket();
+    }
 }

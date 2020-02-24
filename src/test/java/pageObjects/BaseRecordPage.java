@@ -898,6 +898,22 @@ public class BaseRecordPage extends BasePage {
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );
     }
+    public void enterStartDate_DateFormat_Timezone_Delay(String pattern, String timeZone, int delay) {
+        String dateTime = CommonUtils.getDateTime(pattern, timeZone, delay);
+        findElement(By.id(txt_REQUEST_START)).clear();
+        enterTextByElement(By.id(txt_REQUEST_START),dateTime );
+    }
+
+    public void enterEndDate_DateFormat_Timezone_Delay(String pattern, String timeZone, int delay) {
+
+        String dateTime = CommonUtils.getDateTime(pattern, timeZone, delay);
+        findElement(By.id(txt_REQUEST_END)).clear();
+        enterTextByElement(By.id(txt_REQUEST_END),dateTime );
+    }
+
+
+
+
 
     public void enterStartDateAs(String startDate)
     {

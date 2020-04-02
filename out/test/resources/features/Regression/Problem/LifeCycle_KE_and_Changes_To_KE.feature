@@ -19,7 +19,7 @@
       Then user validates ticket status as "Draft"
       When user clicks on "Interested Parties" tab
       And user clicks on add button under interested parties
-      And user switches to frame 2
+      And user switches to frame
       And user selects type as "Additional Access" under interested parties
       And user clicks on radio button user
       Then user enters "Tohall_copy" in login name plus field
@@ -51,7 +51,7 @@
       And user clicks save button
       Then an error message should appear: "Required field (without a default) not specified : Closure Code (ARERR 9424)"
       When user selects error code as "Full Impact"
-      #When user selects closure code as "Full Impact"
+      When user selects closure code as "Full Impact"
       When user clicks on "Diagnosis" tab
       And user right clicks on CI "SE_CPE_FRECPE5" and selects "Impact:Clear All"
       And user should see confirmation message for impact clear and user clicks yes

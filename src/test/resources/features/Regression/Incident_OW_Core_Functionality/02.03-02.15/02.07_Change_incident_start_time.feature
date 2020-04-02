@@ -13,9 +13,9 @@ Feature: change incident start time
     And user enters "02:07 Change Incident Start Time" in Title field in Trouble event
     And user selects request type as "Customer" on trouble event page
     And user enters description as "02:07 Change Incident Start Time"
-    And user changes event start time as "2021-12-31 11:59:59" future date and time
+    And user changes event start time as "12-31-2021 11:59:59" future date and time
     Then user clicks on save button
     And an error message should appear: "The Event Start Time cannot be set in the future (ARERR 999001300)"
-    When user changes event start time as "2018-12-31 11:59:59" past date and time
+    When user changes event start time as "12-31-2019 11:59:59" past date and time
     Then user clicks on save button
     And ticket should be created and status should be assigned

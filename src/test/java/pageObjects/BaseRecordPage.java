@@ -648,8 +648,10 @@ public class BaseRecordPage extends BasePage {
     }
     public void clickonChooseFile_OnFrame(){
         driver.switchTo().parentFrame();
-        driver.switchTo().frame(2);
-        driver.switchTo().frame(1);
+        int size = driver.findElements(By.tagName("iframe")).size();
+        switchToFrameByIndex(size - 1);
+        int size1 = driver.findElements(By.tagName("iframe")).size();
+        switchToFrameByIndex(size1 - 1);
         findElement(By.id("PopupAttFileTable")).click();
     }
     public void clickOk_AttachmentOnFrame(){
@@ -874,14 +876,14 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterStartDate(int delay) {
-        String dateTime = CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM-dd-yyyy HH:mm:ss", "Europe/Stockholm", delay);
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
     }
 
     public void enterEndDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM-dd-yyyy HH:mm:ss", "Europe/Stockholm", delay);
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );
     }

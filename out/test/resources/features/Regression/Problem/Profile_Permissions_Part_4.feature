@@ -19,7 +19,7 @@
       And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation"
       When user clicks on "Interested Parties" tab
       When user clicks on add button under interested parties
-      And user switches to frame 2
+      And user switches to frame
       And user selects type as "Additional Access" under interested parties
       And user clicks on radio button user
       Then user enters "Tohall_copy" in login name plus field

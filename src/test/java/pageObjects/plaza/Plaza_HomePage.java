@@ -27,11 +27,11 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_ADDITIONAL_COMMENTS= "sp_formfield_additional_comments";
     public static final String btn_ORDER= "x016e0fdbdb854700b27fdb11ce9619e3";
     public static final String txt_PLAZA_REQUEST_NUM_ID="reqnum";
-    public static final String dd_SERVICE_REQUEST_NAME_ID= "select2-chosen-15";
+    public static final String dd_SERVICE_REQUEST_NAME_ID= "select2-chosen-11";
     public static final String txt_CRM_REQUEST_ID= "sp_formfield_sr46_v_request";
-    public static final String txt_CRM_PLANNED_START= "sp_formfield_sr1_v_planned_start_date";
-    public static final String txt_CRM_PLANNED_END= "sp_formfield_sr1_v_planned_end_date";
-    public static final String txt_CRM_DESCRIPTION= "sp_formfield_sr1_v_description";
+    public static final String txt_CRM_PLANNED_START= "sp_formfield_sr46_v_planned_start_date";
+    public static final String txt_CRM_PLANNED_END= "sp_formfield_sr46_v_planned_end_date";
+    public static final String txt_CRM_DESCRIPTION= "sp_formfield_sr46_v_description";
     public static final String dd_CRM_SYSTEM= "s2id_sp_formfield_sr46_v_system";
     public static final String txt_C2B_REQUEST_ID="sp_formfield_sr74_v_request";
     public static final String dd_ENVIRONMENT="s2id_autogen19";
@@ -334,11 +334,6 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_ADD_CI_TEXT_BOX="//input[@type='text']";
     private static final String txt_ONE_Time_ADD_CI="s2id_sp_formfield_add_ci";
     private static final String txt_HOST_GROUP_NAME = "sp_formfield_sr81_v_host_name";
-
-    public void selectAddOneTimeCi(String CiName){
-        PlazaValidation.CI = CiName;
-        addCi(txt_ONE_Time_ADD_CI, txt_ADD_CI_TEXT_BOX, CiName);
-    }
     private static final String txt_APPWATCH_DESCRIPTION = "sp_formfield_sr81_v_description";
     private static final String dd_SERVICE_NAME_IBS = "select2-chosen-15";
     private static final String dd_IBS_CI = "s2id_autogen28";
@@ -348,6 +343,25 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_IBS_ORDER_DESCRIPTION = "sp_formfield_sr82_v_description";
     private static final String txt_TOUCHPOINT_UPDATE_DESCRIPTION = "sp_formfield_sr45_v_description";
     private static final String txt_TOUCHPOINT_PLANNED_START_AND_TIME = "sp_formfield_sr45_v_planned_start_date";
+
+
+
+    public void selectDropdownByUsingClickAndSendKeys(String elementID, String dropdownValue){
+        clickElement(By.id(elementID));
+        WebElement Element=findElement(By.xpath("//input[@type='text']"));
+        Element.sendKeys(dropdownValue);
+        wait(500);
+        Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
+    }
+    public void selectAddOneTimeCi(String CiName){
+        PlazaValidation.CI = CiName;
+        addCi(txt_ONE_Time_ADD_CI, txt_ADD_CI_TEXT_BOX, CiName);
+    }
+    public void selectServiceAs(String service){
+        selectDropdownByUsingClickAndSendKeys("select2-chosen-1", service);
+
+    }
 
     public void enterAppwatchHostGroupName (String text){
         enterTextByElement(By.id(txt_HOST_GROUP_NAME), text);
@@ -637,7 +651,7 @@ public class Plaza_HomePage extends BasePage {
         WebElement Element=findElement(By.xpath("//input[@aria-owns='select2-results-27']"));
         Element.sendKeys(dropdownName);
         wait(1000);
-       Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ARROW_DOWN);
         Element.sendKeys(Keys.ENTER);
 
     }
@@ -773,11 +787,13 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectNatureAndContent(String text){
         PlazaValidation.NatureAndContent=text;
-        selectDropdownWithMultipleValues(By.id("s2id_autogen32"),By.id("s2id_autogen32_results"), text );
+        clickElementById("s2id_sp_formfield_pdb_natureOfContent");
+        wait(500);
+        driver.switchTo().activeElement().sendKeys(Keys.ENTER);
     }
     public void selectAffectedPerson(String text){
         PlazaValidation.AffectedPersons=text;
-        selectDropdownByTagNameDiv(By.id("select2-chosen-21"),By.id("select2-results-21"), text );
+        selectDropdownByTagNameDiv(By.id("select2-chosen-22"),By.id("select2-results-22"), text );
     }
     public void enterDatetime_PDB(String text){
         PlazaValidation.DateTime=text;
@@ -2027,7 +2043,7 @@ public class Plaza_HomePage extends BasePage {
     public void selectCRMSystemDropdown(String dropdownName){
             PlazaValidation.System = dropdownName;
 
-            selectDropdownByTagNameDiv(By.id(dd_CRM_SYSTEM), By.id("select2-results-18"), dropdownName);
+            selectDropdownByTagNameDiv(By.id(dd_CRM_SYSTEM), By.id("select2-results-14"), dropdownName);
 //        WebElement searchBox=findElement(By.id(dd_CRM_SYSTEM));
 //        searchBox.click();
 //        findElement(By.id("s2id_autogen18_search")).sendKeys(dropdownName);
@@ -2155,7 +2171,7 @@ public class Plaza_HomePage extends BasePage {
         PlazaValidation.Issue = dropdownName;
         PlazaValidation.ServiceRequestName = dropdownName;
         PlazaValidation.System = dropdownName;
-        selectDropdown(By.id(dd_SERVICE_REQUEST_NAME_ID), By.id("select2-results-15"), dropdownName);
+        selectDropdown(By.id(dd_SERVICE_REQUEST_NAME_ID), By.id("select2-results-11"), dropdownName);
 
     }
 

@@ -1,4 +1,4 @@
-@E2E_problem_and_known_error #@problem @Reg_Problem
+@E2E_problem_and_known_error @problem @Reg_Problem
 #passed
   Feature: E2E problem and known error
 

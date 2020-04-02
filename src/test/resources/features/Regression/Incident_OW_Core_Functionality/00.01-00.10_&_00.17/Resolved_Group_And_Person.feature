@@ -22,7 +22,7 @@
 #     Then user validates Resolved person availability
       Then multiple values should be available in "Resolved Group" dropdown
       Then user selects resolved group and verifies resolved person dropdown values
-        |resolved group                                                    |resolved person dropdown values|
+        |resolved group                                                  |resolved person dropdown values |
       |Access network:Mobile:RAN:Acc Mob RAN Ericsson-SE                 |anbl04:anbr00:anek28:anla13:chel05:clasbe:dick00:erth04:fqr0174:frsa18:haat00:heni43:jono64:krist4:lennyb:makelmi4:matuhl:oao241:rfy065:taka01:thgi00 |
       |Access network:Mobile:RAN:Acc Mob RAN NSN-SE                      |anbl04:anbr00:anek28:anla13:chel05:clasbe:dick00:erth04:fqr0174:frsa18:haat00:heni43:jono64:krist4:lennyb:makelmi4:matuhl:oao241:rfy065:taka01:thgi00 |
       |Access network:Mobile:RAN:Common:Mobile Services-DS               |anbl04:anbr00:anek28:anla13:chel05:clasbe:dick00:erth04:fqr0174:frsa18:haat00:heni43:jono64:krist4:lennyb:makelmi4:matuhl:oao241:rfy065:taka01:thgi00 |

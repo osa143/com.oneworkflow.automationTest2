@@ -1,4 +1,4 @@
-@Backup_One_Time @PLAZA
+@Backup_OneTime @PLAZA
   Feature: Backup One Time plaza form test
     Scenario: user validates information sent to OW from Plaza
 

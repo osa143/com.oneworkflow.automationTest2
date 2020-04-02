@@ -751,7 +751,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user validates {string} BU is added automatically")
     public void userValidatesBUIsAddedAutomatically(String arg0) {
-        Assert.assertTrue(troubleEventPage.verifyIsDenmarkSelected());
+        Assert.assertTrue(troubleEventPage.checkAffectedBuIsSelected(arg0));
     }
 
     @And("user clicks on close button on bulk update window")
@@ -822,7 +822,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event end time as {int} mins past")
     public void userEntersEventEndTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", arg0));
+        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", arg0));
     }
 
     @And("user selects action dropdown as {string} on trouble event page")
@@ -832,7 +832,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event start time as {int} mins past")
     public void userEntersEventStartTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", arg0));
+        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", arg0));
     }
 
     @And("user should see confirmation message for impact clear and clicks ok")

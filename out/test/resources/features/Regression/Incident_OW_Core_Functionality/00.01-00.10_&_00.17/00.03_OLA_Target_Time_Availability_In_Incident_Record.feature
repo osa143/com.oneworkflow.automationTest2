@@ -18,4 +18,4 @@ Feature: OLA target time availability in Incident Record
     And ticket should be created and status should be assigned
     Then user validates OLA Target Time availability
     And OLA target time field must be greyed out and not possible for user to alter
-    And user validates that the content of OLA date and time format as "yyyy-MM-dd HH:mm:ss"
+    And user validates that the content of OLA date and time format as "MM-dd-yyyy HH:mm:ss"

@@ -5,7 +5,7 @@ Feature: User is able to change status to pending
   Scenario: User logs into One workflow, creates a problem ticket, changes status to pending then checks ticket status
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "frvi96_auto" and password as "Test@1234"
+    When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create problem record
     And user switches to window 1
@@ -40,4 +40,4 @@ Feature: User is able to change status to pending
 #    And problem ticket status should be under investigation
 #    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Pending to Under Investigation."
 
-
+  #PB-000000040406

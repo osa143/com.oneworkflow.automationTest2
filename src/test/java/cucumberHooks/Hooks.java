@@ -28,7 +28,7 @@ public class Hooks {
 //            CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 0);
 //            agentConsolePage.clickNavUserMenu();
 //            agentConsolePage.clickMenuItemLogout();
-//              DriverFactory.getInstance().quit();
+//            DriverFactory.getInstance().quit();
 
        }
     }

@@ -8,7 +8,7 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      #And user clicks on application under IT Infrastructure dropdown
+      And user clicks on application under IT Infrastructure dropdown
       And user clicks on show more button
       When user clicks on Finance & Assurance
       Then user should see Finance & Assurance form

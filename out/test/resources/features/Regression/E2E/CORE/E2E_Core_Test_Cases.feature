@@ -16,13 +16,13 @@
       Then user validates "<BU_Name1>" and "<BU_Name2>" checkboxes are selected
       When user clicks on CTI details under sections
       And user validates availability of category dropdown
-      #Then multiple statuses "1:Access:Access|Transport:BSS:Computer Equipment:Computer Services:Core:Customer Service:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:Organization:OSS:Packet_Transport:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:Transport|Access:TV:VAS" should be available in "Category" dropdown
+#      Then multiple statuses "1:Access:Access|Transport:BSS:Computer Equipment:Computer Services:Core:Customer Service:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:Organization:OSS:Packet_Transport:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:Transport|Access:TV:VAS" should be available in "Category" dropdown
       And user selects Category as "Core"
       Then user validates availability of type dropdown
-      #And multiple statuses "Fixed_IMS:IP:MESSAGING:Mobile CS Core Network:Mobile IMS Core Network:Mobile PS Core Network:Mobile_CS:Mobile_PS:NFVI:Other:Performance:Planning:Presentation:Software:WLAN:Workflow" should be available in "Type" dropdown
+#      And multiple statuses "Fixed_IMS:IP:MESSAGING:Mobile CS Core Network:Mobile IMS Core Network:Mobile PS Core Network:Mobile_CS:Mobile_PS:NFVI:Other:Performance:Planning:Presentation:Software:WLAN:Workflow" should be available in "Type" dropdown
       Then user selects Type as "Mobile PS Core Network"
       When user validates availability of item dropdown
-      #Then multiple statuses "DNS:EPG:GGSN:NAT:NLS:PCRF:PGW:PM:RADIUS:SGSN:SHAPERS:TPE-CMIPBB:TPE-CMIPBB_Mobile_PS" should be available in "Item" dropdown
+#      Then multiple statuses "DNS:EPG:GGSN:NAT:NLS:PCRF:PGW:PM:RADIUS:SGSN:SHAPERS:TPE-CMIPBB:TPE-CMIPBB_Mobile_PS" should be available in "Item" dropdown
       And user selects Item as "SGSN"
       And user validates event start time is present
       When user clicks on location under sections
@@ -46,21 +46,21 @@
       Then multiple statuses "Degradation of Service:Loss of Service:No Impact:(clear)" should be available in "Level*" dropdown
       And user selects impact level as "Degradation of Service"
       Then user clicks on relate CI
-      And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
-      And user closes warning message
+      Then user closes warning message
+#      And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
       And user enters "<CI Name2>" in name field
       Then user clicks on search button on CI search window
       And user selects CI "<CI Name2>"
       And user selects impact level as "Degradation of Service"
       Then user clicks on relate CI
-      And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
-      And user closes warning message
+      Then user closes warning message
+#      And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
       And user clicks on close button on CI search window
       And CI should be listed and displayed under the Diagnosis tab
       Then user validates CI "Impact Status" is "Active"
       And user validates "Primary" CI is equal to "<CI Name>"
       Then user clicks on save button
-     # And user validates "<Validate BU>" BU is added automatically
+      #And user validates "<Validate BU>" BU is added automatically
       When user clicks on attachments under sections
       And  user adds attachment and verifies under "internal"
         | summary   | description | fullFilePath       | attachments |
@@ -113,8 +113,8 @@
       Examples:
       |BU_Name1 |BU_Name2 |Location|Location Name         |Title                        |Description                  |CI Name1          |CI Name2        |CI Name         |Validate BU |
 #      |Sweden   |Finland  |SE_     |SE_Site_126608         |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_FREMME2  |LT_SGSN_VLMMME02|SE_SGSN_FREMME2  |Lithuania   |
-#    |Norway   |Finland  |NO_     |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_EPG_OSL900EPG2|DK_EPG_AMBEPG1  |NO_EPG_OSL900EPG2|Denmark     |
-#     |Lithuania|Denmark  |LT_     |LT_Site_888           |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E| LT_SGSN_VLMMME02|SE_SGSN_FREMME2 |LT_SGSN_VLMMME02 |Sweden      |
-#     |Finland  |Denmark  |FI_     |FI_Site_riutula keskus|Test case MT004 Finland E2E  |Test case MT004 Finland E2E  | FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1|FI_SGSN_HKIMME02 |Estonia     |
-#    |Estonia  |Sweden   |EE_     |EE_Site_KARDL          |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_EPG_KOORTEPG1 |FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1 |Finland     |
-#    |Denmark  |Sweden   |DK_     |DK_Site_S0001         |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_EPG_AMBEPG1   |EE_EPG_KOORTEPG1|DK_EPG_AMBEPG1   |Estonia     |
+#      |Norway   |Finland  |NO_     |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_EPG_OSL900EPG2|DK_EPG_AMBEPG1  |NO_EPG_OSL900EPG2|Denmark     |
+#      |Lithuania|Denmark  |LT_     |LT_Site_888           |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E| LT_SGSN_VLMMME02|SE_SGSN_FREMME2 |LT_SGSN_VLMMME02 |Sweden      |
+#      |Finland  |Denmark  |FI_     |FI_Site_riutula keskus|Test case MT004 Finland E2E  |Test case MT004 Finland E2E  | FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1|FI_SGSN_HKIMME02 |Estonia     |
+#      |Estonia  |Sweden   |EE_     |EE_Site_KARDL          |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_EPG_KOORTEPG1 |FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1 |Finland     |
+#      |Denmark  |Sweden   |DK_     |DK_Site_S0001         |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_EPG_AMBEPG1   |EE_EPG_KOORTEPG1|DK_EPG_AMBEPG1   |Estonia     |

@@ -1,4 +1,4 @@
-@02.08_Change_priority_level @Incident @02
+@02.08 @Incident @02
   #passed
   Feature: user change priority level
     Scenario: user change priority level

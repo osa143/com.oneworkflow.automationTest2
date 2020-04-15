@@ -8,7 +8,8 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Application" under IT Infrastructure
+      And user clicks on application under IT Infrastructure dropdown
+      And user clicks on show more button
       When user clicks on Finance & Assurance
       Then user should see Finance & Assurance form
       #Then user selects system name in haiti as "Other"
@@ -62,8 +63,8 @@
       Examples:
 
        |Request           |System                           |Description           |AdditionalComments|
-     |Test1 F&A/Request |addressmaster                           |Test1 F&A/Description |Test1 F&A/AC      |
-#      |Test2 F&A/Request |alpha2 etl prod                         |Test2 F&A/Description |Test2 F&A/AC      |
+ #    |Test1 F&A/Request |addressmaster                           |Test1 F&A/Description |Test1 F&A/AC      |
+      |Test2 F&A/Request |alpha2 etl prod                         |Test2 F&A/Description |Test2 F&A/AC      |
 #      |Test3 F&A/Request |alpha2 etl test                         |Test3 F&A/Description |Test3 F&A/AC      |
 #      |Test4 F&A/Request |arkinet prod                            |Test4 F&A/Description |Test4 F&A/AC      |
 #      |Test5 F&A/Request |ars platform                            |Test5 F&A/Description |Test5 F&A/AC      |

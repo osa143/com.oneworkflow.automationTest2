@@ -34,7 +34,7 @@
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Skypoint - private cloud"
-      And user validates nimbus restore vm description same as plaza
+#      And user validates nimbus restore vm description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -43,7 +43,6 @@
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
-      And user validates CI availability
       And user validates CI "cc100cgas001" is listed
       And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
       Then user switches to frame
@@ -51,8 +50,7 @@
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      When user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
-      And user should see confirmation message and clicks on yes button
+      When user right clicks on CI "cc100cgas001" and clears impact
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

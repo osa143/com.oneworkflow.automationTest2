@@ -335,7 +335,8 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
             int attachmentsCount = Integer.parseInt(attachments.get(i).get(3));
             System.out.println("summary is: " + summary);
             driver.findElement(By.id(btnADD_ID)).click();
-            switchToFrameByIndex(2);
+            int size = driver.findElements(By.tagName("iframe")).size();
+            switchToFrameByIndex(size - 1);
             enterSummary_attachments(summary);
             enterDescription_Attachment_OnFrame(description);
             clickAdd_AttachmentOnFrame();
@@ -343,7 +344,8 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
             CommonUtils.uploadFile(fullFilePath);
             wait(1000);
             clickOk_AttachmentOnFrame();
-            switchToFrameByIndex(2);
+            int size1 = driver.findElements(By.tagName("iframe")).size();
+            switchToFrameByIndex(size1 - 1);
             if(type.equals("external"))
             {
                 clickExternalRadioButton();

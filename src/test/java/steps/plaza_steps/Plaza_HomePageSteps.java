@@ -2279,4 +2279,14 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userEntersHostServiceGroupNameAs(String arg0) {
         homePage.enterAppwatchHostGroupName(arg0);
     }
+
+    @And("user clicks on application under IT Infrastructure dropdown")
+    public void userClicksOnApplicationUnderITInfrastructureDropdown() {
+        clickElementById("b49dd9c1db9997446734f1eabf961975");
+    }
+
+    @And("user clicks on show more button")
+    public void userClicksOnShowMoreButton() {
+        clickElement(By.xpath("//button[contains(text(), 'Show More')]"));
+    }
 }

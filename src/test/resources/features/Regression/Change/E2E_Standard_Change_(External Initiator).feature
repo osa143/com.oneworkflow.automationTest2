@@ -24,12 +24,13 @@ Feature: E2E standard change external initiator
     When user clicks save button
     And multiple error messages should appear with red boarder around fields
     When user enters "CI B2" in the change builder field
-    And user enters start time as 10 minutes fast from current sweden time
-    And user enters end time as 16 minutes fast from current sweden time
-    And user enters impact duration as "5" minutes
+    And user enters as "Automation Test" in service and customer impact
+    And user enters request start time as 4 minutes past from "Europe/London" timezone "MM/dd/yyyy HH:mm:ss" format
+    And user enters request end time as 6 minutes past from "Europe/London" timezone "MM/dd/yyyy HH:mm:ss" format
+    And user enters impact duration as "2" minutes
     Then user enters description as "Regression - Change Management Process"
-    #Then user adds "Regression - Change Management Process" to current description
     And user clicks on save button
+    And user gets change ticket value
     And user waits 10 secs
     And user clicks on "Timeline" tab
     Then change should also be reflected in the timeline as "Ticket Priority is set to Info. Request Status is set to New. " on row 2
@@ -45,7 +46,7 @@ Feature: E2E standard change external initiator
     Then user selects all CI's that appear
     And user selects impact level as "No Impact"
     And user clicks on relate CI
-    Then user closes warning message
+    Then user closes warning message on CI search window for change ticket
     And user clicks on close button on CI search window
     And CI should be listed and displayed under the Diagnosis tab
     When user clicks "Interested Parties" tab
@@ -59,7 +60,7 @@ Feature: E2E standard change external initiator
     And user validates owner profile as "Change Manager"
     And user validates owner as "Change Manager"
     And user should see assigned profile as "Change Implementation Control"
-    And user waits 30 secs
+    And user waits for 2 minutes
     Then change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Assigned to Scheduled. " on row 1
     And user waits for 2 minutes
     And user clicks on ticket refresh button

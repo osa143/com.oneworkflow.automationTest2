@@ -103,6 +103,8 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         wait(2000);
         closeWarningMessage();
         clickCloseButton();
+        driver.switchTo().defaultContent();
+        wait(1000);
 
     }
 

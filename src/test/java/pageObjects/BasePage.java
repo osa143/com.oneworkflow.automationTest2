@@ -158,7 +158,7 @@ public void clickElementById(String Id){
 
     public String calculateEstimatedReady(int time, String timeUnit){
         String estimatedTime = "";
-        String format = "yyyy-MM-dd HH:mm:ss";
+        String format = "MM-dd-yyyy HH:mm:ss";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
         String eventStartTime = getEventStartTime();
         if(eventStartTime.isEmpty())

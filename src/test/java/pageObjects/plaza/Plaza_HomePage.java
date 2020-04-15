@@ -18,7 +18,7 @@ import static utils.CommonUtils.*;
 
 public class Plaza_HomePage extends BasePage {
 
-    public static final String dd_ROLE_ID= "select2-chosen-13";
+    public static final String dd_ROLE_ID= "select2-chosen-9";
     public static final String txt_REQUEST_ID= "sp_formfield_sr2_v_request";
     public static final String dd_SYSTEM_ID= "s2id_sp_formfield_sr2_v_system";
     public static final String txt_PLANNED_START= "sp_formfield_sr2_v_start_date";
@@ -536,7 +536,7 @@ public class Plaza_HomePage extends BasePage {
         enterTextByElement(By.id(txt_CRM_RESOURCE_SERVICE_REQUEST), text);
     }
     public void selectDropdownValueUnderItInfrastructure(String DropdownValue){
-        driver.findElement(By.id("ddddd28bdb8197042b3cfc16bf961980")).findElements(By.tagName("span")).stream().filter(element -> element.getAttribute("value").equals(DropdownValue)).findFirst().orElse(null).click();
+        driver.findElement(By.id("xcc61d55edb198b00b27fdb11ce961902")).findElements(By.tagName("span")).stream().filter(element -> element.getAttribute("value").equals(DropdownValue)).findFirst().orElse(null).click();
     }
 
     public void selectWebtabCi(String dropdownName){
@@ -2136,14 +2136,14 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectRoleDropdown(String dropdownName){
         PlazaValidation.Role = dropdownName;
-        selectDropdown(By.id(dd_ROLE_ID), By.id("select2-results-13"), dropdownName);
+        selectDropdown(By.id(dd_ROLE_ID), By.id("select2-results-9"), dropdownName);
         clickEscButton();
 
     }
     public void selectSystemDropdown(String dropdownName)
     {
         PlazaValidation.System = dropdownName;
-        selectDropdownByTagNameDiv(By.id(dd_SYSTEM_ID), By.id("select2-results-17"),  dropdownName);
+        selectDropdownByTagNameDiv(By.id(dd_SYSTEM_ID), By.id("select2-results-13"),  dropdownName);
     }
 
 

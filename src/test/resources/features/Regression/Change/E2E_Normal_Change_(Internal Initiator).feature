@@ -102,7 +102,7 @@
       #And user validates send button is disabled
       When user logsOut
       And user goes back to login page
-      Then user logs in with valid username "DC CS Core (Voice)_auto" and password as "Telia@1234"
+      Then user logs in with valid username "DC CS Core (Voice)_auto" and password as "Test@1234"
       And user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on more filters button
       And user switches to frame
@@ -123,7 +123,7 @@
       When user clicks on Diagnosis tab
       And user clicks on Show CR Matching button
       Then user should see Show CR Matching table appear
-      When user enters description as "- Additional Information"
+      When user enters description as "- Additional Information."
       Then user enters reason field as "New Reason"
       And user clicks on details under sections
       Then user enters "New Communication plan" in the communication plan field

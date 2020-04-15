@@ -73,17 +73,17 @@ Feature: External Normal Change E2E
     When user clicks on "Interested Parties" tab
     And user enters email address as "Test123xxx@Test123xxx.com"
     And user clicks on add email button
-    Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
+    Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 1
     When user clicks on Send button
     Then user validates ticket status as "Assigned"
     And user clicks on "Timeline" tab
     And user validates Timeline Text entry isn't readonly
     #Think it might be enough to validate that we cant press the save button (except timeline entries - will validate we can still make those)
     #And user validates no changes other changes can be made to the change ticket
-    And user clicks on owner under sections
+    #And user clicks on owner under sections
     And user validates owner profile as "Change Manager"
     And user validates owner as "ChangeManager"
-    Then change should also be reflected in the timeline as "STATUS MODIFIED.  Assignee Profile has changed from  to DC CS Core (Voice). Request Status has changed from New to Assigned."
+    Then change should also be reflected in the timeline as "STATUS MODIFIED.  Assignee Profile has changed from  to DC IMS Core. Request Status has changed from New to Assigned."
     And user gets ticket value
     And user goes back to login page
     Then user logs in with valid username "DC IMS Core_auto" and password as "Test@1234"

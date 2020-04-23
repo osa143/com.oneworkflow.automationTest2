@@ -265,26 +265,26 @@
 #      And user right clicks on primary CI and selects "Impact:Clear"
 #      And user clicks on yes on CI warning window
 #      Then user validates CI "Impact Status" is "Inactive"
-#      And user validates ci impact from time is updated
-#      And user validates ci impact to time is updated
-#      Then user clicks on save button
-#      And change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Impact has changed from  to No Impact. Actual End has changed from  UTC to 2019-07-26 13:23:51 UTC. Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed. "
-#      And user logsOut
-#      And user goes back to login page
-#      When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
-#      Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user clicks on more filters button
-#      And user clicks on "Core" tab
-#      And user selects status as "Completed" on user more filters window
-#      And user clicks on apply button on user more filters window
-#      And user should see "CR" tickets with "Status" of "Completed"
-#      When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
-#      And user switches to window 2
-#      Then user enters ticket previously created
-#      When user changes status to "Closed"
-#      And user selects resolved group as "Change Manager"
-#      And user selects resolved person as "ChangeManager1_Automation"
-#      And user enters review details as "Random Notes"
-#      And user selects closure code as "Test Ticket"
-#      Then user clicks on save button
-#      And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Completed to Closed."
+      And user validates ci impact from time is updated
+      And user validates ci impact to time is updated
+      Then user clicks on save button
+      And change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Impact has changed from  to No Impact. Actual End has changed from  UTC to 2019-07-26 13:23:51 UTC. Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed. "
+      And user logsOut
+      And user goes back to login page
+      When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
+      Then user successfully logged in to OneWorkflow and agent console should be displayed
+      When user clicks on more filters button
+      And user clicks on "Core" tab
+      And user selects status as "Completed" on user more filters window
+      And user clicks on apply button on user more filters window
+      And user should see "CR" tickets with "Status" of "Completed"
+      When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
+      And user switches to window 2
+      Then user enters ticket previously created
+      When user changes status to "Closed"
+      And user selects resolved group as "Change Manager"
+      And user selects resolved person as "ChangeManager1_Automation"
+      And user enters review details as "Random Notes"
+      And user selects closure code as "Test Ticket"
+      Then user clicks on save button
+      And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Completed to Closed."

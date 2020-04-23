@@ -8,7 +8,7 @@ import runners.BaseTest;
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
 
-        tags = {"@Backup_One_Time"}
+        tags = {"@E2E_Normal_Change_External_Initiator"}
 
 )
 public class Test_Runner extends BaseTest {

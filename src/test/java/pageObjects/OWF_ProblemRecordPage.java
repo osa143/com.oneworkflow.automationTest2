@@ -36,6 +36,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String ddREQUEST_TYPE_ID = "arid_WIN_0_777031002";
     private static final String ddURGENCY = "Urgency";
     private static final String ddWITHDRAWN_REASON = "Withdrawn Reason";
+    private static final String ddACCOUNTABLE_ORG= "Accountable Org.";
 
     private static final String ddValueDUPLICATE_ENTRIES = "Duplicate Entries";
     private static final String ddValueFALSE_ALARM = "False Alarm";
@@ -107,10 +108,39 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txt_ONSITE_CONTACT= "arid_WIN_0_705001292";
     private static final String txt_TRAVEL_TIME= "arid_WIN_0_705001293";
     private static final String table_TIMELINE = "T999000510";
+    private static final String btnEDIT= "WIN_0_808080012";
+    private static final String btnCLICK_SAVE= "WIN_0_700030040";
+    private static final String fld_ACCOUNTABLE_ORG_AS_MANDATORY="//label[contains(text(),'Accountable Org.*')]";
+    private static final String fld_ACCOUNTABLE_ORG_AS_NOT_MANDATORY="//label[contains(text(),'Accountable Org.')]";
+    private static final String dd_ACCOUNTABLE_ORG= "arid_WIN_0_808080010";
+
+    public boolean IsAccountableOrganisation_IsReadOnly(){
+        return checkIfControlIsReadonly(dd_ACCOUNTABLE_ORG);
+    }
+
+    public boolean isAccountableOrganisationIs_mandatory(){
+        return verifyElementIsDisplayed(By.xpath(fld_ACCOUNTABLE_ORG_AS_MANDATORY));
+
+    }
+    public boolean isAccountableOrganisationIs_Not_mandatory(){
+        return verifyElementIsDisplayed(By.xpath(fld_ACCOUNTABLE_ORG_AS_NOT_MANDATORY));
+
+    }
+    public boolean isAccountableOrganisationIsDisplayed(){
+        return verifyElementIsDisplayed(By.id(dd_ACCOUNTABLE_ORG));
+    }
+   public void selectAccountable_Org(String value){
+       selectDropDownNameAndValue(ddACCOUNTABLE_ORG, value, false);
+   }
+
+    public void selectAffected_Org(String value){
+       clickElementById(btnEDIT);
+       switchToFrameByIndex(2);
+       clickElementByContainsTextAndTagName("span", value);
+       clickElementById(btnCLICK_SAVE);
 
 
-
-
+    }
     public void createProblemTicket(DataTable dataTable){
         clickSwedenCheckBox();
         List<Map<String, String>> list=dataTable.asMaps(String.class, String.class);
@@ -119,6 +149,8 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         enterDescription(list.get(0).get("Description"));
         selectImpactType(list.get(0).get("ImpactType"));
         selectUrgency(list.get(0).get("Urgency"));
+        selectAccountable_Org(list.get(0).get("AccountableOrg"));
+        selectAffected_Org(list.get(0).get("AffectedOrg"));
         clickSave();
         wait(3000);
 

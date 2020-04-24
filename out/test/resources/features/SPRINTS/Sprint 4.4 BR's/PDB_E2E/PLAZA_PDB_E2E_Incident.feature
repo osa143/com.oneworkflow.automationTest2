@@ -11,8 +11,8 @@
       And user clicks on "SUBMIT A TICKET"
       And user switches to window 1
       Then user validates PDB submit form opens
-     # And user selects service area as "Security"
-     # And user selects service as "Personal Data Breach"
+      And user selects service area as "Security"
+     And user selects service as "Personal Data Breach"
       Then user enters PDB date and time as current date and time
       And user selects PDB effected country "<PDB Affected Country>"
       And user selects nature and content as "Address"

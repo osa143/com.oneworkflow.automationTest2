@@ -123,7 +123,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String dd_ASSIGNMENT_PROFILE= "Assignment Profile";
     private static final String btn_PRIORITY_CHECK= "WIN_0_600002912";
     private static final String table_SELECT_TARGET_REQUEST= "T700506101";
-    private static final String btn_LINK_LINKED_ITEMS= "WIN_5_777506009";
+    private static final String btn_LINK_LINKED_ITEMS= "WIN_4_777506009";
     private static final String txt_TIMELINE= "arid_WIN_0_777777103";
     private static final String rbtn_PUBLIC= "WIN_0_rc0id777021180";
     private static final String txt_ROOT_CAUSE_DESCRIPTION= "arid_WIN_0_777021052";

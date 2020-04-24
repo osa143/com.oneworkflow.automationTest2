@@ -10,15 +10,15 @@ Feature: Verification of ability to link tickets
     And user switches to window 1
     Then problem record form should appear in new tab
     When user creates problem ticket with following details
-      |Title                                 |RequestType |Description           |ImpactType      |Urgency|
-      |Proactive investigation of Tohall_Copy|CPS:IT:Other|UAT Test2 Linked items|Moderate/Limited|Low    |
+      |Title                                 |RequestType |Description           |ImpactType      |Urgency|AccountableOrg|AffectedOrg|
+      |Proactive investigation of Tohall_Copy|CPS:IT:Other|UAT Test2 Linked items|Moderate/Limited|Low    |CA_Infra      |CA_IT      |
     Then ticket should be created and status should be assigned
     When user clicks on create problem record
     And user switches to window 2
     Then problem record form should appear in new tab
     When user creates problem ticket with following details
-      |Title                                 |RequestType |Description                            |ImpactType      |Urgency|
-      |Proactive investigation of Tohall_Copy|CPS:IT:Other|UAT Test2 Linked items - Linked problem|Moderate/Limited|Low    |
+      |Title                                 |RequestType |Description                            |ImpactType      |Urgency|AccountableOrg|AffectedOrg|
+      |Proactive investigation of Tohall_Copy|CPS:IT:Other|UAT Test2 Linked items - Linked problem|Moderate/Limited|Low    |CA_Infra      |CA_IT      |
     Then ticket should be created and status should be assigned
     And user gets ticket value
     When user clicks on create trouble event

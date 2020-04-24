@@ -67,3 +67,4 @@
       And user clicks on the search button on select target request
       And user clicks on accept button
       Then user validates 2 linked ticket availability
+

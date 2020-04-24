@@ -881,6 +881,7 @@ public class OWF_TroubleEventPageSteps {
     @Then("error message should display as {string} on change record page")
     public void errorMessageShouldDisplayAsOnChangeRecordPage(String arg0) {
         Assert.assertEquals(troubleEventPage.getErrorText_change_recordPage(), arg0);
+        troubleEventPage.wait(3000);
 
     }
 

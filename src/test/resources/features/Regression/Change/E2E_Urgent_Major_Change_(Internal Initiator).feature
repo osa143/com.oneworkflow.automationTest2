@@ -100,7 +100,7 @@
 #      #And user validates "Send" is readonly
       When user logsOut
       And user goes back to login page
-      Then user logs in with valid username "ChangeManager1" and password as "Telia@1234"
+      Then user logs in with valid username "ChangeManager1_Automation" and password as "Telia@1234"
       And user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on more filters button
       And user switches to frame

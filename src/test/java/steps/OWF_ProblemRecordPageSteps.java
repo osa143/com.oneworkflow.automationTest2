@@ -594,6 +594,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @When("user clicks on assignment under sections")
     public void userClicksOnAssignmentUnderSections() {
+        problemRecordPage.wait(500);
         problemRecordPage.clickAssignments_underSections();
 
     }

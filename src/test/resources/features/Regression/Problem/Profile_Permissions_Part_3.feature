@@ -10,8 +10,8 @@
       And user switches to window 1
       Then problem record form should appear in new tab
       When user creates problem ticket with following details
-        |               Title                  |RequestType |Description                  |ImpactType      |Urgency|
-        |Proactive investigation of frvi96_auto|CPS:IT:Other|UAT Profile Permissions test3|Moderate/Limited|Low    |
+        |               Title                  |RequestType |Description                  |ImpactType      |Urgency|AccountableOrg|AffectedOrg|
+        |Proactive investigation of frvi96_auto|CPS:IT:Other|UAT Profile Permissions test3|Moderate/Limited|Low    |CA_Infra      |CA_IT      |
       Then ticket should be created and status should be assigned
       When user clicks on Ack button
       Then problem ticket status should be under investigation

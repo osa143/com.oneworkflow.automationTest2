@@ -34,7 +34,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_CRM_DESCRIPTION= "sp_formfield_sr46_v_description";
     public static final String dd_CRM_SYSTEM= "s2id_sp_formfield_sr46_v_system";
     public static final String txt_C2B_REQUEST_ID="sp_formfield_sr74_v_request";
-    public static final String dd_ENVIRONMENT="s2id_autogen19";
+    public static final String dd_ENVIRONMENT="s2id_autogen15";
     public static final String txt_C2B_DESCRIPTION="sp_formfield_sr74_v_description";
     public static final String dd_SELECT_REQUEST_ID="select2-chosen-16";
     public static final String txt_C2B_GENERAL_REQUEST_ID="sp_formfield_sr112_v_request";
@@ -2201,7 +2201,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectEnvironment(String dropdownName){
         PlazaValidation.Environment = dropdownName;
-        selectDropdownByTagNameDiv(By.id(dd_ENVIRONMENT), By.id("s2id_autogen19_results"),  dropdownName);
+        selectDropdownByTagNameDiv(By.id(dd_ENVIRONMENT), By.id("s2id_autogen15_results"),  dropdownName);
     }
 
     public void enterCablingNew_DC_Site(String text){

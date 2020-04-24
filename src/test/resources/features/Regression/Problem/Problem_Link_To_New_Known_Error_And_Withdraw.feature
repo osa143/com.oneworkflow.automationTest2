@@ -12,8 +12,8 @@
       And user switches to window 1
       Then problem record form should appear in new tab
       When user creates problem ticket with following details
-        |Title                                 |RequestType     |Description                   |ImpactType      |Urgency|
-        |Proactive investigation of frvi96_auto|CPS:IT:Other|UAT Test Known Error linked items|Moderate/Limited|Low    |
+        |Title                                 |RequestType     |Description                   |ImpactType      |Urgency|AccountableOrg|AffectedOrg|
+        |Proactive investigation of frvi96_auto|CPS:IT:Other|UAT Test Known Error linked items|Moderate/Limited|Low    |CA_Infra      |CA_IT      |
       Then ticket should be created and status should be assigned
       Then user clicks on Ack button
       And problem ticket status should be under investigation
@@ -34,7 +34,7 @@
       Then user clicks on save button on the problem form
       And user validates ticket status as "Draft"
       Then user clicks on linked items tab
-      And user clicks on radio button cleared
+      #And user clicks on radio button cleared
       And problem ticket should be listed
       When user changes status to "Withdrawn" on problem record page
       And user clicks on save button

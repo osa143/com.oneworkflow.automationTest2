@@ -11,8 +11,8 @@ Feature: User is able to change status to pending
     And user switches to window 1
     Then problem record form should appear in new tab
     When user creates problem ticket with following details
-      |Title                                 |RequestType |Description  |ImpactType      |Urgency|
-      |Proactive investigation of frvi96_auto|CPS:IT:Other|UAT Test6|Moderate/Limited|Low    |
+      |Title                                 |RequestType |Description  |ImpactType      |Urgency|AccountableOrg|AffectedOrg|
+      |Proactive investigation of frvi96_auto|CPS:IT:Other|UAT Test6|Moderate/Limited|Low    |CA_Infra      |CA_IT      |
     Then ticket should be created and status should be assigned
     Then user clicks on Ack button
     And problem ticket status should be under investigation
@@ -33,8 +33,8 @@ Feature: User is able to change status to pending
     When user changes status to "Pending" on problem record page
     And user enters date value as 2 minutes in the future
     And user selects reason dropdown as "Incident ongoing"
-    Then user validates ticket status as "Pending"
     And user clicks on save button on the problem form
+    Then user validates ticket status as "Pending"
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Under Investigation to Pending."
 #    Then user waits for 30 minutes
 #    And problem ticket status should be under investigation

@@ -11,8 +11,8 @@ Feature: User is able to close and clone a problem ticket
     And user switches to window 1
     Then problem record form should appear in new tab
     When user creates problem ticket with following details
-    |Title                                  |RequestType |Description   |ImpactType      |Urgency|
-    |proactive investigation of: frvi96_auto|CPS:IT:Other|UAT Test close|Moderate/Limited|Low    |
+    |Title                                  |RequestType |Description   |ImpactType      |Urgency|AccountableOrg|AffectedOrg|
+    |proactive investigation of: frvi96_auto|CPS:IT:Other|UAT Test close|Moderate/Limited|Low    |CA_Infra      |CA_IT      |
 
     Then ticket should be created and status should be assigned
     Then user clicks on Ack button
@@ -30,8 +30,6 @@ Feature: User is able to close and clone a problem ticket
     And an error message should appear: "Required field (without a default) not specified :Decision Go/NoGo (ARERR 9424)"
     And an error message should appear: "Required field (without a default) not specified :Solution (ARERR 9424)"
     And an error message should appear: "Required field (without a default) not specified :Solution Found Date (ARERR 9424)"
-    Then user enters actual finish as current date
-    And user enters decision go no go as current date
     And user selects solved under closure code
     And user enters solution as "A change in processes"
     And user enters solution found date as current date

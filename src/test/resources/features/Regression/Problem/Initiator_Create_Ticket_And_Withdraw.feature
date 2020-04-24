@@ -20,6 +20,8 @@ Feature: initiator create ticket and withdraw
     And user enters description as "UAT Test1"
     And user selects impact type as moderate:limited
     And user selects urgency as low
+    And user selects accountable organisation as "CA_Infra"
+    And user selects affected organisation as "CA_IT"
     And user clicks on save button on the problem form
     Then ticket should be created and status should be assigned
     When user changes status to "Withdrawn" on problem record page

@@ -21,7 +21,7 @@ Feature: Plaza CRM form test
     And user enters CRM planned end date as current date
     And user enters CRM description as "<Description>"
     And user enters additional comments as "<AdditionalComments>"
-    #Then user clicks on "Submit"
+    Then user clicks on "Submit"
     And user gets plaza request id
     And user clicks on plaza request id
     Then user should see service request form
@@ -55,6 +55,7 @@ Feature: Plaza CRM form test
     And user clicks on save button
     And user validates ticket status as "Closed"
     When user switches to window 0
+    And user waits 5 secs
     And user clicks on main page refresh
     Then user validates plaza request has completed
 
@@ -62,11 +63,11 @@ Feature: Plaza CRM form test
 
     |Request           |System       |Description           |AdditionalComments|
 #    |Test2 CRM/Request |1B           |Test2 CRM/Description |Test2 CRM/AC      |
-#    |Test3 CRM/Request |ALPHA1       |Test3 CRM/Description |Test3 CRM/AC      |
-#    |Test4 CRM/Request |ALPHA2       |Test4 CRM/Description |Test4 CRM/AC      |
+    |Test3 CRM/Request |ALPHA1       |Test3 CRM/Description |Test3 CRM/AC      |
+    |Test4 CRM/Request |ALPHA2       |Test4 CRM/Description |Test4 CRM/AC      |
 #    |Test5 CRM/Request |EMU          |Test5 CRM/Description |Test5 CRM/AC      |
-#    |Test6 CRM/Request |FLOWVIEW     |Test6 CRM/Description |Test6 CRM/AC      |
-#    |Test7 CRM/Request |GESB-AIPL    |Test7 CRM/Description |Test7 CRM/AC      |
+    |Test6 CRM/Request |FLOWVIEW     |Test6 CRM/Description |Test6 CRM/AC      |
+    |Test7 CRM/Request |GESB-AIPL    |Test7 CRM/Description |Test7 CRM/AC      |
 #    |Test8 CRM/Request |GESB-B2BEBXML|Test8 CRM/Description |Test8 CRM/AC      |
 #    |Test9 CRM/Request |GESB-B2BLight|Test9 CRM/Description |Test9 CRM/AC      |
 #    |Test10 CRM/Request|GESB-B2BSOAP |Test10 CRM/Description|Test10 CRM/AC     |
@@ -80,7 +81,7 @@ Feature: Plaza CRM form test
 #    |Test18 CRM/Request|MULTIBELLA   |Test18 CRM/Description|Test18 CRM/AC     |
 #    |Test19 CRM/Request|ONEVIEW      |Test19 CRM/Description|Test19 CRM/AC     |
 #    |Test20 CRM/Request|POTS         |Test20 CRM/Description|Test20 CRM/AC     |
-    |Test21 CRM/Request|RODOD        |Test21 CRM/Description|Test21 CRM/AC     |
+#    |Test21 CRM/Request|RODOD        |Test21 CRM/Description|Test21 CRM/AC     |
 #    |Test22 CRM/Request|SVN          |Test22 CRM/Description|Test22 CRM/AC     |
 #    |Test23 CRM/Request|TRIWIA       |Test23 CRM/Description|Test23 CRM/AC     |
 #    |Test24 CRM/Request|WEBTAB       |Test24 CRM/Description|Test24 CRM/AC     |

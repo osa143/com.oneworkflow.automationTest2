@@ -1296,6 +1296,44 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.verifyResolvedGroupAndPerson_dropdownValues(dataTable);
 
     }
+
+    @When("user clicks on open checkbox under linked items tab")
+    public void userClicksOnOpenCheckboxUnderLinkedItemsTab() {
+        problemRecordPage.clickOpenCheckBox();
+    }
+
+    @When("user clicks on cleared checkbox under linked items tab")
+    public void userClicksOnClearedCheckboxUnderLinkedItemsTab() {
+     problemRecordPage.clickClearedCheckBox();
+    }
+
+    @And("user selects accountable organisation as {string}")
+    public void userSelectsAccountableOrganisationAs(String arg0) {
+        problemRecordPage.selectAccountable_Org(arg0);
+        
+    }
+
+    @And("user selects affected organisation as {string}")
+    public void userSelectsAffectedOrganisationAs(String arg0) {
+        problemRecordPage.selectAffected_Org(arg0);
+    }
+
+    @Then("user should see accountable organisation dropdown as mandatory")
+    public void userShouldSeeAccountableOrganisationDropdownAsMandatory() {
+        Assert.assertTrue(problemRecordPage.isAccountableOrganisationIs_mandatory());
+        Assert.assertTrue(problemRecordPage.isAccountableOrganisationIsDisplayed());
+    }
+
+    @And("user verifies accountable organisation is not read only")
+    public void userVerifiesAccountableOrganisationIsNotReadOnly() {
+        Assert.assertFalse(problemRecordPage.IsAccountableOrganisation_IsReadOnly());
+    }
+
+    @Then("user should see accountable organisation dropdown as not mandatory")
+    public void userShouldSeeAccountableOrganisationDropdownAsNotMandatory() {
+        Assert.assertTrue(problemRecordPage.isAccountableOrganisationIs_Not_mandatory());
+        Assert.assertTrue(problemRecordPage.isAccountableOrganisationIsDisplayed());
+    }
 }
 
 

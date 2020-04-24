@@ -143,6 +143,15 @@ public class BaseRecordPage extends BasePage {
     private static final String ddCATEGORY = "Category";
     private static final String ddTYPE = "Type";
     private static final String ddITEM = "Item";
+    private static final String chkbxOPEN= "WIN_4_rc0id800040059";
+    private static final String chkbxCLEARED= "WIN_4_rc0id800040060";
+
+    public void clickOpenCheckBox(){
+        clickElement(By.id(chkbxOPEN));
+    }
+    public void clickClearedCheckBox(){
+        clickElement(By.id(chkbxCLEARED));
+    }
     public void selectCategory(String value){
         selectDropDownNameAndValue(ddCATEGORY, value, false);
     }

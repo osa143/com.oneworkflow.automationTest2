@@ -103,6 +103,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         clickToSelectCi();
         selectLevel(CI_Impact);
         clickRelateCiButton();
+        clickYesOnConfirmationMessage();
         closeWarningMessage();
         clickCloseButton();
         driver.switchTo().defaultContent();

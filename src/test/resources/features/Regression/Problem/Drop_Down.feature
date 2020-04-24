@@ -17,7 +17,9 @@
       Then multiple statuses "Extensive/Widespread:Significant/Large:Moderate/Limited:(clear)" should be available in "Impact" dropdown
       And user selects impact as "Extensive/Widespread"
       And multiple statuses "Critical:High:Medium:Low:(clear)" should be available in "Urgency" dropdown
-      Then user selects urgency as High
+      And user selects urgency as High
+      And user selects accountable organisation as "CA_Infra"
+      And user selects affected organisation as "CA_IT"
       When user clicks on save button on the problem form
       Then multiple statuses "Assigned:Pending:Under Investigation:Withdrawn:(clear)" should be available in "Status*" dropdown
       When user changes status to "Under Investigation" on problem record page

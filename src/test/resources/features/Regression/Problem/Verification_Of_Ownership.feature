@@ -29,14 +29,13 @@ Feature: Verification of Problem ticket owner
     And user gets ticket value
     Then user logsOut
     And user goes back to login page
-    #username and password are not correct for below step, replace credentials
-    And user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
+    And user logs in with valid username "mina09_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
     And user switches to window 2
     And user enters Problem Ticket
     And user clicks Search on ticket search
-    #When user tries to Ack the ticket but its shouldn't allow
+    When user tries to Ack the ticket but its shouldn't allow
     When user verifies status is read only
     Then problem ticket status should be assigned
     Then request type should be read only

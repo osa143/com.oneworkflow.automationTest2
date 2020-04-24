@@ -14,7 +14,7 @@ public class OWF_WorkOrderPageSteps {
     @And("user validates ticket status as {string}")
     public void userValidatesTicketStatusAs(String arg0) {
         Assert.assertEquals(workOrderPage.getStatusText(), arg0, "Status is not new");
-        workOrderPage.wait(500);
+        workOrderPage.wait(1000);
     }
 
     @And("user validates parent ticket id availability")

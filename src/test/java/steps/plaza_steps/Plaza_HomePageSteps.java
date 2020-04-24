@@ -2078,6 +2078,7 @@ public class Plaza_HomePageSteps extends BasePage {
     @And("user clicks on {string} under IT Infrastructure")
     public void userClicksOnUnderITInfrastructure(String arg0) {
         homePage.selectDropdownValueUnderItInfrastructure(arg0);
+        homePage.wait(1000);
     }
 
     @And("user enters CRM resource request as {string}")
@@ -2260,7 +2261,6 @@ public class Plaza_HomePageSteps extends BasePage {
         homePage.enterTouchpointUpdateDescription(arg0);
     }
 
-
     @And("user enters touchpoint planned start date and time as current time")
     public void userEntersTouchpointPlannedStartDateAndTimeAsCurrentTime() {
         homePage.enterTouchpointStartDateAndTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
@@ -2269,7 +2269,6 @@ public class Plaza_HomePageSteps extends BasePage {
     @And("user selects order one time Add CI as {string}")
     public void userSelectsOrderOneTimeAddCIAs(String arg0) {
        homePage.selectAddOneTimeCi(arg0);
-
     }
 
     @When("user clicks on account management and server form")

@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="54" parent-id="1">
+<tr class="s-fail" test-id="11" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And user adds CI "SE_EPG_FREEPG1" to change ticket with impact level "Loss of Service" <br/><span class="text-muted text-sm">External user processes a normal change ticket</span></td>
-	<td>0h 1m 38s+553msc</td>
+	<td class="_600">When user adds below CI's to the ticket <br/><span class="text-muted text-sm">user checks impact record on CI</span></td>
+	<td>0h 0m 38s+900msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -135,25 +135,26 @@
 </tr>
 <tr class="details">
 	<td colspan="5">
+		<textarea disabled class="code-block"><table class='runtime-table table-striped table'><tr><td>CI Name</td></tr><tr><td>SE_SGSN_FREMME2</td></tr><tr><td>SE_SGSN_HYMME2</td></tr><tr><td>SE_SGSN_LDHMME1</td></tr><tr><td>SE_SGSN_VRRMME1</td></tr></table></textarea>
 		
-		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[contains(text(),'OK')] (tried for 30 second(s) with 500 milliseconds interval)
+		
+		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: WIN_0_700027904 (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.BasePage.findElement(BasePage.java:57)
-	at pageObjects.BasePage.clickElementByContainsTextAndTagName(BasePage.java:79)
-	at pageObjects.OWF_CiSearchPage.closeWarningMessage_changeTicket(OWF_CiSearchPage.java:466)
-	at pageObjects.OWF_CiSearchPage.addCI_ToChangeTicket(OWF_CiSearchPage.java:122)
-	at steps.OWF_CiSearchPageSteps.userAddsCIToChangeTicketWithImpactLevel(OWF_CiSearchPageSteps.java:485)
-	at ✽.user adds CI "SE_EPG_FREEPG1" to change ticket with impact level "Loss of Service"(features/Regression/Change/E2E_Normal_Change_(External Initiator).feature:69)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'OK')]"}
-  (Session info: chrome=80.0.3987.163)
+	at pageObjects.BasePage.clickElementById(BasePage.java:97)
+	at pageObjects.OWF_CiSearchPage.clickYesOnConfirmationMessage(OWF_CiSearchPage.java:477)
+	at pageObjects.OWF_CiSearchPage.addCIsToTicket(OWF_CiSearchPage.java:89)
+	at steps.OWF_CiSearchPageSteps.userAddsBelowCISToTheTicket(OWF_CiSearchPageSteps.java:475)
+	at ✽.user adds below CI's to the ticket(features/Regression/Incident_OW_Core_Functionality/02.03-02.15/02.03_Check_impact_record.feature:17)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#WIN_0_700027904"}
+  (Session info: chrome=80.0.3987.149)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-I92010A', ip: '192.168.0.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.242.49', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.163, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53272}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 76f810b20b20665b930165057149774b
-*** Element info: {Using=xpath, value=//a[contains(text(),'OK')]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58518}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fa9cf95895bcf04c6c3069912f25d7e9
+*** Element info: {Using=id, value=WIN_0_700027904}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -165,17 +166,18 @@ Session ID: 76f810b20b20665b930165057149774b
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at pageObjects.BasePage.findElement(BasePage.java:57)
-	at pageObjects.BasePage.clickElementByContainsTextAndTagName(BasePage.java:79)
-	at pageObjects.OWF_CiSearchPage.closeWarningMessage_changeTicket(OWF_CiSearchPage.java:466)
-	at pageObjects.OWF_CiSearchPage.addCI_ToChangeTicket(OWF_CiSearchPage.java:122)
-	at steps.OWF_CiSearchPageSteps.userAddsCIToChangeTicketWithImpactLevel(OWF_CiSearchPageSteps.java:485)
+	at pageObjects.BasePage.clickElementById(BasePage.java:97)
+	at pageObjects.OWF_CiSearchPage.clickYesOnConfirmationMessage(OWF_CiSearchPage.java:477)
+	at pageObjects.OWF_CiSearchPage.addCIsToTicket(OWF_CiSearchPage.java:89)
+	at steps.OWF_CiSearchPageSteps.userAddsBelowCISToTheTicket(OWF_CiSearchPageSteps.java:475)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -243,7 +245,7 @@ Session ID: 76f810b20b20665b930165057149774b
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Apr 21, 2020 02:09:54 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Apr 2, 2020 11:48:53 AM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

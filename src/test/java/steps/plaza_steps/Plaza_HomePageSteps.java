@@ -94,6 +94,7 @@ public class Plaza_HomePageSteps extends BasePage {
     @When("user opens new tab")
     public void userOpensNewTab() {
         homePage.openNewTab();
+        homePage.wait(1000);
     }
 
 
@@ -2288,5 +2289,15 @@ public class Plaza_HomePageSteps extends BasePage {
     @And("user clicks on show more button")
     public void userClicksOnShowMoreButton() {
         clickElement(By.xpath("//button[contains(text(), 'Show More')]"));
+    }
+
+    @And("user selects service area as {string}")
+    public void userSelectsServiceAreaAs(String arg0) {
+       homePage.selectServiceAs(arg0);
+    }
+
+    @When("user clicks support on plaza homepage")
+    public void userClicksSupportOnPlazaHomepage() {
+        clickElement(By.xpath("//*[@id='xcab273021b8480d00c1e87fe6e4bcbaf']/div/a"));
     }
 }

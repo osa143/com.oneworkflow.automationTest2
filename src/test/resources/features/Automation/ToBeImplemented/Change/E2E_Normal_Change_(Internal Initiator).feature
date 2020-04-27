@@ -201,70 +201,70 @@
       Then user changes status to "Approval Requested"
       And user clicks on save button
       When user clicks on "Approval" tab
-#      And user clicks on request thats pending approval
-#      And user clicks on view button
-#      Then user switches to frame
-#      And user enters "Change can be approved right away" in comments field
-#      And user clicks on approve button
-#      Then user switches to window 2
-#      And user clicks on ticket refresh button
-#      Then user validates ticket status as "Approved"
-#      When user clicks on "Notifications" tab
-#      And user clicks on "Sent" tab
-#      Then user should see "Approved Change-Builder" email update
-#      And change should also be reflected in the timeline as "Ticket approved by ChangeManager1_Automation in date: "
-#      When user changes status to "Schedule Requested"
-#      And user clicks on save button
-#      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approved to Schedule Requested."
-#      And user validates ticket status as "Scheduled"
-#      Then user clicks on assignment under sections
-#      And user should see assigned profile as "Change Implementation Control"
-#      And user enters "ChangeImplementationControl1" in assignee
-#      And user selects assignee as "ChangeImplementationControl1" by using alphabet C key down 2 times
-#      And user clicks on owner under sections
-#      And user validates owner profile as "Change Manager"
-#      And user validates owner as "ChangeManager1_Automation"
-#      Then user clicks on save button
-#      When user clicks on "Notifications" tab
-#      And user clicks on "Sent" tab
-#      Then user should see "Assignment-user" email update
-#      And user logsOut
-#      And user goes back to login page
-#      When user logs in with valid username "ChangeImplementationControl1" and password as "Telia@1234"
-#      Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user clicks on more filters button
-#      And user clicks on "Core" tab
-#      And user selects status as "Scheduled" on user more filters window
-#      And user clicks on apply button on user more filters window
-#      And user should see "CR" tickets with "Status" of "Scheduled"
-#      When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
-#      And user switches to window 2
-#      Then user enters ticket previously created
-#      When user changes status to "Implementation"
-#      And user clicks on save button
-#      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Start has changed from  UTC to 2019-07-26 13:09:51 UTC. Request Status has changed from Scheduled to Implementation. "
-#      Then user clicks on "Schedule" tab
-#      Then user validates actual start time is updated
-#      When user clicks on "Notifications" tab
-#      And user clicks on "Sent" tab
-#      Then user should see "Implementation" email update
-#      When user clicks on timeline tab
-#      And user enters "Successful - no issues during implementation" in the timeline text box
-#      And user clicks on add button on timeline
-#      When user changes status to "Completed"
-#      And user clicks on save button
-#      And error message should display as "Required field (without a default) not specified : Actual Impact (ARERR 9424)"
-#      And error message should display as "Required field (without a default) not specified : Completed Code (ARERR 9424)"
-#      Then user clicks on "Schedule" tab
-#      Then user validates actual end time is updated
-#      Then user selects actual impact as "No Impact"
-#      And user selects completed code as "Successful"
-#      And user clicks on save button
-#      Then error message should display as "There are still outstanding active or pending impact records. Please clear them before clearing the request. (ARERR 999001210)"
-#      When user clicks on Diagnosis tab
-#      And user right clicks on primary CI and selects "Impact:Clear"
-#      And user clicks on yes on CI warning window
-#      Then user validates CI "Impact Status" is "Inactive"
+      And user clicks on request thats pending approval
+      And user clicks on view button
+      Then user switches to frame
+      And user enters "Change can be approved right away" in comments field
+      And user clicks on approve button
+      Then user switches to window 2
+      And user clicks on ticket refresh button
+      Then user validates ticket status as "Approved"
+      When user clicks on "Notifications" tab
+      And user clicks on "Sent" tab
+      Then user should see "Approved Change-Builder" email update
+      And change should also be reflected in the timeline as "Ticket approved by ChangeManager1_Automation in date: "
+      When user changes status to "Schedule Requested"
+      And user clicks on save button
+      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approved to Schedule Requested."
+      And user validates ticket status as "Scheduled"
+      Then user clicks on assignment under sections
+      And user should see assigned profile as "Change Implementation Control"
+      And user enters "ChangeImplementationControl1" in assignee
+      And user selects assignee as "ChangeImplementationControl1" by using alphabet C key down 2 times
+      And user clicks on owner under sections
+      And user validates owner profile as "Change Manager"
+      And user validates owner as "ChangeManager1_Automation"
+      Then user clicks on save button
+      When user clicks on "Notifications" tab
+      And user clicks on "Sent" tab
+      Then user should see "Assignment-user" email update
+      And user logsOut
+      And user goes back to login page
+      When user logs in with valid username "ChangeImplementationControl1" and password as "Telia@1234"
+      Then user successfully logged in to OneWorkflow and agent console should be displayed
+      When user clicks on more filters button
+      And user clicks on "Core" tab
+      And user selects status as "Scheduled" on user more filters window
+      And user clicks on apply button on user more filters window
+      And user should see "CR" tickets with "Status" of "Scheduled"
+      When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
+      And user switches to window 2
+      Then user enters ticket previously created
+      When user changes status to "Implementation"
+      And user clicks on save button
+      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Start has changed from  UTC to 2019-07-26 13:09:51 UTC. Request Status has changed from Scheduled to Implementation. "
+      Then user clicks on "Schedule" tab
+      Then user validates actual start time is updated
+      When user clicks on "Notifications" tab
+      And user clicks on "Sent" tab
+      Then user should see "Implementation" email update
+      When user clicks on timeline tab
+      And user enters "Successful - no issues during implementation" in the timeline text box
+      And user clicks on add button on timeline
+      When user changes status to "Completed"
+      And user clicks on save button
+      And error message should display as "Required field (without a default) not specified : Actual Impact (ARERR 9424)"
+      And error message should display as "Required field (without a default) not specified : Completed Code (ARERR 9424)"
+      Then user clicks on "Schedule" tab
+      Then user validates actual end time is updated
+      Then user selects actual impact as "No Impact"
+      And user selects completed code as "Successful"
+      And user clicks on save button
+      Then error message should display as "There are still outstanding active or pending impact records. Please clear them before clearing the request. (ARERR 999001210)"
+      When user clicks on Diagnosis tab
+      And user right clicks on primary CI and selects "Impact:Clear"
+      And user clicks on yes on CI warning window
+      Then user validates CI "Impact Status" is "Inactive"
       And user validates ci impact from time is updated
       And user validates ci impact to time is updated
       Then user clicks on save button

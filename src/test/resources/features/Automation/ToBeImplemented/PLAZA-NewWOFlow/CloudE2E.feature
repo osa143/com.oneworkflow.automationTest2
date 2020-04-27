@@ -1,4 +1,4 @@
-@CloudE2E1 @PlazaWONew
+@CloudE2E @PlazaWONew
   #Have added ID's for the fields as well, should be correct
 
 Feature: New WO flow Plaza

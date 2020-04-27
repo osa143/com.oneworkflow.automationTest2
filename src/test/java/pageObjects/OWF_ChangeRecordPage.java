@@ -94,7 +94,11 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_ACTUALDOWNTIME = "arid_WIN_0_600001501";
     private static final String txt_SUBSCRIPTIONID = "arid_WIN_0_600002012";
     private static final String txt_ADDRESSOFISSUE = "arid_WIN_0_600002023";
+    private static final String btn_APPROVE= "WIN_0_705001330";
 
+    public void clickApprove(){
+        clickElement(By.id(btn_APPROVE));
+    }
     public String getAddressOfIssue(){
         return getTextByID(txt_ADDRESSOFISSUE);
     }

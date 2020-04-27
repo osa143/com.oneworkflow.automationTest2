@@ -28,7 +28,7 @@ Feature: Internal Urgent Critical Change E2E
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
     Then user enters request start time 2 hours ahead of current date
     And user enters request end time 5 hours ahead of current date
-    And user enters impact duration as "3" hours
+    And user enters impact duration as 3 hours
     And user selects estimated impact dropdown as "Loss of Service"
     And user enters as "Regression - Change Management Process" in service and customer impact
     And user clicks on save button

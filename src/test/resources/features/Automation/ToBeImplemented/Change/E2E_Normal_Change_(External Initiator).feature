@@ -38,8 +38,8 @@ Feature: External Normal Change E2E
     And user selects priority as "Minor"
     And user enters "Privacy Data: Just Testing" in the change builder field
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-    And user enters start time as 24 hours fast from current sweden time
-    And user enters end time as 28 hours fast from current sweden time
+    And user enters start time as 24 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss a" format
+    And user enters end time as 28 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss a" format
     And user enters impact duration as "45" minutes
     And user selects estimated impact dropdown as "Degradation of Service"
     And user clicks on save button
@@ -73,20 +73,20 @@ Feature: External Normal Change E2E
     When user clicks on "Interested Parties" tab
     And user enters email address as "Test123xxx@Test123xxx.com"
     And user clicks on add email button
-    Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 1
+    Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
     When user clicks on Send button
     Then user validates ticket status as "Assigned"
     And user clicks on "Timeline" tab
     And user validates Timeline Text entry isn't readonly
     #Think it might be enough to validate that we cant press the save button (except timeline entries - will validate we can still make those)
     #And user validates no changes other changes can be made to the change ticket
-    #And user clicks on owner under sections
     And user validates owner profile as "Change Manager"
     And user validates owner as "ChangeManager"
     Then change should also be reflected in the timeline as "STATUS MODIFIED.  Assignee Profile has changed from  to DC IMS Core. Request Status has changed from New to Assigned."
     And user gets ticket value
+    And user logsOut
     And user goes back to login page
-    Then user logs in with valid username "DC IMS Core_auto" and password as "Test@1234"
+    When user logs in with valid username "DC IMS Core_auto" and password as "Test@1234"
     And user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on more filters button
     And user switches to frame
@@ -109,11 +109,11 @@ Feature: External Normal Change E2E
     And user clicks on Show CR Matching button
     Then user should see Show CR Matching table appear
     When user enters description as "- Additional Information"
-    Then user enters reason field as "New Reason"
+    Then user enters reason field as "- New Reason"
     And user clicks on details under sections
-    Then user enters "New Communication plan" in the communication plan field
+    Then user enters "- New Communication plan" in the communication plan field
     And user clicks on save button
-    Then change should also be reflected in the timeline as "Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) to TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) - Additional info."
+    Then change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (External Initiator) to TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (External Initiator)- Additional Information. "
     Then user clicks on "Schedule" tab
     Then user enters request start time 168 hours ahead of current date
     And user enters request end time 172 hours ahead of current date
@@ -128,7 +128,7 @@ Feature: External Normal Change E2E
     Then user clicks on bulk update save button
     When user clicks on "Notifications" tab
     And user clicks on "Sent" tab
-      #Then user should see "Acknowledged" email update
+    Then user should see "Acknowledged" email update
     When user changes status to "Approval Requested"
     And user clicks on save button
       #And change should also be reflected in the timeline as "Processing of the following notification event(s) started: Approvals Notification messages will be displayed on the Notifications tab."
@@ -169,21 +169,21 @@ Feature: External Normal Change E2E
     Then user validates ticket status as "Approved"
     When user clicks on "Notifications" tab
     And user clicks on "Sent" tab
-    #Then user should see "Approved" email update
+    Then user should see "Approved" email update
     When user changes status to "Schedule Requested"
     And user clicks on save button
-    Then user validates changes can be made on the ticket
+    #Then user validates changes can be made on the ticket ##Not sure how this is applicable here##
     And user clicks on timeline tab
-    And change should also be reflected in the timeline as ""
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approved to Schedule Requested. "
     When user clears description field
     And user enters description as "TEST TICKET - New Description"
     And user clicks on save button
-    Then change should also be reflected in the timeline as ""
+    Then change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (External Initiator)- Additional Information to TEST TICKET - New Description"
     Then user validates ticket status as "Scheduled"
     And user validates agreed start time is updated
     And user validates agreed end time is updated
     Then user clicks on assignment under sections
-    And user should see assigned profile as "ChangeImplementationControl1"
+    And user should see assigned profile as "ChangeImplementationControl"
     And user validates assignee is "Change Impl Contr"
     When user logsOut
     And user goes back to login page
@@ -206,12 +206,11 @@ Feature: External Normal Change E2E
     And user clicks on save button
     Then user validates ticket status as "Implementation"
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Start has changed from  UTC to 2019-08-30 13:35:27 UTC. Request Status has changed from Scheduled to Implementation."
-    Then user gets current time
     And user clicks on "Schedule" tab
-    And user validates actual start time matches implementation time
+    And user validates actual start time as current date time
     When user clicks on "Notifications" tab
     And user clicks on "Sent" tab
-    #Then user should see "Implementation" email update
+    Then user should see "Implementation" email update
     When user clicks on timeline tab
     And user enters "Successful, no issues during implementation" in the timeline text box
     And user clicks on add button on timeline

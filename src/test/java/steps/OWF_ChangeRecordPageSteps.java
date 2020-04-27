@@ -866,7 +866,53 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.enterEndDate_DateFormat_Timezone_Delay(pattern, timezone, delay);
     }
 
+    @And("user enters start time as {int} hours fast from current sweden time in {string} format")
+    public void userEntersStartTimeAsHoursFastFromCurrentSwedenTimeInFormat(int delayHours, String pattern) {
+        int newDelay = 60 * delayHours;
+        changeRecordPage.enterStartDate_DateFormat_Timezone_Delay(pattern, "Europe/Stockholm", newDelay);
+    }
 
+    @And("user enters end time as {int} hours fast from current sweden time in {string} format")
+    public void userEntersEndTimeAsHoursFastFromCurrentSwedenTimeInFormat(int delayHours, String pattern) {
+        int newDelay = 60 * delayHours;
+        changeRecordPage.enterEndDate_DateFormat_Timezone_Delay(pattern, "Europe/Stockholm", newDelay);
+    }
+
+    @And("user clicks on request thats pending approval")
+    public void userClicksOnRequestThatsPendingApproval() {
+        changeRecordPage.clickPendingTicketForApproval();
+    }
+
+    @And("user enters {string} in comments field")
+    public void userEntersInCommentsField(String arg0) {
+        changeRecordPage.enterApprovalRequestComment(arg0);
+    }
+
+    @And("user clicks on approve button")
+    public void userClicksOnApproveButton() {
+        changeRecordPage.clickApprove();
+    }
+
+    @When("user clears description field")
+    public void userClearsDescriptionField() {
+        changeRecordPage.clearDescriptionField();
+    }
+
+    @And("user validates agreed start time is updated")
+    public void userValidatesAgreedStartTimeIsUpdated() {
+        Assert.assertNotNull(changeRecordPage.getAgreedStart());
+    }
+
+    @And("user validates agreed end time is updated")
+    public void userValidatesAgreedEndTimeIsUpdated() {
+        Assert.assertNotNull(changeRecordPage.getAgreedEnd());
+    }
+
+    @And("user validates actual start time as current date time")
+    public void userValidatesActualStartTimeAsCurrentDateTime() {
+        String CurrentDateTime= CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", 0);
+        Assert.assertEquals(CurrentDateTime, changeRecordPage.getActualStart());
+    }
 }
 
 

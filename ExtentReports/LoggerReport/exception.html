@@ -107,6 +107,52 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
+							<a href="#" class="item-title _500">java.time.format.DateTimeParseException</a>
+							<div class="item-except text-sm text-muted h-1x">
+								1 tests
+							</div>
+							<div class="tc d-none">
+								<h5 class="mb-4">java.time.format.DateTimeParseException</h5>
+								<table class="table">
+									<thead><tr>
+										<th id="status-col"></th>
+										<th>Test</th>
+										<th>Duration</th>
+										<th>Attributes</th>
+										<th>Media</th>
+										<th>Source</th>
+									</tr></thead>
+									<tbody>
+	
+<tr class="s-fail" test-id="21" parent-id="1">
+	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
+	<td class="_600">When user enters estimated ready as event start time plus 4 days on trouble event page <br/><span class="text-muted text-sm">Estimated ready date and time availability</span></td>
+	<td>0h 0m 0s+143msc</td>
+	<td></td>
+	<td>
+	</td>
+	<td class="static"><i class="static fa fa-external-link"></i></td>
+</tr>
+<tr class="details">
+	<td colspan="5">
+		
+		<textarea disabled class="code-block">java.time.format.DateTimeParseException: Text '2020-04-24 14:34:18' could not be parsed at index 2
+	at java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:1949)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1851)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at pageObjects.BasePage.calculateEstimatedReady(BasePage.java:168)
+	at steps.OWF_TroubleEventPageSteps.userEntersEstimatedReadyAsEventStartTimePlusDays(OWF_TroubleEventPageSteps.java:290)
+	at ✽.user enters estimated ready as event start time plus 4 days on trouble event page(features/Regression/Incident_OW_Core_Functionality/00.01-00.10_&_00.17/00.04_Estimated_Ready_Date_Time_Availability.feature:24)
+</textarea>
+	</td>
+</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="list-item attr">
+						<div class="list-body">
 							<a href="#" class="item-title _500">org.openqa.selenium.TimeoutException</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
@@ -124,10 +170,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="11" parent-id="1">
+<tr class="s-fail" test-id="27" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">When user adds below CI's to the ticket <br/><span class="text-muted text-sm">All CI Impact Statuses will remain ‘Active’until the status of the problem moves</span></td>
-	<td>0h 0m 44s+510msc</td>
+	<td class="_600">Hooks.Teardown(Scenario) <br/><span class="text-muted text-sm">Estimated ready date and time availability</span></td>
+	<td>0h 10m 32s+673msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -135,26 +181,14 @@
 </tr>
 <tr class="details">
 	<td colspan="5">
-		<textarea disabled class="code-block"><table class='runtime-table table-striped table'><tr><td>CI Name</td></tr><tr><td>SE_SGSN_FREMME2</td></tr><tr><td>SE_SGSN_HYMME2</td></tr><tr><td>SE_SGSN_LDHMME1</td></tr><tr><td>SE_SGSN_VRRMME1</td></tr></table></textarea>
 		
-		
-		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: WIN_0_700027904 (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.BasePage.clickElementById(BasePage.java:97)
-	at pageObjects.OWF_CiSearchPage.clickYesOnConfirmationMessage(OWF_CiSearchPage.java:479)
-	at pageObjects.OWF_CiSearchPage.addCIsToTicket(OWF_CiSearchPage.java:89)
-	at steps.OWF_CiSearchPageSteps.userAddsBelowCISToTheTicket(OWF_CiSearchPageSteps.java:476)
-	at ✽.user adds below CI's to the ticket(features/SPRINTS/Sprint_P2S1/5198_CI_Active_InvestigationComplete_Status.feature:19)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#WIN_0_700027904"}
-  (Session info: chrome=80.0.3987.163)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=81.0.4044.122)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.242.50', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+System info: host: 'DESKTOP-I92010A', ip: '192.168.0.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.163, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60749}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: bc1cca3dc27a6c6874f219177860d4f7
-*** Element info: {Using=id, value=WIN_0_700027904}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64087}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c787df8a9ead8cff90a27a09d6a40ecd
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -165,19 +199,11 @@ Session ID: bc1cca3dc27a6c6874f219177860d4f7
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at pageObjects.BasePage.clickElementById(BasePage.java:97)
-	at pageObjects.OWF_CiSearchPage.clickYesOnConfirmationMessage(OWF_CiSearchPage.java:479)
-	at pageObjects.OWF_CiSearchPage.addCIsToTicket(OWF_CiSearchPage.java:89)
-	at steps.OWF_CiSearchPageSteps.userAddsBelowCISToTheTicket(OWF_CiSearchPageSteps.java:476)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pageObjects.BasePage.selectMenuItem(BasePage.java:200)
+	at pageObjects.OWF_AgentConsolePage.clickMenuItemLogout(OWF_AgentConsolePage.java:456)
+	at cucumberHooks.Hooks.Teardown(Hooks.java:30)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -185,12 +211,11 @@ Session ID: bc1cca3dc27a6c6874f219177860d4f7
 	at cucumber.runtime.Utils$1.call(Utils.java:26)
 	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
 	at cucumber.runtime.Utils.invoke(Utils.java:20)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:49)
-	at cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)
 	at cucumber.runner.TestStep.executeStep(TestStep.java:63)
 	at cucumber.runner.TestStep.run(TestStep.java:49)
-	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)
-	at cucumber.runner.TestCase.run(TestCase.java:44)
+	at cucumber.runner.TestCase.run(TestCase.java:48)
 	at cucumber.runner.Runner.runPickle(Runner.java:40)
 	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:68)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
@@ -245,7 +270,7 @@ Session ID: bc1cca3dc27a6c6874f219177860d4f7
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Apr 24, 2020 11:39:08 AM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Apr 24, 2020 01:33:55 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

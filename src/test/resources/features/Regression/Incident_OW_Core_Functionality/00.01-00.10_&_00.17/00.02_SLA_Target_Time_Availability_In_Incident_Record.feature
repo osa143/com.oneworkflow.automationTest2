@@ -1,4 +1,4 @@
-@00.02 #@Incident
+@00.02 @00 #@Incident
 #Passed
 Feature: SLA Target time availability in Incident Record
 

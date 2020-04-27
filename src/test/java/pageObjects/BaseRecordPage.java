@@ -145,6 +145,20 @@ public class BaseRecordPage extends BasePage {
     private static final String ddITEM = "Item";
     private static final String chkbxOPEN= "WIN_4_rc0id800040059";
     private static final String chkbxCLEARED= "WIN_4_rc0id800040060";
+    private static final String fld_PENDING_TICKET= "//*[@id='T777031442']/tbody/tr[2]";
+    private static final String txt_AGREED_START_TIME= "arid_WIN_0_777021162";
+    private static final String txt_AGREED_END_TIME= "arid_WIN_0_777021163";
+
+    public String getAgreedStartTime(){
+        return getTextByID(txt_AGREED_START_TIME);
+    }
+
+    public String getAgreedEndTime(){
+        return getTextByID(txt_AGREED_END_TIME);
+    }
+    public void clickPendingTicketForApproval(){
+        clickElement(By.xpath(fld_PENDING_TICKET));
+    }
 
     public void clickOpenCheckBox(){
         clickElement(By.id(chkbxOPEN));
@@ -171,6 +185,9 @@ public class BaseRecordPage extends BasePage {
         driver.findElement(By.id(txtDESCRIPTION_ID)).sendKeys(description);
     }public void clickSwedenCheckBox() {
         driver.findElement(By.id(chkbxSWEDEN)).click();
+    }
+    public void clearDescriptionField(){
+        findElement(By.id(txtDESCRIPTION_ID)).clear();
     }
 
     public boolean verifyIsCheckBoxSelected(String checkBoxId){
@@ -885,14 +902,14 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterStartDate(int delay) {
-        String dateTime = CommonUtils.getDateTime("MM-dd-yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM-dd-yyyy HH:mm:ss a", "Europe/Stockholm", delay);
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
     }
 
     public void enterEndDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("MM-dd-yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM-dd-yyyy HH:mm:ss a", "Europe/Stockholm", delay);
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );
     }

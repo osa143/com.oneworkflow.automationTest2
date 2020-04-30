@@ -150,6 +150,9 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     public String getImpactHours(){
         return getTextByID(txt_IMPACT_HOURS);
     }
+    public void enterImpactedHours(String text){
+        enterTextByElement(By.id(txt_IMPACT_HOURS), text);
+    }
 
     public String getImpactDays(){
         return getTextByID(txt_IMPACT_DAYS);

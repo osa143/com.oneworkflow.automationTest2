@@ -910,8 +910,25 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user validates actual start time as current date time")
     public void userValidatesActualStartTimeAsCurrentDateTime() {
-        String CurrentDateTime= CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", 0);
+        String CurrentDateTime= CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss a", "Europe/Stockholm", 0);
         Assert.assertEquals(CurrentDateTime, changeRecordPage.getActualStart());
+    }
+
+    @And("user gets CI impact from time and impact to time")
+    public void userGetsCIImpactFromTimeAndImpactToTime() {
+        CommonUtils.CI_Impact_From_Time=changeRecordPage.getTableCellData(By.id("T700009087"), "Impact From",1);
+        CommonUtils.CI_Impact_To_Time=changeRecordPage.getTableCellData(By.id("T700009087"), "Impact To",1);
+    }
+
+    @And("user validates CI impact from time and impact to time is updated")
+    public void userValidatesCIImpactFromTimeAndImpactToTimeIsUpdated() {
+        Assert.assertEquals(CommonUtils.CI_Impact_From_Time, changeRecordPage.getTableCellData(By.id("T700009087"), "Impact From",1));
+        Assert.assertEquals(CommonUtils.CI_Impact_To_Time, changeRecordPage.getTableCellData(By.id("T700009087"), "Impact To",1));
+    }
+
+    @And("user enters impact duration as {string} hours")
+    public void userEntersImpactDurationAsHours(String ImpactedHours) {
+        changeRecordPage.enterImpactedHours(ImpactedHours);
     }
 }
 

@@ -109,11 +109,11 @@ Feature: Internal Urgent Critical Change E2E
     And user validates Timeline Text entry isn't readonly
     Then change should also be reflected in the timeline as "Assignee Profile has changed from  to Escalation Manager. Estonia Country has changed from  to Estonia. Request Status has changed from New to Assigned."
     And user gets ticket value
-#      And user waits 40 secs
-#      When user clicks on "Notifications" tab
-#      And user clicks on "Sent" tab
-#      #Then user should see "Assignment-Profile" email update
-#      #And user validates "Send" is readonly
+#   And user waits 40 secs
+#   When user clicks on "Notifications" tab
+#   And user clicks on "Sent" tab
+#   Then user should see "Assignment-Profile" email update
+#   And user validates "Send" is readonly
     When user logsOut
     And user goes back to login page
     Then user logs in with valid username "EscalationManager1" and password as "Test@1234"

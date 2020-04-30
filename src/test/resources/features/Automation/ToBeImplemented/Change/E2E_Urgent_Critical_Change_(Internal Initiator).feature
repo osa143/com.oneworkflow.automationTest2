@@ -28,7 +28,7 @@ Feature: Internal Urgent Critical Change E2E
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
     Then user enters request start time 2 hours ahead of current date
     And user enters request end time 5 hours ahead of current date
-    And user enters impact duration as 3 hours
+    And user enters impact duration as "3" hours
     And user selects estimated impact dropdown as "Loss of Service"
     And user enters as "Regression - Change Management Process" in service and customer impact
     And user clicks on save button
@@ -45,7 +45,7 @@ Feature: Internal Urgent Critical Change E2E
     And user selects answer as "A. No"
     And user selects answer as "B. Impact to other systems/technologies are unclear!"
     And user selects answer as "Tested successfully, this is a pilot"
-    And user selects answer as "D. "Only" Consumer customers affected."
+    And user selects answer as "D. \"Only\" Consumer customers affected."
     And user selects answer as "A. Yes"
     And user selects answer as "A. Yes"
     And user selects answer as "A. Yes (outcome of the Change can be instantly verified)"
@@ -65,7 +65,6 @@ Feature: Internal Urgent Critical Change E2E
     And user clicks on clear button
     And user selects Category as "Access"
     Then user enters "SE_BSC%" in the name+ field
-    And user selects "All CI's" under search for dropdown
     Then user clicks on search button on CI search window
     And user selects all CI's that appear
     And user selects impact level as "Loss of Service"
@@ -110,11 +109,11 @@ Feature: Internal Urgent Critical Change E2E
     And user validates Timeline Text entry isn't readonly
     Then change should also be reflected in the timeline as "Assignee Profile has changed from  to Escalation Manager. Estonia Country has changed from  to Estonia. Request Status has changed from New to Assigned."
     And user gets ticket value
-#      And user waits 40 secs
-#      When user clicks on "Notifications" tab
-#      And user clicks on "Sent" tab
-#      #Then user should see "Assignment-Profile" email update
-#      #And user validates "Send" is readonly
+#   And user waits 40 secs
+#   When user clicks on "Notifications" tab
+#   And user clicks on "Sent" tab
+#   Then user should see "Assignment-Profile" email update
+#   And user validates "Send" is readonly
     When user logsOut
     And user goes back to login page
     Then user logs in with valid username "EscalationManager1" and password as "Test@1234"
@@ -186,7 +185,7 @@ Feature: Internal Urgent Critical Change E2E
     And user clicks on owner under sections
     Then user validates owner profile as "Escalation Manager"
     And user validates owner as "EscalationManager1"
-    And user validates assigned profile is "Change Implementation Control"
+    And user should see assigned profile as "Change Implementation Control"
     And user validates assignee is "Change Impl Contr"
     When user logsOut from One workflow
     And user goes back to login page
@@ -227,11 +226,10 @@ Feature: Internal Urgent Critical Change E2E
     When user clicks on Diagnosis tab
     And user right clicks on primary CI and selects "Impact:Clear All"
     And user closes warning message
-    Then user gets impact from time
-    And user gets impact to time
+    Then user gets CI impact from time and impact to time
     And user clicks on "Schedule" tab
-    And user validates "actual start" time matches "impact from" time
-    And user validates "actual end" time matches "impact to" time
+    And user validates impact from time is same as event start time
+    And user validates impact to time is same as request end time
     Then user clicks on save button
     And user clicks on timeline tab
     And user validates ticket status as "Completed"

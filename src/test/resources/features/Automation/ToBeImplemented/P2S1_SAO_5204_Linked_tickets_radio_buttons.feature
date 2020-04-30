@@ -17,43 +17,45 @@
       Then ticket should be created and status should be assigned
       And user clicks on linked items tab
       Then user selects target application first dropdown as "OS3 - Work Order"
-      And user selects target application second dropdown as "Caused By"
+      And user selects target application second dropdown as "Caused by"
       And user clicks on create button under linked items
       And user switches to window 2
       Then work order form should appear in new tab
       And user selects request type as "Analysis" in work order page
       And user clicks save button
-      Then user validates WorkOrder status as "New"
+      Then user validates ticket status as "New"
       And user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
-      And user selects assignee as "Change_Automation_3"
+      And user enters "Change_Automation_3" in assignee
       Then user clicks save button
       And user validates ticket status as "Assigned"
       Then user clicks on Ack button
       And user validates ticket status as "Work In Progress"
-      Then user selects status as "Cleared"
+      Then user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
       Then user clicks save button
       And user validates ticket status as "Cleared"
       Then user switches to window 1
       And user clicks refresh button under linked items
-      And user validates "Work Order" linked ticket availability
+      And user validates 1 linked ticket availability
       Then user selects target application first dropdown as "OS3 - Problem"
-      And user selects target application second dropdown as "Fixed By"
+      And user selects target application second dropdown as "Fixed by"
       Then user clicks on create button under linked items
-      And user switches to window 3
+      And user switches to window 2
       Then problem record form should appear in new tab
-      And user selects request type as "Xfunctional:Carrier" in problem form
+      And user selects request type as "CPS:IT:Other" in problem form
       Then user selects impact as "Extensive/Widespread"
       And user selects urgency as "High"
+      And user selects accountable organisation as "CA_Infra"
+      And user selects affected organisation as "CA_IT"
       And user clicks save button
       Then problem ticket status should be assigned
       And user switches to window 1
       Then user clicks refresh button under linked items
-      And user validates "Problem Record" linked ticket availability
+      And user validates 2 linked ticket availability
       When user selects target application first dropdown as "OS3 - Operations"
       And user selects target application second dropdown as "Is child of"
       Then user clicks on create button under linked items
-      And user switches to window 4
+      And user switches to window 2
       Then trouble record form should appear in new tab
       And user selects request type as "Customer" on trouble event page
       Then user clicks save button
@@ -62,11 +64,11 @@
       Then user validates ticket status as "Work In Progress"
       And user switches to window 1
       Then user clicks refresh button under linked items
-      And user validates "Trouble" linked ticket availability
+      And user validates 3 linked ticket availability
       When user selects target application first dropdown as "OS3 - Change"
       And user selects target application second dropdown as "Caused"
       Then user clicks on create button under linked items
-      And user switches to window 5
+      And user switches to window 2
       Then change record form should open in a new tab
       And user selects change type as "Change Record"
       Then user selects request type as "Standard Change"
@@ -79,11 +81,11 @@
       Then user validates ticket status as "New"
       And user switches to window 1
       Then user clicks refresh button under linked items
-      And user validates Change linked ticket availability
+      And user validates 4 linked ticket availability
       Then user selects target application first dropdown as "OS3 - Work Order"
       And user selects target application second dropdown as "Caused by"
       Then user clicks on create button under linked items
-      And user switches to window 6
+      And user switches to window 2
       Then work order form should appear in new tab
       Then user selects request type as "Analysis" in work order page
       And user clicks save button
@@ -105,7 +107,7 @@
       Then user validates ticket status as "Closed"
       And user switches to window 1
       Then user clicks refresh button under linked items
-      And user validates work order linked ticket availability
+      And user validates 5 linked ticket availability
       When user selects target application first dropdown as "OS3 - Work Order"
       And user selects target application second dropdown as "Caused by"
       Then user clicks on create button under linked items
@@ -120,7 +122,7 @@
       Then user validates ticket status as "Withdrawn"
       And user switches to window 1
       Then user clicks refresh button under linked items
-      And user validates workorder linked ticket availability
+      And user validates 6 linked ticket availability
       When user selects target application first dropdown as "OS3 - Work Order"
       And user selects target application second dropdown as "Caused by"
       Then user clicks on create button under linked items
@@ -136,7 +138,7 @@
       And user validates ticket status as "Pending"
       Then user switches to window 1
       And user clicks refresh button under linked items
-      And user validates workorder linked ticket availability
+      And user validates 7 linked ticket availability
       Then user selects target application first dropdown as "(clear)"
       And user validates all radio buttons are selected
       Then user validates ticket statuses "New:Assigned:Work In Progress:Cleared:Closed:Pending:Withdrawn" can be seen under linked items tab

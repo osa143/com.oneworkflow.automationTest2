@@ -8,28 +8,28 @@
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       And user validates agent console is displayed correctly
       Then user validates availability of "Timeline:Details:List:Search / Quick Create" tabs
-      And user logsOut from One workflow
+#      And user logsOut from One workflow
 
       Examples:
 
       |User                        |Password |
 #      |Tohall_copy                 |Test@1234|
 #      |Tohall_copy2                |Test@1234|
-#      |Tohall_copy3                |Friday45|
-#      |Tohall_copy4                |Test@1234|
-#      |Tohall_copy5                |Test@1234|
-#      |Tohall_copy6                |Friday45|
-#      |Tohall_copy7                |Friday45|
+      |Tohall_copy3                |Test@1234|
+      |Tohall_copy4                |Test@1234|
+      |Tohall_copy5                |Test@1234|
+      |Tohall_copy6                |Test@1234|
+      |Tohall_copy7                |Test@1234|
       |Change_Automation_1         |Test@1234|
       |Change_Automation_2         |Test@1234|
       |Change_Automation_3         |Test@1234|
       |Change_Automation_4         |Test@1234|
       |Change_Automation_5         |Test@1234|
-      |Change_Automation_6         |Friday45|
-      |Change_Automation_7         |Friday45|
-      |Change_Automation_8         |Friday45|
-      |Change_Automation_9         |Friday45|
-      |Change_Automation_10        |Friday45|
+      |Change_Automation_6         |Test@1234|
+      |Change_Automation_7         |Test@1234|
+      |Change_Automation_8         |Test@1234|
+      |Change_Automation_9         |Test@1234|
+      |Change_Automation_10        |Test@1234|
       |ChangeInitiator/Builder1    |Test@1234|
       |ChangeInitiatorInternal1    |Test@1234|
       |ChangeManager1_Automation   |Test@1234|

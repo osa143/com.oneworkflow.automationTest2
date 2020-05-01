@@ -1335,6 +1335,10 @@ public class OWF_ProblemRecordPageSteps {
         Assert.assertTrue(problemRecordPage.isAccountableOrganisationIs_Not_mandatory());
         Assert.assertTrue(problemRecordPage.isAccountableOrganisationIsDisplayed());
     }
+    @And("user gets time value of timeline entry")
+    public void userGetsTimeValueOfTimelineEntry() {
+        CommonUtils.Timeline_Entry= problemRecordPage.getTimelineStatus(1);
+    }
 }
 
 

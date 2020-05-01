@@ -930,6 +930,23 @@ public class OWF_ChangeRecordPageSteps {
     public void userEntersImpactDurationAsHours(String ImpactedHours) {
         changeRecordPage.enterImpactedHours(ImpactedHours);
     }
+
+    @And("user clicks on last risk question selects last answer as {string}")
+    public void userClicksOnLastRiskQuestionSelectsLastAnswerAs(String answer) {
+        changeRecordPage.clickArrowUpButton();
+        changeRecordPage.selectAnswer(answer);
+    }
+
+
+
+    @And("user validates actual start time matches timeline entry time")
+    public void userValidatesActualStartTimeMatchesTimelineEntryTime() {
+        boolean containsMessage = CommonUtils.Timeline_Entry.contains(changeRecordPage.getActualStart());
+        Assert.assertTrue(containsMessage, "actual start time matches timeline entry time");
+    }
+
+
+
 }
 
 

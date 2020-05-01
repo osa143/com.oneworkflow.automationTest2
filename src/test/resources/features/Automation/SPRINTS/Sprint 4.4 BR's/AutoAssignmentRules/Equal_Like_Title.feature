@@ -16,13 +16,13 @@ Feature: Assignment rules can be configured with EQUAL and LIKE conditions on th
      When user logs in with valid username "dwk298" and password as "Telia2018@@"
      Then user successfully logged in to OneWorkflow and agent console should be displayed
      And user selects administration menu as "All Requests:Auto Assignment Rules"
-     Given user is on the assignment rules configuration form
+     When user is on the assignment rules configuration form
 
 
-#  Scenario: New assignment rules can be configured using EQUAL and LIKE conditions
-#    When user clicks the new button on assignment rule window
-#    Then the new assignment rule configuration form is displayed
-#    And multiple options "=:LIKE" should be available in Title dropdown
+  Scenario: New assignment rules can be configured using EQUAL and LIKE conditions
+    When user clicks the new button on assignment rule window
+    Then the new assignment rule configuration form is displayed
+    And multiple options "=:LIKE" should be available in Title dropdown
 
 
   Scenario: Existing assignment rules can be configured using EQUAL and LIKE conditions

@@ -113,6 +113,9 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String fld_ACCOUNTABLE_ORG_AS_MANDATORY="//label[contains(text(),'Accountable Org.*')]";
     private static final String fld_ACCOUNTABLE_ORG_AS_NOT_MANDATORY="//label[contains(text(),'Accountable Org.')]";
     private static final String dd_ACCOUNTABLE_ORG= "arid_WIN_0_808080010";
+    private static final String btnApply= "WIN_0_808080115";
+    private static final String txt_IMPORTANCE= "arid_WIN_0_600001821";
+
 
     public boolean IsAccountableOrganisation_IsReadOnly(){
         return checkIfControlIsReadonly(dd_ACCOUNTABLE_ORG);
@@ -133,11 +136,15 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
        selectDropDownNameAndValue(ddACCOUNTABLE_ORG, value, false);
    }
 
+   public void selectAffectedOrganisation(String affectedOrg)
+   {
+       selectDropDownNameAndValue("Organisations", affectedOrg, false);
+   }
     public void selectAffected_Org(String value){
        clickElementById(btnEDIT);
        switchToFrameByIndex(2);
-       clickElementByContainsTextAndTagName("span", value);
-       clickElementById(btnCLICK_SAVE);
+        selectAffectedOrganisation(value);
+       clickElementById(btnApply);
 
 
     }
@@ -244,6 +251,9 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
     public String getImpact(){
         return getTextByID(txt_IMPACT);
+    }
+    public String getImportance(){
+        return getTextByID(txt_IMPORTANCE);
     }
 
 

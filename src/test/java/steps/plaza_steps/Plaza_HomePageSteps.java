@@ -2300,4 +2300,9 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userClicksSupportOnPlazaHomepage() {
         clickElement(By.xpath("//*[@id='xcab273021b8480d00c1e87fe6e4bcbaf']/div/a"));
     }
+
+    @And("user selects affected person type as {string}")
+    public void userSelectsAffectedPersonTypeAs(String arg0) {
+        homePage.clickPDB_AffectedPersonType(arg0);
+    }
 }

@@ -1339,6 +1339,11 @@ public class OWF_ProblemRecordPageSteps {
     public void userGetsTimeValueOfTimelineEntry() {
         CommonUtils.Timeline_Entry= problemRecordPage.getTimelineStatus(1);
     }
+
+    @And("user validates importance as {string}")
+    public void userValidatesImportanceAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getImportance(), arg0);
+    }
 }
 
 

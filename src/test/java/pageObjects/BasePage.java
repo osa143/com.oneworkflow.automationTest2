@@ -67,8 +67,8 @@ public class BasePage {
         return findElement(By.xpath(element)).isDisplayed();
 
     }
-    public boolean verifyElementIsDisplayedByContainsTextAndTagNameSpan(String tagName, String textName){
-        String element = String.format("//%s[contains(text(),'%s')]", tagName, textName);
+    public boolean verifyElementIsDisplayedByContainsTextAndTagName(String tagName, String text){
+        String element = String.format("//%s[contains(text(),'%s')]", tagName, text);
         System.out.println(element);
         return findElement(By.xpath(element)).isDisplayed();
 

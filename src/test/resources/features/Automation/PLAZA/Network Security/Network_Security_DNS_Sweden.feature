@@ -9,10 +9,10 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Firewall & Network" under IT Infrastructure
+      And user clicks on firewall & network under IT Infrastructure dropdown
       When user clicks on DNS DHCP pebble
       Then user should see "DNS/DHCP" form
-      Then user selects network security system name in haiti as "Other"
+      Then user selects network security system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Service Request Name as "DNS Sweden"
       And user enters Network Security Add Modify Remove DNS request as "Test2 Network Security Sweden/Request"

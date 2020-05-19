@@ -859,6 +859,21 @@ public class OWF_WorkOrderPageSteps {
     public void userValidatesTouchpointPlusUpdateSupportPagesSameAsPlaza() {
         Assert.assertTrue(workOrderPage.verifyTouchpointPlusUpdateSupportPages());
     }
+
+    @And("user validates linux description same as Plaza")
+    public void userValidatesLinuxDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifylinux());
+    }
+
+    @And("user validates cloud description same as Plaza")
+    public void userValidatesCloudDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyCloudE2E());
+    }
+
+    @And("user validates windows server description same as Plaza")
+    public void userValidatesWindowsServerDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyWindowsServer());
+    }
 }
 
 

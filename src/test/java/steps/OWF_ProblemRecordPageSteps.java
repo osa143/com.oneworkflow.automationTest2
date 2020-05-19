@@ -1339,6 +1339,11 @@ public class OWF_ProblemRecordPageSteps {
     public void userGetsTimeValueOfTimelineEntry() {
         CommonUtils.Timeline_Entry= problemRecordPage.getTimelineStatus(1);
     }
+
+    @Then("user clicks edit affected org button")
+    public void userClicksEditAffectedOrgButton() {
+        problemRecordPage.clickEditAffectedOrgButton();
+    }
 }
 
 

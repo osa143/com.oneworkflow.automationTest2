@@ -8,7 +8,8 @@ Feature: Plaza EFS-BSS form test
     Then user clicks on plaza portal
     When user clicks on Products & Services
     And user clicks on IT Infrastructure dropdown
-    And user clicks on "Application" under IT Infrastructure
+    And user clicks on application under IT Infrastructure dropdown
+    And user clicks on show more button
     When user clicks on "EFS-BSS" pebble
     Then user should see "EFS-BSS" form
     #Then user selects system name in haiti as "Other"

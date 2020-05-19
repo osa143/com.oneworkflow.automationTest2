@@ -22,8 +22,8 @@ Feature: checking of bulk loading format
       And user enters "Regression - Change Management Process" in the ver of functionality field
       And user enters "Regression - Change Management Process" in the risk description field
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-      Then user enters request start time 24 hours ahead of current date
-      And user enters request end time 28 hours ahead of current date
+    And user enters start time as 24 hours fast from current sweden time in "YYYY/MM/dd HH:mm:ss" format
+    And user enters end time as 28 hours fast from current sweden time in "YYYY/MM/dd HH:mm:ss" format
       And user enters impact duration as "45" minutes
       And user selects estimated impact dropdown as "Degradation of Service"
       And user clicks on save button
@@ -52,4 +52,4 @@ Feature: checking of bulk loading format
       Examples:
 
           |50CIs|
-  | SE;selanne;SE OSS RC;SE_AAA_AAA01SE;SE_AAA_AAA02SE;SE_AAA_AAA03SE;SE_AAA_AAA04SE;SE_AAA_AAA98SE;SE_AAA_AAA99SE;Selleri ACC;LT_AC_AC-KONDIC_202;LT DNS SIP;LT_023A_ID_MISSEDCI;LT_2C964012_ID_MISSEDCI;LT_2C975011_ID_MISSEDCI;LT_2F180011_ID_MISSEDCI;LT_2F196011_ID_MISSEDCI;LT_2F198011_ID_MISSEDCI;OnePlan;LT_57FA_ID_MISSEDCI;NO_AC_AC-AKH902-350-1-201;NO_AC_AC-AKH902-350-1-401;NO_AC_AC-AKH902-350-1-402;NO_AC_AC-AKH902-350-1-403;NO_AC_AC-AKH902-350-1-404;NO_AC_AC-AKH902-350-1-405;NO_AC_AC-AKH902-350-2-201;NO_AC_AC-AKH902-350-2-401;NO_AC_AC-AKH902-350-2-402;NO_AC_AC-AKH902-350-2-403;FI_AS_hkpswbe01;FI_AFG_AFG01FI;FI_AFG_AFG02FI;FI_AFG_AFG99FI;FI_AS_emk10-3krs-c2960-z3;FI_AS_emk8-3krs-c3560-z3;FI_AS_emk8-5krs-c2950-1;FI_AS_hkiswbe01;FI_AS_hkiswbe02;EE_eNodeB_200001;EE_eNodeB_200002;EE_eNodeB_200004;EE_eNodeB_200007;EE_eNodeB_200010;EE_eNodeB_200011;EE_eNodeB_200012;EE_eNodeB_200014;EE_eNodeB_200015;EE_eNodeB_200017;DK_AAA_AAA01DK |
+  | SE;EE_CNDB_kjjtiams011;SE OSS RC;SE_AAA_AAA01SE;SE_AAA_AAA02SE;SE_AAA_AAA03SE;SE_AAA_AAA04SE;SE_AAA_AAA98SE;SE_AAA_AAA99SE;Selleri ACC;LT_AC_AC-KONDIC_202;LT DNS SIP;LT_023A_ID_MISSEDCI;LT_2C964012_ID_MISSEDCI;LT_2C975011_ID_MISSEDCI;LT_2F180011_ID_MISSEDCI;LT_2F196011_ID_MISSEDCI;LT_2F198011_ID_MISSEDCI;OnePlan;LT_57FA_ID_MISSEDCI;NO_AC_AC-AKH902-350-1-201;NO_AC_AC-AKH902-350-1-401;NO_AC_AC-AKH902-350-1-402;NO_AC_AC-AKH902-350-1-403;NO_AC_AC-AKH902-350-1-404;NO_AC_AC-AKH902-350-1-405;NO_AC_AC-AKH902-350-2-201;NO_AC_AC-AKH902-350-2-401;NO_AC_AC-AKH902-350-2-402;NO_AC_AC-AKH902-350-2-403;FI_AS_hkpswbe01;FI_AFG_AFG01FI;FI_AFG_AFG02FI;FI_AFG_AFG99FI;FI_AS_emk10-3krs-c2960-z3;FI_AS_emk8-3krs-c3560-z3;FI_AS_emk8-5krs-c2950-1;FI_AS_hkiswbe01;FI_AS_hkiswbe02;EE_eNodeB_200001;EE_eNodeB_200002;EE_eNodeB_200004;EE_eNodeB_200007;EE_eNodeB_200010;EE_eNodeB_200011;EE_eNodeB_200012;EE_eNodeB_200014;EE_eNodeB_200015;EE_eNodeB_200017;DK_AAA_AAA01DK |

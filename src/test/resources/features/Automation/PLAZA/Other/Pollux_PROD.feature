@@ -9,7 +9,10 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Application" under IT Infrastructure
+      And user clicks on application under IT Infrastructure dropdown
+      And user clicks on show more button
+      And user waits 2 secs
+      And user clicks on show more button
       When user clicks on "POLLUX" pebble
       Then user should see "POLLUX" form
       #Then user selects system name in haiti as "Other"
@@ -64,6 +67,6 @@
       Examples:
 
         |Request                   |Description                   |Additional Comments  |Desc Validation|
-#        |Pollux-PROD - Test/Request|Pollux-PROD - Test/Description|Pollux-PROD - Test/AC|               |
-        |Pollux-AT - Test/Request  |Pollux-AT - Test/Description  |Pollux-AT - Test/AC  |               |
+        |Pollux-PROD - Test/Request|Pollux-PROD - Test/Description|Pollux-PROD - Test/AC|               |
+ #       |Pollux-AT - Test/Request  |Pollux-AT - Test/Description  |Pollux-AT - Test/AC  |               |
       

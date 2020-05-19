@@ -132,12 +132,12 @@
 #      |Telia Carrier                   |No              |Personal Data Breach \| Telia Carrier                          |Minor   |PDB Carrier      |
 #      |Sweden                          |No              |Personal Data Breach \| Sweden                                 |Minor   |PDB SE           |
 #      |Finland                         |No              |Personal Data Breach \| Finland                                |Minor   |                 |
-      |Norway                          |No              |Personal Data Breach \| Norway                                 |Minor   |PDB NO           |
+#      |Norway                          |No              |Personal Data Breach \| Norway                                 |Minor   |PDB NO           |
 #      |Denmark                         |No              |Personal Data Breach \| Denmark                                |Minor   |PDB DK           |
 #      |Estonia                         |No              |Personal Data Breach \| Estonia                                |Minor   |PDB EE           |
 #      |Lithuania                       |No              |Personal Data Breach \| Lithuania                              |Minor   |PDB LT           |
 #      |Other (or more than one country)|Yes             |Personal Data Breach \| Other Other (or more than one country) |Major   |                 |
-#      |Telia Carrier                   |Yes             |Personal Data Breach \| Telia Carrier                          |Major   |PDB Control Center|
+      |Telia Carrier                   |Yes             |Personal Data Breach \| Telia Carrier                          |Major   |PDB Control Center|
 #      |Sweden                          |Yes             |Personal Data Breach \| Sweden                                 |Major   |PDB Control Center|
 #      |Finland                         |Yes             |Personal Data Breach \| Finland                                |Major   |PDB Control Center|
 #      |Norway                          |Yes             |Personal Data Breach \| Norway                                 |Major   |PDB Control Center|

@@ -9,10 +9,11 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Compute & Operating System" under IT Infrastructure
+      And user clicks on compute & operating system under IT Infrastructure dropdown
+      And user clicks on show more button
       When user clicks on account management and server form
       Then user should see "Account Management - Server" form
-      Then user selects network security firewall system name in haiti as "Other"
+      Then user selects network security firewall system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system account management request as "Test2 Operating System Account/Request"
       And user selects select request "Add Local Account"

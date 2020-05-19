@@ -8,10 +8,10 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Storage & Data Protection" under IT Infrastructure
+      And user clicks on storage & data protection under IT Infrastructure
       When user clicks on "Restore from Backup" pebble
       Then user should see "Restore from Backup" form
-      Then user selects system name in haiti as "Other"
+      Then user selects system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Backup request as "Test1 Backup Restore/Request"
       And user enters back up date and as current date and time
@@ -41,7 +41,7 @@
       And user validates title field as "Service Request | Restore from Backup"
       And user validates request type as "Service Request | PLAZA"
       #Not sure about description validation outside of a table
-      #And user validates back up restore description same as plaza
+      And user validates back up restore description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       And user clicks on attachments under sections

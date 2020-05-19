@@ -85,7 +85,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txt_URGENCY= "arid_WIN_0_705002083";
     private static final String txt_ROOTCAUSECODE= "arid_WIN_0_777031437";
     private static final String rbtn_PRIVATE= "WIN_0_rc1id777021180";
-    private static final String btn_REFRESH= "//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
+    private static final String btn_REFRESH= "//*[@id='WIN_4_777506000']/div[1]/table/tbody/tr/td[2]/a[2]";
     private static final String txt_SERVICEAFFECTED= "arid_WIN_0_600001014";
     private static final String txt_ESTIMATED_READY= "arid_WIN_0_777504503";
     private static final String txt_MODEL= "arid_WIN_0_240001002";
@@ -113,6 +113,10 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String fld_ACCOUNTABLE_ORG_AS_MANDATORY="//label[contains(text(),'Accountable Org.*')]";
     private static final String fld_ACCOUNTABLE_ORG_AS_NOT_MANDATORY="//label[contains(text(),'Accountable Org.')]";
     private static final String dd_ACCOUNTABLE_ORG= "arid_WIN_0_808080010";
+
+    public void clickEditAffectedOrgButton(){
+        clickElement(By.id("btnEDIT"));
+    }
 
     public boolean IsAccountableOrganisation_IsReadOnly(){
         return checkIfControlIsReadonly(dd_ACCOUNTABLE_ORG);

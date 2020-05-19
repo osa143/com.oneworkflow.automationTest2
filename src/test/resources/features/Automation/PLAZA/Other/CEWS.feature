@@ -8,7 +8,8 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Application" under IT Infrastructure
+      And user clicks on application under IT Infrastructure dropdown
+      And user clicks on show more button
       When user clicks on "CEWS" pebble
       Then user should see "CEWS" form
       #Then user selects system name in haiti as "Other"
@@ -68,5 +69,7 @@
       When user switches to window 0
       And user clicks on main page refresh
       Then user validates plaza request has completed
+
+
 
 

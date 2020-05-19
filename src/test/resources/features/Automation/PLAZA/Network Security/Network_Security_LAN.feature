@@ -9,10 +9,10 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Firewall & Network" under IT Infrastructure
+      And user clicks on firewall & network under IT Infrastructure dropdown
       When user clicks on LAN Data Net LAN pebble
-      Then user should see "LAN (Data Net LAN)" form
-      Then user selects system name in haiti as "Other"
+      Then user should see "Managed LAN Request" form
+      Then user selects system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Network Security LAN request as "Test5 Network Security LAN/Request"
       Then user enters Network Security LAN description as "Test5 Network Security/Description"

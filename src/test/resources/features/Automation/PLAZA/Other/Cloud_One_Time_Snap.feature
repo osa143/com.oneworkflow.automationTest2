@@ -8,10 +8,10 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Cloud" under IT Infrastructure
+      And user clicks on cloud under IT Infrastructure dropdown
       When user clicks on "Order one-time Snapshot of VM" pebble
       Then user should see "Order one-time Snapshot of VM" form
-      Then user selects system name in haiti as "Other"
+      Then user selects system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox

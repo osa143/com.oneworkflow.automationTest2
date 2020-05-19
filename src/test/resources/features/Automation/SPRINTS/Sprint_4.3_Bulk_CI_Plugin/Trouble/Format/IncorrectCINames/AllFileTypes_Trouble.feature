@@ -48,7 +48,7 @@
      Examples:
 
       |fileTypes                                                                                                 |
-#      |Test Attachments\10 CI's - Incorrect Names\CSV.csv|
+    #  |Test Attachments\10 CI's - Incorrect Names\CSV.csv|
       |Test Attachments\10 CI's - Incorrect Names\TEXT.txt|
       |Test Attachments\10 CI's - Incorrect Names\XLS.xls|
       |Test Attachments\10 CI's - Incorrect Names\XLSX.xlsx|

@@ -6,24 +6,28 @@ Feature: New WO flow Plaza
 
     Given user is on the Plaza login page
     When user enters username "testauto" and password as "test123" and clicks on login
+    And user clicks on plaza portal
     Then user should see the plaza home page
     When user enters "Ask" in plaza search box
     And user opens internal case form
-    Then user should see internal case form appear
+#    Then user should see internal case form appear
     And user selects "IT Infrastructure" under Service area dropdown
-    And user selects system name in haiti as "Other"
+    And user selects compute and operating system system name in haiti as "1B"
     And user selects "Compute & Operating System" under Service area category dropdown
     And user enters "Test Request" in the plaza request field
     And user enters "cc100cgas001" in the plaza CI field
     And user selects "Linux/Unix Server" under type of server dropdown
     And user enters "Test Description" in the plaza description field
     Then user clicks on add attachment in plaza
+    And user searches for "Test Attachments\other files\Test WORD FILE.docx" attachment and adds it
       #And user selects an attachment
       #And user clicks on open button
     Then user clicks on submit button on plaza form
-    And user clicks on shown ICM number
-    Then user waits 30 secs
-    And user gets work order ticket number from Plaza
+    And user gets plaza request id
+    And user clicks on plaza request id
+#    And user clicks on shown ICM number
+#    Then user waits 30 secs
+#    And user gets work order ticket number from Plaza
     When user enters "Test Update" in the ticket timeline
     And user clicks on plaza send button
     Then user validates plaza ticket has update to timeline
@@ -34,38 +38,39 @@ Feature: New WO flow Plaza
     When user selects search menu as "Open Search Form:Work Order"
     And user switches to window 2
     Then user should see blank work order form
-    When user enters work order ID from Plaza
-    And user clicks on the search button
+    And user enters plaza request id in the source id field
+#    When user enters work order ID from Plaza
+    And user clicks Search on ticket search
     Then user should see plaza ticket
     And user validates source field as "PLAZA"
     And user validates source ID field contains ICM number
-    And user validates service provider as "PLAZA"
-    And user validates title field as "Service Request | Nimbus - General Inquiry"
+    And user validates source field as "PLAZA"
+    And user validates title field as "Service Request | Operating System -  General Inquiry"
     And user validates request type as "Service Request | PLAZA"
-    And user validates WO description same as Plaza
+    And user validates linux description same as Plaza
     And user validates ticket priority as "Minor"
     Then user clicks on assignment under sections
     And user clicks on owner under sections
     And user clicks on CTI details under sections
     And user clicks on attachments under sections
-    Then user validates 1 attachment visibility under external
+#    Then user validates 1 attachment visibility under external
     And user validates owner profile as "PLAZA"
     And user validates owner as "PLAZA"
-    And user "IT Cloud" is listed as the assigned profile
+    And user should see assigned profile as "Linux/Unix L2"
     When user enters "Test Update" in the timeline text box
     And user clicks on add button
     And change should also be reflected in the timeline as "Test Update" on row 1
     Then user clicks on Diagnosis tab
-    And user validates primary ci as "cc100cgas001"
+    And user validates CI "cc100cgas001" is listed
     And user switches to window 0
     And user clicks on main page refresh
-    And user validates plaza first timeline message as "Comments from OneWorkflow at 2019-10-25T14:01:20Z@Change_Automation_1: Test Update"
+#    And user validates plaza first timeline message as "Comments from OneWorkflow at 2019-10-25T14:01:20Z@Change_Automation_1: Test Update"
     And user switches to window 2
-    When user changes status to "Pending"
+    And user changes status to "Pending" on work order page
     And user enters on hold to date 2 minutes in the future
-    And user enters reason field as "Waiting for Customer Info"
-    Then user clicks on save button and closes warning messages
-    And change should also be reflected in the timeline as "STATUS MODIFIED.  The trouble Status has changed: Work In Progress >> Pending." on row 1
+    And user selects on hold reason as "Waiting for Customer Info"
+    Then user clicks on save button
+#    And change should also be reflected in the timeline as "STATUS MODIFIED.  The trouble Status has changed: Work In Progress >> Pending." on row 1
     Then user switches to window 0
     And user validates plaza first timeline message as "State has been changed to Pending in OneWorkflow"
     Then user waits for two minutes
@@ -90,7 +95,7 @@ Feature: New WO flow Plaza
     Then user switches to window 2
     Then user validates ticket status as "Work In Progress"
     And change should also be reflected in the timeline as "State has been changed from Pending to Work In Progress in OneWorkflow" on row 3
-    When user changes status to "Cleared" on trouble event page
+    When user changes status to "Cleared" on work order page
     And user selects completion code as "Success"
     Then user clicks on "Schedule" tab
     And user enters event end time as current time

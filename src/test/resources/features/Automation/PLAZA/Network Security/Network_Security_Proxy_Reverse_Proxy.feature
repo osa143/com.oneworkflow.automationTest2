@@ -9,10 +9,11 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Firewall & Network" under IT Infrastructure
+      And user clicks on firewall & network under IT Infrastructure dropdown
+      And user clicks on show more button
       When user clicks on Proxy pebble
       Then user should see "Proxy" form
-      Then user selects proxy general inquiry system name in haiti as "Other"
+      Then user selects proxy general inquiry system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Reverse proxy"
       And user enters network security proxy request as "Test3 Network Security Proxy/Request"

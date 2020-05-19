@@ -32,6 +32,8 @@
       And user validates ticket status as "Work In Progress"
       Then user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
+      And user clicks on "Schedule" tab
+      And user enters schedule end as current date
       Then user clicks save button
       And user validates ticket status as "Cleared"
       Then user switches to window 1
@@ -40,8 +42,8 @@
       Then user selects target application first dropdown as "OS3 - Problem"
       And user selects target application second dropdown as "Fixed by"
       Then user clicks on create button under linked items
-      And user switches to window 2
       Then problem record form should appear in new tab
+      And user switches to window 3
       And user selects request type as "CPS:IT:Other" in problem form
       Then user selects impact as "Extensive/Widespread"
       And user selects urgency as "High"
@@ -55,7 +57,7 @@
       When user selects target application first dropdown as "OS3 - Operations"
       And user selects target application second dropdown as "Is child of"
       Then user clicks on create button under linked items
-      And user switches to window 2
+      And user switches to window 4
       Then trouble record form should appear in new tab
       And user selects request type as "Customer" on trouble event page
       Then user clicks save button
@@ -68,7 +70,7 @@
       When user selects target application first dropdown as "OS3 - Change"
       And user selects target application second dropdown as "Caused"
       Then user clicks on create button under linked items
-      And user switches to window 2
+      And user switches to window 5
       Then change record form should open in a new tab
       And user selects change type as "Change Record"
       Then user selects request type as "Standard Change"
@@ -85,7 +87,7 @@
       Then user selects target application first dropdown as "OS3 - Work Order"
       And user selects target application second dropdown as "Caused by"
       Then user clicks on create button under linked items
-      And user switches to window 2
+      And user switches to window 6
       Then work order form should appear in new tab
       Then user selects request type as "Analysis" in work order page
       And user clicks save button
@@ -98,7 +100,7 @@
       Then user validates ticket status as "Work In Progress"
       And user selects status as "Cleared"
       And user selects completion code as "Success"
-      Then user clicks on schedule tab
+      Then user clicks on "Schedule" tab
       And user enters schedule end as current date
       Then user clicks save button
       And user validates ticket status as "Cleared"
@@ -111,7 +113,7 @@
       When user selects target application first dropdown as "OS3 - Work Order"
       And user selects target application second dropdown as "Caused by"
       Then user clicks on create button under linked items
-      And user switches to window 6
+      And user switches to window 7
       Then work order form should appear in new tab
       Then user selects request type as "Analysis" in work order page
       And user clicks save button
@@ -126,7 +128,7 @@
       When user selects target application first dropdown as "OS3 - Work Order"
       And user selects target application second dropdown as "Caused by"
       Then user clicks on create button under linked items
-      And user switches to window 6
+      And user switches to window 8
       Then work order form should appear in new tab
       Then user selects request type as "Analysis" in work order page
       And user clicks save button

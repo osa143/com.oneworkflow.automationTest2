@@ -8,10 +8,10 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Storage & Data Protection" under IT Infrastructure
+      And user clicks on storage & data protection under IT Infrastructure
       When user clicks on "Verify Backup Configuration" pebble
       Then user should see "Verify Backup Configuration" form
-      Then user selects system name in haiti as "Other"
+      Then user selects system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox
@@ -39,7 +39,7 @@
       And user validates title field as "Service Request | Verify Backup Configuration"
       And user validates request type as "Service Request | PLAZA"
       #Not sure about description validation outside of a table
-      #And user validates back up verify description same as plaza
+      And user validates back up verify description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

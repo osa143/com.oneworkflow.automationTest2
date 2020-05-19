@@ -8,10 +8,10 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Database" under IT Infrastructure
+      And user clicks on database under IT Infrastructure
       When user clicks on "Database Request" pebble
       Then user should see "Database Request" form
-      Then user selects System name in haiti as "Other"
+      Then user selects System name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Access Request"
       And user enters Database Access request as "<Request>"
@@ -41,9 +41,9 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Database Request"
       And user validates request type as "Service Request | PLAZA"
-#      And user validates Database access request description same as plaza
+      And user validates Database access request description same as plaza
       Then user clicks on owner under sections
-      #And user clicks on assignment under sections
+      And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
       And user validates owner as "PLAZA"
       And user should see assigned profile as "<Assigned Profile>"
@@ -80,8 +80,8 @@
       Examples:
 
       |Request                                |Database Type|Description                      |Additional Comments  |Account Type|Assigned Profile|
-      |Test1 Database AccessMSSQL/Request     |MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server |MSSQL L3       |
-#      |Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |MySQL L3        |
+    #  |Test1 Database AccessMSSQL/Request     |MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server |MSSQL L3       |
+      |Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |MySQL L3        |
 
 
 

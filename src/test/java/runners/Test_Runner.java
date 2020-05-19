@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@Finance_Assurance"}
+        tags = {"@SAO-5204"}
 
 )
 public class Test_Runner extends BaseTest {

@@ -9,7 +9,7 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Messaging" under IT Infrastructure
+      And user clicks on messaging under IT Infrastructure dropdown
       When user clicks on "Denmark Mail" pebble
       Then user should see "Denmark Mail" form
       #Then user selects system name in haiti as "Other"
@@ -40,7 +40,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Denmark Mail"
       And user validates request type as "Service Request | PLAZA"
-#      And user validates messaging denmark mail description same as plaza
+      And user validates messaging denmark mail description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

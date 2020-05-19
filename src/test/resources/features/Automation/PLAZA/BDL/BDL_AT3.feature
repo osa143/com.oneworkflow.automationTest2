@@ -8,7 +8,7 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Application" under IT Infrastructure
+      And user clicks on application under IT Infrastructure dropdown
       When user clicks on "BDL" pebble
       Then user should see "BDL" form
       #Then user selects system name in haiti as "Other"
@@ -44,7 +44,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | BDL"
       And user validates request type as "Service Request | PLAZA"
-#      And user validates BDL description same as plaza description
+      And user validates BDL description same as plaza description
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

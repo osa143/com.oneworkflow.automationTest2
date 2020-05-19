@@ -1468,4 +1468,31 @@ public class OWF_WorkOrderPage extends BasePage {
         return false;
     }
 
+    public boolean verifylinux() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.TypeOfServer)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyCloudE2E() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.CI)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyWindowsServer() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.CI)) {
+            return true;
+        }
+        return false;
+    }
 }

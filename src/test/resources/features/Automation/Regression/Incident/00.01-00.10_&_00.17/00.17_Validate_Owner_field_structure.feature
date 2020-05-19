@@ -17,34 +17,34 @@ Feature: validation owner field structure
     And User selects "Owner Profile*" as dropdownValue and should see values for "notreadonly"
 
       | DropdownValue | DropdownValuesToBePresent|
-#      | PLAZA         |                          |
-#      | Access network:Mobile:RAN:Common | Mobile Services-DS:NW Radio Quality-NO:RAN Customer Tickets SE |
-#      | Access network:Mobile:RAN:Deployment | Rollout NO|
-#      | Access network:Mobile:RAN:Deployment SE |NW Deployment Eltel-SE:NW Deployment KPI Team-SE:NW Deployment Netel-SE:NW Deployment Relacom-SE:NW Deployment Scanmast-SE:NW Deployment Support-SE    |
-#      | Access network:Mobile:RAN:Design | Design RAN&Core-SE                                                                                                                                                             |
-#      | Access network:Mobile:RAN:Ericsson  | RAN Ericsson-Common |
-#      | Access network:Mobile:RAN:Huawei | RAN Huawei-Common |
-##      | Access network:Mobile:RAN | Acc Mob RAN Ericsson-SE:Acc Mob RAN NSN-SE:Mobile service-FLEN:RAN improve-Common |
-#      | Access network:Mobile:RAN:NSN | RAN NSN-Common |
-#      | Access network:Mobile:RAN:Planning | NW Planning Last Mile-SE:NW RAN Deployment DK:RAN Engineering-Common:RAN Engineering-SE  |
-#      | Access network:Mobile:Transmission | BtB Solution-DK:MBH Design-DK:MBH Fiber-DK:MBH Implementing-DK:MBH Main-DK |
-#      | Access network:Mobile:WIFI | Core support Wlan |
-#      | Access network:Mobile:WLAN:Common | RAN Telia Wifi |
-#      | Access network:Mobile:WLAN | WLAN Agreement:WLAN Coverage:WLAN TG-EL |
-#      | BSS:Billing | Amdocs-DK:AOFokus-DK:Axapta-DK:Bill Management-SE:Billing L2-FI:Bruce/Rosetta:Bruce/Rosetta-DK:Charging & Rating-SE:DK Tech IT Billing:DLG NaviBilling:Focus Op-DK:Fokus Finance Approve-DK:Fokus Operations QA-DK:Fokus Ops Business Approve-DK:Fokus Price & Parameters-DK:Fokus Test:Foton-DK:ICH-DK:Invoicing&Cust Interact-SE:KisbiGeneva Operations-DK:KisbiGeneva Price & Para-DK:KisbiGeneva-DK:Mit Tele Navibilling-DK:Ninja-DK:OCS Operation-EE:OCS Operation-SE:Port&Bill -Common:Prepaid-FI:StateEvent-DK:VERO-DK |
-#      | BSS:Channels | BSS Ch Vart Telia-SE:Channels L2-FI:Omni Channels-SE:Portal Channels L2-SE |
-#      | BSS:CRM | CRM L2-FI:Cust & Order Mgmt -SE |
-#      | BSS:Data&Analytics | Data&Analytics L2-FI |
-#      | BSS:GDPR | GDPR Manager-DK |
-#      | BSS:MicroServices | Microservice-DK |
-#      | BSS:NEO | NEO IT Awaiting BU-DK:NEO IT DK Services-DK:NEO IT Ninja-DK:NEO IT Tango/Copa-DK:NEO IT-DK |
-#      | BSS:Other | BSS COPE-DK |
-#      | BSS | Etray-DK:Online-DK |
-#      | BSS:Provisioning | Provisioning_EMANG-SE:Provisioning-SE |
-#      | BSS:Sales | Sales&Partner-SE |
-##      | Control Center | Incident Manager |
-#      | Control Center:Improvement | SA Process Improvements |
-#      | Control Center:Monitoring | CC Fixed access-FI:CC Fixed access-SE:CC IP/TV:CC IT:CC Mob Core/IMS/Fixed Voice/IN:CC Mob&Access-Common:CC Monitoring Management:CC WDM |
+      | PLAZA         |                          |
+      | Access network:Mobile:RAN:Common | Mobile Services-DS:NW Radio Quality-NO:RAN Customer Tickets SE |
+      | Access network:Mobile:RAN:Deployment | Rollout NO|
+      | Access network:Mobile:RAN:Deployment SE |NW Deployment Eltel-SE:NW Deployment KPI Team-SE:NW Deployment Netel-SE:NW Deployment Relacom-SE:NW Deployment Scanmast-SE:NW Deployment Support-SE    |
+      | Access network:Mobile:RAN:Design | Design RAN&Core-SE                                                                                                                                                             |
+      | Access network:Mobile:RAN:Ericsson  | RAN Ericsson-Common |
+      | Access network:Mobile:RAN:Huawei | RAN Huawei-Common |
+#      | Access network:Mobile:RAN | Acc Mob RAN Ericsson-SE:Acc Mob RAN NSN-SE:Mobile service-FLEN:RAN improve-Common |
+      | Access network:Mobile:RAN:NSN | RAN NSN-Common |
+      | Access network:Mobile:RAN:Planning | NW Planning Last Mile-SE:NW RAN Deployment DK:RAN Engineering-Common:RAN Engineering-SE  |
+      | Access network:Mobile:Transmission | BtB Solution-DK:MBH Design-DK:MBH Fiber-DK:MBH Implementing-DK:MBH Main-DK |
+      | Access network:Mobile:WIFI | Core support Wlan |
+      | Access network:Mobile:WLAN:Common | RAN Telia Wifi |
+      | Access network:Mobile:WLAN | WLAN Agreement:WLAN Coverage:WLAN TG-EL |
+      | BSS:Billing | Amdocs-DK:AOFokus-DK:Axapta-DK:Bill Management-SE:Billing L2-FI:Bruce/Rosetta:Bruce/Rosetta-DK:Charging & Rating-SE:DK Tech IT Billing:DLG NaviBilling:Focus Op-DK:Fokus Finance Approve-DK:Fokus Operations QA-DK:Fokus Ops Business Approve-DK:Fokus Price & Parameters-DK:Fokus Test:Foton-DK:ICH-DK:Invoicing&Cust Interact-SE:KisbiGeneva Operations-DK:KisbiGeneva Price & Para-DK:KisbiGeneva-DK:Mit Tele Navibilling-DK:Ninja-DK:OCS Operation-EE:OCS Operation-SE:Port&Bill -Common:Prepaid-FI:StateEvent-DK:VERO-DK |
+      | BSS:Channels | BSS Ch Vart Telia-SE:Channels L2-FI:Omni Channels-SE:Portal Channels L2-SE |
+      | BSS:CRM | CRM L2-FI:Cust & Order Mgmt -SE |
+      | BSS:Data&Analytics | Data&Analytics L2-FI |
+      | BSS:GDPR | GDPR Manager-DK |
+      | BSS:MicroServices | Microservice-DK |
+      | BSS:NEO | NEO IT Awaiting BU-DK:NEO IT DK Services-DK:NEO IT Ninja-DK:NEO IT Tango/Copa-DK:NEO IT-DK |
+      | BSS:Other | BSS COPE-DK |
+      | BSS | Etray-DK:Online-DK |
+      | BSS:Provisioning | Provisioning_EMANG-SE:Provisioning-SE |
+      | BSS:Sales | Sales&Partner-SE |
+#      | Control Center | Incident Manager |
+      | Control Center:Improvement | SA Process Improvements |
+      | Control Center:Monitoring | CC Fixed access-FI:CC Fixed access-SE:CC IP/TV:CC IT:CC Mob Core/IMS/Fixed Voice/IN:CC Mob&Access-Common:CC Monitoring Management:CC WDM |
       | Control Center:Monitoring:Not to be used | CC Monitor FM Connection Issue |
       | Control Center:Performance | CC Perf&Quality:CC Prod&proc |
       | Core:Mobile | Core Production-Common:Test & Verification-Common |

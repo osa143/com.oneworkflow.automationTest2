@@ -8,10 +8,10 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Data Center" under IT Infrastructure
+      And user clicks on data center under IT Infrastructure dropdown
       When user clicks on "On-site Services" pebble
       Then user should see "On-site Services" form
-      Then user selects system name in haiti as "Other"
+      Then user selects system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters on site services DC-site or address as "Test address"
       Then user enters on site services description as "Test4 Data Center/Description"
@@ -35,7 +35,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | On-site Services"
       And user validates request type as "Service Request | PLAZA"
-#      And user validates Data center on site services description same as plaza
+      And user validates Data center on site services description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

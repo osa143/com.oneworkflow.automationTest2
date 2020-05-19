@@ -10,16 +10,17 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Firewall & Network" under IT Infrastructure
+      And user clicks on firewall & network under IT Infrastructure dropdown
+      And user clicks on show more button
       When user clicks on Remote Access (VPN ACS)
       Then user should see "Remote Access (VPN/ACS)" form
       Then user selects select request as "General VPN"
-      Then user selects remote access system name in haiti as "Other"
-      When user selects role dropdown as "Application Operation Engineer"
-      And user enters network security remote request as "Test9 Network Security/Request"
-      Then user selects remote access select request as "General VPN"
+#      Then user selects remote access system name in haiti as "1B"
+#      When user selects role dropdown as "Application Operation Engineer"
+#      And user enters network security remote request as "Test9 Network Security/Request"
+#      Then user selects remote access select request as "General VPN"
       Then user enters Network Security Remote Access description as "Test9 Network Security/Description"
-      And user enters additional comments as "Network Security - Test9/AC"
+#      And user enters additional comments as "Network Security - Test9/AC"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -34,9 +35,9 @@
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
-      And user validates title field as "Service Request | Remote Access (VPN/ACS)"
+      And user validates title field as "Service Request | Remote Access (VPN, Strong authentication, ISE/Tacacs, TeliaNet, ServerNet, TSRU Norway customers )"
       And user validates request type as "Service Request | PLAZA"
-      And user validates network security remote access description
+#      And user validates network security remote access description
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

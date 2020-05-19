@@ -9,7 +9,7 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Application" under IT Infrastructure
+      And user clicks on application under IT Infrastructure dropdown
       When user clicks on "BCPP" pebble
       Then user should see "BCPP" form
       #Then user selects system name in haiti as "Other"
@@ -70,7 +70,7 @@
       Examples:
 
         |Request                |Environment|Description                |Additional Comments|
-#        |BCPP-Prod/Request      |Prod       |BCPP-Prod/Description      |BCPP-Prod/AC       |
-#        |Test2-BCPP-Prod/Request|Prod       |Test2-BCPP-Prod/Description|Test2-BCPP-Prod/AC |
-#        |BCPP-Test/Request      |Test       |BCPP-Test/Description      |BCPP-Test/AC       |
-        |Test2-BCPP-Test/Request|Test       |Test2-BCPP-Test/Description|Test2-BCPP-Test/AC |
+        |BCPP-Prod/Request      |Prod       |BCPP-Prod/Description      |BCPP-Prod/AC       |
+ #       |Test2-BCPP-Prod/Request|Prod       |Test2-BCPP-Prod/Description|Test2-BCPP-Prod/AC |
+ #       |BCPP-Test/Request      |Test       |BCPP-Test/Description      |BCPP-Test/AC       |
+ #       |Test2-BCPP-Test/Request|Test       |Test2-BCPP-Test/Description|Test2-BCPP-Test/AC |

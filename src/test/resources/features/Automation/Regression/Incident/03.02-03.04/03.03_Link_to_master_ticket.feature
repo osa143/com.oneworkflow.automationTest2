@@ -1,5 +1,5 @@
 @03.03 @Incident @03
-  #passed
+  #passed2
   Feature: Link to master ticket
     Scenario: Link to master ticket
 

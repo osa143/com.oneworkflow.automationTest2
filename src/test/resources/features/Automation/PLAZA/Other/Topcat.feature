@@ -8,7 +8,10 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Application" under IT Infrastructure
+      And user clicks on application under IT Infrastructure dropdown
+      And user clicks on show more button
+      And user waits 2 secs
+      And user clicks on show more button
       When user clicks on "Topcat" pebble
       Then user should see "Topcat" form
      # Then user selects system name in haiti as "Other"
@@ -69,5 +72,5 @@
       Examples:
 
       |Service Request Name       |Request             |Description             |Additional Comments|
-      #|General Request            |Test2 Topcat/Request|Test2 Topcat/Description|Test2 Topcat/AC    |
-      |Restore Catalogue Database |Test1 Topcat/Request|Test1 Topcat/Description|Test1 Topcat/AC    |
+      |General Request            |Test2 Topcat/Request|Test2 Topcat/Description|Test2 Topcat/AC    |
+     # |Restore Catalogue Database |Test1 Topcat/Request|Test1 Topcat/Description|Test1 Topcat/AC    |

@@ -22,8 +22,8 @@ Feature: checking of bulk loading format
       And user enters "Regression - Change Management Process" in the ver of functionality field
       And user enters "Regression - Change Management Process" in the risk description field
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-      Then user enters request start time 24 hours ahead of current date
-      And user enters request end time 28 hours ahead of current date
+    And user enters start time as 24 hours fast from current sweden time in "yyyy-MM-dd HH:mm:ss" format
+    And user enters end time as 28 hours fast from current sweden time in "yyyy-MM-dd HH:mm:ss" format
       And user enters impact duration as "45" minutes
       And user selects estimated impact dropdown as "Degradation of Service"
       And user clicks on save button
@@ -58,9 +58,9 @@ Feature: checking of bulk loading format
 
           |fileTypes                                                                                                 |
 #          |Test Attachments\10 CI's - Incorrect Names\CSV.csv|
-          |Test Attachments\10 CI's - Incorrect Names\TEXT.txt|
+ #         |Test Attachments\10 CI's - Incorrect Names\TEXT.txt|
 #          |Test Attachments\10 CI's - Incorrect Names\XLS.xls|
-#          |Test Attachments\10 CI's - Incorrect Names\XLSX.xlsx|
+          |Test Attachments\10 CI's - Incorrect Names\XLSX.xlsx|
 
 
 

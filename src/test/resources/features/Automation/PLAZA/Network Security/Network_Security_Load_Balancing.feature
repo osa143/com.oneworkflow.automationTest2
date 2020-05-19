@@ -9,10 +9,11 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Firewall & Network" under IT Infrastructure
+      And user clicks on firewall & network under IT Infrastructure dropdown
+      And user clicks on show more button
       When user clicks on Network Load Balancing pebble
       Then user should see "Network Load Balancing" form
-      Then user selects system name in haiti as "Other"
+        Then user selects system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Network Security Load request as "Test6 Network Security/Request"
       Then user enters Network Security Load description as "Test6 Network Security/Description"

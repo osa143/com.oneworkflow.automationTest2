@@ -9,7 +9,8 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Compute & Operating System" under IT Infrastructure
+      And user clicks on compute & operating system under IT Infrastructure dropdown
+      And user clicks on show more button
       When user clicks on Access to Red Hat Knowledgebase
       Then user should see "Access to Red Hat Knowledgebase" form
       #Then user selects system name in haiti as "Other"
@@ -34,7 +35,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Access to Red Hat Knowledgebase"
       And user validates request type as "Service Request | PLAZA"
-#      And user validates operating system access description same as plaza
+      And user validates operating system access description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

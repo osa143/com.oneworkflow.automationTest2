@@ -716,7 +716,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Firewall Routing Request pebble")
     public void userClicksOnFirewallRoutingRequestPebble() {
-        clickElement(By.xpath("//*[@id=\"x2723de4adb72cf006734f1eabf9619aa\"]/div/div/div[2]/div[11]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[12]/div/a"));
     }
 
     @Then("user selects New Change Service Request Name as {string}")
@@ -782,7 +782,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on LAN Data Net LAN pebble")
     public void userClicksOnLANDataNetLANPebble() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[10]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[14]/div/a"));
     }
 
     @And("user enters Network Security LAN request as {string}")
@@ -797,7 +797,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Network Load Balancing pebble")
     public void userClicksOnNetworkLoadBalancingPebble() {
-        clickElement(By.xpath("//*[@id=\"x2723de4adb72cf006734f1eabf9619aa\"]/div/div/div[2]/div[14]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[15]/div/a"));
 
 
     }
@@ -814,7 +814,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Network Routing Switching pebble")
     public void userClicksOnNetworkRoutingSwitchingPebble() {
-        clickElement(By.xpath("//*[@id=\"x2723de4adb72cf006734f1eabf9619aa\"]/div/div/div[2]/div[16]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a"));
     }
 
     @Then("user selects New Switch Service Request Name as {string}")
@@ -889,7 +889,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Proxy pebble")
     public void userClicksOnProxyPebble() {
-        clickElement(By.xpath("//*[@id=\"x2723de4adb72cf006734f1eabf9619aa\"]/div/div/div[2]/div[17]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[18]/div/a"));
     }
 
 
@@ -1199,7 +1199,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Remote Access \\(VPN ACS)")
     public void userClicksOnRemoteAccessVPNACS() {
-        clickElement(By.xpath("/html/body/div[1]/section/main/div[3]/div/sp-page-row/div/div[2]/span/div/div/div/div[2]/div[18]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[19]/div/a"));
     }
 
     @And("user enters network security remote request as {string}")
@@ -1219,7 +1219,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Network Routing Switching")
     public void userClicksOnNetworkRoutingSwitching() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[16]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a"));
     }
 
     @And("user enters network security switch port request as {string}")
@@ -1309,7 +1309,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Change OS Patching")
     public void userClicksOnChangeOSPatching() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[19]/div/a/div"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[19]/div/a"));
     }
 
     @And("user enters operating system manual request as {string}")
@@ -1334,7 +1334,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Manual OS Patching")
     public void userClicksOnManualOSPatching() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[20]/div/a"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[20]/div/a/div/img"));
     }
 
     @And("user enters operating system manual os patching request as {string}")
@@ -1805,7 +1805,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Access to Red Hat Knowledgebase")
     public void userClicksOnAccessToRedHatKnowledgebase() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div[17]/div/a/div/h2"));
+        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a/div/h2"));
     }
 
     @Then("user validates plaza ticket has update to timeline")
@@ -2299,6 +2299,56 @@ public class Plaza_HomePageSteps extends BasePage {
     @When("user clicks support on plaza homepage")
     public void userClicksSupportOnPlazaHomepage() {
         clickElement(By.xpath("//*[@id='xcab273021b8480d00c1e87fe6e4bcbaf']/div/a"));
+    }
+
+    @And("user selects compute and operating system system name in haiti as {string}")
+    public void userSelectsComputeAndOperatingSystemSystemNameInHaitiAs(String arg0) {
+        homePage.selectcomputeSystemNameInHaiti(arg0);
+    }
+
+    @And("user clicks on firewall & network under IT Infrastructure dropdown")
+    public void userClicksOnFirewallNetworkUnderITInfrastructureDropdown() {
+        clickElementById("c85eddc1db9997446734f1eabf96198a");
+    }
+
+    @And("user clicks on cloud under IT Infrastructure dropdown")
+    public void userClicksOnCloudUnderITInfrastructureDropdown() {
+        clickElementById("7afd99c1db9997446734f1eabf9619be");
+    }
+
+    @And("user clicks on compute & operating system under IT Infrastructure dropdown")
+    public void userClicksOnComputeOperatingSystemUnderITInfrastructureDropdown() {
+        clickElementById("d56e9dc1db9997446734f1eabf961970");
+    }
+
+    @And("user clicks on messaging under IT Infrastructure dropdown")
+    public void userClicksOnMessagingUnderITInfrastructureDropdown() {
+        clickElementById("00e7f797dbe153006734f1eabf961914");
+    }
+
+    @And("user clicks on database under IT Infrastructure")
+    public void userClicksOnDatabaseUnderITInfrastructure() {
+        clickElementById("78d96643dbc197042b3cfc16bf9619ab");
+    }
+
+    @And("user clicks on data center under IT Infrastructure dropdown")
+    public void userClicksOnDataCenterUnderITInfrastructureDropdown() {
+        clickElementById("0e0e9dc1db9997446734f1eabf96196a");
+    }
+
+    @And("user clicks on storage & data protection under IT Infrastructure")
+    public void userClicksOnStorageDataProtectionUnderITInfrastructure() {
+        clickElementById("6d9e9505db9997446734f1eabf96195a");
+    }
+
+    @And("user validates resolution notes as {string}")
+    public void userValidatesResolutionNotesAs(String arg0) {
+        Assert.assertEquals(homePage.getResolutionNotes(), arg0);
+    }
+
+    @Then("user validates resolution code as {string}")
+    public void userValidatesResolutionCodeAs(String arg0) {
+        Assert.assertEquals(homePage.getResolutionCode(), arg0);
     }
 
     @And("user selects affected person type as {string}")

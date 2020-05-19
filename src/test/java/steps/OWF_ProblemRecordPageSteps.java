@@ -1379,6 +1379,11 @@ public class OWF_ProblemRecordPageSteps {
     public void additionalRootCauseCodesShouldBeSavedAs(String arg0) {
         Assert.assertEquals(problemRecordPage.getText_AdditionalRootCauseCodes(), arg0);
     }
+
+    @Then("user clicks edit affected org button")
+    public void userClicksEditAffectedOrgButton() {
+        problemRecordPage.clickEditAffectedOrgButton();
+    }
 }
 
 

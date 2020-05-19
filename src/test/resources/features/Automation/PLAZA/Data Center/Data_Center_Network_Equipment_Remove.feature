@@ -8,10 +8,10 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Data Center" under IT Infrastructure
+      And user clicks on data center under IT Infrastructure dropdown
       When user clicks on "Network Equipment - Remove" pebble
       Then user should see "Network Equipment - Remove" form
-      Then user selects system name in haiti as "Other"
+      Then user selects system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Network Equipment Request as "Test5 Data Center/Request"
       And user enters Network Equipment DC-site or address as "Test address"
@@ -56,8 +56,7 @@
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
-      And user should see confirmation message for impact clear and user clicks yes
+      And user right clicks on CI "cc100cgas001" and clears impact
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

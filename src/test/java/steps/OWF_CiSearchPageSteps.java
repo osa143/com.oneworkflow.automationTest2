@@ -495,4 +495,14 @@ public class OWF_CiSearchPageSteps {
     public void userClosesWarningMessageOnCISearchWindowForChangeTicket() {
         ciSearchPage.closeWarningMessage_changeTicket();
     }
+
+    @And("user clicks on radio button open")
+    public void userClicksOnRadioButtonOpen() {
+        ciSearchPage.clickOpenRadioButton_linkedItems();
+    }
+
+    @And("user clicks on radio button closed")
+    public void userClicksOnRadioButtonClosed() {
+        ciSearchPage.clickClosedRadioButton_linkedItems();
+    }
 }

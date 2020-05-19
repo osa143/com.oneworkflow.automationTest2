@@ -21,8 +21,8 @@
       And user enters "Regression - Change Management Process" in the ver of functionality field
       And user enters "Regression - Change Management Process" in the risk description field
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-      Then user enters request start time 24 hours ahead of current date
-      And user enters request end time 28 hours ahead of current date
+      And user enters start time as 24 hours fast from current sweden time in "yyyy-MM-dd HH:mm:ss" format
+      And user enters end time as 28 hours fast from current sweden time in "yyyy-MM-dd HH:mm:ss" format
       And user enters impact duration as "45" minutes
       And user selects estimated impact dropdown as "Degradation of Service"
       And user clicks on save button
@@ -33,7 +33,7 @@
       When user selects impact level as "No Impact"
       And user clicks on Manual Input radio button
       And user clicks on Ignore Duplicate CIs checkbox
-      And user enters "LT DNS SIP;SE_AFG_AFG01SE;FI DNS Gi;FI DNS Gn;FI_AFG_AFG01FI" in manual CI search box
+      And user enters "LT DNS SIP;LT DNS SIP;FI DNS Gi;FI DNS Gn;FI DNS ENUM" in manual CI search box
       Then user clicks on save button under bulk import
       And first error message should display as "The manually identified CIs are now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window

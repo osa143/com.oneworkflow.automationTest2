@@ -102,6 +102,10 @@
       And user validates plaza second timeline message as "Incident state Resolved was In Progress"
       Then user enters plaza assignment group as "IT Application Support"
       And user enters plaza assignee as "Agata Stefanovič"
+      And user clicks on "Closure Information" tab
+      Then user validates resolution code as "Solved (Permanently)"
+      And user vaidates resolution notes as ""
+      And user validates PDB title field as ""
       Then user clicks on plaza close incident button
       And user waits 4 secs
       And user validates plaza ticket status as "Closed"

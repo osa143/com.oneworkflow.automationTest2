@@ -23,29 +23,29 @@
       And user clicks on Manual Input radio button
       And user clicks on Ignore Duplicate CIs checkbox
       And user enters "LT DNS SIP;SE_AFG_AFG01SE;FI DNS Gi;FI DNS Gn;FI_AFG_AFG01FI" in manual CI search box
-#      Then user clicks on save button under bulk import
-#      And first error message should display as "The manually identified CIs are now being processed..." on bulk ci window
-#      And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-#      When user clicks on Show Bulk Import button
-#      And user switches to frame
-#      When user clicks on "Related CIs" tab
-#      And user validates "Dup. CIs" as "2" in row 1
-#      Then user validates at least one CI has "With Warnings" under "Status"
-#      And user validates total rows as "5"
-#      And user validates Rows OK as "0"
-#      And user validates with errors as "0"
-#      And user validates with warnings as "5"
-#      And user validates warning message as "Multiple CIs named 'LT DNS SIP' were found, and the import job is configured to Ignore Duplicate CIs!" in row 1
-#      And user validates warning message as "Multiple CIs named 'SE_AFG_AFG01SE' were found, and the import job is configured to Ignore Duplicate CIs!" in row 2
-#      And user validates warning message as "Multiple CIs named 'FI DNS Gi' were found, and the import job is configured to Ignore Duplicate CIs!" in row 3
-#      And user validates warning message as "Multiple CIs named 'FI DNS Gn' were found, and the import job is configured to Ignore Duplicate CIs!" in row 4
-#      And user validates warning message as "Multiple CIs named 'FI_AFG_AFG01FI' were found, and the import job is configured to Ignore Duplicate CIs!" in row 5
-#      And user validates "Status" as "With Warnings" in row 1
-#      And user validates "Status" as "With Warnings" in row 2
-#      And user validates "Status" as "With Warnings" in row 3
-#      And user validates "Status" as "With Warnings" in row 4
-#      And user validates "Status" as "With Warnings" in row 5
-#      Then user clicks on bulk loading close button
+      Then user clicks on save button under bulk import
+      And first error message should display as "The manually identified CIs are now being processed..." on bulk ci window
+      And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
+      When user clicks on Show Bulk Import button
+      And user switches to frame
+      When user clicks on "Related CIs" tab
+      And user validates "Dup. CIs" as "2" in row 1
+      Then user validates at least one CI has "With Warnings" under "Status"
+      And user validates total rows as "5"
+      And user validates Rows OK as "0"
+      And user validates with errors as "0"
+      And user validates with warnings as "5"
+      And user validates warning message as "Multiple CIs named 'LT DNS SIP' were found, and the import job is configured to Ignore Duplicate CIs!" in row 1
+      And user validates warning message as "Multiple CIs named 'SE_AFG_AFG01SE' were found, and the import job is configured to Ignore Duplicate CIs!" in row 2
+      And user validates warning message as "Multiple CIs named 'FI DNS Gi' were found, and the import job is configured to Ignore Duplicate CIs!" in row 3
+      And user validates warning message as "Multiple CIs named 'FI DNS Gn' were found, and the import job is configured to Ignore Duplicate CIs!" in row 4
+      And user validates warning message as "Multiple CIs named 'FI_AFG_AFG01FI' were found, and the import job is configured to Ignore Duplicate CIs!" in row 5
+      And user validates "Status" as "With Warnings" in row 1
+      And user validates "Status" as "With Warnings" in row 2
+      And user validates "Status" as "With Warnings" in row 3
+      And user validates "Status" as "With Warnings" in row 4
+      And user validates "Status" as "With Warnings" in row 5
+      Then user clicks on bulk loading close button
 
 
 

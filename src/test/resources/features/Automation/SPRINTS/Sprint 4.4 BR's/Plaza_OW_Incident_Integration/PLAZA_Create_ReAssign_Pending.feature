@@ -93,6 +93,7 @@
       When user changes status to "Cleared" on trouble event page
       And user selects fault position as "N/A:N/A" on trouble event page
       And user selects cause as "N/A:N/A:N/A" on trouble event page
+      And user selects action dropdown as "N/A:N/A" on trouble event page
       And user enters event end time as current time
       And user clicks on save button and closes warning messages
       Then user validates ticket status as "Cleared"
@@ -102,6 +103,8 @@
       And user validates plaza second timeline message as "Incident state Resolved was In Progress"
       Then user enters plaza assignment group as "IT Application Support"
       And user enters plaza assignee as "Agata Stefanovič"
+      Then user validates resolution code as "Solved (Permanently)"
+      And user validates resolution notes as "N/A:N/A"
       Then user clicks on plaza close incident button
       And user waits 4 secs
       And user validates plaza ticket status as "Closed"

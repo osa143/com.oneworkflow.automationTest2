@@ -27,11 +27,11 @@ Feature: Plaza creation/withdrawing of incident ticket
     And user enters "Test Update" in the ticket timeline
     And user clicks on plaza send button
     And user waits 30 secs
-#    When user clicks on shown ICM number
-#    Then user should see ICM form
-#    And user validates INC is present under internal case subtasks
-#    When user clicks on INC under internal case subtasks
-#    Then user should see INC form
+    When user clicks on shown ICM number
+    Then user should see ICM form
+    And user validates INC is present under internal case subtasks
+    When user clicks on INC under internal case subtasks
+    Then user should see INC form
     And user opens new tab
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password

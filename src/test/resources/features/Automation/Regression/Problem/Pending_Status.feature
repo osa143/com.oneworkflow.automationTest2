@@ -31,7 +31,7 @@ Feature: User is able to change status to pending
     Then problem ticket status should be under investigation
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Pending to Under Investigation."
     When user changes status to "Pending" on problem record page
-    And user enters date value as 2 minutes in the future
+    And user enters date value as 30 minutes in the future
     And user selects reason dropdown as "Incident ongoing"
     And user clicks on save button on the problem form
     Then user validates ticket status as "Pending"

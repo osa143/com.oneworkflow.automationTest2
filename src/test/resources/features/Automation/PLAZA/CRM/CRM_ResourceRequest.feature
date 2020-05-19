@@ -8,7 +8,8 @@ Feature: Plaza CRM form test
     Then user clicks on plaza portal
     When user clicks on Products & Services
     And user clicks on IT Infrastructure dropdown
-    And user clicks on "Application" under IT Infrastructure
+    And user clicks on application under IT Infrastructure dropdown
+    And user clicks on show more button
     When user clicks on "CRM" pebble
     Then user should see CRM form
    # Then user selects system name in haiti as "Other"
@@ -34,7 +35,7 @@ Feature: Plaza CRM form test
     Then user should see plaza ticket
     And user validates source field as "PLAZA"
     And user validates title field as "Service Request | CRM"
-    #And user validates CRM description same as plaza
+    And user validates CRM description same as plaza
     Then user clicks on owner under sections
     And user clicks on assignment under sections
     Then user validates owner profile as "PLAZA"

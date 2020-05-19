@@ -1340,6 +1340,46 @@ public class OWF_ProblemRecordPageSteps {
         CommonUtils.Timeline_Entry= problemRecordPage.getTimelineStatus(1);
     }
 
+    @And("user validates importance as {string}")
+    public void userValidatesImportanceAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getImportance(), arg0);
+    }
+
+    @Then("user should see root cause code primary drop down as mandatory")
+    public void userShouldSeeRootCauseCodePrimaryDropDownAsMandatory() {
+        Assert.assertTrue(problemRecordPage.isAdditionalRootCauseCode_Not_mandatory());
+        Assert.assertTrue(problemRecordPage.isAdditionalRootCauseCodeDisplayed());
+
+    }
+
+    @And("user should see additional root cause code drop down as optional")
+    public void userShouldSeeAdditionalRootCauseCodeDropDownAsOptional() {
+        Assert.assertTrue(problemRecordPage.isRootCauseCode_mandatory());
+        Assert.assertTrue(problemRecordPage.isRootCauseCodeDisplayed());
+    }
+
+    @When("user clicks edit button for additional root cause")
+    public void userClicksEditButtonForAdditionalRootCause() {
+        problemRecordPage.clickEdit_Additional_RootCauseCode();
+        problemRecordPage.switchToFrameByIndex(2);
+    }
+
+    @Then("user should see {string}")
+    public void userShouldSee(String text) {
+        problemRecordPage.verifyElementIsDisplayedByContainsTextAndTagName("label",text);
+    }
+
+    @When("user selects multiple additional root cause codes as {string}")
+    public void userSelectsMultipleAdditionalRootCauseCodesAs(String arg0) {
+       problemRecordPage.selectMultipleAdditionalRootCauseCodes(arg0);
+       problemRecordPage.clickApplyButton_additionalRC_codes();
+    }
+
+    @Then("additional root cause codes should be saved as {string}")
+    public void additionalRootCauseCodesShouldBeSavedAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getText_AdditionalRootCauseCodes(), arg0);
+    }
+
     @Then("user clicks edit affected org button")
     public void userClicksEditAffectedOrgButton() {
         problemRecordPage.clickEditAffectedOrgButton();

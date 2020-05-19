@@ -53,7 +53,7 @@ public class OWF_CiSearchPageSteps {
     @And("user closes warning message")
     public void userClosesWarningMessageAndClicksOnCloseButton() {
         ciSearchPage.clickYesOnConfirmationMessage();
-        ciSearchPage.closeWarningMessage();
+        //ciSearchPage.closeWarningMessage();
     }
     @When("user clicks on clear button")
     public void userClicksOnClearButton() {

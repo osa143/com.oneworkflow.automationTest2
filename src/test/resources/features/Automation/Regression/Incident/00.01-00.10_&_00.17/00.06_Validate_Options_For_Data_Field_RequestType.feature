@@ -16,5 +16,5 @@ Feature: Validate options for data field request type
     And User selects "Request Type" as dropdownValue and should see values for "notreadonly"
       | DropdownValue | DropdownValuesToBePresent|
       | Service Request | Service Request:Improvement|
-    And user logsOut and accepts alert
+#    And user logsOut and accepts alert
 

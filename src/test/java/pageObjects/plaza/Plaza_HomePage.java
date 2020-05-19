@@ -369,15 +369,15 @@ public class Plaza_HomePage extends BasePage {
         WebElement Element=findElement(By.xpath("//input[@type='text']"));
         Element.sendKeys(dropdownValue);
         wait(500);
-        Element.sendKeys(Keys.ARROW_DOWN);
-        Element.sendKeys(Keys.ENTER);
+        driver.switchTo().activeElement().sendKeys(Keys.ARROW_DOWN);
+        driver.switchTo().activeElement().sendKeys(Keys.ENTER);
     }
     public void selectAddOneTimeCi(String CiName){
         PlazaValidation.CI = CiName;
         addCi(txt_ONE_Time_ADD_CI, txt_ADD_CI_TEXT_BOX, CiName);
     }
     public void selectServiceAs(String service){
-        selectDropdownByUsingClickAndSendKeys("select2-chosen-1", service);
+        selectDropdownByUsingClickAndSendKeys("s2id_sp_formfield_service_area", service);
 
     }
 
@@ -748,6 +748,10 @@ public class Plaza_HomePage extends BasePage {
 
         driver.findElement((By.id(div_PDB_Affected_COUNTRY))).findElements(By.tagName("span")).stream().filter(element -> element.getText().trim().equals(AffectedCountry)).findFirst().orElse(null).click();
     }
+    public void clickPDB_AffectedPersonType(String AffectedPersonType) {
+
+        driver.findElement((By.id("sp_formfield_pdb_affectedPerson"))).findElements(By.tagName("span")).stream().filter(element -> element.getText().trim().equals(AffectedPersonType)).findFirst().orElse(null).click();
+    }
     public void selectSystemNameInHaiti(String dropdownName){
         clickElement(By.id(dd_SYSTEM_NAME_IN_HAITI));
         WebElement Element=findElement(By.id("select2-results-16"));
@@ -806,12 +810,12 @@ public class Plaza_HomePage extends BasePage {
     public void selectNatureAndContent(String text){
         PlazaValidation.NatureAndContent=text;
         clickElementById("s2id_sp_formfield_pdb_natureOfContent");
-        wait(500);
+        wait(1000);
         driver.switchTo().activeElement().sendKeys(Keys.ENTER);
     }
     public void selectAffectedPerson(String text){
         PlazaValidation.AffectedPersons=text;
-        selectDropdownByTagNameDiv(By.id("select2-chosen-22"),By.id("select2-results-22"), text );
+        selectDropdownByTagNameDiv(By.id("select2-chosen-3"),By.id("select2-results-3"), text );
     }
     public void enterDatetime_PDB(String text){
         PlazaValidation.DateTime=text;
@@ -824,8 +828,11 @@ public class Plaza_HomePage extends BasePage {
         return getTextByID("select2-chosen-3");
     }
     public void selectService(String text){
-//        PlazaValidation.Service = text;
-        selectDropdownByTagNameDiv(By.id("s2id_sp_formfield_infra_service"), By.id("select2-results-23"), text);
+        clickElement(By.id("s2id_sp_formfield_service"));
+        WebElement Element=findElement(By.xpath("//input[@type='text']"));
+        Element.sendKeys(text);
+        wait(500);
+        driver.switchTo().activeElement().sendKeys(Keys.ENTER);
     }
     public String getManualNotification_plaza(){
         return getTextByElement(By.xpath("//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p"));

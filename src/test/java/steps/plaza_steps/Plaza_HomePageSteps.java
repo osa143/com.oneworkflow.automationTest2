@@ -2350,4 +2350,9 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userValidatesResolutionCodeAs(String arg0) {
         Assert.assertEquals(homePage.getResolutionCode(), arg0);
     }
+
+    @And("user selects affected person type as {string}")
+    public void userSelectsAffectedPersonTypeAs(String arg0) {
+        homePage.clickPDB_AffectedPersonType(arg0);
+    }
 }

@@ -99,7 +99,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
             selectLevel(CI_Impact);
             clickRelateCiButton();
             clickYesOnConfirmationMessage();
-            closeWarningMessage();
+            //closeWarningMessage();
         }
         clickCloseButton();
     }
@@ -116,7 +116,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         selectLevel(CI_Impact);
         clickRelateCiButton();
         clickYesOnConfirmationMessage();
-        closeWarningMessage();
+       // closeWarningMessage();
         clickCloseButton();
         driver.switchTo().defaultContent();
         wait(1000);
@@ -489,7 +489,8 @@ public class OWF_CiSearchPage extends BaseRecordPage {
 
     public void clickYesOnConfirmationMessage(){
         driver.switchTo().frame(1);
-       clickElementById("WIN_0_700027904");
+        wait(1000);
+        clickElement(By.id("ardivpcl"));
         wait(1000);
         driver.switchTo().defaultContent();
         driver.switchTo().frame(2);

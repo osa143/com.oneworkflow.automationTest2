@@ -106,7 +106,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txt_ONSITE_CONTACT= "arid_WIN_0_705001292";
     private static final String txt_TRAVEL_TIME= "arid_WIN_0_705001293";
     private static final String table_TIMELINE = "T999000510";
-    private static final String btnEDIT= "WIN_0_808080012";
+    private static final String btnEDIT_AFFECTED_ORGS = "WIN_0_808080012";
     private static final String btnCLICK_SAVE= "WIN_0_700030040";
     private static final String fld_ACCOUNTABLE_ORG_AS_MANDATORY="//label[contains(text(),'Accountable Org.*')]";
     private static final String fld_ROOT_CAUSE_CODE_AS_MANDATORY="//label[contains(text(),'Accountable Org.*')]";
@@ -118,9 +118,28 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String fld_ADDITIONAL_ROOT_CAUSE_CODE_AS_NOT_MANDATORY="//label[contains(text(),'Additional RC Codes')]";
     private static final String btn_EDIT_ROOT_CAUSE_CODE= "WIN_0_800040067";
     private static final String btn_APPLY_ROOT_CAUSE_CODES= "WIN_0_800040088";
+    private static final String btn_MAKE_PRIMARY="WIN_0_800040086";
+    private static final String btn_REMOVE_SELECTED= "WIN_0_800040087";
 
+       public boolean verifyAdditionalRootCauseCodeIsRemoved(){
+
+        int rows_Before_remove=getTableRows(By.id("T800040090")).size();
+        clickTableElement_secondary_rootCause("Root Cause", "Technical | Other");
+        clickRemoveSelected();
+        int rows_after_remove= getTableRows(By.id("T800040090")).size();
+        if(rows_Before_remove>rows_after_remove)
+            return true;
+            else return false;
+}
+
+    public void clickMakePrimary(){
+        clickElementById(btn_MAKE_PRIMARY);
+    }
+    public void clickRemoveSelected(){
+        clickElementById(btn_REMOVE_SELECTED);
+    }
     public String getText_AdditionalRootCauseCodes(){
-        return getTextByID(txt_ADDITIONAL_ROOT_CAUSE_CODE);
+        return getAttributeValueById(txt_ADDITIONAL_ROOT_CAUSE_CODE);
     }
     public void selectAdditionalRootCauseCodes(String value){
         selectDropDownNameAndValue("Root Cause Codes", value, false);
@@ -182,7 +201,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
        selectDropDownNameAndValue("Organisations", affectedOrg, false);
    }
     public void selectAffected_Org(String value){
-       clickElementById(btnEDIT);
+       clickElementById(btnEDIT_AFFECTED_ORGS);
        switchToFrameByIndex(2);
         selectAffectedOrganisation(value);
        clickElementById(btnApply);
@@ -284,7 +303,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
       clickElement(By.id(rbtn_PRIVATE));
   }
     public String getRootCauseCode(){
-        return getTextByID(txt_ROOTCAUSECODE);
+        return getAttributeValueById(txt_ROOTCAUSECODE);
     }
     public String getUrgency(){
         return getTextByID(txt_URGENCY);

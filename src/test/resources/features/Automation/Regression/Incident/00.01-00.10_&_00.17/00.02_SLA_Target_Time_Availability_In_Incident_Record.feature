@@ -16,7 +16,7 @@ Feature: SLA Target time availability in Incident Record
     #UAT
     When user clicks on advanced search button
     And user waits 2 secs
-    And user enters "'Cust. Remaining SLA' != \"00:00:00\"" in the advanced search bar
+    And user enters "'Cust. Remaining SLA' != $NULL$ AND 'Status' = \"Closed\"" in the advanced search bar
     And user clicks on the search button
     Then ticket with SLA should be opened
     And user validates Cust. Remaining SLA or SLA Target Time availability

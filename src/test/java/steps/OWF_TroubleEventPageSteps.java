@@ -737,11 +737,11 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user validates {string} is visible")
     public void userValidatesIsVisible(String arg0) {
-      Assert.assertTrue(troubleEventPage.verifyElementIsDisplayedByContainsTextAndTagNameSpan("span", arg0));
+      Assert.assertTrue(troubleEventPage.verifyElementIsDisplayedByContainsTextAndTagName("span", arg0));
     }
     @And("user validates {string} is visible on bulk CI loading window tagname {string}")
     public void userValidatesIsVisibleOnBulkCILoadingWindowTagname(String arg0, String arg1) {
-        Assert.assertTrue(troubleEventPage.verifyElementIsDisplayedByContainsTextAndTagNameSpan(arg1, arg0));
+        Assert.assertTrue(troubleEventPage.verifyElementIsDisplayedByContainsTextAndTagName(arg1, arg0));
     }
 
     @When("user clicks on {string} under info type")

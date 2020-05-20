@@ -9,10 +9,10 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Cloud" under IT Infrastructure
+      And user clicks on cloud under IT Infrastructure dropdown
       When user clicks on "Skypoint - private cloud" pebble
       Then user should see "Skypoint - private cloud" form
-      Then user selects nimbus system name in haiti as "Other"
+      Then user selects nimbus system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Modify Onboarding in Skypoint"
       And user enters nimbus request as "Test7 Nimbus/Request"

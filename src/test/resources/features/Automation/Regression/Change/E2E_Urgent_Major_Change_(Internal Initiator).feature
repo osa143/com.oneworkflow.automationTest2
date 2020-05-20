@@ -43,14 +43,13 @@
       When user answers all risk questions as below
       And user selects answer as "A. No"
       And user selects answer as "B. Impact to other systems/technologies are unclear!"
-      And user selects answer as "Tested successfully, this is a pilot"
       And user selects answer as "D. \"Only\" Consumer customers affected."
       And user selects answer as "A. Yes"
       And user selects answer as "A. Yes"
       And user selects answer as "A. Yes (outcome of the Change can be instantly verified)"
       And user selects answer as "B. No"
       And user selects answer as "A. No"
-      And user selects answer as "A. No"
+      And user selects last answer as "A. No"
       Then user validates risk score gets updated
       Then user clicks on save button
       Then an error message should appear: "Please select at least one country of impact for this change. (ARERR 10000)"
@@ -64,7 +63,6 @@
       And user clicks on clear button
       And user selects Category as "Access"
       Then user enters "SE_BSC%" in the name+ field
-      And user selects "All CI's" under search for dropdown
       Then user clicks on search button on CI search window
       And user selects all CI's that appear
       And user selects impact level as "Loss of Service"
@@ -127,16 +125,7 @@
       Then user enters "New Communication plan" in the communication plan field
       And user clicks on save button
       When user clicks on risk tab
-      And user selects answer as "A. No"
-      And user selects answer as "B. Impact to other systems/technologies are unclear!"
-      And user selects answer as "Tested successfully, this is a pilot"
-      And user selects answer as "D. \"Only\" Consumer customers affected."
-      And user selects answer as "A. Yes"
-      And user selects answer as "A. Yes"
-      And user selects answer as "A. Yes (outcome of the Change can be instantly verified)"
-      And user selects answer as "B. No"
-      And user selects answer as "A. No"
-      And user selects answer as "B. Yes"
+      And user clicks on last risk question selects last answer as "B. Yes"
       Then user clicks on save button
       Then user clicks on "Schedule" tab
       And user enters request start time 168 hours ahead of current date
@@ -148,7 +137,8 @@
       And user clicks on Diagnosis tab
       Then user selects all CI's that appear
       And user right clicks on primary CI and selects "Impact:Update"
-      Then user change the impact from and to time to be the same as in schedule tab
+      Then user enters impact from time as same value as request start time on impact details bulk update window
+      And user enters impact to time as same value as request end time on impact details bulk update window
       And user clicks ok on CI window pop up
       Then user clicks on save button
       When user clicks on "Interested Parties" tab
@@ -226,11 +216,9 @@
       When user clicks on Diagnosis tab
       And user right clicks on primary CI and selects "Impact:Clear All"
       And user closes warning message
-      Then user gets impact from time
-      And user gets impact to time
+      Then user gets CI impact from time and impact to time
       And user clicks on "Schedule" tab
-      And user validates "actual start" time matches "impact from" time
-      And user validates "actual end" time matches "impact to" time
+      And user validates CI impact from time and impact to time is updated
       Then user clicks on save button
       And user clicks on timeline tab
       And user validates ticket status as "Completed"

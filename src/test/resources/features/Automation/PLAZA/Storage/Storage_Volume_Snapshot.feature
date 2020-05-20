@@ -11,7 +11,7 @@
       And user clicks on "Storage & Data Protection"
       When user clicks on "Volume Snapshot" pebble
       Then user should see "Volume Snapshot" form
-      Then user selects remote access system name in haiti as "Other"
+      Then user selects remote access system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Storage volume request as "Test3 Storage/Request"
       And user selects storage volume Choose Option as "Create Snapshot"

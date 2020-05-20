@@ -18,7 +18,7 @@ Feature: creation  multiple WO's internally and dispatch these to different assi
     When user adds below CI's to the ticket
       |   CI Name     |
       |SE_SGSN_VRRMME1|
-      |SE_SGSN_LDHMME1 |
+      |SE_SGSN_LDHMME1|
     Then user clicks on save button
     When user clicks on "Work Orders" tab
     And user clicks on create from ticket

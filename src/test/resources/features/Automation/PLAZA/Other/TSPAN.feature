@@ -8,7 +8,10 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Application" under IT Infrastructure
+      And user clicks on application under IT Infrastructure dropdown
+      And user clicks on show more button
+      And user waits 2 secs
+      And user clicks on show more button
       When user clicks on "TSPAN" pebble
       Then user should see "TSPAN" form
       #Then user selects system name in haiti as "Other"
@@ -69,7 +72,7 @@
       Examples:
 
       |Request            |Select Request  |Environment|Description            |Additional Comments|
-      |Test1 TSPAN/Request|Account/Password|Prod       |Test1 TSPAN/Description|Test1 TSPAN/AC     |
+      #|Test1 TSPAN/Request|Account/Password|Prod       |Test1 TSPAN/Description|Test1 TSPAN/AC     |
       #|Test2 TSPAN/Request|Account/Password|Test       |Test2 TSPAN/Description|Test2 TSPAN/AC     |
-      #|Test3 TSPAN/Request|Other          |Prod       |Test3 TSPAN/Description|Test3 TSPAN/AC     |
-#      |Test4 TSPAN/Request|Other          |Test       |Test4 TSPAN/Description|Test4 TSPAN/AC     |
+     # |Test3 TSPAN/Request|Other          |Prod       |Test3 TSPAN/Description|Test3 TSPAN/AC     |
+      |Test4 TSPAN/Request|Other          |Test       |Test4 TSPAN/Description|Test4 TSPAN/AC     |

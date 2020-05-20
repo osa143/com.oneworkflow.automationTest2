@@ -195,7 +195,7 @@
       And user clicks on save button
       Then change should also be reflected in the timeline as "Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) - Additional info to TEST TICKET PLEASE IGNORE - New Description."
       When user clicks on risk tab
-      And user selects last answer as "Yes"
+      And user clicks on last risk question selects last answer as "Yes"
       And user clicks on save button
       Then user changes status to "Approval Requested"
       And user clicks on save button

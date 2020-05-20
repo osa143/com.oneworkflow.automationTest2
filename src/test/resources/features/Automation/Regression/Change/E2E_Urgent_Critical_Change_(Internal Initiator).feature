@@ -1,4 +1,4 @@
-@E2E_Urgent_Critical_Change_(Internal_Initiator)
+@E2E_Urgent_Critical_Change_Internal_Initiator
 
 Feature: Internal Urgent Critical Change E2E
   Scenario: Internal user processes a normal change ticket
@@ -44,14 +44,13 @@ Feature: Internal Urgent Critical Change E2E
     When user answers all risk questions as below
     And user selects answer as "A. No"
     And user selects answer as "B. Impact to other systems/technologies are unclear!"
-    And user selects answer as "Tested successfully, this is a pilot"
     And user selects answer as "D. \"Only\" Consumer customers affected."
     And user selects answer as "A. Yes"
     And user selects answer as "A. Yes"
     And user selects answer as "A. Yes (outcome of the Change can be instantly verified)"
     And user selects answer as "B. No"
     And user selects answer as "A. No"
-    And user selects answer as "A. No"
+    And user selects last answer as "A. No"
     Then user validates risk score gets updated
     Then user clicks on Send button
     Then an error message should appear: "Please select at least one country of impact for this change. (ARERR 10000)"
@@ -143,7 +142,7 @@ Feature: Internal Urgent Critical Change E2E
     Then user enters "New Communication plan" in the communication plan field
     And user clicks on save button
     When user clicks on risk tab
-    And user selects urgent last answer as "B. Yes"
+    And user clicks on last risk question selects last answer as "B. Yes"
     Then user clicks on "Schedule" tab
     And user enters request start time 168 hours ahead of current date
     And user enters request end time 171 hours ahead of current date

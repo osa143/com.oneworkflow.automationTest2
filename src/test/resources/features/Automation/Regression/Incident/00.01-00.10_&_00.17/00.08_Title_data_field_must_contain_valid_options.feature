@@ -12,4 +12,4 @@
       Then trouble record form should appear in new tab
       When user validates Title availability
       Then multiple statuses "(no entries in menu)" should be available in "Title" dropdown
-      And user logsOut and accepts alert
+#      And user logsOut and accepts alert

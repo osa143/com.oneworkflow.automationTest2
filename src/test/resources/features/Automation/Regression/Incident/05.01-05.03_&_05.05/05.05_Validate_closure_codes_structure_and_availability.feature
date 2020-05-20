@@ -19,7 +19,7 @@
       And User selects "Fault Position" as dropdownValue and should see values for "notreadonly"
 
         | DropdownValue | DropdownValuesToBePresent|
-        | Carrier Voice | Genband |
+#        | Carrier Voice | Genband |
 #        | Customer      | Cable/Fibre fault:Configuration failure:Other:Power failure:Telia Owned CPE:Transmission failure:Unclear |
 #        | Carrier Voice | Genband |
 #        | Customer | Cable/Fibre fault:Configuration failure:Other:Power failure:Telia Owned CPE:Transmission failure:Unclear |
@@ -34,7 +34,7 @@
 #        | Mobile:CS Core Networks | EIR Frontend:HLR Frontend:HSS Frontend:MGW:MNP Frontend:MSC:NDB:NEBR:One-NDS:Other:PGW:SCP:STP:Unclear |
 #        | Mobile:IMS Core Networks | AFG:CSCF:DSC:IP-Works:MTAS:Other:SBG:Unclear |
 #        | Mobile:Mobile CNDB | Mobile CNDB |
-#        | Mobile:PS Core Networks | AAA:ePDG:EPG:GLANA CPE:M2M-VPN:NAT:NFVI:Other:PCRF:PM:SGSN/MME:Unclear |
+#        | Mobile:PS Core Networks | AAA:CMG:CMM:ePDG:EPG:GLANA CPE:M2M-VPN:NAT:NFVI:Other:PCRF:PM:SGSN/MME:Unclear |
 #        | Mobile:Radio Access Network | Base Station:BSC:Other:RNC:SIU:Unclear |
 #        | Mobile:Roaming | DRX:IP/STP:Other:Unclear |
 #        | Mobile:WLAN Access | AP:NAS:Other:Unclear |
@@ -60,7 +60,7 @@
       And User selects "Cause" as dropdownValue and should see values for "readonly"
 
         | DropdownValue | DropdownValuesToBePresent|
-        | Change Process:Configuration | Customer:Other:Other Service Provider:Supplier:TC Field Force:Telia Company:Third Party:Unclear:Vendor |
+#        | Change Process:Configuration | Customer:Other:Other Service Provider:Supplier:TC Field Force:Telia Company:Third Party:Unclear:Vendor |
 #        | Change Process:Configuration | Customer:Other:Other Service Provider:Supplier:TC Field Force:Telia Company:Third Party:Unclear:Vendor |
 #        | Change Process:Event Suppression | N/A |
 #        | Change Process:Human Mistake | Customer:Other:Other Service Provider:Supplier:TC Field Force:Telia Company:Third Party:Unclear:Vendor |
@@ -77,14 +77,14 @@
 #        | Deliver/RI:Other | Other |
 #        | Deliver/RI:Planning/Testing | Customer:Other:Other Service Provider:Supplier:TC Field Force:Telia Company:Third Party:Unclear:Vendor |
 #        | Deliver/RI:Routine | Customer:Other:Other Service Provider:Supplier:TC Field Force:Telia Company:Third Party:Unclear:Vendor |
-#        | Deliver/RI:Unclear | Customer:Other:Other Service Provider:Supplier:TC Field Force:Telia Company:Third Party:Unclear:Vendor |
+      #  | Deliver/RI:Unclear | Customer:Other:Other Service Provider:Supplier:TC Field Force:Telia Company:Third Party:Unclear:Vendor |
 #        | Delivery Reclamation:Other | Other |
-#        | Enviroment:Extreme Weather | N/A |
-#        | Enviroment:Fire | N/A |
-#        | Enviroment:Flooding | N/A |
-#        | Enviroment:Lightning | N/A |
-#        | Enviroment:Other | N/A |
-#        | Enviroment:Temperature | N/A |
+#        | Environment:Extreme weather | N/A |
+#        | Environment:Fire | N/A |
+#        | Environment:Flooding | N/A |
+#        | Environment:Lightning | N/A |
+#        | Environment:Other | N/A |
+#        | Environment:Temperature | N/A |
 #        | Hardware Failure:Antenna aligment | N/A |
 #        | Hardware Failure:Antenna equipment fault | N/A |
 #        | Hardware Failure:Cable | N/A |
@@ -112,7 +112,7 @@
 #        | Logical:Configuration | N/A |
 #        | Logical:Logical connection | N/A |
 #        | Logical:Memory depleted | N/A |
-#        | Logical:Other | N/A |
+#        | Logical:Other | Other |
 #        | Logical:Routing | N/A |
 #        | N/A:N/A | N/A |
 #        | No Cause Found:Mobile Coverage | N/A |
@@ -138,10 +138,10 @@
 #        | Security:Theft | Other |
 #        | Security:Vandalism | Other |
 #        | SNOW:Automatically detected break | Undefined |
-#        | SNOW:Customer related | Announce Maintenance:Billing:Customer Not Returned:DDOS attack:Environment:Maintenance:Third Party:Unannounced Maintenance:Underfined:User |
+#        | SNOW:Customer related | Announced Maintenance:Billing:Customer Not Returned:DDOS attack:Environment:Maintenance:Third Party:Unannounced Maintenance:Undefined:User |
 #        | SNOW:Delivery complaints | Undefined |
 #        | SNOW:Exclude (duplicate) | Undefined |
-#        | SNOW:Force Majeure | Undefined |
+#        | SNOW:Force majeure | Undefined |
 #        | SNOW:Hardware | Accessories:Fixed terminal:Mobile terminal:Modem:Router:Undefined |
 #        | SNOW:Maintenance | Announced:Unannounced:Undefined |
 #        | SNOW:Network related | Access:Configuration:Environment:Node:Undefined |
@@ -161,17 +161,17 @@
 #        | Withdrawn:Other | Other |
 
       And User selects "Action" as dropdownValue and should see values for "readonly"
-        | Alarm configuration change | Other:Telia Company |
-        | Auto closed | Automation |
-        | Capacity increase | Customer:Other:Other Service Provider |
-        | Customer guidance | Other:Telia Company |
-        | Customer has repaired | Customer |
-        | Duplicate | N/A                  |
-        | Fault disappeared by itself | N/A |
-        | Final notification done | Telia Company |
-        | Level adjustment | Customer:Other:Other Service Provider:Supplier:TC Field Force:Telia Company:Third Party:Unclear:Vendor |
-        | N/A | N/A |
-        | No Action | N/A |
+#        | Alarm configuration change | Other:Telia Company |
+#        | Auto closed | Automation |
+#        | Capacity increase | Customer:Other:Other Service Provider:Telia Company:Third Party |
+#        | Customer guidance | Other:Telia Company |
+#        | Customer has repaired | Customer |
+#        | Duplicate | N/A                  |
+#        | Fault disappeared by itself | N/A |
+#        | Final notification done | Telia Company |
+#        | Level adjustment | Customer:Other:Other Service Provider:Supplier:TC Field Force:Telia Company:Third Party:Unclear:Vendor |
+#        | N/A | N/A |
+        | No Action | N/A:Telia Company |
 #        | No faults found ||
         | Other | Other |
         | Other Service Provider has repaired | Other Service Provider |

@@ -155,7 +155,7 @@ Feature: External Normal Change E2E
     And user clicks on Show CR Matching button
     Then user should see Show CR Matching table appear
     When user clicks on risk tab
-    And user selects last answer as "Yes"
+    And user clicks on last risk question selects last answer as "Yes"
     And user clicks on save button
     And user validates availability of tabs "Approval"
     When user clicks on "Approval" tab

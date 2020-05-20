@@ -72,8 +72,6 @@
       When user changes status to "Closed" on problem record page
       And user clicks save button
       Then mandatory fields should be indicated in bold
-      And user enters actual finish as current date
-      When user enters decision go no go as current date
       And user selects solved under closure code
       And user enters solution as "A change in processes"
       And user enters solution found date as current date

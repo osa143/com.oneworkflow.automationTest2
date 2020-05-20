@@ -30,6 +30,7 @@ public class CommonUtils extends BasePage {
     public static String OpTicket_plaza;
     public static String CI_Impact_From_Time;
     public static String CI_Impact_To_Time;
+    public static String Timeline_Entry;
 
     // 0 - parent window
     // 1 - first child and so on

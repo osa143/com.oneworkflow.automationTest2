@@ -1,5 +1,6 @@
 @PLAZA_PDB_E2E_Incident @PLAZA_Incident_Flow
   #Ticket ID to come from Plaza
+  #below scenario also covers SAO- 5205, when creating a Major ticket from Plaza for PDB validate Importance, impact logic follow.
   Feature: Plaza creation of incident ticket
     Scenario Outline: user validates plaza incident ticket
 
@@ -12,7 +13,7 @@
       And user switches to window 1
       Then user validates PDB submit form opens
       And user selects service area as "Security"
-     And user selects service as "Personal Data Breach"
+      And user selects service as "Personal Data Breach"
       Then user enters PDB date and time as current date and time
       And user selects PDB effected country "<PDB Affected Country>"
       And user selects nature and content as "Address"
@@ -40,10 +41,12 @@
       And user validates source field as "PLAZA"
       And user validates source ID field contains ICM number
       And user validates service provider as "Data Breach"
-      And user validates "<Affected BU>" BU is added automatically
+      And user validates "<PDB Affected Country>" BU is added automatically
       And user validates PDB title field as "<Title>"
       And user validates PDB description same as Plaza
       And user validates ticket priority as "<Priority>"
+      And user validates Impact as "<Impact>"
+      And user validates importance as "<Importance>"
       And change should also be reflected in the timeline as "Test Timeline Update" on row 1
       Then user clicks on assignment under sections
       And user clicks on owner under sections
@@ -127,26 +130,23 @@
 
 
       Examples:
-      |PDB Affected Country             |Number of Persons|Title                                                           |Priority|AssignedProfile|
-#      |Other (or more than one country)|No               |Personal Data Breach \| Other Other (or more than one country) |Minor   |                 |
-#      |Telia Carrier                   |No              |Personal Data Breach \| Telia Carrier                          |Minor   |PDB Carrier      |
-#      |Sweden                          |No              |Personal Data Breach \| Sweden                                 |Minor   |PDB SE           |
-#      |Finland                         |No              |Personal Data Breach \| Finland                                |Minor   |                 |
-      |Norway                          |No              |Personal Data Breach \| Norway                                 |Minor   |PDB NO           |
-#      |Denmark                         |No              |Personal Data Breach \| Denmark                                |Minor   |PDB DK           |
-#      |Estonia                         |No              |Personal Data Breach \| Estonia                                |Minor   |PDB EE           |
-#      |Lithuania                       |No              |Personal Data Breach \| Lithuania                              |Minor   |PDB LT           |
-#      |Other (or more than one country)|Yes             |Personal Data Breach \| Other Other (or more than one country) |Major   |                 |
-#      |Telia Carrier                   |Yes             |Personal Data Breach \| Telia Carrier                          |Major   |PDB Control Center|
-#      |Sweden                          |Yes             |Personal Data Breach \| Sweden                                 |Major   |PDB Control Center|
-#      |Finland                         |Yes             |Personal Data Breach \| Finland                                |Major   |PDB Control Center|
-#      |Norway                          |Yes             |Personal Data Breach \| Norway                                 |Major   |PDB Control Center|
-#      |Denmark                         |Yes             |Personal Data Breach \| Denmark                                |Major   |PDB Control Center|
-#      |Estonia                         |Yes             |Personal Data Breach \| Estonia                                |Major   |PDB Control Center|
-#      |Lithuania                       |Yes             |Personal Data Breach \| Lithuania                              |Major   |PDB Control Center|
-
-
-
+      |PDB Affected Country             |Number of Persons|Title                                                          |Priority|Impact|Importance|AssignedProfile  |
+#      |Other (or more than one country)|Yes              |Personal Data Breach \| Other Other (or more than one country) |Major   |Major |  High    |PDB Control Center|
+#      |Telia Carrier                   |Yes              |Personal Data Breach \| Telia Carrier                          |Major   |Major |  High    |PDB Control Center|
+      |Sweden                          |Yes              |Personal Data Breach \| Sweden                                 |Major   |Major |  High    |PDB Control Center|
+#      |Finland                         |Yes              |Personal Data Breach \| Finland                                |Major   |Major |  High    |PDB Control Center|
+#      |Norway                          |Yes              |Personal Data Breach \| Norway                                 |Major   |Major |  High    |PDB Control Center|
+#      |Denmark                         |Yes              |Personal Data Breach \| Denmark                                |Major   |Major |  High    |PDB Control Center|
+#      |Estonia                         |Yes              |Personal Data Breach \| Estonia                                |Major   |Major |  High    |PDB Control Center|
+#      |Lithuania                       |Yes              |Personal Data Breach \| Lithuania                              |Major   |Major |  High    |PDB Control Center|
+#      |Other (or more than one country)|No               |Personal Data Breach \| Other Other (or more than one country) |Minor   |Minor |	Low      |                 |
+#      |Telia Carrier                   |No               |Personal Data Breach \| Telia Carrier                          |Minor   |Minor |	Low      |PDB Carrier      |
+#      |Sweden                          |No               |Personal Data Breach \| Sweden                                 |Minor   |Minor |	Low      |PDB SE           |
+#      |Finland                         |No               |Personal Data Breach \| Finland                                |Minor   |Minor |	Low      |PDB FI           |
+#      |Norway                          |No              |Personal Data Breach \| Norway                                 |Minor    |Minor |	Low     |PDB NO           |
+#      |Denmark                         |No               |Personal Data Breach \| Denmark                                |Minor   |Minor |	Low      |PDB DK           |
+#      |Estonia                         |No               |Personal Data Breach \| Estonia                                |Minor   |Minor |	Low      |PDB EE           |
+#      |Lithuania                       |No               |Personal Data Breach \| Lithuania                              |Minor   |Minor |	Low      |PDB LT           |
 
 
 

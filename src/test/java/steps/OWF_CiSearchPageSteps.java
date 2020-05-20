@@ -53,7 +53,7 @@ public class OWF_CiSearchPageSteps {
     @And("user closes warning message")
     public void userClosesWarningMessageAndClicksOnCloseButton() {
         ciSearchPage.clickYesOnConfirmationMessage();
-        ciSearchPage.closeWarningMessage();
+        //ciSearchPage.closeWarningMessage();
     }
     @When("user clicks on clear button")
     public void userClicksOnClearButton() {
@@ -494,5 +494,15 @@ public class OWF_CiSearchPageSteps {
     @Then("user closes warning message on CI search window for change ticket")
     public void userClosesWarningMessageOnCISearchWindowForChangeTicket() {
         ciSearchPage.closeWarningMessage_changeTicket();
+    }
+
+    @And("user clicks on radio button open")
+    public void userClicksOnRadioButtonOpen() {
+        ciSearchPage.clickOpenRadioButton_linkedItems();
+    }
+
+    @And("user clicks on radio button closed")
+    public void userClicksOnRadioButtonClosed() {
+        ciSearchPage.clickClosedRadioButton_linkedItems();
     }
 }

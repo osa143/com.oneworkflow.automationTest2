@@ -118,6 +118,9 @@ public class PlazaValidation {
     public static String NumberOfServers;
     public static String OrganisationName;
     public static String ServiceId;
+    public static String ServiceAreaCategory;
+    public static String TypeOfServer;
+    public static String Service;
 
 
 

@@ -19,7 +19,38 @@
       And multiple statuses "Critical:High:Medium:Low:(clear)" should be available in "Urgency" dropdown
       And user selects urgency as High
       And user selects accountable organisation as "CA_Infra"
+      And multiple menu options "CA_Infra:CA_IT:CA_Provider:(clear)" should be available
+      And User selects "Accountable Org." as dropdownValue and should see values for "notreadonly"
+        | DropdownValue | DropdownValuesToBePresent|
+        | CA_NSD        | IP:ServCore |
+        | DK_NSD        | IP          |
+        | EX            | CustFault   |
+        | FI_Infra      | CableSites  |
+        | InfraSE       | CableSites:NCS:PSTN |
+        | IT            | CustEng:EntServ:Infra:OSS |
+        | NO_Infra      | CableSites                |
+        | NSD           | ConvAccess:IP:ServCore    |
+        | PAComm        | Conv:Voice                |
+        | PAConn        | BusNW:Internet:MobVD      |
+        | PAITServ      | MDM_DAAS:Security         |
+        | PAMedia       | ConnHome:TV               |
+
       And user selects affected organisation as "CA_IT"
+      Then user clicks edit affected org button
+      And User selects "Affected Orgs." as dropdownValue and should see values for "notreadonly"
+        | DropdownValue | DropdownValuesToBePresent|
+        | CA_NSD        | IP:ServCore |
+        | DK_NSD        | IP          |
+        | EX            | CustFault   |
+        | FI_Infra      | CableSites  |
+        | InfraSE       | CableSites:NCS:PSTN |
+        | IT            | CustEng:EntServ:Infra:OSS |
+        | NO_Infra      | CableSites                |
+        | NSD           | ConvAccess:IP:ServCore    |
+        | PAComm        | Conv:Voice                |
+        | PAConn        | BusNW:Internet:MobVD      |
+        | PAITServ      | MDM_DAAS:Security         |
+        | PAMedia       | ConnHome:TV               |
       When user clicks on save button on the problem form
       Then multiple statuses "Assigned:Pending:Under Investigation:Withdrawn:(clear)" should be available in "Status*" dropdown
       When user changes status to "Under Investigation" on problem record page
@@ -53,7 +84,7 @@
         | External:External factor | Digging:Fire:Power outage:Weather |
         | External | Other |
         | People | Emotional stress:Lack of competence:Missing training:Other:Poor Judgement:Time pressure:Too much over time, too tired |
-        | Process and Organisation | Caused by Delivery (project or customer deliveries):Caused by Maintenance:Caused by Trouble shooting:Lack of resources:Other:Process misssing or inadequate:Process not followed in organisation:Process not fully implemented:Too complex organisation,unclear RACI |
+        | Process and Organisation | Caused by Delivery (project or customer deliveries):Caused by Maintenance:Caused by Trouble shooting:Lack of resources:Other:Process missing or inadequate:Process not followed in organisation:Process not fully implemented:Too complex organisation,unclear RACI |
         | Process and Organisation:Caused by Change | Approval flow violated:Inadequate risk assessment:Parallel Changes:Poor testing:Poor Verification |
         | Process and Organisation:Documentation missing or inadequate | Checks list and procedures:CI inadequately documented:CI not documented in inventory |
         | Process and Organisation:Vendor | Lack of documentation:Lack of unclear SLA, WLA, RACI:Not complying to vendor recommendations / requirements:Use of non approved contractor |

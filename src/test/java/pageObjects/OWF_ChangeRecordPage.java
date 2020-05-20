@@ -12,6 +12,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String ddANSWER= "Answer";
     private static final String dd_OWNER= "Owner*";
     private static final String btnDOWN = "reg_img_700050252";
+    private static final String btnUP= "reg_img_700050251";
     private static final String ddREQUEST_CATEGORY = "Request Category*";
     private static final String dd_CHANGE_TYPE= "arid_WIN_0_755000000";
     private static final String txt_SEARCH_FILTER_CALENDAR= "combo-1017-inputEl";
@@ -483,6 +484,10 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     public void clickDownButton(){
         driver.findElement(By.id(btnDOWN)).click();
     }
+    public void clickArrowUpButton(){
+        driver.findElement(By.id(btnUP)).click();
+    }
+
     public void selectRequestCategoryOnChangeRecordPage(String value){
         selectDropDownNameAndValue(ddREQUEST_CATEGORY, value, false);
     }

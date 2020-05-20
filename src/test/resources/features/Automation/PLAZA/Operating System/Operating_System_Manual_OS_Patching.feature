@@ -8,10 +8,11 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Compute & Operating System" under IT Infrastructure
+      And user clicks on compute & operating system under IT Infrastructure dropdown
+      And user clicks on show more button
       When user clicks on Manual OS Patching
       Then user should see "Manual OS Patching" form
-      Then user selects network security system name in haiti as "Other"
+      Then user selects network security system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system manual os patching request as "Test6 Operating System Manual/Request"
       And user selects manual os patching Add CI as "cc001cgas001"

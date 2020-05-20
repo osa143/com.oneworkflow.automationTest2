@@ -9,7 +9,7 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Messaging" under IT Infrastructure
+      And user clicks on messaging under IT Infrastructure dropdown
       When user clicks on "TSS Mail Premium Support" pebble
       Then user should see "TSS Mail Premium Support" form
       #Then user selects system name in haiti as "Other"

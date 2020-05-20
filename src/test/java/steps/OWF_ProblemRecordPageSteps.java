@@ -1335,6 +1335,78 @@ public class OWF_ProblemRecordPageSteps {
         Assert.assertTrue(problemRecordPage.isAccountableOrganisationIs_Not_mandatory());
         Assert.assertTrue(problemRecordPage.isAccountableOrganisationIsDisplayed());
     }
+    @And("user gets time value of timeline entry")
+    public void userGetsTimeValueOfTimelineEntry() {
+        CommonUtils.Timeline_Entry= problemRecordPage.getTimelineStatus(1);
+    }
+
+    @And("user validates importance as {string}")
+    public void userValidatesImportanceAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getImportance(), arg0);
+    }
+
+    @Then("user should see root cause code primary drop down as mandatory")
+    public void userShouldSeeRootCauseCodePrimaryDropDownAsMandatory() {
+        Assert.assertTrue(problemRecordPage.isAdditionalRootCauseCode_Not_mandatory());
+        Assert.assertTrue(problemRecordPage.isAdditionalRootCauseCodeDisplayed());
+
+    }
+
+    @And("user should see additional root cause code drop down as optional")
+    public void userShouldSeeAdditionalRootCauseCodeDropDownAsOptional() {
+        Assert.assertTrue(problemRecordPage.isRootCauseCode_mandatory());
+        Assert.assertTrue(problemRecordPage.isRootCauseCodeDisplayed());
+    }
+
+    @When("user clicks edit button for additional root cause")
+    public void userClicksEditButtonForAdditionalRootCause() {
+        problemRecordPage.clickEdit_Additional_RootCauseCode();
+        problemRecordPage.switchToFrameByIndex(2);
+    }
+
+    @Then("user should see {string}")
+    public void userShouldSee(String text) {
+        problemRecordPage.verifyElementIsDisplayedByContainsTextAndTagName("label",text);
+    }
+
+    @When("user selects multiple additional root cause codes as {string}")
+    public void userSelectsMultipleAdditionalRootCauseCodesAs(String arg0) {
+       problemRecordPage.selectMultipleAdditionalRootCauseCodes(arg0);
+       problemRecordPage.clickApplyButton_additionalRC_codes();
+    }
+
+    @Then("additional root cause codes should be saved as {string}")
+    public void additionalRootCauseCodesShouldBeSavedAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getText_AdditionalRootCauseCodes(), arg0);
+    }
+
+    @Then("user clicks edit affected org button")
+    public void userClicksEditAffectedOrgButton() {
+        problemRecordPage.clickEditAffectedOrgButton();
+    }
+
+    @And("click on any secondary root cause code and click on make primary button")
+    public void clickOnAnySecondaryRootCauseCodeAndClickOnMakePrimaryButton() {
+        problemRecordPage.clickTableElement_secondary_rootCause("Root Cause", "External | Other");
+        problemRecordPage.clickMakePrimary();
+
+    }
+
+    @Then("root cause should be changed to {string} root cause code")
+    public void rootCauseShouldBeChangedToRootCauseCode(String arg0) {
+        Assert.assertEquals(problemRecordPage.getTableCellData(By.id("T800040090"), "Fld-Type", 1), arg0);
+    }
+
+    @And("click on any secondary root cause code and click on remove selected")
+    public void clickOnAnySecondaryRootCauseCodeAndClickOnRemoveSelected() {
+        Assert.assertTrue(problemRecordPage.verifyAdditionalRootCauseCodeIsRemoved());
+
+    }
+
+    @And("click apply button on additional root cause codes window")
+    public void clickApplyButtonOnAdditionalRootCauseCodesWindow() {
+        problemRecordPage.clickApplyButton_additionalRC_codes();
+    }
 }
 
 

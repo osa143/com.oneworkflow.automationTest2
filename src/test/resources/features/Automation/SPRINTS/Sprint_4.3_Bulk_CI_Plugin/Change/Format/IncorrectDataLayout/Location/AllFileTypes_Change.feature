@@ -22,8 +22,8 @@ Feature: Bulk Loading Incorrect Data layout- Location
       And user enters "Regression - Change Management Process" in the ver of functionality field
       And user enters "Regression - Change Management Process" in the risk description field
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-      Then user enters request start time 24 hours ahead of current date
-      And user enters request end time 28 hours ahead of current date
+      And user enters start time as 24 hours fast from current sweden time in "yyyy-MM-dd HH:mm:ss" format
+      And user enters end time as 28 hours fast from current sweden time in "yyyy-MM-dd HH:mm:ss" format
       And user enters impact duration as "45" minutes
       And user selects estimated impact dropdown as "Degradation of Service"
       And user clicks on save button
@@ -57,8 +57,8 @@ Feature: Bulk Loading Incorrect Data layout- Location
 
           |fileTypes                                                                                                    |
           |Test Attachments\IncorrectFormatColumnLocation\CSV.csv|
-          |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xls|
-          |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xlsx|
+#          |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xls|
+#          |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xlsx|
 
 
 

@@ -9,10 +9,11 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Firewall & Network" under IT Infrastructure
+      And user clicks on firewall & network under IT Infrastructure dropdown
+      And user clicks on show more button
       When user clicks on Network Routing Switching
       Then user should see "Network Routing/Switching" form
-      Then user selects network security firewall system name in haiti as "Other"
+      Then user selects network security firewall system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects service request name as "Switch Port Configuration"
       And user enters network security switch port request as "Test10 Network Security Switch Port/Request"

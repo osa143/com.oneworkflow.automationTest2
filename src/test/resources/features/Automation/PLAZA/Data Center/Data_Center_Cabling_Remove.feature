@@ -9,10 +9,10 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Data Center" under IT Infrastructure
+      And user clicks on data center under IT Infrastructure dropdown
       When user clicks on "Cabling - Remove" pebble
       Then user should see "Cabling - Remove" form
-      Then user selects system name in haiti as "Other"
+      Then user selects system name in haiti as "1B"
       And user enters Cabling - New request as "Test2 Cabling/Request"
       And user enters DC-site or address as "Test address"
       And user enters Room as "Test room"
@@ -36,7 +36,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Cabling - Remove"
       And user validates request type as "Service Request | PLAZA"
-#      And user validates Data center cabling remove description same as plaza
+      And user validates Data center cabling remove description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

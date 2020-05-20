@@ -9,7 +9,8 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Firewall & Network" under IT Infrastructure
+      And user clicks on firewall & network under IT Infrastructure dropdown
+      And user clicks on show more button
       When user clicks on "Network Management System Veha" pebble
       Then user should see "Network Management System Veha" form
      # Then user selects system name in haiti as "Other"

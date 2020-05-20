@@ -115,6 +115,7 @@ public class BaseRecordPage extends BasePage {
     public static final String table_ALARMS_ID = "T700508140";
     public static final String table_LINKED_ITEMS_ID = "T777506000";
     public static final String table_INTERESTED_PARTIES_ID = "T705002015";
+    public static final String table_ASSOCIATED_ROOT_CAUSE_CODES_ID = "T800040090";
     private static final String table_ADD_INTERESTED_PARTIES= "T700027964";
     public static final String btnREFRESH_XPATH = "//div[@id='WIN_0_999000510']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
     private static final String btnYes = "WIN_0_700027904";
@@ -224,7 +225,7 @@ public class BaseRecordPage extends BasePage {
         return getTextByID(txtACTUAL_FINISH_ID);
     }
     public String getRootCauseDetails(){
-        return getTextByID(txtROOT_CAUSE_DETAILS_ID);
+        return getAttributeValueById(txtROOT_CAUSE_DETAILS_ID);
     }
     public boolean verifyFinlandIsSelectedAsAffectedBu() {
         return findElement(By.id(chkbxFINLAND)).isSelected();
@@ -271,6 +272,11 @@ public class BaseRecordPage extends BasePage {
 
     public void clickTableElement_interestedParteis(String colName, String cellData){
         WebElement element=getTableCellElement(By.id(table_INTERESTED_PARTIES_ID), colName, cellData);
+        element.click();
+    }
+
+    public void clickTableElement_secondary_rootCause(String colName, String cellData){
+        WebElement element=getTableCellElement(By.id(table_ASSOCIATED_ROOT_CAUSE_CODES_ID), colName, cellData);
         element.click();
     }
 
@@ -903,6 +909,7 @@ public class BaseRecordPage extends BasePage {
 
     public void enterStartDate(int delay) {
         String dateTime = CommonUtils.getDateTime("MM-dd-yyyy HH:mm:ss a", "Europe/Stockholm", delay);
+        CommonUtils.eventStartTime=dateTime;
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
     }
@@ -910,6 +917,7 @@ public class BaseRecordPage extends BasePage {
     public void enterEndDate(int delay) {
 
         String dateTime = CommonUtils.getDateTime("MM-dd-yyyy HH:mm:ss a", "Europe/Stockholm", delay);
+        CommonUtils.requestEnd=dateTime;
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );
     }

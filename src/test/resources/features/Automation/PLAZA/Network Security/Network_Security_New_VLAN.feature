@@ -9,10 +9,11 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Firewall & Network" under IT Infrastructure
+      And user clicks on firewall & network under IT Infrastructure dropdown
+      And user clicks on show more button
       When user clicks on Network Routing Switching pebble
       Then user should see "Network Routing Switching" form
-      Then user selects network security firewall system name in haiti as "Other"
+      Then user selects network security firewall system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects service request name as "New VLAN / Network configuration"
       And user enters Network Security Routing New VLAN request as "Test8 Network Security New VLAN/Request"

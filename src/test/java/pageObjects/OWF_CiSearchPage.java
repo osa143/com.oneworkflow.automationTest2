@@ -68,6 +68,18 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String bulkCILoading_DIV_ID = "WIN_0_800038059";
     private static final String rbtn_IGNORE_HANDLING_DUPLICATE_CIS= "WIN_0_RCGroup800038013";
     private static final String txt_IMPACT_TO_PLUS_BULK_UPDATE= "arid_WIN_0_999000299";
+    private static final String btn_RADIOOPEN_ID = "WIN_4_rc0id800040059";
+    private static final String btn_RADIOCLOSED_ID = "WIN_4_rc0id800040061";
+
+
+    public void clickClosedRadioButton_linkedItems(){
+        driver.findElement(By.id(btn_RADIOCLOSED_ID)).click();
+    }
+
+
+    public void clickOpenRadioButton_linkedItems(){
+        driver.findElement(By.id(btn_RADIOOPEN_ID)).click();
+    }
 
 
 
@@ -87,7 +99,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
             selectLevel(CI_Impact);
             clickRelateCiButton();
             clickYesOnConfirmationMessage();
-            closeWarningMessage();
+            //closeWarningMessage();
         }
         clickCloseButton();
     }
@@ -104,7 +116,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         selectLevel(CI_Impact);
         clickRelateCiButton();
         clickYesOnConfirmationMessage();
-        closeWarningMessage();
+       // closeWarningMessage();
         clickCloseButton();
         driver.switchTo().defaultContent();
         wait(1000);
@@ -477,7 +489,8 @@ public class OWF_CiSearchPage extends BaseRecordPage {
 
     public void clickYesOnConfirmationMessage(){
         driver.switchTo().frame(1);
-       clickElementById("WIN_0_700027904");
+        wait(1000);
+        clickElement(By.id("ardivpcl"));
         wait(1000);
         driver.switchTo().defaultContent();
         driver.switchTo().frame(2);

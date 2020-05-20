@@ -8,10 +8,10 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on "Database" under IT Infrastructure
+      And user clicks on database under IT Infrastructure
       When user clicks on "Database Request" pebble
       Then user should see "Database Request" form
-      Then user selects System name in haiti as "Other"
+      Then user selects System name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Backup/Restore"
       And user enters Database request as "Test3 Database Backup/Request"

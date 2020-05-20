@@ -31,11 +31,12 @@ Feature: Problem, root causes code menus
     Then additional root cause codes should be saved as "External | Other; People | Other; Process and Organisation | Other; Technical | Other;"
     When user clicks edit button for additional root cause
     And click on any secondary root cause code and click on make primary button
-    Then root cause should be changed to primary root cause code
-    When user clicks apply button change should be reflected on primary root cause text area
-    When user clicks on edit button for additional root cause code
+    Then root cause should be changed to "Primary" root cause code
     And click on any secondary root cause code and click on remove selected
-    And user clicks apply button 
+    And click apply button on additional root cause codes window
+    And user clicks on save button
+    Then user validates root cause code is "External | Other"
+    Then additional root cause codes should be saved as "People | Other; Process and Organisation | Other; Technical | HW error;"
     When user changes status to closed
     And user clicks on save button
     And an error message should appear: "Required field (without a default) not specified :Closure Code (ARERR 9424)"

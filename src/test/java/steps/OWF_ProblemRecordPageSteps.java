@@ -1384,6 +1384,29 @@ public class OWF_ProblemRecordPageSteps {
     public void userClicksEditAffectedOrgButton() {
         problemRecordPage.clickEditAffectedOrgButton();
     }
+
+    @And("click on any secondary root cause code and click on make primary button")
+    public void clickOnAnySecondaryRootCauseCodeAndClickOnMakePrimaryButton() {
+        problemRecordPage.clickTableElement_secondary_rootCause("Root Cause", "External | Other");
+        problemRecordPage.clickMakePrimary();
+
+    }
+
+    @Then("root cause should be changed to {string} root cause code")
+    public void rootCauseShouldBeChangedToRootCauseCode(String arg0) {
+        Assert.assertEquals(problemRecordPage.getTableCellData(By.id("T800040090"), "Fld-Type", 1), arg0);
+    }
+
+    @And("click on any secondary root cause code and click on remove selected")
+    public void clickOnAnySecondaryRootCauseCodeAndClickOnRemoveSelected() {
+        Assert.assertTrue(problemRecordPage.verifyAdditionalRootCauseCodeIsRemoved());
+
+    }
+
+    @And("click apply button on additional root cause codes window")
+    public void clickApplyButtonOnAdditionalRootCauseCodesWindow() {
+        problemRecordPage.clickApplyButton_additionalRC_codes();
+    }
 }
 
 

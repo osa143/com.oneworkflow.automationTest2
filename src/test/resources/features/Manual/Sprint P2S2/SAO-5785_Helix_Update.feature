@@ -3,8 +3,8 @@
 #CIKEY=ITRef_Cell_EE_MSC_EE_MSC (Priority 1)
 #CIKEY=ITRef_Cell_LT_eNodeB_Giruliai-Kla-L-S-216 (Priority 5)
 
-Feature: As a fault management system Helix should be able to append incidents
-  Scenario: As a fault management system Helix should be able to append incidents
+Feature: As a fault management system Helix should be able to update incidents
+  Scenario: As a fault management system Helix should be able to update incidents
     Given user has access to Helix
     When user generates an alarm towards Helix
     Then Helix should be able to process alarm(s) and create an incident towards OW

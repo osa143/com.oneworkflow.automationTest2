@@ -6,6 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pageObjects.OWF_TroubleEventPage;
 import pageObjects.OWF_WorkOrderPage;
@@ -233,6 +234,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user validates CI {string} is {string}")
     public void userValidatesCIImpactStatusIs(String columnName, String columnValue) {
+        troubleEventPage.selectTab("Diagnosis");
        Assert.assertEquals(troubleEventPage.verifyColumnStatus(columnName, 1), columnValue, "CI Impact status is not inactive");
     }
 
@@ -1273,6 +1275,15 @@ public class OWF_TroubleEventPageSteps {
     @And("user gets parent ticket details")
     public void userGetsParentTicketDetails() {
         troubleEventPage.getParentTicket();
+    }
+
+
+
+    @And("user clicks radio button to select all CIs and right clicks on {string} and clear all CIs impact")
+    public void userClicksRadioButtonToSelectAllCIsAndRightClicksOnAndClearAllCIsImpact(String CI_name) {
+        troubleEventPage.clickAllAlarms_Diagnosis();
+        troubleEventPage.rightClickOnElement(CI_name);
+        troubleEventPage.setPreferences("Impact:Clear");
     }
 }
 

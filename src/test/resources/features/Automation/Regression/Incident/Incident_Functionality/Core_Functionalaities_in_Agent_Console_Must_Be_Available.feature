@@ -1,4 +1,4 @@
-@Core_Functionalities_in_Agent_Console_Must_Be_Available @Incident @Trouble1
+@06.02 @Core_Functionalities_in_Agent_Console_Must_Be_Available @Incident @Trouble1
   #passed
   Feature: core functionality in agent console must be available
     Scenario: core functionality in agent console must be available

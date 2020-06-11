@@ -25,5 +25,5 @@ Feature: Incident ticket - Cleared time change to closed: Event time should not 
       And user clicks save button
 #
 #
-##      Then user validates that the event end time is not change/set to current TIMESTAMP
+#     Then user validates that the event end time is not change/set to current TIMESTAMP
       

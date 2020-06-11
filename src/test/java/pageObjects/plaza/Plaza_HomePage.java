@@ -301,6 +301,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String dd_NIMBUS_HAITI= "s2id_sp_formfield_h2_name";
     private static final String dd_SYSTEM_ITFI= "s2id_sp_formfield_sr99_v_system";
     private static final String dd_OCC_CI= "s2id_sp_formfield_sr65_v_add_ci";
+    private static final String dd_SERVER_DATABASE_CI= "s2id_sp_formfield_sr1_v_add_ci";
     private static final String dd_VEHA_SYSTEM= "s2id_sp_formfield_system";
     private static final String dd_WEBTAB_CI = "s2id_sp_formfield_sr65_v_add_ci";
     private static final String txt_CRM_RESOURCE_SERVICE_REQUEST= "sp_formfield_sr1_v_request";
@@ -601,6 +602,12 @@ public class Plaza_HomePage extends BasePage {
         wait(1000);
         Element.sendKeys(Keys.ARROW_DOWN);
         Element.sendKeys(Keys.ENTER);
+
+    }
+
+    public void selectServerDatabaseCi(String dropdownName){
+        PlazaValidation.CI = dropdownName;
+        selectDropdownWithMultipleValues(By.id(dd_SERVER_DATABASE_CI), By.id("s2id_autogen15_results"),  dropdownName);
 
     }
 
@@ -2190,7 +2197,14 @@ public class Plaza_HomePage extends BasePage {
     public void selectSystemDropdown(String dropdownName)
     {
         PlazaValidation.System = dropdownName;
-        selectDropdownByTagNameDiv(By.id(dd_SYSTEM_ID), By.id("select2-results-13"),  dropdownName);
+        clickElement(By.id(dd_SYSTEM_ID));
+        WebElement Element=findElement(By.xpath("//input[@type='text']"));
+        Element.sendKeys(dropdownName);
+         wait(700);
+       // Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
+        wait(700);
+        //selectDropdownByTagNameDiv(By.id(dd_SYSTEM_ID), By.id("select2-results-13"),  dropdownName);
     }
 
 

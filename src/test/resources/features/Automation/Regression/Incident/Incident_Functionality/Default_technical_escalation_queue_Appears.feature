@@ -1,4 +1,4 @@
-@When_creating_workorder_a_proposal_of_default_technical_escalation_queue_should_appear @Incident @Trouble1
+@06.03 @When_creating_workorder_a_proposal_of_default_technical_escalation_queue_should_appear @Incident @Trouble1
   #passed
   Feature: When creating workorder, a proposal of default technical escalation queue should appear
     Scenario: When creating workorder, a proposal of default technical escalation queue should appear

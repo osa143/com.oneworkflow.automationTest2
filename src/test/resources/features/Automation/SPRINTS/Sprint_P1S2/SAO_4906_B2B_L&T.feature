@@ -16,7 +16,7 @@
      And user enters description as "B2B Test: SAO-4906"
      And user selects priority as "Info"
      Then user clicks on save button
-     When user adds CI "SE_Site_K M13" to the ticket with impact level "Degradation of Service"
+     When user adds CI "SE_eNodeB_Klingsta M1" to the ticket with impact level "Degradation of Service"
      And user selects assigned profile dropdown as "FieldSerive:Mobile(B2B):L-T – FS – SE – B2B"
      Then multiple statuses "14 Day Repair Time:2 Day Repair:24 Hours Repair Time:6 Hours Repair Time" should be available in "SLA Class" dropdown
      And user selects SLA class as "14 Day Repair Time"
@@ -36,9 +36,9 @@
      Then user clicks on ticket refresh button
      When user clicks on "B2B Dispatch" tab
      Then user should see WFM ticket ID
-     And user validates Contact Name as ""
+     And user validates Contact Name as "Lassila & Tikanoja"
      And user validates Contact Telephone Number is present
-     And user validates Contact Mail Address as ""
+     And user validates Contact Mail Address as "test@l-t.se"
      When user selects dispatch status as "Cancel Requested"
      And user enters Cancel Requested Reason as "TEST"
      And user clicks on save button

@@ -863,7 +863,7 @@ public void clickElementById(String Id){
   }
   public void switchToDefault(){
         driver.switchTo().defaultContent();
-        wait(1000);
+        wait(500);
   }
   public void enterSendKeys(By element){
       findElement(element).sendKeys(Keys.ENTER);

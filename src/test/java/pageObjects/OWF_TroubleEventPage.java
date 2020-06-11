@@ -163,7 +163,10 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_REJECT_REASON="arid_WIN_0_600001019";
     private static final String txt_HIERARCHIC_ESCLATION_LEVEL="arid_WIN_0_700025204";
 
-
+public void rightClickOnElement(String cellData){
+    WebElement element = getTableCellElement(By.id(table_DIAGNOSIS_ID), "CI Name", cellData);
+    rightClickOnElement(element);
+}
     public void impactFromUpdateAsPastTime(String cellData){
         selectAndRightClickOnTableElement(cellData);
         WebElement element = driver.switchTo().activeElement();
@@ -821,6 +824,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         driver.findElement(By.xpath(chkbxHEADER_XPATH_Diagnosis)).click();
     }
 
+
     public void selectFaultPosition(String value){
         selectDropDownNameAndValueForMultipleMenuTableBodys(ddFAULTY_POSITION, value, false, 2);
     }
@@ -850,8 +854,8 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         return verifyElementIsDisplayed(By.id(ddREQUEST_TYPE_ID));
     }
     public void enterEventEndTimeAsCurrentTime(){
-        wait(1000);
         driver.findElement(By.id(txtEVENT_END_TIME)).sendKeys(Keys.ENTER);
+        wait(2000);
     }
     public void enterEventEndTimeAsPast(String time){
         enterTextByElement(By.id(txtEVENT_END_TIME), time);

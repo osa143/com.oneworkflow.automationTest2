@@ -26,7 +26,7 @@ Feature: Incident summary
     And user right clicks on primary CI and selects "Impact:Clear"
     And user clicks on save button
     Then user validates ticket status as "Cleared"
-    When user changes status to "Closed" on trouble event page second time
+    When user changes status to "Closed"
     And user clicks on save button
     Then user validates ticket status as "Closed"
     And user validates closure info is present

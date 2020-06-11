@@ -16,6 +16,7 @@ Feature: Plaza CRM form test
     When user selects role dropdown as "Application Operation Engineer"
     And user selects service request name as "Resource Request"
     And user enters CRM resource request as "Test26 CRM/Request"
+    And user selects server database CI as "cc001cgas001"
     And user enters CRM planned start date as current date
     And user enters CRM planned end date as current date
     And user enters CRM description as "Test26 CRM/Description"

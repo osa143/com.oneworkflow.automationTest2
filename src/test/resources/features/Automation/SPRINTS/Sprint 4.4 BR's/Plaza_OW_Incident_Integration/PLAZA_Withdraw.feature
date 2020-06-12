@@ -20,18 +20,18 @@ Feature: Plaza creation/withdrawing of incident ticket
     And user gets plaza request id
     And user clicks on plaza request id
     And user validates internal case management form opens
-    Then user validates plaza first timeline message as "This Incident was raised on behalf of testauto  from "
+    Then user validates plaza first timeline message as "This Incident was raised on behalf of Test Auto from "
     And user validates plaza second timeline message as "An incident copy creation has been forwarded to OWF successfully"
     And user waits 10 secs
-    And user should see incident ticket update in plaza
+#    And user should see incident ticket update in plaza
     And user enters "Test Update" in the ticket timeline
     And user clicks on plaza send button
     And user waits 30 secs
-    When user clicks on shown ICM number
-    Then user should see ICM form
-    And user validates INC is present under internal case subtasks
-    When user clicks on INC under internal case subtasks
-    Then user should see INC form
+#    When user clicks on shown ICM number
+#    Then user should see ICM form
+#    And user validates INC is present under internal case subtasks
+#    When user clicks on INC under internal case subtasks
+#    Then user should see INC form
     And user opens new tab
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password

@@ -36,7 +36,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | BCPP"
       And user validates request type as "Service Request | PLAZA"
-#      And user validates bccp description same as plaza
+      And user validates bccp description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -70,7 +70,7 @@
       Examples:
 
         |Request                |Environment|Description                |Additional Comments|
-        |BCPP-Prod/Request      |Prod       |BCPP-Prod/Description      |BCPP-Prod/AC       |
- #       |Test2-BCPP-Prod/Request|Prod       |Test2-BCPP-Prod/Description|Test2-BCPP-Prod/AC |
- #       |BCPP-Test/Request      |Test       |BCPP-Test/Description      |BCPP-Test/AC       |
- #       |Test2-BCPP-Test/Request|Test       |Test2-BCPP-Test/Description|Test2-BCPP-Test/AC |
+       # |BCPP-Prod/Request      |Prod       |BCPP-Prod/Description      |BCPP-Prod/AC       |
+        #|Test2-BCPP-Prod/Request|Prod       |Test2-BCPP-Prod/Description|Test2-BCPP-Prod/AC |
+        |BCPP-Test/Request      |Test       |BCPP-Test/Description      |BCPP-Test/AC       |
+  #      |Test2-BCPP-Test/Request|Test       |Test2-BCPP-Test/Description|Test2-BCPP-Test/AC |

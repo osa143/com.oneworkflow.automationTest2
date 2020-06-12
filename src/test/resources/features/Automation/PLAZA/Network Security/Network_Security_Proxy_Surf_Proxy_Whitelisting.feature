@@ -66,4 +66,4 @@
 
       |Request                                          |SurfProxy /URL filter|Description                             |Additional Comments        |
       |Test7 Network Security Proxy Whitelisting/Request|Whitelisting DDC FI  |Test7 Network Security Proxy/Description|Network Security - Test7/AC|
-  #    |Test8 Network Security Proxy Whitelisting/Request|Whitelisting DDC SE |Test8 Network Security Proxy/Description|Network Security - Test8/AC|
+   #   |Test8 Network Security Proxy Whitelisting/Request|Whitelisting DDC SE |Test8 Network Security Proxy/Description|Network Security - Test8/AC|

@@ -57,11 +57,11 @@
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      And user waits 60 secs
+      And user waits 20 secs
       And user clicks on "Diagnosis" tab
       And user waits 3 secs
       When user right clicks on CI "apoteket-fnt-137263" and clears impact
-      And user should see confirmation message and clicks on yes button
+     # And user should see confirmation message and clicks on yes button
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

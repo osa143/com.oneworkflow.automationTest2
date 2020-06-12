@@ -47,6 +47,9 @@
       And user selects priority as "Minor"
       And user clicks on save button
       Then user validates ticket status as "Draft"
+      When user changes status to "Published" on problem record page
+      And user clicks save button
+      Then known error ticket status should be "Published"
       And user clicks on linked items tab
       And user selects target application first dropdown as "OS3 - Operations"
       And user selects target application second dropdown as "Is workaround for"

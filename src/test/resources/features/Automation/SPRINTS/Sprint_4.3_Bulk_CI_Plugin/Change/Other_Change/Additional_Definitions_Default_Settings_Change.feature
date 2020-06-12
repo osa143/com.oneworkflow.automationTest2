@@ -26,8 +26,8 @@ Feature: checking of bulk loading additional definitions default settings
     And user selects priority as "Critical"
     And user enters "Privacy Data: Just Testing" in the change builder field
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-    And user enters start time as 24 hours fast from current sweden time in "yyyy-MM-dd HH:mm:ss" format
-    And user enters end time as 28 hours fast from current sweden time in "yyyy-MM-dd HH:mm:ss" format
+    And user enters start time as 24 hours fast from current sweden time in "YYYY-MM-dd HH:mm:ss" format
+    And user enters end time as 28 hours fast from current sweden time in "YYYY-MM-dd HH:mm:ss" format
     And user gets request start and end time on change record page
     And user enters impact duration as "45" minutes
     And user selects estimated impact dropdown as "Degradation of Service"

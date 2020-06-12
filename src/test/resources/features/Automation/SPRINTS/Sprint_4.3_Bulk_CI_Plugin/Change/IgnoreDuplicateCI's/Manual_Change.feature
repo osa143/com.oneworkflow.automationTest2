@@ -21,8 +21,8 @@
       And user enters "Regression - Change Management Process" in the ver of functionality field
       And user enters "Regression - Change Management Process" in the risk description field
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-      And user enters start time as 24 hours fast from current sweden time in "yyyy-MM-dd HH:mm:ss" format
-      And user enters end time as 28 hours fast from current sweden time in "yyyy-MM-dd HH:mm:ss" format
+      And user enters start time as 24 hours fast from current sweden time in "MM-dd-YYYY HH:mm:ss" format
+      And user enters end time as 28 hours fast from current sweden time in "MM-dd-YYYY HH:mm:ss" format
       And user enters impact duration as "45" minutes
       And user selects estimated impact dropdown as "Degradation of Service"
       And user clicks on save button
@@ -47,10 +47,10 @@
       And user validates with errors as "0"
       And user validates with warnings as "5"
       And user validates warning message as "Multiple CIs named 'LT DNS SIP' were found, and the import job is configured to Ignore Duplicate CIs!" in row 1
-      And user validates warning message as "Multiple CIs named 'SE_AFG_AFG01SE' were found, and the import job is configured to Ignore Duplicate CIs!" in row 2
+      And user validates warning message as "Multiple CIs named 'LT DNS SIP' were found, and the import job is configured to Ignore Duplicate CIs!" in row 2
       And user validates warning message as "Multiple CIs named 'FI DNS Gi' were found, and the import job is configured to Ignore Duplicate CIs!" in row 3
       And user validates warning message as "Multiple CIs named 'FI DNS Gn' were found, and the import job is configured to Ignore Duplicate CIs!" in row 4
-      And user validates warning message as "Multiple CIs named 'FI_AFG_AFG01FI' were found, and the import job is configured to Ignore Duplicate CIs!" in row 5
+      And user validates warning message as "Multiple CIs named 'FI DNS ENUM' were found, and the import job is configured to Ignore Duplicate CIs!" in row 5
       And user validates "Status" as "With Warnings" in row 1
       And user validates "Status" as "With Warnings" in row 2
       And user validates "Status" as "With Warnings" in row 3

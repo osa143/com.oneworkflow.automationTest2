@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="31" parent-id="1">
+<tr class="s-fail" test-id="44" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then user validates root cause code is "External | Other" <br/><span class="text-muted text-sm">Multiple root causes code menus, 4 with one Primary</span></td>
-	<td>0h 0m 0s+68msc</td>
+	<td class="_600">And User selects "Root Cause Code" as dropdownValue and should see values for "notreadonly" <br/><span class="text-muted text-sm">user verifies available information</span></td>
+	<td>0h 0m 13s+175msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -135,16 +135,17 @@
 </tr>
 <tr class="details">
 	<td colspan="5">
+		<textarea disabled class="code-block"><table class='runtime-table table-striped table'><tr><td>DropdownValue</td><td>DropdownValuesToBePresent</td></tr><tr><td>External:3rd Party Failure</td><td>External value chains:Interference:Mobile terminals</td></tr><tr><td>External:External factor</td><td>Digging:Fire:Power outage:Weather</td></tr><tr><td>External</td><td>Other</td></tr><tr><td>People</td><td>Emotional stress:Lack of competence:Missing training:Other:Poor Judgement:Time pressure:Too much over time, too tired</td></tr><tr><td>Process and Organisation</td><td>Caused by Delivery (project or customer deliveries):Caused by Maintenance:Caused by Trouble shooting:Lack of resources:Other:Process missing or inadequate:Process not followed in organisation:Process not fully implemented:Too complex organisation,unclear RACI</td></tr><tr><td>Process and Organisation:Caused by Change</td><td>Approval flow violated:Inadequate risk assessment:Parallel Changes:Poor testing:Poor Verification</td></tr><tr><td>Process and Organisation:Documentation missing or inadequate</td><td>Checks list and procedures:CI inadequately documented:CI not documented in inventory</td></tr><tr><td>Process and Organisation:Vendor</td><td>Lack of documentation:Lack of unclear SLA, WLA, RACI:Not complying to vendor recommendations / requirements:Use of non approved contractor</td></tr><tr><td>Technical</td><td>HW error:Lack of capacity,licenses:Lack of patching:Missing inadequate monitoring and alarms:Other:Redundancy didn't work as expected:Root Cause Not Found:Security,hacker attack,SW & Config error:The design does not meet expectation:The implementation is not according to architecture</td></tr><tr><td>Technical:Infrastructure</td><td>Cooling & Heating:Power</td></tr></table></textarea>
 		
-		<textarea disabled class="code-block">java.lang.AssertionError: expected [External | Other] but found []
+		
+		<textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at steps.OWF_ProblemRecordPageSteps.userValidatesRootCauseCodeIs(OWF_ProblemRecordPageSteps.java:1105)
-	at ✽.user validates root cause code is "External | Other"(features/Automation/SPRINTS/Sprint_P2S1/SAO_5208_Multiple_RootCauseCodeMenu's.feature:38)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at pageObjects.BaseRecordPage.verifyMultipleDropdownValues(BaseRecordPage.java:629)
+	at steps.OWF_TroubleEventPageSteps.userSelectsDropdownNameAsDropdownValueAndShouldSeeValues(OWF_TroubleEventPageSteps.java:1087)
+	at ✽.User selects "Root Cause Code" as dropdownValue and should see values for "notreadonly"(features/Automation/Regression/Problem/Drop_Down.feature:80)
 </textarea>
 	</td>
 </tr>
@@ -172,7 +173,7 @@
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">May 18, 2020 04:17:55 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jun 5, 2020 03:52:56 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

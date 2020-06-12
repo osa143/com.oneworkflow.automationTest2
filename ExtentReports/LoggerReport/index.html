@@ -50,6 +50,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -94,7 +102,7 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
@@ -111,7 +119,8 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Multiple_root_causes_code_menus</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@Drop_Down</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@Reg_Problem</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -128,38 +137,40 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="pass">
-											<div class="st pass test l0" 
-												tags="@Multiple_root_causes_code_menus"
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
+												tags="@Drop_Down @Reg_Problem"
 												devices="">
-												<span class="tt">05.18.2020 16:22:06</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">[Problem, root causes code menus] started</span>
+												<span class="tt">06.05.2020 15:52:56</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">[user validates drop-downs for problem record] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Multiple_root_causes_code_menus</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Drop_Down</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Reg_Problem</span>
 												</span>
 												
 											</div>
-											<div class="st pass test l1" 
-												tags="@Multiple_root_causes_code_menus"
+											<div class="st fail test l1" 
+												tags="@Drop_Down @Reg_Problem"
 												devices="">
-												<span class="tt">05.18.2020 16:22:06</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">|---[Multiple root causes code menus, 4 with one Primary] started</span>
+												<span class="tt">06.05.2020 15:52:56</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[user verifies available information] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Multiple_root_causes_code_menus</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Drop_Down</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Reg_Problem</span>
 												</span>
 												
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:22:06</span>&nbsp;
+												<span class="tt">06.05.2020 15:52:56</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:22:14</span>&nbsp;
+													<span class="tt">06.05.2020 15:53:06</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
 													
@@ -169,14 +180,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:22:14</span>&nbsp;
+												<span class="tt">06.05.2020 15:53:06</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "frvi96_auto" and password as "Test@1234"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:22:20</span>&nbsp;
+													<span class="tt">06.05.2020 15:53:11</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "frvi96_auto" and password as "Test@1234"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -184,12 +195,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:22:20</span>&nbsp;
+												<span class="tt">06.05.2020 15:53:11</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:22:20</span>&nbsp;
+													<span class="tt">06.05.2020 15:53:11</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
 													
@@ -199,12 +210,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:22:20</span>&nbsp;
+												<span class="tt">06.05.2020 15:53:11</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create problem record] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:22:27</span>&nbsp;
+													<span class="tt">06.05.2020 15:53:21</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create problem record]</span>
 													
@@ -214,12 +225,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:22:27</span>&nbsp;
+												<span class="tt">06.05.2020 15:53:21</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:22:27</span>&nbsp;
+													<span class="tt">06.05.2020 15:53:21</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
 													
@@ -229,12 +240,12 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:22:27</span>&nbsp;
+												<span class="tt">06.05.2020 15:53:21</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem record form should appear in new tab] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:22:27</span>&nbsp;
+													<span class="tt">06.05.2020 15:53:21</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem record form should appear in new tab]</span>
 													
@@ -244,29 +255,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:22:27</span>&nbsp;
+												<span class="tt">06.05.2020 15:53:21</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user creates problem ticket with following details] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates BU availability] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:22:27</span>&nbsp;
+													<span class="tt">06.05.2020 15:53:25</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user creates problem ticket with following details]</span>
-													
-													<span class="td"><table class='runtime-table table-striped table'><tr><td>Title</td><td>RequestType</td><td>Description</td><td>ImpactType</td><td>Urgency</td><td>AccountableOrg</td><td>AffectedOrg</td></tr><tr><td>proactive investigation of: frvi96_auto</td><td>CPS:IT:Other</td><td>UAT Test close</td><td>Moderate/Limited</td><td>Low</td><td>CA_Infra</td><td>CA_IT</td></tr></table></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:22:56</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then ticket should be created and status should be assigned] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:05</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then ticket should be created and status should be assigned]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates BU availability]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -274,14 +270,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:23:05</span>&nbsp;
+												<span class="tt">06.05.2020 15:53:25</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on Ack button] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on internal checkbox under affected BU's] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:13</span>&nbsp;
+													<span class="tt">06.05.2020 15:53:25</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on Ack button]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on internal checkbox under affected BU's]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -289,14 +285,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:23:13</span>&nbsp;
+												<span class="tt">06.05.2020 15:53:25</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And problem ticket status should be under investigation] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters "Reactive investigation of:Tohall_copy" in Title field] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:14</span>&nbsp;
+													<span class="tt">06.05.2020 15:53:25</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And problem ticket status should be under investigation]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters "Reactive investigation of:Tohall_copy" in Title field]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -304,14 +300,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:23:14</span>&nbsp;
+												<span class="tt">06.05.2020 15:53:25</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user changes status to investigation complete] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "CPS:IT:Other" in problem form] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:16</span>&nbsp;
+													<span class="tt">06.05.2020 15:53:33</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user changes status to investigation complete]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "CPS:IT:Other" in problem form]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -319,14 +315,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:23:16</span>&nbsp;
+												<span class="tt">06.05.2020 15:53:33</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see root cause code primary drop down as mandatory] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "Drop Down Verification"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:16</span>&nbsp;
+													<span class="tt">06.05.2020 15:53:34</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see root cause code primary drop down as mandatory]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "Drop Down Verification"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -334,14 +330,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:23:16</span>&nbsp;
+												<span class="tt">06.05.2020 15:53:34</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user should see additional root cause code drop down as optional] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Extensive/Widespread:Significant/Large:Moderate/Limited:(clear)" should be available in "Impact" dropdown] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:16</span>&nbsp;
+													<span class="tt">06.05.2020 15:53:40</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user should see additional root cause code drop down as optional]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Extensive/Widespread:Significant/Large:Moderate/Limited:(clear)" should be available in "Impact" dropdown]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -349,14 +345,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:23:16</span>&nbsp;
+												<span class="tt">06.05.2020 15:53:40</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects root cause code as Technical:HW error under route cause] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects impact as "Extensive/Widespread"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:22</span>&nbsp;
+													<span class="tt">06.05.2020 15:53:43</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects root cause code as Technical:HW error under route cause]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects impact as "Extensive/Widespread"]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -364,14 +360,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:23:22</span>&nbsp;
+												<span class="tt">06.05.2020 15:53:43</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks edit button for additional root cause] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And multiple statuses "Critical:High:Medium:Low:(clear)" should be available in "Urgency" dropdown] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:22</span>&nbsp;
+													<span class="tt">06.05.2020 15:53:46</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks edit button for additional root cause]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And multiple statuses "Critical:High:Medium:Low:(clear)" should be available in "Urgency" dropdown]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -379,14 +375,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:23:22</span>&nbsp;
+												<span class="tt">06.05.2020 15:53:46</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see "Root Cause Codes"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects urgency as High] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:23</span>&nbsp;
+													<span class="tt">06.05.2020 15:53:50</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see "Root Cause Codes"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects urgency as High]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -394,14 +390,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:23:23</span>&nbsp;
+												<span class="tt">06.05.2020 15:53:50</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects multiple additional root cause codes as "External:Other/People:Other/Process and Organisation:Other/Technical:Other"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on save button on the problem form] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:44</span>&nbsp;
+													<span class="tt">06.05.2020 15:53:55</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects multiple additional root cause codes as "External:Other/People:Other/Process and Organisation:Other/Technical:Other"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on save button on the problem form]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -409,14 +405,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:23:44</span>&nbsp;
+												<span class="tt">06.05.2020 15:53:55</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters route cause details as "Bad Management"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Assigned:Pending:Under Investigation:Withdrawn:(clear)" should be available in "Status*" dropdown] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:44</span>&nbsp;
+													<span class="tt">06.05.2020 15:54:01</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters route cause details as "Bad Management"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Assigned:Pending:Under Investigation:Withdrawn:(clear)" should be available in "Status*" dropdown]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -424,12 +420,312 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:23:44</span>&nbsp;
+												<span class="tt">06.05.2020 15:54:01</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to "Under Investigation" on problem record page] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:54:05</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to "Under Investigation" on problem record page]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:54:05</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:54:10</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:54:10</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates ticket status as "Under Investigation"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:54:14</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates ticket status as "Under Investigation"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:54:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on linked items tab] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:54:16</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on linked items tab]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:54:16</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "OS3 - Change:OS3 - Known Error:OS3 - Operations:OS3 - Problem:OS3 - Work Order:(clear)" should be available in "Target Application" dropdown] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:54:20</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "OS3 - Change:OS3 - Known Error:OS3 - Operations:OS3 - Problem:OS3 - Work Order:(clear)" should be available in "Target Application" dropdown]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:54:20</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects target application first dropdown as "OS3 - Change"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:54:24</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects target application first dropdown as "OS3 - Change"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:54:24</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Caused by:Is related to:Is workaround for:Solution for:(clear)" should be available in "Fld-SourceRelationshipType" dropdown] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:54:27</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Caused by:Is related to:Is workaround for:Solution for:(clear)" should be available in "Fld-SourceRelationshipType" dropdown]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:54:27</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects target application first dropdown as "OS3 - Known Error"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:54:31</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects target application first dropdown as "OS3 - Known Error"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:54:31</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Caused by:Related to:Solution for:Workaround for:(clear)" should be available in "Fld-SourceRelationshipType" dropdown] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:54:34</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Caused by:Related to:Solution for:Workaround for:(clear)" should be available in "Fld-SourceRelationshipType" dropdown]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:54:34</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects target application first dropdown as "OS3 - Operations"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:54:37</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects target application first dropdown as "OS3 - Operations"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:54:37</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Caused by:Is related to:Is workaround for:Solution for:(clear)" should be available in "Fld-SourceRelationshipType" dropdown] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:54:40</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Caused by:Is related to:Is workaround for:Solution for:(clear)" should be available in "Fld-SourceRelationshipType" dropdown]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:54:40</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user waits 3 secs] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:54:43</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user waits 3 secs]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:54:43</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects target application first dropdown as "OS3 - Problem"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:54:47</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects target application first dropdown as "OS3 - Problem"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:54:47</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Caused by:Related to:Solution for:Workaround for:(clear)" should be available in "Fld-SourceRelationshipType" dropdown] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:54:50</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Caused by:Related to:Solution for:Workaround for:(clear)" should be available in "Fld-SourceRelationshipType" dropdown]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:54:50</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects target application first dropdown as "OS3 - Work Order"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:54:54</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects target application first dropdown as "OS3 - Work Order"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:54:54</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Caused by:Is related to:Is workaround for:Solution for:(clear)" should be available in "Fld-SourceRelationshipType" dropdown] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:54:57</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "Caused by:Is related to:Is workaround for:Solution for:(clear)" should be available in "Fld-SourceRelationshipType" dropdown]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:54:57</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to investigation complete] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:55:00</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to investigation complete]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:55:00</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates route cause code availability] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:55:00</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates route cause code availability]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:55:00</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user selects root cause code as "People:Emotional stress"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:55:05</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user selects root cause code as "People:Emotional stress"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:55:05</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters route cause details as "Vendor contracts to be reviewed"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:55:05</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters route cause details as "Vendor contracts to be reviewed"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:55:05</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters RC found date as current date] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:45</span>&nbsp;
+													<span class="tt">06.05.2020 15:55:05</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters RC found date as current date]</span>
 													
@@ -439,14 +735,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:23:45</span>&nbsp;
+												<span class="tt">06.05.2020 15:55:05</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button on the problem form] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:52</span>&nbsp;
+													<span class="tt">06.05.2020 15:55:11</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button on the problem form]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -454,14 +750,14 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:23:52</span>&nbsp;
+												<span class="tt">06.05.2020 15:55:11</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Under Investigation to Investigation Complete. "] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to "Closed" on problem record page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:56</span>&nbsp;
+													<span class="tt">06.05.2020 15:55:19</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Under Investigation to Investigation Complete. "]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to "Closed" on problem record page]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -469,297 +765,57 @@
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:23:56</span>&nbsp;
+												<span class="tt">06.05.2020 15:55:19</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then additional root cause codes should be saved as "External | Other; People | Other; Process and Organisation | Other; Technical | Other;"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "No Solution Identified:Not Repeatable:Rejected:Risk Accepted:Solved:Workaround:(clear)" should be available in "Closure Code" dropdown readonly] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:56</span>&nbsp;
+													<span class="tt">06.05.2020 15:55:22</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then additional root cause codes should be saved as "External | Other; People | Other; Process and Organisation | Other; Technical | Other;"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then multiple statuses "No Solution Identified:Not Repeatable:Rejected:Risk Accepted:Solved:Workaround:(clear)" should be available in "Closure Code" dropdown readonly]</span>
 													
 													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">06.05.2020 15:55:22</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User selects "Root Cause Code" as dropdownValue and should see values for "notreadonly"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">06.05.2020 15:55:22</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User selects "Root Cause Code" as dropdownValue and should see values for "notreadonly"]</span>
+													
+													<span class="td"><table class='runtime-table table-striped table'><tr><td>DropdownValue</td><td>DropdownValuesToBePresent</td></tr><tr><td>External:3rd Party Failure</td><td>External value chains:Interference:Mobile terminals</td></tr><tr><td>External:External factor</td><td>Digging:Fire:Power outage:Weather</td></tr><tr><td>External</td><td>Other</td></tr><tr><td>People</td><td>Emotional stress:Lack of competence:Missing training:Other:Poor Judgement:Time pressure:Too much over time, too tired</td></tr><tr><td>Process and Organisation</td><td>Caused by Delivery (project or customer deliveries):Caused by Maintenance:Caused by Trouble shooting:Lack of resources:Other:Process missing or inadequate:Process not followed in organisation:Process not fully implemented:Too complex organisation,unclear RACI</td></tr><tr><td>Process and Organisation:Caused by Change</td><td>Approval flow violated:Inadequate risk assessment:Parallel Changes:Poor testing:Poor Verification</td></tr><tr><td>Process and Organisation:Documentation missing or inadequate</td><td>Checks list and procedures:CI inadequately documented:CI not documented in inventory</td></tr><tr><td>Process and Organisation:Vendor</td><td>Lack of documentation:Lack of unclear SLA, WLA, RACI:Not complying to vendor recommendations / requirements:Use of non approved contractor</td></tr><tr><td>Technical</td><td>HW error:Lack of capacity,licenses:Lack of patching:Missing inadequate monitoring and alarms:Other:Redundancy didn't work as expected:Root Cause Not Found:Security,hacker attack,SW & Config error:The design does not meet expectation:The implementation is not according to architecture</td></tr><tr><td>Technical:Infrastructure</td><td>Cooling & Heating:Power</td></tr></table></span>
+												</div>
+												<div class="st fail">
+													<span class="tt">06.05.2020 15:55:35</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User selects "Root Cause Code" as dropdownValue and should see values for "notreadonly"]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at pageObjects.BaseRecordPage.verifyMultipleDropdownValues(BaseRecordPage.java:629)
+	at steps.OWF_TroubleEventPageSteps.userSelectsDropdownNameAsDropdownValueAndShouldSeeValues(OWF_TroubleEventPageSteps.java:1087)
+	at ✽.User selects "Root Cause Code" as dropdownValue and should see values for "notreadonly"(features/Automation/Regression/Problem/Drop_Down.feature:80)
+</textarea></span>
 												</div>
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">05.18.2020 16:23:56</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks edit button for additional root cause] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:57</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks edit button for additional root cause]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:23:57</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on any secondary root cause code and click on make primary button] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:58</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on any secondary root cause code and click on make primary button]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:23:58</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then root cause should be changed to "Primary" root cause code] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:58</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then root cause should be changed to "Primary" root cause code]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:23:58</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on any secondary root cause code and click on remove selected] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:58</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on any secondary root cause code and click on remove selected]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:23:58</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And click apply button on additional root cause codes window] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:23:58</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And click apply button on additional root cause codes window]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:23:58</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:24:06</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:24:06</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates root cause code is "External | Other"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:24:06</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates root cause code is "External | Other"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:24:06</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then additional root cause codes should be saved as "People | Other; Process and Organisation | Other; Technical | HW error;"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:24:06</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then additional root cause codes should be saved as "People | Other; Process and Organisation | Other; Technical | HW error;"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:24:06</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to closed] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:24:08</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to closed]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:24:08</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:24:16</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:24:16</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And an error message should appear: "Required field (without a default) not specified :Closure Code (ARERR 9424)"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:24:16</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And an error message should appear: "Required field (without a default) not specified :Closure Code (ARERR 9424)"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:24:16</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And an error message should appear: "Required field (without a default) not specified :Solution (ARERR 9424)"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:24:16</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And an error message should appear: "Required field (without a default) not specified :Solution (ARERR 9424)"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:24:16</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And an error message should appear: "Required field (without a default) not specified :Solution Found Date (ARERR 9424)"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:24:16</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And an error message should appear: "Required field (without a default) not specified :Solution Found Date (ARERR 9424)"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:24:16</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects solved under closure code] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:24:19</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects solved under closure code]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:24:19</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters solution as "A change in processes"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:24:20</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters solution as "A change in processes"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:24:20</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters solution found date as current date] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:24:20</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters solution found date as current date]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:24:20</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:24:27</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:24:27</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates ticket status as "Closed"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">05.18.2020 16:24:28</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates ticket status as "Closed"]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">05.18.2020 16:24:28</span>&nbsp;
+												<span class="tt">06.05.2020 15:55:35</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
 												
 												<div class="st pass">
-													<span class="tt">05.18.2020 16:24:28</span>&nbsp;
+													<span class="tt">06.05.2020 15:55:35</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
 													

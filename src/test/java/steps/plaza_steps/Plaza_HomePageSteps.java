@@ -268,7 +268,7 @@ public class Plaza_HomePageSteps extends BasePage {
     @And("user clicks on add attachment in plaza")
     public void userClicksOnAddAttachmentInPlaza() {
         //homePage.clickAddAttachment();
-        homePage.clickElementByContainsTextAndTagName("*", "Add attachments");
+        homePage.clickElement(By.xpath("//button[@title='Add attachment']/span"));
     }
 
     @And("user enters Backup one time UNC Local path as {string}")

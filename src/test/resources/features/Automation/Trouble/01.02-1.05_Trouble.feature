@@ -1,5 +1,5 @@
 @1.02-1.05Trouble
-  #test case covers 01.02,01.03,01.04,01.05 and 01.17
+  #test case covers 01.02,01.03,01.04,01.05 and 01.17.
 
   Feature: 01.02-01.05 trouble
     Scenario: 01.02-01.05 trouble

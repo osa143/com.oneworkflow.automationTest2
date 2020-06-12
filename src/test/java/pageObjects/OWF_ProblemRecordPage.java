@@ -109,7 +109,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String btnEDIT_AFFECTED_ORGS = "WIN_0_808080012";
     private static final String btnCLICK_SAVE= "WIN_0_700030040";
     private static final String fld_ACCOUNTABLE_ORG_AS_MANDATORY="//label[contains(text(),'Accountable Org.*')]";
-    private static final String fld_ROOT_CAUSE_CODE_AS_MANDATORY="//label[contains(text(),'Accountable Org.*')]";
+    private static final String fld_ROOT_CAUSE_CODE_AS_MANDATORY="//label[contains(text(),'Root Cause Code*')]";
     private static final String fld_ACCOUNTABLE_ORG_AS_NOT_MANDATORY="//label[contains(text(),'Accountable Org.')]";
     private static final String dd_ACCOUNTABLE_ORG= "arid_WIN_0_808080010";
     private static final String btnApply= "WIN_0_808080115";
@@ -146,6 +146,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
     public void clickApplyButton_additionalRC_codes(){
         clickElementById(btn_APPLY_ROOT_CAUSE_CODES);
+        switchToDefault();
     }
     public void selectMultipleAdditionalRootCauseCodes(String additionalRC_codes){
         String [] rootCauseCodes = additionalRC_codes.split("/");
@@ -218,6 +219,18 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         selectUrgency(list.get(0).get("Urgency"));
         selectAccountable_Org(list.get(0).get("AccountableOrg"));
         selectAffected_Org(list.get(0).get("AffectedOrg"));
+        clickSave();
+        wait(3000);
+
+    }
+    public void createProblemTicket_2(DataTable dataTable){
+        clickSwedenCheckBox();
+        List<Map<String, String>> list=dataTable.asMaps(String.class, String.class);
+        enterTitle(list.get(0).get("Title"));
+        selectRequestType(list.get(0).get("RequestType"), false);
+        enterDescription(list.get(0).get("Description"));
+        selectImpactType(list.get(0).get("ImpactType"));
+        selectUrgency(list.get(0).get("Urgency"));
         clickSave();
         wait(3000);
 
@@ -443,16 +456,28 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
             enterDescription_Attachment_OnFrame(description);
             clickAdd_AttachmentOnFrame();
             clickonChooseFile_OnFrame();
+            wait(600);
             CommonUtils.uploadFile(fullFilePath);
-            wait(1000);
+            wait(800);
             clickOk_AttachmentOnFrame();
+            wait(600);
             int size1 = driver.findElements(By.tagName("iframe")).size();
-            switchToFrameByIndex(size1 - 1);
+            if(size1>2){
+                switchToFrameByIndex(size1 - 1);
+            }
+            else
+            {
+                switchToFrameByIndex(size1);
+            }
+
             if(type.equals("external"))
             {
                 clickExternalRadioButton();
             }
-            clickInternalRadioButton();
+            else
+            {
+                clickInternalRadioButton();
+            }
             clickSave_AttachmentOnFrame();
             Assert.assertTrue(validateAttachmentAvailability(attachmentsCount));
         }

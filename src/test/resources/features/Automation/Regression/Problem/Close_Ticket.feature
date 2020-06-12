@@ -1,7 +1,8 @@
-@Close_Ticket @problem @Reg_Problem
+@Close_Ticket @problem @Reg_Problem @smoke
  #passed
 Feature: User is able to close and clone a problem ticket
-  #Below scenario also covers-SAO-5208-Multiple root causes code menus, 4 with one Primary
+  #Below scenario also covers-SAO-5208-Multiple root causes code menus, 4 with one Primary and
+  #SAO-5198, All CI Impact Statuses will remain ‘Active’until the status of the problem moves to closed
   Scenario: User logs into One workflow, creates a problem ticket, closes it then clones it
 
 
@@ -11,13 +12,20 @@ Feature: User is able to close and clone a problem ticket
     When user clicks on create problem record
     And user switches to window 1
     Then problem record form should appear in new tab
-    When user creates problem ticket with following details
-      |Title                                  |RequestType |Description   |ImpactType      |Urgency|AccountableOrg|AffectedOrg|
-      |proactive investigation of: frvi96_auto|CPS:IT:Other|UAT Test close|Moderate/Limited|Low    |CA_Infra      |CA_IT      |
+    When user creates problem ticket with below details
+      |Title                                  |RequestType |Description   |ImpactType      |Urgency|
+      |proactive investigation of: frvi96_auto|CPS:IT:Other|UAT Test close|Moderate/Limited|Low    |
     Then ticket should be created and status should be assigned
+    When user adds below CI's to the ticket
+      |   CI Name     |
+      |SE_SGSN_FREMME2|
+      |SE_SGSN_HYMME2 |
+      |SE_SGSN_LDHMME1|
+      |SE_SGSN_VRRMME1|
     Then user clicks on Ack button
     And problem ticket status should be under investigation
     Then user changes status to investigation complete
+    And user validates CI "Impact Status" is "Active"
     Then user should see root cause code primary drop down as mandatory
     And user should see additional root cause code drop down as optional
     And user selects root cause code as Technical:HW error under route cause
@@ -47,6 +55,7 @@ Feature: User is able to close and clone a problem ticket
     And user enters solution found date as current date
     Then user clicks on save button
     And user validates ticket status as "Closed"
+    And user validates CI "Impact Status" is "Inactive"
     And change should also be reflected in the timeline as "Status has changed from Investigation Complete to Closed."
     When user clicks on clone button
     And user switches to window 2

@@ -630,6 +630,31 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.doLogout();
         //agentConsolePage.getDriver().switchTo().alert().accept();
     }
+
+    @And("user should see specified Timezone as {string} top right under username")
+    public void userShouldSeeSpecifiedTimezoneAsTopRightOfTheAgentConsoleUnderUsername(String ExpectedTimeZone) {
+        Assert.assertEquals(agentConsolePage.getTimezone(), ExpectedTimeZone );
+    }
+
+    @When("user selects {string} menu as {string}")
+    public void userSelectsMenuAs(String menu, String item) {
+        agentConsolePage.selectMenuAndItem(menu, item);
+    }
+
+    @And("user should see confirmation message and clicks ok button and close the my account window")
+    public void userShouldSeeConfirmationMessageAndClicksOkButtonAndCloseTheMyAccountWindow() {
+        agentConsolePage.closeConfirmationMessageAndClickCloseButton();
+    }
+
+    @And("user enters Time Zone as {string}")
+    public void userEntersTimeZoneAs(String timeZone) {
+        agentConsolePage.enterTimeZone(timeZone);
+    }
+
+    @And("user clicks save button on my account window")
+    public void userClicksSaveButtonOnMyAccountWindow() {
+        agentConsolePage.clickSaveButton_MyAccount();
+    }
 }
 
 

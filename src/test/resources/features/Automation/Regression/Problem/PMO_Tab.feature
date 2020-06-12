@@ -10,9 +10,9 @@ Feature: PMO Tab
     When user clicks on create problem record
     And user switches to window 1
     Then problem record form should appear in new tab
-    When user creates problem ticket with following details
-      |Title                                     |RequestType     |Description  |ImpactType      |Urgency|AccountableOrg|AffectedOrg|
-      |Proactive investigation of Automation Test|CPS:IT:Other    |UAT Test7    |Moderate/Limited|Low    |CA_Infra      |CA_IT      |
+    When user creates problem ticket with below details
+      |Title                                  |RequestType |Description   |ImpactType      |Urgency|
+      |proactive investigation of: frvi96_auto|CPS:IT:Other|UAT Test close|Moderate/Limited|Low    |
     Then ticket should be created and status should be assigned
     And user gets ticket value
     When user verifies PM office tab visibility

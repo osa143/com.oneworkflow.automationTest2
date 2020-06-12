@@ -7,9 +7,9 @@
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
       And user clicks on plaza portal
-      When user enters "Ask" in plaza search box
-      And user opens internal case form
-      Then user should see internal case form appear
+      When user clicks on support link
+      And user clicks on "SUBMIT A TICKET"
+      And user switches to window 1
       And user selects "Applications" under Service area dropdown
       And user selects "AlarmMap" under plaza category dropdown
       And user selects "Application Error" under plaza type of issue

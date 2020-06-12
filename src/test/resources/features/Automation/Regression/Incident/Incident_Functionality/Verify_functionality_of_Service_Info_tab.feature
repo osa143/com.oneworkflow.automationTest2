@@ -1,4 +1,4 @@
-@Verify_functionality_of_Service_Info_tab @Incident @Trouble1
+@06.15 @Verify_functionality_of_Service_Info_tab @Incident @Trouble1
   #passed
   Feature: Verify functionality of service info tab
     Scenario: Verify functionality of service info tab

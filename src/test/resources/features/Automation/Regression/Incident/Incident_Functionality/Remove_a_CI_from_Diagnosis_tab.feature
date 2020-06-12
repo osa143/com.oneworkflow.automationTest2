@@ -1,7 +1,7 @@
-@Remove_a_CI_from_Diagnosis_tab @Incident @Trouble1
+@06.09 @Remove_a_CI_from_Diagnosis_tab @Incident @Trouble1
   #passed
-  Feature: Removal of CI from diagnosis tab
-    Scenario: Removal of CI from diagnosis tab
+  Feature: Remove of CI from diagnosis tab
+    Scenario: Remove of CI from diagnosis tab
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

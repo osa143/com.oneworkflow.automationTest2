@@ -26,7 +26,7 @@
       And user selects auto notify radio button as yes
       And user clicks on save button under interested parties frame
       Then problem initiator user should be listed under interested parties tab
-      And change should also be reflected in the timeline as "The User Tomas Hallén has been added as interested parties."
+     # And change should also be reflected in the timeline as "The User Tomas Hallén has been added as interested parties."
       When user clicks on "Additional Info" tab
       And user enters "Tohall_copy" in the analysis team member one field
       And user clicks on save button on the problem form

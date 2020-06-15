@@ -36,16 +36,9 @@ Feature: E2E standard change internal initiator
     And an error message should appear: "Please select at least one country of impact for this change. (ARERR 10000)"
     And user clicks on norway checkbox under affected BU's
     Then user clicks on Send button and closes warning message
-    When user clicks on "Diagnosis" tab
-    And user clicks on CI search button
-    Then user switches to frame
-    And user enters "SE_STN_100042_S_S_M3" in the name+ field
-    And user clicks on search button on CI search window
-    Then user selects CI "SE_STN_100042_S_S_M3"
-    And user selects impact level as "No Impact"
-    And user clicks on relate CI
-    Then user closes warning message
-    And user clicks on close button on CI search window
+    Then user clicks on "Diagnosis" tab
+    And user adds CI "SE_STN_100042_S_S_M3" to change ticket with impact level "No Impact"
+    And user clicks on save button
     And CI should be listed and displayed under the Diagnosis tab
     When user clicks "Interested Parties" tab
     And user enters email address as "Test123xxx@Test123xxx.com"

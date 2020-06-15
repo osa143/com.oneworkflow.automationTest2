@@ -25,9 +25,9 @@ Feature: E2E standard change external initiator
     And multiple error messages should appear with red boarder around fields
     When user enters "CI B2" in the change builder field
     And user enters as "Automation Test" in service and customer impact
-    And user enters request start time as 4 minutes past from "Europe/London" timezone "MM/dd/yyyy HH:mm:ss" format
-    And user enters request end time as 6 minutes past from "Europe/London" timezone "MM/dd/yyyy HH:mm:ss" format
-    And user enters impact duration as "2" minutes
+    And user enters request start time as 5 minutes past from "Europe/London" timezone "MM/dd/yyyy HH:mm:ss" format
+    And user enters request end time as 10 minutes past from "Europe/London" timezone "MM/dd/yyyy HH:mm:ss" format
+    And user enters impact duration as "0" minutes
     Then user enters description as "Regression - Change Management Process"
     And user clicks on save button
     And user gets change ticket value
@@ -38,22 +38,17 @@ Feature: E2E standard change external initiator
     And an error message should appear: "Please select at least one country of impact for this change. (ARERR 10000)"
     And user clicks on norway checkbox under affected BU's
     Then user clicks on Send button and closes warning message
-    When user clicks on "Diagnosis" tab
-    And user clicks on CI search button
-    Then user switches to frame
-    And user enters "NO_NAT_GiBigIP0%" in the name+ field
-    And user clicks on search button on CI search window
-    Then user selects all CI's that appear
-    And user selects impact level as "No Impact"
-    And user clicks on relate CI
-    Then user closes warning message on CI search window for change ticket
-    And user clicks on close button on CI search window
+    Then user clicks on "Diagnosis" tab
+    And user adds CI "NO_NAT_GiBigIP0%" to change ticket with impact level "No Impact"
+    And user clicks on save button
     And CI should be listed and displayed under the Diagnosis tab
     When user clicks "Interested Parties" tab
     And user enters email address as "Test123xxx@Test123xxx.com"
     And user clicks on add email button
     Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
     And user clicks on send button and clicks yes on warning window
+    Then user switches to window 1
+    And user clicks on ticket refresh button
     Then user validates ticket status as "Assigned"
     And user clicks on owner under sections
     And user clicks on assignment under sections
@@ -61,8 +56,10 @@ Feature: E2E standard change external initiator
     And user validates owner as "Change Manager"
     And user should see assigned profile as "Change Implementation Control"
     And user waits for 2 minutes
+    And user clicks on ticket refresh button
+    And user clicks on timeline tab
     Then change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Assigned to Scheduled. " on row 1
-    And user waits for 2 minutes
+    And user waits for 4 minutes
     And user clicks on ticket refresh button
     And user clicks on "Timeline" tab
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Start has changed from  UTC to 2019-09-05 10:15:00 UTC. Request Status has changed from Scheduled to Implementation." on row 2

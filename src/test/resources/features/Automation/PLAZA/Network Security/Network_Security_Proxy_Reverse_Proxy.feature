@@ -1,5 +1,5 @@
 @Network_Security_Proxy_Reverse_Proxy @PLAZA
-  #passed
+
   Feature: Network Security Proxy Reverse Proxy form test
     Scenario: user validates information sent to OW from Plaza
 

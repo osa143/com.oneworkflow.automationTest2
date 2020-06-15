@@ -7,9 +7,9 @@
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
       And user clicks on plaza portal
-      When user enters "Ask" in plaza search box
-      And user opens internal case form
-      Then user should see internal case form appear
+      When user clicks on support link
+      And user clicks on "SUBMIT A TICKET"
+      And user switches to window 1
       And user selects "Applications" under Service area dropdown
       And user selects "AlarmMap" under plaza category dropdown
       And user selects "Application Error" under plaza type of issue
@@ -20,17 +20,17 @@
       And user gets plaza request id
       And user clicks on plaza request id
       And user validates internal case management form opens
-      Then user validates plaza first timeline message as "This Incident was raised on behalf of testauto auto from "
+      Then user validates plaza first timeline message as "This Incident was raised on behalf of Test Auto from "
       And user validates plaza second timeline message as "An incident copy creation has been forwarded to OWF successfully"
       And user waits 10 secs
-      And user should see incident ticket update in plaza
+      #And user should see incident ticket update in plaza
       And user enters "Test Update" in the ticket timeline
       And user clicks on plaza send button
-      When user clicks on shown ICM number
-      Then user should see ICM form
-      And user validates INC is present under internal case subtasks
-      When user clicks on INC under internal case subtasks
-      Then user should see INC form
+#      When user clicks on shown ICM number
+#      Then user should see ICM form
+#      And user validates INC is present under internal case subtasks
+#      When user clicks on INC under internal case subtasks
+#      Then user should see INC form
       And user opens new tab
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
@@ -104,7 +104,7 @@
       Then user enters plaza assignment group as "IT Application Support"
       And user enters plaza assignee as "Agata Stefanovič"
       Then user validates resolution code as "Solved (Permanently)"
-      And user validates resolution notes as "N/A:N/A"
+      And user validates resolution notes as "N/A:N/A:N/A"
       Then user clicks on plaza close incident button
       And user waits 4 secs
       And user validates plaza ticket status as "Closed"

@@ -1,5 +1,5 @@
 @Network_Security_Firewall_Troubleshoot @PLAZA
-  #passed
+
   Feature: Network Security Firewall Troubleshoot plaza form test
     Scenario: user validates information sent to OW from Plaza
 

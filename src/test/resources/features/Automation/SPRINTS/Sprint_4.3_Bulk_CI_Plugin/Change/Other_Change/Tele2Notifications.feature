@@ -3,7 +3,7 @@
     Scenario: Bulk Loading Summary
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_6" and password as "Test@1234"
+      When user logs in with valid username "Change_Automation_4" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create change record
       Then user switches to window 1
@@ -21,8 +21,8 @@
       And user enters "Regression - Change Management Process" in the ver of functionality field
       And user enters "Regression - Change Management Process" in the risk description field
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-      And user enters start time as 24 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
-      And user enters end time as 28 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
+      And user enters start time as 24 hours fast from current sweden time in "d/m/yyyy HH:mm:ss" format
+      And user enters end time as 28 hours fast from current sweden time in "d/m/yyyy HH:mm:ss" format
       And user enters impact duration as "45" minutes
       And user selects estimated impact dropdown as "Degradation of Service"
       And user clicks on save button

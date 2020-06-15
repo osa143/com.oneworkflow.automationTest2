@@ -1,4 +1,4 @@
-@05.01  @Incident1 @05
+@05.01  @Incident1 @05  @smoke
   #passed
   Feature: manually close an incident
     Scenario: manually close an incident
@@ -26,7 +26,7 @@
       And user right clicks on CI "SE_EPG_FREEPG1" and selects "Impact:Clear"
       And user clicks on save button
       Then user validates ticket status as "Cleared"
-      When user changes status to "Closed" on trouble event page second time
+      When user changes status to "Closed"
       And user clicks on save button
       Then user validates ticket status as "Closed"
 

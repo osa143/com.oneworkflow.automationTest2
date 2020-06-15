@@ -268,7 +268,7 @@ public class Plaza_HomePageSteps extends BasePage {
     @And("user clicks on add attachment in plaza")
     public void userClicksOnAddAttachmentInPlaza() {
         //homePage.clickAddAttachment();
-        homePage.clickElementByContainsTextAndTagName("*", "Add attachments");
+        homePage.clickElement(By.xpath("//button[@title='Add attachment']/span"));
     }
 
     @And("user enters Backup one time UNC Local path as {string}")
@@ -2354,5 +2354,16 @@ public class Plaza_HomePageSteps extends BasePage {
     @And("user selects affected person type as {string}")
     public void userSelectsAffectedPersonTypeAs(String arg0) {
         homePage.clickPDB_AffectedPersonType(arg0);
+    }
+
+    @And("user selects server database CI as {string}")
+    public void userSelectsServerDatabaseCIAs(String arg0) {
+        homePage.selectServerDatabaseCi(arg0);
+
+    }
+
+    @When("user clicks on support link")
+    public void userClicksOnSupportLink() {
+        homePage.clickElementById("xcab273021b8480d00c1e87fe6e4bcbaf");
     }
 }

@@ -396,10 +396,10 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         WebElement advanceSearchTextBox= findElement(By.xpath("//div[@class='AdvancedSearchBarField arfid1005 ardbnFld-AdvanceQuery']//textarea[@id='arid1005']"));
         advanceSearchTextBox.click();
         advanceSearchTextBox.sendKeys(text);
+
     }
     public void clickAdvancedSearch(){
         clickElement(By.id(btn_ADVANCED_SEARCH));
-        wait(2000);
     }
     public void clickCancel(){
         clickElement(By.id(btn_CANCEL_LOCATION));

@@ -1408,6 +1408,11 @@ public class OWF_ProblemRecordPageSteps {
     public void clickApplyButtonOnAdditionalRootCauseCodesWindow() {
         problemRecordPage.clickApplyButton_additionalRC_codes();
     }
+
+    @When("user creates problem ticket with below details")
+    public void userCreatesProblemTicketWithBelowDetails(DataTable dataTable) {
+        problemRecordPage.createProblemTicket_2(dataTable);
+    }
 }
 
 

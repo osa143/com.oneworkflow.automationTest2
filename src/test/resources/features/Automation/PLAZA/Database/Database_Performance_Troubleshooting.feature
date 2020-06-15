@@ -58,8 +58,8 @@
       And user clicks on bulk update save button
       Then user switches to window 1
       When user selects all CI's that appear
-      And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
-      Then user should see confirmation message for impact clear and user clicks yes
+      And user right clicks on CI "cc100cgas001" and clears impact
+      #Then user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

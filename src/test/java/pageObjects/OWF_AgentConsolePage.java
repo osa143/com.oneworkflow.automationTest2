@@ -81,7 +81,38 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String row1_AUTO_ASSIGNMENT_RULES_TABLE= "//*[@id='T700002001']/tbody/tr[2]/td[1]";
     private static final String btn_OPEN= "WIN_0_700002009";
     private static final String txt_TITLE= "arid_WIN_3_800038101";
+    private static final String fld_TIMEZONE= "//div[@arid='800004002']";
+    private static final String btn_OK="//*[@id='PopupMsgFooter']/a";
+    private static final String btn_CLOSE= "//a[@arid='777000001']";
+    private static final String txt_TIMEZONE= "//div[@arid='799999958']/textarea";
+    private static final String btn_SAVE_MY_ACCOUNT="//a[@arid='1003']";
 
+    public void clickSaveButton_MyAccount(){
+        clickElement(By.xpath(btn_SAVE_MY_ACCOUNT));
+    }
+
+    public void enterTimeZone(String timeZone){
+        WebElement TimeZoneTextBox= findElement(By.xpath(txt_TIMEZONE));
+        TimeZoneTextBox.clear();
+        TimeZoneTextBox.sendKeys(timeZone);
+    }
+
+    public void closeConfirmationMessageAndClickCloseButton(){
+        wait(2000);
+        switchToFrameByIndex(2);
+        clickElement(By.xpath(btn_OK));
+        clickElement(By.xpath(btn_CLOSE));
+        switchToDefault();
+    }
+
+    public String getTimezone(){
+        String TimeZone= getTextByElement(By.xpath(fld_TIMEZONE));
+        System.out.println(TimeZone);
+        return TimeZone;
+    }
+    public void selectMenuAndItem(String menu, String item){
+        selectMainMenuAndMenuItem(menu, item);
+    }
 
     public boolean verifyTitleDropdownValues(String options, String dropdownName ){
         return verifyDropdownValues(options, dropdownName, txt_TITLE);

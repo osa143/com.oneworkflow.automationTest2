@@ -30,7 +30,6 @@ Feature: Internal Urgent Critical Change E2E
     And user enters request end time 5 hours ahead of current date
     And user enters impact duration as "3" hours
     And user selects estimated impact dropdown as "Loss of Service"
-    And user enters as "Regression - Change Management Process" in service and customer impact
     And user clicks on save button
     And user waits
     Then user validates availability of tabs "Timeline:Diagnosis:Risk:Schedule:Interested Parties:Approval:Notifications:Linked Items:Work Orders:Service Level:Related Project:Service Info:Telenor" on change record page

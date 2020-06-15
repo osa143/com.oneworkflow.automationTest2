@@ -826,10 +826,11 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.wait(3000);
     }
 
-    @And("user enters ticket previously created")
-    public void userEntersTicketPreviouslyCreated() {
+    @And("user enters ticket previously created and searches")
+    public void userEntersTicketPreviouslyCreatedAndSearches() {
         problemRecordPage.enterTicket(ticket);
         System.out.println("user entered problem ticket" + ticket);
+        problemRecordPage.clickSearchButton();
     }
 
     @And("user validates Save is present")

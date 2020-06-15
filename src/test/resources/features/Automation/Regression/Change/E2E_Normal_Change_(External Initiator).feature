@@ -30,6 +30,7 @@ Feature: External Normal Change E2E
 #      Then user should see change record
 #      And user closes change record window
 #      And user closes calendar window
+
     When user selects request type as "Normal Change"
     Then user selects title as "Mobile:IMS Core" on Change record page
     And user selects request category as "Software Installation" on change record page
@@ -59,7 +60,7 @@ Feature: External Normal Change E2E
     And user selects answer as "Yes (outcome of the change can be instantly verified)"
     And user selects answer as "Yes"
     And user selects answer as "Simple"
-    And user selects last answer as "No"
+    And user selects last answer as "Yes"
     Then user validates risk score gets updated
     Then user clicks on Send button
     Then an error message should appear: "Please select at least one country of impact for this change. (ARERR 10000)"
@@ -89,7 +90,6 @@ Feature: External Normal Change E2E
     When user logs in with valid username "DC IMS Core_auto" and password as "Test@1234"
     And user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on more filters button
-    And user switches to frame
     And user clicks on "Core" tab
     Then user enters title as "Mobile | IMS Core" on more filter window
     And user selects status as "Assigned" on user more filters window
@@ -97,8 +97,7 @@ Feature: External Normal Change E2E
     And user should see "CR" tickets with "Status" of "Assigned"
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 2
-    Then user enters ticket previously created
-    And user clicks Search on ticket search
+    Then user enters ticket previously created and searches
     When user clicks on Ack button
     Then user validates ticket status as "Analysis"
     And user validates last ack by field has data present
@@ -113,12 +112,11 @@ Feature: External Normal Change E2E
     And user clicks on details under sections
     Then user enters "- New Communication plan" in the communication plan field
     And user clicks on save button
-    Then change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (External Initiator) to TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (External Initiator)- Additional Information. "
+    Then change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (External Initiator) to - Additional Information. "
     Then user clicks on "Schedule" tab
     Then user enters request start time 168 hours ahead of current date
     And user enters request end time 172 hours ahead of current date
     Then user clicks on save button
-    When user gets the schedule time values
     And user clicks on Diagnosis tab
     And user right clicks on primary CI and selects "Impact:Update"
     Then user switches to frame
@@ -126,8 +124,6 @@ Feature: External Normal Change E2E
     And user enters impact to time as same value as request end time on impact details bulk update window
     And user clicks confirm checkbox
     Then user clicks on bulk update save button
-    When user clicks on "Notifications" tab
-    And user clicks on "Sent" tab
     Then user should see "Acknowledged" email update
     When user changes status to "Approval Requested"
     And user clicks on save button
@@ -137,6 +133,7 @@ Feature: External Normal Change E2E
     And user validates availability of tabs "Approval"
     And user waits 2 secs
     When user logsOut from One workflow
+    And user switches to window 1
     And user goes back to login page
     Then user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
     And user successfully logged in to OneWorkflow and agent console should be displayed
@@ -146,17 +143,14 @@ Feature: External Normal Change E2E
     And user clicks on apply button on user more filters window
     And user should see "CR" tickets with "Status" of "Approval Requested"
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
-    And user switches to window 1
-    Then user enters ticket previously created
+    And user switches to window 2
+    Then user enters ticket previously created and searches
     When user clicks on owner under sections
     Then user selects owner as "ChangeManager1_Automation"
     And user clicks on save button
     When user clicks on Diagnosis tab
     And user clicks on Show CR Matching button
     Then user should see Show CR Matching table appear
-    When user clicks on risk tab
-    And user clicks on last risk question selects last answer as "Yes"
-    And user clicks on save button
     And user validates availability of tabs "Approval"
     When user clicks on "Approval" tab
     And user clicks on request thats pending approval
@@ -164,8 +158,8 @@ Feature: External Normal Change E2E
     Then user switches to frame
     And user enters "Change can be approved right away" in comments field
     And user clicks on approve button
-    Then user switches to window 2
     And user clicks on ticket refresh button
+    And user waits
     Then user validates ticket status as "Approved"
     When user clicks on "Notifications" tab
     And user clicks on "Sent" tab
@@ -191,7 +185,6 @@ Feature: External Normal Change E2E
     And user successfully logged in to OneWorkflow and agent console should be displayed
     And user selects all dropdown as "Change Ticket"
     When user clicks on more filters button
-    And user switches to frame
     And user clicks on "Core" tab
     And user selects status as "Scheduled" on user more filters window
     Then user clicks on apply button on user more filters window
@@ -199,8 +192,7 @@ Feature: External Normal Change E2E
     And user should see "CR" tickets with "Status" of "Scheduled"
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 2
-    Then user enters ticket previously created
-    And user clicks Search on ticket search
+    Then user enters ticket previously created and searches
     Then user should see change record ticket
     When user changes status to "Implementation"
     And user clicks on save button
@@ -235,7 +227,6 @@ Feature: External Normal Change E2E
     And user successfully logged in to OneWorkflow and agent console should be displayed
     And user selects all dropdown as "Change Ticket"
     When user clicks on more filters button
-    And user switches to frame
     And user clicks on "Core" tab
     And user selects status as "Completed" on user more filters window
     Then user clicks on apply button on user more filters window
@@ -243,8 +234,7 @@ Feature: External Normal Change E2E
     And user should see "CR" tickets with "Status" of "Completed"
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 2
-    Then user enters ticket previously created
-    And user clicks Search on ticket search
+    Then user enters ticket previously created and searches
     Then user should see change record ticket
     When user changes status to "Closed"
     And user selects resolved group as "Change Manager"

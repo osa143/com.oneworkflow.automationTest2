@@ -871,6 +871,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterImpactDurationMins(String impactDurationMins) {
+        clearText(By.id(txtIMPACT_DURATION_MINS));
         enterTextByElement(By.id(txtIMPACT_DURATION_MINS), impactDurationMins);
     }
 
@@ -937,6 +938,8 @@ public class BaseRecordPage extends BasePage {
     public void enterStartDate_DateFormat_Timezone_Delay(String pattern, String timeZone, int delay) {
         String dateTime = CommonUtils.getDateTime(pattern, timeZone, delay);
         findElement(By.id(txt_REQUEST_START)).clear();
+        CommonUtils.requestStart=dateTime;
+        System.out.println("Request Start time is " + CommonUtils.requestStart);
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
     }
 
@@ -944,6 +947,8 @@ public class BaseRecordPage extends BasePage {
 
         String dateTime = CommonUtils.getDateTime(pattern, timeZone, delay);
         findElement(By.id(txt_REQUEST_END)).clear();
+        CommonUtils.requestEnd=dateTime;
+        System.out.println("Request End time is " + CommonUtils.requestEnd);
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );
     }
 

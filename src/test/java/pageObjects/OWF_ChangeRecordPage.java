@@ -11,8 +11,8 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String btnSEND = "WIN_0_600002905";
     private static final String ddANSWER= "Answer";
     private static final String dd_OWNER= "Owner*";
-    private static final String btnDOWN = "reg_img_700050252";
-    private static final String btnUP= "reg_img_700050251";
+    private static final String btnDOWN = "WIN_0_700050252";
+    private static final String btnUP= "WIN_0_700050251";
     private static final String ddREQUEST_CATEGORY = "Request Category*";
     private static final String dd_CHANGE_TYPE= "arid_WIN_0_755000000";
     private static final String txt_SEARCH_FILTER_CALENDAR= "combo-1017-inputEl";
@@ -99,6 +99,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
 
     public void clickApprove(){
         clickElement(By.id(btn_APPROVE));
+        switchToDefault();
     }
     public String getAddressOfIssue(){
         return getTextByID(txt_ADDRESSOFISSUE);
@@ -168,11 +169,11 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     }
 
     public String getRequestEnd(){
-        return getTextByID(txt_REQUESTEND);
+        return getAttributeValueById(txt_REQUESTEND);
     }
 
     public String getRequestStart(){
-        return getTextByID(txt_REQUESTSTART);
+        return getAttributeValueById(txt_REQUESTSTART);
     }
 
     public String getServiceAndCustomerImpact(){

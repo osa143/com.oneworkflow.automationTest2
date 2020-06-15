@@ -380,12 +380,16 @@ public class OWF_ChangeRecordPageSteps {
     @Then("user should see {string} email update")
     public void userShouldSeeEmailUpdate(String arg0) {
         try {
-            Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 1), arg0);
-        } catch (Exception e) {
-            changeRecordPage.wait(5000);
-            changeRecordPage.selectTab("Linked Items");
+            changeRecordPage.wait(30000);
             changeRecordPage.selectTab("Notifications");
             changeRecordPage.selectTab("Sent");
+            Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 1), arg0);
+        } catch (Exception e) {
+            changeRecordPage.wait(30000);
+            changeRecordPage.clickRefresh_ticketFresh();
+            changeRecordPage.selectTab("Notifications");
+            changeRecordPage.selectTab("Sent");
+            System.out.println("Trying second time");
             Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 1), arg0);
         }
 
@@ -435,7 +439,9 @@ public class OWF_ChangeRecordPageSteps {
     @When("user gets the schedule time values")
     public void userGetsTheScheduleTimeValues() {
         CommonUtils.requestStart = changeRecordPage.getRequestStart();
+        System.out.println("Request start time is " + CommonUtils.requestStart);
         CommonUtils.requestEnd = changeRecordPage.getRequestEnd();
+        System.out.println("Request End time is " + CommonUtils.requestEnd);
     }
 
 

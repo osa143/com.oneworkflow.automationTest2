@@ -373,6 +373,7 @@ public class OWF_AgentConsolePageSteps {
     @When("user clicks on more filters button")
     public void userClicksOnMoreFiltersButton() {
         agentConsolePage.clickMoreFilters();
+        agentConsolePage.switchToFrameByIndex(2);
     }
 
     @When("user selects status as {string} on user more filters window")

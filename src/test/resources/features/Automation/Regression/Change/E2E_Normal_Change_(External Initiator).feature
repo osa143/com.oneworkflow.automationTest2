@@ -30,6 +30,7 @@ Feature: External Normal Change E2E
 #      Then user should see change record
 #      And user closes change record window
 #      And user closes calendar window
+
     When user selects request type as "Normal Change"
     Then user selects title as "Mobile:IMS Core" on Change record page
     And user selects request category as "Software Installation" on change record page

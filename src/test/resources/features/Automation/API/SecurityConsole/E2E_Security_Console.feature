@@ -57,6 +57,7 @@
       And user enters new GUID as "New Test GUID"
       Then user clicks on submit button
       And user clicks ok on pop up window
+      And user clicks on the "Edit GUID" button
       And user validates new GUID is shown
       When user selects "New Test GUID" request in the table
       And user clicks on the "Disable" button
@@ -68,9 +69,9 @@
       And user validates "Operation" value is cleared
       When user selects preferences as "Remove Column:API Client Name"
       Then user validates "API Client Name" column is not present
-      When user selects preferences as "Remove Column:API Client Name"
+      When user selects preferences as "Remove Column:API Operation"
       Then user validates "API Operation" column is not present
-      When user selects preferences as "Remove Column:API Client Name"
+      When user selects preferences as "Remove Column:Operation Status"
       Then user validates "Operation Status" column is not present
       When user selects preferences as "Reset"
       Then user validates "API Client Name" column is present

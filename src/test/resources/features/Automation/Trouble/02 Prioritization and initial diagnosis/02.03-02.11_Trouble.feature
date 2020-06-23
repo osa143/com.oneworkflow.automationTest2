@@ -1,7 +1,7 @@
 @02.03-02.08_Trouble
   #testcase covers 02.03,02.05,02.07 and 02.08
-  Feature: 02.03-02.08 trouble
-    Scenario: 02.03-02.08 trouble
+  Feature: 02.03-02.11 trouble
+    Scenario: 02.03-02.11 trouble
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
@@ -53,3 +53,7 @@
       And user clicks on save button
       Then user validates that priority changes to "Emergency"
       And change should also be reflected in the timeline as "The Ticket Priority has been updated to :  Emergency" on row 2
+      When user selects search menu as "Open Search Form:Trouble Event"
+      And user switches to window 2
+      And user enters ticket id as "OP-000000539006"
+      Then user validates OLA value is set

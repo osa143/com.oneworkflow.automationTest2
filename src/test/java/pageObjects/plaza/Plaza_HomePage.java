@@ -57,7 +57,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_UNC_LOCAL_PATH= "sp_formfield_include_exclude";
     public static final String txt_Description= "sp_formfield_description";
     public static final String dd_BACK_UP_ADD_CI= "s2id_autogen14";
-    public static final String btn_ADD_ATTACHMENT= "//button[@title='attachment']";
+    public static final String btn_ADD_ATTACHMENT="button[@title='Add attachment']/span";
     public static final String txt_INCLUDE_CI="sp_formfield_include_ci";
     public static final String txt_RETENTION_PERIOD="sp_formfield_retention_period";
     public static final String txt_BACK_UP_DATE_TIME="sp_formfield_date_time";
@@ -482,6 +482,147 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_AT3_CI = "s2id_autogen18_results";
     private static final String dd_PROD_CI = "s2id_autogen15";
     private static final String txt_PROD_CI = "s2id_autogen15_results";
+    private static final String link_FINANCE_ASSURANCE="//img[@alt='Finance & Assurance']";
+    private static final String link_DATABASE = "//*[@id='xcc61d55edb198b00b27fdb11ce961902']/div/div[2]/div[6]/div[4]";
+    private static final String pebble_DNS_DHCP = "//h2[contains(text(),'DNS/DHCP')]";
+    private static final String pebble_FIREWALL_ROUTING_REQUEST = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[12]/div/a";
+    private static final String pebble_LAN_DATA_NET_LAN = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[14]/div/a";
+    private static final String pebble_NETWORK_LOAD_BALANCING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[15]/div/a";
+    private static final String pebble_NETWORK_ROUTING_SWITCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a";
+    private static final String pebble_PROXY = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[18]/div/a";
+    private static final String pebble_REMOTE_ACCESS_VPN_ACS = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[19]/div/a";
+    private static final String pebble_CHANGE_OS_PATCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[19]/div/a";
+    private static final String pebble_MANUAL_OS_PATCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[20]/div/a/div/img";
+    private static final String link_IT_INFRASTRUCTURE = "//*[@id='ddddd28bdb8197042b3cfc16bf961980']";
+    private static final String pebble_ACCESS_RED_HAT_KNOWLEDGEBASE = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a/div/h2";
+    private static final String btn_SUBMIT = "//button[@name='submit']";
+    private static final String btn_SEND = "//input[@value='Send']";
+    private static final String link_PRODUCTS_AND_SERVICES = "//*[contains(text(),'Products & Services')]";
+    private static final String link_ACCOUNT_MANAGEMENT_AND_SERVER_FORM = "//h2[contains(text(),'Account Management - Server')]";
+    private static final String link_APPLICATION = "b49dd9c1db9997446734f1eabf961975";
+    private static final String btn_SHOW_MORE = "//button[contains(text(), 'Show More')]";
+    private static final String link_SUPPORT_HOMEPAGE = "//*[@id='xcab273021b8480d00c1e87fe6e4bcbaf']/div/a";
+    private static final String link_FIREWALL_AND_NETWORK = "c85eddc1db9997446734f1eabf96198a";
+    private static final String link_CLOUD = "7afd99c1db9997446734f1eabf9619be";
+    private static final String link_COMPUTE_AND_OPERATING_SYSTEM = "d56e9dc1db9997446734f1eabf961970";
+    private static final String link_MESSAGING = "00e7f797dbe153006734f1eabf961914";
+    private static final String linkDATABASE = "78d96643dbc197042b3cfc16bf9619ab";
+    private static final String link_DATA_CENTER = "0e0e9dc1db9997446734f1eabf96196a";
+    private static final String link_STORAGE_AND_DATA_PROTECTION = "6d9e9505db9997446734f1eabf96195a";
+    private static final String link_SUPPORT = "xcab273021b8480d00c1e87fe6e4bcbaf";
+
+    public void click_Support(){
+        clickElement(By.xpath(link_SUPPORT));
+    }
+
+    public void click_Storage_And_Data_Protection(){
+        clickElement(By.xpath(link_STORAGE_AND_DATA_PROTECTION));
+    }
+
+    public void click_Data_Center(){
+        clickElement(By.xpath(link_DATA_CENTER));
+    }
+
+    public void click_Database(){
+        clickElement(By.xpath(linkDATABASE));
+    }
+
+    public void clickMessaging(){
+        clickElement(By.xpath(link_MESSAGING));
+    }
+
+    public void clickCompute_And_Operating_System(){
+        clickElement(By.xpath(link_COMPUTE_AND_OPERATING_SYSTEM));
+    }
+
+    public void clickCloud(){
+        clickElement(By.xpath(link_CLOUD));
+    }
+
+    public void clickFirewall_And_Network(){
+        clickElement(By.xpath(link_FIREWALL_AND_NETWORK));
+    }
+
+    public void clickSupport(){
+        clickElement(By.xpath(link_SUPPORT_HOMEPAGE));
+    }
+
+    public void clickShow_More(){
+        clickElement(By.xpath(btn_SHOW_MORE));
+    }
+
+    public void clickApplication(){
+        clickElement(By.xpath(link_APPLICATION));
+    }
+
+    public void clickAccount_Management_And_Server_Form(){
+        clickElement(By.xpath(link_ACCOUNT_MANAGEMENT_AND_SERVER_FORM));
+    }
+
+    public void clickProducts_And_Services(){
+        clickElement(By.xpath(link_PRODUCTS_AND_SERVICES));
+    }
+
+    public void clickSend_Button(){
+        clickElement(By.xpath(btn_SEND));
+    }
+
+    public void clickSubmit_Button(){
+        clickElement(By.xpath(btn_SUBMIT));
+    }
+
+    public void clickAccess_Red_Hat_Knowledgebase(){
+        clickElement(By.xpath(pebble_ACCESS_RED_HAT_KNOWLEDGEBASE));
+    }
+
+    public void clickIT_Infrastructure(){
+        clickElement(By.xpath(link_IT_INFRASTRUCTURE));
+    }
+
+    public void clickManual_OS_Patching(){
+        clickElement(By.xpath(pebble_MANUAL_OS_PATCHING));
+    }
+
+    public void clickChange_OS_Patching(){
+        clickElement(By.xpath(pebble_CHANGE_OS_PATCHING));
+    }
+
+    public void clickRemote_Access (){
+        clickElement(By.xpath(pebble_REMOTE_ACCESS_VPN_ACS));
+    }
+
+    public void clickProxy(){
+        clickElement(By.xpath(pebble_PROXY));
+    }
+
+    public void clickNetwork_Routing_Switching(){
+        clickElement(By.xpath(pebble_NETWORK_ROUTING_SWITCHING));
+    }
+
+    public void clickNetwork_Load_Balancing(){
+        clickElement(By.xpath(pebble_NETWORK_LOAD_BALANCING));
+    }
+
+    public void clickLAN_Data_Net_Lan(){
+        clickElement(By.xpath(pebble_LAN_DATA_NET_LAN));
+    }
+
+    public void clickFirewall_Routing_Request(){
+        clickElement(By.xpath(pebble_FIREWALL_ROUTING_REQUEST));
+    }
+
+    public void clickDNS_DHCP() {
+        clickElement(By.xpath(pebble_DNS_DHCP));
+    }
+
+    public void clickDatabase() {
+        clickElement(By.xpath(link_DATABASE));
+    }
+
+
+    public void clickFinanceAssurance() {
+        clickElement(By.xpath(link_FINANCE_ASSURANCE));
+    }
 
 
     public String getResolutionCode(){

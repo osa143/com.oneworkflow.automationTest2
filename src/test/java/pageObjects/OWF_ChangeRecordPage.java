@@ -505,6 +505,4 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
 
     }
 
-
-
 }

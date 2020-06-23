@@ -812,7 +812,7 @@ public void rightClickOnElement(String cellData){
     }
 
 
-    private static final String btnSAVE = "WIN_0_777505104";
+    private static final String btnSAVE = "WIN_0_700025244";
     public void enterClosureInfo(String closureInfo){
         driver.findElement(By.id(txtCLOSURE_INFO)).sendKeys(closureInfo);
     }

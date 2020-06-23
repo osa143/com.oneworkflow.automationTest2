@@ -24,7 +24,6 @@ public class OWF_AgentConsolePageSteps {
 
     @When("user selects SID console from agent console")
     public void userSelectsSIDConsoleFromAgentConsole() {
-
         agentConsolePage.clickConsoleMenu();
         agentConsolePage.clickMenuItemSIDConsole();
     }
@@ -44,6 +43,8 @@ public class OWF_AgentConsolePageSteps {
 
     @When("user clicks on create problem record")
     public void userClicksOnCreateProblemRecord() {
+
+
         agentConsolePage.clickCreateMenu();
         agentConsolePage.clickMenuItemProblemRecord();
         //agentConsolePage.wait(3000);

@@ -1413,6 +1413,13 @@ public class OWF_ProblemRecordPageSteps {
     public void userCreatesProblemTicketWithBelowDetails(DataTable dataTable) {
         problemRecordPage.createProblemTicket_2(dataTable);
     }
+
+    @Then("{string} shouldn't be visible on problem record form" )
+    public void shouldnTBeVisibleOnProblemRecordForm(String fields) {
+        Assert.assertTrue(problemRecordPage.verifyFieldsInvisible(fields));
+
+
+    }
 }
 
 

@@ -2360,4 +2360,27 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userClicksOnSupportLink() {
         homePage.click_Support();
     }
+
+    @And("user gets plaza OP ticket")
+    public void userGetsPlazaOPTicket() {
+        homePage.wait(30000);
+        try {
+            homePage.getOpTicket_plaza();
+        }
+        catch(Exception e){
+            homePage.wait(5000);
+            homePage.getOpTicket_plaza();
+        }
+    }
+
+
+    @And("user clicks on plaza closure information tab")
+    public void userClicksOnPlazaClosureInformationTab() {
+        homePage.clickClosureInformationTab();
+    }
+
+    @And("user clicks on plaza {string} tab")
+    public void userClicksOnPlazaTab(String tabName) {
+        homePage.clickTab_Plaza(tabName);
+    }
 }

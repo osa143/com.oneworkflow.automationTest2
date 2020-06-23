@@ -58,6 +58,20 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_ACTUAL_SCHEDULE_START= "arid_WIN_0_777021164";
     private static final String txt_ACTUAL_SCHEDULE_END= "arid_WIN_0_777021165";
 
+
+
+
+
+    public boolean verify_OP_Ticket_Description() {
+        String actualDescription = getDescription();
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.ServiceArea)
+                && actualDescription.contains(PlazaValidation.Category_Incident) && actualDescription.contains(PlazaValidation.TypeOfIssue)
+                && actualDescription.contains(PlazaValidation.Subject) && actualDescription.contains(PlazaValidation.Description_Incident))
+        {
+            return true;
+        }
+        return false;
+    }
     public void enterRequestedScheduleEnd(String text){
         clearText(By.id(txt_REQUESTED_SCHEDULE_END));
         enterTextByElement(By.id(txt_REQUESTED_SCHEDULE_END), text);

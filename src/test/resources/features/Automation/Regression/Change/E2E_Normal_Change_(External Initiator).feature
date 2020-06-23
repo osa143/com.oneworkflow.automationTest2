@@ -30,7 +30,6 @@ Feature: External Normal Change E2E
 #      Then user should see change record
 #      And user closes change record window
 #      And user closes calendar window
-
     When user selects request type as "Normal Change"
     Then user selects title as "Mobile:IMS Core" on Change record page
     And user selects request category as "Software Installation" on change record page
@@ -85,7 +84,7 @@ Feature: External Normal Change E2E
     And user validates owner as "ChangeManager"
     Then change should also be reflected in the timeline as "STATUS MODIFIED.  Assignee Profile has changed from  to DC IMS Core. Request Status has changed from New to Assigned."
     And user gets ticket value
-    And user logsOut
+    And user logsOut from One workflow
     And user goes back to login page
     When user logs in with valid username "DC IMS Core_auto" and password as "Test@1234"
     And user successfully logged in to OneWorkflow and agent console should be displayed
@@ -127,8 +126,8 @@ Feature: External Normal Change E2E
     Then user should see "Acknowledged" email update
     When user changes status to "Approval Requested"
     And user clicks on save button
-      #And change should also be reflected in the timeline as "Processing of the following notification event(s) started: Approvals Notification messages will be displayed on the Notifications tab."
-      #And change should also be reflected in the timeline as "Request Status has changed from Analysis to Approval Requested."
+    #And change should also be reflected in the timeline as "Processing of the following notification event(s) started: Approvals Notification messages will be displayed on the Notifications tab. " on row 60
+    #And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Analysis to Approval Requested. " on row 59
     Then user validates ticket status as "Approval Requested"
     And user validates availability of tabs "Approval"
     And user waits 2 secs
@@ -158,15 +157,15 @@ Feature: External Normal Change E2E
     Then user switches to frame
     And user enters "Change can be approved right away" in comments field
     And user clicks on approve button
+    Then user switches to window 2
+    And user clicks on save button and closes confirmation
     And user clicks on ticket refresh button
-    And user waits
     Then user validates ticket status as "Approved"
     When user clicks on "Notifications" tab
     And user clicks on "Sent" tab
     Then user should see "Approved" email update
     When user changes status to "Schedule Requested"
     And user clicks on save button
-    #Then user validates changes can be made on the ticket ##Not sure how this is applicable here##
     And user clicks on timeline tab
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approved to Schedule Requested. "
     When user clears description field
@@ -179,7 +178,7 @@ Feature: External Normal Change E2E
     Then user clicks on assignment under sections
     And user should see assigned profile as "ChangeImplementationControl"
     And user validates assignee is "Change Impl Contr"
-    When user logsOut
+    When user logsOut from One workflow
     And user goes back to login page
     Then user logs in with valid username "ChangeImplementationControl1" and password as "Test@1234"
     And user successfully logged in to OneWorkflow and agent console should be displayed
@@ -221,7 +220,7 @@ Feature: External Normal Change E2E
     And user clicks on yes on warning window
     Then user clicks on save button
     And user validates ticket status as "Completed"
-    When user logsOut
+    When user logsOut from One workflow
     And user goes back to login page
     Then user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
     And user successfully logged in to OneWorkflow and agent console should be displayed

@@ -1286,6 +1286,15 @@ public class OWF_TroubleEventPageSteps {
         troubleEventPage.setPreferences("Impact:Clear");
     }
 
+    @And("user clicks on save button and closes confirmation")
+    public void userClicksOnSaveButtonAndClicksClosesConfirmation() {
+        troubleEventPage.clickSaveButton();
+        troubleEventPage.switchToFrameByIndex(2);
+        troubleEventPage.wait(3000);
+        troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
+        troubleEventPage.switchToDefault();
+    }
+
     @And("user validates closure info as {string}")
     public void userValidatesClosureInfoAs(String expectedClosureInfo) {
         Assert.assertEquals(troubleEventPage.getClosureInfo(), expectedClosureInfo);

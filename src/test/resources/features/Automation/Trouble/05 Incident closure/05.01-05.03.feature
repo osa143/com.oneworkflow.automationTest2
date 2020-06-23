@@ -1,7 +1,7 @@
-@05.03  @Incident1 @05
-  #passed
-  Feature: Service restored date and time field is mandatory before a ticket can be closed
-    Scenario: Service restored date and time field is mandatory before a ticket can be closed
+@05.01-05.03
+
+  Feature: 05.01-05.03 trouble
+    Scenario: 05.01-05.03 trouble
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
@@ -15,6 +15,7 @@
       And user enters description as "Test case 05.03 Event End Time"
       And user clicks on save button
       Then ticket should be created and status should be assigned
+      And user adds CI "SE_EPG_FREEPG1" to the ticket with impact level "Degradation of Service"
       When user changes status to "Cleared" on trouble event page
       And user selects fault position as "N/A:N/A" on trouble event page
       And user selects cause as "N/A:N/A:N/A" on trouble event page
@@ -26,5 +27,7 @@
       When user enters event end time as current time
       And user clicks on save button
       Then user validates ticket status as "Cleared"
-      And user clicks on save button and closes warning messages
-
+      When user changes status to "Closed"
+      And user clicks on save button
+      Then user validates ticket status as "Closed"
+      And user validates closure info is present

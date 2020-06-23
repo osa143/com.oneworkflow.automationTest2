@@ -12,6 +12,7 @@ import java.io.IOException;
 
 public class Hooks {
 
+
     @After
     public void Teardown(Scenario scenario) throws IOException, InterruptedException {
 
@@ -31,5 +32,20 @@ public class Hooks {
 //            DriverFactory.getInstance().quit();
 
        }
+
+
+    public int addingTwoNumbers(int b,int c){
+
+        int sum=b+c;
+        return sum;
+    }
+
+    public int multiplyThreeNumbers (int a, int b,int c){
+        int result=a*b*c;
+        return result;
+    }
+
+
+
     }
 

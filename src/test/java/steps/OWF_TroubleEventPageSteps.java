@@ -1294,6 +1294,16 @@ public class OWF_TroubleEventPageSteps {
         troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
         troubleEventPage.switchToDefault();
     }
+
+    @And("user validates closure info as {string}")
+    public void userValidatesClosureInfoAs(String expectedClosureInfo) {
+        Assert.assertEquals(troubleEventPage.getClosureInfo(), expectedClosureInfo);
+    }
+
+    @And("user validates action field as {string}")
+    public void userValidatesActionFieldAs(String expectedAction) {
+        Assert.assertEquals(troubleEventPage.getAction(), expectedAction);
+    }
 }
 
 

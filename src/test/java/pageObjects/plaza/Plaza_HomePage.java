@@ -57,7 +57,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_UNC_LOCAL_PATH= "sp_formfield_include_exclude";
     public static final String txt_Description= "sp_formfield_description";
     public static final String dd_BACK_UP_ADD_CI= "s2id_autogen14";
-    public static final String btn_ADD_ATTACHMENT= "//button[@title='attachment']";
+    public static final String btn_ADD_ATTACHMENT="button[@title='Add attachment']/span";
     public static final String txt_INCLUDE_CI="sp_formfield_include_ci";
     public static final String txt_RETENTION_PERIOD="sp_formfield_retention_period";
     public static final String txt_BACK_UP_DATE_TIME="sp_formfield_date_time";
@@ -291,7 +291,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String div_PDB_Affected_COUNTRY= "sp_formfield_pdb_country";
     private static final String txt_ASSIGNMENT_GROUP= "sys_display.incident.assignment_group";
     private static final String txt_ASSIGNED_TO= "sys_display.incident.assigned_to";
-    private static final String txt_STATE= "incident.state";
+    private static final String txt_STATE= "//*[@id='element.u_internal_case_management.state']/div[2]";
     private static final String btn_CLOSE_INCIDENT= "close_incident";
     private static final String dd_SYSTEMNAME_HAITI_DATABASE = "s2id_sp_formfield_h2_name";
     private static final String dd_NETWORKSECURITY_HAITI= "s2id_sp_formfield_h2_name";
@@ -345,7 +345,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_TOUCHPOINT_UPDATE_DESCRIPTION = "sp_formfield_sr45_v_description";
     private static final String txt_TOUCHPOINT_PLANNED_START_AND_TIME = "sp_formfield_sr45_v_planned_start_date";
     private static final String dd_COMPUTE_SYSTEMNAME_IN_HAITI = "s2id_sp_formfield_h2_name";
-    private static final String GET_RESOLUTION_CODE = "incident.close_code";
+    private static final String GET_RESOLUTION_CODE = "//*[@id='element.incident.close_code']/div[2]";
     private static final String GET_RESOLUTION_NOTES = "incident.close_notes";
     private static final String txt_COMPUTE_SYSTEM = "select2-results-22";
     private static final String txt_TEXT_BOX = "//input[@type='text']";
@@ -391,7 +391,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_OW_ATTACHMENT_NOTIFICATION_PLAZA = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p";
     private static final String btn_PDB_AFFECTED_PERSON = "sp_formfield_pdb_affectedPerson";
     private static final String dd_SYSTEM_NAME_HAITI = "select2-results-12";
-    private static final String txt_GET_OP_TICKET = "//*[@id=\"xba9dcc6fdb3ad7802b3cfc16bf96195f\"]/div/div/div[2]/div/div/ul/li[2]/div[2]/div/div[2]/p";
+    private static final String txt_GET_OP_TICKET = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[2]/div[2]/div/div[2]/p";
     private static final String txt_AFFECTED_PERSONS_PDB = "sp_formfield_pdb_affPerDescChecksp_formfield_pdb_affPerDescCheck";
     private static final String txt_NATURE_AND_CONTENT = "s2id_sp_formfield_pdb_natureOfContent";
     private static final String txt_AFFECTED_PERSONS = "select2-chosen-3";
@@ -482,13 +482,166 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_AT3_CI = "s2id_autogen18_results";
     private static final String dd_PROD_CI = "s2id_autogen15";
     private static final String txt_PROD_CI = "s2id_autogen15_results";
+    private static final String link_FINANCE_ASSURANCE="//img[@alt='Finance & Assurance']";
+    private static final String link_DATABASE = "//*[@id='xcc61d55edb198b00b27fdb11ce961902']/div/div[2]/div[6]/div[4]";
+    private static final String pebble_DNS_DHCP = "//h2[contains(text(),'DNS/DHCP')]";
+    private static final String pebble_FIREWALL_ROUTING_REQUEST = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[12]/div/a";
+    private static final String pebble_LAN_DATA_NET_LAN = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[14]/div/a";
+    private static final String pebble_NETWORK_LOAD_BALANCING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[15]/div/a";
+    private static final String pebble_NETWORK_ROUTING_SWITCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a";
+    private static final String pebble_PROXY = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[18]/div/a";
+    private static final String pebble_REMOTE_ACCESS_VPN_ACS = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[19]/div/a";
+    private static final String pebble_CHANGE_OS_PATCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[19]/div/a";
+    private static final String pebble_MANUAL_OS_PATCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[20]/div/a/div/img";
+    private static final String link_IT_INFRASTRUCTURE = "//*[@id='ddddd28bdb8197042b3cfc16bf961980']";
+    private static final String pebble_ACCESS_RED_HAT_KNOWLEDGEBASE = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a/div/h2";
+    private static final String btn_SUBMIT = "//button[@name='submit']";
+    private static final String btn_SEND = "//input[@value='Send']";
+    private static final String link_PRODUCTS_AND_SERVICES = "//*[contains(text(),'Products & Services')]";
+    private static final String link_ACCOUNT_MANAGEMENT_AND_SERVER_FORM = "//h2[contains(text(),'Account Management - Server')]";
+    private static final String link_APPLICATION = "b49dd9c1db9997446734f1eabf961975";
+    private static final String btn_SHOW_MORE = "//button[contains(text(), 'Show More')]";
+    private static final String link_SUPPORT_HOMEPAGE = "//*[@id='xcab273021b8480d00c1e87fe6e4bcbaf']/div/a";
+    private static final String link_FIREWALL_AND_NETWORK = "c85eddc1db9997446734f1eabf96198a";
+    private static final String link_CLOUD = "7afd99c1db9997446734f1eabf9619be";
+    private static final String link_COMPUTE_AND_OPERATING_SYSTEM = "d56e9dc1db9997446734f1eabf961970";
+    private static final String link_MESSAGING = "00e7f797dbe153006734f1eabf961914";
+    private static final String linkDATABASE = "78d96643dbc197042b3cfc16bf9619ab";
+    private static final String link_DATA_CENTER = "0e0e9dc1db9997446734f1eabf96196a";
+    private static final String link_STORAGE_AND_DATA_PROTECTION = "6d9e9505db9997446734f1eabf96195a";
+    private static final String link_SUPPORT = "xcab273021b8480d00c1e87fe6e4bcbaf";
 
+    public void click_Support(){
+        clickElement(By.xpath(link_SUPPORT));
+    }
+
+    public void click_Storage_And_Data_Protection(){
+        clickElement(By.xpath(link_STORAGE_AND_DATA_PROTECTION));
+    }
+
+    public void click_Data_Center(){
+        clickElement(By.xpath(link_DATA_CENTER));
+    }
+
+    public void click_Database(){
+        clickElement(By.xpath(linkDATABASE));
+    }
+
+    public void clickMessaging(){
+        clickElement(By.xpath(link_MESSAGING));
+    }
+
+    public void clickCompute_And_Operating_System(){
+        clickElement(By.xpath(link_COMPUTE_AND_OPERATING_SYSTEM));
+    }
+
+    public void clickCloud(){
+        clickElement(By.xpath(link_CLOUD));
+    }
+
+    public void clickFirewall_And_Network(){
+        clickElement(By.xpath(link_FIREWALL_AND_NETWORK));
+    }
+
+    public void clickSupport(){
+        clickElement(By.xpath(link_SUPPORT_HOMEPAGE));
+    }
+
+    public void clickShow_More(){
+        clickElement(By.xpath(btn_SHOW_MORE));
+    }
+
+    public void clickApplication(){
+        clickElement(By.xpath(link_APPLICATION));
+    }
+
+    public void clickAccount_Management_And_Server_Form(){
+        clickElement(By.xpath(link_ACCOUNT_MANAGEMENT_AND_SERVER_FORM));
+    }
+
+    public void clickProducts_And_Services(){
+        clickElement(By.xpath(link_PRODUCTS_AND_SERVICES));
+    }
+
+    public void clickSend_Button(){
+        clickElement(By.xpath(btn_SEND));
+    }
+
+    public void clickSubmit_Button(){
+        clickElement(By.xpath(btn_SUBMIT));
+    }
+
+    public void clickAccess_Red_Hat_Knowledgebase(){
+        clickElement(By.xpath(pebble_ACCESS_RED_HAT_KNOWLEDGEBASE));
+    }
+
+    public void clickIT_Infrastructure(){
+        clickElement(By.xpath(link_IT_INFRASTRUCTURE));
+    }
+
+    public void clickManual_OS_Patching(){
+        clickElement(By.xpath(pebble_MANUAL_OS_PATCHING));
+    }
+
+    public void clickChange_OS_Patching(){
+        clickElement(By.xpath(pebble_CHANGE_OS_PATCHING));
+    }
+
+    public void clickRemote_Access (){
+        clickElement(By.xpath(pebble_REMOTE_ACCESS_VPN_ACS));
+    }
+
+    public void clickProxy(){
+        clickElement(By.xpath(pebble_PROXY));
+    }
+
+    public void clickNetwork_Routing_Switching(){
+        clickElement(By.xpath(pebble_NETWORK_ROUTING_SWITCHING));
+    }
+
+    public void clickNetwork_Load_Balancing(){
+        clickElement(By.xpath(pebble_NETWORK_LOAD_BALANCING));
+    }
+
+    public void clickLAN_Data_Net_Lan(){
+        clickElement(By.xpath(pebble_LAN_DATA_NET_LAN));
+    }
+
+    public void clickFirewall_Routing_Request(){
+        clickElement(By.xpath(pebble_FIREWALL_ROUTING_REQUEST));
+    }
+
+    public void clickDNS_DHCP() {
+        clickElement(By.xpath(pebble_DNS_DHCP));
+    }
+
+    public void clickDatabase() {
+        clickElement(By.xpath(link_DATABASE));
+    }
+
+
+    public void clickFinanceAssurance() {
+        clickElement(By.xpath(link_FINANCE_ASSURANCE));
+    }
+    private static final String tab_CLOSURE_INFORMATION= "//*[@id='tabs2_section']/span[5]/span[1]/span[2]";
+
+    public void clickTab_Plaza(String tabName){
+
+      driver.findElements(By.className("tab_caption_text")).stream().filter(element -> element.getText().equals(tabName)).findFirst().orElse(null).click();
+
+        }
+
+
+    public void clickClosureInformationTab(){
+        clickElement(By.xpath(tab_CLOSURE_INFORMATION));
+    }
 
     public String getResolutionCode(){
-        return getTextByElement(By.id(GET_RESOLUTION_CODE));
+        return getTextByElement(By.xpath(GET_RESOLUTION_CODE));
     }
 
     public String getResolutionNotes(){
+        wait(500);
         return getTextByElement(By.id(GET_RESOLUTION_NOTES));
     }
 
@@ -823,14 +976,20 @@ public class Plaza_HomePage extends BasePage {
 
     public void clickCloseIncident(){
        clickElement(By.id(btn_CLOSE_INCIDENT));
+       wait(1000);
    }
    public String getIncidentState(){
-       return getAttributeValueById(txt_STATE);
+       return getTextByElement(By.xpath(txt_STATE));
    }
     public void enterAssignmentGroup_PlazaIncident(String text){
         enterTextByElement(By.id(txt_ASSIGNMENT_GROUP), text);
-    } public void enterAssignedTo_PlazaIncident(String text){
+    }
+    public void enterAssignedTo_PlazaIncident(String text){
         enterTextByElement(By.id(txt_ASSIGNED_TO), text);
+        wait(500);
+        WebElement element=driver.switchTo().activeElement();
+        element.sendKeys(Keys.ARROW_DOWN);
+        element.sendKeys(Keys.ENTER);
     }
 
     public boolean verifyINCisPresent(){
@@ -857,16 +1016,20 @@ public class Plaza_HomePage extends BasePage {
         return getTextByElement(By.xpath(txt_SECOND_TIMELINE_MESSAGE));
     }
     public void selectCategory_plazaIncident(String dropDownValue){
+        PlazaValidation.Category_Incident=dropDownValue;
         selectDropdown(By.id(dd_PLAZA_INCIDENT_CATEGORY), By.id(dd_PLAZA_INCIDENT_CATEGORY_RESULTS),  dropDownValue);
     }
     public void selectTypeOfIssue_plazaIncident(String dropDownValue){
+        PlazaValidation.TypeOfIssue=dropDownValue;
         selectDropdown(By.id(dd_PLAZA_INCIDENT_TYPE_OF_ISSUE), By.id(dd_PLAZA_INCIDENT_TYPE_OF_ISSUE_RESULTS),  dropDownValue);
     }
 
    public void enterSubject_PlazaIncident(String text){
+        PlazaValidation.Subject=text;
         enterTextByElement(By.id(txt_PLAZA_INCIDENT_SUBJECT), text);
    }
     public void enterDescribeQuestionOrCase_plazaIncident(String text){
+        PlazaValidation.Description_Incident=text;
         enterTextByElement(By.id(txt_PLAZA_INCIDENT_DESCRIPTION), text);
     }
     public void clickNoAccessToMail(){
@@ -1011,7 +1174,8 @@ public class Plaza_HomePage extends BasePage {
         enterTextByElement(By.id(txt_LINUX_UNIX_SERVER_DESCRIPTION), text);
     }
     public void selectServiceArea(String text){
-        selectDropdownByTagNameDiv(By.id(dd_SERVICE_AREA), By.id(txt_SERVICE_AREA_RESULTS), text);
+        PlazaValidation.ServiceArea=text;
+        selectDropdownByEnterText(dd_SERVICE_AREA, text);
     }
 
     public void selectTypeOfServer(String text){
@@ -2342,6 +2506,15 @@ public class Plaza_HomePage extends BasePage {
         Element.sendKeys(Keys.ENTER);
         wait(700);
         //selectDropdownByTagNameDiv(By.id(dd_SYSTEM_ID), By.id("select2-results-13"),  dropdownName);
+    }
+    public void selectDropdownByEnterText(String DropDownID, String DropdownValue){
+        clickElement(By.id(DropDownID));
+        WebElement Element=findElement(By.xpath("//input[@type='text']"));
+        Element.sendKeys(DropdownValue);
+        wait(700);
+        // Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
+        wait(700);
     }
 
 

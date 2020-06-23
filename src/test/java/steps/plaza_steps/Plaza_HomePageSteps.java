@@ -71,7 +71,8 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Finance & Assurance")
     public void userClicksOnFinanceAssurance() {
-        clickElement(By.xpath("//img[@alt='Finance & Assurance']"));
+        homePage.clickFinanceAssurance();
+
     }
 
     @And("user gets plaza request id")
@@ -267,8 +268,8 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user clicks on add attachment in plaza")
     public void userClicksOnAddAttachmentInPlaza() {
-        //homePage.clickAddAttachment();
-        homePage.clickElement(By.xpath("//button[@title='Add attachment']/span"));
+        homePage.clickAddAttachment();
+
     }
 
     @And("user enters Backup one time UNC Local path as {string}")
@@ -445,7 +446,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user clicks on Database")
     public void userClicksOnDatabase() {
-        clickElement(By.xpath("//*[@id=\"xcc61d55edb198b00b27fdb11ce961902\"]/div/div[2]/div[6]/div[4]"));
+        homePage.clickDatabase();
     }
 
     @And("user selects Database Type as {string}")
@@ -706,7 +707,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on DNS DHCP pebble")
     public void userClicksOnDNSDHCPPebble() {
-        clickElement(By.xpath("//h2[contains(text(),'DNS/DHCP')]"));
+        homePage.clickDNS_DHCP();
     }
 
     @And("user enters Network Security Add Modify Remove DNS description as {string}")
@@ -716,7 +717,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Firewall Routing Request pebble")
     public void userClicksOnFirewallRoutingRequestPebble() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[12]/div/a"));
+        homePage.clickFirewall_Routing_Request();
     }
 
     @Then("user selects New Change Service Request Name as {string}")
@@ -782,7 +783,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on LAN Data Net LAN pebble")
     public void userClicksOnLANDataNetLANPebble() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[14]/div/a"));
+        homePage.clickLAN_Data_Net_Lan();
     }
 
     @And("user enters Network Security LAN request as {string}")
@@ -797,9 +798,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Network Load Balancing pebble")
     public void userClicksOnNetworkLoadBalancingPebble() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[15]/div/a"));
-
-
+        homePage.clickNetwork_Load_Balancing();
     }
 
     @And("user enters Network Security Load request as {string}")
@@ -814,7 +813,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Network Routing Switching pebble")
     public void userClicksOnNetworkRoutingSwitchingPebble() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a"));
+        homePage.clickNetwork_Routing_Switching();
     }
 
     @Then("user selects New Switch Service Request Name as {string}")
@@ -889,7 +888,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Proxy pebble")
     public void userClicksOnProxyPebble() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[18]/div/a"));
+        homePage.clickProxy();
     }
 
 
@@ -1199,7 +1198,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Remote Access \\(VPN ACS)")
     public void userClicksOnRemoteAccessVPNACS() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[19]/div/a"));
+        homePage.clickRemote_Access();
     }
 
     @And("user enters network security remote request as {string}")
@@ -1217,10 +1216,6 @@ public class Plaza_HomePageSteps extends BasePage {
         homePage.selectNetworkSecurity_firewall_new_change_service_request(arg0);
     }
 
-    @When("user clicks on Network Routing Switching")
-    public void userClicksOnNetworkRoutingSwitching() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a"));
-    }
 
     @And("user enters network security switch port request as {string}")
     public void userEntersNetworkSecuritySwitchPortRequestAs(String arg0) {
@@ -1309,7 +1304,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Change OS Patching")
     public void userClicksOnChangeOSPatching() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[19]/div/a"));
+        homePage.clickChange_OS_Patching();
     }
 
     @And("user enters operating system manual request as {string}")
@@ -1334,7 +1329,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Manual OS Patching")
     public void userClicksOnManualOSPatching() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[20]/div/a/div/img"));
+        homePage.clickManual_OS_Patching();
     }
 
     @And("user enters operating system manual os patching request as {string}")
@@ -1773,8 +1768,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user clicks on IT Infrastructure dropdown")
     public void userClicksOnITInfrastructureDropdown() {
-        clickElement(By.xpath("//*[@id=\"ddddd28bdb8197042b3cfc16bf961980\"]"));
-
+        homePage.clickIT_Infrastructure();
     }
 
 
@@ -1805,7 +1799,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Access to Red Hat Knowledgebase")
     public void userClicksOnAccessToRedHatKnowledgebase() {
-        clickElement(By.xpath("//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a/div/h2"));
+        homePage.clickAccess_Red_Hat_Knowledgebase();
     }
 
     @Then("user validates plaza ticket has update to timeline")
@@ -1899,7 +1893,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @Then("user clicks on submit button on plaza form")
     public void userClicksOnSubmitButtonOnPlazaForm() {
-        clickElement(By.xpath("//button[@name='submit']"));
+        homePage.clickSubmit_Button();
         homePage.wait(5000);
     }
 
@@ -1915,7 +1909,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user clicks on plaza send button")
     public void userClicksOnPlazaSendButton() {
-        clickElement(By.xpath("//input[@value='Send']"));
+        homePage.clickSend_Button();
     }
 
 
@@ -2072,7 +2066,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on Products & Services")
     public void userClicksOnProductsServices() {
-        homePage.clickElement(By.xpath("//*[contains(text(),'Products & Services')]"));
+        homePage.clickProducts_And_Services();
     }
 
     @And("user clicks on {string} under IT Infrastructure")
@@ -2273,7 +2267,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on account management and server form")
     public void userClicksOnAccountManagementAndServerForm() {
-        clickElement(By.xpath("//h2[contains(text(),'Account Management - Server')]"));
+        homePage.clickAccount_Management_And_Server_Form();
     }
 
     @And("user enters host service group name as {string}")
@@ -2283,12 +2277,12 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user clicks on application under IT Infrastructure dropdown")
     public void userClicksOnApplicationUnderITInfrastructureDropdown() {
-        clickElementById("b49dd9c1db9997446734f1eabf961975");
+        homePage.clickApplication();
     }
 
     @And("user clicks on show more button")
     public void userClicksOnShowMoreButton() {
-        clickElement(By.xpath("//button[contains(text(), 'Show More')]"));
+        homePage.clickShow_More();
     }
 
     @And("user selects service area as {string}")
@@ -2298,7 +2292,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks support on plaza homepage")
     public void userClicksSupportOnPlazaHomepage() {
-        clickElement(By.xpath("//*[@id='xcab273021b8480d00c1e87fe6e4bcbaf']/div/a"));
+        homePage.clickSupport();
     }
 
     @And("user selects compute and operating system system name in haiti as {string}")
@@ -2308,37 +2302,37 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user clicks on firewall & network under IT Infrastructure dropdown")
     public void userClicksOnFirewallNetworkUnderITInfrastructureDropdown() {
-        clickElementById("c85eddc1db9997446734f1eabf96198a");
+        homePage.clickFirewall_And_Network();
     }
 
     @And("user clicks on cloud under IT Infrastructure dropdown")
     public void userClicksOnCloudUnderITInfrastructureDropdown() {
-        clickElementById("7afd99c1db9997446734f1eabf9619be");
+        homePage.clickCloud();
     }
 
     @And("user clicks on compute & operating system under IT Infrastructure dropdown")
     public void userClicksOnComputeOperatingSystemUnderITInfrastructureDropdown() {
-        clickElementById("d56e9dc1db9997446734f1eabf961970");
+        homePage.clickCompute_And_Operating_System();
     }
 
     @And("user clicks on messaging under IT Infrastructure dropdown")
     public void userClicksOnMessagingUnderITInfrastructureDropdown() {
-        clickElementById("00e7f797dbe153006734f1eabf961914");
+        homePage.clickMessaging();
     }
 
     @And("user clicks on database under IT Infrastructure")
     public void userClicksOnDatabaseUnderITInfrastructure() {
-        clickElementById("78d96643dbc197042b3cfc16bf9619ab");
+        homePage.click_Database();
     }
 
     @And("user clicks on data center under IT Infrastructure dropdown")
     public void userClicksOnDataCenterUnderITInfrastructureDropdown() {
-        clickElementById("0e0e9dc1db9997446734f1eabf96196a");
+        homePage.click_Data_Center();
     }
 
     @And("user clicks on storage & data protection under IT Infrastructure")
     public void userClicksOnStorageDataProtectionUnderITInfrastructure() {
-        clickElementById("6d9e9505db9997446734f1eabf96195a");
+        homePage.click_Storage_And_Data_Protection();
     }
 
     @And("user validates resolution notes as {string}")
@@ -2364,6 +2358,29 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on support link")
     public void userClicksOnSupportLink() {
-        homePage.clickElementById("xcab273021b8480d00c1e87fe6e4bcbaf");
+        homePage.click_Support();
+    }
+
+    @And("user gets plaza OP ticket")
+    public void userGetsPlazaOPTicket() {
+        homePage.wait(30000);
+        try {
+            homePage.getOpTicket_plaza();
+        }
+        catch(Exception e){
+            homePage.wait(5000);
+            homePage.getOpTicket_plaza();
+        }
+    }
+
+
+    @And("user clicks on plaza closure information tab")
+    public void userClicksOnPlazaClosureInformationTab() {
+        homePage.clickClosureInformationTab();
+    }
+
+    @And("user clicks on plaza {string} tab")
+    public void userClicksOnPlazaTab(String tabName) {
+        homePage.clickTab_Plaza(tabName);
     }
 }

@@ -15,15 +15,12 @@
       And user selects "Application Error" under plaza type of issue
       And user enters "Test OW OP Ticket" in the plaza subject field
       And user enters "Test OW OP Ticket" in the plaza describe field
-      And user selects No under access to email radio buttons
       Then user clicks on submit button on plaza form
       And user gets plaza request id
       And user clicks on plaza request id
-      And user validates internal case management form opens
-      Then user validates plaza first timeline message as "This Incident was raised on behalf of Test Auto from "
-      And user validates plaza second timeline message as "An incident copy creation has been forwarded to OWF successfully"
-      And user waits 10 secs
-      #And user should see incident ticket update in plaza
+      And user gets plaza OP ticket
+      And user clicks on main page refresh
+      And user waits 30 secs
       And user enters "Test Update" in the ticket timeline
       And user clicks on plaza send button
 #      When user clicks on shown ICM number

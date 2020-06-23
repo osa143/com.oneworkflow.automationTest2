@@ -1,8 +1,8 @@
 @1.02-1.05Trouble
   #test case covers 01.02,01.03,01.04,01.05 and 01.17.
 
-  Feature: 01.02-01.05 trouble
-    Scenario: 01.02-01.05 trouble
+  Feature: 01.02-01.05 + 01.09 and 01.17 trouble
+    Scenario: 01.02-01.05 + 01.09 and 01.17 trouble
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
@@ -39,3 +39,14 @@
       And user changes event start time -1 day in the past
       And user clicks on save button
       Then ticket should be created and status should be assigned
+      When user clicks on attachments under sections
+      And  user adds attachment and verifies under "internal"
+        | summary   | description | fullFilePath       | attachments |
+        | Test JPEG | Test JPEG   | Test JPEG FILE.jpg | 1           |
+        | Test PNG  | Test PNG    | Test PNG FILE.png  | 2           |
+        | Test PDF  | Test PDF    | Test PDF FILE.pdf  | 3           |
+        | Test WORD | Test WORD   | Test WORD FILE.docx| 4           |
+        | Test EXCEL| Test EXCEL  | Test XLS FILE.xls  | 5           |
+        | Test PPT  | Test PPT    | Test PPT FILE.pptx | 6           |
+      Then user clicks save button
+

@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import javax.xml.bind.SchemaOutputResolver;
 import java.util.List;
 
 public class OWF_AgentConsolePage extends BasePage {
@@ -431,7 +432,6 @@ public class OWF_AgentConsolePage extends BasePage {
         selectMainMenu(menuForCONSOLE);
 
     }
-
 
     public void clickNavUserMenu() {
         selectMainMenu(menuForNAV_USERNAME);

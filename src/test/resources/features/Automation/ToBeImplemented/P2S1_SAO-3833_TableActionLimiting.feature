@@ -25,7 +25,8 @@ Feature: user validates limit on table actions
     Then user selects title as "Mobile:CS Core (Voice)" on Change record page
     And user selects request category as "Software Installation" on change record page
     And user enters description as "TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator)"
-    And user enters reason field as "Regression"And user selects priority as "Critical"
+    And user enters reason field as "Regression"
+    And user selects priority as "Critical"
     And user enters "Privacy Data: Just Testing" in the change builder field
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
     And user enters start time as 24 hours fast from current sweden time

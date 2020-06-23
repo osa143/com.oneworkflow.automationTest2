@@ -59,7 +59,10 @@
       When user enters ticket in ticket ID+ field
       And user clicks on the search button on select target request
       And user clicks on accept button
+      When user clicks on open checkbox under linked items tab
       Then user validates 1 linked ticket availability
+      When user clicks on cleared checkbox under linked items tab
+      Then user validates 0 linked ticket availability
       And user clicks on linked items tab
       And user selects target application first dropdown as "OS3 - Change"
       And user selects target application second dropdown as "Caused by"
@@ -69,5 +72,8 @@
       When user enters change ticket in ticket ID+ field
       And user clicks on the search button on select target request
       And user clicks on accept button
+      When user clicks on open checkbox under linked items tab
       Then user validates 2 linked ticket availability
+      When user clicks on cleared checkbox under linked items tab
+      Then user validates 0 linked ticket availability
 

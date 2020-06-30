@@ -429,6 +429,7 @@ public class OWF_AgentConsolePageSteps {
 
     @When("user sets the preferences as {string}")
     public void userSetsThePreferencesAs(String arg0) {
+
         agentConsolePage.clickPreferences();
         agentConsolePage.setPreferences(arg0);
     }
@@ -657,6 +658,7 @@ public class OWF_AgentConsolePageSteps {
     public void userClicksSaveButtonOnMyAccountWindow() {
         agentConsolePage.clickSaveButton_MyAccount();
     }
+
 }
 
 

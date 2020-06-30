@@ -1,6 +1,6 @@
 @E2E_Security_Console
 
-  Feature: E2E verification of the API security console
+    Feature: E2E verification of the API security console
     Scenario: E2E verification of the API security console
 
       When user is on the OneWorkflow login page for security console

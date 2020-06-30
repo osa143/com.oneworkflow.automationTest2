@@ -378,6 +378,7 @@ public class OWF_AgentConsolePage extends BasePage {
         driver.findElement(By.id(table_ID)).findElement(By.xpath("//a[contains(text(),'Preferences')]")).click();
     }
 
+
     public void acceptAlert(){
         driver.switchTo().alert().accept();
     }

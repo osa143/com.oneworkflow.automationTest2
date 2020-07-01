@@ -82,5 +82,6 @@ public class OWF_SIDConsolePageSteps {
     public void userValidatesCISForAllCountries(String colValues) {
         Assert.assertTrue(sidConsolePage.verifyCISForAllCountries("Name", colValues));
     }
+
 }
 

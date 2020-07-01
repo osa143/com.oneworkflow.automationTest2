@@ -26,12 +26,12 @@
       And user selects accountable organisation as "CA_Infra"
       And multiple menu options "CA_Infra:CA_IT:CA_Provider:(clear)" should be available
       And User selects "Accountable Org." as dropdownValue and should see values for "notreadonly"
-        | DropdownValue | DropdownValuesToBePresent|
-        | CA_NSD        | IP:ServCore |
-        | DK_NSD        | IP          |
-        | EX            | CustFault   |
-        | FI_Infra      | CableSites  |
-        | InfraSE       | CableSites:NCS:PSTN |
+        | DropdownValue | DropdownValuesToBePresent |
+        | CA_NSD        | IP:ServCore               |
+        | DK_NSD        | IP                        |
+        | EX            | CustFault                 |
+        | FI_Infra      | CableSites                |
+        | InfraSE       | CableSites:NCS:PSTN       |
         | IT            | CustEng:EntServ:Infra:OSS |
         | NO_Infra      | CableSites                |
         | NO_IT         | CableSites                |
@@ -44,12 +44,12 @@
       And user selects affected organisation as "CA_IT"
       Then user clicks edit affected org button
       And User selects "Affected Orgs." as dropdownValue and should see values for "notreadonly"
-        | DropdownValue | DropdownValuesToBePresent|
-        | CA_NSD        | IP:ServCore |
-        | DK_NSD        | IP          |
-        | EX            | CustFault   |
-        | FI_Infra      | CableSites  |
-        | InfraSE       | CableSites:NCS:PSTN |
+        | DropdownValue | DropdownValuesToBePresent |
+        | CA_NSD        | IP:ServCore               |
+        | DK_NSD        | IP                        |
+        | EX            | CustFault                 |
+        | FI_Infra      | CableSites                |
+        | InfraSE       | CableSites:NCS:PSTN       |
         | IT            | CustEng:EntServ:Infra:OSS |
         | NO_Infra      | CableSites                |
         | NO_IT         | CustEnd                   |

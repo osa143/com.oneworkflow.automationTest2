@@ -3,17 +3,16 @@
     Feature: E2E verification of the API security console
     Scenario: E2E verification of the API security console
 
-      When user is on the OneWorkflow login page for security console
-      Then user logs in with valid username "apitester1" and password as "badger"
-      And user successfully logged in to OneWorkflow and agent console should be displayed
-      And user validates security console is displayed
+      Given user is on the OneWorkflow login page for security console
+      When user logs in with valid username "apitester1" and password as "badger"
+      Then user validates security console is displayed
       When user clicks on create new client button
       And user enters client name as "Test Client Name"
       When user opens and selects "- oneworkflow-userautomaint" from "User" dropdown
-      And user validates chosen name "f12023" is in the user field
+      Then user validates chosen name "f12023" is in the user field
       When user opens and selects "- Roberta-F11925" from "User" dropdown
       Then user validates old user value is cleared and new value "f11925" is set
-      Then user clears value in field and enters user as "api"
+      When user clears value in field and enters user as "api"
       And user validates user list is shown and selects user "apitester1"
       And user enters summary as "Test Client Summary"
       Then user clicks on submit button

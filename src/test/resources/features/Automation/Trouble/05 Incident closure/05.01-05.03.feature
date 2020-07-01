@@ -25,6 +25,16 @@
       And user clicks on save button
       Then an error message should appear: "Required field (without a default) not specified : Event End Time (ARERR 9424)"
       When user enters event end time as current time
+      When user clicks on "Diagnosis" tab
+      And user validates CI "SE_EPG_FREEPG1" is listed
+      And user right clicks on CI "SE_EPG_FREEPG1" and selects "Impact:Update"
+      Then user switches to frame
+      And user enters impact from time as past on impact details bulk update window
+      And user enters impact to time as past on impact details bulk update window
+      Then user clicks confirm checkbox
+      And user clicks on bulk update save button
+      And user right clicks on primary CI and selects "Impact:Clear"
+      And user right clicks on primary CI and selects "Impact:Clear"
       And user clicks on save button
       Then user validates ticket status as "Cleared"
       When user changes status to "Closed"

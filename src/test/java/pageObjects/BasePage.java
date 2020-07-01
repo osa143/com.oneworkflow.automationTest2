@@ -16,9 +16,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class BasePage {
-
-
+public class BasePage{
 
     public static WebDriver driver;
     WebDriverWait webDriverWait = new WebDriverWait(DriverFactory.getInstance().getDriver(), 30);
@@ -152,6 +150,7 @@ public void clickElementById(String Id){
     public String getTextByElement(By element) {
         return findElement(element).getText();
     }
+
     public String getTextByID(String id){
         return findElement(By.id(id)).getText();
     }
@@ -422,7 +421,9 @@ public void clickElementById(String Id){
             wait(500);
         }
     }
-
+    public void clickPreferences(String table_ID) {
+        driver.findElement(By.id(table_ID)).findElement(By.xpath("//a[contains(text(),'Preferences')]")).click();
+    }
     public void setFilterPreferences(String preferences) {
         wait(1000);
 

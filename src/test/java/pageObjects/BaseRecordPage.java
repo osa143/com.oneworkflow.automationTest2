@@ -13,7 +13,6 @@ import java.util.List;
 
 public class BaseRecordPage extends BasePage {
 
-
     public static final String ddSTATUS = "Status*";
     public static final String ddValueINVESTIGATION_COMPLETE = "Investigation Complete";
     public static final String ddValueCLOSED = "Closed";

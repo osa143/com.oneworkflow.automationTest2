@@ -380,12 +380,12 @@ public class OWF_ChangeRecordPageSteps {
     @Then("user should see {string} email update")
     public void userShouldSeeEmailUpdate(String arg0) {
         try {
-            changeRecordPage.wait(30000);
+            changeRecordPage.wait(45000);
             changeRecordPage.selectTab("Notifications");
             changeRecordPage.selectTab("Sent");
             Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 1), arg0);
         } catch (Exception e) {
-            changeRecordPage.wait(30000);
+            changeRecordPage.wait(45000);
             changeRecordPage.clickRefresh_ticketFresh();
             changeRecordPage.selectTab("Notifications");
             changeRecordPage.selectTab("Sent");
@@ -950,9 +950,6 @@ public class OWF_ChangeRecordPageSteps {
         boolean containsMessage = CommonUtils.Timeline_Entry.contains(changeRecordPage.getActualStart());
         Assert.assertTrue(containsMessage, "actual start time matches timeline entry time");
     }
-
-
-
 }
 
 

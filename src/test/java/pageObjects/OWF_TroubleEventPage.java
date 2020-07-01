@@ -162,6 +162,11 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String dd_HOLD_REASON= "Reason";
     private static final String txt_REJECT_REASON="arid_WIN_0_600001019";
     private static final String txt_HIERARCHIC_ESCLATION_LEVEL="arid_WIN_0_700025204";
+    private static final String txt_ACTION= "arid_WIN_0_777031381";
+
+    public String getAction(){
+        return getAttributeValueById(txt_ACTION);
+    }
 
 public void rightClickOnElement(String cellData){
     WebElement element = getTableCellElement(By.id(table_DIAGNOSIS_ID), "CI Name", cellData);
@@ -776,9 +781,7 @@ public void rightClickOnElement(String cellData){
   public void selectStatus(String value){
         selectDropDownNameAndValue(ddSTATUS, value, false);
   }
-  public String getClosureInfo(){
-        return getAttributeValueById((txtCLOSURE_INFO));
-  }
+
 
     public void selectTicket(){
         driver.findElement(By.xpath(chkbxSELECT_TIKCET)).click();
@@ -812,9 +815,12 @@ public void rightClickOnElement(String cellData){
     }
 
 
-    private static final String btnSAVE = "WIN_0_777505104";
+    private static final String btnSAVE = "WIN_0_700025244";
     public void enterClosureInfo(String closureInfo){
         driver.findElement(By.id(txtCLOSURE_INFO)).sendKeys(closureInfo);
+    }
+    public String getClosureInfo(){
+        return getAttributeValueById(txtCLOSURE_INFO);
     }
     public void clickOk_Diagnosis_OnFame(){
         driver.findElement(By.id(btnOK_DIAGNOSIS_ON_FRAME)).click();

@@ -26,4 +26,5 @@
       When user enters event end time as current time
       And user clicks on save button
       Then user validates ticket status as "Cleared"
+      And user clicks on save button and closes warning messages
 

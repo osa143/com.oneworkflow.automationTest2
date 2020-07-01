@@ -99,7 +99,7 @@
       Then user should see "Assignment-Profile" email update
       #Below step doesnt work, button is disabled, but comes back as enabled in Intellij, until we figure this out, below step will stay disabled
       #And user validates send button is disabled
-      When user logsOut
+      When user logsOut from One workflow
       And user goes back to login page
       Then user logs in with valid username "DC CS Core (Voice)_auto" and password as "Test@1234"
       And user successfully logged in to OneWorkflow and agent console should be displayed
@@ -145,14 +145,13 @@
       When user clicks on "Interested Parties" tab
       And user enters email address as "Test2@Test2.com"
       And user clicks on add email button
-      Then user should see new email "Test2@Test2.com" added in "Email Address" in row 1
+      Then user should see new email "Test2@Test2.com" added in "Email Address" in row 3
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab
       Then user should see "Acknowledged" email update
       When user changes status to "Approval Requested"
       And user clicks on save button
-      And change should also be reflected in the timeline as "Processing of the following notification event(s) started: Approvals Notification messages will be displayed on the Notifications tab."
-      And change should also be reflected in the timeline as "Request Status has changed from Analysis to Approval Requested."
+      And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Analysis to Approval Requested." on row 65
       Then user validates ticket status as "Approval Requested"
       And user validates availability of tabs "Approval"
       And user waits 2 secs

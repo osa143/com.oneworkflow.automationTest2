@@ -291,7 +291,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String div_PDB_Affected_COUNTRY= "sp_formfield_pdb_country";
     private static final String txt_ASSIGNMENT_GROUP= "sys_display.incident.assignment_group";
     private static final String txt_ASSIGNED_TO= "sys_display.incident.assigned_to";
-    private static final String txt_STATE= "incident.state";
+    private static final String txt_STATE= "//*[@id='element.u_internal_case_management.state']/div[2]";
     private static final String btn_CLOSE_INCIDENT= "close_incident";
     private static final String dd_SYSTEMNAME_HAITI_DATABASE = "s2id_sp_formfield_h2_name";
     private static final String dd_NETWORKSECURITY_HAITI= "s2id_sp_formfield_h2_name";
@@ -345,7 +345,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_TOUCHPOINT_UPDATE_DESCRIPTION = "sp_formfield_sr45_v_description";
     private static final String txt_TOUCHPOINT_PLANNED_START_AND_TIME = "sp_formfield_sr45_v_planned_start_date";
     private static final String dd_COMPUTE_SYSTEMNAME_IN_HAITI = "s2id_sp_formfield_h2_name";
-    private static final String GET_RESOLUTION_CODE = "incident.close_code";
+    private static final String GET_RESOLUTION_CODE = "//*[@id='element.incident.close_code']/div[2]";
     private static final String GET_RESOLUTION_NOTES = "incident.close_notes";
     private static final String txt_COMPUTE_SYSTEM = "select2-results-22";
     private static final String txt_TEXT_BOX = "//input[@type='text']";
@@ -391,7 +391,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_OW_ATTACHMENT_NOTIFICATION_PLAZA = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p";
     private static final String btn_PDB_AFFECTED_PERSON = "sp_formfield_pdb_affectedPerson";
     private static final String dd_SYSTEM_NAME_HAITI = "select2-results-12";
-    private static final String txt_GET_OP_TICKET = "//*[@id=\"xba9dcc6fdb3ad7802b3cfc16bf96195f\"]/div/div/div[2]/div/div/ul/li[2]/div[2]/div/div[2]/p";
+    private static final String txt_GET_OP_TICKET = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[2]/div[2]/div/div[2]/p";
     private static final String txt_AFFECTED_PERSONS_PDB = "sp_formfield_pdb_affPerDescChecksp_formfield_pdb_affPerDescCheck";
     private static final String txt_NATURE_AND_CONTENT = "s2id_sp_formfield_pdb_natureOfContent";
     private static final String txt_AFFECTED_PERSONS = "select2-chosen-3";
@@ -623,13 +623,25 @@ public class Plaza_HomePage extends BasePage {
     public void clickFinanceAssurance() {
         clickElement(By.xpath(link_FINANCE_ASSURANCE));
     }
+    private static final String tab_CLOSURE_INFORMATION= "//*[@id='tabs2_section']/span[5]/span[1]/span[2]";
 
+    public void clickTab_Plaza(String tabName){
+
+      driver.findElements(By.className("tab_caption_text")).stream().filter(element -> element.getText().equals(tabName)).findFirst().orElse(null).click();
+
+        }
+
+
+    public void clickClosureInformationTab(){
+        clickElement(By.xpath(tab_CLOSURE_INFORMATION));
+    }
 
     public String getResolutionCode(){
-        return getTextByElement(By.id(GET_RESOLUTION_CODE));
+        return getTextByElement(By.xpath(GET_RESOLUTION_CODE));
     }
 
     public String getResolutionNotes(){
+        wait(500);
         return getTextByElement(By.id(GET_RESOLUTION_NOTES));
     }
 
@@ -964,14 +976,20 @@ public class Plaza_HomePage extends BasePage {
 
     public void clickCloseIncident(){
        clickElement(By.id(btn_CLOSE_INCIDENT));
+       wait(1000);
    }
    public String getIncidentState(){
-       return getAttributeValueById(txt_STATE);
+       return getTextByElement(By.xpath(txt_STATE));
    }
     public void enterAssignmentGroup_PlazaIncident(String text){
         enterTextByElement(By.id(txt_ASSIGNMENT_GROUP), text);
-    } public void enterAssignedTo_PlazaIncident(String text){
+    }
+    public void enterAssignedTo_PlazaIncident(String text){
         enterTextByElement(By.id(txt_ASSIGNED_TO), text);
+        wait(500);
+        WebElement element=driver.switchTo().activeElement();
+        element.sendKeys(Keys.ARROW_DOWN);
+        element.sendKeys(Keys.ENTER);
     }
 
     public boolean verifyINCisPresent(){
@@ -998,16 +1016,20 @@ public class Plaza_HomePage extends BasePage {
         return getTextByElement(By.xpath(txt_SECOND_TIMELINE_MESSAGE));
     }
     public void selectCategory_plazaIncident(String dropDownValue){
+        PlazaValidation.Category_Incident=dropDownValue;
         selectDropdown(By.id(dd_PLAZA_INCIDENT_CATEGORY), By.id(dd_PLAZA_INCIDENT_CATEGORY_RESULTS),  dropDownValue);
     }
     public void selectTypeOfIssue_plazaIncident(String dropDownValue){
+        PlazaValidation.TypeOfIssue=dropDownValue;
         selectDropdown(By.id(dd_PLAZA_INCIDENT_TYPE_OF_ISSUE), By.id(dd_PLAZA_INCIDENT_TYPE_OF_ISSUE_RESULTS),  dropDownValue);
     }
 
    public void enterSubject_PlazaIncident(String text){
+        PlazaValidation.Subject=text;
         enterTextByElement(By.id(txt_PLAZA_INCIDENT_SUBJECT), text);
    }
     public void enterDescribeQuestionOrCase_plazaIncident(String text){
+        PlazaValidation.Description_Incident=text;
         enterTextByElement(By.id(txt_PLAZA_INCIDENT_DESCRIPTION), text);
     }
     public void clickNoAccessToMail(){
@@ -1152,7 +1174,8 @@ public class Plaza_HomePage extends BasePage {
         enterTextByElement(By.id(txt_LINUX_UNIX_SERVER_DESCRIPTION), text);
     }
     public void selectServiceArea(String text){
-        selectDropdownByTagNameDiv(By.id(dd_SERVICE_AREA), By.id(txt_SERVICE_AREA_RESULTS), text);
+        PlazaValidation.ServiceArea=text;
+        selectDropdownByEnterText(dd_SERVICE_AREA, text);
     }
 
     public void selectTypeOfServer(String text){
@@ -2483,6 +2506,15 @@ public class Plaza_HomePage extends BasePage {
         Element.sendKeys(Keys.ENTER);
         wait(700);
         //selectDropdownByTagNameDiv(By.id(dd_SYSTEM_ID), By.id("select2-results-13"),  dropdownName);
+    }
+    public void selectDropdownByEnterText(String DropDownID, String DropdownValue){
+        clickElement(By.id(DropDownID));
+        WebElement Element=findElement(By.xpath("//input[@type='text']"));
+        Element.sendKeys(DropdownValue);
+        wait(700);
+        // Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
+        wait(700);
     }
 
 

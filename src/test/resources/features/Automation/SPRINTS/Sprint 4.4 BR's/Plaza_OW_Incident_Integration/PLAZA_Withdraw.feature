@@ -7,26 +7,22 @@ Feature: Plaza creation/withdrawing of incident ticket
     When user enters username "testauto" and password as "test123" and clicks on login
     Then user should see the plaza home page
     And user clicks on plaza portal
-    When user enters "Ask" in plaza search box
-    And user opens internal case form
-    Then user should see internal case form appear
+    When user clicks on support link
+    And user clicks on "SUBMIT A TICKET"
+    And user switches to window 1
     And user selects "Applications" under Service area dropdown
     And user selects "AlarmMap" under plaza category dropdown
     And user selects "Application Error" under plaza type of issue
     And user enters "Test OW OP Ticket" in the plaza subject field
     And user enters "Test OW OP Ticket" in the plaza describe field
-    And user selects No under access to email radio buttons
     Then user clicks on submit button on plaza form
     And user gets plaza request id
     And user clicks on plaza request id
-    And user validates internal case management form opens
-    Then user validates plaza first timeline message as "This Incident was raised on behalf of Test Auto from "
-    And user validates plaza second timeline message as "An incident copy creation has been forwarded to OWF successfully"
-    And user waits 10 secs
-#    And user should see incident ticket update in plaza
+    And user gets plaza OP ticket
+    And user clicks on main page refresh
+    And user waits 30 secs
     And user enters "Test Update" in the ticket timeline
     And user clicks on plaza send button
-    And user waits 30 secs
 #    When user clicks on shown ICM number
 #    Then user should see ICM form
 #    And user validates INC is present under internal case subtasks

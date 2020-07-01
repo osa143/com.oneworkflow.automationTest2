@@ -18,14 +18,10 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String linkASSIGNMENTS = "WIN_0_999000346";
     private static final String TABLE_ID = "T1020";
     private static final String dd_STATUS= "Status*";
-
-
     private static final String btnTIMELINE_XPATH = "//a[contains(text(),'Timeline')]";
     private static final String fld_TIMELINE_DISPLAY_XPATH = "//div[@id='WIN_0_999000510']//div[@class='BaseTableInner']";
-
     private static final String ddNO_ID = "arid_WIN_0_600001801";
     private static final String ddREASON = "Reason";
-
     private static final String txtTITLE_ID = "arid_WIN_0_777031000";
     private static final String txtREQUEST_CATEGORY_ID="arid_WIN_0_777021548";
     private static final String txtDESCRIPTION_ID = "arid_WIN_0_777031007";
@@ -120,6 +116,23 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String btn_APPLY_ROOT_CAUSE_CODES= "WIN_0_800040088";
     private static final String btn_MAKE_PRIMARY="WIN_0_800040086";
     private static final String btn_REMOVE_SELECTED= "WIN_0_800040087";
+
+
+
+    public boolean verifyFieldsInvisible(String fields) {
+        String arr[] = fields.split(":" );
+
+        for (int i = 0; i < arr.length; i++) {
+            final String fieldName = arr[i];
+            try{
+                verifyElementIsDisplayedByContainsTextAndTagName("*",fieldName);
+            }
+           catch(Exception e){
+               System.out.println(fieldName + " - Is not present on the problem form");
+           }
+        }
+        return true;
+    }
 
        public boolean verifyAdditionalRootCauseCodeIsRemoved(){
 
@@ -554,7 +567,8 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
 
 
-    public String getDescriptionText() {
+    public String getDescriptionText()
+    {
         return getAttributeValueById(txtDESCRIPTION_ID);
     }
 

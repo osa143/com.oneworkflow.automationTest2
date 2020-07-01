@@ -11,6 +11,8 @@ import utils.CommonUtils;
 public class OWF_WorkOrderPageSteps {
 
    OWF_WorkOrderPage workOrderPage= new OWF_WorkOrderPage();
+
+
     @And("user validates ticket status as {string}")
     public void userValidatesTicketStatusAs(String arg0) {
         Assert.assertEquals(workOrderPage.getStatusText(), arg0, "Status is not new");
@@ -873,6 +875,11 @@ public class OWF_WorkOrderPageSteps {
     @And("user validates windows server description same as Plaza")
     public void userValidatesWindowsServerDescriptionSameAsPlaza() {
         Assert.assertTrue(workOrderPage.verifyWindowsServer());
+    }
+
+    @And("user validates OP ticket description same as plaza")
+    public void userValidatesOPTicketDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verify_OP_Ticket_Description());
     }
 }
 

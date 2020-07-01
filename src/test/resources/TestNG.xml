@@ -2,8 +2,7 @@
 
     <test name="Test">
         <classes>
-            <class name="runners.IT_VAS_SPRINT_4_1_runners.SAO_181_Runner"/>
-           <class name="runners.IT_VAS_SPRINT_4_1_runners.SAO_191_Runner"/>
+            <class name="runners.Test_Runner"/>
         </classes>
     </test>
 </suite>

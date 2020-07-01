@@ -20,11 +20,11 @@
       And user clicks close on confirmation window
       Then user validates created user "Test Client Name" is present under "Client Name" dropdown
       When user clicks create new operation button
-      And user enters operation name as "Test Operation Name22"
+      And user enters operation name as "Test Operation Name Harvey1"
       And user clicks on submit button
       And user clicks close on confirmation window
-      Then user validates created operation "Test Operation Name22" is present under "Operation" dropdown
-      Then user selects "Client Name" as "Test Client Name"
+      Then user validates created operation "Test Operation Name Harvey1" is present under "Operation" dropdown
+      Then user selects "Client Name" as "Test Client Name Harvey1"
       Then user validates that "apitester1New" is present under user and readonly
       When user clicks the pencil icon
       Then user validates client name is readonly
@@ -33,9 +33,9 @@
       When user enters user as "apitester1New"
       And user clicks on the confirm button
       Then user validates user as "apitester1New"
-      Then user selects "Operation" as "Test Operation Name"
+      Then user selects "Operation" as "Test Operation Name Harvey"
       And user clicks on the enable button
-      Then user validates "Test Operation Name" is present under the request table in row 1
+      Then user validates "Test Operation Name Harvey" is present under the request table in row 1
       Then user selects "Operation" as "Attach CI"
       And user clicks on the enable button
       Then user validates "Attach CI" is present under the request table in row 2
@@ -45,15 +45,15 @@
       Then user selects "Operation" as "Create Problem"
       And user clicks on the enable button
       Then user validates "Create Problem" is present under the request table in row 4
-      When user selects "Test Operation Name" request in the table
+      When user selects "Test Operation Name Harvey" request in the table
       And user clicks on the Edit GUID button
-      And user enters new GUID ID as "New Test GUID14"
+      And user enters new GUID ID as "New Test GUID17"
       Then user clicks on submit button
       And user clicks close on confirmation window
       And user clicks on the Edit GUID button
-      And user validates new GUID is shown as "New Test GUID14"
+      And user validates new GUID is shown as "New Test GUID17"
       When user closes Edit GUID window
-      When user selects "Test Operation Name" request in the table
+      When user selects "Test Operation Name Harvey" request in the table
       And user clicks on the disable button
       Then user validates "New Test GUID" request isnt present in the table
       When user clicks on the reset button
@@ -72,9 +72,9 @@
       When user selects "Client Name" as "Test Client Name"
       And user clicks on remove client button
       Then user validates "Test Client Name" isnt present under the "Client Name" drop down
-      Then user selects "Operation" as "Test Operation Name"
+      Then user selects "Operation" as "Test Operation Name Harvey"
       When user clicks on removal operation button
-      Then user validates "Test Operation" isnt present under the "Operation" drop down
+      Then user validates "Test Operation Name Harvey" isnt present under the "Operation" drop down
       When user clicks on home button
       Then user validates agent console is displayed correctly
       When user logsOut

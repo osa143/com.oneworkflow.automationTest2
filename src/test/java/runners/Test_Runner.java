@@ -7,7 +7,7 @@ import runners.BaseTest;
 @CucumberOptions(features = "classpath:features/",
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@Login"}
+        tags = {"@E2E_Security_Console"}
 
 )
 public class Test_Runner extends BaseTest {

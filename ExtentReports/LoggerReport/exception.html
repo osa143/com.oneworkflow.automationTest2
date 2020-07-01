@@ -107,74 +107,9 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.UnhandledAlertException</a>
-							<div class="item-except text-sm text-muted h-1x">
-								1 tests
-							</div>
-							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.UnhandledAlertException</h5>
-								<table class="table">
-									<thead><tr>
-										<th id="status-col"></th>
-										<th>Test</th>
-										<th>Duration</th>
-										<th>Attributes</th>
-										<th>Media</th>
-										<th>Source</th>
-									</tr></thead>
-									<tbody>
-	
-<tr class="s-fail" test-id="79" parent-id="1">
-	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And user validates agent console is displayed correctly <br/><span class="text-muted text-sm">Test to see if all user profiles are working correctly</span></td>
-	<td>0h 0m 0s+42msc</td>
-	<td></td>
-	<td>
-	</td>
-	<td class="static"><i class="static fa fa-external-link"></i></td>
-</tr>
-<tr class="details">
-	<td colspan="5">
-		
-		<textarea disabled class="code-block">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : User is currently connected from another machine or incompatible session. (ARERR 9093)
-
-Do you wish to override?}
-  (Session info: chrome=83.0.4103.106): User is currently connected from another machine or incompatible session. (ARERR 9093)
-
-Do you wish to override?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-I92010A', ip: '192.168.0.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62723}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: b94dd994d8129e69ba92f29d8fc0a7e5
-*** Element info: {Using=id, value=T777000002}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.BasePage.getTableRows(BasePage.java:559)
-	at pageObjects.OWF_AgentConsolePage.getTableRowsCount(OWF_AgentConsolePage.java:386)
-	at pageObjects.OWF_AgentConsolePage.verifyAgentConsoleHasData(OWF_AgentConsolePage.java:390)
-	at steps.OWF_AgentConsolePageSteps.userValidatesAgentConsoleIsDisplayedCorrectly(OWF_AgentConsolePageSteps.java:627)
-	at ✽.user validates agent console is displayed correctly(features/Automation/Regression/Login/Login.feature:9)
-</textarea>
-	</td>
-</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-					<div class="list-item attr">
-						<div class="list-body">
 							<a href="#" class="item-title _500">java.lang.AssertionError</a>
 							<div class="item-except text-sm text-muted h-1x">
-								3 tests
+								1 tests
 							</div>
 							<div class="tc d-none">
 								<h5 class="mb-4">java.lang.AssertionError</h5>
@@ -189,10 +124,10 @@ Session ID: b94dd994d8129e69ba92f29d8fc0a7e5
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="143" parent-id="1">
+<tr class="s-fail" test-id="35" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And user validates agent console is displayed correctly <br/><span class="text-muted text-sm">Test to see if all user profiles are working correctly</span></td>
-	<td>0h 0m 4s+370msc</td>
+	<td class="_600">Then user validates "Test Operation Name Harvey" is present under the request table in row 1 <br/><span class="text-muted text-sm">E2E verification of the API security console</span></td>
+	<td>0h 0m 0s+498msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -201,168 +136,15 @@ Session ID: b94dd994d8129e69ba92f29d8fc0a7e5
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
+		<textarea disabled class="code-block">java.lang.AssertionError: expected [Test Operation Name Harvey] but found [Test Operation Name31]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at steps.OWF_AgentConsolePageSteps.userValidatesAgentConsoleIsDisplayedCorrectly(OWF_AgentConsolePageSteps.java:627)
-	at ✽.user validates agent console is displayed correctly(features/Automation/Regression/Login/Login.feature:9)
-</textarea>
-	</td>
-</tr>
-	
-<tr class="s-fail" test-id="303" parent-id="1">
-	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And user validates agent console is displayed correctly <br/><span class="text-muted text-sm">Test to see if all user profiles are working correctly</span></td>
-	<td>0h 0m 5s+523msc</td>
-	<td></td>
-	<td>
-	</td>
-	<td class="static"><i class="static fa fa-external-link"></i></td>
-</tr>
-<tr class="details">
-	<td colspan="5">
-		
-		<textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at steps.OWF_AgentConsolePageSteps.userValidatesAgentConsoleIsDisplayedCorrectly(OWF_AgentConsolePageSteps.java:627)
-	at ✽.user validates agent console is displayed correctly(features/Automation/Regression/Login/Login.feature:9)
-</textarea>
-	</td>
-</tr>
-	
-<tr class="s-fail" test-id="311" parent-id="1">
-	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And user validates agent console is displayed correctly <br/><span class="text-muted text-sm">Test to see if all user profiles are working correctly</span></td>
-	<td>0h 0m 5s+87msc</td>
-	<td></td>
-	<td>
-	</td>
-	<td class="static"><i class="static fa fa-external-link"></i></td>
-</tr>
-<tr class="details">
-	<td colspan="5">
-		
-		<textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at steps.OWF_AgentConsolePageSteps.userValidatesAgentConsoleIsDisplayedCorrectly(OWF_AgentConsolePageSteps.java:627)
-	at ✽.user validates agent console is displayed correctly(features/Automation/Regression/Login/Login.feature:9)
-</textarea>
-	</td>
-</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-					<div class="list-item attr">
-						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.NoSuchElementException</a>
-							<div class="item-except text-sm text-muted h-1x">
-								2 tests
-							</div>
-							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.NoSuchElementException</h5>
-								<table class="table">
-									<thead><tr>
-										<th id="status-col"></th>
-										<th>Test</th>
-										<th>Duration</th>
-										<th>Attributes</th>
-										<th>Media</th>
-										<th>Source</th>
-									</tr></thead>
-									<tbody>
-	
-<tr class="s-fail" test-id="149" parent-id="1">
-	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">When user logs in with valid username "ChangeInitiatorInternal1" and password as "Test@1234" <br/><span class="text-muted text-sm">Test to see if all user profiles are working correctly</span></td>
-	<td>0h 0m 35s+176msc</td>
-	<td></td>
-	<td>
-	</td>
-	<td class="static"><i class="static fa fa-external-link"></i></td>
-</tr>
-<tr class="details">
-	<td colspan="5">
-		
-		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#username\-id"}
-  (Session info: chrome=83.0.4103.106)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-I92010A', ip: '192.168.0.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62723}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: b94dd994d8129e69ba92f29d8fc0a7e5
-*** Element info: {Using=id, value=username-id}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.OWF_LoginPage.enterUsername(OWF_LoginPage.java:13)
-	at pageObjects.OWF_LoginPage.doLogin(OWF_LoginPage.java:26)
-	at steps.OWF_LoginPageSteps.userLogsInWithValidUsernameAndPasswordAs(OWF_LoginPageSteps.java:22)
-	at ✽.user logs in with valid username "ChangeInitiatorInternal1" and password as "Test@1234"(features/Automation/Regression/Login/Login.feature:7)
-</textarea>
-	</td>
-</tr>
-	
-<tr class="s-fail" test-id="157" parent-id="1">
-	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234" <br/><span class="text-muted text-sm">Test to see if all user profiles are working correctly</span></td>
-	<td>0h 0m 34s+996msc</td>
-	<td></td>
-	<td>
-	</td>
-	<td class="static"><i class="static fa fa-external-link"></i></td>
-</tr>
-<tr class="details">
-	<td colspan="5">
-		
-		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#username\-id"}
-  (Session info: chrome=83.0.4103.106)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-I92010A', ip: '192.168.0.228', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.106, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62723}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: b94dd994d8129e69ba92f29d8fc0a7e5
-*** Element info: {Using=id, value=username-id}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.OWF_LoginPage.enterUsername(OWF_LoginPage.java:13)
-	at pageObjects.OWF_LoginPage.doLogin(OWF_LoginPage.java:26)
-	at steps.OWF_LoginPageSteps.userLogsInWithValidUsernameAndPasswordAs(OWF_LoginPageSteps.java:22)
-	at ✽.user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"(features/Automation/Regression/Login/Login.feature:7)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at steps.OWF_LoginPageSteps.userValidatesIsPresentUnderTheRequestTable(OWF_LoginPageSteps.java:175)
+	at ✽.user validates "Test Operation Name Harvey" is present under the request table in row 1(features/Automation/API/SecurityConsole/E2E_Security_Console.feature:38)
 </textarea>
 	</td>
 </tr>
@@ -390,7 +172,7 @@ Session ID: b94dd994d8129e69ba92f29d8fc0a7e5
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Jun 23, 2020 04:48:32 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jul 1, 2020 01:18:10 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

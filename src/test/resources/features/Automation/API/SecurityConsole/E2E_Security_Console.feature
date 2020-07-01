@@ -4,8 +4,8 @@
     Scenario: E2E verification of the API security console
 
       When user is on the OneWorkflow login page for security console
-      And user logs in with valid username "apitester1" and password as "badger"
-      Then user successfully logged in to OneWorkflow and agent console should be displayed
+      Then user logs in with valid username "apitester1" and password as "badger"
+      And user successfully logged in to OneWorkflow and agent console should be displayed
       And user validates security console is displayed
       When user clicks on create new client button
       And user enters client name as "Test Client Name"
@@ -20,10 +20,10 @@
       And user clicks close on confirmation window
       Then user validates created user "Test Client Name" is present under "Client Name" dropdown
       When user clicks create new operation button
-      And user enters operation name as "Test Operation Name22"
+      And user enters operation name as "Test Operation Name23"
       And user clicks on submit button
       And user clicks close on confirmation window
-      Then user validates created operation "Test Operation Name22" is present under "Operation" dropdown
+      Then user validates created operation "Test Operation Name23" is present under "Operation" dropdown
       Then user selects "Client Name" as "Test Client Name"
       Then user validates that "apitester1New" is present under user and readonly
       When user clicks the pencil icon
@@ -47,11 +47,11 @@
       Then user validates "Create Problem" is present under the request table in row 4
       When user selects "Test Operation Name" request in the table
       And user clicks on the Edit GUID button
-      And user enters new GUID ID as "New Test GUID14"
+      And user enters new GUID ID as "New Test GUID15"
       Then user clicks on submit button
       And user clicks close on confirmation window
       And user clicks on the Edit GUID button
-      And user validates new GUID is shown as "New Test GUID14"
+      And user validates new GUID is shown as "New Test GUID15"
       When user closes Edit GUID window
       When user selects "Test Operation Name" request in the table
       And user clicks on the disable button

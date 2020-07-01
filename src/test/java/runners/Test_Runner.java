@@ -5,6 +5,9 @@ import cucumber.api.CucumberOptions;
 import runners.BaseTest;
 
 @CucumberOptions(features = "classpath:features/",
+        plugin = {
+                "pretty",
+                "html:test-output/html",},
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
         tags = {"@E2E_Security_Console"}

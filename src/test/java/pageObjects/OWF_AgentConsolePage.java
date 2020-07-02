@@ -91,7 +91,37 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String btn_Add_Right = "WIN_3_800080011";
     private static final String btn_Close_User_Information = "WIN_3_777000001";
     private static final String btn_Remove_Left = "WIN_3_800080012";
+    private static final String table_Available_Trust_Principles="T800080004";
+    private static final String table_Selected_Trust_Principles="T800080007";
 
+    public Boolean getTrustPrinciplesAvailableCountry(int rowNum, String expectedCountry) {
+        int count = getTableRowsCount(table_Selected_Trust_Principles);
+        System.out.println("Trust Principles Available Country count is " + count);
+        if (count <=1) {
+            return false;
+        }
+        else
+            {
+            String actualCountry = getTableCellData(By.id(table_Selected_Trust_Principles), "TP Description", rowNum);
+            System.out.println(actualCountry);
+            System.out.println(expectedCountry);
+            if (actualCountry.contains(expectedCountry)) {
+            }
+            return true;
+        }
+    }
+    public boolean verifyAvailableTrustPrinciplesCountries(String countries) {
+        int count = getTableRowsCount(table_Available_Trust_Principles);
+        if (count > 5) {
+            String[] country = countries.split(":");
+            System.out.println("Trust principles country values are: " + country);
+            for (int i = 0; i < country.length; i++) {
+                verifyElementIsDisplayedByContainsTextAndTagName("span", country[i]);
+            }
+         return true;
+        }
+        else return false;
+    }
 
     public void clickRemoveLeft(){
         clickElementById(btn_Remove_Left);
@@ -286,7 +316,7 @@ public class OWF_AgentConsolePage extends BasePage {
         return false;
     }
     public boolean validateTicketsAvailabilityInAgentConsoleTable(){
-        int count= getTableRowsCount();
+        int count= getTableRowsCount(table_ID);
         System.out.println(count);
         if (count>50)
             return true;
@@ -404,12 +434,15 @@ public class OWF_AgentConsolePage extends BasePage {
         driver.switchTo().alert().accept();
     }
 
+    public int getTableRowsCount(String tableID) {
+        return getTableRows(By.id(tableID)).size();
+    }
     public int getTableRowsCount() {
         return getTableRows(By.id(table_ID)).size();
     }
 
     public Boolean verifyAgentConsoleHasData(){
-        int count= getTableRowsCount();
+        int count= getTableRowsCount(table_ID);
         if(count>1)
             return true;
         else return false;

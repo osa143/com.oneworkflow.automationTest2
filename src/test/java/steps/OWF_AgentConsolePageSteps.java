@@ -1,5 +1,6 @@
 package steps;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -659,6 +660,58 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.clickSaveButton_MyAccount();
     }
 
+
+    @Then("user console should be opened in new window")
+    public void userConsoleShouldBeOpenedInNewWindow() {
+        Assert.assertEquals(agentConsolePage.getPageTitle(), "OS3 User Console (Search)");
+
+    }
+
+    @Then("user selects user {string} in user table")
+    public void userClicksOnUserAndClicksOpen(String text) {
+        agentConsolePage.clickElementByContainsTextAndTagName("span", text);
+    }
+
+    @And("user clicks open user button")
+    public void userClicksOpenUserButton() {
+        agentConsolePage.clickOpenUser();
+    }
+
+    @And("user validates countries {string} are present")
+    public void userValidatesCountriesArePresent(String arg0) {
+        Assert.assertTrue(agentConsolePage.verifyElementIsDisplayedByContainsText(arg0));
+    }
+
+    @Then("user selects country {string}")
+    public void userSelectsCountry(String text) {
+        agentConsolePage.clickElementByContainsTextAndTagName("span", text);
+    }
+
+    @And("user clicks add right button")
+    public void userClicksAddRightButton() {
+        agentConsolePage.clickAddRight();
+    }
+
+    @Then("user closes user information window")
+    public void userClosesUserInformationWindow() {
+        agentConsolePage.clickCloseUserInformation();
+    }
+
+
+    @Then("user clicks remove left button")
+    public void userClicksRemoveLeftButton() {
+        agentConsolePage.clickRemoveLeft();
+    }
+
+    @And("user validates {string} has been removed")
+    public void userValidatesHasBeenRemoved(String arg0) {
+
+    }
+
+    @And("user information window should be opened")
+    public void userInformationWindowShouldBeOpened() {
+        //dummystep
+    }
 }
 
 

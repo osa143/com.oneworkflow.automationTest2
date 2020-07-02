@@ -10,7 +10,7 @@ import runners.BaseTest;
                 "html:test-output/html",}, // for html report
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@E2E_Security_Console"}
+        tags = {"@SAO-4555+SAO-4556"}
 
 )
 public class Test_Runner extends BaseTest {

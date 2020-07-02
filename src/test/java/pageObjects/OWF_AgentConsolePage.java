@@ -5,7 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import javax.xml.bind.SchemaOutputResolver;
+//import javax.xml.bind.SchemaOutputResolver;
 import java.util.List;
 
 public class OWF_AgentConsolePage extends BasePage {
@@ -87,6 +87,27 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String btn_CLOSE= "//a[@arid='777000001']";
     private static final String txt_TIMEZONE= "//div[@arid='799999958']/textarea";
     private static final String btn_SAVE_MY_ACCOUNT="//a[@arid='1003']";
+    private static final String btn_Open_User = "WIN_0_700027095";
+    private static final String btn_Add_Right = "WIN_3_800080011";
+    private static final String btn_Close_User_Information = "WIN_3_777000001";
+    private static final String btn_Remove_Left = "WIN_3_800080012";
+
+
+    public void clickRemoveLeft(){
+        clickElementById(btn_Remove_Left);
+    }
+
+    public void clickCloseUserInformation(){
+        clickElementById(btn_Close_User_Information);
+    }
+
+    public void  clickAddRight(){
+        clickElementById(btn_Add_Right);
+    }
+
+    public void clickOpenUser(){
+        clickElementById(btn_Open_User);
+    }
 
     public void clickSaveButton_MyAccount(){
         clickElement(By.xpath(btn_SAVE_MY_ACCOUNT));

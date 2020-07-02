@@ -1,4 +1,4 @@
-@SAO-4555+SAO-4556
+@SAO-4555_SAO-4556
 
   Feature: User Profile Development - User forms and workflow
     Scenario: User Profile Development - User forms and workflow

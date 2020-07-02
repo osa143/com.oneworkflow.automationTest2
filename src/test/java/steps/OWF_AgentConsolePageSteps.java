@@ -1,11 +1,9 @@
 package steps;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.OWF_AgentConsolePage;
 import utils.CommonUtils;
@@ -711,6 +709,21 @@ public class OWF_AgentConsolePageSteps {
     @And("user information window should be opened")
     public void userInformationWindowShouldBeOpened() {
         //dummystep
+    }
+
+    @And("user should see available trust principles as countries {string}")
+    public void userShouldSeeAvailableTrustPrinciplesAsCountries(String countries) {
+     Assert.assertTrue(agentConsolePage.verifyAvailableTrustPrinciplesCountries(countries));
+    }
+
+    @Then("user should see {string} under selected trust principles")
+    public void userShouldSeeUnderSelectedTrustPrinciples(String countryName) {
+        Assert.assertTrue(agentConsolePage.getTrustPrinciplesAvailableCountry(1, countryName));
+    }
+
+    @Then("user shouldn't see {string} under selected trust principles")
+    public void userShouldnTSeeUnderSelectedTrustPrinciples(String countryName) {
+        Assert.assertFalse(agentConsolePage.getTrustPrinciplesAvailableCountry(1, countryName));
     }
 }
 

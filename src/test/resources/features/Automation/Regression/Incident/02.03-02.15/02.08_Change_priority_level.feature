@@ -21,6 +21,29 @@
       And user clicks on save button
       Then user validates that priority changes to "Emergency"
       And change should also be reflected in the timeline as "The Ticket Priority has been updated to :  Emergency" on row 2
-
+      When user selects importance as "High"
+      And user selects impact as "Major" on trouble event page
+      And user clicks on priority check button
+      And user clicks on save button
+      Then user validates that priority changes to "Major"
+      And change should also be reflected in the timeline as "The Ticket Priority has been updated to :  Major" on row 1
+      When user selects importance as "Average"
+      And user selects impact as "Medium" on trouble event page
+      And user clicks on priority check button
+      And user clicks on save button
+      Then user validates that priority changes to "Minor"
+      And change should also be reflected in the timeline as "The Ticket Priority has been updated to :  Minor" on row 1
+      When user selects importance as "Low"
+      And user selects impact as "Minor" on trouble event page
+      And user clicks on priority check button
+      And user clicks on save button
+      Then user validates that priority changes to "Minor"
+      And change should also be reflected in the timeline as "The Ticket Priority has been updated to :  Minor" on row 1
+      When user selects importance as "Low"
+      And user selects impact as "No" on trouble event page
+      And user clicks on priority check button
+      And user clicks on save button
+      Then user validates that priority changes to "Minor"
+      And change should also be reflected in the timeline as "The Ticket Priority has been updated to :  Minor" on row 1
 
 

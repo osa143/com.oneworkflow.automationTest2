@@ -24,8 +24,7 @@
       And user validates that priority changes to major
       When user selects search menu as "Open Search Form:Trouble Event"
       And user switches to window 2
-      And user enters ticket previously created
-      And user clicks Search on ticket search
+      And user enters ticket previously created and searches
       And ticket should be displayed
       And user validates ticket priority as "Major"
 

@@ -31,6 +31,7 @@
       And user switches to window 2
       Then a known error ticket should appear in new tab
       And user validates ticket status as "New"
+      And user enters "Test ticket" in Title field
       Then user clicks on save button on the problem form
       And user validates ticket status as "Draft"
       Then user clicks on linked items tab

@@ -157,12 +157,12 @@ public void clickElementById(String Id){
 
     public String calculateEstimatedReady(int time, String timeUnit){
         String estimatedTime = "";
-        String format = "MM-dd-yyyy HH:mm:ss";
+        String format = "MM/dd/yyyy HH:mm:ss";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
         String eventStartTime = getEventStartTime();
         System.out.println(eventStartTime);
         if(eventStartTime.isEmpty())
-            eventStartTime  = CommonUtils.getDateTime(format, "Europe/Stockholm", 0);
+            eventStartTime  = CommonUtils.getDateTime(format, "Europe/London", 0);
         ;
         LocalDateTime dateTime = LocalDateTime.parse(eventStartTime, formatter);
         if(timeUnit.equals("days"))
@@ -802,8 +802,10 @@ public void clickElementById(String Id){
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
     }
 
-    public static byte[] takeScreenShotAsByteArray() {
-        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+    public static String takeScreenShotAsByteArray() {
+        String destination = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+
+        return "data:image/jpg;base64, " +destination;
     }
 
 

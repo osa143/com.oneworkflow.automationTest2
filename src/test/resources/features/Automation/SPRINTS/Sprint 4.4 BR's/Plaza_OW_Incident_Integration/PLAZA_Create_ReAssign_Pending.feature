@@ -59,7 +59,7 @@
       Then change should also be reflected in the timeline as "Test Update"
       When user switches to window 0
       And user clicks on main page refresh
-      Then user validates plaza first timeline message as "Comments from OneWorkflow at 2019-10-25T09:11:25Z@Change_Automation_1: Test update"
+      Then user validates plaza first timeline message as "Comments from OneWorkflow @Change_Automation_1: Test update"
       Then user switches to window 2
       When user selects assignment profile dropdown as "IT:Application:Application-NO"
       And user enters "dwk298" in assignee

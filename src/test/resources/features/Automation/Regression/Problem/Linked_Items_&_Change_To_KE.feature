@@ -42,12 +42,15 @@
       And user switches to window 3
       Then known error form should appear in new tab
       And user enters "Known Error B" in Title field
-      And user selects request type as "Rejected:Ticket Rejected" on known error page
+      And user selects request type as "CPS:IT:Other" on known error page
       And user enters description as "A known error"
       And user selects priority as "Minor"
       And user clicks on save button
       Then user validates ticket status as "Draft"
       When user changes status to "Published" on problem record page
+      And user selects "Known Error Code" as "Risk accepted"
+      And user selects affected organisation as "CA_Infra"
+      And user selects accountable organisation as "CA_IT"
       And user clicks save button
       Then known error ticket status should be "Published"
       And user clicks on linked items tab

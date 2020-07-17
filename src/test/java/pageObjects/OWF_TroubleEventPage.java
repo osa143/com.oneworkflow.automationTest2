@@ -163,6 +163,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_REJECT_REASON="arid_WIN_0_600001019";
     private static final String txt_HIERARCHIC_ESCLATION_LEVEL="arid_WIN_0_700025204";
     private static final String txt_ACTION= "arid_WIN_0_777031381";
+    private static final String chkbx_TO_SELECT_TICKET= "//*[@id='T700506101']/tbody/tr[2]/td[1]/input";
 
     public String getAction(){
         return getAttributeValueById(txt_ACTION);
@@ -808,6 +809,7 @@ public void rightClickOnElement(String cellData){
     }
     public void clickSearch_selctTargetRequest(){
         driver.findElement(By.id(btnSEARCH_SELECT_TARGET_REQUEST)).click();
+        clickElement(By.xpath(chkbx_TO_SELECT_TICKET));
     }
 
     public String getOlaTargetTime(){

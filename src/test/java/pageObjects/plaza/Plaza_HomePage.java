@@ -520,7 +520,7 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void click_Data_Center(){
-        clickElement(By.xpath(link_DATA_CENTER));
+        clickElement(By.id(link_DATA_CENTER));
     }
 
     public void click_Database(){
@@ -552,7 +552,7 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void clickApplication(){
-        clickElement(By.xpath(link_APPLICATION));
+        clickElement(By.id(link_APPLICATION));
     }
 
     public void clickAccount_Management_And_Server_Form(){
@@ -2504,7 +2504,8 @@ public class Plaza_HomePage extends BasePage {
          wait(700);
        // Element.sendKeys(Keys.ARROW_DOWN);
         Element.sendKeys(Keys.ENTER);
-        wait(700);
+        Element.sendKeys(Keys.TAB);
+        wait(1000);
         //selectDropdownByTagNameDiv(By.id(dd_SYSTEM_ID), By.id("select2-results-13"),  dropdownName);
     }
     public void selectDropdownByEnterText(String DropDownID, String DropdownValue){
@@ -2521,6 +2522,7 @@ public class Plaza_HomePage extends BasePage {
     public void enterRequest(String text){
         PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_REQUEST_ID), text);
+
     }
     public void selectServiceRequestName(String dropdownName){
         PlazaValidation.Issue = dropdownName;

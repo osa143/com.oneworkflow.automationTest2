@@ -21,16 +21,16 @@ public class Hooks {
     public void Teardown(Scenario scenario) throws IOException, InterruptedException {
 
         if (scenario.isFailed()) {
-            byte[] screenshot = BasePage.takeScreenShotAsByteArray();
+        String screenshot = BasePage.takeScreenShotAsByteArray();
 //        File file = ReporterUtils.saveScreenShot(BasePage.takeScreenShot());
 //        String relativePath = "." + "/" + "Screenshots" + "/" + file.getName();
-//        Path p = Paths.get("Screenshots\\" + file.getName());
-            scenario.embed(screenshot, "image/png");
-       }
+///       Path p = Paths.get("Screenshots\\" + file.getName());
+            scenario.embed(screenshot.getBytes(), "image/png");
+      }
 
-
+//
 //            OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
-//            CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 0);
+//            CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
 //            agentConsolePage.clickNavUserMenu();
 //            agentConsolePage.clickMenuItemLogout();
 //            DriverFactory.getInstance().quit();

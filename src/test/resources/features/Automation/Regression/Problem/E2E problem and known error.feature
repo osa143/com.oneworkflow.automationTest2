@@ -63,6 +63,7 @@
       And user switches to window 4
       Then known error ticket status should be "New"
       And user gets ticket value
+      When user enters "Test ticket" in Title field
 #      When user selects request type as "Risks & Failures:Lack of Business Continuity Management (BCM)"
 #      And user enters description as "Test"
       And user clicks on save button
@@ -88,6 +89,9 @@
       And user enters Problem Ticket
       And user clicks Search on ticket search
       When user changes status to "Published" on problem record page
+      And user selects "Known Error Code" as "Risk accepted"
+      And user selects affected organisation as "CA_Infra"
+      And user selects accountable organisation as "CA_IT"
       And user clicks on save button
       Then user validates ticket status as "Published"
       When user changes status to "Closed" on problem record page

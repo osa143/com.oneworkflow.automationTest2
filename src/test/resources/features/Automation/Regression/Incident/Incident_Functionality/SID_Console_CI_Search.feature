@@ -8,7 +8,7 @@
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects SID console from agent console
       Then user switches to window 1
-      When user selects Category as "Core"
+      When user selects Category as "CORE"
       And user selects Type as "Mobile PS Core Network"
       And user selects Item as "SGSN"
       And user clicks on search

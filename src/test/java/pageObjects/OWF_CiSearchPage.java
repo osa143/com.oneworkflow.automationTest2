@@ -70,7 +70,19 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String txt_IMPACT_TO_PLUS_BULK_UPDATE= "arid_WIN_0_999000299";
     private static final String btn_RADIOOPEN_ID = "WIN_4_rc0id800040059";
     private static final String btn_RADIOCLOSED_ID = "WIN_4_rc0id800040061";
+    private static final String btn_RADIOCleared_ID = "WIN_4_rc0id800040060";
 
+    public boolean isOpenRadioButtonSelected(){
+        return findElement(By.id(btn_RADIOOPEN_ID)).isSelected();
+    }
+
+    public boolean isClearedRadioButtonSelected(){
+        return findElement(By.id(btn_RADIOCLOSED_ID)).isSelected();
+    }
+
+    public boolean isClosedRadioButtonSelected(){
+        return findElement(By.id(btn_RADIOCleared_ID)).isSelected();
+    }
 
     public void clickClosedRadioButton_linkedItems(){
         driver.findElement(By.id(btn_RADIOCLOSED_ID)).click();

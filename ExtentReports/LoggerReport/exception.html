@@ -107,12 +107,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">java.lang.IndexOutOfBoundsException</a>
+							<a href="#" class="item-title _500">java.lang.AssertionError</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">java.lang.IndexOutOfBoundsException</h5>
+								<h5 class="mb-4">java.lang.AssertionError</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="23" parent-id="1">
+<tr class="s-fail" test-id="124" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then user shouldn't see "Denmark" under selected trust principles <br/><span class="text-muted text-sm">Verify user Profile Development - User forms and workflow</span></td>
-	<td>0h 0m 30s+133msc</td>
+	<td class="_600">And user selects withdrawn reason as "Test Ticket" <br/><span class="text-muted text-sm">user testing linked ticket radio buttons</span></td>
+	<td>0h 0m 0s+95msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,14 +136,15 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
-	at java.util.ArrayList.get(ArrayList.java:433)
-	at pageObjects.BasePage.getColumnIndexByHeaderName(BasePage.java:475)
-	at pageObjects.BasePage.getTableCellData(BasePage.java:671)
-	at pageObjects.OWF_AgentConsolePage.getTrustPrinciplesAvailableCountry(OWF_AgentConsolePage.java:104)
-	at steps.OWF_AgentConsolePageSteps.userShouldnTSeeUnderSelectedTrustPrinciples(OWF_AgentConsolePageSteps.java:726)
-	at ✽.user shouldn't see "Denmark" under selected trust principles(features/Automation/SPRINTS/Sprint_P2S1/P2S1_SAO-4555+SAO-4556_Trust_Principles.feature:26)
+		<textarea disabled class="code-block">java.lang.AssertionError: expected [Test Ticket] but found []
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at steps.OWF_ChangeRecordPageSteps.userSelectsWithdrawnReasonAs(OWF_ChangeRecordPageSteps.java:700)
+	at ✽.user selects withdrawn reason as "Test Ticket"(features/Automation/SPRINTS/Sprint_P2S1/SAO_5204_Linked_tickets_radio_buttons.feature:127)
 </textarea>
 	</td>
 </tr>
@@ -171,10 +172,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="24" parent-id="1">
+<tr class="s-fail" test-id="165" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Hooks.Teardown(Scenario) <br/><span class="text-muted text-sm">Verify user Profile Development - User forms and workflow</span></td>
-	<td>0h 0m 1s+840msc</td>
+	<td class="_600">Hooks.Teardown(Scenario) <br/><span class="text-muted text-sm">user testing linked ticket radio buttons</span></td>
+	<td>0h 0m 0s+469msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -183,7 +184,7 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">cucumber.runtime.CucumberException: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow-automation\ExtentReports\Screenshots\Screenshots_20200702_161955
+		<textarea disabled class="code-block">cucumber.runtime.CucumberException: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow-automation\ExtentReports\Screenshots\Screenshots_20200717_153155
 	at extentreports.cucumber.adapter.ExtentCucumberAdapter.createReportFileOutputStream(ExtentCucumberAdapter.java:225)
 	at extentreports.cucumber.adapter.ExtentCucumberAdapter.writeBytesToURL(ExtentCucumberAdapter.java:213)
 	at extentreports.cucumber.adapter.ExtentCucumberAdapter.handleEmbed(ExtentCucumberAdapter.java:197)
@@ -236,7 +237,7 @@
 	at org.testng.TestNG.run(TestNG.java:1017)
 	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)
 	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
-Caused by: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow-automation\ExtentReports\Screenshots\Screenshots_20200702_161955
+Caused by: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow-automation\ExtentReports\Screenshots\Screenshots_20200717_153155
 	at extentreports.cucumber.adapter.URLOutputStream.ensureParentDirExists(URLOutputStream.java:56)
 	at extentreports.cucumber.adapter.URLOutputStream.<init>(URLOutputStream.java:36)
 	at extentreports.cucumber.adapter.URLOutputStream.<init>(URLOutputStream.java:26)
@@ -269,7 +270,7 @@ Caused by: java.io.IOException: Failed to create directory C:\Users\mahesh%20vad
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Jul 2, 2020 04:19:58 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jul 17, 2020 03:31:57 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

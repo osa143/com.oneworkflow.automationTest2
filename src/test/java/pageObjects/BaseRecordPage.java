@@ -554,7 +554,7 @@ public class BaseRecordPage extends BasePage {
         wait(1000);
         int size = getTableRows(By.id(table_LINKED_ITEMS_ID)).size();
         System.out.println("Available Tickets" + (size-1));
-        if(ticketSize > size){
+        if(size >ticketSize){
             return true;
         }
         return false;
@@ -911,7 +911,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterStartDate(int delay) {
-        String dateTime = CommonUtils.getDateTime("MM-dd-yyyy HH:mm:ss a", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         CommonUtils.eventStartTime=dateTime;
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
@@ -919,7 +919,7 @@ public class BaseRecordPage extends BasePage {
 
     public void enterEndDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("MM-dd-yyyy HH:mm:ss a", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         CommonUtils.requestEnd=dateTime;
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );

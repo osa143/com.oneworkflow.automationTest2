@@ -1,4 +1,4 @@
-@Data_Center_Network_Equipment_On_Site @PLAZA
+@Data_Center_Network_Equipment_On_Site @PLAZA @DataCenter
   Feature: Data Center Network Equipment On Site plaza form test
     Scenario: user validates information sent to OW from Plaza
 

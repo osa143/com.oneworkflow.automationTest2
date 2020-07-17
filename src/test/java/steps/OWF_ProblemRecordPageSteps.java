@@ -1420,6 +1420,60 @@ public class OWF_ProblemRecordPageSteps {
 
 
     }
+
+    @When("user clicks on the added attachment")
+    public void userClicksOnTheAddedAttachment() {
+       problemRecordPage.clickOnAttachment();
+    }
+
+    @Then("attachment form should open in new tab")
+    public void attachmentFormShouldOpenInNewTab() {
+        CommonUtils.switchToChildWindow(problemRecordPage.getDriver(), 2);
+        Assert.assertEquals(problemRecordPage.getPageTitle(), "OS3 Attachments(Modify)");
+    }
+
+    @When("user clicks on the attachment listed")
+    public void userClicksOnTheAttachmentListed() {
+        problemRecordPage.clickOnAttachment_attachmentWindow();
+    }
+
+    @And("clicks on display button")
+    public void clicksOnDisplayButton() {
+        problemRecordPage.clickOnDisplay();
+    }
+
+    @Then("a new window should open with the attachment shown")
+    public void aNewWindowShouldOpenWithTheAttachmentShown() {
+        Assert.assertTrue(problemRecordPage.verifyNewWindowDisplayed());
+    }
+
+    @When("user closes the attachment window")
+    public void userClosesTheAttachmentWindow() {
+        CommonUtils.switchToChildWindow(problemRecordPage.getDriver(), 3);
+        problemRecordPage.closeTab();
+    }
+
+    @And("closes the attachment tab")
+    public void closesTheAttachmentTab() {
+        CommonUtils.switchToChildWindow(problemRecordPage.getDriver(), 2);
+        problemRecordPage.closeTab();
+    }
+
+    @And("user clicks on the delete button under internal")
+    public void userClicksOnTheDeleteButtonUnderInternal() {
+        problemRecordPage.clickOnDelete();
+    }
+
+    @Then("attachment should no longer be visible")
+    public void attachmentShouldNoLongerBeVisible() {
+        Assert.assertTrue(problemRecordPage.verifyAttachmentIsNotAvailable());
+    }
+
+    @When("user clicks on next tab button")
+    public void userClicksOnNextTabButton() {
+        problemRecordPage.clickNextTab();
+        problemRecordPage.clickNextTab();
+    }
 }
 
 

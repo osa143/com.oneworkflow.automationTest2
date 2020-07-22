@@ -653,7 +653,7 @@ public void rightClickOnElement(String cellData){
         System.out.println("Error message is: " +error);
         return error;
     }
-    public String getErrorText_change_recordPage(){
+    public String getErrorText_(){
         switchToFrameByIndex(2);
         String error =getTextByID(Error_POP_UP_ID);
         System.out.println(error);

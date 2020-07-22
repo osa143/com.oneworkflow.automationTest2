@@ -21,12 +21,12 @@ public class Hooks {
     public void Teardown(Scenario scenario) throws IOException, InterruptedException {
 
         if (scenario.isFailed()) {
-        String screenshot = BasePage.takeScreenShotAsByteArray();
+            byte[] screenshot = BasePage.takeScreenShotAsByteArray();
 //        File file = ReporterUtils.saveScreenShot(BasePage.takeScreenShot());
 //        String relativePath = "." + "/" + "Screenshots" + "/" + file.getName();
-///       Path p = Paths.get("Screenshots\\" + file.getName());
-            scenario.embed(screenshot.getBytes(), "image/png");
-      }
+//        Path p = Paths.get("Screenshots\\" + file.getName());
+            scenario.embed(screenshot, "image/png");
+        }
 
 //
 //            OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();

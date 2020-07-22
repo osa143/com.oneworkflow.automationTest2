@@ -148,6 +148,31 @@ public class BaseRecordPage extends BasePage {
     private static final String fld_PENDING_TICKET= "//*[@id='T777031442']/tbody/tr[2]";
     private static final String txt_AGREED_START_TIME= "arid_WIN_0_777021162";
     private static final String txt_AGREED_END_TIME= "arid_WIN_0_777021163";
+    private static final String dd_Known_Error_Code= "arid_WIN_0_808080010";
+    private static final String txt_Next_Assessment_Date= "arid_WIN_0_800040083";
+
+
+
+    public boolean verifyFieldsInvisible(String fields) {
+        String arr[] = fields.split("," );
+
+        for (int i = 0; i < arr.length; i++) {
+            final String fieldName = arr[i];
+            try{
+                verifyElementIsDisplayedByContainsTextAndTagName("*",fieldName);
+            }
+            catch(Exception e){
+                System.out.println(fieldName + " - Is not present on the form");
+            }
+        }
+        return true;
+    }
+    public void enterNextAssessmentDate(String assessmentDate){
+        enterTextByElement(By.id(txt_Next_Assessment_Date), assessmentDate );
+    }
+    public boolean verifyIsKnownErrorCodeIsReadOnly(){
+        return checkIfControlIsReadonly(dd_Known_Error_Code);
+    }
 
     public String getAgreedStartTime(){
         return getTextByID(txt_AGREED_START_TIME);

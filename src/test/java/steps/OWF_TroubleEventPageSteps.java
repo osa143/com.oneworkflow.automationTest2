@@ -6,7 +6,6 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pageObjects.OWF_TroubleEventPage;
 import pageObjects.OWF_WorkOrderPage;
@@ -375,7 +374,7 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("error message should display as {string}")
     public void errorMessageShouldDisplayAs(String arg0) {
-//        Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
+        Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
         //troubleEventPage.getErrorText();
         //troubleEventPage.clickOkOnPopup();
         //troubleEventPage.clickOk();
@@ -882,7 +881,7 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("error message should display as {string} on change record page")
     public void errorMessageShouldDisplayAsOnChangeRecordPage(String arg0) {
-        Assert.assertEquals(troubleEventPage.getErrorText_change_recordPage(), arg0);
+        Assert.assertEquals(troubleEventPage.getErrorText_(), arg0);
         troubleEventPage.wait(3000);
 
     }

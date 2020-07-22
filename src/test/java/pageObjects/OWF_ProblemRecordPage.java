@@ -122,6 +122,32 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String table_row_Attachment_Window= "//*[@id='T700500008']/tbody/tr[2]";
     private static final String btn_DELETE= "WIN_0_777000022";
     private static final String btn_NEXT_TAB="nextTab";
+    private static final String Error_POP_UP_ID= "PopupMsgBox";
+
+
+    public boolean verifyFieldsInvisible(String fields) {
+        String arr[] = fields.split(":" );
+
+        for (int i = 0; i < arr.length; i++) {
+            final String fieldName = arr[i];
+            try{
+                verifyElementIsDisplayedByContainsTextAndTagName("*",fieldName);
+            }
+            catch(Exception e){
+                System.out.println(fieldName + " - Is not present on the form");
+            }
+        }
+        return true;
+    }
+
+    public String getErrorText_(){
+        switchToFrameByIndex(2);
+        String error =getTextByID(Error_POP_UP_ID);
+        System.out.println("The error message is " + error);
+        clickElementByContainsTextAndTagName("a", "OK");
+        return error;
+
+    }
 
     public void clickNextTab(){
         clickElementById(btn_NEXT_TAB);
@@ -151,20 +177,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     public void clickOnAttachment(){
         clickElement(By.xpath(table_row_Attachment));
     }
-    public boolean verifyFieldsInvisible(String fields) {
-        String arr[] = fields.split(":" );
 
-        for (int i = 0; i < arr.length; i++) {
-            final String fieldName = arr[i];
-            try{
-                verifyElementIsDisplayedByContainsTextAndTagName("*",fieldName);
-            }
-           catch(Exception e){
-               System.out.println(fieldName + " - Is not present on the problem form");
-           }
-        }
-        return true;
-    }
 
        public boolean verifyAdditionalRootCauseCodeIsRemoved(){
 

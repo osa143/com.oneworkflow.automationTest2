@@ -889,6 +889,21 @@ public class OWF_ProblemRecordPageSteps {
 
     }
 
+    @When("user changes status to {string} on known error page")
+    public void userChangesStatusToOnKnownErrorPage(String arg0) {
+        try {
+            problemRecordPage.selectStatus_problemRecord(arg0);
+        } catch (Exception e) {
+            System.out.println("Not able to change the status... Try again");
+            try {
+                problemRecordPage.selectStatus_problemRecord(arg0);
+            } catch (Exception e2) {
+
+            }
+        }
+
+    }
+
     @And("user enters {string} in assignee")
     public void userEntersInAssignee(String assigneeName) {
         problemRecordPage.enterAssignee(assigneeName);
@@ -1473,6 +1488,28 @@ public class OWF_ProblemRecordPageSteps {
     public void userClicksOnNextTabButton() {
         problemRecordPage.clickNextTab();
         problemRecordPage.clickNextTab();
+    }
+
+
+    @And("user should see {string} dropdown as optional")
+    public void userShouldSeeDropdownAsOptional(String textAsOptional) {
+        Assert.assertTrue(problemRecordPage.verifyElementIsDisplayedByContainsText(textAsOptional));
+    }
+
+    @And("user should see {string} dropdown as mandatory")
+    public void userShouldSeeDropdownAsMandatory(String textAsMandatory) {
+        Assert.assertTrue(problemRecordPage.verifyElementIsDisplayedByContainsText(textAsMandatory));
+    }
+
+    @And("user should see accountable organisation as read only")
+    public void userShouldSeeAccountableOrganisationAsReadOnly() {
+        Assert.assertTrue(problemRecordPage.IsAccountableOrganisation_IsReadOnly());
+    }
+
+
+    @Then("error message should display for close ticket as {string}")
+    public void errorMessageShouldDisplayForCloseTicketAsClosed(String errorMessage) {
+        Assert.assertEquals(problemRecordPage.getErrorText_(),errorMessage);
     }
 }
 

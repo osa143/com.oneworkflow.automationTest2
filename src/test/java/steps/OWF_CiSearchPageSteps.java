@@ -118,6 +118,7 @@ public class OWF_CiSearchPageSteps {
     @Then("CI should be listed and displayed under the Diagnosis tab")
     public void ciShouldBeListedAndDisplayedUnderTheDiagnosisTab() {
         ciSearchPage.selectTab("Diagnosis");
+        ciSearchPage.clickRefresh_Diagnosis();
         int size = ciSearchPage.ciDiagnosisTableRows().size();
         Assert.assertNotEquals(size, 1, "CI details are not displayed");
     }

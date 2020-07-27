@@ -169,7 +169,7 @@ public class OWF_ProblemRecordPageSteps {
     public void descriptionFieldShouldBeGreyedOutShouldNotBeAbleToChanged() {
         System.out.println(problemRecordPage.getDescriptionText());
         Assert.assertTrue(problemRecordPage.getDescriptionTextBoxStatus(), "description is not greyed out");
-        Assert.assertEquals(problemRecordPage.getDescriptionText(), "UAT Test1 withdraw after Ack");
+        Assert.assertEquals(problemRecordPage.getDescriptionText(), "Initiator Change Description after Ack");
 
     }
 
@@ -1444,7 +1444,7 @@ public class OWF_ProblemRecordPageSteps {
     @Then("attachment form should open in new tab")
     public void attachmentFormShouldOpenInNewTab() {
         CommonUtils.switchToChildWindow(problemRecordPage.getDriver(), 2);
-        Assert.assertEquals(problemRecordPage.getPageTitle(), "OS3 Attachments(Modify)");
+        Assert.assertEquals(problemRecordPage.getPageTitle(), "OS3 Attachments (Modify)");
     }
 
     @When("user clicks on the attachment listed")
@@ -1510,6 +1510,11 @@ public class OWF_ProblemRecordPageSteps {
     @Then("error message should display for close ticket as {string}")
     public void errorMessageShouldDisplayForCloseTicketAsClosed(String errorMessage) {
         Assert.assertEquals(problemRecordPage.getErrorText_(),errorMessage);
+    }
+
+    @And("user clicks attachment open button")
+    public void userClicksAttachmentOpenButton() {
+        problemRecordPage.clickOpenAttachment();
     }
 }
 

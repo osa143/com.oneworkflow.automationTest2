@@ -62,14 +62,19 @@
       And user clicks on create button under linked items
       And user switches to window 4
       Then known error ticket status should be "New"
-      And user gets ticket value
+      And user gets known error ticket
       When user enters "Test ticket" in Title field
-#      When user selects request type as "Risks & Failures:Lack of Business Continuity Management (BCM)"
-#      And user enters description as "Test"
       And user clicks on save button
-      And user waits 3 secs
       Then known error ticket status should be "Draft"
-      And user switches to window 3
+      And user logsOut
+      And user switches to window 4
+      And user goes back to login page
+      When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
+      Then user successfully logged in to OneWorkflow and agent console should be displayed
+      And user clicks on search and selects open search forms and problem record
+      And user switches to window 5
+      And user enters Problem Ticket
+      And user clicks Search on ticket search
       When user changes status to "Closed" on problem record page
       And user clicks save button
       Then mandatory fields should be indicated in bold
@@ -79,22 +84,17 @@
       And user clicks on save button
       Then user validates ticket status as "Closed"
       And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Investigation Complete to Closed. "
-      And user logsOut
-      And user switches to window 2
-      And user goes back to login page
-      When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
-      Then user successfully logged in to OneWorkflow and agent console should be displayed
       And user selects search menu as "Open Search Form:Known Error"
-      And user switches to window 4
-      And user enters Problem Ticket
+      And user switches to window 6
+      And user enters known error ticket
       And user clicks Search on ticket search
-      When user changes status to "Published" on problem record page
+      When user changes status to "Published" on known error page
       And user selects "Known Error Code" as "Risk accepted"
+      And user selects accountable organisation as "CA_Infra"
       And user selects affected organisation as "CA_Infra"
-      And user selects accountable organisation as "CA_IT"
       And user clicks on save button
       Then user validates ticket status as "Published"
-      When user changes status to "Closed" on problem record page
+      When user changes status to "Closed" on known error page
       And user clicks save button
       When user selects closure code as "Full Impact"
       And user clicks on save button

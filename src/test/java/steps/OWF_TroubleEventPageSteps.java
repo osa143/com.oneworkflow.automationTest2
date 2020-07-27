@@ -669,11 +669,9 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("user validates {int} linked ticket availability")
     public void userValidatesLinkedTicketAvailability(int arg0) {
-        troubleEventPage.validateLinkedItemsAvailability(arg0);
+        Assert.assertTrue(troubleEventPage.validateLinkedItemsAvailability(arg0));
 
     }
-
-
 
     @Then("user enters root cause description as {string}")
     public void userEntersRootCauseDescriptionAs(String arg0) {
@@ -1205,7 +1203,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters on hold to date {int} minutes in the future")
     public void userEntersOnHoldToDateMinutesInTheFuture(int arg0) {
-       troubleEventPage.enterHoldToDateAndTime(CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", arg0));
+       troubleEventPage.enterHoldToDateAndTime(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user selects on hold reason as {string}")
@@ -1302,6 +1300,11 @@ public class OWF_TroubleEventPageSteps {
     @And("user validates action field as {string}")
     public void userValidatesActionFieldAs(String expectedAction) {
         Assert.assertEquals(troubleEventPage.getAction(), expectedAction);
+    }
+
+    @Then("user validates ticket statuses {string} can be seen under linked items tab")
+    public void userValidatesTicketStatusesCanBeSeenUnderLinkedItemsTab(String cellValues) {
+        Assert.assertTrue(troubleEventPage.verifyColumnValuesForMultipleInputs(By.id("T777506000"),"Status", cellValues));
     }
 }
 

@@ -152,6 +152,11 @@ public class BaseRecordPage extends BasePage {
     private static final String txt_Next_Assessment_Date= "arid_WIN_0_800040083";
 
 
+    public void enterTicket(String ticket) {
+        driver.findElement(By.id(txtSEARCH_TICKET_ID)).sendKeys(ticket);
+    }
+
+
 
     public boolean verifyFieldsInvisible(String fields) {
         String arr[] = fields.split("," );
@@ -574,12 +579,13 @@ public class BaseRecordPage extends BasePage {
        }
        return false;
     }
-    public boolean validateLinkedItemsAvailability(int ticketSize)
+    public boolean validateLinkedItemsAvailability(int expectedTickets)
     {
         wait(1000);
         int size = getTableRows(By.id(table_LINKED_ITEMS_ID)).size();
-        System.out.println("Available Tickets" + (size-1));
-        if(size >ticketSize){
+        int actualTickets=size-1;
+        System.out.println("Available Tickets are - " + (actualTickets));
+        if(actualTickets==expectedTickets){
             return true;
         }
         return false;
@@ -951,14 +957,14 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterStartDate_format(int delay) {
-        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss a", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
     }
 
     public void enterEndDate_format(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss a", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );
     }

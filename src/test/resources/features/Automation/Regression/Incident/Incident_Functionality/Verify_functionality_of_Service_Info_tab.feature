@@ -16,7 +16,6 @@
       And user clicks on save button
       Then ticket should be created and status should be assigned
       Then user clicks on "Service Info" tab
-      Then user clicks on "Service Info" tab
       Then user validates "Public service information extent controlled" is visible
       And user validates "Telia.se kartan" is visible
       And user validates "SMS till SLM kunder" is visible

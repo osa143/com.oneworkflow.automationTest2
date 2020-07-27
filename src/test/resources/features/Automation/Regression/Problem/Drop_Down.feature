@@ -24,7 +24,7 @@
       And multiple statuses "Critical:High:Medium:Low:(clear)" should be available in "Urgency" dropdown
       And user selects urgency as High
       And user selects accountable organisation as "CA_Infra"
-      And multiple menu options "CA_Infra:CA_IT:CA_Provider:(clear)" should be available
+      And multiple statuses "CA_Infra:CA_IT:CA_Provider:(clear)" should be available in "Accountable Org." dropdown
       And User selects "Accountable Org." as dropdownValue and should see values for "notreadonly"
         | DropdownValue | DropdownValuesToBePresent |
         | CA_NSD        | IP:ServCore               |
@@ -34,7 +34,7 @@
         | InfraSE       | CableSites:NCS:PSTN       |
         | IT            | CustEng:EntServ:Infra:OSS |
         | NO_Infra      | CableSites                |
-        | NO_IT         | CableSites                |
+        | NO_IT         | CustEng                   |
         | NSD           | ConvAccess:IP:ServCore    |
         | PAComm        | Conv:Voice                |
         | PAConn        | BusNW:Internet:MobVD      |
@@ -43,6 +43,7 @@
 
       And user selects affected organisation as "CA_IT"
       Then user clicks edit affected org button
+      And multiple statuses "CA_Infra:CA_IT:CA_Provider:(clear)" should be available in "Organisations  " dropdown
       And User selects "Affected Orgs." as dropdownValue and should see values for "notreadonly"
         | DropdownValue | DropdownValuesToBePresent |
         | CA_NSD        | IP:ServCore               |
@@ -52,7 +53,7 @@
         | InfraSE       | CableSites:NCS:PSTN       |
         | IT            | CustEng:EntServ:Infra:OSS |
         | NO_Infra      | CableSites                |
-        | NO_IT         | CustEnd                   |
+        | NO_IT         | CustEnG                   |
         | NSD           | ConvAccess:IP:ServCore    |
         | PAComm        | Conv:Voice                |
         | PAConn        | BusNW:Internet:MobVD      |

@@ -18,7 +18,7 @@
       When user clicks on "Diagnosis" tab
       And user clicks on CI search button
       Then user switches to frame
-      And user selects Category as "Core"
+      And user selects Category as "CORE"
       And user selects Type as "Mobile PS Core Network"
       And user selects Item as "SGSN"
       When user enters "SE_SGSN_FREMME2" in name field
@@ -29,6 +29,7 @@
       And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
       And user closes warning message
       And user clicks on close button on CI search window
+      And user waits 5 secs
       When user adds below CI's to the ticket
         |   CI Name     |
         |SE_SGSN_HYMME2|
@@ -44,7 +45,7 @@
       Then user switches to window 2
       When user clicks save button
       Then multiple error messages should appear with red boarder around fields
-      When user selects request type as "Carrier:INFRA:Infrastructure" in problem form
+      When user selects request type as "Carrier:INFRA:Power" in problem form
       And user selects impact as "Significant/Large"
       And user selects urgency as "Medium"
       Then user clicks on save button on the problem form

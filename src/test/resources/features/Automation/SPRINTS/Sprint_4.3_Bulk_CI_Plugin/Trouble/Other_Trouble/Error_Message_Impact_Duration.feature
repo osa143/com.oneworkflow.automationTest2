@@ -20,8 +20,8 @@ Feature: checking of bulk loading error message impact duration
     And user switches to frame
     Then user should see bulk ci loading window
     When user selects impact level as "No Impact"
-    And user enters impact from date as current date midnight plus 44 hours on bulk CI loading window
-    And user enters impact to date as current date midnight plus 48 hours on bulk CI loading window
+    And user enters impact from date as current date midnight plus 72 hours on bulk CI loading window
+    And user enters impact to date as current date midnight plus 96 hours on bulk CI loading window
     And user clicks on Manual Input radio button
     And user enters "One Workflow" in manual CI search box
     Then user clicks on save button under bulk import

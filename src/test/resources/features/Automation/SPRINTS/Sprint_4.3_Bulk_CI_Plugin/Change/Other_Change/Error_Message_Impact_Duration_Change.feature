@@ -22,8 +22,8 @@ Feature: checking of bulk loading error message impact duration
     And user enters "Regression - Change Management Process" in the ver of functionality field
     And user enters "Regression - Change Management Process" in the risk description field
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-    And user enters start time as 24 hours fast from current sweden time in "MM-dd-YYYY HH:mm:ss" format
-    And user enters end time as 28 hours fast from current sweden time in "MM-dd-YYYY HH:mm:ss" format
+    And user enters start time as 24 hours fast from current sweden time in "MM/dd/YYYY HH:mm:ss" format
+    And user enters end time as 28 hours fast from current sweden time in "MM/dd/YYYY HH:mm:ss" format
     And user enters impact duration as "45" minutes
     And user selects estimated impact dropdown as "Degradation of Service"
     And user clicks on save button
@@ -33,18 +33,18 @@ Feature: checking of bulk loading error message impact duration
     Then user should see bulk ci loading window
     When user selects impact level as "No Impact"
     And user clicks on Manual Input radio button
-#    And user enters impact from date as current date midnight plus 48 hours on bulk CI loading window
-#    And user enters impact to date as current date midnight plus 54 hours on bulk CI loading window
-#    And user enters "One Workflow" in manual CI search box
-#    Then user clicks on save button under bulk import
-#    And user should see error message of "(300825): From date cannot be in the future for planned impact record." on bulk cI window
-#    And user should see error message of "To date cannot be in the future for un-planned impact record." on bulk cI window and clicks ok
-#    And user switches to frame
-#    And user enters impact from date as current date midnight plus -20 hours on bulk CI loading window
-#    And user enters impact to date as current date midnight plus -24 hours on bulk CI loading window
-#    And user clicks on save button under bulk import
-#    Then user should see error message of "(300825): From date cannot be in the future for planned impact record." on bulk cI window
-#    And user should see error message of "Impact From date must be before Impact To date." on bulk cI window and clicks ok
+    And user enters impact from date as current date midnight plus 48 hours on bulk CI loading window
+    And user enters impact to date as current date midnight plus 54 hours on bulk CI loading window
+    And user enters "One Workflow" in manual CI search box
+    Then user clicks on save button under bulk import
+    And user should see error message of "(300825): From date cannot be in the future for planned impact record." on bulk cI window
+    And user should see error message of "To date cannot be in the future for un-planned impact record." on bulk cI window and clicks ok
+    And user switches to frame
+    And user enters impact from date as current date midnight plus -20 hours on bulk CI loading window
+    And user enters impact to date as current date midnight plus -24 hours on bulk CI loading window
+    And user clicks on save button under bulk import
+    Then user should see error message of "(300825): From date cannot be in the future for planned impact record." on bulk cI window
+    And user should see error message of "Impact From date must be before Impact To date." on bulk cI window and clicks ok
     And user clicks on save button under bulk import
     Then user should see error message of "Please type in or paste the list of CIs you you want to relate. (ARERR 10000)" on bulk cI window
     And user should see error message of "Please type in or paste the list of CIs you you want to relate. (ARERR 10000)" on bulk cI window and clicks ok

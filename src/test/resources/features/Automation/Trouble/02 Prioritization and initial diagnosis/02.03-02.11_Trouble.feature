@@ -1,4 +1,4 @@
-@02.03-02.08_Trouble
+@02.03-02.11_Trouble
   #testcase covers 02.03,02.05,02.07 and 02.08
   Feature: 02.03-02.11 trouble
     Scenario: 02.03-02.11 trouble
@@ -45,17 +45,14 @@
       And user clicks confirm checkbox
       And user clicks on bulk update save button
       Then user validates CI "SE_SGSN_HYMME2" impact level is "Loss of Service"
-      And user right clicks on CI "SE_SGSN_FREMME2" and clears impact for all CI's
-      And user should see confirmation message and clicks on yes button
-      And user right clicks on CI "SE_SGSN_FREMME2" and clears impact for all CI's
-      And user should see confirmation message and clicks on yes button
+      And user clicks radio button to select all CIs and right clicks on "SE_SGSN_FREMME2" and clear all CIs impact
       And user validates CI "Impact Status" is "Inactive"
       When user selects importance as "Critical"
       And user selects impact as "Critical" on trouble event page
       And user clicks on priority check button
       And user clicks on save button
       Then user validates that priority changes to "Emergency"
-      And change should also be reflected in the timeline as "The Ticket Priority has been updated to :  Emergency" on row 2
+      And change should also be reflected in the timeline as "The Ticket Priority has been updated to :  Emergency" on row 1
       When user selects search menu as "Open Search Form:Trouble Event"
       And user switches to window 2
       And user enters ticket id as "OP-000000539006"

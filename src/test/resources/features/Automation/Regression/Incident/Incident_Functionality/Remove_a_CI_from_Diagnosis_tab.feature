@@ -19,9 +19,10 @@
               |SE_EPG_HYEPG1  |
               |SE_EPG_LDHEPG1 |
       And user clicks on "Diagnosis" tab
-      Then user validates "Business Hours" is available
-      When user clicks on Remove Column under preferences
-      Then user validates "Business Hours" is available
+      And user validates CI columns "Business Hours" availability
+      When user clicks on Remove Column "Business Hours" under preferences
+      And user clicks refresh button under linked items
+      And user validates CI columns "Business Hours" availability
       And user gets number of CI's
       When user right clicks on CI "SE_EPG_LDHEPG1" and selects "Detach"
       And user clicks on save button

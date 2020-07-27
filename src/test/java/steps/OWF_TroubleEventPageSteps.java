@@ -288,7 +288,7 @@ public class OWF_TroubleEventPageSteps {
     @When("user enters estimated ready as event start time plus {int} days on trouble event page")
     public void userEntersEstimatedReadyAsEventStartTimePlusDays(int arg0) {
 
-        workOrderPage.clearEstimatedReady();
+      //  workOrderPage.clearEstimatedReady();
         workOrderPage.enterEstimatedReady(troubleEventPage.calculateEstimatedReady(arg0, "days"));
     }
 
@@ -1304,6 +1304,7 @@ public class OWF_TroubleEventPageSteps {
     public void userValidatesActionFieldAs(String expectedAction) {
         Assert.assertEquals(troubleEventPage.getAction(), expectedAction);
     }
+
 }
 
 

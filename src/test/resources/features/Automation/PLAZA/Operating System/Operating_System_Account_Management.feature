@@ -13,7 +13,7 @@
       And user clicks on show more button
       When user clicks on account management and server form
       Then user should see "Account Management - Server" form
-      Then user selects network security firewall system name in haiti as "1B"
+      Then user selects operating account management system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system account management request as "Test2 Operating System Account/Request"
       And user selects select request "Add Local Account"
@@ -39,7 +39,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Account Management - Server"
       And user validates request type as "Service Request | PLAZA"
-      And user validates operating system account management description same as plaza
+     # And user validates operating system account management description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

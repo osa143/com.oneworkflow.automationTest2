@@ -1,21 +1,39 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/SPRINTS/Sprint_P2S1/P2S1_SAO-4555+SAO-4556_Trust_Principles.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/Regression/Incident/Incident_Functionality/Remove_a_CI_from_Diagnosis_tab.feature");
 formatter.feature({
-  "name": "User Profile Development - User forms and workflow",
+  "name": "Remove of CI from diagnosis tab",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@SAO-4555_SAO-4556"
+      "name": "@06.09"
+    },
+    {
+      "name": "@Remove_a_CI_from_Diagnosis_tab"
+    },
+    {
+      "name": "@Incident"
+    },
+    {
+      "name": "@Trouble1"
     }
   ]
 });
 formatter.scenario({
-  "name": "Verify user Profile Development - User forms and workflow",
+  "name": "Remove of CI from diagnosis tab",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@SAO-4555_SAO-4556"
+      "name": "@06.09"
+    },
+    {
+      "name": "@Remove_a_CI_from_Diagnosis_tab"
+    },
+    {
+      "name": "@Incident"
+    },
+    {
+      "name": "@Trouble1"
     }
   ]
 });
@@ -30,11 +48,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user logs in with valid username \"fhr501\" and password as \"2020B@dger\"",
+  "name": "user logs in with valid user and password",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_LoginPageSteps.userLogsInWithValidUsernameAndPasswordAs(String,String)"
+  "location": "OWF_LoginPageSteps.userLogsInWithValidUserAndPassword()"
 });
 formatter.result({
   "status": "passed"
@@ -50,11 +68,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user selects \"Administration\" as \"People:Users\"",
+  "name": "user clicks on create trouble event",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSelectsAs(String,String)"
+  "location": "OWF_AgentConsolePageSteps.userClicksOnCreateTroubleEvent()"
 });
 formatter.result({
   "status": "passed"
@@ -70,127 +88,85 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user console should be opened in new window",
+  "name": "trouble record form should appear in new tab",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userConsoleShouldBeOpenedInNewWindow()"
+  "location": "OWF_TroubleEventPageSteps.troubleRecordFormShouldAppearInNewTab()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user selects user \"adg862\" in user table",
+  "name": "user creates an incident with following details",
+  "rows": [
+    {
+      "cells": [
+        "Title",
+        "RequestType",
+        "Description"
+      ]
+    },
+    {
+      "cells": [
+        "Test case 05.01 Manually close an incident",
+        "Customer",
+        "Test case 05.01 Manually close an incident"
+      ]
+    }
+  ],
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnUserAndClicksOpen(String)"
+  "location": "OWF_TroubleEventPageSteps.userCreatesAnIncidentWithFollowingDetails(DataTable)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks open user button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOpenUserButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user information window should be opened",
+  "name": "ticket should be created and status should be assigned",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userInformationWindowShouldBeOpened()"
+  "location": "OWF_ChangeRecordPageSteps.ticketShouldBeCreatedAndStatusShouldBeAssigned()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on \"Trust Principles\" tab",
+  "name": "user adds below CI\u0027s to the ticket",
+  "rows": [
+    {
+      "cells": [
+        "CI Name"
+      ]
+    },
+    {
+      "cells": [
+        "SE_EPG_FREEPG1"
+      ]
+    },
+    {
+      "cells": [
+        "SE_EPG_HYEPG1"
+      ]
+    },
+    {
+      "cells": [
+        "SE_EPG_LDHEPG1"
+      ]
+    }
+  ],
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
+  "location": "OWF_CiSearchPageSteps.userAddsBelowCISToTheTicket(DataTable)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user should see available trust principles as countries \"Sweden:Finland:Denmark:Norway:Lithuania:Estonia\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userShouldSeeAvailableTrustPrinciplesAsCountries(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects country \"Denmark\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userSelectsCountry(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks add right button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksAddRightButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user should see \"Denmark\" under selected trust principles",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userShouldSeeUnderSelectedTrustPrinciples(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user closes user information window",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClosesUserInformationWindow()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects user \"adg862\" in user table",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnUserAndClicksOpen(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks open user button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOpenUserButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on \"Trust Principles\" tab",
+  "name": "user clicks on \"Diagnosis\" tab",
   "keyword": "And "
 });
 formatter.match({
@@ -200,41 +176,51 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user should see \"Denmark\" under selected trust principles",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userShouldSeeUnderSelectedTrustPrinciples(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks remove left button",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksRemoveLeftButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user shouldn\u0027t see \"Denmark\" under selected trust principles",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userShouldnTSeeUnderSelectedTrustPrinciples(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user closes user information window",
+  "name": "user validates CI columns \"Business Hours\" availability",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClosesUserInformationWindow()"
+  "location": "OWF_TroubleEventPageSteps.userValidatesCIColumnAvailability(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user gets number of CI\u0027s",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userGetsNumberOfCIS()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user right clicks on CI \"SE_EPG_LDHEPG1\" and selects \"Detach\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userRightClicksOnCIAndSelects(String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on save button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "CI should be detached from ticket",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.ciShouldBeDetachedFromTicket()"
 });
 formatter.result({
   "status": "passed"

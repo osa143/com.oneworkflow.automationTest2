@@ -11,7 +11,7 @@
       And user clicks on IT Infrastructure dropdown
       And user clicks on firewall & network under IT Infrastructure dropdown
       And user clicks on show more button
-      When user clicks on Network Routing Switching
+      When user clicks on Network Routing Switching pebble
       Then user should see "Network Routing/Switching" form
       Then user selects network security firewall system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
@@ -19,7 +19,7 @@
       And user enters network security switch port request as "Test10 Network Security Switch Port/Request"
       Then user selects existing IP net as "Yes"
       And user selects new IP net as "Yes"
-      And user selects Add CI as "cc100cgas001"
+      And user selects network security switch port config add CI as "cc100cgas001"
       Then user enters Network Security Switch Port description as "Test10 Network Security/Description"
       And user enters additional comments as "Network Security - Test10/AC"
       Then user clicks on "Submit"

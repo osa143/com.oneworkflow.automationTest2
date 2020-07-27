@@ -4,17 +4,17 @@
     Scenario: Search for known error using quick search based on category
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "frvi96_auto" and password as "Test@1234"
+      When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create known error
       And user switches to window 1
       Then known error form should appear in new tab
       And user enters "Known Error B" in Title field
-      And user selects request type as "Rejected:Ticket Rejected" on known error page
+      And user selects request type as "Carrier:INFRA:Power" on known error page
       And user enters description as "A known error"
       And user selects priority as "Minor"
       When user clicks on CTI details under sections
-      And user selects Category as "Core"
+      And user selects Category as "CORE"
       And user selects Type as "Other"
       And user selects Item as "BR"
       And user clicks on save button
@@ -38,7 +38,7 @@
       And user clicks on "Diagnosis" tab
       Then CI should be listed and displayed under the Diagnosis tab
       When user clicks on CTI details under sections
-      And user selects Category as "Core"
+      And user selects Category as "CORE"
       And user selects Type as "Other"
       And user selects Item as "BR"
       Then user clicks on save button
@@ -48,7 +48,7 @@
       And user clicks on link button
       Then user switches to frame
       And user clicks on the clear button
-      And user selects Category as "Core"
+      And user selects Category as "CORE"
       And user selects Type as "Other"
       And user selects Item as "BR"
       And user clicks on the search button

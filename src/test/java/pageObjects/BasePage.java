@@ -157,12 +157,12 @@ public void clickElementById(String Id){
 
     public String calculateEstimatedReady(int time, String timeUnit){
         String estimatedTime = "";
-        String format = "MM-dd-yyyy HH:mm:ss";
+        String format = "dd/MM/yyyy HH:mm:ss";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
         String eventStartTime = getEventStartTime();
         System.out.println(eventStartTime);
         if(eventStartTime.isEmpty())
-            eventStartTime  = CommonUtils.getDateTime(format, "Europe/Stockholm", 0);
+            eventStartTime  = CommonUtils.getDateTime(format, "Europe/London", 0);
         ;
         LocalDateTime dateTime = LocalDateTime.parse(eventStartTime, formatter);
         if(timeUnit.equals("days"))

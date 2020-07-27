@@ -3,6 +3,7 @@
 Feature: User is able to close and clone a problem ticket
   #Below scenario also covers-SAO-5208-Multiple root causes code menus, 4 with one Primary and
   #SAO-5198, All CI Impact Statuses will remain ‘Active’until the status of the problem moves to closed
+  #SAO-5337	Restrictions on PB closure
   Scenario: User logs into One workflow, creates a problem ticket, closes it then clones it
 
 
@@ -13,8 +14,8 @@ Feature: User is able to close and clone a problem ticket
     And user switches to window 1
     Then problem record form should appear in new tab
     When user creates problem ticket with below details
-      |Title                                  |RequestType |Description   |ImpactType      |Urgency|
-      |proactive investigation of: frvi96_auto|CPS:IT:Other|UAT Test close|Moderate/Limited|Low    |
+      |Title                                  |RequestType            |Description   |ImpactType      |Urgency|
+      |proactive investigation of: frvi96_auto|XX_Test:Functional Test|UAT Test close|Moderate/Limited|Low    |
     Then ticket should be created and status should be assigned
     When user adds below CI's to the ticket
       |   CI Name     |
@@ -46,6 +47,16 @@ Feature: User is able to close and clone a problem ticket
     Then user validates root cause code is "External | Other"
     Then additional root cause codes should be saved as "People | Other; Process and Organisation | Other; Technical | HW error;"
     When user changes status to closed
+    Then error message should display for close ticket as "Your user profile doesn't allow you to change the status to \"Closed\". (ARERR 10000)"
+    Then user gets ticket value
+    And user logsOut
+    Then user goes back to login page
+    When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
+    Then user clicks on search and selects open search forms and problem record
+    And user switches to window 2
+    Then user enters Problem Ticket
+    And user clicks Search on ticket search
+    When user changes status to closed
     And user clicks on save button
     And an error message should appear: "Required field (without a default) not specified :Closure Code (ARERR 9424)"
     And an error message should appear: "Required field (without a default) not specified :Solution (ARERR 9424)"
@@ -58,6 +69,6 @@ Feature: User is able to close and clone a problem ticket
     And user validates CI "Impact Status" is "Inactive"
     And change should also be reflected in the timeline as "Status has changed from Investigation Complete to Closed."
     When user clicks on clone button
-    And user switches to window 2
+    And user switches to window 3
     Then problem record form should appear in new tab
     And user validates ticket status as "Investigation Complete"

@@ -1,8 +1,10 @@
 @B2B_Test_Cases
-#Only Transtema is present in SIT
-  Feature: B2B Cancel work order to field service before work is carried out
+#create a B2B wO ticket and send to field service which shouldn't reach them,
+# as a result it shouldn't create Error in the B2B interface ticket
 
-    Scenario Outline: user can cancel a work order sent to a field service before any work is carried out
+  Feature: Turn off the Error in the B2B Interface OP tickets
+
+    Scenario Outline: verify no error in the B2B interface ticket created when work order not reached to B2B
 
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password

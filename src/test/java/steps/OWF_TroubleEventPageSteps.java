@@ -6,7 +6,6 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pageObjects.OWF_TroubleEventPage;
 import pageObjects.OWF_WorkOrderPage;
@@ -375,7 +374,7 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("error message should display as {string}")
     public void errorMessageShouldDisplayAs(String arg0) {
-//        Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
+        Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
         //troubleEventPage.getErrorText();
         //troubleEventPage.clickOkOnPopup();
         //troubleEventPage.clickOk();
@@ -670,11 +669,9 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("user validates {int} linked ticket availability")
     public void userValidatesLinkedTicketAvailability(int arg0) {
-        troubleEventPage.validateLinkedItemsAvailability(arg0);
+        Assert.assertTrue(troubleEventPage.validateLinkedItemsAvailability(arg0));
 
     }
-
-
 
     @Then("user enters root cause description as {string}")
     public void userEntersRootCauseDescriptionAs(String arg0) {
@@ -824,7 +821,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event end time as {int} mins past")
     public void userEntersEventEndTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", arg0));
+        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user selects action dropdown as {string} on trouble event page")
@@ -834,7 +831,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event start time as {int} mins past")
     public void userEntersEventStartTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", arg0));
+        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user should see confirmation message for impact clear and clicks ok")
@@ -882,7 +879,7 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("error message should display as {string} on change record page")
     public void errorMessageShouldDisplayAsOnChangeRecordPage(String arg0) {
-        Assert.assertEquals(troubleEventPage.getErrorText_change_recordPage(), arg0);
+        Assert.assertEquals(troubleEventPage.getErrorText_(), arg0);
         troubleEventPage.wait(3000);
 
     }
@@ -1206,7 +1203,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters on hold to date {int} minutes in the future")
     public void userEntersOnHoldToDateMinutesInTheFuture(int arg0) {
-       troubleEventPage.enterHoldToDateAndTime(CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", arg0));
+       troubleEventPage.enterHoldToDateAndTime(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user selects on hold reason as {string}")
@@ -1305,6 +1302,10 @@ public class OWF_TroubleEventPageSteps {
         Assert.assertEquals(troubleEventPage.getAction(), expectedAction);
     }
 
+    @Then("user validates ticket statuses {string} can be seen under linked items tab")
+    public void userValidatesTicketStatusesCanBeSeenUnderLinkedItemsTab(String cellValues) {
+        Assert.assertTrue(troubleEventPage.verifyColumnValuesForMultipleInputs(By.id("T777506000"),"Status", cellValues));
+    }
 }
 
 

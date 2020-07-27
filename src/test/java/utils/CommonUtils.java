@@ -17,6 +17,7 @@ public class CommonUtils extends BasePage {
     public static String ciDetailsBeforeUpdate;
     public static String opTicket;
     public static String pbTicket;
+    public static String keTicket;
     public static String firstTicketBefore;
     public static String firstTicketAfterWait;
     public static String firstTicketAfterRefreshInterval;
@@ -83,7 +84,7 @@ public class CommonUtils extends BasePage {
     public static String getDateAsTodayMidnight(int delayMinutes)
     {
         LocalTime midnight = LocalTime.MIDNIGHT;
-        LocalDate today = LocalDate.now(ZoneId.of("Europe/Stockholm"));
+        LocalDate today = LocalDate.now(ZoneId.of("Europe/London"));
         LocalDateTime todayMidnight = LocalDateTime.of(today, midnight);
 
         if (delayMinutes >= 0) {
@@ -91,7 +92,7 @@ public class CommonUtils extends BasePage {
         } else {
             todayMidnight= todayMidnight.minusMinutes(Math.abs(delayMinutes));
         }
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/YYYY HH:mm:ss");
         return dateTimeFormatter.format(todayMidnight);
 
     }

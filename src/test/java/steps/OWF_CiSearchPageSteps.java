@@ -118,6 +118,7 @@ public class OWF_CiSearchPageSteps {
     @Then("CI should be listed and displayed under the Diagnosis tab")
     public void ciShouldBeListedAndDisplayedUnderTheDiagnosisTab() {
         ciSearchPage.selectTab("Diagnosis");
+        ciSearchPage.clickRefresh_Diagnosis();
         int size = ciSearchPage.ciDiagnosisTableRows().size();
         Assert.assertNotEquals(size, 1, "CI details are not displayed");
     }
@@ -505,5 +506,20 @@ public class OWF_CiSearchPageSteps {
     @And("user clicks on radio button closed")
     public void userClicksOnRadioButtonClosed() {
         ciSearchPage.clickClosedRadioButton_linkedItems();
+    }
+
+    @And("user validates radio button open is selected")
+    public void userValidatesRadioButtonOpenIsSelected() {
+        Assert.assertTrue(ciSearchPage.isOpenRadioButtonSelected());
+    }
+
+    @And("user validates radio button cleared is selected")
+    public void userValidatesRadioButtonClearedIsSelected() {
+        Assert.assertTrue(ciSearchPage.isClearedRadioButtonSelected());
+    }
+
+    @And("user validates radio button closed is selected")
+    public void userValidatesRadioButtonClosedIsSelected() {
+        Assert.assertTrue(ciSearchPage.isClosedRadioButtonSelected());
     }
 }

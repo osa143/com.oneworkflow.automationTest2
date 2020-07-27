@@ -169,6 +169,9 @@ public class OWF_AgentConsolePage extends BasePage {
     public boolean verifyTitleDropdownValues(String options, String dropdownName ){
         return verifyDropdownValues(options, dropdownName, txt_TITLE);
     }
+
+
+
     public void clickOpen_AssignmentRules(){
         clickElement(By.id(btn_OPEN));
     }
@@ -540,6 +543,13 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void clickMenuItemLogout() {
         selectMenuItem(menuItemLOGOUT);
+        try{
+            switchToFrameByIndex(2);
+            clickElementByContainsTextAndTagName("*", "Yes");
+        }
+        catch (Exception e){
+
+        }
         wait(3000);
     }
 

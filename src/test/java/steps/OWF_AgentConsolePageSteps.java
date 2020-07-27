@@ -665,6 +665,11 @@ public class OWF_AgentConsolePageSteps {
 
     }
 
+    @And("dropdown values {string} should be available in {string} dropdown")
+    public void dropdownValuesShouldBeAvailableInDropdown(String dropdownValues, String dropdownName) {
+        Assert.assertTrue(agentConsolePage.verifyDropdownValues(dropdownValues, dropdownName, "notreadonly"));
+    }
+
     @Then("user selects user {string} in user table")
     public void userClicksOnUserAndClicksOpen(String text) {
         agentConsolePage.clickElementByContainsTextAndTagName("span", text);

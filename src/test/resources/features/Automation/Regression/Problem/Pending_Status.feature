@@ -1,4 +1,4 @@
-#Need to check ticket status manually after 30 mins
+#Need to check ticket status manually after 30 mins  PB-000000042949
 @Pending_Status @Reg_Problem
 Feature: User is able to change status to pending
 
@@ -11,8 +11,8 @@ Feature: User is able to change status to pending
     And user switches to window 1
     Then problem record form should appear in new tab
     When user creates problem ticket with below details
-      |Title                                  |RequestType |Description   |ImpactType      |Urgency|
-      |proactive investigation of: frvi96_auto|CPS:IT:Other|UAT Test close|Moderate/Limited|Low    |
+      |Title                                  |RequestType            |Description               |ImpactType      |Urgency|
+      |proactive investigation of: frvi96_auto|XX_Test:Functional Test|Pending ticket status Test|Moderate/Limited|Low    |
     Then ticket should be created and status should be assigned
     Then user clicks on Ack button
     And problem ticket status should be under investigation

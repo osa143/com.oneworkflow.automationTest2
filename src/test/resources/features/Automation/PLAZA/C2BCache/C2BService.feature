@@ -9,6 +9,7 @@ Feature: Plaza C2B Cache form test
     When user clicks on Products & Services
     And user clicks on IT Infrastructure dropdown
     And user clicks on application under IT Infrastructure dropdown
+    And user clicks on show more button
     When user clicks on "C2BService" pebble
     Then user should see "C2B Service" form
     #Then user selects system name in haiti as "Other"
@@ -51,14 +52,15 @@ Feature: Plaza C2B Cache form test
     And user clicks on save button
     And user validates ticket status as "Closed"
     When user switches to window 0
+    And user waits 10 secs
     And user clicks on main page refresh
     Then user validates plaza request has completed
 
 
     Examples:
     |Request                 |Environment|Description                 |AdditionalComments |
-  #  |Test1 C2BService/Request|AT         |Test1 C2BService/Description|Test1 C2BService/AC|
-    |Test2 C2BService/Request|Prod       |Test2 C2BService/Description|Test1 C2BService/AC|
+     |Test1 C2BService/Request|AT         |Test1 C2BService/Description|Test1 C2BService/AC|
+#    |Test2 C2BService/Request|Prod       |Test2 C2BService/Description|Test1 C2BService/AC|
 
 
 

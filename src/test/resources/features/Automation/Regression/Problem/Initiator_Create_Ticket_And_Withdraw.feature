@@ -16,12 +16,10 @@ Feature: initiator create ticket and withdraw
     And user clicks save button
     Then multiple error messages should appear with red boarder around fields
     When user enters "proactive investigation of Tohall_Copy" in Title field
-    And user selects request type as "CPS:IT:Other" on Problem record page
-    And user enters description as "UAT Test1"
+    And user selects request type as "XX_Test:Functional Test" on Problem record page
+    And user enters description as "SIT Test- Initiator create ticket and withdraw "
     And user selects impact type as moderate:limited
     And user selects urgency as low
-    And user selects accountable organisation as "CA_Infra"
-    And user selects affected organisation as "CA_IT"
     And user clicks on save button on the problem form
     Then ticket should be created and status should be assigned
     When user changes status to "Withdrawn" on problem record page

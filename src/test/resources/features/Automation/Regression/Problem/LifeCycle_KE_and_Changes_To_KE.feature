@@ -12,7 +12,7 @@
       And user switches to window 1
       Then known error form should appear in new tab
       And user enters "Known Error B" in Title field
-      And user selects request type as "Rejected:Ticket Rejected" on known error page
+      And user selects request type as "XX_Test:Functional Test" on known error page
       And user enters description as "A known error"
       And user selects priority as "Minor"
       And user clicks on save button
@@ -33,6 +33,9 @@
       And user adds CI "SE_CPE_FRECPE5" to the ticket
       Then CI should be listed and displayed under the Diagnosis tab
       When user changes status to "Published" on problem record page
+      And user selects "Known Error Code" as "Risk accepted"
+      And user selects affected organisation as "CA_Infra"
+      And user selects accountable organisation as "CA_IT"
       And user clicks on save button
       Then known error ticket status should be "Published"
       When user enters description as "More information"
@@ -50,7 +53,6 @@
       When user changes status to "Closed" on problem record page
       And user clicks save button
       Then an error message should appear: "Required field (without a default) not specified : Closure Code (ARERR 9424)"
-      When user selects error code as "Full Impact"
       When user selects closure code as "Full Impact"
       When user clicks on "Diagnosis" tab
       And user right clicks on CI "SE_CPE_FRECPE5" and selects "Impact:Clear All"

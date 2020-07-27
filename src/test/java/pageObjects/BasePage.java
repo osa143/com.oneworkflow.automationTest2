@@ -68,7 +68,7 @@ public class BasePage{
     public boolean verifyElementIsDisplayedByContainsTextAndTagName(String tagName, String text){
         String element = String.format("//%s[contains(text(),'%s')]", tagName, text);
         System.out.println(element);
-        return findElement(By.xpath(element)).isDisplayed();
+        return driver.findElement(By.xpath(element)).isDisplayed();
 
     }
     public void clickElementByContainsTextAndTagName(String tagName, String textName){
@@ -157,7 +157,7 @@ public void clickElementById(String Id){
 
     public String calculateEstimatedReady(int time, String timeUnit){
         String estimatedTime = "";
-        String format = "dd/MM/yyyy HH:mm:ss";
+        String format = "MM/dd/yyyy HH:mm:ss";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
         String eventStartTime = getEventStartTime();
         System.out.println(eventStartTime);
@@ -733,9 +733,9 @@ public void clickElementById(String Id){
         return  false;
     }
 
-    public boolean verifyColumnValuesForMultipleInputs(By table, String columnName, String columnValue)
+    public boolean verifyColumnValuesForMultipleInputs(By table, String columnName, String CellValue)
     {
-        String[] columnValues = columnValue.split(":");
+        String[] cellValues = CellValue.split(":");
 
         int colNum = getColumnIndexByHeaderName(table, columnName);
         List<WebElement> tableRows = getTableRows(table);
@@ -749,7 +749,7 @@ public void clickElementById(String Id){
                 if(i == 51)
                     break;
 
-                if(verifySingleColumnValue(td.getText().trim(), columnValues))
+                if(verifySingleColumnValue(td.getText().trim(), cellValues))
                     continue;
                 else
                     return false;
@@ -758,6 +758,7 @@ public void clickElementById(String Id){
         }
         return true;
     }
+
 
     //columnValue should be separated by :
     public boolean verifyColumnValuesMultiple(By table, String columnName, String columnValue, boolean partialText)
@@ -895,16 +896,16 @@ public void clickElementById(String Id){
         }
         return true;
     }
-    public boolean verifyDropdownValues(String statuses, String dropdownName, String dropdownId)
+    public boolean verifyDropdownValues(String ExpectedDropdownValues, String dropdownName, String dropdownId)
     {
-        String[] multipleStatus = statuses.split(":");
-        List<String> dropdownValues = getDropdownValues(dropdownName, dropdownId);
+        String[] multipleValues = ExpectedDropdownValues.split(":");
+        List<String> ActualDropdownValues = getDropdownValues(dropdownName, dropdownId);
         clickEscButton();
 
-        System.out.println("Dropdown values are: " + dropdownValues);
-        for (int i = 0; i < multipleStatus.length; i++)
+        System.out.println("Dropdown values are: " + ActualDropdownValues);
+        for (int i = 0; i < multipleValues.length; i++)
         {
-            if (!dropdownValues.contains(multipleStatus[i]))
+            if (!ActualDropdownValues.contains(multipleValues[i]))
             {
                 return false;
             }

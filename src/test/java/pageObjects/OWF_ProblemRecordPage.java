@@ -9,12 +9,12 @@ import utils.CommonUtils;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class OWF_ProblemRecordPage extends BaseRecordPage {
 
 
     private static final String txtTICKET_ID = "arid_WIN_0_730000060";
-    private static final String txtSEARCH_TICKET_ID = "arid_WIN_0_777777600";
     private static final String linkASSIGNMENTS = "WIN_0_999000346";
     private static final String TABLE_ID = "T1020";
     private static final String dd_STATUS= "Status*";
@@ -67,7 +67,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String btnACK_CSS = "#WIN_0_777504152";
     private static final String timeline_TABLE_ID = "T999000510";
     private static final String btnRELEASE_ID = "WIN_0_777021435";
-    private static final String btn_YES= "WIN_6_700027904";
+    private static final String btn_YES= "//a[@arid='700027904']";
 
     private static final String txtSOURCE_ID = "arid_WIN_0_777777912";
     private static final String txtPRIORITY_ID = "arid_WIN_0_700025204";
@@ -116,9 +116,18 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String btn_APPLY_ROOT_CAUSE_CODES= "WIN_0_800040088";
     private static final String btn_MAKE_PRIMARY="WIN_0_800040086";
     private static final String btn_REMOVE_SELECTED= "WIN_0_800040087";
+    private static final String table_row_Attachments= "T777000013";
+    private static final String table_row_Attachment= "//*[@id='T777000013']/tbody/tr[2]";
+    private static final String table_row_Attachment_Window= "//*[@id='T700500008']/tbody/tr[2]";
+    private static final String btn_DELETE= "WIN_0_777000022";
+    private static final String btn_NEXT_TAB="nextTab";
+    private static final String Error_POP_UP_ID= "PopupMsgBox";
+    private static final String btn_Open_Attachment= "WIN_0_777000021";
 
 
-
+    public void clickOpenAttachment(){
+        clickElementById(btn_Open_Attachment);
+    }
     public boolean verifyFieldsInvisible(String fields) {
         String arr[] = fields.split(":" );
 
@@ -127,12 +136,54 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
             try{
                 verifyElementIsDisplayedByContainsTextAndTagName("*",fieldName);
             }
-           catch(Exception e){
-               System.out.println(fieldName + " - Is not present on the problem form");
-           }
+            catch(Exception e){
+                System.out.println(fieldName + " - Is not present on the form");
+            }
         }
         return true;
     }
+
+    public String getErrorText_(){
+        switchToFrameByIndex(2);
+        String error =getTextByID(Error_POP_UP_ID);
+        System.out.println("The error message is " + error);
+        clickElementByContainsTextAndTagName("a", "OK");
+        return error;
+
+    }
+
+    public void clickNextTab(){
+        clickElementById(btn_NEXT_TAB);
+    }
+    public boolean verifyAttachmentIsNotAvailable(){
+        int tableRows=getTableRows(By.id(table_row_Attachments)).size();
+        int numOfAttachments=tableRows-1;
+        System.out.println("Number of attachments are - " +numOfAttachments);
+        if(numOfAttachments==0)
+            return true;
+        else return false;
+    }
+    public void clickOnDelete(){
+        clickElementById(btn_DELETE);
+    }
+    public Boolean verifyNewWindowDisplayed(){
+        int windowHandles=driver.getWindowHandles().size();
+        if(windowHandles==3){
+            return true;
+        }
+        else return false;
+    }
+
+    public void clickOnDisplay(){
+        clickElementByContainsTextAndTagName("a", "Display");
+    }
+    public void clickOnAttachment_attachmentWindow(){
+        clickElement(By.xpath(table_row_Attachment_Window));
+    }
+    public void clickOnAttachment(){
+        clickElement(By.xpath(table_row_Attachment));
+    }
+
 
        public boolean verifyAdditionalRootCauseCodeIsRemoved(){
 
@@ -348,7 +399,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
     public void clickYes_impactClear(){
-        clickElement(By.id(btn_YES));
+        clickElement(By.xpath(btn_YES));
         wait(1000);
     }
     public boolean verifyTitleIsReadOnly(){
@@ -436,9 +487,6 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         driver.findElement(By.xpath(btnTIMELINE_XPATH)).click();
     }
 
-    public void enterTicket(String ticket) {
-        driver.findElement(By.id(txtSEARCH_TICKET_ID)).sendKeys(ticket);
-    }
 
     public void clickYesOnFrame() {
         driver.findElement(By.id(btnYES_ON_FRAME_ID)).click();
@@ -478,8 +526,12 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
             if(size1>2){
                 switchToFrameByIndex(size1 - 1);
             }
+            else if(size1>3){
+                switchToFrameByIndex(size1 - 2);
+            }
             else
             {
+                switchToDefault();
                 switchToFrameByIndex(size1);
             }
 
@@ -487,9 +539,13 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
             {
                 clickExternalRadioButton();
             }
-            else
+            else if((type.equals("internal")))
             {
                 clickInternalRadioButton();
+            }
+            else if((type.equals("")))
+                {
+
             }
             clickSave_AttachmentOnFrame();
             Assert.assertTrue(validateAttachmentAvailability(attachmentsCount));

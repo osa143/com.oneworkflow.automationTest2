@@ -11,8 +11,8 @@ Feature: PMO Tab
     And user switches to window 1
     Then problem record form should appear in new tab
     When user creates problem ticket with below details
-      |Title                                  |RequestType |Description   |ImpactType      |Urgency|
-      |proactive investigation of: frvi96_auto|CPS:IT:Other|UAT Test close|Moderate/Limited|Low    |
+      |Title                                  |RequestType            |Description |ImpactType      |Urgency|
+      |proactive investigation of: frvi96_auto|XX_Test:Functional Test|PMO Tab Test|Moderate/Limited|Low    |
     Then ticket should be created and status should be assigned
     And user gets ticket value
     When user verifies PM office tab visibility
@@ -25,6 +25,7 @@ Feature: PMO Tab
     And user switches to window 2
     And user enters Problem Ticket
     And user clicks Search on ticket search
+    When user clicks on next tab button
     Then user validates availability of tabs "PM Office"
     And user clicks on "PM Office" tab
     When user enters "Secret problem stuff" in the problem review field
@@ -54,6 +55,7 @@ Feature: PMO Tab
     And user enters Problem Ticket
     And user clicks Search on ticket search
     When user verifies PM office tab visibility
+    When user clicks on next tab button
     Then PM office tab should be visible
     When user enters "Secret problem stuff" in the problem review field
     And user clicks on save button

@@ -148,6 +148,36 @@ public class BaseRecordPage extends BasePage {
     private static final String fld_PENDING_TICKET= "//*[@id='T777031442']/tbody/tr[2]";
     private static final String txt_AGREED_START_TIME= "arid_WIN_0_777021162";
     private static final String txt_AGREED_END_TIME= "arid_WIN_0_777021163";
+    private static final String dd_Known_Error_Code= "arid_WIN_0_808080010";
+    private static final String txt_Next_Assessment_Date= "arid_WIN_0_800040083";
+
+
+    public void enterTicket(String ticket) {
+        driver.findElement(By.id(txtSEARCH_TICKET_ID)).sendKeys(ticket);
+    }
+
+
+
+    public boolean verifyFieldsInvisible(String fields) {
+        String arr[] = fields.split("," );
+
+        for (int i = 0; i < arr.length; i++) {
+            final String fieldName = arr[i];
+            try{
+                verifyElementIsDisplayedByContainsTextAndTagName("*",fieldName);
+            }
+            catch(Exception e){
+                System.out.println(fieldName + " - Is not present on the form");
+            }
+        }
+        return true;
+    }
+    public void enterNextAssessmentDate(String assessmentDate){
+        enterTextByElement(By.id(txt_Next_Assessment_Date), assessmentDate );
+    }
+    public boolean verifyIsKnownErrorCodeIsReadOnly(){
+        return checkIfControlIsReadonly(dd_Known_Error_Code);
+    }
 
     public String getAgreedStartTime(){
         return getTextByID(txt_AGREED_START_TIME);
@@ -549,12 +579,13 @@ public class BaseRecordPage extends BasePage {
        }
        return false;
     }
-    public boolean validateLinkedItemsAvailability(int ticketSize)
+    public boolean validateLinkedItemsAvailability(int expectedTickets)
     {
         wait(1000);
         int size = getTableRows(By.id(table_LINKED_ITEMS_ID)).size();
-        System.out.println("Available Tickets" + (size-1));
-        if(ticketSize > size){
+        int actualTickets=size-1;
+        System.out.println("Available Tickets are - " + (actualTickets));
+        if(actualTickets==expectedTickets){
             return true;
         }
         return false;
@@ -911,7 +942,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterStartDate(int delay) {
-        String dateTime = CommonUtils.getDateTime("MM-dd-yyyy HH:mm:ss a", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         CommonUtils.eventStartTime=dateTime;
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
@@ -919,21 +950,21 @@ public class BaseRecordPage extends BasePage {
 
     public void enterEndDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("MM-dd-yyyy HH:mm:ss a", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         CommonUtils.requestEnd=dateTime;
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );
     }
 
     public void enterStartDate_format(int delay) {
-        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss a", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
     }
 
     public void enterEndDate_format(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss a", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );
     }

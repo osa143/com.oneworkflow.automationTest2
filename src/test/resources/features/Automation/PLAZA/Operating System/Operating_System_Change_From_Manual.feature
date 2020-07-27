@@ -12,7 +12,7 @@
       And user clicks on show more button
       When user clicks on Change OS Patching
       Then user should see "Change OS Patching" form
-      Then user selects network security firewall system name in haiti as "1B"
+      Then user selects operating system change from manual system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system change from manual request as "<Request>"
       And user selects select request "<Select Request>"

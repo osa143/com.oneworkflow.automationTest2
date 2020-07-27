@@ -1,5 +1,5 @@
 @1.02-1.05Trouble
-  #test case covers 01.02,01.03,01.04,01.05 and 01.17.
+  #test case covers 01.02,01.03,01.04,01.05,01.09 and 01.17.
 
   Feature: 01.02-01.05 + 01.09 and 01.17 trouble
     Scenario: 01.02-01.05 + 01.09 and 01.17 trouble
@@ -36,8 +36,9 @@
       And user enters "Test Case 01.17 Event Start Time In History" in Title field in Trouble event
       And user selects request type as "Customer" on trouble event page
       And user enters description as "Test Case 01.17 Event Start Time In History"
-      #And user changes event start time -1 day in the past
-      #And user enters event start time as -9 mins past
+     # And user changes event start time -1 day in the past
+    #  And user enters event start time as -9 mins past
+      And user enters event start time as -85 mins past
       And user clicks on save button
       Then ticket should be created and status should be assigned
       When user clicks on attachments under sections

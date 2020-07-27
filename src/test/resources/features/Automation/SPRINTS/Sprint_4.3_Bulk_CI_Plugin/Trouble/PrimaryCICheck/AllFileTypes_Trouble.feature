@@ -46,7 +46,7 @@ Feature: checking of bulk loading additional definitions default settings
     And user validates with warnings as "0"
     Then user validates at least one CI has "Completed" under "Status"
     Then user clicks on bulk loading close button
-    And user waits 5 secs
+    And user waits 10 secs
     When user clicks on ticket refresh button
     And user clicks on Diagnosis tab
     Then user validates primary ci as "SE_AP_alvesta-radmannen-ap1"
@@ -55,7 +55,7 @@ Feature: checking of bulk loading additional definitions default settings
 
     Examples:
       |fileTypes                                                                                                  |
-      |Test Attachments\10 CI's - Correct Names\CSV.csv |
-      |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
+      #|Test Attachments\10 CI's - Correct Names\CSV.csv |
+      #|Test Attachments\10 CI's - Correct Names\FILE.xlsx|
       |Test Attachments\10 CI's - Correct Names\XLS.xls|
       |Test Attachments\10 CI's - Correct Names\TEXT.txt |

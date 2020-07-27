@@ -22,7 +22,7 @@
       And user enters additional comments as "Test1 Backup Restore/AC"
       And user clicks on add attachment in plaza
       And user searches for "Test Attachments\other files\Test Image.png" attachment and adds it
-      And user clicks on add attachment in plaza
+      And user clicks on add second attachment in plaza
       And user searches for "Test Attachments\other files\Test Image 2.png" attachment and adds it
       Then user clicks on "Submit"
       And user gets plaza request id

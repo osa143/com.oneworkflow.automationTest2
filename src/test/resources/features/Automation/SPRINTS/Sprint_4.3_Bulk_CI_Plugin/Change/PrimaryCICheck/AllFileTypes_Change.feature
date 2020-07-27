@@ -22,8 +22,8 @@ Feature: checking of bulk loading additional definitions default settings
     And user enters "Regression - Change Management Process" in the ver of functionality field
     And user enters "Regression - Change Management Process" in the risk description field
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-    And user enters start time as 24 hours fast from current sweden time in "YYYY/MM/dd HH:mm:ss" format
-    And user enters end time as 28 hours fast from current sweden time in "YYYY/MM/dd HH:mm:ss" format
+    And user enters start time as 24 hours fast from current sweden time in "MM/dd/YYYY HH:mm:ss" format
+    And user enters end time as 28 hours fast from current sweden time in "MM/dd/YYYY HH:mm:ss" format
     And user enters impact duration as "45" minutes
     And user selects estimated impact dropdown as "Degradation of Service"
     And user clicks on save button
@@ -56,7 +56,7 @@ Feature: checking of bulk loading additional definitions default settings
     And user validates with warnings as "0"
     Then user validates at least one CI has "Completed" under "Status"
     Then user clicks on bulk loading close button
-    And user waits 5 secs
+    And user waits 10 secs
     When user clicks on ticket refresh button
     And user clicks on Diagnosis tab
     Then user validates primary ci as "SE_AP_alvesta-radmannen-ap1"

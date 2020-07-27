@@ -12,7 +12,7 @@
       And user clicks on show more button
       When user clicks on Change OS Patching
       Then user should see "Change OS Patching" form
-      Then user selects network security firewall system name in haiti as "1B"
+      Then user selects operating change from auto system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system change from auto request as "Test3 Operating System Account/Request"
       And user selects select request "Changing from Auto to Manual patching"
@@ -39,7 +39,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Change OS Patching"
       And user validates request type as "Service Request | PLAZA"
-      And user validates operating system change from auto description same as plaza
+      #And user validates operating system change from auto description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

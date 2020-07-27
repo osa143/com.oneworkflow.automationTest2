@@ -20,6 +20,7 @@ Feature: Estimated ready date and time availability
     And user switches to window 2
     And user enters ticket previously created and searches
     Then user verifies estimated ready field is available
+    And user waits 5 secs
     When user enters estimated ready as event start time plus 4 days on trouble event page
     And user clicks on save button
     Then estimated ready time should be saved correctly on trouble event page

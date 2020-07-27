@@ -35,8 +35,9 @@ Feature: checking of bulk loading format
       And user validates Rows OK as "4"
       And user validates with errors as "0"
       And user validates with warnings as "0"
-      Then user clicks on close button on bulk update window
-      And user switches to window 1
+    And user clicks on bulk loading close button
+    And user logsOut and closes the browser
+    And user switches to window 0
 
 
 

@@ -57,7 +57,8 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_UNC_LOCAL_PATH= "sp_formfield_include_exclude";
     public static final String txt_Description= "sp_formfield_description";
     public static final String dd_BACK_UP_ADD_CI= "s2id_autogen14";
-    public static final String btn_ADD_ATTACHMENT="button[@title='Add attachment']/span";
+    public static final String btn_ADD_ATTACHMENT="//*[@id='catItemTop']/div/div[4]/div/div[2]/label/span";
+    public static final String btn_ADD_SECOND_ATTACHMENT="//*[@id='catItemTop']/div/div[4]/div/div[3]/label/span";
     public static final String txt_INCLUDE_CI="sp_formfield_include_ci";
     public static final String txt_RETENTION_PERIOD="sp_formfield_retention_period";
     public static final String txt_BACK_UP_DATE_TIME="sp_formfield_date_time";
@@ -81,7 +82,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_NETWORK_EQUIPMENT_REQUEST="sp_formfield_sr51_v_request";
     public static final String txt_NETWORK_EQUIPMENT_DC_SITE= "sp_formfield_sr51_v_dc_site";
     public static final String txt_NETWORK_EQUIPMENT_ROOM= "sp_formfield_sr51_v_room";
-    public static final String dd_ADD_CI = "s2id_autogen14";
+    public static final String dd_ADD_CI = "s2id_autogen13";
     public static final String txt_NETWORK_EQUIPMENT_DNS_IP_ADRESS="sp_formfield_sr51_v_dns_ip_address";
     public static final String txt_NETWORK_EQUIPMENT_DELIVERY="sp_formfield_sr51_v_date_for_delivery";
     public static final String txt_NETWORK_EQUIPMENT_DATE_FOR_DECOMMISSION= "sp_formfield_sr51_v_date_for_decommission";
@@ -99,7 +100,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_DATABASE_ACCOUNT_PERMISSIONS="sp_formfield_sr21_v_permissions";
     public static final String txt_DATABASE_DESCRIPTION= "sp_formfield_sr21_v_description";
     public static final String txt_DATABASE_DNS_IP_ADDRESS= "sp_formfield_sr21_v_source_dns";
-    public static final String dd_DATABASE_NEW_EXISTING_ACCOUNT=  "select2-chosen-15";
+    public static final String dd_DATABASE_NEW_EXISTING_ACCOUNT=  "select2-chosen-14";
     public static final String dd_DATABASE_DEFAULT_TABLE_SPACE= "sp_formfield_sr21_v_default_tablespace";
     public static final String txt_DATABASE_REQUEST_REQUEST= "sp_formfield_sr115_v_request";
     public static final String dd_DATABASE_REQUEST_CHOOSE_ACTION= "select2-chosen-18";
@@ -135,7 +136,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String dd_NIMBUS_ADD_CI= "s2id_autogen18";
     private static final String dd_NIMBUS_TYPE= "select2-chosen-13";
     private static final String txt_NIMBUS_DESCRIPTION_MANDATORY= "sp_formfield_description_mandatory";
-    private static final String txt_NIMBUS_DESCRIPTION= "sp_formfield_nim_description";
+    private static final String txt_NIMBUS_DESCRIPTION= "sp_formfield_nimbus_new_description";
     private static final String txt_NIMBUS_SIZE= "sp_formfield_expand_backup_size";
     private static final String txt_NIMBUS_VOLUMES_DRIVES= "sp_formfield_extend_disk_volume";
     private static final String dd_NIMBUS_EXTEND_DISK_ADD_CI= "s2id_autogen19";
@@ -160,6 +161,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_SERVICE_REQUEST= "select2-chosen-11";
     public static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_REQUEST= "sp_formfield_sr114_v_request";
     public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI= "s2id_autogen15";
+    public static final String dd_NETWORK_SECURITY_SWITCH_PORT_CONFIG_ADD_CI= "s2id_autogen17";
     public static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_DESCRIPTION= "sp_formfield_sr114_v_description";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_REQUEST= "sp_formfield_sr34_v_request";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_TICKET_NUMBER= "sp_formfield_sr34_v_fire_ticket_number";
@@ -374,7 +376,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String dd_NETWORK_SECURITY_REMOTE_ACCESS_SYSTEM_HAITI = "//input[@aria-owns='select2-results-13']";
     private static final String dd_NETWORK_SECURITY_PROXY_GENERAL_INQUIRY_HAITI = "//input[@type='text']";
     private static final String dd_NETWORK_SECURITY_FIREWALL_SYSTEM_HAITI = "s2id_autogen15_search";
-    private static final String dd_NETWORK_SECURITY_SYSTEM_NAME_HAITI = "2id_autogen14_search";
+    private static final String dd_NETWORK_SECURITY_SYSTEM_NAME_HAITI = "s2id_autogen14_search";
     private static final String dd_DATABASE_SYSTEM_NAME_HAITI = "//input[@aria-owns='select2-results-23']";
     private static final String txt_VERIFY_INC = "u_internal_case_management.REL:975cb40fdbd9db446734f1eabf961939_table";
     private static final String btn_CLICK_INC_NUMBER = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[4]/div[2]/div/div[2]/p";
@@ -433,10 +435,11 @@ public class Plaza_HomePage extends BasePage {
     private static final String GET_PLAZA_REQUEST_STATUS = "//*[@id='xcc316d33d7230200a9addd173e24d4f5']/div/div[2]/div/div/div[2]/span/div";
     private static final String txt_NETWORK_SECURITY_PROXY_SURF_PROXY_SLOW_SURFING_SITES = "select2-results-13";
     private static final String txt_NETWORK_SECURITY_PROXY_REVERSE_LOAD_BALANCING_METHOD = "s2id_autogen20_results";
-    private static final String txt_NETWORK_SECURITY_PROXY_REVERSE_HIGH_AVAILIBILITY = "select2-results-20";
+    private static final String txt_NETWORK_SECURITY_PROXY_REVERSE_HIGH_AVAILIBILITY = "select2-results-15";
     private static final String txt_NETWORK_SECURITY_PROXY_REVERSE_CERTIFICATE = "s2id_autogen19_results";
     private static final String txt_NETWORK_SECURITY_NEW_SWITCH_NETWORK_CI = "s2id_autogen18_results";
     private static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI = "s2id_autogen15_results";
+    private static final String txt_NETWORK_SECURITY_SWITCH_PORT_CONFIG_ADD_CI = "s2id_autogen17_results";
     private static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_SERVICE_REQUEST = "select2-results-11";
     private static final String txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_SCHEDULED_CHANGE = "select2-results-12";
     private static final String txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_DNS_SERVICE_REQUEST_NAME = "select2-results-11";
@@ -450,17 +453,18 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_CI = "s2id_autogen35_results";
     private static final String txt_DATABASE_PERFORMANCE_TROUBLESHOOTING_DB_TYPE = "select2-results-12";
     private static final String txt_DATABASE_CONFIGURE_PARAMETER_ADD_CI = "s2id_autogen39_results";
+    private static final String txt_DATABASE_CONFIGURE_PARAMETER_DATABASE_ADD_CI = "s2id_autogen40_results";
     private static final String txt_DATABASE_CONFIGURE_PARAMETER_DATABASE_TYPE = "select2-results-12";
     private static final String txt_DATABASE_REQUEST_ADD_CI = "s2id_autogen37_results";
     private static final String txt_DATABASE_REQUEST_ADD_SERVER_CI = "s2id_autogen36_results";
     private static final String txt_DATABASE_REQUEST_DATABASE_TYPE = "select2-results-12";
     private static final String txt_DATABASE_REQUEST_LOCATION = "select2-results-20";
     private static final String txt_DATABASE_REQUEST_CHOOSE_ACTION = "select2-results-18";
-    private static final String txt_DATABASE_NEW_EXISTING_ACCOUNT = "select2-results-15";
+    private static final String txt_DATABASE_NEW_EXISTING_ACCOUNT = "select2-results-14";
     private static final String txt_ADD_DATABASE_CI = "s2id_autogen25_results";
     private static final String txt_ADD_SERVER_CI = "s2id_autogen26_results";
     private static final String txt_DATABASE_ACCOUNT_TYPE = "select2-results-14";
-    private static final String txt_ADDCI = "s2id_autogen14_results";
+    private static final String txt_ADDCI = "s2id_autogen13_results";
     private static final String GET_CIS = "s2id_sp_formfield_sr108_v_at3";
     private static final String GET_CIS2 = "s2id_sp_formfield_sr108_v_at3";
     private static final String dd_AT1_CI = "s2id_sp_formfield_sr108_v_at1";
@@ -485,16 +489,16 @@ public class Plaza_HomePage extends BasePage {
     private static final String link_FINANCE_ASSURANCE="//img[@alt='Finance & Assurance']";
     private static final String link_DATABASE = "//*[@id='xcc61d55edb198b00b27fdb11ce961902']/div/div[2]/div[6]/div[4]";
     private static final String pebble_DNS_DHCP = "//h2[contains(text(),'DNS/DHCP')]";
-    private static final String pebble_FIREWALL_ROUTING_REQUEST = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[12]/div/a";
-    private static final String pebble_LAN_DATA_NET_LAN = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[14]/div/a";
-    private static final String pebble_NETWORK_LOAD_BALANCING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[15]/div/a";
-    private static final String pebble_NETWORK_ROUTING_SWITCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a";
-    private static final String pebble_PROXY = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[18]/div/a";
-    private static final String pebble_REMOTE_ACCESS_VPN_ACS = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[19]/div/a";
-    private static final String pebble_CHANGE_OS_PATCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[19]/div/a";
-    private static final String pebble_MANUAL_OS_PATCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[20]/div/a/div/img";
+    private static final String pebble_FIREWALL_ROUTING_REQUEST = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[11]/div/a";
+    private static final String pebble_LAN_DATA_NET_LAN = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[13]/div/a";
+    private static final String pebble_NETWORK_LOAD_BALANCING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[14]/div/a";
+    private static final String pebble_NETWORK_ROUTING_SWITCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[16]/div/a";
+    private static final String pebble_PROXY = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a";
+    private static final String pebble_REMOTE_ACCESS_VPN_ACS = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[18]/div/a";
+    private static final String pebble_CHANGE_OS_PATCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[18]/div/a";
+    private static final String pebble_MANUAL_OS_PATCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[19]/div/a";
     private static final String link_IT_INFRASTRUCTURE = "//*[@id='ddddd28bdb8197042b3cfc16bf961980']";
-    private static final String pebble_ACCESS_RED_HAT_KNOWLEDGEBASE = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a/div/h2";
+    private static final String pebble_ACCESS_RED_HAT_KNOWLEDGEBASE = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[16]/div/a";
     private static final String btn_SUBMIT = "//button[@name='submit']";
     private static final String btn_SEND = "//input[@value='Send']";
     private static final String link_PRODUCTS_AND_SERVICES = "//*[contains(text(),'Products & Services')]";
@@ -516,7 +520,7 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void click_Storage_And_Data_Protection(){
-        clickElement(By.xpath(link_STORAGE_AND_DATA_PROTECTION));
+        clickElement(By.id(link_STORAGE_AND_DATA_PROTECTION));
     }
 
     public void click_Data_Center(){
@@ -524,23 +528,23 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void click_Database(){
-        clickElement(By.xpath(linkDATABASE));
+        clickElement(By.id(linkDATABASE));
     }
 
     public void clickMessaging(){
-        clickElement(By.xpath(link_MESSAGING));
+        clickElement(By.id(link_MESSAGING));
     }
 
     public void clickCompute_And_Operating_System(){
-        clickElement(By.xpath(link_COMPUTE_AND_OPERATING_SYSTEM));
+        clickElement(By.id(link_COMPUTE_AND_OPERATING_SYSTEM));
     }
 
     public void clickCloud(){
-        clickElement(By.xpath(link_CLOUD));
+        clickElement(By.id(link_CLOUD));
     }
 
     public void clickFirewall_And_Network(){
-        clickElement(By.xpath(link_FIREWALL_AND_NETWORK));
+        clickElement(By.id(link_FIREWALL_AND_NETWORK));
     }
 
     public void clickSupport(){
@@ -912,6 +916,7 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void selectNimbusSystemNameHaiti(String dropdownName){
+        PlazaValidation.SystemNameInHaiti = dropdownName;
         clickElement(By.id(dd_NIMBUS_HAITI));
         WebElement Element=findElement(By.xpath(dd_SYSTEM_NAME_HAITI_NIMBUS));
         Element.sendKeys(dropdownName);
@@ -932,6 +937,7 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void selectNetworkSecurityProxySystemNameHaiti(String dropdownName){
+        PlazaValidation.SystemNameInHaiti = dropdownName;
         clickElement(By.id(dd_PROXY_GENERAL_INQUIRY_HAITI));
         WebElement Element=findElement(By.xpath(dd_NETWORK_SECURITY_PROXY_GENERAL_INQUIRY_HAITI));
         Element.sendKeys(dropdownName);
@@ -941,7 +947,20 @@ public class Plaza_HomePage extends BasePage {
 
     }
 
+    public void selectNetworkSecurityProxyResourceRequestSystemNameHaiti(String dropdownName){
+        PlazaValidation.SystemNameInHaiti = dropdownName;
+        clickElement(By.id(dd_PROXY_GENERAL_INQUIRY_HAITI));
+        WebElement Element=findElement(By.xpath(dd_NETWORK_SECURITY_PROXY_GENERAL_INQUIRY_HAITI));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
+
+    }
+
+
     public void selectNetworkSecurityFirewallSystemNameHaiti(String dropdownName){
+        PlazaValidation.SystemNameInHaiti = dropdownName;
         clickElement(By.id(dd_NETWORKSECURITY_FIREWALL_HAITI));
         WebElement Element=findElement(By.id(dd_NETWORK_SECURITY_FIREWALL_SYSTEM_HAITI));
         Element.sendKeys(dropdownName);
@@ -951,9 +970,10 @@ public class Plaza_HomePage extends BasePage {
 
     }
 
-    public void selectNetworkSecuritySystemNameHaiti(String dropdownName){
-        clickElement(By.id(dd_NETWORKSECURITY_HAITI));
-        WebElement Element=findElement(By.id(dd_NETWORK_SECURITY_SYSTEM_NAME_HAITI));
+    public void selectNetworkSecurityNewSwitchSystemNameHaiti(String dropdownName){
+        PlazaValidation.SystemNameInHaiti = dropdownName;
+        clickElement(By.id(dd_NETWORKSECURITY_FIREWALL_HAITI));
+        WebElement Element=findElement(By.xpath("//input[@type='text']"));
         Element.sendKeys(dropdownName);
         wait(1000);
         Element.sendKeys(Keys.ARROW_DOWN);
@@ -961,7 +981,61 @@ public class Plaza_HomePage extends BasePage {
 
     }
 
+    public void selectOperatingAccountManagementSystemNameHaiti(String dropdownName){
+        clickElement(By.id(dd_NETWORKSECURITY_FIREWALL_HAITI));
+        WebElement Element=findElement(By.xpath("//input[@type='text']"));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ENTER);
+
+    }
+
+    public void selectOperatingChangeFromAutoSystemNameHaiti(String dropdownName){
+        clickElement(By.id(dd_NETWORKSECURITY_FIREWALL_HAITI));
+        WebElement Element=findElement(By.xpath("//input[@type='text']"));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ENTER);
+
+    }
+
+    public void selectOperatingChangeFromManualSystemNameHaiti(String dropdownName){
+        clickElement(By.id(dd_NETWORKSECURITY_FIREWALL_HAITI));
+        WebElement Element=findElement(By.xpath("//input[@type='text']"));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ENTER);
+
+    }
+
+    public void selectNetworkSecuritySystemNameHaiti(String dropdownName){
+        PlazaValidation.SystemNameInHaiti = dropdownName;
+        clickElement(By.id(dd_NETWORKSECURITY_HAITI));
+        WebElement Element=findElement(By.id(dd_NETWORK_SECURITY_SYSTEM_NAME_HAITI));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ENTER);
+    }
+
+    public void selectNetworkSecurityFirewallNewChangeSystemNameHaiti(String dropdownName){
+        PlazaValidation.SystemNameInHaiti = dropdownName;
+        clickElement(By.id(dd_NETWORKSECURITY_HAITI));
+        WebElement Element=findElement(By.xpath("//input[@type='text']"));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ENTER);
+    }
+
+    public void selectOperatingSystemNameHaiti(String dropdownName){
+        clickElement(By.id(dd_NETWORKSECURITY_HAITI));
+        WebElement Element=findElement(By.xpath("//input[@type='text']"));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ENTER);
+    }
+
     public void selectSystemNameHaiti(String dropdownName){
+        PlazaValidation.SystemNameInHaiti = dropdownName;
         clickElement(By.id(dd_SYSTEMNAME_HAITI_DATABASE));
         WebElement Element=findElement(By.xpath(dd_DATABASE_SYSTEM_NAME_HAITI));
         Element.sendKeys(dropdownName);
@@ -1060,6 +1134,7 @@ public class Plaza_HomePage extends BasePage {
         driver.findElement((By.id(btn_PDB_AFFECTED_PERSON))).findElements(By.tagName("span")).stream().filter(element -> element.getText().trim().equals(AffectedPersonType)).findFirst().orElse(null).click();
     }
     public void selectSystemNameInHaiti(String dropdownName){
+        PlazaValidation.SystemNameInHaiti = dropdownName;
         clickElement(By.id(dd_SYSTEM_NAME_IN_HAITI));
         WebElement Element=findElement(By.id(dd_SYSTEM_NAME_HAITI));
         WebElement element= driver.switchTo().activeElement();
@@ -1817,6 +1892,10 @@ public class Plaza_HomePage extends BasePage {
         PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI), By.id(txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI),  dropdownName);
     }
+    public void enterNetworkSecurity_switch_port_add_ci_multipleValues(String dropdownName){
+        PlazaValidation.CI = dropdownName;
+        selectDropdownWithMultipleValues(By.id(dd_NETWORK_SECURITY_SWITCH_PORT_CONFIG_ADD_CI), By.id(txt_NETWORK_SECURITY_SWITCH_PORT_CONFIG_ADD_CI),  dropdownName);
+    }
 
     public void enterNetworkSecurity_firewall_new_change_request(String text){
         PlazaValidation.Request = text;
@@ -2038,7 +2117,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectDatabaseConfigureParameter_AddDbCi_multipleValues(String dropdownName){
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_DATABASE_CONFIGURE_PARAMETER_DB_ADD_CI), By.id(txt_DATABASE_CONFIGURE_PARAMETER_ADD_CI),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_DATABASE_CONFIGURE_PARAMETER_DB_ADD_CI), By.id(txt_DATABASE_CONFIGURE_PARAMETER_DATABASE_ADD_CI),  dropdownName);
 
     }
     public void selectDatabaseConfigureParameter_databaseType(String dropdownName){
@@ -2289,6 +2368,10 @@ public class Plaza_HomePage extends BasePage {
 
     public void clickAddAttachment(){
         clickElement(By.xpath(btn_ADD_ATTACHMENT));
+    }
+
+    public void clickAddSecondAttachment(){
+        clickElement(By.xpath(btn_ADD_SECOND_ATTACHMENT));
     }
 
     public void selectsAddCi_back_up(String dropdownName){

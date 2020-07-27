@@ -1,5 +1,6 @@
 @Choose_or_change_assignment_profile_and_not_be_possible_to_close_incident
 
+
   Feature: Choose or change assignment profile and not possible to close incident
     Scenario:Choose or change assignment profile and not possible to close incident
 

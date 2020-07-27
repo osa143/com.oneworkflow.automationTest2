@@ -18,8 +18,8 @@
       When user clicks on location under sections
       When user clicks on CTI details under sections
       And user validates availability of category dropdown
-      Then multiple statuses "1:Access:BSS:Computer Equipment:Computer Services:Core:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:OSS:Packet_Transport:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:TV:VAS" should be available in "Category" dropdown
-      And user selects Category as "Core"
+      Then multiple statuses "1:Access:BSS:Computer Equipment:Computer Services:CORE:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:OSS:Packet_Transport:Process:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:TV:VAS" should be available in "Category" dropdown
+      And user selects Category as "CORE"
       Then user validates availability of type dropdown
       And multiple statuses "Fixed_IMS:IP:MESSAGING:Mobile CS Core Network:Mobile IMS Core Network:Mobile PS Core Network:Mobile_CS:Mobile_PS:NFVI:Other:Presentation:Software:Sync:WLAN:Workflow" should be available in "Type" dropdown
       Then user selects Type as "Mobile PS Core Network"
@@ -36,7 +36,8 @@
       And user enters "Test Case 01.17 Event Start Time In History" in Title field in Trouble event
       And user selects request type as "Customer" on trouble event page
       And user enters description as "Test Case 01.17 Event Start Time In History"
-      And user changes event start time -1 day in the past
+      #And user changes event start time -1 day in the past
+      #And user enters event start time as -9 mins past
       And user clicks on save button
       Then ticket should be created and status should be assigned
       When user clicks on attachments under sections

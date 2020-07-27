@@ -1,4 +1,4 @@
-@Data_Center_Request @PLAZA
+@Data_Center_Request @PLAZA @DataCenter
   Feature: Data Center Request plaza form test
     Scenario: user validates information sent to OW from Plaza
 

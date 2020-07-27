@@ -506,4 +506,19 @@ public class OWF_CiSearchPageSteps {
     public void userClicksOnRadioButtonClosed() {
         ciSearchPage.clickClosedRadioButton_linkedItems();
     }
+
+    @And("user validates radio button open is selected")
+    public void userValidatesRadioButtonOpenIsSelected() {
+        Assert.assertTrue(ciSearchPage.isOpenRadioButtonSelected());
+    }
+
+    @And("user validates radio button cleared is selected")
+    public void userValidatesRadioButtonClearedIsSelected() {
+        Assert.assertTrue(ciSearchPage.isClearedRadioButtonSelected());
+    }
+
+    @And("user validates radio button closed is selected")
+    public void userValidatesRadioButtonClosedIsSelected() {
+        Assert.assertTrue(ciSearchPage.isClosedRadioButtonSelected());
+    }
 }

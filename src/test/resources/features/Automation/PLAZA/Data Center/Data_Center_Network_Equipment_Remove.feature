@@ -1,4 +1,4 @@
-@Data_Center_Network_Equipment_Remove @PLAZA
+@Data_Center_Network_Equipment_Remove @PLAZA @DataCenter
   Feature: Data Center Network Equipment Remove plaza form test
     Scenario: user validates information sent to OW from Plaza
 

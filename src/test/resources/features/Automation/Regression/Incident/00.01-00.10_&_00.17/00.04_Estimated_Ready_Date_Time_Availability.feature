@@ -18,8 +18,7 @@ Feature: Estimated ready date and time availability
     And user gets ticket value
     When user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 2
-    And user enters ticket previously created
-    And user clicks Search on ticket search
+    And user enters ticket previously created and searches
     Then user verifies estimated ready field is available
     When user enters estimated ready as event start time plus 4 days on trouble event page
     And user clicks on save button

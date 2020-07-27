@@ -4,7 +4,6 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.OWF_AgentConsolePage;
 import utils.CommonUtils;
@@ -661,6 +660,78 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.clickSaveButton_MyAccount();
     }
 
+
+    @Then("user console should be opened in new window")
+    public void userConsoleShouldBeOpenedInNewWindow() {
+        Assert.assertEquals(agentConsolePage.getPageTitle(), "OS3 User Console (Search)");
+
+    }
+
+    @And("dropdown values {string} should be available in {string} dropdown")
+    public void dropdownValuesShouldBeAvailableInDropdown(String dropdownValues, String dropdownName) {
+        Assert.assertTrue(agentConsolePage.verifyDropdownValues(dropdownValues, dropdownName, "notreadonly"));
+    }
+
+    @Then("user selects user {string} in user table")
+    public void userClicksOnUserAndClicksOpen(String text) {
+        agentConsolePage.clickElementByContainsTextAndTagName("span", text);
+    }
+
+    @And("user clicks open user button")
+    public void userClicksOpenUserButton() {
+        agentConsolePage.clickOpenUser();
+    }
+
+    @And("user validates countries {string} are present")
+    public void userValidatesCountriesArePresent(String arg0) {
+        Assert.assertTrue(agentConsolePage.verifyElementIsDisplayedByContainsText(arg0));
+    }
+
+    @Then("user selects country {string}")
+    public void userSelectsCountry(String text) {
+        agentConsolePage.clickElementByContainsTextAndTagName("span", text);
+    }
+
+    @And("user clicks add right button")
+    public void userClicksAddRightButton() {
+        agentConsolePage.clickAddRight();
+    }
+
+    @Then("user closes user information window")
+    public void userClosesUserInformationWindow() {
+        agentConsolePage.clickCloseUserInformation();
+    }
+
+
+    @Then("user clicks remove left button")
+    public void userClicksRemoveLeftButton() {
+        agentConsolePage.clickRemoveLeft();
+    }
+
+    @And("user validates {string} has been removed")
+    public void userValidatesHasBeenRemoved(String arg0) {
+
+    }
+
+    @And("user information window should be opened")
+    public void userInformationWindowShouldBeOpened() {
+        //dummystep
+    }
+
+    @And("user should see available trust principles as countries {string}")
+    public void userShouldSeeAvailableTrustPrinciplesAsCountries(String countries) {
+     Assert.assertTrue(agentConsolePage.verifyAvailableTrustPrinciplesCountries(countries));
+    }
+
+    @Then("user should see {string} under selected trust principles")
+    public void userShouldSeeUnderSelectedTrustPrinciples(String countryName) {
+        Assert.assertTrue(agentConsolePage.getTrustPrinciplesAvailableCountry(1, countryName));
+    }
+
+    @Then("user shouldn't see {string} under selected trust principles")
+    public void userShouldnTSeeUnderSelectedTrustPrinciples(String countryName) {
+        Assert.assertFalse(agentConsolePage.getTrustPrinciplesAvailableCountry(1, countryName));
+    }
 }
 
 

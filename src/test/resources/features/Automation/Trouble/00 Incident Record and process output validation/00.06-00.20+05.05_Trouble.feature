@@ -306,7 +306,7 @@
         | Level adjustment | Customer:Other:Other Service Provider:Supplier:TC Field Force:Telia Company:Third Party:Unclear:Vendor |
         | N/A | N/A |
         | No Action | N/A:Telia Company |
-        | No faults found ||
+        | No faults found |             |
         | Other | Other |
         | Other Service Provider has repaired | Other Service Provider |
         | Repair | Customer:Other:Other Service Provider:Supplier:TC Field Force:Telia Company:Third Party:Unclear:Vendor |

@@ -5,7 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import javax.xml.bind.SchemaOutputResolver;
+//import javax.xml.bind.SchemaOutputResolver;
 import java.util.List;
 
 public class OWF_AgentConsolePage extends BasePage {
@@ -87,6 +87,57 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String btn_CLOSE= "//a[@arid='777000001']";
     private static final String txt_TIMEZONE= "//div[@arid='799999958']/textarea";
     private static final String btn_SAVE_MY_ACCOUNT="//a[@arid='1003']";
+    private static final String btn_Open_User = "WIN_0_700027095";
+    private static final String btn_Add_Right = "WIN_3_800080011";
+    private static final String btn_Close_User_Information = "WIN_3_777000001";
+    private static final String btn_Remove_Left = "WIN_3_800080012";
+    private static final String table_Available_Trust_Principles="T800080004";
+    private static final String table_Selected_Trust_Principles="T800080007";
+
+    public Boolean getTrustPrinciplesAvailableCountry(int rowNum, String expectedCountry) {
+        int count = getTableRowsCount(table_Selected_Trust_Principles);
+        System.out.println("Trust Principles Available Country count is " + count);
+        if (count <=1) {
+            return false;
+        }
+        else
+            {
+            String actualCountry = getTableCellData(By.id(table_Selected_Trust_Principles), "TP Description", rowNum);
+            System.out.println(actualCountry);
+            System.out.println(expectedCountry);
+            if (actualCountry.contains(expectedCountry)) {
+            }
+            return true;
+        }
+    }
+    public boolean verifyAvailableTrustPrinciplesCountries(String countries) {
+        int count = getTableRowsCount(table_Available_Trust_Principles);
+        if (count > 5) {
+            String[] country = countries.split(":");
+            System.out.println("Trust principles country values are: " + country);
+            for (int i = 0; i < country.length; i++) {
+                verifyElementIsDisplayedByContainsTextAndTagName("span", country[i]);
+            }
+         return true;
+        }
+        else return false;
+    }
+
+    public void clickRemoveLeft(){
+        clickElementById(btn_Remove_Left);
+    }
+
+    public void clickCloseUserInformation(){
+        clickElementById(btn_Close_User_Information);
+    }
+
+    public void  clickAddRight(){
+        clickElementById(btn_Add_Right);
+    }
+
+    public void clickOpenUser(){
+        clickElementById(btn_Open_User);
+    }
 
     public void clickSaveButton_MyAccount(){
         clickElement(By.xpath(btn_SAVE_MY_ACCOUNT));
@@ -118,6 +169,9 @@ public class OWF_AgentConsolePage extends BasePage {
     public boolean verifyTitleDropdownValues(String options, String dropdownName ){
         return verifyDropdownValues(options, dropdownName, txt_TITLE);
     }
+
+
+
     public void clickOpen_AssignmentRules(){
         clickElement(By.id(btn_OPEN));
     }
@@ -265,7 +319,7 @@ public class OWF_AgentConsolePage extends BasePage {
         return false;
     }
     public boolean validateTicketsAvailabilityInAgentConsoleTable(){
-        int count= getTableRowsCount();
+        int count= getTableRowsCount(table_ID);
         System.out.println(count);
         if (count>50)
             return true;
@@ -383,12 +437,15 @@ public class OWF_AgentConsolePage extends BasePage {
         driver.switchTo().alert().accept();
     }
 
+    public int getTableRowsCount(String tableID) {
+        return getTableRows(By.id(tableID)).size();
+    }
     public int getTableRowsCount() {
         return getTableRows(By.id(table_ID)).size();
     }
 
     public Boolean verifyAgentConsoleHasData(){
-        int count= getTableRowsCount();
+        int count= getTableRowsCount(table_ID);
         if(count>1)
             return true;
         else return false;

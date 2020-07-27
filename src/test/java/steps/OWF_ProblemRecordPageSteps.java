@@ -889,6 +889,21 @@ public class OWF_ProblemRecordPageSteps {
 
     }
 
+    @When("user changes status to {string} on known error page")
+    public void userChangesStatusToOnKnownErrorPage(String arg0) {
+        try {
+            problemRecordPage.selectStatus_problemRecord(arg0);
+        } catch (Exception e) {
+            System.out.println("Not able to change the status... Try again");
+            try {
+                problemRecordPage.selectStatus_problemRecord(arg0);
+            } catch (Exception e2) {
+
+            }
+        }
+
+    }
+
     @And("user enters {string} in assignee")
     public void userEntersInAssignee(String assigneeName) {
         problemRecordPage.enterAssignee(assigneeName);
@@ -1419,6 +1434,82 @@ public class OWF_ProblemRecordPageSteps {
         Assert.assertTrue(problemRecordPage.verifyFieldsInvisible(fields));
 
 
+    }
+
+    @When("user clicks on the added attachment")
+    public void userClicksOnTheAddedAttachment() {
+       problemRecordPage.clickOnAttachment();
+    }
+
+    @Then("attachment form should open in new tab")
+    public void attachmentFormShouldOpenInNewTab() {
+        CommonUtils.switchToChildWindow(problemRecordPage.getDriver(), 2);
+        Assert.assertEquals(problemRecordPage.getPageTitle(), "OS3 Attachments(Modify)");
+    }
+
+    @When("user clicks on the attachment listed")
+    public void userClicksOnTheAttachmentListed() {
+        problemRecordPage.clickOnAttachment_attachmentWindow();
+    }
+
+    @And("clicks on display button")
+    public void clicksOnDisplayButton() {
+        problemRecordPage.clickOnDisplay();
+    }
+
+    @Then("a new window should open with the attachment shown")
+    public void aNewWindowShouldOpenWithTheAttachmentShown() {
+        Assert.assertTrue(problemRecordPage.verifyNewWindowDisplayed());
+    }
+
+    @When("user closes the attachment window")
+    public void userClosesTheAttachmentWindow() {
+        CommonUtils.switchToChildWindow(problemRecordPage.getDriver(), 3);
+        problemRecordPage.closeTab();
+    }
+
+    @And("closes the attachment tab")
+    public void closesTheAttachmentTab() {
+        CommonUtils.switchToChildWindow(problemRecordPage.getDriver(), 2);
+        problemRecordPage.closeTab();
+    }
+
+    @And("user clicks on the delete button under internal")
+    public void userClicksOnTheDeleteButtonUnderInternal() {
+        problemRecordPage.clickOnDelete();
+    }
+
+    @Then("attachment should no longer be visible")
+    public void attachmentShouldNoLongerBeVisible() {
+        Assert.assertTrue(problemRecordPage.verifyAttachmentIsNotAvailable());
+    }
+
+    @When("user clicks on next tab button")
+    public void userClicksOnNextTabButton() {
+        problemRecordPage.clickNextTab();
+        problemRecordPage.clickNextTab();
+    }
+
+
+    @And("user should see {string} dropdown as optional")
+    public void userShouldSeeDropdownAsOptional(String textAsOptional) {
+        Assert.assertTrue(problemRecordPage.verifyElementIsDisplayedByContainsText(textAsOptional));
+    }
+
+    @And("user should see {string} dropdown as mandatory")
+    public void userShouldSeeDropdownAsMandatory(String textAsMandatory) {
+        Assert.assertTrue(problemRecordPage.verifyElementIsDisplayedByContainsText(textAsMandatory));
+    }
+
+    @And("user should see accountable organisation as read only")
+    public void userShouldSeeAccountableOrganisationAsReadOnly() {
+        Assert.assertTrue(problemRecordPage.IsAccountableOrganisation_IsReadOnly());
+    }
+
+
+    @Then("error message should display for close ticket as {string}")
+    public void errorMessageShouldDisplayForCloseTicketAsClosed(String errorMessage) {
+        Assert.assertEquals(problemRecordPage.getErrorText_(),errorMessage);
     }
 }
 

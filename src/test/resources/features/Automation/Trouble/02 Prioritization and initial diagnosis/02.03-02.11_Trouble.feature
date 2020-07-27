@@ -45,7 +45,10 @@
       And user clicks confirm checkbox
       And user clicks on bulk update save button
       Then user validates CI "SE_SGSN_HYMME2" impact level is "Loss of Service"
-      And user right clicks on CI "SE_SGSN_FREMME2" and clears impact for check impact record
+      And user right clicks on CI "SE_SGSN_FREMME2" and clears impact for all CI's
+      And user should see confirmation message and clicks on yes button
+      And user right clicks on CI "SE_SGSN_FREMME2" and clears impact for all CI's
+      And user should see confirmation message and clicks on yes button
       And user validates CI "Impact Status" is "Inactive"
       When user selects importance as "Critical"
       And user selects impact as "Critical" on trouble event page

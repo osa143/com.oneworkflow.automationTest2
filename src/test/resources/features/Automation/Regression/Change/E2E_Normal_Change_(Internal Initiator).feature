@@ -73,10 +73,10 @@
       And CI should be listed and displayed under the Diagnosis tab
       When user clicks on Show CR Matching button
       Then user should see Show CR Matching table appear
-      When user clicks on "Interested Parties" tab
-      And user enters email address as "Test123xxx@Test123xxx.com"
-      And user clicks on add email button
-      Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
+#      When user clicks on "Interested Parties" tab
+#      And user enters email address as "Test123xxx@Test123xxx.com"
+#      And user clicks on add email button
+#      Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
       When user clicks on Send button
       Then user validates ticket status as "Assigned"
       And user clicks on assignment under sections

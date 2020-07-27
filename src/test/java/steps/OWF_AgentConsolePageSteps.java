@@ -26,6 +26,8 @@ public class OWF_AgentConsolePageSteps {
     public void userSelectsSIDConsoleFromAgentConsole() {
         agentConsolePage.clickConsoleMenu();
         agentConsolePage.clickMenuItemSIDConsole();
+        CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
+
     }
 
     @When("user clicks on add column under preferences and selects OP next due date")

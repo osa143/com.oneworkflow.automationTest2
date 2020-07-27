@@ -733,9 +733,9 @@ public void clickElementById(String Id){
         return  false;
     }
 
-    public boolean verifyColumnValuesForMultipleInputs(By table, String columnName, String columnValue)
+    public boolean verifyColumnValuesForMultipleInputs(By table, String columnName, String CellValue)
     {
-        String[] columnValues = columnValue.split(":");
+        String[] cellValues = CellValue.split(":");
 
         int colNum = getColumnIndexByHeaderName(table, columnName);
         List<WebElement> tableRows = getTableRows(table);
@@ -749,7 +749,7 @@ public void clickElementById(String Id){
                 if(i == 51)
                     break;
 
-                if(verifySingleColumnValue(td.getText().trim(), columnValues))
+                if(verifySingleColumnValue(td.getText().trim(), cellValues))
                     continue;
                 else
                     return false;
@@ -758,6 +758,7 @@ public void clickElementById(String Id){
         }
         return true;
     }
+
 
     //columnValue should be separated by :
     public boolean verifyColumnValuesMultiple(By table, String columnName, String columnValue, boolean partialText)

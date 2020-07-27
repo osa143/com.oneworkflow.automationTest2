@@ -1,6 +1,7 @@
 package pageObjects;
 
 import io.cucumber.datatable.DataTable;
+import org.apache.commons.lang3.ObjectUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -22,7 +23,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String btnCREATE_linked_items = "WIN_4_777506020";
     private static final String btn_CREATE_linked_items= "WIN_5_777506020";
     private static final String chkbxTO_SELECT_CI = "//*[@id='T700009024']/tbody/tr[2]";
-    private static final String rbtn_CLEARED_ID = "WIN_4_rc1id730011091";
+    private static final String rbtn_CLEARED_ID = "WIN_4_rc0id800040060";
     private static final String ddCATEGORY= "Category*";
     private static final String txtNAME_PLUS_ID = "arid_WIN_0_700009016";
     private static final String ddLEVEL = "Level*";
@@ -71,17 +72,31 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String btn_RADIOOPEN_ID = "WIN_4_rc0id800040059";
     private static final String btn_RADIOCLOSED_ID = "WIN_4_rc0id800040061";
     private static final String btn_RADIOCleared_ID = "WIN_4_rc0id800040060";
+    private static final String txt_Impact_From_CI_Search= "arid_WIN_0_700009083";
+    private static final String btn_Refresh= "//*[@id='WIN_0_700009087']/div[1]/table/tbody/tr/td[2]/a[2]";
+
+
+    public void clickRefresh_Diagnosis(){
+        clickElement(By.xpath(btn_Refresh));
+        wait(500);
+    }
+
+    public String getImpactFromDateCiSearchWindow(){
+        String ImpactFromDate= getTextByID(txt_Impact_From_CI_Search);
+        System.out.println("Get Text values is - " +ImpactFromDate);
+        return ImpactFromDate;
+    }
 
     public boolean isOpenRadioButtonSelected(){
         return findElement(By.id(btn_RADIOOPEN_ID)).isSelected();
     }
 
     public boolean isClearedRadioButtonSelected(){
-        return findElement(By.id(btn_RADIOCLOSED_ID)).isSelected();
+        return driver.findElement(By.id(btn_RADIOCleared_ID)).isSelected();
     }
 
     public boolean isClosedRadioButtonSelected(){
-        return findElement(By.id(btn_RADIOCleared_ID)).isSelected();
+        return findElement(By.id(btn_RADIOCLOSED_ID)).isSelected();
     }
 
     public void clickClosedRadioButton_linkedItems(){
@@ -114,6 +129,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
             //closeWarningMessage();
         }
         clickCloseButton();
+        switchToDefault();
     }
 
     public void addCI(String CIName, String CI_Impact){
@@ -126,12 +142,15 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         clickCiSearchButton();
         clickToSelectCi();
         selectLevel(CI_Impact);
+        if(getImpactFromDateCiSearchWindow().equals("")||getImpactFromDateCiSearchWindow().equals(null))
+        {
+            driver.findElement(By.id(txt_Impact_From_CI_Search)).sendKeys(Keys.ENTER);
+        }
         clickRelateCiButton();
         clickYesOnConfirmationMessage();
        // closeWarningMessage();
         clickCloseButton();
-        driver.switchTo().defaultContent();
-        wait(1000);
+        switchToDefault();
 
     }
 
@@ -149,7 +168,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         wait(1000);
         closeWarningMessage_changeTicket();
         clickCloseButton();
-
+        switchToDefault();
     }
     public void enterImpactTo(String text){
         findElement(By.id(txt_IMPACT_TO_PLUS_BULK_UPDATE)).clear();

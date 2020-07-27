@@ -24,7 +24,8 @@
      And user should see "Affected Orgs." dropdown as optional
      When user enters next assessment date as 3 days in the future
      And user clicks on save button
-     Then user should see email notification sent within 60 minutes under notification tab
+     #within 60 minutes
+     Then user should see "" email update
      Then change should also be reflected in the timeline as "" on row 1
      When user changes status to "Published" on known error page
      And user should see "Known Error Code*" dropdown as mandatory

@@ -12,7 +12,7 @@
       And user switches to window 1
       Then known error form should appear in new tab
       And user enters "Known Error B" in Title field
-      And user selects request type as "CPS:IT:Other" on known error page
+      And user selects request type as "XX_Test:Functional Test" on known error page
       And user enters description as "A known error"
       And user selects priority as "Minor"
       And user clicks on save button

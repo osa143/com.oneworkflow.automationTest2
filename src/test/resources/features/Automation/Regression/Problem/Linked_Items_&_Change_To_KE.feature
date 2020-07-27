@@ -35,7 +35,6 @@
       And user selects last answer as "No"
       And user clicks on save button
       And user adds CI "SE_CPE_FRECPE5" to change ticket with impact level "No Impact"
-      Then CI should be listed and displayed under the Diagnosis tab
       When user clicks on Send button
       Then ticket should be created and status should be assigned
       When user clicks on create known error
@@ -62,9 +61,15 @@
       When user enters ticket in ticket ID+ field
       And user clicks on the search button on select target request
       And user clicks on accept button
-      When user clicks on open checkbox under linked items tab
-      Then user validates 1 linked ticket availability
+      And user selects target application first dropdown as "(clear)"
       When user clicks on cleared checkbox under linked items tab
+      And user clicks on radio button closed
+      And user validates radio button open is selected
+      Then user validates 1 linked ticket availability
+      And user clicks on cleared checkbox under linked items tab
+      When user clicks on open checkbox under linked items tab
+      And user clicks on radio button closed
+      And user validates radio button cleared is selected
       Then user validates 0 linked ticket availability
       And user clicks on linked items tab
       And user selects target application first dropdown as "OS3 - Change"
@@ -75,8 +80,13 @@
       When user enters change ticket in ticket ID+ field
       And user clicks on the search button on select target request
       And user clicks on accept button
-      When user clicks on open checkbox under linked items tab
+      And user selects target application first dropdown as "(clear)"
+      When user clicks on radio button closed
+      And user clicks on cleared checkbox under linked items tab
+      And user validates radio button open is selected
       Then user validates 2 linked ticket availability
-      When user clicks on cleared checkbox under linked items tab
+      And user clicks on radio button closed
+      And user clicks on open checkbox under linked items tab
+      And user validates radio button cleared is selected
       Then user validates 0 linked ticket availability
 

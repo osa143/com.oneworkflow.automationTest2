@@ -1,4 +1,6 @@
 @E2E_Normal_Change_Internal_Initiator @Change
+  #OP-000001903409 - OW button missing: Covered here
+
   Feature: Internal Normal Change E2E
     Scenario: Internal user processes a normal change ticket
 
@@ -37,6 +39,7 @@
       And user enters reason field as "Regression"
       And user selects priority as "Critical"
       And user enters "Privacy Data: Just Testing" in the change builder field
+      Then user validates "Change Builder" button is present
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
       And user enters start time as 24 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss a" format
       And user enters end time as 28 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss a" format
@@ -145,17 +148,18 @@
       When user clicks on "Interested Parties" tab
       And user enters email address as "Test2@Test2.com"
       And user clicks on add email button
-      Then user should see new email "Test2@Test2.com" added in "Email Address" in row 3
+      Then user should see new email "Test2@Test2.com" added in "Email Address" in row 2
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab
       Then user should see "Acknowledged" email update
       When user changes status to "Approval Requested"
       And user clicks on save button
-      And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Analysis to Approval Requested." on row 65
+      And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Analysis to Approval Requested." on row 66
       Then user validates ticket status as "Approval Requested"
       And user validates availability of tabs "Approval"
       And user waits 2 secs
       When user logsOut from One workflow
+      And user switches to window 1
       And user goes back to login page
       Then user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
       And user successfully logged in to OneWorkflow and agent console should be displayed

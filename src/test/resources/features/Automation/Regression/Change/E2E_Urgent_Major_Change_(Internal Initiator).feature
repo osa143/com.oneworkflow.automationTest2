@@ -24,6 +24,7 @@
       And user enters reason field as "Regression"
       And user selects priority as "Major"
       And user enters "CI I2" in the change builder field
+      Then user validates "Change Builder" button is present
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
       And user enters start time as 24 hours fast from current sweden time
       And user enters end time as 28 hours fast from current sweden time

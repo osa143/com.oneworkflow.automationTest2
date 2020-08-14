@@ -1,31 +1,36 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/SPRINTS/Sprint_P3S1/SAO-5325_Hide_Fields.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/API/SecurityConsole/E2E_Security_Console.feature");
 formatter.feature({
-  "name": "SAO-5325 Hide fields",
+  "name": "E2E verification of the API security console",
   "description": "",
-  "keyword": "Feature"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@E2E_Security_Console"
+    }
+  ]
 });
 formatter.scenario({
-  "name": "verify fields are invisible",
+  "name": "E2E verification of the API security console",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@5325"
+      "name": "@E2E_Security_Console"
     }
   ]
 });
 formatter.step({
-  "name": "user is on the OneWorkflow login page",
+  "name": "user is on the OneWorkflow login page for security console",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "OWF_LoginPageSteps.userIsOnTheOneWorkflowLoginPage()"
+  "location": "OWF_LoginPageSteps.userIsOnTheOneWorkflowLoginPageForSecurityConsole()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user logs in with valid username \"frvi96_auto\" and password as \"Test@1234\"",
+  "name": "user logs in with valid username \"apitester1\" and password as \"badger\"",
   "keyword": "When "
 });
 formatter.match({
@@ -35,365 +40,757 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user successfully logged in to OneWorkflow and agent console should be displayed",
+  "name": "user validates security console is displayed",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userSuccessfullyLoggedInToOneworkflowAndAgentConsoleShouldBeDisplayed()"
+  "location": "OWF_LoginPageSteps.userValidatesSecurityConsoleIsDisplayed()"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.AssertionError: expected [BMC Remedy Mid Tier 9.1 - Error page] but found [API:SYS:ADM:SecurityConsole (Search)]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat steps.OWF_LoginPageSteps.userValidatesSecurityConsoleIsDisplayed(OWF_LoginPageSteps.java:52)\r\n\tat ✽.user validates security console is displayed(features/Automation/API/SecurityConsole/E2E_Security_Console.feature:8)\r\n",
+  "status": "failed"
 });
 formatter.step({
-  "name": "user clicks on create known error",
+  "name": "user clicks on create new client button",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnCreateKnownError()"
+  "location": "OWF_LoginPageSteps.userClicksOnCreateNewClientButton()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "user switches to window 1",
+  "name": "user enters client name as \"Test Client Name\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
+  "location": "OWF_LoginPageSteps.userEntersClientNameAs(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "known error form should appear in new tab",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_KnownErrorPageSteps.knownErrorFormShouldAppearInNewTab()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "\"Workaround Available,Customer Effect,Cust. Effect Description,Work Around Initiation date,Work Around Accountable : TeliaID,Work Around Accountable : Name,Solution Proposal Category,Solution Proposal Reference ID #,Solution Proposal Status\" shouldn\u0027t be visible",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_KnownErrorPageSteps.shouldnTBeVisible(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters \"SAO-5325 Hide fields\" in Title field",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersInTitleField(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects request type as \"CPS:IT:Other\" on known error page",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_KnownErrorPageSteps.userSelectsRequestTypeAsOnKnownErrorPage(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters description as \"A known error\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersDescriptionAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects priority as \"Minor\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSelectsPriorityAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on save button",
+  "name": "user opens and selects \"- oneworkflow-userautomaint\" from \"User\" dropdown",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
+  "location": "OWF_LoginPageSteps.userOpensAndSelectsFromDropdown(String,String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "user validates ticket status as \"Draft\"",
+  "name": "user validates chosen name \"f12023\" is in the user field",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userValidatesTicketStatusAs(String)"
+  "location": "OWF_LoginPageSteps.userValidatesChosenNameIsInTheUserField(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "\"Workaround Available,Customer Effect,Cust. Effect Description,Work Around Initiation date,Work Around Accountable : TeliaID,Work Around Accountable : Name,Solution Proposal Category,Solution Proposal Reference ID #,Solution Proposal Status\" shouldn\u0027t be visible",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_KnownErrorPageSteps.shouldnTBeVisible(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user should see \"Next Assessment Date\" dropdown as optional",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userShouldSeeDropdownAsOptional(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user should see \"Known Error Code\" dropdown as optional",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userShouldSeeDropdownAsOptional(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user should see \"Accountable Org.\" dropdown as optional",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userShouldSeeDropdownAsOptional(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user should see \"Affected Orgs.\" dropdown as optional",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userShouldSeeDropdownAsOptional(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user changes status to \"Published\" on known error page",
+  "name": "user opens and selects \"- Roberta-F11925\" from \"User\" dropdown",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userChangesStatusToOnKnownErrorPage(String)"
+  "location": "OWF_LoginPageSteps.userOpensAndSelectsFromDropdown(String,String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "user should see \"Known Error Code*\" dropdown as mandatory",
+  "name": "user validates old user value is cleared and new value \"f11925\" is set",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesOldUserValueIsClearedAndNewValueIsSet(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clears value in field and enters user as \"api\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClearsValueInFieldAndEntersUserAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates user list is shown and selects user \"apitester1\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userShouldSeeDropdownAsMandatory(String)"
+  "location": "OWF_LoginPageSteps.userValidatesUserListIsShownAndSelectsUser(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "user should see \"Accountable Org.*\" dropdown as mandatory",
+  "name": "user enters summary as \"Test Client Summary\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userShouldSeeDropdownAsMandatory(String)"
+  "location": "OWF_LoginPageSteps.userEntersSummaryAs(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "user should see \"Affected Orgs.*\" dropdown as mandatory",
+  "name": "user clicks on submit button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksOnSubmitButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks close on confirmation window",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userShouldSeeDropdownAsMandatory(String)"
+  "location": "OWF_LoginPageSteps.userClicksCloseOnConfirmationWindow()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "dropdown values \"Risk accepted:Awaiting solution implementation:Active investigation:Pending information/confirmation:(clear)\" should be available in \"Known Error Code\" dropdown",
+  "name": "user validates created user \"Test Client Name\" is present under \"Client Name\" dropdown",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesCreatedUserIsPresentUnderDropdown(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks create new operation button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksCreateNewOperationButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user enters operation name as \"Test Operation Name30\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.dropdownValuesShouldBeAvailableInDropdown(String,String)"
+  "location": "OWF_LoginPageSteps.userEntersOperationNameAs(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "user selects \"Known Error Code\" as \"Risk accepted\"",
+  "name": "user clicks on submit button",
   "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksOnSubmitButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks close on confirmation window",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksCloseOnConfirmationWindow()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates created operation \"Test Operation Name30\" is present under \"Operation\" dropdown",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesCreatedOperationIsPresentUnderDropdown(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user selects \"Client Name\" as \"Test Client Name\"",
+  "keyword": "Then "
 });
 formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userSelectsAs(String,String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "user selects affected organisation as \"CA_Infra\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSelectsAffectedOrganisationAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects accountable organisation as \"CA_IT\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSelectsAccountableOrganisationAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "known error ticket status should be \"Published\"",
+  "name": "user validates that \"apitester1New\" is present under user and readonly",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_KnownErrorPageSteps.knownErrorTicketStatusShouldBe(String)"
+  "location": "OWF_LoginPageSteps.userValidatesThatApitesterIsPresentUnderUserAndReadonly(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "\"Workaround Available,Customer Effect,Cust. Effect Description,Work Around Initiation date,Work Around Accountable : TeliaID,Work Around Accountable : Name,Solution Proposal Category,Solution Proposal Reference ID #,Solution Proposal Status\" shouldn\u0027t be visible",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_KnownErrorPageSteps.shouldnTBeVisible(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "change should also be reflected in the timeline as \"STATUS MODIFIED.  Status has changed from Draft to Published. Known Error Code has changed from  to Risk accepted. Accountable Org. has changed from  to CA_IT. Affected Orgs. has changed from  to CA_Infra;.\" on row 1",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.changeShouldAlsoBeReflectedInTheTimelineAsOnRow(String,int)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user changes status to \"Closed\" on known error page",
+  "name": "user clicks the pencil icon",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userChangesStatusToOnKnownErrorPage(String)"
+  "location": "OWF_LoginPageSteps.userClicksThePencilIcon()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "user should see known error code as read only",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_KnownErrorPageSteps.userShouldSeeKnownErrorCodeAsReadOnly()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user should see accountable organisation as read only",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userShouldSeeAccountableOrganisationAsReadOnly()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects closure code as \"Full Impact\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSelectsClosureCodeAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "change should also be reflected in the timeline as \"STATUS MODIFIED.  Status has changed from Published to Closed.\" on row 1",
+  "name": "user validates client name is readonly",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.changeShouldAlsoBeReflectedInTheTimelineAsOnRow(String,int)"
+  "location": "OWF_LoginPageSteps.userValidatesClientNameIsReadonly()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "\"Workaround Available,Customer Effect,Cust. Effect Description,Work Around Initiation date,Work Around Accountable : TeliaID,Work Around Accountable : Name,Solution Proposal Category,Solution Proposal Reference ID #,Solution Proposal Status\" shouldn\u0027t be visible",
+  "name": "user validates operation is readonly",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesOperationIsReadonly()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates user is editable and not read only",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesUserIsEditableAndNotReadOnly()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user enters user as \"apitester1New\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userEntersUserAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on the confirm button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksOnTheConfirmButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates user as \"apitester1New\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_KnownErrorPageSteps.shouldnTBeVisible(String)"
+  "location": "OWF_LoginPageSteps.userValidatesUserAs(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
+formatter.step({
+  "name": "user selects \"Operation\" as \"Test Operation Name\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSelectsAs(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on the enable button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksOnTheEnableButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates \"Test Operation Name\" is present under the request table in row 1",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesIsPresentUnderTheRequestTable(String,int)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user selects \"Operation\" as \"Attach CI\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSelectsAs(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on the enable button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksOnTheEnableButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates \"Attach CI\" is present under the request table in row 2",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesIsPresentUnderTheRequestTable(String,int)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user selects \"Operation\" as \"Create Change Request\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSelectsAs(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on the enable button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksOnTheEnableButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates \"Create Change Request\" is present under the request table in row 3",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesIsPresentUnderTheRequestTable(String,int)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user selects \"Operation\" as \"Create Problem\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSelectsAs(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on the enable button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksOnTheEnableButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates \"Create Problem\" is present under the request table in row 4",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesIsPresentUnderTheRequestTable(String,int)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user selects \"Test Operation Name\" request in the table",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userSelectsRequestInTheTable(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on the Edit GUID button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksOnTheEditGUIDButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user enters new GUID ID as \"New Test GUID17\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userEntersNewGUIDIDAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on submit button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksOnSubmitButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks close on confirmation window",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksCloseOnConfirmationWindow()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on the Edit GUID button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksOnTheEditGUIDButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates new GUID is shown as \"New Test GUID17\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesNewGUIDIsShownAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user closes Edit GUID window",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClosesEditGUIDWindow()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user selects \"Test Operation Name\" request in the table",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userSelectsRequestInTheTable(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on the disable button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksOnTheDisableButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates \"New Test GUID\" request isnt present in the table",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesRequestIsntPresentInTheTable(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on the reset button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksOnTheResetButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "all entries should be cleared from the table",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.allEntriesShouldBeClearedFromTheTable()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user selects the preferences as \"Remove Column:API Client Name\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userSelectsThePreferencesAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates \"API Client Name\" column is not present",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesColumnIsNotPresent(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user selects the preferences as \"Remove Column:API Operation\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userSelectsThePreferencesAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates \"API Operation\" column is not present",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesColumnIsNotPresent(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user selects the preferences as \"Remove Column:OperationStatus\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userSelectsThePreferencesAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates \"Operation Status\" column is not present",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesColumnIsNotPresent(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user selects the preferences as \"Reset\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userSelectsThePreferencesAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates \"API Client Name\" column is present",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesColumnIsPresent(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates \"Status\" column is present",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesColumnIsPresent(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates \"API Operation\" column is present",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesColumnIsPresent(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates \"OperationStatus\" column is present",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesColumnIsPresent(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user selects \"Client Name\" as \"Test Client Name\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSelectsAs(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on remove client button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksOnRemoveClientButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates \"Test Client Name\" isnt present under the \"Client Name\" drop down",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesIsntPresentUnderTheDropDown(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user selects \"Operation\" as \"Test Operation Name\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSelectsAs(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on removal operation button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksOnRemovalOperationButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates \"Test Operation\" isnt present under the \"Operation\" drop down",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesIsntPresentUnderTheDropDown(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on home button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userClicksOnHomeButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates agent console is displayed correctly",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userValidatesAgentConsoleIsDisplayedCorrectly()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user logsOut",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userLogsOut()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user switches to window 0",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on main page refresh",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userClicksOnMainPageRefresh()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates the OW login page is displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userValidatesTheOWLoginPageIsDisplayed()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.embedding("image/png", "embedded0.png");
 formatter.after({
   "status": "passed"
 });

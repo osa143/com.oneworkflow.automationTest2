@@ -17,7 +17,7 @@ Feature:  Today in the customer operations interface,
   And user clicks on cloud under IT Infrastructure dropdown
   When user clicks on "Skypoint - private cloud" pebble
   Then user should see "Skypoint - private cloud" form
-  Then user selects nimbus system name in haiti as "Other"
+  Then user selects nimbus system name in haiti as "1B"
   #Then user selects system name in haiti as "1B"
   When user selects role dropdown as "Application Operation Engineer"
   And user selects service request name as "Add/Modify/Remove CPU/Memory/Disk to VM"
@@ -31,7 +31,6 @@ Feature:  Today in the customer operations interface,
   And user clicks on plaza request id
   Then user should see service request form
   When user opens new tab
-    And user enters ticket previously created and searches
   Given user is on the OneWorkflow login page
   When user logs in with valid user and password
   Then user successfully logged in to OneWorkflow and agent console should be displayed

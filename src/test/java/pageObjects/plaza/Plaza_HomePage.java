@@ -503,7 +503,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String btn_SHOW_MORE = "//button[contains(text(), 'Show More')]";
     private static final String link_SUPPORT_HOMEPAGE = "//*[@id='xcab273021b8480d00c1e87fe6e4bcbaf']/div/a";
     private static final String link_FIREWALL_AND_NETWORK = "c85eddc1db9997446734f1eabf96198a";
-    private static final String link_CLOUD = "7afd99c1db9997446734f1eabf9619be";
+    private static final String link_CLOUD = "//*[@id=\"7afd99c1db9997446734f1eabf9619be\"]";
     private static final String link_COMPUTE_AND_OPERATING_SYSTEM = "d56e9dc1db9997446734f1eabf961970";
     private static final String link_MESSAGING = "00e7f797dbe153006734f1eabf961914";
     private static final String linkDATABASE = "78d96643dbc197042b3cfc16bf9619ab";

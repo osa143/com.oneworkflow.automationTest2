@@ -19,7 +19,7 @@
       Then user enters email address field as "Test@Test.com"
       Then user enters phone field as "123456789"
       And user enters Cloud one time snapshot request as "Test1 Cloud one time snapshot/Request"
-      And user selects order one time Add CI as "cc100cgas001"
+      And user selects order one time Add CI as "0001TELIDNAS\MSSQLSERVER"
       Then user enters cloud one time snapshot description as "Test1 Cloud one time snapshot/Description"
       And user enters date and time for deletion as current date and time
       And user enters additional comments as "Test1 Cloud one time snapshot/AC"
@@ -52,14 +52,14 @@
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
-      And user validates CI "cc100cgas001" is listed
-      And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
+      And user validates CI "0001TELIDNAS\MSSQLSERVER" is listed
+      And user right clicks on CI "0001TELIDNAS\MSSQLSERVER" and selects "Impact:Update"
       Then user switches to frame
       And user enters impact from time as past on impact details bulk update window
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      When user right clicks on CI "cc100cgas001" and clears impact
+      When user right clicks on CI "0001TELIDNAS\MSSQLSERVER" and clears impact
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

@@ -18,6 +18,7 @@ Feature: Adding of CI to incident ticket
     And user clicks on save button
     Then ticket should be created and status should be assigned
     When user clicks on Diagnosis tab
+    And user validates CI columns "CI Name:PrimarySecondary:CI Priority:Business Hours:Custom Attribute4" availability
     And user clicks on CI search button
     Then user switches to frame
     And user selects Category as "CORE"
@@ -49,7 +50,6 @@ Feature: Adding of CI to incident ticket
     And user clicks on relate CI
     Then user closes warning message
     And user clicks on close button on CI search window
-    And user clicks on "Diagnosis" tab
     And CI should be listed and displayed under the Diagnosis tab
     And user validates "Primary" CI is equal to "SE_EPG_FREEPG1"
     And user validates CI "Impact Status" is "Active"

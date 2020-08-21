@@ -14,7 +14,7 @@
       And user selects request type as "Customer" on trouble event page
       And user enters description as "Test Case 03.04 Make Master Ticket"
       And user clicks on save button
-      And user gets ticket value
+      And user gets trouble ticket value
       Then ticket should be created and status should be assigned
       When user clicks on create trouble event
       And user switches to window 2
@@ -34,7 +34,7 @@
       And user enters ticket in ticket ID+ field
       And user clicks on the search button
       And user clicks on accept button
-      Then user validates 1 linked ticket availability
-      Then change should also be reflected in the timeline as "Correlation to ticket;. Relationship Type: Is master of" for trouble ticket in row 1
+      Then user validates linked ticket availability under linked items
+      And change should also be reflected in the timeline as "Correlation to ticket;. Relationship Type: Is master of" for trouble ticket in row 1
 
 

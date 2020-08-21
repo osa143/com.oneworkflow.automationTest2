@@ -1,4 +1,4 @@
-@B2B_Test_Cases
+@B2B
 #create a B2B wO ticket and send to field service which shouldn't reach them,
 # as a result it shouldn't create Error in the B2B interface ticket
 

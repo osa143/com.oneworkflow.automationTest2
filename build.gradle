@@ -22,6 +22,7 @@ def cucumberJarVersion = '4.2.0'
 dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     compile group: 'log4j', name: 'log4j', version: '1.2.17'
+    testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.3.0'
     compile group: 'net.masterthought', name: 'cucumber-reporting', version: '4.6.0'
     compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '3.4.0'
     compile group: 'io.cucumber', name: 'cucumber-core', version: cucumberJarVersion
@@ -41,7 +42,7 @@ dependencies {
 
 task cukes (type: Test){
     testLogging.showStandardStreams = true
-    print 'hi'
+    print 'Test'
     systemProperty "owf.env", System.getProperty("owf.env", 'runtime_test')
     def suite = 'src/test/resources/TestNG.xml'
 

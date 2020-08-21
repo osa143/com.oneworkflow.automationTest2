@@ -11,8 +11,8 @@
       And user switches to window 1
       Then problem record form should appear in new tab
       When user creates problem ticket with below details
-        |               Title                  |RequestType            |Description                 |ImpactType      |Urgency|
-        |Proactive investigation of frvi96_auto|XX_Test:Functional Test|UAT Profile Permissions test|Moderate/Limited|Low    |
+        |               Title                  |RequestType |Description                 |ImpactType      |Urgency|
+        |Proactive investigation of frvi96_auto|CPS:IT:Other|UAT Profile Permissions test|Moderate/Limited|Low    |
       Then ticket should be created and status should be assigned
       And user validates "Restricted Info" tab is not visible
       Then user tries to change the status to "Under investigation"

@@ -1,6 +1,6 @@
 @All_File_Types_Bulk_Loading_CTI_Details_change @SAO-427
-Feature: checking of bulk loading CTI details
-  Scenario Outline: user checks the bulk loading CTI details
+Feature: checking of bulk loading CTI details and location details
+  Scenario Outline: user checks the bulk loading CTI details and location details
 
     Given user is on the OneWorkflow login page
     And user logs in with valid user and password
@@ -59,13 +59,22 @@ Feature: checking of bulk loading CTI details
     Then user validates Category as "Access"
     And user validates type as "WLAN"
     And user validates item as "AP"
+    When user clicks on location under sections
+    Then user validates location id as "ALV WLAN11"
+    And user validates location name as "SE_Site_ALV WLAN11"
+    And user validates region id as "08"
+    And user validates region name as "KALMAR"
+    And user validates latitude as "56.675540"
+    And user validates longitude as "16.285040"
+    And user validates x degree as "0"
+    And user validates y degree as "0"
     And user logsOut and closes the browser
     And user switches to window 0
 
 
     Examples:
       |fileTypes                                                                                                  |
-#      |Test Attachments\10 CI's - Correct Names\CSV.csv |
-      |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
-      |Test Attachments\10 CI's - Correct Names\XLS.xls|
-      |Test Attachments\10 CI's - Correct Names\TEXT.txt |
+      |Test Attachments\10 CI's - Correct Names\CSV.csv |
+#      |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
+#      |Test Attachments\10 CI's - Correct Names\XLS.xls|
+#      |Test Attachments\10 CI's - Correct Names\TEXT.txt |

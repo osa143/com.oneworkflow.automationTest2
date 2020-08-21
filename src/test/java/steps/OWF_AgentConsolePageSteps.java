@@ -730,6 +730,11 @@ public class OWF_AgentConsolePageSteps {
     public void userShouldnTSeeUnderSelectedTrustPrinciples(String countryName) {
         Assert.assertFalse(agentConsolePage.getTrustPrinciplesAvailableCountry(1, countryName));
     }
+
+    @Then("tickets {string} should be filtered {string}")
+    public void ticketsShouldBeFiltered(String colValue, String colName) {
+        Assert.assertTrue(agentConsolePage.verifyTicketsFilteredToSearch(colName, colValue, false));
+    }
 }
 
 

@@ -157,13 +157,13 @@ public void clickElementById(String Id){
 
     public String calculateEstimatedReady(int time, String timeUnit){
         String estimatedTime = "";
-        String format = "MM/dd/yyyy HH:mm:ss";
+        String format = "dd/MM/yyyy HH:mm:ss";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
         String eventStartTime = getEventStartTime();
-        System.out.println(eventStartTime);
-        if(eventStartTime.isEmpty())
-            eventStartTime  = CommonUtils.getDateTime(format, "Europe/London", 0);
-        ;
+        System.out.println("Event start time is =" + eventStartTime);
+//        if(eventStartTime.isEmpty())
+//            eventStartTime  = CommonUtils.getDateTime(format, "Europe/London", 0);
+
         LocalDateTime dateTime = LocalDateTime.parse(eventStartTime, formatter);
         if(timeUnit.equals("days"))
         {
@@ -174,8 +174,11 @@ public void clickElementById(String Id){
             estimatedTime = dateTime.plusHours(time).toString();
         }
 
-        estimatedTime = estimatedTime.replace('T',' ');
-        System.out.println("Estimated time is: " + estimatedTime);
+//        estimatedTime = estimatedTime.replace('T',' ');
+//        System.out.println("Estimated time is: " + estimatedTime);
+//        LocalDateTime dateTime1 = LocalDateTime.parse(estimatedTime, formatter);
+//        estimatedTime =dateTime1.toString();
+        System.out.println("Calculated estimated readt time is - " +estimatedTime);
         return estimatedTime;
     }
 

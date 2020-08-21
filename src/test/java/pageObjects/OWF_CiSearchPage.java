@@ -77,6 +77,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
 
 
     public void clickRefresh_Diagnosis(){
+        wait(1000);
         clickElement(By.xpath(btn_Refresh));
         wait(500);
     }
@@ -151,6 +152,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
        // closeWarningMessage();
         clickCloseButton();
         switchToDefault();
+        wait(3000);
 
     }
 

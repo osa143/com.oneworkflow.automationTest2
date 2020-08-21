@@ -51,6 +51,9 @@
       And user validates owner as "PLAZA"
       And user should see assigned profile as "Backup"
       And user validates 1 attachment visibility under external
+      When user clicks attachment open button
+      And user switches to window 3
+      Then user validates external is selected
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab

@@ -21,7 +21,7 @@
         |SE_SGSN_LDHMME1|
         |SE_SGSN_VRRMME1|
       And user clicks on "Diagnosis" tab
-      Then user validates CI columns "Category:Type:Item:Site Name:Impact Type:Impact Category:Impact Level:Impact Status:Impact From:Impact To:CI Class Type" availability
+      Then user validates CI columns "Category:Type:Item:Site Name:Impact Type:Impact Category:Impact Level:Impact Status:Impact From:Impact To:CI Class Type:CI Name:PrimarySecondary:CI Priority:Business Hours:Custom Attribute4" availability
       #Impact to and CI class, type wont have data - this is fine (based on ALM test)
       And user validates columns have data present
       When user right clicks on CI "SE_SGSN_HYMME2" and selects "Impact:Update"

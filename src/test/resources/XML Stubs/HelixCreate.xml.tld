@@ -1,0 +1,45 @@
+<ns0:BAOInputRequest xmlns:ns0="OWIF">
+    <ns0:FaultManagement>
+        <ns0:CreateIncident>
+            <ns0:Action>Create</ns0:Action>
+            <ns0:Operation>Create Incident</ns0:Operation>
+            <ns0:InterfaceName>Helix</ns0:InterfaceName>
+            <ns0:NMSGUID>MaheshTestTest3</ns0:NMSGUID>
+            <ns0:AlarmGUID>MaheshTestTest3</ns0:AlarmGUID>
+            <ns0:AlarmNumber>MaheshTestTest3</ns0:AlarmNumber>
+            <ns0:AlarmType>EquipmentAlarm</ns0:AlarmType>
+            <ns0:AlarmTextShort>TimDevice_RadioClockIsNotStable</ns0:AlarmTextShort>
+            <ns0:AlarmTextLong>Cells: 621781 621782 621783 621784 621785 621786 621787 621788 621789 651781 651782 651783
+                Prio: 12:2
+                OriginalMOI: mbru225,MeContext=rbs62178,ManagedElement=1,Equipment=1,Subrack=1,Slot=1,PlugInUnit=1,TimDeviceSet=1,TimDevice=1
+                &lt;user_data&gt;SpecificProblem=TimDevice_RadioClockIsNotStable&lt;#&gt;ManagedObject=SE,RNC=mbru225,NODEB=rbs62178,Subrack=1,Slot=1,PlugInUnit=1,TimDeviceSet=1,TimDevice=1&lt;#&gt;Tech=MSC&lt;#&gt;AffectedCI=Country=SE;Equipment_ID=;Site=;Tech=MSC&lt;#&gt;Tags=transmission&lt;/user_data&gt;</ns0:AlarmTextLong>
+            <ns0:CtrlNeName>hoburg.telia.se</ns0:CtrlNeName>
+            <ns0:CtrlNeAddress>10.62.4.50</ns0:CtrlNeAddress>
+            <ns0:AlarmTime>2020-05-01T11:27:20+02:00</ns0:AlarmTime>
+            <ns0:ActualEventTime>2020-05-01T11:27:20+02:00</ns0:ActualEventTime>
+            <ns0:AlarmSeverity>Major</ns0:AlarmSeverity>
+            <ns0:ObjectName>CIKEY=ITRef_Cell_SE_UMTSCell_334332</ns0:ObjectName>
+            <ns0:ObjectClass>Site</ns0:ObjectClass>
+            <ns0:ServiceProvisionFor>Telia Company</ns0:ServiceProvisionFor>
+            <ns0:OwningNMS>Helix</ns0:OwningNMS>
+            <ns0:RecordType>Alarm</ns0:RecordType>
+            <ns0:interactionDate>2020-05-01T11:24:59+02:00</ns0:interactionDate>
+            <ns0:AlarmFirstOccurrence>2020-05-01T11:27:20+02:00</ns0:AlarmFirstOccurrence>
+            <ns0:AlarmLastOccurrence>2020-05-01T11:27:20+02:00</ns0:AlarmLastOccurrence>
+            <ns0:AdditionalInfo>Cells: 621781 621782 621783 621784 621785 621786 621787 621788 621789 651781 651782 651783
+                Prio: 12:2
+                OriginalMOI: mbru225,MeContext=rbs62178,ManagedElement=1,Equipment=1,Subrack=1,Slot=1,PlugInUnit=1,TimDeviceSet=1,TimDevice=1
+                &lt;user_data&gt;SpecificProblem=TimDevice_RadioClockIsNotStable&lt;#&gt;ManagedObject=SE,RNC=mbru225,NODEB=rbs62178,Subrack=1,Slot=1,PlugInUnit=1,TimDeviceSet=1,TimDevice=1&lt;#&gt;Tech=MSC&lt;#&gt;AffectedCI=Country=EE;Equipment_ID=;Site=;Tech=MSCS&lt;#&gt;Tags=transmission&lt;/user_data&gt;</ns0:AdditionalInfo>
+            <ns0:ObjectAlias>NE .se.snb_enm PART "SE,RNC=mbru225,NODEB=rbs62178,Subrack=1,Slot=1,PlugInUnit=1,TimDeviceSet=1,TimDevice=1"</ns0:ObjectAlias>
+            <ns0:Component>HP IOC Component</ns0:Component>
+            <ns0:Country>Estonia</ns0:Country>
+            <ns0:Technology>MSC</ns0:Technology>
+            <ns0:FaultDomain>transmission</ns0:FaultDomain>
+            <ns0:JobID>MaheshTestTest3</ns0:JobID>
+            <ns0:UserId>rage</ns0:UserId>
+            <ns0:AlarmCounter>0</ns0:AlarmCounter>
+            <ns0:AlarmStatus>Toggling</ns0:AlarmStatus>
+            <ns0:Tag></ns0:Tag>
+        </ns0:CreateIncident>
+    </ns0:FaultManagement>
+</ns0:BAOInputRequest>

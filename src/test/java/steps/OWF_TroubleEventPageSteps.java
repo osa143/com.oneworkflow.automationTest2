@@ -196,7 +196,6 @@ public class OWF_TroubleEventPageSteps {
     @And("user clicks on accept button")
     public void userClicksOnAcceptButton() {
         troubleEventPage.clickAccept_selectTargetRequest();
-        troubleEventPage.wait(1000);
     }
 
     @Then("user selects ticket under select target request")
@@ -287,13 +286,14 @@ public class OWF_TroubleEventPageSteps {
     @When("user enters estimated ready as event start time plus {int} days on trouble event page")
     public void userEntersEstimatedReadyAsEventStartTimePlusDays(int arg0) {
 
-        workOrderPage.clearEstimatedReady();
-        workOrderPage.enterEstimatedReady(troubleEventPage.calculateEstimatedReady(arg0, "days"));
+      //  workOrderPage.clearEstimatedReady();
+        CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("dd/MM/yyyy HH:mm:ss","Europe/London",arg0);
+        workOrderPage.enterEstimatedReady(CommonUtils.estimatedReadyTime);
     }
 
     @Then("estimated ready time should be saved correctly on trouble event page")
     public void estimatedReadyTimeShouldBeSavedCorrectly() {
-        Assert.assertEquals(troubleEventPage.calculateEstimatedReady(4, "days"), workOrderPage.getSavedEstimatedReady());
+        Assert.assertEquals(CommonUtils.estimatedReadyTime, workOrderPage.getSavedEstimatedReady());
     }
 
 
@@ -578,6 +578,7 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("user validates location details are updated")
     public void userValidatesLocationDetailsAreUpdated() {
+
     }
 
     @Then("multiple statuses {string} should be available in Importance dropdown")
@@ -669,11 +670,9 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("user validates {int} linked ticket availability")
     public void userValidatesLinkedTicketAvailability(int arg0) {
-        troubleEventPage.validateLinkedItemsAvailability(arg0);
+        Assert.assertTrue(troubleEventPage.validateLinkedItemsAvailability(arg0));
 
     }
-
-
 
     @Then("user enters root cause description as {string}")
     public void userEntersRootCauseDescriptionAs(String arg0) {
@@ -806,7 +805,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user gets trouble ticket value")
     public void userGetsTroubleTicketValue() {
-            CommonUtils.opTicket = troubleEventPage.getTicketValue();
+        CommonUtils.opTicket = troubleEventPage.getTicketValue();
             System.out.println("Stored trouble ticket is " + CommonUtils.opTicket);
     }
 
@@ -882,7 +881,7 @@ public class OWF_TroubleEventPageSteps {
     @Then("error message should display as {string} on change record page")
     public void errorMessageShouldDisplayAsOnChangeRecordPage(String arg0) {
         Assert.assertEquals(troubleEventPage.getErrorText_(), arg0);
-        troubleEventPage.wait(3000);
+        troubleEventPage.wait(1000);
 
     }
 
@@ -1205,7 +1204,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters on hold to date {int} minutes in the future")
     public void userEntersOnHoldToDateMinutesInTheFuture(int arg0) {
-       troubleEventPage.enterHoldToDateAndTime(CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", arg0));
+       troubleEventPage.enterHoldToDateAndTime(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user selects on hold reason as {string}")
@@ -1302,6 +1301,27 @@ public class OWF_TroubleEventPageSteps {
     @And("user validates action field as {string}")
     public void userValidatesActionFieldAs(String expectedAction) {
         Assert.assertEquals(troubleEventPage.getAction(), expectedAction);
+    }
+
+    @Then("user validates ticket statuses {string} can be seen under linked items tab")
+    public void userValidatesTicketStatusesCanBeSeenUnderLinkedItemsTab(String cellValues) {
+        Assert.assertTrue(troubleEventPage.verifyColumnValuesForMultipleInputs(By.id("T777506000"),"Status", cellValues));
+    }
+
+    @Then("user validates linked ticket availability under linked items")
+    public void userValidatesLinkedTicketAvailabilityUnderLinkedItems() {
+        troubleEventPage.clickLinkedItems();
+        Assert.assertEquals(troubleEventPage.getLinkedTicketId(), CommonUtils.opTicket);
+    }
+
+    @And("user validates vendor section is not present")
+    public void userValidatesVendorSectionIsNotPresent() {
+        Assert.assertFalse(troubleEventPage.verifyVendorSectionIsPresent());
+    }
+
+    @Then("user validates external is selected")
+    public void userValidatesExternalIsSelected() {
+        Assert.assertTrue(troubleEventPage.isExternalSelected());
     }
 }
 

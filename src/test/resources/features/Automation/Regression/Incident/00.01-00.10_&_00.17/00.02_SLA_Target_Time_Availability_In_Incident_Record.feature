@@ -18,10 +18,11 @@ Feature: SLA Target time availability in Incident Record
     And user waits 2 secs
     And user enters "'Cust. Remaining SLA' != $NULL$ AND 'Status' = \"Closed\"" in the advanced search bar
     And user clicks Search on ticket search
+    When user waits 15 secs
     Then ticket with SLA should be opened
     And user validates Cust. Remaining SLA or SLA Target Time availability
     Then customer SLA field must be greyed out and not possible for user to alter
-    And user validates that the content of SLA date and time format as "dd/MM/yyyy HH:mm:ss "
+    And user validates that the content of SLA date and time format as "dd/MM/yyyy HH:mm:ss"
 
 
 

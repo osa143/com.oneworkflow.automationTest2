@@ -126,6 +126,7 @@ public class PlazaValidation {
     public static String TypeOfIssue;
     public static String Subject;
     public static String Description_Incident;
+    public static String SystemNameInHaiti;
 
 
 

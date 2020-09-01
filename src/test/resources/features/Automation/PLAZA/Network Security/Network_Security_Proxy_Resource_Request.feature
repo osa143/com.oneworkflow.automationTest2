@@ -13,7 +13,7 @@
       And user clicks on show more button
       When user clicks on Proxy pebble
       Then user should see "Proxy" form
-      Then user selects proxy general inquiry system name in haiti as "1B"
+      Then user selects proxy general resource request system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Resource Request"
       And user enters network security proxy request as "Test2 Network Security Proxy/Request"

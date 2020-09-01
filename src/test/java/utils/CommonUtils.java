@@ -17,6 +17,7 @@ public class CommonUtils extends BasePage {
     public static String ciDetailsBeforeUpdate;
     public static String opTicket;
     public static String pbTicket;
+    public static String keTicket;
     public static String firstTicketBefore;
     public static String firstTicketAfterWait;
     public static String firstTicketAfterRefreshInterval;
@@ -31,6 +32,8 @@ public class CommonUtils extends BasePage {
     public static String CI_Impact_From_Time;
     public static String CI_Impact_To_Time;
     public static String Timeline_Entry;
+    public static String estimatedReadyTime;
+    public static String WO_eventStartTime;
 
     // 0 - parent window
     // 1 - first child and so on
@@ -76,6 +79,21 @@ public class CommonUtils extends BasePage {
             startDateTime = currentDateTime.plusMinutes(minutes);
         } else {
             startDateTime = currentDateTime.minusMinutes(Math.abs(minutes));
+        }
+        return dateTimeFormatter.format(startDateTime);
+
+    }
+    public static String getDateTimePlusDays(String pattern, String timeZone, int days) {
+        if (timeZone.equals(""))
+            timeZone = ZoneId.systemDefault().getId();
+        LocalDateTime startDateTime = null;
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(pattern);
+        LocalDateTime currentDateTime = LocalDateTime.now(TimeZone.getTimeZone(timeZone).toZoneId());
+
+        if (days >= 0) {
+            startDateTime = currentDateTime.plusDays(days);
+        } else {
+            startDateTime = currentDateTime.minusDays(Math.abs(days));
         }
         return dateTimeFormatter.format(startDateTime);
 

@@ -12,7 +12,7 @@
       And user clicks on show more button
       When user clicks on Manual OS Patching
       Then user should see "Manual OS Patching" form
-      Then user selects network security system name in haiti as "1B"
+      Then user selects operating system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system manual os patching request as "Test6 Operating System Manual/Request"
       And user selects manual os patching Add CI as "cc001cgas001"

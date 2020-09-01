@@ -881,6 +881,20 @@ public class OWF_WorkOrderPageSteps {
     public void userValidatesOPTicketDescriptionSameAsPlaza() {
         Assert.assertTrue(workOrderPage.verify_OP_Ticket_Description());
     }
+
+    @And("user gets work order event start time")
+    public void userGetsWorkOrderEventStartTime() {
+        CommonUtils.WO_eventStartTime=workOrderPage.getEventStartTime();
+        System.out.println("Event start time when WO is in new status is - " + CommonUtils.WO_eventStartTime);
+    }
+
+    @Then("user validates event start time is same as when ticket was in new status")
+    public void userValidatesEventStartTimeIsSameAsWhenTicketWasInNewStatus() {
+        String assignedWO_eventStartTime= workOrderPage.getEventStartTime();
+        System.out.println("Event start time when WO is in Assigned status is - " + assignedWO_eventStartTime);
+        Assert.assertEquals(assignedWO_eventStartTime, CommonUtils.WO_eventStartTime);
+
+    }
 }
 
 

@@ -10,11 +10,11 @@
       And user switches to window 1
       Then trouble record form should appear in new tab
       And user enters title as "Test"
-      Then user selects request type as "Event"
+      And user selects request type as "Event" on trouble event page
       And user enters description as "Test Desc"
       Then user clicks on sweden checkbox under affected BU's
       Then user clicks save button
-      And trouble ticket should be created and status should be assigned
+      And ticket should be created and status should be assigned
       Then user clicks on Ack button
       And user selects status as "Withdrawn"
       Then user selects withdrawn reason as "Test Ticket"

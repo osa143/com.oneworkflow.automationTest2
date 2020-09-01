@@ -26,9 +26,10 @@
       And user selects a CI from list
       Then user selects impact level as "Degradation of Service"
       And user clicks on relate CI
-      And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
+     # And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
       And user closes warning message
       And user clicks on close button on CI search window
+      And user waits 6 secs
       When user adds below CI's to the ticket
         |   CI Name     |
         |SE_SGSN_HYMME2|

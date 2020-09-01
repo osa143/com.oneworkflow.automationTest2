@@ -12,7 +12,7 @@
       And user clicks on show more button
       When user clicks on Network Routing Switching pebble
       Then user should see "Network Routing Switching" form
-      Then user selects network security firewall system name in haiti as "1B"
+      Then user selects network security new switch system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects New Switch Service Request Name as "New Switch - Configure"
       And user enters Network Security Routing New Switch request as "Test7 Network Security New Switch/Request"

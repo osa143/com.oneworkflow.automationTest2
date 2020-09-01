@@ -118,4 +118,16 @@ public class OWF_KnownErrorPageSteps {
     public void shouldnTBeVisible(String fields) {
         Assert.assertTrue(knownErrorPage.verifyFieldsInvisible(fields));
     }
+
+    @And("user gets known error ticket")
+    public void userGetsKnownErrorTicket() {
+        String ticket = knownErrorPage.getTicketValue();
+        System.out.println("Stored ticket is " + ticket);
+        CommonUtils.keTicket = ticket;
+    }
+
+    @And("user enters known error ticket")
+    public void userEntersKnownErrorTicket() {
+        knownErrorPage.enterTicket(CommonUtils.keTicket);
+    }
 }

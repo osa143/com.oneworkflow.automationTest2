@@ -157,13 +157,13 @@ public void clickElementById(String Id){
 
     public String calculateEstimatedReady(int time, String timeUnit){
         String estimatedTime = "";
-        String format = "MM/dd/yyyy HH:mm:ss";
+        String format = "dd/MM/yyyy HH:mm:ss";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
         String eventStartTime = getEventStartTime();
-        System.out.println(eventStartTime);
-        if(eventStartTime.isEmpty())
-            eventStartTime  = CommonUtils.getDateTime(format, "Europe/London", 0);
-        ;
+        System.out.println("Event start time is =" + eventStartTime);
+//        if(eventStartTime.isEmpty())
+//            eventStartTime  = CommonUtils.getDateTime(format, "Europe/London", 0);
+
         LocalDateTime dateTime = LocalDateTime.parse(eventStartTime, formatter);
         if(timeUnit.equals("days"))
         {
@@ -174,8 +174,11 @@ public void clickElementById(String Id){
             estimatedTime = dateTime.plusHours(time).toString();
         }
 
-        estimatedTime = estimatedTime.replace('T',' ');
-        System.out.println("Estimated time is: " + estimatedTime);
+//        estimatedTime = estimatedTime.replace('T',' ');
+//        System.out.println("Estimated time is: " + estimatedTime);
+//        LocalDateTime dateTime1 = LocalDateTime.parse(estimatedTime, formatter);
+//        estimatedTime =dateTime1.toString();
+        System.out.println("Calculated estimated readt time is - " +estimatedTime);
         return estimatedTime;
     }
 
@@ -733,9 +736,9 @@ public void clickElementById(String Id){
         return  false;
     }
 
-    public boolean verifyColumnValuesForMultipleInputs(By table, String columnName, String columnValue)
+    public boolean verifyColumnValuesForMultipleInputs(By table, String columnName, String CellValue)
     {
-        String[] columnValues = columnValue.split(":");
+        String[] cellValues = CellValue.split(":");
 
         int colNum = getColumnIndexByHeaderName(table, columnName);
         List<WebElement> tableRows = getTableRows(table);
@@ -749,7 +752,7 @@ public void clickElementById(String Id){
                 if(i == 51)
                     break;
 
-                if(verifySingleColumnValue(td.getText().trim(), columnValues))
+                if(verifySingleColumnValue(td.getText().trim(), cellValues))
                     continue;
                 else
                     return false;
@@ -758,6 +761,7 @@ public void clickElementById(String Id){
         }
         return true;
     }
+
 
     //columnValue should be separated by :
     public boolean verifyColumnValuesMultiple(By table, String columnName, String columnValue, boolean partialText)

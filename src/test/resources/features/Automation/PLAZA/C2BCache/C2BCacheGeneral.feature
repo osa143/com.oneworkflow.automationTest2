@@ -68,4 +68,4 @@ Feature: Plaza C2B Cache form test
       |Test4 C2BCache/Request|Prod         |Test4 C2BCache/Description|Test4 C2BCache/AC |
       |Test5 C2BCache/Request|RATM         |Test5 C2BCache/Description|Test5 C2BCache/AC  |
       |Test6 C2BCache/Request|SIT          |Test6 C2BCache/Description|Test6 C2BCache/AC |
-#      |Test7 C2BCache/Request|ST           |Test7 C2BCache/Description|Test7 C2BCache/AC |
+      |Test7 C2BCache/Request|ST           |Test7 C2BCache/Description|Test7 C2BCache/AC |

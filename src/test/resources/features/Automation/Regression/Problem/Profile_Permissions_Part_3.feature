@@ -9,9 +9,9 @@
       When user clicks on create problem record
       And user switches to window 1
       Then problem record form should appear in new tab
-      When user creates problem ticket with following details
-        |               Title                  |RequestType |Description                  |ImpactType      |Urgency|AccountableOrg|AffectedOrg|
-        |Proactive investigation of frvi96_auto|CPS:IT:Other|UAT Profile Permissions test3|Moderate/Limited|Low    |CA_Infra      |CA_IT      |
+      When user creates problem ticket with below details
+        |               Title                  |RequestType            |Description                  |ImpactType      |Urgency|
+        |Proactive investigation of frvi96_auto|XX_Test:Functional Test|UAT Profile Permissions test3|Moderate/Limited|Low    |
       Then ticket should be created and status should be assigned
       When user clicks on Ack button
       Then problem ticket status should be under investigation
@@ -34,7 +34,7 @@
       And user selects solved under closure code
       And user enters solution as "A change in processes"
       And user enters solution found date as current date
-      Then user clicks on save button on the problem form
+      And user clicks on save button
       And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Investigation Complete to Closed. "
 
 

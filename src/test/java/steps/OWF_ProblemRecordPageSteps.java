@@ -169,7 +169,7 @@ public class OWF_ProblemRecordPageSteps {
     public void descriptionFieldShouldBeGreyedOutShouldNotBeAbleToChanged() {
         System.out.println(problemRecordPage.getDescriptionText());
         Assert.assertTrue(problemRecordPage.getDescriptionTextBoxStatus(), "description is not greyed out");
-        Assert.assertEquals(problemRecordPage.getDescriptionText(), "UAT Test1 withdraw after Ack");
+        Assert.assertEquals(problemRecordPage.getDescriptionText(), "Initiator Change Description after Ack");
 
     }
 
@@ -217,7 +217,7 @@ public class OWF_ProblemRecordPageSteps {
     @And("change should also be reflected in the timeline as {string} for trouble ticket in row {int}")
     public void changeShouldAlsoBeReflectedInTheTimelineForOPTicketAs(String message, int rowNum) {
         String[] str = message.split(";");
-        str[0] += " " + CommonUtils.pbTicket;
+        str[0] += " " + CommonUtils.opTicket;
 
         String newMessage = "";
         for (int i = 0; i < str.length; i++) {
@@ -240,7 +240,7 @@ public class OWF_ProblemRecordPageSteps {
     @When("user tries to Ack the ticket but its shouldn't allow")
     public void userTriesAckTheTicketButItsShouldnTAllow() {
 
-        Assert.assertFalse(problemRecordPage.getAckButtonStatus(), "user is able to Ack Ticket");
+        Assert.assertFalse(problemRecordPage.getAckButtonStatus());
     }
 
     @Then("problem ticket status should be assigned")
@@ -853,7 +853,14 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user enters ticket in ticket ID+ field")
     public void userEntersTicketInTicketIDField() {
+        if(ticket == null ||ticket.equals("")){
+            ticket=CommonUtils.opTicket;
+            System.out.println("inside if " +ticket);
+        }
+        System.out.println("Outside if " +ticket);
+        System.out.println("OP ticket value is -"+CommonUtils.opTicket );
         problemRecordPage.enterTicketIdPlus(ticket);
+
     }
 
     @And("change should also be reflected in the timeline as {string} on row {int}")
@@ -1444,7 +1451,7 @@ public class OWF_ProblemRecordPageSteps {
     @Then("attachment form should open in new tab")
     public void attachmentFormShouldOpenInNewTab() {
         CommonUtils.switchToChildWindow(problemRecordPage.getDriver(), 2);
-        Assert.assertEquals(problemRecordPage.getPageTitle(), "OS3 Attachments(Modify)");
+        Assert.assertEquals(problemRecordPage.getPageTitle(), "OS3 Attachments (Modify)");
     }
 
     @When("user clicks on the attachment listed")
@@ -1510,6 +1517,11 @@ public class OWF_ProblemRecordPageSteps {
     @Then("error message should display for close ticket as {string}")
     public void errorMessageShouldDisplayForCloseTicketAsClosed(String errorMessage) {
         Assert.assertEquals(problemRecordPage.getErrorText_(),errorMessage);
+    }
+
+    @And("user clicks attachment open button")
+    public void userClicksAttachmentOpenButton() {
+        problemRecordPage.clickOpenAttachment();
     }
 }
 

@@ -18,7 +18,7 @@
       And user should see WIP ticket value
       And user should see Cleared ticket value
       When user selects "Trouble Ticket" under all tickets
-      Then user validates availability of tabs "Timeline:Details:List:Search / Quick Create:Alarms"
+      Then user validates availability of tabs "Timeline:Details:List:Search / Quick Create"
       Then user validates tickets are listed in agent console table
 
 

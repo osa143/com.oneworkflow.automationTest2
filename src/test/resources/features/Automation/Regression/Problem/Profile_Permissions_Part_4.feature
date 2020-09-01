@@ -10,9 +10,9 @@
       When user clicks on create problem record
       And user switches to window 1
       Then problem record form should appear in new tab
-      When user creates problem ticket with following details
-        |               Title                  |RequestType |Description                  |ImpactType      |Urgency|AccountableOrg|AffectedOrg|
-        |Proactive investigation of frvi96_auto|CPS:IT:Other|UAT Profile Permissions test4|Moderate/Limited|Low    |CA_Infra      |CA_IT      |
+      When user creates problem ticket with below details
+        |               Title                  |RequestType            |Description                   |ImpactType      |Urgency|
+        |Proactive investigation of frvi96_auto|XX_Test:Functional Test|UAT Profile Permissions test 4|Moderate/Limited|Low    |
       Then ticket should be created and status should be assigned
       When user clicks on Ack button
       Then problem ticket status should be under investigation
@@ -42,7 +42,6 @@
       When user enters description as "Some new information"
       And user clicks on save button on the problem form
       And user adds CI "SE_CPE_FRECPE5" to the ticket
-      And user clicks on "Diagnosis" tab
       And CI should be listed and displayed under the Diagnosis tab
       When user changes status to "Investigation Complete" on problem record page
       And user clicks on Diagnosis tab

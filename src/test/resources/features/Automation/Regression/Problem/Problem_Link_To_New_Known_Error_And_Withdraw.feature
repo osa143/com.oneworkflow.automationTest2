@@ -12,9 +12,9 @@
       When user clicks on create problem record
       And user switches to window 1
       Then problem record form should appear in new tab
-      When user creates problem ticket with following details
-        |Title                                 |RequestType            |Description                   |ImpactType      |Urgency|AccountableOrg|AffectedOrg|
-        |Proactive investigation of frvi96_auto|XX_Test:Functional Test|UAT Test Known Error linked items|Moderate/Limited|Low    |CA_Infra      |CA_IT      |
+      When user creates problem ticket with below details
+        |Title                                  |RequestType            |Description               |ImpactType      |Urgency|
+        |proactive investigation of: frvi96_auto|XX_Test:Functional Test|PB link to KE and withdraw|Moderate/Limited|Low    |
       Then ticket should be created and status should be assigned
       Then user clicks on Ack button
       And problem ticket status should be under investigation

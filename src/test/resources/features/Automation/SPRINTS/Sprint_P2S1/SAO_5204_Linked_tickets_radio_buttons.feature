@@ -124,7 +124,7 @@
       And user clicks on save button
       Then user validates ticket status as "New"
       When user changes status to "Withdrawn" on work order page
-      And user selects withdrawn reason as "Test Ticket"
+      And user selects withdrawn reason as false alarm and clicks save
       And user should see confirmation message and clicks on yes button
       Then user validates ticket status as "Withdrawn"
       And user switches to window 1
@@ -157,13 +157,13 @@
       And user clicks on radio button closed
       And user validates radio button open is selected
       Then user validates ticket statuses "New:Assigned:Work In Progress:Pending" can be seen under linked items tab
-      And user clicks on radio button open
       When user clicks on radio button cleared
+      And user clicks on radio button open
       And user validates radio button cleared is selected
       Then user validates ticket statuses "Cleared" can be seen under linked items tab
-      And user clicks on radio button cleared
       When user clicks on radio button closed
-      And user validates radio button cleared is selected
+      And user clicks on radio button cleared
+      And user validates radio button closed is selected
       Then user validates ticket statuses "Closed:Withdrawn" can be seen under linked items tab
 
 

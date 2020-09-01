@@ -34,21 +34,21 @@
       Then multiple statuses "Degradation of Service:Loss of Service:No Impact:(clear)" should be available in "Level*" dropdown
       And user selects impact level as "Degradation of Service"
       And user clicks on relate CI
-      And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
+      #And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
       And user closes warning message
       When user enters "SE_SGSN_VRRMME1" in name field
       And user clicks on search button on CI search window
       And user selects a CI from list
       And user selects impact level as "Degradation of Service"
       And user clicks on relate CI
-      And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
+      #And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
       And user closes warning message
       When user enters "SE_SGSN_LDHMME1" in name field
       And user clicks on search button on CI search window
       And user selects a CI from list
       And user selects impact level as "Degradation of Service"
       And user clicks on relate CI
-      And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
+      #And error message should display as "Please verify that there are no impacted CI's in other tickets by using Show CR Matching (ARWARN 10000)"
       And user closes warning message
       And user clicks on close button on CI search window
       And user clicks on "Diagnosis" tab

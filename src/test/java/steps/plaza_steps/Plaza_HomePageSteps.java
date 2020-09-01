@@ -2383,4 +2383,49 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userClicksOnPlazaTab(String tabName) {
         homePage.clickTab_Plaza(tabName);
     }
+
+    @Then("user selects operating system name in haiti as {string}")
+    public void userSelectsOperatingSystemNameInHaitiAs(String arg0) {
+        homePage.selectOperatingSystemNameHaiti(arg0);
+    }
+
+    @Then("user selects operating system change from manual system name in haiti as {string}")
+    public void userSelectsOperatingSystemChangeFromManualSystemNameInHaitiAs(String arg0) {
+        homePage.selectOperatingChangeFromManualSystemNameHaiti(arg0);
+    }
+
+    @Then("user selects operating change from auto system name in haiti as {string}")
+    public void userSelectsOperatingChangeFromAutoSystemNameInHaitiAs(String arg0) {
+        homePage.selectOperatingChangeFromAutoSystemNameHaiti(arg0);
+    }
+
+    @Then("user selects operating account management system name in haiti as {string}")
+    public void userSelectsOperatingAccountManagementSystemNameInHaitiAs(String arg0) {
+        homePage.selectOperatingAccountManagementSystemNameHaiti(arg0);
+    }
+
+    @Then("user selects network security firewall new change system name in haiti as {string}")
+    public void userSelectsNetworkSecurityFirewallNewChangeSystemNameInHaitiAs(String arg0) {
+        homePage.selectNetworkSecurityFirewallNewChangeSystemNameHaiti(arg0);
+    }
+
+    @Then("user selects network security new switch system name in haiti as {string}")
+    public void userSelectsNetworkSecurityNewSwitchSystemNameInHaitiAs(String arg0) {
+        homePage.selectNetworkSecurityNewSwitchSystemNameHaiti(arg0);
+    }
+
+    @Then("user selects proxy general resource request system name in haiti as {string}")
+    public void userSelectsProxyGeneralResourceRequestSystemNameInHaitiAs(String arg0) {
+        homePage.selectNetworkSecurityProxyResourceRequestSystemNameHaiti(arg0);
+    }
+
+    @And("user selects network security switch port config add CI as {string}")
+    public void userSelectsNetworkSecuritySwitchPortConfigAddCIAs(String arg0) {
+        homePage.enterNetworkSecurity_switch_port_add_ci_multipleValues(arg0);
+    }
+
+    @And("user clicks on add second attachment in plaza")
+    public void userClicksOnAddSecondAttachmentInPlaza() {
+        homePage.clickAddSecondAttachment();
+    }
 }

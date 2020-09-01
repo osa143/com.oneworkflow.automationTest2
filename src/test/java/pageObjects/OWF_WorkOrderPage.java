@@ -185,7 +185,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.Phone) && actualDescription.contains(PlazaValidation.AdditionalComments)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Schedule)
                 &&actualDescription.contains(PlazaValidation.UncLocalPath) &&actualDescription.contains(PlazaValidation.CI)
-                &&actualDescription.contains(PlazaValidation.Description))
+                &&actualDescription.contains(PlazaValidation.SystemNameInHaiti) &&actualDescription.contains(PlazaValidation.Description))
         {
             return true;
         }
@@ -198,7 +198,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.DateTime) && actualDescription.contains(PlazaValidation.CI)
                 && actualDescription.contains(PlazaValidation.UncLocalPath) && actualDescription.contains(PlazaValidation.RestoreFiles)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Description)
-                &&actualDescription.contains(PlazaValidation.AdditionalComments))
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) &&actualDescription.contains(PlazaValidation.AdditionalComments))
         {
             return true;
         }
@@ -211,7 +211,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.CI)
                 && actualDescription.contains(PlazaValidation.Email) && actualDescription.contains(PlazaValidation.Phone)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Description)
-                &&actualDescription.contains(PlazaValidation.AdditionalComments))
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) &&actualDescription.contains(PlazaValidation.AdditionalComments))
         {
             return true;
         }
@@ -533,7 +533,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.DatabaseType) && actualDescription.contains(PlazaValidation.CI)
                 && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.DatabaseName)
-                && actualDescription.contains(PlazaValidation.AccountType)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AccountType)
                 && actualDescription.contains(PlazaValidation.NewExistingAccount) && actualDescription.contains(PlazaValidation.AccountName)
                 && actualDescription.contains(PlazaValidation.Permissions) && actualDescription.contains(PlazaValidation.Description)
                 && actualDescription.contains(PlazaValidation.AdditionalComments)) {
@@ -548,7 +548,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.DatabaseType) && actualDescription.contains(PlazaValidation.CI)
                 && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.DatabaseName)
-                && actualDescription.contains(PlazaValidation.AccountType)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AccountType)
                 && actualDescription.contains(PlazaValidation.NewExistingAccount) && actualDescription.contains(PlazaValidation.AccountName)
                 && actualDescription.contains(PlazaValidation.Permissions) && actualDescription.contains(PlazaValidation.Description)
                 && actualDescription.contains(PlazaValidation.AdditionalComments)) {
@@ -565,7 +565,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.DatabaseName)
                 && actualDescription.contains(PlazaValidation.AccountType) && actualDescription.contains(PlazaValidation.AccountName)
                 && actualDescription.contains(PlazaValidation.Permissions) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -579,7 +579,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.CI)
                 && actualDescription.contains(PlazaValidation.DatabaseName) && actualDescription.contains(PlazaValidation.Location)
                 && actualDescription.contains(PlazaValidation.PlannedStartDate) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -592,7 +592,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.DatabaseType) && actualDescription.contains(PlazaValidation.CI)
                 && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.DatabaseName)
                 && actualDescription.contains(PlazaValidation.Parameters) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -603,6 +603,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.DatabaseType) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.DatabaseName)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
@@ -716,8 +717,8 @@ public class OWF_WorkOrderPage extends BasePage {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
-                && actualDescription.contains(PlazaValidation.Schedule) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.Schedule)
+                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -728,7 +729,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.CustomerIdName) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -739,7 +740,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.CI)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -752,6 +753,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.TicketNumber) && actualDescription.contains(PlazaValidation.SourceIpAddress)
                 && actualDescription.contains(PlazaValidation.TargetIpAddress) && actualDescription.contains(PlazaValidation.ServerConnectivityVerified)
                 && actualDescription.contains(PlazaValidation.DateTestsPerformed) && actualDescription.contains(PlazaValidation.TrafficReturnRoutingVerified)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
         return true;
         }
@@ -762,7 +764,7 @@ public class OWF_WorkOrderPage extends BasePage {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -772,7 +774,7 @@ public class OWF_WorkOrderPage extends BasePage {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -785,6 +787,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.DcSite)
                 && actualDescription.contains(PlazaValidation.Room) && actualDescription.contains(PlazaValidation.Rack)
                 && actualDescription.contains(PlazaValidation.SwitchUsage) && actualDescription.contains(PlazaValidation.TerminalServer)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
@@ -797,7 +800,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.IpNet) && actualDescription.contains(PlazaValidation.VlanName)
                 && actualDescription.contains(PlazaValidation.VlanPurpose) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -807,6 +810,7 @@ public class OWF_WorkOrderPage extends BasePage {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
@@ -817,6 +821,7 @@ public class OWF_WorkOrderPage extends BasePage {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
@@ -831,7 +836,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.ProtocolPort) && actualDescription.contains(PlazaValidation.Certificate)
                 && actualDescription.contains(PlazaValidation.WebserverAddress) && actualDescription.contains(PlazaValidation.HighAvailibility)
                 && actualDescription.contains(PlazaValidation.LoadBalancingMethod) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -846,6 +851,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.InternalExternalWebsite) && actualDescription.contains(PlazaValidation.ErrorMessage)
                 && actualDescription.contains(PlazaValidation.WorkedBefore) && actualDescription.contains(PlazaValidation.ProblemOccure)
                 && actualDescription.contains(PlazaValidation.ProxySettings) && actualDescription.contains(PlazaValidation.TicketNumber)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
@@ -861,7 +867,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.InternalExternalWebsite) && actualDescription.contains(PlazaValidation.ErrorMessage)
                 && actualDescription.contains(PlazaValidation.WorkedBefore) && actualDescription.contains(PlazaValidation.ProblemOccure)
                 && actualDescription.contains(PlazaValidation.UserId) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -874,7 +880,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.UrlFilter) && actualDescription.contains(PlazaValidation.UserIp)
                 && actualDescription.contains(PlazaValidation.DateTestsPerformed) && actualDescription.contains(PlazaValidation.InternalExternalWebsite)
                 && actualDescription.contains(PlazaValidation.InternalExternalWebsite) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -886,6 +892,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.UrlFilter) && actualDescription.contains(PlazaValidation.SourceIpAddress)
                 && actualDescription.contains(PlazaValidation.TargetUrl) && actualDescription.contains(PlazaValidation.H2Name)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
@@ -908,7 +915,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.ExistingIpNet) && actualDescription.contains(PlazaValidation.NewIpNet)
                 && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.Description)
-            && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -919,6 +926,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.Type)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
@@ -930,7 +938,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -941,6 +949,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.Size) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
@@ -951,6 +960,7 @@ public class OWF_WorkOrderPage extends BasePage {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.Drives) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
@@ -961,6 +971,7 @@ public class OWF_WorkOrderPage extends BasePage {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.Drives) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
@@ -972,7 +983,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.DateTime) && actualDescription.contains(PlazaValidation.CI)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -983,7 +994,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.H2Name) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -995,7 +1006,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.FrontsideNetworkInformation) && actualDescription.contains(PlazaValidation.MgmtNetworkInformation)
                 && actualDescription.contains(PlazaValidation.Ruleset) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -1009,7 +1020,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.DualSiteServices) && actualDescription.contains(PlazaValidation.ApproverAccount)
                 && actualDescription.contains(PlazaValidation.CmdbAssigned) && actualDescription.contains(PlazaValidation.CmdbLocal)
                 && actualDescription.contains(PlazaValidation.H2Name) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -1020,6 +1031,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.DateTime) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
@@ -1031,7 +1043,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -1052,6 +1064,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.SelectRequest)
                 && actualDescription.contains(PlazaValidation.OperatingSystem) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.AccountType) && actualDescription.contains(PlazaValidation.AccountName)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
@@ -1064,6 +1077,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.SelectRequest)
                 && actualDescription.contains(PlazaValidation.OperatingSystem) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.Justification) && actualDescription.contains(PlazaValidation.MonthlyPatching)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
@@ -1076,6 +1090,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.SelectRequest)
                 && actualDescription.contains(PlazaValidation.OperatingSystem) && actualDescription.contains(PlazaValidation.CI)
+                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.ServiceWindow) && actualDescription.contains(PlazaValidation.Justification)
                 && actualDescription.contains(PlazaValidation.MonthlyPatching) && actualDescription.contains(PlazaValidation.Description)
                 && actualDescription.contains(PlazaValidation.AdditionalComments)) {

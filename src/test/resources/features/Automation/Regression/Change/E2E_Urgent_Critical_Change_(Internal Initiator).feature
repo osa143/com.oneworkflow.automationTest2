@@ -25,7 +25,7 @@ Feature: Internal Urgent Critical Change E2E
     And user enters reason field as "Regression"
     And user selects priority as "Critical"
     And user enters "CI B2" in the change builder field
-    Then user validates "Change Builder" button is present
+    #Then user validates "Change Builder" button is present
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
     Then user enters request start time 2 hours ahead of current date
     And user enters request end time 5 hours ahead of current date

@@ -39,7 +39,7 @@
       And user enters reason field as "Regression"
       And user selects priority as "Critical"
       And user enters "Privacy Data: Just Testing" in the change builder field
-      Then user validates "Change Builder" button is present
+#      Then user validates "Change Builder" button is present
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
       And user enters start time as 24 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss a" format
       And user enters end time as 28 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss a" format
@@ -58,7 +58,7 @@
       When user answers all risk questions as below
       And user selects answer as "Impact to other systems/technologies are unclear"
       And user selects answer as "No"
-      And user selects answer as "Tested successfully, this is a pilot"
+      And user selects answer as "Tested succesfully, this is a pilot"
       And user selects answer as "Yes (outcome of the change can be instantly verified)"
       And user selects answer as "Yes"
       And user selects answer as "Simple"

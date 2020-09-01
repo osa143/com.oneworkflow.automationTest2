@@ -24,7 +24,7 @@
       And user enters reason field as "Regression"
       And user selects priority as "Major"
       And user enters "CI I2" in the change builder field
-      Then user validates "Change Builder" button is present
+      #Then user validates "Change Builder" button is present
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
       And user enters start time as 24 hours fast from current sweden time
       And user enters end time as 28 hours fast from current sweden time
@@ -188,7 +188,7 @@
       And user should see "CR" tickets with "Status" of "Scheduled"
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
       And user switches to window 2
-      Then user enters ticket previously created
+      Then user enters ticket previously created and searches
       And user clicks Search on ticket search
       And user validates ticket status as "Scheduled"
       When user changes status to "Implementation"
@@ -237,7 +237,7 @@
       And user should see "CR" tickets with "Status" of "Completed"
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
       And user switches to window 2
-      Then user enters ticket previously created
+      Then user enters ticket previously created and searches
       And user clicks Search on ticket search
       When user changes status to "Closed"
       And user enters review details as "Random Notes"

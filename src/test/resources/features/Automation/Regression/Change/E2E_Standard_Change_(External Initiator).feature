@@ -24,7 +24,7 @@ Feature: E2E standard change external initiator
     When user clicks save button
     And multiple error messages should appear with red boarder around fields
     When user enters "CI B2" in the change builder field
-    Then user validates "Change Builder" button is present
+    #Then user validates "Change Builder" button is present
     And user enters as "Automation Test" in service and customer impact
     And user enters request start time as 5 minutes past from "Europe/London" timezone "MM/dd/yyyy HH:mm:ss" format
     And user enters request end time as 10 minutes past from "Europe/London" timezone "MM/dd/yyyy HH:mm:ss" format

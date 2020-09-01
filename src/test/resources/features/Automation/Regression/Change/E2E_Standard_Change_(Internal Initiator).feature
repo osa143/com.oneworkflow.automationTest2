@@ -24,7 +24,7 @@ Feature: E2E standard change internal initiator
     When user clicks save button
     And multiple error messages should appear with red boarder around fields
     When user enters "CI B2" in the change builder field
-    Then user validates "Change Builder" button is present
+    #Then user validates "Change Builder" button is present
     And user enters start time as 10 minutes fast from current sweden time
     And user enters end time as 16 minutes fast from current sweden time
     And user enters impact duration as "5" minutes

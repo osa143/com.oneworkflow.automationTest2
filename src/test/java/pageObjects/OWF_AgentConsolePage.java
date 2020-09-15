@@ -93,6 +93,51 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String btn_Remove_Left = "WIN_3_800080012";
     private static final String table_Available_Trust_Principles="T800080004";
     private static final String table_Selected_Trust_Principles="T800080007";
+    private static final String txt_QUICK_CREATE_TITLE="arid_WIN_0_800007025";
+    private static final String dd_QUICK_CREATE_REQUEST_TYPE="arid_WIN_0_800007026";
+    private static final String txt_QUICK_CREATE_TROUBLE_DESCRIPTION="arid_WIN_0_800007027";
+    private static final String btn_QUICK_CREATE_BUTTON="WIN_0_800007034";
+    private static final String dd_QUICK_CREATE_SOURCE="arid_WIN_0_800007021";
+    private static final String ERROR_POP_UP="pbartable";
+    private static final String chkbx_SWEDEN="WIN_0_rc0id830000120";
+
+
+    public void clickQuickCreateSwedenCheckBox() {
+        driver.findElement(By.id(chkbx_SWEDEN)).click();
+    }
+
+    public String getErrorPopUpText(){
+        driver.switchTo().parentFrame();
+        //driver.switchTo().frame(2);
+        //driver.switchTo().frame(1);
+        String error= findElement(By.id(ERROR_POP_UP)).getText();
+        System.out.println("Error message is: " +error);
+        return error;
+    }
+
+    public void selectQuickCreateTroubleSource(String requestType){
+        clickElement(By.id(dd_QUICK_CREATE_SOURCE));
+        selectDropDownValue(requestType);
+    }
+
+    public void clickQuickCreateButton(){
+        clickElementById(btn_QUICK_CREATE_BUTTON);
+    }
+
+    public void enterQuickCreateTroubleTitle(String title) {
+        findElement(By.id(txt_QUICK_CREATE_TITLE)).clear();
+        driver.findElement(By.id(txt_QUICK_CREATE_TITLE)).sendKeys(title);
+    }
+
+    public void selectQuickCreateTroubleRequestType(String requestType){
+        clickElement(By.id(dd_QUICK_CREATE_REQUEST_TYPE));
+        selectDropDownValue(requestType);
+    }
+
+    public void enterQuickCreateTroubleDescription(String description) {
+        findElement(By.id(txt_QUICK_CREATE_TROUBLE_DESCRIPTION)).clear();
+        driver.findElement(By.id(txt_QUICK_CREATE_TROUBLE_DESCRIPTION)).sendKeys(description);
+    }
 
     public Boolean getTrustPrinciplesAvailableCountry(int rowNum, String expectedCountry) {
         int count = getTableRowsCount(table_Selected_Trust_Principles);

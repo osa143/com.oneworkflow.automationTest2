@@ -167,6 +167,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         clickRelateCiButton();
         wait(1000);
         closeWarningMessage_changeTicket();
+        //clickOk_OnPop_up();
         clickCloseButton();
         switchToDefault();
     }

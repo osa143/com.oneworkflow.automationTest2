@@ -37,6 +37,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String dd_ENVIRONMENT="s2id_autogen15";
     public static final String txt_C2B_DESCRIPTION="sp_formfield_sr74_v_description";
     public static final String dd_SELECT_REQUEST_ID="select2-chosen-12";
+    public static final String dd_SMTP_RELAY = "select2-chosen-12";
     public static final String txt_C2B_GENERAL_REQUEST_ID="sp_formfield_sr112_v_request";
     public static final String dd_C2B_GENERAL_ENVIRONMENT="s2id_autogen16";
     public static final String txt_C2B_GENERAL_DESCRIPTION="sp_formfield_sr112_v_description";
@@ -83,6 +84,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_NETWORK_EQUIPMENT_DC_SITE= "sp_formfield_sr51_v_dc_site";
     public static final String txt_NETWORK_EQUIPMENT_ROOM= "sp_formfield_sr51_v_room";
     public static final String dd_ADD_CI = "s2id_autogen13";
+    public static final String dd_NETWORK_ADD_CI = "s2id_autogen14";
     public static final String txt_NETWORK_EQUIPMENT_DNS_IP_ADRESS="sp_formfield_sr51_v_dns_ip_address";
     public static final String txt_NETWORK_EQUIPMENT_DELIVERY="sp_formfield_sr51_v_date_for_delivery";
     public static final String txt_NETWORK_EQUIPMENT_DATE_FOR_DECOMMISSION= "sp_formfield_sr51_v_date_for_decommission";
@@ -100,7 +102,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_DATABASE_ACCOUNT_PERMISSIONS="sp_formfield_sr21_v_permissions";
     public static final String txt_DATABASE_DESCRIPTION= "sp_formfield_sr21_v_description";
     public static final String txt_DATABASE_DNS_IP_ADDRESS= "sp_formfield_sr21_v_source_dns";
-    public static final String dd_DATABASE_NEW_EXISTING_ACCOUNT=  "select2-chosen-14";
+    public static final String dd_DATABASE_NEW_EXISTING_ACCOUNT=  "select2-chosen-15";
     public static final String dd_DATABASE_DEFAULT_TABLE_SPACE= "sp_formfield_sr21_v_default_tablespace";
     public static final String txt_DATABASE_REQUEST_REQUEST= "sp_formfield_sr115_v_request";
     public static final String dd_DATABASE_REQUEST_CHOOSE_ACTION= "select2-chosen-18";
@@ -240,6 +242,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_H2= "sp_formfield_sr7_v_hid";
     private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_DESCRIPTION= "sp_formfield_sr7_v_description";
     private static final String dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI= "s2id_autogen16";
+    private static final String dd_BCPP_ADD_CI = "s2id_sp_formfield_sr107_v_add_ci";
     private static final String txt_CEWS_REQUEST= "sp_formfield_sr65_v_request";
     private static final String txt_CEWS_DESCRIPTION= "sp_formfield_sr65_v_description";
     private static final String dd_CEWS_ADD_CI= "s2id_autogen13";
@@ -428,6 +431,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_MEGADISC_ADD_USER_SELECT_GROUP = "s2id_autogen14_results";
     private static final String txt_CEWS_ADD_CI = "s2id_autogen13_results";
     private static final String txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI = "s2id_autogen16_results";
+    private static final String txt_BCPP_ADD_CI = "s2id_autogen15_results";
     private static final String txt_STORAGE_EXPORT_SOURCE_CI = "s2id_autogen14_results";
     private static final String txt_STORAGE_EXPORT_TARGET_CI = "s2id_autogen15_results";
     private static final String txt_STORAGE_CONFIGURE_TRUNK_CI = "s2id_autogen14_results";
@@ -460,11 +464,12 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_DATABASE_REQUEST_DATABASE_TYPE = "select2-results-12";
     private static final String txt_DATABASE_REQUEST_LOCATION = "select2-results-20";
     private static final String txt_DATABASE_REQUEST_CHOOSE_ACTION = "select2-results-18";
-    private static final String txt_DATABASE_NEW_EXISTING_ACCOUNT = "select2-results-14";
+    private static final String txt_DATABASE_NEW_EXISTING_ACCOUNT = "select2-results-15";
     private static final String txt_ADD_DATABASE_CI = "s2id_autogen25_results";
     private static final String txt_ADD_SERVER_CI = "s2id_autogen26_results";
     private static final String txt_DATABASE_ACCOUNT_TYPE = "select2-results-14";
     private static final String txt_ADDCI = "s2id_autogen13_results";
+    private static final String txt_NETWORK_ADD_CI = "s2id_autogen14_results";
     private static final String GET_CIS = "s2id_sp_formfield_sr108_v_at3";
     private static final String GET_CIS2 = "s2id_sp_formfield_sr108_v_at3";
     private static final String dd_AT1_CI = "s2id_sp_formfield_sr108_v_at1";
@@ -477,6 +482,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_SYSTEM_ID = "select2-results-13";
     private static final String txt_SERVICE_REQUEST_NAME_ID = "select2-results-11";
     private static final String txt_SELECT_REQUEST_ID = "select2-results-12";
+    private static final String txt_SMTP_RELAY = "select2-results-12";
     private static final String txt_C2B_SERVICE_ENVIRONMENT = "s2id_autogen13_results";
     private static final String txt_C2B_GENERAL_ENVIRONMENT = "s2id_autogen16_results";
     private static final String txt_ENVIRONMENT = "s2id_autogen15_results";
@@ -488,7 +494,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_PROD_CI = "s2id_autogen15_results";
     private static final String link_FINANCE_ASSURANCE="//img[@alt='Finance & Assurance']";
     private static final String link_DATABASE = "//*[@id='xcc61d55edb198b00b27fdb11ce961902']/div/div[2]/div[6]/div[4]";
-    private static final String pebble_DNS_DHCP = "//h2[contains(text(),'DNS/DHCP')]";
+    private static final String pebble_DNS_DHCP = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[6]/div/a/div/h3";
     private static final String pebble_FIREWALL_ROUTING_REQUEST = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[11]/div/a";
     private static final String pebble_LAN_DATA_NET_LAN = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[13]/div/a";
     private static final String pebble_NETWORK_LOAD_BALANCING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[14]/div/a";
@@ -502,7 +508,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String btn_SUBMIT = "//button[@name='submit']";
     private static final String btn_SEND = "//input[@value='Send']";
     private static final String link_PRODUCTS_AND_SERVICES = "//*[contains(text(),'Products & Services')]";
-    private static final String link_ACCOUNT_MANAGEMENT_AND_SERVER_FORM = "//h2[contains(text(),'Account Management - Server')]";
+    private static final String link_ACCOUNT_MANAGEMENT_AND_SERVER_FORM = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a/div/h3";
     private static final String link_APPLICATION = "b49dd9c1db9997446734f1eabf961975";
     private static final String btn_SHOW_MORE = "//button[contains(text(), 'Show More')]";
     private static final String link_SUPPORT_HOMEPAGE = "//*[@id='xcab273021b8480d00c1e87fe6e4bcbaf']/div/a";
@@ -1474,13 +1480,14 @@ public class Plaza_HomePage extends BasePage {
     public void selectCews_add_ci(String CiName){
         PlazaValidation.System = CiName;
         PlazaValidation.CI = CiName;
-       addCi(dd_OCC_CI, txt_ADD_CI_TEXT_BOX, CiName);
+       addCi(dd_CEWS_ADD_CI, txt_CEWS_ADD_CI, CiName);
 
     }
+
     public void select_add_ci(String dropdownName){
         PlazaValidation.System = dropdownName;
         PlazaValidation.CI = dropdownName;
-        selectDropdownWithMultipleValues(By.id(dd_CEWS_ADD_CI), By.id(txt_CEWS_ADD_CI),  dropdownName);
+        selectDropdownWithMultipleValues(By.id(dd_OCC_CI), By.id(txt_ADD_CI_TEXT_BOX),  dropdownName);
 
     }
 
@@ -1498,6 +1505,22 @@ public class Plaza_HomePage extends BasePage {
         PlazaValidation.CI = dropdownName;
         selectDropdownWithMultipleValues(By.id(dd_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI), By.id(txt_OPERATING_SYSTEM_MANUAL_OS_PATCHING_ADD_CI),  dropdownName);
 
+    }
+
+    public void selectBCPP_ADD_CI (String dropdownName){
+//        PlazaValidation.CI = dropdownName;
+//        clickElement(By.id(dd_BCPP_ADD_CI));
+//        wait(1000);
+//        driver.switchTo().activeElement().sendKeys(Keys.ENTER);
+//        selectDropdownWithMultipleValues(By.id(dd_BCPP_ADD_CI), By.id(txt_BCPP_ADD_CI), dropdownName);
+        PlazaValidation.CI = dropdownName;
+        clickElement(By.id(dd_BCPP_ADD_CI));
+        wait(1000);
+        WebElement Element=findElement(By.xpath(dd_BCPP_ADD_CI));
+        Element.sendKeys(dropdownName);
+        wait(1000);
+        Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
     }
 
     public void enterOperatingSystem_manual_os_patching_description(String text){
@@ -2231,6 +2254,13 @@ public class Plaza_HomePage extends BasePage {
         selectDropdownWithMultipleValues(By.id(dd_ADD_CI), By.id(txt_ADDCI),  dropdownName);
 
     }
+
+    public void selectNetwork_EquipmentCI (String dropdownName){
+        PlazaValidation.CI = dropdownName;
+        selectDropdownWithMultipleValues(By.id(dd_NETWORK_ADD_CI), By.id(txt_NETWORK_ADD_CI), dropdownName);
+    }
+
+
     public void enterNetworkEquipment_request(String text){
         PlazaValidation.Request = text;
         enterTextByElement(By.id(txt_NETWORK_EQUIPMENT_REQUEST), text);
@@ -2623,10 +2653,14 @@ public class Plaza_HomePage extends BasePage {
 
     public void select_selectRequest(String dropdownName){
         PlazaValidation.DualSiteServices = dropdownName;
-        PlazaValidation.SmtpRelay = dropdownName;
         PlazaValidation.SelectRequest = dropdownName;
         PlazaValidation.DatabaseType = dropdownName;
         selectDropdown(By.id(dd_SELECT_REQUEST_ID), By.id(txt_SELECT_REQUEST_ID),  dropdownName);
+    }
+
+    public void selectSMTP_RELAY(String dropdownName){
+        PlazaValidation.SmtpRelay=dropdownName;
+        selectDropdown(By.id(dd_SMTP_RELAY), By.id(txt_SMTP_RELAY), dropdownName);
     }
 
     public void selectC2B_serviceEnvironment(String dropdownName){

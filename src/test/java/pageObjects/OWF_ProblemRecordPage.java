@@ -742,6 +742,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
     public boolean validateErrorMessage(){
         int size=getTableRows(By.id(errorTABLE_ID)).size();
+        System.out.println("Table rows size is - " +size);
         if(size>0){
             return true;
         }

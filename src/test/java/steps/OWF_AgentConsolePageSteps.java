@@ -730,6 +730,41 @@ public class OWF_AgentConsolePageSteps {
     public void userShouldnTSeeUnderSelectedTrustPrinciples(String countryName) {
         Assert.assertFalse(agentConsolePage.getTrustPrinciplesAvailableCountry(1, countryName));
     }
+
+    @And("user enters quick create description as {string}")
+    public void userEntersQuickCreateDescriptionAs(String description) {
+        agentConsolePage.enterQuickCreateTroubleDescription(description);
+    }
+
+    @Then("user selects quick create request type as {string}")
+    public void userSelectsQuickCreateRequestTypeAs(String requestType) {
+        agentConsolePage.selectQuickCreateTroubleRequestType(requestType);
+    }
+
+    @And("user enters quick create title as {string}")
+    public void userEntersQuickCreateTitleAs(String title) {
+        agentConsolePage.enterQuickCreateTroubleTitle(title);
+    }
+
+    @Then("user clicks on quick create button")
+    public void userClicksOnQuickCreateButton() {
+        agentConsolePage.clickQuickCreateButton();
+    }
+
+    @Then("user selects quick create source as {string}")
+    public void userSelectsQuickCreateSourceAs(String arg0) {
+        agentConsolePage.selectQuickCreateTroubleSource(arg0);
+    }
+
+    @And("error message should display on agent console as {string}")
+    public void errorMessageShouldDisplayOnAgentConsoleAs(String arg0) {
+        Assert.assertEquals(agentConsolePage.getErrorPopUpText(), arg0);
+    }
+
+    @Then("user clicks quick create affected BU as sweden")
+    public void userClicksQuickCreateAffectedBUAsSweden() {
+        agentConsolePage.clickQuickCreateSwedenCheckBox();
+    }
 }
 
 

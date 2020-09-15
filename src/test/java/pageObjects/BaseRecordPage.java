@@ -152,11 +152,10 @@ public class BaseRecordPage extends BasePage {
     private static final String txt_Next_Assessment_Date= "arid_WIN_0_800040083";
 
 
+
     public void enterTicket(String ticket) {
         driver.findElement(By.id(txtSEARCH_TICKET_ID)).sendKeys(ticket);
     }
-
-
 
     public boolean verifyFieldsInvisible(String fields) {
         String arr[] = fields.split("," );
@@ -920,7 +919,11 @@ public class BaseRecordPage extends BasePage {
 
 
     public void enterChangeBuilderType(String changeBuilderName) {
-        enterTextByElement(By.id(txtCHANGE_BUILDER_FIELD_ID), changeBuilderName);
+        //enterTextByElement(By.id(txtCHANGE_BUILDER_FIELD_ID), changeBuilderName);
+        findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).clear();
+        driver.findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).sendKeys(changeBuilderName);
+        driver.findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).sendKeys(Keys.ENTER);
+
     }
 
     public void clickSave() {

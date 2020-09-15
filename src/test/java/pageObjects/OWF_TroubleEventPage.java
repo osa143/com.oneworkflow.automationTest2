@@ -164,6 +164,50 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_HIERARCHIC_ESCLATION_LEVEL="arid_WIN_0_700025204";
     private static final String txt_ACTION= "arid_WIN_0_777031381";
     private static final String chkbx_TO_SELECT_TICKET= "//*[@id='T700506101']/tbody/tr[2]/td[1]/input";
+    private static final String txt_CAUSE= "arid_WIN_0_777031380";
+    private static final String txt_FAULT_POSITION= "arid_WIN_0_600001048";
+
+
+    public boolean verifyPriorityCheckIsReadOnly(){
+        //return checkIfControlIsReadonly(btn_PRIORITY_CHECK);
+        return findElement(By.id(btn_PRIORITY_CHECK)).isEnabled();
+    }
+
+    public boolean verifyEventEndTimeIsReadOnly(){
+        return checkIfControlIsReadonly(txtEVENT_END_TIME);
+    }
+
+    public boolean verifyClosureInfoIsReadOnly(){
+        return checkIfControlIsReadonly(txtCLOSURE_INFO);
+    }
+
+    public boolean verifyActionIsReadOnly(){
+        return checkIfControlIsReadonly(txt_ACTION);
+    }
+
+    public boolean verifyCauseIsReadOnly(){
+        return checkIfControlIsReadonly(txt_CAUSE);
+    }
+
+    public boolean verifyFaultPositionIsReadOnly(){
+        return checkIfControlIsReadonly(txt_FAULT_POSITION);
+    }
+
+    public Boolean verifyClosureInfoFieldIsMandatory() {
+        return verifyElementIsDisplayed(By.id(txtCLOSURE_INFO));
+    }
+
+    public Boolean verifyActionFieldIsMandatory() {
+        return verifyElementIsDisplayed(By.id(txt_ACTION));
+    }
+
+    public Boolean verifyCauseFieldIsMandatory() {
+        return verifyElementIsDisplayed(By.id(txt_CAUSE));
+    }
+
+    public Boolean verifyFaultPositionIsMandatory() {
+        return verifyElementIsDisplayed(By.id(txt_FAULT_POSITION));
+    }
 
     public String getAction(){
         return getAttributeValueById(txt_ACTION);
@@ -863,7 +907,13 @@ public void rightClickOnElement(String cellData){
     }
     public void enterEventEndTimeAsCurrentTime(){
         driver.findElement(By.id(txtEVENT_END_TIME)).sendKeys(Keys.ENTER);
+        CommonUtils.EventEndTime=getEventEndTime();
         wait(2000);
+    }
+    public String getEventEndTime(){
+
+        return getTextByID(txtEVENT_END_TIME);
+
     }
     public void enterEventEndTimeAsPast(String time){
         enterTextByElement(By.id(txtEVENT_END_TIME), time);

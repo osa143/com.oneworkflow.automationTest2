@@ -14,6 +14,7 @@ Feature: checking of bulk loading CTI details
     And user enters reason field as "Regression"
     And user selects priority as "Critical"
     And user enters "Privacy Data: Just Testing" in the change builder field
+    #And user enters as "Privacy Data: Just Testing" in Change Builder field
     When user enters "Regression - Change Management Process" in the implementation field
     And user enters "Regression - Change Management Process" in the test plan field
     And user enters "Regression - Change Management Process" in the rollback field
@@ -65,7 +66,7 @@ Feature: checking of bulk loading CTI details
 
     Examples:
       |fileTypes                                                                                                  |
-#      |Test Attachments\10 CI's - Correct Names\CSV.csv |
+      |Test Attachments\10 CI's - Correct Names\CSV.csv |
       |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
       |Test Attachments\10 CI's - Correct Names\XLS.xls|
       |Test Attachments\10 CI's - Correct Names\TEXT.txt |

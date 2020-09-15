@@ -787,11 +787,6 @@ public class OWF_WorkOrderPageSteps {
 
     }
 
-    @Then("user selects owner profile as {string}")
-    public void userSelectsOwnerProfileAs(String arg0) {
-        workOrderPage.selectOwner(arg0);
-    }
-
     @And("user enters request scheduled end time as {string}")
     public void userEntersRequestScheduledEndTimeAs(String arg0) {
         workOrderPage.enterRequestedScheduleEnd(arg0);
@@ -880,6 +875,11 @@ public class OWF_WorkOrderPageSteps {
     @And("user validates OP ticket description same as plaza")
     public void userValidatesOPTicketDescriptionSameAsPlaza() {
         Assert.assertTrue(workOrderPage.verify_OP_Ticket_Description());
+    }
+
+    @And("user validates event start time as read only")
+    public void userValidatesEventStartTimeAsReadOnly() {
+        Assert.assertTrue(workOrderPage.verifyEventStartTimeIsReadOnly());
     }
 }
 

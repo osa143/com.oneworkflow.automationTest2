@@ -669,6 +669,18 @@ public void rightClickOnElement(String cellData){
         findElement(By.id(btn_VENDOR_UNDER_SECTIONS)).click();
     }
 
+    public boolean verifyVendorSectionIsPresent(){
+
+            String attributeStyle= driver.findElement(By.id(btn_VENDOR_UNDER_SECTIONS)).getAttribute("Style");
+              System.out.println("Vendor visibility status is - " +attributeStyle);
+            if(attributeStyle.contains("hidden")){
+                return false;
+            }
+             return true;
+
+
+    }
+
     public void clickOnHold(){
         findElement(By.id(btn_ON_HOLD_UNDER_SECTIONS)).click();
     }
@@ -809,7 +821,8 @@ public void rightClickOnElement(String cellData){
     }
     public String getCust_Remaining_SLA(){
         String SLA_Target_Time = getAttributeValueById(txtCUST_REMAINING_SLA_ID);
-        System.out.println(SLA_Target_Time);
+        System.out.println("Cust remaoning SLA- "+ getTextByID(txtCUST_REMAINING_SLA_ID));
+        System.out.println("Cust Remaining SLA - " +SLA_Target_Time);
         return SLA_Target_Time;
     }
     public String getOLATargetTime(){
@@ -837,6 +850,7 @@ public void rightClickOnElement(String cellData){
 
     public void clickAccept_selectTargetRequest(){
         findElement(By.id(btnACCEPT_SELECT_TARGET_REQUEST)).click();
+        wait(1000);
     }
 
     public void selectRelationshipType(String value){

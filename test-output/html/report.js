@@ -1,21 +1,117 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/Regression/Change/SAO_453_Missing_Interested_Party_Types.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/Regression/B2B/B2B_Calculate_SLA.feature");
 formatter.feature({
-  "name": "SAO-453 - Missing Interested Party Types (ISO, ISM...)",
+  "name": "B2B - Work order",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@SAO_453"
+      "name": "@B2B_WO_Calculate_SLA"
+    }
+  ]
+});
+formatter.scenarioOutline({
+  "name": "calculate SLA for 10h and verify Estimated ready time",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "user is on the OneWorkflow login page",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "user logs in with valid user and password",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user successfully logged in to OneWorkflow and agent console should be displayed",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user clicks on create work order",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user switches to window 1",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user enters title as \"\u003ctitle\u003e\"",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user selects request type as \"Maintenance\" on work order page",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enters description as \"\u003cDescription\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user selects priority as \"Info\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on save button",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user adds CI \"\u003cCIName\u003e\" to the ticket with impact level \"Degradation of Service\"",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user clicks on ticket refresh button",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on apply BtwoB button",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user should see assigned profile as \"\u003cAssignmentProfile\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user selects SLA class as \"\u003cSLA Class\u003e\"",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user validates estimated ready time is updated for 10 hours",
+  "keyword": "And "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "title",
+        "Description",
+        "CIName",
+        "AssignmentProfile",
+        "Manufacturer",
+        "SLA Class"
+      ]
+    },
+    {
+      "cells": [
+        "B2B Automated Test - Finland Eltel",
+        "B2B Automation, Finland, Eltel",
+        "FI_LTECell_Valpe4H",
+        "Eltel - FS - FIN - B2B",
+        "Nokia",
+        "10 Hours repair time (FI\u003dA1)"
+      ]
     }
   ]
 });
 formatter.scenario({
-  "name": "SAO-453 - Missing Interested Party Types (ISO, ISM...)",
+  "name": "calculate SLA for 10h and verify Estimated ready time",
   "description": "",
-  "keyword": "Scenario",
+  "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@SAO_453"
+      "name": "@B2B_WO_Calculate_SLA"
     }
   ]
 });
@@ -30,11 +126,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user logs in with valid username \"Change_Automation_8\" and password as \"Test@1234\"",
-  "keyword": "When "
+  "name": "user logs in with valid user and password",
+  "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_LoginPageSteps.userLogsInWithValidUsernameAndPasswordAs(String,String)"
+  "location": "OWF_LoginPageSteps.userLogsInWithValidUserAndPassword()"
 });
 formatter.result({
   "status": "passed"
@@ -50,11 +146,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on create change record",
+  "name": "user clicks on create work order",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnCreateChangeRecord()"
+  "location": "OWF_AgentConsolePageSteps.userSelectsCreateMenuAs()"
 });
 formatter.result({
   "status": "passed"
@@ -70,68 +166,28 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user selects request type as \"Standard Change\"",
+  "name": "user enters title as \"B2B Automated Test - Finland Eltel\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userSelectsRequestTypeAs(String)"
+  "location": "OWF_WorkOrderPageSteps.userEntersTitle(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user selects template as \"All:IT:Other:TEST TEMPLATE [UAT] - Standard Change\"",
+  "name": "user selects request type as \"Maintenance\" on work order page",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userSelectsTemplateAs(String)"
+  "location": "OWF_WorkOrderPageSteps.userSelectsRequestTypeAsOnWorkOrderPage(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters as \"Automation Test\" in service and customer impact",
+  "name": "user enters description as \"B2B Automation, Finland, Eltel\"",
   "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userEntersAsInServiceAndCustomerImpact(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters request start time as 10 minutes past from \"Europe/London\" timezone \"MM/dd/yyyy HH:mm:ss\" format",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userEntersRequestStartTimeAsMinutesPastFromTimezoneFormat(int,String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters request end time as 30 minutes past from \"Europe/London\" timezone \"MM/dd/yyyy HH:mm:ss\" format",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userEntersRequestEndTimeAsMinutesPastFromTimezoneFormat(int,String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters impact duration as \"8\" minutes",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userEntersImpactDurationAsMinutes(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters description as \"Regression - Change Management Process\"",
-  "keyword": "Then "
 });
 formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userEntersDescriptionAs(String)"
@@ -140,18 +196,18 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enter \"Testing\" in the change builder field",
-  "keyword": "Then "
+  "name": "user selects priority as \"Info\"",
+  "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userEnterInTheChangeBuilderField(String)"
+  "location": "OWF_ProblemRecordPageSteps.userSelectsPriorityAs(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
   "name": "user clicks on save button",
-  "keyword": "And "
+  "keyword": "Then "
 });
 formatter.match({
   "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
@@ -160,168 +216,69 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on \"Diagnosis\" tab",
+  "name": "user adds CI \"FI_LTECell_Valpe4H\" to the ticket with impact level \"Degradation of Service\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userAddsCIToTheTicketWithImpactLevel(String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on ticket refresh button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userClicksOnTicketRefreshButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on apply BtwoB button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userClicksOnApplyBBButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user should see assigned profile as \"Eltel - FS - FIN - B2B\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
+  "location": "OWF_WorkOrderPageSteps.userShouldSeeAssignedProfileAs(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user adds CI \"One Workflow\" to change ticket with impact level \"No Impact\"",
+  "name": "user selects SLA class as \"10 Hours repair time (FI\u003dA1)\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userSelectsSLAClassAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user validates estimated ready time is updated for 10 hours",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_CiSearchPageSteps.userAddsCIToChangeTicketWithImpactLevel(String,String)"
+  "location": "OWF_WorkOrderPageSteps.userValidatesEstimatedReadyTimeIsUpdatedForHours(int)"
 });
 formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "CI should be listed and displayed under the Diagnosis tab",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.ciShouldBeListedAndDisplayedUnderTheDiagnosisTab()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on Send button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksOnSendButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user waits 5 secs",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userWaitsSecs(int)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters as \"test\" in Change Builder field",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userEntersAsInChangeBuilderField(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user switches to frame",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSwitchesToFrame()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user waits 4 secs",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userWaitsSecs(int)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates multiple options \"Additional Access:Change Builder:Change Initiator:Contact:Custom1:Custom2:Requested By:Requested For:Solution Manager:Solution Owner:Vendor:(clear)\" should be available in Type dropdown",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesMultipleOptionsShouldBeAvailableInTypeDropdown(String)"
-});
-formatter.result({
-  "error_message": "org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document\n  (Session info: chrome\u003d85.0.4183.102)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-6FQK1D6\u0027, ip: \u002710.85.242.43\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\\Users\\jlm97\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54639}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 214ccf2f9caccce6559e92c812a32848\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)\r\n\tat pageObjects.BasePage.getDropdownValues(BasePage.java:260)\r\n\tat pageObjects.BasePage.verifyDropdownValues(BasePage.java:902)\r\n\tat pageObjects.OWF_ChangeRecordPage.verifyInterestedPartiesTypes(OWF_ChangeRecordPage.java:103)\r\n\tat steps.OWF_ChangeRecordPageSteps.userValidatesMultipleOptionsShouldBeAvailableInTypeDropdown(OWF_ChangeRecordPageSteps.java:972)\r\n\tat ✽.user validates multiple options \"Additional Access:Change Builder:Change Initiator:Contact:Custom1:Custom2:Requested By:Requested For:Solution Manager:Solution Owner:Vendor:(clear)\" should be available in Type dropdown(features/Automation/Regression/Change/SAO_453_Missing_Interested_Party_Types.feature:30)\r\n",
+  "error_message": "java.lang.AssertionError: expected [22/08/2020 01:44:36] but found [2020-08-22T01:44:36]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat steps.OWF_WorkOrderPageSteps.userValidatesEstimatedReadyTimeIsUpdatedForHours(OWF_WorkOrderPageSteps.java:122)\r\n\tat ✽.user validates estimated ready time is updated for 10 hours(features/Automation/Regression/B2B/B2B_Calculate_SLA.feature:22)\r\n",
   "status": "failed"
-});
-formatter.step({
-  "name": "user selects type as \"Change Builder\" under interested parties",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_KnownErrorPageSteps.userSelectsTypeAsUnderInterestedParties(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user right clicks on CI \"\" and clears impact for all CI\u0027s",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userRightClicksOnCIAndClearsImpactForAllCIS(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user enters \"Change_Automation_3\" in login name plus field",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_KnownErrorPageSteps.userEntersInLoginNamePlusField(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on search under add interested party",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_KnownErrorPageSteps.userClicksOnSearchUnderAddInterestedParty()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user highlights user \"Change_Automation_3\" under interested parties",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userHighlightsUserUnderInterestedParties(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on add button under interested parties",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_KnownErrorPageSteps.userClicksOnAddButtonUnderInterestedParties()"
-});
-formatter.result({
-  "status": "skipped"
 });
 formatter.embedding("image/png", "embedded0.png");
 formatter.after({
-  "status": "passed"
+  "error_message": "cucumber.runtime.CucumberException: java.io.IOException: Failed to create directory C:\\Users\\mahesh%20vaddegani\\Documents\\oneworkflow-automation\\ExtentReports\\Screenshots\\Screenshots_20200821_154346\r\n\tat extentreports.cucumber.adapter.ExtentCucumberAdapter.createReportFileOutputStream(ExtentCucumberAdapter.java:225)\r\n\tat extentreports.cucumber.adapter.ExtentCucumberAdapter.writeBytesToURL(ExtentCucumberAdapter.java:213)\r\n\tat extentreports.cucumber.adapter.ExtentCucumberAdapter.handleEmbed(ExtentCucumberAdapter.java:197)\r\n\tat extentreports.cucumber.adapter.ExtentCucumberAdapter.access$400(ExtentCucumberAdapter.java:37)\r\n\tat extentreports.cucumber.adapter.ExtentCucumberAdapter$6.receive(ExtentCucumberAdapter.java:97)\r\n\tat extentreports.cucumber.adapter.ExtentCucumberAdapter$6.receive(ExtentCucumberAdapter.java:94)\r\n\tat cucumber.runner.AbstractEventPublisher.send(AbstractEventPublisher.java:45)\r\n\tat cucumber.runner.AbstractEventBus.send(AbstractEventBus.java:9)\r\n\tat cucumber.runner.TimeServiceEventBus.send(TimeServiceEventBus.java:3)\r\n\tat cucumber.runner.ThreadLocalRunnerSupplier$SynchronizedEventBus.send(ThreadLocalRunnerSupplier.java:90)\r\n\tat cucumber.runner.ThreadLocalRunnerSupplier$LocalEventBus.send(ThreadLocalRunnerSupplier.java:63)\r\n\tat cucumber.runner.Scenario.embed(Scenario.java:58)\r\n\tat cucumberHooks.Hooks.Teardown(Hooks.java:28)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:48)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\r\n\tat cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:68)\r\n\tat cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)\r\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:583)\r\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)\r\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)\r\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)\r\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:648)\r\n\tat org.testng.TestRunner.run(TestRunner.java:505)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:455)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:364)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1137)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1049)\r\n\tat org.testng.TestNG.run(TestNG.java:1017)\r\n\tat org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)\r\n\tat org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)\r\nCaused by: java.io.IOException: Failed to create directory C:\\Users\\mahesh%20vaddegani\\Documents\\oneworkflow-automation\\ExtentReports\\Screenshots\\Screenshots_20200821_154346\r\n\tat extentreports.cucumber.adapter.URLOutputStream.ensureParentDirExists(URLOutputStream.java:56)\r\n\tat extentreports.cucumber.adapter.URLOutputStream.\u003cinit\u003e(URLOutputStream.java:36)\r\n\tat extentreports.cucumber.adapter.URLOutputStream.\u003cinit\u003e(URLOutputStream.java:26)\r\n\tat extentreports.cucumber.adapter.ExtentCucumberAdapter.createReportFileOutputStream(ExtentCucumberAdapter.java:223)\r\n\t... 51 more\r\n",
+  "status": "failed"
 });
 });

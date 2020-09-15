@@ -9,7 +9,7 @@
       When user clicks on create problem record
       And user switches to window 1
       Then problem record form should appear in new tab
-      When user creates problem ticket with following details
+      When user creates problem ticket with below details
         |               Title                  |RequestType            |Description                  |ImpactType      |Urgency|
         |Proactive investigation of frvi96_auto|XX_Test:Functional Test|UAT Profile Permissions test3|Moderate/Limited|Low    |
       Then ticket should be created and status should be assigned
@@ -34,6 +34,7 @@
       And user selects solved under closure code
       And user enters solution as "A change in processes"
       And user enters solution found date as current date
+      And user clicks on save button
       And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Investigation Complete to Closed. "
 
 

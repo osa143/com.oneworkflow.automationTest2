@@ -765,6 +765,11 @@ public class OWF_AgentConsolePageSteps {
     public void userClicksQuickCreateAffectedBUAsSweden() {
         agentConsolePage.clickQuickCreateSwedenCheckBox();
     }
+
+    @Then("tickets {string} should be filtered {string}")
+    public void ticketsShouldBeFiltered(String colValue, String colName) {
+        Assert.assertTrue(agentConsolePage.verifyTicketsFilteredToSearch(colName, colValue, false));
+    }
 }
 
 

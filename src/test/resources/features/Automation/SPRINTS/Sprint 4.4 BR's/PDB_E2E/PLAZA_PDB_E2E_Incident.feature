@@ -133,7 +133,7 @@
       |PDB Affected Country             |Number of Persons|Title                                                          |Priority|Impact|Importance|AssignedProfile  |
 #      |Other (or more than one country)|Yes              |Personal Data Breach \| Other Other (or more than one country) |Major   |Major |  High    |PDB Control Center|
 #      |Telia Carrier                   |Yes              |Personal Data Breach \| Telia Carrier                          |Major   |Major |  High    |PDB Control Center|
-      |Sweden                          |Yes              |Personal Data Breach \| Sweden                                 |Major   |Major |  High    |PDB Control Center|
+#      |Sweden                          |Yes              |Personal Data Breach \| Sweden                                 |Major   |Major |  High    |PDB Control Center|
 #      |Finland                         |Yes              |Personal Data Breach \| Finland                                |Major   |Major |  High    |PDB Control Center|
 #      |Norway                          |Yes              |Personal Data Breach \| Norway                                 |Major   |Major |  High    |PDB Control Center|
 #      |Denmark                         |Yes              |Personal Data Breach \| Denmark                                |Major   |Major |  High    |PDB Control Center|
@@ -146,7 +146,7 @@
 #      |Norway                          |No              |Personal Data Breach \| Norway                                 |Minor    |Minor |	Low     |PDB NO           |
 #      |Denmark                         |No               |Personal Data Breach \| Denmark                                |Minor   |Minor |	Low      |PDB DK           |
 #      |Estonia                         |No               |Personal Data Breach \| Estonia                                |Minor   |Minor |	Low      |PDB EE           |
-#      |Lithuania                       |No               |Personal Data Breach \| Lithuania                              |Minor   |Minor |	Low      |PDB LT           |
+      |Lithuania                       |No               |Personal Data Breach \| Lithuania                              |Minor   |Minor |	Low      |PDB LT           |
 
 
 

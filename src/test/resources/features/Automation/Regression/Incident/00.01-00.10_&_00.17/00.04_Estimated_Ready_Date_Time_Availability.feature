@@ -14,13 +14,13 @@ Feature: Estimated ready date and time availability
     And user selects request type as "Customer" on trouble event page
     And user enters description as "Test case 00.04 Estimated Ready date and time"
     And user clicks on save button
+    And user waits 5 secs
     Then ticket should be created and status should be assigned
     And user gets ticket value
     When user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 2
     And user enters ticket previously created and searches
     Then user verifies estimated ready field is available
-    And user waits 5 secs
     When user enters estimated ready as event start time plus 4 days on trouble event page
     And user clicks on save button
     Then estimated ready time should be saved correctly on trouble event page

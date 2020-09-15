@@ -42,6 +42,7 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String ddValueWO_OP = "WO & OP";
 
     private static final String table_ID = "T777000002";
+    private static final String QuickSearch_table_ID= "T700010488";
     private static final String timeline_table_DIV_ID = "WIN_0_700508140";
 
     private static final String timeline_TABLE_ID = "T700508140";
@@ -267,6 +268,9 @@ public class OWF_AgentConsolePage extends BasePage {
     public boolean verifyTicketsAssignedToCurrentUserProfile(String colName, String colValue, boolean partialText){
         return verifyColumnValuesMultiple(By.id(table_ID), colName, colValue, partialText );
 
+    }
+    public boolean verifyTicketsFilteredToSearch(String colName, String colValue, boolean partialText){
+        return verifyColumnValuesMultiple(By.id(QuickSearch_table_ID), colName, colValue, partialText );
     }
     public String getAgentConsoleTableCellData(String columnName, int rowNum){
         return getTableCellData(By.id(table_ID), columnName, rowNum);

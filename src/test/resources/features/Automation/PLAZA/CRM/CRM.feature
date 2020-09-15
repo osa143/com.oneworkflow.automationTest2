@@ -62,7 +62,7 @@ Feature: Plaza CRM form test
     Examples:
 
     |Request           |System       |Description           |AdditionalComments|
- #   |Test2 CRM/Request |1B           |Test2 CRM/Description |Test2 CRM/AC      |
+#    |Test2 CRM/Request |1B           |Test2 CRM/Description |Test2 CRM/AC      |
 #    |Test3 CRM/Request |ALPHA1       |Test3 CRM/Description |Test3 CRM/AC      |
 #    |Test4 CRM/Request |ALPHA2       |Test4 CRM/Description |Test4 CRM/AC      |
 #    |Test5 CRM/Request |EMU          |Test5 CRM/Description |Test5 CRM/AC      |
@@ -74,7 +74,7 @@ Feature: Plaza CRM form test
 #    |Test11 CRM/Request|GESB-DK      |Test11 CRM/Description|Test11 CRM/AC     |
 #    |Test12 CRM/Request|GESB-EMS     |Test12 CRM/Description|Test12 CRM/AC     |
 #    |Test13 CRM/Request|GESB-MBA     |Test13 CRM/Description|Test13 CRM/AC     |
-#    |Test14 CRM/Request|GESB-TSSESB  |Test14 CRM/Description|Test14 CRM/AC     |
+    |Test14 CRM/Request|GESB-TSSESB  |Test14 CRM/Description|Test14 CRM/AC     |
 #    |Test15 CRM/Request|HERKULES     |Test15 CRM/Description|Test15 CRM/AC     |
 #    |Test16 CRM/Request|MFT          |Test16 CRM/Description|Test16 CRM/AC     |
 #    |Test17 CRM/Request|MIT/UAD      |Test17 CRM/Description|Test17 CRM/AC     |

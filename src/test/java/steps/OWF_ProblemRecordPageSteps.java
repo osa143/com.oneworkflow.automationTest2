@@ -217,7 +217,7 @@ public class OWF_ProblemRecordPageSteps {
     @And("change should also be reflected in the timeline as {string} for trouble ticket in row {int}")
     public void changeShouldAlsoBeReflectedInTheTimelineForOPTicketAs(String message, int rowNum) {
         String[] str = message.split(";");
-        str[0] += " " + CommonUtils.pbTicket;
+        str[0] += " " + CommonUtils.opTicket;
 
         String newMessage = "";
         for (int i = 0; i < str.length; i++) {
@@ -240,7 +240,7 @@ public class OWF_ProblemRecordPageSteps {
     @When("user tries to Ack the ticket but its shouldn't allow")
     public void userTriesAckTheTicketButItsShouldnTAllow() {
 
-        Assert.assertFalse(problemRecordPage.getAckButtonStatus(), "user is able to Ack Ticket");
+        Assert.assertFalse(problemRecordPage.getAckButtonStatus());
     }
 
     @Then("problem ticket status should be assigned")
@@ -853,7 +853,14 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user enters ticket in ticket ID+ field")
     public void userEntersTicketInTicketIDField() {
+        if(ticket == null ||ticket.equals("")){
+            ticket=CommonUtils.opTicket;
+            System.out.println("inside if " +ticket);
+        }
+        System.out.println("Outside if " +ticket);
+        System.out.println("OP ticket value is -"+CommonUtils.opTicket );
         problemRecordPage.enterTicketIdPlus(ticket);
+
     }
 
     @And("change should also be reflected in the timeline as {string} on row {int}")

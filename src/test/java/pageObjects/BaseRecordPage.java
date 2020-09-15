@@ -116,7 +116,7 @@ public class BaseRecordPage extends BasePage {
     public static final String table_INTERESTED_PARTIES_ID = "T705002015";
     public static final String table_ASSOCIATED_ROOT_CAUSE_CODES_ID = "T800040090";
     private static final String table_ADD_INTERESTED_PARTIES= "T700027964";
-    public static final String btnREFRESH_XPATH = "//div[@id='WIN_0_999000510']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
+    public static final String btnREFRESH_XPATH = "//*[@id='WIN_0_999000510']/div[1]/table/tbody/tr/td[2]/a[2]";
     private static final String btnYes = "WIN_0_700027904";
     public static final String txt_PROBLEM_REVIEW_FIELD= "arid_WIN_0_600001011";
     private static final String ddSTATUS_TROUBLE_EVENT_PAGE = "Status";
@@ -139,6 +139,7 @@ public class BaseRecordPage extends BasePage {
     private static final String txt_APPROVAL_COMMENT = "arid_WIN_0_13001";
     private static final String txtDESCRIPTION_ID = "arid_WIN_0_777031007";
     private static final String ddPRIORITY_ID = "Priority";
+    private static final String btn_EXTERNAL= "WIN_0_rc0id600001903";
 
     private static final String ddCATEGORY = "Category";
     private static final String ddTYPE = "Type";
@@ -150,12 +151,25 @@ public class BaseRecordPage extends BasePage {
     private static final String txt_AGREED_END_TIME= "arid_WIN_0_777021163";
     private static final String dd_Known_Error_Code= "arid_WIN_0_808080010";
     private static final String txt_Next_Assessment_Date= "arid_WIN_0_800040083";
+    private static final String txt_LinkedTicketID="//*[@id='T777506000']/tbody/tr[2]/td[2]/nobr/span";
+    private static final String btn_LinkedItems= "//*[@id='WIN_0_999000003']/div[2]/div[2]/div/dl/dd[5]/span[2]/a";
+
+    public boolean isExternalSelected(){
+        return verifyIsElementSelected(By.id(btn_EXTERNAL));
+    }
+    public void clickLinkedItems(){
+        clickElement(By.xpath(btn_LinkedItems));
+    }
 
 
-
+    public String getLinkedTicketId(){
+        return findElement(By.xpath(txt_LinkedTicketID)).getText();
+    }
     public void enterTicket(String ticket) {
         driver.findElement(By.id(txtSEARCH_TICKET_ID)).sendKeys(ticket);
     }
+
+
 
     public boolean verifyFieldsInvisible(String fields) {
         String arr[] = fields.split("," );
@@ -582,6 +596,7 @@ public class BaseRecordPage extends BasePage {
     {
         wait(1000);
         int size = getTableRows(By.id(table_LINKED_ITEMS_ID)).size();
+        System.out.println("Table rows are -" +size);
         int actualTickets=size-1;
         System.out.println("Available Tickets are - " + (actualTickets));
         if(actualTickets==expectedTickets){
@@ -600,7 +615,7 @@ public class BaseRecordPage extends BasePage {
     public void clickRefresh_timeline()
     {
         clickElement(By.xpath(btnREFRESH_XPATH));
-        wait(1500);
+        wait(1000);
     }
     public boolean isStatusDropDownReadOnly(){
         return checkIfControlIsReadonly(ddSTATuS_ID);
@@ -890,6 +905,7 @@ public class BaseRecordPage extends BasePage {
     }
     public String getStatusText() {
         String StatusText = findElement(By.id(ddSTATuS_ID)).getAttribute("value");
+        System.out.println("Ticket status is - " +StatusText);
         return StatusText;
 
     }

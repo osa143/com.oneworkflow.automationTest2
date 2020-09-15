@@ -328,33 +328,33 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         return getTextByID(txt_REASSIGNMENT_COUNT);
     }
     public String get_X_Degree(){
-        return getTextByID(txt_X_DEGREE);
+        return getAttributeValueById(txt_X_DEGREE);
     }
     public String get_Y_Degree(){
-        return getTextByID(txt_Y_DEGREE);
+        return getAttributeValueById(txt_Y_DEGREE);
     }
     public String getLocationDetails(){
-        return getTextByID(txt_LOCATION_DETAILS_DEGREE);
+        return getAttributeValueById(txt_LOCATION_DETAILS_DEGREE);
     }
 
 
     public String getLongitude(){
-        return getTextByID(txt_LONGITUDE);
+        return getAttributeValueById(txt_LONGITUDE);
     }
     public String getLatitude(){
-        return getTextByID(txt_LATITUDE);
+        return getAttributeValueById(txt_LATITUDE);
     }
     public String getRegionName(){
-        return getTextByID(txt_REGION_NAME);
+        return getAttributeValueById(txt_REGION_NAME);
     }
     public String getRegionId(){
-        return getTextByID(txt_REGION_ID);
+        return getAttributeValueById(txt_REGION_ID);
     }
     public String getLocationNamePlus(){
-        return getTextByID(txt_LOCATION_NAME_PLUS);
+        return getAttributeValueById(txt_LOCATION_NAME_PLUS);
     }
     public String getLocationIdPlus(){
-        return getTextByID(txt_LOCATION_ID_PLUS);
+        return getAttributeValueById(txt_LOCATION_ID_PLUS);
     }
 
     public String getModel(){
@@ -640,7 +640,12 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
     public boolean getAckButtonStatus() {
-        return driver.findElement(By.id(btn_ACK_ID)).isEnabled();
+        clickElementById(btn_ACK_ID);
+        wait(2000);
+        if(getStatusText().equals("Assigned")){
+            return false;
+        }
+        else return true;
     }
 
     public void selectWithdrawnReason_FalseAlarmDropDown() {

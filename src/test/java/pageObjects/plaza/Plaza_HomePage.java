@@ -675,7 +675,15 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectAddOneTimeCi(String CiName){
         PlazaValidation.CI = CiName;
-        addCi(txt_ONE_Time_ADD_CI, txt_ADD_CI_TEXT_BOX, CiName);
+        //addCi(txt_ONE_Time_ADD_CI, txt_ADD_CI_TEXT_BOX, CiName);
+        //selectDropdownByTagNameDiv(By.id(txt_ONE_Time_ADD_CI), By.id(),CiName);
+        clickElement(By.id(txt_ONE_Time_ADD_CI));
+        wait(2000);
+       // enterTextByElement(By.id(txt_ONE_Time_ADD_CI), CiName);
+//        driver.switchTo().activeElement().sendKeys(Keys.ARROW_DOWN);
+        driver.switchTo().activeElement().sendKeys(Keys.ENTER);
+
+        wait(300);
     }
     public void selectServiceAs(String service){
         selectDropdownByUsingClickAndSendKeys(txt_SERVICE, service);
@@ -1468,7 +1476,7 @@ public class Plaza_HomePage extends BasePage {
         enterTextByElement(By.id(txt_EBILL_REQUEST), text);
     }
 
-    public void addCi(String id, String xPath, String CiName ){
+    public void addCi(String id, String xPath, String CiName){
         clickElementById(id);
         enterTextByElement(By.xpath(xPath), CiName);
         wait(1000);

@@ -58,7 +58,7 @@
       When user answers all risk questions as below
       And user selects answer as "Impact to other systems/technologies are unclear"
       And user selects answer as "No"
-      And user selects answer as "Tested succesfully, this is a pilot"
+      And user selects answer as "Tested successfully, this is a pilot"
       And user selects answer as "Yes (outcome of the change can be instantly verified)"
       And user selects answer as "Yes"
       And user selects answer as "Simple"
@@ -154,7 +154,7 @@
       Then user should see "Acknowledged" email update
       When user changes status to "Approval Requested"
       And user clicks on save button
-      And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Analysis to Approval Requested." on row 66
+      #And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Analysis to Approval Requested." on row 66
       Then user validates ticket status as "Approval Requested"
       And user validates availability of tabs "Approval"
       And user waits 2 secs

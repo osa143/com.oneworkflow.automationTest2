@@ -1,4 +1,4 @@
-@Create_Normal_Change_RFC
+@Create_Normal_Change_RFC1
 # Tags: optional
 
 Feature: Create Normal Change RFC

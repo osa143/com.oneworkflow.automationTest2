@@ -2673,7 +2673,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectC2B_serviceEnvironment(String dropdownName){
         PlazaValidation.Environment = dropdownName;
-        selectDropdown(By.id(dd_C2B_SERVICE_ENVIRONMENT), By.id(txt_C2B_SERVICE_ENVIRONMENT),  dropdownName);
+        selectDropdownByTagNameDiv(By.id(dd_C2B_SERVICE_ENVIRONMENT), By.id(txt_C2B_SERVICE_ENVIRONMENT),  dropdownName);
     }
 
     public void selectC2B_GeneralEnvironment(String dropdownName){

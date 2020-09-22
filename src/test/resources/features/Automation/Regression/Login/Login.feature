@@ -13,9 +13,7 @@
       Then user switches to frame
       And user clicks on "profiles" tab
       And user validates "<Profiles>" profile is present
-      #And user logsOut from One workflow
 
-      Examples:
 
       Examples:
         |User                        |Password |Profiles|

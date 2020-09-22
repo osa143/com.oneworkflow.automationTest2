@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="127" parent-id="1">
+<tr class="s-fail" test-id="158" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then user should see new email "Test2@Test2.com" added in "Email Address" in row 2 <br/><span class="text-muted text-sm">Internal user processes a normal change ticket</span></td>
-	<td>0h 0m 0s+612msc</td>
+	<td class="_600">And user validates Request Category isn't readonly <br/><span class="text-muted text-sm">Internal user processes a normal change ticket</span></td>
+	<td>0h 0m 0s+95msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,15 +136,13 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">java.lang.AssertionError: expected [Test2@Test2.com] but found [xchangeinitiatorinternal1@teliacompany.com_OFF]
+		<textarea disabled class="code-block">java.lang.AssertionError: expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at steps.OWF_ChangeRecordPageSteps.userShouldSeeNewEmailAddedInInRow(OWF_ChangeRecordPageSteps.java:377)
-	at ✽.user should see new email "Test2@Test2.com" added in "Email Address" in row 2(features/Automation/Regression/Change/E2E_Normal_Change_(Internal Initiator).feature:151)
+	at org.testng.Assert.assertFalse(Assert.java:65)
+	at org.testng.Assert.assertFalse(Assert.java:75)
+	at steps.OWF_ProblemRecordPageSteps.userValidatesRequestCategoryIsnTReadonly(OWF_ProblemRecordPageSteps.java:985)
+	at ✽.user validates Request Category isn't readonly(features/Automation/Regression/Change/E2E_Normal_Change_(Internal Initiator).feature:184)
 </textarea>
 	</td>
 </tr>
@@ -172,7 +170,7 @@
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Sep 16, 2020 03:40:29 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Sep 22, 2020 12:13:54 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

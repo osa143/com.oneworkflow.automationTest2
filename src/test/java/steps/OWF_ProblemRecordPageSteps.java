@@ -155,7 +155,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user goes back to login page")
     public void userGoesBackToLoginPage() {
-        problemRecordPage.getDriver().findElement(By.xpath("//a[contains(text(),'Return to home page')]")).click();
+        problemRecordPage.getDriver().findElement(By.xpath("//*[@id=\"logoutmsg\"]/tbody/tr[4]/td[2]/a")).click();
         problemRecordPage.wait(5000);
     }
 
@@ -392,7 +392,7 @@ public class OWF_ProblemRecordPageSteps {
     @And("ticket status should be closed")
     public void ticketStatusShouldBeClosed() {
         String closed = problemRecordPage.getStatusText();
-        Assert.assertEquals(closed, "closed", "status is not closed");
+        Assert.assertEquals(closed, "Closed", "status is not closed");
 
     }
 
@@ -1522,6 +1522,21 @@ public class OWF_ProblemRecordPageSteps {
     @And("user clicks attachment open button")
     public void userClicksAttachmentOpenButton() {
         problemRecordPage.clickOpenAttachment();
+    }
+
+    @And("user validates Communication plan is read only")
+    public void userValidatesCommunicationPlanIsReadOnly() {
+        Assert.assertTrue(problemRecordPage.verifyCommunicationPlanIsReadOnly());
+    }
+
+    @And("user validates Ver of Functionality is readonly")
+    public void userValidatesVerOfFunctionalityIsReadonly() {
+        Assert.assertTrue(problemRecordPage.verifyVerOfFuncionalityIsReadOnly());
+    }
+
+    @And("user validates Risk Description is read only")
+    public void userValidatesRiskDescriptionIsReadOnly() {
+        Assert.assertTrue(problemRecordPage.verifyRiskDescriptionIsReadOnly());
     }
 }
 

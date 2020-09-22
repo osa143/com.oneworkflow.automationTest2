@@ -948,7 +948,11 @@ public class BaseRecordPage extends BasePage {
 
 
     public void enterChangeBuilderType(String changeBuilderName) {
-        enterTextByElement(By.id(txtCHANGE_BUILDER_FIELD_ID), changeBuilderName);
+        //enterTextByElement(By.id(txtCHANGE_BUILDER_FIELD_ID), changeBuilderName);
+        findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).clear();
+        driver.findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).sendKeys(changeBuilderName);
+        driver.findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).sendKeys(Keys.ENTER);
+
     }
 
     public void clickSave() {

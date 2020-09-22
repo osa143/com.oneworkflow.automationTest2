@@ -34,6 +34,8 @@ public class CommonUtils extends BasePage {
     public static String Timeline_Entry;
     public static String estimatedReadyTime;
     public static String WO_eventStartTime;
+    public static String EventEndTime;
+
 
     // 0 - parent window
     // 1 - first child and so on
@@ -109,7 +111,7 @@ public class CommonUtils extends BasePage {
         } else {
             todayMidnight= todayMidnight.minusMinutes(Math.abs(delayMinutes));
         }
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/YYYY HH:mm:ss");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM/dd/YYYY HH:mm:ss");
         return dateTimeFormatter.format(todayMidnight);
 
     }

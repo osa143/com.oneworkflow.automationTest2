@@ -1352,6 +1352,71 @@ public class OWF_TroubleEventPageSteps {
         Assert.assertTrue(troubleEventPage.isActionReadOnly());
         Assert.assertTrue(troubleEventPage.isClosureInfoReadOnly());
     }
+
+    @Then("user validates event end time is same as cleared status event end time")
+    public void userValidatesEventEndTimeIsSameAsClearedStatusEventEndTime() {
+        Assert.assertEquals(CommonUtils.EventEndTime, troubleEventPage.getEventEndTime());
+    }
+
+    @Then("user validates fault position field is mandatory")
+    public void userValidatesFaultPositionFieldIsMandatory() {
+        Assert.assertTrue(troubleEventPage.verifyFaultPositionIsMandatory());
+        }
+
+    @And("user validates cause field is mandatory")
+    public void userValidatesCauseFieldIsMandatory() {
+        Assert.assertTrue(troubleEventPage.verifyCauseFieldIsMandatory());
+    }
+
+    @And("user validates action field is mandatory")
+    public void userValidatesActionFieldIsMandatory() {
+        Assert.assertTrue(troubleEventPage.verifyActionFieldIsMandatory());
+    }
+
+    @And("user validates closure info field is mandatory")
+    public void userValidatesClosureInfoFieldIsMandatory() {
+        Assert.assertTrue(troubleEventPage.verifyClosureInfoFieldIsMandatory());
+    }
+
+    @And("user validates fault position is read only")
+    public void userValidatesFaultPositionIsReadOnly() {
+        Assert.assertTrue(troubleEventPage.verifyFaultPositionIsReadOnly());
+    }
+
+    @And("user validates cause field is read only")
+    public void userValidatesCauseFieldIsReadOnly() {
+        Assert.assertTrue(troubleEventPage.verifyCauseIsReadOnly());
+    }
+
+    @And("user validates event end time is read only")
+    public void userValidatesEventEndTimeIsReadOnly() {
+        Assert.assertTrue(troubleEventPage.verifyEventEndTimeIsReadOnly());
+    }
+
+    @And("user validates action is read only")
+    public void userValidatesActionIsReadOnly() {
+        Assert.assertTrue(troubleEventPage.verifyActionIsReadOnly());
+    }
+
+    @And("user validates closure info is read only")
+    public void userValidatesClosureInfoIsReadOnly() {
+        Assert.assertTrue(troubleEventPage.verifyClosureInfoIsReadOnly());
+    }
+
+    @And("user validates priority check button is read only")
+    public void userValidatesPriorityCheckButtonIsReadOnly() {
+        Assert.assertTrue(troubleEventPage.verifyPriorityCheckIsReadOnly());
+    }
+
+    @And("user validates assigned profile {string} can be seen under linked items tab")
+    public void userValidatesAssignedProfileCanBeSeenUnderLinkedItemsTab(String cellValues) {
+        Assert.assertTrue(troubleEventPage.verifyColumnValuesForMultipleInputs(By.id("777506000"),"Profile", cellValues));
+    }
+
+    @And("user enters auto close date as {int} mins past")
+    public void userEntersAutoCloseDateAsIntMinsPast(int arg0) {
+        troubleEventPage.enterAutoCloseDate(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0));
+    }
 }
 
 

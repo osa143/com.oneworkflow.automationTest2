@@ -10,6 +10,8 @@ Feature: E2E standard change internal initiator
     Then user switches to window 1
     When user clicks save button
     Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)" on change record page
+    And user waits 3 secs
+    And user validates change builder+ is mandatory
     When user selects request type as "Standard Change"
     And user validates "Template*" is mandatory
     And user selects template as "All:IT:Other:TEST TEMPLATE [UAT] - Standard Change"
@@ -24,6 +26,7 @@ Feature: E2E standard change internal initiator
     When user clicks save button
     And multiple error messages should appear with red boarder around fields
     When user enters "CI B2" in the change builder field
+    #Then user validates "Change Builder" button is present
     And user enters start time as 10 minutes fast from current sweden time
     And user enters end time as 16 minutes fast from current sweden time
     And user enters impact duration as "5" minutes

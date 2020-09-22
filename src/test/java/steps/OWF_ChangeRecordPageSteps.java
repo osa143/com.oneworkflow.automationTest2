@@ -450,6 +450,12 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.selectOwner(arg0);
     }
 
+    @Then("user selects owner profile as {string}")
+    public void userSelectsOwnerProfileAs(String arg0) {
+        changeRecordPage.selectOwnerProfile(arg0);
+    }
+
+
     @And("user selects resolved group as {string}")
     public void userSelectsResolvedGroupAs(String arg0) {
         changeRecordPage.selectResolvedGroup(arg0);
@@ -493,6 +499,7 @@ public class OWF_ChangeRecordPageSteps {
     @When("user logsOut from One workflow")
     public void userLogsOutFromOneWorkflow() {
         changeRecordPage.selectDropDownNameAndValue("Nav-Username", "Logout", false);
+        changeRecordPage.wait(2000);
     }
 
     @And("user gets request start and end time on change record page")
@@ -897,6 +904,7 @@ public class OWF_ChangeRecordPageSteps {
     @And("user clicks on approve button")
     public void userClicksOnApproveButton() {
         changeRecordPage.clickApprove();
+        changeRecordPage.switchToFrameByIndex(2);
     }
 
     @When("user clears description field")
@@ -949,6 +957,21 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesActualStartTimeMatchesTimelineEntryTime() {
         boolean containsMessage = CommonUtils.Timeline_Entry.contains(changeRecordPage.getActualStart());
         Assert.assertTrue(containsMessage, "actual start time matches timeline entry time");
+    }
+
+    @And("user validates change builder+ is mandatory")
+    public void userValidatesChangeBuilderIsMandatory() {
+        Assert.assertTrue(changeRecordPage.verifyChangeBuilderIsMandatory());
+    }
+
+    @And("user enter {string} in the change builder field")
+    public void userEnterInTheChangeBuilderField(String arg0) {
+        changeRecordPage.enterChangeBuilder(arg0);
+    }
+
+    @Then("user validates multiple options {string} should be available in Type dropdown")
+    public void userValidatesMultipleOptionsShouldBeAvailableInTypeDropdown(String arg0) {
+        Assert.assertTrue(changeRecordPage.verifyInterestedPartiesTypes(arg0, ""));
     }
 }
 

@@ -5,7 +5,8 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      Then user clicks on plaza portal
+      #Then user clicks on plaza portal
+      And user waits 5 secs
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on application under IT Infrastructure dropdown
@@ -20,7 +21,8 @@
       And user enters email address field as "Test@Test.com"
       Then user enters phone field as "123456789"
       And user enters CEWS request as "Test1 CEWS/Request"
-      And user selects CEWS Add CI as "cc100cgas001"
+      #And user selects CEWS Add CI as "cc100cgas001"
+      And user waits 30 secs
       Then user enters CEWS description as "Test1 CEWS/Description"
       And user enters additional comments as "Test1 CEWS/AC"
       Then user clicks on "Submit"
@@ -66,6 +68,8 @@
       When user changes status to "Closed" on work order page
       And user clicks on save button
       And user validates ticket status as "Closed"
+      And user validates event start time as read only
+      And user validates Priority is readonly
       When user switches to window 0
       And user clicks on main page refresh
       Then user validates plaza request has completed

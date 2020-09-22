@@ -57,10 +57,11 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_ESTIMATED_SCHEDULE_END= "arid_WIN_0_777021168";
     private static final String txt_ACTUAL_SCHEDULE_START= "arid_WIN_0_777021164";
     private static final String txt_ACTUAL_SCHEDULE_END= "arid_WIN_0_777021165";
+    private static final String txt_EVENT_START_TIME = "arid_WIN_0_703001000";
 
-
-
-
+    public boolean verifyEventStartTimeIsReadOnly(){
+        return checkIfControlIsReadonly(txt_EVENT_START_TIME);
+    }
 
     public boolean verify_OP_Ticket_Description() {
         String actualDescription = getDescription();

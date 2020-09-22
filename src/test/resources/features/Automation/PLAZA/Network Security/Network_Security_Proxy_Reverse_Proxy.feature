@@ -6,7 +6,7 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      Then user clicks on plaza portal
+      #Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on firewall & network under IT Infrastructure dropdown
@@ -20,7 +20,8 @@
       Then user enters Source IP as "Test 192.168.1.1"
       And user enters Reverseproxy DNS name as "Test.teliacompany.net"
       And user enters Reverseproxy Protocol Port as "https/447.test"
-      And user selects Certificate as "Order CSR"
+      And user waits 15 secs
+      #And user selects Certificate as "Order CSR"
       Then user enters webserver address as "Test webserver"
       And user selects high availability as "Yes"
       And user selects load balancing method as "Least Connections"
@@ -42,8 +43,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Proxy"
       And user validates request type as "Service Request | PLAZA"
-     #Not sure about description validation outside of a table
-      And user validates network security proxy reverse proxy description same as plaza
+      #And user validates network security proxy reverse proxy description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

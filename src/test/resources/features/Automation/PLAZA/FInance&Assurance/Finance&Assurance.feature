@@ -5,7 +5,7 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      Then user clicks on plaza portal
+#      Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on application under IT Infrastructure dropdown
@@ -120,7 +120,7 @@
 #      |Test54 F&A/Request|Saida                                   |Test54 F&A/Description|Test54 F&A/AC     |
 #      |Test55 F&A/Request|Secure@Source                           |Test55 F&A/Description|Test55 F&A/AC     |
 #      |Test56 F&A/Request|servicedata prod                        |Test56 F&A/Description|Test56 F&A/AC     |
-      |Test57 F&A/Request|sinn                                    |Test57 F&A/Description|Test57 F&A/AC     |
+#      |Test57 F&A/Request|sinn                                    |Test57 F&A/Description|Test57 F&A/AC     |
 #      |Test58 F&A/Request|sis                                     |Test58 F&A/Description|Test58 F&A/AC     |
 #      |Test59 F&A/Request|skanova open source integration platform|Test59 F&A/Description|Test59 F&A/AC     |
 #      |Test60 F&A/Request|staff                                   |Test60 F&A/Description|Test60 F&A/AC     |
@@ -128,9 +128,9 @@
 #      |Test62 F&A/Request|tbis                                    |Test62 F&A/Description|Test62 F&A/AC     |
 #      |Test63 F&A/Request|telsims                                 |Test63 F&A/Description|Test63 F&A/AC     |
 #      |Test64 F&A/Request|tholbox beställ                         |Test64 F&A/Description|Test64 F&A/AC     |
-#      |Test65 F&A/Request|tsic bim prod                           |Test65 F&A/Description|Test65 F&A/AC     |
+      |Test65 F&A/Request|tsic bim prod                           |Test65 F&A/Description|Test65 F&A/AC     |
 #      |Test66 F&A/Request|vqms                                    |Test66 F&A/Description|Test66 F&A/AC     |
 #      |Test67 F&A/Request|wanoverview prod                        |Test67 F&A/Description|Test67 F&A/AC     |
 #      |Test68 F&A/Request|wikitsic prod                           |Test68 F&A/Description|Test68 F&A/AC     |
 #      |Test69 F&A/Request|x-pris web txn                          |Test69 F&A/Description|Test69 F&A/AC     |
-#
+

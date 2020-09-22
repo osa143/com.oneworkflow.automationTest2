@@ -822,7 +822,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event end time as {int} mins past")
     public void userEntersEventEndTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user selects action dropdown as {string} on trouble event page")
@@ -832,7 +832,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event start time as {int} mins past")
     public void userEntersEventStartTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user should see confirmation message for impact clear and clicks ok")
@@ -1322,6 +1322,35 @@ public class OWF_TroubleEventPageSteps {
     @Then("user validates external is selected")
     public void userValidatesExternalIsSelected() {
         Assert.assertTrue(troubleEventPage.isExternalSelected());
+    }
+
+    @And("user enters equipment as {string}")
+    public void userEntersEquipmentAs(String equipment) {
+        troubleEventPage.enterEquipment(equipment);
+    }
+
+    @Then("user validates fault position as {string}")
+    public void userValidatesFaultPositionAs(String faultPosition) {
+        Assert.assertEquals(troubleEventPage.getFaultPosition(), faultPosition);
+    }
+
+    @And("user validates equipment as {string}")
+    public void userValidatesEquipmentAs(String equipment) {
+     Assert.assertEquals(troubleEventPage.getEquipment(), equipment);
+    }
+
+    @And("user validates cause as {string}")
+    public void userValidatesCauseAs(String cause) {
+        Assert.assertEquals(troubleEventPage.getCause(), cause);
+    }
+
+    @And("user should see fault position, equipment, cause, action, closure info fields read only")
+    public void userShouldSeeFaultPositionEquipmentCauseActionClosureInfoFieldsReadOnly() {
+        Assert.assertTrue(troubleEventPage.isFaultPositionReadOnly());
+        Assert.assertTrue(troubleEventPage.isEquipmentReadOnly());
+        Assert.assertTrue(troubleEventPage.isCauseReadOnly());
+        Assert.assertTrue(troubleEventPage.isActionReadOnly());
+        Assert.assertTrue(troubleEventPage.isClosureInfoReadOnly());
     }
 
     @Then("user validates event end time is same as cleared status event end time")

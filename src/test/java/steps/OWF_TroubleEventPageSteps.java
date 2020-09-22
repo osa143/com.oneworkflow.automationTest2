@@ -1323,6 +1323,35 @@ public class OWF_TroubleEventPageSteps {
     public void userValidatesExternalIsSelected() {
         Assert.assertTrue(troubleEventPage.isExternalSelected());
     }
+
+    @And("user enters equipment as {string}")
+    public void userEntersEquipmentAs(String equipment) {
+        troubleEventPage.enterEquipment(equipment);
+    }
+
+    @Then("user validates fault position as {string}")
+    public void userValidatesFaultPositionAs(String faultPosition) {
+        Assert.assertEquals(troubleEventPage.getFaultPosition(), faultPosition);
+    }
+
+    @And("user validates equipment as {string}")
+    public void userValidatesEquipmentAs(String equipment) {
+     Assert.assertEquals(troubleEventPage.getEquipment(), equipment);
+    }
+
+    @And("user validates cause as {string}")
+    public void userValidatesCauseAs(String cause) {
+        Assert.assertEquals(troubleEventPage.getCause(), cause);
+    }
+
+    @And("user should see fault position, equipment, cause, action, closure info fields read only")
+    public void userShouldSeeFaultPositionEquipmentCauseActionClosureInfoFieldsReadOnly() {
+        Assert.assertTrue(troubleEventPage.isFaultPositionReadOnly());
+        Assert.assertTrue(troubleEventPage.isEquipmentReadOnly());
+        Assert.assertTrue(troubleEventPage.isCauseReadOnly());
+        Assert.assertTrue(troubleEventPage.isActionReadOnly());
+        Assert.assertTrue(troubleEventPage.isClosureInfoReadOnly());
+    }
 }
 
 

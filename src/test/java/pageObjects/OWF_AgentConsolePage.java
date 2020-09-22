@@ -547,13 +547,13 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void clickMenuItemLogout() {
         selectMenuItem(menuItemLOGOUT);
-        try{
-            switchToFrameByIndex(2);
-            clickElementByContainsTextAndTagName("*", "Yes");
-        }
-        catch (Exception e){
-
-        }
+//        try{
+//            switchToFrameByIndex(2);
+//            clickElementByContainsTextAndTagName("*", "Yes");
+//        }
+//        catch (Exception e){
+//
+//        }
         wait(3000);
     }
 

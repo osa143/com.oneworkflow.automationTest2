@@ -8,13 +8,13 @@
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       And user validates agent console is displayed correctly
       Then user validates availability of "Timeline:Details:List:Search / Quick Create" tabs
-      And user logsOut from One workflow
+#      And user logsOut from One workflow
 
       Examples:
 
       |User                        |Password |
 #      |Tohall_copy                 |Test@1234|
-##      |Tohall_copy2                |Test@1234|
+#      |Tohall_copy2                |Test@1234|
 #      |Tohall_copy3                |Test@1234|
 #      |Tohall_copy4                |Test@1234|
 #      |Tohall_copy5                |Test@1234|
@@ -32,7 +32,7 @@
 #      |Change_Automation_10        |Test@1234|
 #      |ChangeInitiator/Builder1    |Test@1234|
 #      |ChangeInitiatorInternal1    |Test@1234|
-      |ChangeManager1_Automation   |Test@1234|
+#      |ChangeManager1_Automation   |Test@1234|
 #      |frvi96_auto                 |Test@1234|
 #      |DC CS Core (Voice)_auto     |Test@1234|
 #      |EscalationManager1          |Test@1234|
@@ -42,7 +42,7 @@
 #      |syvaptu1_auto               |Test@1234|
 #      |PlazaTest                   |Test@1234|
 #      |ow_basic2_auto              |Test@1234|
-      |ow_CCMobAccess_auto         |Test@1234|
+#      |ow_CCMobAccess_auto         |Test@1234|
 #      |ow_CCMobAccess1_auto        |Test@1234|
 #      |cm_appadmin1_auto           |Test@1234|
 #      |cm_adminaccess1_auto        |Test@1234|
@@ -52,10 +52,12 @@
 #      |ow_external0                |Test@1234|
 #      |ow_external1                |Test@1234|
 #      |ow_external2                |Test@1234|
-#      |ow_basic1                   |Test@1234|
-#      |ow_basic2                   |Test@1234|
-#      |ow_basic3                   |Test@1234|
-#      |Assignment_admin            |Test@1234|
+      |ow_basic1                   |Test@1234|
+      |ow_basic2                   |Test@1234|
+      |ow_basic3                   |Test@1234|
+      |Assignment_admin            |Test@1234|
+
+
 
 
 

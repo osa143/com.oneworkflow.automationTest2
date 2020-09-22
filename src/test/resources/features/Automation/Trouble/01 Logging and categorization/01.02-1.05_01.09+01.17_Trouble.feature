@@ -16,16 +16,16 @@
       Then user validates sweden and finland checkboxes are selected
       And user validates event start time is present
       When user clicks on location under sections
-      When user clicks on CTI details under sections
-      And user validates availability of category dropdown
-      Then multiple statuses "1:Access:BSS:Computer Equipment:Computer Services:CORE:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:OSS:Packet_Transport:Process:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:TV:VAS" should be available in "Category" dropdown
-      And user selects Category as "CORE"
-      Then user validates availability of type dropdown
-      And multiple statuses "Fixed_IMS:IP:MESSAGING:Mobile CS Core Network:Mobile IMS Core Network:Mobile PS Core Network:Mobile_CS:Mobile_PS:NFVI:Other:Presentation:Software:Sync:WLAN:Workflow" should be available in "Type" dropdown
-      Then user selects Type as "Mobile PS Core Network"
-      When user validates availability of item dropdown
-      Then multiple statuses "DNS:EPG::GGSN:NAT::NLS:PCRF:PGW::PM:RADIUS:SGSN:SHAPERS:TPE-CMIPBB" should be available in "Item" dropdown
-      And user selects Item as "SGSN"
+#      When user clicks on CTI details under sections
+#      And user validates availability of category dropdown
+#      Then multiple statuses "1:Access:BSS:Computer Equipment:Computer Services:CORE:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:OSS:Packet_Transport:Process:Product:SERVER:Service:Service Platform:SITE-LP:Software:Transmission:Transport:TV:VAS" should be available in "Category" dropdown
+#      And user selects Category as "CORE"
+#      Then user validates availability of type dropdown
+#      And multiple statuses "Fixed_IMS:IP:MESSAGING:Mobile CS Core Network:Mobile IMS Core Network:Mobile PS Core Network:Mobile_CS:Mobile_PS:NFVI:Other:Presentation:Software:Sync:WLAN:Workflow" should be available in "Type" dropdown
+#      Then user selects Type as "Mobile PS Core Network"
+#      When user validates availability of item dropdown
+#      Then multiple statuses "DNS:EPG::GGSN:LOCAL_CORE:NAT::NLS:PCRF:PGW::PM:RADIUS:SGSN:SHAPERS:TPE-CMIPBB" should be available in "Item" dropdown
+#      And user selects Item as "SGSN"
     #To search for the location details you need to press enter after the text
       And user enters "SE_" within the location ID+ field
       And user switches to frame

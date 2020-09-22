@@ -84,11 +84,10 @@ Feature: PMO Tab
     And user goes back to login page
     When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    And user clicks on search and selects open search forms and problem record
+    And user selects search menu as "Open Search Form:Known Error"
     And user switches to window 2
     And user enters known error ticket
     And user clicks Search on ticket search
-    When user clicks on next tab button
     Then user validates availability of tabs "PM Office"
     And user clicks on "PM Office" tab
     When user enters "Secret problem stuff" in the problem review field
@@ -99,7 +98,7 @@ Feature: PMO Tab
     And user goes back to login page
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    And user clicks on search and selects open search forms and problem record
+    And user selects search menu as "Open Search Form:Known Error"
     And user switches to window 2
     And user enters known error ticket
     And user clicks Search on ticket search
@@ -118,7 +117,6 @@ Feature: PMO Tab
     And user enters Problem Ticket
     And user clicks Search on ticket search
     When user verifies PM office tab visibility
-    When user clicks on next tab button
     Then PM office tab should be visible
     When user enters "Secret problem stuff" in the problem review field
     And user clicks on save button

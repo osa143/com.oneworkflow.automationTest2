@@ -94,6 +94,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String table_WORKORDERS_ID = "T777504000";
     private static final String ddTEMPLATE_Field_ID = "WIN_0_777504501";
     private static final String dd_FAULT_TYPE_Field_ID="arid_WIN_0_777020103";
+    private static final String txt_FAULT_POSITION= "arid_WIN_0_600001048";
     private static final String ddIMPACT_Field_ID = "WIN_0_705002082";
     private static final String ddTITLE_Field_ID= "WIN_0_777031000";
     private static final String ddIMPORTANCE_Field_ID= "WIN_0_600001821";
@@ -163,7 +164,27 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_REJECT_REASON="arid_WIN_0_600001019";
     private static final String txt_HIERARCHIC_ESCLATION_LEVEL="arid_WIN_0_700025204";
     private static final String txt_ACTION= "arid_WIN_0_777031381";
+    private static final String txt_CAUSE= "arid_WIN_0_777031380";
     private static final String chkbx_TO_SELECT_TICKET= "//*[@id='T700506101']/tbody/tr[2]/td[1]/input";
+
+    public boolean isClosureInfoReadOnly(){
+        return checkIfControlIsReadonly(txtCLOSURE_INFO);
+    }
+    public boolean isFaultPositionReadOnly(){
+        return checkIfControlIsReadonly(txt_FAULT_POSITION);
+    }
+    public boolean isCauseReadOnly(){
+        return checkIfControlIsReadonly(txt_CAUSE);
+    }
+    public boolean isActionReadOnly(){
+        return checkIfControlIsReadonly(txt_ACTION);
+    }
+    public String getFaultPosition(){
+        return getAttributeValueById(txt_FAULT_POSITION);
+    }
+    public String getCause(){
+        return getAttributeValueById(txt_CAUSE);
+    }
 
     public String getAction(){
         return getAttributeValueById(txt_ACTION);
@@ -833,6 +854,7 @@ public void rightClickOnElement(String cellData){
 
     private static final String btnSAVE = "WIN_0_700025244";
     public void enterClosureInfo(String closureInfo){
+        driver.findElement(By.id(txtCLOSURE_INFO)).clear();
         driver.findElement(By.id(txtCLOSURE_INFO)).sendKeys(closureInfo);
     }
     public String getClosureInfo(){

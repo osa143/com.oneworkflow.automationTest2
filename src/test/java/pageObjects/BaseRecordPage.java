@@ -153,6 +153,19 @@ public class BaseRecordPage extends BasePage {
     private static final String txt_Next_Assessment_Date= "arid_WIN_0_800040083";
     private static final String txt_LinkedTicketID="//*[@id='T777506000']/tbody/tr[2]/td[2]/nobr/span";
     private static final String btn_LinkedItems= "//*[@id='WIN_0_999000003']/div[2]/div[2]/div/dl/dd[5]/span[2]/a";
+    private static final String txt_EQUIPMENT="arid_WIN_0_600001067";
+
+
+    public boolean isEquipmentReadOnly(){
+        return checkIfControlIsReadonly(txt_EQUIPMENT);
+    }
+    public void enterEquipment(String text){
+        findElement(By.id(txt_EQUIPMENT)).clear();
+        enterTextByElement(By.id(txt_EQUIPMENT),text);
+    }
+    public String getEquipment(){
+        return getAttributeValueById(txt_EQUIPMENT);
+    }
 
     public boolean isExternalSelected(){
         return verifyIsElementSelected(By.id(btn_EXTERNAL));

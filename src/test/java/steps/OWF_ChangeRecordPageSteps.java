@@ -499,6 +499,7 @@ public class OWF_ChangeRecordPageSteps {
     @When("user logsOut from One workflow")
     public void userLogsOutFromOneWorkflow() {
         changeRecordPage.selectDropDownNameAndValue("Nav-Username", "Logout", false);
+        changeRecordPage.wait(2000);
     }
 
     @And("user gets request start and end time on change record page")
@@ -903,6 +904,7 @@ public class OWF_ChangeRecordPageSteps {
     @And("user clicks on approve button")
     public void userClicksOnApproveButton() {
         changeRecordPage.clickApprove();
+        changeRecordPage.switchToFrameByIndex(2);
     }
 
     @When("user clears description field")

@@ -37,6 +37,7 @@ Feature: External Normal Change E2E
     And user enters reason field as "Regression"
     And user selects priority as "Minor"
     And user enters "Privacy Data: Just Testing" in the change builder field
+    #Then user validates "Change Builder" button is present
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
     And user enters start time as 24 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss a" format
     And user enters end time as 28 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss a" format
@@ -46,7 +47,7 @@ Feature: External Normal Change E2E
     And user waits
     Then user validates availability of tabs "Timeline:Diagnosis:Risk:Schedule:Interested Parties:Approval:Notifications:Linked Items:Work Orders:Service Level:Related Project:Service Info:Telenor" on change record page
     When user clicks on owner under sections
-    And user validates owner profile as "ChangeInitiator/Builder1"
+    And user validates owner profile as "Change Initiator-External"
     And user validates owner as "ChangeInitiator/Builder1"
     Then user clicks on Send button
     Then error message should display as "You must provide an answer to all the risk question outlined in the Risk tab before Send (ARERR 10000)" on change record page

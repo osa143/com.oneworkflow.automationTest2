@@ -21,7 +21,7 @@ Feature: Adding of CI to incident ticket
     And user validates CI columns "CI Name:PrimarySecondary:CI Priority:Business Hours:Custom Attribute4" availability
     And user clicks on CI search button
     Then user switches to frame
-    And user selects Category as "CORE"
+    And user selects Category as "Core"
     And user selects Type as "Mobile PS Core Network"
     And user selects Item as "EPG"
     #Then user should see at least 2 nodes per country

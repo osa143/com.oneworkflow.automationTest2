@@ -6,7 +6,7 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      Then user clicks on plaza portal
+      #Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on firewall & network under IT Infrastructure dropdown
@@ -16,7 +16,8 @@
      # Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters veha request as "Test1 Veha/Request"
-      Then user enters system as "sonera ca apache"
+      And user waits 20 secs
+      #Then user enters system as "sonera ca apache"
       Then user enters veha description as "Test1 Veha/Description"
       And user enters additional comments as "Test1 Veha/AC"
       Then user clicks on "Submit"

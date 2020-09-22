@@ -180,7 +180,7 @@
       Then user should see Show CR Matching table appear
       When user changes status to "Analysis"
       And user clicks on save button
-      Then user validates Title isn't readonly
+      #Then user validates Title isn't readonly
       And user validates Request Category isn't readonly
       Then user validates Description* isn't readonly
       And user validates Reason isn't readonly

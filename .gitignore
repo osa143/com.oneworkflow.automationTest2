@@ -7,6 +7,6 @@
 .gradle
 *.xml
 *.html
-*.9.png
+*.png
 *.yarn.lock
 *.js

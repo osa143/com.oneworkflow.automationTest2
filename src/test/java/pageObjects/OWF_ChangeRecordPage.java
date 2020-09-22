@@ -96,6 +96,28 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_SUBSCRIPTIONID = "arid_WIN_0_600002012";
     private static final String txt_ADDRESSOFISSUE = "arid_WIN_0_600002023";
     private static final String btn_APPROVE= "WIN_0_705001330";
+    private static final String dd_OWNER_PROFILE = "arid_WIN_0_777031401";
+    private static final String dd_INTERESTED_PARTIES_TYPE = "arid_WIN_0_700027963";
+
+    public boolean verifyInterestedPartiesTypes(String statuses, String dropdownName){
+        return verifyDropdownValues(statuses, dropdownName, dd_INTERESTED_PARTIES_TYPE);
+    }
+
+    public void enterChangeBuilder(String changeBuilderName) {
+        findElement(By.id(txt_CHANGE_BUILDER)).clear();
+        driver.findElement(By.id(txt_CHANGE_BUILDER)).sendKeys(changeBuilderName);
+        //driver.findElement(By.id(txt_CHANGE_BUILDER)).sendKeys(Keys.ENTER);
+
+    }
+
+    public void selectOwnerProfile(String value) {
+        selectDropDownNameAndValue(dd_OWNER_PROFILE, value, false);
+    }
+
+
+    public Boolean verifyChangeBuilderIsMandatory() {
+        return verifyElementIsDisplayed(By.id(txt_CHANGE_BUILDER));
+    }
 
     public void clickApprove(){
         clickElement(By.id(btn_APPROVE));

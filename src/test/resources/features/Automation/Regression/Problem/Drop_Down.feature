@@ -28,37 +28,37 @@
       And User selects "Accountable Org." as dropdownValue and should see values for "notreadonly"
         | DropdownValue | DropdownValuesToBePresent |
         | CA_NSD        | IP:ServCore               |
-        | DK_NSD        | IP                        |
-        | EX            | CustFault                 |
-        | FI_Infra      | CableSites                |
+        | InfraDK       | CableSites:NW             |
+        | InfraEE       | CableSites:NW             |
+        | InfraFI       | CableSites:NW             |
+        | InfraLT       | CableSites:NW             |
+        | InfraNO       | CableSites:NW             |
         | InfraSE       | CableSites:NCS:PSTN       |
-        | IT            | CustEng:EntServ:Infra:OSS |
-        | NO_Infra      | CableSites                |
-        | NO_IT         | CustEng                   |
+        | IT            | CustEng:EntServ:Infra:OSS:Workplace |
+        | NO            | OC&MC:Phonero             |
         | NSD           | ConvAccess:IP:ServCore    |
-        | PAComm        | Conv:Voice                |
+        | PAComm        | Conv:VAS:Voice                |
         | PAConn        | BusNW:Internet:MobVD      |
         | PAITServ      | MDM_DAAS:Security         |
-        | PAMedia       | ConnHome:TV               |
 
-      And user selects affected organisation as "CA_IT"
+     # And user selects affected organisation as "CA_IT"
       Then user clicks edit affected org button
       And multiple statuses "CA_Infra:CA_IT:CA_Provider:(clear)" should be available in "Organisations  " dropdown
       And User selects "Affected Orgs." as dropdownValue and should see values for "notreadonly"
         | DropdownValue | DropdownValuesToBePresent |
         | CA_NSD        | IP:ServCore               |
-        | DK_NSD        | IP                        |
-        | EX            | CustFault                 |
-        | FI_Infra      | CableSites                |
+        | InfraDK       | CableSites:NW             |
+        | InfraEE       | CableSites:NW             |
+        | InfraFI       | CableSites:NW             |
+        | InfraLT       | CableSites:NW             |
+        | InfraNO       | CableSites:NW             |
         | InfraSE       | CableSites:NCS:PSTN       |
-        | IT            | CustEng:EntServ:Infra:OSS |
-        | NO_Infra      | CableSites                |
-        | NO_IT         | CustEnG                   |
+        | IT            | CustEng:EntServ:Infra:OSS:Workplace |
+        | NO            | OC&MC:Phonero             |
         | NSD           | ConvAccess:IP:ServCore    |
-        | PAComm        | Conv:Voice                |
+        | PAComm        | Conv:VAS:Voice                |
         | PAConn        | BusNW:Internet:MobVD      |
         | PAITServ      | MDM_DAAS:Security         |
-        | PAMedia       | ConnHome:TV               |
       When user clicks on save button on the problem form
       Then "Estimated Ready:Actual Finish:Decision Go/NoGo:Resolving Group:Resolving Person" shouldn't be visible on problem record form
       Then multiple statuses "Assigned:Pending:Under Investigation:Withdrawn:(clear)" should be available in "Status*" dropdown

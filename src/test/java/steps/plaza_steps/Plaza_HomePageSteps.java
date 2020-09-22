@@ -400,7 +400,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user selects Network Equipment CI as {string}")
     public void userSelectsNetworkEquipmentCIAs(String arg0) {
-        homePage.selectsAddCi_multipleValues(arg0);
+        homePage.selectNetwork_EquipmentCI(arg0);
     }
 
     @And("user enters Network Equipment requested delivery date as current date and time")
@@ -687,7 +687,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user selects messaging SMTP relay as {string}")
     public void userSelectsMessagingSMTPRelayAs(String arg0) {
-        homePage.select_selectRequest(arg0);
+        homePage.selectSMTP_RELAY(arg0);
     }
 
     @And("user selects messaging CI as {string}")
@@ -1385,7 +1385,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user selects BCCP Add ci as {string}")
     public void userSelectsBCCPAddCiAs(String arg0) {
-        homePage.selectOperatingSystem_manual_os_patching_add_ci(arg0);
+        homePage.selectBCPP_ADD_CI(arg0);
     }
 
     @And("user enters CEWS request as {string}")

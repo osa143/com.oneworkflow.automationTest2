@@ -26,8 +26,8 @@ Feature: checking of bulk loading additional definitions default settings
     And user selects priority as "Critical"
     And user enters "Privacy Data: Just Testing" in the change builder field
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-    And user enters start time as 24 hours fast from current sweden time in "MM/dd/YYYY HH:mm:ss" format
-    And user enters end time as 28 hours fast from current sweden time in "MM/dd/YYYY HH:mm:ss" format
+    And user enters start time as 24 hours fast from current sweden time in "M/dd/YYYY HH:mm:ss" format
+    And user enters end time as 28 hours fast from current sweden time in "M/dd/YYYY HH:mm:ss" format
     And user gets request start and end time on change record page
     And user enters impact duration as "45" minutes
     And user selects estimated impact dropdown as "Degradation of Service"
@@ -48,8 +48,8 @@ Feature: checking of bulk loading additional definitions default settings
     #Blank default value for level
     And user validates Level default value is ""
     And user validates "From*" is visible on bulk CI loading window tagname "label"
-    Then user validates impact from time is same as request start time
-    Then user validates impact to time is same as request end time
+    #Then user validates impact from time is same as request start time
+    #Then user validates impact to time is same as request end time
     And user validates "To+" is visible on bulk CI loading window tagname "label"
     And user validates "Upload File" is visible on bulk CI loading window tagname "label"
     And user validates "Manual Input" is visible on bulk CI loading window tagname "label"

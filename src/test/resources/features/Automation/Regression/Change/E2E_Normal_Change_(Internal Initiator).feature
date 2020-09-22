@@ -169,7 +169,7 @@
       And user clicks on apply button on user more filters window
       And user should see "CR" tickets with "Status" of "Approval Requested"
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
-      And user switches to window 1
+      And user switches to window 2
       Then user enters ticket previously created and searches
       When user clicks on owner under sections
       Then user validates owner profile as "Change Manager"

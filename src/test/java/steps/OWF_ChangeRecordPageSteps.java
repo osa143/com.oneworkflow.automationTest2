@@ -1032,6 +1032,31 @@ public class OWF_ChangeRecordPageSteps {
     public void userClicksOnCancelButtonOnInterestedPartiesWindow() {
         changeRecordPage.clickCancel_InterestedParty();
     }
+
+    @Then("user should see auto assignment rules window")
+    public void userShouldSeeAutoAssignmentRulesWindow() {
+       Assert.assertEquals(changeRecordPage.getPageTitle(), "OS3 Assignment Rules Console (New)");
+    }
+
+    @And("user enters {string} in the Location Name+ field and searches")
+    public void userEntersInTheLocationNameFieldAndSearches(String locationName) {
+        changeRecordPage.enterLocationNamePlusAndSearch(locationName);
+    }
+
+    @When("user enters {string} within the location ID+ field and searches")
+    public void userEntersWithinTheLocationIDFieldAndSearches(String locationID) {
+        changeRecordPage.enterLocationIDPlusAndSearch(locationID);
+    }
+
+    @When("user enters {string} within the RegionName+ field and searches")
+    public void userEntersWithinTheRegionNameFieldAndSearches(String regionName) {
+        changeRecordPage.enterRegionNamePlusAndSearch(regionName);
+    }
+
+    @Then("user validates locations related to {string} are shown")
+    public void userValidatesLocationsRelatedToAreShown(String colValue) {
+        Assert.assertTrue(changeRecordPage.verifyExpectedDataIsPresent("Name", colValue));
+    }
 }
 
 

@@ -94,6 +94,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String table_WORKORDERS_ID = "T777504000";
     private static final String ddTEMPLATE_Field_ID = "WIN_0_777504501";
     private static final String dd_FAULT_TYPE_Field_ID="arid_WIN_0_777020103";
+    private static final String txt_FAULT_POSITION= "arid_WIN_0_600001048";
     private static final String ddIMPACT_Field_ID = "WIN_0_705002082";
     private static final String ddTITLE_Field_ID= "WIN_0_777031000";
     private static final String ddIMPORTANCE_Field_ID= "WIN_0_600001821";
@@ -162,8 +163,80 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String dd_HOLD_REASON= "Reason";
     private static final String txt_REJECT_REASON="arid_WIN_0_600001019";
     private static final String txt_HIERARCHIC_ESCLATION_LEVEL="arid_WIN_0_700025204";
+    private static final String txt_ACTION= "arid_WIN_0_777031381";
+    private static final String txt_CAUSE= "arid_WIN_0_777031380";
+    private static final String chkbx_TO_SELECT_TICKET= "//*[@id='T700506101']/tbody/tr[2]/td[1]/input";
 
 
+
+    public boolean verifyPriorityCheckIsReadOnly(){
+        //return checkIfControlIsReadonly(btn_PRIORITY_CHECK);
+        return findElement(By.id(btn_PRIORITY_CHECK)).isEnabled();
+    }
+
+    public boolean verifyEventEndTimeIsReadOnly(){
+        return checkIfControlIsReadonly(txtEVENT_END_TIME);
+    }
+
+    public boolean verifyClosureInfoIsReadOnly(){
+        return checkIfControlIsReadonly(txtCLOSURE_INFO);
+    }
+
+    public boolean verifyActionIsReadOnly(){
+        return checkIfControlIsReadonly(txt_ACTION);
+    }
+
+    public boolean verifyCauseIsReadOnly(){
+        return checkIfControlIsReadonly(txt_CAUSE);
+    }
+
+    public boolean verifyFaultPositionIsReadOnly(){
+        return checkIfControlIsReadonly(txt_FAULT_POSITION);
+    }
+
+    public Boolean verifyClosureInfoFieldIsMandatory() {
+        return verifyElementIsDisplayed(By.id(txtCLOSURE_INFO));
+    }
+
+    public Boolean verifyActionFieldIsMandatory() {
+        return verifyElementIsDisplayed(By.id(txt_ACTION));
+    }
+
+    public Boolean verifyCauseFieldIsMandatory() {
+        return verifyElementIsDisplayed(By.id(txt_CAUSE));
+    }
+
+    public Boolean verifyFaultPositionIsMandatory() {
+        return verifyElementIsDisplayed(By.id(txt_FAULT_POSITION));
+    }
+
+    public boolean isClosureInfoReadOnly(){
+        return checkIfControlIsReadonly(txtCLOSURE_INFO);
+    }
+    public boolean isFaultPositionReadOnly(){
+        return checkIfControlIsReadonly(txt_FAULT_POSITION);
+    }
+    public boolean isCauseReadOnly(){
+        return checkIfControlIsReadonly(txt_CAUSE);
+    }
+    public boolean isActionReadOnly(){
+        return checkIfControlIsReadonly(txt_ACTION);
+    }
+    public String getFaultPosition(){
+        return getAttributeValueById(txt_FAULT_POSITION);
+    }
+    public String getCause(){
+        return getAttributeValueById(txt_CAUSE);
+    }
+
+    public String getAction(){
+        return getAttributeValueById(txt_ACTION);
+    }
+
+public void rightClickOnElement(String cellData){
+    WebElement element = getTableCellElement(By.id(table_DIAGNOSIS_ID), "CI Name", cellData);
+    rightClickOnElement(element);
+}
     public void impactFromUpdateAsPastTime(String cellData){
         selectAndRightClickOnTableElement(cellData);
         WebElement element = driver.switchTo().activeElement();
@@ -616,6 +689,18 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         findElement(By.id(btn_VENDOR_UNDER_SECTIONS)).click();
     }
 
+    public boolean verifyVendorSectionIsPresent(){
+
+            String attributeStyle= driver.findElement(By.id(btn_VENDOR_UNDER_SECTIONS)).getAttribute("Style");
+              System.out.println("Vendor visibility status is - " +attributeStyle);
+            if(attributeStyle.contains("hidden")){
+                return false;
+            }
+             return true;
+
+
+    }
+
     public void clickOnHold(){
         findElement(By.id(btn_ON_HOLD_UNDER_SECTIONS)).click();
     }
@@ -644,7 +729,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         System.out.println("Error message is: " +error);
         return error;
     }
-    public String getErrorText_change_recordPage(){
+    public String getErrorText_(){
         switchToFrameByIndex(2);
         String error =getTextByID(Error_POP_UP_ID);
         System.out.println(error);
@@ -756,7 +841,8 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
     public String getCust_Remaining_SLA(){
         String SLA_Target_Time = getAttributeValueById(txtCUST_REMAINING_SLA_ID);
-        System.out.println(SLA_Target_Time);
+        System.out.println("Cust remaoning SLA- "+ getTextByID(txtCUST_REMAINING_SLA_ID));
+        System.out.println("Cust Remaining SLA - " +SLA_Target_Time);
         return SLA_Target_Time;
     }
     public String getOLATargetTime(){
@@ -773,9 +859,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
   public void selectStatus(String value){
         selectDropDownNameAndValue(ddSTATUS, value, false);
   }
-  public String getClosureInfo(){
-        return getAttributeValueById((txtCLOSURE_INFO));
-  }
+
 
     public void selectTicket(){
         driver.findElement(By.xpath(chkbxSELECT_TIKCET)).click();
@@ -786,6 +870,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
 
     public void clickAccept_selectTargetRequest(){
         findElement(By.id(btnACCEPT_SELECT_TARGET_REQUEST)).click();
+        wait(1000);
     }
 
     public void selectRelationshipType(String value){
@@ -802,6 +887,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
     public void clickSearch_selctTargetRequest(){
         driver.findElement(By.id(btnSEARCH_SELECT_TARGET_REQUEST)).click();
+        clickElement(By.xpath(chkbx_TO_SELECT_TICKET));
     }
 
     public String getOlaTargetTime(){
@@ -809,9 +895,13 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
 
 
-    private static final String btnSAVE = "WIN_0_777505104";
+    private static final String btnSAVE = "WIN_0_700025244";
     public void enterClosureInfo(String closureInfo){
+        driver.findElement(By.id(txtCLOSURE_INFO)).clear();
         driver.findElement(By.id(txtCLOSURE_INFO)).sendKeys(closureInfo);
+    }
+    public String getClosureInfo(){
+        return getAttributeValueById(txtCLOSURE_INFO);
     }
     public void clickOk_Diagnosis_OnFame(){
         driver.findElement(By.id(btnOK_DIAGNOSIS_ON_FRAME)).click();
@@ -820,6 +910,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     public void clickAllAlarms_Diagnosis(){
         driver.findElement(By.xpath(chkbxHEADER_XPATH_Diagnosis)).click();
     }
+
 
     public void selectFaultPosition(String value){
         selectDropDownNameAndValueForMultipleMenuTableBodys(ddFAULTY_POSITION, value, false, 2);
@@ -850,8 +941,14 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         return verifyElementIsDisplayed(By.id(ddREQUEST_TYPE_ID));
     }
     public void enterEventEndTimeAsCurrentTime(){
-        wait(1000);
         driver.findElement(By.id(txtEVENT_END_TIME)).sendKeys(Keys.ENTER);
+        CommonUtils.EventEndTime=getEventEndTime();
+        wait(2000);
+    }
+    public String getEventEndTime(){
+
+        return getTextByID(txtEVENT_END_TIME);
+
     }
     public void enterEventEndTimeAsPast(String time){
         enterTextByElement(By.id(txtEVENT_END_TIME), time);
@@ -1052,6 +1149,18 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
             && ChildTicketDescription.equals(ParentTicketDescription) && ChildTicketPriority.equals(ParentTicketPriority))
         {
          return true;
+        }
+        return false;
+    }
+    public boolean verifyChild_WO_TicketSameAsParent_OP() {
+        getChildTicket();
+        // below step Only for running Sweden B2B test
+        Assert.assertTrue(verifySwedenBuIsSelected());
+
+        if (ChildTicketTitle.equals(ParentTicketTitle) && ChildTicketRequestType.equals(ParentTicketRequestType)
+                && ChildTicketDescription.equals(ParentTicketDescription) && ChildTicketPriority.equals(ParentTicketPriority))
+        {
+            return true;
         }
         return false;
     }

@@ -1,7 +1,14 @@
 /build
 /gradle
 /target
+/ExtentReports
+/test-output
 .idea
 .gradle
 *.xml
 *.html
+*.png
+*.yarn.lock
+*.js
+*.png
+

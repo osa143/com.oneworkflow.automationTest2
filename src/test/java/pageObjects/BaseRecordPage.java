@@ -13,7 +13,6 @@ import java.util.List;
 
 public class BaseRecordPage extends BasePage {
 
-
     public static final String ddSTATUS = "Status*";
     public static final String ddValueINVESTIGATION_COMPLETE = "Investigation Complete";
     public static final String ddValueCLOSED = "Closed";
@@ -115,8 +114,9 @@ public class BaseRecordPage extends BasePage {
     public static final String table_ALARMS_ID = "T700508140";
     public static final String table_LINKED_ITEMS_ID = "T777506000";
     public static final String table_INTERESTED_PARTIES_ID = "T705002015";
+    public static final String table_ASSOCIATED_ROOT_CAUSE_CODES_ID = "T800040090";
     private static final String table_ADD_INTERESTED_PARTIES= "T700027964";
-    public static final String btnREFRESH_XPATH = "//div[@id='WIN_0_999000510']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
+    public static final String btnREFRESH_XPATH = "//*[@id='WIN_0_999000510']/div[1]/table/tbody/tr/td[2]/a[2]";
     private static final String btnYes = "WIN_0_700027904";
     public static final String txt_PROBLEM_REVIEW_FIELD= "arid_WIN_0_600001011";
     private static final String ddSTATUS_TROUBLE_EVENT_PAGE = "Status";
@@ -139,10 +139,89 @@ public class BaseRecordPage extends BasePage {
     private static final String txt_APPROVAL_COMMENT = "arid_WIN_0_13001";
     private static final String txtDESCRIPTION_ID = "arid_WIN_0_777031007";
     private static final String ddPRIORITY_ID = "Priority";
+    private static final String btn_EXTERNAL= "WIN_0_rc0id600001903";
 
     private static final String ddCATEGORY = "Category";
     private static final String ddTYPE = "Type";
     private static final String ddITEM = "Item";
+    private static final String chkbxOPEN= "WIN_4_rc0id800040059";
+    private static final String chkbxCLEARED= "WIN_4_rc0id800040060";
+    private static final String fld_PENDING_TICKET= "//*[@id='T777031442']/tbody/tr[2]";
+    private static final String txt_AGREED_START_TIME= "arid_WIN_0_777021162";
+    private static final String txt_AGREED_END_TIME= "arid_WIN_0_777021163";
+    private static final String dd_Known_Error_Code= "arid_WIN_0_808080010";
+    private static final String txt_Next_Assessment_Date= "arid_WIN_0_800040083";
+    private static final String txt_LinkedTicketID="//*[@id='T777506000']/tbody/tr[2]/td[2]/nobr/span";
+    private static final String btn_LinkedItems= "//*[@id='WIN_0_999000003']/div[2]/div[2]/div/dl/dd[5]/span[2]/a";
+    private static final String txt_EQUIPMENT="arid_WIN_0_600001067";
+
+
+    public boolean isEquipmentReadOnly(){
+        return checkIfControlIsReadonly(txt_EQUIPMENT);
+    }
+    public void enterEquipment(String text){
+        findElement(By.id(txt_EQUIPMENT)).clear();
+        enterTextByElement(By.id(txt_EQUIPMENT),text);
+    }
+    public String getEquipment(){
+        return getAttributeValueById(txt_EQUIPMENT);
+    }
+
+    public boolean isExternalSelected(){
+        return verifyIsElementSelected(By.id(btn_EXTERNAL));
+    }
+    public void clickLinkedItems(){
+        clickElement(By.xpath(btn_LinkedItems));
+    }
+
+
+    public String getLinkedTicketId(){
+        return findElement(By.xpath(txt_LinkedTicketID)).getText();
+    }
+    public void enterTicket(String ticket) {
+        driver.findElement(By.id(txtSEARCH_TICKET_ID)).sendKeys(ticket);
+    }
+
+
+
+    public boolean verifyFieldsInvisible(String fields) {
+        String arr[] = fields.split("," );
+
+        for (int i = 0; i < arr.length; i++) {
+            final String fieldName = arr[i];
+            try{
+                verifyElementIsDisplayedByContainsTextAndTagName("*",fieldName);
+            }
+            catch(Exception e){
+                System.out.println(fieldName + " - Is not present on the form");
+            }
+        }
+        return true;
+    }
+    public void enterNextAssessmentDate(String assessmentDate){
+        enterTextByElement(By.id(txt_Next_Assessment_Date), assessmentDate );
+    }
+    public boolean verifyIsKnownErrorCodeIsReadOnly(){
+        return checkIfControlIsReadonly(dd_Known_Error_Code);
+    }
+
+    public String getAgreedStartTime(){
+        return getTextByID(txt_AGREED_START_TIME);
+    }
+
+    public String getAgreedEndTime(){
+        return getTextByID(txt_AGREED_END_TIME);
+    }
+    public void clickPendingTicketForApproval(){
+        clickElement(By.xpath(fld_PENDING_TICKET));
+    }
+
+    public void clickOpenCheckBox(){
+        clickElement(By.id(chkbxOPEN));
+    }
+    public void clickClearedCheckBox(){
+        clickElement(By.id(chkbxCLEARED));
+    }
     public void selectCategory(String value){
         selectDropDownNameAndValue(ddCATEGORY, value, false);
     }
@@ -162,6 +241,9 @@ public class BaseRecordPage extends BasePage {
         driver.findElement(By.id(txtDESCRIPTION_ID)).sendKeys(description);
     }public void clickSwedenCheckBox() {
         driver.findElement(By.id(chkbxSWEDEN)).click();
+    }
+    public void clearDescriptionField(){
+        findElement(By.id(txtDESCRIPTION_ID)).clear();
     }
 
     public boolean verifyIsCheckBoxSelected(String checkBoxId){
@@ -198,7 +280,7 @@ public class BaseRecordPage extends BasePage {
         return getTextByID(txtACTUAL_FINISH_ID);
     }
     public String getRootCauseDetails(){
-        return getTextByID(txtROOT_CAUSE_DETAILS_ID);
+        return getAttributeValueById(txtROOT_CAUSE_DETAILS_ID);
     }
     public boolean verifyFinlandIsSelectedAsAffectedBu() {
         return findElement(By.id(chkbxFINLAND)).isSelected();
@@ -245,6 +327,11 @@ public class BaseRecordPage extends BasePage {
 
     public void clickTableElement_interestedParteis(String colName, String cellData){
         WebElement element=getTableCellElement(By.id(table_INTERESTED_PARTIES_ID), colName, cellData);
+        element.click();
+    }
+
+    public void clickTableElement_secondary_rootCause(String colName, String cellData){
+        WebElement element=getTableCellElement(By.id(table_ASSOCIATED_ROOT_CAUSE_CODES_ID), colName, cellData);
         element.click();
     }
 
@@ -484,7 +571,10 @@ public class BaseRecordPage extends BasePage {
         WebElement element = driver.switchTo().activeElement();
         element.sendKeys(Keys.UP);
         element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.UP);
         element.sendKeys(Keys.ARROW_RIGHT);
+        element.sendKeys(Keys.DOWN);
         element.sendKeys(Keys.DOWN);
         element.sendKeys(Keys.DOWN);
         element.sendKeys(Keys.ENTER);
@@ -515,12 +605,14 @@ public class BaseRecordPage extends BasePage {
        }
        return false;
     }
-    public boolean validateLinkedItemsAvailability(int ticketSize)
+    public boolean validateLinkedItemsAvailability(int expectedTickets)
     {
         wait(1000);
         int size = getTableRows(By.id(table_LINKED_ITEMS_ID)).size();
-        System.out.println("Available Tickets" + (size-1));
-        if(ticketSize > size){
+        System.out.println("Table rows are -" +size);
+        int actualTickets=size-1;
+        System.out.println("Available Tickets are - " + (actualTickets));
+        if(actualTickets==expectedTickets){
             return true;
         }
         return false;
@@ -536,7 +628,7 @@ public class BaseRecordPage extends BasePage {
     public void clickRefresh_timeline()
     {
         clickElement(By.xpath(btnREFRESH_XPATH));
-        wait(1500);
+        wait(1000);
     }
     public boolean isStatusDropDownReadOnly(){
         return checkIfControlIsReadonly(ddSTATuS_ID);
@@ -648,8 +740,10 @@ public class BaseRecordPage extends BasePage {
     }
     public void clickonChooseFile_OnFrame(){
         driver.switchTo().parentFrame();
-        driver.switchTo().frame(2);
-        driver.switchTo().frame(1);
+        int size = driver.findElements(By.tagName("iframe")).size();
+        switchToFrameByIndex(size - 1);
+        int size1 = driver.findElements(By.tagName("iframe")).size();
+        switchToFrameByIndex(size1 - 1);
         findElement(By.id("PopupAttFileTable")).click();
     }
     public void clickOk_AttachmentOnFrame(){
@@ -824,6 +918,7 @@ public class BaseRecordPage extends BasePage {
     }
     public String getStatusText() {
         String StatusText = findElement(By.id(ddSTATuS_ID)).getAttribute("value");
+        System.out.println("Ticket status is - " +StatusText);
         return StatusText;
 
     }
@@ -837,6 +932,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterImpactDurationMins(String impactDurationMins) {
+        clearText(By.id(txtIMPACT_DURATION_MINS));
         enterTextByElement(By.id(txtIMPACT_DURATION_MINS), impactDurationMins);
     }
 
@@ -852,7 +948,11 @@ public class BaseRecordPage extends BasePage {
 
 
     public void enterChangeBuilderType(String changeBuilderName) {
-        enterTextByElement(By.id(txtCHANGE_BUILDER_FIELD_ID), changeBuilderName);
+        //enterTextByElement(By.id(txtCHANGE_BUILDER_FIELD_ID), changeBuilderName);
+        findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).clear();
+        driver.findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).sendKeys(changeBuilderName);
+        driver.findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).sendKeys(Keys.ENTER);
+
     }
 
     public void clickSave() {
@@ -874,30 +974,52 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterStartDate(int delay) {
-        String dateTime = CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        CommonUtils.eventStartTime=dateTime;
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
     }
 
     public void enterEndDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        CommonUtils.requestEnd=dateTime;
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );
     }
 
     public void enterStartDate_format(int delay) {
-        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
     }
 
     public void enterEndDate_format(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );
     }
+    public void enterStartDate_DateFormat_Timezone_Delay(String pattern, String timeZone, int delay) {
+        String dateTime = CommonUtils.getDateTime(pattern, timeZone, delay);
+        findElement(By.id(txt_REQUEST_START)).clear();
+        CommonUtils.requestStart=dateTime;
+        System.out.println("Request Start time is " + CommonUtils.requestStart);
+        enterTextByElement(By.id(txt_REQUEST_START),dateTime );
+    }
+
+    public void enterEndDate_DateFormat_Timezone_Delay(String pattern, String timeZone, int delay) {
+
+        String dateTime = CommonUtils.getDateTime(pattern, timeZone, delay);
+        findElement(By.id(txt_REQUEST_END)).clear();
+        CommonUtils.requestEnd=dateTime;
+        System.out.println("Request End time is " + CommonUtils.requestEnd);
+        enterTextByElement(By.id(txt_REQUEST_END),dateTime );
+    }
+
+
+
+
 
     public void enterStartDateAs(String startDate)
     {

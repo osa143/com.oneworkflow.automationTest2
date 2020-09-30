@@ -11,10 +11,12 @@ import utils.CommonUtils;
 public class OWF_WorkOrderPageSteps {
 
    OWF_WorkOrderPage workOrderPage= new OWF_WorkOrderPage();
+
+
     @And("user validates ticket status as {string}")
     public void userValidatesTicketStatusAs(String arg0) {
         Assert.assertEquals(workOrderPage.getStatusText(), arg0, "Status is not new");
-        workOrderPage.wait(500);
+        workOrderPage.wait(1000);
     }
 
     @And("user validates parent ticket id availability")
@@ -734,7 +736,7 @@ public class OWF_WorkOrderPageSteps {
     @And("user validates email notification is sent")
     public void userValidatesEmailNotificationIsSent() {
       workOrderPage.clickOnSent();
-      Assert.assertEquals(workOrderPage.getMethodText(), "Email HTML");
+      Assert.assertEquals(workOrderPage.getMethodText(), "Email - HTML");
     }
 
     @And("user highlights ticket under work order")
@@ -783,11 +785,6 @@ public class OWF_WorkOrderPageSteps {
     public void userEntersEstimatedReadyAsCurrentDateAndTime() {
         workOrderPage.enterEstimatedReadyAsCurrentDateAndTime();
 
-    }
-
-    @Then("user selects owner profile as {string}")
-    public void userSelectsOwnerProfileAs(String arg0) {
-        workOrderPage.selectOwner(arg0);
     }
 
     @And("user enters request scheduled end time as {string}")
@@ -858,6 +855,45 @@ public class OWF_WorkOrderPageSteps {
     @Then("user validates touchpoint plus update support pages same as plaza")
     public void userValidatesTouchpointPlusUpdateSupportPagesSameAsPlaza() {
         Assert.assertTrue(workOrderPage.verifyTouchpointPlusUpdateSupportPages());
+    }
+
+    @And("user validates linux description same as Plaza")
+    public void userValidatesLinuxDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifylinux());
+    }
+
+    @And("user validates cloud description same as Plaza")
+    public void userValidatesCloudDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyCloudE2E());
+    }
+
+    @And("user validates windows server description same as Plaza")
+    public void userValidatesWindowsServerDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verifyWindowsServer());
+    }
+
+    @And("user validates OP ticket description same as plaza")
+    public void userValidatesOPTicketDescriptionSameAsPlaza() {
+        Assert.assertTrue(workOrderPage.verify_OP_Ticket_Description());
+    }
+
+    @And("user validates event start time as read only")
+    public void userValidatesEventStartTimeAsReadOnly() {
+        Assert.assertTrue(workOrderPage.verifyEventStartTimeIsReadOnly());
+    }
+
+    @And("user gets work order event start time")
+    public void userGetsWorkOrderEventStartTime() {
+        CommonUtils.WO_eventStartTime=workOrderPage.getEventStartTime();
+        System.out.println("Event start time when WO is in new status is - " + CommonUtils.WO_eventStartTime);
+    }
+
+    @Then("user validates event start time is same as when ticket was in new status")
+    public void userValidatesEventStartTimeIsSameAsWhenTicketWasInNewStatus() {
+        String assignedWO_eventStartTime= workOrderPage.getEventStartTime();
+        System.out.println("Event start time when WO is in Assigned status is - " + assignedWO_eventStartTime);
+        Assert.assertEquals(assignedWO_eventStartTime, CommonUtils.WO_eventStartTime);
+
     }
 }
 

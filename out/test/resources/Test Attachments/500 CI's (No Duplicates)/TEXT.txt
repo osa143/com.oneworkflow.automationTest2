@@ -1,6 +1,6 @@
 CI Name
 SE
-selanne
+EE_CNDB_kjjtiams011
 SE OSS RC
 SE_AAA_AAA01SE
 SE_AAA_AAA02SE
@@ -8,7 +8,7 @@ SE_AAA_AAA03SE
 SE_AAA_AAA04SE
 SE_AAA_AAA98SE
 SE_AAA_AAA99SE
-SELYCAL01S-FLX
+SE_AAA_CoreTest05
 SE_ActixOne
 SE_AFG_AFG01SE
 SE_AFG_AFG02SE
@@ -18,7 +18,7 @@ SE_AFG_AFG99SE
 SE_AFG_REFAFG
 SE_ALE_hogalid-ale2
 SE_ALE_m-hyllie-ale1
-SEMAL11S
+SE_AP_are-holiday-club-ap65
 SE_ALE_test-ale
 SE_ALE_vrr-ale1
 SE_AP_1246521-ap
@@ -46,7 +46,7 @@ SE_AP_akersberga-enebacken-ap6
 SE_AP_akersberga-enebacken-ap7
 SE_AP_akersberga-enebacken-ap8
 SE_AP_akersberga-enebacken-ap9
-SEMALIS06S
+SE_AP_are-holiday-club-ap64
 SE_AP_akersberga-preem-ap1
 semal02s-bu-027.adn.telia.se->dns-log4-sn95
 SE_AP_alem-preem-ap1
@@ -204,7 +204,7 @@ NO.DUMMY.INFRASTRUCTURE
 NO.DUMMY.MANAGEMENT
 NO.DUMMY.OLD.TELE2.DECOM
 NO.DUMMY.RANDOM.UNKNOWN
-NO.MONITOR
+NO_AHUB_hbhros1102
 NO_99999_ID_MISSEDCI
 NO_AAA_AAA01NO
 NO_AAA_AAA02NO
@@ -389,7 +389,7 @@ LT_2C975011_ID_MISSEDCI
 LT_2F180011_ID_MISSEDCI
 LT_2F196011_ID_MISSEDCI
 LT_2F198011_ID_MISSEDCI
-tealeaf
+SE_AP_are-holiday-club-ap69
 SEALIME01S-FLX
 lt_99999_ID_MISSEDCI
 LT_AC_AC-KONDIC_001
@@ -492,7 +492,7 @@ Test Directory
 Test New Production
 TEST TEAM CENTER
 TESTAS
-TESTAPP
+SE_AP_are-holiday-club-ap62
 DK AWS DevToolsMaster
 DK DNS External- STOP
 DK email sender

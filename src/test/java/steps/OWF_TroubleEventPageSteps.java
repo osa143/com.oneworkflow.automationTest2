@@ -196,7 +196,6 @@ public class OWF_TroubleEventPageSteps {
     @And("user clicks on accept button")
     public void userClicksOnAcceptButton() {
         troubleEventPage.clickAccept_selectTargetRequest();
-        troubleEventPage.wait(1000);
     }
 
     @Then("user selects ticket under select target request")
@@ -233,6 +232,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user validates CI {string} is {string}")
     public void userValidatesCIImpactStatusIs(String columnName, String columnValue) {
+        troubleEventPage.selectTab("Diagnosis");
        Assert.assertEquals(troubleEventPage.verifyColumnStatus(columnName, 1), columnValue, "CI Impact status is not inactive");
     }
 
@@ -286,13 +286,14 @@ public class OWF_TroubleEventPageSteps {
     @When("user enters estimated ready as event start time plus {int} days on trouble event page")
     public void userEntersEstimatedReadyAsEventStartTimePlusDays(int arg0) {
 
-        workOrderPage.clearEstimatedReady();
-        workOrderPage.enterEstimatedReady(troubleEventPage.calculateEstimatedReady(arg0, "days"));
+      //  workOrderPage.clearEstimatedReady();
+        CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("dd/MM/yyyy HH:mm:ss","Europe/London",arg0);
+        workOrderPage.enterEstimatedReady(CommonUtils.estimatedReadyTime);
     }
 
     @Then("estimated ready time should be saved correctly on trouble event page")
     public void estimatedReadyTimeShouldBeSavedCorrectly() {
-        Assert.assertEquals(troubleEventPage.calculateEstimatedReady(4, "days"), workOrderPage.getSavedEstimatedReady());
+        Assert.assertEquals(CommonUtils.estimatedReadyTime, workOrderPage.getSavedEstimatedReady());
     }
 
 
@@ -373,7 +374,7 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("error message should display as {string}")
     public void errorMessageShouldDisplayAs(String arg0) {
-//        Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
+        Assert.assertEquals(troubleEventPage.getErrorText(), arg0);
         //troubleEventPage.getErrorText();
         //troubleEventPage.clickOkOnPopup();
         //troubleEventPage.clickOk();
@@ -577,6 +578,7 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("user validates location details are updated")
     public void userValidatesLocationDetailsAreUpdated() {
+
     }
 
     @Then("multiple statuses {string} should be available in Importance dropdown")
@@ -668,11 +670,9 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("user validates {int} linked ticket availability")
     public void userValidatesLinkedTicketAvailability(int arg0) {
-        troubleEventPage.validateLinkedItemsAvailability(arg0);
+        Assert.assertTrue(troubleEventPage.validateLinkedItemsAvailability(arg0));
 
     }
-
-
 
     @Then("user enters root cause description as {string}")
     public void userEntersRootCauseDescriptionAs(String arg0) {
@@ -737,11 +737,11 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user validates {string} is visible")
     public void userValidatesIsVisible(String arg0) {
-      Assert.assertTrue(troubleEventPage.verifyElementIsDisplayedByContainsTextAndTagNameSpan("span", arg0));
+      Assert.assertTrue(troubleEventPage.verifyElementIsDisplayedByContainsTextAndTagName("span", arg0));
     }
     @And("user validates {string} is visible on bulk CI loading window tagname {string}")
     public void userValidatesIsVisibleOnBulkCILoadingWindowTagname(String arg0, String arg1) {
-        Assert.assertTrue(troubleEventPage.verifyElementIsDisplayedByContainsTextAndTagNameSpan(arg1, arg0));
+        Assert.assertTrue(troubleEventPage.verifyElementIsDisplayedByContainsTextAndTagName(arg1, arg0));
     }
 
     @When("user clicks on {string} under info type")
@@ -751,7 +751,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user validates {string} BU is added automatically")
     public void userValidatesBUIsAddedAutomatically(String arg0) {
-        Assert.assertTrue(troubleEventPage.verifyIsDenmarkSelected());
+        Assert.assertTrue(troubleEventPage.checkAffectedBuIsSelected(arg0));
     }
 
     @And("user clicks on close button on bulk update window")
@@ -805,7 +805,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user gets trouble ticket value")
     public void userGetsTroubleTicketValue() {
-            CommonUtils.opTicket = troubleEventPage.getTicketValue();
+        CommonUtils.opTicket = troubleEventPage.getTicketValue();
             System.out.println("Stored trouble ticket is " + CommonUtils.opTicket);
     }
 
@@ -822,7 +822,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event end time as {int} mins past")
     public void userEntersEventEndTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", arg0));
+        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user selects action dropdown as {string} on trouble event page")
@@ -832,7 +832,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event start time as {int} mins past")
     public void userEntersEventStartTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", arg0));
+        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user should see confirmation message for impact clear and clicks ok")
@@ -880,7 +880,8 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("error message should display as {string} on change record page")
     public void errorMessageShouldDisplayAsOnChangeRecordPage(String arg0) {
-        Assert.assertEquals(troubleEventPage.getErrorText_change_recordPage(), arg0);
+        Assert.assertEquals(troubleEventPage.getErrorText_(), arg0);
+        troubleEventPage.wait(1000);
 
     }
 
@@ -1203,7 +1204,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters on hold to date {int} minutes in the future")
     public void userEntersOnHoldToDateMinutesInTheFuture(int arg0) {
-       troubleEventPage.enterHoldToDateAndTime(CommonUtils.getDateTime("yyyy/MM/dd HH:mm:ss", "Europe/Stockholm", arg0));
+       troubleEventPage.enterHoldToDateAndTime(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user selects on hold reason as {string}")
@@ -1272,6 +1273,154 @@ public class OWF_TroubleEventPageSteps {
     @And("user gets parent ticket details")
     public void userGetsParentTicketDetails() {
         troubleEventPage.getParentTicket();
+    }
+
+
+
+    @And("user clicks radio button to select all CIs and right clicks on {string} and clear all CIs impact")
+    public void userClicksRadioButtonToSelectAllCIsAndRightClicksOnAndClearAllCIsImpact(String CI_name) {
+        troubleEventPage.clickAllAlarms_Diagnosis();
+        troubleEventPage.rightClickOnElement(CI_name);
+        troubleEventPage.setPreferences("Impact:Clear");
+    }
+
+    @And("user clicks on save button and closes confirmation")
+    public void userClicksOnSaveButtonAndClicksClosesConfirmation() {
+        troubleEventPage.clickSaveButton();
+        troubleEventPage.switchToFrameByIndex(2);
+        troubleEventPage.wait(3000);
+        troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
+        troubleEventPage.switchToDefault();
+    }
+
+    @And("user validates closure info as {string}")
+    public void userValidatesClosureInfoAs(String expectedClosureInfo) {
+        Assert.assertEquals(troubleEventPage.getClosureInfo(), expectedClosureInfo);
+    }
+
+    @And("user validates action field as {string}")
+    public void userValidatesActionFieldAs(String expectedAction) {
+        Assert.assertEquals(troubleEventPage.getAction(), expectedAction);
+    }
+
+    @Then("user validates ticket statuses {string} can be seen under linked items tab")
+    public void userValidatesTicketStatusesCanBeSeenUnderLinkedItemsTab(String cellValues) {
+        Assert.assertTrue(troubleEventPage.verifyColumnValuesForMultipleInputs(By.id("T777506000"),"Status", cellValues));
+    }
+
+    @Then("user validates linked ticket availability under linked items")
+    public void userValidatesLinkedTicketAvailabilityUnderLinkedItems() {
+        troubleEventPage.clickLinkedItems();
+        Assert.assertEquals(troubleEventPage.getLinkedTicketId(), CommonUtils.opTicket);
+    }
+
+    @And("user validates vendor section is not present")
+    public void userValidatesVendorSectionIsNotPresent() {
+        Assert.assertFalse(troubleEventPage.verifyVendorSectionIsPresent());
+    }
+
+    @Then("user validates external is selected")
+    public void userValidatesExternalIsSelected() {
+        Assert.assertTrue(troubleEventPage.isExternalSelected());
+    }
+
+    @And("user enters equipment as {string}")
+    public void userEntersEquipmentAs(String equipment) {
+        troubleEventPage.enterEquipment(equipment);
+    }
+
+    @Then("user validates fault position as {string}")
+    public void userValidatesFaultPositionAs(String faultPosition) {
+        Assert.assertEquals(troubleEventPage.getFaultPosition(), faultPosition);
+    }
+
+    @And("user validates equipment as {string}")
+    public void userValidatesEquipmentAs(String equipment) {
+     Assert.assertEquals(troubleEventPage.getEquipment(), equipment);
+    }
+
+    @And("user validates cause as {string}")
+    public void userValidatesCauseAs(String cause) {
+        Assert.assertEquals(troubleEventPage.getCause(), cause);
+    }
+
+    @And("user should see fault position, equipment, cause, action, closure info fields read only")
+    public void userShouldSeeFaultPositionEquipmentCauseActionClosureInfoFieldsReadOnly() {
+        Assert.assertTrue(troubleEventPage.isFaultPositionReadOnly());
+        Assert.assertTrue(troubleEventPage.isEquipmentReadOnly());
+        Assert.assertTrue(troubleEventPage.isCauseReadOnly());
+        Assert.assertTrue(troubleEventPage.isActionReadOnly());
+        Assert.assertTrue(troubleEventPage.isClosureInfoReadOnly());
+    }
+
+    @Then("user validates event end time is same as cleared status event end time")
+    public void userValidatesEventEndTimeIsSameAsClearedStatusEventEndTime() {
+        Assert.assertEquals(CommonUtils.EventEndTime, troubleEventPage.getEventEndTime());
+    }
+
+    @Then("user validates fault position field is mandatory")
+    public void userValidatesFaultPositionFieldIsMandatory() {
+        Assert.assertTrue(troubleEventPage.verifyFaultPositionIsMandatory());
+        }
+
+    @And("user validates cause field is mandatory")
+    public void userValidatesCauseFieldIsMandatory() {
+        Assert.assertTrue(troubleEventPage.verifyCauseFieldIsMandatory());
+    }
+
+    @And("user validates action field is mandatory")
+    public void userValidatesActionFieldIsMandatory() {
+        Assert.assertTrue(troubleEventPage.verifyActionFieldIsMandatory());
+    }
+
+    @And("user validates closure info field is mandatory")
+    public void userValidatesClosureInfoFieldIsMandatory() {
+        Assert.assertTrue(troubleEventPage.verifyClosureInfoFieldIsMandatory());
+    }
+
+    @And("user validates fault position is read only")
+    public void userValidatesFaultPositionIsReadOnly() {
+        Assert.assertTrue(troubleEventPage.verifyFaultPositionIsReadOnly());
+    }
+
+    @And("user validates cause field is read only")
+    public void userValidatesCauseFieldIsReadOnly() {
+        Assert.assertTrue(troubleEventPage.verifyCauseIsReadOnly());
+    }
+
+    @And("user validates event end time is read only")
+    public void userValidatesEventEndTimeIsReadOnly() {
+        Assert.assertTrue(troubleEventPage.verifyEventEndTimeIsReadOnly());
+    }
+
+    @And("user validates action is read only")
+    public void userValidatesActionIsReadOnly() {
+        Assert.assertTrue(troubleEventPage.verifyActionIsReadOnly());
+    }
+
+    @And("user validates closure info is read only")
+    public void userValidatesClosureInfoIsReadOnly() {
+        Assert.assertTrue(troubleEventPage.verifyClosureInfoIsReadOnly());
+    }
+
+    @And("user validates priority check button is read only")
+    public void userValidatesPriorityCheckButtonIsReadOnly() {
+        Assert.assertTrue(troubleEventPage.verifyPriorityCheckIsReadOnly());
+    }
+
+    @And("user validates assigned profile {string} can be seen under linked items tab")
+    public void userValidatesAssignedProfileCanBeSeenUnderLinkedItemsTab(String cellValues) {
+        Assert.assertTrue(troubleEventPage.verifyColumnValuesForMultipleInputs(By.id("777506000"),"Profile", cellValues));
+    }
+
+    @And("user enters auto close date as {int} mins past")
+    public void userEntersAutoCloseDateAsIntMinsPast(int arg0) {
+        troubleEventPage.enterAutoCloseDate(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0));
+    }
+
+    @And("user validates child WO ticket details are same as parent OP ticket")
+    public void userValidatesChildWOTicketDetailsAreSameAsParentOPTicket() {
+      Assert.assertTrue(troubleEventPage.verifyChild_WO_TicketSameAsParent_OP());
     }
 }
 

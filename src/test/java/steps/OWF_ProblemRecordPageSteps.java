@@ -129,7 +129,7 @@ public class OWF_ProblemRecordPageSteps {
 
         }
 
-        problemRecordPage.wait(5000);
+        problemRecordPage.wait(6000);
     }
 
     @Then("problem ticket status should be under investigation")
@@ -155,7 +155,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user goes back to login page")
     public void userGoesBackToLoginPage() {
-        problemRecordPage.getDriver().findElement(By.xpath("//a[contains(text(),'Return to home page')]")).click();
+        problemRecordPage.getDriver().findElement(By.xpath("//*[@id=\"logoutmsg\"]/tbody/tr[4]/td[2]/a")).click();
         problemRecordPage.wait(5000);
     }
 
@@ -169,7 +169,7 @@ public class OWF_ProblemRecordPageSteps {
     public void descriptionFieldShouldBeGreyedOutShouldNotBeAbleToChanged() {
         System.out.println(problemRecordPage.getDescriptionText());
         Assert.assertTrue(problemRecordPage.getDescriptionTextBoxStatus(), "description is not greyed out");
-        Assert.assertEquals(problemRecordPage.getDescriptionText(), "UAT Test1 withdraw after Ack");
+        Assert.assertEquals(problemRecordPage.getDescriptionText(), "Initiator Change Description after Ack");
 
     }
 
@@ -217,7 +217,7 @@ public class OWF_ProblemRecordPageSteps {
     @And("change should also be reflected in the timeline as {string} for trouble ticket in row {int}")
     public void changeShouldAlsoBeReflectedInTheTimelineForOPTicketAs(String message, int rowNum) {
         String[] str = message.split(";");
-        str[0] += " " + CommonUtils.pbTicket;
+        str[0] += " " + CommonUtils.opTicket;
 
         String newMessage = "";
         for (int i = 0; i < str.length; i++) {
@@ -240,7 +240,7 @@ public class OWF_ProblemRecordPageSteps {
     @When("user tries to Ack the ticket but its shouldn't allow")
     public void userTriesAckTheTicketButItsShouldnTAllow() {
 
-        Assert.assertFalse(problemRecordPage.getAckButtonStatus(), "user is able to Ack Ticket");
+        Assert.assertFalse(problemRecordPage.getAckButtonStatus());
     }
 
     @Then("problem ticket status should be assigned")
@@ -392,7 +392,7 @@ public class OWF_ProblemRecordPageSteps {
     @And("ticket status should be closed")
     public void ticketStatusShouldBeClosed() {
         String closed = problemRecordPage.getStatusText();
-        Assert.assertEquals(closed, "closed", "status is not closed");
+        Assert.assertEquals(closed, "Closed", "status is not closed");
 
     }
 
@@ -594,6 +594,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @When("user clicks on assignment under sections")
     public void userClicksOnAssignmentUnderSections() {
+        problemRecordPage.wait(500);
         problemRecordPage.clickAssignments_underSections();
 
     }
@@ -825,10 +826,11 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.wait(3000);
     }
 
-    @And("user enters ticket previously created")
-    public void userEntersTicketPreviouslyCreated() {
+    @And("user enters ticket previously created and searches")
+    public void userEntersTicketPreviouslyCreatedAndSearches() {
         problemRecordPage.enterTicket(ticket);
         System.out.println("user entered problem ticket" + ticket);
+        problemRecordPage.clickSearchButton();
     }
 
     @And("user validates Save is present")
@@ -851,7 +853,14 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user enters ticket in ticket ID+ field")
     public void userEntersTicketInTicketIDField() {
+        if(ticket == null ||ticket.equals("")){
+            ticket=CommonUtils.opTicket;
+            System.out.println("inside if " +ticket);
+        }
+        System.out.println("Outside if " +ticket);
+        System.out.println("OP ticket value is -"+CommonUtils.opTicket );
         problemRecordPage.enterTicketIdPlus(ticket);
+
     }
 
     @And("change should also be reflected in the timeline as {string} on row {int}")
@@ -874,6 +883,21 @@ public class OWF_ProblemRecordPageSteps {
 
     @When("user changes status to {string} on problem record page")
     public void userChangesStatusToOnProblemRecordPage(String arg0) {
+        try {
+            problemRecordPage.selectStatus_problemRecord(arg0);
+        } catch (Exception e) {
+            System.out.println("Not able to change the status... Try again");
+            try {
+                problemRecordPage.selectStatus_problemRecord(arg0);
+            } catch (Exception e2) {
+
+            }
+        }
+
+    }
+
+    @When("user changes status to {string} on known error page")
+    public void userChangesStatusToOnKnownErrorPage(String arg0) {
         try {
             problemRecordPage.selectStatus_problemRecord(arg0);
         } catch (Exception e) {
@@ -1295,6 +1319,224 @@ public class OWF_ProblemRecordPageSteps {
     public void userSelectsResolvedGroupAndVerifiesResolvedPersonDropdownValues(DataTable dataTable) {
         problemRecordPage.verifyResolvedGroupAndPerson_dropdownValues(dataTable);
 
+    }
+
+    @When("user clicks on open checkbox under linked items tab")
+    public void userClicksOnOpenCheckboxUnderLinkedItemsTab() {
+        problemRecordPage.clickOpenCheckBox();
+    }
+
+    @When("user clicks on cleared checkbox under linked items tab")
+    public void userClicksOnClearedCheckboxUnderLinkedItemsTab() {
+     problemRecordPage.clickClearedCheckBox();
+    }
+
+    @And("user selects accountable organisation as {string}")
+    public void userSelectsAccountableOrganisationAs(String arg0) {
+        problemRecordPage.selectAccountable_Org(arg0);
+        
+    }
+
+    @And("user selects affected organisation as {string}")
+    public void userSelectsAffectedOrganisationAs(String arg0) {
+        problemRecordPage.selectAffected_Org(arg0);
+    }
+
+    @Then("user should see accountable organisation dropdown as mandatory")
+    public void userShouldSeeAccountableOrganisationDropdownAsMandatory() {
+        Assert.assertTrue(problemRecordPage.isAccountableOrganisationIs_mandatory());
+        Assert.assertTrue(problemRecordPage.isAccountableOrganisationIsDisplayed());
+    }
+
+    @And("user verifies accountable organisation is not read only")
+    public void userVerifiesAccountableOrganisationIsNotReadOnly() {
+        Assert.assertFalse(problemRecordPage.IsAccountableOrganisation_IsReadOnly());
+    }
+
+    @Then("user should see accountable organisation dropdown as not mandatory")
+    public void userShouldSeeAccountableOrganisationDropdownAsNotMandatory() {
+        Assert.assertTrue(problemRecordPage.isAccountableOrganisationIs_Not_mandatory());
+        Assert.assertTrue(problemRecordPage.isAccountableOrganisationIsDisplayed());
+    }
+    @And("user gets time value of timeline entry")
+    public void userGetsTimeValueOfTimelineEntry() {
+        CommonUtils.Timeline_Entry= problemRecordPage.getTimelineStatus(1);
+    }
+
+    @And("user validates importance as {string}")
+    public void userValidatesImportanceAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getImportance(), arg0);
+    }
+
+    @Then("user should see root cause code primary drop down as mandatory")
+    public void userShouldSeeRootCauseCodePrimaryDropDownAsMandatory() {
+        Assert.assertTrue(problemRecordPage.isAdditionalRootCauseCode_Not_mandatory());
+        Assert.assertTrue(problemRecordPage.isAdditionalRootCauseCodeDisplayed());
+
+    }
+
+    @And("user should see additional root cause code drop down as optional")
+    public void userShouldSeeAdditionalRootCauseCodeDropDownAsOptional() {
+        Assert.assertTrue(problemRecordPage.isRootCauseCode_mandatory());
+        Assert.assertTrue(problemRecordPage.isRootCauseCodeDisplayed());
+    }
+
+    @When("user clicks edit button for additional root cause")
+    public void userClicksEditButtonForAdditionalRootCause() {
+        problemRecordPage.clickEdit_Additional_RootCauseCode();
+        problemRecordPage.switchToFrameByIndex(2);
+    }
+
+    @Then("user should see {string}")
+    public void userShouldSee(String text) {
+        problemRecordPage.verifyElementIsDisplayedByContainsTextAndTagName("label",text);
+    }
+
+    @When("user selects multiple additional root cause codes as {string}")
+    public void userSelectsMultipleAdditionalRootCauseCodesAs(String arg0) {
+       problemRecordPage.selectMultipleAdditionalRootCauseCodes(arg0);
+       problemRecordPage.clickApplyButton_additionalRC_codes();
+    }
+
+    @Then("additional root cause codes should be saved as {string}")
+    public void additionalRootCauseCodesShouldBeSavedAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getText_AdditionalRootCauseCodes(), arg0);
+    }
+
+    @Then("user clicks edit affected org button")
+    public void userClicksEditAffectedOrgButton() {
+        problemRecordPage.clickEditAffectedOrgButton();
+    }
+
+    @And("click on any secondary root cause code and click on make primary button")
+    public void clickOnAnySecondaryRootCauseCodeAndClickOnMakePrimaryButton() {
+        problemRecordPage.clickTableElement_secondary_rootCause("Root Cause", "External | Other");
+        problemRecordPage.clickMakePrimary();
+
+    }
+
+    @Then("root cause should be changed to {string} root cause code")
+    public void rootCauseShouldBeChangedToRootCauseCode(String arg0) {
+        Assert.assertEquals(problemRecordPage.getTableCellData(By.id("T800040090"), "Fld-Type", 1), arg0);
+    }
+
+    @And("click on any secondary root cause code and click on remove selected")
+    public void clickOnAnySecondaryRootCauseCodeAndClickOnRemoveSelected() {
+        Assert.assertTrue(problemRecordPage.verifyAdditionalRootCauseCodeIsRemoved());
+
+    }
+
+    @And("click apply button on additional root cause codes window")
+    public void clickApplyButtonOnAdditionalRootCauseCodesWindow() {
+        problemRecordPage.clickApplyButton_additionalRC_codes();
+    }
+
+    @When("user creates problem ticket with below details")
+    public void userCreatesProblemTicketWithBelowDetails(DataTable dataTable) {
+        problemRecordPage.createProblemTicket_2(dataTable);
+    }
+
+    @Then("{string} shouldn't be visible on problem record form" )
+    public void shouldnTBeVisibleOnProblemRecordForm(String fields) {
+        Assert.assertTrue(problemRecordPage.verifyFieldsInvisible(fields));
+
+
+    }
+
+    @When("user clicks on the added attachment")
+    public void userClicksOnTheAddedAttachment() {
+       problemRecordPage.clickOnAttachment();
+    }
+
+    @Then("attachment form should open in new tab")
+    public void attachmentFormShouldOpenInNewTab() {
+        CommonUtils.switchToChildWindow(problemRecordPage.getDriver(), 2);
+        Assert.assertEquals(problemRecordPage.getPageTitle(), "OS3 Attachments (Modify)");
+    }
+
+    @When("user clicks on the attachment listed")
+    public void userClicksOnTheAttachmentListed() {
+        problemRecordPage.clickOnAttachment_attachmentWindow();
+    }
+
+    @And("clicks on display button")
+    public void clicksOnDisplayButton() {
+        problemRecordPage.clickOnDisplay();
+    }
+
+    @Then("a new window should open with the attachment shown")
+    public void aNewWindowShouldOpenWithTheAttachmentShown() {
+        Assert.assertTrue(problemRecordPage.verifyNewWindowDisplayed());
+    }
+
+    @When("user closes the attachment window")
+    public void userClosesTheAttachmentWindow() {
+        CommonUtils.switchToChildWindow(problemRecordPage.getDriver(), 3);
+        problemRecordPage.closeTab();
+    }
+
+    @And("closes the attachment tab")
+    public void closesTheAttachmentTab() {
+        CommonUtils.switchToChildWindow(problemRecordPage.getDriver(), 2);
+        problemRecordPage.closeTab();
+    }
+
+    @And("user clicks on the delete button under internal")
+    public void userClicksOnTheDeleteButtonUnderInternal() {
+        problemRecordPage.clickOnDelete();
+    }
+
+    @Then("attachment should no longer be visible")
+    public void attachmentShouldNoLongerBeVisible() {
+        Assert.assertTrue(problemRecordPage.verifyAttachmentIsNotAvailable());
+    }
+
+    @When("user clicks on next tab button")
+    public void userClicksOnNextTabButton() {
+        problemRecordPage.clickNextTab();
+        problemRecordPage.clickNextTab();
+    }
+
+
+    @And("user should see {string} dropdown as optional")
+    public void userShouldSeeDropdownAsOptional(String textAsOptional) {
+        Assert.assertTrue(problemRecordPage.verifyElementIsDisplayedByContainsText(textAsOptional));
+    }
+
+    @And("user should see {string} dropdown as mandatory")
+    public void userShouldSeeDropdownAsMandatory(String textAsMandatory) {
+        Assert.assertTrue(problemRecordPage.verifyElementIsDisplayedByContainsText(textAsMandatory));
+    }
+
+    @And("user should see accountable organisation as read only")
+    public void userShouldSeeAccountableOrganisationAsReadOnly() {
+        Assert.assertTrue(problemRecordPage.IsAccountableOrganisation_IsReadOnly());
+    }
+
+
+    @Then("error message should display for close ticket as {string}")
+    public void errorMessageShouldDisplayForCloseTicketAsClosed(String errorMessage) {
+        Assert.assertEquals(problemRecordPage.getErrorText_(),errorMessage);
+    }
+
+    @And("user clicks attachment open button")
+    public void userClicksAttachmentOpenButton() {
+        problemRecordPage.clickOpenAttachment();
+    }
+
+    @And("user validates Communication plan is read only")
+    public void userValidatesCommunicationPlanIsReadOnly() {
+        Assert.assertTrue(problemRecordPage.verifyCommunicationPlanIsReadOnly());
+    }
+
+    @And("user validates Ver of Functionality is readonly")
+    public void userValidatesVerOfFunctionalityIsReadonly() {
+        Assert.assertTrue(problemRecordPage.verifyVerOfFuncionalityIsReadOnly());
+    }
+
+    @And("user validates Risk Description is read only")
+    public void userValidatesRiskDescriptionIsReadOnly() {
+        Assert.assertTrue(problemRecordPage.verifyRiskDescriptionIsReadOnly());
     }
 }
 

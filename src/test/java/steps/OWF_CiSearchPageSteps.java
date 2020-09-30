@@ -52,7 +52,8 @@ public class OWF_CiSearchPageSteps {
 
     @And("user closes warning message")
     public void userClosesWarningMessageAndClicksOnCloseButton() {
-        ciSearchPage.closeWarningMessage();
+        ciSearchPage.clickYesOnConfirmationMessage();
+        //ciSearchPage.closeWarningMessage();
     }
     @When("user clicks on clear button")
     public void userClicksOnClearButton() {
@@ -116,6 +117,9 @@ public class OWF_CiSearchPageSteps {
 
     @Then("CI should be listed and displayed under the Diagnosis tab")
     public void ciShouldBeListedAndDisplayedUnderTheDiagnosisTab() {
+        ciSearchPage.wait(4000);
+        ciSearchPage.selectTab("Diagnosis");
+        ciSearchPage.clickRefresh_Diagnosis();
         int size = ciSearchPage.ciDiagnosisTableRows().size();
         Assert.assertNotEquals(size, 1, "CI details are not displayed");
     }
@@ -483,5 +487,40 @@ public class OWF_CiSearchPageSteps {
     @And("user adds CI {string} to change ticket with impact level {string}")
     public void userAddsCIToChangeTicketWithImpactLevel(String CiName, String impactLevel) {
         ciSearchPage.addCI_ToChangeTicket(CiName, impactLevel);
+    }
+
+    @When("user adds below CI's to the ticket with impact level {string}")
+    public void userAddsBelowCISToTheTicketWithImpactLevel(DataTable dataTable, String impactLevel) {
+        ciSearchPage.addCIsToTicket(dataTable, impactLevel);
+    }
+
+    @Then("user closes warning message on CI search window for change ticket")
+    public void userClosesWarningMessageOnCISearchWindowForChangeTicket() {
+        ciSearchPage.closeWarningMessage_changeTicket();
+    }
+
+    @And("user clicks on radio button open")
+    public void userClicksOnRadioButtonOpen() {
+        ciSearchPage.clickOpenRadioButton_linkedItems();
+    }
+
+    @And("user clicks on radio button closed")
+    public void userClicksOnRadioButtonClosed() {
+        ciSearchPage.clickClosedRadioButton_linkedItems();
+    }
+
+    @And("user validates radio button open is selected")
+    public void userValidatesRadioButtonOpenIsSelected() {
+        Assert.assertTrue(ciSearchPage.isOpenRadioButtonSelected());
+    }
+
+    @And("user validates radio button cleared is selected")
+    public void userValidatesRadioButtonClearedIsSelected() {
+        Assert.assertTrue(ciSearchPage.isClearedRadioButtonSelected());
+    }
+
+    @And("user validates radio button closed is selected")
+    public void userValidatesRadioButtonClosedIsSelected() {
+        Assert.assertTrue(ciSearchPage.isClosedRadioButtonSelected());
     }
 }

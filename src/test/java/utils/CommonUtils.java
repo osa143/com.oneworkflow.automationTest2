@@ -17,6 +17,7 @@ public class CommonUtils extends BasePage {
     public static String ciDetailsBeforeUpdate;
     public static String opTicket;
     public static String pbTicket;
+    public static String keTicket;
     public static String firstTicketBefore;
     public static String firstTicketAfterWait;
     public static String firstTicketAfterRefreshInterval;
@@ -28,6 +29,13 @@ public class CommonUtils extends BasePage {
     public static String eventStartTime;
     public static String plazaRequestID;
     public static String OpTicket_plaza;
+    public static String CI_Impact_From_Time;
+    public static String CI_Impact_To_Time;
+    public static String Timeline_Entry;
+    public static String estimatedReadyTime;
+    public static String WO_eventStartTime;
+    public static String EventEndTime;
+
 
     // 0 - parent window
     // 1 - first child and so on
@@ -61,6 +69,8 @@ public class CommonUtils extends BasePage {
 
     }
 
+
+
     public static String getDateTime(String pattern, String timeZone, int minutes) {
         if (timeZone.equals(""))
             timeZone = ZoneId.systemDefault().getId();
@@ -75,10 +85,25 @@ public class CommonUtils extends BasePage {
         return dateTimeFormatter.format(startDateTime);
 
     }
+    public static String getDateTimePlusDays(String pattern, String timeZone, int days) {
+        if (timeZone.equals(""))
+            timeZone = ZoneId.systemDefault().getId();
+        LocalDateTime startDateTime = null;
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(pattern);
+        LocalDateTime currentDateTime = LocalDateTime.now(TimeZone.getTimeZone(timeZone).toZoneId());
+
+        if (days >= 0) {
+            startDateTime = currentDateTime.plusDays(days);
+        } else {
+            startDateTime = currentDateTime.minusDays(Math.abs(days));
+        }
+        return dateTimeFormatter.format(startDateTime);
+
+    }
     public static String getDateAsTodayMidnight(int delayMinutes)
     {
         LocalTime midnight = LocalTime.MIDNIGHT;
-        LocalDate today = LocalDate.now(ZoneId.of("Europe/Stockholm"));
+        LocalDate today = LocalDate.now(ZoneId.of("Europe/London"));
         LocalDateTime todayMidnight = LocalDateTime.of(today, midnight);
 
         if (delayMinutes >= 0) {
@@ -86,7 +111,7 @@ public class CommonUtils extends BasePage {
         } else {
             todayMidnight= todayMidnight.minusMinutes(Math.abs(delayMinutes));
         }
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM/dd/YYYY HH:mm:ss");
         return dateTimeFormatter.format(todayMidnight);
 
     }
@@ -126,6 +151,8 @@ public class CommonUtils extends BasePage {
             e.printStackTrace();
         }
     }
+
+
 
 
 }

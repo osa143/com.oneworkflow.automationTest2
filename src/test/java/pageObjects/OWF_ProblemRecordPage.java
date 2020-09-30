@@ -6,28 +6,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import utils.CommonUtils;
-import utils.PlazaValidation;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class OWF_ProblemRecordPage extends BaseRecordPage {
 
 
     private static final String txtTICKET_ID = "arid_WIN_0_730000060";
-    private static final String txtSEARCH_TICKET_ID = "arid_WIN_0_777777600";
     private static final String linkASSIGNMENTS = "WIN_0_999000346";
     private static final String TABLE_ID = "T1020";
     private static final String dd_STATUS= "Status*";
-
-
     private static final String btnTIMELINE_XPATH = "//a[contains(text(),'Timeline')]";
     private static final String fld_TIMELINE_DISPLAY_XPATH = "//div[@id='WIN_0_999000510']//div[@class='BaseTableInner']";
-
     private static final String ddNO_ID = "arid_WIN_0_600001801";
     private static final String ddREASON = "Reason";
-
     private static final String txtTITLE_ID = "arid_WIN_0_777031000";
     private static final String txtREQUEST_CATEGORY_ID="arid_WIN_0_777021548";
     private static final String txtDESCRIPTION_ID = "arid_WIN_0_777031007";
@@ -36,6 +30,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String ddREQUEST_TYPE_ID = "arid_WIN_0_777031002";
     private static final String ddURGENCY = "Urgency";
     private static final String ddWITHDRAWN_REASON = "Withdrawn Reason";
+    private static final String ddACCOUNTABLE_ORG= "Accountable Org.";
 
     private static final String ddValueDUPLICATE_ENTRIES = "Duplicate Entries";
     private static final String ddValueFALSE_ALARM = "False Alarm";
@@ -72,7 +67,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String btnACK_CSS = "#WIN_0_777504152";
     private static final String timeline_TABLE_ID = "T999000510";
     private static final String btnRELEASE_ID = "WIN_0_777021435";
-    private static final String btn_YES= "WIN_6_700027904";
+    private static final String btn_YES= "//a[@arid='700027904']";
 
     private static final String txtSOURCE_ID = "arid_WIN_0_777777912";
     private static final String txtPRIORITY_ID = "arid_WIN_0_700025204";
@@ -84,7 +79,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txt_URGENCY= "arid_WIN_0_705002083";
     private static final String txt_ROOTCAUSECODE= "arid_WIN_0_777031437";
     private static final String rbtn_PRIVATE= "WIN_0_rc1id777021180";
-    private static final String btn_REFRESH= "//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
+    private static final String btn_REFRESH= "//*[@id='WIN_4_777506000']/div[1]/table/tbody/tr/td[2]/a[2]";
     private static final String txt_SERVICEAFFECTED= "arid_WIN_0_600001014";
     private static final String txt_ESTIMATED_READY= "arid_WIN_0_777504503";
     private static final String txt_MODEL= "arid_WIN_0_240001002";
@@ -107,11 +102,192 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txt_ONSITE_CONTACT= "arid_WIN_0_705001292";
     private static final String txt_TRAVEL_TIME= "arid_WIN_0_705001293";
     private static final String table_TIMELINE = "T999000510";
+    private static final String btnEDIT_AFFECTED_ORGS = "WIN_0_808080012";
+    private static final String btnCLICK_SAVE= "WIN_0_700030040";
+    private static final String fld_ACCOUNTABLE_ORG_AS_MANDATORY="//label[contains(text(),'Accountable Org.*')]";
+    private static final String fld_ROOT_CAUSE_CODE_AS_MANDATORY="//label[contains(text(),'Root Cause Code*')]";
+    private static final String fld_ACCOUNTABLE_ORG_AS_NOT_MANDATORY="//label[contains(text(),'Accountable Org.')]";
+    private static final String dd_ACCOUNTABLE_ORG= "arid_WIN_0_808080010";
+    private static final String btnApply= "WIN_0_808080115";
+    private static final String txt_IMPORTANCE= "arid_WIN_0_600001821";
+    private static final String txt_ADDITIONAL_ROOT_CAUSE_CODE = "arid_WIN_0_800040066";
+    private static final String fld_ADDITIONAL_ROOT_CAUSE_CODE_AS_NOT_MANDATORY="//label[contains(text(),'Additional RC Codes')]";
+    private static final String btn_EDIT_ROOT_CAUSE_CODE= "WIN_0_800040067";
+    private static final String btn_APPLY_ROOT_CAUSE_CODES= "WIN_0_800040088";
+    private static final String btn_MAKE_PRIMARY="WIN_0_800040086";
+    private static final String btn_REMOVE_SELECTED= "WIN_0_800040087";
+    private static final String table_row_Attachments= "T777000013";
+    private static final String table_row_Attachment= "//*[@id='T777000013']/tbody/tr[2]";
+    private static final String table_row_Attachment_Window= "//*[@id='T700500008']/tbody/tr[2]";
+    private static final String btn_DELETE= "WIN_0_777000022";
+    private static final String btn_NEXT_TAB="nextTab";
+    private static final String Error_POP_UP_ID= "PopupMsgBox";
+    private static final String btn_Open_Attachment= "WIN_0_777000021";
 
 
+    public void clickOpenAttachment(){
+        clickElementById(btn_Open_Attachment);
+    }
+    public boolean verifyFieldsInvisible(String fields) {
+        String arr[] = fields.split(":" );
+
+        for (int i = 0; i < arr.length; i++) {
+            final String fieldName = arr[i];
+            try{
+                verifyElementIsDisplayedByContainsTextAndTagName("*",fieldName);
+            }
+            catch(Exception e){
+                System.out.println(fieldName + " - Is not present on the form");
+            }
+        }
+        return true;
+    }
+
+    public String getErrorText_(){
+        switchToFrameByIndex(2);
+        String error =getTextByID(Error_POP_UP_ID);
+        System.out.println("The error message is " + error);
+        clickElementByContainsTextAndTagName("a", "OK");
+        return error;
+
+    }
+
+    public void clickNextTab(){
+        clickElementById(btn_NEXT_TAB);
+    }
+    public boolean verifyAttachmentIsNotAvailable(){
+        int tableRows=getTableRows(By.id(table_row_Attachments)).size();
+        int numOfAttachments=tableRows-1;
+        System.out.println("Number of attachments are - " +numOfAttachments);
+        if(numOfAttachments==0)
+            return true;
+        else return false;
+    }
+    public void clickOnDelete(){
+        clickElementById(btn_DELETE);
+    }
+    public Boolean verifyNewWindowDisplayed(){
+        int windowHandles=driver.getWindowHandles().size();
+        if(windowHandles==3){
+            return true;
+        }
+        else return false;
+    }
+
+    public void clickOnDisplay(){
+        clickElementByContainsTextAndTagName("a", "Display");
+    }
+    public void clickOnAttachment_attachmentWindow(){
+        clickElement(By.xpath(table_row_Attachment_Window));
+    }
+    public void clickOnAttachment(){
+        clickElement(By.xpath(table_row_Attachment));
+    }
 
 
+       public boolean verifyAdditionalRootCauseCodeIsRemoved(){
+
+        int rows_Before_remove=getTableRows(By.id("T800040090")).size();
+        clickTableElement_secondary_rootCause("Root Cause", "Technical | Other");
+        clickRemoveSelected();
+        int rows_after_remove= getTableRows(By.id("T800040090")).size();
+        if(rows_Before_remove>rows_after_remove)
+            return true;
+            else return false;
+}
+
+    public void clickMakePrimary(){
+        clickElementById(btn_MAKE_PRIMARY);
+    }
+    public void clickRemoveSelected(){
+        clickElementById(btn_REMOVE_SELECTED);
+    }
+    public String getText_AdditionalRootCauseCodes(){
+        return getAttributeValueById(txt_ADDITIONAL_ROOT_CAUSE_CODE);
+    }
+    public void selectAdditionalRootCauseCodes(String value){
+        selectDropDownNameAndValue("Root Cause Codes", value, false);
+    }
+    public void clickApplyButton_additionalRC_codes(){
+        clickElementById(btn_APPLY_ROOT_CAUSE_CODES);
+        switchToDefault();
+    }
+    public void selectMultipleAdditionalRootCauseCodes(String additionalRC_codes){
+        String [] rootCauseCodes = additionalRC_codes.split("/");
+        for (int i=0; i<rootCauseCodes.length; i++){
+            selectAdditionalRootCauseCodes(rootCauseCodes[i]);
+        }
+    }
+
+    public void clickEdit_Additional_RootCauseCode(){
+        clickElementById(btn_EDIT_ROOT_CAUSE_CODE);
+    }
+    public boolean isAdditionalRootCauseCode_Not_mandatory(){
+        return verifyElementIsDisplayed(By.xpath(fld_ADDITIONAL_ROOT_CAUSE_CODE_AS_NOT_MANDATORY));
+
+    }
+    public boolean isAdditionalRootCauseCodeDisplayed(){
+        return verifyElementIsDisplayed(By.id(txt_ADDITIONAL_ROOT_CAUSE_CODE));
+    }
+
+    public boolean isRootCauseCode_mandatory(){
+        return verifyElementIsDisplayed(By.xpath(fld_ROOT_CAUSE_CODE_AS_MANDATORY));
+
+    }
+    public boolean isRootCauseCodeDisplayed(){
+        return verifyElementIsDisplayed(By.id(txtROOT_CAUSE_DETAILS_ID));
+    }
+
+    public void clickEditAffectedOrgButton(){
+        clickElement(By.id("btnEDIT"));
+    }
+
+    public boolean IsAccountableOrganisation_IsReadOnly(){
+        return checkIfControlIsReadonly(dd_ACCOUNTABLE_ORG);
+    }
+
+    public boolean isAccountableOrganisationIs_mandatory(){
+        return verifyElementIsDisplayed(By.xpath(fld_ACCOUNTABLE_ORG_AS_MANDATORY));
+
+    }
+    public boolean isAccountableOrganisationIs_Not_mandatory(){
+        return verifyElementIsDisplayed(By.xpath(fld_ACCOUNTABLE_ORG_AS_NOT_MANDATORY));
+
+    }
+    public boolean isAccountableOrganisationIsDisplayed(){
+        return verifyElementIsDisplayed(By.id(dd_ACCOUNTABLE_ORG));
+    }
+   public void selectAccountable_Org(String value){
+       selectDropDownNameAndValue(ddACCOUNTABLE_ORG, value, false);
+   }
+
+   public void selectAffectedOrganisation(String affectedOrg)
+   {
+       selectDropDownNameAndValue("Organisations", affectedOrg, false);
+   }
+    public void selectAffected_Org(String value){
+       clickElementById(btnEDIT_AFFECTED_ORGS);
+       switchToFrameByIndex(2);
+        selectAffectedOrganisation(value);
+       clickElementById(btnApply);
+
+
+    }
     public void createProblemTicket(DataTable dataTable){
+        clickSwedenCheckBox();
+        List<Map<String, String>> list=dataTable.asMaps(String.class, String.class);
+        enterTitle(list.get(0).get("Title"));
+        selectRequestType(list.get(0).get("RequestType"), false);
+        enterDescription(list.get(0).get("Description"));
+        selectImpactType(list.get(0).get("ImpactType"));
+        selectUrgency(list.get(0).get("Urgency"));
+        selectAccountable_Org(list.get(0).get("AccountableOrg"));
+        selectAffected_Org(list.get(0).get("AffectedOrg"));
+        clickSave();
+        wait(3000);
+
+    }
+    public void createProblemTicket_2(DataTable dataTable){
         clickSwedenCheckBox();
         List<Map<String, String>> list=dataTable.asMaps(String.class, String.class);
         enterTitle(list.get(0).get("Title"));
@@ -152,33 +328,33 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         return getTextByID(txt_REASSIGNMENT_COUNT);
     }
     public String get_X_Degree(){
-        return getTextByID(txt_X_DEGREE);
+        return getAttributeValueById(txt_X_DEGREE);
     }
     public String get_Y_Degree(){
-        return getTextByID(txt_Y_DEGREE);
+        return getAttributeValueById(txt_Y_DEGREE);
     }
     public String getLocationDetails(){
-        return getTextByID(txt_LOCATION_DETAILS_DEGREE);
+        return getAttributeValueById(txt_LOCATION_DETAILS_DEGREE);
     }
 
 
     public String getLongitude(){
-        return getTextByID(txt_LONGITUDE);
+        return getAttributeValueById(txt_LONGITUDE);
     }
     public String getLatitude(){
-        return getTextByID(txt_LATITUDE);
+        return getAttributeValueById(txt_LATITUDE);
     }
     public String getRegionName(){
-        return getTextByID(txt_REGION_NAME);
+        return getAttributeValueById(txt_REGION_NAME);
     }
     public String getRegionId(){
-        return getTextByID(txt_REGION_ID);
+        return getAttributeValueById(txt_REGION_ID);
     }
     public String getLocationNamePlus(){
-        return getTextByID(txt_LOCATION_NAME_PLUS);
+        return getAttributeValueById(txt_LOCATION_NAME_PLUS);
     }
     public String getLocationIdPlus(){
-        return getTextByID(txt_LOCATION_ID_PLUS);
+        return getAttributeValueById(txt_LOCATION_ID_PLUS);
     }
 
     public String getModel(){
@@ -204,7 +380,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
       clickElement(By.id(rbtn_PRIVATE));
   }
     public String getRootCauseCode(){
-        return getTextByID(txt_ROOTCAUSECODE);
+        return getAttributeValueById(txt_ROOTCAUSECODE);
     }
     public String getUrgency(){
         return getTextByID(txt_URGENCY);
@@ -213,6 +389,9 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     public String getImpact(){
         return getTextByID(txt_IMPACT);
     }
+    public String getImportance(){
+        return getTextByID(txt_IMPORTANCE);
+    }
 
 
     public boolean verifyDescriptionIsReadOnly(){
@@ -220,7 +399,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
     public void clickYes_impactClear(){
-        clickElement(By.id(btn_YES));
+        clickElement(By.xpath(btn_YES));
         wait(1000);
     }
     public boolean verifyTitleIsReadOnly(){
@@ -308,9 +487,6 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         driver.findElement(By.xpath(btnTIMELINE_XPATH)).click();
     }
 
-    public void enterTicket(String ticket) {
-        driver.findElement(By.id(txtSEARCH_TICKET_ID)).sendKeys(ticket);
-    }
 
     public void clickYesOnFrame() {
         driver.findElement(By.id(btnYES_ON_FRAME_ID)).click();
@@ -335,20 +511,42 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
             int attachmentsCount = Integer.parseInt(attachments.get(i).get(3));
             System.out.println("summary is: " + summary);
             driver.findElement(By.id(btnADD_ID)).click();
-            switchToFrameByIndex(2);
+            int size = driver.findElements(By.tagName("iframe")).size();
+            switchToFrameByIndex(size - 1);
             enterSummary_attachments(summary);
             enterDescription_Attachment_OnFrame(description);
             clickAdd_AttachmentOnFrame();
             clickonChooseFile_OnFrame();
+            wait(600);
             CommonUtils.uploadFile(fullFilePath);
-            wait(1000);
+            wait(800);
             clickOk_AttachmentOnFrame();
-            switchToFrameByIndex(2);
+            wait(600);
+            int size1 = driver.findElements(By.tagName("iframe")).size();
+            if(size1>2){
+                switchToFrameByIndex(size1 - 1);
+            }
+            else if(size1>3){
+                switchToFrameByIndex(size1 - 2);
+            }
+            else
+            {
+                switchToDefault();
+                switchToFrameByIndex(size1);
+            }
+
             if(type.equals("external"))
             {
                 clickExternalRadioButton();
             }
-            clickInternalRadioButton();
+            else if((type.equals("internal")))
+            {
+                clickInternalRadioButton();
+            }
+            else if((type.equals("")))
+                {
+
+            }
             clickSave_AttachmentOnFrame();
             Assert.assertTrue(validateAttachmentAvailability(attachmentsCount));
         }
@@ -425,7 +623,8 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
 
 
-    public String getDescriptionText() {
+    public String getDescriptionText()
+    {
         return getAttributeValueById(txtDESCRIPTION_ID);
     }
 
@@ -441,7 +640,12 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
     public boolean getAckButtonStatus() {
-        return driver.findElement(By.id(btn_ACK_ID)).isEnabled();
+        clickElementById(btn_ACK_ID);
+        wait(2000);
+        if(getStatusText().equals("Assigned")){
+            return false;
+        }
+        else return true;
     }
 
     public void selectWithdrawnReason_FalseAlarmDropDown() {
@@ -543,6 +747,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
     public boolean validateErrorMessage(){
         int size=getTableRows(By.id(errorTABLE_ID)).size();
+        System.out.println("Table rows size is - " +size);
         if(size>0){
             return true;
         }

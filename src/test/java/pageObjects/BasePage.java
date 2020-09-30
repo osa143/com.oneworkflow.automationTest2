@@ -16,9 +16,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class BasePage {
-
-
+public class BasePage{
 
     public static WebDriver driver;
     WebDriverWait webDriverWait = new WebDriverWait(DriverFactory.getInstance().getDriver(), 30);
@@ -67,10 +65,10 @@ public class BasePage {
         return findElement(By.xpath(element)).isDisplayed();
 
     }
-    public boolean verifyElementIsDisplayedByContainsTextAndTagNameSpan(String tagName, String textName){
-        String element = String.format("//%s[contains(text(),'%s')]", tagName, textName);
+    public boolean verifyElementIsDisplayedByContainsTextAndTagName(String tagName, String text){
+        String element = String.format("//%s[contains(text(),'%s')]", tagName, text);
         System.out.println(element);
-        return findElement(By.xpath(element)).isDisplayed();
+        return driver.findElement(By.xpath(element)).isDisplayed();
 
     }
     public void clickElementByContainsTextAndTagName(String tagName, String textName){
@@ -152,18 +150,20 @@ public void clickElementById(String Id){
     public String getTextByElement(By element) {
         return findElement(element).getText();
     }
+
     public String getTextByID(String id){
         return findElement(By.id(id)).getText();
     }
 
     public String calculateEstimatedReady(int time, String timeUnit){
         String estimatedTime = "";
-        String format = "yyyy-MM-dd HH:mm:ss";
+        String format = "dd/MM/yyyy HH:mm:ss";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
         String eventStartTime = getEventStartTime();
-        if(eventStartTime.isEmpty())
-            eventStartTime  = CommonUtils.getDateTime(format, "Europe/Stockholm", 0);
-        ;
+        System.out.println("Event start time is =" + eventStartTime);
+//        if(eventStartTime.isEmpty())
+//            eventStartTime  = CommonUtils.getDateTime(format, "Europe/London", 0);
+
         LocalDateTime dateTime = LocalDateTime.parse(eventStartTime, formatter);
         if(timeUnit.equals("days"))
         {
@@ -174,8 +174,11 @@ public void clickElementById(String Id){
             estimatedTime = dateTime.plusHours(time).toString();
         }
 
-        estimatedTime = estimatedTime.replace('T',' ');
-        System.out.println("Estimated time is: " + estimatedTime);
+//        estimatedTime = estimatedTime.replace('T',' ');
+//        System.out.println("Estimated time is: " + estimatedTime);
+//        LocalDateTime dateTime1 = LocalDateTime.parse(estimatedTime, formatter);
+//        estimatedTime =dateTime1.toString();
+        System.out.println("Calculated estimated readt time is - " +estimatedTime);
         return estimatedTime;
     }
 
@@ -319,7 +322,7 @@ public void clickElementById(String Id){
             dropdownXpath = "//img[@alt='Menu for " + dropdownName + "']/..";
 
         driver.findElement(By.xpath(dropdownXpath)).click();
-        wait(900);
+        wait(1500);
 
         String arr[] = dropdownValue.split(":");
         int index = getMenuTableBodyIndex(arr[0]);
@@ -334,7 +337,7 @@ public void clickElementById(String Id){
 
                 elements.get(i + index).findElements(By.tagName("td")).stream().filter(element -> element.getText().equals(temp)).findFirst().orElse(null).click();
             }
-            wait(900);
+            wait(1500);
         }
 
     }
@@ -421,7 +424,9 @@ public void clickElementById(String Id){
             wait(500);
         }
     }
-
+    public void clickPreferences(String table_ID) {
+        driver.findElement(By.id(table_ID)).findElement(By.xpath("//a[contains(text(),'Preferences')]")).click();
+    }
     public void setFilterPreferences(String preferences) {
         wait(1000);
 
@@ -731,9 +736,9 @@ public void clickElementById(String Id){
         return  false;
     }
 
-    public boolean verifyColumnValuesForMultipleInputs(By table, String columnName, String columnValue)
+    public boolean verifyColumnValuesForMultipleInputs(By table, String columnName, String CellValue)
     {
-        String[] columnValues = columnValue.split(":");
+        String[] cellValues = CellValue.split(":");
 
         int colNum = getColumnIndexByHeaderName(table, columnName);
         List<WebElement> tableRows = getTableRows(table);
@@ -747,7 +752,7 @@ public void clickElementById(String Id){
                 if(i == 51)
                     break;
 
-                if(verifySingleColumnValue(td.getText().trim(), columnValues))
+                if(verifySingleColumnValue(td.getText().trim(), cellValues))
                     continue;
                 else
                     return false;
@@ -756,6 +761,7 @@ public void clickElementById(String Id){
         }
         return true;
     }
+
 
     //columnValue should be separated by :
     public boolean verifyColumnValuesMultiple(By table, String columnName, String columnValue, boolean partialText)
@@ -862,7 +868,7 @@ public void clickElementById(String Id){
   }
   public void switchToDefault(){
         driver.switchTo().defaultContent();
-        wait(1000);
+        wait(500);
   }
   public void enterSendKeys(By element){
       findElement(element).sendKeys(Keys.ENTER);
@@ -893,16 +899,16 @@ public void clickElementById(String Id){
         }
         return true;
     }
-    public boolean verifyDropdownValues(String statuses, String dropdownName, String dropdownId)
+    public boolean verifyDropdownValues(String ExpectedDropdownValues, String dropdownName, String dropdownId)
     {
-        String[] multipleStatus = statuses.split(":");
-        List<String> dropdownValues = getDropdownValues(dropdownName, dropdownId);
+        String[] multipleValues = ExpectedDropdownValues.split(":");
+        List<String> ActualDropdownValues = getDropdownValues(dropdownName, dropdownId);
         clickEscButton();
 
-        System.out.println("Dropdown values are: " + dropdownValues);
-        for (int i = 0; i < multipleStatus.length; i++)
+        System.out.println("Dropdown values are: " + ActualDropdownValues);
+        for (int i = 0; i < multipleValues.length; i++)
         {
-            if (!dropdownValues.contains(multipleStatus[i]))
+            if (!ActualDropdownValues.contains(multipleValues[i]))
             {
                 return false;
             }

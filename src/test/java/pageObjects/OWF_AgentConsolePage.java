@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+//import javax.xml.bind.SchemaOutputResolver;
 import java.util.List;
 
 public class OWF_AgentConsolePage extends BasePage {
@@ -41,6 +42,7 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String ddValueWO_OP = "WO & OP";
 
     private static final String table_ID = "T777000002";
+    private static final String QuickSearch_table_ID= "T700010488";
     private static final String timeline_table_DIV_ID = "WIN_0_700508140";
 
     private static final String timeline_TABLE_ID = "T700508140";
@@ -81,11 +83,145 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String row1_AUTO_ASSIGNMENT_RULES_TABLE= "//*[@id='T700002001']/tbody/tr[2]/td[1]";
     private static final String btn_OPEN= "WIN_0_700002009";
     private static final String txt_TITLE= "arid_WIN_3_800038101";
+    private static final String fld_TIMEZONE= "//div[@arid='800004002']";
+    private static final String btn_OK="//*[@id='PopupMsgFooter']/a";
+    private static final String btn_CLOSE= "//a[@arid='777000001']";
+    private static final String txt_TIMEZONE= "//div[@arid='799999958']/textarea";
+    private static final String btn_SAVE_MY_ACCOUNT="//a[@arid='1003']";
+    private static final String btn_Open_User = "WIN_0_700027095";
+    private static final String btn_Add_Right = "WIN_3_800080011";
+    private static final String btn_Close_User_Information = "//a[@arid='777000001']";
+    private static final String btn_Remove_Left = "WIN_3_800080012";
+    private static final String table_Available_Trust_Principles="T800080004";
+    private static final String table_Selected_Trust_Principles="T800080007";
+    private static final String txt_QUICK_CREATE_TITLE="arid_WIN_0_800007025";
+    private static final String dd_QUICK_CREATE_REQUEST_TYPE="arid_WIN_0_800007026";
+    private static final String txt_QUICK_CREATE_TROUBLE_DESCRIPTION="arid_WIN_0_800007027";
+    private static final String btn_QUICK_CREATE_BUTTON="WIN_0_800007034";
+    private static final String dd_QUICK_CREATE_SOURCE="arid_WIN_0_800007021";
+    private static final String ERROR_POP_UP="pbartable";
+    private static final String chkbx_SWEDEN="WIN_0_rc0id830000120";
+    private static final String table_USER_INFORMATION= "T700028052";
 
+    public boolean verifyUserProfiles(String colName, String colValue, boolean partialText){
+        return verifyColumnValuesMultiple(By.id(table_USER_INFORMATION), colName, colValue, partialText );
+
+    }
+    public void clickQuickCreateSwedenCheckBox() {
+        driver.findElement(By.id(chkbx_SWEDEN)).click();
+    }
+
+    public String getErrorPopUpText(){
+        driver.switchTo().parentFrame();
+        //driver.switchTo().frame(2);
+        //driver.switchTo().frame(1);
+        String error= findElement(By.id(ERROR_POP_UP)).getText();
+        System.out.println("Error message is: " +error);
+        return error;
+    }
+
+    public void selectQuickCreateTroubleSource(String requestType){
+        clickElement(By.id(dd_QUICK_CREATE_SOURCE));
+        selectDropDownValue(requestType);
+    }
+
+    public void clickQuickCreateButton(){
+        clickElementById(btn_QUICK_CREATE_BUTTON);
+    }
+
+    public void enterQuickCreateTroubleTitle(String title) {
+        findElement(By.id(txt_QUICK_CREATE_TITLE)).clear();
+        driver.findElement(By.id(txt_QUICK_CREATE_TITLE)).sendKeys(title);
+    }
+
+    public void selectQuickCreateTroubleRequestType(String requestType){
+        clickElement(By.id(dd_QUICK_CREATE_REQUEST_TYPE));
+        selectDropDownValue(requestType);
+    }
+
+    public void enterQuickCreateTroubleDescription(String description) {
+        findElement(By.id(txt_QUICK_CREATE_TROUBLE_DESCRIPTION)).clear();
+        driver.findElement(By.id(txt_QUICK_CREATE_TROUBLE_DESCRIPTION)).sendKeys(description);
+    }
+
+    public Boolean getTrustPrinciplesAvailableCountry(int rowNum, String expectedCountry) {
+        int count = getTableRowsCount(table_Selected_Trust_Principles);
+        System.out.println("Trust Principles Available Country count is " + count);
+        if (count <=1) {
+            return false;
+        }
+        else
+            {
+            String actualCountry = getTableCellData(By.id(table_Selected_Trust_Principles), "TP Description", rowNum);
+            System.out.println(actualCountry);
+            System.out.println(expectedCountry);
+            if (actualCountry.contains(expectedCountry)) {
+            }
+            return true;
+        }
+    }
+    public boolean verifyAvailableTrustPrinciplesCountries(String countries) {
+        int count = getTableRowsCount(table_Available_Trust_Principles);
+        if (count > 5) {
+            String[] country = countries.split(":");
+            System.out.println("Trust principles country values are: " + country);
+            for (int i = 0; i < country.length; i++) {
+                verifyElementIsDisplayedByContainsTextAndTagName("span", country[i]);
+            }
+         return true;
+        }
+        else return false;
+    }
+
+    public void clickRemoveLeft(){
+        clickElementById(btn_Remove_Left);
+    }
+
+    public void clickCloseUserInformation(){
+        clickElement(By.xpath(btn_Close_User_Information));
+    }
+
+    public void  clickAddRight(){
+        clickElementById(btn_Add_Right);
+    }
+
+    public void clickOpenUser(){
+        clickElementById(btn_Open_User);
+    }
+
+    public void clickSaveButton_MyAccount(){
+        clickElement(By.xpath(btn_SAVE_MY_ACCOUNT));
+    }
+
+    public void enterTimeZone(String timeZone){
+        WebElement TimeZoneTextBox= findElement(By.xpath(txt_TIMEZONE));
+        TimeZoneTextBox.clear();
+        TimeZoneTextBox.sendKeys(timeZone);
+    }
+
+    public void closeConfirmationMessageAndClickCloseButton(){
+        wait(2000);
+        switchToFrameByIndex(2);
+        clickElement(By.xpath(btn_OK));
+        clickElement(By.xpath(btn_CLOSE));
+        switchToDefault();
+    }
+
+    public String getTimezone(){
+        String TimeZone= getTextByElement(By.xpath(fld_TIMEZONE));
+        System.out.println(TimeZone);
+        return TimeZone;
+    }
+    public void selectMenuAndItem(String menu, String item){
+        selectMainMenuAndMenuItem(menu, item);
+    }
 
     public boolean verifyTitleDropdownValues(String options, String dropdownName ){
         return verifyDropdownValues(options, dropdownName, txt_TITLE);
     }
+
+
+
     public void clickOpen_AssignmentRules(){
         clickElement(By.id(btn_OPEN));
     }
@@ -136,6 +272,9 @@ public class OWF_AgentConsolePage extends BasePage {
     public boolean verifyTicketsAssignedToCurrentUserProfile(String colName, String colValue, boolean partialText){
         return verifyColumnValuesMultiple(By.id(table_ID), colName, colValue, partialText );
 
+    }
+    public boolean verifyTicketsFilteredToSearch(String colName, String colValue, boolean partialText){
+        return verifyColumnValuesMultiple(By.id(QuickSearch_table_ID), colName, colValue, partialText );
     }
     public String getAgentConsoleTableCellData(String columnName, int rowNum){
         return getTableCellData(By.id(table_ID), columnName, rowNum);
@@ -233,7 +372,7 @@ public class OWF_AgentConsolePage extends BasePage {
         return false;
     }
     public boolean validateTicketsAvailabilityInAgentConsoleTable(){
-        int count= getTableRowsCount();
+        int count= getTableRowsCount(table_ID);
         System.out.println(count);
         if (count>50)
             return true;
@@ -346,16 +485,20 @@ public class OWF_AgentConsolePage extends BasePage {
         driver.findElement(By.id(table_ID)).findElement(By.xpath("//a[contains(text(),'Preferences')]")).click();
     }
 
+
     public void acceptAlert(){
         driver.switchTo().alert().accept();
     }
 
+    public int getTableRowsCount(String tableID) {
+        return getTableRows(By.id(tableID)).size();
+    }
     public int getTableRowsCount() {
         return getTableRows(By.id(table_ID)).size();
     }
 
     public Boolean verifyAgentConsoleHasData(){
-        int count= getTableRowsCount();
+        int count= getTableRowsCount(table_ID);
         if(count>1)
             return true;
         else return false;
@@ -400,7 +543,6 @@ public class OWF_AgentConsolePage extends BasePage {
         selectMainMenu(menuForCONSOLE);
 
     }
-
 
     public void clickNavUserMenu() {
         selectMainMenu(menuForNAV_USERNAME);
@@ -454,6 +596,13 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public void clickMenuItemLogout() {
         selectMenuItem(menuItemLOGOUT);
+//        try{
+//            switchToFrameByIndex(2);
+//            clickElementByContainsTextAndTagName("*", "Yes");
+//        }
+//        catch (Exception e){
+//
+//        }
         wait(3000);
     }
 

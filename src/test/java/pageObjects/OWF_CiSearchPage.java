@@ -1,6 +1,7 @@
 package pageObjects;
 
 import io.cucumber.datatable.DataTable;
+import org.apache.commons.lang3.ObjectUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -22,7 +23,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String btnCREATE_linked_items = "WIN_4_777506020";
     private static final String btn_CREATE_linked_items= "WIN_5_777506020";
     private static final String chkbxTO_SELECT_CI = "//*[@id='T700009024']/tbody/tr[2]";
-    private static final String rbtn_CLEARED_ID = "WIN_4_rc1id730011091";
+    private static final String rbtn_CLEARED_ID = "WIN_4_rc0id800040060";
     private static final String ddCATEGORY= "Category*";
     private static final String txtNAME_PLUS_ID = "arid_WIN_0_700009016";
     private static final String ddLEVEL = "Level*";
@@ -68,6 +69,45 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String bulkCILoading_DIV_ID = "WIN_0_800038059";
     private static final String rbtn_IGNORE_HANDLING_DUPLICATE_CIS= "WIN_0_RCGroup800038013";
     private static final String txt_IMPACT_TO_PLUS_BULK_UPDATE= "arid_WIN_0_999000299";
+    private static final String btn_RADIOOPEN_ID = "WIN_4_rc0id800040059";
+    private static final String btn_RADIOCLOSED_ID = "WIN_4_rc0id800040061";
+    private static final String btn_RADIOCleared_ID = "WIN_4_rc0id800040060";
+    private static final String txt_Impact_From_CI_Search= "arid_WIN_0_700009083";
+    private static final String btn_Refresh= "//*[@id='WIN_0_700009087']/div[1]/table/tbody/tr/td[2]/a[2]";
+
+
+    public void clickRefresh_Diagnosis(){
+        wait(1000);
+        clickElement(By.xpath(btn_Refresh));
+        wait(500);
+    }
+
+    public String getImpactFromDateCiSearchWindow(){
+        String ImpactFromDate= getTextByID(txt_Impact_From_CI_Search);
+        System.out.println("Get Text values is - " +ImpactFromDate);
+        return ImpactFromDate;
+    }
+
+    public boolean isOpenRadioButtonSelected(){
+        return findElement(By.id(btn_RADIOOPEN_ID)).isSelected();
+    }
+
+    public boolean isClearedRadioButtonSelected(){
+        return driver.findElement(By.id(btn_RADIOCleared_ID)).isSelected();
+    }
+
+    public boolean isClosedRadioButtonSelected(){
+        return findElement(By.id(btn_RADIOCLOSED_ID)).isSelected();
+    }
+
+    public void clickClosedRadioButton_linkedItems(){
+        driver.findElement(By.id(btn_RADIOCLOSED_ID)).click();
+    }
+
+
+    public void clickOpenRadioButton_linkedItems(){
+        driver.findElement(By.id(btn_RADIOOPEN_ID)).click();
+    }
 
 
 
@@ -75,7 +115,8 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     public void addCIsToTicket(DataTable CiName, String CI_Impact) {
         clickDiagnosis();
         clickCiSearch();
-        switchToFrameByIndex(2);
+        int size = driver.findElements(By.tagName("iframe")).size();
+        switchToFrameByIndex(size-1);
         List<List<String>> Cis = CiName.asLists(String.class);
         for (int i = 1; i < Cis.size(); i++) {
             System.out.println("CI Name is: " + Cis.get(i).get(0));
@@ -85,39 +126,52 @@ public class OWF_CiSearchPage extends BaseRecordPage {
             clickToSelectCi();
             selectLevel(CI_Impact);
             clickRelateCiButton();
-            closeWarningMessage();
+            clickYesOnConfirmationMessage();
+            //closeWarningMessage();
         }
         clickCloseButton();
+        switchToDefault();
     }
 
     public void addCI(String CIName, String CI_Impact){
         clickDiagnosis();
         clickCiSearch();
-        switchToFrameByIndex(2);
+        int size = driver.findElements(By.tagName("iframe")).size();
+        switchToFrameByIndex(size-1);
         clickClearButton();
         enterNamePlus(CIName);
         clickCiSearchButton();
         clickToSelectCi();
         selectLevel(CI_Impact);
+        if(getImpactFromDateCiSearchWindow().equals("")||getImpactFromDateCiSearchWindow().equals(null))
+        {
+            driver.findElement(By.id(txt_Impact_From_CI_Search)).sendKeys(Keys.ENTER);
+        }
         clickRelateCiButton();
-        closeWarningMessage();
+        clickYesOnConfirmationMessage();
+       // closeWarningMessage();
         clickCloseButton();
+        switchToDefault();
+        wait(3000);
 
     }
 
     public void addCI_ToChangeTicket(String CIName, String CI_ImpactLevel){
         clickDiagnosis();
         clickCiSearch();
-        switchToFrameByIndex(2);
+        int size = driver.findElements(By.tagName("iframe")).size();
+        switchToFrameByIndex(size-1);
         clickClearButton();
         enterNamePlus(CIName);
         clickCiSearchButton();
         clickToSelectCi();
         selectLevel(CI_ImpactLevel);
         clickRelateCiButton();
+        wait(1000);
         closeWarningMessage_changeTicket();
+        //clickOk_OnPop_up();
         clickCloseButton();
-
+        switchToDefault();
     }
     public void enterImpactTo(String text){
         findElement(By.id(txt_IMPACT_TO_PLUS_BULK_UPDATE)).clear();
@@ -467,6 +521,14 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         }
     }
 
+    public void clickYesOnConfirmationMessage(){
+        driver.switchTo().frame(1);
+        wait(1000);
+        clickElement(By.id("ardivpcl"));
+        wait(1000);
+        driver.switchTo().defaultContent();
+        driver.switchTo().frame(2);
+    }
     public void closeWarningMessage()
     {
         driver.switchTo().frame(1);

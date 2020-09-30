@@ -5,6 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
 import pageObjects.OWF_KnownErrorPage;
+import utils.CommonUtils;
 
 public class OWF_KnownErrorPageSteps {
 
@@ -98,5 +99,35 @@ public class OWF_KnownErrorPageSteps {
     @When("user enters closure code as {string}")
     public void userEntersClosureCodeAs(String arg0) {
      knownErrorPage.enterClosureCode(arg0);
+    }
+
+
+    @And("user should see known error code as read only")
+    public void userShouldSeeKnownErrorCodeAsReadOnly() {
+        Assert.assertTrue(knownErrorPage.verifyIsKnownErrorCodeIsReadOnly());
+
+    }
+
+    @When("user enters next assessment date as {int} days in the future")
+    public void userEntersNextAssessmentDateAsDaysInTheFuture(int delay) {
+          int newDelay= delay*24*60;
+          knownErrorPage.enterNextAssessmentDate(CommonUtils.getDateTime("MM/DD/yyyy HH:mm:ss ", "Europe/London", newDelay));
+    }
+
+    @Then("{string} shouldn't be visible")
+    public void shouldnTBeVisible(String fields) {
+        Assert.assertTrue(knownErrorPage.verifyFieldsInvisible(fields));
+    }
+
+    @And("user gets known error ticket")
+    public void userGetsKnownErrorTicket() {
+        String ticket = knownErrorPage.getTicketValue();
+        System.out.println("Stored ticket is " + ticket);
+        CommonUtils.keTicket = ticket;
+    }
+
+    @And("user enters known error ticket")
+    public void userEntersKnownErrorTicket() {
+        knownErrorPage.enterTicket(CommonUtils.keTicket);
     }
 }

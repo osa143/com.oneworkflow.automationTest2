@@ -4,7 +4,6 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.OWF_AgentConsolePage;
 import utils.CommonUtils;
@@ -24,9 +23,10 @@ public class OWF_AgentConsolePageSteps {
 
     @When("user selects SID console from agent console")
     public void userSelectsSIDConsoleFromAgentConsole() {
-
         agentConsolePage.clickConsoleMenu();
         agentConsolePage.clickMenuItemSIDConsole();
+        CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
+
     }
 
     @When("user clicks on add column under preferences and selects OP next due date")
@@ -44,6 +44,8 @@ public class OWF_AgentConsolePageSteps {
 
     @When("user clicks on create problem record")
     public void userClicksOnCreateProblemRecord() {
+
+
         agentConsolePage.clickCreateMenu();
         agentConsolePage.clickMenuItemProblemRecord();
         //agentConsolePage.wait(3000);
@@ -373,6 +375,7 @@ public class OWF_AgentConsolePageSteps {
     @When("user clicks on more filters button")
     public void userClicksOnMoreFiltersButton() {
         agentConsolePage.clickMoreFilters();
+        agentConsolePage.switchToFrameByIndex(2);
     }
 
     @When("user selects status as {string} on user more filters window")
@@ -427,6 +430,7 @@ public class OWF_AgentConsolePageSteps {
 
     @When("user sets the preferences as {string}")
     public void userSetsThePreferencesAs(String arg0) {
+
         agentConsolePage.clickPreferences();
         agentConsolePage.setPreferences(arg0);
     }
@@ -629,6 +633,150 @@ public class OWF_AgentConsolePageSteps {
     public void userLogsOutAndAcceptsAlert() {
         agentConsolePage.doLogout();
         //agentConsolePage.getDriver().switchTo().alert().accept();
+    }
+
+    @And("user should see specified Timezone as {string} top right under username")
+    public void userShouldSeeSpecifiedTimezoneAsTopRightOfTheAgentConsoleUnderUsername(String ExpectedTimeZone) {
+        Assert.assertEquals(agentConsolePage.getTimezone(), ExpectedTimeZone );
+    }
+
+    @When("user selects {string} menu as {string}")
+    public void userSelectsMenuAs(String menu, String item) {
+        agentConsolePage.selectMenuAndItem(menu, item);
+    }
+
+    @And("user should see confirmation message and clicks ok button and close the my account window")
+    public void userShouldSeeConfirmationMessageAndClicksOkButtonAndCloseTheMyAccountWindow() {
+        agentConsolePage.closeConfirmationMessageAndClickCloseButton();
+    }
+
+    @And("user enters Time Zone as {string}")
+    public void userEntersTimeZoneAs(String timeZone) {
+        agentConsolePage.enterTimeZone(timeZone);
+    }
+
+    @And("user clicks save button on my account window")
+    public void userClicksSaveButtonOnMyAccountWindow() {
+        agentConsolePage.clickSaveButton_MyAccount();
+    }
+
+
+    @Then("user console should be opened in new window")
+    public void userConsoleShouldBeOpenedInNewWindow() {
+        Assert.assertEquals(agentConsolePage.getPageTitle(), "OS3 User Console (Search)");
+
+    }
+
+    @And("dropdown values {string} should be available in {string} dropdown")
+    public void dropdownValuesShouldBeAvailableInDropdown(String dropdownValues, String dropdownName) {
+        Assert.assertTrue(agentConsolePage.verifyDropdownValues(dropdownValues, dropdownName, "notreadonly"));
+    }
+
+    @Then("user selects user {string} in user table")
+    public void userClicksOnUserAndClicksOpen(String text) {
+        agentConsolePage.clickElementByContainsTextAndTagName("span", text);
+    }
+
+    @And("user clicks open user button")
+    public void userClicksOpenUserButton() {
+        agentConsolePage.clickOpenUser();
+    }
+
+    @And("user validates countries {string} are present")
+    public void userValidatesCountriesArePresent(String arg0) {
+        Assert.assertTrue(agentConsolePage.verifyElementIsDisplayedByContainsText(arg0));
+    }
+
+    @Then("user selects country {string}")
+    public void userSelectsCountry(String text) {
+        agentConsolePage.clickElementByContainsTextAndTagName("span", text);
+    }
+
+    @And("user clicks add right button")
+    public void userClicksAddRightButton() {
+        agentConsolePage.clickAddRight();
+    }
+
+    @Then("user closes user information window")
+    public void userClosesUserInformationWindow() {
+        agentConsolePage.clickCloseUserInformation();
+    }
+
+
+    @Then("user clicks remove left button")
+    public void userClicksRemoveLeftButton() {
+        agentConsolePage.clickRemoveLeft();
+    }
+
+    @And("user validates {string} has been removed")
+    public void userValidatesHasBeenRemoved(String arg0) {
+
+    }
+
+    @And("user information window should be opened")
+    public void userInformationWindowShouldBeOpened() {
+        //dummystep
+    }
+
+    @And("user should see available trust principles as countries {string}")
+    public void userShouldSeeAvailableTrustPrinciplesAsCountries(String countries) {
+     Assert.assertTrue(agentConsolePage.verifyAvailableTrustPrinciplesCountries(countries));
+    }
+
+    @Then("user should see {string} under selected trust principles")
+    public void userShouldSeeUnderSelectedTrustPrinciples(String countryName) {
+        Assert.assertTrue(agentConsolePage.getTrustPrinciplesAvailableCountry(1, countryName));
+    }
+
+    @Then("user shouldn't see {string} under selected trust principles")
+    public void userShouldnTSeeUnderSelectedTrustPrinciples(String countryName) {
+        Assert.assertFalse(agentConsolePage.getTrustPrinciplesAvailableCountry(1, countryName));
+    }
+
+    @And("user enters quick create description as {string}")
+    public void userEntersQuickCreateDescriptionAs(String description) {
+        agentConsolePage.enterQuickCreateTroubleDescription(description);
+    }
+
+    @Then("user selects quick create request type as {string}")
+    public void userSelectsQuickCreateRequestTypeAs(String requestType) {
+        agentConsolePage.selectQuickCreateTroubleRequestType(requestType);
+    }
+
+    @And("user enters quick create title as {string}")
+    public void userEntersQuickCreateTitleAs(String title) {
+        agentConsolePage.enterQuickCreateTroubleTitle(title);
+    }
+
+    @Then("user clicks on quick create button")
+    public void userClicksOnQuickCreateButton() {
+        agentConsolePage.clickQuickCreateButton();
+    }
+
+    @Then("user selects quick create source as {string}")
+    public void userSelectsQuickCreateSourceAs(String arg0) {
+        agentConsolePage.selectQuickCreateTroubleSource(arg0);
+    }
+
+    @And("error message should display on agent console as {string}")
+    public void errorMessageShouldDisplayOnAgentConsoleAs(String arg0) {
+        Assert.assertEquals(agentConsolePage.getErrorPopUpText(), arg0);
+    }
+
+    @Then("user clicks quick create affected BU as sweden")
+    public void userClicksQuickCreateAffectedBUAsSweden() {
+        agentConsolePage.clickQuickCreateSwedenCheckBox();
+    }
+
+    @Then("tickets {string} should be filtered {string}")
+    public void ticketsShouldBeFiltered(String colValue, String colName) {
+        Assert.assertTrue(agentConsolePage.verifyTicketsFilteredToSearch(colName, colValue, false));
+    }
+
+    @And("user validates {string} are present under {string} column")
+    public void userValidatesArePresentUnderColumn(String colValues, String colName) {
+        Assert.assertTrue(agentConsolePage.verifyUserProfiles(colName, colValues, false));
+        agentConsolePage.clickCloseUserInformation();
     }
 }
 

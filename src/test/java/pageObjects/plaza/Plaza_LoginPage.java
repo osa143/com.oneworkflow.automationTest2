@@ -25,7 +25,7 @@ public class Plaza_LoginPage extends BasePage {
         driver.get(url);
     }
     public void doLogin(String username, String password){
-        PlazaValidation.UserName = "test auto";
+        PlazaValidation.UserName = "Test Auto";
         enterUsername(username);
         enterPassword(password);
         clickLoginButton();

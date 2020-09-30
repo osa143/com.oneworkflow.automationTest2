@@ -55,6 +55,7 @@ public class DriverFactory {
 
                 case "CHROME":
                     WebDriverManager.chromedriver().setup();
+                    System.setProperty("webdriver.chrome.silentOutput","true");
                     driver = new ChromeDriver();
                     break;
 

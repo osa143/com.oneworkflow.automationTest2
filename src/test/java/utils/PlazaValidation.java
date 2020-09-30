@@ -118,6 +118,15 @@ public class PlazaValidation {
     public static String NumberOfServers;
     public static String OrganisationName;
     public static String ServiceId;
+    public static String ServiceAreaCategory;
+    public static String TypeOfServer;
+    public static String Service;
+    public static String ServiceArea;
+    public static String Category_Incident;
+    public static String TypeOfIssue;
+    public static String Subject;
+    public static String Description_Incident;
+    public static String SystemNameInHaiti;
 
 
 

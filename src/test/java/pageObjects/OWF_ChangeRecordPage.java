@@ -11,7 +11,8 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String btnSEND = "WIN_0_600002905";
     private static final String ddANSWER= "Answer";
     private static final String dd_OWNER= "Owner*";
-    private static final String btnDOWN = "reg_img_700050252";
+    private static final String btnDOWN = "WIN_0_700050252";
+    private static final String btnUP= "WIN_0_700050251";
     private static final String ddREQUEST_CATEGORY = "Request Category*";
     private static final String dd_CHANGE_TYPE= "arid_WIN_0_755000000";
     private static final String txt_SEARCH_FILTER_CALENDAR= "combo-1017-inputEl";
@@ -92,15 +93,53 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_COMPLETEDCODE = "arid_WIN_0_777021166";
     private static final String txt_EXTERNALPARENTTICKETID = "arid_WIN_0_600001020";
     private static final String txt_ACTUALDOWNTIME = "arid_WIN_0_600001501";
-    private static final String txt_SUBSCRIPTIONID = "arid_WIN_0_600002012";
-    private static final String txt_ADDRESSOFISSUE = "arid_WIN_0_600002023";
+    private static final String txt_SUBSCRIPTION_ID = "arid_WIN_0_600002012";
+    private static final String txt_ADDRESS_OF_ISSUE = "arid_WIN_0_600002023";
+    private static final String btn_APPROVE= "WIN_0_705001330";
+    private static final String dd_OWNER_PROFILE = "arid_WIN_0_777031401";
+    private static final String dd_INTERESTED_PARTIES_TYPE = "arid_WIN_0_700027963";
+    private static final String txt_EXTERNAL_TICKET_ID= "WIN_0_600002211";
 
+    public String getExternalTicketID(){
+        return getAttributeValueById(txt_EXTERNAL_TICKET_ID);
+    }
+    private static final String btn_CHANGE_BUILDER= "//img[@alt='Editor for Change Builder+*']";
+
+    public boolean verifyChangeBuilderButtonIsDisplayed(){
+        return verifyElementIsDisplayed(By.xpath(btn_CHANGE_BUILDER));
+    }
+
+
+    public boolean verifyInterestedPartiesTypes(String statuses, String dropdownName){
+        return verifyDropdownValues(statuses, dropdownName, dd_INTERESTED_PARTIES_TYPE);
+    }
+
+    public void enterChangeBuilder(String changeBuilderName) {
+        findElement(By.id(txt_CHANGE_BUILDER)).clear();
+        driver.findElement(By.id(txt_CHANGE_BUILDER)).sendKeys(changeBuilderName);
+        //driver.findElement(By.id(txt_CHANGE_BUILDER)).sendKeys(Keys.ENTER);
+
+    }
+
+    public void selectOwnerProfile(String value) {
+        selectDropDownNameAndValue(dd_OWNER_PROFILE, value, false);
+    }
+
+
+    public Boolean verifyChangeBuilderIsMandatory() {
+        return verifyElementIsDisplayed(By.id(txt_CHANGE_BUILDER));
+    }
+
+    public void clickApprove(){
+        clickElement(By.id(btn_APPROVE));
+        switchToDefault();
+    }
     public String getAddressOfIssue(){
-        return getTextByID(txt_ADDRESSOFISSUE);
+        return getTextByID(txt_ADDRESS_OF_ISSUE);
     }
 
     public String getSubscriptionID(){
-        return getTextByID(txt_SUBSCRIPTIONID);
+        return getTextByID(txt_SUBSCRIPTION_ID);
     }
 
     public String getActualDowntime(){
@@ -146,6 +185,9 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     public String getImpactHours(){
         return getTextByID(txt_IMPACT_HOURS);
     }
+    public void enterImpactedHours(String text){
+        enterTextByElement(By.id(txt_IMPACT_HOURS), text);
+    }
 
     public String getImpactDays(){
         return getTextByID(txt_IMPACT_DAYS);
@@ -160,11 +202,11 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     }
 
     public String getRequestEnd(){
-        return getTextByID(txt_REQUESTEND);
+        return getAttributeValueById(txt_REQUESTEND);
     }
 
     public String getRequestStart(){
-        return getTextByID(txt_REQUESTSTART);
+        return getAttributeValueById(txt_REQUESTSTART);
     }
 
     public String getServiceAndCustomerImpact(){
@@ -217,8 +259,8 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         enterRiskDescriptionId(listMap.get(0).get("Risk"));
         enterServiceAndCustomerImpact(listMap.get(0).get("ServiceCustomerImpact"));
         selectEstimatedImpact(listMap.get(0).get("EstimatedImpact"));
-        enterStartDate_format(10);
-        enterEndDate_format(20);
+        enterStartDate(10);
+        enterEndDate(20);
         enterImpactDurationMins(listMap.get(0).get("ImpactDuration"));
         clickSave();
     }
@@ -387,10 +429,10 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         WebElement advanceSearchTextBox= findElement(By.xpath("//div[@class='AdvancedSearchBarField arfid1005 ardbnFld-AdvanceQuery']//textarea[@id='arid1005']"));
         advanceSearchTextBox.click();
         advanceSearchTextBox.sendKeys(text);
+
     }
     public void clickAdvancedSearch(){
         clickElement(By.id(btn_ADVANCED_SEARCH));
-        wait(2000);
     }
     public void clickCancel(){
         clickElement(By.id(btn_CANCEL_LOCATION));
@@ -476,6 +518,10 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     public void clickDownButton(){
         driver.findElement(By.id(btnDOWN)).click();
     }
+    public void clickArrowUpButton(){
+        driver.findElement(By.id(btnUP)).click();
+    }
+
     public void selectRequestCategoryOnChangeRecordPage(String value){
         selectDropDownNameAndValue(ddREQUEST_CATEGORY, value, false);
     }
@@ -491,7 +537,5 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         return availability;
 
     }
-
-
 
 }

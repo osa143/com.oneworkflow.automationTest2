@@ -99,6 +99,7 @@ public class OWF_ChangeRecordPageSteps {
     @When("user clicks on Send button")
     public void userClicksOnSendButton() {
         changeRecordPage.clickSendButton();
+        changeRecordPage.wait(3000);
 
     }
 
@@ -205,6 +206,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user selects answer as {string}")
     public void userSelectsAnswerAs(String arg0) {
+        changeRecordPage.wait(500);
         changeRecordPage.selectAnswer(arg0);
         changeRecordPage.clickDownButton();
         changeRecordPage.wait(500);
@@ -378,12 +380,16 @@ public class OWF_ChangeRecordPageSteps {
     @Then("user should see {string} email update")
     public void userShouldSeeEmailUpdate(String arg0) {
         try {
-            Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 1), arg0);
-        } catch (Exception e) {
-            changeRecordPage.wait(5000);
-            changeRecordPage.selectTab("Linked Items");
+            changeRecordPage.wait(45000);
             changeRecordPage.selectTab("Notifications");
             changeRecordPage.selectTab("Sent");
+            Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 1), arg0);
+        } catch (Exception e) {
+            changeRecordPage.wait(45000);
+            changeRecordPage.clickRefresh_ticketFresh();
+            changeRecordPage.selectTab("Notifications");
+            changeRecordPage.selectTab("Sent");
+            System.out.println("Trying second time");
             Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 1), arg0);
         }
 
@@ -433,7 +439,9 @@ public class OWF_ChangeRecordPageSteps {
     @When("user gets the schedule time values")
     public void userGetsTheScheduleTimeValues() {
         CommonUtils.requestStart = changeRecordPage.getRequestStart();
+        System.out.println("Request start time is " + CommonUtils.requestStart);
         CommonUtils.requestEnd = changeRecordPage.getRequestEnd();
+        System.out.println("Request End time is " + CommonUtils.requestEnd);
     }
 
 
@@ -441,6 +449,12 @@ public class OWF_ChangeRecordPageSteps {
     public void userSelectsOwnerAs(String arg0) {
         changeRecordPage.selectOwner(arg0);
     }
+
+    @Then("user selects owner profile as {string}")
+    public void userSelectsOwnerProfileAs(String arg0) {
+        changeRecordPage.selectOwnerProfile(arg0);
+    }
+
 
     @And("user selects resolved group as {string}")
     public void userSelectsResolvedGroupAs(String arg0) {
@@ -485,6 +499,7 @@ public class OWF_ChangeRecordPageSteps {
     @When("user logsOut from One workflow")
     public void userLogsOutFromOneWorkflow() {
         changeRecordPage.selectDropDownNameAndValue("Nav-Username", "Logout", false);
+        changeRecordPage.wait(2000);
     }
 
     @And("user gets request start and end time on change record page")
@@ -853,6 +868,121 @@ public class OWF_ChangeRecordPageSteps {
     public void userClicksRiskQuestionDownArrow() {
         changeRecordPage.clickDownButton();
         changeRecordPage.wait(500);
+    }
+
+    @And("user enters request start time as {int} minutes past from {string} timezone {string} format")
+    public void userEntersRequestStartTimeAsMinutesPastFromTimezoneFormat(int delay, String timezone, String pattern) {
+        changeRecordPage.enterStartDate_DateFormat_Timezone_Delay(pattern, timezone, delay);
+    }
+    @And("user enters request end time as {int} minutes past from {string} timezone {string} format")
+    public void userEntersRequestEndTimeAsMinutesPastFromTimezoneFormat(int delay, String timezone, String pattern) {
+        changeRecordPage.enterEndDate_DateFormat_Timezone_Delay(pattern, timezone, delay);
+    }
+
+    @And("user enters start time as {int} hours fast from current sweden time in {string} format")
+    public void userEntersStartTimeAsHoursFastFromCurrentSwedenTimeInFormat(int delayHours, String pattern) {
+        int newDelay = 60 * delayHours;
+        changeRecordPage.enterStartDate_DateFormat_Timezone_Delay(pattern, "Europe/Stockholm", newDelay);
+    }
+
+    @And("user enters end time as {int} hours fast from current sweden time in {string} format")
+    public void userEntersEndTimeAsHoursFastFromCurrentSwedenTimeInFormat(int delayHours, String pattern) {
+        int newDelay = 60 * delayHours;
+        changeRecordPage.enterEndDate_DateFormat_Timezone_Delay(pattern, "Europe/Stockholm", newDelay);
+    }
+
+    @And("user clicks on request thats pending approval")
+    public void userClicksOnRequestThatsPendingApproval() {
+        changeRecordPage.clickPendingTicketForApproval();
+    }
+
+    @And("user enters {string} in comments field")
+    public void userEntersInCommentsField(String arg0) {
+        changeRecordPage.enterApprovalRequestComment(arg0);
+    }
+
+    @And("user clicks on approve button")
+    public void userClicksOnApproveButton() {
+        changeRecordPage.clickApprove();
+        changeRecordPage.switchToFrameByIndex(2);
+    }
+
+    @When("user clears description field")
+    public void userClearsDescriptionField() {
+        changeRecordPage.clearDescriptionField();
+    }
+
+    @And("user validates agreed start time is updated")
+    public void userValidatesAgreedStartTimeIsUpdated() {
+        Assert.assertNotNull(changeRecordPage.getAgreedStart());
+    }
+
+    @And("user validates agreed end time is updated")
+    public void userValidatesAgreedEndTimeIsUpdated() {
+        Assert.assertNotNull(changeRecordPage.getAgreedEnd());
+    }
+
+    @And("user validates actual start time as current date time")
+    public void userValidatesActualStartTimeAsCurrentDateTime() {
+        String CurrentDateTime= CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss a", "Europe/Stockholm", 0);
+        Assert.assertEquals(CurrentDateTime, changeRecordPage.getActualStart());
+    }
+
+    @And("user gets CI impact from time and impact to time")
+    public void userGetsCIImpactFromTimeAndImpactToTime() {
+        CommonUtils.CI_Impact_From_Time=changeRecordPage.getTableCellData(By.id("T700009087"), "Impact From",1);
+        CommonUtils.CI_Impact_To_Time=changeRecordPage.getTableCellData(By.id("T700009087"), "Impact To",1);
+    }
+
+    @And("user validates CI impact from time and impact to time is updated")
+    public void userValidatesCIImpactFromTimeAndImpactToTimeIsUpdated() {
+        Assert.assertEquals(CommonUtils.CI_Impact_From_Time, changeRecordPage.getTableCellData(By.id("T700009087"), "Impact From",1));
+        Assert.assertEquals(CommonUtils.CI_Impact_To_Time, changeRecordPage.getTableCellData(By.id("T700009087"), "Impact To",1));
+    }
+
+    @And("user enters impact duration as {string} hours")
+    public void userEntersImpactDurationAsHours(String ImpactedHours) {
+        changeRecordPage.enterImpactedHours(ImpactedHours);
+    }
+
+    @And("user clicks on last risk question selects last answer as {string}")
+    public void userClicksOnLastRiskQuestionSelectsLastAnswerAs(String answer) {
+        changeRecordPage.clickArrowUpButton();
+        changeRecordPage.selectAnswer(answer);
+    }
+
+
+
+    @And("user validates actual start time matches timeline entry time")
+    public void userValidatesActualStartTimeMatchesTimelineEntryTime() {
+        boolean containsMessage = CommonUtils.Timeline_Entry.contains(changeRecordPage.getActualStart());
+        Assert.assertTrue(containsMessage, "actual start time matches timeline entry time");
+    }
+
+    @And("user validates change builder+ is mandatory")
+    public void userValidatesChangeBuilderIsMandatory() {
+        Assert.assertTrue(changeRecordPage.verifyChangeBuilderIsMandatory());
+    }
+
+    @And("user enter {string} in the change builder field")
+    public void userEnterInTheChangeBuilderField(String arg0) {
+        changeRecordPage.enterChangeBuilder(arg0);
+    }
+
+    @Then("user validates multiple options {string} should be available in Type dropdown")
+    public void userValidatesMultipleOptionsShouldBeAvailableInTypeDropdown(String arg0) {
+        Assert.assertTrue(changeRecordPage.verifyInterestedPartiesTypes(arg0, ""));
+    }
+
+    @Then("user validates Nokia ticket ID is present")
+    public void userValidatesNokiaTicketIDIsPresent() {
+     Assert.assertNotNull(changeRecordPage.getExternalTicketID());
+    }
+
+    @Then("user validates change builder button is present")
+    public void userValidatesButtonIsPresent() {
+        Assert.assertTrue(changeRecordPage.verifyChangeBuilderButtonIsDisplayed());
+
     }
 }
 

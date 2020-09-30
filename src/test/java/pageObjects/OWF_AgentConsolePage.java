@@ -90,7 +90,7 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String btn_SAVE_MY_ACCOUNT="//a[@arid='1003']";
     private static final String btn_Open_User = "WIN_0_700027095";
     private static final String btn_Add_Right = "WIN_3_800080011";
-    private static final String btn_Close_User_Information = "WIN_3_777000001";
+    private static final String btn_Close_User_Information = "//a[@arid='777000001']";
     private static final String btn_Remove_Left = "WIN_3_800080012";
     private static final String table_Available_Trust_Principles="T800080004";
     private static final String table_Selected_Trust_Principles="T800080007";
@@ -101,8 +101,12 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String dd_QUICK_CREATE_SOURCE="arid_WIN_0_800007021";
     private static final String ERROR_POP_UP="pbartable";
     private static final String chkbx_SWEDEN="WIN_0_rc0id830000120";
+    private static final String table_USER_INFORMATION= "T700028052";
 
+    public boolean verifyUserProfiles(String colName, String colValue, boolean partialText){
+        return verifyColumnValuesMultiple(By.id(table_USER_INFORMATION), colName, colValue, partialText );
 
+    }
     public void clickQuickCreateSwedenCheckBox() {
         driver.findElement(By.id(chkbx_SWEDEN)).click();
     }
@@ -174,7 +178,7 @@ public class OWF_AgentConsolePage extends BasePage {
     }
 
     public void clickCloseUserInformation(){
-        clickElementById(btn_Close_User_Information);
+        clickElement(By.xpath(btn_Close_User_Information));
     }
 
     public void  clickAddRight(){

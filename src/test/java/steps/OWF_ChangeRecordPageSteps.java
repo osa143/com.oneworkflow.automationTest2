@@ -974,10 +974,63 @@ public class OWF_ChangeRecordPageSteps {
         Assert.assertTrue(changeRecordPage.verifyInterestedPartiesTypes(arg0, ""));
     }
 
+    @Then("user validates Nokia ticket ID is present")
+    public void userValidatesNokiaTicketIDIsPresent() {
+     Assert.assertNotNull(changeRecordPage.getExternalTicketID());
+    }
+
     @Then("user validates change builder button is present")
     public void userValidatesButtonIsPresent() {
         Assert.assertTrue(changeRecordPage.verifyChangeBuilderButtonIsDisplayed());
 
+    }
+
+    @Then("user validates Location Details are shown")
+    public void userValidatesLocationDetailsAreShown() {
+        changeRecordPage.switchToFrameByIndex(2);
+        Assert.assertTrue(changeRecordPage.verifyLocationDetailsIsDisplayed());
+
+    }
+
+    @Then("user clicks on refresh button under related CIs")
+    public void userClicksOnRefreshButtonUnderRelatedCIs() {
+        changeRecordPage.clickRefresh_RelatedCIs_LocationDetails();
+    }
+
+    @And("user validates CIs are shown under related CI table")
+    public void userValidatesCIsAreShownUnderRelatedCITable() {
+        Assert.assertTrue(changeRecordPage.verifyRelatedCIsArePresent_LocationDetails());
+    }
+
+    @Then("user clicks on the close button on location details window")
+    public void userClicksOnTheCloseButtonOnLocationDetailsWindow() {
+                changeRecordPage.clickCloseLocationDetails();
+    }
+
+    @And("user validates add interested parties form is shown")
+    public void userValidatesAddInterestedPartiesFormIsShown() {
+        Assert.assertTrue(changeRecordPage.verifyInterestedPartyIsDisplayed());
+
+    }
+
+    @And("user enters organization name plus as {string} and searches")
+    public void userEntersOrganizationNamePlusAsAndSearches(String Org_Name) {
+        changeRecordPage.enterOrganisationNamePlusAndSearch(Org_Name);
+    }
+
+    @And("user selects Agile Network Systems and clicks use button")
+    public void userSelectsAndClicksUseButton() {
+       changeRecordPage.clickUse_FrameOnFrame();
+    }
+
+    @Then("user validates organization as {string}")
+    public void userValidatesOrganizationAs(String expected_Org_Name) {
+      Assert.assertEquals(changeRecordPage.getOrganisationName(),expected_Org_Name);
+    }
+
+    @Then("user clicks on cancel button on interested parties window")
+    public void userClicksOnCancelButtonOnInterestedPartiesWindow() {
+        changeRecordPage.clickCancel_InterestedParty();
     }
 }
 

@@ -98,6 +98,11 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String btn_APPROVE= "WIN_0_705001330";
     private static final String dd_OWNER_PROFILE = "arid_WIN_0_777031401";
     private static final String dd_INTERESTED_PARTIES_TYPE = "arid_WIN_0_700027963";
+    private static final String txt_EXTERNAL_TICKET_ID= "WIN_0_600002211";
+
+    public String getExternalTicketID(){
+        return getAttributeValueById(txt_EXTERNAL_TICKET_ID);
+    }
     private static final String btn_CHANGE_BUILDER= "//img[@alt='Editor for Change Builder+*']";
 
     public boolean verifyChangeBuilderButtonIsDisplayed(){

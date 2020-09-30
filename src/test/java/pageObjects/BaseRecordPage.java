@@ -989,14 +989,14 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterStartDate_format(int delay) {
-        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
     }
 
     public void enterEndDate_format(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );
     }

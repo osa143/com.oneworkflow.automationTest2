@@ -29,7 +29,7 @@ Feature: SAO-453 - Missing Interested Party Types (ISO, ISM...)
     And user waits 4 secs
     Then user validates multiple options "Additional Access:Change Builder:Change Initiator:Contact:Custom1:Custom2:Requested By:Requested For:Solution Manager:Solution Owner:Vendor:(clear)" should be available in Type dropdown
     And user selects type as "Change Builder" under interested parties
-    And user right clicks on CI "" and clears impact for all CI's
+    And user right clicks on CI "One Workflow" and clears impact for all CI's
     Then user enters "Change_Automation_3" in login name plus field
     And user clicks on search under add interested party
     And user highlights user "Change_Automation_3" under interested parties

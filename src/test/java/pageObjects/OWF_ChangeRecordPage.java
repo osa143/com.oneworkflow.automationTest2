@@ -93,11 +93,17 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_COMPLETEDCODE = "arid_WIN_0_777021166";
     private static final String txt_EXTERNALPARENTTICKETID = "arid_WIN_0_600001020";
     private static final String txt_ACTUALDOWNTIME = "arid_WIN_0_600001501";
-    private static final String txt_SUBSCRIPTIONID = "arid_WIN_0_600002012";
-    private static final String txt_ADDRESSOFISSUE = "arid_WIN_0_600002023";
+    private static final String txt_SUBSCRIPTION_ID = "arid_WIN_0_600002012";
+    private static final String txt_ADDRESS_OF_ISSUE = "arid_WIN_0_600002023";
     private static final String btn_APPROVE= "WIN_0_705001330";
     private static final String dd_OWNER_PROFILE = "arid_WIN_0_777031401";
     private static final String dd_INTERESTED_PARTIES_TYPE = "arid_WIN_0_700027963";
+    private static final String btn_CHANGE_BUILDER= "//img[@alt='Editor for Change Builder+*']";
+
+    public boolean verifyChangeBuilderButtonIsDisplayed(){
+        return verifyElementIsDisplayed(By.xpath(btn_CHANGE_BUILDER));
+    }
+
 
     public boolean verifyInterestedPartiesTypes(String statuses, String dropdownName){
         return verifyDropdownValues(statuses, dropdownName, dd_INTERESTED_PARTIES_TYPE);
@@ -124,11 +130,11 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         switchToDefault();
     }
     public String getAddressOfIssue(){
-        return getTextByID(txt_ADDRESSOFISSUE);
+        return getTextByID(txt_ADDRESS_OF_ISSUE);
     }
 
     public String getSubscriptionID(){
-        return getTextByID(txt_SUBSCRIPTIONID);
+        return getTextByID(txt_SUBSCRIPTION_ID);
     }
 
     public String getActualDowntime(){

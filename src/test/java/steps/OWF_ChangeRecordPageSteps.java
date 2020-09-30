@@ -973,6 +973,12 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesMultipleOptionsShouldBeAvailableInTypeDropdown(String arg0) {
         Assert.assertTrue(changeRecordPage.verifyInterestedPartiesTypes(arg0, ""));
     }
+
+    @Then("user validates change builder button is present")
+    public void userValidatesButtonIsPresent() {
+        Assert.assertTrue(changeRecordPage.verifyChangeBuilderButtonIsDisplayed());
+
+    }
 }
 
 

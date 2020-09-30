@@ -1273,8 +1273,7 @@ formatter.match({
   "location": "OWF_ChangeRecordPageSteps.userShouldSeeNewEmailAddedInInRow(String,String,int)"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: expected [Test2@Test2.com] but found [xchangeinitiatorinternal1@teliacompany.com_OFF]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat steps.OWF_ChangeRecordPageSteps.userShouldSeeNewEmailAddedInInRow(OWF_ChangeRecordPageSteps.java:377)\r\n\tat ✽.user should see new email \"Test2@Test2.com\" added in \"Email Address\" in row 2(features/Automation/Regression/Change/E2E_Normal_Change_(Internal Initiator).feature:151)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "user clicks on \"Notifications\" tab",
@@ -1284,7 +1283,7 @@ formatter.match({
   "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user clicks on \"Sent\" tab",
@@ -1294,7 +1293,7 @@ formatter.match({
   "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user should see \"Acknowledged\" email update",
@@ -1304,7 +1303,7 @@ formatter.match({
   "location": "OWF_ChangeRecordPageSteps.userShouldSeeEmailUpdate(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user changes status to \"Approval Requested\"",
@@ -1314,7 +1313,7 @@ formatter.match({
   "location": "OWF_ChangeRecordPageSteps.userChangeStatusTo(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user clicks on save button",
@@ -1324,7 +1323,7 @@ formatter.match({
   "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user validates ticket status as \"Approval Requested\"",
@@ -1334,7 +1333,7 @@ formatter.match({
   "location": "OWF_WorkOrderPageSteps.userValidatesTicketStatusAs(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user validates availability of tabs \"Approval\"",
@@ -1344,7 +1343,7 @@ formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userValidatesAvailabilityOfTabs(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user waits 2 secs",
@@ -1354,7 +1353,7 @@ formatter.match({
   "location": "OWF_WorkOrderPageSteps.userWaitsSecs(int)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user logsOut from One workflow",
@@ -1364,7 +1363,7 @@ formatter.match({
   "location": "OWF_ChangeRecordPageSteps.userLogsOutFromOneWorkflow()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user switches to window 1",
@@ -1374,7 +1373,7 @@ formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user goes back to login page",
@@ -1384,7 +1383,7 @@ formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userGoesBackToLoginPage()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user logs in with valid username \"ChangeManager1_Automation\" and password as \"Test@1234\"",
@@ -1394,7 +1393,7 @@ formatter.match({
   "location": "OWF_LoginPageSteps.userLogsInWithValidUsernameAndPasswordAs(String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user successfully logged in to OneWorkflow and agent console should be displayed",
@@ -1404,7 +1403,7 @@ formatter.match({
   "location": "OWF_AgentConsolePageSteps.userSuccessfullyLoggedInToOneworkflowAndAgentConsoleShouldBeDisplayed()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user clicks on more filters button",
@@ -1414,7 +1413,7 @@ formatter.match({
   "location": "OWF_AgentConsolePageSteps.userClicksOnMoreFiltersButton()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user clicks on \"Core\" tab",
@@ -1424,7 +1423,7 @@ formatter.match({
   "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user selects status as \"Approval Requested\" on user more filters window",
@@ -1434,7 +1433,7 @@ formatter.match({
   "location": "OWF_AgentConsolePageSteps.userSelectsStatusAsOnUserMoreFiltersWindow(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user clicks on apply button on user more filters window",
@@ -1444,7 +1443,7 @@ formatter.match({
   "location": "OWF_AgentConsolePageSteps.userClicksOnApplyButtonOnUserMoreFiltersWindow()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user should see \"CR\" tickets with \"Status\" of \"Approval Requested\"",
@@ -1454,7 +1453,7 @@ formatter.match({
   "location": "OWF_AgentConsolePageSteps.userShouldSeeTicketsWithOf(String,String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user selects search menu as \"Open Search Form:Change Record/Project/Freeze\"",
@@ -1464,17 +1463,17 @@ formatter.match({
   "location": "OWF_AgentConsolePageSteps.userSelectsSearchMenuAs(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "user switches to window 1",
+  "name": "user switches to window 2",
   "keyword": "And "
 });
 formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user enters ticket previously created and searches",
@@ -1484,7 +1483,7 @@ formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userEntersTicketPreviouslyCreatedAndSearches()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user clicks on owner under sections",
@@ -1494,7 +1493,7 @@ formatter.match({
   "location": "OWF_TroubleEventPageSteps.userClicksOnOwnerUnderSections()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user validates owner profile as \"Change Manager\"",
@@ -1504,7 +1503,7 @@ formatter.match({
   "location": "OWF_ChangeRecordPageSteps.userValidatesOwnerProfileAs(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user selects owner as \"ChangeManager1_Automation\"",
@@ -1514,7 +1513,7 @@ formatter.match({
   "location": "OWF_ChangeRecordPageSteps.userSelectsOwnerAs(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user clicks on save button",
@@ -1524,7 +1523,7 @@ formatter.match({
   "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user clicks on Diagnosis tab",
@@ -1534,7 +1533,7 @@ formatter.match({
   "location": "OWF_ChangeRecordPageSteps.userClicksOnDiagnosisTab()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user clicks on Show CR Matching button",
@@ -1544,7 +1543,7 @@ formatter.match({
   "location": "OWF_ChangeRecordPageSteps.userClicksOnShowCRMatchingButton()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user should see Show CR Matching table appear",
@@ -1554,7 +1553,7 @@ formatter.match({
   "location": "OWF_ChangeRecordPageSteps.userShouldSeeShowCRMatchingTableAppear()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user changes status to \"Analysis\"",
@@ -1564,7 +1563,7 @@ formatter.match({
   "location": "OWF_ChangeRecordPageSteps.userChangeStatusTo(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user clicks on save button",
@@ -1574,17 +1573,7 @@ formatter.match({
   "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates Title isn\u0027t readonly",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userValidatesTitleIsnTReadonly()"
-});
-formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user validates Request Category isn\u0027t readonly",
@@ -1594,7 +1583,8 @@ formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userValidatesRequestCategoryIsnTReadonly()"
 });
 formatter.result({
-  "status": "skipped"
+  "error_message": "java.lang.AssertionError: expected [false] but found [true]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertFalse(Assert.java:65)\r\n\tat org.testng.Assert.assertFalse(Assert.java:75)\r\n\tat steps.OWF_ProblemRecordPageSteps.userValidatesRequestCategoryIsnTReadonly(OWF_ProblemRecordPageSteps.java:985)\r\n\tat ✽.user validates Request Category isn\u0027t readonly(features/Automation/Regression/Change/E2E_Normal_Change_(Internal Initiator).feature:184)\r\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "user validates Description* isn\u0027t readonly",

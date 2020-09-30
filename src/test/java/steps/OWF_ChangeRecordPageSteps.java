@@ -978,6 +978,12 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesNokiaTicketIDIsPresent() {
      Assert.assertNotNull(changeRecordPage.getExternalTicketID());
     }
+
+    @Then("user validates change builder button is present")
+    public void userValidatesButtonIsPresent() {
+        Assert.assertTrue(changeRecordPage.verifyChangeBuilderButtonIsDisplayed());
+
+    }
 }
 
 

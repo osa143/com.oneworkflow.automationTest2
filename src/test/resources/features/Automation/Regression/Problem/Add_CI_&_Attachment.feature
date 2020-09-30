@@ -18,8 +18,15 @@
       When user adds below CI's to the ticket
         |   CI Name     |
         |SE_CPE_FRECPE5 |
-      Then user clicks on Diagnosis tab
+       |FI_LTECell_Valpe4H|
+      And user clicks on Diagnosis tab
       Then CI should be listed and displayed under the Diagnosis tab
+      When user clicks on ticket refresh button
+      Then user validates finland as affected BU
+      When user clicks on CTI details under sections
+      Then user validates Category as "Packet_Transport"
+      And user validates type as "Other"
+      And user validates item as "CPE"
       And  user adds attachment and verifies under ""
         | summary   | description | fullFilePath       | attachments |
         | Test JPEG | Test JPEG   | attachement.doc.txt | 1          |

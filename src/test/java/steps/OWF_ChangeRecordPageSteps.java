@@ -973,6 +973,11 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesMultipleOptionsShouldBeAvailableInTypeDropdown(String arg0) {
         Assert.assertTrue(changeRecordPage.verifyInterestedPartiesTypes(arg0, ""));
     }
+
+    @Then("user validates Nokia ticket ID is present")
+    public void userValidatesNokiaTicketIDIsPresent() {
+     Assert.assertNotNull(changeRecordPage.getExternalTicketID());
+    }
 }
 
 

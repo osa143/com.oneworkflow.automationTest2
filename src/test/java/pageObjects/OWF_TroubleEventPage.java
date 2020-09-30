@@ -166,8 +166,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_ACTION= "arid_WIN_0_777031381";
     private static final String txt_CAUSE= "arid_WIN_0_777031380";
     private static final String chkbx_TO_SELECT_TICKET= "//*[@id='T700506101']/tbody/tr[2]/td[1]/input";
-    private static final String txt_CAUSE= "arid_WIN_0_777031380";
-    private static final String txt_FAULT_POSITION= "arid_WIN_0_600001048";
+
 
 
     public boolean verifyPriorityCheckIsReadOnly(){
@@ -1150,6 +1149,18 @@ public void rightClickOnElement(String cellData){
             && ChildTicketDescription.equals(ParentTicketDescription) && ChildTicketPriority.equals(ParentTicketPriority))
         {
          return true;
+        }
+        return false;
+    }
+    public boolean verifyChild_WO_TicketSameAsParent_OP() {
+        getChildTicket();
+        // below step Only for running Sweden B2B test
+        Assert.assertTrue(verifySwedenBuIsSelected());
+
+        if (ChildTicketTitle.equals(ParentTicketTitle) && ChildTicketRequestType.equals(ParentTicketRequestType)
+                && ChildTicketDescription.equals(ParentTicketDescription) && ChildTicketPriority.equals(ParentTicketPriority))
+        {
+            return true;
         }
         return false;
     }

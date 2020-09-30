@@ -1417,6 +1417,11 @@ public class OWF_TroubleEventPageSteps {
     public void userEntersAutoCloseDateAsIntMinsPast(int arg0) {
         troubleEventPage.enterAutoCloseDate(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0));
     }
+
+    @And("user validates child WO ticket details are same as parent OP ticket")
+    public void userValidatesChildWOTicketDetailsAreSameAsParentOPTicket() {
+      Assert.assertTrue(troubleEventPage.verifyChild_WO_TicketSameAsParent_OP());
+    }
 }
 
 

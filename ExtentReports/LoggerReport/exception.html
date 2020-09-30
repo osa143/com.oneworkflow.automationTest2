@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="25" parent-id="1">
+<tr class="s-fail" test-id="11" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then user validates change builder button is present <br/><span class="text-muted text-sm">Internal user processes a normal change ticket</span></td>
-	<td>0h 0m 30s+73msc</td>
+	<td class="_600">And user clicks on cancel button <br/><span class="text-muted text-sm">Location search on auto assignment form</span></td>
+	<td>0h 0m 31s+91msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,23 +136,22 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: //img[@alt='Editor for Change Builder+*'] (tried for 30 second(s) with 500 milliseconds interval)
+		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: WIN_0_700000105 (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at pageObjects.BasePage.findElement(BasePage.java:55)
-	at pageObjects.BasePage.verifyElementIsDisplayed(BasePage.java:59)
-	at pageObjects.OWF_ChangeRecordPage.verifyChangeBuilderButtonIsDisplayed(OWF_ChangeRecordPage.java:173)
-	at steps.OWF_ChangeRecordPageSteps.userValidatesButtonIsPresent(OWF_ChangeRecordPageSteps.java:984)
-	at ✽.user validates change builder button is present(features/Automation/Regression/Change/E2E_Normal_Change_(Internal Initiator).feature:42)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#\/\/img\[\@alt\=\'Editor\ for\ Change\ Builder\+\*\'\]"}
+	at pageObjects.OWF_TroubleEventPage.clickCancel(OWF_TroubleEventPage.java:478)
+	at steps.OWF_TroubleEventPageSteps.userClicksOnCancelButton(OWF_TroubleEventPageSteps.java:730)
+	at ✽.user clicks on cancel button(features/Automation/Regression/Change/Admin/AutoAssignLocationSearch.feature:14)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#WIN_0_700000105"}
   (Session info: chrome=85.0.4183.121)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.241.69', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55768}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 03f9fcebc0f403512afae5752df1bb89
-*** Element info: {Using=id, value=//img[@alt='Editor for Change Builder+*']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53968}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 40a0a8d727047692cb396fcb579ea5f8
+*** Element info: {Using=id, value=WIN_0_700000105}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -171,9 +170,8 @@ Session ID: 03f9fcebc0f403512afae5752df1bb89
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	at pageObjects.BasePage.findElement(BasePage.java:55)
-	at pageObjects.BasePage.verifyElementIsDisplayed(BasePage.java:59)
-	at pageObjects.OWF_ChangeRecordPage.verifyChangeBuilderButtonIsDisplayed(OWF_ChangeRecordPage.java:173)
-	at steps.OWF_ChangeRecordPageSteps.userValidatesButtonIsPresent(OWF_ChangeRecordPageSteps.java:984)
+	at pageObjects.OWF_TroubleEventPage.clickCancel(OWF_TroubleEventPage.java:478)
+	at steps.OWF_TroubleEventPageSteps.userClicksOnCancelButton(OWF_TroubleEventPageSteps.java:730)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -241,10 +239,10 @@ Session ID: 03f9fcebc0f403512afae5752df1bb89
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="274" parent-id="1">
+<tr class="s-fail" test-id="18" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Hooks.Teardown(Scenario) <br/><span class="text-muted text-sm">Internal user processes a normal change ticket</span></td>
-	<td>0h 0m 0s+490msc</td>
+	<td class="_600">Hooks.Teardown(Scenario) <br/><span class="text-muted text-sm">Location search on auto assignment form</span></td>
+	<td>0h 0m 0s+357msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -253,7 +251,7 @@ Session ID: 03f9fcebc0f403512afae5752df1bb89
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">cucumber.runtime.CucumberException: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow-automation\ExtentReports\Screenshots\Screenshots_20200930_152122
+		<textarea disabled class="code-block">cucumber.runtime.CucumberException: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow-automation\ExtentReports\Screenshots\Screenshots_20200930_173406
 	at extentreports.cucumber.adapter.ExtentCucumberAdapter.createReportFileOutputStream(ExtentCucumberAdapter.java:225)
 	at extentreports.cucumber.adapter.ExtentCucumberAdapter.writeBytesToURL(ExtentCucumberAdapter.java:213)
 	at extentreports.cucumber.adapter.ExtentCucumberAdapter.handleEmbed(ExtentCucumberAdapter.java:197)
@@ -306,7 +304,7 @@ Session ID: 03f9fcebc0f403512afae5752df1bb89
 	at org.testng.TestNG.run(TestNG.java:1017)
 	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)
 	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
-Caused by: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow-automation\ExtentReports\Screenshots\Screenshots_20200930_152122
+Caused by: java.io.IOException: Failed to create directory C:\Users\mahesh%20vaddegani\Documents\oneworkflow-automation\ExtentReports\Screenshots\Screenshots_20200930_173406
 	at extentreports.cucumber.adapter.URLOutputStream.ensureParentDirExists(URLOutputStream.java:56)
 	at extentreports.cucumber.adapter.URLOutputStream.<init>(URLOutputStream.java:36)
 	at extentreports.cucumber.adapter.URLOutputStream.<init>(URLOutputStream.java:26)
@@ -339,7 +337,7 @@ Caused by: java.io.IOException: Failed to create directory C:\Users\mahesh%20vad
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Sep 30, 2020 03:21:25 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Sep 30, 2020 05:34:08 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

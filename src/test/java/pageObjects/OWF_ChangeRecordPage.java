@@ -107,7 +107,29 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_ORGANISATION_NAME_PLUS="arid_WIN_0_700031001";
     private static final String btn_USE_QUICK_CI_SEARCH_INTERESTED_PARTY= "WIN_0_990000936";
     private static final String btn_Cancel_INTERESTED_PARTY="WIN_0_777777852";
+    private static final String txt_LOCATION_NAME= "arid_WIN_3_777031430";
+    private static final String txt_LOCATION_ID="arid_WIN_3_777031006";
+    private static final String txt_REGION_NAME= "arid_WIN_3_700009638";
+    private static final String table_SELECT_LOCATION_= "T700024013";
 
+    public boolean verifyExpectedDataIsPresent(String colName, String colValue){
+        switchToFrameByIndex(2);
+        return verifyColumnValuesText(By.id(table_SELECT_LOCATION_),colName, colValue, true);
+    }
+
+
+    public void enterRegionNamePlusAndSearch(String text){
+        enterTextByElement(By.id(txt_REGION_NAME), text);
+        driver.findElement(By.id(txt_REGION_NAME)).sendKeys(Keys.ENTER);
+    }
+    public void enterLocationIDPlusAndSearch(String text){
+        enterTextByElement(By.id(txt_LOCATION_ID), text);
+        driver.findElement(By.id(txt_LOCATION_ID)).sendKeys(Keys.ENTER);
+    }
+    public void enterLocationNamePlusAndSearch(String text){
+        enterTextByElement(By.id(txt_LOCATION_NAME), text);
+        driver.findElement(By.id(txt_LOCATION_NAME)).sendKeys(Keys.ENTER);
+    }
     public void clickCancel_InterestedParty(){
         clickElementById(btn_Cancel_INTERESTED_PARTY);
     }
@@ -119,8 +141,6 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
    public void clickUse_FrameOnFrame(){
 
         try {
-            clickElementById("ardivpcl");
-            wait(1000);
             driver.switchTo().frame(1);
             clickElementById(btn_USE_QUICK_CI_SEARCH_INTERESTED_PARTY);
             wait(1000);

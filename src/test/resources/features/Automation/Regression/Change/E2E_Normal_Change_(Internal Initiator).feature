@@ -40,10 +40,11 @@
       And user validates change builder+ is mandatory
       And user selects priority as "Critical"
       And user enters "Privacy Data: Just Testing" in the change builder field
-#      Then user validates "Change Builder" button is present
+      Then user validates change builder button is present
+      And user validates reason text field expand button is present
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-      And user enters start time as 24 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss a" format
-      And user enters end time as 28 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss a" format
+      And user enters start time as 24 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss" format
+      And user enters end time as 28 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss" format
       And user enters impact duration as "45" minutes
       And user selects estimated impact dropdown as "Degradation of Service"
       And user clicks on save button
@@ -75,12 +76,29 @@
       And user clicks on save button
       And user switches to default
       And CI should be listed and displayed under the Diagnosis tab
+      When user right clicks on CI "FI_MGW_SMG03TRE" and selects "Show:Location Details"
+      Then user validates Location Details are shown
+      And user validates availability of tabs "Details:Relationships"
+      And user clicks on "Relationships" tab
+      Then user clicks on refresh button under related CIs
+      And user validates CIs are shown under related CI table
+      And user clicks on the close button on location details window
       When user clicks on Show CR Matching button
       Then user should see Show CR Matching table appear
-#      When user clicks on "Interested Parties" tab
-#      And user enters email address as "Test123xxx@Test123xxx.com"
-#      And user clicks on add email button
-#      Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
+      When user clicks on "Interested Parties" tab
+      And user enters email address as "Test123xxx@Test123xxx.com"
+      And user clicks on add email button
+      Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 1
+      Then user clicks on add button under interested parties
+      And user switches to frame
+      And user validates add interested parties form is shown
+      When user selects type as "Additional Access" under interested parties
+      And user clicks on radio button user
+      And user enters organization name plus as "ANS" and searches
+      And user selects Agile Network Systems and clicks use button
+      Then user validates organization as "Agile Network Systems"
+      Then user clicks on cancel button on interested parties window
+      And user validates finland as affected BU
       When user clicks on Send button
       Then user validates ticket status as "Assigned"
       And user clicks on assignment under sections
@@ -149,7 +167,7 @@
       When user clicks on "Interested Parties" tab
       And user enters email address as "Test2@Test2.com"
       And user clicks on add email button
-      Then user should see new email "Test2@Test2.com" added in "Email Address" in row 2
+#      Then user should see new email "Test2@Test2.com" added in "Email Address" in row 2
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab
       Then user should see "Acknowledged" email update
@@ -181,18 +199,18 @@
       Then user should see Show CR Matching table appear
       When user changes status to "Analysis"
       And user clicks on save button
-      Then user validates Title isn't readonly
-      And user validates Request Category isn't readonly
-      Then user validates Description* isn't readonly
-      And user validates Reason isn't readonly
-      And user validates Priority isn't readonly
-      And user validates Project Code isn't readonly
-      And user validates Change Builder+* isn't readonly
-      And user validates Implementation isn't readonly
-      And user validates Test Plan isn't readonly
-      And user validates Rollback isn't readonly
-      And user validates Ver of Functionality* isn't readonly
-      And user validates Timeline Text entry isn't readonly
+#      Then user validates Title isn't readonly
+#      And user validates Request Category isn't readonly
+#      Then user validates Description* isn't readonly
+#      And user validates Reason isn't readonly
+#      #And user validates Priority isn't readonly
+#      And user validates Project Code isn't readonly
+#      And user validates Change Builder+* isn't readonly
+#      And user validates Implementation isn't readonly
+#      And user validates Test Plan isn't readonly
+#      And user validates Rollback isn't readonly
+#      And user validates Ver of Functionality* isn't readonly
+#      And user validates Timeline Text entry isn't readonly
       And user enters description as "TEST TICKET PLEASE IGNORE - New Description"
       And user clicks on save button
       Then change should also be reflected in the timeline as "Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) - Additional info to TEST TICKET PLEASE IGNORE - New Description."

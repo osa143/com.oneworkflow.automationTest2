@@ -19,8 +19,15 @@ Feature: User is able to add a CI and attachment to a problem ticket
       When user adds below CI's to the ticket
         |   CI Name     |
         |SE_CPE_FRECPE5 |
-      Then user clicks on Diagnosis tab
+       |FI_LTECell_Valpe4H|
+      And user clicks on Diagnosis tab
       Then CI should be listed and displayed under the Diagnosis tab
+      When user clicks on ticket refresh button
+      Then user validates finland as affected BU
+      When user clicks on CTI details under sections
+      Then user validates Category as "Packet_Transport"
+      And user validates type as "Other"
+      And user validates item as "CPE"
       And  user adds attachment and verifies under ""
         | summary   | description | fullFilePath       | attachments |
         | Test JPEG | Test JPEG   | attachement.doc.txt | 1          |
@@ -31,9 +38,9 @@ Feature: User is able to add a CI and attachment to a problem ticket
       Then attachment form should open in new tab
       When user clicks on the attachment listed
       And clicks on display button
-#      Then a new window should open with the attachment shown
-#      When user closes the attachment window
-#      And closes the attachment tab
+      Then a new window should open with the attachment shown
+      When user closes the attachment window
+      And closes the attachment tab
       And user switches to window 1
       When user clicks on the added attachment
       And user clicks on the delete button under internal

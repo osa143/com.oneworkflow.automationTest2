@@ -24,20 +24,13 @@ Feature: SAO-453 - Missing Interested Party Types (ISO, ISM...)
     And CI should be listed and displayed under the Diagnosis tab
     Then user clicks on Send button
     And user waits 5 secs
-    Then user enters as "Change_Automation_3" in Change Builder field
-    When user clicks "Interested Parties" tab
-    Then user validates "Change_Automation_3" is listed as an interested party
-#    And user waits 3 secs
-#    Then user enters as "Change_Automation_3" in Change Builder field
-#    And user switches to frame
-#    And user waits 4 secs
-    #Then user validates multiple options "Additional Access:Change Builder:Change Initiator:Contact:Custom1:Custom2:Requested By:Requested For:Solution Manager:Solution Owner:Vendor:(clear)" should be available in Type dropdown
-#    When user selects type as "Custom1" under interested parties
-#    And user enters "" in login name plus field
-#    Then user clicks on search under add interested party
-#    And user highlights present user under add interested party
-#    And user waits 10 secs
-#    Then user clicks on save button under interested parties frame
-#    When user clicks "Interested Parties" tab
-#    Then user validates "Change_Automation_3" is listed as an interested party
-
+    Then user enters as "test" in Change Builder field
+    And user switches to frame
+    And user waits 4 secs
+    Then user validates multiple options "Additional Access:Change Builder:Change Initiator:Contact:Custom1:Custom2:Requested By:Requested For:Solution Manager:Solution Owner:Vendor:(clear)" should be available in Type dropdown
+    And user selects type as "Change Builder" under interested parties
+    And user right clicks on CI "One Workflow" and clears impact for all CI's
+    Then user enters "Change_Automation_3" in login name plus field
+    And user clicks on search under add interested party
+    And user highlights user "Change_Automation_3" under interested parties
+    Then user clicks on add button under interested parties

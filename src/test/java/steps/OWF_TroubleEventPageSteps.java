@@ -1355,7 +1355,10 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("user validates event end time is same as cleared status event end time")
     public void userValidatesEventEndTimeIsSameAsClearedStatusEventEndTime() {
-        Assert.assertEquals(CommonUtils.EventEndTime, troubleEventPage.getEventEndTime());
+        System.out.println("cleared ticket event End time is - " +CommonUtils.EventEndTime);
+        System.out.println("closed ticket event End time is - " +troubleEventPage.getEventEndTime_ClosedTicketStatus());
+
+        Assert.assertEquals(CommonUtils.EventEndTime, troubleEventPage.getEventEndTime_ClosedTicketStatus());
     }
 
     @Then("user validates fault position field is mandatory")
@@ -1426,6 +1429,46 @@ public class OWF_TroubleEventPageSteps {
     @And("user validates hierarchic escalation level isnt read only")
     public void userValidatesHierarchicEscalationLevelIsntReadOnly() {
         Assert.assertFalse(troubleEventPage.verifyHierarchicEscalationLevelIsReadOnly());
+    }
+
+    @And("user validates child WO ticket details are same as parent OP ticket")
+    public void userValidatesChildWOTicketDetailsAreSameAsParentOPTicket() {
+      Assert.assertTrue(troubleEventPage.verifyChild_WO_TicketSameAsParent_OP());
+    }
+
+    @Then("user validates source status as {string}")
+    public void userValidatesSourceStatusAs(String expectedSourceStatus) {
+    Assert.assertEquals(troubleEventPage.getSourceStatus(), expectedSourceStatus);
+    }
+
+    @And("user validates configuring source as {string}")
+    public void userValidatesConfiguringSourceAs(String expectedSourceName) {
+        Assert.assertEquals(troubleEventPage.getSourceName(), expectedSourceName);
+    }
+
+    @When("user enters Age in days as {string} and clicks save button")
+    public void userEntersAgeInDaysAsAndClicksSaveButton(String ageInDays) {
+        troubleEventPage.enterAgeInDaysAndClickSave(ageInDays);
+    }
+
+    @Then("age in days should be updated to {string}")
+    public void ageInDaysShouldBeUpdatedTo(String expectedAgeInDays) {
+        Assert.assertEquals(troubleEventPage.getAgeInDays(), expectedAgeInDays);
+    }
+
+    @When("user clicks on timeline filter button")
+    public void userClicksOnTimelineFilterButton() {
+     troubleEventPage.clickTimelineFilter();
+    }
+
+    @When("user uncheck include children ticket")
+    public void userUncheckIncludeChildrenTicket() {
+     troubleEventPage.clickTimelineFilterCheckBox();
+    }
+
+    @And("user should see {string} as {string} for linked ticket")
+    public void userShouldSeeAsForLinkedTicket(String columnName, String expectedCI) {
+        Assert.assertEquals(expectedCI, troubleEventPage.getPrimaryCIofLinkedTicket(columnName, 1));
     }
 }
 

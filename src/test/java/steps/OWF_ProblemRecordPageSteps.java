@@ -129,7 +129,7 @@ public class OWF_ProblemRecordPageSteps {
 
         }
 
-        problemRecordPage.wait(5000);
+        problemRecordPage.wait(6000);
     }
 
     @Then("problem ticket status should be under investigation")

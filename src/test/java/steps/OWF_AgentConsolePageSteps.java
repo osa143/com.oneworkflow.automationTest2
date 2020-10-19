@@ -772,6 +772,12 @@ public class OWF_AgentConsolePageSteps {
     public void ticketsShouldBeFiltered(String colValue, String colName) {
         Assert.assertTrue(agentConsolePage.verifyTicketsFilteredToSearch(colName, colValue, false));
     }
+
+    @And("user validates {string} are present under {string} column")
+    public void userValidatesArePresentUnderColumn(String colValues, String colName) {
+        Assert.assertTrue(agentConsolePage.verifyUserProfiles(colName, colValues, false));
+        agentConsolePage.clickCloseUserInformation();
+    }
 }
 
 

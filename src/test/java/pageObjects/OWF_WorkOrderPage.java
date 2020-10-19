@@ -2,6 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import utils.CommonUtils;
 import utils.PlazaValidation;
 
@@ -58,7 +59,26 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_ACTUAL_SCHEDULE_START= "arid_WIN_0_777021164";
     private static final String txt_ACTUAL_SCHEDULE_END= "arid_WIN_0_777021165";
     private static final String txt_EVENT_START_TIME = "arid_WIN_0_703001000";
+    private static final String tableRow2_OUTBOUND= "//*[@id='T600002302']/tbody/tr[3]";
+    private static final String txt_MESSAGE= "arid_WIN_0_536870956";
 
+    public boolean verifyRequestTypeIsReadOnly(){
+        return checkIfControlIsReadonly(txt_REQUEST_TYPE);
+    }
+    public boolean verifyWithdrawnReasonAndMessageIsPresent(){
+
+        String message= getAttributeValueById(txt_MESSAGE);
+        System.out.println("message field value is - " + message);
+        if (message.contains("Automated Test Test"))
+            return true;
+        else return false;
+    }
+    public void doubleClickOnWithdrawnMessage(){
+        doubleClickOnElement(driver.findElement(By.xpath(tableRow2_OUTBOUND)));
+    }
+    public boolean verifySLA_classIsReadOnly(){
+        return checkIfControlIsReadonly(txt_SLA_CLASS);
+    }
     public boolean verifyEventStartTimeIsReadOnly(){
         return checkIfControlIsReadonly(txt_EVENT_START_TIME);
     }

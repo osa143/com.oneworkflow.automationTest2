@@ -1,11 +1,11 @@
-@C2BDeployment @PLAZA
+@C2BDeployment @PLAZA @C2B_Tests
 Feature: Plaza C2B Cache form test
   Scenario Outline: user validates information sent to OW from Plaza
 
     Given user is on the Plaza login page
     When user enters username "testauto" and password as "test123" and clicks on login
     Then user should see the plaza home page
-#    Then user clicks on plaza portal
+    Then user clicks on plaza portal
     When user clicks on Products & Services
     And user clicks on IT Infrastructure dropdown
     And user clicks on application under IT Infrastructure dropdown
@@ -62,9 +62,9 @@ Feature: Plaza C2B Cache form test
     Examples:
     |Request                |Environment|Description               |AdditionalComments|
 #    |Test1 C2BCache/Request |AT         |Test1 C2BCache/Description|Test1 C2BCache/AC |
-    |Test2 C2BCache/Request |DEV        |Test2 C2BCache/Description|Test2 C2BCache/AC |
-    |Test3 C2BCache/Request |MITE       |Test3 C2BCache/Description|Test3 C2BCache/AC |
-    |Test4 C2BCache/Request |Prod       |Test4 C2BCache/Description|Test4 C2BCache/AC |
+#    |Test2 C2BCache/Request |DEV        |Test2 C2BCache/Description|Test2 C2BCache/AC |
+#    |Test3 C2BCache/Request |MITE       |Test3 C2BCache/Description|Test3 C2BCache/AC |
+#    |Test4 C2BCache/Request |Prod       |Test4 C2BCache/Description|Test4 C2BCache/AC |
     |Test5 C2BCache/Request |RATM       |Test5 C2BCache/Description|Test5 C2BCache/AC |
     |Test6 C2BCache/Request |SIT        |Test6 C2BCache/Description|Test6 C2BCache/AC |
     |Test7 C2BCache/Request |ST         |Test7 C2BCache/Description|Test7 C2BCache/AC |

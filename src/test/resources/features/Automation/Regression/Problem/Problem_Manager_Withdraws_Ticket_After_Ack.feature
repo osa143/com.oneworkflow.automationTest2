@@ -1,4 +1,4 @@
-@PM_Withdraw_Ticket_After_Ack @problem @Reg_Problem
+@PM_Withdraw_Ticket_After_Ack @problem @Reg_Problem  @prob
 #passed
 Feature:withdraw problem Ticket
 

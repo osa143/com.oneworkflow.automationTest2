@@ -520,6 +520,29 @@ public class Plaza_HomePage extends BasePage {
     private static final String link_DATA_CENTER = "0e0e9dc1db9997446734f1eabf96196a";
     private static final String link_STORAGE_AND_DATA_PROTECTION = "6d9e9505db9997446734f1eabf96195a";
     private static final String link_SUPPORT = "xcab273021b8480d00c1e87fe6e4bcbaf";
+    private static final String txt_LIST_OF_FILES= "sp_formfield_owf_scep_listoffiles";
+    private static final String txt_LIST_OF_FILE_TYPES= "sp_formfield_owf_scep_listoffilestypes";
+    private static final String txt_LIST_OF_PROCESSES= "sp_formfield_owf_scep_listofprocess";
+    private static final String txt_SELECT_CI_EXCLUSION= "s2id_sp_formfield_owf_scep_ci";
+
+
+    public void select_CI_exclusionEndpoint() {
+        clickElement(By.id(txt_SELECT_CI_EXCLUSION));
+        WebElement element = driver.switchTo().activeElement();
+        element.sendKeys(Keys.ENTER);
+    }
+    public void enterListOfProcesses(String text) {
+
+        enterTextByElement(By.id(txt_LIST_OF_PROCESSES), text);
+    }
+    public void enterListOfFileTypes(String text) {
+
+        enterTextByElement(By.id(txt_LIST_OF_FILE_TYPES), text);
+    }
+    public void enterListOfFiles(String text) {
+
+        enterTextByElement(By.id(txt_LIST_OF_FILES), text);
+    }
 
     public void click_Support(){
         clickElement(By.xpath(link_SUPPORT));

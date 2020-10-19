@@ -1,4 +1,4 @@
-@Problem_Link_To_New_Known_Error_And_Withdraw @problem @Reg_Problem
+@Problem_Link_To_New_Known_Error_And_Withdraw @problem @Reg_Problem  @prob
   #Passed
 # This test also covers SAO-5305 Auto population from PB to KE tickets
 

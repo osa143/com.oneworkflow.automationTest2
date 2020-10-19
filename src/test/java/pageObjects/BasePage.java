@@ -56,7 +56,12 @@ public class BasePage{
     }
 
     public boolean verifyElementIsDisplayed(By element){
+
         return findElement(element).isDisplayed();
+    }
+    public String makeXpath(String tagName, String attribute, String value) {
+        String xpath = "//" + tagName + "[@" + attribute + "='" + value + "']";
+        return xpath;
     }
 
     public boolean verifyElementIsDisplayedByContainsText(String textName){
@@ -796,10 +801,48 @@ public void clickElementById(String Id){
         return true;
     }
 
+    public boolean verifyColumnValuesText(By table, String columnName, String columnValue, boolean partialText)
+    {
+        int colNum = getColumnIndexByHeaderName(table, columnName);
+        List<WebElement> tableRows = getTableRows(table);
+        System.out.println("Number of rows are: "+ tableRows.size());
+        wait(1000);
+        if(tableRows.size() > 0){
+            for (int i = 1; i < tableRows.size(); i++) {
+                WebElement td = tableRows.get(i).findElements(By.tagName("td")).get(colNum);
+                String cellData=td.findElement(By.tagName("span")).getText().trim();
+                System.out.println("Table cell value is: "+ cellData);
+                if(partialText)
+                {
+                    if(!cellData.contains(columnValue))
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    if(!columnValue.contains(td.getText().trim()))
+                    {
+                        return false;
+                    }
+                }
+                if(i == 50)
+                    break;
+            }
+        }
+
+        return true;
+    }
+
     public void rightClickOnElement(WebElement element)
     {
         Actions action = new Actions(driver);
         action.contextClick(element).build().perform();
+    }
+    public void doubleClickOnElement(WebElement element)
+    {
+        Actions action = new Actions(driver);
+        action.doubleClick(element).build().perform();
     }
     public static File takeScreenShot() {
 
@@ -836,6 +879,7 @@ public void clickElementById(String Id){
         List<String> tabValues = new ArrayList<String>();
 
         List<WebElement> elements = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr")).get(0).findElements(By.tagName("th"));
+       // List<WebElement> elements= driver.findElement(table).findElements(By.className("BaseTableHeader"));
 
         for (int i = 0; i < elements.size(); i++) {
             WebElement tableHeader = elements.get(i);

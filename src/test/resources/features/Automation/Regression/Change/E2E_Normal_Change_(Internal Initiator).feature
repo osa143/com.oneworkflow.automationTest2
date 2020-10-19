@@ -40,9 +40,10 @@
       And user selects priority as "Critical"
       And user enters "Privacy Data: Just Testing" in the change builder field
       Then user validates change builder button is present
+      And user validates reason text field expand button is present
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-      And user enters start time as 24 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
-      And user enters end time as 28 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
+      And user enters start time as 24 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss" format
+      And user enters end time as 28 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss" format
       And user enters impact duration as "45" minutes
       And user selects estimated impact dropdown as "Degradation of Service"
       And user clicks on save button
@@ -74,15 +75,13 @@
       And user clicks on save button
       And user switches to default
       And CI should be listed and displayed under the Diagnosis tab
-      Then user right clicks on CI "FI_MGW_SMG03TRE" and selects "Show:Location Details"
-      And user switches to frame
+      When user right clicks on CI "FI_MGW_SMG03TRE" and selects "Show:Location Details"
       Then user validates Location Details are shown
-      And user validates availability of tabs "Details:Secure Information:Relationships"
+      And user validates availability of tabs "Details:Relationships"
       And user clicks on "Relationships" tab
       Then user clicks on refresh button under related CIs
       And user validates CIs are shown under related CI table
-      Then user clicks on the close button
-      And user switches to default
+      And user clicks on the close button on location details window
       When user clicks on Show CR Matching button
       Then user should see Show CR Matching table appear
       When user clicks on "Interested Parties" tab
@@ -93,11 +92,11 @@
       And user switches to frame
       And user validates add interested parties form is shown
       When user selects type as "Additional Access" under interested parties
-      And user searches organization name as "ANS"
-      Then user validates list of organizations is shown
-      And user selects "Agile Network Systems" and clicks accept button
+      And user clicks on radio button user
+      And user enters organization name plus as "ANS" and searches
+      And user selects Agile Network Systems and clicks use button
       Then user validates organization as "Agile Network Systems"
-      Then user clicks on close button under interested parties
+      Then user clicks on cancel button on interested parties window
       And user validates finland as affected BU
       When user clicks on Send button
       Then user validates ticket status as "Assigned"

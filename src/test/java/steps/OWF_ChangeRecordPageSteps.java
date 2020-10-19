@@ -984,6 +984,84 @@ public class OWF_ChangeRecordPageSteps {
         Assert.assertTrue(changeRecordPage.verifyChangeBuilderButtonIsDisplayed());
 
     }
+
+    @Then("user validates Location Details are shown")
+    public void userValidatesLocationDetailsAreShown() {
+        changeRecordPage.switchToFrameByIndex(2);
+        Assert.assertTrue(changeRecordPage.verifyLocationDetailsIsDisplayed());
+
+    }
+
+    @Then("user clicks on refresh button under related CIs")
+    public void userClicksOnRefreshButtonUnderRelatedCIs() {
+        changeRecordPage.clickRefresh_RelatedCIs_LocationDetails();
+    }
+
+    @And("user validates CIs are shown under related CI table")
+    public void userValidatesCIsAreShownUnderRelatedCITable() {
+        Assert.assertTrue(changeRecordPage.verifyRelatedCIsArePresent_LocationDetails());
+    }
+
+    @Then("user clicks on the close button on location details window")
+    public void userClicksOnTheCloseButtonOnLocationDetailsWindow() {
+                changeRecordPage.clickCloseLocationDetails();
+    }
+
+    @And("user validates add interested parties form is shown")
+    public void userValidatesAddInterestedPartiesFormIsShown() {
+        Assert.assertTrue(changeRecordPage.verifyInterestedPartyIsDisplayed());
+
+    }
+
+    @And("user enters organization name plus as {string} and searches")
+    public void userEntersOrganizationNamePlusAsAndSearches(String Org_Name) {
+        changeRecordPage.enterOrganisationNamePlusAndSearch(Org_Name);
+    }
+
+    @And("user selects Agile Network Systems and clicks use button")
+    public void userSelectsAndClicksUseButton() {
+       changeRecordPage.clickUse_FrameOnFrame();
+    }
+
+    @Then("user validates organization as {string}")
+    public void userValidatesOrganizationAs(String expected_Org_Name) {
+      Assert.assertEquals(changeRecordPage.getOrganisationName(),expected_Org_Name);
+    }
+
+    @Then("user clicks on cancel button on interested parties window")
+    public void userClicksOnCancelButtonOnInterestedPartiesWindow() {
+        changeRecordPage.clickCancel_InterestedParty();
+    }
+
+    @Then("user should see auto assignment rules window")
+    public void userShouldSeeAutoAssignmentRulesWindow() {
+       Assert.assertEquals(changeRecordPage.getPageTitle(), "OS3 Assignment Rules Console (New)");
+    }
+
+    @And("user enters {string} in the Location Name+ field and searches")
+    public void userEntersInTheLocationNameFieldAndSearches(String locationName) {
+        changeRecordPage.enterLocationNamePlusAndSearch(locationName);
+    }
+
+    @When("user enters {string} within the location ID+ field and searches")
+    public void userEntersWithinTheLocationIDFieldAndSearches(String locationID) {
+        changeRecordPage.enterLocationIDPlusAndSearch(locationID);
+    }
+
+    @When("user enters {string} within the RegionName+ field and searches")
+    public void userEntersWithinTheRegionNameFieldAndSearches(String regionName) {
+        changeRecordPage.enterRegionNamePlusAndSearch(regionName);
+    }
+
+    @Then("user validates locations related to {string} are shown")
+    public void userValidatesLocationsRelatedToAreShown(String colValue) {
+        Assert.assertTrue(changeRecordPage.verifyExpectedDataIsPresent("Name", colValue));
+    }
+
+    @And("user validates reason text field expand button is present")
+    public void userValidatesReasonTextFieldExpandButtonIsPresent() {
+        Assert.assertTrue(changeRecordPage.verifyReasonTextEditorButtonIsDisplayed());
+    }
 }
 
 

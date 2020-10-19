@@ -152,8 +152,8 @@ public class BaseRecordPage extends BasePage {
     private static final String dd_Known_Error_Code= "arid_WIN_0_808080010";
     private static final String txt_Next_Assessment_Date= "arid_WIN_0_800040083";
     private static final String txt_LinkedTicketID="//*[@id='T777506000']/tbody/tr[2]/td[2]/nobr/span";
-    private static final String btn_LinkedItems= "//*[@id='WIN_0_999000003']/div[2]/div[2]/div/dl/dd[5]/span[2]/a";
     private static final String txt_EQUIPMENT="arid_WIN_0_600001067";
+    private static final String btn_CLEAR= "WIN_0_700506223";
 
 
     public boolean isEquipmentReadOnly(){
@@ -171,7 +171,7 @@ public class BaseRecordPage extends BasePage {
         return verifyIsElementSelected(By.id(btn_EXTERNAL));
     }
     public void clickLinkedItems(){
-        clickElement(By.xpath(btn_LinkedItems));
+            selectTab("Linked Items");
     }
 
 
@@ -372,6 +372,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterTicketIdPlus(String ticketId){
+        clickElement(By.id(btn_CLEAR));
         enterTextByElement(By.id(txtTICKET_ID_PLUS_ID),ticketId);
 
     }

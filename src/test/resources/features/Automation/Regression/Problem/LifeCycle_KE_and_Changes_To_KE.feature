@@ -53,7 +53,7 @@
       When user changes status to "Closed" on problem record page
       And user clicks save button
       Then an error message should appear: "Required field (without a default) not specified : Closure Code (ARERR 9424)"
-      When user selects closure code as "Full Impact"
+      When user selects closure code as "Solved"
       When user clicks on "Diagnosis" tab
       And user right clicks on CI "SE_CPE_FRECPE5" and selects "Impact:Clear All"
       And user should see confirmation message for impact clear and user clicks yes

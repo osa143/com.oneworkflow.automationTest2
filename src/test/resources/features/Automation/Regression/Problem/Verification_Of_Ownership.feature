@@ -1,4 +1,4 @@
-@Verification_of_ownership @problem @Reg_Problem
+@Verification_of_ownership @problem @Reg_Problem  @prob
   #passed
 Feature: Verification of Problem ticket owner
 

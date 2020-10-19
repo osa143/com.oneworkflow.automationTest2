@@ -18,10 +18,10 @@ Feature: Adding of CI to incident ticket
     And user clicks on save button
     Then ticket should be created and status should be assigned
     When user clicks on Diagnosis tab
-    And user validates CI columns "CI Name:PrimarySecondary:CI Priority:Business Hours:Custom Attribute4" availability
+    #And user validates CI columns "CI Name:PrimarySecondary:CI Priority:Business Hours:Custom Attribute4" availability
     And user clicks on CI search button
     Then user switches to frame
-    And user selects Category as "Core"
+    And user selects Category as "CORE"
     And user selects Type as "Mobile PS Core Network"
     And user selects Item as "EPG"
     #Then user should see at least 2 nodes per country

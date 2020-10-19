@@ -27,9 +27,6 @@ public class WebService {
     public void createIncidentFromStub() {
         RestAssured.given().spec(request).body(body).post(Rest_URL).then().log().all().assertThat().statusCode(expectedStatusCode).assertThat().extract().response();
 
-
     }
-
-
 
 }

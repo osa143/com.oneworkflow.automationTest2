@@ -123,6 +123,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String btn_NEXT_TAB="nextTab";
     private static final String Error_POP_UP_ID= "PopupMsgBox";
     private static final String btn_Open_Attachment= "WIN_0_777000021";
+    private static final String txt_IMPACT_TYPE= "arid_WIN_0_700009080";
 
 
     public void clickOpenAttachment(){
@@ -681,9 +682,16 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     public void selectModerateLimitedDdValue() {
         selectDropDownValue(ddValueMODERATE_LIMITED);
     }
-    public void selectImpactType(String value){
-        selectDropDownNameAndValue(ddIMPACT, value, false);
+    public void selectImpactType(String value) {
+        try {
+            selectDropDownNameAndValue(ddIMPACT, value, false);
+        }
+        catch(Exception e){
+            clickElementById(txt_IMPACT_TYPE);
+            selectMenuItem(value);
+        }
     }
+
 
     public void select_Impact_ClearDdValue() {
         selectDropDownValue(ddValueCLEAR);

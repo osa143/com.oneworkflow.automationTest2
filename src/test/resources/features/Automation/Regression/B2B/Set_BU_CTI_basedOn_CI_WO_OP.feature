@@ -1,6 +1,7 @@
 @Set_BU_CTI_based_on_CI
-
+ # This test also cover SAO-3937
   Feature: Work order creation from incident and validate set country based on CI
+
 
     Scenario: Affected BU should updated from CI
 
@@ -36,3 +37,16 @@
       Then user validates Category as "Packet_Transport"
       And user validates type as "Other"
       And user validates item as "CPE"
+      When user selects Category as "DS"
+      Then user validates type as ""
+      And user validates item as ""
+      When user selects Type as "MIS"
+      Then user validates item as ""
+      When user switches to window 1
+      And user selects Category as "DS"
+      Then user validates type as ""
+      And user validates item as ""
+      When user selects Type as "MIS"
+      Then user validates item as ""
+      
+

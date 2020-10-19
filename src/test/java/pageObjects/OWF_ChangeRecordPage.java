@@ -99,11 +99,100 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String dd_OWNER_PROFILE = "arid_WIN_0_777031401";
     private static final String dd_INTERESTED_PARTIES_TYPE = "arid_WIN_0_700027963";
     private static final String txt_EXTERNAL_TICKET_ID= "WIN_0_600002211";
+    private static final String div_LOCATION_DETAILS= "WIN_0_999000101";
+    private static final String btn_CLOSE_LOCATION_DETAILS= "WIN_0_999000100";
+    private static final String btn_REFRESH_RELATED_CIS= "//*[@id='WIN_0_700009650']/div[1]/table/tbody/tr/td[3]/a[2]";
+    private static final String table_RELATED_CIS="T700009650";
+    private static final String div_INTERESTED_PARTY="WIN_0_999000005";
+    private static final String txt_ORGANISATION_NAME_PLUS="arid_WIN_0_700031001";
+    private static final String btn_USE_QUICK_CI_SEARCH_INTERESTED_PARTY= "WIN_0_990000936";
+    private static final String btn_Cancel_INTERESTED_PARTY="WIN_0_777777852";
+    private static final String txt_LOCATION_NAME= "arid_WIN_3_777031430";
+    private static final String txt_LOCATION_ID="arid_WIN_3_777031006";
+    private static final String txt_REGION_NAME= "arid_WIN_3_700009638";
+    private static final String table_SELECT_LOCATION_= "T700024013";
+    private static final String btn_CHANGE_BUILDER= "//img[@alt='Editor for Change Builder+*']";
+    private static final String btn_REASON_EDITOR= "//img[@alt='Editor for Reason']";
+
+    public boolean verifyReasonTextEditorButtonIsDisplayed(){
+        return verifyElementIsDisplayed(By.xpath(btn_REASON_EDITOR));
+    }
+
+    public boolean verifyExpectedDataIsPresent(String colName, String colValue){
+        switchToFrameByIndex(2);
+        return verifyColumnValuesText(By.id(table_SELECT_LOCATION_),colName, colValue, true);
+    }
+
+
+    public void enterRegionNamePlusAndSearch(String text){
+        enterTextByElement(By.id(txt_REGION_NAME), text);
+        driver.findElement(By.id(txt_REGION_NAME)).sendKeys(Keys.ENTER);
+    }
+    public void enterLocationIDPlusAndSearch(String text){
+        enterTextByElement(By.id(txt_LOCATION_ID), text);
+        driver.findElement(By.id(txt_LOCATION_ID)).sendKeys(Keys.ENTER);
+    }
+    public void enterLocationNamePlusAndSearch(String text){
+        enterTextByElement(By.id(txt_LOCATION_NAME), text);
+        driver.findElement(By.id(txt_LOCATION_NAME)).sendKeys(Keys.ENTER);
+    }
+    public void clickCancel_InterestedParty(){
+        clickElementById(btn_Cancel_INTERESTED_PARTY);
+    }
+
+   public String getOrganisationName(){
+       return getAttributeValueById(txt_ORGANISATION_NAME_PLUS);
+   }
+
+   public void clickUse_FrameOnFrame(){
+
+        try {
+            driver.switchTo().frame(1);
+            clickElementById(btn_USE_QUICK_CI_SEARCH_INTERESTED_PARTY);
+            wait(1000);
+            driver.switchTo().defaultContent();
+            driver.switchTo().frame(2);
+            wait(1000);
+        }
+        catch (Exception ex)
+        {
+            driver.switchTo().frame(1);
+            driver.switchTo().parentFrame();
+            driver.switchTo().frame(1);
+            clickElementById(btn_USE_QUICK_CI_SEARCH_INTERESTED_PARTY);
+            wait(1000);
+            driver.switchTo().defaultContent();
+            driver.switchTo().frame(2);
+            wait(1000);
+        }
+    }
+    public void enterOrganisationNamePlusAndSearch(String text){
+        enterTextByElement(By.id(txt_ORGANISATION_NAME_PLUS), text);
+        driver.findElement(By.id(txt_ORGANISATION_NAME_PLUS)).sendKeys(Keys.ENTER);
+    }
+    public boolean verifyInterestedPartyIsDisplayed(){
+        return verifyElementIsDisplayed(By.xpath(div_INTERESTED_PARTY));
+    }
+    public boolean verifyRelatedCIsArePresent_LocationDetails(){
+        int CIsNumber=getTableRows(By.id(table_RELATED_CIS)).size();
+        if(CIsNumber>0)
+            return true;
+        else return false;
+    }
+    public void clickRefresh_RelatedCIs_LocationDetails(){
+        clickElement(By.xpath(btn_REFRESH_RELATED_CIS));
+    }
+    public void clickCloseLocationDetails(){
+        clickElementById(btn_CLOSE_LOCATION_DETAILS);
+    }
+
+    public boolean verifyLocationDetailsIsDisplayed(){
+        return verifyElementIsDisplayed(By.id(div_LOCATION_DETAILS));
+    }
 
     public String getExternalTicketID(){
         return getAttributeValueById(txt_EXTERNAL_TICKET_ID);
     }
-    private static final String btn_CHANGE_BUILDER= "//img[@alt='Editor for Change Builder+*']";
 
     public boolean verifyChangeBuilderButtonIsDisplayed(){
         return verifyElementIsDisplayed(By.xpath(btn_CHANGE_BUILDER));
@@ -433,6 +522,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     }
     public void clickAdvancedSearch(){
         clickElement(By.id(btn_ADVANCED_SEARCH));
+        wait(1000);
     }
     public void clickCancel(){
         clickElement(By.id(btn_CANCEL_LOCATION));

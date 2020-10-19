@@ -5,7 +5,7 @@ Feature: Plaza CRM form test
     Given user is on the Plaza login page
     When user enters username "testauto" and password as "test123" and clicks on login
     Then user should see the plaza home page
-#    Then user clicks on plaza portal
+    Then user clicks on plaza portal
     When user clicks on Products & Services
     And user clicks on IT Infrastructure dropdown
     And user clicks on application under IT Infrastructure dropdown
@@ -77,13 +77,13 @@ Feature: Plaza CRM form test
 #    |Test14 CRM/Request|GESB-TSSESB  |Test14 CRM/Description|Test14 CRM/AC     |
 #    |Test15 CRM/Request|HERKULES     |Test15 CRM/Description|Test15 CRM/AC     |
 #    |Test16 CRM/Request|MFT          |Test16 CRM/Description|Test16 CRM/AC     |
-    |Test17 CRM/Request|MIT/UAD      |Test17 CRM/Description|Test17 CRM/AC     |
+#    |Test17 CRM/Request|MIT/UAD      |Test17 CRM/Description|Test17 CRM/AC     |
 #    |Test18 CRM/Request|MULTIBELLA   |Test18 CRM/Description|Test18 CRM/AC     |
 #    |Test19 CRM/Request|ONEVIEW      |Test19 CRM/Description|Test19 CRM/AC     |
 #    |Test20 CRM/Request|POTS         |Test20 CRM/Description|Test20 CRM/AC     |
 #    |Test21 CRM/Request|RODOD        |Test21 CRM/Description|Test21 CRM/AC     |
-#    |Test22 CRM/Request|SVN          |Test22 CRM/Description|Test22 CRM/AC     |
-#    |Test23 CRM/Request|TRIWIA       |Test23 CRM/Description|Test23 CRM/AC     |
-#    |Test24 CRM/Request|WEBTAB       |Test24 CRM/Description|Test24 CRM/AC     |
-#    |Test25 CRM/Request|WOW          |Test25 CRM/Description|Test25 CRM/AC     |
+    |Test22 CRM/Request|SVN          |Test22 CRM/Description|Test22 CRM/AC     |
+    |Test23 CRM/Request|TRIWIA       |Test23 CRM/Description|Test23 CRM/AC     |
+    |Test24 CRM/Request|WEBTAB       |Test24 CRM/Description|Test24 CRM/AC     |
+    |Test25 CRM/Request|WOW          |Test25 CRM/Description|Test25 CRM/AC     |
 

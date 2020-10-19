@@ -2428,4 +2428,25 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userClicksOnAddSecondAttachmentInPlaza() {
         homePage.clickAddSecondAttachment();
     }
+
+    @And("user enters list of files and folders as {string}")
+    public void userEntersListOfFilesAndFoldersAs(String arg0) {
+        
+        homePage.enterListOfFiles(arg0);
+    }
+
+    @Then("user enters list of file types as {string}")
+    public void userEntersListOfFileTypesAs(String arg0) {
+        homePage.enterListOfFileTypes(arg0);
+    }
+
+    @And("user enters list of processes as {string}")
+    public void userEntersListOfProcessesAs(String arg0) {
+        homePage.enterListOfProcesses(arg0);
+    }
+
+    @Then("user adds any CI on plaza exclusion endpoint protection antivirus form")
+    public void userAddsAnyCIOnPlazaExclusionEndpointProtectionAntivirusForm() {
+      homePage.select_CI_exclusionEndpoint();
+    }
 }

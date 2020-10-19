@@ -1057,6 +1057,11 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesLocationsRelatedToAreShown(String colValue) {
         Assert.assertTrue(changeRecordPage.verifyExpectedDataIsPresent("Name", colValue));
     }
+
+    @And("user validates reason text field expand button is present")
+    public void userValidatesReasonTextFieldExpandButtonIsPresent() {
+        Assert.assertTrue(changeRecordPage.verifyReasonTextEditorButtonIsDisplayed());
+    }
 }
 
 

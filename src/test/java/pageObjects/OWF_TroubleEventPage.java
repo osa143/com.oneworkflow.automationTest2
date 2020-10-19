@@ -166,9 +166,38 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_ACTION= "arid_WIN_0_777031381";
     private static final String txt_CAUSE= "arid_WIN_0_777031380";
     private static final String chkbx_TO_SELECT_TICKET= "//*[@id='T700506101']/tbody/tr[2]/td[1]/input";
+    private static final String txt_SOURCE_STATUS= "arid_WIN_0_7";
+    private static final String txt_SOURCE_NAME = "arid_WIN_0_808080010";
+    private static final String txt_AGE_IN_DAYS= "arid_WIN_0_808080001";
+    private static final String btnSAVE = "WIN_0_700025244";
+    private static final String btn_TIMELINE_FILTER= "//a[@title='Timeline Filter']";
+    private static final String chkbx_INCLUDE_CHILDREN_TIKCETS= "WIN_1_rc0id800040190";
+    private static final String table_LINKED_ITEMS= "T777506000";
 
 
-
+    public String getPrimaryCIofLinkedTicket(String columnName, int rowNum){
+        return getTableCellData(By.id(table_LINKED_ITEMS), columnName, rowNum);
+    }
+    public void clickTimelineFilterCheckBox(){
+        clickElement(By.id(chkbx_INCLUDE_CHILDREN_TIKCETS));
+    }
+    public void clickTimelineFilter(){
+        clickElement(By.xpath(btn_TIMELINE_FILTER));
+    }
+    public String getAgeInDays(){
+        return getAttributeValueById(txt_AGE_IN_DAYS);
+    }
+    public void enterAgeInDaysAndClickSave(String text){
+       findElement(By.id(txt_AGE_IN_DAYS)).clear();
+       findElement(By.id(txt_AGE_IN_DAYS)).sendKeys(text);
+       clickSaveButton();
+   }
+    public String getSourceName(){
+        return getAttributeValueById(txt_SOURCE_NAME);
+    }
+    public String getSourceStatus(){
+        return getAttributeValueById(txt_SOURCE_STATUS);
+    }
     public boolean verifyPriorityCheckIsReadOnly(){
         //return checkIfControlIsReadonly(btn_PRIORITY_CHECK);
         return findElement(By.id(btn_PRIORITY_CHECK)).isEnabled();
@@ -895,7 +924,7 @@ public void rightClickOnElement(String cellData){
     }
 
 
-    private static final String btnSAVE = "WIN_0_700025244";
+
     public void enterClosureInfo(String closureInfo){
         driver.findElement(By.id(txtCLOSURE_INFO)).clear();
         driver.findElement(By.id(txtCLOSURE_INFO)).sendKeys(closureInfo);
@@ -950,6 +979,13 @@ public void rightClickOnElement(String cellData){
         return getTextByID(txtEVENT_END_TIME);
 
     }
+
+    public String getEventEndTime_ClosedTicketStatus(){
+
+        return getAttributeValueById(txtEVENT_END_TIME);
+
+    }
+
     public void enterEventEndTimeAsPast(String time){
         enterTextByElement(By.id(txtEVENT_END_TIME), time);
     }

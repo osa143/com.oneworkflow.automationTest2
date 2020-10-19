@@ -37,9 +37,9 @@
       Then attachment form should open in new tab
       When user clicks on the attachment listed
       And clicks on display button
-#      Then a new window should open with the attachment shown
-#      When user closes the attachment window
-#      And closes the attachment tab
+      Then a new window should open with the attachment shown
+      When user closes the attachment window
+      And closes the attachment tab
       And user switches to window 1
       When user clicks on the added attachment
       And user clicks on the delete button under internal

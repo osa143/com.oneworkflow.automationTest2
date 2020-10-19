@@ -14,6 +14,7 @@ Feature: User is able to change status to pending
       |Title                                  |RequestType            |Description               |ImpactType      |Urgency|
       |proactive investigation of: frvi96_auto|XX_Test:Functional Test|Pending ticket status Test|Moderate/Limited|Low    |
     Then ticket should be created and status should be assigned
+    And user gets ticket value
     Then user clicks on Ack button
     And problem ticket status should be under investigation
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation."

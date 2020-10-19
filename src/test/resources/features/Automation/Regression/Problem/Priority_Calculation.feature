@@ -1,4 +1,4 @@
-@Priority_Calculation @problem @Reg_Problem
+@Priority_Calculation @problem @Reg_Problem  @prob
 #Passed
   Feature: problem
     Scenario: priority calculation

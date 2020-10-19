@@ -150,6 +150,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         clickRelateCiButton();
         clickYesOnConfirmationMessage();
        // closeWarningMessage();
+        wait(3000);
         clickCloseButton();
         switchToDefault();
         wait(3000);

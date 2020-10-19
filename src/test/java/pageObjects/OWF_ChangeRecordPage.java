@@ -98,6 +98,12 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String btn_APPROVE= "WIN_0_705001330";
     private static final String dd_OWNER_PROFILE = "arid_WIN_0_777031401";
     private static final String dd_INTERESTED_PARTIES_TYPE = "arid_WIN_0_700027963";
+    private static final String dd_UNIQUE_NAME = "arid_WIN_0_700020762";
+
+    public void SelectUniqueName (String value){
+        clickElement(By.id(dd_UNIQUE_NAME));
+        selectDropDownNameAndValue(dd_UNIQUE_NAME, value, false);
+    }
 
     public boolean verifyInterestedPartiesTypes(String statuses, String dropdownName){
         return verifyDropdownValues(statuses, dropdownName, dd_INTERESTED_PARTIES_TYPE);

@@ -6,7 +6,7 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-     # Then user clicks on plaza portal
+      Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on application under IT Infrastructure dropdown
@@ -17,7 +17,7 @@
       And user enters BCCP request as "<Request>"
       And user selects service request name as "Account/Password"
       And user selects BCPP environment as "<Environment>"
-     # And user selects BCCP Add ci as "aa187bcpp01"
+      And user selects BCCP Add ci as "aa187bcpp01"
       And user waits 30 secs
       And user enters BCPP description as "<Description>"
       And user enters additional comments as "<Additional Comments>"
@@ -71,7 +71,7 @@
       Examples:
 
         |Request                |Environment|Description                |Additional Comments|
-        |BCPP-Prod/Request      |Prod       |BCPP-Prod/Description      |BCPP-Prod/AC       |
+        #|BCPP-Prod/Request      |Prod       |BCPP-Prod/Description      |BCPP-Prod/AC       |
         #|Test2-BCPP-Prod/Request|Prod       |Test2-BCPP-Prod/Description|Test2-BCPP-Prod/AC |
         #|BCPP-Test/Request      |Test       |BCPP-Test/Description      |BCPP-Test/AC       |
-        #|Test2-BCPP-Test/Request|Test       |Test2-BCPP-Test/Description|Test2-BCPP-Test/AC |
+        |Test2-BCPP-Test/Request|Test       |Test2-BCPP-Test/Description|Test2-BCPP-Test/AC |

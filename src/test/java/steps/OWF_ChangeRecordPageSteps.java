@@ -973,6 +973,11 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesMultipleOptionsShouldBeAvailableInTypeDropdown(String arg0) {
         Assert.assertTrue(changeRecordPage.verifyInterestedPartiesTypes(arg0, ""));
     }
+
+    @And("user selects unique name as {string}")
+    public void userSelectsUniqueNameAs(String arg0) {
+        changeRecordPage.SelectUniqueName(arg0);
+    }
 }
 
 

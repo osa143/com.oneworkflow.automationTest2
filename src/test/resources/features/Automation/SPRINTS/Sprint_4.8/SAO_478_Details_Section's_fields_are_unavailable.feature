@@ -1,11 +1,11 @@
 @SAO_478
 
-Feature: SAO-478 - Details Section's fields are unavailable
+Feature: SAO-478 - Details Sections fields are unavailable
 
   Scenario: SAO-478 - Details Section's fields are unavailable
 
     Given user is on the OneWorkflow login page
-    Given user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
+    And user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create change record
     Then user switches to window 1
@@ -23,7 +23,7 @@ Feature: SAO-478 - Details Section's fields are unavailable
     And user adds CI "SE_CPE_FRECPE5" to change ticket with impact level "No Impact"
     And user waits 5 secs
     Then user clicks on Send button
-    And user waits 10 secs
+    And user waits 20 secs
    # And user should see confirmation message and clicks on yes button
     And user validates ticket status as "Assigned"
     And user validates Implementation is readonly
@@ -34,7 +34,7 @@ Feature: SAO-478 - Details Section's fields are unavailable
     And user validates Risk Description is read only
     Then user clicks on Ack button
     And user waits 3 secs
-    And user validates ticket status as "Analysis"
+    #And user validates ticket status as "Analysis"
     And user validates Implementation is readonly
     And user validates Test Plan is readonly
     And user validates Rollback is readonly
@@ -87,9 +87,9 @@ Feature: SAO-478 - Details Section's fields are unavailable
     And user adds CI "SE_EPG_FREEPG1" to change ticket with impact level "Loss of Service"
     And user waits 5 secs
     Then user clicks on Send button
-    And user validates ticket status as "Assigned"
+    #And user validates ticket status as "Assigned"
     Then user clicks on Ack button
-    And user validates ticket status as "Analysis"
+   # And user validates ticket status as "Analysis"
     And user validates Implementation isn't readonly
     And user validates Test Plan isn't readonly
     And user validates Rollback isn't readonly

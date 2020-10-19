@@ -36,6 +36,7 @@ Feature: checking of bulk loading error message impact duration
     And user clicks on Manual Input radio button
     And user enters impact from date as current date midnight plus 24 hours on bulk CI loading window
     And user enters impact to date as current date midnight plus 30 hours on bulk CI loading window
+    When user clicks on Manual Input radio button
     And user enters "One Workflow" in manual CI search box
     Then user clicks on save button under bulk import
     And user should see error message of "(300825): From date cannot be in the future for planned impact record." on bulk cI window

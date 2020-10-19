@@ -111,6 +111,12 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_LOCATION_ID="arid_WIN_3_777031006";
     private static final String txt_REGION_NAME= "arid_WIN_3_700009638";
     private static final String table_SELECT_LOCATION_= "T700024013";
+    private static final String btn_CHANGE_BUILDER= "//img[@alt='Editor for Change Builder+*']";
+    private static final String btn_REASON_EDITOR= "//img[@alt='Editor for Reason']";
+
+    public boolean verifyReasonTextEditorButtonIsDisplayed(){
+        return verifyElementIsDisplayed(By.xpath(btn_REASON_EDITOR));
+    }
 
     public boolean verifyExpectedDataIsPresent(String colName, String colValue){
         switchToFrameByIndex(2);
@@ -187,10 +193,9 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     public String getExternalTicketID(){
         return getAttributeValueById(txt_EXTERNAL_TICKET_ID);
     }
-    private static final String btn_CHANGE_BUILDER= "//img[@alt='Editor for Change Builder+*']";
 
     public boolean verifyChangeBuilderButtonIsDisplayed(){
-        return verifyElementIsDisplayed(By.id(btn_CHANGE_BUILDER));
+        return verifyElementIsDisplayed(By.xpath(btn_CHANGE_BUILDER));
     }
 
 
@@ -517,6 +522,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     }
     public void clickAdvancedSearch(){
         clickElement(By.id(btn_ADVANCED_SEARCH));
+        wait(1000);
     }
     public void clickCancel(){
         clickElement(By.id(btn_CANCEL_LOCATION));

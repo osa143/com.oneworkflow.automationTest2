@@ -35,15 +35,20 @@ Feature: Verification of ability to link tickets
     And user switches to window 4
     Then change record form should open in a new tab
     When user clicks on sweden checkbox under affected BU's
-    And user selects template as "All:Mobile:Billing:Nobill - Customer refund (SE)"
-    And user selects request type as "Normal Change"
-    And user enters "Problem initiator" in the change builder field
-    Then user clicks on "Schedule" tab
-    And user enters as "Test Service and customer impact" in service and customer impact
-    And user enters start time as 5 minutes fast from current sweden time
-    And user enters end time as 11 minutes fast from current sweden time
-    And user enters impact duration as "6" minutes
-    And user selects estimated impact as "No Impact"
+    When user selects request type as "Normal Change"
+    Then user selects title as "Mobile:CS Core (Voice)" on Change record page
+    And user selects request category as "Software Installation" on change record page
+    And user enters description as "TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator)"
+    And user enters reason field as "Regression"
+    And user selects priority as "Critical"
+    And user enters "Privacy Data: Just Testing" in the change builder field
+    Then user validates change builder button is present
+    And user validates reason text field expand button is present
+    Then user enters as "Test Data - Ignore Ticket" in service and customer impact
+    And user enters start time as 24 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss" format
+    And user enters end time as 28 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss" format
+    And user enters impact duration as "45" minutes
+    And user selects estimated impact dropdown as "Degradation of Service"
     And user clicks on save button
     And user waits 3 secs
     Then user clicks on Risk tab

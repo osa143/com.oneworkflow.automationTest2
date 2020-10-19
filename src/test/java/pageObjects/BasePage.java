@@ -56,7 +56,12 @@ public class BasePage{
     }
 
     public boolean verifyElementIsDisplayed(By element){
+
         return findElement(element).isDisplayed();
+    }
+    public String makeXpath(String tagName, String attribute, String value) {
+        String xpath = "//" + tagName + "[@" + attribute + "='" + value + "']";
+        return xpath;
     }
 
     public boolean verifyElementIsDisplayedByContainsText(String textName){
@@ -834,6 +839,11 @@ public void clickElementById(String Id){
         Actions action = new Actions(driver);
         action.contextClick(element).build().perform();
     }
+    public void doubleClickOnElement(WebElement element)
+    {
+        Actions action = new Actions(driver);
+        action.doubleClick(element).build().perform();
+    }
     public static File takeScreenShot() {
 
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -869,6 +879,7 @@ public void clickElementById(String Id){
         List<String> tabValues = new ArrayList<String>();
 
         List<WebElement> elements = driver.findElement(table).findElement(By.tagName("tbody")).findElements(By.tagName("tr")).get(0).findElements(By.tagName("th"));
+       // List<WebElement> elements= driver.findElement(table).findElements(By.className("BaseTableHeader"));
 
         for (int i = 0; i < elements.size(); i++) {
             WebElement tableHeader = elements.get(i);

@@ -1,4 +1,4 @@
-@Changing_of_assignee_for_problem_ticket @problem @Reg_Problem
+@Changing_of_assignee_for_problem_ticket @problem @Reg_Problem  @prob
 #passed
 #This feature covers 2 scenarios
 Feature: Changing of assignee for problem ticket

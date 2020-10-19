@@ -1,4 +1,4 @@
-@Profile_Permissions_Part_4 @problem @Reg_Problem
+@Profile_Permissions_Part_4 @problem @Reg_Problem  @prob
   #passed
   #CI search window
   Feature:  profile permissions part 4

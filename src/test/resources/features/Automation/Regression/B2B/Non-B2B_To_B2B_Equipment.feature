@@ -2,7 +2,8 @@
 
   Feature: convert a non B2B WO to B2B WO
 
-    Scenario:check possibility of converting a non B2B WO to B2B WO
+    Scenario:check possibility of converting a non B2B WO to B2B WO and verify SLA is read only after
+      ticket is assigned for SLA class Mast-xxh
 
 
       Given user is on the OneWorkflow login page
@@ -21,6 +22,13 @@
       When user adds CI "SE_LTECell_100895010" to the ticket with impact level "Degradation of Service"
       And user clicks on apply BtwoB button
       Then user should see assigned profile as "Transtema2 - FS - SE - B2B"
+      When user selects SLA class as "Mast:10h repair time"
+      And user clicks on "B2B Dispatch" tab
+      And user enters header value as "Test"
+      And user enters message value as "Automated Test"
+      And user clicks on save button
+      And user validates ticket status as "Assigned"
+      Then user validates SLA class as read only
 
 
 

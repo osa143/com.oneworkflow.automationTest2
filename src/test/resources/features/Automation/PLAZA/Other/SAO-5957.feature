@@ -5,18 +5,19 @@
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
+      And user clicks on plaza portal
       Then user should see the plaza home page
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on compute & operating system under IT Infrastructure dropdown
-      And user clicks on "Join Server to TCAD" pebble
+      And user clicks on "Exclusion from Endpoint Protection (SCEP) Antivirus" pebble
       Then user should see "Exclusion from Endpoint Protection (SCEP) Antivirus" form
       And user selects system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters list of files and folders as "Testing"
       Then user enters list of file types as "Test file types"
       And user enters list of processes as "Test Processes"
-      Then user attaches any CI
+      Then user adds any CI on plaza exclusion endpoint protection antivirus form
       And user enters additional comments as "Test A/C"
       Then user clicks on "Submit"
       And user gets plaza request id
@@ -33,4 +34,7 @@
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
       And user clicks on CTI details under sections
-      Then user should see incorrect CTI details
+      #user should see incorrect CTI details
+      Then user validates Category as "IT"
+      And user validates type as "Server"
+      And user validates item as "Windows"

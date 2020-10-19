@@ -105,7 +105,7 @@
       And user validates vendor section is not present
       When user changes status to "Closed" on known error page
       And user clicks save button
-      When user selects closure code as "Full Impact"
+      When user selects closure code as "Solved"
       And user clicks on save button
       Then user validates ticket status as "Closed"
       And user validates vendor section is not present

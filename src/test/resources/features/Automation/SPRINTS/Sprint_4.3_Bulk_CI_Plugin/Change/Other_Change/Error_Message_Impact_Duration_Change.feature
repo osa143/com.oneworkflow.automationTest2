@@ -46,8 +46,16 @@ Feature: checking of bulk loading error message impact duration
     And user enters impact to date as current date midnight plus -24 hours on bulk CI loading window
     And user clicks on save button under bulk import
     Then user should see error message of "'Impact From' cannot be set in the past. (ARERR 10000)" on bulk cI window
-    And user should see error message of "Impact From date must be before Impact To date." on bulk cI window and clicks ok
+    And user should see error message of "'Impact From' cannot be set in the past. (ARERR 10000)" on bulk cI window and clicks ok
+    And user switches to frame
+    And user enters impact from date as current date midnight plus 48 hours on bulk CI loading window
+    And user enters impact to date as current date midnight plus 24 hours on bulk CI loading window
     And user clicks on save button under bulk import
+    Then user should see error message of "Impact From date must be before Impact To date." on bulk cI window
+    And user should see error message of "Impact From date must be before Impact To date." on bulk cI window and clicks ok
+    And user switches to frame
+    And user enters "" in manual CI search box
+    Then user clicks on save button under bulk import
     Then user should see error message of "Please type in or paste the list of CIs you you want to relate. (ARERR 10000)" on bulk cI window
     And user should see error message of "Please type in or paste the list of CIs you you want to relate. (ARERR 10000)" on bulk cI window and clicks ok
     And user switches to frame

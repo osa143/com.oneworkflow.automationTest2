@@ -20,6 +20,7 @@ Feature: SAO-5994-OP-000002126347 - Cannot add all fields to email template
     And user enters impact duration as "3" hours
     And user clicks save button
     Then user clicks on "Diagnosis" tab
+    And user waits 5 secs
     And user adds CI "One Workflow" to change ticket with impact level "No Impact"
     And CI should be listed and displayed under the Diagnosis tab
     When user clicks on Send button
@@ -27,9 +28,9 @@ Feature: SAO-5994-OP-000002126347 - Cannot add all fields to email template
     When user clicks on Ack button
    # Then user validates ticket status as "Analysis"
     And user waits 5 secs
-    And user selects status as "Approval Requested"
+    And user changes status to "Approval Requested"
     Then user clicks save button
-    And user validates ticket status as "Approved"
+    #And user validates ticket status as "Approved"
     Then user changes status to "Schedule Requested"
     And user clicks save button
     Then user validates ticket status as "Scheduled"

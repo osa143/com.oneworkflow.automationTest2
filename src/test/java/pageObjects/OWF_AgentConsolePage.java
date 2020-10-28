@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+import utils.CommonUtils;
 
 //import javax.xml.bind.SchemaOutputResolver;
 import java.util.List;
@@ -102,6 +104,36 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String ERROR_POP_UP="pbartable";
     private static final String chkbx_SWEDEN="WIN_0_rc0id830000120";
     private static final String table_USER_INFORMATION= "T700028052";
+    private static final String TableRow1 = "//*[@id='T777000002']/tbody/tr[2]/td[2]";
+    private static final String SELECT_TICKET_LINKED_ITEMS = "//*[@id='T777506000']/tbody/tr[2]/td[2]/nobr/span";
+    private static final String UNLINK_BUTTON = "WIN_4_777506010";
+    private static final String btn_OK_LINKED_ITEMS = "//*[@id='PopupMsgFooter']/a";
+
+    public void clickOkButton(){
+        switchToFrameByIndex(2);
+        clickElementByContainsTextAndTagName("a", "OK");
+
+    }
+
+    public void verifyTicketIsUnlinked(){
+        Assert.assertNotEquals(CommonUtils.UnlinkTicket, getTextByElement(By.xpath(SELECT_TICKET_LINKED_ITEMS)));
+    }
+
+    public void selectTicketAndUnlink(){
+        CommonUtils.UnlinkTicket=getTextByElement(By.xpath(SELECT_TICKET_LINKED_ITEMS));
+        clickElement(By.xpath(SELECT_TICKET_LINKED_ITEMS));
+        clickElementById(UNLINK_BUTTON);
+    }
+
+    public void clickOnTableRow1_agentConsole(){
+        clickElement(By.xpath(TableRow1));
+    }
+
+    public void enterTicketID(String ticket) {
+        enterTextByElement(By.id(txt_SEARCH), ticket);
+        driver.findElement(By.id(txt_SEARCH)).sendKeys(Keys.ENTER);
+        wait(1000);
+    }
 
     public boolean verifyUserProfiles(String colName, String colValue, boolean partialText){
         return verifyColumnValuesMultiple(By.id(table_USER_INFORMATION), colName, colValue, partialText );

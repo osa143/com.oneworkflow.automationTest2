@@ -36,7 +36,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_C2B_REQUEST_ID="sp_formfield_sr74_v_request";
     public static final String dd_ENVIRONMENT="s2id_autogen15";
     public static final String txt_C2B_DESCRIPTION="sp_formfield_sr74_v_description";
-    public static final String dd_SELECT_REQUEST_ID="select2-chosen-12";
+    public static final String dd_SELECT_REQUEST_ID="select2-chosen-9";
     public static final String dd_SMTP_RELAY = "select2-chosen-12";
     public static final String txt_C2B_GENERAL_REQUEST_ID="sp_formfield_sr112_v_request";
     public static final String dd_C2B_GENERAL_ENVIRONMENT="s2id_autogen16";
@@ -481,7 +481,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_ROLE_ID = "select2-results-9";
     private static final String txt_SYSTEM_ID = "select2-results-13";
     private static final String txt_SERVICE_REQUEST_NAME_ID = "select2-results-11";
-    private static final String txt_SELECT_REQUEST_ID = "select2-results-12";
+    private static final String txt_SELECT_REQUEST_ID = "select2-results-9";
     private static final String txt_SMTP_RELAY = "select2-results-12";
     private static final String txt_C2B_SERVICE_ENVIRONMENT = "s2id_autogen13_results";
     private static final String txt_C2B_GENERAL_ENVIRONMENT = "s2id_autogen16_results";
@@ -1511,7 +1511,13 @@ public class Plaza_HomePage extends BasePage {
     public void selectCews_add_ci(String CiName){
         PlazaValidation.System = CiName;
         PlazaValidation.CI = CiName;
-       addCi(dd_CEWS_ADD_CI, txt_CEWS_ADD_CI, CiName);
+       //addCi(dd_CEWS_ADD_CI, txt_CEWS_ADD_CI, CiName);
+        clickElement(By.id(dd_CEWS_ADD_CI));
+        WebElement Element=findElement(By.xpath(dd_CEWS_ADD_CI));
+        Element.sendKeys(CiName);
+        wait(1000);
+        Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
 
     }
 
@@ -1547,7 +1553,7 @@ public class Plaza_HomePage extends BasePage {
         PlazaValidation.CI = dropdownName;
         clickElement(By.id(dd_BCPP_ADD_CI));
         wait(1000);
-        WebElement Element=findElement(By.xpath(dd_BCPP_ADD_CI));
+        WebElement Element=findElement(By.id(dd_BCPP_ADD_CI));
         Element.sendKeys(dropdownName);
         wait(1000);
         Element.sendKeys(Keys.ARROW_DOWN);

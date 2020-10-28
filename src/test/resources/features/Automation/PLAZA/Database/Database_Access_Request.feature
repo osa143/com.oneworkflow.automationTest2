@@ -5,7 +5,7 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      #Then user clicks on plaza portal
+      Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on database under IT Infrastructure
@@ -50,19 +50,22 @@
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
-      And user validates CI "cc100cgas001" is listed
       And user validates CI "TEST" is listed
-      And user selects all CI's that appear
+      And user validates CI "cc100cgas001" is listed in row 2
       And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
       Then user switches to frame
       And user enters impact from time as past on impact details bulk update window
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      Then user switches to window 1
-      When user selects all CI's that appear
-      And user right clicks on CI "cc100cgas001" and selects "Impact:Clear All"
-      And user should see confirmation message for impact clear and user clicks yes
+      And user right clicks on CI "TEST" and selects "Impact:Update"
+      Then user switches to frame
+      And user enters impact from time as past on impact details bulk update window
+      And user enters impact to time as past on impact details bulk update window
+      Then user clicks confirm checkbox
+      And user clicks on bulk update save button
+      And user right clicks on CI "cc100cgas001" and clears impact for all CI's
+      Then user should see confirmation message for impact clear and user clicks yes
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
@@ -80,8 +83,8 @@
       Examples:
 
       |Request                                |Database Type|Description                      |Additional Comments  |Account Type|Assigned Profile|
-     # |Test1 Database AccessMSSQL/Request     |MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server |MSSQL L3       |
-      |Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |MySQL L3        |
+      |Test1 Database AccessMSSQL/Request     |MSSQL        |Test1 Database Access/Description|Database - Test1/AC  |SQL Server |MSSQL L3       |
+      #|Test2 Database AccessMySQL/Request     |MySQL        |Test2 Database Access/Description|Database - Test2/AC  |SQL Server  |MySQL L3        |
 
 
 

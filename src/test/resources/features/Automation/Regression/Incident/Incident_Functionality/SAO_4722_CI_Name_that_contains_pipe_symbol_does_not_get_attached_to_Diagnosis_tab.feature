@@ -2,7 +2,7 @@
 
 Feature: SAO_4722 - CI Name that contains " | " does not get attached to Diagnosis tab
 
-  Scenario: SAO_4722 - CI Name that contains " | " does not get attached to Diagnosis tab
+  Scenario: SAO_4722 - CI Name that contains pipe symbol does not get attached to Diagnosis tab
 
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password

@@ -198,6 +198,12 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         return verifyElementIsDisplayed(By.xpath(btn_CHANGE_BUILDER));
     }
 
+    private static final String dd_UNIQUE_NAME = "arid_WIN_0_700020762";
+
+    public void SelectUniqueName (String value){
+        clickElement(By.id(dd_UNIQUE_NAME));
+        selectDropDownNameAndValue(dd_UNIQUE_NAME, value, false);
+    }
 
     public boolean verifyInterestedPartiesTypes(String statuses, String dropdownName){
         return verifyDropdownValues(statuses, dropdownName, dd_INTERESTED_PARTIES_TYPE);

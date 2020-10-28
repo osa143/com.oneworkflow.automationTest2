@@ -974,6 +974,11 @@ public class OWF_ChangeRecordPageSteps {
         Assert.assertTrue(changeRecordPage.verifyInterestedPartiesTypes(arg0, ""));
     }
 
+    @And("user selects unique name as {string}")
+    public void userSelectsUniqueNameAs(String arg0) {
+        changeRecordPage.SelectUniqueName(arg0);
+    }
+
     @Then("user validates Nokia ticket ID is present")
     public void userValidatesNokiaTicketIDIsPresent() {
      Assert.assertNotNull(changeRecordPage.getExternalTicketID());

@@ -1418,7 +1418,17 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters auto close date as {int} mins past")
     public void userEntersAutoCloseDateAsIntMinsPast(int arg0) {
-        troubleEventPage.enterAutoCloseDate(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterAutoCloseDate(CommonUtils.getDateTime("MM-dd-YYYY HH:mm:ss", "Europe/London", arg0));
+    }
+
+    @Then("user validates hierarchic escalation level is read only")
+    public void userValidatesHierarchicEscalationLevelIsReadOnly() {
+        Assert.assertTrue(troubleEventPage.verifyHierarchicEscalationLevelIsReadOnly());
+    }
+
+    @And("user validates hierarchic escalation level isnt read only")
+    public void userValidatesHierarchicEscalationLevelIsntReadOnly() {
+        Assert.assertFalse(troubleEventPage.verifyHierarchicEscalationLevelIsReadOnly());
     }
 
     @And("user validates child WO ticket details are same as parent OP ticket")

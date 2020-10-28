@@ -35,6 +35,7 @@ Feature: External Normal Change E2E
     And user selects request category as "Software Installation" on change record page
     And user enters description as "TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (External Initiator)"
     And user enters reason field as "Regression"
+    And user validates change builder+ is mandatory
     And user selects priority as "Minor"
     And user enters "Privacy Data: Just Testing" in the change builder field
     #Then user validates "Change Builder" button is present

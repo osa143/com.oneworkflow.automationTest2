@@ -74,6 +74,8 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String btn_RADIOCleared_ID = "WIN_4_rc0id800040060";
     private static final String txt_Impact_From_CI_Search= "arid_WIN_0_700009083";
     private static final String btn_Refresh= "//*[@id='WIN_0_700009087']/div[1]/table/tbody/tr/td[2]/a[2]";
+    private static final String ddTARGET_APPLICATION_FIRST = "Target Application";
+    private static final String ddTARGET_APPLICATION_SECOND = "Fld-SourceRelationshipType";
 
 
     public void clickRefresh_Diagnosis(){
@@ -150,6 +152,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         clickRelateCiButton();
         clickYesOnConfirmationMessage();
        // closeWarningMessage();
+        wait(3000);
         clickCloseButton();
         switchToDefault();
         wait(3000);
@@ -459,8 +462,6 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         clickElement(By.id(btn_LINK));
     }
 
-    private static final String ddTARGET_APPLICATION_FIRST = "Target Application";
-    private static final String ddTARGET_APPLICATION_SECOND = "Fld-SourceRelationshipType";
 
     public void selectTargetApplicationFirst(String value){
         selectDropDownNameAndValue(ddTARGET_APPLICATION_FIRST,value, false);

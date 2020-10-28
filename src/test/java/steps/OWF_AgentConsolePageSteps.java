@@ -7,6 +7,7 @@ import cucumber.api.java.en.When;
 import org.testng.Assert;
 import pageObjects.OWF_AgentConsolePage;
 import utils.CommonUtils;
+import utils.Ticket;
 
 import static utils.CommonUtils.*;
 
@@ -777,6 +778,27 @@ public class OWF_AgentConsolePageSteps {
     public void userValidatesArePresentUnderColumn(String colValues, String colName) {
         Assert.assertTrue(agentConsolePage.verifyUserProfiles(colName, colValues, false));
         agentConsolePage.clickCloseUserInformation();
+    }
+
+    @And("user enters ticket previously created and searches in agent console and highlights")
+    public void userEntersTicketPreviouslyCreatedAndSearchesInAgentConsole() {
+        agentConsolePage.enterTicketID(CommonUtils.opTicket);
+        agentConsolePage.clickOnTableRow1_agentConsole();
+    }
+
+    @When("user selects ticket and clicks on unlink button")
+    public void userSelectsTicketAndClicksOnUnlinkButton() {
+        agentConsolePage.selectTicketAndUnlink();
+    }
+
+    @And("user validates ticket has been unlinked")
+    public void userValidatesTicketHasBeenUnlinked() {
+        agentConsolePage.verifyTicketIsUnlinked();
+    }
+
+    @And("user clicks ok button on linked items popup")
+    public void userClicksOkButtonOnLinkedItemsPopup() {
+        agentConsolePage.clickOkButton();
     }
 }
 

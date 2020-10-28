@@ -162,7 +162,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_HOLD_TO_DATE= "arid_WIN_0_777031004";
     private static final String dd_HOLD_REASON= "Reason";
     private static final String txt_REJECT_REASON="arid_WIN_0_600001019";
-    private static final String txt_HIERARCHIC_ESCLATION_LEVEL="arid_WIN_0_700025204";
+    private static final String txt_HIERARCHIC_ESCLATION_LEVEL="arid_WIN_0_600001809";
     private static final String txt_ACTION= "arid_WIN_0_777031381";
     private static final String txt_CAUSE= "arid_WIN_0_777031380";
     private static final String chkbx_TO_SELECT_TICKET= "//*[@id='T700506101']/tbody/tr[2]/td[1]/input";
@@ -173,7 +173,13 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btn_TIMELINE_FILTER= "//a[@title='Timeline Filter']";
     private static final String chkbx_INCLUDE_CHILDREN_TIKCETS= "WIN_1_rc0id800040190";
     private static final String table_LINKED_ITEMS= "T777506000";
+//    private static final String txt_CAUSE= "arid_WIN_0_777031380";
+//    private static final String txt_FAULT_POSITION= "arid_WIN_0_600001048";
 
+
+    public boolean verifyHierarchicEscalationLevelIsReadOnly(){
+        return checkIfControlIsReadonly(txt_HIERARCHIC_ESCLATION_LEVEL);
+    }
 
     public String getPrimaryCIofLinkedTicket(String columnName, int rowNum){
         return getTableCellData(By.id(table_LINKED_ITEMS), columnName, rowNum);

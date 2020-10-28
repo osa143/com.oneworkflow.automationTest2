@@ -22,6 +22,7 @@
       And user selects request category as "Software Installation" on change record page
       And user enters description as "TEST TICKET PLEASE IGNORE - Automated Test for Urgent Major Change (Internal Initiator)"
       And user enters reason field as "Regression"
+      And user validates change builder+ is mandatory
       And user selects priority as "Major"
       And user enters "CI I2" in the change builder field
       #Then user validates "Change Builder" button is present

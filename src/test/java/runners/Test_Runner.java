@@ -5,10 +5,10 @@ import cucumber.api.CucumberOptions;
 import runners.BaseTest;
 
 @CucumberOptions(features = "classpath:features/",
-//        plugin = { "pretty", "html:test-output/html",}, // for html report
+        plugin = { "pretty", "html:test-output/html",}, // for html report
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@SAO_5994"}
+        tags = {"@E2E_problem_and_known_error"}
 
 )
 public class Test_Runner extends BaseTest {

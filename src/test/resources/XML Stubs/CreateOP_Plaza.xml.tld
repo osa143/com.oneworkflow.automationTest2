@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Body>
+        <ns0:BAOReceiver-Request xmlns:ns0="OWTTMS">
+            <ns0:BAOInputRequest>
+                <ns0:CustomerOperation>
+                    <ns0:CreateIncidentDisturbanceInformationInbound>
+                        <ns0:Action>Create</ns0:Action>
+                        <ns0:Operation>Notification</ns0:Operation>
+                        <ns0:InterfaceName>PLAZA</ns0:InterfaceName>
+                        <ns0:RequestedByLoginID>rug645</ns0:RequestedByLoginID>
+                        <ns0:Source>Customer Care</ns0:Source>
+                        <ns0:EventStartTime>2019-07-17T08:25:49+02:00</ns0:EventStartTime>
+                        <ns0:Title>Test a</ns0:Title>
+                        <ns0:RequestType>Customer</ns0:RequestType>
+                        <ns0:Description>Test description</ns0:Description>
+                        <ns0:TicketPriority>Minor</ns0:TicketPriority>
+                        <ns0:InterfaceTicketID>CS0536981</ns0:InterfaceTicketID>
+                        <ns0:Category>Customer Service</ns0:Category>
+                        <ns0:Type>Mobile Services</ns0:Type>
+                        <ns0:Technology>GSM</ns0:Technology>
+                        <ns0:Item>Others</ns0:Item>
+                        <ns0:SLAWithCustomer>2019-07-18T14:25:49+02:00</ns0:SLAWithCustomer>
+                        <ns0:WorkNotes>TEST worknotes</ns0:WorkNotes>
+                        <ns0:SubscriptionID>TEST</ns0:SubscriptionID>
+                        <ns0:AddressOfIssue>TEST</ns0:AddressOfIssue>
+                        <ns0:ContactPersonRole>Person Role</ns0:ContactPersonRole>
+                        <ns0:ContactPersonName>Person Name</ns0:ContactPersonName>
+                        <ns0:ContactPersonPhoneNumber>044205235</ns0:ContactPersonPhoneNumber>
+                        <ns0:ContactPersonEmail>Person email</ns0:ContactPersonEmail>
+                        <ns0:AlternateContactPersons>AlternameContactPerson</ns0:AlternateContactPersons>
+                        <ns0:PreferredContactMethod>email</ns0:PreferredContactMethod>
+                        <ns0:CustomerEscalatedFlag>TEST</ns0:CustomerEscalatedFlag>
+                        <ns0:ServiceDeskEscalatedFlag>TEST</ns0:ServiceDeskEscalatedFlag>
+                        <ns0:HierarchicEscalatedLevel>TEST</ns0:HierarchicEscalatedLevel>
+
+                        <ns0:ServiceProvisionFor>Telia Company</ns0:ServiceProvisionFor>
+                        <ns0:Country>SWEDEN</ns0:Country>
+                        <ns0:AdditionalContactPersonList>
+                            <ns0:ContactPerson>
+                                <ns0:ContactPersonRole>User</ns0:ContactPersonRole>
+                                <ns0:ContactPersonName>Erika</ns0:ContactPersonName>
+                                <ns0:ContactPersonPhoneNumber>123456</ns0:ContactPersonPhoneNumber>
+                                <ns0:ContactPersonEmail>erika.tanigawa@agilenetsystems.com</ns0:ContactPersonEmail>
+                            </ns0:ContactPerson>
+                        </ns0:AdditionalContactPersonList>
+                        <ns0:EstimatedReadyDateTime>2019-07-16T11:25:49+02:00</ns0:EstimatedReadyDateTime>
+                        <ns0:AttachmentList>
+                            <ns0:Attachment>
+                                <ns0:Filename>test.txt</ns0:Filename>
+                                <ns0:AttachmentData>YWFh</ns0:AttachmentData>
+                            </ns0:Attachment>
+                        </ns0:AttachmentList>
+                        <ns0:CIList>
+                            <ns0:CI>
+                                <ns0:CIName>EE_LTECell_TIIMAL3</ns0:CIName>
+                                <ns0:ImpactName>None</ns0:ImpactName>
+                                <ns0:AssociationType>Related</ns0:AssociationType>
+                                <ns0:From>2019-07-15T18:15:03Z</ns0:From>
+                                <ns0:Category>Actual</ns0:Category>
+                                <ns0:ImpactType>Un-Planned</ns0:ImpactType>
+                            </ns0:CI>
+                            <ns0:CI>
+                                <ns0:CIName>EE_LTECell_TIIMAL1</ns0:CIName>
+                                <ns0:ImpactName>None</ns0:ImpactName>
+                                <ns0:AssociationType>Related</ns0:AssociationType>
+                                <ns0:From>2019-06-27T18:15:03Z</ns0:From>
+                                <ns0:Category>Actual</ns0:Category>
+                                <ns0:ImpactType>Un-Planned</ns0:ImpactType>
+                            </ns0:CI>
+                        </ns0:CIList>
+                        <ns0:JobID></ns0:JobID>
+                    </ns0:CreateIncidentDisturbanceInformationInbound>
+                </ns0:CustomerOperation>
+            </ns0:BAOInputRequest>
+        </ns0:BAOReceiver-Request>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

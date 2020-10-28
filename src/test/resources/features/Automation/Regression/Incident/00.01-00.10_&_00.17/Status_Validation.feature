@@ -36,10 +36,6 @@
       Then multiple statuses "Cleared:Pending:Withdrawn:Work In Progress:(clear)" should be available in "Status*" dropdown
       And user logsOut and accepts alert
 
-
-
-
-
       Examples:
         |BU_Name1 |BU_Name2 |Location|Location Name         |Title                        |Description                  |CI Name1          |CI Name2        |CI Name         |Validate BU |
         |Norway   |Finland  |NO_     |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_EPG_OSL900EPG2|DK_EPG_AMBEPG1  |NO_EPG_OSL900EPG2|Denmark     |

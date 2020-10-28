@@ -1,6 +1,6 @@
-@Initiator_Link_Tickets @Reg_Problem  @problem
+@Initiator_Link_Tickets @Reg_Problem  @problem @prob
   #passed  #CI search window
-Feature: Verification of ability to link tickets
+Feature: Initiator link tickets
   Scenario: user should be able to link different types of tickets together
 
     Given user is on the OneWorkflow login page
@@ -33,24 +33,9 @@ Feature: Verification of ability to link tickets
     And user gets trouble ticket value
     When user clicks on create change record
     And user switches to window 4
-    Then change record form should open in a new tab
-    When user clicks on sweden checkbox under affected BU's
-    When user selects request type as "Normal Change"
-    Then user selects title as "Mobile:CS Core (Voice)" on Change record page
-    And user selects request category as "Software Installation" on change record page
-    And user enters description as "TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator)"
-    And user enters reason field as "Regression"
-    And user selects priority as "Critical"
-    And user enters "Privacy Data: Just Testing" in the change builder field
-    Then user validates change builder button is present
-    And user validates reason text field expand button is present
-    Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-    And user enters start time as 24 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss" format
-    And user enters end time as 28 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss" format
-    And user enters impact duration as "45" minutes
-    And user selects estimated impact dropdown as "Degradation of Service"
-    And user clicks on save button
-    And user waits 3 secs
+    When user creates change ticket with following details
+      |RequestType  |Title            |RequestCategory|Description     |Reason       |Priority|ChangeBuilder      |Implementation|TestPlan   |RollBack   |CommPlan   |VerOfFunctionality|Risk   |ServiceCustomerImpact|ImpactDuration|EstimatedImpact       |
+      |Normal Change|IT:Other         |Cable splicing |Correcting error|Test Ticket  |Info    |Change_Automation_1|Test Ticket   |Test Ticket|Test Ticket|Test Ticket|Test Ticket       |No Risk|Test ticket no impact|      3       |Degradation of Service|
     Then user clicks on Risk tab
     And user selects answer as "Impact to other systems/technologies are unclear"
     And user selects answer as "No"

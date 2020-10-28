@@ -155,7 +155,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user goes back to login page")
     public void userGoesBackToLoginPage() {
-        problemRecordPage.getDriver().findElement(By.xpath("//*[@id=\"logoutmsg\"]/tbody/tr[4]/td[2]/a")).click();
+        problemRecordPage.clickOnGoBackToLoginPage();
         problemRecordPage.wait(5000);
     }
 

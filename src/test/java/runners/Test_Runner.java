@@ -8,7 +8,7 @@ import runners.BaseTest;
         plugin = { "pretty", "html:test-output/html",}, // for html report
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@6830"}
+        tags = {"@E2E_problem_and_known_error"}
 
 )
 public class Test_Runner extends BaseTest {

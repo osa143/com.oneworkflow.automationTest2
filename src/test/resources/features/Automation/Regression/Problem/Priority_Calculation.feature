@@ -36,3 +36,10 @@
       Then priority should be "Minor"
       And user selects urgency as "Low"
       Then priority should be "Minor"
+      When user clicks on internal checkbox under affected BU's
+      And user enters "Priority_Calculation Test" in Title field
+      And user selects request type as "CPS:IT:Other" in problem form
+      And user enters description as "Problem ticket Priority_Calculation Test"
+      Then user clicks on save button
+      And problem ticket status should be assigned
+

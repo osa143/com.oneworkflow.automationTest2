@@ -1,4 +1,4 @@
-@E2E_problem_and_known_error @problem @Reg_Problem
+@E2E_problem_and_known_error @problem @Reg_Problem  @prob
 #passed
 # This test also covers SAO-5334 Hide section vendor
   Feature: E2E problem and known error
@@ -109,7 +109,8 @@
       And user clicks on save button
       Then user validates ticket status as "Closed"
       And user validates vendor section is not present
-     # And user validates all fields are read only and not editable
+      And user validates all fields are read only and not editable
+
 
 
 

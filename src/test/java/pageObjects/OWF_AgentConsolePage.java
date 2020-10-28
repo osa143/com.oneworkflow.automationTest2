@@ -603,7 +603,12 @@ public class OWF_AgentConsolePage extends BasePage {
         catch (Exception e){
 
         }
-        wait(3000);
+        wait(2000);
+    }
+
+    public void clickMenuItemLogout_Hooks() {
+        selectMenuItem(menuItemLOGOUT);
+        wait(2000);
     }
 
     public boolean verifyFilteredStatus(String columnName, String columnValue)

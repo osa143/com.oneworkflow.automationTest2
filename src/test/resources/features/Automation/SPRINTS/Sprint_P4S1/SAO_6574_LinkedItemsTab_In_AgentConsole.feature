@@ -1,4 +1,4 @@
-@SAO_5204
+@SAO_6574
 #To be changed
   Feature: user testing linked ticket radio buttons
     Scenario: user testing linked ticket radio buttons

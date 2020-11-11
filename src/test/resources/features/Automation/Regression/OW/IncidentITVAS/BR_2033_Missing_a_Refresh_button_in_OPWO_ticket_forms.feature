@@ -16,12 +16,19 @@ Feature: BR-2033 - Missing a Refresh button in OPWO ticket forms
     And user selects request type as "Customer" on trouble event page
     And user enters description as "Test"
     And user clicks on save button
+    And user gets ticket value
     Then ticket should be created and status should be assigned
-    When user duplicates current tab
+    When user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 2
+    And user enters ticket previously created and searches
+    And user clicks on Ack button
     And user enters description as "Test Update 2"
-    And user selects priority as "Major"
+    When user selects impact as "Critical" on trouble event page
+    And user selects importance as "Critical"
+    And user clicks on priority check button
     And user clicks save button
     And user switches to window 1
-    And user clicks refresh button
-    Then user validates OP ticket is updated
+    And user clicks on ticket refresh button
+    Then user validates description as "Test Update 2"
+    And priority should be "Emergency"
+    And user validates ticket status as "Work In Progress"

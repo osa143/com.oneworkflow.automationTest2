@@ -127,7 +127,9 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String link_GO_BACK_TO_LOGIN= "//*[@id='logoutmsg']/tbody/tr[4]/td[2]/a";
 
 
-
+    public void enterVendorName(String vendorName){
+        enterTextByElement(By.id(txt_VENDOR_NAME), vendorName);
+    }
     public void clickOnGoBackToLoginPage(){
         clickElement(By.xpath(link_GO_BACK_TO_LOGIN));
     }

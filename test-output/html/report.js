@@ -1,39 +1,21 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/Regression/Problem/E2E problem and known error.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/SPRINTS/Sprint_P4S2/SAO_6834_Open_RelatedTicket_From_Timeline.feature");
 formatter.feature({
-  "name": "E2E problem and known error",
+  "name": "Incident",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@E2E_problem_and_known_error"
-    },
-    {
-      "name": "@problem"
-    },
-    {
-      "name": "@Reg_Problem"
-    },
-    {
-      "name": "@prob"
+      "name": "@6834"
     }
   ]
 });
 formatter.scenario({
-  "name": "E2E problem and known error",
+  "name": "Ability to open related ticket from timeline entries",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@E2E_problem_and_known_error"
-    },
-    {
-      "name": "@problem"
-    },
-    {
-      "name": "@Reg_Problem"
-    },
-    {
-      "name": "@prob"
+      "name": "@6834"
     }
   ]
 });
@@ -48,11 +30,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user logs in with valid username \"Tohall_copy\" and password as \"Test@1234\"",
+  "name": "user logs in with valid user and password",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_LoginPageSteps.userLogsInWithValidUsernameAndPasswordAs(String,String)"
+  "location": "OWF_LoginPageSteps.userLogsInWithValidUserAndPassword()"
 });
 formatter.result({
   "status": "passed"
@@ -68,11 +50,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on create problem record",
+  "name": "user clicks on create trouble event",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnCreateProblemRecord()"
+  "location": "OWF_AgentConsolePageSteps.userClicksOnCreateTroubleEvent()"
 });
 formatter.result({
   "status": "passed"
@@ -88,51 +70,61 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "problem record form should appear in new tab",
+  "name": "trouble record form should appear in new tab",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.problemRecordFormShouldAppearInNewTab()"
+  "location": "OWF_TroubleEventPageSteps.troubleRecordFormShouldAppearInNewTab()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user validates vendor section is not present",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userValidatesVendorSectionIsNotPresent()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user creates problem ticket with below details",
-  "rows": [
-    {
-      "cells": [
-        "Title",
-        "RequestType",
-        "Description",
-        "ImpactType",
-        "Urgency"
-      ]
-    },
-    {
-      "cells": [
-        "proactive investigation of: frvi96_auto",
-        "CPS:IT:Other",
-        "UAT Test close",
-        "Moderate/Limited",
-        "Low"
-      ]
-    }
-  ],
+  "name": "user clicks on sweden checkbox under affected BU\u0027s",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userCreatesProblemTicketWithBelowDetails(DataTable)"
+  "location": "OWF_ProblemRecordPageSteps.userClicksOnSwedenCheckboxUnderAffectedBUS()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters \"Parent ticket\" in Title field in Trouble event",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userEntersInTitleFieldInTroubleEvent(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects request type as \"Customer\" on trouble event page",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userSelectsRequestTypeAsStringOnTroubleEventPage(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters description as \"Link to child ticket\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userEntersDescriptionAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on save button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
 });
 formatter.result({
   "status": "passed"
@@ -148,71 +140,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user validates vendor section is not present",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userValidatesVendorSectionIsNotPresent()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user gets ticket value",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userGetsTicketValue()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user logsOut",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userLogsOut()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user goes back to login page",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userGoesBackToLoginPage()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user logs in with valid username \"frvi96_auto\" and password as \"Test@1234\"",
+  "name": "user clicks on create trouble event",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_LoginPageSteps.userLogsInWithValidUsernameAndPasswordAs(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user successfully logged in to OneWorkflow and agent console should be displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userSuccessfullyLoggedInToOneworkflowAndAgentConsoleShouldBeDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on search and selects open search forms and problem record",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnSearchAndSelectsOpenSearchFormsAndProblemRecord()"
+  "location": "OWF_AgentConsolePageSteps.userClicksOnCreateTroubleEvent()"
 });
 formatter.result({
   "status": "passed"
@@ -228,231 +160,51 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters Problem Ticket",
-  "keyword": "And "
+  "name": "trouble record form should appear in new tab",
+  "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersProblemTicket()"
+  "location": "OWF_TroubleEventPageSteps.troubleRecordFormShouldAppearInNewTab()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks Search on ticket search",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksSearchOnTicketSearch()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on Ack button",
+  "name": "user clicks on sweden checkbox under affected BU\u0027s",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksOnAckButton()"
+  "location": "OWF_ProblemRecordPageSteps.userClicksOnSwedenCheckboxUnderAffectedBUS()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "problem ticket status should be under investigation",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.problemTicketStatusShouldBeUnderInvestigation()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates vendor section is not present",
+  "name": "user enters \"Child ticket\" in Title field in Trouble event",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userValidatesVendorSectionIsNotPresent()"
+  "location": "OWF_TroubleEventPageSteps.userEntersInTitleFieldInTroubleEvent(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "change should also be reflected in the timeline as \"STATUS MODIFIED.  Status has changed from Assigned to Under Investigation.\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.changeShouldAlsoBeReflectedInTheTimelineAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on assignment under sections",
+  "name": "user selects request type as \"Customer\" on trouble event page",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksOnAssignmentUnderSections()"
+  "location": "OWF_TroubleEventPageSteps.userSelectsRequestTypeAsStringOnTroubleEventPage(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user selects assigned profile dropdown as \"Problem Management:Problem Initiator\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSelectsAssignedProfileDropdownAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters \"Tohall_copy\" in assignee",
+  "name": "user enters description as \"Link to Master ticket\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersInAssignee(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on save button on the problem form",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksOnSaveButtonOnTheProblemForm()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "change should also be reflected in the timeline \"Request has been reassigned from Assignee user :frvi96_auto:Tohall_copy\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.changeShouldAlsoBeReflectedInTheTimeline(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user logsOut",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userLogsOut()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user goes back to login page",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userGoesBackToLoginPage()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user logs in with valid username \"Tohall_copy\" and password as \"Test@1234\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_LoginPageSteps.userLogsInWithValidUsernameAndPasswordAs(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user successfully logged in to OneWorkflow and agent console should be displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userSuccessfullyLoggedInToOneworkflowAndAgentConsoleShouldBeDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on search and selects open search forms and problem record",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnSearchAndSelectsOpenSearchFormsAndProblemRecord()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user switches to window 3",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters Problem Ticket",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersProblemTicket()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks Search on ticket search",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksSearchOnTicketSearch()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user changes status as Investigation Complete on problem record page",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userChangesStatusAsInvestigationCompleteOnProblemRecordPage()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects root cause code as \"Technical:HW error\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSelectsRootCauseCodeAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters route cause details as \"Bad management\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersRouteCauseDetailsAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters RC found date as current date",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersRCFoundDateAsCurrentDate()"
+  "location": "OWF_ProblemRecordPageSteps.userEntersDescriptionAs(String)"
 });
 formatter.result({
   "status": "passed"
@@ -468,121 +220,31 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user validates ticket status as \"Investigation Complete\"",
+  "name": "ticket should be created and status should be assigned",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userValidatesTicketStatusAs(String)"
+  "location": "OWF_ChangeRecordPageSteps.ticketShouldBeCreatedAndStatusShouldBeAssigned()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user validates vendor section is not present",
+  "name": "user gets trouble ticket value",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userValidatesVendorSectionIsNotPresent()"
+  "location": "OWF_TroubleEventPageSteps.userGetsTroubleTicketValue()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "change should also be reflected in the timeline as \"STATUS MODIFIED.  Status has changed from Under Investigation to Investigation Complete.\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.changeShouldAlsoBeReflectedInTheTimelineAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user logsOut",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userLogsOut()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user switches to window 2",
+  "name": "user switches to window 1",
   "keyword": "And "
 });
 formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user goes back to login page",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userGoesBackToLoginPage()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user logs in with valid username \"frvi96_auto\" and password as \"Test@1234\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_LoginPageSteps.userLogsInWithValidUsernameAndPasswordAs(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user successfully logged in to OneWorkflow and agent console should be displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userSuccessfullyLoggedInToOneworkflowAndAgentConsoleShouldBeDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on search and selects open search forms and problem record",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnSearchAndSelectsOpenSearchFormsAndProblemRecord()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user switches to window 3",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters Problem Ticket",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersProblemTicket()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks Search on ticket search",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksSearchOnTicketSearch()"
 });
 formatter.result({
   "status": "passed"
@@ -598,7 +260,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user selects target application first dropdown as \"OS3 - Known Error\"",
+  "name": "user selects target application first dropdown as \"OS3 - Operations\"",
   "keyword": "And "
 });
 formatter.match({
@@ -608,7 +270,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user selects target application second dropdown as \"Caused by\"",
+  "name": "user selects target application second dropdown as \"Is master of\"",
   "keyword": "And "
 });
 formatter.match({
@@ -618,17 +280,87 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on create button under linked items",
+  "name": "user clicks on link button under linked items tab",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_CiSearchPageSteps.userClicksOnCreateButtonUnderLinkedItems()"
+  "location": "OWF_TroubleEventPageSteps.userClicksOnLinkButtonUnderLinkedItemsTab()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user switches to window 4",
+  "name": "user switches to frame",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSwitchesToFrame()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters ticket in ticket ID+ field",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userEntersTicketInTicketIDField()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on the search button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userClicksOnTheSearchButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on accept button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userClicksOnAcceptButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user waits 6 secs",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userWaitsSecs(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user validates linked ticket availability under linked items",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userValidatesLinkedTicketAvailabilityUnderLinkedItems()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "change should also be reflected in the timeline as \"Correlation to ticket;. Relationship Type: Is child of\" for trouble ticket in row 2",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.changeShouldAlsoBeReflectedInTheTimelineForOPTicketAs(String,int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user switches to window 2",
   "keyword": "And "
 });
 formatter.match({
@@ -638,87 +370,47 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "known error ticket status should be \"New\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_KnownErrorPageSteps.knownErrorTicketStatusShouldBe(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates vendor section is not present",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userValidatesVendorSectionIsNotPresent()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user gets known error ticket",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_KnownErrorPageSteps.userGetsKnownErrorTicket()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters \"Test ticket\" in Title field",
+  "name": "user enters \"Update to parent from child\" in the timeline text box",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersInTitleField(String)"
+  "location": "OWF_TroubleEventPageSteps.userEntersInTheTimelineTextBox(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on save button",
+  "name": "user clicks on public radio button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
+  "location": "OWF_TroubleEventPageSteps.userClicksOnPublicRadioButton()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "known error ticket status should be \"Draft\"",
+  "name": "user clicks on add button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userClicksOnAddButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "change should also be reflected in the timeline as \"Update to parent from child\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_KnownErrorPageSteps.knownErrorTicketStatusShouldBe(String)"
+  "location": "OWF_ProblemRecordPageSteps.changeShouldAlsoBeReflectedInTheTimelineAs(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user validates vendor section is not present",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userValidatesVendorSectionIsNotPresent()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user logsOut",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userLogsOut()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user switches to window 4",
+  "name": "user switches to window 1",
   "keyword": "And "
 });
 formatter.match({
@@ -728,167 +420,17 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user goes back to login page",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userGoesBackToLoginPage()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user logs in with valid username \"syvaptu1_auto\" and password as \"Test@1234\"",
+  "name": "user clicks on timeline filter button",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_LoginPageSteps.userLogsInWithValidUsernameAndPasswordAs(String,String)"
+  "location": "OWF_TroubleEventPageSteps.userClicksOnTimelineFilterButton()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user successfully logged in to OneWorkflow and agent console should be displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userSuccessfullyLoggedInToOneworkflowAndAgentConsoleShouldBeDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on search and selects open search forms and problem record",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnSearchAndSelectsOpenSearchFormsAndProblemRecord()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user switches to window 5",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters Problem Ticket",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersProblemTicket()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks Search on ticket search",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksSearchOnTicketSearch()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user changes status to \"Closed\" on problem record page",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userChangesStatusToOnProblemRecordPage(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksSaveButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "mandatory fields should be indicated in bold",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.mandatoryFieldsShouldBeIndicatedInBold()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects solved under closure code",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSelectsSolvedUnderClosureCode()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters solution as \"A change in processes\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersSolutionAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters solution found date as current date",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersSolutionFoundDateAsCurrentDate()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates ticket status as \"Closed\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userValidatesTicketStatusAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates vendor section is not present",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userValidatesVendorSectionIsNotPresent()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "change should also be reflected in the timeline as \"STATUS MODIFIED.  Status has changed from Investigation Complete to Closed. \"",
+  "name": "change should also be reflected in the timeline as \"Update to parent from child\"",
   "keyword": "And "
 });
 formatter.match({
@@ -898,181 +440,21 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user selects search menu as \"Open Search Form:Known Error\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userSelectsSearchMenuAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user switches to window 6",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters known error ticket",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_KnownErrorPageSteps.userEntersKnownErrorTicket()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks Search on ticket search",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksSearchOnTicketSearch()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user changes status to \"Published\" on known error page",
+  "name": "user uncheck include children ticket",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userChangesStatusToOnKnownErrorPage(String)"
+  "location": "OWF_TroubleEventPageSteps.userUncheckIncludeChildrenTicket()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user selects \"Known Error Code\" as \"Risk accepted\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSelectsAs(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects accountable organisation as \"CA_Infra\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSelectsAccountableOrganisationAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects affected organisation as \"CA_Infra\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSelectsAffectedOrganisationAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates ticket status as \"Published\"",
+  "name": "change should also be reflected in the timeline as \"STATUS MODIFIED.  The trouble Status has changed: Assigned \u003e\u003e Work In Progress\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userValidatesTicketStatusAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates vendor section is not present",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userValidatesVendorSectionIsNotPresent()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user changes status to \"Closed\" on known error page",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userChangesStatusToOnKnownErrorPage(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksSaveButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects closure code as \"Solved\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSelectsClosureCodeAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates ticket status as \"Closed\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userValidatesTicketStatusAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates vendor section is not present",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userValidatesVendorSectionIsNotPresent()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates all fields are read only and not editable",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_KnownErrorPageSteps.userValidatesAllFieldsAreReadOnlyAndNotEditable()"
+  "location": "OWF_ProblemRecordPageSteps.changeShouldAlsoBeReflectedInTheTimelineAs(String)"
 });
 formatter.result({
   "status": "passed"

@@ -821,6 +821,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event end time as {int} mins past")
     public void userEntersEventEndTimeAsMinsPast(int arg0) {
+        CommonUtils.EventEndTime= CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0);
         troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
@@ -1468,12 +1469,27 @@ public class OWF_TroubleEventPageSteps {
 
     @When("user uncheck include children ticket")
     public void userUncheckIncludeChildrenTicket() {
-     troubleEventPage.clickTimelineFilterCheckBox();
+     troubleEventPage.clickIncludeChildrenCheckBox();
     }
 
     @And("user should see {string} as {string} for linked ticket")
     public void userShouldSeeAsForLinkedTicket(String columnName, String expectedCI) {
         Assert.assertEquals(expectedCI, troubleEventPage.getPrimaryCIofLinkedTicket(columnName, 1));
+    }
+
+    @When("user clicks on include children ticket")
+    public void userClicksOnIncludeChildrenTicket() {
+        troubleEventPage.clickIncludeChildrenCheckBox();
+    }
+
+    @And("user sets the preferences under the timeline as {string}")
+    public void userSetsThePreferencesUnderTheTimelineAs(String preferences) {
+      troubleEventPage.selectPreferences_timeline(preferences);
+    }
+
+    @And("user double clicks on timeline to open ticket")
+    public void userDoubleClicksOnTimelineToOpenTicket() {
+        troubleEventPage.doubleClickOnTimelineTicket();
     }
 }
 

@@ -1,4 +1,4 @@
-@04.04  @Incident1 @04
+@04.04  @Incident1 @04 @HelixRegr
   #passed
   Feature: Create change from incident using create button in linked items tab
     Scenario: Create change from incident using create button in linked items tab

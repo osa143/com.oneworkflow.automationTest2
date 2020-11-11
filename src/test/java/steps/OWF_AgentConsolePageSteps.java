@@ -800,6 +800,23 @@ public class OWF_AgentConsolePageSteps {
     public void userClicksOkButtonOnLinkedItemsPopup() {
         agentConsolePage.clickOkButton();
     }
+
+    @And("{string} column within agent console should be displayed")
+    public void columnWithinAgentConsoleShouldBeDisplayed(String column) {
+        int columnIndex = agentConsolePage.getColumnIndexByHeaderName(column);
+        Assert.assertNotEquals(columnIndex, -1, 0, column + "within agent console is not displayed");
+    }
+
+    @And("{string} field should be available for all OP tickets")
+    public void fieldShouldBeAvailableForAllOPTickets(String arg0) {
+        Assert.assertTrue(agentConsolePage.verifyColumnHasData(arg0));
+    }
+
+    @And("user validates {string} column is filled with correct information from ticket as {string}")
+    public void userValidatesColumnIsFilledWithCorrectInformationFromTicketAs(String column, String columnValue) {
+        Assert.assertEquals(agentConsolePage.getAgentConsoleTableCellData(column, 1), columnValue);
+
+    }
 }
 
 

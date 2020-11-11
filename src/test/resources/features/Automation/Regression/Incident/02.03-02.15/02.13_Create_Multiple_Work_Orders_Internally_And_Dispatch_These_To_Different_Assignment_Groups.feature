@@ -1,6 +1,6 @@
-@02.13 @Incident @02
+@02.13 @Incident @02 @HelixRegr
 #passed
-Feature: creation  multiple WO's internally and dispatch these to different assignment groups
+Feature: create multiple work orders and dispacth to different assignment gropus
   Scenario: user can create multiple work orders and dispatch these to different assignment groups
 
     Given user is on the OneWorkflow login page

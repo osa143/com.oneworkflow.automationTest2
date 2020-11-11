@@ -927,6 +927,11 @@ public class OWF_WorkOrderPageSteps {
     public void userValidatesRequestTypeAsReadonly() {
         Assert.assertTrue(workOrderPage.verifyRequestTypeIsReadOnly());
     }
+
+    @And("user double clicks on work order and opens")
+    public void userDoubleClicksOnWorkOrderAndOpens() {
+      workOrderPage.doubleClickOnWorkOrderAndOpen();
+    }
 }
 
 

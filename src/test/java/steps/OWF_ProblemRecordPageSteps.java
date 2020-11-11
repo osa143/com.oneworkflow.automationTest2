@@ -1538,6 +1538,11 @@ public class OWF_ProblemRecordPageSteps {
     public void userValidatesRiskDescriptionIsReadOnly() {
         Assert.assertTrue(problemRecordPage.verifyRiskDescriptionIsReadOnly());
     }
+
+    @And("user enters vendor name as {string}")
+    public void userEntersVendorNameAs(String vendorName) {
+        problemRecordPage.enterVendorName(vendorName);
+    }
 }
 
 

@@ -410,7 +410,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
 
 
     public String getAssignedProfile(){
-        return getTextByID(dd_ASSIGNED_PROFILE);
+        return getAttributeValueById(dd_ASSIGNED_PROFILE);
     }
 
     public String getChangeBuilder(){

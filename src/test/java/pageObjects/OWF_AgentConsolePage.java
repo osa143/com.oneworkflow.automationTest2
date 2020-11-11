@@ -543,6 +543,9 @@ public class OWF_AgentConsolePage extends BasePage {
     public boolean validateOpNextDueDateInformation() {
         return columnHasData(table_ID, "OP Next Due Date");
     }
+    public boolean verifyColumnHasData(String columnName) {
+        return columnHasData(table_ID, columnName);
+    }
 
     public boolean validateOpTargetDateInformation() {
         return columnHasData(table_ID, "OP Target Date");

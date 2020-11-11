@@ -62,7 +62,8 @@
 
          Examples:
         |               title                 |           Description            |         CIName        |    AssignmentProfile    |Manufacturer|   ContactName                    |ContactMailAddress                |                 SLA Class                              |AckRowNum|CancelRowNum|
-        |B2B Automated Test - Finland Eltel   |B2B Automation, Finland, Eltel    |FI_LTECell_Valpe4H     |Eltel - FS - FIN - B2B   |Nokia      |ELTEL ContactCenter                |nmc-messages@eltelnetworks.se    |118 Hour 5 days Cleanup correction time workdays (FI=A3) |   1     |     2    |
+        |B2B Automated Test - Sweden Transtema|B2B Automation, Sweden, Transtema |SE_LTECell_100895010   |Transtema2 - FS - SE - B2B|Ericsson   |Transtema SOC                      |support.tns@transtema.com         |118 Hour 5 days Cleanup correction time workdays        |   2     |     3      |
+#        |B2B Automated Test - Finland Eltel   |B2B Automation, Finland, Eltel    |FI_LTECell_Valpe4H     |Eltel - FS - FIN - B2B   |Nokia      |ELTEL ContactCenter                |nmc-messages@eltelnetworks.se    |118 Hour 5 days Cleanup correction time workdays (FI=A3) |   1     |     2    |
 #        |B2B Automated Test - Finland Empower |B2B Automation, Finland, Empower  |FI_LTECell_Hauci1L     |Empower - FS - FI - B2B  |Nokia      |Empower Switchboard                |SCTyonohjaus@empower.fi          |118 Hour 5 days Cleanup correction time workdays (FI=A3) |   1     |     2      |
 
 

@@ -15,7 +15,7 @@
       And user enters description as "02:05 Acknowledge The Functional Escalation To You AKA Incident Assignment"
       And user clicks on save button
       Then ticket should be created and status should be assigned
-      Then user validates availability of tabs "Timeline:Diagnosis:Interested Parties:Notifications:Linked Items:Work Orders:Service Level:Alarms:Recurring Incidents:Service Info"
+      Then user validates availability of tabs "Timeline:Diagnosis:Interested Parties:Notifications:Linked Items:Work Orders:Service Level:Alarms:Ticket Matching:Service Info"
       When user clicks on Ack button
       And user clicks on assignment under sections
       Then user validates last ack by field has data present

@@ -21,7 +21,7 @@
       And user enters description as "Test case 01.08 Set the Service impact"
       Then user clicks on save button
       And ticket should be created and status should be assigned
-      Then user validates availability of tabs "Timeline:Diagnosis:Interested Parties:Notifications:Linked Items:Work Orders:Service Level:Alarms:Recurring Incidents:Service Info"
+      Then user validates availability of tabs "Timeline:Diagnosis:Interested Parties:Notifications:Linked Items:Work Orders:Service Level:Alarms:Ticket Matching:Service Info"
       When user clicks on Diagnosis tab
       And user clicks on CI search button
       Then user switches to frame

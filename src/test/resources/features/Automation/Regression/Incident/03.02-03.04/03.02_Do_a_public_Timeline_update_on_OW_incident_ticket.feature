@@ -1,4 +1,4 @@
-@03.02 @Incident @03
+@03.02 @Incident @03 @HelixRegr
 #passed
   Feature: Do a public timeline update on OW incident ticket
     Scenario: Do a public timeline update on OW incident ticket

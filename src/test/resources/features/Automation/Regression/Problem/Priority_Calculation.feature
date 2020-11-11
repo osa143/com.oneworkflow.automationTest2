@@ -1,6 +1,6 @@
 @Priority_Calculation @problem @Reg_Problem  @prob
 #Passed
-  Feature: problem
+  Feature: priority calculation
     Scenario: priority calculation
 
       Given user is on the OneWorkflow login page

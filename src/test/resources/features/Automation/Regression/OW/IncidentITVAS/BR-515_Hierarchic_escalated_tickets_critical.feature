@@ -1,9 +1,9 @@
-@Automation_BR_515_Hierarchic_escalated_tickets_critical
+@BR_515_critical @OW_incident
 
 
-Feature: Automation_BR_515_Hierarchic_escalated_tickets_critical
+Feature: BR_515_Hierarchic_escalated_tickets_critical
 
-  Scenario: Automation_BR_515_Hierarchic_escalated_tickets_critical
+  Scenario: BR_515_Hierarchic_escalated_tickets_critical
 
 
     Given user is on the OneWorkflow login page
@@ -18,18 +18,19 @@ Feature: Automation_BR_515_Hierarchic_escalated_tickets_critical
     And user enters description as "Test BR-515"
     And user selects importance as "Critical"
     And user selects impact as "Major" on trouble event page
-    And user selects assigned profile dropdown as "Control Center:Monitoring:CC IT"
+    And user selects assignment profile dropdown as "Control Center:Monitoring:CC IT"
     And user enters "CC IT" in assignee
     Then user clicks on save button
     And user validates ticket priority as "Critical"
     Then user validates hierarchic escalation level as "Escalation manager (EM)"
-    When user clicks on work order tab
-    And user opens linked work order
+    When user clicks "Work Orders" tab
+    And user double clicks on work order and opens
     And user switches to window 2
+    And user clicks on assignment under sections
     Then user validates assigned profile as "Escalation Manager"
     And user clicks on Ack button
     Then user validates ticket status as "Work In Progress"
-    When user changes status to "Cleared" on trouble event page
+    When user changes status to "Cleared" on work order page
     And user selects completion code as "Success"
     And user clicks on "Schedule" tab
     And user enters schedule end as current date

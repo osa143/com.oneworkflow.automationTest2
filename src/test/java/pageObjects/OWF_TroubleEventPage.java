@@ -173,10 +173,19 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btn_TIMELINE_FILTER= "//a[@title='Timeline Filter']";
     private static final String chkbx_INCLUDE_CHILDREN_TIKCETS= "WIN_1_rc0id800040190";
     private static final String table_LINKED_ITEMS= "T777506000";
+    private static final String table_TIMELINE= "T999000510";
+    private static final String table_ROW1_TIMELINE= "//*[@id='T999000510']/tbody/tr[2]";
 //    private static final String txt_CAUSE= "arid_WIN_0_777031380";
 //    private static final String txt_FAULT_POSITION= "arid_WIN_0_600001048";
 
-
+    public void doubleClickOnTimelineTicket(){
+        WebElement element= findElement(By.xpath(table_ROW1_TIMELINE));
+        action.doubleClick(element).perform();
+    }
+    public void selectPreferences_timeline(String preferences){
+        clickPreferences(table_TIMELINE);
+        setPreferences(preferences);
+    }
     public boolean verifyHierarchicEscalationLevelIsReadOnly(){
         return checkIfControlIsReadonly(txt_HIERARCHIC_ESCLATION_LEVEL);
     }
@@ -184,7 +193,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     public String getPrimaryCIofLinkedTicket(String columnName, int rowNum){
         return getTableCellData(By.id(table_LINKED_ITEMS), columnName, rowNum);
     }
-    public void clickTimelineFilterCheckBox(){
+    public void clickIncludeChildrenCheckBox(){
         clickElement(By.id(chkbx_INCLUDE_CHILDREN_TIKCETS));
     }
     public void clickTimelineFilter(){
@@ -310,7 +319,7 @@ public void rightClickOnElement(String cellData){
         selectDropDownNameAndValue("Level*", value, false);
     }
     public String getHierarchicEscalationLevel(){
-        return getTextByID(txt_HIERARCHIC_ESCLATION_LEVEL);
+        return getAttributeValueById(txt_HIERARCHIC_ESCLATION_LEVEL);
     }
     public void SelectFirstThreeCIs(){
         clickElement(By.xpath("//*[@id='T700009024']/tbody/tr[2]"));

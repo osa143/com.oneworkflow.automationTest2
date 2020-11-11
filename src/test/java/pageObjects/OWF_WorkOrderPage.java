@@ -61,6 +61,13 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_EVENT_START_TIME = "arid_WIN_0_703001000";
     private static final String tableRow2_OUTBOUND= "//*[@id='T600002302']/tbody/tr[3]";
     private static final String txt_MESSAGE= "arid_WIN_0_536870956";
+    private static final String td_ROW1= "//*[@id='T777504000']/tbody/tr[2]/td[1]/nobr";
+
+    public void doubleClickOnWorkOrderAndOpen(){
+        WebElement element=driver.findElement(By.xpath(td_ROW1));
+            doubleClickOnElement(element);
+
+    }
 
     public boolean verifyRequestTypeIsReadOnly(){
         return checkIfControlIsReadonly(txt_REQUEST_TYPE);

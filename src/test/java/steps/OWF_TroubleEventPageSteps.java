@@ -285,9 +285,8 @@ public class OWF_TroubleEventPageSteps {
 
     @When("user enters estimated ready as event start time plus {int} days on trouble event page")
     public void userEntersEstimatedReadyAsEventStartTimePlusDays(int arg0) {
-
-      //  workOrderPage.clearEstimatedReady();
-        CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("dd/MM/yyyy HH:mm:ss","Europe/London",arg0);
+        //  workOrderPage.clearEstimatedReady();
+        CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("MM/dd/yyyy HH:mm:ss","Europe/London",arg0);
         workOrderPage.enterEstimatedReady(CommonUtils.estimatedReadyTime);
     }
 
@@ -822,7 +821,8 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event end time as {int} mins past")
     public void userEntersEventEndTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
+        CommonUtils.EventEndTime= CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0);
+        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user selects action dropdown as {string} on trouble event page")
@@ -832,7 +832,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event start time as {int} mins past")
     public void userEntersEventStartTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user should see confirmation message for impact clear and clicks ok")
@@ -1288,9 +1288,15 @@ public class OWF_TroubleEventPageSteps {
     public void userClicksOnSaveButtonAndClicksClosesConfirmation() {
         troubleEventPage.clickSaveButton();
         troubleEventPage.switchToFrameByIndex(2);
-        troubleEventPage.wait(3000);
-        troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
-        troubleEventPage.switchToDefault();
+        troubleEventPage.wait(5000);
+        try{
+            troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
+            troubleEventPage.switchToDefault();
+        }
+        catch(Exception e){
+
+        }
+
     }
 
     @And("user validates closure info as {string}")
@@ -1463,12 +1469,27 @@ public class OWF_TroubleEventPageSteps {
 
     @When("user uncheck include children ticket")
     public void userUncheckIncludeChildrenTicket() {
-     troubleEventPage.clickTimelineFilterCheckBox();
+     troubleEventPage.clickIncludeChildrenCheckBox();
     }
 
     @And("user should see {string} as {string} for linked ticket")
     public void userShouldSeeAsForLinkedTicket(String columnName, String expectedCI) {
         Assert.assertEquals(expectedCI, troubleEventPage.getPrimaryCIofLinkedTicket(columnName, 1));
+    }
+
+    @When("user clicks on include children ticket")
+    public void userClicksOnIncludeChildrenTicket() {
+        troubleEventPage.clickIncludeChildrenCheckBox();
+    }
+
+    @And("user sets the preferences under the timeline as {string}")
+    public void userSetsThePreferencesUnderTheTimelineAs(String preferences) {
+      troubleEventPage.selectPreferences_timeline(preferences);
+    }
+
+    @And("user double clicks on timeline to open ticket")
+    public void userDoubleClicksOnTimelineToOpenTicket() {
+        troubleEventPage.doubleClickOnTimelineTicket();
     }
 }
 

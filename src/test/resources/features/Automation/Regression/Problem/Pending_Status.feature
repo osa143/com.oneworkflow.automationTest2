@@ -1,4 +1,4 @@
-#Need to check ticket status manually after 30 mins  PB-000000042949
+#Need to check ticket status manually after 30 mins
 @Pending_Status @Reg_Problem
 Feature: User is able to change status to pending
 

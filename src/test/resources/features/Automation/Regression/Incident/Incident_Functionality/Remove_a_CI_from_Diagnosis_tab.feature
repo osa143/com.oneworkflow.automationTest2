@@ -1,4 +1,4 @@
-@06.09 @Remove_a_CI_from_Diagnosis_tab @Incident @Trouble1
+@06.09 @Remove_a_CI_from_Diagnosis_tab @Incident @Trouble1 @HelixRegr
   #passed
   Feature: Remove of CI from diagnosis tab
     Scenario: Remove of CI from diagnosis tab

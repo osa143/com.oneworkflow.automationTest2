@@ -543,6 +543,9 @@ public class OWF_AgentConsolePage extends BasePage {
     public boolean validateOpNextDueDateInformation() {
         return columnHasData(table_ID, "OP Next Due Date");
     }
+    public boolean verifyColumnHasData(String columnName) {
+        return columnHasData(table_ID, columnName);
+    }
 
     public boolean validateOpTargetDateInformation() {
         return columnHasData(table_ID, "OP Target Date");
@@ -635,7 +638,12 @@ public class OWF_AgentConsolePage extends BasePage {
         catch (Exception e){
 
         }
-        wait(3000);
+        wait(2000);
+    }
+
+    public void clickMenuItemLogout_Hooks() {
+        selectMenuItem(menuItemLOGOUT);
+        wait(2000);
     }
 
     public boolean verifyFilteredStatus(String columnName, String columnValue)

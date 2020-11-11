@@ -154,8 +154,24 @@ public class BaseRecordPage extends BasePage {
     private static final String txt_LinkedTicketID="//*[@id='T777506000']/tbody/tr[2]/td[2]/nobr/span";
     private static final String txt_EQUIPMENT="arid_WIN_0_600001067";
     private static final String btn_CLEAR= "WIN_0_700506223";
+    private static final String div_ALL_FIELDS= "WIN_0_999000050";
 
 
+    public boolean verifyElementsAreReadOnly(){
+        List<WebElement> elements = driver.findElement(By.id(div_ALL_FIELDS)).findElements(By.tagName("textarea"));
+
+        for (int i = 0; i < elements.size(); i ++){
+            WebElement element=elements.get(i);
+            System.out.println("Number of read only elements are - " + elements.size());
+            System.out.println(element);
+            String isReadOnly = element.getAttribute("readonly");
+            if (isReadOnly != null && isReadOnly.contains("true")) {
+                return true;
+            }
+            return false;
+        }
+                return false;
+    }
     public boolean isEquipmentReadOnly(){
         return checkIfControlIsReadonly(txt_EQUIPMENT);
     }

@@ -1,21 +1,21 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/SPRINTS/Sprint_P4S1/SAO_6830_PrimaryCI_Column_In_LinkedItemsTab.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/SPRINTS/Sprint_P4S2/SAO_6834_Open_RelatedTicket_From_Timeline.feature");
 formatter.feature({
   "name": "Incident",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@6830"
+      "name": "@6834"
     }
   ]
 });
 formatter.scenario({
-  "name": "verify primary CI column and CI for linked ticket",
+  "name": "Ability to open related ticket from timeline entries",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@6830"
+      "name": "@6834"
     }
   ]
 });
@@ -135,26 +135,6 @@ formatter.step({
 });
 formatter.match({
   "location": "OWF_ChangeRecordPageSteps.ticketShouldBeCreatedAndStatusShouldBeAssigned()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user adds CI \"SE_LTECell_220184024\" to the ticket",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.userAddsToTheTicket(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "CI should be listed and displayed under the Diagnosis tab",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.ciShouldBeListedAndDisplayedUnderTheDiagnosisTab()"
 });
 formatter.result({
   "status": "passed"
@@ -350,71 +330,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user switches to window 2",
+  "name": "user waits 6 secs",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user adds CI \"SE_GSM-AHS\" to the ticket",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.userAddsToTheTicket(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "CI should be listed and displayed under the Diagnosis tab",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.ciShouldBeListedAndDisplayedUnderTheDiagnosisTab()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on linked items tab",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.userClicksOnLinkedItemsTab()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user should see \"Primary CI\" as \"SE_LTECell_220184024\" for linked ticket",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userShouldSeeAsForLinkedTicket(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user switches to window 1",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on linked items tab",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.userClicksOnLinkedItemsTab()"
+  "location": "OWF_WorkOrderPageSteps.userWaitsSecs(int)"
 });
 formatter.result({
   "status": "passed"
@@ -430,11 +350,111 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user should see \"Primary CI\" as \"SE_GSM-AHS\" for linked ticket",
+  "name": "change should also be reflected in the timeline as \"Correlation to ticket;. Relationship Type: Is child of\" for trouble ticket in row 2",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userShouldSeeAsForLinkedTicket(String,String)"
+  "location": "OWF_ProblemRecordPageSteps.changeShouldAlsoBeReflectedInTheTimelineForOPTicketAs(String,int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user switches to window 2",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters \"Update to parent from child\" in the timeline text box",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userEntersInTheTimelineTextBox(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on public radio button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userClicksOnPublicRadioButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on add button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userClicksOnAddButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "change should also be reflected in the timeline as \"Update to parent from child\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.changeShouldAlsoBeReflectedInTheTimelineAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user switches to window 1",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on timeline filter button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userClicksOnTimelineFilterButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "change should also be reflected in the timeline as \"Update to parent from child\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.changeShouldAlsoBeReflectedInTheTimelineAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user uncheck include children ticket",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userUncheckIncludeChildrenTicket()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "change should also be reflected in the timeline as \"STATUS MODIFIED.  The trouble Status has changed: Assigned \u003e\u003e Work In Progress\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.changeShouldAlsoBeReflectedInTheTimelineAs(String)"
 });
 formatter.result({
   "status": "passed"

@@ -20,7 +20,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String btn_LINK = "WIN_5_777506009";
     private static final String btnACCEPT_ID = "WIN_0_730011058";
     private static final String txtLOCATION_ID = "arid_WIN_0_700009015";
-    private static final String btnCREATE_linked_items = "WIN_4_777506020";
+    private static final String btnCREATE_linked_items = "WIN_5_777506020";
     private static final String btn_CREATE_linked_items= "WIN_5_777506020";
     private static final String chkbxTO_SELECT_CI = "//*[@id='T700009024']/tbody/tr[2]";
     private static final String rbtn_CLEARED_ID = "WIN_4_rc0id800040060";

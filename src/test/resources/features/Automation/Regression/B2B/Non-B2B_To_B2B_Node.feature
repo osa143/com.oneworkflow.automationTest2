@@ -18,7 +18,7 @@
       And user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
       And user enters "Change_Automation_1" in assignee
       Then user clicks on save button
-      When user adds CI "SE_eNodeB_Yttervik" to the ticket with impact level "Degradation of Service"
+      When user adds CI "SE_LTECell_103392011" to the ticket with impact level "Degradation of Service"
       And user clicks on apply BtwoB button
       Then user should see assigned profile as "Eltel - FS - SE - B2B"
 

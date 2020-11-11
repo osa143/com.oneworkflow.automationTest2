@@ -16,9 +16,9 @@ Feature: Plaza EFS-BSS form test
     #Then user selects system name in haiti as "Other"
     When user selects role dropdown as "Application Operation Engineer"
     And user enters EFS-BSS request as "Test1 EFS/Request"
-    And user enters CI as "ef002appp1"
-    And user enters CI as "ef002appp2"
-    And user enters CI as "ef002appp3"
+#    And user enters CI as "ef002appp1"
+#    And user enters CI as "ef002appp2"
+#    And user enters CI as "ef002appp3"
     And user waits 40 secs
     And user enters EFS description as "Test1 EFS/Description"
     And user enters additional comments as "Test1 EFS/AC"

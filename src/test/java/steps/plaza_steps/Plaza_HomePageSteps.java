@@ -1710,7 +1710,7 @@ public class Plaza_HomePageSteps extends BasePage {
     }
     @Then("user enters system as {string}")
     public void userEntersSystemAs(String arg0) {
-        homePage.select_add_ci(arg0);
+        homePage.selectVehaSystem(arg0);
     }
     @Then("user enters veha description as {string}")
     public void userEntersVehaDescriptionAs(String arg0) {

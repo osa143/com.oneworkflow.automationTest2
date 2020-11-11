@@ -162,7 +162,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_DESCRIPTION= "sp_formfield_sr105_v_description";
     public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_SERVICE_REQUEST= "select2-chosen-11";
     public static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_REQUEST= "sp_formfield_sr114_v_request";
-    public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI= "s2id_autogen15";
+    public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI= "s2id_autogen17";
     public static final String dd_NETWORK_SECURITY_SWITCH_PORT_CONFIG_ADD_CI= "s2id_autogen17";
     public static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_DESCRIPTION= "sp_formfield_sr114_v_description";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_REQUEST= "sp_formfield_sr34_v_request";
@@ -442,7 +442,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_NETWORK_SECURITY_PROXY_REVERSE_HIGH_AVAILIBILITY = "select2-results-15";
     private static final String txt_NETWORK_SECURITY_PROXY_REVERSE_CERTIFICATE = "s2id_autogen19_results";
     private static final String txt_NETWORK_SECURITY_NEW_SWITCH_NETWORK_CI = "s2id_autogen18_results";
-    private static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI = "s2id_autogen15_results";
+    private static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI = "s2id_autogen17_results";
     private static final String txt_NETWORK_SECURITY_SWITCH_PORT_CONFIG_ADD_CI = "s2id_autogen17_results";
     private static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_SERVICE_REQUEST = "select2-results-11";
     private static final String txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_SCHEDULED_CHANGE = "select2-results-12";

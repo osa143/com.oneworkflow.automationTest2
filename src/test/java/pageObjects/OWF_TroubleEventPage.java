@@ -277,7 +277,7 @@ public void rightClickOnElement(String cellData){
         WebElement element = driver.switchTo().activeElement();
         element.sendKeys(Keys.UP);
         element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
+        //element.sendKeys(Keys.UP);
         element.sendKeys(Keys.ARROW_RIGHT);
         element.sendKeys(Keys.DOWN);
         element.sendKeys(Keys.ENTER);

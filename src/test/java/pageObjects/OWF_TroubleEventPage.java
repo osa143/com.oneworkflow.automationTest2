@@ -177,6 +177,52 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String table_ROW1_TIMELINE= "//*[@id='T999000510']/tbody/tr[2]";
 //    private static final String txt_CAUSE= "arid_WIN_0_777031380";
 //    private static final String txt_FAULT_POSITION= "arid_WIN_0_600001048";
+    private static final String btn_TICKET_MATCHING_REFRESH = "WIN_0_600002911";
+    private static final String chkbx_TICKET_MATCHING_INCIDENT = "WIN_0_rc0id800040281";
+    private static final String chkbx_TICKET_MATCHING_WORK_ORDER = "WIN_0_rc0id800040283";
+    private static final String chkbx_TICKET_MATCHING_CHANGE = "WIN_0_rc0id800040282";
+    private static final String chkbx_TICKET_MATCHING_CLEARED = "WIN_0_rc0id800040286";
+    private static final String chkbx_TICKET_MATCHING_OPEN = "WIN_0_rc0id800040285";
+    private static final String txt_CLOSED_WITHIN_DAYS = "arid_WIN_0_800040404";
+    private static final String chkbx_TICKET_MATCHING_TITLE = "WIN_0_rc0id800040405";
+    private static final String dd_TICKET_MATCHING_MATCH_BY = "arid_WIN_0_800040284";
+
+
+    public void selectTicketMatchBy(String value){
+        selectDropDownNameAndValue(dd_TICKET_MATCHING_MATCH_BY, value, false);
+    }
+
+    public void clickTicketMatchingTitleCheckbox(){
+        clickElementById(chkbx_TICKET_MATCHING_TITLE);
+    }
+
+    public void enterTicketMatchingClosedWithinDays(String text){
+        enterTextByElement(By.id(txt_CLOSED_WITHIN_DAYS), text);
+    }
+
+    public void clickTicketMatchingOpenCheckbox(){
+        clickElementById(chkbx_TICKET_MATCHING_OPEN);
+    }
+
+    public void clickTicketMatchingClearedCheckbox(){
+        clickElementById(chkbx_TICKET_MATCHING_CLEARED);
+    }
+
+    public void clickTicketMatchingChangeCheckbox(){
+        clickElementById(chkbx_TICKET_MATCHING_CHANGE);
+    }
+
+    public void clickTicketMatchingWorkOrderCheckbox(){
+        clickElementById(chkbx_TICKET_MATCHING_WORK_ORDER);
+    }
+
+    public void clickTicketMatchingIncidentCheckbox(){
+        clickElementById(chkbx_TICKET_MATCHING_INCIDENT);
+    }
+
+    public void clickTicketMatchingRefreshButton(){
+        clickElementById(btn_TICKET_MATCHING_REFRESH);
+    }
 
     public void doubleClickOnTimelineTicket(){
         WebElement element= findElement(By.xpath(table_ROW1_TIMELINE));

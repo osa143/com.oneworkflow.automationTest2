@@ -76,7 +76,140 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String btn_Refresh= "//*[@id='WIN_0_700009087']/div[1]/table/tbody/tr/td[2]/a[2]";
     private static final String ddTARGET_APPLICATION_FIRST = "Target Application";
     private static final String ddTARGET_APPLICATION_SECOND = "Fld-SourceRelationshipType";
+    private static final String btn_MANAGE_TEMPLATE_COG = "WIN_0_800040298";
+    private static final String btn_CREATE_MY_TEMPLATE = "WIN_0_800040415";
+    private static final String btn_CREATE_NEW_SECTION = "WIN_0_800040231";
+    private static final String txt_SECTION_LABEL = "arid_WIN_0_800040307";
+    private static final String btn_SECTION_LABEL_SAVE = "WIN_0_800040364";
+    private static final String btn_EDIT_SECTION = "WIN_0_800040248";
+    private static final String btn_DELETE_SECTION = "WIN_0_800040243";
+    private static final String btn_DELETE_SECTION_2 = "WIN_0_800040310";
+    private static final String btn_ARROW_UP_SECTION = "WIN_0_800040229";
+    private static final String btn_ARROW_DOWN_SECTION = "WIN_0_800040230";
+    private static final String btn_ADD_ATTRIBUTE = "WIN_0_800040243";
+    private static final String dd_CLASS = "arid_WIN_0_800040369";
+    private static final String txt_ATTRIBUTE_PLUS = "arid_WIN_0_800040370";
+    private static final String btn_APPLY_FILTER = "WIN_0_800040371";
+    private static final String btn_CLEAR_FILTER = "WIN_0_800040372";
+    private static final String btn_SAVE_FIELD_TO_SECTION = "WIN_0_800040356";
+    private static final String btn_EDIT_ATTRIBUTE = "WIN_0_800040249";
+    private static final String btn_EDIT_ATTRIBUTE_SAVE = "WIN_0_800040247";
+    private static final String chkbx_SHOW_LABEL = "//*[@id='WIN_0_rc0id800040317']";
+    private static final String btn_DELETE_ATTRIBUTE = "WIN_0_800040244";
+    private static final String btn_DELETE_ATTRIBUTE2 = "WIN_0_800040322";
+    private static final String btn_ARROW_UP_ATTRIBUTE = "WIN_0_800040241";
+    private static final String btn_ARROW_DOWN_ATTRIBUTE = "WIN_0_800040242";
+    private static final String txt_CI_DETAILS_TEMPLATE_WINDOW = "WIN_0_800040423";
+    private static final String txt_TEMPLATE_TEXT = "//*[@id='T800040222']/tbody/tr[6]/td[1]/nobr/span";
+    private static final String btn_CLOSE_CI_DETAILS_TEMPLATE = "WIN_0_800040431";
+    private static final String btn_CLOSE_CI_DETAILS = "WIN_0_999000415";
 
+
+    public void clickCloseCIDetailsTemplate(){
+        clickElementById(btn_CLOSE_CI_DETAILS_TEMPLATE);
+        wait(1000);
+        clickElementById(btn_CLOSE_CI_DETAILS);
+    }
+
+    public String getSectionLabel(){
+        return getTextByElement(By.xpath(txt_TEMPLATE_TEXT));
+    }
+
+    public boolean isCIDetailsTemplateWindowDisplayed(){
+        return verifyElementIsDisplayed(By.id(txt_CI_DETAILS_TEMPLATE_WINDOW));
+    }
+
+    public void clickArrowDownAttribute(){
+        clickElementById(btn_ARROW_DOWN_ATTRIBUTE);
+    }
+
+   public void clickArrowUpAttribute(){
+       clickElementById(btn_ARROW_UP_ATTRIBUTE);
+   }
+
+    public void clickDeleteAttributeSecondButton(){
+       clickElementById(btn_DELETE_ATTRIBUTE2);
+   }
+
+    public void clickDeleteAttributeButton(){
+       clickElementById(btn_DELETE_ATTRIBUTE);
+   }
+
+    public void clickShowLabelCheckbox(){
+        clickElement(By.xpath(chkbx_SHOW_LABEL));
+    }
+
+    public void clickEditAttributeSaveButton(){
+        clickElementById(btn_EDIT_ATTRIBUTE_SAVE);
+    }
+
+    public void clickEditAttribute(){
+        clickElementById(btn_EDIT_ATTRIBUTE);
+    }
+
+    public void clickSaveFieldToSectionButton(){
+        clickElementById(btn_SAVE_FIELD_TO_SECTION);
+    }
+
+    public void clickClearFilterButton(){
+        clickElementById(btn_CLEAR_FILTER);
+    }
+
+    public void clickApplyFilterButton(){
+        clickElementById(btn_APPLY_FILTER);
+    }
+
+    public void enterAttributePlus(String value){
+        enterTextByElement(By.id(txt_ATTRIBUTE_PLUS), value);
+    }
+
+    public void selectClass(String value){
+        selectDropDownNameAndValue(dd_CLASS, value, false);
+    }
+
+    public void clickAddAttributeButton(){
+        clickElementById(btn_ADD_ATTRIBUTE);
+    }
+
+    public void clickArrowDownSectionButton(){
+        clickElementById(btn_ARROW_DOWN_SECTION);
+    }
+
+    public void clickArrowUpSectionButton(){
+        clickElementById(btn_ARROW_UP_SECTION);
+    }
+
+    public void clickSecondDeleteSectionButton(){
+        clickElementById(btn_DELETE_SECTION_2);
+    }
+
+    public void clickDeleteSection(){
+        clickElementById(btn_DELETE_SECTION);
+    }
+
+    public void clickEditSection(){
+        clickElementById(btn_EDIT_SECTION);
+    }
+
+    public void clickCreateSectionSaveButton(){
+        clickElementById(btn_SECTION_LABEL_SAVE);
+    }
+
+    public void enterSectionLabelName(String SectionName){
+        enterTextByElement(By.id(txt_SECTION_LABEL), SectionName);
+    }
+
+    public void clickCreateNewSection(){
+        clickElementById(btn_CREATE_NEW_SECTION);
+    }
+
+    public void clickCreateMyTemplate(){
+        clickElementById(btn_CREATE_MY_TEMPLATE);
+    }
+
+    public void clickManageTemplateCog(){
+        clickElementById(btn_MANAGE_TEMPLATE_COG);
+    }
 
     public void clickRefresh_Diagnosis(){
         wait(1000);

@@ -1498,6 +1498,61 @@ public class OWF_TroubleEventPageSteps {
     }
 
 
+
+    @And("user clicks ticket matching refresh button")
+    public void userClicksTicketMatchingRefreshButton() {
+        troubleEventPage.clickTicketMatchingRefreshButton();
+    }
+
+    @When("user clicks on ticket matching incident checkbox")
+    public void userClicksOnTicketMatchingIncidentCheckbox() {
+        troubleEventPage.clickTicketMatchingIncidentCheckbox();
+    }
+
+    @And("user clicks on ticket matching work order checkbox")
+    public void userClicksOnTicketMatchingWorkOrderCheckbox() {
+        troubleEventPage.clickTicketMatchingWorkOrderCheckbox();
+    }
+
+    @When("user clicks on ticket matching change checkbox")
+    public void userClicksOnTicketMatchingChangeCheckbox() {
+        troubleEventPage.clickTicketMatchingChangeCheckbox();
+    }
+
+    @And("user clicks on ticket matching cleared checkbox")
+    public void userClicksOnTicketMatchingClearedCheckbox() {
+        troubleEventPage.clickTicketMatchingClearedCheckbox();
+    }
+
+    @When("user clicks on ticket matching open checkbox")
+    public void userClicksOnTicketMatchingOpenCheckbox() {
+        troubleEventPage.clickTicketMatchingOpenCheckbox();
+    }
+
+    @And("user enters closed within days as {string}")
+    public void userEntersClosedWithinDaysAs(String arg0) {
+        troubleEventPage.enterTicketMatchingClosedWithinDays(arg0);
+    }
+
+    @And("user clicks on ticket matching title checkbox")
+    public void userClicksOnTicketMatchingTitleCheckbox() {
+        troubleEventPage.clickTicketMatchingTitleCheckbox();
+    }
+
+    @When("user selects match by dropdown as {string}")
+    public void userSelectsMatchByDropdownAs(String arg0) {
+        troubleEventPage.selectTicketMatchBy(arg0);
+    }
+
+    @Then("{string} tickets should only be displayed under ticket matching")
+    public void ticketsShouldOnlyBeDisplayedUnderTicketMatching(String columnValue) {
+        Assert.assertTrue(troubleEventPage.verifyTicketsUnderTicketMatching("Ticket ID",columnValue, true));
+    }
+
+    @Then("{string} tickets should be displayed under ticket matching")
+    public void ticketsShouldBeDisplayedUnderTicketMatching(String columnValue) {
+        Assert.assertTrue(troubleEventPage.verifyTicketsUnderTicketMatching("Status",columnValue, true));
+    }
 }
 
 

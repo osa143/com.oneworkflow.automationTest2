@@ -16,8 +16,8 @@
 
       Examples:
         |User                        |Password |Profiles|
-        |Tohall_copy                 |Test@1234|2003:2001:2005|
-        |Tohall_copy2                |Test@1234|2003:2279:2005:2210|
+#        |Tohall_copy                 |Test@1234|2003:2001:2005|
+#        |Tohall_copy2                |Test@1234|2003:2279:2005:2210|
 #        |Tohall_copy3                |Test@1234|2001:2005:2003:2279:2210|
 #        |Tohall_copy4                |Test@1234|2210:2003:2196:2279|
 #        |Tohall_copy5                |Test@1234|2210:2003:2196:2279|
@@ -58,7 +58,7 @@
 #        |ow_basic1                   |Test@1234|2136:2003:2279:2196|
 #        |ow_basic2                   |Test@1234|2196:2003:2136:2279|
 #        |ow_basic3                   |Test@1234|2196:2249|
-#        |Assignment_admin            |Test@1234|2015:2692:2003:2279:2196|
+        |Assignment_admin            |Test@1234|2015:2692:2003:2279:2196|
 
 
 

@@ -15,6 +15,7 @@ Feature: SAO_4722 - CI Name that contains " | " does not get attached to Diagnos
     And user selects request type as "Event" on trouble event page
     Then user enters description as "Test Description"
     And user clicks save button
+    And user waits 5 secs
     Then ticket should be created and status should be assigned
     And user adds CI "NO_XWDM_NO- MAN0007|NO_XWDM_TRA_Empty_NO- MAN0007" to the ticket
     Then user clicks on Diagnosis tab

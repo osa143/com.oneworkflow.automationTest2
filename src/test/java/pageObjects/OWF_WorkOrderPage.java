@@ -60,9 +60,19 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_ACTUAL_SCHEDULE_END= "arid_WIN_0_777021165";
     private static final String txt_EVENT_START_TIME = "arid_WIN_0_703001000";
     private static final String tableRow2_OUTBOUND= "//*[@id='T600002302']/tbody/tr[3]";
+    private static final String tableRow1_OUTBOUND="//*[@id='T600002302']/tbody/tr[2]";
     private static final String txt_MESSAGE= "arid_WIN_0_536870956";
     private static final String td_ROW1= "//*[@id='T777504000']/tbody/tr[2]/td[1]/nobr";
+    private static final String txt_AGREEMENT_CONTRACTOR= "arid_WIN_0_536870920";
+    private static final String txt_CUSTOMER_ID_CONTRACTOR= "arid_WIN_0_536870921";
 
+   public String getAgreementContract(){
+       return getAttributeValueById(txt_AGREEMENT_CONTRACTOR);
+   }
+
+    public String getCustomerContractID(){
+        return getAttributeValueById(txt_CUSTOMER_ID_CONTRACTOR);
+    }
     public void doubleClickOnWorkOrderAndOpen(){
         WebElement element=driver.findElement(By.xpath(td_ROW1));
             doubleClickOnElement(element);
@@ -82,6 +92,9 @@ public class OWF_WorkOrderPage extends BasePage {
     }
     public void doubleClickOnWithdrawnMessage(){
         doubleClickOnElement(driver.findElement(By.xpath(tableRow2_OUTBOUND)));
+    }
+    public void doubleClickAndOpenOutboundMessage(){
+        doubleClickOnElement(driver.findElement(By.xpath(tableRow1_OUTBOUND)));
     }
     public boolean verifySLA_classIsReadOnly(){
         return checkIfControlIsReadonly(txt_SLA_CLASS);

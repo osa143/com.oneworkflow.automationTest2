@@ -1491,6 +1491,13 @@ public class OWF_TroubleEventPageSteps {
     public void userDoubleClicksOnTimelineToOpenTicket() {
         troubleEventPage.doubleClickOnTimelineTicket();
     }
+
+    @Then("child ticket should be opened")
+    public void childTicketShouldBeOpened() {
+        Assert.assertEquals(CommonUtils.opTicket, troubleEventPage.getTroubleTicket());
+    }
+
+
 }
 
 

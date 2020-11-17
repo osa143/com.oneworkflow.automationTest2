@@ -932,6 +932,21 @@ public class OWF_WorkOrderPageSteps {
     public void userDoubleClicksOnWorkOrderAndOpens() {
       workOrderPage.doubleClickOnWorkOrderAndOpen();
     }
+
+    @When("user double clicks and open outbound message")
+    public void userDoubleClicksAndOpenOutboundMessage() {
+        workOrderPage.doubleClickAndOpenOutboundMessage();
+    }
+
+    @Then("user should see agreement contractor as {string}")
+    public void userShouldSeeAgreementContractorAs(String agreementContractor) {
+        Assert.assertEquals(workOrderPage.getAgreementContract(), agreementContractor);
+    }
+
+    @And("user validates customer ID contractor as {string}")
+    public void userValidatesCustomerIDContractorAs(String customerContractorID) {
+        Assert.assertEquals(workOrderPage.getCustomerContractID(), customerContractorID);
+    }
 }
 
 

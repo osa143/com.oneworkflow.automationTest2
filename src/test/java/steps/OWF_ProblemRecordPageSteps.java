@@ -1543,6 +1543,11 @@ public class OWF_ProblemRecordPageSteps {
     public void userEntersVendorNameAs(String vendorName) {
         problemRecordPage.enterVendorName(vendorName);
     }
+
+    @And("user gets estimated ready time")
+    public void userGetsEstimatedReadyTime() {
+        CommonUtils.estimatedReadyTime = problemRecordPage.getEstimatedReadyTime();
+    }
 }
 
 

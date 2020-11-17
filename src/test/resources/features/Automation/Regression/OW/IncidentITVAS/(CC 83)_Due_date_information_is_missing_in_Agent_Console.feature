@@ -1,4 +1,4 @@
-@Automation_OP-000000438117_(CC83)_Due_date_information_is_missing_in_Agent_Console_for_Event_tickets
+@CC83_Due_date_information_is_missing_in_Agent_Console
 
 
 Feature: Automation - OP-000000438117( CC 83) - Due date information is missing in Agent Console for Event tickets[s]
@@ -9,7 +9,7 @@ Feature: Automation - OP-000000438117( CC 83) - Due date information is missing 
     When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on add column from preferences and selects OP next due date
-    Then user validates OP next due date column has been added
+    Then OP next due date column within agent console should be displayed
     When user clicks on create trouble event
     And user switches to window 1
     Then trouble record form should appear in new tab
@@ -19,6 +19,7 @@ Feature: Automation - OP-000000438117( CC 83) - Due date information is missing 
     And user enters description as "Test"
     And user clicks on save button
     Then user gets trouble ticket value
+    And user gets estimated ready time
     When user switches to window 0
     And user enters ticket previously created and searches in agent console and highlights
     Then user validates OP next due date is same as estimated ready

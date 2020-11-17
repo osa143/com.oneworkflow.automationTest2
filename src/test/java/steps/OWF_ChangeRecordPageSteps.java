@@ -1067,6 +1067,11 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesReasonTextFieldExpandButtonIsPresent() {
         Assert.assertTrue(changeRecordPage.verifyReasonTextEditorButtonIsDisplayed());
     }
+
+    @And("user clicks on yes for CAB required")
+    public void userClicksOnYesForCABRequired() {
+        changeRecordPage.clickCabRequiredYes();
+    }
 }
 
 

@@ -155,6 +155,11 @@ public class BaseRecordPage extends BasePage {
     private static final String txt_EQUIPMENT="arid_WIN_0_600001067";
     private static final String btn_CLEAR= "WIN_0_700506223";
     private static final String div_ALL_FIELDS= "WIN_0_999000050";
+    private static final String table_TICKET_MATCHING = "T600002282";
+
+    public boolean verifyTicketsUnderTicketMatching(String columnName, String columnValue, boolean partialText){
+       return verifyColumnValuesMultiple(By.id(table_TICKET_MATCHING), columnName, columnValue, partialText);
+    }
 
 
     public boolean verifyElementsAreReadOnly(){
@@ -588,12 +593,12 @@ public class BaseRecordPage extends BasePage {
         WebElement element = driver.switchTo().activeElement();
         element.sendKeys(Keys.UP);
         element.sendKeys(Keys.UP);
-        //#element.sendKeys(Keys.UP);
-        //element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.UP);
+        element.sendKeys(Keys.UP);
         element.sendKeys(Keys.ARROW_RIGHT);
         element.sendKeys(Keys.DOWN);
         element.sendKeys(Keys.DOWN);
-        //element.sendKeys(Keys.DOWN);
+        element.sendKeys(Keys.DOWN);
         element.sendKeys(Keys.ENTER);
         wait(1000);
     }

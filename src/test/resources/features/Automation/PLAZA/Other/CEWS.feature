@@ -22,7 +22,7 @@
       And user enters email address field as "Test@Test.com"
       Then user enters phone field as "123456789"
       And user enters CEWS request as "Test1 CEWS/Request"
-      And user selects CEWS Add CI as "cc100cgas001"
+      #And user selects CEWS Add CI as "cc100cgas001"
       And user waits 30 secs
       Then user enters CEWS description as "Test1 CEWS/Description"
       And user enters additional comments as "Test1 CEWS/AC"

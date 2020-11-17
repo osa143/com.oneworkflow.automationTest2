@@ -1,4 +1,4 @@
-@Drop_Down @Reg_Problem
+@Dropdown    @Reg_Problem
 #  This testcase also covers 3 other stories from P2S1 Sprint
 #  SAO-5196:Accountable Organisation drop down menu
 #  SAO-5203:Affected Organisation drop down menu,

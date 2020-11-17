@@ -39,6 +39,7 @@ Feature: SAO-4687 - Closure codes issues
     And user validates cause field is mandatory
     And user validates event end time is a mandatory field
     And user validates event end time is same as cleared status event end time
+    And user waits 10 secs
     When user changes status to "Closed"
     Then user validates fault position field is mandatory
     And user validates cause field is mandatory

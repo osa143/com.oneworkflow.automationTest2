@@ -108,7 +108,18 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String SELECT_TICKET_LINKED_ITEMS = "//*[@id='T777506000']/tbody/tr[2]/td[2]/nobr/span";
     private static final String UNLINK_BUTTON = "WIN_4_777506010";
     private static final String btn_OK_LINKED_ITEMS = "//*[@id='PopupMsgFooter']/a";
+    private static final String rbtn_CAB_REQUIRED_NO= "WIN_0_rc0id800000002";
 
+    public boolean verifyCabRequiredNoTickets(){
+        WebElement element = findElement(By.xpath(TableRow1));
+        action.doubleClick(element).perform();
+        action.doubleClick(element).perform();
+        CommonUtils.switchToChildWindow(driver, 2);
+        wait(5000);
+        selectTab("Schedule");
+        return verifyIsElementSelected(By.id(rbtn_CAB_REQUIRED_NO));
+
+    }
     public void clickOkButton(){
         switchToFrameByIndex(2);
         clickElementByContainsTextAndTagName("a", "OK");

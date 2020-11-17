@@ -376,7 +376,14 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
     public String getEstimatedReady(){
-        return getTextByID(txt_ESTIMATED_READY);
+        String estimatedReadyTime= getTextByID(txt_ESTIMATED_READY);
+        System.out.println("ERT is - " +estimatedReadyTime);
+        return estimatedReadyTime;
+    }
+    public String getEstimatedReadyTime(){
+        String estimatedReadyTime= getAttributeValueById(txt_ESTIMATED_READY);
+        System.out.println("attr ERT is - " +estimatedReadyTime);
+        return estimatedReadyTime;
     }
     public String getServiceEffectedText(){
         return getTextByID(txt_SERVICEAFFECTED);

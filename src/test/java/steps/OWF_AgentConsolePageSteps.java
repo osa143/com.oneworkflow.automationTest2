@@ -817,6 +817,21 @@ public class OWF_AgentConsolePageSteps {
         Assert.assertEquals(agentConsolePage.getAgentConsoleTableCellData(column, 1), columnValue);
 
     }
+
+    @Then("user should see CAB required yes tickets")
+    public void userShouldSeeCABRequiredYesTickets() {
+        Assert.assertEquals(changeTicket, agentConsolePage.getAgentConsoleTableCellData("ID", 1));
+    }
+
+    @Then("user should see CAB required no tickets")
+    public void userShouldSeeCABRequiredNoTickets() {
+       Assert.assertTrue(agentConsolePage.verifyCabRequiredNoTickets());
+    }
+
+    @Then("user validates OP next due date is same as estimated ready")
+    public void userValidatesOPNextDueDateIsSameAsEstimatedReady() {
+        Assert.assertEquals(agentConsolePage.getAgentConsoleTableCellData("OP Next Due Date", 1), CommonUtils.estimatedReadyTime);
+    }
 }
 
 

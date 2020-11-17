@@ -173,8 +173,9 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btn_TIMELINE_FILTER= "//a[@title='Timeline Filter']";
     private static final String chkbx_INCLUDE_CHILDREN_TIKCETS= "WIN_1_rc0id800040190";
     private static final String table_LINKED_ITEMS= "T777506000";
-    private static final String table_TIMELINE= "T999000510";
+    private static final String btn_PREFERENCES_TIMELINE= "//*[@id='WIN_0_999000510']/div[1]/table/tbody/tr/td[2]/a[1]";
     private static final String table_ROW1_TIMELINE= "//*[@id='T999000510']/tbody/tr[2]";
+
 //    private static final String txt_CAUSE= "arid_WIN_0_777031380";
 //    private static final String txt_FAULT_POSITION= "arid_WIN_0_600001048";
     private static final String btn_TICKET_MATCHING_REFRESH = "WIN_0_600002911";
@@ -224,16 +225,17 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
         clickElementById(btn_TICKET_MATCHING_REFRESH);
     }
 
-    public void doubleClickOnTimelineTicket(){
-        WebElement element= findElement(By.xpath(table_ROW1_TIMELINE));
-        action.doubleClick(element).perform();
-    }
+
     public void selectPreferences_timeline(String preferences){
-        clickPreferences(table_TIMELINE);
+        findElement(By.xpath(btn_PREFERENCES_TIMELINE)).click();
         setPreferences(preferences);
     }
     public boolean verifyHierarchicEscalationLevelIsReadOnly(){
         return checkIfControlIsReadonly(txt_HIERARCHIC_ESCLATION_LEVEL);
+    }
+    public void doubleClickOnTimelineTicket(){
+        WebElement element= findElement(By.xpath(table_ROW1_TIMELINE));
+        action.doubleClick(element).perform();
     }
 
     public String getPrimaryCIofLinkedTicket(String columnName, int rowNum){

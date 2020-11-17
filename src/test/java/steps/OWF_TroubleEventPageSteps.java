@@ -1492,6 +1492,13 @@ public class OWF_TroubleEventPageSteps {
         troubleEventPage.doubleClickOnTimelineTicket();
     }
 
+    @Then("child ticket should be opened")
+    public void childTicketShouldBeOpened() {
+        Assert.assertEquals(CommonUtils.opTicket, troubleEventPage.getTroubleTicket());
+    }
+
+
+
     @And("user clicks ticket matching refresh button")
     public void userClicksTicketMatchingRefreshButton() {
         troubleEventPage.clickTicketMatchingRefreshButton();

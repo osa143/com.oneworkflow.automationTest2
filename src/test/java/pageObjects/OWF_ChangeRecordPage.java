@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import utils.CommonUtils;
+
 import java.util.List;
 import java.util.Map;
 
@@ -113,7 +115,16 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String table_SELECT_LOCATION_= "T700024013";
     private static final String btn_CHANGE_BUILDER= "//img[@alt='Editor for Change Builder+*']";
     private static final String btn_REASON_EDITOR= "//img[@alt='Editor for Reason']";
+    private static final String rbtn_CAB_REQUIRED_YES = "WIN_0_rc1id800000002";
+    private static final String YES_CONFIRMATION= "WIN_0_700027904";
 
+
+public void clickCabRequiredYes(){
+    clickElementById(rbtn_CAB_REQUIRED_YES);
+    CommonUtils.switchToChildWindow(driver, 2);
+    clickElementById(YES_CONFIRMATION);
+    CommonUtils.switchToChildWindow(driver, 1);
+}
     public boolean verifyReasonTextEditorButtonIsDisplayed(){
         return verifyElementIsDisplayed(By.xpath(btn_REASON_EDITOR));
     }

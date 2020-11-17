@@ -51,6 +51,8 @@
       And user sets the preferences under the timeline as "Add Column:Source"
       And user double clicks on timeline to open ticket
       And user switches to window 3
+      Then child ticket should be opened
+
 
 
 

@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="63" parent-id="1">
+<tr class="s-fail" test-id="20" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then "Cleared" tickets should be displayed under ticket matching <br/><span class="text-muted text-sm">SAO-6737 - Improving Recurring Incidents Tab(Name Subject to Change)</span></td>
-	<td>0h 0m 1s+318msc</td>
+	<td class="_600">Then user validates OP next due date is same as estimated ready <br/><span class="text-muted text-sm">Automation - OP-000000438117( CC 83) - Due date information is missing in Agent Console for Event tickets[s]</span></td>
+	<td>0h 0m 3s+975msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,13 +136,15 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
+		<textarea disabled class="code-block">java.lang.AssertionError: expected [] but found [11/23/2020 2:02:13 PM]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at steps.OWF_TroubleEventPageSteps.ticketsShouldBeDisplayedUnderTicketMatching(OWF_TroubleEventPageSteps.java:1547)
-	at ✽."Cleared" tickets should be displayed under ticket matching(features/Automation/SPRINTS/Sprint_P4S2/SAO_6737_Improving_Recurring_Incidents_Tab.feature:69)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at steps.OWF_AgentConsolePageSteps.userValidatesOPNextDueDateIsSameAsEstimatedReady(OWF_AgentConsolePageSteps.java:833)
+	at ✽.user validates OP next due date is same as estimated ready(features/Automation/Regression/OW/IncidentITVAS/(CC 83)_Due_date_information_is_missing_in_Agent_Console.feature:25)
 </textarea>
 	</td>
 </tr>
@@ -170,7 +172,7 @@
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Nov 16, 2020 11:31:05 AM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Nov 16, 2020 04:01:42 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

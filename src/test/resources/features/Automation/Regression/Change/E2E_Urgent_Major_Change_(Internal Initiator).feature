@@ -26,8 +26,8 @@
       And user enters "CI I2" in the change builder field
       #Then user validates "Change Builder" button is present
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-      And user enters start time as 24 hours fast from current sweden time
-      And user enters end time as 28 hours fast from current sweden time
+      And user enters start time as 24 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
+      And user enters end time as 28 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
       And user enters impact duration as "50" minutes
       And user selects estimated impact dropdown as "Loss of Service"
       And user enters as "Regression - Change Management Process" in service and customer impact

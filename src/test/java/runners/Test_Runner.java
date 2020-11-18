@@ -8,7 +8,7 @@ import runners.BaseTest;
 //        plugin = { "pretty", "html:test-output/html",}, // for html report
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@AdminChangeLocationSearch"}
+        tags = {"@E2E_Normal_Change_Internal_Initiator"}
 
 )
 public class Test_Runner extends BaseTest {

@@ -1287,7 +1287,7 @@ public class OWF_TroubleEventPageSteps {
     @And("user clicks on save button and closes confirmation")
     public void userClicksOnSaveButtonAndClicksClosesConfirmation() {
         troubleEventPage.clickSaveButton();
-        troubleEventPage.switchToFrameByIndex(2);
+        troubleEventPage.switchToFrameByIndex(1);
         troubleEventPage.wait(3000);
         troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
         troubleEventPage.switchToDefault();

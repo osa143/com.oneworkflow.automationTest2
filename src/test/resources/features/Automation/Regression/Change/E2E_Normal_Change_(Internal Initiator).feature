@@ -19,19 +19,6 @@
       And user enters "Regression - Change Management Process" in the risk description field
       When user clicks save button
       And multiple error messages should appear with red boarder around fields
-#      When user clicks on "Calendar" under actions
-#      #Need to check this as it appears in a different window not different Tab
-#      And user switches to window 2
-#      When user enters "Change Record" in calendar search box
-#      And user clicks on ticket type "Change Record"
-#      Then user validates change records are shown in calendar
-#      When user clicks on a present change record
-#      #Need to check this as well
-#      And user switches to frame
-#      And user clicks on open button on calendar
-#      Then user should see change record
-#      And user closes change record window
-#      And user closes calendar window
       When user selects request type as "Normal Change"
       Then user selects title as "Mobile:CS Core (Voice)" on Change record page
       And user selects request category as "Software Installation" on change record page
@@ -41,8 +28,8 @@
       And user enters "Privacy Data: Just Testing" in the change builder field
       Then user validates change builder button is present
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-      And user enters start time as 24 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss" format
-      And user enters end time as 28 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss" format
+      And user enters start time as 24 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
+      And user enters end time as 28 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
       And user enters impact duration as "45" minutes
       And user selects estimated impact dropdown as "Degradation of Service"
       And user clicks on save button
@@ -74,28 +61,29 @@
       And user clicks on save button
       And user switches to default
       And CI should be listed and displayed under the Diagnosis tab
-      When user right clicks on CI "FI_MGW_SMG03TRE" and selects "Show:Location Details"
-      Then user validates Location Details are shown
-      And user validates availability of tabs "Details:Relationships"
-      And user clicks on "Relationships" tab
-      Then user clicks on refresh button under related CIs
-      And user validates CIs are shown under related CI table
+#      When user right clicks on CI "FI_MGW_SMG03TRE" and selects "Show:Location Details"
+#      Then user validates Location Details are shown
+#      And user validates availability of tabs "Details:Relationships"
+#      And user clicks on "Relationships" tab
+#      Then user clicks on refresh button under related CIs
+#      And user validates CIs are shown under related CI table
       And user clicks on the close button on location details window
       When user clicks on Show CR Matching button
       Then user should see Show CR Matching table appear
       When user clicks on "Interested Parties" tab
       And user enters email address as "Test123xxx@Test123xxx.com"
       And user clicks on add email button
-      Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 1
-      Then user clicks on add button under interested parties
-      And user switches to frame
-      And user validates add interested parties form is shown
-      When user selects type as "Additional Access" under interested parties
-      And user clicks on radio button user
-      And user enters organization name plus as "ANS" and searches
-      And user selects Agile Network Systems and clicks use button
-      Then user validates organization as "Agile Network Systems"
-      Then user clicks on cancel button on interested parties window
+#      Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 1
+#      Then user clicks on add button under interested parties
+#      And user switches to frame 3
+#      When user selects type as "Additional Access" under interested parties
+#      And user clicks on radio button user
+#      And user enters organization name plus as "ANS" and searches
+#      And user selects Agile Network Systems and clicks use button
+#      And user switches to frame 0
+#      Then user validates organization as "Agile Network Systems"
+#      Then user clicks on cancel button on interested parties window
+#      And user switches to default
       And user validates finland as affected BU
       When user clicks on Send button
       Then user validates ticket status as "Assigned"
@@ -211,14 +199,15 @@
 #      And user validates Timeline Text entry isn't readonly
       And user enters description as "TEST TICKET PLEASE IGNORE - New Description"
       And user clicks on save button
-      Then change should also be reflected in the timeline as "Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) - Additional info to TEST TICKET PLEASE IGNORE - New Description."
+      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from - Additional Information to TEST TICKET PLEASE IGNORE - New Description. "
       When user clicks on risk tab
       And user clicks on last risk question selects last answer as "Yes"
       And user clicks on save button
       Then user changes status to "Approval Requested"
       And user clicks on save button
       When user clicks on "Approval" tab
-      And user clicks on request thats pending approval
+      And user clicks on request that's "Pending Approval"
+      Then user selects CAB approval
       And user clicks on view button
       Then user switches to frame
       And user enters "Change can be approved right away" in comments field
@@ -226,12 +215,13 @@
       Then user switches to window 2
       And user clicks on ticket refresh button
       Then user validates ticket status as "Approved"
+      And user waits 45 secs
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab
       Then user should see "Approved Change-Builder" email update
+      And user waits 45 secs
+      And user clicks on ticket refresh button
       And change should also be reflected in the timeline as "Ticket approved by ChangeManager1_Automation in date: "
-      When user changes status to "Schedule Requested"
-      And user clicks on save button
       Then change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approved to Schedule Requested."
       And user validates ticket status as "Scheduled"
       Then user clicks on assignment under sections

@@ -17,19 +17,6 @@ Feature: External Normal Change E2E
     And user enters "Regression - Change Management Process" in the risk description field
     When user clicks save button
     And multiple error messages should appear with red boarder around fields
-# Need to check this as it appears in a different window not different Tab
-#      When user clicks on "Calendar" under actions
-#      And user switches to window 2
-#      When user enters "Change Record" in calendar search box
-#      And user clicks on ticket type "Change Record"
-#      Then user validates change records are shown in calendar
-#      When user clicks on a present change record
-#      #Need to check this as well
-#      And user switches to frame
-#      And user clicks on open button on calendar
-#      Then user should see change record
-#      And user closes change record window
-#      And user closes calendar window
     When user selects request type as "Normal Change"
     Then user selects title as "Mobile:IMS Core" on Change record page
     And user selects request category as "Software Installation" on change record page
@@ -37,10 +24,10 @@ Feature: External Normal Change E2E
     And user enters reason field as "Regression"
     And user selects priority as "Minor"
     And user enters "Privacy Data: Just Testing" in the change builder field
-    #Then user validates "Change Builder" button is present
+    Then user validates change builder button is present
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-    And user enters start time as 24 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss a" format
-    And user enters end time as 28 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss a" format
+    And user enters start time as 24 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
+    And user enters end time as 28 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
     And user enters impact duration as "45" minutes
     And user selects estimated impact dropdown as "Degradation of Service"
     And user clicks on save button

@@ -1,4 +1,4 @@
-@02.08 @Incident @02
+@02.08 @Incident @02 @HelixRegr
   #passed
   Feature: user change priority level
     Scenario: user change priority level

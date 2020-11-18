@@ -28,7 +28,7 @@ Feature: Setting location of incident origin
     When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user enters "NO_Site_OSL001" in the Location Name+ field
-     Then tickets "NO_Site_OSL001" should be filtered "Location Name"
+    Then tickets "NO_Site_OSL001" should be filtered "Location Name"
     When user enters "NO_Site_TLM151" in the Location Name+ field
     Then tickets "NO_Site_TLM151" should be filtered "Location Name"
 

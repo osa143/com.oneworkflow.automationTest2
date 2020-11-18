@@ -5,7 +5,7 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      #Then user clicks on plaza portal
+      Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on storage & data protection under IT Infrastructure
@@ -51,9 +51,9 @@
       And user validates owner as "PLAZA"
       And user should see assigned profile as "Backup"
       And user validates 1 attachment visibility under external
-      When user clicks attachment open button
-      And user switches to window 3
-      Then user validates external is selected
+#      When user clicks attachment open button
+#      And user switches to window 3
+#      Then user validates external is selected
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab

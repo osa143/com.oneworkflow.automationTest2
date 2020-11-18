@@ -974,6 +974,11 @@ public class OWF_ChangeRecordPageSteps {
         Assert.assertTrue(changeRecordPage.verifyInterestedPartiesTypes(arg0, ""));
     }
 
+    @And("user selects unique name as {string}")
+    public void userSelectsUniqueNameAs(String arg0) {
+        changeRecordPage.SelectUniqueName(arg0);
+    }
+
     @Then("user validates Nokia ticket ID is present")
     public void userValidatesNokiaTicketIDIsPresent() {
      Assert.assertNotNull(changeRecordPage.getExternalTicketID());
@@ -1056,6 +1061,16 @@ public class OWF_ChangeRecordPageSteps {
     @Then("user validates locations related to {string} are shown")
     public void userValidatesLocationsRelatedToAreShown(String colValue) {
         Assert.assertTrue(changeRecordPage.verifyExpectedDataIsPresent("Name", colValue));
+    }
+
+    @And("user validates reason text field expand button is present")
+    public void userValidatesReasonTextFieldExpandButtonIsPresent() {
+        Assert.assertTrue(changeRecordPage.verifyReasonTextEditorButtonIsDisplayed());
+    }
+
+    @And("user clicks on yes for CAB required")
+    public void userClicksOnYesForCABRequired() {
+        changeRecordPage.clickCabRequiredYes();
     }
 
     @And("user clicks yes on save confirmation message")

@@ -12,8 +12,8 @@ Feature: SAO-4166 - OW - incorrect incident tickets keep coming
     When user selects request type as "Standard Change"
     And user selects template as "All:IT:Other:TEST TEMPLATE [UAT] - Standard Change"
     Then user enters "Test" in the change builder field
-    And user enters request start time as 2 minutes past from "Europe/London" timezone "MM/dd/yyyy HH:mm:ss" format
-    And user enters request end time as 3 minutes past from "Europe/London" timezone "MM/dd/yyyy HH:mm:ss" format
+    And user enters request start time as 3 minutes past from "Europe/London" timezone "MM/dd/yyyy HH:mm:ss" format
+    And user enters request end time as 4 minutes past from "Europe/London" timezone "MM/dd/yyyy HH:mm:ss" format
     And user enters impact duration as "1" minutes
     Then user selects estimated impact as "No Impact"
     And user clicks save button
@@ -25,6 +25,7 @@ Feature: SAO-4166 - OW - incorrect incident tickets keep coming
     Then user clicks on create button under linked items
     And user switches to window 2
     Then user selects request type as "Customer" on trouble event page
+    And user clicks on sweden checkbox under affected BU's
     And user clicks save button
     Then user switches to window 1
     And user waits 3 secs

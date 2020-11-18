@@ -155,7 +155,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user goes back to login page")
     public void userGoesBackToLoginPage() {
-        problemRecordPage.getDriver().findElement(By.xpath("//*[@id=\"logoutmsg\"]/tbody/tr[4]/td[2]/a")).click();
+        problemRecordPage.clickOnGoBackToLoginPage();
         problemRecordPage.wait(5000);
     }
 
@@ -1537,6 +1537,16 @@ public class OWF_ProblemRecordPageSteps {
     @And("user validates Risk Description is read only")
     public void userValidatesRiskDescriptionIsReadOnly() {
         Assert.assertTrue(problemRecordPage.verifyRiskDescriptionIsReadOnly());
+    }
+
+    @And("user enters vendor name as {string}")
+    public void userEntersVendorNameAs(String vendorName) {
+        problemRecordPage.enterVendorName(vendorName);
+    }
+
+    @And("user gets estimated ready time")
+    public void userGetsEstimatedReadyTime() {
+        CommonUtils.estimatedReadyTime = problemRecordPage.getEstimatedReadyTime();
     }
 }
 

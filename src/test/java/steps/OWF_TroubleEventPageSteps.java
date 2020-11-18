@@ -285,9 +285,8 @@ public class OWF_TroubleEventPageSteps {
 
     @When("user enters estimated ready as event start time plus {int} days on trouble event page")
     public void userEntersEstimatedReadyAsEventStartTimePlusDays(int arg0) {
-
-      //  workOrderPage.clearEstimatedReady();
-        CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("dd/MM/yyyy HH:mm:ss","Europe/London",arg0);
+        //  workOrderPage.clearEstimatedReady();
+        CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("MM/dd/yyyy HH:mm:ss","Europe/London",arg0);
         workOrderPage.enterEstimatedReady(CommonUtils.estimatedReadyTime);
     }
 
@@ -822,7 +821,8 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event end time as {int} mins past")
     public void userEntersEventEndTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
+        CommonUtils.EventEndTime= CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0);
+        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user selects action dropdown as {string} on trouble event page")
@@ -832,7 +832,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event start time as {int} mins past")
     public void userEntersEventStartTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user should see confirmation message for impact clear and clicks ok")
@@ -1287,10 +1287,16 @@ public class OWF_TroubleEventPageSteps {
     @And("user clicks on save button and closes confirmation")
     public void userClicksOnSaveButtonAndClicksClosesConfirmation() {
         troubleEventPage.clickSaveButton();
-        troubleEventPage.switchToFrameByIndex(1);
-        troubleEventPage.wait(3000);
-        troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
-        troubleEventPage.switchToDefault();
+        troubleEventPage.switchToFrameByIndex(2);
+        troubleEventPage.wait(5000);
+        try{
+            troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
+            troubleEventPage.switchToDefault();
+        }
+        catch(Exception e){
+
+        }
+
     }
 
     @And("user validates closure info as {string}")
@@ -1355,7 +1361,10 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("user validates event end time is same as cleared status event end time")
     public void userValidatesEventEndTimeIsSameAsClearedStatusEventEndTime() {
-        Assert.assertEquals(CommonUtils.EventEndTime, troubleEventPage.getEventEndTime());
+        System.out.println("cleared ticket event End time is - " +CommonUtils.EventEndTime);
+        System.out.println("closed ticket event End time is - " +troubleEventPage.getEventEndTime_ClosedTicketStatus());
+
+        Assert.assertEquals(CommonUtils.EventEndTime, troubleEventPage.getEventEndTime_ClosedTicketStatus());
     }
 
     @Then("user validates fault position field is mandatory")
@@ -1415,12 +1424,134 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters auto close date as {int} mins past")
     public void userEntersAutoCloseDateAsIntMinsPast(int arg0) {
-        troubleEventPage.enterAutoCloseDate(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterAutoCloseDate(CommonUtils.getDateTime("MM-dd-YYYY HH:mm:ss", "Europe/London", arg0));
+    }
+
+    @Then("user validates hierarchic escalation level is read only")
+    public void userValidatesHierarchicEscalationLevelIsReadOnly() {
+        Assert.assertTrue(troubleEventPage.verifyHierarchicEscalationLevelIsReadOnly());
+    }
+
+    @And("user validates hierarchic escalation level isnt read only")
+    public void userValidatesHierarchicEscalationLevelIsntReadOnly() {
+        Assert.assertFalse(troubleEventPage.verifyHierarchicEscalationLevelIsReadOnly());
     }
 
     @And("user validates child WO ticket details are same as parent OP ticket")
     public void userValidatesChildWOTicketDetailsAreSameAsParentOPTicket() {
       Assert.assertTrue(troubleEventPage.verifyChild_WO_TicketSameAsParent_OP());
+    }
+
+    @Then("user validates source status as {string}")
+    public void userValidatesSourceStatusAs(String expectedSourceStatus) {
+    Assert.assertEquals(troubleEventPage.getSourceStatus(), expectedSourceStatus);
+    }
+
+    @And("user validates configuring source as {string}")
+    public void userValidatesConfiguringSourceAs(String expectedSourceName) {
+        Assert.assertEquals(troubleEventPage.getSourceName(), expectedSourceName);
+    }
+
+    @When("user enters Age in days as {string} and clicks save button")
+    public void userEntersAgeInDaysAsAndClicksSaveButton(String ageInDays) {
+        troubleEventPage.enterAgeInDaysAndClickSave(ageInDays);
+    }
+
+    @Then("age in days should be updated to {string}")
+    public void ageInDaysShouldBeUpdatedTo(String expectedAgeInDays) {
+        Assert.assertEquals(troubleEventPage.getAgeInDays(), expectedAgeInDays);
+    }
+
+    @When("user clicks on timeline filter button")
+    public void userClicksOnTimelineFilterButton() {
+     troubleEventPage.clickTimelineFilter();
+    }
+
+    @When("user uncheck include children ticket")
+    public void userUncheckIncludeChildrenTicket() {
+     troubleEventPage.clickIncludeChildrenCheckBox();
+    }
+
+    @And("user should see {string} as {string} for linked ticket")
+    public void userShouldSeeAsForLinkedTicket(String columnName, String expectedCI) {
+        Assert.assertEquals(expectedCI, troubleEventPage.getPrimaryCIofLinkedTicket(columnName, 1));
+    }
+
+    @When("user clicks on include children ticket")
+    public void userClicksOnIncludeChildrenTicket() {
+        troubleEventPage.clickIncludeChildrenCheckBox();
+    }
+
+    @And("user sets the preferences under the timeline as {string}")
+    public void userSetsThePreferencesUnderTheTimelineAs(String preferences) {
+      troubleEventPage.selectPreferences_timeline(preferences);
+    }
+
+    @And("user double clicks on timeline to open ticket")
+    public void userDoubleClicksOnTimelineToOpenTicket() {
+        troubleEventPage.doubleClickOnTimelineTicket();
+    }
+
+    @Then("child ticket should be opened")
+    public void childTicketShouldBeOpened() {
+        Assert.assertEquals(CommonUtils.opTicket, troubleEventPage.getTroubleTicket());
+    }
+
+
+
+    @And("user clicks ticket matching refresh button")
+    public void userClicksTicketMatchingRefreshButton() {
+        troubleEventPage.clickTicketMatchingRefreshButton();
+    }
+
+    @When("user clicks on ticket matching incident checkbox")
+    public void userClicksOnTicketMatchingIncidentCheckbox() {
+        troubleEventPage.clickTicketMatchingIncidentCheckbox();
+    }
+
+    @And("user clicks on ticket matching work order checkbox")
+    public void userClicksOnTicketMatchingWorkOrderCheckbox() {
+        troubleEventPage.clickTicketMatchingWorkOrderCheckbox();
+    }
+
+    @When("user clicks on ticket matching change checkbox")
+    public void userClicksOnTicketMatchingChangeCheckbox() {
+        troubleEventPage.clickTicketMatchingChangeCheckbox();
+    }
+
+    @And("user clicks on ticket matching cleared checkbox")
+    public void userClicksOnTicketMatchingClearedCheckbox() {
+        troubleEventPage.clickTicketMatchingClearedCheckbox();
+    }
+
+    @When("user clicks on ticket matching open checkbox")
+    public void userClicksOnTicketMatchingOpenCheckbox() {
+        troubleEventPage.clickTicketMatchingOpenCheckbox();
+    }
+
+    @And("user enters closed within days as {string}")
+    public void userEntersClosedWithinDaysAs(String arg0) {
+        troubleEventPage.enterTicketMatchingClosedWithinDays(arg0);
+    }
+
+    @And("user clicks on ticket matching title checkbox")
+    public void userClicksOnTicketMatchingTitleCheckbox() {
+        troubleEventPage.clickTicketMatchingTitleCheckbox();
+    }
+
+    @When("user selects match by dropdown as {string}")
+    public void userSelectsMatchByDropdownAs(String arg0) {
+        troubleEventPage.selectTicketMatchBy(arg0);
+    }
+
+    @Then("{string} tickets should only be displayed under ticket matching")
+    public void ticketsShouldOnlyBeDisplayedUnderTicketMatching(String columnValue) {
+        Assert.assertTrue(troubleEventPage.verifyTicketsUnderTicketMatching("Ticket ID",columnValue, true));
+    }
+
+    @Then("{string} tickets should be displayed under ticket matching")
+    public void ticketsShouldBeDisplayedUnderTicketMatching(String columnValue) {
+        Assert.assertTrue(troubleEventPage.verifyTicketsUnderTicketMatching("Status",columnValue, true));
     }
 }
 

@@ -10,13 +10,14 @@
       # Menu for All Roles:All Tickets:All
       And multiple menu options "Fld-OfTypeID:Fld-RoleViewMenu:Fld-ViewTicketsID" should be available
       Then user validates search bar is visible
-      When user clicks on refresh button above ticket numbers
-      # ID's different in ST
-      Then user should see Alerts ticket value
-      And user should see New ticket value
-      And user should see Assigned ticket value
-      And user should see WIP ticket value
-      And user should see Cleared ticket value
+      ## Below steps removed from the application in P4S1 ##
+#      When user clicks on refresh button above ticket numbers
+#      # ID's different in ST
+#      Then user should see Alerts ticket value
+#      And user should see New ticket value
+#      And user should see Assigned ticket value
+#      And user should see WIP ticket value
+#      And user should see Cleared ticket value
       When user selects "Trouble Ticket" under all tickets
       Then user validates availability of tabs "Timeline:Details:List:Search / Quick Create"
       Then user validates tickets are listed in agent console table

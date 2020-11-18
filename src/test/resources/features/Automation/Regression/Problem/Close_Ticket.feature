@@ -1,4 +1,4 @@
-@Close_Ticket @problem @Reg_Problem @smoke
+@Close_Ticket @problem @Reg_Problem @smoke @prob
  #passed
 Feature: User is able to close and clone a problem ticket
   #Below scenario also covers-SAO-5208-Multiple root causes code menus, 4 with one Primary and

@@ -162,7 +162,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_DESCRIPTION= "sp_formfield_sr105_v_description";
     public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_SERVICE_REQUEST= "select2-chosen-11";
     public static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_REQUEST= "sp_formfield_sr114_v_request";
-    public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI= "s2id_autogen15";
+    public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI= "s2id_autogen17";
     public static final String dd_NETWORK_SECURITY_SWITCH_PORT_CONFIG_ADD_CI= "s2id_autogen17";
     public static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_DESCRIPTION= "sp_formfield_sr114_v_description";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_REQUEST= "sp_formfield_sr34_v_request";
@@ -442,7 +442,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_NETWORK_SECURITY_PROXY_REVERSE_HIGH_AVAILIBILITY = "select2-results-15";
     private static final String txt_NETWORK_SECURITY_PROXY_REVERSE_CERTIFICATE = "s2id_autogen19_results";
     private static final String txt_NETWORK_SECURITY_NEW_SWITCH_NETWORK_CI = "s2id_autogen18_results";
-    private static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI = "s2id_autogen15_results";
+    private static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI = "s2id_autogen17_results";
     private static final String txt_NETWORK_SECURITY_SWITCH_PORT_CONFIG_ADD_CI = "s2id_autogen17_results";
     private static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_SERVICE_REQUEST = "select2-results-11";
     private static final String txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_SCHEDULED_CHANGE = "select2-results-12";
@@ -520,6 +520,29 @@ public class Plaza_HomePage extends BasePage {
     private static final String link_DATA_CENTER = "0e0e9dc1db9997446734f1eabf96196a";
     private static final String link_STORAGE_AND_DATA_PROTECTION = "6d9e9505db9997446734f1eabf96195a";
     private static final String link_SUPPORT = "xcab273021b8480d00c1e87fe6e4bcbaf";
+    private static final String txt_LIST_OF_FILES= "sp_formfield_owf_scep_listoffiles";
+    private static final String txt_LIST_OF_FILE_TYPES= "sp_formfield_owf_scep_listoffilestypes";
+    private static final String txt_LIST_OF_PROCESSES= "sp_formfield_owf_scep_listofprocess";
+    private static final String txt_SELECT_CI_EXCLUSION= "s2id_sp_formfield_owf_scep_ci";
+
+
+    public void select_CI_exclusionEndpoint() {
+        clickElement(By.id(txt_SELECT_CI_EXCLUSION));
+        WebElement element = driver.switchTo().activeElement();
+        element.sendKeys(Keys.ENTER);
+    }
+    public void enterListOfProcesses(String text) {
+
+        enterTextByElement(By.id(txt_LIST_OF_PROCESSES), text);
+    }
+    public void enterListOfFileTypes(String text) {
+
+        enterTextByElement(By.id(txt_LIST_OF_FILE_TYPES), text);
+    }
+    public void enterListOfFiles(String text) {
+
+        enterTextByElement(By.id(txt_LIST_OF_FILES), text);
+    }
 
     public void click_Support(){
         clickElement(By.xpath(link_SUPPORT));
@@ -1488,7 +1511,13 @@ public class Plaza_HomePage extends BasePage {
     public void selectCews_add_ci(String CiName){
         PlazaValidation.System = CiName;
         PlazaValidation.CI = CiName;
-       addCi(dd_CEWS_ADD_CI, txt_CEWS_ADD_CI, CiName);
+       //addCi(dd_CEWS_ADD_CI, txt_CEWS_ADD_CI, CiName);
+        clickElement(By.id(dd_CEWS_ADD_CI));
+        WebElement Element=findElement(By.xpath(dd_CEWS_ADD_CI));
+        Element.sendKeys(CiName);
+        wait(1000);
+        Element.sendKeys(Keys.ARROW_DOWN);
+        Element.sendKeys(Keys.ENTER);
 
     }
 
@@ -1524,7 +1553,7 @@ public class Plaza_HomePage extends BasePage {
         PlazaValidation.CI = dropdownName;
         clickElement(By.id(dd_BCPP_ADD_CI));
         wait(1000);
-        WebElement Element=findElement(By.xpath(dd_BCPP_ADD_CI));
+        WebElement Element=findElement(By.id(dd_BCPP_ADD_CI));
         Element.sendKeys(dropdownName);
         wait(1000);
         Element.sendKeys(Keys.ARROW_DOWN);

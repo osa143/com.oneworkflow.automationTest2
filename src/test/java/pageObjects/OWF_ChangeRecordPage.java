@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import utils.CommonUtils;
+
 import java.util.List;
 import java.util.Map;
 
@@ -113,9 +115,22 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String table_SELECT_LOCATION_= "T700024013";
     private static final String btn_CHANGE_BUILDER= "//img[@alt='Editor for Change Builder+*']";
     private static final String table_NORMALCHANGE_APPROVAL = "T705001250";
+    private static final String btn_REASON_EDITOR= "//img[@alt='Editor for Reason']";
+    private static final String rbtn_CAB_REQUIRED_YES = "WIN_0_rc1id800000002";
+    private static final String YES_CONFIRMATION= "WIN_0_700027904";
 
     public void clickCABApproval(){
         clickElement(By.xpath("//*[@id=\"T777031442\"]/tbody/tr[2]/td[3]/nobr"));
+    }
+
+public void clickCabRequiredYes(){
+    clickElementById(rbtn_CAB_REQUIRED_YES);
+    CommonUtils.switchToChildWindow(driver, 2);
+    clickElementById(YES_CONFIRMATION);
+    CommonUtils.switchToChildWindow(driver, 1);
+}
+    public boolean verifyReasonTextEditorButtonIsDisplayed(){
+        return verifyElementIsDisplayed(By.xpath(btn_REASON_EDITOR));
     }
 
     public boolean verifyExpectedDataIsPresent(String colName, String colValue){
@@ -213,6 +228,12 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         return verifyElementIsDisplayed(By.xpath(btn_CHANGE_BUILDER));
     }
 
+    private static final String dd_UNIQUE_NAME = "arid_WIN_0_700020762";
+
+    public void SelectUniqueName (String value){
+        clickElement(By.id(dd_UNIQUE_NAME));
+        selectDropDownNameAndValue(dd_UNIQUE_NAME, value, false);
+    }
 
     public boolean verifyInterestedPartiesTypes(String statuses, String dropdownName){
         return verifyDropdownValues(statuses, dropdownName, dd_INTERESTED_PARTIES_TYPE);
@@ -419,7 +440,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
 
 
     public String getAssignedProfile(){
-        return getTextByID(dd_ASSIGNED_PROFILE);
+        return getAttributeValueById(dd_ASSIGNED_PROFILE);
     }
 
     public String getChangeBuilder(){
@@ -537,6 +558,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     }
     public void clickAdvancedSearch(){
         clickElement(By.id(btn_ADVANCED_SEARCH));
+        wait(1000);
     }
     public void clickCancel(){
         clickElement(By.id(btn_CANCEL_LOCATION));

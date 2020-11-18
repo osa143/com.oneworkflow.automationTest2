@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pageObjects.OWF_WorkOrderPage;
 import utils.CommonUtils;
@@ -894,6 +895,57 @@ public class OWF_WorkOrderPageSteps {
         System.out.println("Event start time when WO is in Assigned status is - " + assignedWO_eventStartTime);
         Assert.assertEquals(assignedWO_eventStartTime, CommonUtils.WO_eventStartTime);
 
+    }
+    @Then("user validates SLA class as read only")
+    public void userValidatesSLAClassAsReadOnly() {
+        Assert.assertTrue(workOrderPage.verifySLA_classIsReadOnly());
+    }
+
+    @When("user double clicks and open withdrawn message")
+    public void userDoubleClicksAndOpenWithdrawnMessage() {
+      workOrderPage.doubleClickOnWithdrawnMessage();
+    }
+
+    @And("new interface window should be opened")
+    public void newInterfaceWindowShouldBeOpened() {
+        CommonUtils.switchToChildWindow(workOrderPage.getDriver(), 2);
+        workOrderPage.wait(2000);
+    }
+
+    @And("user clicks on custom field tab and clicks on message field and opens it")
+    public void userClicksOnCustomFieldTabAndClicksOnMessageFieldAndOpensIt() {
+        workOrderPage.selectTab("Custom Field");
+
+    }
+
+    @Then("user should see message and withdrawn reason in message text field")
+    public void userShouldSeeMessageAndWithdrawnReasonInMessageTextField() {
+        Assert.assertTrue(workOrderPage.verifyWithdrawnReasonAndMessageIsPresent());
+    }
+
+    @Then("user validates request type as readonly")
+    public void userValidatesRequestTypeAsReadonly() {
+        Assert.assertTrue(workOrderPage.verifyRequestTypeIsReadOnly());
+    }
+
+    @And("user double clicks on work order and opens")
+    public void userDoubleClicksOnWorkOrderAndOpens() {
+      workOrderPage.doubleClickOnWorkOrderAndOpen();
+    }
+
+    @When("user double clicks and open outbound message")
+    public void userDoubleClicksAndOpenOutboundMessage() {
+        workOrderPage.doubleClickAndOpenOutboundMessage();
+    }
+
+    @Then("user should see agreement contractor as {string}")
+    public void userShouldSeeAgreementContractorAs(String agreementContractor) {
+        Assert.assertEquals(workOrderPage.getAgreementContract(), agreementContractor);
+    }
+
+    @And("user validates customer ID contractor as {string}")
+    public void userValidatesCustomerIDContractorAs(String customerContractorID) {
+        Assert.assertEquals(workOrderPage.getCustomerContractID(), customerContractorID);
     }
 }
 

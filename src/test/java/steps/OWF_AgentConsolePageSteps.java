@@ -7,6 +7,7 @@ import cucumber.api.java.en.When;
 import org.testng.Assert;
 import pageObjects.OWF_AgentConsolePage;
 import utils.CommonUtils;
+import utils.Ticket;
 
 import static utils.CommonUtils.*;
 
@@ -777,6 +778,59 @@ public class OWF_AgentConsolePageSteps {
     public void userValidatesArePresentUnderColumn(String colValues, String colName) {
         Assert.assertTrue(agentConsolePage.verifyUserProfiles(colName, colValues, false));
         agentConsolePage.clickCloseUserInformation();
+    }
+
+    @And("user enters ticket previously created and searches in agent console and highlights")
+    public void userEntersTicketPreviouslyCreatedAndSearchesInAgentConsole() {
+        agentConsolePage.enterTicketID(CommonUtils.opTicket);
+        agentConsolePage.clickOnTableRow1_agentConsole();
+    }
+
+    @When("user selects ticket and clicks on unlink button")
+    public void userSelectsTicketAndClicksOnUnlinkButton() {
+        agentConsolePage.selectTicketAndUnlink();
+    }
+
+    @And("user validates ticket has been unlinked")
+    public void userValidatesTicketHasBeenUnlinked() {
+        agentConsolePage.verifyTicketIsUnlinked();
+    }
+
+    @And("user clicks ok button on linked items popup")
+    public void userClicksOkButtonOnLinkedItemsPopup() {
+        agentConsolePage.clickOkButton();
+    }
+
+    @And("{string} column within agent console should be displayed")
+    public void columnWithinAgentConsoleShouldBeDisplayed(String column) {
+        int columnIndex = agentConsolePage.getColumnIndexByHeaderName(column);
+        Assert.assertNotEquals(columnIndex, -1, 0, column + "within agent console is not displayed");
+    }
+
+    @And("{string} field should be available for all OP tickets")
+    public void fieldShouldBeAvailableForAllOPTickets(String arg0) {
+        Assert.assertTrue(agentConsolePage.verifyColumnHasData(arg0));
+    }
+
+    @And("user validates {string} column is filled with correct information from ticket as {string}")
+    public void userValidatesColumnIsFilledWithCorrectInformationFromTicketAs(String column, String columnValue) {
+        Assert.assertEquals(agentConsolePage.getAgentConsoleTableCellData(column, 1), columnValue);
+
+    }
+
+    @Then("user should see CAB required yes tickets")
+    public void userShouldSeeCABRequiredYesTickets() {
+        Assert.assertEquals(changeTicket, agentConsolePage.getAgentConsoleTableCellData("ID", 1));
+    }
+
+    @Then("user should see CAB required no tickets")
+    public void userShouldSeeCABRequiredNoTickets() {
+       Assert.assertTrue(agentConsolePage.verifyCabRequiredNoTickets());
+    }
+
+    @Then("user validates OP next due date is same as estimated ready")
+    public void userValidatesOPNextDueDateIsSameAsEstimatedReady() {
+        Assert.assertEquals(agentConsolePage.getAgentConsoleTableCellData("OP Next Due Date", 1), CommonUtils.estimatedReadyTime);
     }
 }
 

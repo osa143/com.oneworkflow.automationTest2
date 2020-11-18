@@ -162,13 +162,105 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_HOLD_TO_DATE= "arid_WIN_0_777031004";
     private static final String dd_HOLD_REASON= "Reason";
     private static final String txt_REJECT_REASON="arid_WIN_0_600001019";
-    private static final String txt_HIERARCHIC_ESCLATION_LEVEL="arid_WIN_0_700025204";
+    private static final String txt_HIERARCHIC_ESCLATION_LEVEL="arid_WIN_0_600001809";
     private static final String txt_ACTION= "arid_WIN_0_777031381";
     private static final String txt_CAUSE= "arid_WIN_0_777031380";
     private static final String chkbx_TO_SELECT_TICKET= "//*[@id='T700506101']/tbody/tr[2]/td[1]/input";
+    private static final String txt_SOURCE_STATUS= "arid_WIN_0_7";
+    private static final String txt_SOURCE_NAME = "arid_WIN_0_808080010";
+    private static final String txt_AGE_IN_DAYS= "arid_WIN_0_808080001";
+    private static final String btnSAVE = "WIN_0_700025244";
+    private static final String btn_TIMELINE_FILTER= "//a[@title='Timeline Filter']";
+    private static final String chkbx_INCLUDE_CHILDREN_TIKCETS= "WIN_1_rc0id800040190";
+    private static final String table_LINKED_ITEMS= "T777506000";
+    private static final String btn_PREFERENCES_TIMELINE= "//*[@id='WIN_0_999000510']/div[1]/table/tbody/tr/td[2]/a[1]";
+    private static final String table_ROW1_TIMELINE= "//*[@id='T999000510']/tbody/tr[2]";
+
+//    private static final String txt_CAUSE= "arid_WIN_0_777031380";
+//    private static final String txt_FAULT_POSITION= "arid_WIN_0_600001048";
+    private static final String btn_TICKET_MATCHING_REFRESH = "WIN_0_600002911";
+    private static final String chkbx_TICKET_MATCHING_INCIDENT = "WIN_0_rc0id800040281";
+    private static final String chkbx_TICKET_MATCHING_WORK_ORDER = "WIN_0_rc0id800040283";
+    private static final String chkbx_TICKET_MATCHING_CHANGE = "WIN_0_rc0id800040282";
+    private static final String chkbx_TICKET_MATCHING_CLEARED = "WIN_0_rc0id800040286";
+    private static final String chkbx_TICKET_MATCHING_OPEN = "WIN_0_rc0id800040285";
+    private static final String txt_CLOSED_WITHIN_DAYS = "arid_WIN_0_800040404";
+    private static final String chkbx_TICKET_MATCHING_TITLE = "WIN_0_rc0id800040405";
+    private static final String dd_TICKET_MATCHING_MATCH_BY = "arid_WIN_0_800040284";
 
 
+    public void selectTicketMatchBy(String value){
+        selectDropDownNameAndValue(dd_TICKET_MATCHING_MATCH_BY, value, false);
+    }
 
+    public void clickTicketMatchingTitleCheckbox(){
+        clickElementById(chkbx_TICKET_MATCHING_TITLE);
+    }
+
+    public void enterTicketMatchingClosedWithinDays(String text){
+        enterTextByElement(By.id(txt_CLOSED_WITHIN_DAYS), text);
+    }
+
+    public void clickTicketMatchingOpenCheckbox(){
+        clickElementById(chkbx_TICKET_MATCHING_OPEN);
+    }
+
+    public void clickTicketMatchingClearedCheckbox(){
+        clickElementById(chkbx_TICKET_MATCHING_CLEARED);
+    }
+
+    public void clickTicketMatchingChangeCheckbox(){
+        clickElementById(chkbx_TICKET_MATCHING_CHANGE);
+    }
+
+    public void clickTicketMatchingWorkOrderCheckbox(){
+        clickElementById(chkbx_TICKET_MATCHING_WORK_ORDER);
+    }
+
+    public void clickTicketMatchingIncidentCheckbox(){
+        clickElementById(chkbx_TICKET_MATCHING_INCIDENT);
+    }
+
+    public void clickTicketMatchingRefreshButton(){
+        clickElementById(btn_TICKET_MATCHING_REFRESH);
+    }
+
+
+    public void selectPreferences_timeline(String preferences){
+        findElement(By.xpath(btn_PREFERENCES_TIMELINE)).click();
+        setPreferences(preferences);
+    }
+    public boolean verifyHierarchicEscalationLevelIsReadOnly(){
+        return checkIfControlIsReadonly(txt_HIERARCHIC_ESCLATION_LEVEL);
+    }
+    public void doubleClickOnTimelineTicket(){
+        WebElement element= findElement(By.xpath(table_ROW1_TIMELINE));
+        action.doubleClick(element).perform();
+    }
+
+    public String getPrimaryCIofLinkedTicket(String columnName, int rowNum){
+        return getTableCellData(By.id(table_LINKED_ITEMS), columnName, rowNum);
+    }
+    public void clickIncludeChildrenCheckBox(){
+        clickElement(By.id(chkbx_INCLUDE_CHILDREN_TIKCETS));
+    }
+    public void clickTimelineFilter(){
+        clickElement(By.xpath(btn_TIMELINE_FILTER));
+    }
+    public String getAgeInDays(){
+        return getAttributeValueById(txt_AGE_IN_DAYS);
+    }
+    public void enterAgeInDaysAndClickSave(String text){
+       findElement(By.id(txt_AGE_IN_DAYS)).clear();
+       findElement(By.id(txt_AGE_IN_DAYS)).sendKeys(text);
+       clickSaveButton();
+   }
+    public String getSourceName(){
+        return getAttributeValueById(txt_SOURCE_NAME);
+    }
+    public String getSourceStatus(){
+        return getAttributeValueById(txt_SOURCE_STATUS);
+    }
     public boolean verifyPriorityCheckIsReadOnly(){
         //return checkIfControlIsReadonly(btn_PRIORITY_CHECK);
         return findElement(By.id(btn_PRIORITY_CHECK)).isEnabled();
@@ -242,7 +334,7 @@ public void rightClickOnElement(String cellData){
         WebElement element = driver.switchTo().activeElement();
         element.sendKeys(Keys.UP);
         element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
+        //element.sendKeys(Keys.UP);
         element.sendKeys(Keys.ARROW_RIGHT);
         element.sendKeys(Keys.DOWN);
         element.sendKeys(Keys.ENTER);
@@ -275,7 +367,7 @@ public void rightClickOnElement(String cellData){
         selectDropDownNameAndValue("Level*", value, false);
     }
     public String getHierarchicEscalationLevel(){
-        return getTextByID(txt_HIERARCHIC_ESCLATION_LEVEL);
+        return getAttributeValueById(txt_HIERARCHIC_ESCLATION_LEVEL);
     }
     public void SelectFirstThreeCIs(){
         clickElement(By.xpath("//*[@id='T700009024']/tbody/tr[2]"));
@@ -895,7 +987,7 @@ public void rightClickOnElement(String cellData){
     }
 
 
-    private static final String btnSAVE = "WIN_0_700025244";
+
     public void enterClosureInfo(String closureInfo){
         driver.findElement(By.id(txtCLOSURE_INFO)).clear();
         driver.findElement(By.id(txtCLOSURE_INFO)).sendKeys(closureInfo);
@@ -950,6 +1042,13 @@ public void rightClickOnElement(String cellData){
         return getTextByID(txtEVENT_END_TIME);
 
     }
+
+    public String getEventEndTime_ClosedTicketStatus(){
+
+        return getAttributeValueById(txtEVENT_END_TIME);
+
+    }
+
     public void enterEventEndTimeAsPast(String time){
         enterTextByElement(By.id(txtEVENT_END_TIME), time);
     }

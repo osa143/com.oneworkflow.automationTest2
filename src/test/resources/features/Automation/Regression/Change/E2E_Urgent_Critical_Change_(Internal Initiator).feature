@@ -23,6 +23,7 @@ Feature: Internal Urgent Critical Change E2E
     And user selects request category as "Software Installation" on change record page
     And user enters description as "TEST TICKET PLEASE IGNORE - Automated Test for Urgent Major Critical (Internal Initiator)"
     And user enters reason field as "Regression"
+    And user validates change builder+ is mandatory
     And user selects priority as "Critical"
     And user enters "CI B2" in the change builder field
     Then user validates change builder button is present

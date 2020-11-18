@@ -1,6 +1,6 @@
-@Initiator_Link_Tickets @Reg_Problem  @problem
+@Initiator_Link_Tickets @Reg_Problem  @problem @prob
   #passed  #CI search window
-Feature: Verification of ability to link tickets
+Feature: Initiator link tickets
   Scenario: user should be able to link different types of tickets together
 
     Given user is on the OneWorkflow login page
@@ -33,19 +33,9 @@ Feature: Verification of ability to link tickets
     And user gets trouble ticket value
     When user clicks on create change record
     And user switches to window 4
-    Then change record form should open in a new tab
-    When user clicks on sweden checkbox under affected BU's
-    And user selects template as "All:Mobile:Billing:Nobill - Customer refund (SE)"
-    And user selects request type as "Normal Change"
-    And user enters "Problem initiator" in the change builder field
-    Then user clicks on "Schedule" tab
-    And user enters as "Test Service and customer impact" in service and customer impact
-    And user enters start time as 5 minutes fast from current sweden time
-    And user enters end time as 11 minutes fast from current sweden time
-    And user enters impact duration as "6" minutes
-    And user selects estimated impact as "No Impact"
-    And user clicks on save button
-    And user waits 3 secs
+    When user creates change ticket with following details
+      |RequestType  |Title            |RequestCategory|Description     |Reason       |Priority|ChangeBuilder      |Implementation|TestPlan   |RollBack   |CommPlan   |VerOfFunctionality|Risk   |ServiceCustomerImpact|ImpactDuration|EstimatedImpact       |
+      |Normal Change|IT:Other         |Cable splicing |Correcting error|Test Ticket  |Info    |Change_Automation_1|Test Ticket   |Test Ticket|Test Ticket|Test Ticket|Test Ticket       |No Risk|Test ticket no impact|      3       |Degradation of Service|
     Then user clicks on Risk tab
     And user selects answer as "Impact to other systems/technologies are unclear"
     And user selects answer as "No"

@@ -35,6 +35,7 @@ public class CommonUtils extends BasePage {
     public static String estimatedReadyTime;
     public static String WO_eventStartTime;
     public static String EventEndTime;
+    public static String UnlinkTicket;
 
 
     // 0 - parent window

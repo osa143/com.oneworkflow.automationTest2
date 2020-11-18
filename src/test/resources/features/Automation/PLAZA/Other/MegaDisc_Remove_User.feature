@@ -6,7 +6,7 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      #Then user clicks on plaza portal
+      Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on application under IT Infrastructure dropdown
@@ -20,7 +20,8 @@
       Then user selects choose option as "Remove User"
       And user enters MegaDisc request as "Test1 MegaDisc/Request"
       And user enters megadisc account name as "Test1234"
-      And user enters megadisc select group as "App_Megadisc_Admin"
+      And user waits 15 secs
+#      And user enters megadisc select group as "App_Megadisc_Admin"
       And user selects requested person as "Anders Englund"
       And user enters megadisc description as "Test1 MegaDisc/Description"
       And user enters additional comments as "Test1 Megadisc/AC"

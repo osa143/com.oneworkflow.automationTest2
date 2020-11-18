@@ -1,7 +1,7 @@
-@Linked_Items_&_Change_To_KE @Reg_Problem  @problem
+@Linked_Items_&_Change_To_KE @Reg_Problem  @problem @prob
   #Passed
   #CI search window
-  Feature: linking of trouble and change ticket to KE
+  Feature: linked items and change to KE
     Scenario: user is able to link a change and trouble ticket to a known error
 
       Given user is on the OneWorkflow login page

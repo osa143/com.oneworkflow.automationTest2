@@ -35,6 +35,6 @@ Feature: SAO-4693 - OP-000001763134 - Owner profile defect
     Then user enters description as "SAO-4693 test"
     And user selects priority as "Major"
     And user clicks on owner under sections
-    And user selects "Owner Profile*" as "Core:Mobile:Mobile PS:Mob PS Core WEST"
+    And user selects "Owner Profile*" as "Core:Mobile:Mobile CS:Voice&IMS EAST"
     Then user clicks save button
     Then an error message should appear: "Owner and Owner Profile are required(ARERR 33418)."

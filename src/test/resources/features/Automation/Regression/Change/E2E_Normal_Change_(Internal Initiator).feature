@@ -24,9 +24,11 @@
       And user selects request category as "Software Installation" on change record page
       And user enters description as "TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator)"
       And user enters reason field as "Regression"
+      And user validates change builder+ is mandatory
       And user selects priority as "Critical"
       And user enters "Privacy Data: Just Testing" in the change builder field
       Then user validates change builder button is present
+      And user validates reason text field expand button is present
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
       And user enters start time as 24 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
       And user enters end time as 28 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format

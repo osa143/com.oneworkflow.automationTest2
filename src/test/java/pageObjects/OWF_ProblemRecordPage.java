@@ -123,7 +123,16 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String btn_NEXT_TAB="nextTab";
     private static final String Error_POP_UP_ID= "PopupMsgBox";
     private static final String btn_Open_Attachment= "WIN_0_777000021";
+    private static final String txt_IMPACT_TYPE= "arid_WIN_0_700009080";
+    private static final String link_GO_BACK_TO_LOGIN= "//*[@id='logoutmsg']/tbody/tr[4]/td[2]/a";
 
+
+    public void enterVendorName(String vendorName){
+        enterTextByElement(By.id(txt_VENDOR_NAME), vendorName);
+    }
+    public void clickOnGoBackToLoginPage(){
+        clickElement(By.xpath(link_GO_BACK_TO_LOGIN));
+    }
 
     public void clickOpenAttachment(){
         clickElementById(btn_Open_Attachment);
@@ -270,6 +279,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
        switchToFrameByIndex(2);
         selectAffectedOrganisation(value);
        clickElementById(btnApply);
+       switchToDefault();
 
 
     }
@@ -366,7 +376,14 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
     public String getEstimatedReady(){
-        return getTextByID(txt_ESTIMATED_READY);
+        String estimatedReadyTime= getTextByID(txt_ESTIMATED_READY);
+        System.out.println("ERT is - " +estimatedReadyTime);
+        return estimatedReadyTime;
+    }
+    public String getEstimatedReadyTime(){
+        String estimatedReadyTime= getAttributeValueById(txt_ESTIMATED_READY);
+        System.out.println("attr ERT is - " +estimatedReadyTime);
+        return estimatedReadyTime;
     }
     public String getServiceEffectedText(){
         return getTextByID(txt_SERVICEAFFECTED);
@@ -681,9 +698,16 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     public void selectModerateLimitedDdValue() {
         selectDropDownValue(ddValueMODERATE_LIMITED);
     }
-    public void selectImpactType(String value){
-        selectDropDownNameAndValue(ddIMPACT, value, false);
+    public void selectImpactType(String value) {
+        try {
+            selectDropDownNameAndValue(ddIMPACT, value, false);
+        }
+        catch(Exception e){
+            clickElementById(txt_IMPACT_TYPE);
+            selectMenuItem(value);
+        }
     }
+
 
     public void select_Impact_ClearDdValue() {
         selectDropDownValue(ddValueCLEAR);

@@ -1,4 +1,4 @@
- @problem @Reg_Problem
+@PMO_Tab @problem @Reg_Problem  @prob
 #passed
 Feature: PMO Tab
   @PMO_Tab_problem
@@ -92,32 +92,34 @@ Feature: PMO Tab
     And user clicks on "PM Office" tab
     When user enters "Secret problem stuff" in the problem review field
     And user clicks on save button
+    And user clicks on "PM Office" tab
     And problem review field should be updated with the text "Secret problem stuff"
     And user logsOut
-    And user switches to window 1
+    And user switches to window 2
     And user goes back to login page
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user selects search menu as "Open Search Form:Known Error"
-    And user switches to window 2
+    And user switches to window 3
     And user enters known error ticket
     And user clicks Search on ticket search
     And user changes status to "Withdrawn" on problem record page
     And user selects withdrawn reason as false alarm and clicks save
     And user clicks on yes button on warning window
     Then user validates ticket status as "Withdrawn"
-    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Withdrawn. "
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Draft to Withdrawn. "
     And user logsOut
-    And user switches to window 1
+    And user switches to window 2
     And user goes back to login page
     When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    And user clicks on search and selects open search forms and problem record
-    And user switches to window 2
-    And user enters Problem Ticket
+    And user selects search menu as "Open Search Form:Known Error"
+    And user switches to window 3
+    And user enters known error ticket
     And user clicks Search on ticket search
     When user verifies PM office tab visibility
     Then PM office tab should be visible
+    And user clicks on "PM Office" tab
     When user enters "Secret problem stuff" in the problem review field
     And user clicks on save button
     And problem review field should be updated with the text "Secret problem stuffSecret problem stuff"

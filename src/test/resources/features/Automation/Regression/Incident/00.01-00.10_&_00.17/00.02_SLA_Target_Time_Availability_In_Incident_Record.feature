@@ -1,4 +1,4 @@
-@00.02 @00 #@Incident
+@SLA_target_Time @00 #@Incident
 #Passed
 Feature: SLA Target time availability in Incident Record
 
@@ -11,13 +11,10 @@ Feature: SLA Target time availability in Incident Record
     And multiple menu options "Console:Create:Search:Administration" should be available
     When user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 1
-    #SIT ENV
-#    And user enters ticket id as "OP-000000538992"
-    #UAT
     When user clicks on advanced search button
-    And user waits 5 secs
     And user enters "'Cust. Remaining SLA' != $NULL$ AND 'Status' = \"Closed\"" in the advanced search bar
     And user clicks Search on ticket search
+    And user waits 25 secs
     Then ticket with SLA should be opened
     And user validates Cust. Remaining SLA or SLA Target Time availability
     Then customer SLA field must be greyed out and not possible for user to alter

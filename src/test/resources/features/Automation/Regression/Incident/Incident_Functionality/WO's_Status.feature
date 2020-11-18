@@ -1,5 +1,6 @@
 @06.17 @WO's_Status @Incident @Trouble1
   #passed
+#TS:OS3:OP:request:PreCheckWOPreposal
   Feature: WO's status
     Scenario: WO's status
 

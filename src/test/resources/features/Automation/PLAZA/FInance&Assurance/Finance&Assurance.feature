@@ -1,11 +1,11 @@
-@Finance_Assurance @Plaza @smoke
+@Finance_Assurance @Plaza
   Feature: Plaza Alpha ETL Prod form test
     Scenario Outline: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-#      Then user clicks on plaza portal
+      Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on application under IT Infrastructure dropdown
@@ -56,7 +56,7 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
-      And user waits 5 secs
+      And user waits 10 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed
 
@@ -125,12 +125,12 @@
 #      |Test59 F&A/Request|skanova open source integration platform|Test59 F&A/Description|Test59 F&A/AC     |
 #      |Test60 F&A/Request|staff                                   |Test60 F&A/Description|Test60 F&A/AC     |
 #      |Test61 F&A/Request|tbb unix                                |Test61 F&A/Description|Test61 F&A/AC     |
-#      |Test62 F&A/Request|tbis                                    |Test62 F&A/Description|Test62 F&A/AC     |
+      |Test62 F&A/Request|tbis                                    |Test62 F&A/Description|Test62 F&A/AC     |
 #      |Test63 F&A/Request|telsims                                 |Test63 F&A/Description|Test63 F&A/AC     |
 #      |Test64 F&A/Request|tholbox beställ                         |Test64 F&A/Description|Test64 F&A/AC     |
-      |Test65 F&A/Request|tsic bim prod                           |Test65 F&A/Description|Test65 F&A/AC     |
+#      |Test65 F&A/Request|tsic bim prod                           |Test65 F&A/Description|Test65 F&A/AC     |
 #      |Test66 F&A/Request|vqms                                    |Test66 F&A/Description|Test66 F&A/AC     |
 #      |Test67 F&A/Request|wanoverview prod                        |Test67 F&A/Description|Test67 F&A/AC     |
 #      |Test68 F&A/Request|wikitsic prod                           |Test68 F&A/Description|Test68 F&A/AC     |
 #      |Test69 F&A/Request|x-pris web txn                          |Test69 F&A/Description|Test69 F&A/AC     |
-
+#

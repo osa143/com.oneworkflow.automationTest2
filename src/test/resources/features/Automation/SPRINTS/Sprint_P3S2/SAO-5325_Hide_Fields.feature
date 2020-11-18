@@ -1,9 +1,7 @@
-
+@prob
    Feature: SAO-5325 Hide fields
     @5325
     Scenario: verify fields are invisible
-
-
 
      Given user is on the OneWorkflow login page
      When user logs in with valid username "frvi96_auto" and password as "Test@1234"
@@ -28,7 +26,7 @@
      And user should see "Known Error Code*" dropdown as mandatory
      And user should see "Accountable Org.*" dropdown as mandatory
      And user should see "Affected Orgs.*" dropdown as mandatory
-     And dropdown values "Risk accepted:Awaiting solution implementation:Active investigation:Pending information/confirmation:(clear)" should be available in "Known Error Code" dropdown
+     And dropdown values "Active investigation:Awaiting solution implementation:Pending solution verification:Risk accepted:Pending more data:(clear)" should be available in "Known Error Code" dropdown
      And user selects "Known Error Code" as "Risk accepted"
      And user selects affected organisation as "CA_Infra"
      And user selects accountable organisation as "CA_IT"
@@ -39,7 +37,7 @@
      When user changes status to "Closed" on known error page
      And user should see known error code as read only
      And user should see accountable organisation as read only
-     And user selects closure code as "Full Impact"
+     And user selects closure code as "Solved"
      And user clicks on save button
      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Published to Closed." on row 1
      Then "Workaround Available,Customer Effect,Cust. Effect Description,Work Around Initiation date,Work Around Accountable : TeliaID,Work Around Accountable : Name,Solution Proposal Category,Solution Proposal Reference ID #,Solution Proposal Status" shouldn't be visible

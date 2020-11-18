@@ -1,5 +1,6 @@
 @Add_CI_&_Attachment  @Reg_Problem
-  Feature: User is able to add a CI and attachment to a problem ticket
+  #OS3:PM:Configuration:AddCI
+Feature: User is able to add a CI and attachment to a problem ticket
     Scenario: user can create a problem record and add a CI and attachment to it
 
       Given user is on the OneWorkflow login page
@@ -37,9 +38,9 @@
       Then attachment form should open in new tab
       When user clicks on the attachment listed
       And clicks on display button
-#      Then a new window should open with the attachment shown
-#      When user closes the attachment window
-#      And closes the attachment tab
+      Then a new window should open with the attachment shown
+      When user closes the attachment window
+      And closes the attachment tab
       And user switches to window 1
       When user clicks on the added attachment
       And user clicks on the delete button under internal

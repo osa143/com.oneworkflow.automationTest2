@@ -10,7 +10,7 @@ Scenario: Create work order when CO system sends CTI and No CI
   Given user is on the Plaza login page
   When user enters username "testauto" and password as "test123" and clicks on login
   Then user should see the plaza home page
-  #Then user clicks on plaza portal
+  Then user clicks on plaza portal
   When user clicks on Products & Services
   And user clicks on IT Infrastructure dropdown
   And user clicks on data center under IT Infrastructure dropdown

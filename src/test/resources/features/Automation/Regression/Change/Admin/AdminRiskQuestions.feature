@@ -10,7 +10,7 @@
       When user clicks on the "New" button
       And user switches to frame
       Then user validates CM Risk Manangement Questions form is displayed
-      When user enters "" in the customer+ field and searches
+      When user enters "Test" in the customer+ field and searches
       Then user validates
 
 

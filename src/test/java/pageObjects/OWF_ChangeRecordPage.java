@@ -114,10 +114,14 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_REGION_NAME= "arid_WIN_3_700009638";
     private static final String table_SELECT_LOCATION_= "T700024013";
     private static final String btn_CHANGE_BUILDER= "//img[@alt='Editor for Change Builder+*']";
+    private static final String table_NORMALCHANGE_APPROVAL = "T705001250";
     private static final String btn_REASON_EDITOR= "//img[@alt='Editor for Reason']";
     private static final String rbtn_CAB_REQUIRED_YES = "WIN_0_rc1id800000002";
     private static final String YES_CONFIRMATION= "WIN_0_700027904";
 
+    public void clickCABApproval(){
+        clickElement(By.xpath("//*[@id=\"T777031442\"]/tbody/tr[2]/td[3]/nobr"));
+    }
 
 public void clickCabRequiredYes(){
     clickElementById(rbtn_CAB_REQUIRED_YES);
@@ -133,7 +137,6 @@ public void clickCabRequiredYes(){
         switchToFrameByIndex(2);
         return verifyColumnValuesText(By.id(table_SELECT_LOCATION_),colName, colValue, true);
     }
-
 
     public void enterRegionNamePlusAndSearch(String text){
         enterTextByElement(By.id(txt_REGION_NAME), text);
@@ -185,14 +188,29 @@ public void clickCabRequiredYes(){
         return verifyElementIsDisplayed(By.xpath(div_INTERESTED_PARTY));
     }
     public boolean verifyRelatedCIsArePresent_LocationDetails(){
+        wait(7000);
         int CIsNumber=getTableRows(By.id(table_RELATED_CIS)).size();
         if(CIsNumber>0)
             return true;
         else return false;
     }
     public void clickRefresh_RelatedCIs_LocationDetails(){
-        clickElement(By.xpath(btn_REFRESH_RELATED_CIS));
+        try {
+            wait(1000);
+            clickElement(By.cssSelector("#WIN_0_700009650 > div.TableHdr > table > tbody > tr > td.TableHdrR > a.Ref.btn.btn3d.TableBtn"));
+        } catch (Exception e) {
+            driver.findElement(By.id("WIN_0_700009650")).findElement(By.xpath("//a[contains(text(),'Refresh')][2]")).click();
+        }
+
+        //clickElement(By.xpath("//a[contains(text(),'Refresh')][2]"));
+
     }
+
+    public void clickTableElementRequestPendingApproval_2(String cellData){
+        WebElement element=getTableCellElement(By.id(table_NORMALCHANGE_APPROVAL),"Status", cellData);
+        element.click();
+    }
+
     public void clickCloseLocationDetails(){
         clickElementById(btn_CLOSE_LOCATION_DETAILS);
     }
@@ -204,6 +222,7 @@ public void clickCabRequiredYes(){
     public String getExternalTicketID(){
         return getAttributeValueById(txt_EXTERNAL_TICKET_ID);
     }
+
 
     public boolean verifyChangeBuilderButtonIsDisplayed(){
         return verifyElementIsDisplayed(By.xpath(btn_CHANGE_BUILDER));

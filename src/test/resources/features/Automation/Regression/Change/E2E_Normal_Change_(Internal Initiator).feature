@@ -69,7 +69,7 @@
 #      And user clicks on "Relationships" tab
 #      Then user clicks on refresh button under related CIs
 #      And user validates CIs are shown under related CI table
-      And user clicks on the close button on location details window
+#      And user clicks on the close button on location details window
       When user clicks on Show CR Matching button
       Then user should see Show CR Matching table appear
       When user clicks on "Interested Parties" tab
@@ -135,7 +135,7 @@
       And user clicks on details under sections
       Then user enters "New Communication plan" in the communication plan field
       And user clicks on save button
-      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) to - Additional Information. "
+      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (Internal Initiator) to - Additional Information."
       Then user clicks on "Schedule" tab
       And user enters start time as 168 hours fast from current sweden time
       And user enters end time as 172 hours fast from current sweden time
@@ -220,11 +220,13 @@
       And user waits 45 secs
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab
-      Then user should see "Approved Change-Builder" email update
+      Then user should see "Approved-ChangeBuilder" email update
       And user waits 45 secs
       And user clicks on ticket refresh button
-      And change should also be reflected in the timeline as "Ticket approved by ChangeManager1_Automation in date: "
-      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approved to Schedule Requested."
+#      And change should also be reflected in the timeline as "Ticket approved by ChangeManager1_Automation in date: "
+#      And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approval Requested to Approved. "
+#      And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approved to Schedule Requested. "
+#      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has automatically changed from Scheduled Request to Scheduled. "
       And user validates ticket status as "Scheduled"
       Then user clicks on assignment under sections
       And user should see assigned profile as "Change Implementation Control"
@@ -233,18 +235,19 @@
       And user validates owner profile as "Change Manager"
       And user validates owner as "ChangeManager1_Automation"
       Then user clicks on save button
+      And user waits 45 secs
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab
-      Then user should see "Assignment-user" email update
+      Then user should see "Assignment-User" email update
       And user logsOut
       And user goes back to login page
-      When user logs in with valid username "ChangeImplementationControl1" and password as "Telia@1234"
+      When user logs in with valid username "ChangeImplementationControl1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on more filters button
       And user clicks on "Core" tab
       And user selects status as "Scheduled" on user more filters window
       And user clicks on apply button on user more filters window
-      And user should see "CR" tickets with "Status" of "Scheduled"
+      #And user should see "CR" tickets with "Status" of "Scheduled"
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
       And user switches to window 2
       Then user enters ticket previously created and searches

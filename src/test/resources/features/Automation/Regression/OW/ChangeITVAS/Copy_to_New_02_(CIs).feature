@@ -1,4 +1,4 @@
-@Copy_to_New_02_(CIs)
+@Copy_to_New_02_(CI)
 
 Feature: Copy to New 02 (CIs) [aR]
 

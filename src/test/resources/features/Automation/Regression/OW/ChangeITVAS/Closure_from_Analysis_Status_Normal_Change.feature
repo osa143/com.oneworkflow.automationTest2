@@ -14,7 +14,7 @@ Feature: Closure from Analysis Status - Normal Change [SaR]
     Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)" on change record page
     When user selects request type as "Standard Change"
     And user validates "Template*" is mandatory
-    And user selects template as "All:IT:Other:TEST TEMPLATE [UAT] - Standard Change"
+    And user selects template as "All:IT:Other:TEST TEMPLATE [UAT] - Normal Change"
     When user enters "_" in the change builder field
     And user enters as "Test" in service and customer impact
     And user enters request start time as 5 minutes past from "Europe/London" timezone "MM/dd/yyyy HH:mm:ss" format

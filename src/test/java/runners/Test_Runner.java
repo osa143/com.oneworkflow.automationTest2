@@ -8,7 +8,7 @@ import java.util.List;
         plugin = { "pretty", "html:test-output/html",}, // for html report
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@CC83_Due_date_information_is_missing_in_Agent_Console"}
+        tags = {"@06.09"}
 
 )
 public class Test_Runner extends BaseTest {

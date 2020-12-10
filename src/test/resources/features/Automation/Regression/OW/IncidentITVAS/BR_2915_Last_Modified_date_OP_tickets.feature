@@ -1,6 +1,5 @@
 @BR_2915_Last_Modified
 
-
 Feature: BR-2915 - Last Modified date should be available in Console View for OP tickets[s]
 
   Scenario: BR-2915 - Last Modified date should be available in Console View for OP tickets[s]

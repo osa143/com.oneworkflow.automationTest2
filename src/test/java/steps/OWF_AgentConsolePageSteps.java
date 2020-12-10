@@ -832,6 +832,105 @@ public class OWF_AgentConsolePageSteps {
     public void userValidatesOPNextDueDateIsSameAsEstimatedReady() {
         Assert.assertEquals(agentConsolePage.getAgentConsoleTableCellData("OP Next Due Date", 1), CommonUtils.estimatedReadyTime);
     }
+
+    @Then("user validates OP target date is same as OLA target date")
+    public void userValidatesOPTargetDateIsSameAsOLATargetDate() {
+        Assert.assertEquals(agentConsolePage.getAgentConsoleTableCellData("OP Target Date", 1), CommonUtils.OLA_TargetTime);
+    }
+
+    @When("user sets the preferences under the agent console as {string}")
+    public void userSetsThePreferencesUnderTheAgentConsoleAs(String preferences) {
+        agentConsolePage.clickPreferences();
+        agentConsolePage.setPreferences(preferences);
+    }
+
+
+    @And("user enters quick search CI as {string}")
+    public void userEntersQuickSearchCIAs(String CI_name) {
+        agentConsolePage.enter_CI_QuickSearch(CI_name);
+    }
+
+    @Then("{string} tickets should be displayed for quick search")
+    public void ticketsShouldBeDisplayedForQuickSearch(String colValue) {
+        Assert.assertTrue(agentConsolePage.verifyTicketsFilteredToSearch("Status", colValue, false));
+    }
+
+
+    @And("user validates ticket previously created is present under quick search results")
+    public void userValidatesTicketPreviouslyCreatedIsPresentUnderQuickSearchResults() {
+        agentConsolePage.clickOnCreateDate_ToSortTheTickets();
+        agentConsolePage.clickOnCreateDate_ToSortTheTickets();
+        agentConsolePage.wait(1000);
+        Assert.assertEquals(agentConsolePage.getQuickSearchResults_TableData("ID", 1), CommonUtils.opTicket);
+    }
+
+    @And("user double clicks on ticket under quick search results to open")
+    public void userDoubleClicksOnTicketUnderQuickSearchResultsToOpen() {
+        agentConsolePage.doubleClickOnTicket_QuickSearchResults();
+    }
+
+    @And("user should see {string} under console menu")
+    public void userShouldSeeUnderConsoleMenu(String menuItems) {
+      Assert.assertTrue(agentConsolePage.verifyMenuItems(menuItems));
+        agentConsolePage.clickEscButton();
+    }
+
+    @And("user clicks on {string} menu")
+    public void userClicksOnMenu(String menu) {
+        agentConsolePage.selectMainMenu(menu);
+    }
+
+    @And("user should't see {string} under console menu")
+    public void userShouldTSeeUnderConsoleMenu(String menuItems) {
+
+        Assert.assertFalse(agentConsolePage.verifyMenuItems2(menuItems));
+        agentConsolePage.clickEscButton();
+    }
+
+    @Then("template console is opened")
+    public void templateConsoleIsOpened() {
+        Assert.assertEquals(agentConsolePage.getPageTitle(), "OS3 Change Template Console (New)");
+    }
+
+    @When("user selects {string} dropdown as {string}")
+    public void userSelectsDropdownAs(String dropdownName, String dropdownValue) {
+        agentConsolePage.selectMenuAndItem(dropdownName, dropdownValue);
+    }
+
+    @And("user clicks on show templates")
+    public void userClicksOnShowTemplates() {
+        agentConsolePage.clickShowTemplate();
+    }
+
+    @And("user enters add person first name as {string}")
+    public void userEntersAddPersonFirstNameAs(String firstName) {
+        agentConsolePage.enterFirstName(firstName);
+    }
+
+    @And("user enters add person last name as {string}")
+    public void userEntersAddPersonLastNameAs(String lastName) {
+        agentConsolePage.enterLastName(lastName);
+    }
+
+    @And("user enters add person email address as {string}")
+    public void userEntersAddPersonEmailAddressAs(String email) {
+        agentConsolePage.enterEmailAddress(email);
+    }
+
+    @And("user clicks add button for add person")
+    public void userClicksAddButtonForAddPerson() {
+        agentConsolePage.clickAdd_addPerson();
+    }
+
+    @Then("contact {string} should be added under {string}")
+    public void contactShouldBeAddedUnder(String expectedEmail, String columnName) {
+        Assert.assertEquals(agentConsolePage.getContacts(columnName, 1), expectedEmail);;
+    }
+
+    @And("user clicks cancel button on new notification window")
+    public void userClicksCancelButtonOnNewNotificationWindow() {
+        agentConsolePage.clickAddCancel();
+    }
 }
 
 

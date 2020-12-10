@@ -1,6 +1,4 @@
 @BR_2930_verify_Region_name
-#BR-2930 - verify Region name[d]
-
 Feature: BR-2930 - verify Region name
 
   Scenario: BR-2930 - verify Region name
@@ -12,17 +10,19 @@ Feature: BR-2930 - verify Region name
     And user switches to window 1
     Then trouble record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
-    And user enters "Test" in Title field in Trouble event
+    And user enters "Verify Region name test" in Title field in Trouble event
     And user selects request type as "Customer" on trouble event page
-    And user enters description as "Test"
+    And user enters description as "Verify Region name test"
     And user clicks on save button
     Then ticket should be created and status should be assigned
     When user adds CI "SE_eNodeB_Snuggtaskeberg" to the ticket
+    And user clicks on Diagnosis tab
     And user right clicks on CI "SE_eNodeB_Snuggtaskeberg" and selects "Show:CI Details"
     And user switches to frame
     Then user validates region name as "VÄSTERNORRLAND"
-    When user switches to window 1
-    And user clicks on add column from preferences and selects region name
-    Then user validates region name column is present
-    And user validates region name as "VÄSTERNORRLAND" for previously created ticket
+    When user switches to window 0
+    When user sets the preferences under the agent console as "Add Column:Region Name"
+    Then "Region Name" column within agent console should be displayed
+    And user validates "Region Name" column is filled with correct information from ticket as "VÄSTERNORRLAND"
+
 

@@ -190,7 +190,8 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
 
 
     public void selectTicketMatchBy(String value){
-        selectDropDownNameAndValue(dd_TICKET_MATCHING_MATCH_BY, value, false);
+        clickDropDownById(dd_TICKET_MATCHING_MATCH_BY);
+        selectDropDownValue(value);
     }
 
     public void clickTicketMatchingTitleCheckbox(){
@@ -198,7 +199,9 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     }
 
     public void enterTicketMatchingClosedWithinDays(String text){
-        enterTextByElement(By.id(txt_CLOSED_WITHIN_DAYS), text);
+        WebElement TextBox_Closed_Within_Days= findElement(By.id(txt_CLOSED_WITHIN_DAYS));
+        TextBox_Closed_Within_Days.clear();
+        TextBox_Closed_Within_Days.sendKeys(text);
     }
 
     public void clickTicketMatchingOpenCheckbox(){

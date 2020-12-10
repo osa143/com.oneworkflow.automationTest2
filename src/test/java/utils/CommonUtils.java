@@ -36,6 +36,8 @@ public class CommonUtils extends BasePage {
     public static String WO_eventStartTime;
     public static String EventEndTime;
     public static String UnlinkTicket;
+    public static String TokeID;
+    public static String OLA_TargetTime;
 
 
     // 0 - parent window

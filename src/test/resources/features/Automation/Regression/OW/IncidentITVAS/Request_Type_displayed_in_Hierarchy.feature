@@ -1,5 +1,4 @@
-@Automation_Request_Type_displayed_in_Hierarchy
-#Automation - Request Type displayed in Hierarchy[s]
+@Request_Type_displayed_in_Hierarchy
 
 Feature: Request Type displayed in Hierarchy[s]
 

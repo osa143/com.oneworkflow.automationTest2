@@ -111,6 +111,24 @@ public void clickElementById(String Id){
         }
         return true;
     }
+    public boolean verifyMenuItems2(String items) {
+        String[] menuItems = items.split(":");
+        for (int i = 0; i < menuItems.length; i++) {
+            try {
+                String mainMenuXpath = "//img[@alt='Menu for " + menuItems[i] + "']/..";
+                WebElement element = driver.findElement(By.xpath(mainMenuXpath));
+                boolean result = element.isEnabled();
+                if (result == false)
+                    return false;
+                else return true;
+
+            } catch (Exception e) {
+              return false;
+            }
+
+        }
+        return false;
+    }
 
     public boolean verifyDateTimeFormat(String format, String dateToValidate)
     {
@@ -857,8 +875,13 @@ public void clickElementById(String Id){
 
     public void selectTab(String tab) {
         wait(2000);
-        driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tab)).findFirst().orElse(null).click();
-
+        try {
+            driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tab)).findFirst().orElse(null).click();
+        }
+        catch (Exception e){
+            wait(3000);
+            driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tab)).findFirst().orElse(null).click();
+        }
     }
 
     public List<String> getTabValues()

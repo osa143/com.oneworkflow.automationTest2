@@ -119,6 +119,12 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String rbtn_CAB_REQUIRED_YES = "WIN_0_rc1id800000002";
     private static final String YES_CONFIRMATION= "WIN_0_700027904";
 
+public void enterActualStartAsCurrentDateTime(){
+    findElement(By.id(txt_ACTUAL_START)).sendKeys(Keys.ENTER);
+}
+    public void enterActualEndAsCurrentDateTime(){
+        findElement(By.id(txt_ACTUAL_END)).sendKeys(Keys.ENTER);
+    }
     public void clickCABApproval(){
         clickElement(By.xpath("//*[@id=\"T777031442\"]/tbody/tr[2]/td[3]/nobr"));
     }
@@ -137,6 +143,7 @@ public void clickCabRequiredYes(){
         switchToFrameByIndex(2);
         return verifyColumnValuesText(By.id(table_SELECT_LOCATION_),colName, colValue, true);
     }
+
 
     public void enterRegionNamePlusAndSearch(String text){
         enterTextByElement(By.id(txt_REGION_NAME), text);

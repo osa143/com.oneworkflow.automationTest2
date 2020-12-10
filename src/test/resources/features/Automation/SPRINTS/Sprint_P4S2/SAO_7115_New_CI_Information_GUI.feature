@@ -20,16 +20,17 @@ Feature: SAO-7115 - New CI Information GUI
     |SE_AAA_AAA98SE|
     |SE_AAA_AAA99SE|
     |test          |
+    And user clicks on Diagnosis tab
     Then user right clicks on CI "SE_AAA_AAA98SE" and selects "Show:CI Details"
     When user clicks manage my template cog button
     Then user validates CI details template window is opened
     When user clicks create my template button
-    Then user should validates use my template button is read only
+    Then user should see use my template button is read only
     When user clicks create new section button
     And user enters section label as "Test"
     And user clicks create section save button
     Then user validates "Test" section is displayed
-    When user selects "Test" section
+    When user clicks on test section
     And user clicks edit section button
     And user enters section label as "New Test Name"
     And user clicks edit section save button

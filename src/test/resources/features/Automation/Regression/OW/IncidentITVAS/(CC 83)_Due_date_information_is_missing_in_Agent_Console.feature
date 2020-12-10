@@ -14,9 +14,9 @@ Feature: Automation - OP-000000438117( CC 83) - Due date information is missing 
     And user switches to window 1
     Then trouble record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
-    And user enters "Test" in Title field in Trouble event
+    And user enters "OP next due date test" in Title field in Trouble event
     And user selects request type as "Customer" on trouble event page
-    And user enters description as "Test"
+    And user enters description as "OP next due date and Estimated ready time Test"
     And user clicks on save button
     Then user gets trouble ticket value
     And user gets estimated ready time

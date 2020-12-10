@@ -30,7 +30,7 @@ public class Hooks {
 
 
 //            OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
-//            CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 0);
+//            CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
 //            agentConsolePage.clickNavUserMenu();
 //            agentConsolePage.clickMenuItemLogout_Hooks();
 //            DriverFactory.getInstance().quit();

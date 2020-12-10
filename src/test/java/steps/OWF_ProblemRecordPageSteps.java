@@ -156,7 +156,7 @@ public class OWF_ProblemRecordPageSteps {
     @And("user goes back to login page")
     public void userGoesBackToLoginPage() {
         problemRecordPage.clickOnGoBackToLoginPage();
-        problemRecordPage.wait(5000);
+        problemRecordPage.wait(3000);
     }
 
     @And("user switches to window {int}")
@@ -408,8 +408,8 @@ public class OWF_ProblemRecordPageSteps {
 
 
     @And("user selects priority as {string}")
-    public void userSelectsPriorityAs(String Major) {
-        problemRecordPage.selectPriority(Major);
+    public void userSelectsPriorityAs(String priority) {
+        problemRecordPage.selectPriority(priority);
     }
 
     @Then("user clicks on attachments under sections")
@@ -1547,6 +1547,11 @@ public class OWF_ProblemRecordPageSteps {
     @And("user gets estimated ready time")
     public void userGetsEstimatedReadyTime() {
         CommonUtils.estimatedReadyTime = problemRecordPage.getEstimatedReadyTime();
+    }
+
+    @When("user selects actions dropdown as {string}")
+    public void userSelectsActionsDropdownAs(String dropdownvalue) {
+        problemRecordPage.selectActions(dropdownvalue);
     }
 }
 

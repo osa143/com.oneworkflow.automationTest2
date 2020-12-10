@@ -118,7 +118,12 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String rbtn_CAB_REQUIRED_YES = "WIN_0_rc1id800000002";
     private static final String YES_CONFIRMATION= "WIN_0_700027904";
 
-
+public void enterActualStartAsCurrentDateTime(){
+    findElement(By.id(txt_ACTUAL_START)).sendKeys(Keys.ENTER);
+}
+    public void enterActualEndAsCurrentDateTime(){
+        findElement(By.id(txt_ACTUAL_END)).sendKeys(Keys.ENTER);
+    }
 public void clickCabRequiredYes(){
     clickElementById(rbtn_CAB_REQUIRED_YES);
     CommonUtils.switchToChildWindow(driver, 2);

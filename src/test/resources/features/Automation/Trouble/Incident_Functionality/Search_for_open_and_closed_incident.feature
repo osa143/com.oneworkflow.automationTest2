@@ -45,6 +45,7 @@
       And user enters "EE_" within the location ID+
       And user clicks Search on ticket search
       And user should see "Closed" "EE" tickets
+      And user clicks on main page refresh
       When user changes status to "Assigned" on trouble event page
       And user clicks on location under sections
       And user enters "SE_" within the location ID+

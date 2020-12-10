@@ -17,6 +17,6 @@ Feature: Change
     ##Priority value should be cleared##
     Then priority should be ""
     And dropdown values "Critical:Major" should be available in "Priority" dropdown
-    When user selects template as "All:IT:Other:TEST TEMPLATE [UAT] - Standard Change"
+    When user selects template as "All:IT:Carrier:Telia Carrier UAT Changes"
     Then user validates request type as readonly
     And user validates Priority is readonly

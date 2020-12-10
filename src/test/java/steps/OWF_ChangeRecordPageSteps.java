@@ -1072,6 +1072,16 @@ public class OWF_ChangeRecordPageSteps {
     public void userClicksOnYesForCABRequired() {
         changeRecordPage.clickCabRequiredYes();
     }
+
+    @And("user enters actual start date as current time")
+    public void userEntersActualStartDateAsCurrentTime() {
+        changeRecordPage.enterActualStartAsCurrentDateTime();
+    }
+
+    @And("user enters actual end as current time")
+    public void userEntersActualEndAsCurrentTime() {
+        changeRecordPage.enterActualEndAsCurrentDateTime();
+    }
 }
 
 

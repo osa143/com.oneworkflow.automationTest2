@@ -440,6 +440,9 @@ public class OWF_CiSearchPageSteps {
 
     @And("user validates CI {string} is listed")
     public void userValidatesCIIsListed(String arg0) {
+        ciSearchPage.selectTab("Diagnosis");
+        ciSearchPage.wait(1000);
+        ciSearchPage.clickRefresh_Diagnosis();
         Assert.assertEquals(ciSearchPage.getCI_Name("CI Name", 1), arg0);
     }
 
@@ -653,5 +656,21 @@ public class OWF_CiSearchPageSteps {
     @When("user clicks on close CI details template window and CI details window")
     public void userClicksOnCloseCIDetailsTemplateWindowAndCIDetailsWindow() {
         ciSearchPage.clickCloseCIDetailsTemplate();
+    }
+
+    @When("user selects search for as {string} on CI search window")
+    public void userSelectsSearchForAsOnCISearchWindow(String value) {
+        ciSearchPage.clickSearchForDropdown();
+        ciSearchPage.selectSearchForValue(value);
+    }
+
+    @Then("user should see use my template button is read only")
+    public void userShouldSeeUseMyTemplateButtonIsReadOnly() {
+     Assert.assertTrue(ciSearchPage.verifyUseMyButtonTemplateIsReadOnly());
+    }
+
+    @When("user clicks on test section")
+    public void userClicksOnTestSection() {
+
     }
 }

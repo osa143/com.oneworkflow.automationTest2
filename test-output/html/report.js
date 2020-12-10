@@ -1,21 +1,21 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/Regression/OW/IncidentITVAS/(CC 83)_Due_date_information_is_missing_in_Agent_Console.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/SPRINTS/Sprint_P4S3/SAO_7281_Easy Access to Contacts in OW E-mails.feature");
 formatter.feature({
-  "name": "Automation - OP-000000438117( CC 83) - Due date information is missing in Agent Console for Event tickets[s]",
+  "name": "Ow Emails",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@CC83_Due_date_information_is_missing_in_Agent_Console"
+      "name": "@7181"
     }
   ]
 });
 formatter.scenario({
-  "name": "Automation - OP-000000438117( CC 83) - Due date information is missing in Agent Console for Event tickets[s]",
+  "name": "SAO-7281- Easy access to contacts",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@CC83_Due_date_information_is_missing_in_Agent_Console"
+      "name": "@7181"
     }
   ]
 });
@@ -50,294 +50,105 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on add column from preferences and selects OP next due date",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnAddColumnFromPreferencesAndSelectsOPNextDueDate()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "OP next due date column within agent console should be displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.opNextDueDateColumnWithinAgentConsoleShouldBeDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on create trouble event",
+  "name": "user selects actions dropdown as \"Email \u003e Outgoing\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnCreateTroubleEvent()"
+  "location": "OWF_ProblemRecordPageSteps.userSelectsActionsDropdownAs(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user switches to window 1",
+  "name": "user switches to frame",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
+  "location": "OWF_ProblemRecordPageSteps.userSwitchesToFrame()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "trouble record form should appear in new tab",
+  "name": "user clicks \"Add Person - free text\" tab",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userClicksTab(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters add person first name as \"Test\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userEntersAddPersonFirstNameAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters add person last name as \"User\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userEntersAddPersonLastNameAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters add person email address as \"testuser@test.com\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userEntersAddPersonEmailAddressAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks add button for add person",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userClicksAddButtonForAddPerson()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "contact \"testuser@test.com\" should be added under \"Send Notification To\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_TroubleEventPageSteps.troubleRecordFormShouldAppearInNewTab()"
+  "location": "OWF_AgentConsolePageSteps.contactShouldBeAddedUnder(String,String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on sweden checkbox under affected BU\u0027s",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksOnSwedenCheckboxUnderAffectedBUS()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters \"Test\" in Title field in Trouble event",
+  "name": "dropdown values \"Test User [testuser@test.com]\" should be available in \"Select a Previously Used Contact (use Autofill or the Menu):\" dropdown",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userEntersInTitleFieldInTroubleEvent(String)"
+  "location": "OWF_AgentConsolePageSteps.dropdownValuesShouldBeAvailableInDropdown(String,String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertTrue(Assert.java:44)\r\n\tat org.testng.Assert.assertTrue(Assert.java:54)\r\n\tat steps.OWF_AgentConsolePageSteps.dropdownValuesShouldBeAvailableInDropdown(OWF_AgentConsolePageSteps.java:673)\r\n\tat ✽.dropdown values \"Test User [testuser@test.com]\" should be available in \"Select a Previously Used Contact (use Autofill or the Menu):\" dropdown(features/Automation/SPRINTS/Sprint_P4S3/SAO_7281_Easy Access to Contacts in OW E-mails.feature:17)\r\n",
+  "status": "failed"
 });
 formatter.step({
-  "name": "user selects request type as \"Customer\" on trouble event page",
+  "name": "user clicks cancel button on new notification window",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userSelectsRequestTypeAsStringOnTroubleEventPage(String)"
+  "location": "OWF_AgentConsolePageSteps.userClicksCancelButtonOnNewNotificationWindow()"
 });
 formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters description as \"Test\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersDescriptionAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user gets trouble ticket value",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userGetsTroubleTicketValue()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user gets estimated ready time",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userGetsEstimatedReadyTime()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user switches to window 0",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters ticket previously created and searches in agent console and highlights",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userEntersTicketPreviouslyCreatedAndSearchesInAgentConsole()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates OP next due date is same as estimated ready",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userValidatesOPNextDueDateIsSameAsEstimatedReady()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user switches to window 1",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on Ack button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksOnAckButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates ticket status as \"Work In Progress\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userValidatesTicketStatusAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user changes status to \"Cleared\" on trouble event page",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userChangesStatusToOnTroubleEventPage(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects fault position as \"N/A:N/A\" on trouble event page",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userSelectsFaultPositionAsOnTroubleEventPage(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects cause as \"N/A:N/A:N/A\" on trouble event page",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userSelectsCauseAsOnTroubleEventPage(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters event end time as current time",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userEntersEventEndTimeAsCurrentTime()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksSaveButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates ticket status as \"Cleared\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userValidatesTicketStatusAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user changes status to \"Closed\" on trouble event page",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userChangesStatusToOnTroubleEventPage(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects action dropdown as \"N/A:N/A\" on trouble event page",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userSelectsActionDropdownAsOnTroubleEventPage(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters closure info as \"Test Info\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userEntersClosureInfoAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksSaveButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates ticket status as \"Closed\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userValidatesTicketStatusAs(String)"
-});
-formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.after({
   "status": "passed"

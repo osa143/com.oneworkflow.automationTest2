@@ -35,6 +35,7 @@
       And user enters description as "<Description>"
       Then user clicks on save button
       And ticket should be created and status should be assigned
+      And user gets trouble ticket value
       Then user validates availability of tabs "Timeline:Diagnosis:Interested Parties:Notifications:Linked Items:Work Orders:Service Level:Alarms:Ticket Matching:Service Info"
       When user clicks on Diagnosis tab
       And user clicks on CI search button

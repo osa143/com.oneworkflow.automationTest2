@@ -428,8 +428,12 @@ public class OWF_WorkOrderPage extends BasePage {
         return getAttributeValueById(txtWOs_STATUS_ID);
     }
     public String getStatusText(){
-        return getAttributeValueById(txtSTATUS_ID);
-
+        String status= getAttributeValueById(txtSTATUS_ID);
+        if(status==null||status=="")
+        {
+            status= getTextByID(txtSTATUS_ID);
+        }
+  return status;
     }
     public String getParentTicketId(){
         return getAttributeValueById(txtPARENT_TICKET_ID);

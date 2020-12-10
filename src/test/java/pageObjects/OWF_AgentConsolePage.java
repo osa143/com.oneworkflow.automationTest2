@@ -12,7 +12,7 @@ import java.util.List;
 
 public class OWF_AgentConsolePage extends BasePage {
 
-
+    Actions action = new Actions(driver);
     private static final String menuForCONSOLE = "Console";
     private static final String menuForCREATE = "Create";
     private static final String menuForSEARCH = "Search";
@@ -109,7 +109,51 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String UNLINK_BUTTON = "WIN_4_777506010";
     private static final String btn_OK_LINKED_ITEMS = "//*[@id='PopupMsgFooter']/a";
     private static final String rbtn_CAB_REQUIRED_NO= "WIN_0_rc0id800000002";
+    private static final String txt_CI_QUICK_CREATE_SEARCH= "arid_WIN_0_700050220";
+    private static final String tdROW1_QUICK_SEARCH_RESULTS= "//*[@id='T700010488']/tbody/tr[2]/td[2]";
+    private static final String btn_CREATE_DATE= "//*[@id='WIN_0_700010488']/div[2]/div/div[1]/div[7]";
+    private static final String btn_SHOW_TEMPLATE= "WIN_0_700047004";
+    private static final String txt_FIRST_NAME= "arid_WIN_0_700020043";
+    private static final String txt_LAST_NAME= "arid_WIN_0_700020044";
+    private static final String txt_EMAIL_ADDRESS= "arid_WIN_0_700020045";
+    private static final String btn_ADD= "WIN_0_700020037";
+    private static final String table_Contacts= "T700020029";
+    private static final String btn_CANCEL= "WIN_0_777777852";
 
+    public void clickAddCancel(){
+        clickElementById(btn_CANCEL);
+    }
+    public String getContacts(String columnName, int rowNum){
+        return getTableCellData(By.id(table_Contacts), columnName, rowNum);
+    }
+    public void clickAdd_addPerson(){
+        clickElementById(btn_ADD);
+    }
+    public void enterEmailAddress(String email){
+        enterTextByElement(By.id(txt_EMAIL_ADDRESS), email);
+    }
+    public void enterLastName(String lastName){
+        enterTextByElement(By.id(txt_LAST_NAME), lastName);
+    }
+    public void enterFirstName(String firstName){
+        enterTextByElement(By.id(txt_FIRST_NAME), firstName);
+    }
+    public void clickShowTemplate(){
+        clickElementById(btn_SHOW_TEMPLATE);
+    }
+    public void doubleClickOnTicket_QuickSearchResults(){
+        WebElement element= findElement(By.xpath(tdROW1_QUICK_SEARCH_RESULTS));
+        action.doubleClick(element).perform();
+    }
+    public String getQuickSearchResults_TableData(String colName, int rowNum){
+        return getTableCellData(By.id(QuickSearch_table_ID), colName, rowNum);
+    }
+    public void clickOnCreateDate_ToSortTheTickets(){
+       clickElement(By.xpath(btn_CREATE_DATE));
+    }
+    public void enter_CI_QuickSearch(String text){
+        enterTextByElement(By.id(txt_CI_QUICK_CREATE_SEARCH), text);
+    }
     public boolean verifyCabRequiredNoTickets(){
         WebElement element = findElement(By.xpath(TableRow1));
         action.doubleClick(element).perform();
@@ -477,8 +521,6 @@ public class OWF_AgentConsolePage extends BasePage {
     }
 
 
-
-    Actions action = new Actions(driver);
 
     public void doubleClickOnAlarm(){
         WebElement element= findElement(By.xpath(alarmTdROW1_XPATH));

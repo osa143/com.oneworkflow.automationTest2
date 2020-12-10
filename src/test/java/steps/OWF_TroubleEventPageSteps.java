@@ -1551,7 +1551,52 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("{string} tickets should be displayed under ticket matching")
     public void ticketsShouldBeDisplayedUnderTicketMatching(String columnValue) {
-        Assert.assertTrue(troubleEventPage.verifyTicketsUnderTicketMatching("Status",columnValue, true));
+        Assert.assertTrue(troubleEventPage.verifyTicketsUnderTicketMatching("Status",columnValue, false));
+    }
+
+    @Then("user validates tickets with the same title {string} are displayed")
+    public void userValidatesTicketsWithTheSameTitleAreDisplayed(String columnValue) {
+        Assert.assertTrue(troubleEventPage.verifyTicketsUnderTicketMatching("Title",columnValue, false));
+    }
+
+    @Then("user validates tickets with same CI {string} are displayed")
+    public void userValidatesTicketsWithSameCIAreDisplayed(String columnValue) {
+        Assert.assertTrue(troubleEventPage.verifyTicketsUnderTicketMatching("Primary CI",columnValue, false));
+    }
+
+    @And("user gets OLA target date")
+    public void userGetsOLATargetDate() {
+     CommonUtils.OLA_TargetTime= troubleEventPage.getOlaTargetTime();
+    }
+
+    @And("user selects quick create priority as {string}")
+    public void userSelectsQuickCreatePriorityAs(String arg0) {
+        troubleEventPage.selectPriority_quickCreate(arg0);
+    }
+
+    @And("user enters quick create work order title as {string}")
+    public void userEntersQuickCreateWorkOrderTitleAs(String title) {
+        troubleEventPage.enterTitle_QuickCreate(title);
+    }
+
+    @And("user selects quick create type as {string}")
+    public void userSelectsQuickCreateTypeAs(String type) {
+    troubleEventPage.selectType_quickCreate(type);
+    }
+
+    @And("user enters quick create work order description as {string}")
+    public void userEntersQuickCreateWorkOrderDescriptionAs(String description) {
+        troubleEventPage.enterDescription_QuickCreate(description);
+    }
+
+    @Then("user clicks on work order quick create button")
+    public void userClicksOnWorkOrderQuickCreateButton() {
+        troubleEventPage.clickCreate_WO_quickCreate();
+    }
+
+    @Then("{string} tickets should be displayed under SID console show history tickets")
+    public void ticketsShouldBeDisplayedUnderSIDConsoleShowHistoryTickets(String columnValue) {
+        Assert.assertTrue(troubleEventPage.verifyTicketsUnderSID_Console_ShowHistory("Ticket Status",columnValue, false));
     }
 }
 

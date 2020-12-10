@@ -9,12 +9,13 @@ Feature: SAO-7046 - Token ID in SID Console
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects SID console from agent console
     Then SID console page should be opened
-    And user validates "CIs by TokenId" is present under search for dropdown
-    When user enters "" in manual CI search box
-    And user clicks on CI search button
-    Then user copies token ID present
-    When user selects search for dropdown as "CI by TokenId"
-    And user validates location+ field as read only
-    And user enters stored token ID and searches
-    Then user validates token ID is present
+    And dropdown values "CIs with Location:All CIs:Circuit CIs:CIs by TokenId:(clear)" should be available in search for dropdown
+    When user enters "SE_AAA_AAA98SE" in name field
+    And user clicks on search button on CI search window
+    Then user gets token ID for the CI
+    When user clicks on clear button
+    When user selects search for as "CIs by TokenId" on CI search window
+    Then user should see location plus as read only
+    And user enters saved token ID and searches
+    Then user validates CI "SE_AAA_AAA98SE" and token ID is present for the CI
     

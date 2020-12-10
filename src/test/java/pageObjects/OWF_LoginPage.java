@@ -24,7 +24,9 @@ public class OWF_LoginPage extends BasePage {
 
     public void doLogin(String username, String password) {
         enterUsername(username);
+        System.out.println("Entered username is - "+username);
         enterPassword(password);
+        System.out.println("Entered password is - "+password);
         clickLogin();
     }
 

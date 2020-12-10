@@ -15,7 +15,7 @@
 #      And User selects "Request Type" as dropdownValue and should see values for "notreadonly"
 #        | DropdownValue | DropdownValuesToBePresent|
 #        | Service Request | Service Request:Improvement|
-
+#
 #      When user validates template dropdown availability
 #      Then multiple statuses "Site access registration:Workforce Escalation-SE:(clear)" should be available in "Template" dropdown readonly
 #      When user validates Title availability
@@ -32,22 +32,23 @@
 
         | DropdownValue | DropdownValuesToBePresent|
         #| PLAZA         |                          |
-       # | Access network:Mobile:RAN:Common | NW Radio Quality-NO |
+#        | Access network:Mobile:RAN:Common | NW Radio Quality-NO |
 #        | Access network:Home | Access Home Connectivity-EE |
 #        | Access network:Mobile:RAN:Deployment | Rollout NO|
 #        | Access network:Mobile:RAN:Deployment SE | NW Deployment Eltel-SE:NW Deployment KPI Team-SE:NW Deployment Netel-SE:NW Deployment Relacom-SE:NW Deployment Scanmast-SE:NW Deployment Support-SE    |
 #        | Access network:Mobile:RAN:Design | Design RAN&Core-SE                                                                                                                                                             |
 #        | Access network:Mobile:RAN:Ericsson  | RAN Ericsson-Common |
 #        | Access network:Mobile:RAN:Huawei | RAN Huawei-Common |
-        #| Access network:Mobile:RAN | Acc Mob RAN Ericsson-SE:Acc Mob RAN NSN-SE:Mobile service-FLEN:RAN improve-Common |
+        ##| Access network:Mobile:RAN | Acc Mob RAN Ericsson-SE:Acc Mob RAN NSN-SE:Mobile service-FLEN:RAN improve-Common |
 #        | Access network:Mobile:RAN:NSN | RAN NSN-Common |
 #        | Access network:Mobile:RAN:Planning | NW Planning Last Mile-SE:NW RAN Deployment DK:RAN Engineering-Common:RAN Engineering-SE  |
 #        | Access network:Mobile:Transmission | BtB Solution-DK:MBH Design-DK:MBH Fiber-DK:MBH Implementing-DK:MBH Main-DK |
 #        | Access network:Mobile:WIFI | Core support Wlan |
 #        | Access network:Mobile:WLAN:Common | RAN Telia Wifi |
-       # | Access network:Mobile:WLAN | WLAN Agreement:WLAN Coverage:WLAN TG-EL |
-       #needvalidatemanual | BSS:Billing | Amdocs-DK:AOFokus-DK:Axapta-DK:Bill Management-SE:Billing L2-FI:Bruce/Rosetta:Bruce/Rosetta-DK:Charging & Rating-SE:DK Tech IT Billing:DLG NaviBilling:Focus Op-DK:Fokus Finance Approve-DK:Fokus Operations QA-DK:Fokus Ops Business Approve-DK:Fokus Price & Parameters-DK:Fokus Test:Foton-DK:ICH-DK:Invoicing&Cust Interact-SE:KisbiGeneva Operations-DK:KisbiGeneva Price & Para-DK:KisbiGeneva-DK:Mit Tele Navibilling-DK:Ninja-DK:OCS Operation-EE:OCS Operation-SE:Port&Bill -Common:Prepaid-FI:StateEvent-DK:VERO-DK |
+       ## | Access network:Mobile:WLAN | WLAN Agreement:WLAN Coverage:WLAN TG-EL |
+       ##needvalidatemanual | BSS:Billing | Amdocs-DK:AOFokus-DK:Axapta-DK:Bill Management-SE:Billing L2-FI:Bruce/Rosetta:Bruce/Rosetta-DK:Charging & Rating-SE:DK Tech IT Billing:DLG NaviBilling:Focus Op-DK:Fokus Finance Approve-DK:Fokus Operations QA-DK:Fokus Ops Business Approve-DK:Fokus Price & Parameters-DK:Fokus Test:Foton-DK:ICH-DK:Invoicing&Cust Interact-SE:KisbiGeneva Operations-DK:KisbiGeneva Price & Para-DK:KisbiGeneva-DK:Mit Tele Navibilling-DK:Ninja-DK:OCS Operation-EE:OCS Operation-SE:Port&Bill -Common:Prepaid-FI:StateEvent-DK:VERO-DK |
 #        | BSS:Billing:Policy Manager SE | BSS Bill Policy Manager-SE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+      #  | BSS:Billing:Payment as a service | Payment as a service |
 #        | BSS:Channels | BSS Ch Vart Telia-SE:Channels L2-FI:Omni Channels-SE:Portal Channels L2-SE |
 #        | BSS:CRM | CRM L2-FI:Cust & Order Mgmt -SE |
 #        | BSS:Data&Analytics | BSS D&A Insight-DK:Data&Analytics L2-FI |
@@ -55,17 +56,17 @@
 #        | BSS:MicroServices | Microservice-DK |
 #        | BSS:NEO | NEO IT Awaiting BU-DK:NEO IT DK Services-DK:NEO IT Ninja-DK:NEO IT Tango/Copa-DK:NEO IT-DK |
 #        | BSS:Other | BSS COPE-DK |
-        #| BSS | Etray-DK:Online-DK |
+        ##| BSS | Etray-DK:Online-DK |
 #        | BSS:Provisioning | Provisioning_EMANG-SE:Provisioning-SE |
 #        | BSS:Sales | Sales&Partner-SE |
 #        | Control Center | Incident Manager |
 #        | Control Center:Improvement | SA Process Improvements |
-        #| Control Center:Monitoring | CC Fixed access-FI:CC Fixed access-SE:CC IP/TV:CC IT:CC Mob Core/IMS/Fixed Voice/IN:CC Mob&Access-Common:CC Monitoring Management:CC WDM |
+        ##| Control Center:Monitoring | CC Fixed access-FI:CC Fixed access-SE:CC IP/TV:CC IT:CC Mob Core/IMS/Fixed Voice/IN:CC Mob&Access-Common:CC Monitoring Management:CC WDM |
 #        | Control Center:Monitoring:Not to be used | CC Monitor FM Connection Issue |
 #        | Control Center:Performance | CC Perf&Quality:CC Prod&proc |
 #        | Core:Mobile | Core Production-Common:Test & Verification-Common |
 #        | Core:Mobile:Mobile CS:Development | Development Voice-Common |
-        #| Core:Mobile:Mobile CS | Network Design Rejlers PRA-SE:Voice&IMS EAST:Voice&IMS NO_EE:Voice&IMS SE_DK |
+       # #| Core:Mobile:Mobile CS | Network Design Rejlers PRA-SE:Voice&IMS FI_LT:Voice&IMS NO_EE:Voice&IMS SE_DK |
 #        | Core:Mobile:Mobile IP | Mobile Core IP EAST:Mobile Core IP WEST |
 #        | Core:Mobile:Mobile PS:Development | Development Data-Common |
 #        | Core:Mobile:Mobile PS | Mob PS Core EAST:Mob PS Core West |
@@ -82,7 +83,7 @@
 #        | Customer Services:Mobile Services:NrPort | BU Tech Support Nrport-SE |
 #        | Customer Services:Mobile Services:SME | BU Tech Support SME-SE |
 #        | Customer Services:TV Services | TV CO L2-SE |
-#checkinuat        | External:ANS  | OW_ANS                  |
+#        | External:ANS  | OW_ANS                  |
 #        | External:Application | External Application CGI |
 #        | External:CGI | OSS CGI |
 #        | External:Comarch | Multibella |
@@ -90,16 +91,16 @@
 #        | External:Geneva | AM Support |
 #        | External | Keypro |
 #        | External:TCS | Channels:Ext TCS Billing-FI:Ext TCS OSS-FI |
-       # | External:wipro | Alpha2am |
 #        | External:wipro:TrueSight | Ext Wipro TrueSight |
 #        | Field Service:Mobile (B2B) | FDC-Common:FS Åland-FI |
 #        | Infrastructure:Development | IT infra-Common |
 #        | Infrastructure:Maintenance | Large Production Premises-NO:Siteinfra-DK:Siteinfra-NO:Tech_Sites-SE |
- # checkmanual      | IT:Application | Application Identity & Access:Application-NO:Assurance:Billing-NO:CTI Admin-FI:Enterprise:IT App CDL:IT App Customer Identity:IT App eBS Platform:IT App Integration-SE:IT App RODOD:IT App Telia Finance:JobSchedulling-FI:Middleware:Multibella-FI:NMS:Portal-NO:SAP:TAC1-NO:Tiksu-FI:Tunnestiimi-FI |
-#        | IT:Application:Billing | Billing:IT App Bill BDL:IT App Bill BiC:IT App Bill MOP2:IT App Bill MPS/RTS:IT App Bill Reflex:IT App Billing-EE |
-#        | IT:Application:BSS | IT App BSS CeSim:IT App BSS EDWM L1:IT App BSS EDWM L2:IT App BSS E-shop EE:IT App BSS Event: IT App BSS Marketstore:IT App BSS OCC:IT App BSS Produktguiden:IT App BSS Sales_Order Mgmt-EE:IT App BSS RR2R:IT App BSS SAIDA:IT App BSS WebS MultiDevice:IT App Integration BASE |
+ # checkmanual      | IT:Application | Application Identity & Access:Application-NO:Assurance:Billing-NO:CTI Admin-FI:Enterprise:IT App CDL:IT App Customer Identity:IT App eBS Platform:IT App Integration-SE:IT App NIAM-Common:IT App RODOD:IT App Telia Finance:JobSchedulling-FI:Middleware:Multibella-FI:NMS:Portal-NO:SAP:TAC1-NO:Tiksu-FI:Tunnestiimi-FI |
+#         | IT:Application:Analytics | IT App Analytics&BI-EE |
+        #        | IT:Application:Billing | Billing:IT App Bill BDL:IT App Bill BiC:IT App Bill MOP2:IT App Bill MPS/RTS:IT App Bill Reflex:IT App Billing-EE |
+#        | IT:Application:BSS | IT App BSS CeSim:IT App BSS EDWM L1:IT App BSS EDWM L2:IT App BSS E-shop EE:IT App BSS Event:IT App BSS Freya:IT App BSS Marketstore:IT App BSS OCC:IT App BSS Produktguiden:IT App BSS Sales_Order Mgmt-EE:IT App BSS RR2R:IT App BSS SAIDA:IT App BSS WebS MultiDevice:IT App Integration BASE |
 #        | IT:Application:Contact Center | IT App CC CIS Operations SP:IT App CC CIS Support |
-#        | IT:Application:CRM | CRM:IT App CRM Alpha:IT App CRM API Market:IT App CRM Apollo:IT App CRM C2B Cache:IT App CRM C2B Services:IT App CRM C2B Caesar:IT App Cust Services-EE:IT App CRM Koda:IT App CRM Kundbild:IT App CRM OMT:IT App CRM OPT:IT App CRM Promis:IT App CRM Rodod UIM:IT App CRM Rodod AIA:IT App CRM Rodod BRM:IT App CRM Rodod OPH:IT App CRM Rodod OSM:IT App CRM Rodod Service Desk:IT App CRM Rodod Siebel:IT App CRM SINN |
+#        | IT:Application:CRM | CRM:IT App CRM Alpha:IT App CRM API Market:IT App CRM Apollo:IT App CRM C2B Cache:IT App CRM C2B Services:IT App CRM C2B Caesar:IT App Cust Services-EE:IT App CRM Koda:IT App CRM Kundbild:IT App CRM OMT:IT App CRM OPT:IT App CRM Promis:IT App CRM Rodod UIM:IT App CRM Rodod AIA:IT App CRM Rodod BRM:IT App CRM Rodod OPH:IT App CRM Rodod OSM:IT App CRM Rodod Service Desk:IT App CRM Rodod Siebel:IT App CRM SINN:IT App CRM UOR |
 #        | IT:Application:CRM:WOW | IT App CRM WOW AT Test:IT App CRM WOW Func Maint:IT App CRM WOW L1:IT App CRM WOW L2:IT App CRM WOW Maint Hours:IT App CRM WOW Performance |
 #        | IT:Application:Digital Channels | IT App DigCh Agora 2L N&F:IT App DigCh Broadband Sales:IT App DigCh Drools Flow:IT App DigCh Infra:IT App DigCh Mitt Telia:IT App DigCh Mitt Telia App:IT App DigCh Mobile Sales:IT App DigCh Mybusiness:IT App DigCh Order Flows:IT App DigCh Redaktionen:IT App DigCh Support:IT App DigCh Telia Admin:IT App DigCh telia.se:IT App DigCh Vart Telia |
 #        | IT:Application:E2E Solutions | IT App E2ES Fixed Fallout:IT App E2ES Migration:IT App E2ES Mobile Fallout |
@@ -110,16 +111,15 @@
 #        | IT:Application:Integration | IT App Integration Chronos:IT App Integration Evy:IT App Integration GESB |
 #        | IT:Application:Inventory | IT App Invent Netw Dev Tool-EE:IT App Inventory Coppar GUI:IT App Inventory CSS:IT App Inventory EAI:IT App Inventory ECM:IT App Inventory EIAS:IT App Inventory Qliksense:IT App Inventory-EE |
 #        | IT:Application:Netadmin  | IT App OSS Netadmin |
-#        | IT:Application:OSS | IT-Application-OSS:IT App OSS 1B:IT App OSS Cview-EAI:IT App OSS E-B2B:IT App OSS EEIS:IT App OSS FaDA:IT App OSS Flowview:IT App OSS Goldpen:IT App OSS Herkules:IT App OSS NAC-Julia:IT App OSS NetPro:IT App OSS Service Gateway:IT App OSS SOM -DK:IT App OSS SOM -EE:IT App OSS WebOSS:IT App OSS Websystem Linjenat |
+#        | IT:Application:OSS | IT-Application-OSS:IT App OSS 1B:IT App OSS Cview-EAI:IT App OSS E-B2B:IT App OSS EEIS:IT App OSS FaDA:IT App OSS Flowview:IT App OSS Goldpen:IT App OSS Helix:IT App OSS Herkules:IT App OSS NAC-Julia:IT App OSS NetPro:IT App OSS Service Gateway:IT App OSS Slice:IT App OSS SOM -DK:IT App OSS SOM -EE:IT App OSS WebOSS:IT App OSS Websystem Linjenat |
 #        | IT:Application:Portal | Portal:IT App Portal Self Service-EE |
 #        | IT:Application:Security | IT App SecTeliaSign:IT App Security-EE:Security Services-FI |
 #        | IT:Application:SIG | IT App SIG Registerfragor:IT App SIG NAS |
 #        | IT:Application:Supplier Mgmt | IT App SuppM 1B |
 #        | IT:Application:Workflow | IT App WF Helix:IT App WF ServiceNow:IT App WF TNT |
-#        | IT:Cloud Infrastructure | IT Cloud:IT Cloud AWS CIAM-NO:IT Cloud AWS Party&Privacy:IT Cloud TCS:NFVI:Public Cloud |
+#        | IT:Cloud Infrastructure | IT Cloud:IT Cloud AWS Party&Privacy:IT Cloud TCS:NFVI:Public Cloud |
 #        | IT:Database | Database-NO:IT Database MariaDB L3:IT DB Oracle/PostgreSQL-EE:MSSQL L3:MySQL L3:Oracle L3:PostgreSQL L3 |
 #        | IT:DataCenter | DC Denmark:DC Finland:DC Norway:DC Sweden:IT DC Estonia:IT DC OSS-EE |
-#        remove| IT:Event Management | BMC/TrueSight |
 #        | IT:FI:CC:Avacon | Delivery |
 #        | IT:Infra | Backup:IT Infra Core-EE:SE:Service Development:Software Asset Management:Storage:User Network:Workplace |
 #        | IT:Network | DNS/DHCP:LAN Services:Load Balancer L2:Load Balancer L3:Routing/Switching L2:Routing/Switching L3:TSIN L2:TSIN L3 |
@@ -154,7 +154,7 @@
 #        | VAS:Application Services | Application Services:VAS Application Services-EE |
 #        | VAS:IMS Services | VAS IMS TCAS |
 #        | VAS:IN Services | VAS IN CGW:VAS IN Entry:VAS IN Managed Voice:VAS IN Services KY&Cleanmail:VAS IN Services Meridix Hawkey:VAS IN Services NGIN CIVR:VAS IN Services NSEE:VAS IN Services Other:VAS IN Services SGW OCSC SIG:VAS IN Services Touchpoint-DK:VAS IN Services Touchpoint-SE:VAS IN Services-EE:VAS IN Touchpoint Plus-SE |
-#        | VAS:IoT | IoT-operation:VAS IoT and MCP-EE |
+#        | VAS:IoT | IoT-operation:VAS IoT and MCP-EE:VAS IoT CloudOps:VAS IoT DevOps |
 #        | VAS:MAS:Linux | VAS MAS Linux |
 #        | VAS:MAS:Windows | VAS MAS Windows |
 #        | VAS:Messaging Services | VAS Messaging Email-EE:VAS Messaging Linux:VAS Messaging Windows:VAS Messaging-EE |
@@ -163,6 +163,7 @@
 #        | VAS:Mobile:IN services | IN Services-Common:IN Services-EE |
 #        | VAS:Mobile:Messaging | Messaging Operation-EE:Messaging Services-Common |
 #        | VAS:Mobile:Services | 112/114 DK:3de Party Content-DK:Core NW Development-Common:IME-DK:IME-LT:IME-NO:Mobiz Link-DK:Mobiz SP-DK:Mobiz Status-DK:Policy manager-DK:Probiz-DK:Touchpoint Plus-DK:Touchpoint Soho-DK:UBP-DK:UC miscellaneous-DK:VCDR-DK |
+#        | Voice:Fixed:Pabx    | Voice Fix PABX Alcatel:Voice Fix PABX Ascom:Voice Fix PABX Avaya Aura:Voice Fix Avaya Call S:Voice Fix PABX Avaya CS1000:Voice Fix PABX Avaya IP-Office:Voice Fix PABX Avaya Signal S:Voice Fix PABX Cisco:Voice Fix PABX Competella:Voice Fix PABX Mitel CMG:Voice Fix PABX Mitel MiCC:Voice Fix PABX Mitel Mxone:Voice Fix PABX Mitel Mxone:Voice Fix PABX Tellus:Voice Fix PABX Trio:Voice Fix PABX Vision80/20                                                                                                                                                                                                                    |
 #         | Voice:Fixed:PSTN | L2 Fixed Voice-SE     |
 #        | Voice:Fixed:VoIP    | Voice Fix VoIP Applications-EE:Voice Fix VoIP SAP CCtr-EE:Voice Fix VoIP Services-EE |
          #| Voice:Fixed      | Voice Fixed ACE L3    |
@@ -214,7 +215,7 @@
 #        | Undefined Telia | Undefined Telia |
 #        | VAS:IoT | Backend (incl DCP):Mobile App:Other:Unclear |
 #        | VAS:Service Nodes | Charging:Email:IN Node:IVR:Messaging:NSEE:OTA:Other:Roaming:UC:Unclear |
-
+#
 #      And User selects "Cause" as dropdownValue and should see values for "readonly"
 #
 #        | DropdownValue | DropdownValuesToBePresent|
@@ -320,7 +321,7 @@
 #        | Technical Error:Technical Error | Other:Telia Company |
 #        | Not a PDB:Not a PDB             | N/A                 |
 #        | Human Error:Human Error         | Other:Telia Company |
-
+#
 #      And User selects "Action" as dropdownValue and should see values for "readonly"
 #        | Alarm configuration change | Other:Telia Company |
 #        | Auto closed | Automation |

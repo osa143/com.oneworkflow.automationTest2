@@ -54,7 +54,6 @@ Feature: SAO-478 - Details Sections fields are unavailable
 #    And user validates Risk Description is read only
     Given user logs in with valid username "ChangeInitiatorInternal1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user selects search menu as "Open Search Form:Change Record"
     When user clicks on create change record
     Then user switches to window 1
     When user selects request type as "Normal Change"
@@ -151,7 +150,7 @@ Feature: SAO-478 - Details Sections fields are unavailable
     And user validates Communication Plan* isn't readonly
     And user validates Ver of Functionality* isn't readonly
     And user validates Risk Description* isn't readonly
-
-
-
-
+#
+#
+#
+#

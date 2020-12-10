@@ -72,7 +72,7 @@
       Examples:
 
       |Request            |Select Request  |Environment|Description            |Additional Comments|
-      #|Test1 TSPAN/Request|Account/Password|Prod       |Test1 TSPAN/Description|Test1 TSPAN/AC     |
+      |Test1 TSPAN/Request|Account/Password|Prod       |Test1 TSPAN/Description|Test1 TSPAN/AC     |
      # |Test2 TSPAN/Request|Account/Password|Test       |Test2 TSPAN/Description|Test2 TSPAN/AC     |
       #|Test3 TSPAN/Request|Other          |Prod       |Test3 TSPAN/Description|Test3 TSPAN/AC     |
-      |Test4 TSPAN/Request|Other          |Test       |Test4 TSPAN/Description|Test4 TSPAN/AC     |
+      #|Test4 TSPAN/Request|Other          |Test       |Test4 TSPAN/Description|Test4 TSPAN/AC     |

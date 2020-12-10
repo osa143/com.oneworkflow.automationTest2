@@ -57,15 +57,15 @@ Feature: checking of bulk loading CTI details and location details
     When user clicks on ticket refresh button
     When user clicks on CTI details under sections
     Then user validates Category as "Access"
-    And user validates type as "WLAN"
-    And user validates item as "AP"
+    And user validates type as "WLAN Access"
+    And user validates item as "AccessPoint"
     When user clicks on location under sections
     Then user validates location id as "ALV WLAN11"
     And user validates location name as "SE_Site_ALV WLAN11"
-    And user validates region id as "08"
-    And user validates region name as "KALMAR"
-    And user validates latitude as "56.675540"
-    And user validates longitude as "16.285040"
+    And user validates region id as "07"
+    And user validates region name as "KRONOBERG"
+    And user validates latitude as "56.899700"
+    And user validates longitude as "14.555100"
     And user validates x degree as "0"
     And user validates y degree as "0"
     And user logsOut and closes the browser
@@ -74,7 +74,7 @@ Feature: checking of bulk loading CTI details and location details
 
     Examples:
       |fileTypes                                                                                                  |
-      |Test Attachments\10 CI's - Correct Names\CSV.csv |
-      |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
-      |Test Attachments\10 CI's - Correct Names\XLS.xls|
+ #     |Test Attachments\10 CI's - Correct Names\CSV.csv |
+#      |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
+#      |Test Attachments\10 CI's - Correct Names\XLS.xls|
       |Test Attachments\10 CI's - Correct Names\TEXT.txt |

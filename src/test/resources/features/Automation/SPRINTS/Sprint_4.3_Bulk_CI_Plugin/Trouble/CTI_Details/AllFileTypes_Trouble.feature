@@ -45,21 +45,21 @@ Feature: checking of bulk loading CTI details
     And user validates with warnings as "0"
     Then user validates at least one CI has "Completed" under "Status"
     Then user clicks on bulk loading close button
-    And user waits 5 secs
-    When user clicks on ticket refresh button
+    And user waits 15 secs
+#    When user clicks on ticket refresh button
     When user clicks on CTI details under sections
     Then user validates Category as "Access"
-    And user validates type as "WLAN"
-    And user validates item as "AP"
+    And user validates type as "WLAN Access"
+    And user validates item as "AccessPoint"
     And user logsOut and closes the browser
     And user switches to window 0
 
 
     Examples:
       |fileTypes                                                                                                  |
-      |Test Attachments\10 CI's - Correct Names\CSV.csv |
-      |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
-      |Test Attachments\10 CI's - Correct Names\XLS.xls|
+ #     |Test Attachments\10 CI's - Correct Names\CSV.csv |
+    #  |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
+#      |Test Attachments\10 CI's - Correct Names\XLS.xls|
       |Test Attachments\10 CI's - Correct Names\TEXT.txt |
 
 

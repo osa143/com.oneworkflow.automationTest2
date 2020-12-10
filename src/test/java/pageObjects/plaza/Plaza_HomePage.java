@@ -36,7 +36,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_C2B_REQUEST_ID="sp_formfield_sr74_v_request";
     public static final String dd_ENVIRONMENT="s2id_autogen15";
     public static final String txt_C2B_DESCRIPTION="sp_formfield_sr74_v_description";
-    public static final String dd_SELECT_REQUEST_ID="select2-chosen-12";
+    public static final String dd_SELECT_REQUEST_ID="select2-chosen-9";
     public static final String dd_SMTP_RELAY = "select2-chosen-12";
     public static final String txt_C2B_GENERAL_REQUEST_ID="sp_formfield_sr112_v_request";
     public static final String dd_C2B_GENERAL_ENVIRONMENT="s2id_autogen16";
@@ -102,7 +102,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_DATABASE_ACCOUNT_PERMISSIONS="sp_formfield_sr21_v_permissions";
     public static final String txt_DATABASE_DESCRIPTION= "sp_formfield_sr21_v_description";
     public static final String txt_DATABASE_DNS_IP_ADDRESS= "sp_formfield_sr21_v_source_dns";
-    public static final String dd_DATABASE_NEW_EXISTING_ACCOUNT=  "select2-chosen-15";
+    public static final String dd_DATABASE_NEW_EXISTING_ACCOUNT=  "select2-chosen-14";
     public static final String dd_DATABASE_DEFAULT_TABLE_SPACE= "sp_formfield_sr21_v_default_tablespace";
     public static final String txt_DATABASE_REQUEST_REQUEST= "sp_formfield_sr115_v_request";
     public static final String dd_DATABASE_REQUEST_CHOOSE_ACTION= "select2-chosen-18";
@@ -162,7 +162,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_DESCRIPTION= "sp_formfield_sr105_v_description";
     public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_SERVICE_REQUEST= "select2-chosen-11";
     public static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_REQUEST= "sp_formfield_sr114_v_request";
-    public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI= "s2id_autogen17";
+    public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI= "s2id_autogen15";
     public static final String dd_NETWORK_SECURITY_SWITCH_PORT_CONFIG_ADD_CI= "s2id_autogen17";
     public static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_DESCRIPTION= "sp_formfield_sr114_v_description";
     private static final String txt_NETWORK_SECURITY_FIREWALL_TROUBLESHOOT_REQUEST= "sp_formfield_sr34_v_request";
@@ -442,7 +442,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_NETWORK_SECURITY_PROXY_REVERSE_HIGH_AVAILIBILITY = "select2-results-15";
     private static final String txt_NETWORK_SECURITY_PROXY_REVERSE_CERTIFICATE = "s2id_autogen19_results";
     private static final String txt_NETWORK_SECURITY_NEW_SWITCH_NETWORK_CI = "s2id_autogen18_results";
-    private static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI = "s2id_autogen17_results";
+    private static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_ADD_CI = "s2id_autogen15_results";
     private static final String txt_NETWORK_SECURITY_SWITCH_PORT_CONFIG_ADD_CI = "s2id_autogen17_results";
     private static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_SERVICE_REQUEST = "select2-results-11";
     private static final String txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_SCHEDULED_CHANGE = "select2-results-12";
@@ -464,7 +464,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_DATABASE_REQUEST_DATABASE_TYPE = "select2-results-12";
     private static final String txt_DATABASE_REQUEST_LOCATION = "select2-results-20";
     private static final String txt_DATABASE_REQUEST_CHOOSE_ACTION = "select2-results-18";
-    private static final String txt_DATABASE_NEW_EXISTING_ACCOUNT = "select2-results-15";
+    private static final String txt_DATABASE_NEW_EXISTING_ACCOUNT = "select2-results-14";
     private static final String txt_ADD_DATABASE_CI = "s2id_autogen25_results";
     private static final String txt_ADD_SERVER_CI = "s2id_autogen26_results";
     private static final String txt_DATABASE_ACCOUNT_TYPE = "select2-results-14";
@@ -481,7 +481,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_ROLE_ID = "select2-results-9";
     private static final String txt_SYSTEM_ID = "select2-results-13";
     private static final String txt_SERVICE_REQUEST_NAME_ID = "select2-results-11";
-    private static final String txt_SELECT_REQUEST_ID = "select2-results-12";
+    private static final String txt_SELECT_REQUEST_ID = "select2-results-9";
     private static final String txt_SMTP_RELAY = "select2-results-12";
     private static final String txt_C2B_SERVICE_ENVIRONMENT = "s2id_autogen13_results";
     private static final String txt_C2B_GENERAL_ENVIRONMENT = "s2id_autogen16_results";
@@ -494,13 +494,13 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_PROD_CI = "s2id_autogen15_results";
     private static final String link_FINANCE_ASSURANCE="//img[@alt='Finance & Assurance']";
     private static final String link_DATABASE = "//*[@id='xcc61d55edb198b00b27fdb11ce961902']/div/div[2]/div[6]/div[4]";
-    private static final String pebble_DNS_DHCP = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[6]/div/a/div/h3";
-    private static final String pebble_FIREWALL_ROUTING_REQUEST = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[11]/div/a";
+    private static final String pebble_DNS_DHCP = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[7]/div/a/div/h3";
+    private static final String pebble_FIREWALL_ROUTING_REQUEST = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[12]/div/a/div/h3";
     private static final String pebble_LAN_DATA_NET_LAN = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[13]/div/a";
-    private static final String pebble_NETWORK_LOAD_BALANCING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[14]/div/a";
-    private static final String pebble_NETWORK_ROUTING_SWITCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[16]/div/a";
-    private static final String pebble_PROXY = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a";
-    private static final String pebble_REMOTE_ACCESS_VPN_ACS = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[18]/div/a";
+    private static final String pebble_NETWORK_LOAD_BALANCING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[15]/div/a/div/h3";
+    private static final String pebble_NETWORK_ROUTING_SWITCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a/div/h3";
+    private static final String pebble_PROXY = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[18]/div/a/div/h3";
+    private static final String pebble_REMOTE_ACCESS_VPN_ACS = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[19]/div/a/div/h3";
     private static final String pebble_CHANGE_OS_PATCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[18]/div/a";
     private static final String pebble_MANUAL_OS_PATCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[19]/div/a";
     private static final String link_IT_INFRASTRUCTURE = "//*[@id='ddddd28bdb8197042b3cfc16bf961980']";

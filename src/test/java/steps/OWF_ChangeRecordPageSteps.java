@@ -499,7 +499,7 @@ public class OWF_ChangeRecordPageSteps {
     @When("user logsOut from One workflow")
     public void userLogsOutFromOneWorkflow() {
         changeRecordPage.selectDropDownNameAndValue("Nav-Username", "Logout", false);
-        changeRecordPage.wait(2000);
+        changeRecordPage.wait(3000);
     }
 
     @And("user gets request start and end time on change record page")
@@ -992,7 +992,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @Then("user validates Location Details are shown")
     public void userValidatesLocationDetailsAreShown() {
-        changeRecordPage.switchToFrameByIndex(2);
+        changeRecordPage.switchToFrameByIndex(3);
         Assert.assertTrue(changeRecordPage.verifyLocationDetailsIsDisplayed());
 
     }
@@ -1081,6 +1081,26 @@ public class OWF_ChangeRecordPageSteps {
     @And("user enters actual end as current time")
     public void userEntersActualEndAsCurrentTime() {
         changeRecordPage.enterActualEndAsCurrentDateTime();
+    }
+
+    @And("user clicks yes on save confirmation message")
+    public void userClicksYesOnSaveConfirmationMessage() {
+        try {
+            wait(4000);
+            changeRecordPage.switchToFrameByIndex(2);
+            changeRecordPage.clickElementByContainsTextAndTagName("*", "Yes");
+        } catch (Exception e){}
+
+    }
+
+    @And("user clicks on request that's {string}")
+    public void userClicksOnRequestThatS(String cellData) {
+        changeRecordPage.clickTableElementRequestPendingApproval_2(cellData);
+    }
+
+    @Then("user selects CAB approval")
+    public void userSelectsApproval() {
+        changeRecordPage.clickCABApproval();
     }
 }
 

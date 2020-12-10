@@ -117,7 +117,8 @@ public class OWF_CiSearchPageSteps {
 
     @Then("CI should be listed and displayed under the Diagnosis tab")
     public void ciShouldBeListedAndDisplayedUnderTheDiagnosisTab() {
-        ciSearchPage.wait(4000);
+        ciSearchPage.switchToDefault();
+        ciSearchPage.wait(1000);
         ciSearchPage.selectTab("Diagnosis");
         ciSearchPage.clickRefresh_Diagnosis();
         int size = ciSearchPage.ciDiagnosisTableRows().size();
@@ -525,6 +526,16 @@ public class OWF_CiSearchPageSteps {
     @And("user validates radio button closed is selected")
     public void userValidatesRadioButtonClosedIsSelected() {
         Assert.assertTrue(ciSearchPage.isClosedRadioButtonSelected());
+    }
+
+    @And("user closes warning message on change add CI")
+    public void userClosesWarningMessageOnChangeAddCI() {
+        ciSearchPage.closeWarningMessage_changeTicket();
+        ciSearchPage.wait(2000);
+        ciSearchPage.clickCloseButton();
+//        ciSearchPage.switchToFrameByIndex(3);
+//        ciSearchPage.clickElementByContainsTextAndTagName("a", "Yes");
+
     }
 
     @When("user clicks manage my template cog button")

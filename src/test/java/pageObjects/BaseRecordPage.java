@@ -156,9 +156,36 @@ public class BaseRecordPage extends BasePage {
     private static final String btn_CLEAR= "WIN_0_700506223";
     private static final String div_ALL_FIELDS= "WIN_0_999000050";
     private static final String table_TICKET_MATCHING = "T600002282";
+    private static final String table_SID_CONSOLE_SHOW_HISTORY="T700009045";
+    private static final String txt_PRIORITY= "arid_WIN_0_800007043";
+    private static final String txt_TITLE_QUICK_CREATE = "arid_WIN_0_800007044";
+    private static final String txt_TYPE_WO_QUICK_CREATE="arid_WIN_0_800007045";
+    private static final String txt_DESCRIPTION_WO_QUICK_CREATE= "arid_WIN_0_800007046";
+    private static final String btn_CREATE_WO_QUICK_CREATE= "WIN_0_800007047";
 
+
+    public void clickCreate_WO_quickCreate() {
+        clickElement(By.id(btn_CREATE_WO_QUICK_CREATE));
+    }
+    public void enterTitle_QuickCreate(String text){
+        enterTextByElement(By.id(txt_TITLE_QUICK_CREATE), text);
+    }
+    public void enterDescription_QuickCreate(String text){
+        enterTextByElement(By.id(txt_DESCRIPTION_WO_QUICK_CREATE), text);
+    }
+    public void selectType_quickCreate(String value){
+        clickElementById(txt_TYPE_WO_QUICK_CREATE);
+        selectDropDownValue(value);
+    }
+    public void selectPriority_quickCreate(String value){
+        clickElementById(txt_PRIORITY);
+        selectDropDownValue(value);
+    }
     public boolean verifyTicketsUnderTicketMatching(String columnName, String columnValue, boolean partialText){
        return verifyColumnValuesMultiple(By.id(table_TICKET_MATCHING), columnName, columnValue, partialText);
+    }
+    public boolean verifyTicketsUnderSID_Console_ShowHistory(String columnName, String columnValue, boolean partialText){
+        return verifyColumnValuesMultiple(By.id(table_SID_CONSOLE_SHOW_HISTORY), columnName, columnValue, partialText);
     }
 
 
@@ -818,6 +845,9 @@ public class BaseRecordPage extends BasePage {
     }
     public void selectActions_TimeTracking(){
         selectDropDownNameAndValue(ddACTIONS, ddValueTIME_TRACKING, false);
+    }
+    public void selectActions(String dropdownValue){
+        selectDropDownNameAndValue(ddACTIONS, dropdownValue, false);
     }
     public void selectActivity_WorkingOnTicket(){
         selectDropDownNameAndValue(ddACTIVITY_IN_FRAME, ddValueWORKING_ON_TICKET, false);

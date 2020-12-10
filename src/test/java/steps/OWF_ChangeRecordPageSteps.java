@@ -1073,6 +1073,16 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.clickCabRequiredYes();
     }
 
+    @And("user enters actual start date as current time")
+    public void userEntersActualStartDateAsCurrentTime() {
+        changeRecordPage.enterActualStartAsCurrentDateTime();
+    }
+
+    @And("user enters actual end as current time")
+    public void userEntersActualEndAsCurrentTime() {
+        changeRecordPage.enterActualEndAsCurrentDateTime();
+    }
+
     @And("user clicks yes on save confirmation message")
     public void userClicksYesOnSaveConfirmationMessage() {
         try {

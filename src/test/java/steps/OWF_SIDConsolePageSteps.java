@@ -6,6 +6,7 @@ import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 import org.testng.Assert;
 import pageObjects.OWF_SIDConsolePage;
+import utils.CommonUtils;
 
 import java.util.List;
 
@@ -83,5 +84,48 @@ public class OWF_SIDConsolePageSteps {
         Assert.assertTrue(sidConsolePage.verifyCISForAllCountries("Name", colValues));
     }
 
+    @Then("user gets token ID for the CI")
+    public void userGetsTokenIDForTheCI() {
+        CommonUtils.TokeID = sidConsolePage.getSID_Console_TableData("TokenId", 1);
+    }
+
+    @And("user enters saved token ID and searches")
+    public void userEntersSavedTokenIDAndSearches() {
+        sidConsolePage.enterNamePlus(CommonUtils.TokeID);
+        sidConsolePage.clickSearchButton();
+
+    }
+
+    @Then("user validates CI {string} and token ID is present for the CI")
+    public void userValidatesCIAndTokenIDIsPresentForTheCI(String expected_CI_Name) {
+        Assert.assertEquals(sidConsolePage.getSID_Console_TableData("Name", 1), expected_CI_Name);
+        Assert.assertEquals(sidConsolePage.getSID_Console_TableData("TokenId", 1), CommonUtils.TokeID);
+    }
+
+    @And("dropdown values {string} should be available in search for dropdown")
+    public void dropdownValuesShouldBeAvailableInSearchForDropdown(String expectedValues) {
+     Assert.assertTrue(sidConsolePage.verifySearchForDropdownValues(expectedValues, ""));
+    }
+
+    @Then("user should see location plus as read only")
+    public void userShouldSeeLocationPlusAsReadOnly() {
+     Assert.assertTrue(sidConsolePage.verifyLocationIsReadOnly());
+    }
+
+    @And("user clicks on show history")
+    public void userClicksOnShowHistory() {
+        sidConsolePage.clickShowHistory();
+    }
+
+    @Then("user validates ticket previously created is present")
+    public void userValidatesTicketPreviouslyCreatedIsPresent() {
+    Assert.assertEquals(sidConsolePage.getSIDConsole_RelatedMatches_TableData("Ticket ID", 1), CommonUtils.opTicket);
+    }
+
+
+    @And("user double clicks on ticket under SID console matching ticket to open")
+    public void userDoubleClicksOnTicketUnderSIDConsoleMatchingTicketToOpen() {
+     sidConsolePage.doubleClickOnTicket_SIDConsole_RelatedMatches();
+    }
 }
 

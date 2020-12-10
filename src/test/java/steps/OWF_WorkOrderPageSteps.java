@@ -16,7 +16,7 @@ public class OWF_WorkOrderPageSteps {
 
     @And("user validates ticket status as {string}")
     public void userValidatesTicketStatusAs(String arg0) {
-        Assert.assertEquals(workOrderPage.getStatusText(), arg0, "Status is not new");
+        Assert.assertEquals(workOrderPage.getStatusText(), arg0, "Status is wrong");
         workOrderPage.wait(1000);
     }
 
@@ -947,6 +947,8 @@ public class OWF_WorkOrderPageSteps {
     public void userValidatesCustomerIDContractorAs(String customerContractorID) {
         Assert.assertEquals(workOrderPage.getCustomerContractID(), customerContractorID);
     }
+
+
 }
 
 

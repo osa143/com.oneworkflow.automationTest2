@@ -1,4 +1,4 @@
-@Telia_Wifi @Regression
+@Telia_Wifi @Regression @Test
   Feature: Telia Wifi regression test
     Scenario: Telia Wifi
 

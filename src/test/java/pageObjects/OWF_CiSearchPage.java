@@ -481,8 +481,8 @@ public class OWF_CiSearchPage extends BaseRecordPage {
 
     public void clickOk_popUp(){
         int size = driver.findElements(By.tagName("iframe")).size();
-        switchToFrameByIndex(size-1);
-        clickElement(By.xpath("//*[@id=\"PopupMsgFooter\"]/a"));
+//        switchToFrameByIndex(size-1);
+        clickElement(By.xpath("//*[@id='PopupMsgFooter']/a"));
         wait(2000);
     }
 

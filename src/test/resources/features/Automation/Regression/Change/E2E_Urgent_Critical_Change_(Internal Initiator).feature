@@ -64,13 +64,14 @@ Feature: Internal Urgent Critical Change E2E
     And CI search tab should be opened
     And user clicks on clear button
     And user selects Category as "Access"
-    Then user enters "SE_BSC%" in the name+ field
+    Then user enters "SE_BSC_AB16B" in the name+ field
     Then user clicks on search button on CI search window
     And user selects all CI's that appear
     And user selects impact level as "Loss of Service"
     And user clicks on relate CI
     Then user closes warning message on change add CI
-    And user clicks yes on save confirmation message
+#    And user clicks yes on save confirmation message
+    And user waits 20 secs
     And CI should be listed and displayed under the Diagnosis tab
     And user clicks on Diagnosis tab
     And user clicks on CI search button
@@ -78,13 +79,14 @@ Feature: Internal Urgent Critical Change E2E
     And CI search tab should be opened
     And user clicks on clear button
     And user selects Category as "Access"
-    Then user enters "SE_RNC%" in the name+ field
+    Then user enters "SE_RNC_AK6RU102" in the name+ field
     Then user clicks on search button on CI search window
     And user selects all CI's that appear
     And user selects impact level as "Loss of Service"
     And user clicks on relate CI
     And user closes warning message on change add CI
-    And user clicks yes on save confirmation message
+    #And user clicks yes on save confirmation message
+    And user waits 20 secs
     And CI should be listed and displayed under the Diagnosis tab
     When user clicks on Show CR Matching button
     Then user should see Show CR Matching table appear
@@ -93,12 +95,13 @@ Feature: Internal Urgent Critical Change E2E
     And user clicks on add email button
     Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
     When user clicks on Send button
+    And user waits 5 secs
     Then user validates ticket status as "Assigned"
     And user clicks on owner under sections
     And user clicks on assignment under sections
     And user validates owner profile as "Change Manager"
     And user validates owner as "ChangeManager"
-    And user should see assigned profile as "Change Manager"
+    And user should see assigned profile as "Escalation Manager"
     And user clicks on timeline tab
     Then user validates Description* isn't readonly
     And user validates Project Code isn't readonly

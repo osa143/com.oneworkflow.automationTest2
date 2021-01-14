@@ -931,6 +931,12 @@ public class OWF_AgentConsolePageSteps {
     public void userClicksCancelButtonOnNewNotificationWindow() {
         agentConsolePage.clickAddCancel();
     }
+
+
+    @When("user selects contact {string} and clicks remove selected person")
+    public void userSelectsContactAndClicksRemoveSelectedPerson(String contact) {
+        agentConsolePage.selectContactAndClicksRemoveSelectedPerson(contact);
+    }
 }
 
 

@@ -59,6 +59,7 @@
         |ow_basic2                   |Test@1234|2196:2003:2136:2279|
         |ow_basic3                   |Test@1234|2196:2249|
         |Assignment_admin            |Test@1234|2015:2692:2003:2279:2196|
+        |ChangeManager2_Automation   |Test@1234|2007:2006|
 
 
 

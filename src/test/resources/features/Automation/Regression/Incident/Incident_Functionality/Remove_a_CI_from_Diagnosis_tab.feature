@@ -10,8 +10,8 @@
       And user switches to window 1
       Then trouble record form should appear in new tab
       When user creates an incident with following details
-        |                Title                     |RequestType|                 Description              |
-        |Test case 05.01 Manually close an incident|Customer   |Test case 05.01 Manually close an incident|
+        |                Title     |RequestType|                 Description              |
+        |Remove a CI from Diangosis|Customer   |Test case 05.01 Manually close an incident|
       Then ticket should be created and status should be assigned
       When user adds below CI's to the ticket
               |   CI Name     |

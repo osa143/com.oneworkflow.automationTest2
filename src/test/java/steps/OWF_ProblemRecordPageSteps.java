@@ -7,7 +7,6 @@ import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import pageObjects.BaseRecordPage;
 import pageObjects.OWF_ProblemRecordPage;
 import utils.CommonUtils;
 
@@ -103,7 +102,7 @@ public class OWF_ProblemRecordPageSteps {
     public void userGetsTicketValue() {
         ticket = problemRecordPage.getTicketValue();
         System.out.println("Stored ticket is " + ticket);
-        CommonUtils.pbTicket = ticket;
+        CommonUtils.savedTicket = ticket;
 
     }
 
@@ -207,7 +206,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("change should also be reflected in the timeline as {string} for PB ticket")
     public void changeShouldAlsoBeReflectedInTheTimelineForPBTicket(String message) {
-        message += CommonUtils.pbTicket;
+        message += CommonUtils.savedTicket;
 
         problemRecordPage.clickTimelineButton();
         boolean containsMessage = problemRecordPage.getTimelineStatus(1).contains(message);
@@ -829,7 +828,7 @@ public class OWF_ProblemRecordPageSteps {
     @And("user enters ticket previously created and searches")
     public void userEntersTicketPreviouslyCreatedAndSearches() {
         problemRecordPage.enterTicket(ticket);
-        System.out.println("user entered problem ticket" + ticket);
+        System.out.println("user entered ticket - " + ticket);
         problemRecordPage.clickSearchButton();
     }
 
@@ -1552,6 +1551,31 @@ public class OWF_ProblemRecordPageSteps {
     @When("user selects actions dropdown as {string}")
     public void userSelectsActionsDropdownAs(String dropdownvalue) {
         problemRecordPage.selectActions(dropdownvalue);
+    }
+
+    @And("user enters item as {string}")
+    public void userEntersItemAs(String item) {
+        problemRecordPage.enterItem(item);
+    }
+
+    @And("user enters category as {string}")
+    public void userEntersCategoryAs(String category) {
+       problemRecordPage.enterCategory(category);
+    }
+
+    @And("user validates {string} is not mandatory")
+    public void userValidatesIsNotMandatory(String elementName) {
+        Assert.assertTrue(problemRecordPage.verifyElementIs_Not_mandatory(elementName));
+    }
+
+    @And("user enters onsite engineers as {string}")
+    public void userEntersOnsiteEngineersAs(String OnSiteEngineer) {
+        problemRecordPage.enterOnSiteEngineerAs(OnSiteEngineer);
+    }
+
+    @And("user enters onsite contact as {string}")
+    public void userEntersOnsiteContactAs(String contact) {
+        problemRecordPage.enterOnSiteContactAs(contact);
     }
 }
 

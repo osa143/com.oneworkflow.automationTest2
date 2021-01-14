@@ -35,7 +35,7 @@
      And user enters "HPE Common Temip" in the source field
      When user clicks on advanced search button
      ## In advance search we have to enter the date in correct format to search within age in days of source##
-     And user enters "'3'>\"07/11/2020\"" in the advanced search bar
+     And user enters "'3'>\"07/12/2020\"" in the advanced search bar
      And user clicks Search on ticket search
      And user waits 15 secs
      When user selects fault position as "Other:Other" on trouble event page

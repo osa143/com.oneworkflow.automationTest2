@@ -119,7 +119,13 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String btn_ADD= "WIN_0_700020037";
     private static final String table_Contacts= "T700020029";
     private static final String btn_CANCEL= "WIN_0_777777852";
+    private static final String btn_REMOVE_SELECTED_PERSON= "WIN_0_700020031";
 
+    public void selectContactAndClicksRemoveSelectedPerson(String contact){
+       WebElement contactEmail= getTableCellElement(By.id(table_Contacts), "Send Notification To", contact);
+       contactEmail.click();
+       clickElementById(btn_REMOVE_SELECTED_PERSON);
+    }
     public void clickAddCancel(){
         clickElementById(btn_CANCEL);
     }

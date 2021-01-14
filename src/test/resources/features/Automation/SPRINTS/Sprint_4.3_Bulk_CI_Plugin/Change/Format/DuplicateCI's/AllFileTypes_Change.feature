@@ -1,4 +1,4 @@
-@duplicateCIs_change @SAO-427
+@duplicateCIs_change2 @SAO-427
 Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format
 

@@ -13,10 +13,10 @@ Feature: Change Templates [SaR]
     When user selects "Service Provider" dropdown as "Telia Company"
     And user clicks on show templates
     Then templates should appear
-    When user selects "TEST TEMPLATE [UAT] - Standard Change" and clicks open
-    And user switches to frame
+    When user selects "Telia Carrier UAT Changes" under "Name" column and clicks open
     Then user clicks on "Further Details" tab
     And user validates "Category" is not mandatory
     And user validates "Type" is not mandatory
     And user validates "Item" is not mandatory
     And user validates "Technology" is not mandatory
+    And user clicks close button on change template window

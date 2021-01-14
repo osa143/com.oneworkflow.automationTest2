@@ -343,7 +343,12 @@ public class BaseRecordPage extends BasePage {
     public String getItem(){
         return getAttributeValueById(txt_ITEM);
     }
-
+    public void enterItem(String item){
+        enterTextByElement(By.id(txt_ITEM), item);
+    }
+    public void enterCategory(String category){
+        enterTextByElement(By.id(txt_CATEGORY), category);
+    }
 
 
     public void enterSummary_attachments(String text){
@@ -1000,7 +1005,7 @@ public class BaseRecordPage extends BasePage {
     }
 
 
-    public void enterChangeBuilderType(String changeBuilderName) {
+    public void enterChangeBuilderTypeAndClicksEnter(String changeBuilderName) {
         //enterTextByElement(By.id(txtCHANGE_BUILDER_FIELD_ID), changeBuilderName);
         findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).clear();
         driver.findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).sendKeys(changeBuilderName);
@@ -1027,7 +1032,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterStartDate(int delay) {
-        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         CommonUtils.eventStartTime=dateTime;
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
@@ -1035,7 +1040,7 @@ public class BaseRecordPage extends BasePage {
 
     public void enterEndDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         CommonUtils.requestEnd=dateTime;
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );

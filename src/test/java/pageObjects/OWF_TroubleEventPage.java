@@ -934,6 +934,18 @@ public void rightClickOnElement(String cellData){
         return true;
         else return false;
     }
+    public boolean validateWorkOrdersAvailability(int expectedTickets)
+    {
+        wait(1000);
+        int size = getTableRows(By.id(table_WORKORDERS_ID)).size();
+        System.out.println("Table rows are -" +size);
+        int actualTickets=size-1;
+        System.out.println("Available Tickets are - " + (actualTickets));
+        if(actualTickets==expectedTickets){
+            return true;
+        }
+        return false;
+    }
     public String getCust_Remaining_SLA(){
         String SLA_Target_Time = getAttributeValueById(txtCUST_REMAINING_SLA_ID);
         System.out.println("Cust remaoning SLA- "+ getTextByID(txtCUST_REMAINING_SLA_ID));

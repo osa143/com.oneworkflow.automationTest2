@@ -965,6 +965,12 @@ public class OWF_AgentConsolePageSteps {
     @Then("user validates orange support icon is displayed on ticket created")
     public void userValidatesOrangeSupportIconIsDisplayedOnTicketCreated() {
     }
+
+
+    @When("user selects contact {string} and clicks remove selected person")
+    public void userSelectsContactAndClicksRemoveSelectedPerson(String contact) {
+        agentConsolePage.selectContactAndClicksRemoveSelectedPerson(contact);
+    }
 }
 
 

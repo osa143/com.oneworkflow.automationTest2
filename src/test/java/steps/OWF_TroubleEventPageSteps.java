@@ -1618,6 +1618,23 @@ public class OWF_TroubleEventPageSteps {
     public void userValidatesCISAs(String arg0, String cellValue) {
         Assert.assertEquals(cellValue, troubleEventPage.verifyColumnStatus("S", 1));
     }
+
+    @Then("user should see {int} work order listed under work order tab")
+    public void userShouldSeeWorkOrderListedUnderWorkOrderTab(int numberOfWorkOrders) {
+        Assert.assertTrue(troubleEventPage.validateWorkOrdersAvailability(numberOfWorkOrders));
+    }
+
+    @And("user right clicks on primary CI and validates options {string} are available")
+    public void userRightClicksOnPrimaryCIAndValidatesOptionsAreAvailable(String expectedValues) {
+        troubleEventPage.selectPrimaryTicket();
+        Assert.assertTrue(troubleEventPage.verifyDropdownValues(expectedValues));
+    }
+
+    @And("user right clicks on secondary CI and validates options {string} are available")
+    public void userRightClicksOnSecondaryCIAndValidatesOptionsAreAvailable(String expectedValues) {
+        troubleEventPage.selectTicketAndRightClick();
+        Assert.assertTrue(troubleEventPage.verifyDropdownValues(expectedValues));
+    }
 }
 
 

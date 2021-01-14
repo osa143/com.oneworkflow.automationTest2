@@ -43,7 +43,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user enters as {string} in Change Builder field")
     public void userEntersAsInChangeBuilderField(String text) {
-        changeRecordPage.enterChangeBuilderType(text);
+        changeRecordPage.enterChangeBuilderTypeAndClicksEnter(text);
 
     }
 
@@ -587,17 +587,6 @@ public class OWF_ChangeRecordPageSteps {
 
     }
 
-    @Then("user clicks on approval tab")
-    public void userClicksOnApprovalTab() {
-    }
-
-    @And("user clicks approve button")
-    public void userClicksApproveButton() {
-    }
-
-    @Then("user clicks on schedule tab")
-    public void userClicksOnScheduleTab() {
-    }
 
     @Then("user validates change initiator as {string}")
     public void userValidatesChangeInitiatorAs(String arg0) {
@@ -1100,7 +1089,43 @@ public class OWF_ChangeRecordPageSteps {
 
     @Then("user selects CAB approval")
     public void userSelectsApproval() {
+
         changeRecordPage.clickCABApproval();
+    }
+
+    @And("user should see review details {string}")
+    public void userShouldSeeReviewDetails(String expectedReviewDetails) {
+        Assert.assertEquals(expectedReviewDetails, changeRecordPage.getReviewDetails());
+    }
+
+    @Then("user should see change ticket previously created")
+    public void userShouldSeeChangeTicketPreviouslyCreated() {
+        Assert.assertEquals(changeRecordPage.getTicketValue(), CommonUtils.savedTicket);
+    }
+
+    @Then("templates should appear")
+    public void templatesShouldAppear() {
+     Assert.assertTrue(changeRecordPage.verifyTemplatesAppeared());
+    }
+
+    @When("user selects {string} under {string} column and clicks open")
+    public void userSelectsUnderColumnAndClicksOpen(String tableCellData, String columnName) {
+        changeRecordPage.selectTemplateAndDoubleClickToOpen(columnName,tableCellData);
+    }
+
+    @And("user clicks close button on change template window")
+    public void userClicksCloseButtonOnChangeTemplateWindow() {
+        changeRecordPage.clickClose_changeTemplate();
+    }
+
+    @And("user enters project code as {string}")
+    public void userEntersProjectCodeAs(String projectCode) {
+        changeRecordPage.enterProjectCode(projectCode);
+    }
+
+    @Then("user validates fields under schedule tab are read only")
+    public void userValidatesFieldsUnderScheduleTabAreReadOnly() {
+    Assert.assertTrue(changeRecordPage.verifyFieldsAreReadOnly());
     }
 
     @And("user enters impact duration as {string} seconds")

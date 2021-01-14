@@ -75,14 +75,15 @@
       When user clicks on "Interested Parties" tab
       And user enters email address as "Test123xxx@Test123xxx.com"
       And user clicks on add email button
-#      Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 1
+      Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
 #      Then user clicks on add button under interested parties
 #      And user switches to frame 3
 #      When user selects type as "Additional Access" under interested parties
 #      And user clicks on radio button user
 #      And user enters organization name plus as "ANS" and searches
 #      And user selects Agile Network Systems and clicks use button
-#      And user switches to frame 0
+#      And user switches to default
+#      And user switches to frame 3
 #      Then user validates organization as "Agile Network Systems"
 #      Then user clicks on cancel button on interested parties window
 #      And user switches to default
@@ -155,7 +156,7 @@
       When user clicks on "Interested Parties" tab
       And user enters email address as "Test2@Test2.com"
       And user clicks on add email button
-#      Then user should see new email "Test2@Test2.com" added in "Email Address" in row 2
+      Then user should see new email "Test2@Test2.com" added in "Email Address" in row 3
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab
       Then user should see "Acknowledged" email update
@@ -236,6 +237,7 @@
       And user validates owner as "ChangeManager1_Automation"
       Then user clicks on save button
       And user waits 45 secs
+      And user clicks on ticket refresh button
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab
       Then user should see "Assignment-User" email update
@@ -247,15 +249,18 @@
       And user clicks on "Core" tab
       And user selects status as "Scheduled" on user more filters window
       And user clicks on apply button on user more filters window
-      #And user should see "CR" tickets with "Status" of "Scheduled"
+      And user should see "CR" tickets with "Status" of "Scheduled"
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
-      And user switches to window 2
+      And user switches to window 3
       Then user enters ticket previously created and searches
       When user changes status to "Implementation"
       And user clicks on save button
-      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Start has changed from  UTC to 2019-07-26 13:09:51 UTC. Request Status has changed from Scheduled to Implementation. "
+      And user waits 15 secs
+      Then change should also be reflected in the timeline as "Request Status has changed from Scheduled to Implementation. " on row 2
       Then user clicks on "Schedule" tab
       Then user validates actual start time is updated
+      And user waits 15 secs
+      Then user clicks on ticket refresh button
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab
       Then user should see "Implementation" email update
@@ -264,22 +269,23 @@
       And user clicks on add button on timeline
       When user changes status to "Completed"
       And user clicks on save button
-      And error message should display as "Required field (without a default) not specified : Actual Impact (ARERR 9424)"
-      And error message should display as "Required field (without a default) not specified : Completed Code (ARERR 9424)"
+#      And error message should display as "Required field (without a default) not specified : Actual Impact (ARERR 9424)"
+#      And error message should display as "Required field (without a default) not specified : Completed Code (ARERR 9424)"
       Then user clicks on "Schedule" tab
       Then user validates actual end time is updated
       Then user selects actual impact as "No Impact"
       And user selects completed code as "Successful"
       And user clicks on save button
-      Then error message should display as "There are still outstanding active or pending impact records. Please clear them before clearing the request. (ARERR 999001210)"
+      #Then error message should display as "There are still outstanding active or pending impact records. Please clear them before clearing the request. (ARERR 999001210)"
       When user clicks on Diagnosis tab
       And user gets CI impact from time and impact to time
       And user right clicks on primary CI and selects "Impact:Clear"
-      And user clicks on yes on CI warning window
+      And user clicks yes on impact update confirmation
+      And user switches to window 3
       Then user validates CI "Impact Status" is "Inactive"
       And user validates CI impact from time and impact to time is updated
       Then user clicks on save button
-      And change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Impact has changed from  to No Impact. Actual End has changed from  UTC to 2019-07-26 13:23:51 UTC. Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed. "
+      And change should also be reflected in the timeline as "Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed. "
       And user logsOut
       And user goes back to login page
       When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"

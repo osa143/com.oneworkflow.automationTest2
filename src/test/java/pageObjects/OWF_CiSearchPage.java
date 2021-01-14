@@ -295,6 +295,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     public void addCI_ToChangeTicket(String CIName, String CI_ImpactLevel){
         clickDiagnosis();
         clickCiSearch();
+        wait(1000);
         int size = driver.findElements(By.tagName("iframe")).size();
         switchToFrameByIndex(size-1);
         clickClearButton();

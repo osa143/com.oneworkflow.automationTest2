@@ -1092,6 +1092,12 @@ public class OWF_ChangeRecordPageSteps {
     public void userSelectsApproval() {
         changeRecordPage.clickCABApproval();
     }
+
+    @And("user clicks yes on impact update confirmation")
+    public void userClicksYesOnImpactUpdateConfirmation() {
+        changeRecordPage.switchToFrameByIndex(1);
+        changeRecordPage.clickYes();
+    }
 }
 
 

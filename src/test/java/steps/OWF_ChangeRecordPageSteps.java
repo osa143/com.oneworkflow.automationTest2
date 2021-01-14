@@ -1127,6 +1127,18 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesFieldsUnderScheduleTabAreReadOnly() {
     Assert.assertTrue(changeRecordPage.verifyFieldsAreReadOnly());
     }
+
+    @And("user enters impact duration as {string} seconds")
+    public void userEntersImpactDurationAsSeconds(String arg0) {
+        changeRecordPage.enterImpactDurationSecs(arg0);
+    }
+
+
+    @And("user clicks yes on impact update confirmation")
+    public void userClicksYesOnImpactUpdateConfirmation() {
+        changeRecordPage.switchToFrameByIndex(1);
+        changeRecordPage.clickYes();
+    }
 }
 
 

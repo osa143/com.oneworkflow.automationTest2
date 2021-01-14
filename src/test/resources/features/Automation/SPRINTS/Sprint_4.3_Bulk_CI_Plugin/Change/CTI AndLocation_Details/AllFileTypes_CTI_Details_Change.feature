@@ -42,7 +42,7 @@ Feature: checking of bulk loading CTI details and location details
     Then user clicks on save button under bulk import
     And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
     And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-    And user waits 60 secs
+    And user waits 30 secs
     When user clicks on Show Bulk Import button
     And user switches to frame
     And user clicks on "Related CIs" tab
@@ -57,8 +57,8 @@ Feature: checking of bulk loading CTI details and location details
     When user clicks on ticket refresh button
     When user clicks on CTI details under sections
     Then user validates Category as "Access"
-    And user validates type as "WLAN"
-    And user validates item as "AP"
+    And user validates type as "WLAN Access"
+    And user validates item as "AccessPoint"
     When user clicks on location under sections
     Then user validates location id as "ALV WLAN11"
     And user validates location name as "SE_Site_ALV WLAN11"
@@ -75,6 +75,6 @@ Feature: checking of bulk loading CTI details and location details
     Examples:
       |fileTypes                                                                                                  |
       |Test Attachments\10 CI's - Correct Names\CSV.csv |
-      |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
-      |Test Attachments\10 CI's - Correct Names\XLS.xls|
-      |Test Attachments\10 CI's - Correct Names\TEXT.txt |
+     # |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
+     # |Test Attachments\10 CI's - Correct Names\XLS.xls|
+     # |Test Attachments\10 CI's - Correct Names\TEXT.txt |

@@ -50,9 +50,9 @@ Feature: Rescheduling - Agreed Schedule + Impact Records (Telia) [aR]
     And user clicks save button
     Then user validates ticket status as "Scheduled"
     When user clicks on Diagnosis tab
-    And user validates ci "" impact status as inactive
+   # And user validates ci "" impact status as "" in row 1
     #step20
-
+    And user validates "dummy" as "Inactive" in row 1
     When user changes status to "Approved"
     And user clicks save button
     When user clicks on schedule tab
@@ -70,10 +70,10 @@ Feature: Rescheduling - Agreed Schedule + Impact Records (Telia) [aR]
     And user validates agreed start as ""
     Then user validates agreed end as ""
     When user clicks on Diagnosis tab
-    And user validates D as "0"
-    And user validates H as "0"
-    And user validates M as "0"
-    Then user validates S as "2"
+    And user validates CI "" D as "0"
+    And user validates CI "" H as "0"
+    And user validates CI "" M as "0"
+    Then user validates CI "" S as "2"
     When user clicks on approval tab
     And user clicks on request thats pending approval
     And user clicks on approve button
@@ -81,13 +81,13 @@ Feature: Rescheduling - Agreed Schedule + Impact Records (Telia) [aR]
     And user validates agreed start as request start
     Then user validates agreed end as request end
     When user clicks on Diagnosis tab
-    And user validates ci "" impact status as inactive
+    And user validates "dummy" as "Inactive" in row 1
     And user validates impact from time as agreed start time
     And user validates impact to time as agreed end time
-    And user validates D as "0"
-    And user validates H as "0"
-    And user validates M as "0"
-    Then user validates S as "2"
+    And user validates CI "" D as "0"
+    And user validates CI "" H as "0"
+    And user validates CI "" M as "0"
+    Then user validates CI "" S as "2"
 
 
 

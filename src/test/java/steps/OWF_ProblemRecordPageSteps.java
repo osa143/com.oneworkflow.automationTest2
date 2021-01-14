@@ -830,6 +830,7 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.enterTicket(ticket);
         System.out.println("user entered ticket - " + ticket);
         problemRecordPage.clickSearchButton();
+        problemRecordPage.wait(4000);
     }
 
     @And("user validates Save is present")

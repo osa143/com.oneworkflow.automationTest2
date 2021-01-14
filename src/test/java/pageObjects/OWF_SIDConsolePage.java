@@ -3,6 +3,7 @@ package pageObjects;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import java.util.List;
@@ -56,7 +57,38 @@ public class OWF_SIDConsolePage extends BasePage {
     private static final String ddValueCIRCUIT_CIS = "Circuit CIs";
     private static final String ddValueCLEAR = "(clear)";
 
-    private static final String AgentConsoleTable_ID = "T700009024";
+    private static final String SID_ConsoleTable_ID = "T700009024";
+    private static final String btn_SHOW_HISTORY= "//input[@value='Show History']";
+    private static final String table_RELATED_MATCHES= "T700009045";
+    private static final String tdROW1_RELATED_MATCHES_XPATH= "//*[@id='T700009045']/tbody/tr[2]/td[2]";
+    private static final String column_TICKET_TITLE="//*[@id='WIN_0_700009045']/div[2]/div/div[1]/div[5]";
+
+    public void clickOnColumnTitle(){
+        clickElement(By.xpath(column_TICKET_TITLE));
+    }
+    Actions action = new Actions(driver);
+    public void doubleClickOnTicket_SIDConsole_RelatedMatches(){
+        WebElement element= findElement(By.xpath(tdROW1_RELATED_MATCHES_XPATH));
+        action.doubleClick(element).perform();
+    }
+    public String getSIDConsole_RelatedMatches_TableData(String colName, int rowNum){
+        return getTableCellData(By.id(table_RELATED_MATCHES), colName, rowNum);
+    }
+
+   public void clickShowHistory(){
+       clickElement(By.xpath(btn_SHOW_HISTORY));
+   }
+    public boolean verifyLocationIsReadOnly(){
+        return checkIfControlIsReadonly(txtbxLOCATION_PLUS);
+    }
+
+    public boolean verifySearchForDropdownValues(String options, String dropdownName ){
+        return verifyDropdownValues(options, dropdownName, ddSEARCH_FOR);
+    }
+    public String getSID_Console_TableData(String colName, int rowNum){
+        return getTableCellData(By.id(SID_ConsoleTable_ID), colName, rowNum);
+    }
+
 
 
     public void selectCategory(String value){
@@ -112,7 +144,9 @@ public class OWF_SIDConsolePage extends BasePage {
     }
 
     public void enterNamePlus(String namePlus) {
-        driver.findElement(By.id(txtbxNAME_PLUS)).sendKeys(namePlus);
+        WebElement TextBox_namePlus= findElement(By.id(txtbxNAME_PLUS));
+        TextBox_namePlus.clear();
+        TextBox_namePlus.sendKeys(namePlus);
     }
 
     public void clickReRunButton() {
@@ -251,22 +285,22 @@ public class OWF_SIDConsolePage extends BasePage {
     }
 
     public List<WebElement> TableRows() {
-        return getTableRows(By.id(AgentConsoleTable_ID));
+        return getTableRows(By.id(SID_ConsoleTable_ID));
     }
 
     public boolean validateSiteNameDetails() {
 
-        return validateIfAllColumnRowsHasData(AgentConsoleTable_ID, "Site Name");
+        return validateIfAllColumnRowsHasData(SID_ConsoleTable_ID, "Site Name");
     }
 
     public boolean verifyCIS(String colName, String colValue, boolean partialText){
-        return verifyColumnValuesMultiple(By.id(AgentConsoleTable_ID), colName, colValue, partialText );
+        return verifyColumnValuesMultiple(By.id(SID_ConsoleTable_ID), colName, colValue, partialText );
 
 
     }
     public boolean verifyCISForAllCountries(String colName, String colValue){
 
-        return verifyColumnValuesForMultipleInputs(By.id(AgentConsoleTable_ID), colName, colValue);
+        return verifyColumnValuesForMultipleInputs(By.id(SID_ConsoleTable_ID), colName, colValue);
 
     }
 }

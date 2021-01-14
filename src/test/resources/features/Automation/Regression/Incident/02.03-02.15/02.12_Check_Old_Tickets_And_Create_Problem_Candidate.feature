@@ -33,7 +33,7 @@
       When user adds below CI's to the ticket
         |   CI Name     |
         |SE_SGSN_HYMME2|
-        |SE_SGSN_LDHMME1 |
+        |SE_SGSN_LDHMME1|
         |SE_SGSN_VRRMME1|
       And user clicks on "Diagnosis" tab
       And CI should be listed and displayed under the Diagnosis tab

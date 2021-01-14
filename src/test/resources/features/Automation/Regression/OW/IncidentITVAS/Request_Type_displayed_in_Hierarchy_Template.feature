@@ -1,4 +1,4 @@
-@Automation_Request_Type_displayed_in_Hierarchy_Template
+@Request_Type_displayed_in_Hierarchy_Template
 
 
 Feature: Automation - Request Type displayed in Hierarchy - Template[s]
@@ -11,6 +11,6 @@ Feature: Automation - Request Type displayed in Hierarchy - Template[s]
     When user clicks on create work order
     And user switches to window 1
     Then work order form should appear in new tab
-    When user selects template as "SA Process:Improvement/Automation:SA Process improvement"
-    And user validates template as "SA Request | Configuration"
-    #need to review
+    When user selects template as "SA Process:Improvement/Automation:SA Process Improvement"
+    And user validates request type as "Service Request | SA Process Improvement"
+    And user clicks on save button

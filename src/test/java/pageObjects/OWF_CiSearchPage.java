@@ -20,7 +20,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String btn_LINK = "WIN_5_777506009";
     private static final String btnACCEPT_ID = "WIN_0_730011058";
     private static final String txtLOCATION_ID = "arid_WIN_0_700009015";
-    private static final String btnCREATE_linked_items = "WIN_5_777506020";
+    private static final String btnCREATE_linked_items = "//*[@arid='777506020']";
     private static final String btn_CREATE_linked_items= "WIN_5_777506020";
     private static final String chkbxTO_SELECT_CI = "//*[@id='T700009024']/tbody/tr[2]";
     private static final String rbtn_CLEARED_ID = "WIN_4_rc0id800040060";
@@ -103,7 +103,14 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String txt_TEMPLATE_TEXT = "//*[@id='T800040222']/tbody/tr[6]/td[1]/nobr/span";
     private static final String btn_CLOSE_CI_DETAILS_TEMPLATE = "WIN_0_800040431";
     private static final String btn_CLOSE_CI_DETAILS = "WIN_0_999000415";
+    private static final String btn_USE_MY_TEMPLATE= "WIN_0_800040417";
 
+    public void clickOnTestSection(){
+        clickElement(By.xpath(txt_TEMPLATE_TEXT));
+    }
+    public boolean verifyUseMyButtonTemplateIsReadOnly(){
+        return checkIfControlIsReadonly(btn_USE_MY_TEMPLATE);
+    }
 
     public void clickCloseCIDetailsTemplate(){
         clickElementById(btn_CLOSE_CI_DETAILS_TEMPLATE);
@@ -475,8 +482,8 @@ public class OWF_CiSearchPage extends BaseRecordPage {
 
     public void clickOk_popUp(){
         int size = driver.findElements(By.tagName("iframe")).size();
-        switchToFrameByIndex(size-1);
-        clickElement(By.xpath("//*[@id=\"PopupMsgFooter\"]/a"));
+//        switchToFrameByIndex(size-1);
+        clickElement(By.xpath("//*[@id='PopupMsgFooter']/a"));
         wait(2000);
     }
 
@@ -534,6 +541,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     }
 
     public static void enterImpactFrom(){
+        driver.findElement(By.id(txt_IMPACT_FROM)).clear();
         driver.findElement(By.id(txt_IMPACT_FROM)).sendKeys(Keys.ENTER);
     }
     public void enterImpactFrom(String text){
@@ -573,7 +581,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     }
 
     public void clickCreate_linkedItems(){
-        findElement(By.id(btnCREATE_linked_items)).click();
+        findElement(By.xpath(btnCREATE_linked_items)).click();
     }
     public void clickCreate(){
         findElement(By.id(btn_CREATE_linked_items)).click();
@@ -615,8 +623,12 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         driver.findElement(By.id(ddSEARCH_FOR_ID)).click();
     }
 
+
     public void selectAllCiDdValue() {
         selectDropDownValue(ddValueALL_CIS);
+    }
+    public void selectSearchForValue(String value) {
+        selectDropDownValue(value);
     }
 
     public void clickCiSearchButton() {
@@ -636,14 +648,14 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     {
         try {
             clickElementById("ardivpcl");
-            wait(1000);
+            wait(500);
             driver.switchTo().frame(1);
 
             clickElementByContainsTextAndTagName("a", "OK");
-            wait(1000);
+            wait(500);
             driver.switchTo().defaultContent();
             driver.switchTo().frame(2);
-            wait(1000);
+            wait(500);
         }
         catch (Exception ex)
         {
@@ -651,18 +663,18 @@ public class OWF_CiSearchPage extends BaseRecordPage {
             driver.switchTo().parentFrame();
             driver.switchTo().frame(1);
             clickElementByContainsTextAndTagName("a", "OK");
-            wait(1000);
+            wait(500);
             driver.switchTo().defaultContent();
             driver.switchTo().frame(2);
-            wait(1000);
+            wait(500);
         }
     }
 
     public void clickYesOnConfirmationMessage(){
         driver.switchTo().frame(1);
-        wait(1000);
+        wait(700);
         clickElement(By.id("ardivpcl"));
-        wait(1000);
+        wait(700);
         driver.switchTo().defaultContent();
         driver.switchTo().frame(2);
     }

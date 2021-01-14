@@ -4,7 +4,7 @@
     Scenario: Verification of configuring source
 
      Given user is on the OneWorkflow login page
-     When user logs in with valid username "fhr501" and password as "C0vidbadger"
+     When user logs in with valid username "fhr501" and password as "H0neybadger"
      Then user successfully logged in to OneWorkflow and agent console should be displayed
      When user selects "Administration" menu as "Trouble:Edit Closure Code Configuration"
      And user switches to window 1
@@ -35,7 +35,7 @@
      And user enters "HPE Common Temip" in the source field
      When user clicks on advanced search button
      ## In advance search we have to enter the date in correct format to search within age in days of source##
-     And user enters "'3'>\"17/10/2020\"" in the advanced search bar
+     And user enters "'3'>\"07/12/2020\"" in the advanced search bar
      And user clicks Search on ticket search
      And user waits 15 secs
      When user selects fault position as "Other:Other" on trouble event page
@@ -55,7 +55,7 @@
      And user enters "HPE Common Temip" in the source field
      When user clicks on advanced search button
      ## In advanced search we have to enter the date in correct format to search within age in days of source##
-     And user enters "'3'<\"09/10/2020\"" in the advanced search bar
+     And user enters "'3'<\"07/11/2020\"" in the advanced search bar
      And user clicks Search on ticket search
      And user waits 15 secs
      And user should see fault position, equipment, cause, action, closure info fields read only

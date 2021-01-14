@@ -59,6 +59,11 @@ public class BasePage{
 
         return findElement(element).isDisplayed();
     }
+    public boolean verifyElementIs_Not_mandatory(String elementName){
+        return driver.findElements(By.tagName("label")).stream()
+                .filter(element -> element.getText().equals(elementName)).findFirst().orElse(null).isDisplayed();
+
+    }
     public String makeXpath(String tagName, String attribute, String value) {
         String xpath = "//" + tagName + "[@" + attribute + "='" + value + "']";
         return xpath;
@@ -110,6 +115,24 @@ public void clickElementById(String Id){
                 return false;
         }
         return true;
+    }
+    public boolean verifyMenuItems2(String items) {
+        String[] menuItems = items.split(":");
+        for (int i = 0; i < menuItems.length; i++) {
+            try {
+                String mainMenuXpath = "//img[@alt='Menu for " + menuItems[i] + "']/..";
+                WebElement element = driver.findElement(By.xpath(mainMenuXpath));
+                boolean result = element.isEnabled();
+                if (result == false)
+                    return false;
+                else return true;
+
+            } catch (Exception e) {
+              return false;
+            }
+
+        }
+        return false;
     }
 
     public boolean verifyDateTimeFormat(String format, String dateToValidate)
@@ -268,6 +291,20 @@ public void clickElementById(String Id){
             dropdownValues.add(elements.get(i).getText().trim());
         }
 
+        return dropdownValues;
+
+    }
+    public List<String> getDropdownValues()
+    {
+        List<String> dropdownValues = new ArrayList<String>();
+
+        List<WebElement> elements = findElement(By.className("MenuTableBody")).findElements(By.tagName("td"));
+
+        for (int i = 0; i < elements.size(); i ++)
+        {
+            dropdownValues.add(elements.get(i).getText().trim());
+        }
+         clickEscButton();
         return dropdownValues;
 
     }
@@ -470,6 +507,14 @@ public void clickElementById(String Id){
         }
         return false;
     }
+    public boolean checkIfControlIsReadonlyByElement(WebElement element) {
+        String isReadOnly = element.getAttribute("readonly");
+        if (isReadOnly != null && isReadOnly.contains("true")) {
+            return true;
+        }
+        return false;
+    }
+
     public boolean verifyElementIsReadyOnlyByContainsText(String textName) {
         String element = String.format("//label[contains(text(),'%s')]/text area", textName);
         System.out.println(element);
@@ -857,8 +902,13 @@ public void clickElementById(String Id){
 
     public void selectTab(String tab) {
         wait(2000);
-        driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tab)).findFirst().orElse(null).click();
-
+        try {
+            driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tab)).findFirst().orElse(null).click();
+        }
+        catch (Exception e){
+            wait(3000);
+            driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tab)).findFirst().orElse(null).click();
+        }
     }
 
     public List<String> getTabValues()
@@ -948,6 +998,22 @@ public void clickElementById(String Id){
         String[] multipleValues = ExpectedDropdownValues.split(":");
         List<String> ActualDropdownValues = getDropdownValues(dropdownName, dropdownId);
         clickEscButton();
+
+        System.out.println("Dropdown values are: " + ActualDropdownValues);
+        for (int i = 0; i < multipleValues.length; i++)
+        {
+            if (!ActualDropdownValues.contains(multipleValues[i]))
+            {
+                return false;
+            }
+
+        }
+        return true;
+    }
+    public boolean verifyDropdownValues(String ExpectedDropdownValues)
+    {
+        String[] multipleValues = ExpectedDropdownValues.split(":");
+        List<String> ActualDropdownValues = getDropdownValues();
 
         System.out.println("Dropdown values are: " + ActualDropdownValues);
         for (int i = 0; i < multipleValues.length; i++)

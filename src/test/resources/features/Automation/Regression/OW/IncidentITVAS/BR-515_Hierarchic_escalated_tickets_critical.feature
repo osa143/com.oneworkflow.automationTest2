@@ -1,10 +1,8 @@
 @BR_515_critical @OW_incident
 
-
 Feature: BR_515_Hierarchic_escalated_tickets_critical
 
   Scenario: BR_515_Hierarchic_escalated_tickets_critical
-
 
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password

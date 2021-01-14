@@ -4,7 +4,7 @@
     Scenario: Verify user Profile Development - User forms and workflow
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "fhr501" and password as "C0vidbadger"
+      When user logs in with valid username "fhr501" and password as "H0neybadger"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects "Administration" as "People:Users"
       And user switches to window 1

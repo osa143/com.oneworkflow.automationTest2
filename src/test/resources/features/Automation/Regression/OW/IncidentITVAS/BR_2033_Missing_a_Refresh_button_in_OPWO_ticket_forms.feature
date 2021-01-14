@@ -12,9 +12,9 @@ Feature: BR-2033 - Missing a Refresh button in OPWO ticket forms
     And user switches to window 1
     Then trouble record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
-    And user enters "Test" in Title field in Trouble event
+    And user enters "Refresh button Test" in Title field in Trouble event
     And user selects request type as "Customer" on trouble event page
-    And user enters description as "Test"
+    And user enters description as "Refresh ticket Test"
     And user clicks on save button
     And user gets ticket value
     Then ticket should be created and status should be assigned

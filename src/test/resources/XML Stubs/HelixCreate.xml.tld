@@ -4,9 +4,9 @@
             <ns0:Action>Create</ns0:Action>
             <ns0:Operation>Create Incident</ns0:Operation>
             <ns0:InterfaceName>Helix</ns0:InterfaceName>
-            <ns0:NMSGUID>MaheshTestTest3</ns0:NMSGUID>
-            <ns0:AlarmGUID>MaheshTestTest3</ns0:AlarmGUID>
-            <ns0:AlarmNumber>MaheshTestTest3</ns0:AlarmNumber>
+            <ns0:NMSGUID>MaheshTestDec1</ns0:NMSGUID>
+            <ns0:AlarmGUID>MaheshTestDec1</ns0:AlarmGUID>
+            <ns0:AlarmNumber>MaheshTestDec1</ns0:AlarmNumber>
             <ns0:AlarmType>EquipmentAlarm</ns0:AlarmType>
             <ns0:AlarmTextShort>TimDevice_RadioClockIsNotStable</ns0:AlarmTextShort>
             <ns0:AlarmTextLong>Cells: 621781 621782 621783 621784 621785 621786 621787 621788 621789 651781 651782 651783
@@ -35,7 +35,7 @@
             <ns0:Country>Estonia</ns0:Country>
             <ns0:Technology>MSC</ns0:Technology>
             <ns0:FaultDomain>transmission</ns0:FaultDomain>
-            <ns0:JobID>MaheshTestTest3</ns0:JobID>
+            <ns0:JobID>MaheshTestDec1</ns0:JobID>
             <ns0:UserId>rage</ns0:UserId>
             <ns0:AlarmCounter>0</ns0:AlarmCounter>
             <ns0:AlarmStatus>Toggling</ns0:AlarmStatus>

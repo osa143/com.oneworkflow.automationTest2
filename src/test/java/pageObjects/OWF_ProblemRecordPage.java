@@ -313,6 +313,10 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     public String getOnsiteEngineer(){
         return getTextByID(txt_ONSITE_ENGINEER);
     }
+    public void enterOnSiteEngineerAs(String text){
+        enterTextByElement(By.id(txt_ONSITE_ENGINEER), text);
+    }
+
     public String getAccountNumber(){
         return getTextByID(txt_ACCOUNT_NUMBER);
     }
@@ -327,6 +331,9 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
     public String getOnsiteContact(){
         return getTextByID(txt_ONSITE_CONTACT);
+    }
+    public void enterOnSiteContactAs(String text){
+        enterTextByElement(By.id(txt_ONSITE_CONTACT), text);
     }
     public String getTravelTime(){
         return getTextByID(txt_TRAVEL_TIME);

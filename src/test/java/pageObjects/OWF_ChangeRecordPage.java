@@ -118,7 +118,44 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String btn_REASON_EDITOR= "//img[@alt='Editor for Reason']";
     private static final String rbtn_CAB_REQUIRED_YES = "WIN_0_rc1id800000002";
     private static final String YES_CONFIRMATION= "WIN_0_700027904";
+    private static final String table_TEMPLATES= "T777000002";
+    private static final String btn_CLOSE_CHANGE_TEMPLATE= "WIN_2_777000001";
 
+    public boolean verifyFieldsAreReadOnly(){
+         WebElement Div_schedule_tab=  driver.findElement(By.id("WIN_0_999001529"));
+         List<WebElement> elements= Div_schedule_tab.findElements(By.tagName("textarea"));
+
+        for (int i = 0; i < elements.size(); i ++)
+        {
+            boolean result =checkIfControlIsReadonlyByElement(elements.get(i));
+            System.out.println("Read only element - " +elements.get(i));
+            if (result==false)
+                return false;
+        }
+        return true;
+    }
+
+    public void clickClose_changeTemplate(){
+        clickElementById(btn_CLOSE_CHANGE_TEMPLATE);
+    }
+
+    public void selectTemplateAndDoubleClickToOpen(String columnName, String tableCellData){
+        WebElement requiredTemplate= getTableCellElement(By.id(table_TEMPLATES),columnName, tableCellData);
+        doubleClickOnElement(requiredTemplate);
+    }
+    public boolean verifyTemplatesAppeared(){
+        int templates= getTableRows(By.id(table_TEMPLATES)).size();
+        if (templates>0)
+            return true;
+        else return false;
+    }
+
+public void enterActualStartAsCurrentDateTime(){
+    findElement(By.id(txt_ACTUAL_START)).sendKeys(Keys.ENTER);
+}
+    public void enterActualEndAsCurrentDateTime(){
+        findElement(By.id(txt_ACTUAL_END)).sendKeys(Keys.ENTER);
+    }
     public void clickCABApproval(){
         clickElement(By.xpath("//*[@id=\"T777031442\"]/tbody/tr[2]/td[3]/nobr"));
     }
@@ -137,6 +174,7 @@ public void clickCabRequiredYes(){
         switchToFrameByIndex(2);
         return verifyColumnValuesText(By.id(table_SELECT_LOCATION_),colName, colValue, true);
     }
+
 
     public void enterRegionNamePlusAndSearch(String text){
         enterTextByElement(By.id(txt_REGION_NAME), text);
@@ -355,7 +393,7 @@ public void clickCabRequiredYes(){
 
 
     public String getReviewDetails(){
-        return getTextByID(txt_REVIEWDETAILS);
+        return getAttributeValueById(txt_REVIEWDETAILS);
     }
 
     public String getResolvedPerson(){
@@ -454,6 +492,9 @@ public void clickCabRequiredYes(){
        return getTextByID(txt_PROJECTCODE);
    }
 
+   public void enterProjectCode(String projectCode){
+        enterTextByElement(By.id(txt_PROJECTCODE), projectCode);
+   }
     public String getRequestCategory(){
        return getTextByID(txt_REQUEST_CATEGORY);
    }

@@ -156,9 +156,36 @@ public class BaseRecordPage extends BasePage {
     private static final String btn_CLEAR= "WIN_0_700506223";
     private static final String div_ALL_FIELDS= "WIN_0_999000050";
     private static final String table_TICKET_MATCHING = "T600002282";
+    private static final String table_SID_CONSOLE_SHOW_HISTORY="T700009045";
+    private static final String txt_PRIORITY= "arid_WIN_0_800007043";
+    private static final String txt_TITLE_QUICK_CREATE = "arid_WIN_0_800007044";
+    private static final String txt_TYPE_WO_QUICK_CREATE="arid_WIN_0_800007045";
+    private static final String txt_DESCRIPTION_WO_QUICK_CREATE= "arid_WIN_0_800007046";
+    private static final String btn_CREATE_WO_QUICK_CREATE= "WIN_0_800007047";
 
+
+    public void clickCreate_WO_quickCreate() {
+        clickElement(By.id(btn_CREATE_WO_QUICK_CREATE));
+    }
+    public void enterTitle_QuickCreate(String text){
+        enterTextByElement(By.id(txt_TITLE_QUICK_CREATE), text);
+    }
+    public void enterDescription_QuickCreate(String text){
+        enterTextByElement(By.id(txt_DESCRIPTION_WO_QUICK_CREATE), text);
+    }
+    public void selectType_quickCreate(String value){
+        clickElementById(txt_TYPE_WO_QUICK_CREATE);
+        selectDropDownValue(value);
+    }
+    public void selectPriority_quickCreate(String value){
+        clickElementById(txt_PRIORITY);
+        selectDropDownValue(value);
+    }
     public boolean verifyTicketsUnderTicketMatching(String columnName, String columnValue, boolean partialText){
        return verifyColumnValuesMultiple(By.id(table_TICKET_MATCHING), columnName, columnValue, partialText);
+    }
+    public boolean verifyTicketsUnderSID_Console_ShowHistory(String columnName, String columnValue, boolean partialText){
+        return verifyColumnValuesMultiple(By.id(table_SID_CONSOLE_SHOW_HISTORY), columnName, columnValue, partialText);
     }
 
 
@@ -316,7 +343,12 @@ public class BaseRecordPage extends BasePage {
     public String getItem(){
         return getAttributeValueById(txt_ITEM);
     }
-
+    public void enterItem(String item){
+        enterTextByElement(By.id(txt_ITEM), item);
+    }
+    public void enterCategory(String category){
+        enterTextByElement(By.id(txt_CATEGORY), category);
+    }
 
 
     public void enterSummary_attachments(String text){
@@ -594,10 +626,10 @@ public class BaseRecordPage extends BasePage {
         WebElement element = driver.switchTo().activeElement();
         element.sendKeys(Keys.UP);
         element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
+       // element.sendKeys(Keys.UP);
+        //element.sendKeys(Keys.UP);
         element.sendKeys(Keys.ARROW_RIGHT);
-        element.sendKeys(Keys.DOWN);
+        //element.sendKeys(Keys.DOWN);
         element.sendKeys(Keys.DOWN);
         element.sendKeys(Keys.DOWN);
         element.sendKeys(Keys.ENTER);
@@ -819,6 +851,9 @@ public class BaseRecordPage extends BasePage {
     public void selectActions_TimeTracking(){
         selectDropDownNameAndValue(ddACTIONS, ddValueTIME_TRACKING, false);
     }
+    public void selectActions(String dropdownValue){
+        selectDropDownNameAndValue(ddACTIONS, dropdownValue, false);
+    }
     public void selectActivity_WorkingOnTicket(){
         selectDropDownNameAndValue(ddACTIVITY_IN_FRAME, ddValueWORKING_ON_TICKET, false);
     }
@@ -960,7 +995,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterImpactDurationSecs(String impactDurationSecs) {
-
+        clearText(By.id(txtIMPACT_DURATION_SECS));
         enterTextByElement(By.id(txtIMPACT_DURATION_SECS), impactDurationSecs);
     }
 
@@ -970,7 +1005,7 @@ public class BaseRecordPage extends BasePage {
     }
 
 
-    public void enterChangeBuilderType(String changeBuilderName) {
+    public void enterChangeBuilderTypeAndClicksEnter(String changeBuilderName) {
         //enterTextByElement(By.id(txtCHANGE_BUILDER_FIELD_ID), changeBuilderName);
         findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).clear();
         driver.findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).sendKeys(changeBuilderName);
@@ -997,7 +1032,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterStartDate(int delay) {
-        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         CommonUtils.eventStartTime=dateTime;
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
@@ -1005,7 +1040,7 @@ public class BaseRecordPage extends BasePage {
 
     public void enterEndDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         CommonUtils.requestEnd=dateTime;
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );

@@ -197,6 +197,7 @@ public class OWF_AgentConsolePageSteps {
     @When("user selects search menu as {string}")
     public void userSelectsSearchMenuAs(String arg0) {
         agentConsolePage.selectSearchMenu(arg0);
+        agentConsolePage.wait(2000);
     }
 
     @And("user clicks on {string} tab")

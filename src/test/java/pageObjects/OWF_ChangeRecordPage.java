@@ -193,13 +193,15 @@ public void clickCabRequiredYes(){
     }
 
    public String getOrganisationName(){
-       return getAttributeValueById(txt_ORGANISATION_NAME_PLUS);
+        return getAttributeValueByElement(By.xpath("//*[@id=\"arid_WIN_0_700031001\"]"));
+       //return getAttributeValueById(txt_ORGANISATION_NAME_PLUS);
    }
 
    public void clickUse_FrameOnFrame(){
 
         try {
             driver.switchTo().frame(1);
+            clickElement(By.xpath("//*[@id=\"T990001100\"]/tbody/tr[2]/td[1]/nobr/span"));
             clickElementById(btn_USE_QUICK_CI_SEARCH_INTERESTED_PARTY);
             wait(1000);
             driver.switchTo().defaultContent();
@@ -211,6 +213,7 @@ public void clickCabRequiredYes(){
             driver.switchTo().frame(1);
             driver.switchTo().parentFrame();
             driver.switchTo().frame(1);
+            clickElement(By.xpath("//*[@id=\"T990001100\"]/tbody/tr[2]/td[1]/nobr/span"));
             clickElementById(btn_USE_QUICK_CI_SEARCH_INTERESTED_PARTY);
             wait(1000);
             driver.switchTo().defaultContent();

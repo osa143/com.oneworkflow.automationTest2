@@ -1133,6 +1133,12 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.enterImpactDurationSecs(arg0);
     }
 
+
+    @And("user clicks yes on impact update confirmation")
+    public void userClicksYesOnImpactUpdateConfirmation() {
+        changeRecordPage.switchToFrameByIndex(1);
+        changeRecordPage.clickYes();
+    }
 }
 
 

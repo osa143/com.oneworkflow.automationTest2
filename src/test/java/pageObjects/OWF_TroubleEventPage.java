@@ -74,8 +74,6 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String dd_IMPORTANCE="arid_WIN_0_600001821";
     private static final String btn_CLOSE_BULK_UPDATE= "WIN_0_999000100";
 
-
-
     private static final String ddSTATUS = "Status";
     private static final String ddTEMPLATE = "Template";
     private static final String ddTITLE = "Title";
@@ -420,9 +418,8 @@ public void rightClickOnElement(String cellData){
     }
 
 
-
     public void clickAdd_timeline(){
-        clickElement(By.id(btn_ADD));
+        clickElement(By.id(btn_ADD_TIMELINE));
     }
     public void enterImpactFromPlus(String text){
         findElement(By.id(txt_IMPACT_FROM_pLUS)).clear();

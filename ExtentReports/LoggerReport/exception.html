@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="14" parent-id="1">
+<tr class="s-fail" test-id="47" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And dropdown values "Test User [testuser@test.com]" should be available in "Select a Previously Used Contact (use Autofill or the Menu):" dropdown <br/><span class="text-muted text-sm">SAO-7281- Easy access to contacts</span></td>
-	<td>0h 0m 3s+97msc</td>
+	<td class="_600">And user validates Rows OK as "500" <br/><span class="text-muted text-sm">user checks the format of bulk loading format</span></td>
+	<td>0h 0m 0s+71msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,13 +136,15 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
+		<textarea disabled class="code-block">java.lang.AssertionError: expected [500] but found [303]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at steps.OWF_AgentConsolePageSteps.dropdownValuesShouldBeAvailableInDropdown(OWF_AgentConsolePageSteps.java:673)
-	at ✽.dropdown values "Test User [testuser@test.com]" should be available in "Select a Previously Used Contact (use Autofill or the Menu):" dropdown(features/Automation/SPRINTS/Sprint_P4S3/SAO_7281_Easy Access to Contacts in OW E-mails.feature:17)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at steps.OWF_CiSearchPageSteps.userValidatesRowsOKAs(OWF_CiSearchPageSteps.java:314)
+	at ✽.user validates Rows OK as "500"(features/Automation/SPRINTS/Sprint_4.3_Bulk_CI_Plugin/Change/Format/500CI's/AllFileTypes_Change.feature:48)
 </textarea>
 	</td>
 </tr>
@@ -170,7 +172,7 @@
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Dec 9, 2020 05:33:50 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jan 13, 2021 02:18:50 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

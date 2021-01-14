@@ -1598,6 +1598,26 @@ public class OWF_TroubleEventPageSteps {
     public void ticketsShouldBeDisplayedUnderSIDConsoleShowHistoryTickets(String columnValue) {
         Assert.assertTrue(troubleEventPage.verifyTicketsUnderSID_Console_ShowHistory("Ticket Status",columnValue, false));
     }
+
+    @And("user validates CI {string} D as {string}")
+    public void userValidatesCIDAs(String arg0, String cellValue) {
+        Assert.assertEquals(cellValue, troubleEventPage.verifyColumnStatus("D", 1));
+    }
+
+    @And("user validates CI {string} H as {string}")
+    public void userValidatesCIHAs(String arg0, String cellValue) {
+        Assert.assertEquals(cellValue, troubleEventPage.verifyColumnStatus("H", 1));
+    }
+
+    @And("user validates CI {string} M as {string}")
+    public void userValidatesCIMAs(String arg0, String cellValue) {
+        Assert.assertEquals(cellValue, troubleEventPage.verifyColumnStatus("M", 1));
+    }
+
+    @Then("user validates CI {string} S as {string}")
+    public void userValidatesCISAs(String arg0, String cellValue) {
+        Assert.assertEquals(cellValue, troubleEventPage.verifyColumnStatus("S", 1));
+    }
 }
 
 

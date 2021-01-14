@@ -1,21 +1,265 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/SPRINTS/Sprint_P4S3/SAO_7281_Easy Access to Contacts in OW E-mails.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/SPRINTS/Sprint_4.3_Bulk_CI_Plugin/Change/Format/DuplicateCI\u0027s/AllFileTypes_Change.feature");
 formatter.feature({
-  "name": "Ow Emails",
+  "name": "checking of bulk loading format",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@7181"
+      "name": "@duplicateCIs_change"
+    },
+    {
+      "name": "@SAO-427"
+    }
+  ]
+});
+formatter.scenarioOutline({
+  "name": "user checks the format of bulk loading format",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "user is on the OneWorkflow login page",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "user logs in with valid user and password",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user successfully logged in to OneWorkflow and agent console should be displayed",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user clicks on create change record",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user switches to window 1",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user selects request type as \"Normal Change\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user selects title as \"Mobile:CS Core (Voice)\" on Change record page",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user selects request category as \"Software Installation\" on change record page",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enters description as \"TEST TICKET PLEASE IGNORE - SAO-427 Duplicate CI\u0027s\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enters reason field as \"Regression\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user selects priority as \"Critical\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enters \"Privacy Data: Just Testing\" in the change builder field",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enters \"Regression - Change Management Process\" in the implementation field",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user enters \"Regression - Change Management Process\" in the test plan field",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enters \"Regression - Change Management Process\" in the rollback field",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enters \"Regression - Change Management Process\" in the communication plan field",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enters \"Regression - Change Management Process\" in the ver of functionality field",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enters \"Regression - Change Management Process\" in the risk description field",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enters as \"Test Data - Ignore Ticket\" in service and customer impact",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user enters start time as 24 hours fast from current sweden time in \"MM/dd/YYYY HH:mm:ss\" format",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enters end time as 28 hours fast from current sweden time in \"MM/dd/YYYY HH:mm:ss\" format",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enters impact duration as \"45\" minutes",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user selects estimated impact dropdown as \"Degradation of Service\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on save button",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on \"Diagnosis\" tab",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user clicks on Add Bulk Import button",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user switches to frame",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user should see bulk ci loading window",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user selects impact level as \"No Impact\"",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user clicks on Upload Import File",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user clicks on choose file button",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user searches for \"\u003cfileTypes\u003e\" attachment and adds it",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on attachment ok button",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user switches to frame",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user validates attached document is visible",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user clicks on save button under bulk import",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "first error message should display as \"The Uploaded File is now being processed...\" on bulk ci window",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "second error message should display as \"Please Check for the progress of this process in \\\"Show Bulk Import\\\". (ARNOTE 10000)\" on bulk ci window",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user waits 60 secs",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on Show Bulk Import button",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user switches to frame",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on \"Related CIs\" tab",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user validates total rows as \"10\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user validates Rows OK as \"5\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user validates with errors as \"5\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user validates with warnings as \"0\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user validates \"Status\" as \"With Errors\" in row 6",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user validates \"Status\" as \"With Errors\" in row 7",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user validates \"Status\" as \"With Errors\" in row 8",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user validates \"Status\" as \"With Errors\" in row 9",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user validates \"Status\" as \"With Errors\" in row 10",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on bulk loading close button",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user logsOut and closes the browser",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user switches to window 0",
+  "keyword": "And "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "fileTypes"
+      ]
+    },
+    {
+      "cells": [
+        "Test Attachments\\5DuplicateCIs\\5CIsCSV.csv"
+      ]
     }
   ]
 });
 formatter.scenario({
-  "name": "SAO-7281- Easy access to contacts",
+  "name": "user checks the format of bulk loading format",
   "description": "",
-  "keyword": "Scenario",
+  "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@7181"
+      "name": "@duplicateCIs_change"
+    },
+    {
+      "name": "@SAO-427"
     }
   ]
 });
@@ -31,7 +275,7 @@ formatter.result({
 });
 formatter.step({
   "name": "user logs in with valid user and password",
-  "keyword": "When "
+  "keyword": "And "
 });
 formatter.match({
   "location": "OWF_LoginPageSteps.userLogsInWithValidUserAndPassword()"
@@ -50,11 +294,231 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user selects actions dropdown as \"Email \u003e Outgoing\"",
+  "name": "user clicks on create change record",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSelectsActionsDropdownAs(String)"
+  "location": "OWF_AgentConsolePageSteps.userClicksOnCreateChangeRecord()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user switches to window 1",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects request type as \"Normal Change\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userSelectsRequestTypeAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects title as \"Mobile:CS Core (Voice)\" on Change record page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userSelectsTitleAsOnChangeRecordPage(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects request category as \"Software Installation\" on change record page",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userSelectsRequestCategoryAsOnChangeRecordPage(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters description as \"TEST TICKET PLEASE IGNORE - SAO-427 Duplicate CI\u0027s\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userEntersDescriptionAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters reason field as \"Regression\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userEntersReasonFieldAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects priority as \"Critical\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSelectsPriorityAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters \"Privacy Data: Just Testing\" in the change builder field",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userEntersInTheChangeBuilderField(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters \"Regression - Change Management Process\" in the implementation field",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userEntersInTheImplementationField(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters \"Regression - Change Management Process\" in the test plan field",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userEntersInTheTestPlanField(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters \"Regression - Change Management Process\" in the rollback field",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userEntersInTheRollbackField(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters \"Regression - Change Management Process\" in the communication plan field",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userEntersInTheCommunicationPlanField(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters \"Regression - Change Management Process\" in the ver of functionality field",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userEntersInTheVerOfFunctionalityField(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters \"Regression - Change Management Process\" in the risk description field",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userEntersInTheRiskDescriptionField(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters as \"Test Data - Ignore Ticket\" in service and customer impact",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userEntersAsInServiceAndCustomerImpact(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters start time as 24 hours fast from current sweden time in \"MM/dd/YYYY HH:mm:ss\" format",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userEntersStartTimeAsHoursFastFromCurrentSwedenTimeInFormat(int,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters end time as 28 hours fast from current sweden time in \"MM/dd/YYYY HH:mm:ss\" format",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userEntersEndTimeAsHoursFastFromCurrentSwedenTimeInFormat(int,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters impact duration as \"45\" minutes",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userEntersImpactDurationAsMinutes(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects estimated impact dropdown as \"Degradation of Service\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userSelectsEstimatedImpactDropdownAsNoImpact(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on save button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on \"Diagnosis\" tab",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on Add Bulk Import button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userClicksOnAddBulkImportButton()"
 });
 formatter.result({
   "status": "passed"
@@ -70,85 +534,274 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks \"Add Person - free text\" tab",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userClicksTab(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters add person first name as \"Test\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userEntersAddPersonFirstNameAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters add person last name as \"User\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userEntersAddPersonLastNameAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters add person email address as \"testuser@test.com\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userEntersAddPersonEmailAddressAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks add button for add person",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksAddButtonForAddPerson()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "contact \"testuser@test.com\" should be added under \"Send Notification To\"",
+  "name": "user should see bulk ci loading window",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.contactShouldBeAddedUnder(String,String)"
+  "location": "OWF_CiSearchPageSteps.userShouldSeeBulkCiLoadingWindow()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "dropdown values \"Test User [testuser@test.com]\" should be available in \"Select a Previously Used Contact (use Autofill or the Menu):\" dropdown",
-  "keyword": "And "
+  "name": "user selects impact level as \"No Impact\"",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.dropdownValuesShouldBeAvailableInDropdown(String,String)"
+  "location": "OWF_CiSearchPageSteps.userSelectsImpactLevelAs(String)"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertTrue(Assert.java:44)\r\n\tat org.testng.Assert.assertTrue(Assert.java:54)\r\n\tat steps.OWF_AgentConsolePageSteps.dropdownValuesShouldBeAvailableInDropdown(OWF_AgentConsolePageSteps.java:673)\r\n\tat ✽.dropdown values \"Test User [testuser@test.com]\" should be available in \"Select a Previously Used Contact (use Autofill or the Menu):\" dropdown(features/Automation/SPRINTS/Sprint_P4S3/SAO_7281_Easy Access to Contacts in OW E-mails.feature:17)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
-  "name": "user clicks cancel button on new notification window",
+  "name": "user clicks on Upload Import File",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userClicksOnUploadImportFile()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on choose file button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksCancelButtonOnNewNotificationWindow()"
+  "location": "OWF_ProblemRecordPageSteps.userClicksOnChooseFileButton()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
+});
+formatter.step({
+  "name": "user searches for \"Test Attachments\\5DuplicateCIs\\5CIsCSV.csv\" attachment and adds it",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSearchesForAttachmentAndAddsIt(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on attachment ok button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userClicksOnAttachmentOkButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user switches to frame",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSwitchesToFrame()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user validates attached document is visible",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userValidatesTxtDocIsVisible()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on save button under bulk import",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userClicksOnSaveButtonUnderBulkImport()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "first error message should display as \"The Uploaded File is now being processed...\" on bulk ci window",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.firstErrorMessageShouldDisplayAsOnBulkCiWindow(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "second error message should display as \"Please Check for the progress of this process in \\\"Show Bulk Import\\\". (ARNOTE 10000)\" on bulk ci window",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.secondErrorMessageShouldDisplayAsOnBulkCiWindow(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user waits 60 secs",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userWaitsSecs(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on Show Bulk Import button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userClicksOnShowBulkImportButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user switches to frame",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSwitchesToFrame()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on \"Related CIs\" tab",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user validates total rows as \"10\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userValidatesTotalRowsAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user validates Rows OK as \"5\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userValidatesRowsOKAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user validates with errors as \"5\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userValidatesWithErrorsAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user validates with warnings as \"0\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userValidatesWithWarningsAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user validates \"Status\" as \"With Errors\" in row 6",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userValidatesAsInRow(String,String,int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user validates \"Status\" as \"With Errors\" in row 7",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userValidatesAsInRow(String,String,int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user validates \"Status\" as \"With Errors\" in row 8",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userValidatesAsInRow(String,String,int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user validates \"Status\" as \"With Errors\" in row 9",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userValidatesAsInRow(String,String,int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user validates \"Status\" as \"With Errors\" in row 10",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userValidatesAsInRow(String,String,int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on bulk loading close button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userClicksOnBulkLoadingCloseButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user logsOut and closes the browser",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userLogsOutsAndCloseTheBrowser()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user switches to window 0",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
+});
+formatter.result({
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"

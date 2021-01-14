@@ -119,6 +119,37 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String btn_ADD= "WIN_0_700020037";
     private static final String table_Contacts= "T700020029";
     private static final String btn_CANCEL= "WIN_0_777777852";
+    private static final String btn_NEW_ALERT = "WIN_0_700002008";
+    private static final String txt_QUALIFICATION_NAME = "arid_WIN_3_8";
+    private static final String dd_SCHEMA = "arid_WIN_3_700010002";
+    private static final String txt_QUALIFICATION = "arid_WIN_0_500182000";
+    private static final String btn_APPLY_QUALIFICATION = "WIN_0_900008001";
+    private static final String txt_ALARM_MESSAGE = "arid_WIN_3_800040444";
+
+    public void  enterAlarmMessage(String Message){
+        enterTextByElement(By.id(txt_ALARM_MESSAGE), Message);
+    }
+
+    public void clickApplyQualification(){
+        clickElementById(btn_APPLY_QUALIFICATION);
+    }
+
+    public void enterQualification(String Qualification){
+        enterTextByElement(By.id(txt_QUALIFICATION), Qualification);
+    }
+
+    public void selectSchemaDropdown(String value){
+        selectDropDownNameAndValue(dd_SCHEMA, value, false );
+    }
+
+    public void enterQualificationName(String qualification){
+        findElement(By.id(txt_QUALIFICATION_NAME)).clear();
+        driver.findElement(By.id(txt_QUALIFICATION_NAME)).sendKeys(qualification);
+    }
+
+    public void  clickNewAlertButton(){
+        clickElementById(btn_NEW_ALERT);
+    }
 
     public void clickAddCancel(){
         clickElementById(btn_CANCEL);

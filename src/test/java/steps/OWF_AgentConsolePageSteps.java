@@ -931,6 +931,40 @@ public class OWF_AgentConsolePageSteps {
     public void userClicksCancelButtonOnNewNotificationWindow() {
         agentConsolePage.clickAddCancel();
     }
+
+    @When("user clicks new alert button")
+    public void userClicksNewAlertButton() {
+        agentConsolePage.clickNewAlertButton();
+    }
+
+    @When("user enters qualification name as {string}")
+    public void userEntersQualificationNameAs(String arg0) {
+        agentConsolePage.enterQualificationName(arg0);
+    }
+
+    @And("user selects schema as {string}")
+    public void userSelectsSchemaAs(String arg0) {
+        agentConsolePage.selectSchemaDropdown(arg0);
+    }
+
+    @When("user enters qualification as {string}")
+    public void userEntersQualificationAs(String arg0) {
+        agentConsolePage.enterQualification(arg0);
+    }
+
+    @And("user clicks apply qualification button")
+    public void userClicksApplyQualificationButton() {
+        agentConsolePage.clickApplyQualification();
+    }
+
+    @When("user enters alarm message as {string}")
+    public void userEntersAlarmMessageAs(String arg0) {
+        agentConsolePage.enterAlarmMessage(arg0);
+    }
+
+    @Then("user validates orange support icon is displayed on ticket created")
+    public void userValidatesOrangeSupportIconIsDisplayedOnTicketCreated() {
+    }
 }
 
 

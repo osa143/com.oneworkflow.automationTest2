@@ -66,10 +66,10 @@
 
       Examples:
         |fileTypes                                                                                                  |
-        |Test Attachments\50 CI's (WithDuplicates)\50CIsCSV.csv|
+   #     |Test Attachments\50 CI's (WithDuplicates)\50CIsCSV.csv|
      #   |Test Attachments\50 CI's (WithDuplicates)\50CIsTextDOC.txt|
-#        |Test Attachments\50 CI's (WithDuplicates)\50CIsXLS.xls|
-#        |Test Attachments\50 CI's (WithDuplicates)\50CIsXLSX.xlsx|
+     #   |Test Attachments\50 CI's (WithDuplicates)\50CIsXLS.xls|
+        |Test Attachments\50 CI's (WithDuplicates)\50CIsXLSX.xlsx|
 
 
 

@@ -10,28 +10,28 @@
       When user clicks on create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
-#      And user verifies request type field is visible
-#      Then multiple statuses "Customer:Customer Reclamation:Event:Internal User:Preventive Maintenance:Stakeholder:Third Party:(clear)" should be available in "Request Type" dropdown
-#      And User selects "Request Type" as dropdownValue and should see values for "notreadonly"
-#        | DropdownValue | DropdownValuesToBePresent|
-#        | Service Request | Service Request:Improvement|
-#
-#      When user validates template dropdown availability
-#      Then multiple statuses "Site access registration:Workforce Escalation-SE:(clear)" should be available in "Template" dropdown readonly
-#      When user validates Title availability
-#      Then multiple statuses "(no entries in menu)" should be available in "Title" dropdown
-#      When user validates impact field availability
-#      Then multiple statuses "No:Minor:Medium:Major:Critical" should be available in "Impact" dropdown readonly
-#      When user validates importance field
-#      Then multiple statuses "Critical:High:Average:Low:(clear)" should be available in Importance dropdown
-#      When user validates fault type dropdown availability
-#      Then multiple statuses "Access Fault:Application fault:Data Fault:Infra Fault:Network Fault:Power Fault:Roaming-Data Fault:Roaming-Voice Fault:Site Fault:Transmission Fault:TV Fault:Voice Fault:(clear)" should be available in "Fault Type" dropdown
+      And user verifies request type field is visible
+      Then multiple statuses "Customer:Customer Reclamation:Event:Internal User:Preventive Maintenance:Stakeholder:Third Party:(clear)" should be available in "Request Type" dropdown
+      And User selects "Request Type" as dropdownValue and should see values for "notreadonly"
+        | DropdownValue | DropdownValuesToBePresent|
+        | Service Request | Service Request:Improvement|
+
+      When user validates template dropdown availability
+      Then multiple statuses "Site access registration:Workforce Escalation-SE:(clear)" should be available in "Template" dropdown readonly
+      When user validates Title availability
+      Then multiple statuses "(no entries in menu)" should be available in "Title" dropdown
+      When user validates impact field availability
+      Then multiple statuses "No:Minor:Medium:Major:Critical" should be available in "Impact" dropdown readonly
+      When user validates importance field
+      Then multiple statuses "Critical:High:Average:Low:(clear)" should be available in Importance dropdown
+      When user validates fault type dropdown availability
+      Then multiple statuses "Access Fault:Application fault:Data Fault:Infra Fault:Network Fault:Power Fault:Roaming-Data Fault:Roaming-Voice Fault:Site Fault:Transmission Fault:TV Fault:Voice Fault:(clear)" should be available in "Fault Type" dropdown
       And user clicks on owner under sections
       Then multiple values should be available in "Owner Profile*" dropdown
       And User selects "Owner Profile*" as dropdownValue and should see values for "notreadonly"
 
         | DropdownValue | DropdownValuesToBePresent|
-        #| PLAZA         |                          |
+#        | PLAZA         |                          |
 #        | Access network:Mobile:RAN:Common | NW Radio Quality-NO |
 #        | Access network:Home | Access Home Connectivity-EE |
 #        | Access network:Mobile:RAN:Deployment | Rollout NO|
@@ -39,16 +39,16 @@
 #        | Access network:Mobile:RAN:Design | Design RAN&Core-SE                                                                                                                                                             |
 #        | Access network:Mobile:RAN:Ericsson  | RAN Ericsson-Common |
 #        | Access network:Mobile:RAN:Huawei | RAN Huawei-Common |
-        ##| Access network:Mobile:RAN | Acc Mob RAN Ericsson-SE:Acc Mob RAN NSN-SE:Mobile service-FLEN:RAN improve-Common |
+        #| Access network:Mobile:RAN | Acc Mob RAN Ericsson-SE:Acc Mob RAN NSN-SE:Mobile service-FLEN:RAN improve-Common |
 #        | Access network:Mobile:RAN:NSN | RAN NSN-Common |
 #        | Access network:Mobile:RAN:Planning | NW Planning Last Mile-SE:NW RAN Deployment DK:RAN Engineering-Common:RAN Engineering-SE  |
 #        | Access network:Mobile:Transmission | BtB Solution-DK:MBH Design-DK:MBH Fiber-DK:MBH Implementing-DK:MBH Main-DK |
 #        | Access network:Mobile:WIFI | Core support Wlan |
 #        | Access network:Mobile:WLAN:Common | RAN Telia Wifi |
-       ## | Access network:Mobile:WLAN | WLAN Agreement:WLAN Coverage:WLAN TG-EL |
-       ##needvalidatemanual | BSS:Billing | Amdocs-DK:AOFokus-DK:Axapta-DK:Bill Management-SE:Billing L2-FI:Bruce/Rosetta:Bruce/Rosetta-DK:Charging & Rating-SE:DK Tech IT Billing:DLG NaviBilling:Focus Op-DK:Fokus Finance Approve-DK:Fokus Operations QA-DK:Fokus Ops Business Approve-DK:Fokus Price & Parameters-DK:Fokus Test:Foton-DK:ICH-DK:Invoicing&Cust Interact-SE:KisbiGeneva Operations-DK:KisbiGeneva Price & Para-DK:KisbiGeneva-DK:Mit Tele Navibilling-DK:Ninja-DK:OCS Operation-EE:OCS Operation-SE:Port&Bill -Common:Prepaid-FI:StateEvent-DK:VERO-DK |
+       # | Access network:Mobile:WLAN | WLAN Agreement:WLAN Coverage:WLAN TG-EL |
+       #needvalidatemanual | BSS:Billing | Amdocs-DK:AOFokus-DK:Axapta-DK:Bill Management-SE:Billing L2-FI:Bruce/Rosetta:Bruce/Rosetta-DK:Charging & Rating-SE:DK Tech IT Billing:DLG NaviBilling:Focus Op-DK:Fokus Finance Approve-DK:Fokus Operations QA-DK:Fokus Ops Business Approve-DK:Fokus Price & Parameters-DK:Fokus Test:Foton-DK:ICH-DK:Invoicing&Cust Interact-SE:KisbiGeneva Operations-DK:KisbiGeneva Price & Para-DK:KisbiGeneva-DK:Mit Tele Navibilling-DK:Ninja-DK:OCS Operation-EE:OCS Operation-SE:Port&Bill -Common:Prepaid-FI:StateEvent-DK:VERO-DK |
 #        | BSS:Billing:Policy Manager SE | BSS Bill Policy Manager-SE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-      #  | BSS:Billing:Payment as a service | Payment as a service |
+#        | BSS:Billing:Payment as a service | Payment as a service |
 #        | BSS:Channels | BSS Ch Vart Telia-SE:Channels L2-FI:Omni Channels-SE:Portal Channels L2-SE |
 #        | BSS:CRM | CRM L2-FI:Cust & Order Mgmt -SE |
 #        | BSS:Data&Analytics | BSS D&A Insight-DK:Data&Analytics L2-FI |
@@ -56,17 +56,17 @@
 #        | BSS:MicroServices | Microservice-DK |
 #        | BSS:NEO | NEO IT Awaiting BU-DK:NEO IT DK Services-DK:NEO IT Ninja-DK:NEO IT Tango/Copa-DK:NEO IT-DK |
 #        | BSS:Other | BSS COPE-DK |
-        ##| BSS | Etray-DK:Online-DK |
+        #| BSS | Etray-DK:Online-DK |
 #        | BSS:Provisioning | Provisioning_EMANG-SE:Provisioning-SE |
 #        | BSS:Sales | Sales&Partner-SE |
 #        | Control Center | Incident Manager |
 #        | Control Center:Improvement | SA Process Improvements |
-        ##| Control Center:Monitoring | CC Fixed access-FI:CC Fixed access-SE:CC IP/TV:CC IT:CC Mob Core/IMS/Fixed Voice/IN:CC Mob&Access-Common:CC Monitoring Management:CC WDM |
+        #| Control Center:Monitoring | CC Fixed access-FI:CC Fixed access-SE:CC IP/TV:CC IT:CC Mob Core/IMS/Fixed Voice/IN:CC Mob&Access-Common:CC Monitoring Management:CC WDM |
 #        | Control Center:Monitoring:Not to be used | CC Monitor FM Connection Issue |
 #        | Control Center:Performance | CC Perf&Quality:CC Prod&proc |
 #        | Core:Mobile | Core Production-Common:Test & Verification-Common |
 #        | Core:Mobile:Mobile CS:Development | Development Voice-Common |
-       # #| Core:Mobile:Mobile CS | Network Design Rejlers PRA-SE:Voice&IMS FI_LT:Voice&IMS NO_EE:Voice&IMS SE_DK |
+        #| Core:Mobile:Mobile CS | Network Design Rejlers PRA-SE:Voice&IMS FI_LT:Voice&IMS NO_EE:Voice&IMS SE_DK |
 #        | Core:Mobile:Mobile IP | Mobile Core IP EAST:Mobile Core IP WEST |
 #        | Core:Mobile:Mobile PS:Development | Development Data-Common |
 #        | Core:Mobile:Mobile PS | Mob PS Core EAST:Mob PS Core West |
@@ -95,9 +95,9 @@
 #        | Field Service:Mobile (B2B) | FDC-Common:FS Åland-FI |
 #        | Infrastructure:Development | IT infra-Common |
 #        | Infrastructure:Maintenance | Large Production Premises-NO:Siteinfra-DK:Siteinfra-NO:Tech_Sites-SE |
- # checkmanual      | IT:Application | Application Identity & Access:Application-NO:Assurance:Billing-NO:CTI Admin-FI:Enterprise:IT App CDL:IT App Customer Identity:IT App eBS Platform:IT App Integration-SE:IT App NIAM-Common:IT App RODOD:IT App Telia Finance:JobSchedulling-FI:Middleware:Multibella-FI:NMS:Portal-NO:SAP:TAC1-NO:Tiksu-FI:Tunnestiimi-FI |
+ ## checkmanual      | IT:Application | Application Identity & Access:Application-NO:Assurance:Billing-NO:CTI Admin-FI:Enterprise:IT App CDL:IT App Customer Identity:IT App eBS Platform:IT App Integration-SE:IT App NIAM-Common:IT App RODOD:IT App Telia Finance:JobSchedulling-FI:Middleware:Multibella-FI:NMS:Portal-NO:SAP:TAC1-NO:Tiksu-FI:Tunnestiimi-FI |
 #         | IT:Application:Analytics | IT App Analytics&BI-EE |
-        #        | IT:Application:Billing | Billing:IT App Bill BDL:IT App Bill BiC:IT App Bill MOP2:IT App Bill MPS/RTS:IT App Bill Reflex:IT App Billing-EE |
+#                | IT:Application:Billing | Billing:IT App Bill BDL:IT App Bill BiC:IT App Bill MOP2:IT App Bill MPS/RTS:IT App Bill Reflex:IT App Billing-EE |
 #        | IT:Application:BSS | IT App BSS CeSim:IT App BSS EDWM L1:IT App BSS EDWM L2:IT App BSS E-shop EE:IT App BSS Event:IT App BSS Freya:IT App BSS Marketstore:IT App BSS OCC:IT App BSS Produktguiden:IT App BSS Sales_Order Mgmt-EE:IT App BSS RR2R:IT App BSS SAIDA:IT App BSS WebS MultiDevice:IT App Integration BASE |
 #        | IT:Application:Contact Center | IT App CC CIS Operations SP:IT App CC CIS Support |
 #        | IT:Application:CRM | CRM:IT App CRM Alpha:IT App CRM API Market:IT App CRM Apollo:IT App CRM C2B Cache:IT App CRM C2B Services:IT App CRM C2B Caesar:IT App Cust Services-EE:IT App CRM Koda:IT App CRM Kundbild:IT App CRM OMT:IT App CRM OPT:IT App CRM Promis:IT App CRM Rodod UIM:IT App CRM Rodod AIA:IT App CRM Rodod BRM:IT App CRM Rodod OPH:IT App CRM Rodod OSM:IT App CRM Rodod Service Desk:IT App CRM Rodod Siebel:IT App CRM SINN:IT App CRM UOR |
@@ -124,7 +124,7 @@
 #        | IT:Infra | Backup:IT Infra Core-EE:SE:Service Development:Software Asset Management:Storage:User Network:Workplace |
 #        | IT:Network | DNS/DHCP:LAN Services:Load Balancer L2:Load Balancer L3:Routing/Switching L2:Routing/Switching L3:TSIN L2:TSIN L3 |
 #        | IT:OSS | Keycom-FI:Satellite-FI |
-       # | IT:Security | Firewall L2:Firewall L3:IT Sec Firewall Auth MobilePAS:PAM:Proxy L2:Proxy L3:Remote Access L2:Remote Access L3 |
+#        | IT:Security | Firewall L2:Firewall L3:IT Sec Firewall Auth MobilePAS:PAM:Proxy L2:Proxy L3:Remote Access L2:Remote Access L3 |
 #        | IT:Security:FW Orchestration | IT Sec FW Orchestration |
 #        | IT:Server | IT Server Duty Tech-EE:IT Server Netw Dev-EE:Linux/Unix L2:Windows L2 |
 #        | IT:Service | Core-NO:NEO-NO:Service-NO |
@@ -136,11 +136,11 @@
 #        | OSS:NEMS:Ericsson | RAN Ericsson NEMS-Common |
 #        | OSS:NEMS:Huawei | RAN Huawei NEMS-Common |
 #        | OSS:NEMS:NSN | RAN NSN NEMS-Common |
-       # | OSS:NEMS | RAN Other NEMS-Common |
+#        | OSS:NEMS | RAN Other NEMS-Common |
 #        | OSS:Performance | OSS Perf Probing:OSS Perf-ENIQ:OSS Performance-Common |
 #        | OSS:Plan&Pres | OSS Data-Common:OSS Distribution-Common:OSS Optimization-Common:OSS Planning-Common:OSS Presentation-Common |
 #        | OSS:Remote Access | OSS Netguard |
-        #| OSS:Workflow | OSS WF Trouble Ticket-EE:SIA -common:SIA-Tieto |
+#        | OSS:Workflow | OSS WF Trouble Ticket-EE:SIA -common:SIA-Tieto |
 #        | OSS:Workflow:OW | OSS WF OW Assignment Profiles:OSS WF OW Workflow Infra:OSS Workflow-Common|
 #        | Packet Transport:DNS | IP Registry |
 #        | Packet Transport:Fixed:CDN | Telia CDN |
@@ -163,10 +163,10 @@
 #        | VAS:Mobile:IN services | IN Services-Common:IN Services-EE |
 #        | VAS:Mobile:Messaging | Messaging Operation-EE:Messaging Services-Common |
 #        | VAS:Mobile:Services | 112/114 DK:3de Party Content-DK:Core NW Development-Common:IME-DK:IME-LT:IME-NO:Mobiz Link-DK:Mobiz SP-DK:Mobiz Status-DK:Policy manager-DK:Probiz-DK:Touchpoint Plus-DK:Touchpoint Soho-DK:UBP-DK:UC miscellaneous-DK:VCDR-DK |
-#        | Voice:Fixed:Pabx    | Voice Fix PABX Alcatel:Voice Fix PABX Ascom:Voice Fix PABX Avaya Aura:Voice Fix Avaya Call S:Voice Fix PABX Avaya CS1000:Voice Fix PABX Avaya IP-Office:Voice Fix PABX Avaya Signal S:Voice Fix PABX Cisco:Voice Fix PABX Competella:Voice Fix PABX Mitel CMG:Voice Fix PABX Mitel MiCC:Voice Fix PABX Mitel Mxone:Voice Fix PABX Mitel Mxone:Voice Fix PABX Tellus:Voice Fix PABX Trio:Voice Fix PABX Vision80/20                                                                                                                                                                                                                    |
+#        | Voice:Fixed:Pabx    | Voice Fix PABX Alcatel:Voice Fix PABX Ascom:Voice Fix PABX Avaya Aura:Voice Fix Avaya Call S:Voice Fix PABX Avaya CS1000:Voice Fix PABX Avaya IP-Office:Voice Fix PABX Avaya Signal S:Voice Fix PABX Cisco:Voice Fix PABX Competella:Voice Fix PABX Mitel CMG:Voice Fix PABX Mitel MiCC:Voice Fix PABX Mitel Mxone:Voice Fix PABX Mitel Mxone:Voice Fix PABX Mitel OneBox:Voice Fix PABX Tellus:Voice Fix PABX Trio:Voice Fix PABX Vision80/20                                                                                                                                                                                                                    |
 #         | Voice:Fixed:PSTN | L2 Fixed Voice-SE     |
 #        | Voice:Fixed:VoIP    | Voice Fix VoIP Applications-EE:Voice Fix VoIP SAP CCtr-EE:Voice Fix VoIP Services-EE |
-         #| Voice:Fixed      | Voice Fixed ACE L3    |
+#         | Voice:Fixed      | Voice Fixed ACE L3    |
 
 #      When user clicks on sweden checkbox under affected BU's
 #      And user enters "Test case 05.03 Event End Time" in Title field in Trouble event

@@ -36,7 +36,7 @@ public class Plaza_HomePage extends BasePage {
     public static final String txt_C2B_REQUEST_ID="sp_formfield_sr74_v_request";
     public static final String dd_ENVIRONMENT="s2id_autogen15";
     public static final String txt_C2B_DESCRIPTION="sp_formfield_sr74_v_description";
-    public static final String dd_SELECT_REQUEST_ID="select2-chosen-9";
+    public static final String dd_SELECT_REQUEST_ID="select2-chosen-12";
     public static final String dd_SMTP_RELAY = "select2-chosen-12";
     public static final String txt_C2B_GENERAL_REQUEST_ID="sp_formfield_sr112_v_request";
     public static final String dd_C2B_GENERAL_ENVIRONMENT="s2id_autogen16";
@@ -481,7 +481,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_ROLE_ID = "select2-results-9";
     private static final String txt_SYSTEM_ID = "select2-results-13";
     private static final String txt_SERVICE_REQUEST_NAME_ID = "select2-results-11";
-    private static final String txt_SELECT_REQUEST_ID = "select2-results-9";
+    private static final String txt_SELECT_REQUEST_ID = "select2-results-12";
     private static final String txt_SMTP_RELAY = "select2-results-12";
     private static final String txt_C2B_SERVICE_ENVIRONMENT = "s2id_autogen13_results";
     private static final String txt_C2B_GENERAL_ENVIRONMENT = "s2id_autogen16_results";
@@ -496,7 +496,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String link_DATABASE = "//*[@id='xcc61d55edb198b00b27fdb11ce961902']/div/div[2]/div[6]/div[4]";
     private static final String pebble_DNS_DHCP = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[7]/div/a/div/h3";
     private static final String pebble_FIREWALL_ROUTING_REQUEST = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[12]/div/a/div/h3";
-    private static final String pebble_LAN_DATA_NET_LAN = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[13]/div/a";
+    private static final String pebble_LAN_DATA_NET_LAN = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[14]/div/a/div/h3";
     private static final String pebble_NETWORK_LOAD_BALANCING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[15]/div/a/div/h3";
     private static final String pebble_NETWORK_ROUTING_SWITCHING = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[17]/div/a/div/h3";
     private static final String pebble_PROXY = "//*[@id='x2723de4adb72cf006734f1eabf9619aa']/div/div/div[2]/div/div[18]/div/a/div/h3";

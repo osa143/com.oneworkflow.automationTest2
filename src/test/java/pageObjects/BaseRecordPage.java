@@ -621,10 +621,10 @@ public class BaseRecordPage extends BasePage {
         WebElement element = driver.switchTo().activeElement();
         element.sendKeys(Keys.UP);
         element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
+       // element.sendKeys(Keys.UP);
+        //element.sendKeys(Keys.UP);
         element.sendKeys(Keys.ARROW_RIGHT);
-        element.sendKeys(Keys.DOWN);
+        //element.sendKeys(Keys.DOWN);
         element.sendKeys(Keys.DOWN);
         element.sendKeys(Keys.DOWN);
         element.sendKeys(Keys.ENTER);
@@ -990,7 +990,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterImpactDurationSecs(String impactDurationSecs) {
-
+        clearText(By.id(txtIMPACT_DURATION_SECS));
         enterTextByElement(By.id(txtIMPACT_DURATION_SECS), impactDurationSecs);
     }
 

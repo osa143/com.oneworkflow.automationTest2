@@ -1102,6 +1102,12 @@ public class OWF_ChangeRecordPageSteps {
     public void userSelectsApproval() {
         changeRecordPage.clickCABApproval();
     }
+
+    @And("user enters impact duration as {string} seconds")
+    public void userEntersImpactDurationAsSeconds(String arg0) {
+        changeRecordPage.enterImpactDurationSecs(arg0);
+    }
+
 }
 
 

@@ -9,11 +9,10 @@ Feature: Permissions - ChangeInitiator-External [aR]
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create change record
     Then user switches to window 1
-    When user clicks save button
-    Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)" on change record page
     When user selects request type as "Standard Change"
-    And user validates "Template*" is mandatory
-    And user selects template as "All:IT:Other:TEST TEMPLATE [UAT] - Normal Change"
+    And user selects template as "All:IT:Carrier:Telia Carrier UAT Changes"
+    And user selects template as "(clear)"
+    And user selects request type as "Normal Change"
     When user enters "_" in the change builder field
     And user enters as "Test" in service and customer impact
     And user enters request start time 24 hours ahead of current date
@@ -21,11 +20,21 @@ Feature: Permissions - ChangeInitiator-External [aR]
     And user enters impact duration as "5" minutes
     Then user enters description as "Testing"
     And user clicks on save button
-    When user adds CI "dummy%" to change ticket with impact level "No Impact"
+    And user gets ticket value
+    When user clicks on Diagnosis tab
+    And user clicks on CI search button
+    Then user switches to frame
+    When user enters "dummy%" in the name+ field
+    And user clicks on search button on CI search window
+    And user selects all CI's that appear
+    And user selects impact level as "Loss of Service"
+    And user clicks on relate CI
+    And user closes warning message on change add CI
+    And user clicks yes on save confirmation message
     Then CI should be listed and displayed under the Diagnosis tab
     When user clicks on "Risk" tab
     And user gets current risk score value
-    When user answers all risk questions as below
+    And user answers all risk questions as below
     And user selects answer as "Impact to other systems/technologies are unclear"
     And user selects answer as "No"
     And user selects answer as "Tested successfully, this is a pilot"
@@ -37,14 +46,12 @@ Feature: Permissions - ChangeInitiator-External [aR]
     When user clicks on Send button
     Then user validates ticket status as "Assigned"
     When user clicks on Diagnosis tab
-    And user clicks on CI search button
-    And user switches to frame
-    And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Show" are available
-    And user right clicks on CI "" and validates options "Refresh:Preferences:Show" are available
-    #Then user validates nothing happens when clicking on all read only options
-    When user clicks on schedule tab
+#   Then user validates CI Search is disabled
+    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
+#   Then user validates nothing happens when clicking on all read only options
+    When user clicks on "Schedule" tab
     Then user validates fields under schedule tab are read only
-    When user gets change ticket value
     And user logsOut
     And user goes back to login page
     And user logs in with valid username "cm_adminaccess1_auto" and password as "Test@1234"
@@ -56,33 +63,24 @@ Feature: Permissions - ChangeInitiator-External [aR]
     When user clicks on Ack button
     Then user validates ticket status as "Analysis"
     When user clicks on Diagnosis tab
-    And user clicks on CI search button
-    Then user validates CI Search is disabled
-    And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Show" are available
-    And user right clicks on CI "" and validates options "Refresh:Preferences:Show" are available
-    #Then user validates nothing happens when clicking on all read only options
-    When user clicks on schedule tab
+    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
+    When user clicks on "Schedule" tab
     Then user validates fields under schedule tab are read only
     When user changes status to "Approval Requested"
     And user clicks save button
-    #    When user gets change ticket value
-#    And user logsOut
-#    And user goes back to login page
-#    And user logs in with valid username "ChangeInitiator/Builder1" and password as "Test@1234"
-#    Then user successfully logged in to OneWorkflow and agent console should be displayed
-#    #When user selects "Search:Open Search Form:Change Record/Project/Freeze"
-#    And user switches to window 3
-#    And user enters ticket previously created and searches
-#    Then ticket should be displayed
+    And user logsOut
+    And user goes back to login page
+    And user logs in with valid username "ChangeInitiator/Builder1" and password as "Test@1234"
+    Then user successfully logged in to OneWorkflow and agent console should be displayed
+    When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
+    And user switches to window 3
+    And user enters ticket previously created and searches
     When user clicks on Diagnosis tab
-    And user clicks on CI search button
-    Then user validates CI Search is disabled
-    And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Show" are available
-    And user right clicks on CI "" and validates options "Refresh:Preferences:Show" are available
-    #Then user validates nothing happens when clicking on all read only options
-    When user clicks on schedule tab
+    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
+    When user clicks on "Schedule" tab
     Then user validates fields under schedule tab are read only
-    When user gets change ticket value
     And user logsOut
     And user goes back to login page
     And user logs in with valid username "cm_adminaccess1_auto" and password as "Test@1234"
@@ -90,13 +88,17 @@ Feature: Permissions - ChangeInitiator-External [aR]
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 3
     And user enters ticket previously created and searches
-    Then ticket should be displayed
-    When user clicks on approval tab
+    Then user changes status to "Approval Requested"
+    And user clicks on save button
+    When user clicks on "Approval" tab
+    And user clicks on request that's "Pending Approval"
+    Then user selects CAB approval
     And user clicks on view button
-    And user clicks approve button
-    And user clicks save button
+    Then user switches to frame
+    And user enters "Change can be approved right away" in comments field
+    And user clicks on approve button
+    And user clicks on ticket refresh button
     Then user validates ticket status as "Approved"
-    When user gets change ticket value
     And user logsOut
     And user goes back to login page
     And user logs in with valid username "ChangeInitiator/Builder1" and password as "Test@1234"
@@ -104,14 +106,10 @@ Feature: Permissions - ChangeInitiator-External [aR]
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 4
     And user enters ticket previously created and searches
-    Then ticket should be displayed
     When user clicks on Diagnosis tab
-    And user clicks on CI search button
-    Then user validates CI Search is disabled
-    And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Show" are available
-    And user right clicks on CI "" and validates options "Refresh:Preferences:Show" are available
-    #Then user validates nothing happens when clicking on all read only options
-    When user clicks on schedule tab
+    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
+    When user clicks on "Schedule" tab
     Then user validates fields under schedule tab are read only
     When user changes status to "Schedule Requested"
     And user clicks save button
@@ -119,21 +117,17 @@ Feature: Permissions - ChangeInitiator-External [aR]
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user validates CI Search is disabled
-    And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Show" are available
-    And user right clicks on CI "" and validates options "Refresh:Preferences:Show" are available
-    #Then user validates nothing happens when clicking on all read only options
-    When user clicks on schedule tab
+    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
+    When user clicks on "Schedule" tab
     Then user validates fields under schedule tab are read only
     When user changes status to "Implementation"
     And user clicks save button
     Then user validates ticket status as "Implementation"
     When user clicks on Diagnosis tab
-    And user clicks on CI search button
-    Then user validates CI Search is disabled
-    And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Show" are available
-    And user right clicks on CI "" and validates options "Refresh:Preferences:Show" are available
-    #Then user validates nothing happens when clicking on all read only options
-    When user clicks on schedule tab
+    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
+    When user clicks on "Schedule" tab
     Then user validates fields under schedule tab are read only
     When user changes status to "Completed"
     And user selects completed code as "Successful"
@@ -149,24 +143,18 @@ Feature: Permissions - ChangeInitiator-External [aR]
     And user clicks save button
     Then user validates ticket status as "Completed"
     When user clicks on Diagnosis tab
-    And user clicks on CI search button
-    Then user validates CI Search is disabled
-    And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Show" are available
-    And user right clicks on CI "" and validates options "Refresh:Preferences:Show" are available
-    #Then user validates nothing happens when clicking on all read only options
-    When user clicks on schedule tab
+    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
+    When user clicks on "Schedule" tab
     Then user validates fields under schedule tab are read only
     When user changes status to "Closed"
     And user enters review details as "Test Details"
     And user selects closure code as "Successful"
     And user clicks save button
     When user clicks on Diagnosis tab
-    And user clicks on CI search button
-    Then user validates CI Search is disabled
-    And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Show" are available
-    And user right clicks on CI "" and validates options "Refresh:Preferences:Show" are available
-    #Then user validates nothing happens when clicking on all read only options
-    When user clicks on schedule tab
+    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
+    When user clicks on "Schedule" tab
     Then user validates fields under schedule tab are read only
 
 

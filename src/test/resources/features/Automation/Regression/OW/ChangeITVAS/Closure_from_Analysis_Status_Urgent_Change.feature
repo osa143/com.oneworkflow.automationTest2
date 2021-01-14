@@ -9,19 +9,9 @@ Feature: Closure from Analysis Status - Urgent Change [SaR]
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create change record
     Then user switches to window 1
-    When user clicks save button
-    Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)" on change record page
-    When user clicks on sweden checkbox under affected BU's
-    And user selects template as "All:IT:Other:TEST TEMPLATE [UAT] - Standard Change"
-    And user selects template as "(clear)"
-    When user selects request type as "Urgent Change"
-    When user enters "_" in the change builder field
-    And user enters as "Test" in service and customer impact
-    And user selects priority as "Critical"
-    And user enters request start time as 5 minutes past from "Europe/London" timezone "MM/dd/yyyy HH:mm:ss" format
-    And user enters request end time as 10 minutes past from "Europe/London" timezone "MM/dd/yyyy HH:mm:ss" format
-    And user enters impact duration as "0" minutes
-    Then user enters description as "Regression - Change Management Process"
+    When user creates change ticket with following details
+      |RequestType  |Title            |RequestCategory|Description     |Reason|Priority|ChangeBuilder        |Implementation    |TestPlan|RollBack    |CommPlan|VerOfFunctionality|Risk   |ServiceCustomerImpact|ImpactDuration|EstimatedImpact|
+      |Urgent Change|IT:Mobile:Billing|Cable splicing |Correcting error|none  |Major   |Closure from analysis|New implementation|Yes     |Not possible|CommPlan|Not possible      |No Risk|Test ticket no impact|5             |No Impact      |
     And user clicks on save button
     And user gets ticket value
     And user adds CI "Dummy" to change ticket with impact level "No Impact"

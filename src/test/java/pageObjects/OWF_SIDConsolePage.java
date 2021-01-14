@@ -61,7 +61,11 @@ public class OWF_SIDConsolePage extends BasePage {
     private static final String btn_SHOW_HISTORY= "//input[@value='Show History']";
     private static final String table_RELATED_MATCHES= "T700009045";
     private static final String tdROW1_RELATED_MATCHES_XPATH= "//*[@id='T700009045']/tbody/tr[2]/td[2]";
+    private static final String column_TICKET_TITLE="//*[@id='WIN_0_700009045']/div[2]/div/div[1]/div[5]";
 
+    public void clickOnColumnTitle(){
+        clickElement(By.xpath(column_TICKET_TITLE));
+    }
     Actions action = new Actions(driver);
     public void doubleClickOnTicket_SIDConsole_RelatedMatches(){
         WebElement element= findElement(By.xpath(tdROW1_RELATED_MATCHES_XPATH));

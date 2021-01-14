@@ -4,7 +4,7 @@
     Scenario: user testing linked ticket radio buttons
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_6" and password as "Test@1234"
+      When user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create trouble event
       And user switches to window 1
@@ -178,7 +178,7 @@
       When user selects ticket and clicks on unlink button
       And user validates ticket has been unlinked
       When user clicks on create trouble event
-      And user switches to window 2
+      And user switches to window 9
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
       And user enters "Test SAO-6574" in Title field in Trouble event

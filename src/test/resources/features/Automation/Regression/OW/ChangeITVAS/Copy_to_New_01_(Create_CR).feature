@@ -1,50 +1,41 @@
-@Copy_to_New_01_(Create_CR)
+@Copy_to_New_01_Create_CR_test
 
 Feature: Copy to New 01 (Create CR) [aR]
 
   Scenario: Copy to New 01 (Create CR) [aR]
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "cm_adminaccess1_auto" and password as "Test@1234"
+    When user logs in with valid username "ow_basic2" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create change record
     Then user switches to window 1
-    When user clicks save button
-    Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)" on change record page
     When user selects request type as "Standard Change"
-    And user validates "Template*" is mandatory
-    And user selects template as "All:IT:Other:TEST TEMPLATE [UAT] - Normal Change"
-    When user enters as "ow_basic2" in Change Builder field
-    And user clicks on sweden checkbox under affected BU's
-    And user clicks on finland checkbox under affected BU's
-    And user clicks on denmark checkbox under affected BU's
-    And user clicks on estonia checkbox under affected BU's
-    And user clicks on lithuania checkbox under affected BU's
-    And user clicks on norway checkbox under affected BU's
+    And user selects template as "All:IT:Carrier:Telia Carrier UAT Changes"
+    And user selects template as "(clear)"
+    And user selects request type as "Normal Change"
+    And user clicks on "Sweden" checkbox under affected BU's
+    And user clicks on "Finland" checkbox under affected BU's
+    And user clicks on "Denmark" checkbox under affected BU's
+    And user clicks on "Estonia" checkbox under affected BU's
+    And user clicks on "Lithuania" checkbox under affected BU's
+    And user clicks on "Norway" checkbox under affected BU's
     And user clicks on "Telia Carrier" checkbox under affected BU's
     And user clicks on "Unknown" checkbox under affected BU's
-    Then user clicks on "Internal" checkbox under affected BU's
-    When user enters as "Test" in service and customer impact
+    And user clicks on "Internal" checkbox under affected BU's
+    And user enters "ow_basic2" in the change builder field
+    And user enters as "Test" in service and customer impact
     And user enters request start time 24 hours ahead of current date
     And user enters request end time 48 hours ahead of current date
     And user enters impact duration as "5" minutes
     And user enters description as "Regression - Change Management Process"
-    Then user enters project code as "0123456789"
-    When user clicks on vendor under sections
-    And user enters vendor name as "Test Vendor Name"
+    And user enters project code as "0123456789"
+    And user clicks on vendor under sections
     And user enters onsite engineers as "Test Onsite Engineers"
-    And user enters account number as "Test Account Number"
-    And user enters telephone number as "0123456789"
-    And user enters hours of operation as "Test 1234"
-    And user enters vendor ref as "Test Vendor Ref"
-    Then user enters onsite contact as "Test Contact"
+    And user enters onsite contact as "Test Contact"
     When user clicks attachments under sections
-    And  user adds attachment and verifies under ""
+    And  user adds attachment and verifies under "Internal"
       | summary   | description | fullFilePath       | attachments |
       | Test JPEG | Test JPEG   | attachement.doc.txt | 1          |
-
-    
-    
     And user clicks on save button
     When user adds CI "SE_RNC_AK1RU62" to change ticket with impact level "No Impact"
     Then CI should be listed and displayed under the Diagnosis tab
@@ -53,7 +44,6 @@ Feature: Copy to New 01 (Create CR) [aR]
     When user clicks on CTI details under sections
     And user clicks on location under sections
     #step15 and 16
-
     When user clicks on "Risk" tab
     And user gets current risk score value
     When user answers all risk questions as below
@@ -73,12 +63,14 @@ Feature: Copy to New 01 (Create CR) [aR]
     When user selects request type as "Event" on trouble event page
     Then user clicks save button
     And user switches to window 1
-    When user clicks on work order tab
-    And user clicks on create from ticket
+    When user clicks on "Work Orders" tab
+    And user clicks on "Create From Ticket"
     And user switches to window 3
     And user selects request type as "Analysis" in work order page
     Then user clicks save button
     When user switches to window 1
-    And user should see work orders listed under work order tab
-    And user gets ticket value
+    When user clicks on "Work Orders" tab
+    Then user should see 1 work order listed under work order tab
+
+
 

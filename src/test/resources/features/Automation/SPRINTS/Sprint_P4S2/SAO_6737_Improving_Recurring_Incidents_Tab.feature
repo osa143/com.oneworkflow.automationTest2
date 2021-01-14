@@ -21,7 +21,7 @@ Feature: SAO-6737 - Improving Recurring Incidents Tab(Name Subject to Change)
     When user clicks on create work order
     And user switches to window 2
     Then work order form should appear in new tab
-    When user enters title as "Test WO SAO-6737"
+    When user enters title as "Test SAO-6737"
     Then user selects request type as "Analysis" in work order page
     And user enters description as "Testing"
     Then user selects priority as "Major"

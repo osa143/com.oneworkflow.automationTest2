@@ -59,6 +59,11 @@ public class BasePage{
 
         return findElement(element).isDisplayed();
     }
+    public boolean verifyElementIs_Not_mandatory(String elementName){
+        return driver.findElements(By.tagName("label")).stream()
+                .filter(element -> element.getText().equals(elementName)).findFirst().orElse(null).isDisplayed();
+
+    }
     public String makeXpath(String tagName, String attribute, String value) {
         String xpath = "//" + tagName + "[@" + attribute + "='" + value + "']";
         return xpath;
@@ -289,6 +294,20 @@ public void clickElementById(String Id){
         return dropdownValues;
 
     }
+    public List<String> getDropdownValues()
+    {
+        List<String> dropdownValues = new ArrayList<String>();
+
+        List<WebElement> elements = findElement(By.className("MenuTableBody")).findElements(By.tagName("td"));
+
+        for (int i = 0; i < elements.size(); i ++)
+        {
+            dropdownValues.add(elements.get(i).getText().trim());
+        }
+         clickEscButton();
+        return dropdownValues;
+
+    }
 
 
     public WebElement waitUntilElementClickable(By by)
@@ -488,6 +507,14 @@ public void clickElementById(String Id){
         }
         return false;
     }
+    public boolean checkIfControlIsReadonlyByElement(WebElement element) {
+        String isReadOnly = element.getAttribute("readonly");
+        if (isReadOnly != null && isReadOnly.contains("true")) {
+            return true;
+        }
+        return false;
+    }
+
     public boolean verifyElementIsReadyOnlyByContainsText(String textName) {
         String element = String.format("//label[contains(text(),'%s')]/text area", textName);
         System.out.println(element);
@@ -971,6 +998,22 @@ public void clickElementById(String Id){
         String[] multipleValues = ExpectedDropdownValues.split(":");
         List<String> ActualDropdownValues = getDropdownValues(dropdownName, dropdownId);
         clickEscButton();
+
+        System.out.println("Dropdown values are: " + ActualDropdownValues);
+        for (int i = 0; i < multipleValues.length; i++)
+        {
+            if (!ActualDropdownValues.contains(multipleValues[i]))
+            {
+                return false;
+            }
+
+        }
+        return true;
+    }
+    public boolean verifyDropdownValues(String ExpectedDropdownValues)
+    {
+        String[] multipleValues = ExpectedDropdownValues.split(":");
+        List<String> ActualDropdownValues = getDropdownValues();
 
         System.out.println("Dropdown values are: " + ActualDropdownValues);
         for (int i = 0; i < multipleValues.length; i++)

@@ -11,7 +11,7 @@
      When user selects "Search" menu as "Open Search Form:Trouble Event"
      And user switches to window 1
      And user selects status as "Closed"
-     And user enters "Temip" in the source field
+     And user enters "HPE Common Temip" in the source field
      And user clicks Search on ticket search
      And user waits 30 secs
      Then user validates ticket status as "Closed"
@@ -19,10 +19,10 @@
      And user should see fault position, equipment, cause, action, closure info fields read only
      When user clicks on main page refresh
      And user selects status as "Closed"
-     And user enters "Temip" in the source field
+     And user enters "HPE Common Temip" in the source field
      When user clicks on advanced search button
      ## In advance search we have to enter the date in correct format to search within age in days of source##
-     And user enters "'3'>\"16/09/2020\"" in the advanced search bar
+     And user enters "'3'>\"16/12/2020\"" in the advanced search bar
      And user clicks Search on ticket search
      And user waits 15 secs
      When user selects fault position as "Other:Other" on trouble event page

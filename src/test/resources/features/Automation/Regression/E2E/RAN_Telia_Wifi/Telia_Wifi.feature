@@ -31,12 +31,11 @@
      # Then user validates ticket information is same as parent ticket
       Then user clicks on save button
       Then user enters description as "Test WO send by email"
-      #And user clicks on assignment under sections
-      And user selects assigned profile dropdown as "Access network:Mobile:WLAN:WLAN Agreement"
+      And user selects assigned profile dropdown as "Access Network:Mobile:WLAN:WLAN Agreement"
       Then user selects SLA class as "DEFAULT:3 weeks repair time"
       And user clicks on save button
       Then user validates ticket status as "Assigned"
-      And user waits 45 secs
+      And user waits 90 secs
       Then user clicks on "Notifications" tab
       Then user clicks on "Sent/Received" tab
       And user validates email notification is sent

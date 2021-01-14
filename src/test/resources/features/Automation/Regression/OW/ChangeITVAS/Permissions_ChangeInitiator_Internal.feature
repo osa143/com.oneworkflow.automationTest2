@@ -12,8 +12,7 @@ Feature: Permissions - ChangeInitiator-Internal [aR]
     When user clicks save button
     Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)" on change record page
     When user selects request type as "Standard Change"
-    And user validates "Template*" is mandatory
-    And user selects template as "All:IT:Other:TEST TEMPLATE [UAT] - Normal Change"
+    And user selects template as "All:IT:Carrier:Telia Carrier UAT Changes"
     When user enters "_" in the change builder field
     And user enters as "Test" in service and customer impact
     And user enters request start time 24 hours ahead of current date
@@ -39,8 +38,8 @@ Feature: Permissions - ChangeInitiator-Internal [aR]
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     And user validates CI Search is disabled
-    And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
-    And user right clicks on CI "" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
+    And user right clicks on primary CI and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
     #Then user validates nothing happens when clicking on all read only options
     When user clicks on schedule tab
     Then user validates fields under schedule tab are read only
@@ -58,8 +57,8 @@ Feature: Permissions - ChangeInitiator-Internal [aR]
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user validates CI Search is disabled
-    And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
-    And user right clicks on CI "" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
+    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
     #Then user validates nothing happens when clicking on all read only options
     When user clicks on schedule tab
     Then user validates fields under schedule tab are read only
@@ -77,6 +76,8 @@ Feature: Permissions - ChangeInitiator-Internal [aR]
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user validates CI Search is disabled
+    And user right clicks on primary CI and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
     And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
     And user right clicks on CI "" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
     #Then user validates nothing happens when clicking on all read only options
@@ -108,8 +109,8 @@ Feature: Permissions - ChangeInitiator-Internal [aR]
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user validates CI Search is disabled
-    And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
-    And user right clicks on CI "" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
+    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
     #Then user validates nothing happens when clicking on all read only options
     When user clicks on schedule tab
     Then user validates fields under schedule tab are read only
@@ -119,8 +120,8 @@ Feature: Permissions - ChangeInitiator-Internal [aR]
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user validates CI Search is disabled
-    And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
-    And user right clicks on CI "" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
+    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
     #Then user validates nothing happens when clicking on all read only options
     When user clicks on schedule tab
     Then user validates fields under schedule tab are read only
@@ -130,8 +131,8 @@ Feature: Permissions - ChangeInitiator-Internal [aR]
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user validates CI Search is disabled
-    And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
-    And user right clicks on CI "" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
+    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
     #Then user validates nothing happens when clicking on all read only options
     When user clicks on schedule tab
     Then user validates fields under schedule tab are read only
@@ -151,8 +152,8 @@ Feature: Permissions - ChangeInitiator-Internal [aR]
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user validates CI Search is disabled
-    And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
-    And user right clicks on CI "" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
+    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
     #Then user validates nothing happens when clicking on all read only options
     When user clicks on schedule tab
     Then user validates fields under schedule tab are read only
@@ -163,8 +164,8 @@ Feature: Permissions - ChangeInitiator-Internal [aR]
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user validates CI Search is disabled
-    And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
-    And user right clicks on CI "" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
+    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
     #Then user validates nothing happens when clicking on all read only options
     When user clicks on schedule tab
     Then user validates fields under schedule tab are read only

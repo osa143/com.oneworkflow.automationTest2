@@ -1,21 +1,27 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/SPRINTS/Sprint_P4S3/SAO_7281_Easy Access to Contacts in OW E-mails.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/Regression/E2E/RAN_Telia_Wifi/Telia_Wifi.feature");
 formatter.feature({
-  "name": "Ow Emails",
+  "name": "Telia Wifi regression test",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@7181"
+      "name": "@Telia_Wifi"
+    },
+    {
+      "name": "@Regression"
     }
   ]
 });
 formatter.scenario({
-  "name": "SAO-7281- Easy access to contacts",
+  "name": "Telia Wifi",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@7181"
+      "name": "@Telia_Wifi"
+    },
+    {
+      "name": "@Regression"
     }
   ]
 });
@@ -31,7 +37,7 @@ formatter.result({
 });
 formatter.step({
   "name": "user logs in with valid user and password",
-  "keyword": "When "
+  "keyword": "And "
 });
 formatter.match({
   "location": "OWF_LoginPageSteps.userLogsInWithValidUserAndPassword()"
@@ -50,11 +56,121 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user selects actions dropdown as \"Email \u003e Outgoing\"",
+  "name": "user clicks on create trouble event",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userClicksOnCreateTroubleEvent()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user switches to window 1",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "trouble record form should appear in new tab",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.troubleRecordFormShouldAppearInNewTab()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on sweden checkbox under affected BU\u0027s",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSelectsActionsDropdownAs(String)"
+  "location": "OWF_ProblemRecordPageSteps.userClicksOnSwedenCheckboxUnderAffectedBUS()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters \"Test Telia Wifi\" in Title field",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userEntersInTitleField(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects request type as \"Event\" on trouble event page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userSelectsRequestTypeAsStringOnTroubleEventPage(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters description as \"Test WO\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userEntersDescriptionAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on save button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user validates ticket status as \"Assigned\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userValidatesTicketStatusAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on Diagnosis tab",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userClicksOnDiagnosisTab()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on CI search button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userClicksOnCISearchButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "CI search tab should be opened",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.ciSearchTabShouldBeOpened()"
 });
 formatter.result({
   "status": "passed"
@@ -70,85 +186,204 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks \"Add Person - free text\" tab",
+  "name": "user enters \"TLÖ WLAN4\" in location field",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userClicksTab(String)"
+  "location": "OWF_CiSearchPageSteps.userEntersInLocationField(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters add person first name as \"Test\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userEntersAddPersonFirstNameAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters add person last name as \"User\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userEntersAddPersonLastNameAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters add person email address as \"testuser@test.com\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userEntersAddPersonEmailAddressAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks add button for add person",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksAddButtonForAddPerson()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "contact \"testuser@test.com\" should be added under \"Send Notification To\"",
+  "name": "user clicks on search button on CI search window",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.contactShouldBeAddedUnder(String,String)"
+  "location": "OWF_CiSearchPageSteps.userClicksOnSearchButtonOnCiSearchWindow()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "dropdown values \"Test User [testuser@test.com]\" should be available in \"Select a Previously Used Contact (use Autofill or the Menu):\" dropdown",
-  "keyword": "And "
+  "name": "user selects the first three CI\u0027s",
+  "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.dropdownValuesShouldBeAvailableInDropdown(String,String)"
+  "location": "OWF_TroubleEventPageSteps.userSelectsTheFirstThreeCIS()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertTrue(Assert.java:44)\r\n\tat org.testng.Assert.assertTrue(Assert.java:54)\r\n\tat steps.OWF_AgentConsolePageSteps.dropdownValuesShouldBeAvailableInDropdown(OWF_AgentConsolePageSteps.java:673)\r\n\tat ✽.dropdown values \"Test User [testuser@test.com]\" should be available in \"Select a Previously Used Contact (use Autofill or the Menu):\" dropdown(features/Automation/SPRINTS/Sprint_P4S3/SAO_7281_Easy Access to Contacts in OW E-mails.feature:17)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
-  "name": "user clicks cancel button on new notification window",
+  "name": "user selects impact level as \"Degradation of Service\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksCancelButtonOnNewNotificationWindow()"
+  "location": "OWF_CiSearchPageSteps.userSelectsImpactLevelAs(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on relate CI",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userClicksOnRelateCI()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user closes warning message",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userClosesWarningMessageAndClicksOnCloseButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on close button on CI search window",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userClicksOnCloseButtonOnCISearchWindow()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on \"Work Orders\" tab",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on create from ticket",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userClicksOnCreateFromTicket()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user switches to window 2",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on save button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters description as \"Test WO send by email\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userEntersDescriptionAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects assigned profile dropdown as \"Access Network:Mobile:WLAN:WLAN Agreement\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSelectsAssignedProfileDropdownAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects SLA class as \"DEFAULT:3 weeks repair time\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userSelectsSLAClassAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on save button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user validates ticket status as \"Assigned\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userValidatesTicketStatusAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user waits 90 secs",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userWaitsSecs(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on \"Notifications\" tab",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on \"Sent/Received\" tab",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user validates email notification is sent",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userValidatesEmailNotificationIsSent()"
+});
+formatter.result({
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"

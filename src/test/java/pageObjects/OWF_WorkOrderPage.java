@@ -46,7 +46,7 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_REQUEST_TYPE= "arid_WIN_0_777031002";
     private static final String txt_REASSIGNED_REASON= "arid_WIN_0_600001026";
     private static final String txt_TECHNOLOGY="arid_WIN_0_777020101";
-    private static final String fld_SENT= "//*[@id='T700020677']/tbody/tr[3]/td[1]/nobr/span";
+    private static final String fld_SENT= "//*[@id='T700020677']/tbody/tr[2]/td[1]/nobr/span";
     private static final String txt_METHOD= "arid_WIN_0_700020737";
     private static final String txt_TEMPLATE= "arid_WIN_0_777504501";
     private static final String txt_REASON= "arid_WIN_0_600001009";

@@ -119,13 +119,18 @@ public class OWF_SIDConsolePageSteps {
 
     @Then("user validates ticket previously created is present")
     public void userValidatesTicketPreviouslyCreatedIsPresent() {
-    Assert.assertEquals(sidConsolePage.getSIDConsole_RelatedMatches_TableData("Ticket ID", 1), CommonUtils.opTicket);
+    Assert.assertEquals(sidConsolePage.getSIDConsole_RelatedMatches_TableData("Ticket ID", 1), CommonUtils.savedTicket);
     }
 
 
     @And("user double clicks on ticket under SID console matching ticket to open")
     public void userDoubleClicksOnTicketUnderSIDConsoleMatchingTicketToOpen() {
      sidConsolePage.doubleClickOnTicket_SIDConsole_RelatedMatches();
+    }
+
+    @And("user clicks on ticket title")
+    public void userClicksOnTicketTitle() {
+      sidConsolePage.clickOnColumnTitle();
     }
 }
 

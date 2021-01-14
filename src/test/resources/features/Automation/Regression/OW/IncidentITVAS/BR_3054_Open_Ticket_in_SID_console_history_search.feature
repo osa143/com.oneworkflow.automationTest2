@@ -15,7 +15,7 @@ Feature: Automation - BR-3054 - Open Ticket in SID console history search[s]
     And user selects request type as "Customer" on trouble event page
     And user enters description as "Open_Ticket_in_SID_console_history_search"
     And user clicks on save button
-    And user gets trouble ticket value
+    And user gets ticket value
     When user adds CI "SE_eNodeB_Snuggtaskeberg" to the ticket
     Then user validates CI "SE_eNodeB_Snuggtaskeberg" is listed
     When user selects "Console" menu as "SID Console"

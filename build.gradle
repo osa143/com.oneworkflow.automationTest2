@@ -111,8 +111,6 @@ jar {
     manifest {
         attributes 'Main-Class': 'runners.Test_Runner'
     }
-    task wrapper(type: Wrapper) {
-        gradleVersion = '4.1'
-    }
+    
 }
 

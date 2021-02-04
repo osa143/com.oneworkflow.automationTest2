@@ -551,7 +551,7 @@ public class BaseRecordPage extends BasePage {
     public String verifyAlarmStatus(){
         return getTableCellData(By.id(table_ALARMS_ID), "AlarmStatus", 1);
     }
-    public void selectPrimaryTicket()
+    public void selectPrimaryCI()
     {
        WebElement element = findElement(By.xpath(chkbxFirstRow_Diagnosis));
        element.click();
@@ -561,6 +561,13 @@ public class BaseRecordPage extends BasePage {
     public void selectTicketAndRightClick()
     {
         saveCiDetails(true);
+        WebElement element = findElement(By.xpath(chkbx_ThirdRow_Diagnosis));
+        element.click();
+        action.contextClick(element).build().perform();
+
+    }
+    public void selectSecondaryCIAndRightClick()
+    {
         WebElement element = findElement(By.xpath(chkbx_ThirdRow_Diagnosis));
         element.click();
         action.contextClick(element).build().perform();
@@ -1032,7 +1039,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterStartDate(int delay) {
-        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", delay);
         CommonUtils.eventStartTime=dateTime;
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
@@ -1040,7 +1047,7 @@ public class BaseRecordPage extends BasePage {
 
     public void enterEndDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", delay);
         CommonUtils.requestEnd=dateTime;
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );

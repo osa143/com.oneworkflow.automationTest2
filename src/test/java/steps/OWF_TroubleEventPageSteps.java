@@ -226,7 +226,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user right clicks on primary CI and selects {string}")
     public void userRightClicksOnPrimaryCIAndSelects(String arg0) {
-        troubleEventPage.selectPrimaryTicket();
+        troubleEventPage.selectPrimaryCI();
        troubleEventPage.setPreferences(arg0);
     }
 
@@ -1626,7 +1626,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user right clicks on primary CI and validates options {string} are available")
     public void userRightClicksOnPrimaryCIAndValidatesOptionsAreAvailable(String expectedValues) {
-        troubleEventPage.selectPrimaryTicket();
+        troubleEventPage.selectPrimaryCI();
         Assert.assertTrue(troubleEventPage.verifyDropdownValues(expectedValues));
     }
 
@@ -1634,6 +1634,34 @@ public class OWF_TroubleEventPageSteps {
     public void userRightClicksOnSecondaryCIAndValidatesOptionsAreAvailable(String expectedValues) {
         troubleEventPage.selectTicketAndRightClick();
         Assert.assertTrue(troubleEventPage.verifyDropdownValues(expectedValues));
+    }
+
+    @And("user clicks on ticket matching problem checkbox")
+    public void userClicksOnTicketMatchingProblemCheckbox() {
+        troubleEventPage.clickTicketMatchingProblemsCheckbox();
+    }
+
+    @And("user clicks on ticket matching known error checkbox")
+    public void userClicksOnTicketMatchingKnownErrorCheckbox() {
+        troubleEventPage.clickTicketMatchingKnownErrorCheckbox();
+    }
+
+    @And("user clicks on ticket refresh button and clicks enter")
+    public void userClicksOnTicketRefreshButtonAndClicksEnter() {
+        troubleEventPage.clickRefresh_ticketFresh();
+        troubleEventPage.clickEnterButton();
+    }
+
+    @Then("user right clicks on primary CI and validates options {string} are disabled")
+    public void userRightClicksOnPrimaryCIAndValidatesOptionsAreDisabled(String expectedValues) {
+        troubleEventPage.selectPrimaryCI();
+        Assert.assertTrue(troubleEventPage.verifyDisabledDropdownValues(expectedValues));
+    }
+
+    @Then("user right clicks on secondary CI and validates options {string} are disabled")
+    public void userRightClicksOnSecondaryCIAndValidatesOptionsAreDisabled(String expectedValues) {
+        troubleEventPage.selectSecondaryCIAndRightClick();
+        Assert.assertTrue(troubleEventPage.verifyDisabledDropdownValues(expectedValues));
     }
 }
 

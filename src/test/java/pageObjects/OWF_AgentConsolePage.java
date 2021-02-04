@@ -127,7 +127,8 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String btn_APPLY_QUALIFICATION = "WIN_0_900008001";
     private static final String txt_ALARM_MESSAGE = "arid_WIN_3_800040444";
 
-    public void  enterAlarmMessage(String Message){
+    public void  enterAlarmMessage(String Message)
+    {
         enterTextByElement(By.id(txt_ALARM_MESSAGE), Message);
     }
 

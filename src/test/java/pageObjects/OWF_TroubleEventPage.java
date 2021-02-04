@@ -1,6 +1,7 @@
 package pageObjects;
 
 import io.cucumber.datatable.DataTable;
+import org.apache.commons.exec.util.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -179,6 +180,8 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btn_TICKET_MATCHING_REFRESH = "WIN_0_600002911";
     private static final String chkbx_TICKET_MATCHING_INCIDENT = "WIN_0_rc0id800040281";
     private static final String chkbx_TICKET_MATCHING_WORK_ORDER = "WIN_0_rc0id800040283";
+    private static final String chkbx_TICKET_MATCHING_PROBLEM= "WIN_0_rc0id800040527";
+    private static final String chkbx_TICKET_MATCHING_KNOWN_ERROR= "WIN_0_rc0id800040528";
     private static final String chkbx_TICKET_MATCHING_CHANGE = "WIN_0_rc0id800040282";
     private static final String chkbx_TICKET_MATCHING_CLEARED = "WIN_0_rc0id800040286";
     private static final String chkbx_TICKET_MATCHING_OPEN = "WIN_0_rc0id800040285";
@@ -216,6 +219,13 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
 
     public void clickTicketMatchingWorkOrderCheckbox(){
         clickElementById(chkbx_TICKET_MATCHING_WORK_ORDER);
+    }
+
+    public void clickTicketMatchingProblemsCheckbox(){
+        clickElementById(chkbx_TICKET_MATCHING_PROBLEM);
+    }
+    public void clickTicketMatchingKnownErrorCheckbox(){
+        clickElementById(chkbx_TICKET_MATCHING_KNOWN_ERROR);
     }
 
     public void clickTicketMatchingIncidentCheckbox(){
@@ -368,7 +378,14 @@ public void rightClickOnElement(String cellData){
         selectDropDownNameAndValue("Level*", value, false);
     }
     public String getHierarchicEscalationLevel(){
-        return getAttributeValueById(txt_HIERARCHIC_ESCLATION_LEVEL);
+        String text= getAttributeValueById(txt_HIERARCHIC_ESCLATION_LEVEL);
+        if(text.trim().length()==0)
+        {
+             text= getTextByID(txt_HIERARCHIC_ESCLATION_LEVEL);
+        }
+        System.out.println("Hierarchic escalation level is - " +text);
+               return text;
+
     }
     public void SelectFirstThreeCIs(){
         clickElement(By.xpath("//*[@id='T700009024']/tbody/tr[2]"));

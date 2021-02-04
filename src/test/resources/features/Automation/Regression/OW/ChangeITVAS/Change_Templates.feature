@@ -1,4 +1,4 @@
-@Change_Templates
+@Change_Templates @OW_Change
 
 
 Feature: Change Templates [SaR]

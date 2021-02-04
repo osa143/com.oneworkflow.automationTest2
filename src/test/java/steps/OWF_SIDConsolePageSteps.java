@@ -119,7 +119,11 @@ public class OWF_SIDConsolePageSteps {
 
     @Then("user validates ticket previously created is present")
     public void userValidatesTicketPreviouslyCreatedIsPresent() {
-    Assert.assertEquals(sidConsolePage.getSIDConsole_RelatedMatches_TableData("Ticket ID", 1), CommonUtils.savedTicket);
+        if(CommonUtils.opTicket==null){
+            CommonUtils.opTicket=CommonUtils.savedTicket;
+        }
+
+    Assert.assertEquals(sidConsolePage.getSIDConsole_RelatedMatches_TableData("Ticket ID", 1), CommonUtils.opTicket);
     }
 
 

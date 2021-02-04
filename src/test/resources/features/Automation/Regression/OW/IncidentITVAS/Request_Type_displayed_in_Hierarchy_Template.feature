@@ -1,4 +1,4 @@
-@Request_Type_displayed_in_Hierarchy_Template
+@Request_Type_displayed_in_Hierarchy_Template @OW_Incident
 
 
 Feature: Automation - Request Type displayed in Hierarchy - Template[s]

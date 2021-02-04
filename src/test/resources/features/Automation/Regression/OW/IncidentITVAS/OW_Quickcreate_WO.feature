@@ -1,4 +1,4 @@
-@Quick_create_WO
+@Quick_create_WO @OW_Incident
 
 Feature: Automation - OW - Quickcreate WO
 

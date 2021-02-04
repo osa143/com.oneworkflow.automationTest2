@@ -1,4 +1,4 @@
-@OW_Attach_remove_attached_files
+@OW_Attach_remove_attached_files @OW_Incident
 
 Feature: Automation - OW - Attach remove attached files
 

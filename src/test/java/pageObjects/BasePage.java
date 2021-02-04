@@ -163,6 +163,13 @@ public void clickElementById(String Id){
         wait(2000);
 
     }
+    public void clickEnterButton()
+    {
+        Actions action = new Actions(driver);
+        action.sendKeys(Keys.ENTER).perform();
+        wait(2000);
+
+    }
     //To be used for all send keys methods.
     public void enterTextByElement(By element, String text)
     {
@@ -308,7 +315,20 @@ public void clickElementById(String Id){
         return dropdownValues;
 
     }
+    public List<String> getDisabledDropdownValues()
+    {
+        List<String> disabledDropdownValues = new ArrayList<String>();
 
+        List<WebElement> disabledElements = driver.findElements(By.className("MenuTableRowDisabled"));
+        for (int i = 0; i < disabledElements.size(); i ++)
+        {
+            List<WebElement> td_elements=disabledElements.get(i).findElement(By.className("MenuEntryNameHover")).findElements(By.tagName("td"));
+            disabledDropdownValues.add(td_elements.get(i).getText().trim());
+        }
+        clickEscButton();
+        return disabledDropdownValues;
+
+    }
 
     public WebElement waitUntilElementClickable(By by)
     {
@@ -1026,7 +1046,23 @@ public void clickElementById(String Id){
         }
         return true;
     }
+    public boolean verifyDisabledDropdownValues(String ExpectedDropdownValues)
+    {
+        String[] multipleValues = ExpectedDropdownValues.split(":");
+        List<String> ActualDisabledDropdownValues = getDisabledDropdownValues();
 
+
+        System.out.println("Dropdown values are: " + ActualDisabledDropdownValues);
+        for (int i = 0; i < multipleValues.length; i++)
+        {
+            if (!ActualDisabledDropdownValues.contains(multipleValues[i]))
+            {
+                return false;
+            }
+
+        }
+        return true;
+    }
     public boolean verifyTabValues(String tabValues)
     {
         wait(1500);

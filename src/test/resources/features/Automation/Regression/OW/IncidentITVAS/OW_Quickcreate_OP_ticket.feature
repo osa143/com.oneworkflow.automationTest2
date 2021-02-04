@@ -1,4 +1,4 @@
-@Quick_Create_OP_ticket
+@Quick_Create_OP_ticket @OW_Incident
 
 Feature: OW - Quickcreate OP ticket
 

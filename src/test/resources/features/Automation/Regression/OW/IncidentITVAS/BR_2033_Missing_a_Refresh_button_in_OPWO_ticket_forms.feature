@@ -1,4 +1,4 @@
-@BR_2033_Missing_a_Refresh_button_in_OPWO_ticket_form
+@BR_2033_Missing_a_Refresh_button_in_OPWO_ticket_form @OW_Incident
 #Automation - BR-2033 - Missing a Refresh button in OPWO ticket form[s]
 
 Feature: BR-2033 - Missing a Refresh button in OPWO ticket forms

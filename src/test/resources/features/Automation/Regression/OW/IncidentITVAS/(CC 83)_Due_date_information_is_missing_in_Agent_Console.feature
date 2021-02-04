@@ -1,4 +1,4 @@
-@CC83_Due_date_information_is_missing_in_Agent_Console
+@CC83_Due_date_information_is_missing_in_Agent_Console @OW_Incident
 
 
 Feature: Automation - OP-000000438117( CC 83) - Due date information is missing in Agent Console for Event tickets[s]

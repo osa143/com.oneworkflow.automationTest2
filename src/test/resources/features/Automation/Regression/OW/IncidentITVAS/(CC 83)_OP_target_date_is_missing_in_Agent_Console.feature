@@ -1,4 +1,4 @@
-@CC83_OP_target_date
+@CC83_OP_target_date @OW_Incident
 
 
 Feature: Automation - OP-000000438117(CC 83) - OP target date information is missing in Agent Console for Event tickets[s]

@@ -1,4 +1,4 @@
-@Copy_to_New_01_Create_CR_test
+@Copy_to_New_01_Create_CR_test @OW_Change
 
 Feature: Copy to New 01 (Create CR) [aR]
 

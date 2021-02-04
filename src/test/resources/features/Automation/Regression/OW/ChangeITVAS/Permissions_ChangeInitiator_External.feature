@@ -1,4 +1,4 @@
-@Permissions_ChangeInitiator_External
+@Permissions_ChangeInitiator_External @OW_Change
 
 Feature: Permissions - ChangeInitiator-External [aR]
 

@@ -118,6 +118,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String Table_DIAGNOSIS= "T700009087";
     private static final String dd_IMPACT_NAME= "Impact Name";
     private static final String chkbx_CONFIRM_ID= "WIN_0_rc0id990000905";
+    private static final String chkbx_CONFIRM_SELECTED_NOT_SELECTED="WIN_0_rc0id800040031";
     private static final String btn_SAVE_BULK_UPDATE_ID= "WIN_0_990000906";
     private static final String txt_ASSIGNEE= "arid_WIN_0_4";
     private static final String dd_ASSIGNMENT_PROFILE= "Assignment Profile";
@@ -342,18 +343,15 @@ public void rightClickOnElement(String cellData){
 }
     public void impactFromUpdateAsPastTime(String cellData){
         selectAndRightClickOnTableElement(cellData);
-        WebElement element = driver.switchTo().activeElement();
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-        //element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.ARROW_RIGHT);
-        element.sendKeys(Keys.DOWN);
-        element.sendKeys(Keys.ENTER);
+        WebElement impact = driver.findElement(By.xpath("//td[contains(text(),'Impact')]"));
+        action.moveToElement(impact).build().perform();
+        WebElement update = driver.findElement(By.xpath("//td[contains(text(),'Update')]"));
+        action.moveToElement(update).click().perform();
         int size =driver.findElements(By.tagName("iframe")).size();
         switchToFrameByIndex(size - 1);
         enterImpactFromPlus(CommonUtils.getDateAsTodayMidnight(0));
         enterImpactToPlus(CommonUtils.getDateAsTodayMidnight(1));
-        clickConfirmCheckBox();
+        clickConfirmCheckBox_all();
         clickSave_bulkUpdate();
     }
 
@@ -645,6 +643,10 @@ public void rightClickOnElement(String cellData){
     public void clickConfirmCheckBox(){
         findElement(By.id(chkbx_CONFIRM_ID)).click();
      }
+    public void clickConfirmCheckBox_all(){
+        findElement(By.id(chkbx_CONFIRM_SELECTED_NOT_SELECTED)).click();
+    }
+
 
      public void enterEventStartTime(String time){
         findElement(By.id(txt_EVENT_START_TIME)).clear();

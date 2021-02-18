@@ -13,10 +13,11 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Set;
 
 public class Hooks {
 
-
+    OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
     @After
     public void Teardown(Scenario scenario) throws IOException, InterruptedException {
 
@@ -28,12 +29,20 @@ public class Hooks {
 //            scenario.embed(screenshot, "image/png");
         }
 
-
-            OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
+        Set<String> handles = agentConsolePage.getDriver().getWindowHandles();
+        int handlesCount = handles.size();
+        System.out.println("Number of windows are - " + handlesCount);
+        if (handlesCount > 1){
             CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 0);
             agentConsolePage.clickNavUserMenu();
             agentConsolePage.clickMenuItemLogout_Hooks();
             DriverFactory.getInstance().quit();
+
+        }
+           else {
+
+        }
+
 
        }
 

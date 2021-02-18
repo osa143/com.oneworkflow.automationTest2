@@ -5,10 +5,11 @@ import org.testng.collections.Lists;
 import java.util.List;
 
 @CucumberOptions(features = "classpath:features/",
-        plugin = { "pretty", "html:test-output/html",}, // for html report
+        plugin = { "pretty", "html:test-output/html",// for html report
+                   "rerun:test-output/failedReRun.txt"}, // To rerun failed scenarios
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@B2B_Test_Cases"}
+        tags = {"@SAO-427"}
 
 )
 

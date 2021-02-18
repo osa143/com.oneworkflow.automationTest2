@@ -1,4 +1,4 @@
-@Add_CI_&_Attachment  @Reg_Problem
+@Add_CI_&_Attachment  @Reg_Problem @HelixRegression
   #OS3:PM:Configuration:AddCI
 Feature: User is able to add a CI and attachment to a problem ticket
     Scenario: user can create a problem record and add a CI and attachment to it
@@ -13,6 +13,7 @@ Feature: User is able to add a CI and attachment to a problem ticket
         |Title                                  |RequestType            |Description                     |ImpactType      |Urgency|
         |proactive investigation of: frvi96_auto|XX_Test:Functional Test|UAT Test 3 Add CI and attachment|Moderate/Limited|Low    |
       Then ticket should be created and status should be assigned
+      And user gets ticket value
       Then user enters description as "-More information"
       And user clicks on save button on the problem form
       And change should also be reflected in the timeline as "Ticket Description has changed from \"UAT Test 3 Add CI and attachment\" to \"-More information\""

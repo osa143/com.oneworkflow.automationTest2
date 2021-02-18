@@ -1136,14 +1136,20 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("user clicks on save button and closes warning messages")
     public void userClicksOnSaveButtonAndClosesWarningMessages() {
-        troubleEventPage.clickSave();
-        troubleEventPage.switchToFrameByIndex(2);
-        troubleEventPage.clickElementByContainsTextAndTagName("a", "OK");
-        troubleEventPage.switchToDefault();
-        troubleEventPage.switchToFrameByIndex(2);
-        troubleEventPage.wait(3000);
-        troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
-        troubleEventPage.switchToDefault();
+        try{
+            troubleEventPage.clickSave();
+            troubleEventPage.switchToFrameByIndex(2);
+            troubleEventPage.clickElementByContainsTextAndTagName("a", "OK");
+            troubleEventPage.switchToDefault();
+            troubleEventPage.switchToFrameByIndex(2);
+            troubleEventPage.wait(3000);
+            troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
+            troubleEventPage.switchToDefault();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     @And("user selects attachment visibility as external")
@@ -1261,6 +1267,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user right clicks on CI {string} and update impact from as past time")
     public void userRightClicksOnCIAndUpdateImpactFromAsPastTime(String arg0) {
+        troubleEventPage.clickDiagnosis();
        troubleEventPage.impactFromUpdateAsPastTime(arg0);
     }
 
@@ -1662,6 +1669,25 @@ public class OWF_TroubleEventPageSteps {
     public void userRightClicksOnSecondaryCIAndValidatesOptionsAreDisabled(String expectedValues) {
         troubleEventPage.selectSecondaryCIAndRightClick();
         Assert.assertTrue(troubleEventPage.verifyDisabledDropdownValues(expectedValues));
+    }
+
+    @And("user right clicks on primary CI and clears impact")
+    public void userRightClicksOnPrimaryCIAndClearsImpact() {
+        troubleEventPage.clickDiagnosis();
+        troubleEventPage.rightClickOnPrimaryCI();
+        troubleEventPage.doImpactClear();
+    }
+
+    @And("user right click on plaza primary CI and selects {string}")
+    public void userRightClickOnPlazaPrimaryCIAndSelects(String arg0) {
+        troubleEventPage.rightClickOnPrimaryCI();
+        troubleEventPage.setPreferences(arg0);
+    }
+    @And("user right clicks on primary CI and clears impact for all CIs")
+    public void userRightClicksOnPrimaryCIAndClearsImpactForAllCIs() {
+        troubleEventPage.clickDiagnosis();
+        troubleEventPage.rightClickOnPrimaryCI();
+        troubleEventPage.doImpactClear_all();
     }
 }
 

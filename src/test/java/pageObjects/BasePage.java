@@ -6,7 +6,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import utils.CommonUtils;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -1095,7 +1094,6 @@ public void clickElementById(String Id){
         }
         return true;
     }
-
 
 }
 

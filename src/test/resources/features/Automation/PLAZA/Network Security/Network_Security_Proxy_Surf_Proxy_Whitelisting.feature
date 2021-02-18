@@ -1,4 +1,4 @@
-@Network_Security_Proxy_Surf_Proxy_Whitelisting @PLAZA
+@Network_Security_Proxy_Surf_Proxy_Whitelisting @PLAZA @Network_Security
   #passed
   Feature: Network Security Proxy Surf Proxy Whitelisting plaza form test
     Scenario Outline: user validates information sent to OW from Plaza
@@ -58,6 +58,7 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 5 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed
 
@@ -65,5 +66,5 @@
       Examples:
 
       |Request                                          |SurfProxy /URL filter|Description                             |Additional Comments        |
-      #|Test7 Network Security Proxy Whitelisting/Request|Whitelisting DDC FI  |Test7 Network Security Proxy/Description|Network Security - Test7/AC|
+      |Test7 Network Security Proxy Whitelisting/Request|Whitelisting DDC FI  |Test7 Network Security Proxy/Description|Network Security - Test7/AC|
       |Test8 Network Security Proxy Whitelisting/Request|Whitelisting DDC SE |Test8 Network Security Proxy/Description|Network Security - Test8/AC|

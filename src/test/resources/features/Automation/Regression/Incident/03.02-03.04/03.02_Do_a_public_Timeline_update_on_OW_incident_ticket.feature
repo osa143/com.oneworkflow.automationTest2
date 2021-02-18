@@ -1,4 +1,4 @@
-@03.02 @Incident @03 @HelixRegr
+@03.02 @Incident @03 @HelixRegression
 #passed
   Feature: Do a public timeline update on OW incident ticket
     Scenario: Do a public timeline update on OW incident ticket
@@ -15,6 +15,7 @@
       And user enters description as "Test Case 03.02 Public Timeline Update"
       And user clicks on save button
       Then ticket should be created and status should be assigned
+      And user gets trouble ticket value
       When user enters "Test Update - Public" in the timeline text box
       And user clicks on public radio button
       And user clicks on add button

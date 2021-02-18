@@ -1,4 +1,4 @@
-@Network_Security_Proxy_Reverse_Proxy @PLAZA
+@Network_Security_Proxy_Reverse_Proxy @PLAZA @Network_Security
 
   Feature: Network Security Proxy Reverse Proxy form test
     Scenario: user validates information sent to OW from Plaza
@@ -44,7 +44,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Proxy"
       And user validates request type as "Service Request | PLAZA"
-      #And user validates network security proxy reverse proxy description same as plaza
+#      And user validates network security proxy reverse proxy description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -63,5 +63,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 5 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed

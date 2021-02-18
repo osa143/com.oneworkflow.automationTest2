@@ -1578,6 +1578,11 @@ public class OWF_ProblemRecordPageSteps {
     public void userEntersOnsiteContactAs(String contact) {
         problemRecordPage.enterOnSiteContactAs(contact);
     }
+
+    @Then("user should see confirmation message for impact clear all and user clicks yes")
+    public void userShouldSeeConfirmationMessageForImpactClearAllAndUserClicksYes() {
+        problemRecordPage.clickYes_impactClear_all();
+    }
 }
 
 

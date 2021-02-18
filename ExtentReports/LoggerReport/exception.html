@@ -124,10 +124,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="38" parent-id="1">
+<tr class="s-fail" test-id="12" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And user validates email notification is sent <br/><span class="text-muted text-sm">Telia Wifi</span></td>
-	<td>0h 0m 30s+129msc</td>
+	<td class="_600">Then user selects network security system name in haiti as "1B" <br/><span class="text-muted text-sm">user validates information sent to OW from Plaza</span></td>
+	<td>0h 0m 30s+131msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -136,24 +136,23 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='T700020677']/tbody/tr[3]/td[1]/nobr/span (tried for 30 second(s) with 500 milliseconds interval)
+		<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: s2id_sp_formfield_h2_name (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at pageObjects.BasePage.clickElement(BasePage.java:102)
-	at pageObjects.OWF_WorkOrderPage.clickOnSent(OWF_WorkOrderPage.java:164)
-	at steps.OWF_WorkOrderPageSteps.userValidatesEmailNotificationIsSent(OWF_WorkOrderPageSteps.java:739)
-	at ✽.user validates email notification is sent(features/Automation/Regression/E2E/RAN_Telia_Wifi/Telia_Wifi.feature:41)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='T700020677']/tbody/tr[3]/td[1]/nobr/span"}
-  (Session info: chrome=87.0.4280.141)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+	at pageObjects.plaza.Plaza_HomePage.selectNetworkSecuritySystemNameHaiti(Plaza_HomePage.java:1064)
+	at steps.plaza_steps.Plaza_HomePageSteps.userSelectsNetworkSecuritySystemNameInHaitiAs(Plaza_HomePageSteps.java:2029)
+	at ✽.user selects network security system name in haiti as "1B"(features/Automation/PLAZA/Network Security/Network_Security_Add_Modify_Remove_DNS.feature:15)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=88.0.4324.150)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P3NRUGT', ip: '10.85.241.204', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+System info: host: 'DESKTOP-6FQK1D6', ip: '10.85.242.126', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\MAHESH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60013}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 8d1d5c7ccc6db882b5f03646865f15b8
-*** Element info: {Using=xpath, value=//*[@id='T700020677']/tbody/tr[3]/td[1]/nobr/span}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.150, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\jlm97\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56169}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2e598e70543cd9bdfaccc8509bc7141d
+*** Element info: {Using=id, value=s2id_sp_formfield_h2_name}
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
@@ -163,8 +162,8 @@ Session ID: 8d1d5c7ccc6db882b5f03646865f15b8
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
@@ -172,8 +171,8 @@ Session ID: 8d1d5c7ccc6db882b5f03646865f15b8
 	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	at pageObjects.BasePage.clickElement(BasePage.java:102)
-	at pageObjects.OWF_WorkOrderPage.clickOnSent(OWF_WorkOrderPage.java:164)
-	at steps.OWF_WorkOrderPageSteps.userValidatesEmailNotificationIsSent(OWF_WorkOrderPageSteps.java:739)
+	at pageObjects.plaza.Plaza_HomePage.selectNetworkSecuritySystemNameHaiti(Plaza_HomePage.java:1064)
+	at steps.plaza_steps.Plaza_HomePageSteps.userSelectsNetworkSecuritySystemNameInHaitiAs(Plaza_HomePageSteps.java:2029)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -241,7 +240,7 @@ Session ID: 8d1d5c7ccc6db882b5f03646865f15b8
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Jan 14, 2021 11:42:09 AM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Feb 9, 2021 01:19:59 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

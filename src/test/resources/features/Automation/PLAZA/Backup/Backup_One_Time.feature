@@ -57,7 +57,6 @@
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      And user waits 60 secs
       And user clicks on "Diagnosis" tab
       And user waits 3 secs
       When user right clicks on CI "cc100cgas001" and clears impact

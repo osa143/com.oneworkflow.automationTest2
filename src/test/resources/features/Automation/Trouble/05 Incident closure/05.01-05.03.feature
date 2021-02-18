@@ -4,7 +4,7 @@
     Scenario: 05.01-05.03 trouble
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid user and password
+      When user logs in with valid username "Change_Automation_9" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create trouble event
       And user switches to window 1

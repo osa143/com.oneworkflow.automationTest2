@@ -8,7 +8,7 @@ import java.util.List;
         plugin = { "pretty", "html:test-output/html",}, // for html report
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@Telia_Wifi"}
+        tags = {"@Bulk_Loading_Format_trouble_50CIS"}
 
 )
 public class Test_Runner extends BaseTest {

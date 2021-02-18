@@ -16,8 +16,8 @@
      # Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters veha request as "Test1 Veha/Request"
-      And user waits 20 secs
-      #Then user enters system as "sonera ca apache"
+#      And user waits 20 secs
+      Then user enters system as "sonera ca apache"
       Then user enters veha description as "Test1 Veha/Description"
       And user enters additional comments as "Test1 Veha/AC"
       Then user clicks on "Submit"

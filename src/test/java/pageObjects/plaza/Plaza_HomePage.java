@@ -374,7 +374,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String dd_CI_WEBTAB = "//input[@aria-owns='s2id_autogen13_results']";
     private static final String dd_SYSTEM_VEHA = "//input[@aria-owns='s2id_autogen13_results']";
     private static final String dd_CI_OCC = "//input[@aria-owns='s2id_autogen13_results']";
-    private static final String dd_IT_FI_SYSTEM = "//input[@type='text']";
+    private static final String dd_IT_FI_SYSTEM = "s2id_autogen13_results";
     private static final String dd_SYSTEM_NAME_HAITI_NIMBUS = "//input[@aria-owns='select2-results-16']";
     private static final String dd_NETWORK_SECURITY_REMOTE_ACCESS_SYSTEM_HAITI = "//input[@aria-owns='select2-results-13']";
     private static final String dd_NETWORK_SECURITY_PROXY_GENERAL_INQUIRY_HAITI = "//input[@type='text']";
@@ -382,7 +382,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String dd_NETWORK_SECURITY_SYSTEM_NAME_HAITI = "s2id_autogen14_search";
     private static final String dd_DATABASE_SYSTEM_NAME_HAITI = "//input[@aria-owns='select2-results-23']";
     private static final String txt_VERIFY_INC = "u_internal_case_management.REL:975cb40fdbd9db446734f1eabf961939_table";
-    private static final String btn_CLICK_INC_NUMBER = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[4]/div[2]/div/div[2]/p";
+    private static final String btn_CLICK_INC_NUMBER = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[5]/div[2]/div/div[2]/p/a";
     private static final String txt_FIRST_TIMELINE_MESSAGE = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[4]/div[2]/div/div[2]/p";
     private static final String txt_SECOND_TIMELINE_MESSAGE = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[3]/div[2]/div/div[2]/p";
     private static final String dd_PLAZA_INCIDENT_CATEGORY = "select2-chosen-1";
@@ -396,7 +396,7 @@ public class Plaza_HomePage extends BasePage {
     private static final String txt_OW_ATTACHMENT_NOTIFICATION_PLAZA = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p";
     private static final String btn_PDB_AFFECTED_PERSON = "sp_formfield_pdb_affectedPerson";
     private static final String dd_SYSTEM_NAME_HAITI = "select2-results-12";
-    private static final String txt_GET_OP_TICKET = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[2]/div[2]/div/div[2]/p";
+    private static final String txt_GET_OP_TICKET = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p";
     private static final String txt_AFFECTED_PERSONS_PDB = "sp_formfield_pdb_affPerDescChecksp_formfield_pdb_affPerDescCheck";
     private static final String txt_NATURE_AND_CONTENT = "s2id_sp_formfield_pdb_natureOfContent";
     private static final String txt_AFFECTED_PERSONS = "select2-chosen-3";
@@ -519,11 +519,25 @@ public class Plaza_HomePage extends BasePage {
     private static final String linkDATABASE = "78d96643dbc197042b3cfc16bf9619ab";
     private static final String link_DATA_CENTER = "0e0e9dc1db9997446734f1eabf96196a";
     private static final String link_STORAGE_AND_DATA_PROTECTION = "6d9e9505db9997446734f1eabf96195a";
-    private static final String link_SUPPORT = "xcab273021b8480d00c1e87fe6e4bcbaf";
+    private static final String link_SUPPORT = "//*[@id='xcab273021b8480d00c1e87fe6e4bcbaf']/div/a/h2";
     private static final String txt_LIST_OF_FILES= "sp_formfield_owf_scep_listoffiles";
     private static final String txt_LIST_OF_FILE_TYPES= "sp_formfield_owf_scep_listoffilestypes";
     private static final String txt_LIST_OF_PROCESSES= "sp_formfield_owf_scep_listofprocess";
     private static final String txt_SELECT_CI_EXCLUSION= "s2id_sp_formfield_owf_scep_ci";
+    private static final String btn_LINKED_INC = "href='incident.do?sys_id=76fdc2b21b0aec90e7eceacee54bcb75&sysparm_record_target=task&sysparm_record_row=1&sysparm_record_rows=1&sysparm_record_list=parent%3Da0fd06721b0aec90e7eceacee54bcb13%5Eu_internal_case%21%3DNULL%5EORDERBYnumber'";
+
+
+    public void openSecondTab(){
+        ((JavascriptExecutor) driver).executeScript("window.open()");
+        ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(2));
+        wait(1000);
+
+    }
+
+    public void userClickINCNumber(){
+        clickElement(By.linkText(btn_LINKED_INC));
+    }
 
 
     public void select_CI_exclusionEndpoint() {
@@ -702,7 +716,7 @@ public class Plaza_HomePage extends BasePage {
         //selectDropdownByTagNameDiv(By.id(txt_ONE_Time_ADD_CI), By.id(),CiName);
         clickElement(By.id(txt_ONE_Time_ADD_CI));
         wait(2000);
-       // enterTextByElement(By.id(txt_ONE_Time_ADD_CI), CiName);
+        enterTextByElement(By.id(txt_ONE_Time_ADD_CI), CiName);
 //        driver.switchTo().activeElement().sendKeys(Keys.ARROW_DOWN);
         driver.switchTo().activeElement().sendKeys(Keys.ENTER);
 
@@ -944,7 +958,7 @@ public class Plaza_HomePage extends BasePage {
 
     public void selectitfiSystem(String dropdownName){
         clickElement(By.id(dd_SYSTEM_ITFI));
-        WebElement Element=findElement(By.xpath(dd_IT_FI_SYSTEM));
+        WebElement Element=findElement(By.id(dd_IT_FI_SYSTEM));
         Element.sendKeys(dropdownName);
         wait(1000);
         Element.sendKeys(Keys.ARROW_DOWN);
@@ -1114,9 +1128,10 @@ public class Plaza_HomePage extends BasePage {
 
     public void clickOn_ICM_number(){
         //driver.findElement(By.id("xba9dcc6fdb3ad7802b3cfc16bf96195f")).findElement(By.tagName("a")).click();
-        WebElement ICM = driver.findElement(By.xpath(btn_CLICK_INC_NUMBER));
-        Actions actions = new Actions(driver);
-        actions.moveToElement(ICM).click();
+//        WebElement ICM = driver.findElement(By.xpath(btn_CLICK_INC_NUMBER));
+//        Actions actions = new Actions(driver);
+//        actions.moveToElement(ICM).click();
+        clickElement(By.xpath(btn_CLICK_INC_NUMBER));
 
     }
     public String getFirstTimelineMessage(){
@@ -1159,9 +1174,17 @@ public class Plaza_HomePage extends BasePage {
     public String getOW_AttachmentNotification_plaza(){
         String message= getTextByElement(By.xpath(txt_OW_ATTACHMENT_NOTIFICATION_PLAZA));
         String arr[] = message.split(":");
-        String AttachmentMessage= arr[2];
+        String AttachmentMessage= arr[1];
         return AttachmentMessage;
     }
+
+    public String getOWNotification_plaza(){
+         return getTextByElement(By.xpath(txt_OW_ATTACHMENT_NOTIFICATION_PLAZA));
+//        String arr[] = message.split(":");
+//        String AttachmentMessage= arr[1];
+//        return AttachmentMessage;
+    }
+
     public void clickPDB_AffectedCountry(String AffectedCountry) {
 
         driver.findElement((By.id(div_PDB_Affected_COUNTRY))).findElements(By.tagName("span")).stream().filter(element -> element.getText().trim().equals(AffectedCountry)).findFirst().orElse(null).click();

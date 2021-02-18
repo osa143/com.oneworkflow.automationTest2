@@ -17,8 +17,8 @@
       And user enters BCCP request as "<Request>"
       And user selects service request name as "Account/Password"
       And user selects BCPP environment as "<Environment>"
-      #And user selects BCCP Add ci as "aa187bcpp01"
-      And user waits 30 secs
+      And user selects BCCP Add ci as "aa187bcpp01"
+#      And user waits 30 secs
       And user enters BCPP description as "<Description>"
       And user enters additional comments as "<Additional Comments>"
       Then user clicks on "Submit"

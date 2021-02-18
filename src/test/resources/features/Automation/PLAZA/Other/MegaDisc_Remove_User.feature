@@ -21,7 +21,7 @@
       And user enters MegaDisc request as "Test1 MegaDisc/Request"
       And user enters megadisc account name as "Test1234"
       And user waits 15 secs
-#      And user enters megadisc select group as "App_Megadisc_Admin"
+      And user enters megadisc select group as "App_Megadisc_Admin"
       And user selects requested person as "Anders Englund"
       And user enters megadisc description as "Test1 MegaDisc/Description"
       And user enters additional comments as "Test1 Megadisc/AC"

@@ -53,6 +53,7 @@
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
+      And user waits 2 secs
       And user validates CI "cc100cgas001" is listed
       And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
       Then user switches to frame

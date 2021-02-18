@@ -120,6 +120,199 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String YES_CONFIRMATION= "WIN_0_700027904";
     private static final String table_TEMPLATES= "T777000002";
     private static final String btn_CLOSE_CHANGE_TEMPLATE= "WIN_2_777000001";
+    private static final String dd_SERVICE_PROVIDER = "WIN_0_700047002";
+    private static final String btn_SHOW_TEMPLATES = "WIN_0_700047004";
+    private static final String txt_CUSTOMER = "arid_WIN_2_777031014";
+    private static final String btn_OPEN_TEMPLATE = "WIN_0_777010092";
+    private static final String txt_STATUS = "arid_WIN_2_7";
+    private static final String txt_TEMPLATE_TYPE = "arid_WIN_2_700047012";
+    private static final String txt_TEMPLATE_SUBTYPE = "arid_WIN_2_700047013";
+    private static final String txt_TEMPLATE_NAME = "arid_WIN_2_777504501";
+    private static final String txt_TEMPLATE_DESCRIPTION = "arid_WIN_2_777504502";
+    private static final String txt_TEMPLATE_REASON = "arid_WIN_2_705001003";
+    private static final String txt_TEMPLATE_CATEGORY = "arid_WIN_2_200000003";
+    private static final String txt_TEMPLATE_TYPE_CTI = "arid_WIN_2_200000004";
+    private static final String txt_TEMPLATE_ITEM = "arid_WIN_2_200000005";
+    private static final String txt_TEMPLATE_TECHNOLOGY = "arid_WIN_2_777020101";
+    private static final String txt_IMPLEMENTATION_STEPS = "arid_WIN_2_700007000";
+    private static final String txt_TEST_PLAN_TEMPLATE = "arid_WIN_2_700007001";
+    private static final String txt_TEMPLATE_ROLLBACK = "arid_WIN_2_700007002";
+    private static final String txt_TEMPLATE_COMMUNICATION_PLAN = "arid_WIN_2_999100101";
+    private static final String txt_TEMPLATE_VER_OF_FUNCTIONALITY = "arid_WIN_2_999100102";
+    private static final String txt_TEMPLATE_RISK_DESCRIPTION = "arid_WIN_2_999100103";
+    private static final String txt_TEMPLATE_REQUEST_TYPE = "arid_WIN_2_777031002";
+    private static final String txt_TEMPLATE_TITLE = "arid_WIN_2_777031000";
+    private static final String txt_TEMPLATE_REQUEST_CATEGORY = "arid_WIN_2_777021548";
+    private static final String txt_TEMPLATE_PRIORITY = "arid_WIN_2_700025204";
+    private static final String txt_TEMPLATE_ESTIMATED_IMPACT = "arid_WIN_2_700025205";
+    private static final String txt_TEMPLATE_EXPECTED_ALARMS = "arid_WIN_2_705001002";
+    private static final String dd_TEMPLATE_SERVICE_PROVIDER = "arid_WIN_0_700047002";
+    private static final String dd_TEMPLATE_SERVICE_PROVIDER_DROPDOWN = "/html/body/div[4]/div[2]/table/tbody/tr[1]/td[1]";
+    private static final String btn_TEMPLATE_NEXT_CHUNK = "//*[@id='WIN_0_777000002']/div[1]/table/tbody/tr/td[1]/div/a[2]";
+    private static final String btn_FURTHER_DETAILS = "//*[@id='WIN_2_777010000']/div[2]/div[2]/div/dl/dd[2]/span[2]/a";
+    private static final String btn_TEMPLATE_CLOSE = "WIN_2_777000001";
+    private static final String btn_PREVIOUS_CHUNK = "//*[@id='WIN_0_777000002']/div[1]/table/tbody/tr/td[1]/div/a[1]";
+    private static final String txt_DESCRIPTION = "arid_WIN_2_777031007";
+    private static final String btn_PRE_APPROVED_NO = "WIN_2_rc0id700061014";
+    private static final String btn_TEMPLATE_SAVE = "WIN_2_1003";
+
+    public boolean isTemplateSavePresent(){
+        return findElement(By.id(btn_TEMPLATE_SAVE)).isDisplayed();
+    }
+
+    public boolean isNoPreApprovedSelected(){
+        return driver.findElement(By.id(btn_PRE_APPROVED_NO)).isSelected();
+    }
+
+    public boolean getDescription(String expectedDescription){
+        String actualDescription =  getTextByID(txt_DESCRIPTION);
+        if (expectedDescription.contains(actualDescription)){
+            return true;
+        }
+        else return false;
+    }
+
+    public void clickPreviousChunkButton(){
+        clickElement(By.xpath(btn_PREVIOUS_CHUNK));
+    }
+
+    public void clickTemplateClose(){
+        clickElement(By.id(btn_TEMPLATE_CLOSE));
+    }
+
+    public void clickFurtherDetailsTab(){
+        clickElement(By.xpath(btn_FURTHER_DETAILS));
+    }
+
+    public void clickNextChunkButton(){
+        findElement(By.xpath(btn_TEMPLATE_NEXT_CHUNK)).click();
+    }
+
+    public void selectTemplateServiceProvider(){
+        clickElement(By.id(dd_TEMPLATE_SERVICE_PROVIDER));
+        clickElement(By.xpath(dd_TEMPLATE_SERVICE_PROVIDER_DROPDOWN));
+    }
+
+    public String getTemplateExpectedAlarms(){
+        return getAttributeValueById(txt_TEMPLATE_EXPECTED_ALARMS);
+    }
+
+    public String getTemplateEstimatedImpact(){
+        return getAttributeValueById(txt_TEMPLATE_ESTIMATED_IMPACT);
+    }
+
+    public String getTemplatePriority(){
+        return getAttributeValueById(txt_TEMPLATE_PRIORITY);
+    }
+
+    public String getTemplateRequestCategory(){
+        return getAttributeValueById(txt_TEMPLATE_REQUEST_CATEGORY);
+    }
+
+    public String getTemplateTitle(){
+        return getAttributeValueById(txt_TEMPLATE_TITLE);
+    }
+
+    public String getTemplateRequestType(){
+        return getAttributeValueById(txt_TEMPLATE_REQUEST_TYPE);
+    }
+
+    public String getTemplateRiskDescription(){
+        return getAttributeValueById(txt_TEMPLATE_RISK_DESCRIPTION);
+    }
+
+    public boolean getTemplateVerOfFunctionality(String expectedVerOfFunctionality){
+        String actualVerOfFunctionality =  getTextByID(txt_TEMPLATE_VER_OF_FUNCTIONALITY);
+        if (expectedVerOfFunctionality.contains(actualVerOfFunctionality)){
+            return true;
+        }
+        else return false;
+    }
+
+    public String getTemplateCommunicationPlan(){
+        return getAttributeValueById(txt_TEMPLATE_COMMUNICATION_PLAN);
+    }
+
+    public String getTemplateRollback(){
+        return getAttributeValueById(txt_TEMPLATE_ROLLBACK);
+    }
+
+    public String getTestPlanTemplate(){
+        return getAttributeValueById(txt_TEST_PLAN_TEMPLATE);
+    }
+
+    public boolean getImplementationSteps(String expectedImplementationSteps){
+        String actualImplementationSteps =  getTextByID(txt_IMPLEMENTATION_STEPS);
+        if (expectedImplementationSteps.contains(actualImplementationSteps)){
+            return true;
+        }
+        else return false;
+    }
+
+    public String getTemplateTechnology(){
+        return getAttributeValueById(txt_TEMPLATE_TECHNOLOGY);
+    }
+
+    public String getTemplateItem(){
+        return getAttributeValueById(txt_TEMPLATE_ITEM);
+    }
+
+    public String getTemplateTypeCTI(){
+        return getAttributeValueById(txt_TEMPLATE_TYPE_CTI);
+    }
+
+    public String getTemplateCategory(){
+        return getAttributeValueById(txt_TEMPLATE_CATEGORY);
+    }
+
+    public boolean getTemplateReason(String expectedReason){
+        String actualReason =  getTextByID(txt_TEMPLATE_REASON);
+        if (expectedReason.contains(actualReason)){
+            return true;
+        }
+        else return false;
+    }
+
+    public String getTemplateDescription(){
+        return getAttributeValueById(txt_TEMPLATE_DESCRIPTION);
+    }
+
+    public String getTemplateName(){
+        return getAttributeValueById(txt_TEMPLATE_NAME);
+    }
+
+    public String getTemplateSubType(){
+        return getAttributeValueById(txt_TEMPLATE_SUBTYPE);
+    }
+
+    public String getTemplateType(){
+        return getAttributeValueById(txt_TEMPLATE_TYPE);
+    }
+
+    public String getStatus(){
+        return getAttributeValueById(txt_STATUS);
+    }
+
+    public void clickOpenTemplateButton(){
+        clickElement(By.id(btn_OPEN_TEMPLATE));
+    }
+
+    public void clickTemplate(String template){
+        clickElementByContainsTextAndTagName("span",template);
+    }
+
+    public String getCustomerPlus(){
+        return getAttributeValueById(txt_CUSTOMER);
+    }
+
+    public void clickShowTemplates(){
+        clickElement(By.id(btn_SHOW_TEMPLATES));
+    }
+
+    public void selectServiceProvider(String value, boolean readOnly ) {
+        //clickElement(By.id(dd_SERVICE_PROVIDER));
+        selectDropDownNameAndValue(dd_SERVICE_PROVIDER, value, readOnly);
+    }
 
     public boolean verifyFieldsAreReadOnly(){
          WebElement Div_schedule_tab=  driver.findElement(By.id("WIN_0_999001529"));

@@ -24,7 +24,10 @@
       And user enters IT FI request as "Test1 IT FI/Request"
       Then user enters IT FI description as "Test1 IT FI/Description"
       And user enters additional comments as "Test1 IT FI/AC"
-      And user enters itfi system dropdown as "AIDA"
+#      And user waits 30 secs
+      Then user enters itfi system dropdown as "AIDA"
+      And user enters itfi system dropdown as "APM"
+      And user enters itfi system dropdown as "ASOP2"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

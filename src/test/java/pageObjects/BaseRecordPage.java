@@ -28,7 +28,7 @@ public class BaseRecordPage extends BasePage {
     public static final String txtINFORMATION_RESTRICTED_INFORMATION_ID= "arid_WIN_0_600001056";
 
     public static final String txt_REQUEST_END = "arid_WIN_0_777021161";
-    public static final String txtREASON_ID = "arid_WIN_0_705001003";
+    public static final String txtREASON_ID = "arid_WIN_0_777021007";
     public static final String txtASSIGNEE_ID = "arid_WIN_0_4";
 
     private static final String txtEXPECTED_ALARMS = "arid_WIN_0_705001002";
@@ -114,7 +114,7 @@ public class BaseRecordPage extends BasePage {
     public static final String table_DIAGNOSIS_ID = "T700009087";
     public static final String table_ALARMS_ID = "T700508140";
     public static final String table_LINKED_ITEMS_ID = "T777506000";
-    public static final String table_INTERESTED_PARTIES_ID = "T705002015";
+    public static final String table_INTERESTED_PARTIES_ID = "//*[@id='WIN_0_700027964']/div[2]";
     public static final String table_ASSOCIATED_ROOT_CAUSE_CODES_ID = "T800040090";
     private static final String table_ADD_INTERESTED_PARTIES= "T700027964";
     public static final String btnREFRESH_XPATH = "//*[@id='WIN_0_999000510']/div[1]/table/tbody/tr/td[2]/a[2]";
@@ -164,6 +164,19 @@ public class BaseRecordPage extends BasePage {
     private static final String txt_DESCRIPTION_WO_QUICK_CREATE= "arid_WIN_0_800007046";
     private static final String btn_CREATE_WO_QUICK_CREATE= "WIN_0_800007047";
     private static final String btn_YES= "//a[@arid='700027904']";
+    private static final String table_INTEREST_PARTIES = "T705002015";
+    private static final String btn_TIMELINE_REFRESH = "//*[@id='WIN_0_999000510']/div[1]/table/tbody/tr/td[2]/a[2]";
+
+    public void clickTimelineRefresh(){
+        clickElement(By.xpath(btn_TIMELINE_REFRESH));
+    }
+
+    public String verifyColumnStatusInterestedParties(String columnName, int rowNum)
+    {
+        wait(500);
+        return getTableCellData(By.id(table_INTEREST_PARTIES), columnName, rowNum );
+    }
+
 
 
     public void clickCreate_WO_quickCreate() {
@@ -381,7 +394,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void clickTableElement_interestedParteis(String colName, String cellData){
-        WebElement element=getTableCellElement(By.id(table_INTERESTED_PARTIES_ID), colName, cellData);
+        WebElement element=getTableCellElement(By.xpath(table_INTERESTED_PARTIES_ID), colName, cellData);
         element.click();
     }
 

@@ -6,6 +6,7 @@ import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import pageObjects.BaseRecordPage;
 import pageObjects.OWF_ChangeRecordPage;
 import utils.CommonUtils;
 
@@ -571,7 +572,7 @@ public class OWF_ChangeRecordPageSteps {
             changeRecordPage.wait(5000);
             changeRecordPage.switchToFrameByIndex(2);
             changeRecordPage.clickElementByContainsTextAndTagName("a", "Yes");
-        }catch(Exception e){
+        } catch (Exception e) {
 
         }
     }
@@ -597,18 +598,18 @@ public class OWF_ChangeRecordPageSteps {
     public void serviceInformationShouldBeActivated() {
         Assert.assertTrue(changeRecordPage.verifyServiceInfoActivated());
 
-        }
+    }
 
-        @And("timeline should updated for service info activation")
-        public void timelineShouldUpdatedForServiceInfoActivation () {
-            Assert.assertTrue(changeRecordPage.verifyServiceInfoActivatedTimelineUpdate());
-        }
+    @And("timeline should updated for service info activation")
+    public void timelineShouldUpdatedForServiceInfoActivation() {
+        Assert.assertTrue(changeRecordPage.verifyServiceInfoActivatedTimelineUpdate());
+    }
 
-        @When("user clicks on disable on service info")
-        public void userClicksOnDisableOnServiceInfo () {
-            changeRecordPage.clickElement(By.xpath("//*[@id='T600002223']/tbody/tr[2]/td[1]"));
-            changeRecordPage.clickElementByContainsTextAndTagName("div", "Disable");
-        }
+    @When("user clicks on disable on service info")
+    public void userClicksOnDisableOnServiceInfo() {
+        changeRecordPage.clickElement(By.xpath("//*[@id='T600002223']/tbody/tr[2]/td[1]"));
+        changeRecordPage.clickElementByContainsTextAndTagName("div", "Disable");
+    }
 
     @Then("timeline should be updated for service info deactivation")
     public void timelineShouldBeUpdatedForServiceInfoDeactivation() {
@@ -835,10 +836,11 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesAddressOfIssueAs(String arg0) {
         Assert.assertEquals(changeRecordPage.getAddressOfIssue(), arg0);
     }
+
     @When("user creates change ticket with following details")
-    public void userCreatesChangeTicketWithFollowingDetails (DataTable dataTable){
-                changeRecordPage.createChangeTicket(dataTable);
-            }
+    public void userCreatesChangeTicketWithFollowingDetails(DataTable dataTable) {
+        changeRecordPage.createChangeTicket(dataTable);
+    }
 
     @When("user validates change type field availability")
     public void userValidatesChangeTypeFieldAvailability() {
@@ -847,7 +849,7 @@ public class OWF_ChangeRecordPageSteps {
     }
 
 
-    @And("user verifies actual impact is visible" )
+    @And("user verifies actual impact is visible")
     public void userVerifiesActualImpactIsVisible() {
         Assert.assertTrue(changeRecordPage.verifyActualImpactAvailability());
     }
@@ -863,6 +865,7 @@ public class OWF_ChangeRecordPageSteps {
     public void userEntersRequestStartTimeAsMinutesPastFromTimezoneFormat(int delay, String timezone, String pattern) {
         changeRecordPage.enterStartDate_DateFormat_Timezone_Delay(pattern, timezone, delay);
     }
+
     @And("user enters request end time as {int} minutes past from {string} timezone {string} format")
     public void userEntersRequestEndTimeAsMinutesPastFromTimezoneFormat(int delay, String timezone, String pattern) {
         changeRecordPage.enterEndDate_DateFormat_Timezone_Delay(pattern, timezone, delay);
@@ -913,20 +916,20 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user validates actual start time as current date time")
     public void userValidatesActualStartTimeAsCurrentDateTime() {
-        String CurrentDateTime= CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss a", "Europe/Stockholm", 0);
+        String CurrentDateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss a", "Europe/Stockholm", 0);
         Assert.assertEquals(CurrentDateTime, changeRecordPage.getActualStart());
     }
 
     @And("user gets CI impact from time and impact to time")
     public void userGetsCIImpactFromTimeAndImpactToTime() {
-        CommonUtils.CI_Impact_From_Time=changeRecordPage.getTableCellData(By.id("T700009087"), "Impact From",1);
-        CommonUtils.CI_Impact_To_Time=changeRecordPage.getTableCellData(By.id("T700009087"), "Impact To",1);
+        CommonUtils.CI_Impact_From_Time = changeRecordPage.getTableCellData(By.id("T700009087"), "Impact From", 1);
+        CommonUtils.CI_Impact_To_Time = changeRecordPage.getTableCellData(By.id("T700009087"), "Impact To", 1);
     }
 
     @And("user validates CI impact from time and impact to time is updated")
     public void userValidatesCIImpactFromTimeAndImpactToTimeIsUpdated() {
-        Assert.assertEquals(CommonUtils.CI_Impact_From_Time, changeRecordPage.getTableCellData(By.id("T700009087"), "Impact From",1));
-        Assert.assertEquals(CommonUtils.CI_Impact_To_Time, changeRecordPage.getTableCellData(By.id("T700009087"), "Impact To",1));
+        Assert.assertEquals(CommonUtils.CI_Impact_From_Time, changeRecordPage.getTableCellData(By.id("T700009087"), "Impact From", 1));
+        Assert.assertEquals(CommonUtils.CI_Impact_To_Time, changeRecordPage.getTableCellData(By.id("T700009087"), "Impact To", 1));
     }
 
     @And("user enters impact duration as {string} hours")
@@ -939,7 +942,6 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.clickArrowUpButton();
         changeRecordPage.selectAnswer(answer);
     }
-
 
 
     @And("user validates actual start time matches timeline entry time")
@@ -970,7 +972,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @Then("user validates Nokia ticket ID is present")
     public void userValidatesNokiaTicketIDIsPresent() {
-     Assert.assertNotNull(changeRecordPage.getExternalTicketID());
+        Assert.assertNotNull(changeRecordPage.getExternalTicketID());
     }
 
     @Then("user validates change builder button is present")
@@ -998,7 +1000,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @Then("user clicks on the close button on location details window")
     public void userClicksOnTheCloseButtonOnLocationDetailsWindow() {
-                changeRecordPage.clickCloseLocationDetails();
+        changeRecordPage.clickCloseLocationDetails();
     }
 
     @And("user validates add interested parties form is shown")
@@ -1014,12 +1016,12 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user selects Agile Network Systems and clicks use button")
     public void userSelectsAndClicksUseButton() {
-       changeRecordPage.clickUse_FrameOnFrame();
+        changeRecordPage.clickUse_FrameOnFrame();
     }
 
     @Then("user validates organization as {string}")
     public void userValidatesOrganizationAs(String expected_Org_Name) {
-      Assert.assertEquals(changeRecordPage.getOrganisationName(),expected_Org_Name);
+        Assert.assertEquals(changeRecordPage.getOrganisationName(), expected_Org_Name);
     }
 
     @Then("user clicks on cancel button on interested parties window")
@@ -1029,7 +1031,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @Then("user should see auto assignment rules window")
     public void userShouldSeeAutoAssignmentRulesWindow() {
-       Assert.assertEquals(changeRecordPage.getPageTitle(), "OS3 Assignment Rules Console (New)");
+        Assert.assertEquals(changeRecordPage.getPageTitle(), "OS3 Assignment Rules Console (New)");
     }
 
     @And("user enters {string} in the Location Name+ field and searches")
@@ -1078,7 +1080,8 @@ public class OWF_ChangeRecordPageSteps {
             wait(4000);
             changeRecordPage.switchToFrameByIndex(2);
             changeRecordPage.clickElementByContainsTextAndTagName("*", "Yes");
-        } catch (Exception e){}
+        } catch (Exception e) {
+        }
 
     }
 
@@ -1105,12 +1108,12 @@ public class OWF_ChangeRecordPageSteps {
 
     @Then("templates should appear")
     public void templatesShouldAppear() {
-     Assert.assertTrue(changeRecordPage.verifyTemplatesAppeared());
+        Assert.assertTrue(changeRecordPage.verifyTemplatesAppeared());
     }
 
     @When("user selects {string} under {string} column and clicks open")
     public void userSelectsUnderColumnAndClicksOpen(String tableCellData, String columnName) {
-        changeRecordPage.selectTemplateAndDoubleClickToOpen(columnName,tableCellData);
+        changeRecordPage.selectTemplateAndDoubleClickToOpen(columnName, tableCellData);
     }
 
     @And("user clicks close button on change template window")
@@ -1125,7 +1128,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @Then("user validates fields under schedule tab are read only")
     public void userValidatesFieldsUnderScheduleTabAreReadOnly() {
-    Assert.assertTrue(changeRecordPage.verifyFieldsAreReadOnly());
+        Assert.assertTrue(changeRecordPage.verifyFieldsAreReadOnly());
     }
 
     @And("user enters impact duration as {string} seconds")
@@ -1138,6 +1141,199 @@ public class OWF_ChangeRecordPageSteps {
     public void userClicksYesOnImpactUpdateConfirmation() {
         changeRecordPage.switchToFrameByIndex(1);
         changeRecordPage.clickYes();
+    }
+    @When("user selects service provider as {string}")
+    public void userSelectsServiceProviderAs(String arg0) {
+        changeRecordPage.selectServiceProvider(arg0, true);
+        changeRecordPage.wait(1000);
+    }
+
+    @And("user clicks show templates button")
+    public void userClicksShowTemplatesButton() {
+        changeRecordPage.clickShowTemplates();
+    }
+
+    @And("user validates customer+ as {string}")
+    public void userValidatesCustomerAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getCustomerPlus(), arg0);
+    }
+
+    @When("user selects {string} and clicks open")
+    public void userSelectsAndClicksOpen(String template) {
+        changeRecordPage.clickTemplate(template);
+        changeRecordPage.clickOpenTemplateButton();
+    }
+
+    @And("user validates status as {string}")
+    public void userValidatesStatusAs(String arg0) {
+        Assert.assertEquals(changeRecordPage.getStatus(), arg0);
+    }
+
+    @And("user validates template type as {string}")
+    public void userValidatesTemplateTypeAs(String templateType) {
+        Assert.assertEquals(changeRecordPage.getTemplateType(), templateType);
+    }
+
+    @And("user validates template subtype as {string}")
+    public void userValidatesTemplateSubtypeAs(String templateSubType) {
+        Assert.assertEquals(changeRecordPage.getTemplateSubType(), templateSubType);
+    }
+
+    @And("user validates template name as {string}")
+    public void userValidatesTemplateNameAs(String templateName) {
+        Assert.assertEquals(changeRecordPage.getTemplateName(), templateName);
+    }
+
+    @And("user validates template description as {string}")
+    public void userValidatesTemplateDescriptionAs(String templateDescription) {
+        Assert.assertEquals(changeRecordPage.getTemplateDescription(), templateDescription);
+    }
+
+    @And("user validates template reason as {string}")
+    public void userValidatesTemplateReasonAs(String templateReason) {
+        Assert.assertTrue(changeRecordPage.getTemplateReason(templateReason));
+    }
+
+
+    @And("user validates template category as {string}")
+    public void userValidatesTemplateCategoryAs(String templateCategory) {
+        Assert.assertEquals(changeRecordPage.getTemplateCategory(), templateCategory);
+    }
+
+    @Then("user validates CTI Template Type as {string}")
+    public void userValidatesCTITemplateTypeAs(String templateTypeCTI) {
+        Assert.assertEquals(changeRecordPage.getTemplateTypeCTI(), templateTypeCTI);
+    }
+
+    @Then("user validates template item as {string}")
+    public void userValidatesTemplateItemAs(String templateItem) {
+        Assert.assertEquals(changeRecordPage.getTemplateItem(), templateItem);
+    }
+
+    @Then("user validates template technology as {string}")
+    public void userValidatesTemplateTechnologyAs(String templateTechnology) {
+        Assert.assertEquals(changeRecordPage.getTemplateTechnology(), templateTechnology);
+    }
+
+    @Then("user validates implementation steps as {string}")
+    public void userValidatesImplementationStepsAs(String templateImplementation) {
+        Assert.assertTrue(changeRecordPage.getImplementationSteps(templateImplementation));
+    }
+
+    @Then("user validates template test plan as {string}")
+    public void userValidatesTemplateTestPlanAs(String templateTestPlan) {
+        Assert.assertEquals(changeRecordPage.getTestPlanTemplate(), templateTestPlan);
+    }
+
+    @Then("user validates template rollback as {string}")
+    public void userValidatesTemplateRollbackAs(String templateRollback) {
+        Assert.assertEquals(changeRecordPage.getTemplateRollback(), templateRollback);
+    }
+
+    @Then("user validates template communication plan as {string}")
+    public void userValidatesTemplateCommunicationPlanAs(String templateCommunicationPlan) {
+        Assert.assertEquals(changeRecordPage.getTemplateCommunicationPlan(), templateCommunicationPlan);
+    }
+
+    @Then("user validates template verification of functionality as {string}")
+    public void userValidatesTemplateVerificationOfFunctionalityAs(String templateVerOfFunctionality) {
+        Assert.assertTrue(changeRecordPage.getTemplateVerOfFunctionality(templateVerOfFunctionality));
+    }
+
+    @Then("user validates template risk description as {string}")
+    public void userValidatesTemplateRiskDescriptionAs(String templateRiskDescription) {
+        Assert.assertEquals(changeRecordPage.getTemplateRiskDescription(), templateRiskDescription);
+
+    }
+
+    @And("user validates template request type as {string}")
+    public void userValidatesTemplateRequestTypeAs(String templateRequestType) {
+        Assert.assertEquals(changeRecordPage.getTemplateRequestType(), templateRequestType);
+    }
+
+    @And("user validates template title as {string}")
+    public void userValidatesTemplateTitleAs(String templateTitle) {
+        Assert.assertEquals(changeRecordPage.getTemplateTitle(), templateTitle);
+    }
+
+    @And("user validates template request category as {string}")
+    public void userValidatesTemplateRequestCategoryAs(String templateRequestCategory) {
+        Assert.assertEquals(changeRecordPage.getTemplateRequestCategory(), templateRequestCategory);
+    }
+
+    @And("user validates template priority as {string}")
+    public void userValidatesTemplatePriorityAs(String templatePriority) {
+        Assert.assertEquals(changeRecordPage.getTemplatePriority(), templatePriority);
+    }
+
+    @And("user validates template estimated impact as {string}")
+    public void userValidatesTemplateEstimatedImpactAs(String templateEstimatedImpact) {
+        Assert.assertEquals(changeRecordPage.getTemplateEstimatedImpact(), templateEstimatedImpact);
+    }
+
+    @And("user validates template expected alarms as {string}")
+    public void userValidatesTemplateExpectedAlarmsAs(String templateExpectedAlarms) {
+        Assert.assertEquals(changeRecordPage.getTemplateExpectedAlarms(), templateExpectedAlarms);
+    }
+
+    @When("user selects service provider as telia company")
+    public void userSelectsServiceProviderAsTeliaCompany() {
+        changeRecordPage.selectTemplateServiceProvider();
+    }
+
+    @And("user clicks on the template next chunk button")
+    public void userClicksOnTheTemplateNextChunkButton() {
+        changeRecordPage.clickNextChunkButton();
+    }
+
+    @And("user clicks on further details tab")
+    public void userClicksOnFurtherDetailsTab() {
+        changeRecordPage.clickFurtherDetailsTab();
+    }
+
+    @Then("user clicks on template close button")
+    public void userClicksOnTemplateCloseButton() {
+        changeRecordPage.clickTemplateClose();
+    }
+
+    @And("user clicks previous chunk button")
+    public void userClicksPreviousChunkButton() {
+        changeRecordPage.clickPreviousChunkButton();
+    }
+
+    @And("user validates description for template as {string}")
+    public void userValidatesDescriptionForTemplateAs(String description) {
+        Assert.assertTrue(changeRecordPage.getDescription(description));
+    }
+
+    @And("user validates relationship as {string}")
+    public void userValidatesRelationshipAs(String cellValue) {
+        Assert.assertEquals(cellValue, changeRecordPage.verifyColumnStatusInterestedParties("Relationship Type", 2));
+    }
+
+    @And("user validates auto notify as {string}")
+    public void userValidatesAutoNotifyAs(String cellValue) {
+        Assert.assertEquals(cellValue, changeRecordPage.verifyColumnStatusInterestedParties("Auto Notify", 2));
+    }
+
+    @Then("user validates access as {string}")
+    public void userValidatesAccessAs(String cellValue) {
+        Assert.assertEquals(cellValue, changeRecordPage.verifyColumnStatusInterestedParties("Access", 2));
+    }
+
+    @And("user clicks timeline refresh button")
+    public void userClicksTimelineRefreshButton() {
+        changeRecordPage.clickTimelineRefresh();
+    }
+
+    @And("user validates template pre-approved no is selected")
+    public void userValidatesTemplatePreApprovedNoIsSelected() {
+        Assert.assertTrue(changeRecordPage.isNoPreApprovedSelected());
+    }
+
+    @And("user validates save button is present")
+    public void userValidatesSaveButtonIsPresent() {
+        Assert.assertTrue(changeRecordPage.isTemplateSavePresent());
     }
 }
 

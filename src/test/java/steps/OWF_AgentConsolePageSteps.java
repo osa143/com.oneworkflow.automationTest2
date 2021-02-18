@@ -978,6 +978,12 @@ public class OWF_AgentConsolePageSteps {
     public void userSelectsContactAndClicksRemoveSelectedPerson(String contact) {
         agentConsolePage.selectContactAndClicksRemoveSelectedPerson(contact);
     }
+
+    @And("user enters change ticket previously created and searches in agent console and highlights")
+    public void userEntersChangeTicketPreviouslyCreatedAndSearchesInAgentConsoleAndHighlights() {
+        agentConsolePage.enterTicketID(CommonUtils.changeTicket);
+        agentConsolePage.clickOnTableRow1_agentConsole();
+    }
 }
 
 

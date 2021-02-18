@@ -25,15 +25,15 @@ Feature: SAO-4166 - OW - incorrect incident tickets keep coming
     Then user clicks on create button under linked items
     And user switches to window 2
     Then user selects request type as "Customer" on trouble event page
-    And user clicks on sweden checkbox under affected BU's
     And user clicks save button
     Then user switches to window 1
     And user waits 3 secs
     And user clicks refresh button under linked items
     Then user validates 1 linked ticket availability
     And user clicks on send button and clicks yes on warning window
-    And user waits for 6 minutes
+    And user waits for 5 minutes
     Then user clicks on ticket refresh button
+    And user enters ticket previously created and searches
     And user clicks on linked items tab
     Then user validates 2 linked ticket availability
     And user validates assigned profile "CC IT" can be seen under linked items tab

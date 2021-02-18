@@ -79,7 +79,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txt_URGENCY= "arid_WIN_0_705002083";
     private static final String txt_ROOTCAUSECODE= "arid_WIN_0_777031437";
     private static final String rbtn_PRIVATE= "WIN_0_rc1id777021180";
-    private static final String btn_REFRESH= "//*[@id='WIN_4_777506000']/div[1]/table/tbody/tr/td[2]/a[2]";
+    private static final String btn_REFRESH= "//*[@id='WIN_5_777506000']/div[1]/table/tbody/tr/td[2]/a[2]";
     private static final String txt_SERVICEAFFECTED= "arid_WIN_0_600001014";
     private static final String txt_ESTIMATED_READY= "arid_WIN_0_777504503";
     private static final String txt_MODEL= "arid_WIN_0_240001002";
@@ -125,6 +125,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String btn_Open_Attachment= "WIN_0_777000021";
     private static final String txt_IMPACT_TYPE= "arid_WIN_0_700009080";
     private static final String link_GO_BACK_TO_LOGIN= "//*[@id='logoutmsg']/tbody/tr[4]/td[2]/a";
+    private static final String btn_AFFECTED_ORG = "//*[@id='WIN_0_808080010']/a";
 
 
     public void enterVendorName(String vendorName){
@@ -248,7 +249,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
     public void clickEditAffectedOrgButton(){
-        clickElement(By.id("btnEDIT"));
+        clickElement(By.id("WIN_0_808080012"));
     }
 
     public boolean IsAccountableOrganisation_IsReadOnly(){
@@ -275,11 +276,11 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
        selectDropDownNameAndValue("Organisations", affectedOrg, false);
    }
     public void selectAffected_Org(String value){
-       clickElementById(btnEDIT_AFFECTED_ORGS);
-       switchToFrameByIndex(2);
+        switchToFrameByIndex(2);
+       clickElement(By.xpath(btn_AFFECTED_ORG));
         selectAffectedOrganisation(value);
-       clickElementById(btnApply);
-       switchToDefault();
+//       clickElementById(btnApply);
+//       switchToDefault();
 
 
     }

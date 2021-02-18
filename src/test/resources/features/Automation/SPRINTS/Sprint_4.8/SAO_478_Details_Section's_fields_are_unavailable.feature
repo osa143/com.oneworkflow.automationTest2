@@ -91,11 +91,13 @@ Feature: SAO-478 - Details Sections fields are unavailable
     Then user clicks on Send button
     And user gets ticket value
     #And user validates ticket status as "Assigned"
+    And user waits 5 secs
     Then user logsOut from One workflow
     And user goes back to login page
     Given user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
+    And user switches to window 2
     Then user enters ticket previously created and searches
     And ticket should be displayed
     Then user clicks on Ack button
@@ -109,10 +111,12 @@ Feature: SAO-478 - Details Sections fields are unavailable
 #    And user validates Risk Description* isn't readonly
     #And user stores change ticket
     Then user logsOut from One workflow
+    And user switches to window 1
     And user goes back to login page
     Given user logs in with valid username "ChangeInitiatorInternal1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
+    And user switches to window 2
     Then user enters ticket previously created and searches
     And ticket should be displayed
     And user validates Implementation isn't readonly
@@ -123,10 +127,12 @@ Feature: SAO-478 - Details Sections fields are unavailable
     And user validates Risk Description* isn't readonly
     And user gets ticket value
     Then user logsOut from One workflow
+    And user switches to window 1
     And user goes back to login page
     When user logs in with valid username "DC CS Core (Voice)_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
+    And user switches to window 2
     Then user enters ticket previously created and searches
     And ticket should be displayed
     Then user validates Communication Plan* isn't readonly
@@ -134,10 +140,12 @@ Feature: SAO-478 - Details Sections fields are unavailable
     And user validates Risk Description* isn't readonly
     And user gets ticket value
     Then user logsOut from One workflow
+    And user switches to window 1
     And user goes back to login page
     When user logs in with valid username "DC IMS Core_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
+    And user switches to window 2
     Then user enters ticket previously created and searches
     And ticket should be displayed
     Then user validates Communication Plan* isn't readonly
@@ -145,10 +153,12 @@ Feature: SAO-478 - Details Sections fields are unavailable
     And user validates Risk Description* isn't readonly
     And user gets ticket value
     Then user logsOut from One workflow
+    And user switches to window 1
     And user goes back to login page
     When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
+    And user switches to window 2
     Then user enters ticket previously created and searches
     And ticket should be displayed
     Then user changes status to "Approval Requested"

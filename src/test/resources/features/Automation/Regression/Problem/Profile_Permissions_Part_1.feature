@@ -1,4 +1,4 @@
-@Profile_Permissions_Part_1 @problem @Reg_Problem  @prob
+@Profile_Permissions_Part_1 @problem @Reg_Problem  @prob @HelixRegression
 #Passed
 
   Feature:  profile permissions part 1

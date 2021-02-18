@@ -1,4 +1,4 @@
-@BR_3054_Open_a_CR_from_SID_Console
+@BR_3054_Open_a_CR_from_SID_Console @OW_Change
 
 
 Feature: BR-3054 - Open a CR from SID Console [SaR]
@@ -6,7 +6,7 @@ Feature: BR-3054 - Open a CR from SID Console [SaR]
   Scenario: BR-3054 - Open a CR from SID Console [SaR]
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "ChangeManager2_Automation" and password as "Test@1234"
+    When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create change record
     And user switches to window 1

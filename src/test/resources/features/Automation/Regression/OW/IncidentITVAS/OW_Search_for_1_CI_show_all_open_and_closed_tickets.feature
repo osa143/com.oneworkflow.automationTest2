@@ -1,4 +1,4 @@
-@Search_for_1_CI_show_all_open_and_closed_tickets
+@Search_for_1_CI_show_all_open_and_closed_tickets @OW_Incident
 
 Feature: Automation - OW - Search for 1 CI show all open and closed tickets
 

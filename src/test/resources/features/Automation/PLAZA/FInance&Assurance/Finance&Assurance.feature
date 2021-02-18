@@ -1,4 +1,4 @@
-@Finance_Assurance @Plaza
+@Finance_Assurance
   Feature: Plaza Alpha ETL Prod form test
     Scenario Outline: user validates information sent to OW from Plaza
 
@@ -56,7 +56,7 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
-      And user waits 10 secs
+      And user waits 6 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed
 
@@ -64,10 +64,10 @@
       Examples:
 
       |Request           |System                                  |Description           |AdditionalComments|
-#      |Test1 F&A/Request |addressmaster                           |Test1 F&A/Description |Test1 F&A/AC      |
-#      |Test2 F&A/Request |alpha2 etl prod                         |Test2 F&A/Description |Test2 F&A/AC      |
-#      |Test3 F&A/Request |alpha2 etl test                         |Test3 F&A/Description |Test3 F&A/AC      |
-#      |Test4 F&A/Request |arkinet prod                            |Test4 F&A/Description |Test4 F&A/AC      |
+      |Test1 F&A/Request |addressmaster                           |Test1 F&A/Description |Test1 F&A/AC      |
+      |Test2 F&A/Request |alpha2 etl prod                         |Test2 F&A/Description |Test2 F&A/AC      |
+      |Test3 F&A/Request |alpha2 etl test                         |Test3 F&A/Description |Test3 F&A/AC      |
+      |Test4 F&A/Request |arkinet prod                            |Test4 F&A/Description |Test4 F&A/AC      |
       |Test5 F&A/Request |ars platform                            |Test5 F&A/Description |Test5 F&A/AC      |
       |Test6 F&A/Request |bi-ana                                  |Test6 F&A/Description |Test6 F&A/AC      |
       |Test7 F&A/Request |BI-X                                    |Test7 F&A/Description |Test7 F&A/AC      |

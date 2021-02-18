@@ -35,6 +35,7 @@
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
       Then user should see plaza ticket
+      When user clicks on Ack button
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | TSPAN"
       And user validates request type as "Service Request | PLAZA"
@@ -55,7 +56,7 @@
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
       And user right clicks on CI "cc100cgas001" and clears impact
-      When user clicks on Ack button
+      And user should see confirmation message for impact clear and user clicks yes
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
       And user clicks on "Schedule" tab
@@ -72,7 +73,7 @@
       Examples:
 
       |Request            |Select Request  |Environment|Description            |Additional Comments|
-      #|Test1 TSPAN/Request|Account/Password|Prod       |Test1 TSPAN/Description|Test1 TSPAN/AC     |
-     # |Test2 TSPAN/Request|Account/Password|Test       |Test2 TSPAN/Description|Test2 TSPAN/AC     |
-      #|Test3 TSPAN/Request|Other          |Prod       |Test3 TSPAN/Description|Test3 TSPAN/AC     |
+      |Test1 TSPAN/Request|Account/Password|Prod       |Test1 TSPAN/Description|Test1 TSPAN/AC     |
+      |Test2 TSPAN/Request|Account/Password|Test       |Test2 TSPAN/Description|Test2 TSPAN/AC     |
+      |Test3 TSPAN/Request|Other          |Prod       |Test3 TSPAN/Description|Test3 TSPAN/AC     |
       |Test4 TSPAN/Request|Other          |Test       |Test4 TSPAN/Description|Test4 TSPAN/AC     |

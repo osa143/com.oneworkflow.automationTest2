@@ -425,7 +425,7 @@ public void clickCabRequiredYes(){
         enterRiskDescriptionId(listMap.get(0).get("Risk"));
         enterServiceAndCustomerImpact(listMap.get(0).get("ServiceCustomerImpact"));
         selectEstimatedImpact(listMap.get(0).get("EstimatedImpact"));
-        enterStartDate(10);
+        enterStartDate(2);
         enterEndDate(20);
         enterImpactDurationMins(listMap.get(0).get("ImpactDuration"));
         clickSave();

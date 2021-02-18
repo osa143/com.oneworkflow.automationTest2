@@ -1,4 +1,4 @@
-@BR_515_critical @OW_incident
+@BR_515_critical @OW_incident @OW_Incident
 
 Feature: BR_515_Hierarchic_escalated_tickets_critical
 

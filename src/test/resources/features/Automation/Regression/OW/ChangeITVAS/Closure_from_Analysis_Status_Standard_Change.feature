@@ -1,4 +1,4 @@
-@Closure_from_Analysis_Status_Standard_Change
+@Closure_from_Analysis_Status_Standard_Change @OW_Change
 
 
 Feature: Closure from Analysis Status - Standard Change [SaR]

@@ -20,7 +20,7 @@ Feature: Call Copy to New (Verification) [aRr]
     When user clicks copy to new button
     And user switches to window 2
     #validate same fields are editable on both CR
-  #validate same fields are read only on both CR
+    #validate same fields are read only on both CR
     And user validates change type as "Change Record"
     And user validates ticket status as "New"
     And user validates service provider as "Telia Company"

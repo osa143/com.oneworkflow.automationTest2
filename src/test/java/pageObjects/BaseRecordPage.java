@@ -80,7 +80,8 @@ public class BaseRecordPage extends BasePage {
     public static final String chkbxTELIA_CARRIER = "WIN_0_rc0id600002008";
     public static final String chkbxUNKOWN = "WIN_0_rc0id600002010";
     public static final String chkbxINTERNAL = "WIN_0_rc0id600002009";
-    public static final String chkbxFirstRow_Diagnosis = "//*[@id='T700009087']/tbody/tr[2]/td[1]/input";
+    public static final String chkbxFirstRow_Diagnosis = "//*[@id='T700009087']/tbody/tr[2]/td[1]";
+    public static final String fld_PRIMARY_CI= "//*[@id='T700009087']/tbody/tr[2]/td[1]";
     public static final String chkbx_ThirdRow_Diagnosis= "//*[@id='T700009087']/tbody/tr[5]/td[1]/input";
     public static final String txtSOLUTION_ID = "arid_WIN_0_705002080";
     public static final String txtSOLUTION_FOUND_DATE = "arid_WIN_0_600001042";
@@ -162,6 +163,7 @@ public class BaseRecordPage extends BasePage {
     private static final String txt_TYPE_WO_QUICK_CREATE="arid_WIN_0_800007045";
     private static final String txt_DESCRIPTION_WO_QUICK_CREATE= "arid_WIN_0_800007046";
     private static final String btn_CREATE_WO_QUICK_CREATE= "WIN_0_800007047";
+    private static final String btn_YES= "//a[@arid='700027904']";
 
 
     public void clickCreate_WO_quickCreate() {
@@ -459,7 +461,12 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void clickRefresh_ticketFresh(){
-        clickElement(By.id(btn_REFRESH));
+        try{
+            clickElement(By.id(btn_REFRESH));
+        }
+       catch(Exception e){
+            e.printStackTrace();
+       }
         wait(3000);
     }
 
@@ -551,16 +558,32 @@ public class BaseRecordPage extends BasePage {
     public String verifyAlarmStatus(){
         return getTableCellData(By.id(table_ALARMS_ID), "AlarmStatus", 1);
     }
-    public void selectPrimaryTicket()
+    public void selectPrimaryCI()
     {
        WebElement element = findElement(By.xpath(chkbxFirstRow_Diagnosis));
        element.click();
        action.contextClick(element).build().perform();
 
     }
+    public void rightClickOnPrimaryCI()
+    {
+        WebElement element = findElement(By.xpath(fld_PRIMARY_CI));
+        element.click();
+        action.contextClick(element).build().perform();
+
+    }
+
+
     public void selectTicketAndRightClick()
     {
         saveCiDetails(true);
+        WebElement element = findElement(By.xpath(chkbx_ThirdRow_Diagnosis));
+        element.click();
+        action.contextClick(element).build().perform();
+
+    }
+    public void selectSecondaryCIAndRightClick()
+    {
         WebElement element = findElement(By.xpath(chkbx_ThirdRow_Diagnosis));
         element.click();
         action.contextClick(element).build().perform();
@@ -601,43 +624,33 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void doImpactClear(String cellData){
+        clickSave();
         selectAndRightClickOnTableElement(cellData);
-        WebElement element = driver.switchTo().activeElement();
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-//        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.ARROW_RIGHT);
-        element.sendKeys(Keys.ENTER);
+        doImpactClear();
+    }
+    public void doImpactClear() {
+        WebElement impact = driver.findElement(By.xpath("//td[contains(text(),'Impact')]"));
+        action.moveToElement(impact).build().perform();
+        WebElement clear = driver.findElement(By.xpath("//td[contains(text(),'Clear')]"));
+        action.moveToElement(clear).click().perform();
+    }
+    public void doImpactClear_all() {
+        WebElement impact = driver.findElement(By.xpath("//td[contains(text(),'Impact')]"));
+        action.moveToElement(impact).build().perform();
+        WebElement clearAll = driver.findElement(By.xpath("//td[contains(text(),'Clear All')]"));
+        action.moveToElement(clearAll).click().perform();
     }
     public void doImpactClear_checkImpactRecord(String cellData){
         selectAndRightClickOnTableElement(cellData);
-        WebElement element = driver.switchTo().activeElement();
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.ARROW_RIGHT);
-        element.sendKeys(Keys.ENTER);
+        doImpactClear();
     }
 
     public void doImpactClearForAllCIs(String cellData){
         selectAndRightClickOnTableElement(cellData);
-        WebElement element = driver.switchTo().activeElement();
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-       // element.sendKeys(Keys.UP);
-        //element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.ARROW_RIGHT);
-        //element.sendKeys(Keys.DOWN);
-        element.sendKeys(Keys.DOWN);
-        element.sendKeys(Keys.DOWN);
-        element.sendKeys(Keys.ENTER);
-        wait(1000);
+        doImpactClear_all();
+        //clickElement(By.xpath(btn_YES));
+
     }
-
-
-
 
     public String getTicketValue() {
         return getAttributeValueById(txtTICKET_ID);
@@ -1032,7 +1045,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterStartDate(int delay) {
-        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", delay);
         CommonUtils.eventStartTime=dateTime;
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
@@ -1040,7 +1053,7 @@ public class BaseRecordPage extends BasePage {
 
     public void enterEndDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", delay);
         CommonUtils.requestEnd=dateTime;
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );

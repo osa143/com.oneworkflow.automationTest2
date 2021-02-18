@@ -56,5 +56,6 @@
     And user clicks on save button
     And user validates ticket status as "Closed"
     When user switches to window 0
+    And user waits 5 secs
     And user clicks on main page refresh
     Then user validates plaza request has completed

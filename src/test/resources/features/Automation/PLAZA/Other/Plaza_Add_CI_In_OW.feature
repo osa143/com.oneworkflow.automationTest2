@@ -17,7 +17,7 @@ Feature: Adding CI in OW
     And user clicks on show more button
     When user clicks on "WEB TAB" pebble
     Then user should see "WEB TAB" form
-      #Then user selects system name in haiti as "Other"
+#    Then user selects system name in haiti as "Other"
     When user selects role dropdown as "Application Operation Engineer"
     And user enters web tab request as "Test1 Web Tab/Request"
     And user enters web tab CI as "cc100cgas001"

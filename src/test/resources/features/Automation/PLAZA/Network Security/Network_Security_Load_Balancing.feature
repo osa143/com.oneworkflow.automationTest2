@@ -1,4 +1,4 @@
-@Network_Security_Load_Balancing @PLAZA
+@Network_Security_Load_Balancing @PLAZA @Network_Security
   #passed
   Feature: Network Security Load Balancing plaza form test
     Scenario: user validates information sent to OW from Plaza
@@ -13,7 +13,7 @@
       And user clicks on show more button
       When user clicks on Network Load Balancing pebble
       Then user should see "Network Load Balancing" form
-        Then user selects system name in haiti as "1B"
+      Then user selects system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Network Security Load request as "Test6 Network Security/Request"
       Then user enters Network Security Load description as "Test6 Network Security/Description"
@@ -53,5 +53,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 5 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed

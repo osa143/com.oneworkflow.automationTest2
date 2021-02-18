@@ -351,7 +351,13 @@ public class OWF_AgentConsolePageSteps {
 
     @And("user clicks ok on alert")
     public void userClicksOkOnAlert() {
-        agentConsolePage.acceptAlert();
+        try {
+            agentConsolePage.acceptAlert();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     @When("user clicks on create known error")

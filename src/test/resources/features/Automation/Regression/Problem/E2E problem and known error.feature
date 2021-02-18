@@ -1,4 +1,4 @@
-@E2E_problem_and_known_error @problem @Reg_Problem  @prob
+@E2E_problem_and_known_error @problem @Reg_Problem  @prob @HelixRegression
 #passed
 # This test also covers SAO-5334 Hide section vendor
   Feature: E2E problem and known error

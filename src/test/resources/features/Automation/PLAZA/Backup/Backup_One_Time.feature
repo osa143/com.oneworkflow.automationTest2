@@ -1,4 +1,4 @@
-@Backup_OneTime1 @PLAZA
+@Backup_OneTime1 @PLAZA @Back_up
   Feature: Backup One Time plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -57,7 +57,6 @@
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      And user waits 60 secs
       And user clicks on "Diagnosis" tab
       And user waits 3 secs
       When user right clicks on CI "cc100cgas001" and clears impact
@@ -72,5 +71,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 4 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed

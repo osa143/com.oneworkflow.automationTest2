@@ -1,4 +1,4 @@
-@06.09 @Remove_a_CI_from_Diagnosis_tab @Incident @Trouble1 @HelixRegr
+@06.09 @Remove_a_CI_from_Diagnosis_tab @Incident @Trouble1 @HelixRegression
   #passed
   Feature: Remove of CI from diagnosis tab
     Scenario: Remove of CI from diagnosis tab
@@ -13,6 +13,7 @@
         |                Title     |RequestType|                 Description              |
         |Remove a CI from Diangosis|Customer   |Test case 05.01 Manually close an incident|
       Then ticket should be created and status should be assigned
+      And user gets trouble ticket value
       When user adds below CI's to the ticket
               |   CI Name     |
               |SE_EPG_FREEPG1 |

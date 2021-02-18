@@ -59,6 +59,7 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_ACTUAL_SCHEDULE_START= "arid_WIN_0_777021164";
     private static final String txt_ACTUAL_SCHEDULE_END= "arid_WIN_0_777021165";
     private static final String txt_EVENT_START_TIME = "arid_WIN_0_703001000";
+    private static final String txt_EVENT_START_TIME_WO="arid_WIN_0_600001302";
     private static final String tableRow2_OUTBOUND= "//*[@id='T600002302']/tbody/tr[3]";
     private static final String tableRow1_OUTBOUND="//*[@id='T600002302']/tbody/tr[2]";
     private static final String txt_MESSAGE= "arid_WIN_0_536870956";
@@ -100,7 +101,7 @@ public class OWF_WorkOrderPage extends BasePage {
         return checkIfControlIsReadonly(txt_SLA_CLASS);
     }
     public boolean verifyEventStartTimeIsReadOnly(){
-        return checkIfControlIsReadonly(txt_EVENT_START_TIME);
+        return checkIfControlIsReadonly(txt_EVENT_START_TIME_WO);
     }
 
     public boolean verify_OP_Ticket_Description() {
@@ -785,7 +786,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.CI)
-                && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -893,7 +894,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.UrlFilter) && actualDescription.contains(PlazaValidation.DateTestsPerformed)
                 && actualDescription.contains(PlazaValidation.SourceIpAddress) && actualDescription.contains(PlazaValidation.Url)
-                && actualDescription.contains(PlazaValidation.InternalExternalWebsite) && actualDescription.contains(PlazaValidation.ErrorMessage)
+                && actualDescription.contains(PlazaValidation.NetworkSecurityInternalExternalWebsite) && actualDescription.contains(PlazaValidation.ErrorMessage)
                 && actualDescription.contains(PlazaValidation.WorkedBefore) && actualDescription.contains(PlazaValidation.ProblemOccure)
                 && actualDescription.contains(PlazaValidation.ProxySettings) && actualDescription.contains(PlazaValidation.TicketNumber)
                 && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
@@ -909,7 +910,7 @@ public class OWF_WorkOrderPage extends BasePage {
                 && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.UrlFilter) && actualDescription.contains(PlazaValidation.DateTestsPerformed)
                 && actualDescription.contains(PlazaValidation.SourceIpAddress) && actualDescription.contains(PlazaValidation.Url)
-                && actualDescription.contains(PlazaValidation.InternalExternalWebsite) && actualDescription.contains(PlazaValidation.ErrorMessage)
+                && actualDescription.contains(PlazaValidation.NetworkSecurityInternalExternalWebsite) && actualDescription.contains(PlazaValidation.ErrorMessage)
                 && actualDescription.contains(PlazaValidation.WorkedBefore) && actualDescription.contains(PlazaValidation.ProblemOccure)
                 && actualDescription.contains(PlazaValidation.UserId) && actualDescription.contains(PlazaValidation.Description)
                 && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
@@ -946,9 +947,9 @@ public class OWF_WorkOrderPage extends BasePage {
 
     public boolean verifyNetworkSecurityRemoteAccessDescription() {
         String actualDescription = getDescription();
-        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
-                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.ServiceRequestName)
-                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.RemoteAccessSelectRequest)
+                && actualDescription.contains(PlazaValidation.Description))
+        {
             return true;
         }
         return false;
@@ -1108,8 +1109,7 @@ public class OWF_WorkOrderPage extends BasePage {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.SelectRequest)
-                && actualDescription.contains(PlazaValidation.OperatingSystem) && actualDescription.contains(PlazaValidation.CI)
-                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
+                && actualDescription.contains(PlazaValidation.OperatingSystem)
                 && actualDescription.contains(PlazaValidation.AccountType) && actualDescription.contains(PlazaValidation.AccountName)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
@@ -1121,8 +1121,7 @@ public class OWF_WorkOrderPage extends BasePage {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.SelectRequest)
-                && actualDescription.contains(PlazaValidation.OperatingSystem) && actualDescription.contains(PlazaValidation.CI)
-                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
+                && actualDescription.contains(PlazaValidation.OperatingSystem)&& actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.Justification) && actualDescription.contains(PlazaValidation.MonthlyPatching)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
@@ -1134,9 +1133,7 @@ public class OWF_WorkOrderPage extends BasePage {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.SelectRequest)
-                && actualDescription.contains(PlazaValidation.OperatingSystem) && actualDescription.contains(PlazaValidation.CI)
-                && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
-                && actualDescription.contains(PlazaValidation.ServiceWindow) && actualDescription.contains(PlazaValidation.Justification)
+                && actualDescription.contains(PlazaValidation.OperatingSystem) && actualDescription.contains(PlazaValidation.ServiceWindow) && actualDescription.contains(PlazaValidation.Justification)
                 && actualDescription.contains(PlazaValidation.MonthlyPatching) && actualDescription.contains(PlazaValidation.Description)
                 && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
@@ -1147,8 +1144,8 @@ public class OWF_WorkOrderPage extends BasePage {
     public boolean verifyOperatingSystemManualOSPatchingDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
-                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.CI)
-                && actualDescription.contains(PlazaValidation.OperatingSystem) && actualDescription.contains(PlazaValidation.ServerPlaced)
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.OperatingSystem)
+                && actualDescription.contains(PlazaValidation.ServerPlaced)
                 && actualDescription.contains(PlazaValidation.WbsCodeField) && actualDescription.contains(PlazaValidation.PlannedStartDate)
                 && actualDescription.contains(PlazaValidation.PlannedEndDate) && actualDescription.contains(PlazaValidation.MonthlyPatching)
                 && actualDescription.contains(PlazaValidation.H2Name) && actualDescription.contains(PlazaValidation.Description)
@@ -1162,8 +1159,7 @@ public class OWF_WorkOrderPage extends BasePage {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.ServiceRequestName)
-                && actualDescription.contains(PlazaValidation.Environment) && actualDescription.contains(PlazaValidation.CI)
-                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.Environment) && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -1174,8 +1170,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
                 && actualDescription.contains(PlazaValidation.Phone) && actualDescription.contains(PlazaValidation.Request)
-                && actualDescription.contains(PlazaValidation.AdditionalComments) && actualDescription.contains(PlazaValidation.Description)
-                && actualDescription.contains(PlazaValidation.CI)) {
+                && actualDescription.contains(PlazaValidation.AdditionalComments) && actualDescription.contains(PlazaValidation.Description)) {
             return true;
         }
         return false;
@@ -1186,7 +1181,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Name) && actualDescription.contains(PlazaValidation.Email)
                 && actualDescription.contains(PlazaValidation.Phone) && actualDescription.contains(PlazaValidation.Request)
-                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.Description)
                 && actualDescription.contains(PlazaValidation.DateTime) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
@@ -1207,9 +1202,8 @@ public class OWF_WorkOrderPage extends BasePage {
     public boolean verifyEfsBssDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
-                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.CI)
-                && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.CI)
-                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;
@@ -1242,7 +1236,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.ChooseOption)
                 && actualDescription.contains(PlazaValidation.AccountName) && actualDescription.contains(PlazaValidation.SelectGroup)
-                && actualDescription.contains(PlazaValidation.RequestedPerson) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.Description)
                 && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
@@ -1254,7 +1248,7 @@ public class OWF_WorkOrderPage extends BasePage {
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
                 && actualDescription.contains(PlazaValidation.ChooseOption) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.AccountName) && actualDescription.contains(PlazaValidation.SelectGroup)
-                && actualDescription.contains(PlazaValidation.RequestedPerson) && actualDescription.contains(PlazaValidation.Description)
+                 && actualDescription.contains(PlazaValidation.Description)
                 && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
@@ -1350,8 +1344,8 @@ public class OWF_WorkOrderPage extends BasePage {
     public boolean verifyVehaNetworkManagementDescription() {
         String actualDescription = getDescription();
         if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
-                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.System)
-                && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
+                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.Description)
+                && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
         }
         return false;

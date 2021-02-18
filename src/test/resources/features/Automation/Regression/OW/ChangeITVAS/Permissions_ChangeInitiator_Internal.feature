@@ -5,50 +5,51 @@ Feature: Permissions - ChangeInitiator-Internal [aR]
   Scenario: Permissions - ChangeInitiator-Internal [aR]
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "ChangeInitiatorInternal" and password as "Test@1234"
+    When user logs in with valid username "ChangeInitiatorInternal1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create change record
     Then user switches to window 1
     When user clicks save button
     Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)" on change record page
     When user selects request type as "Standard Change"
+    And user clicks on sweden checkbox under affected BU's
     And user selects template as "All:IT:Carrier:Telia Carrier UAT Changes"
-    When user enters "_" in the change builder field
+    And user enters "_" in the change builder field
     And user enters as "Test" in service and customer impact
     And user enters request start time 24 hours ahead of current date
     And user enters request end time 48 hours ahead of current date
     And user enters impact duration as "5" minutes
-    Then user enters description as "Testing"
+    And user enters description as "Testing"
     And user clicks on save button
-    When user adds CI "dummy%" to change ticket with impact level "No Impact"
+    Then user gets change ticket value
+    When user clicks on Diagnosis tab
+    And user clicks on CI search button
+    Then user switches to frame
+    When user enters "dummy%" in the name+ field
+    And user clicks on search button on CI search window
+    And user selects all CI's that appear
+    And user selects impact level as "Loss of Service"
+    And user clicks on relate CI
+    And user closes warning message on change add CI
+    And user clicks yes on save confirmation message
     Then CI should be listed and displayed under the Diagnosis tab
-    When user clicks on "Risk" tab
-    And user gets current risk score value
-    When user answers all risk questions as below
-    And user selects answer as "Impact to other systems/technologies are unclear"
-    And user selects answer as "No"
-    And user selects answer as "Tested successfully, this is a pilot"
-    And user selects answer as "Yes (outcome of the change can be instantly verified)"
-    And user selects answer as "Yes"
-    And user selects answer as "Simple"
-    And user selects last answer as "Yes"
-    Then user validates risk score gets updated
     When user clicks on Send button
+    And user waits 5 secs
     Then user validates ticket status as "Assigned"
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     And user validates CI Search is disabled
-    And user right clicks on primary CI and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
-    And user right clicks on secondary CI and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
-    #Then user validates nothing happens when clicking on all read only options
-    When user clicks on schedule tab
+    Then user right clicks on primary CI and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
+    And user right clicks on primary CI and validates options "Make Primary:Set CTI:Impact:Detach:Create Work Order" are disabled
+    And user right clicks on secondary CI and validates options "Make Primary:Set CTI:Impact:Detach:Create Work Order" are disabled
+    When user clicks "Schedule" tab
     Then user validates fields under schedule tab are read only
-    When user gets change ticket value
     And user logsOut
     And user goes back to login page
     And user logs in with valid username "cm_adminaccess1_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    #When user selects "Search:Open Search Form:Change Record/Project/Freeze"
+    When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 2
     And user enters ticket previously created and searches
     Then ticket should be displayed
@@ -57,44 +58,44 @@ Feature: Permissions - ChangeInitiator-Internal [aR]
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user validates CI Search is disabled
-    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    Then user right clicks on primary CI and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
     And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
-    #Then user validates nothing happens when clicking on all read only options
-    When user clicks on schedule tab
+    And user right clicks on primary CI and validates options "Make Primary:Set CTI:Impact:Detach:Create Work Order" are disabled
+    And user right clicks on secondary CI and validates options "Make Primary:Set CTI:Impact:Detach:Create Work Order" are disabled
+    When user clicks "Schedule" tab
     Then user validates fields under schedule tab are read only
     When user changes status to "Approval Requested"
     And user clicks save button
-    #    When user gets change ticket value
-#    And user logsOut
-#    And user goes back to login page
-#    And user logs in with valid username "ChangeInitiator/Builder1" and password as "Test@1234"
-#    Then user successfully logged in to OneWorkflow and agent console should be displayed
-#    #When user selects "Search:Open Search Form:Change Record/Project/Freeze"
-#    And user switches to window 3
-#    And user enters ticket previously created and searches
-#    Then ticket should be displayed
+    When user gets change ticket value
+    And user logsOut
+    And user goes back to login page
+    And user logs in with valid username "ChangeInitiator/Builder1" and password as "Test@1234"
+    Then user successfully logged in to OneWorkflow and agent console should be displayed
+    When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
+    And user switches to window 3
+    And user enters ticket previously created and searches
+    Then ticket should be displayed
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user validates CI Search is disabled
-    And user right clicks on primary CI and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
-    And user right clicks on secondary CI and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
-    And user right clicks on CI "dummy" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
-    And user right clicks on CI "" and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
-    #Then user validates nothing happens when clicking on all read only options
-    When user clicks on schedule tab
+    Then user right clicks on primary CI and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
+    And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
+    And user right clicks on primary CI and validates options "Make Primary:Set CTI:Impact:Detach:Create Work Order" are disabled
+    And user right clicks on secondary CI and validates options "Make Primary:Set CTI:Impact:Detach:Create Work Order" are disabled
+    When user clicks "Schedule" tab
     Then user validates fields under schedule tab are read only
     When user gets change ticket value
     And user logsOut
     And user goes back to login page
     And user logs in with valid username "cm_adminaccess1_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    #When user selects "Search:Open Search Form:Change Record/Project/Freeze"
+    When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 3
     And user enters ticket previously created and searches
     Then ticket should be displayed
-    When user clicks on approval tab
+    When user clicks "Approve" tab
     And user clicks on view button
-    And user clicks approve button
+    When user clicks "Approve" tab
     And user clicks save button
     Then user validates ticket status as "Approved"
     When user gets change ticket value
@@ -109,10 +110,11 @@ Feature: Permissions - ChangeInitiator-Internal [aR]
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user validates CI Search is disabled
-    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    Then user right clicks on primary CI and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
     And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
-    #Then user validates nothing happens when clicking on all read only options
-    When user clicks on schedule tab
+    And user right clicks on primary CI and validates options "Make Primary:Set CTI:Impact:Detach:Create Work Order" are disabled
+    And user right clicks on secondary CI and validates options "Make Primary:Set CTI:Impact:Detach:Create Work Order" are disabled
+    When user clicks "Schedule" tab
     Then user validates fields under schedule tab are read only
     When user changes status to "Schedule Requested"
     And user clicks save button
@@ -120,10 +122,11 @@ Feature: Permissions - ChangeInitiator-Internal [aR]
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user validates CI Search is disabled
-    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    Then user right clicks on primary CI and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
     And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
-    #Then user validates nothing happens when clicking on all read only options
-    When user clicks on schedule tab
+    And user right clicks on primary CI and validates options "Make Primary:Set CTI:Impact:Detach:Create Work Order" are disabled
+    And user right clicks on secondary CI and validates options "Make Primary:Set CTI:Impact:Detach:Create Work Order" are disabled
+    When user clicks "Schedule" tab
     Then user validates fields under schedule tab are read only
     When user changes status to "Implementation"
     And user clicks save button
@@ -131,10 +134,11 @@ Feature: Permissions - ChangeInitiator-Internal [aR]
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user validates CI Search is disabled
-    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    Then user right clicks on primary CI and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
     And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
-    #Then user validates nothing happens when clicking on all read only options
-    When user clicks on schedule tab
+    And user right clicks on primary CI and validates options "Make Primary:Set CTI:Impact:Detach:Create Work Order" are disabled
+    And user right clicks on secondary CI and validates options "Make Primary:Set CTI:Impact:Detach:Create Work Order" are disabled
+    When user clicks "Schedule" tab
     Then user validates fields under schedule tab are read only
     When user changes status to "Completed"
     And user selects completed code as "Successful"
@@ -152,10 +156,11 @@ Feature: Permissions - ChangeInitiator-Internal [aR]
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user validates CI Search is disabled
-    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    Then user right clicks on primary CI and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
     And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
-    #Then user validates nothing happens when clicking on all read only options
-    When user clicks on schedule tab
+    And user right clicks on primary CI and validates options "Make Primary:Set CTI:Impact:Detach:Create Work Order" are disabled
+    And user right clicks on secondary CI and validates options "Make Primary:Set CTI:Impact:Detach:Create Work Order" are disabled
+    When user clicks "Schedule" tab
     Then user validates fields under schedule tab are read only
     When user changes status to "Closed"
     And user enters review details as "Test Details"
@@ -164,8 +169,9 @@ Feature: Permissions - ChangeInitiator-Internal [aR]
     When user clicks on Diagnosis tab
     And user clicks on CI search button
     Then user validates CI Search is disabled
-    And user right clicks on primary CI and validates options "Refresh:Preferences:Show" are available
+    Then user right clicks on primary CI and validates options "Refresh:Preferences:Primary Cause Search:Show" are available
     And user right clicks on secondary CI and validates options "Refresh:Preferences:Show" are available
-    #Then user validates nothing happens when clicking on all read only options
-    When user clicks on schedule tab
+    And user right clicks on primary CI and validates options "Make Primary:Set CTI:Impact:Detach:Create Work Order" are disabled
+    And user right clicks on secondary CI and validates options "Make Primary:Set CTI:Impact:Detach:Create Work Order" are disabled
+    When user clicks "Schedule" tab
     Then user validates fields under schedule tab are read only

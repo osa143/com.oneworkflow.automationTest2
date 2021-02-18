@@ -1,4 +1,4 @@
-@Backup_restore @PLAZA
+@Backup_restore @PLAZA @Back_up
   Feature: Backup restore plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -37,10 +37,11 @@
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
       Then user should see plaza ticket
+      When user clicks on Ack button
+      Then user clicks on ticket refresh button
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Restore from Backup"
       And user validates request type as "Service Request | PLAZA"
-      #Not sure about description validation outside of a table
       And user validates back up restore description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
@@ -59,8 +60,7 @@
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      When user right clicks on CI "cc100cgas001" and clears impact
-      When user clicks on Ack button
+      When user right clicks on primary CI and clears impact
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
       And user clicks on "Schedule" tab
@@ -71,5 +71,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 4 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed

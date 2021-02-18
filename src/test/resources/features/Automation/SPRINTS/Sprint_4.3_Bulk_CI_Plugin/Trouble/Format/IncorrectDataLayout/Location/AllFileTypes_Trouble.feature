@@ -39,15 +39,15 @@ Feature: checking of bulk loading format
       And user validates with errors as "0"
       And user validates with warnings as "0"
       And user clicks on bulk loading close button
-      And user logsOut and closes the browser
-      And user switches to window 0
+#      And user logsOut and closes the browser
+#      And user switches to window 0
 
      Examples:
 
          |fileTypes                                                                                                    |
          |Test Attachments\IncorrectFormatColumnLocation\CSV.csv|
-#         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xls|
-#         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xlsx|
+         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xls|
+         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xlsx|
 
 
 

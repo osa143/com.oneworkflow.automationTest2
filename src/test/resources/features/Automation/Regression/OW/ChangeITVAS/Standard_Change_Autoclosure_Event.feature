@@ -27,7 +27,6 @@ Feature: Standard Change Autoclosure - Event
     When user clicks on Send button
     Then user validates ticket status as "Assigned"
     And user waits for 5 minutes
-
     When user clicks on create trouble event
     And user switches to window 2
     Then trouble record form should appear in new tab

@@ -1,4 +1,4 @@
-@Search_for_1_CI_show_all_open_tickets
+@Search_for_1_CI_show_all_open_tickets @OW_Incident
 
 Feature:Search for 1 CI show all open tickets
 

@@ -23,6 +23,7 @@ Feature: E2E standard change internal initiator
     And user validates Implementation is readonly
     And user validates Test Plan is readonly
     And user validates Rollback is readonly
+    And user validates change builder+ is mandatory
     When user clicks save button
     And multiple error messages should appear with red boarder around fields
     When user enters "CI B2" in the change builder field

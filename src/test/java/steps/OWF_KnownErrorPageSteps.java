@@ -130,4 +130,10 @@ public class OWF_KnownErrorPageSteps {
     public void userEntersKnownErrorTicket() {
         knownErrorPage.enterTicket(CommonUtils.keTicket);
     }
+
+    @And("user validates all fields are read only and not editable")
+    public void userValidatesAllFieldsAreReadOnlyAndNotEditable() {
+        Assert.assertTrue(knownErrorPage.verifyElementsAreReadOnly());
+    }
+
 }

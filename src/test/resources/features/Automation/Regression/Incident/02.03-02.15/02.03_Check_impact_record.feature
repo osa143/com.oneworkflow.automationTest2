@@ -1,8 +1,8 @@
 @02.03 @Incident @02
   #CORE in ST, Core in SIT
   #passed
-  Feature: checking of impact record
-    Scenario: user checks impact record on CI
+  Feature: check impact record
+    Scenario: check impact record
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password

@@ -1,4 +1,4 @@
-@duplicateCIs_change @SAO-427
+@duplicateCIs_change3 @SAO-427
 Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format
 
@@ -54,8 +54,8 @@ Feature: checking of bulk loading format
       And user validates "Status" as "With Errors" in row 9
       And user validates "Status" as "With Errors" in row 10
       And user clicks on bulk loading close button
-      And user logsOut and closes the browser
-      And user switches to window 0
+#      And user logsOut and closes the browser
+#      And user switches to window 0
 
       Examples:
 

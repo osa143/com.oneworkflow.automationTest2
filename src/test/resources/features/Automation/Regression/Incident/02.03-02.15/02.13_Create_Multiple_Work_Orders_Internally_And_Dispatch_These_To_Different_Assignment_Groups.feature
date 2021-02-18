@@ -1,6 +1,6 @@
-@02.13 @Incident @02
+@02.13 @Incident @02 @HelixRegression
 #passed
-Feature: creation  multiple WO's internally and dispatch these to different assignment groups
+Feature: create multiple work orders and dispacth to different assignment gropus
   Scenario: user can create multiple work orders and dispatch these to different assignment groups
 
     Given user is on the OneWorkflow login page
@@ -15,6 +15,7 @@ Feature: creation  multiple WO's internally and dispatch these to different assi
     And user enters description as "02:13 Create Multiple Work Orders Internally And Dispatch"
     And user clicks on save button
     Then ticket should be created and status should be assigned
+    And user gets trouble ticket value
     When user adds below CI's to the ticket
       |   CI Name     |
       |SE_SGSN_VRRMME1|

@@ -1,4 +1,4 @@
-@Network_Security_Proxy_Surf_Proxy_One_Or_Few_Users @PLAZA
+@Network_Security_Proxy_Surf_Proxy_One_Or_Few_Users @PLAZA @Network_Security
   #passed
   Feature: Network Security Proxy Surf Proxy One Or Few Users plaza form test
     Scenario: user validates information sent to OW from Plaza
@@ -6,7 +6,7 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      #Then user clicks on plaza portal
+      Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on firewall & network under IT Infrastructure dropdown
@@ -21,7 +21,7 @@
       And user enters proxy date and time when tests performed as current date and time
       And user enters proxy Source IP Address as "Test address"
       Then user enters URL as "Test.teliacompany.net"
-      Then user selects internal external website as "Yes"
+      And user selects network security internal external website as "Yes"
       Then user enters error message as "Test Error Message"
       And user enters has it worked before as "Test Work"
       Then user enters when did the problem occure as "Test occure"
@@ -44,7 +44,6 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Proxy"
       And user validates request type as "Service Request | PLAZA"
-     #Not sure about description validation outside of a table
       And user validates network security proxy surf proxy one or few users description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
@@ -64,5 +63,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 5 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed

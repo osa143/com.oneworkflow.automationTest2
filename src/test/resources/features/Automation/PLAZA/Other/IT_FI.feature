@@ -6,10 +6,11 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      #Then user clicks on plaza portal
+      Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on application under IT Infrastructure dropdown
+      And user clicks on show more button
       And user clicks on show more button
       When user clicks on "IT FI Services" pebble
       Then user should see "IT FI" form
@@ -23,9 +24,7 @@
       And user enters IT FI request as "Test1 IT FI/Request"
       Then user enters IT FI description as "Test1 IT FI/Description"
       And user enters additional comments as "Test1 IT FI/AC"
-      Then user enters itfi system dropdown as "AIDA"
-      And user enters itfi system dropdown as "APM"
-      And user enters itfi system dropdown as "ASOP2"
+      And user enters itfi system dropdown as "AIDA"
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

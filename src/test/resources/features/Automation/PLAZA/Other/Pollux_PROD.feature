@@ -1,4 +1,6 @@
-@Pollux_PROD @PLAZA
+#From has been removed
+ @Pollux_PROD
+
   #passed
   Feature: Pollux prod plaza form test
     Scenario Outline: user validates information sent to OW from Plaza
@@ -6,7 +8,7 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      #Then user clicks on plaza portal
+      Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on application under IT Infrastructure dropdown
@@ -66,7 +68,7 @@
 
       Examples:
 
-        |Request                   |Description                   |Additional Comments  |Desc Validation|
-      #  |Pollux-PROD - Test/Request|Pollux-PROD - Test/Description|Pollux-PROD - Test/AC|               |
-        |Pollux-AT - Test/Request  |Pollux-AT - Test/Description  |Pollux-AT - Test/AC  |               |
+        |Request                   |Description                   |Additional Comments  |
+        |Pollux-PROD - Test/Request|Pollux-PROD - Test/Description|Pollux-PROD - Test/AC|
+        |Pollux-AT - Test/Request  |Pollux-AT - Test/Description  |Pollux-AT - Test/AC  |
       

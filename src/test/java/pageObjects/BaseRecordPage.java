@@ -80,7 +80,8 @@ public class BaseRecordPage extends BasePage {
     public static final String chkbxTELIA_CARRIER = "WIN_0_rc0id600002008";
     public static final String chkbxUNKOWN = "WIN_0_rc0id600002010";
     public static final String chkbxINTERNAL = "WIN_0_rc0id600002009";
-    public static final String chkbxFirstRow_Diagnosis = "//*[@id='T700009087']/tbody/tr[2]/td[1]/input";
+    public static final String chkbxFirstRow_Diagnosis = "//*[@id='T700009087']/tbody/tr[2]/td[1]";
+    public static final String fld_PRIMARY_CI= "//*[@id='T700009087']/tbody/tr[2]/td[1]";
     public static final String chkbx_ThirdRow_Diagnosis= "//*[@id='T700009087']/tbody/tr[5]/td[1]/input";
     public static final String txtSOLUTION_ID = "arid_WIN_0_705002080";
     public static final String txtSOLUTION_FOUND_DATE = "arid_WIN_0_600001042";
@@ -154,8 +155,57 @@ public class BaseRecordPage extends BasePage {
     private static final String txt_LinkedTicketID="//*[@id='T777506000']/tbody/tr[2]/td[2]/nobr/span";
     private static final String txt_EQUIPMENT="arid_WIN_0_600001067";
     private static final String btn_CLEAR= "WIN_0_700506223";
+    private static final String div_ALL_FIELDS= "WIN_0_999000050";
+    private static final String table_TICKET_MATCHING = "T600002282";
+    private static final String table_SID_CONSOLE_SHOW_HISTORY="T700009045";
+    private static final String txt_PRIORITY= "arid_WIN_0_800007043";
+    private static final String txt_TITLE_QUICK_CREATE = "arid_WIN_0_800007044";
+    private static final String txt_TYPE_WO_QUICK_CREATE="arid_WIN_0_800007045";
+    private static final String txt_DESCRIPTION_WO_QUICK_CREATE= "arid_WIN_0_800007046";
+    private static final String btn_CREATE_WO_QUICK_CREATE= "WIN_0_800007047";
+    private static final String btn_YES= "//a[@arid='700027904']";
 
 
+    public void clickCreate_WO_quickCreate() {
+        clickElement(By.id(btn_CREATE_WO_QUICK_CREATE));
+    }
+    public void enterTitle_QuickCreate(String text){
+        enterTextByElement(By.id(txt_TITLE_QUICK_CREATE), text);
+    }
+    public void enterDescription_QuickCreate(String text){
+        enterTextByElement(By.id(txt_DESCRIPTION_WO_QUICK_CREATE), text);
+    }
+    public void selectType_quickCreate(String value){
+        clickElementById(txt_TYPE_WO_QUICK_CREATE);
+        selectDropDownValue(value);
+    }
+    public void selectPriority_quickCreate(String value){
+        clickElementById(txt_PRIORITY);
+        selectDropDownValue(value);
+    }
+    public boolean verifyTicketsUnderTicketMatching(String columnName, String columnValue, boolean partialText){
+       return verifyColumnValuesMultiple(By.id(table_TICKET_MATCHING), columnName, columnValue, partialText);
+    }
+    public boolean verifyTicketsUnderSID_Console_ShowHistory(String columnName, String columnValue, boolean partialText){
+        return verifyColumnValuesMultiple(By.id(table_SID_CONSOLE_SHOW_HISTORY), columnName, columnValue, partialText);
+    }
+
+
+    public boolean verifyElementsAreReadOnly(){
+        List<WebElement> elements = driver.findElement(By.id(div_ALL_FIELDS)).findElements(By.tagName("textarea"));
+
+        for (int i = 0; i < elements.size(); i ++){
+            WebElement element=elements.get(i);
+            System.out.println("Number of read only elements are - " + elements.size());
+            System.out.println(element);
+            String isReadOnly = element.getAttribute("readonly");
+            if (isReadOnly != null && isReadOnly.contains("true")) {
+                return true;
+            }
+            return false;
+        }
+                return false;
+    }
     public boolean isEquipmentReadOnly(){
         return checkIfControlIsReadonly(txt_EQUIPMENT);
     }
@@ -295,7 +345,12 @@ public class BaseRecordPage extends BasePage {
     public String getItem(){
         return getAttributeValueById(txt_ITEM);
     }
-
+    public void enterItem(String item){
+        enterTextByElement(By.id(txt_ITEM), item);
+    }
+    public void enterCategory(String category){
+        enterTextByElement(By.id(txt_CATEGORY), category);
+    }
 
 
     public void enterSummary_attachments(String text){
@@ -347,6 +402,7 @@ public class BaseRecordPage extends BasePage {
     public void clickTableElementRequestPendingApproval(String colName, int row){
         List<WebElement> element = getTableRows(By.id(table_APPROVAL_TABLE));
     }
+
 
     public void enterApprovalRequestComment(String approvalComment){
         enterTextByElement(By.id(txt_APPROVAL_COMMENT), approvalComment );
@@ -405,7 +461,12 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void clickRefresh_ticketFresh(){
-        clickElement(By.id(btn_REFRESH));
+        try{
+            clickElement(By.id(btn_REFRESH));
+        }
+       catch(Exception e){
+            e.printStackTrace();
+       }
         wait(3000);
     }
 
@@ -497,16 +558,32 @@ public class BaseRecordPage extends BasePage {
     public String verifyAlarmStatus(){
         return getTableCellData(By.id(table_ALARMS_ID), "AlarmStatus", 1);
     }
-    public void selectPrimaryTicket()
+    public void selectPrimaryCI()
     {
        WebElement element = findElement(By.xpath(chkbxFirstRow_Diagnosis));
        element.click();
        action.contextClick(element).build().perform();
 
     }
+    public void rightClickOnPrimaryCI()
+    {
+        WebElement element = findElement(By.xpath(fld_PRIMARY_CI));
+        element.click();
+        action.contextClick(element).build().perform();
+
+    }
+
+
     public void selectTicketAndRightClick()
     {
         saveCiDetails(true);
+        WebElement element = findElement(By.xpath(chkbx_ThirdRow_Diagnosis));
+        element.click();
+        action.contextClick(element).build().perform();
+
+    }
+    public void selectSecondaryCIAndRightClick()
+    {
         WebElement element = findElement(By.xpath(chkbx_ThirdRow_Diagnosis));
         element.click();
         action.contextClick(element).build().perform();
@@ -547,43 +624,33 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void doImpactClear(String cellData){
+        clickSave();
         selectAndRightClickOnTableElement(cellData);
-        WebElement element = driver.switchTo().activeElement();
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-//        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.ARROW_RIGHT);
-        element.sendKeys(Keys.ENTER);
+        doImpactClear();
+    }
+    public void doImpactClear() {
+        WebElement impact = driver.findElement(By.xpath("//td[contains(text(),'Impact')]"));
+        action.moveToElement(impact).build().perform();
+        WebElement clear = driver.findElement(By.xpath("//td[contains(text(),'Clear')]"));
+        action.moveToElement(clear).click().perform();
+    }
+    public void doImpactClear_all() {
+        WebElement impact = driver.findElement(By.xpath("//td[contains(text(),'Impact')]"));
+        action.moveToElement(impact).build().perform();
+        WebElement clearAll = driver.findElement(By.xpath("//td[contains(text(),'Clear All')]"));
+        action.moveToElement(clearAll).click().perform();
     }
     public void doImpactClear_checkImpactRecord(String cellData){
         selectAndRightClickOnTableElement(cellData);
-        WebElement element = driver.switchTo().activeElement();
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.ARROW_RIGHT);
-        element.sendKeys(Keys.ENTER);
+        doImpactClear();
     }
 
     public void doImpactClearForAllCIs(String cellData){
         selectAndRightClickOnTableElement(cellData);
-        WebElement element = driver.switchTo().activeElement();
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.ARROW_RIGHT);
-        element.sendKeys(Keys.DOWN);
-        element.sendKeys(Keys.DOWN);
-        element.sendKeys(Keys.DOWN);
-        element.sendKeys(Keys.ENTER);
-        wait(1000);
+        doImpactClear_all();
+        //clickElement(By.xpath(btn_YES));
+
     }
-
-
-
 
     public String getTicketValue() {
         return getAttributeValueById(txtTICKET_ID);
@@ -797,6 +864,9 @@ public class BaseRecordPage extends BasePage {
     public void selectActions_TimeTracking(){
         selectDropDownNameAndValue(ddACTIONS, ddValueTIME_TRACKING, false);
     }
+    public void selectActions(String dropdownValue){
+        selectDropDownNameAndValue(ddACTIONS, dropdownValue, false);
+    }
     public void selectActivity_WorkingOnTicket(){
         selectDropDownNameAndValue(ddACTIVITY_IN_FRAME, ddValueWORKING_ON_TICKET, false);
     }
@@ -938,7 +1008,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterImpactDurationSecs(String impactDurationSecs) {
-
+        clearText(By.id(txtIMPACT_DURATION_SECS));
         enterTextByElement(By.id(txtIMPACT_DURATION_SECS), impactDurationSecs);
     }
 
@@ -948,7 +1018,7 @@ public class BaseRecordPage extends BasePage {
     }
 
 
-    public void enterChangeBuilderType(String changeBuilderName) {
+    public void enterChangeBuilderTypeAndClicksEnter(String changeBuilderName) {
         //enterTextByElement(By.id(txtCHANGE_BUILDER_FIELD_ID), changeBuilderName);
         findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).clear();
         driver.findElement(By.id(txtCHANGE_BUILDER_FIELD_ID)).sendKeys(changeBuilderName);
@@ -975,7 +1045,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterStartDate(int delay) {
-        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", delay);
         CommonUtils.eventStartTime=dateTime;
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
@@ -983,7 +1053,7 @@ public class BaseRecordPage extends BasePage {
 
     public void enterEndDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", delay);
         CommonUtils.requestEnd=dateTime;
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );

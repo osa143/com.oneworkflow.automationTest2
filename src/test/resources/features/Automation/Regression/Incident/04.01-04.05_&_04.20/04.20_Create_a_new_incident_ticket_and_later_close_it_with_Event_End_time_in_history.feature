@@ -1,5 +1,5 @@
 @04.20 @Incident1 @04
-  #passed
+  #SAO-4039
   Feature: create a new incident ticket and later close it with event end time in history
     Scenario: create a new incident ticket and later close it with event end time in history
 

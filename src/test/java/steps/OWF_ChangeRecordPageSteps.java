@@ -43,7 +43,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user enters as {string} in Change Builder field")
     public void userEntersAsInChangeBuilderField(String text) {
-        changeRecordPage.enterChangeBuilderType(text);
+        changeRecordPage.enterChangeBuilderTypeAndClicksEnter(text);
 
     }
 
@@ -499,7 +499,7 @@ public class OWF_ChangeRecordPageSteps {
     @When("user logsOut from One workflow")
     public void userLogsOutFromOneWorkflow() {
         changeRecordPage.selectDropDownNameAndValue("Nav-Username", "Logout", false);
-        changeRecordPage.wait(2000);
+        changeRecordPage.wait(3000);
     }
 
     @And("user gets request start and end time on change record page")
@@ -587,17 +587,6 @@ public class OWF_ChangeRecordPageSteps {
 
     }
 
-    @Then("user clicks on approval tab")
-    public void userClicksOnApprovalTab() {
-    }
-
-    @And("user clicks approve button")
-    public void userClicksApproveButton() {
-    }
-
-    @Then("user clicks on schedule tab")
-    public void userClicksOnScheduleTab() {
-    }
 
     @Then("user validates change initiator as {string}")
     public void userValidatesChangeInitiatorAs(String arg0) {
@@ -974,6 +963,11 @@ public class OWF_ChangeRecordPageSteps {
         Assert.assertTrue(changeRecordPage.verifyInterestedPartiesTypes(arg0, ""));
     }
 
+    @And("user selects unique name as {string}")
+    public void userSelectsUniqueNameAs(String arg0) {
+        changeRecordPage.SelectUniqueName(arg0);
+    }
+
     @Then("user validates Nokia ticket ID is present")
     public void userValidatesNokiaTicketIDIsPresent() {
      Assert.assertNotNull(changeRecordPage.getExternalTicketID());
@@ -987,7 +981,7 @@ public class OWF_ChangeRecordPageSteps {
 
     @Then("user validates Location Details are shown")
     public void userValidatesLocationDetailsAreShown() {
-        changeRecordPage.switchToFrameByIndex(2);
+        changeRecordPage.switchToFrameByIndex(3);
         Assert.assertTrue(changeRecordPage.verifyLocationDetailsIsDisplayed());
 
     }
@@ -1061,6 +1055,89 @@ public class OWF_ChangeRecordPageSteps {
     @And("user validates reason text field expand button is present")
     public void userValidatesReasonTextFieldExpandButtonIsPresent() {
         Assert.assertTrue(changeRecordPage.verifyReasonTextEditorButtonIsDisplayed());
+    }
+
+    @And("user clicks on yes for CAB required")
+    public void userClicksOnYesForCABRequired() {
+        changeRecordPage.clickCabRequiredYes();
+    }
+
+    @And("user enters actual start date as current time")
+    public void userEntersActualStartDateAsCurrentTime() {
+        changeRecordPage.enterActualStartAsCurrentDateTime();
+    }
+
+    @And("user enters actual end as current time")
+    public void userEntersActualEndAsCurrentTime() {
+        changeRecordPage.enterActualEndAsCurrentDateTime();
+    }
+
+    @And("user clicks yes on save confirmation message")
+    public void userClicksYesOnSaveConfirmationMessage() {
+        try {
+            wait(4000);
+            changeRecordPage.switchToFrameByIndex(2);
+            changeRecordPage.clickElementByContainsTextAndTagName("*", "Yes");
+        } catch (Exception e){}
+
+    }
+
+    @And("user clicks on request that's {string}")
+    public void userClicksOnRequestThatS(String cellData) {
+        changeRecordPage.clickTableElementRequestPendingApproval_2(cellData);
+    }
+
+    @Then("user selects CAB approval")
+    public void userSelectsApproval() {
+
+        changeRecordPage.clickCABApproval();
+    }
+
+    @And("user should see review details {string}")
+    public void userShouldSeeReviewDetails(String expectedReviewDetails) {
+        Assert.assertEquals(expectedReviewDetails, changeRecordPage.getReviewDetails());
+    }
+
+    @Then("user should see change ticket previously created")
+    public void userShouldSeeChangeTicketPreviouslyCreated() {
+        Assert.assertEquals(changeRecordPage.getTicketValue(), CommonUtils.savedTicket);
+    }
+
+    @Then("templates should appear")
+    public void templatesShouldAppear() {
+     Assert.assertTrue(changeRecordPage.verifyTemplatesAppeared());
+    }
+
+    @When("user selects {string} under {string} column and clicks open")
+    public void userSelectsUnderColumnAndClicksOpen(String tableCellData, String columnName) {
+        changeRecordPage.selectTemplateAndDoubleClickToOpen(columnName,tableCellData);
+    }
+
+    @And("user clicks close button on change template window")
+    public void userClicksCloseButtonOnChangeTemplateWindow() {
+        changeRecordPage.clickClose_changeTemplate();
+    }
+
+    @And("user enters project code as {string}")
+    public void userEntersProjectCodeAs(String projectCode) {
+        changeRecordPage.enterProjectCode(projectCode);
+    }
+
+    @Then("user validates fields under schedule tab are read only")
+    public void userValidatesFieldsUnderScheduleTabAreReadOnly() {
+    Assert.assertTrue(changeRecordPage.verifyFieldsAreReadOnly());
+    }
+
+    @And("user enters impact duration as {string} seconds")
+    public void userEntersImpactDurationAsSeconds(String arg0) {
+        changeRecordPage.enterImpactDurationSecs(arg0);
+    }
+
+
+    @And("user clicks yes on impact update confirmation")
+    public void userClicksYesOnImpactUpdateConfirmation() {
+        changeRecordPage.switchToFrameByIndex(1);
+        changeRecordPage.clickYes();
     }
 }
 

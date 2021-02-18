@@ -16,8 +16,9 @@ public class OWF_WorkOrderPageSteps {
 
     @And("user validates ticket status as {string}")
     public void userValidatesTicketStatusAs(String arg0) {
-        Assert.assertEquals(workOrderPage.getStatusText(), arg0, "Status is not new");
         workOrderPage.wait(1000);
+        Assert.assertEquals(workOrderPage.getStatusText(), arg0, "Status is wrong");
+
     }
 
     @And("user validates parent ticket id availability")
@@ -237,7 +238,7 @@ public class OWF_WorkOrderPageSteps {
     }
     @Then("user enters plaza request id in the source id field")
     public void userEntersPlazaRequestIdInTheSourceIdField() {
-        workOrderPage.wait(10000);
+        workOrderPage.wait(15000);
         workOrderPage.enterSourceID(CommonUtils.plazaRequestID);
     }
 
@@ -927,6 +928,28 @@ public class OWF_WorkOrderPageSteps {
     public void userValidatesRequestTypeAsReadonly() {
         Assert.assertTrue(workOrderPage.verifyRequestTypeIsReadOnly());
     }
+
+    @And("user double clicks on work order and opens")
+    public void userDoubleClicksOnWorkOrderAndOpens() {
+      workOrderPage.doubleClickOnWorkOrderAndOpen();
+    }
+
+    @When("user double clicks and open outbound message")
+    public void userDoubleClicksAndOpenOutboundMessage() {
+        workOrderPage.doubleClickAndOpenOutboundMessage();
+    }
+
+    @Then("user should see agreement contractor as {string}")
+    public void userShouldSeeAgreementContractorAs(String agreementContractor) {
+        Assert.assertEquals(workOrderPage.getAgreementContract(), agreementContractor);
+    }
+
+    @And("user validates customer ID contractor as {string}")
+    public void userValidatesCustomerIDContractorAs(String customerContractorID) {
+        Assert.assertEquals(workOrderPage.getCustomerContractID(), customerContractorID);
+    }
+
+
 }
 
 

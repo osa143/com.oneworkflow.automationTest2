@@ -1,4 +1,4 @@
-@05.01  @Incident1 @05  @smoke
+@05.01  @Incident1 @05  @smoke @HelixRegression
   #passed
   Feature: manually close an incident
     Scenario: manually close an incident
@@ -15,6 +15,7 @@
       And user enters description as "Test case 05.01 Manually close an incident"
       And user clicks on save button
       Then ticket should be created and status should be assigned
+      And user gets trouble ticket value
       And user adds CI "SE_EPG_FREEPG1" to the ticket
       When user changes status to "Cleared" on trouble event page
       And user selects fault position as "N/A:N/A" on trouble event page

@@ -6,7 +6,7 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      #Then user clicks on plaza portal
+      Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on messaging under IT Infrastructure dropdown
@@ -44,7 +44,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Clean Mail"
       And user validates request type as "Service Request | PLAZA"
-#      And user validates messaging clean mail description same as plaza
+      And user validates messaging clean mail description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -63,5 +63,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 5 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed

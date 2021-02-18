@@ -117,7 +117,8 @@ public class OWF_CiSearchPageSteps {
 
     @Then("CI should be listed and displayed under the Diagnosis tab")
     public void ciShouldBeListedAndDisplayedUnderTheDiagnosisTab() {
-        ciSearchPage.wait(4000);
+        ciSearchPage.switchToDefault();
+        ciSearchPage.wait(1000);
         ciSearchPage.selectTab("Diagnosis");
         ciSearchPage.clickRefresh_Diagnosis();
         int size = ciSearchPage.ciDiagnosisTableRows().size();
@@ -440,6 +441,9 @@ public class OWF_CiSearchPageSteps {
 
     @And("user validates CI {string} is listed")
     public void userValidatesCIIsListed(String arg0) {
+        ciSearchPage.selectTab("Diagnosis");
+        ciSearchPage.wait(1000);
+        ciSearchPage.clickRefresh_Diagnosis();
         Assert.assertEquals(ciSearchPage.getCI_Name("CI Name", 1), arg0);
     }
 
@@ -522,5 +526,175 @@ public class OWF_CiSearchPageSteps {
     @And("user validates radio button closed is selected")
     public void userValidatesRadioButtonClosedIsSelected() {
         Assert.assertTrue(ciSearchPage.isClosedRadioButtonSelected());
+    }
+
+    @And("user closes warning message on change add CI")
+    public void userClosesWarningMessageOnChangeAddCI() {
+        ciSearchPage.closeWarningMessage_changeTicket();
+        ciSearchPage.wait(2000);
+        ciSearchPage.clickCloseButton();
+//        ciSearchPage.switchToFrameByIndex(3);
+//        ciSearchPage.clickElementByContainsTextAndTagName("a", "Yes");
+
+    }
+
+    @When("user clicks manage my template cog button")
+    public void userClicksManageMyTemplateCogButton() {
+        ciSearchPage.clickManageTemplateCog();
+    }
+
+    @When("user clicks create my template button")
+    public void userClicksCreateMyTemplateButton() {
+        ciSearchPage.clickCreateMyTemplate();
+    }
+
+    @When("user clicks create new section button")
+    public void userClicksCreateNewSectionButton() {
+        ciSearchPage.clickCreateNewSection();
+    }
+
+
+    @And("user enters section label as {string}")
+    public void userEntersSectionLabelAs(String arg0) {
+        ciSearchPage.enterSectionLabelName(arg0);
+    }
+
+    @And("user clicks create section save button")
+    public void userClicksCreateSectionSaveButton() {
+        ciSearchPage.clickCreateSectionSaveButton();
+    }
+
+    @And("user clicks edit section button")
+    public void userClicksEditSectionButton() {
+        ciSearchPage.clickEditSection();
+    }
+
+    @And("user clicks edit section save button")
+    public void userClicksEditSectionSaveButton() {
+        ciSearchPage.clickCreateSectionSaveButton();
+    }
+
+    @And("user clicks delete selected section button")
+    public void userClicksDeleteSelectedSectionButton() {
+        ciSearchPage.clickDeleteSection();
+    }
+
+    @And("user clicks delete section")
+    public void userClicksDeleteSection() {
+        ciSearchPage.clickSecondDeleteSectionButton();
+    }
+
+    @When("user clicks section arrow down button")
+    public void userClicksSectionArrowDownButton() {
+        ciSearchPage.clickArrowDownSectionButton();
+    }
+
+    @When("user clicks add attribute button")
+    public void userClicksAddAttributeButton() {
+        ciSearchPage.clickAddAttributeButton();
+    }
+
+    @And("user selects class as {string}")
+    public void userSelectsClassAs(String arg0) {
+        ciSearchPage.selectClass(arg0);
+    }
+
+    @And("user clicks apply filter button")
+    public void userClicksApplyFilterButton() {
+        ciSearchPage.clickApplyFilterButton();
+    }
+
+    @And("user enters attribute+ as {string}")
+    public void userEntersAttributeAs(String arg0) {
+        ciSearchPage.enterAttributePlus(arg0);
+    }
+
+    @When("user clicks clear attribute search button")
+    public void userClicksClearAttributeSearchButton() {
+        ciSearchPage.clickClearFilterButton();
+    }
+
+    @And("user clicks save field to section button")
+    public void userClicksSaveFieldToSectionButton() {
+        ciSearchPage.clickSaveFieldToSectionButton();
+    }
+
+    @And("user clicks edit attribute button")
+    public void userClicksEditAttributeButton() {
+        ciSearchPage.clickEditAttribute();
+    }
+
+    @And("user clicks edit attribute save button")
+    public void userClicksEditAttributeSaveButton() {
+        ciSearchPage.clickEditAttributeSaveButton();
+    }
+
+    @And("user clicks show label checkbox")
+    public void userClicksShowLabelCheckbox() {
+        ciSearchPage.clickShowLabelCheckbox();
+    }
+
+    @And("user clicks delete attribute button")
+    public void userClicksDeleteAttributeButton() {
+        ciSearchPage.clickDeleteAttributeButton();
+    }
+
+    @And("user clicks delete attribute second button")
+    public void userClicksDeleteAttributeSecondButton() {
+        ciSearchPage.clickDeleteAttributeSecondButton();
+    }
+
+    @And("user clicks attribute arrow up button")
+    public void userClicksAttributeArrowUpButton() {
+        ciSearchPage.clickArrowUpAttribute();
+    }
+
+    @When("user clicks attribute arrow down button")
+    public void userClicksAttributeArrowDownButton() {
+        ciSearchPage.clickArrowDownAttribute();
+    }
+
+    @Then("user validates CI details template window is opened")
+    public void userValidatesCIDetailsTemplateWindowIsOpened() {
+        Assert.assertTrue(ciSearchPage.isCIDetailsTemplateWindowDisplayed());
+    }
+
+    @Then("user validates {string} section is displayed")
+    public void userValidatesSectionIsDisplayed(String expectedSectionLabel) {
+        Assert.assertEquals(ciSearchPage.getSectionLabel(), expectedSectionLabel);
+    }
+
+    @When("user clicks on close CI details template window and CI details window")
+    public void userClicksOnCloseCIDetailsTemplateWindowAndCIDetailsWindow() {
+        ciSearchPage.clickCloseCIDetailsTemplate();
+    }
+
+    @When("user selects search for as {string} on CI search window")
+    public void userSelectsSearchForAsOnCISearchWindow(String value) {
+        ciSearchPage.clickSearchForDropdown();
+        ciSearchPage.selectSearchForValue(value);
+    }
+
+    @Then("user should see use my template button is read only")
+    public void userShouldSeeUseMyTemplateButtonIsReadOnly() {
+     Assert.assertTrue(ciSearchPage.verifyUseMyButtonTemplateIsReadOnly());
+    }
+
+    @When("user clicks on test section")
+    public void userClicksOnTestSection() {
+
+    }
+
+    @And("user enters bulk ci impact from date as {int} hours in {string} format")
+    public void userEntersBulkCiImpactFromDateAsHoursInFormat(int delay, String pattern) {
+        int newDelay= delay*60;
+        ciSearchPage.enterImpactFrom(CommonUtils.getDateTime(pattern, "Europe/Stockholm", newDelay));
+
+    }
+
+    @And("user enters bulk ci impact to date as {int} hours in {string} format")
+    public void userEntersBulkCiImpactToDateAsHoursInFormat(int delay, String pattern) {
+        int newDelay= delay*60;
+        ciSearchPage.enterImpactToPlus(CommonUtils.getDateTime(pattern, "Europe/Stockholm", newDelay));
     }
 }

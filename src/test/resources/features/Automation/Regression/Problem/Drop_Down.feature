@@ -1,4 +1,4 @@
-@Drop_Down @Reg_Problem
+@Dropdown    @Reg_Problem
 #  This testcase also covers 3 other stories from P2S1 Sprint
 #  SAO-5196:Accountable Organisation drop down menu
 #  SAO-5203:Affected Organisation drop down menu,
@@ -24,7 +24,7 @@
       And multiple statuses "Critical:High:Medium:Low:(clear)" should be available in "Urgency" dropdown
       And user selects urgency as High
       And user selects accountable organisation as "CA_Infra"
-      And multiple statuses "CA_Infra:CA_IT:CA_Provider:(clear)" should be available in "Accountable Org." dropdown
+      And multiple statuses "CA_Infra:CA_IT:CA_Provider:DivX:External:TeliaFinance(clear)" should be available in "Accountable Org." dropdown
       And User selects "Accountable Org." as dropdownValue and should see values for "notreadonly"
         | DropdownValue | DropdownValuesToBePresent |
         | CA_NSD        | IP:ServCore               |
@@ -40,10 +40,11 @@
         | PAComm        | Conv:VAS:Voice                |
         | PAConn        | BusNW:Internet:MobVD      |
         | PAITServ      | MDM_DAAS:Security         |
+        | PAMedia       | ConnHome:TV               |
 
      # And user selects affected organisation as "CA_IT"
       Then user clicks edit affected org button
-      And multiple statuses "CA_Infra:CA_IT:CA_Provider:(clear)" should be available in "Organisations  " dropdown
+      And multiple statuses "CA_Infra:CA_IT:CA_Provider:DivX:External:TeliaFinance(clear)" should be available in "Organisations  " dropdown
       And User selects "Affected Orgs." as dropdownValue and should see values for "notreadonly"
         | DropdownValue | DropdownValuesToBePresent |
         | CA_NSD        | IP:ServCore               |
@@ -59,6 +60,7 @@
         | PAComm        | Conv:VAS:Voice                |
         | PAConn        | BusNW:Internet:MobVD      |
         | PAITServ      | MDM_DAAS:Security         |
+        | PAMedia       | ConnHome:TV               |
       When user clicks on save button on the problem form
       Then "Estimated Ready:Actual Finish:Decision Go/NoGo:Resolving Group:Resolving Person" shouldn't be visible on problem record form
       Then multiple statuses "Assigned:Pending:Under Investigation:Withdrawn:(clear)" should be available in "Status*" dropdown
@@ -87,9 +89,13 @@
       Then user clicks on save button on the problem form
       When user changes status to "Closed" on problem record page
       Then "Estimated Ready:Actual Finish:Decision Go/NoGo:Resolving Group:Resolving Person" shouldn't be visible on problem record form
-      Then multiple statuses "No Solution Identified:Not Repeatable:Rejected:Risk Accepted:Solved:Workaround:(clear)" should be available in "Closure Code" dropdown readonly
-      And User selects "Root Cause Code" as dropdownValue and should see values for "notreadonly"
+      Then multiple statuses "Solved:Rejected:Test ticket:(clear)" should be available in "Closure Code" dropdown readonly
+      And User selects "Closure Code" as dropdownValue and should see values for "notreadonly"
+      | Dropdown Value | DropdownValuesToBePresent |
+      | RC found       | Moved to KE               |
+      | RC not found   | Moved to KE               |
 
+      And User selects "Root Cause Code" as dropdownValue and should see values for "notreadonly"
         | DropdownValue | DropdownValuesToBePresent|
         | External:3rd Party Failure | External value chains:Interference:Mobile terminals |
         | External:External factor | Digging:Fire:Power outage:Weather |

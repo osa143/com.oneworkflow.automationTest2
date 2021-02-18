@@ -16,7 +16,7 @@ public class CommonUtils extends BasePage {
 
     public static String ciDetailsBeforeUpdate;
     public static String opTicket;
-    public static String pbTicket;
+    public static String savedTicket;
     public static String keTicket;
     public static String firstTicketBefore;
     public static String firstTicketAfterWait;
@@ -35,6 +35,9 @@ public class CommonUtils extends BasePage {
     public static String estimatedReadyTime;
     public static String WO_eventStartTime;
     public static String EventEndTime;
+    public static String UnlinkTicket;
+    public static String TokeID;
+    public static String OLA_TargetTime;
 
 
     // 0 - parent window
@@ -111,7 +114,7 @@ public class CommonUtils extends BasePage {
         } else {
             todayMidnight= todayMidnight.minusMinutes(Math.abs(delayMinutes));
         }
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM/dd/YYYY HH:mm:ss");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/YYYY HH:mm:ss");
         return dateTimeFormatter.format(todayMidnight);
 
     }

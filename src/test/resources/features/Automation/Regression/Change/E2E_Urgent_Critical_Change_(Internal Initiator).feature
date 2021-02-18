@@ -23,12 +23,13 @@ Feature: Internal Urgent Critical Change E2E
     And user selects request category as "Software Installation" on change record page
     And user enters description as "TEST TICKET PLEASE IGNORE - Automated Test for Urgent Major Critical (Internal Initiator)"
     And user enters reason field as "Regression"
+    And user validates change builder+ is mandatory
     And user selects priority as "Critical"
     And user enters "CI B2" in the change builder field
-    #Then user validates "Change Builder" button is present
+    Then user validates change builder button is present
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-    Then user enters request start time 2 hours ahead of current date
-    And user enters request end time 5 hours ahead of current date
+    And user enters start time as 2 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
+    And user enters end time as 5 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
     And user enters impact duration as "3" hours
     And user selects estimated impact dropdown as "Loss of Service"
     And user clicks on save button
@@ -63,13 +64,14 @@ Feature: Internal Urgent Critical Change E2E
     And CI search tab should be opened
     And user clicks on clear button
     And user selects Category as "Access"
-    Then user enters "SE_BSC%" in the name+ field
+    Then user enters "SE_BSC_AB16B" in the name+ field
     Then user clicks on search button on CI search window
     And user selects all CI's that appear
     And user selects impact level as "Loss of Service"
     And user clicks on relate CI
-    Then user closes warning message
-    And user clicks on close button on CI search window
+    Then user closes warning message on change add CI
+#    And user clicks yes on save confirmation message
+    And user waits 20 secs
     And CI should be listed and displayed under the Diagnosis tab
     And user clicks on Diagnosis tab
     And user clicks on CI search button
@@ -77,13 +79,14 @@ Feature: Internal Urgent Critical Change E2E
     And CI search tab should be opened
     And user clicks on clear button
     And user selects Category as "Access"
-    Then user enters "SE_RNC%" in the name+ field
+    Then user enters "SE_RNC_AK6RU102" in the name+ field
     Then user clicks on search button on CI search window
     And user selects all CI's that appear
     And user selects impact level as "Loss of Service"
     And user clicks on relate CI
-    Then user closes warning message
-    And user clicks on close button on CI search window
+    And user closes warning message on change add CI
+    #And user clicks yes on save confirmation message
+    And user waits 20 secs
     And CI should be listed and displayed under the Diagnosis tab
     When user clicks on Show CR Matching button
     Then user should see Show CR Matching table appear
@@ -92,12 +95,13 @@ Feature: Internal Urgent Critical Change E2E
     And user clicks on add email button
     Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
     When user clicks on Send button
+    And user waits 5 secs
     Then user validates ticket status as "Assigned"
     And user clicks on owner under sections
     And user clicks on assignment under sections
     And user validates owner profile as "Change Manager"
     And user validates owner as "ChangeManager"
-    And user should see assigned profile as "Change Manager"
+    And user should see assigned profile as "Escalation Manager"
     And user clicks on timeline tab
     Then user validates Description* isn't readonly
     And user validates Project Code isn't readonly
@@ -108,11 +112,11 @@ Feature: Internal Urgent Critical Change E2E
     And user validates Timeline Text entry isn't readonly
     Then change should also be reflected in the timeline as "Assignee Profile has changed from  to Escalation Manager. Estonia Country has changed from  to Estonia. Request Status has changed from New to Assigned."
     And user gets ticket value
-#   And user waits 40 secs
-#   When user clicks on "Notifications" tab
-#   And user clicks on "Sent" tab
-#   Then user should see "Assignment-Profile" email update
-#   And user validates "Send" is readonly
+    And user waits 40 secs
+    When user clicks on "Notifications" tab
+    And user clicks on "Sent" tab
+    Then user should see "Assignment-Profile" email update
+    And user validates "Send" is readonly
     When user logsOut
     And user goes back to login page
     Then user logs in with valid username "EscalationManager1" and password as "Test@1234"
@@ -126,7 +130,7 @@ Feature: Internal Urgent Critical Change E2E
     And user should see "CR" tickets with "Status" of "Assigned"
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 2
-    Then user enters ticket previously created
+    Then user enters ticket previously created and searches
     And user clicks Search on ticket search
     When user clicks on Ack button
     Then user validates ticket status as "Analysis"
@@ -196,7 +200,7 @@ Feature: Internal Urgent Critical Change E2E
     And user should see "CR" tickets with "Status" of "Scheduled"
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 2
-    Then user enters ticket previously created
+    Then user enters ticket previously created and searches
     And user clicks Search on ticket search
     And user validates ticket status as "Scheduled"
     When user changes status to "Implementation"
@@ -247,7 +251,7 @@ Feature: Internal Urgent Critical Change E2E
     And user should see "CR" tickets with "Status" of "Completed"
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 2
-    Then user enters ticket previously created
+    Then user enters ticket previously created and searches
     And user clicks Search on ticket search
     When user changes status to "Closed"
     And user enters review details as "Random Notes"

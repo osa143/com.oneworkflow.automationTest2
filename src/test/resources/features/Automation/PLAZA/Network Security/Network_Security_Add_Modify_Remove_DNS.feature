@@ -1,4 +1,4 @@
-@Network_Security_Add_Modify_RemoveDNS @PLAZA
+@Network_Security_Add_Modify_RemoveDNS @PLAZA @Network_Security
   #passed
   Feature: Network Security Add Modify Remove DNS plaza form test
     Scenario: user validates information sent to OW from Plaza
@@ -6,7 +6,7 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-     # Then user clicks on plaza portal
+      Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on firewall & network under IT Infrastructure dropdown
@@ -54,5 +54,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 5 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed

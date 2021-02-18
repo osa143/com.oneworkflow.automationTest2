@@ -49,15 +49,15 @@ Feature: checking of bulk loading format
       And user validates with errors as "0"
       And user validates with warnings as "0"
       Then user clicks on bulk loading close button
-    And user logsOut and closes the browser
+      And user logsOut and closes the browser
       And user switches to window 0
 
       Examples:
 
           |fileTypes                                                                                           |
-          |Test Attachments\500 CI's (No Duplicates)\CSV.csv|
-          |Test Attachments\500 CI's (No Duplicates)\TEXT.txt|
+#          |Test Attachments\500 CI's (No Duplicates)\CSV.csv|
+#          |Test Attachments\500 CI's (No Duplicates)\TEXT.txt|
           |Test Attachments\500 CI's (No Duplicates)\XLS.xls|
-          |Test Attachments\500 CI's (No Duplicates)\XLSX.xlsx|
+#          |Test Attachments\500 CI's (No Duplicates)\XLSX.xlsx|
 
 

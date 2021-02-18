@@ -4,13 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+import utils.CommonUtils;
 
 //import javax.xml.bind.SchemaOutputResolver;
 import java.util.List;
 
 public class OWF_AgentConsolePage extends BasePage {
 
-
+    Actions action = new Actions(driver);
     private static final String menuForCONSOLE = "Console";
     private static final String menuForCREATE = "Create";
     private static final String menuForSEARCH = "Search";
@@ -102,6 +104,129 @@ public class OWF_AgentConsolePage extends BasePage {
     private static final String ERROR_POP_UP="pbartable";
     private static final String chkbx_SWEDEN="WIN_0_rc0id830000120";
     private static final String table_USER_INFORMATION= "T700028052";
+    private static final String TableRow1 = "//*[@id='T777000002']/tbody/tr[2]/td[2]";
+    private static final String SELECT_TICKET_LINKED_ITEMS = "//*[@id='T777506000']/tbody/tr[2]/td[2]/nobr/span";
+    private static final String UNLINK_BUTTON = "WIN_4_777506010";
+    private static final String btn_OK_LINKED_ITEMS = "//*[@id='PopupMsgFooter']/a";
+    private static final String rbtn_CAB_REQUIRED_NO= "WIN_0_rc0id800000002";
+    private static final String txt_CI_QUICK_CREATE_SEARCH= "arid_WIN_0_700050220";
+    private static final String tdROW1_QUICK_SEARCH_RESULTS= "//*[@id='T700010488']/tbody/tr[2]/td[2]";
+    private static final String btn_CREATE_DATE= "//*[@id='WIN_0_700010488']/div[2]/div/div[1]/div[7]";
+    private static final String btn_SHOW_TEMPLATE= "WIN_0_700047004";
+    private static final String txt_FIRST_NAME= "arid_WIN_0_700020043";
+    private static final String txt_LAST_NAME= "arid_WIN_0_700020044";
+    private static final String txt_EMAIL_ADDRESS= "arid_WIN_0_700020045";
+    private static final String btn_ADD= "WIN_0_700020037";
+    private static final String table_Contacts= "T700020029";
+    private static final String btn_CANCEL= "WIN_0_777777852";
+    private static final String btn_REMOVE_SELECTED_PERSON= "WIN_0_700020031";
+    private static final String btn_NEW_ALERT = "WIN_0_700002008";
+    private static final String txt_QUALIFICATION_NAME = "arid_WIN_3_8";
+    private static final String dd_SCHEMA = "arid_WIN_3_700010002";
+    private static final String txt_QUALIFICATION = "arid_WIN_0_500182000";
+    private static final String btn_APPLY_QUALIFICATION = "WIN_0_900008001";
+    private static final String txt_ALARM_MESSAGE = "arid_WIN_3_800040444";
+
+    public void  enterAlarmMessage(String Message)
+    {
+        enterTextByElement(By.id(txt_ALARM_MESSAGE), Message);
+    }
+
+    public void clickApplyQualification(){
+        clickElementById(btn_APPLY_QUALIFICATION);
+    }
+
+    public void enterQualification(String Qualification){
+        enterTextByElement(By.id(txt_QUALIFICATION), Qualification);
+    }
+
+    public void selectSchemaDropdown(String value){
+        selectDropDownNameAndValue(dd_SCHEMA, value, false );
+    }
+
+    public void enterQualificationName(String qualification){
+        findElement(By.id(txt_QUALIFICATION_NAME)).clear();
+        driver.findElement(By.id(txt_QUALIFICATION_NAME)).sendKeys(qualification);
+    }
+
+    public void  clickNewAlertButton(){
+        clickElementById(btn_NEW_ALERT);
+    }
+
+    public void selectContactAndClicksRemoveSelectedPerson(String contact){
+       WebElement contactEmail= getTableCellElement(By.id(table_Contacts), "Send Notification To", contact);
+       contactEmail.click();
+       clickElementById(btn_REMOVE_SELECTED_PERSON);
+    }
+    public void clickAddCancel(){
+        clickElementById(btn_CANCEL);
+    }
+    public String getContacts(String columnName, int rowNum){
+        return getTableCellData(By.id(table_Contacts), columnName, rowNum);
+    }
+    public void clickAdd_addPerson(){
+        clickElementById(btn_ADD);
+    }
+    public void enterEmailAddress(String email){
+        enterTextByElement(By.id(txt_EMAIL_ADDRESS), email);
+    }
+    public void enterLastName(String lastName){
+        enterTextByElement(By.id(txt_LAST_NAME), lastName);
+    }
+    public void enterFirstName(String firstName){
+        enterTextByElement(By.id(txt_FIRST_NAME), firstName);
+    }
+    public void clickShowTemplate(){
+        clickElementById(btn_SHOW_TEMPLATE);
+    }
+    public void doubleClickOnTicket_QuickSearchResults(){
+        WebElement element= findElement(By.xpath(tdROW1_QUICK_SEARCH_RESULTS));
+        action.doubleClick(element).perform();
+    }
+    public String getQuickSearchResults_TableData(String colName, int rowNum){
+        return getTableCellData(By.id(QuickSearch_table_ID), colName, rowNum);
+    }
+    public void clickOnCreateDate_ToSortTheTickets(){
+       clickElement(By.xpath(btn_CREATE_DATE));
+    }
+    public void enter_CI_QuickSearch(String text){
+        enterTextByElement(By.id(txt_CI_QUICK_CREATE_SEARCH), text);
+    }
+    public boolean verifyCabRequiredNoTickets(){
+        WebElement element = findElement(By.xpath(TableRow1));
+        action.doubleClick(element).perform();
+        action.doubleClick(element).perform();
+        CommonUtils.switchToChildWindow(driver, 2);
+        wait(5000);
+        selectTab("Schedule");
+        return verifyIsElementSelected(By.id(rbtn_CAB_REQUIRED_NO));
+
+    }
+    public void clickOkButton(){
+        switchToFrameByIndex(2);
+        clickElementByContainsTextAndTagName("a", "OK");
+
+    }
+
+    public void verifyTicketIsUnlinked(){
+        Assert.assertNotEquals(CommonUtils.UnlinkTicket, getTextByElement(By.xpath(SELECT_TICKET_LINKED_ITEMS)));
+    }
+
+    public void selectTicketAndUnlink(){
+        CommonUtils.UnlinkTicket=getTextByElement(By.xpath(SELECT_TICKET_LINKED_ITEMS));
+        clickElement(By.xpath(SELECT_TICKET_LINKED_ITEMS));
+        clickElementById(UNLINK_BUTTON);
+    }
+
+    public void clickOnTableRow1_agentConsole(){
+        clickElement(By.xpath(TableRow1));
+    }
+
+    public void enterTicketID(String ticket) {
+        enterTextByElement(By.id(txt_SEARCH), ticket);
+        driver.findElement(By.id(txt_SEARCH)).sendKeys(Keys.ENTER);
+        wait(1000);
+    }
 
     public boolean verifyUserProfiles(String colName, String colValue, boolean partialText){
         return verifyColumnValuesMultiple(By.id(table_USER_INFORMATION), colName, colValue, partialText );
@@ -435,8 +560,6 @@ public class OWF_AgentConsolePage extends BasePage {
 
 
 
-    Actions action = new Actions(driver);
-
     public void doubleClickOnAlarm(){
         WebElement element= findElement(By.xpath(alarmTdROW1_XPATH));
         action.doubleClick(element).perform();
@@ -510,6 +633,9 @@ public class OWF_AgentConsolePage extends BasePage {
 
     public boolean validateOpNextDueDateInformation() {
         return columnHasData(table_ID, "OP Next Due Date");
+    }
+    public boolean verifyColumnHasData(String columnName) {
+        return columnHasData(table_ID, columnName);
     }
 
     public boolean validateOpTargetDateInformation() {
@@ -603,7 +729,12 @@ public class OWF_AgentConsolePage extends BasePage {
         catch (Exception e){
 
         }
-        wait(3000);
+        wait(2000);
+    }
+
+    public void clickMenuItemLogout_Hooks() {
+        selectMenuItem(menuItemLOGOUT);
+        wait(2000);
     }
 
     public boolean verifyFilteredStatus(String columnName, String columnValue)

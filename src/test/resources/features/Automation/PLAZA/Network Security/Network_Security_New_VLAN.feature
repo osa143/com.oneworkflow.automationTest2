@@ -1,4 +1,4 @@
-@Network_Security_New_VLAN @PLAZA
+@Network_Security_New_VLAN @PLAZA @Network_Security
   #passed
   Feature: Network Security New VLAN plaza form test
     Scenario: user validates information sent to OW from Plaza
@@ -6,7 +6,7 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      #Then user clicks on plaza portal
+      Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on firewall & network under IT Infrastructure dropdown
@@ -38,7 +38,6 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Network Routing/Switching"
       And user validates request type as "Service Request | PLAZA"
-     #Not sure about description validation outside of a table
       And user validates network security new vlan description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
@@ -58,5 +57,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 5 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed

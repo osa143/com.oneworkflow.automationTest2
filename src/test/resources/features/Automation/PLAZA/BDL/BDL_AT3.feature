@@ -1,4 +1,5 @@
-@BDL_AT3 @PLAZA
+#BDL form Removed from plaza
+@BDL_AT3
   Feature: Plaza BDL form test
     Scenario: user validates information sent to OW from Plaza
 

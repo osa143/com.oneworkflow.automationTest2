@@ -1,4 +1,4 @@
-@03.04 @Incident @03
+@03.04 @Incident @03 @HelixRegression
   #passed
   Feature: Link child tickets and make master ticket
     Scenario: Link child tickets and make master ticket
@@ -16,6 +16,7 @@
       And user clicks on save button
       And user gets trouble ticket value
       Then ticket should be created and status should be assigned
+      And user gets trouble ticket value
       When user clicks on create trouble event
       And user switches to window 2
       Then trouble record form should appear in new tab

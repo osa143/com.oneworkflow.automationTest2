@@ -1,4 +1,4 @@
-@Timeline_Update @problem @Reg_Problem  @prob
+@Timeline_Update @problem @Reg_Problem  @prob @HelixRegression
 #passed
 Feature: Timeline update
 
@@ -14,6 +14,7 @@ Feature: Timeline update
       |               Title                  |RequestType            |Description          |ImpactType      |Urgency|
       |Proactive investigation of frvi96_auto|XX_Test:Functional Test|Timeline updates Test|Moderate/Limited|Low    |
     Then ticket should be created and status should be assigned
+    And user gets ticket value
     Then user clicks on Ack button
     And problem ticket status should be under investigation
     Then user selects impact type as significant:large

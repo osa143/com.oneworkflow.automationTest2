@@ -226,7 +226,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user right clicks on primary CI and selects {string}")
     public void userRightClicksOnPrimaryCIAndSelects(String arg0) {
-        troubleEventPage.selectPrimaryTicket();
+        troubleEventPage.selectPrimaryCI();
        troubleEventPage.setPreferences(arg0);
     }
 
@@ -285,9 +285,8 @@ public class OWF_TroubleEventPageSteps {
 
     @When("user enters estimated ready as event start time plus {int} days on trouble event page")
     public void userEntersEstimatedReadyAsEventStartTimePlusDays(int arg0) {
-
-      //  workOrderPage.clearEstimatedReady();
-        CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("dd/MM/yyyy HH:mm:ss","Europe/London",arg0);
+        //  workOrderPage.clearEstimatedReady();
+        CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("MM/dd/yyyy HH:mm:ss","Europe/London",arg0);
         workOrderPage.enterEstimatedReady(CommonUtils.estimatedReadyTime);
     }
 
@@ -822,7 +821,8 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event end time as {int} mins past")
     public void userEntersEventEndTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
+        CommonUtils.EventEndTime= CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0);
+        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user selects action dropdown as {string} on trouble event page")
@@ -832,7 +832,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event start time as {int} mins past")
     public void userEntersEventStartTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user should see confirmation message for impact clear and clicks ok")
@@ -1136,14 +1136,20 @@ public class OWF_TroubleEventPageSteps {
 
     @Then("user clicks on save button and closes warning messages")
     public void userClicksOnSaveButtonAndClosesWarningMessages() {
-        troubleEventPage.clickSave();
-        troubleEventPage.switchToFrameByIndex(2);
-        troubleEventPage.clickElementByContainsTextAndTagName("a", "OK");
-        troubleEventPage.switchToDefault();
-        troubleEventPage.switchToFrameByIndex(2);
-        troubleEventPage.wait(3000);
-        troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
-        troubleEventPage.switchToDefault();
+        try{
+            troubleEventPage.clickSave();
+            troubleEventPage.switchToFrameByIndex(2);
+            troubleEventPage.clickElementByContainsTextAndTagName("a", "OK");
+            troubleEventPage.switchToDefault();
+            troubleEventPage.switchToFrameByIndex(2);
+            troubleEventPage.wait(3000);
+            troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
+            troubleEventPage.switchToDefault();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     @And("user selects attachment visibility as external")
@@ -1261,6 +1267,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user right clicks on CI {string} and update impact from as past time")
     public void userRightClicksOnCIAndUpdateImpactFromAsPastTime(String arg0) {
+        troubleEventPage.clickDiagnosis();
        troubleEventPage.impactFromUpdateAsPastTime(arg0);
     }
 
@@ -1288,9 +1295,15 @@ public class OWF_TroubleEventPageSteps {
     public void userClicksOnSaveButtonAndClicksClosesConfirmation() {
         troubleEventPage.clickSaveButton();
         troubleEventPage.switchToFrameByIndex(2);
-        troubleEventPage.wait(3000);
-        troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
-        troubleEventPage.switchToDefault();
+        troubleEventPage.wait(5000);
+        try{
+            troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
+            troubleEventPage.switchToDefault();
+        }
+        catch(Exception e){
+
+        }
+
     }
 
     @And("user validates closure info as {string}")
@@ -1418,7 +1431,17 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters auto close date as {int} mins past")
     public void userEntersAutoCloseDateAsIntMinsPast(int arg0) {
-        troubleEventPage.enterAutoCloseDate(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterAutoCloseDate(CommonUtils.getDateTime("MM-dd-YYYY HH:mm:ss", "Europe/London", arg0));
+    }
+
+    @Then("user validates hierarchic escalation level is read only")
+    public void userValidatesHierarchicEscalationLevelIsReadOnly() {
+        Assert.assertTrue(troubleEventPage.verifyHierarchicEscalationLevelIsReadOnly());
+    }
+
+    @And("user validates hierarchic escalation level isnt read only")
+    public void userValidatesHierarchicEscalationLevelIsntReadOnly() {
+        Assert.assertFalse(troubleEventPage.verifyHierarchicEscalationLevelIsReadOnly());
     }
 
     @And("user validates child WO ticket details are same as parent OP ticket")
@@ -1453,12 +1476,218 @@ public class OWF_TroubleEventPageSteps {
 
     @When("user uncheck include children ticket")
     public void userUncheckIncludeChildrenTicket() {
-     troubleEventPage.clickTimelineFilterCheckBox();
+     troubleEventPage.clickIncludeChildrenCheckBox();
     }
 
     @And("user should see {string} as {string} for linked ticket")
     public void userShouldSeeAsForLinkedTicket(String columnName, String expectedCI) {
         Assert.assertEquals(expectedCI, troubleEventPage.getPrimaryCIofLinkedTicket(columnName, 1));
+    }
+
+    @When("user clicks on include children ticket")
+    public void userClicksOnIncludeChildrenTicket() {
+        troubleEventPage.clickIncludeChildrenCheckBox();
+    }
+
+    @And("user sets the preferences under the timeline as {string}")
+    public void userSetsThePreferencesUnderTheTimelineAs(String preferences) {
+      troubleEventPage.selectPreferences_timeline(preferences);
+    }
+
+    @And("user double clicks on timeline to open ticket")
+    public void userDoubleClicksOnTimelineToOpenTicket() {
+        troubleEventPage.doubleClickOnTimelineTicket();
+    }
+
+    @Then("child ticket should be opened")
+    public void childTicketShouldBeOpened() {
+        Assert.assertEquals(CommonUtils.opTicket, troubleEventPage.getTroubleTicket());
+    }
+
+
+
+    @And("user clicks ticket matching refresh button")
+    public void userClicksTicketMatchingRefreshButton() {
+        troubleEventPage.clickTicketMatchingRefreshButton();
+    }
+
+    @When("user clicks on ticket matching incident checkbox")
+    public void userClicksOnTicketMatchingIncidentCheckbox() {
+        troubleEventPage.clickTicketMatchingIncidentCheckbox();
+    }
+
+    @And("user clicks on ticket matching work order checkbox")
+    public void userClicksOnTicketMatchingWorkOrderCheckbox() {
+        troubleEventPage.clickTicketMatchingWorkOrderCheckbox();
+    }
+
+    @When("user clicks on ticket matching change checkbox")
+    public void userClicksOnTicketMatchingChangeCheckbox() {
+        troubleEventPage.clickTicketMatchingChangeCheckbox();
+    }
+
+    @And("user clicks on ticket matching cleared checkbox")
+    public void userClicksOnTicketMatchingClearedCheckbox() {
+        troubleEventPage.clickTicketMatchingClearedCheckbox();
+    }
+
+    @When("user clicks on ticket matching open checkbox")
+    public void userClicksOnTicketMatchingOpenCheckbox() {
+        troubleEventPage.clickTicketMatchingOpenCheckbox();
+    }
+
+    @And("user enters closed within days as {string}")
+    public void userEntersClosedWithinDaysAs(String arg0) {
+        troubleEventPage.enterTicketMatchingClosedWithinDays(arg0);
+    }
+
+    @And("user clicks on ticket matching title checkbox")
+    public void userClicksOnTicketMatchingTitleCheckbox() {
+        troubleEventPage.clickTicketMatchingTitleCheckbox();
+    }
+
+    @When("user selects match by dropdown as {string}")
+    public void userSelectsMatchByDropdownAs(String arg0) {
+        troubleEventPage.selectTicketMatchBy(arg0);
+    }
+
+    @Then("{string} tickets should only be displayed under ticket matching")
+    public void ticketsShouldOnlyBeDisplayedUnderTicketMatching(String columnValue) {
+        Assert.assertTrue(troubleEventPage.verifyTicketsUnderTicketMatching("Ticket ID",columnValue, true));
+    }
+
+    @Then("{string} tickets should be displayed under ticket matching")
+    public void ticketsShouldBeDisplayedUnderTicketMatching(String columnValue) {
+        Assert.assertTrue(troubleEventPage.verifyTicketsUnderTicketMatching("Status",columnValue, false));
+    }
+
+    @Then("user validates tickets with the same title {string} are displayed")
+    public void userValidatesTicketsWithTheSameTitleAreDisplayed(String columnValue) {
+        Assert.assertTrue(troubleEventPage.verifyTicketsUnderTicketMatching("Title",columnValue, false));
+    }
+
+    @Then("user validates tickets with same CI {string} are displayed")
+    public void userValidatesTicketsWithSameCIAreDisplayed(String columnValue) {
+        Assert.assertTrue(troubleEventPage.verifyTicketsUnderTicketMatching("Primary CI",columnValue, false));
+    }
+
+    @And("user gets OLA target date")
+    public void userGetsOLATargetDate() {
+     CommonUtils.OLA_TargetTime= troubleEventPage.getOlaTargetTime();
+    }
+
+    @And("user selects quick create priority as {string}")
+    public void userSelectsQuickCreatePriorityAs(String arg0) {
+        troubleEventPage.selectPriority_quickCreate(arg0);
+    }
+
+    @And("user enters quick create work order title as {string}")
+    public void userEntersQuickCreateWorkOrderTitleAs(String title) {
+        troubleEventPage.enterTitle_QuickCreate(title);
+    }
+
+    @And("user selects quick create type as {string}")
+    public void userSelectsQuickCreateTypeAs(String type) {
+    troubleEventPage.selectType_quickCreate(type);
+    }
+
+    @And("user enters quick create work order description as {string}")
+    public void userEntersQuickCreateWorkOrderDescriptionAs(String description) {
+        troubleEventPage.enterDescription_QuickCreate(description);
+    }
+
+    @Then("user clicks on work order quick create button")
+    public void userClicksOnWorkOrderQuickCreateButton() {
+        troubleEventPage.clickCreate_WO_quickCreate();
+    }
+
+    @Then("{string} tickets should be displayed under SID console show history tickets")
+    public void ticketsShouldBeDisplayedUnderSIDConsoleShowHistoryTickets(String columnValue) {
+        Assert.assertTrue(troubleEventPage.verifyTicketsUnderSID_Console_ShowHistory("Ticket Status",columnValue, false));
+    }
+
+    @And("user validates CI {string} D as {string}")
+    public void userValidatesCIDAs(String arg0, String cellValue) {
+        Assert.assertEquals(cellValue, troubleEventPage.verifyColumnStatus("D", 1));
+    }
+
+    @And("user validates CI {string} H as {string}")
+    public void userValidatesCIHAs(String arg0, String cellValue) {
+        Assert.assertEquals(cellValue, troubleEventPage.verifyColumnStatus("H", 1));
+    }
+
+    @And("user validates CI {string} M as {string}")
+    public void userValidatesCIMAs(String arg0, String cellValue) {
+        Assert.assertEquals(cellValue, troubleEventPage.verifyColumnStatus("M", 1));
+    }
+
+    @Then("user validates CI {string} S as {string}")
+    public void userValidatesCISAs(String arg0, String cellValue) {
+        Assert.assertEquals(cellValue, troubleEventPage.verifyColumnStatus("S", 1));
+    }
+
+    @Then("user should see {int} work order listed under work order tab")
+    public void userShouldSeeWorkOrderListedUnderWorkOrderTab(int numberOfWorkOrders) {
+        Assert.assertTrue(troubleEventPage.validateWorkOrdersAvailability(numberOfWorkOrders));
+    }
+
+    @And("user right clicks on primary CI and validates options {string} are available")
+    public void userRightClicksOnPrimaryCIAndValidatesOptionsAreAvailable(String expectedValues) {
+        troubleEventPage.selectPrimaryCI();
+        Assert.assertTrue(troubleEventPage.verifyDropdownValues(expectedValues));
+    }
+
+    @And("user right clicks on secondary CI and validates options {string} are available")
+    public void userRightClicksOnSecondaryCIAndValidatesOptionsAreAvailable(String expectedValues) {
+        troubleEventPage.selectTicketAndRightClick();
+        Assert.assertTrue(troubleEventPage.verifyDropdownValues(expectedValues));
+    }
+
+    @And("user clicks on ticket matching problem checkbox")
+    public void userClicksOnTicketMatchingProblemCheckbox() {
+        troubleEventPage.clickTicketMatchingProblemsCheckbox();
+    }
+
+    @And("user clicks on ticket matching known error checkbox")
+    public void userClicksOnTicketMatchingKnownErrorCheckbox() {
+        troubleEventPage.clickTicketMatchingKnownErrorCheckbox();
+    }
+
+    @And("user clicks on ticket refresh button and clicks enter")
+    public void userClicksOnTicketRefreshButtonAndClicksEnter() {
+        troubleEventPage.clickRefresh_ticketFresh();
+        troubleEventPage.clickEnterButton();
+    }
+
+    @Then("user right clicks on primary CI and validates options {string} are disabled")
+    public void userRightClicksOnPrimaryCIAndValidatesOptionsAreDisabled(String expectedValues) {
+        troubleEventPage.selectPrimaryCI();
+        Assert.assertTrue(troubleEventPage.verifyDisabledDropdownValues(expectedValues));
+    }
+
+    @Then("user right clicks on secondary CI and validates options {string} are disabled")
+    public void userRightClicksOnSecondaryCIAndValidatesOptionsAreDisabled(String expectedValues) {
+        troubleEventPage.selectSecondaryCIAndRightClick();
+        Assert.assertTrue(troubleEventPage.verifyDisabledDropdownValues(expectedValues));
+    }
+
+    @And("user right clicks on primary CI and clears impact")
+    public void userRightClicksOnPrimaryCIAndClearsImpact() {
+        troubleEventPage.clickDiagnosis();
+        troubleEventPage.rightClickOnPrimaryCI();
+        troubleEventPage.doImpactClear();
+    }
+
+    @And("user right click on plaza primary CI and selects {string}")
+    public void userRightClickOnPlazaPrimaryCIAndSelects(String arg0) {
+        troubleEventPage.rightClickOnPrimaryCI();
+        troubleEventPage.setPreferences(arg0);
+    }
+    @And("user right clicks on primary CI and clears impact for all CIs")
+    public void userRightClicksOnPrimaryCIAndClearsImpactForAllCIs() {
+        troubleEventPage.clickDiagnosis();
+        troubleEventPage.rightClickOnPrimaryCI();
+        troubleEventPage.doImpactClear_all();
     }
 }
 

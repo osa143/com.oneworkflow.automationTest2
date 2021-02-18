@@ -1,11 +1,11 @@
-@Network_Security_Routing_New_Switching @PLAZA
-  Feature: Network Security Routing Switching plaza form test
+@Network_Security_Routing_New_Switching @PLAZA @Network_Security
+  Feature: Network Security New Switch
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-     # Then user clicks on plaza portal
+      Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on firewall & network under IT Infrastructure dropdown
@@ -37,10 +37,10 @@
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
       Then user should see plaza ticket
+      When user clicks on Ack button
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Network Routing/Switching"
       And user validates request type as "Service Request | PLAZA"
-     #Not sure about description validation outside of a table
       And user validates network security new switch description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
@@ -57,12 +57,8 @@
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      And user waits 20 secs
       And user clicks on "Diagnosis" tab
-      And user waits 3 secs
       When user right clicks on CI "apoteket-fnt-137263" and clears impact
-     # And user should see confirmation message and clicks on yes button
-      When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
       And user clicks on "Schedule" tab
@@ -73,5 +69,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 5 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed

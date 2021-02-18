@@ -1,4 +1,4 @@
-@E2E_Tests_Core @E2E
+@E2E_Tests_Core @E2E @HelixRegression
   #for sweden there is an issue for clearing impact, raised defect and closed due to developer was not able to reproduce
 
   Feature: E2E Scenarios
@@ -35,7 +35,8 @@
       And user enters description as "<Description>"
       Then user clicks on save button
       And ticket should be created and status should be assigned
-      Then user validates availability of tabs "Timeline:Diagnosis:Interested Parties:Notifications:Linked Items:Work Orders:Service Level:Alarms:Recurring Incidents:Service Info"
+      And user gets trouble ticket value
+      Then user validates availability of tabs "Timeline:Diagnosis:Interested Parties:Notifications:Linked Items:Work Orders:Service Level:Alarms:Ticket Matching:Service Info"
       When user clicks on Diagnosis tab
       And user clicks on CI search button
       Then user switches to frame
@@ -110,10 +111,10 @@
       Then user validates ticket status as "Closed"
 
       Examples:
-      |BU_Name1 |BU_Name2 |Location|Location Name         |Title                        |Description                  |CI Name1          |CI Name2        |CI Name         |Validate BU |
-#     |Sweden   |Finland  |SE_     |SE_Site_126608         |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_FREMME2  |LT_SGSN_VLMMME02|SE_SGSN_FREMME2  |Lithuania   |
-#     |Norway   |Finland  |NO_     |NO_Site_VSF087        |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_EPG_OSL900EPG2|DK_EPG_AMBEPG1  |NO_EPG_OSL900EPG2|Denmark     |
-#     |Lithuania|Denmark  |LT_     |LT_Site_888           |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E| LT_SGSN_VLMMME02|SE_SGSN_FREMME2 |LT_SGSN_VLMMME02 |Sweden      |
-#     |Finland  |Denmark  |FI_     |FI_Site_riutula keskus|Test case MT004 Finland E2E  |Test case MT004 Finland E2E  | FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1|FI_SGSN_HKIMME02 |Estonia     |
-#     |Estonia  |Sweden   |EE_     |EE_Site_KARDL          |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_EPG_KOORTEPG1 |FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1 |Finland     |
-     |Denmark  |Sweden   |DK_     |DK_Site_S0001         |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_EPG_AMBEPG1   |EE_EPG_KOORTEPG1|DK_EPG_AMBEPG1   |Estonia     |
+      |BU_Name1 |BU_Name2 |Location|Location Name   |Title                        |Description                  |CI Name1          |CI Name2        |CI Name         |Validate BU |
+     |Sweden   |Finland  |SE_     |SE_Site_SE M1   |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_FREMME2  |LT_SGSN_VLMMME02|SE_SGSN_FREMME2  |Lithuania   |
+#     |Norway   |Finland  |NO_     |NO_Site_VSF087  |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_EPG_AKH902EPG3|DK_EPG_AMBEPG1  |NO_EPG_AKH902EPG3|Denmark     |
+#     |Lithuania|Denmark  |LT_     |LT_Site_888     |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E| LT_UMTSCell_0046|SE_SGSN_FREMME2 |LT_UMTSCell_0046 |Sweden      |
+#     |Finland  |Denmark  |FI_     |FI_Site_sampi    |Test case MT004 Finland E2E  |Test case MT004 Finland E2E  | FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1|FI_SGSN_HKIMME02 |Estonia     |
+#     |Estonia  |Sweden   |EE_     |EE_Site_KARDL   |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_EPG_KOORTEPG1 |FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1 |Finland     |
+#     |Denmark  |Sweden   |DK_     |DK_Site_S0001   |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_EPG_AMBEPG1   |EE_EPG_KOORTEPG1|DK_EPG_AMBEPG1   |Estonia     |

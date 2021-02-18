@@ -20,7 +20,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String btn_LINK = "WIN_5_777506009";
     private static final String btnACCEPT_ID = "WIN_0_730011058";
     private static final String txtLOCATION_ID = "arid_WIN_0_700009015";
-    private static final String btnCREATE_linked_items = "WIN_4_777506020";
+    private static final String btnCREATE_linked_items = "//*[@arid='777506020']";
     private static final String btn_CREATE_linked_items= "WIN_5_777506020";
     private static final String chkbxTO_SELECT_CI = "//*[@id='T700009024']/tbody/tr[2]";
     private static final String rbtn_CLEARED_ID = "WIN_4_rc0id800040060";
@@ -35,7 +35,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String txt_IMPACT_FROM= "arid_WIN_0_700009083";
     private static final String btn_ADD_BULK_IMPORT= "WIN_0_800038046";
     private static final String fld_BULK_CI_LOADING= "WIN_0_536870927";
-    private static final String rbtn_MANUAL_INPUT= "WIN_0_rc1id800038034";
+    private static final String rbtn_MANUAL_INPUT= "//label[contains(text(),'Manual Input')]";
     private static final String txt_MANUAL_CI_SEARCH_BOX= "arid_WIN_0_800038045";
     private static final String btn_SAVE_BULK_CI= "WIN_0_700025244";
     private static final String btn_SHOW_BULK_IMPORT= "WIN_0_800038047";
@@ -67,14 +67,156 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String txt_WITH_WARNINGS= "arid_WIN_0_800038069";
     private static final String PRIMARY_CI= "//*[@id='T700009087']/tbody/tr[2]/td[2]/nobr/span";
     private static final String bulkCILoading_DIV_ID = "WIN_0_800038059";
-    private static final String rbtn_IGNORE_HANDLING_DUPLICATE_CIS= "WIN_0_RCGroup800038013";
+    private static final String rbtn_IGNORE_HANDLING_DUPLICATE_CIS= "//label[contains(text(),'Ignore Duplicate CIs')]";
     private static final String txt_IMPACT_TO_PLUS_BULK_UPDATE= "arid_WIN_0_999000299";
     private static final String btn_RADIOOPEN_ID = "WIN_4_rc0id800040059";
     private static final String btn_RADIOCLOSED_ID = "WIN_4_rc0id800040061";
     private static final String btn_RADIOCleared_ID = "WIN_4_rc0id800040060";
     private static final String txt_Impact_From_CI_Search= "arid_WIN_0_700009083";
     private static final String btn_Refresh= "//*[@id='WIN_0_700009087']/div[1]/table/tbody/tr/td[2]/a[2]";
+    private static final String ddTARGET_APPLICATION_FIRST = "Target Application";
+    private static final String ddTARGET_APPLICATION_SECOND = "Fld-SourceRelationshipType";
+    private static final String btn_MANAGE_TEMPLATE_COG = "WIN_0_800040298";
+    private static final String btn_CREATE_MY_TEMPLATE = "WIN_0_800040415";
+    private static final String btn_CREATE_NEW_SECTION = "WIN_0_800040231";
+    private static final String txt_SECTION_LABEL = "arid_WIN_0_800040307";
+    private static final String btn_SECTION_LABEL_SAVE = "WIN_0_800040364";
+    private static final String btn_EDIT_SECTION = "WIN_0_800040248";
+    private static final String btn_DELETE_SECTION = "WIN_0_800040243";
+    private static final String btn_DELETE_SECTION_2 = "WIN_0_800040310";
+    private static final String btn_ARROW_UP_SECTION = "WIN_0_800040229";
+    private static final String btn_ARROW_DOWN_SECTION = "WIN_0_800040230";
+    private static final String btn_ADD_ATTRIBUTE = "WIN_0_800040243";
+    private static final String dd_CLASS = "arid_WIN_0_800040369";
+    private static final String txt_ATTRIBUTE_PLUS = "arid_WIN_0_800040370";
+    private static final String btn_APPLY_FILTER = "WIN_0_800040371";
+    private static final String btn_CLEAR_FILTER = "WIN_0_800040372";
+    private static final String btn_SAVE_FIELD_TO_SECTION = "WIN_0_800040356";
+    private static final String btn_EDIT_ATTRIBUTE = "WIN_0_800040249";
+    private static final String btn_EDIT_ATTRIBUTE_SAVE = "WIN_0_800040247";
+    private static final String chkbx_SHOW_LABEL = "//*[@id='WIN_0_rc0id800040317']";
+    private static final String btn_DELETE_ATTRIBUTE = "WIN_0_800040244";
+    private static final String btn_DELETE_ATTRIBUTE2 = "WIN_0_800040322";
+    private static final String btn_ARROW_UP_ATTRIBUTE = "WIN_0_800040241";
+    private static final String btn_ARROW_DOWN_ATTRIBUTE = "WIN_0_800040242";
+    private static final String txt_CI_DETAILS_TEMPLATE_WINDOW = "WIN_0_800040423";
+    private static final String txt_TEMPLATE_TEXT = "//*[@id='T800040222']/tbody/tr[6]/td[1]/nobr/span";
+    private static final String btn_CLOSE_CI_DETAILS_TEMPLATE = "WIN_0_800040431";
+    private static final String btn_CLOSE_CI_DETAILS = "WIN_0_999000415";
+    private static final String btn_USE_MY_TEMPLATE= "WIN_0_800040417";
 
+    public void clickOnTestSection(){
+        clickElement(By.xpath(txt_TEMPLATE_TEXT));
+    }
+    public boolean verifyUseMyButtonTemplateIsReadOnly(){
+        return checkIfControlIsReadonly(btn_USE_MY_TEMPLATE);
+    }
+
+    public void clickCloseCIDetailsTemplate(){
+        clickElementById(btn_CLOSE_CI_DETAILS_TEMPLATE);
+        wait(1000);
+        clickElementById(btn_CLOSE_CI_DETAILS);
+    }
+
+    public String getSectionLabel(){
+        return getTextByElement(By.xpath(txt_TEMPLATE_TEXT));
+    }
+
+    public boolean isCIDetailsTemplateWindowDisplayed(){
+        return verifyElementIsDisplayed(By.id(txt_CI_DETAILS_TEMPLATE_WINDOW));
+    }
+
+    public void clickArrowDownAttribute(){
+        clickElementById(btn_ARROW_DOWN_ATTRIBUTE);
+    }
+
+   public void clickArrowUpAttribute(){
+       clickElementById(btn_ARROW_UP_ATTRIBUTE);
+   }
+
+    public void clickDeleteAttributeSecondButton(){
+       clickElementById(btn_DELETE_ATTRIBUTE2);
+   }
+
+    public void clickDeleteAttributeButton(){
+       clickElementById(btn_DELETE_ATTRIBUTE);
+   }
+
+    public void clickShowLabelCheckbox(){
+        clickElement(By.xpath(chkbx_SHOW_LABEL));
+    }
+
+    public void clickEditAttributeSaveButton(){
+        clickElementById(btn_EDIT_ATTRIBUTE_SAVE);
+    }
+
+    public void clickEditAttribute(){
+        clickElementById(btn_EDIT_ATTRIBUTE);
+    }
+
+    public void clickSaveFieldToSectionButton(){
+        clickElementById(btn_SAVE_FIELD_TO_SECTION);
+    }
+
+    public void clickClearFilterButton(){
+        clickElementById(btn_CLEAR_FILTER);
+    }
+
+    public void clickApplyFilterButton(){
+        clickElementById(btn_APPLY_FILTER);
+    }
+
+    public void enterAttributePlus(String value){
+        enterTextByElement(By.id(txt_ATTRIBUTE_PLUS), value);
+    }
+
+    public void selectClass(String value){
+        selectDropDownNameAndValue(dd_CLASS, value, false);
+    }
+
+    public void clickAddAttributeButton(){
+        clickElementById(btn_ADD_ATTRIBUTE);
+    }
+
+    public void clickArrowDownSectionButton(){
+        clickElementById(btn_ARROW_DOWN_SECTION);
+    }
+
+    public void clickArrowUpSectionButton(){
+        clickElementById(btn_ARROW_UP_SECTION);
+    }
+
+    public void clickSecondDeleteSectionButton(){
+        clickElementById(btn_DELETE_SECTION_2);
+    }
+
+    public void clickDeleteSection(){
+        clickElementById(btn_DELETE_SECTION);
+    }
+
+    public void clickEditSection(){
+        clickElementById(btn_EDIT_SECTION);
+    }
+
+    public void clickCreateSectionSaveButton(){
+        clickElementById(btn_SECTION_LABEL_SAVE);
+    }
+
+    public void enterSectionLabelName(String SectionName){
+        enterTextByElement(By.id(txt_SECTION_LABEL), SectionName);
+    }
+
+    public void clickCreateNewSection(){
+        clickElementById(btn_CREATE_NEW_SECTION);
+    }
+
+    public void clickCreateMyTemplate(){
+        clickElementById(btn_CREATE_MY_TEMPLATE);
+    }
+
+    public void clickManageTemplateCog(){
+        clickElementById(btn_MANAGE_TEMPLATE_COG);
+    }
 
     public void clickRefresh_Diagnosis(){
         wait(1000);
@@ -150,6 +292,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         clickRelateCiButton();
         clickYesOnConfirmationMessage();
        // closeWarningMessage();
+        wait(3000);
         clickCloseButton();
         switchToDefault();
         wait(3000);
@@ -159,6 +302,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     public void addCI_ToChangeTicket(String CIName, String CI_ImpactLevel){
         clickDiagnosis();
         clickCiSearch();
+        wait(1000);
         int size = driver.findElements(By.tagName("iframe")).size();
         switchToFrameByIndex(size-1);
         clickClearButton();
@@ -182,7 +326,8 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     }
 
     public void clickIgnoreHandlingDuplicateCis(){
-        clickElement(By.name(rbtn_IGNORE_HANDLING_DUPLICATE_CIS));
+        wait(500);
+        findElement(By.xpath(rbtn_IGNORE_HANDLING_DUPLICATE_CIS)).click();
     }
 
     public String getPrimaryCI(){
@@ -337,6 +482,8 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     }
 
     public void clickOk_popUp(){
+        int size = driver.findElements(By.tagName("iframe")).size();
+//        switchToFrameByIndex(size-1);
         clickElement(By.xpath("//*[@id='PopupMsgFooter']/a"));
         wait(2000);
     }
@@ -382,7 +529,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
 
 
     public void clickManualInput(){
-        clickElement(By.id(rbtn_MANUAL_INPUT));
+        clickElement(By.xpath(rbtn_MANUAL_INPUT));
     }
 
 
@@ -395,6 +542,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     }
 
     public static void enterImpactFrom(){
+        driver.findElement(By.id(txt_IMPACT_FROM)).clear();
         driver.findElement(By.id(txt_IMPACT_FROM)).sendKeys(Keys.ENTER);
     }
     public void enterImpactFrom(String text){
@@ -434,7 +582,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     }
 
     public void clickCreate_linkedItems(){
-        findElement(By.id(btnCREATE_linked_items)).click();
+        findElement(By.xpath(btnCREATE_linked_items)).click();
     }
     public void clickCreate(){
         findElement(By.id(btn_CREATE_linked_items)).click();
@@ -459,8 +607,6 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         clickElement(By.id(btn_LINK));
     }
 
-    private static final String ddTARGET_APPLICATION_FIRST = "Target Application";
-    private static final String ddTARGET_APPLICATION_SECOND = "Fld-SourceRelationshipType";
 
     public void selectTargetApplicationFirst(String value){
         selectDropDownNameAndValue(ddTARGET_APPLICATION_FIRST,value, false);
@@ -478,8 +624,12 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         driver.findElement(By.id(ddSEARCH_FOR_ID)).click();
     }
 
+
     public void selectAllCiDdValue() {
         selectDropDownValue(ddValueALL_CIS);
+    }
+    public void selectSearchForValue(String value) {
+        selectDropDownValue(value);
     }
 
     public void clickCiSearchButton() {
@@ -499,14 +649,14 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     {
         try {
             clickElementById("ardivpcl");
-            wait(1000);
+            wait(500);
             driver.switchTo().frame(1);
 
             clickElementByContainsTextAndTagName("a", "OK");
-            wait(1000);
+            wait(500);
             driver.switchTo().defaultContent();
             driver.switchTo().frame(2);
-            wait(1000);
+            wait(500);
         }
         catch (Exception ex)
         {
@@ -514,18 +664,18 @@ public class OWF_CiSearchPage extends BaseRecordPage {
             driver.switchTo().parentFrame();
             driver.switchTo().frame(1);
             clickElementByContainsTextAndTagName("a", "OK");
-            wait(1000);
+            wait(500);
             driver.switchTo().defaultContent();
             driver.switchTo().frame(2);
-            wait(1000);
+            wait(500);
         }
     }
 
     public void clickYesOnConfirmationMessage(){
         driver.switchTo().frame(1);
-        wait(1000);
+        wait(700);
         clickElement(By.id("ardivpcl"));
-        wait(1000);
+        wait(700);
         driver.switchTo().defaultContent();
         driver.switchTo().frame(2);
     }

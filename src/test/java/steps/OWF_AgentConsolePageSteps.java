@@ -7,6 +7,7 @@ import cucumber.api.java.en.When;
 import org.testng.Assert;
 import pageObjects.OWF_AgentConsolePage;
 import utils.CommonUtils;
+import utils.Ticket;
 
 import static utils.CommonUtils.*;
 
@@ -196,6 +197,7 @@ public class OWF_AgentConsolePageSteps {
     @When("user selects search menu as {string}")
     public void userSelectsSearchMenuAs(String arg0) {
         agentConsolePage.selectSearchMenu(arg0);
+        agentConsolePage.wait(2000);
     }
 
     @And("user clicks on {string} tab")
@@ -349,7 +351,13 @@ public class OWF_AgentConsolePageSteps {
 
     @And("user clicks ok on alert")
     public void userClicksOkOnAlert() {
-        agentConsolePage.acceptAlert();
+        try {
+            agentConsolePage.acceptAlert();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     @When("user clicks on create known error")
@@ -777,6 +785,198 @@ public class OWF_AgentConsolePageSteps {
     public void userValidatesArePresentUnderColumn(String colValues, String colName) {
         Assert.assertTrue(agentConsolePage.verifyUserProfiles(colName, colValues, false));
         agentConsolePage.clickCloseUserInformation();
+    }
+
+    @And("user enters ticket previously created and searches in agent console and highlights")
+    public void userEntersTicketPreviouslyCreatedAndSearchesInAgentConsole() {
+        agentConsolePage.enterTicketID(CommonUtils.opTicket);
+        agentConsolePage.clickOnTableRow1_agentConsole();
+    }
+
+    @When("user selects ticket and clicks on unlink button")
+    public void userSelectsTicketAndClicksOnUnlinkButton() {
+        agentConsolePage.selectTicketAndUnlink();
+    }
+
+    @And("user validates ticket has been unlinked")
+    public void userValidatesTicketHasBeenUnlinked() {
+        agentConsolePage.verifyTicketIsUnlinked();
+    }
+
+    @And("user clicks ok button on linked items popup")
+    public void userClicksOkButtonOnLinkedItemsPopup() {
+        agentConsolePage.clickOkButton();
+    }
+
+    @And("{string} column within agent console should be displayed")
+    public void columnWithinAgentConsoleShouldBeDisplayed(String column) {
+        int columnIndex = agentConsolePage.getColumnIndexByHeaderName(column);
+        Assert.assertNotEquals(columnIndex, -1, 0, column + "within agent console is not displayed");
+    }
+
+    @And("{string} field should be available for all OP tickets")
+    public void fieldShouldBeAvailableForAllOPTickets(String arg0) {
+        Assert.assertTrue(agentConsolePage.verifyColumnHasData(arg0));
+    }
+
+    @And("user validates {string} column is filled with correct information from ticket as {string}")
+    public void userValidatesColumnIsFilledWithCorrectInformationFromTicketAs(String column, String columnValue) {
+        Assert.assertEquals(agentConsolePage.getAgentConsoleTableCellData(column, 1), columnValue);
+
+    }
+
+    @Then("user should see CAB required yes tickets")
+    public void userShouldSeeCABRequiredYesTickets() {
+        Assert.assertEquals(changeTicket, agentConsolePage.getAgentConsoleTableCellData("ID", 1));
+    }
+
+    @Then("user should see CAB required no tickets")
+    public void userShouldSeeCABRequiredNoTickets() {
+       Assert.assertTrue(agentConsolePage.verifyCabRequiredNoTickets());
+    }
+
+    @Then("user validates OP next due date is same as estimated ready")
+    public void userValidatesOPNextDueDateIsSameAsEstimatedReady() {
+        Assert.assertEquals(agentConsolePage.getAgentConsoleTableCellData("OP Next Due Date", 1), CommonUtils.estimatedReadyTime);
+    }
+
+    @Then("user validates OP target date is same as OLA target date")
+    public void userValidatesOPTargetDateIsSameAsOLATargetDate() {
+        Assert.assertEquals(agentConsolePage.getAgentConsoleTableCellData("OP Target Date", 1), CommonUtils.OLA_TargetTime);
+    }
+
+    @When("user sets the preferences under the agent console as {string}")
+    public void userSetsThePreferencesUnderTheAgentConsoleAs(String preferences) {
+        agentConsolePage.clickPreferences();
+        agentConsolePage.setPreferences(preferences);
+    }
+
+
+    @And("user enters quick search CI as {string}")
+    public void userEntersQuickSearchCIAs(String CI_name) {
+        agentConsolePage.enter_CI_QuickSearch(CI_name);
+    }
+
+    @Then("{string} tickets should be displayed for quick search")
+    public void ticketsShouldBeDisplayedForQuickSearch(String colValue) {
+        Assert.assertTrue(agentConsolePage.verifyTicketsFilteredToSearch("Status", colValue, false));
+    }
+
+
+    @And("user validates ticket previously created is present under quick search results")
+    public void userValidatesTicketPreviouslyCreatedIsPresentUnderQuickSearchResults() {
+        agentConsolePage.clickOnCreateDate_ToSortTheTickets();
+        agentConsolePage.clickOnCreateDate_ToSortTheTickets();
+        agentConsolePage.wait(1000);
+        Assert.assertEquals(agentConsolePage.getQuickSearchResults_TableData("ID", 1), CommonUtils.opTicket);
+    }
+
+    @And("user double clicks on ticket under quick search results to open")
+    public void userDoubleClicksOnTicketUnderQuickSearchResultsToOpen() {
+        agentConsolePage.doubleClickOnTicket_QuickSearchResults();
+    }
+
+    @And("user should see {string} under console menu")
+    public void userShouldSeeUnderConsoleMenu(String menuItems) {
+      Assert.assertTrue(agentConsolePage.verifyMenuItems(menuItems));
+        agentConsolePage.clickEscButton();
+    }
+
+    @And("user clicks on {string} menu")
+    public void userClicksOnMenu(String menu) {
+        agentConsolePage.selectMainMenu(menu);
+    }
+
+    @And("user should't see {string} under console menu")
+    public void userShouldTSeeUnderConsoleMenu(String menuItems) {
+
+        Assert.assertFalse(agentConsolePage.verifyMenuItems2(menuItems));
+        agentConsolePage.clickEscButton();
+    }
+
+    @Then("template console is opened")
+    public void templateConsoleIsOpened() {
+        Assert.assertEquals(agentConsolePage.getPageTitle(), "OS3 Change Template Console (New)");
+    }
+
+    @When("user selects {string} dropdown as {string}")
+    public void userSelectsDropdownAs(String dropdownName, String dropdownValue) {
+        agentConsolePage.selectMenuAndItem(dropdownName, dropdownValue);
+    }
+
+    @And("user clicks on show templates")
+    public void userClicksOnShowTemplates() {
+        agentConsolePage.clickShowTemplate();
+    }
+
+    @And("user enters add person first name as {string}")
+    public void userEntersAddPersonFirstNameAs(String firstName) {
+        agentConsolePage.enterFirstName(firstName);
+    }
+
+    @And("user enters add person last name as {string}")
+    public void userEntersAddPersonLastNameAs(String lastName) {
+        agentConsolePage.enterLastName(lastName);
+    }
+
+    @And("user enters add person email address as {string}")
+    public void userEntersAddPersonEmailAddressAs(String email) {
+        agentConsolePage.enterEmailAddress(email);
+    }
+
+    @And("user clicks add button for add person")
+    public void userClicksAddButtonForAddPerson() {
+        agentConsolePage.clickAdd_addPerson();
+    }
+
+    @Then("contact {string} should be added under {string}")
+    public void contactShouldBeAddedUnder(String expectedEmail, String columnName) {
+        Assert.assertEquals(agentConsolePage.getContacts(columnName, 1), expectedEmail);;
+    }
+
+    @And("user clicks cancel button on new notification window")
+    public void userClicksCancelButtonOnNewNotificationWindow() {
+        agentConsolePage.clickAddCancel();
+    }
+
+    @When("user clicks new alert button")
+    public void userClicksNewAlertButton() {
+        agentConsolePage.clickNewAlertButton();
+    }
+
+    @When("user enters qualification name as {string}")
+    public void userEntersQualificationNameAs(String arg0) {
+        agentConsolePage.enterQualificationName(arg0);
+    }
+
+    @And("user selects schema as {string}")
+    public void userSelectsSchemaAs(String arg0) {
+        agentConsolePage.selectSchemaDropdown(arg0);
+    }
+
+    @When("user enters qualification as {string}")
+    public void userEntersQualificationAs(String arg0) {
+        agentConsolePage.enterQualification(arg0);
+    }
+
+    @And("user clicks apply qualification button")
+    public void userClicksApplyQualificationButton() {
+        agentConsolePage.clickApplyQualification();
+    }
+
+    @When("user enters alarm message as {string}")
+    public void userEntersAlarmMessageAs(String arg0) {
+        agentConsolePage.enterAlarmMessage(arg0);
+    }
+
+    @Then("user validates orange support icon is displayed on ticket created")
+    public void userValidatesOrangeSupportIconIsDisplayedOnTicketCreated() {
+    }
+
+
+    @When("user selects contact {string} and clicks remove selected person")
+    public void userSelectsContactAndClicksRemoveSelectedPerson(String contact) {
+        agentConsolePage.selectContactAndClicksRemoveSelectedPerson(contact);
     }
 }
 

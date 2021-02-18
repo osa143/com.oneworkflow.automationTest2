@@ -6,7 +6,7 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      #Then user clicks on plaza portal
+      Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on application under IT Infrastructure dropdown
@@ -21,7 +21,7 @@
       Then user selects choose option as "Add User"
       And user enters megadisc account name as "Test1234"
       Then user enters megadisc select group as "App_Megadisc_Admin"
-      Then user selects requested person as "Anders Englund"
+#      Then user selects requested person as "Anders Englund"
       And user enters megadisc description as "Test1 MegaDisc/Description"
       And user enters additional comments as "Test1 Megadisc/AC"
       Then user clicks on "Submit"
@@ -40,7 +40,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | MegaDisc (Account Management)"
       And user validates request type as "Service Request | PLAZA"
-#      And user validates megadisc add user description same as plaza
+      And user validates megadisc add user description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

@@ -17,30 +17,18 @@ Feature: External Normal Change E2E
     And user enters "Regression - Change Management Process" in the risk description field
     When user clicks save button
     And multiple error messages should appear with red boarder around fields
-# Need to check this as it appears in a different window not different Tab
-#      When user clicks on "Calendar" under actions
-#      And user switches to window 2
-#      When user enters "Change Record" in calendar search box
-#      And user clicks on ticket type "Change Record"
-#      Then user validates change records are shown in calendar
-#      When user clicks on a present change record
-#      #Need to check this as well
-#      And user switches to frame
-#      And user clicks on open button on calendar
-#      Then user should see change record
-#      And user closes change record window
-#      And user closes calendar window
     When user selects request type as "Normal Change"
     Then user selects title as "Mobile:IMS Core" on Change record page
     And user selects request category as "Software Installation" on change record page
     And user enters description as "TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (External Initiator)"
     And user enters reason field as "Regression"
+    And user validates change builder+ is mandatory
     And user selects priority as "Minor"
     And user enters "Privacy Data: Just Testing" in the change builder field
-    #Then user validates "Change Builder" button is present
+    Then user validates change builder button is present
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-    And user enters start time as 24 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss a" format
-    And user enters end time as 28 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss a" format
+    And user enters start time as 24 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
+    And user enters end time as 28 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
     And user enters impact duration as "45" minutes
     And user selects estimated impact dropdown as "Degradation of Service"
     And user clicks on save button
@@ -74,7 +62,7 @@ Feature: External Normal Change E2E
     When user clicks on "Interested Parties" tab
     And user enters email address as "Test123xxx@Test123xxx.com"
     And user clicks on add email button
-    Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
+    #Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
     When user clicks on Send button
     Then user validates ticket status as "Assigned"
     And user clicks on "Timeline" tab
@@ -99,7 +87,7 @@ Feature: External Normal Change E2E
     And user switches to window 2
     Then user enters ticket previously created and searches
     When user clicks on Ack button
-    Then user validates ticket status as "Analysis"
+    #Then user validates ticket status as "Analysis"
     And user validates last ack by field has data present
     And user selects assigned profile dropdown as "DC IMS Core"
     And user enters "DC IMS Core_auto" in assignee
@@ -146,7 +134,7 @@ Feature: External Normal Change E2E
     And user switches to window 2
     Then user enters ticket previously created and searches
     When user clicks on owner under sections
-    Then user selects owner as "ChangeManager1_Automation"
+    Then user selects owner as "Change Manager"
     And user clicks on save button
     When user clicks on Diagnosis tab
     And user clicks on Show CR Matching button
@@ -162,6 +150,7 @@ Feature: External Normal Change E2E
     And user clicks on save button and closes confirmation
     And user clicks on ticket refresh button
     Then user validates ticket status as "Approved"
+    And user waits 5 secs
     When user clicks on "Notifications" tab
     And user clicks on "Sent" tab
     Then user should see "Approved" email update

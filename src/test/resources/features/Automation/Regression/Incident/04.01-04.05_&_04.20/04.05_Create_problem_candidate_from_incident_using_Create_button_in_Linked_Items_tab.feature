@@ -1,4 +1,4 @@
-@04.05   @Incident1 @04
+@04.05   @Incident1 @04 @HelixRegression
   #passed
   Feature: create problem candidate from incident using create button in linked items
     Scenario: create problem candidate from incident using create button in linked items

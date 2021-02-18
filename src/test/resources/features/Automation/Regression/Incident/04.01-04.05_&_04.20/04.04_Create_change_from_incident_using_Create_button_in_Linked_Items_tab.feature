@@ -1,4 +1,4 @@
-@04.04  @Incident1 @04
+@04.04  @Incident1 @04 @HelixRegression
   #passed
   Feature: Create change from incident using create button in linked items tab
     Scenario: Create change from incident using create button in linked items tab
@@ -15,6 +15,7 @@
       And user enters description as "Test case 04.04 create change from incident"
       And user clicks on save button
       Then ticket should be created and status should be assigned
+      And user gets trouble ticket value
       When user clicks on Ack button
       And user clicks on assignment under sections
       Then user selects assignment profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core EAST"
@@ -29,10 +30,10 @@
       When user creates change ticket with following details
         |RequestType  |Title            |RequestCategory|Description     |Reason       |Priority|ChangeBuilder      |Implementation|TestPlan   |RollBack   |CommPlan   |VerOfFunctionality|Risk   |ServiceCustomerImpact|ImpactDuration|EstimatedImpact       |
         |Normal Change|IT:Other         |Cable splicing |Correcting error|Test Ticket  |Info    |Change_Automation_1|Test Ticket   |Test Ticket|Test Ticket|Test Ticket|Test Ticket       |No Risk|Test ticket no impact|      3       |Degradation of Service|
-      And user gets ticket value
+      And user gets trouble ticket value
       When user switches to window 1
       And user clicks on linked items tab
       Then user validates 1 linked ticket availability
-      Then change should also be reflected in the timeline as "Correlation to ticket;. Relationship Type: Caused" for trouble ticket in row 1
+      And change should also be reflected in the timeline as "Correlation to ticket;. Relationship Type: Caused" for trouble ticket in row 1
 
 

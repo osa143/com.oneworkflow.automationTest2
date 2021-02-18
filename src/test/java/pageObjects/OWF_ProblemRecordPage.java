@@ -124,7 +124,15 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String Error_POP_UP_ID= "PopupMsgBox";
     private static final String btn_Open_Attachment= "WIN_0_777000021";
     private static final String txt_IMPACT_TYPE= "arid_WIN_0_700009080";
+    private static final String link_GO_BACK_TO_LOGIN= "//*[@id='logoutmsg']/tbody/tr[4]/td[2]/a";
 
+
+    public void enterVendorName(String vendorName){
+        enterTextByElement(By.id(txt_VENDOR_NAME), vendorName);
+    }
+    public void clickOnGoBackToLoginPage(){
+        clickElement(By.xpath(link_GO_BACK_TO_LOGIN));
+    }
 
     public void clickOpenAttachment(){
         clickElementById(btn_Open_Attachment);
@@ -271,6 +279,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
        switchToFrameByIndex(2);
         selectAffectedOrganisation(value);
        clickElementById(btnApply);
+       switchToDefault();
 
 
     }
@@ -304,6 +313,10 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     public String getOnsiteEngineer(){
         return getTextByID(txt_ONSITE_ENGINEER);
     }
+    public void enterOnSiteEngineerAs(String text){
+        enterTextByElement(By.id(txt_ONSITE_ENGINEER), text);
+    }
+
     public String getAccountNumber(){
         return getTextByID(txt_ACCOUNT_NUMBER);
     }
@@ -318,6 +331,9 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
     public String getOnsiteContact(){
         return getTextByID(txt_ONSITE_CONTACT);
+    }
+    public void enterOnSiteContactAs(String text){
+        enterTextByElement(By.id(txt_ONSITE_CONTACT), text);
     }
     public String getTravelTime(){
         return getTextByID(txt_TRAVEL_TIME);
@@ -367,7 +383,14 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     }
 
     public String getEstimatedReady(){
-        return getTextByID(txt_ESTIMATED_READY);
+        String estimatedReadyTime= getTextByID(txt_ESTIMATED_READY);
+        System.out.println("ERT is - " +estimatedReadyTime);
+        return estimatedReadyTime;
+    }
+    public String getEstimatedReadyTime(){
+        String estimatedReadyTime= getAttributeValueById(txt_ESTIMATED_READY);
+        System.out.println("attr ERT is - " +estimatedReadyTime);
+        return estimatedReadyTime;
     }
     public String getServiceEffectedText(){
         return getTextByID(txt_SERVICEAFFECTED);
@@ -399,9 +422,32 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         return checkIfControlIsReadonly(txtDESCRIPTION_ID);
     }
 
-    public void clickYes_impactClear(){
+    public void clickYes_impactClear_all(){
+
         clickElement(By.xpath(btn_YES));
-        wait(1000);
+
+    }
+    public void clickYes_impactClear(){
+        int frames= driver.findElements(By.tagName("iframe")).size();
+
+        if(frames==2){
+
+        }
+        else if(frames>=3){
+            switchToFrameByIndex(frames-1);
+            clickElement(By.xpath(btn_YES));
+            switchToDefault();
+        }
+        else {
+            try{
+                clickElement(By.xpath(btn_YES));
+                wait(500);
+            }
+            catch(Exception e)
+            {
+            }
+
+        }
     }
     public boolean verifyTitleIsReadOnly(){
         return checkIfControlIsReadonly(txtTITLE_ID);

@@ -7,7 +7,6 @@ import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import pageObjects.BaseRecordPage;
 import pageObjects.OWF_ProblemRecordPage;
 import utils.CommonUtils;
 
@@ -103,7 +102,7 @@ public class OWF_ProblemRecordPageSteps {
     public void userGetsTicketValue() {
         ticket = problemRecordPage.getTicketValue();
         System.out.println("Stored ticket is " + ticket);
-        CommonUtils.pbTicket = ticket;
+        CommonUtils.savedTicket = ticket;
 
     }
 
@@ -155,8 +154,8 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("user goes back to login page")
     public void userGoesBackToLoginPage() {
-        problemRecordPage.getDriver().findElement(By.xpath("//*[@id=\"logoutmsg\"]/tbody/tr[4]/td[2]/a")).click();
-        problemRecordPage.wait(5000);
+        problemRecordPage.clickOnGoBackToLoginPage();
+        problemRecordPage.wait(3000);
     }
 
     @And("user switches to window {int}")
@@ -207,7 +206,7 @@ public class OWF_ProblemRecordPageSteps {
 
     @And("change should also be reflected in the timeline as {string} for PB ticket")
     public void changeShouldAlsoBeReflectedInTheTimelineForPBTicket(String message) {
-        message += CommonUtils.pbTicket;
+        message += CommonUtils.savedTicket;
 
         problemRecordPage.clickTimelineButton();
         boolean containsMessage = problemRecordPage.getTimelineStatus(1).contains(message);
@@ -408,8 +407,8 @@ public class OWF_ProblemRecordPageSteps {
 
 
     @And("user selects priority as {string}")
-    public void userSelectsPriorityAs(String Major) {
-        problemRecordPage.selectPriority(Major);
+    public void userSelectsPriorityAs(String priority) {
+        problemRecordPage.selectPriority(priority);
     }
 
     @Then("user clicks on attachments under sections")
@@ -829,8 +828,9 @@ public class OWF_ProblemRecordPageSteps {
     @And("user enters ticket previously created and searches")
     public void userEntersTicketPreviouslyCreatedAndSearches() {
         problemRecordPage.enterTicket(ticket);
-        System.out.println("user entered problem ticket" + ticket);
+        System.out.println("user entered ticket - " + ticket);
         problemRecordPage.clickSearchButton();
+        problemRecordPage.wait(4000);
     }
 
     @And("user validates Save is present")
@@ -1537,6 +1537,51 @@ public class OWF_ProblemRecordPageSteps {
     @And("user validates Risk Description is read only")
     public void userValidatesRiskDescriptionIsReadOnly() {
         Assert.assertTrue(problemRecordPage.verifyRiskDescriptionIsReadOnly());
+    }
+
+    @And("user enters vendor name as {string}")
+    public void userEntersVendorNameAs(String vendorName) {
+        problemRecordPage.enterVendorName(vendorName);
+    }
+
+    @And("user gets estimated ready time")
+    public void userGetsEstimatedReadyTime() {
+        CommonUtils.estimatedReadyTime = problemRecordPage.getEstimatedReadyTime();
+    }
+
+    @When("user selects actions dropdown as {string}")
+    public void userSelectsActionsDropdownAs(String dropdownvalue) {
+        problemRecordPage.selectActions(dropdownvalue);
+    }
+
+    @And("user enters item as {string}")
+    public void userEntersItemAs(String item) {
+        problemRecordPage.enterItem(item);
+    }
+
+    @And("user enters category as {string}")
+    public void userEntersCategoryAs(String category) {
+       problemRecordPage.enterCategory(category);
+    }
+
+    @And("user validates {string} is not mandatory")
+    public void userValidatesIsNotMandatory(String elementName) {
+        Assert.assertTrue(problemRecordPage.verifyElementIs_Not_mandatory(elementName));
+    }
+
+    @And("user enters onsite engineers as {string}")
+    public void userEntersOnsiteEngineersAs(String OnSiteEngineer) {
+        problemRecordPage.enterOnSiteEngineerAs(OnSiteEngineer);
+    }
+
+    @And("user enters onsite contact as {string}")
+    public void userEntersOnsiteContactAs(String contact) {
+        problemRecordPage.enterOnSiteContactAs(contact);
+    }
+
+    @Then("user should see confirmation message for impact clear all and user clicks yes")
+    public void userShouldSeeConfirmationMessageForImpactClearAllAndUserClicksYes() {
+        problemRecordPage.clickYes_impactClear_all();
     }
 }
 

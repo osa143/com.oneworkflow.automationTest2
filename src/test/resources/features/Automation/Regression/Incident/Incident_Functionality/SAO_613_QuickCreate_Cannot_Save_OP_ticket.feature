@@ -15,6 +15,7 @@ Feature: SAO-613 - QuickCreate - Cannot Save OP ticket
     And user enters quick create description as "Testing"
     Then user clicks on quick create button
     And error message should display on agent console as "  Please select at least one country of impact for this problem. (ARERR 10000)  "
+    And user waits 5 secs
     Then user clicks quick create affected BU as sweden
     Then user clicks on quick create button
     And user switches to window 1

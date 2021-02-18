@@ -28,7 +28,7 @@ Feature: checking of bulk loading format
       Then user clicks on save button under bulk import
       And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-      And user waits for 8 minutes
+      And user waits for 6 minutes
       When user clicks on Show Bulk Import button
       And user switches to frame
       When user clicks on "Related CIs" tab

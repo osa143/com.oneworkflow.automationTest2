@@ -42,8 +42,8 @@
       And user validates with warnings as "10"
       And user validates warning message as "No CI named '_AP_alvesta-radmannen-ap1' was found!" in row 1
       And user clicks on bulk loading close button
-      And user logsOut and closes the browser
-      And user switches to window 0
+#      And user logsOut and closes the browser
+#      And user switches to window 0
 
      Examples:
 
@@ -51,7 +51,7 @@
       |Test Attachments\10 CI's - Incorrect Names\CSV.csv|
       |Test Attachments\10 CI's - Incorrect Names\TEXT.txt|
       |Test Attachments\10 CI's - Incorrect Names\XLS.xls|
-     # |Test Attachments\10 CI's - Incorrect Names\XLSX.xlsx|
+      |Test Attachments\10 CI's - Incorrect Names\XLSX.xlsx|
 
 
 

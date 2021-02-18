@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import utils.CommonUtils;
+
 import java.util.List;
 import java.util.Map;
 
@@ -112,8 +114,58 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_REGION_NAME= "arid_WIN_3_700009638";
     private static final String table_SELECT_LOCATION_= "T700024013";
     private static final String btn_CHANGE_BUILDER= "//img[@alt='Editor for Change Builder+*']";
+    private static final String table_NORMALCHANGE_APPROVAL = "T705001250";
     private static final String btn_REASON_EDITOR= "//img[@alt='Editor for Reason']";
+    private static final String rbtn_CAB_REQUIRED_YES = "WIN_0_rc1id800000002";
+    private static final String YES_CONFIRMATION= "WIN_0_700027904";
+    private static final String table_TEMPLATES= "T777000002";
+    private static final String btn_CLOSE_CHANGE_TEMPLATE= "WIN_2_777000001";
 
+    public boolean verifyFieldsAreReadOnly(){
+         WebElement Div_schedule_tab=  driver.findElement(By.id("WIN_0_999001529"));
+         List<WebElement> elements= Div_schedule_tab.findElements(By.tagName("textarea"));
+
+        for (int i = 0; i < elements.size(); i ++)
+        {
+            boolean result =checkIfControlIsReadonlyByElement(elements.get(i));
+            System.out.println("Read only element - " +elements.get(i));
+            if (result==false)
+                return false;
+        }
+        return true;
+    }
+
+    public void clickClose_changeTemplate(){
+        clickElementById(btn_CLOSE_CHANGE_TEMPLATE);
+    }
+
+    public void selectTemplateAndDoubleClickToOpen(String columnName, String tableCellData){
+        WebElement requiredTemplate= getTableCellElement(By.id(table_TEMPLATES),columnName, tableCellData);
+        doubleClickOnElement(requiredTemplate);
+    }
+    public boolean verifyTemplatesAppeared(){
+        int templates= getTableRows(By.id(table_TEMPLATES)).size();
+        if (templates>0)
+            return true;
+        else return false;
+    }
+
+public void enterActualStartAsCurrentDateTime(){
+    findElement(By.id(txt_ACTUAL_START)).sendKeys(Keys.ENTER);
+}
+    public void enterActualEndAsCurrentDateTime(){
+        findElement(By.id(txt_ACTUAL_END)).sendKeys(Keys.ENTER);
+    }
+    public void clickCABApproval(){
+        clickElement(By.xpath("//*[@id=\"T777031442\"]/tbody/tr[2]/td[3]/nobr"));
+    }
+
+public void clickCabRequiredYes(){
+    clickElementById(rbtn_CAB_REQUIRED_YES);
+    CommonUtils.switchToChildWindow(driver, 2);
+    clickElementById(YES_CONFIRMATION);
+    CommonUtils.switchToChildWindow(driver, 1);
+}
     public boolean verifyReasonTextEditorButtonIsDisplayed(){
         return verifyElementIsDisplayed(By.xpath(btn_REASON_EDITOR));
     }
@@ -141,13 +193,15 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     }
 
    public String getOrganisationName(){
-       return getAttributeValueById(txt_ORGANISATION_NAME_PLUS);
+        return getAttributeValueByElement(By.xpath("//*[@id=\"arid_WIN_0_700031001\"]"));
+       //return getAttributeValueById(txt_ORGANISATION_NAME_PLUS);
    }
 
    public void clickUse_FrameOnFrame(){
 
         try {
             driver.switchTo().frame(1);
+            clickElement(By.xpath("//*[@id=\"T990001100\"]/tbody/tr[2]/td[1]/nobr/span"));
             clickElementById(btn_USE_QUICK_CI_SEARCH_INTERESTED_PARTY);
             wait(1000);
             driver.switchTo().defaultContent();
@@ -159,6 +213,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
             driver.switchTo().frame(1);
             driver.switchTo().parentFrame();
             driver.switchTo().frame(1);
+            clickElement(By.xpath("//*[@id=\"T990001100\"]/tbody/tr[2]/td[1]/nobr/span"));
             clickElementById(btn_USE_QUICK_CI_SEARCH_INTERESTED_PARTY);
             wait(1000);
             driver.switchTo().defaultContent();
@@ -174,14 +229,29 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         return verifyElementIsDisplayed(By.xpath(div_INTERESTED_PARTY));
     }
     public boolean verifyRelatedCIsArePresent_LocationDetails(){
+        wait(7000);
         int CIsNumber=getTableRows(By.id(table_RELATED_CIS)).size();
         if(CIsNumber>0)
             return true;
         else return false;
     }
     public void clickRefresh_RelatedCIs_LocationDetails(){
-        clickElement(By.xpath(btn_REFRESH_RELATED_CIS));
+        try {
+            wait(1000);
+            clickElement(By.cssSelector("#WIN_0_700009650 > div.TableHdr > table > tbody > tr > td.TableHdrR > a.Ref.btn.btn3d.TableBtn"));
+        } catch (Exception e) {
+            driver.findElement(By.id("WIN_0_700009650")).findElement(By.xpath("//a[contains(text(),'Refresh')][2]")).click();
+        }
+
+        //clickElement(By.xpath("//a[contains(text(),'Refresh')][2]"));
+
     }
+
+    public void clickTableElementRequestPendingApproval_2(String cellData){
+        WebElement element=getTableCellElement(By.id(table_NORMALCHANGE_APPROVAL),"Status", cellData);
+        element.click();
+    }
+
     public void clickCloseLocationDetails(){
         clickElementById(btn_CLOSE_LOCATION_DETAILS);
     }
@@ -194,10 +264,17 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         return getAttributeValueById(txt_EXTERNAL_TICKET_ID);
     }
 
+
     public boolean verifyChangeBuilderButtonIsDisplayed(){
         return verifyElementIsDisplayed(By.xpath(btn_CHANGE_BUILDER));
     }
 
+    private static final String dd_UNIQUE_NAME = "arid_WIN_0_700020762";
+
+    public void SelectUniqueName (String value){
+        clickElement(By.id(dd_UNIQUE_NAME));
+        selectDropDownNameAndValue(dd_UNIQUE_NAME, value, false);
+    }
 
     public boolean verifyInterestedPartiesTypes(String statuses, String dropdownName){
         return verifyDropdownValues(statuses, dropdownName, dd_INTERESTED_PARTIES_TYPE);
@@ -316,7 +393,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
 
 
     public String getReviewDetails(){
-        return getTextByID(txt_REVIEWDETAILS);
+        return getAttributeValueById(txt_REVIEWDETAILS);
     }
 
     public String getResolvedPerson(){
@@ -348,7 +425,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         enterRiskDescriptionId(listMap.get(0).get("Risk"));
         enterServiceAndCustomerImpact(listMap.get(0).get("ServiceCustomerImpact"));
         selectEstimatedImpact(listMap.get(0).get("EstimatedImpact"));
-        enterStartDate(10);
+        enterStartDate(2);
         enterEndDate(20);
         enterImpactDurationMins(listMap.get(0).get("ImpactDuration"));
         clickSave();
@@ -404,7 +481,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
 
 
     public String getAssignedProfile(){
-        return getTextByID(dd_ASSIGNED_PROFILE);
+        return getAttributeValueById(dd_ASSIGNED_PROFILE);
     }
 
     public String getChangeBuilder(){
@@ -415,6 +492,9 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
        return getTextByID(txt_PROJECTCODE);
    }
 
+   public void enterProjectCode(String projectCode){
+        enterTextByElement(By.id(txt_PROJECTCODE), projectCode);
+   }
     public String getRequestCategory(){
        return getTextByID(txt_REQUEST_CATEGORY);
    }

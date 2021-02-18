@@ -1,4 +1,4 @@
-@Changing_of_assignee_for_problem_ticket @problem @Reg_Problem  @prob
+@Changing_of_assignee_for_problem_ticket @problem @Reg_Problem  @prob @HelixRegression
 #passed
 #This feature covers 2 scenarios
 Feature: Changing of assignee for problem ticket

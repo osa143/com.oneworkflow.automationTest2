@@ -27,6 +27,7 @@ public class PlazaValidation {
     public static String WbsCodeField;
     public static String GeneralRequest;
     public static String SelectRequest;
+    public static String RemoteAccessSelectRequest;
     public static String DcSite;
     public static String Room;
     public static String DeliveryDate;
@@ -68,6 +69,7 @@ public class PlazaValidation {
     public static String UrlFilter;
     public static String Url;
     public static String InternalExternalWebsite;
+    public static String NetworkSecurityInternalExternalWebsite;
     public static String ErrorMessage;
     public static String WorkedBefore;
     public static String ProblemOccure;

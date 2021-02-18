@@ -5,7 +5,7 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-      #Then user clicks on plaza portal
+      Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on cloud under IT Infrastructure dropdown
@@ -19,7 +19,7 @@
       Then user enters email address field as "Test@Test.com"
       Then user enters phone field as "123456789"
       And user enters Cloud one time snapshot request as "Test1 Cloud one time snapshot/Request"
-      And user selects order one time Add CI as "0001TELIDNAS\MSSQLSERVER"
+      And users adds any cloud one time CI
       Then user enters cloud one time snapshot description as "Test1 Cloud one time snapshot/Description"
       And user enters date and time for deletion as current date and time
       And user enters additional comments as "Test1 Cloud one time snapshot/AC"
@@ -38,6 +38,8 @@
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
       Then user should see plaza ticket
+      When user clicks on Ack button
+      And user clicks on ticket refresh button
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Order one-time Snapshot of VM"
       And user validates request type as "Service Request | PLAZA"
@@ -52,15 +54,15 @@
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
-      And user validates CI "0001TELIDNAS\MSSQLSERVER" is listed
-      And user right clicks on CI "0001TELIDNAS\MSSQLSERVER" and selects "Impact:Update"
+      And user right clicks on primary CI and selects "Impact:Update"
       Then user switches to frame
       And user enters impact from time as past on impact details bulk update window
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      When user right clicks on CI "0001TELIDNAS\MSSQLSERVER" and clears impact
-      When user clicks on Ack button
+      And user clicks on save button
+      And user right clicks on primary CI and clears impact
+      And user should see confirmation message for impact clear and user clicks yes
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
       And user clicks on "Schedule" tab

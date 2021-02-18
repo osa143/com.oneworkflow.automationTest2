@@ -6,7 +6,7 @@
       Given user is on the Plaza login page
       When user enters username "testauto" and password as "test123" and clicks on login
       Then user should see the plaza home page
-     # Then user clicks on plaza portal
+      Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
       And user clicks on application under IT Infrastructure dropdown
@@ -17,8 +17,7 @@
       And user enters BCCP request as "<Request>"
       And user selects service request name as "Account/Password"
       And user selects BCPP environment as "<Environment>"
-     # And user selects BCCP Add ci as "aa187bcpp01"
-      And user waits 30 secs
+      And user selects any BCPP CI
       And user enters BCPP description as "<Description>"
       And user enters additional comments as "<Additional Comments>"
       Then user clicks on "Submit"
@@ -37,7 +36,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | BCPP"
       And user validates request type as "Service Request | PLAZA"
-     # And user validates bccp description same as plaza
+      And user validates bccp description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -46,14 +45,13 @@
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
-      And user validates CI "aa187bcpp01" is listed
-      And user right clicks on CI "aa187bcpp01" and selects "Impact:Update"
+      And user right clicks on primary CI and selects "Impact:Update"
       Then user switches to frame
       And user enters impact from time as past on impact details bulk update window
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      When user right clicks on CI "aa187bcpp01" and clears impact
+      When user right clicks on primary CI and clears impact
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
@@ -72,6 +70,6 @@
 
         |Request                |Environment|Description                |Additional Comments|
         |BCPP-Prod/Request      |Prod       |BCPP-Prod/Description      |BCPP-Prod/AC       |
-        #|Test2-BCPP-Prod/Request|Prod       |Test2-BCPP-Prod/Description|Test2-BCPP-Prod/AC |
-        #|BCPP-Test/Request      |Test       |BCPP-Test/Description      |BCPP-Test/AC       |
-        #|Test2-BCPP-Test/Request|Test       |Test2-BCPP-Test/Description|Test2-BCPP-Test/AC |
+        |Test2-BCPP-Prod/Request|Prod       |Test2-BCPP-Prod/Description|Test2-BCPP-Prod/AC |
+        |BCPP-Test/Request      |Test       |BCPP-Test/Description      |BCPP-Test/AC       |
+        |Test2-BCPP-Test/Request|Test       |Test2-BCPP-Test/Description|Test2-BCPP-Test/AC |

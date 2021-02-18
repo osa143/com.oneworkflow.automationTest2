@@ -1,4 +1,4 @@
-@Add_CI_In_OW22
+@Add_CI_In_OW222
 #OS3:WO:Request:IF:Interface:SubmitAttachCIValidateCIName
 
 Feature: Adding CI in OW

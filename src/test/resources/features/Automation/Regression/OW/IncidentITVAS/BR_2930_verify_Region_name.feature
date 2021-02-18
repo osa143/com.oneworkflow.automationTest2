@@ -1,4 +1,4 @@
-@BR_2930_verify_Region_name
+@BR_2930_verify_Region_name @OW_Incident
 Feature: BR-2930 - verify Region name
 
   Scenario: BR-2930 - verify Region name

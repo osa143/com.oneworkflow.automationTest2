@@ -1,4 +1,4 @@
-@Rescheduling_Agreed_Schedule_Impact_Records
+@Rescheduling_Agreed_Schedule_Impact_Records @OW_Change
 # Tags: optional
 
 Feature: Rescheduling - Agreed Schedule + Impact Records (Telia) [aR]

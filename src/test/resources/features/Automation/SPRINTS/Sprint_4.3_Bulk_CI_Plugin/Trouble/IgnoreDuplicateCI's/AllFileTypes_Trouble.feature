@@ -1,5 +1,5 @@
 @Bulk_Loading_Ignore_Duplicate_CI's_Trouble @SAO-427
-  Feature: Bulk Loading ignore duplicate CI's
+  Feature: Bulk Loading ignore duplicate CI's for trouble ticket
     Scenario Outline: Bulk Loading ignore duplicate CI's
       #retest
 
@@ -46,15 +46,15 @@
       And user validates "Status" as "With Warnings" in row 12
       And user validates "Status" as "With Warnings" in row 37
       Then user clicks on bulk loading close button
-      And user logsOut and closes the browser
-      And user switches to window 0
+#      And user logsOut and closes the browser
+#      And user switches to window 0
 
 
       Examples:
         |fileTypes                                             |
-#        |Test Attachments\50 CI's (WithDuplicates)\50CIsCSV.csv|
-    #    |Test Attachments\50 CI's (WithDuplicates)\50CIsTextDOC.txt|
-#        |Test Attachments\50 CI's (WithDuplicates)\50CIsXLS.xls|
+        |Test Attachments\50 CI's (WithDuplicates)\50CIsCSV.csv|
+        |Test Attachments\50 CI's (WithDuplicates)\50CIsTextDOC.txt|
+        |Test Attachments\50 CI's (WithDuplicates)\50CIsXLS.xls|
         |Test Attachments\50 CI's (WithDuplicates)\50CIsXLSX.xlsx|
 
 

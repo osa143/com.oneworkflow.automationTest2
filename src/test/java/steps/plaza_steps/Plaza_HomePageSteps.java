@@ -99,9 +99,9 @@ public class Plaza_HomePageSteps extends BasePage {
     }
 
 
-    @When("user clicks on {string} pebble")
-    public void userClicksOnPebble(String arg0) {
-        homePage.clickPebble(arg0);
+    @When("user clicks on CRM pebble")
+    public void userClicksOnPebble() {
+        homePage.clickOnCRM_Pebble();
     }
 
     @Then("user should see CRM form")
@@ -1005,6 +1005,8 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @Then("user validates plaza request has completed")
     public void userValidatesPlazaRequestHasCompleted() {
+        homePage.wait(3000);
+        homePage.refreshPage();
         Assert.assertEquals(homePage.getPlazaRequestStatus(), "Closed Complete");
         Assert.assertEquals(homePage.getPlazaMessage(), "Order has been completed");
     }
@@ -1061,7 +1063,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @Then("user selects DDC base ruleset applied as {string}")
     public void userSelectsDDCBaseRulesetAppliedAs(String arg0) {
-        homePage.selectDatabase_new_existing_account(arg0);
+        homePage.selectNimbus_DDC_baseRuleSet(arg0);
     }
 
     @Then("user enters frontside network information as {string}")
@@ -1229,7 +1231,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @And("user selects new IP net as {string}")
     public void userSelectsNewIPNetAs(String arg0) {
-        homePage.selectNetworkSecurity_proxy_surf_proxy_slow_surfing_sites(arg0);
+        homePage.selectNetworkSecurity_NewIpNet(arg0);
     }
 
     @Then("user enters Network Security Switch Port description as {string}")
@@ -1259,7 +1261,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @Then("user selects operating system account type as {string}")
     public void userSelectsOperatingSystemAccountTypeAs(String arg0) {
-        homePage.selectNetworkSecurity_proxy_surf_proxy_slow_surfing_sites(arg0);
+        homePage.select_OS_Account_Management_accountType(arg0);
     }
 
     @And("user enters account name as {string}")
@@ -2459,4 +2461,82 @@ public class Plaza_HomePageSteps extends BasePage {
     public void userOpensSecondTab() {
         homePage.openSecondTab();
     }
+
+    @And("user selects any server database CI")
+    public void userSelectsAnyServerDatabaseCI() {
+        homePage.selectAnyServerDatabaseCI();
+
+    }
+
+    @And("user enters CRM  resource request planned start date as current date")
+    public void userEntersCRMResourceRequestPlannedStartDateAsCurrentDate() {
+            homePage.enterCRM_resourceRequest_plannedStart(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 0));
+    }
+
+    @And("user enters CRM resource request planned end date as current date")
+    public void userEntersCRMResourceRequestPlannedEndDateAsCurrentDate() {
+        homePage.enterCRM_resourceRequest_plannedEnd(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", 1));
+    }
+
+    @And("user enters CRM resource request description as {string}")
+    public void userEntersCRMResourceRequestDescriptionAs(String description) {
+        homePage.enterCRM_resourceRequest_Description(description);
+    }
+
+    @And("user selects network security internal external website as {string}")
+    public void userSelectsNetworkSecurityInternalExternalWebsiteAs(String dropdownValue) {
+       homePage.selectNetworkSecurity_new_existing_account(dropdownValue);
+    }
+
+    @Then("user selects network security remote access select request as {string}")
+    public void userSelectsNetworkSecurityRemoteAccessSelectRequestAs(String ddValue) {
+        homePage.selectNetworkSecurityRemoteAccessSelectRequest(ddValue);
+    }
+
+    @And("user selects any operating system account management server CI")
+    public void userSelectsAnyOperatingSystemAccountManagementServerCI() {
+        homePage.select_OS_AccountManagement_ServerDatabaseCI();
+    }
+
+    @And("user selects any operating system CI")
+    public void userSelectsOperatingSystemCI() {
+       homePage.selectCI_OS();
+    }
+
+    @And("user selects operating system change from manual service window as {string}")
+    public void userSelectsOperatingSystemChangeFromManualServiceWindowAs(String serviceWIndow) {
+        homePage.select_OS_ChangeFromManualServiceWindow(serviceWIndow);
+    }
+
+    @And("user selects any operating system manual OS patching CI")
+    public void userSelectsAnyOperatingSystemManualOSPatchingCI() {
+        homePage.selectCI_OS_ManualPatching();
+    }
+
+    @When("user clicks on {string} pebble")
+    public void userClicksOnPebble(String pebbleName) {
+        homePage.clickPebble(pebbleName);
+    }
+
+
+    @And("user selects any BCPP CI")
+    public void userSelectsAnyBCPPCI() {
+        homePage.selectCI_BCPP();
+    }
+
+    @And("user selects any cews CI")
+    public void userSelectsAnyCewsCI() {
+        homePage.selectCI_CEWS();
+    }
+
+    @And("users adds any cloud one time CI")
+    public void usersAddsAnyCloudOneTimeCI() {
+       homePage.selectCI_CloudOneTime();
+    }
+
+    @And("user selects any efs bss CI")
+    public void userSelectsAnyEfsBssCI() {
+        homePage.selectCI_CEWS();
+    }
+
 }

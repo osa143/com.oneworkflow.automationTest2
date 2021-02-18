@@ -1,6 +1,6 @@
-@Network_Security_Slow_Surfing @PLAZA
+@Network_Security_Slow_Surfing @PLAZA @Network_Security
   #passed
-  Feature: Network Security URL Filter plaza form test
+  Feature: Network Security proxy surf proxy slow surfing
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -58,5 +58,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 5 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed

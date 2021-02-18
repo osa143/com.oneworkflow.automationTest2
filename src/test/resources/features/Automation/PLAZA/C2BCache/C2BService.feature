@@ -1,4 +1,4 @@
-@C2BService @PLAZA @C2B_Tests
+@C2BService @C2B_Tests
 Feature: Plaza C2B Cache form test
   Scenario Outline: user validates information sent to OW from Plaza
 

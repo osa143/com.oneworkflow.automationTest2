@@ -40,7 +40,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | CallGuide Mail"
       And user validates request type as "Service Request | PLAZA"
-#      And user validates Messaging callguide mail description same as plaza
+      And user validates Messaging callguide mail description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -59,5 +59,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 5 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed

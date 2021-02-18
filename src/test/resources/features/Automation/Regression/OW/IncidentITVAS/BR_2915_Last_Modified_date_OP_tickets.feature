@@ -1,4 +1,4 @@
-@BR_2915_Last_Modified
+@BR_2915_Last_Modified @OW_Incident
 
 Feature: BR-2915 - Last Modified date should be available in Console View for OP tickets[s]
 

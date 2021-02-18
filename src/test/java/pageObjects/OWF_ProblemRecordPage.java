@@ -423,9 +423,32 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         return checkIfControlIsReadonly(txtDESCRIPTION_ID);
     }
 
-    public void clickYes_impactClear(){
+    public void clickYes_impactClear_all(){
+
         clickElement(By.xpath(btn_YES));
-        wait(1000);
+
+    }
+    public void clickYes_impactClear(){
+        int frames= driver.findElements(By.tagName("iframe")).size();
+
+        if(frames==2){
+
+        }
+        else if(frames>=3){
+            switchToFrameByIndex(frames-1);
+            clickElement(By.xpath(btn_YES));
+            switchToDefault();
+        }
+        else {
+            try{
+                clickElement(By.xpath(btn_YES));
+                wait(500);
+            }
+            catch(Exception e)
+            {
+            }
+
+        }
     }
     public boolean verifyTitleIsReadOnly(){
         return checkIfControlIsReadonly(txtTITLE_ID);

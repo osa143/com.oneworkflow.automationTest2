@@ -19,8 +19,7 @@
       Then user enters email address field as "Test@Test.com"
       Then user enters phone field as "123456789"
       And user enters Cloud one time snapshot request as "Test1 Cloud one time snapshot/Request"
-#     And user waits 30 secs
-         And user selects order one time Add CI as "cc100cgas001"
+      And users adds any cloud one time CI
       Then user enters cloud one time snapshot description as "Test1 Cloud one time snapshot/Description"
       And user enters date and time for deletion as current date and time
       And user enters additional comments as "Test1 Cloud one time snapshot/AC"
@@ -39,10 +38,12 @@
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
       Then user should see plaza ticket
+      When user clicks on Ack button
+      And user clicks on ticket refresh button
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Order one-time Snapshot of VM"
       And user validates request type as "Service Request | PLAZA"
-     # And user validates cloud one time snap description same as plaza
+      And user validates cloud one time snap description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       And user clicks on attachments under sections
@@ -53,15 +54,15 @@
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
-      And user validates CI "0819ALB616" is listed
-      And user right clicks on CI "0819ALB616" and selects "Impact:Update"
+      And user right clicks on primary CI and selects "Impact:Update"
       Then user switches to frame
       And user enters impact from time as past on impact details bulk update window
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      When user right clicks on CI "0819ALB616" and clears impact
-      When user clicks on Ack button
+      And user clicks on save button
+      And user right clicks on primary CI and clears impact
+      And user should see confirmation message for impact clear and user clicks yes
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
       And user clicks on "Schedule" tab

@@ -830,6 +830,7 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.enterTicket(ticket);
         System.out.println("user entered ticket - " + ticket);
         problemRecordPage.clickSearchButton();
+        problemRecordPage.wait(4000);
     }
 
     @And("user validates Save is present")
@@ -1576,6 +1577,11 @@ public class OWF_ProblemRecordPageSteps {
     @And("user enters onsite contact as {string}")
     public void userEntersOnsiteContactAs(String contact) {
         problemRecordPage.enterOnSiteContactAs(contact);
+    }
+
+    @Then("user should see confirmation message for impact clear all and user clicks yes")
+    public void userShouldSeeConfirmationMessageForImpactClearAllAndUserClicksYes() {
+        problemRecordPage.clickYes_impactClear_all();
     }
 }
 

@@ -17,8 +17,8 @@
       And user enters operating system change from manual request as "<Request>"
       And user selects select request "<Select Request>"
       And user selects operating system as "Windows"
-      And user selects Add CI as "cc100cgas001"
-      And user selects Service Window as "Patch-Week-1-Wednesday-2200-0100"
+      And user selects any operating system CI
+      And user selects operating system change from manual service window as "Patch-Week-1-Wednesday-2200-0100"
       And user enters operating system justification as "Test justification"
       And user enters plan to enable automatic monthly patching as "Test plan"
       And user clicks on the commitment checkbox
@@ -40,7 +40,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Change OS Patching"
       And user validates request type as "Service Request | PLAZA"
-#      And user validates operating system change from manual description same as plaza
+      And user validates operating system change from manual description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -49,14 +49,13 @@
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
-      And user validates CI "cc100cgas001" is listed
-      And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
+      And user right click on plaza primary CI and selects "Impact:Update"
       Then user switches to frame
       And user enters impact from time as past on impact details bulk update window
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      And user right clicks on CI "cc100cgas001" and clears impact
+      And user right clicks on primary CI and clears impact
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
@@ -74,5 +73,5 @@
       Examples:
 
       |Request                              |Select Request                                |Description                       |Additional Comments      |
-      #|Test4 Operating System Change/Request|Changing from Manual to Auto patching         |Test4 Operating System/Description|Test4 Operating System/AC|
+      |Test4 Operating System Change/Request|Changing from Manual to Auto patching         |Test4 Operating System/Description|Test4 Operating System/AC|
       |Test5 Operating System Change/Request|Changing patch window for server in auto patch|Test5 Operating System/Description|Test5 Operating System/AC|

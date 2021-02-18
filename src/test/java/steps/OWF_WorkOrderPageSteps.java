@@ -16,8 +16,9 @@ public class OWF_WorkOrderPageSteps {
 
     @And("user validates ticket status as {string}")
     public void userValidatesTicketStatusAs(String arg0) {
-        Assert.assertEquals(workOrderPage.getStatusText(), arg0, "Status is wrong");
         workOrderPage.wait(1000);
+        Assert.assertEquals(workOrderPage.getStatusText(), arg0, "Status is wrong");
+
     }
 
     @And("user validates parent ticket id availability")
@@ -237,7 +238,7 @@ public class OWF_WorkOrderPageSteps {
     }
     @Then("user enters plaza request id in the source id field")
     public void userEntersPlazaRequestIdInTheSourceIdField() {
-        workOrderPage.wait(10000);
+        workOrderPage.wait(15000);
         workOrderPage.enterSourceID(CommonUtils.plazaRequestID);
     }
 

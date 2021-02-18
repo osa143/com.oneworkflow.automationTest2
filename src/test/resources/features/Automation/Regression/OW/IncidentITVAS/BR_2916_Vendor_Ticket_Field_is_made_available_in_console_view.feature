@@ -1,4 +1,4 @@
-@BR-2916_Vendor_Ticket_Field
+@BR-2916_Vendor_Ticket_Field @OW_Incident
 
 Feature: BR-2916 - Vendor Ticket Field is made available in console view[s]
 

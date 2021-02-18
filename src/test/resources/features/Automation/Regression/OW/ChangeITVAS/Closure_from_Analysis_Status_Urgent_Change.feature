@@ -1,4 +1,4 @@
-@Closure_from_Analysis_Status_Urgent_Change2
+@Closure_from_Analysis_Status_Urgent_Change2 @OW_Change
 
 
 Feature: Closure from Analysis Status - Urgent Change [SaR]

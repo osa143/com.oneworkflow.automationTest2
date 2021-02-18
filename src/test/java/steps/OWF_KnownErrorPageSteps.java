@@ -135,4 +135,5 @@ public class OWF_KnownErrorPageSteps {
     public void userValidatesAllFieldsAreReadOnlyAndNotEditable() {
         Assert.assertTrue(knownErrorPage.verifyElementsAreReadOnly());
     }
+
 }

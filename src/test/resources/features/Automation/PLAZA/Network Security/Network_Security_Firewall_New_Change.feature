@@ -1,4 +1,4 @@
-@Network_Security_Firewall_New_Change @PLAZA
+@Network_Security_Firewall_New_Change @PLAZA @Network_Security
   #passed
   Feature: Network Security Firewall New Change plaza form test
     Scenario: user validates information sent to OW from Plaza
@@ -32,6 +32,7 @@
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
       Then user should see plaza ticket
+      When user clicks on Ack button
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Firewall Routing Request"
       And user validates request type as "Service Request | PLAZA"
@@ -52,7 +53,7 @@
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
       And user right clicks on CI "cc001cgas001" and clears impact
-      When user clicks on Ack button
+      And user should see confirmation message for impact clear and user clicks yes
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
       And user clicks on "Schedule" tab
@@ -63,5 +64,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 5 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed

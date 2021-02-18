@@ -1,4 +1,4 @@
-@Manual_Bulk_Loading_CTI_Details_change @SAO-427
+@Manual_Bulk_Loading_CTI_Details_change #@SAO-427
 Feature: checking of bulk loading CTI details and location details
   Scenario: user checks the bulk loading CTI details and location details
 
@@ -36,7 +36,7 @@ Feature: checking of bulk loading CTI details and location details
     And user validates Level default value is ""
     Then user selects impact level as "No Impact"
     When user clicks on Manual Input radio button
-    And user enters "One Workflow" in manual CI search box
+    And user enters "SE_AP_alvesta-radmannen-ap1" in manual CI search box
     Then user clicks on save button under bulk import
     And first error message should display as "The manually identified CIs are now being processed..." on bulk ci window
     And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
@@ -54,5 +54,5 @@ Feature: checking of bulk loading CTI details and location details
     And user validates region name as "KALMAR"
     And user validates latitude as "56.675540"
     And user validates longitude as "16.285040"
-    And user validates x degree as "0"
-    And user validates y degree as "0"
+    And user validates x degree as "56.8997"
+    And user validates y degree as "14.5551"

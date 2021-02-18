@@ -54,16 +54,16 @@ Feature: checking of bulk loading format
       And user validates "Status" as "With Errors" in row 9
       And user validates "Status" as "With Errors" in row 10
       And user clicks on bulk loading close button
-      And user logsOut and closes the browser
-      And user switches to window 0
+#      And user logsOut and closes the browser
+#      And user switches to window 0
 
       Examples:
 
           |fileTypes                                                                                       |
           |Test Attachments\5DuplicateCIs\5CIsCSV.csv |
-#          |Test Attachments\5DuplicateCIs\5CIsTextDOC.txt|
-       #   |Test Attachments\5DuplicateCIs\5CIsXLS.xls|
-#          |Test Attachments\5DuplicateCIs\5CIsXLSX.xlsx|
+          |Test Attachments\5DuplicateCIs\5CIsTextDOC.txt|
+          |Test Attachments\5DuplicateCIs\5CIsXLS.xls|
+          |Test Attachments\5DuplicateCIs\5CIsXLSX.xlsx|
 
 
 

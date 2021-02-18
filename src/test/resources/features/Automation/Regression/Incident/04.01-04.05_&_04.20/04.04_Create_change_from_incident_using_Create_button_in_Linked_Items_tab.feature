@@ -1,4 +1,4 @@
-@04.04  @Incident1 @04 @HelixRegr
+@04.04  @Incident1 @04 @HelixRegression
   #passed
   Feature: Create change from incident using create button in linked items tab
     Scenario: Create change from incident using create button in linked items tab
@@ -15,6 +15,7 @@
       And user enters description as "Test case 04.04 create change from incident"
       And user clicks on save button
       Then ticket should be created and status should be assigned
+      And user gets trouble ticket value
       When user clicks on Ack button
       And user clicks on assignment under sections
       Then user selects assignment profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core EAST"

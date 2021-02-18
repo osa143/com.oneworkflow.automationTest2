@@ -1,4 +1,4 @@
-@Backup_OneTime1 @PLAZA
+@Backup_OneTime1 @PLAZA @Back_up
   Feature: Backup One Time plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -71,5 +71,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 4 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed

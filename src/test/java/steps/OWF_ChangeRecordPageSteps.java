@@ -1136,6 +1136,12 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.enterImpactDurationSecs(arg0);
     }
 
+
+    @And("user clicks yes on impact update confirmation")
+    public void userClicksYesOnImpactUpdateConfirmation() {
+        changeRecordPage.switchToFrameByIndex(1);
+        changeRecordPage.clickYes();
+    }
     @When("user selects service provider as {string}")
     public void userSelectsServiceProviderAs(String arg0) {
         changeRecordPage.selectServiceProvider(arg0, true);

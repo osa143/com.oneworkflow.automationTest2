@@ -1,4 +1,4 @@
-@01.11_Add_CI_To_Incident_Ticket @Incident  @01
+@01.11_Add_CI_To_Incident_Ticket @Incident  @01 @HelixRegression
 #passed
   #CORE for ST, Core for SIT
    #Mobile PS Core Network
@@ -17,6 +17,7 @@ Feature: Adding of CI to incident ticket
     And user enters description as "Test Case 01.11 Add CI's"
     And user clicks on save button
     Then ticket should be created and status should be assigned
+    And user gets trouble ticket value
     When user clicks on Diagnosis tab
     #And user validates CI columns "CI Name:PrimarySecondary:CI Priority:Business Hours:Custom Attribute4" availability
     And user clicks on CI search button

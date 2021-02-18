@@ -50,8 +50,8 @@ Feature: Bulk Loading Incorrect Data layout- Location
       And user validates with errors as "0"
       And user validates with warnings as "0"
       And user clicks on bulk loading close button
-      And user logsOut and closes the browser
-      And user switches to window 0
+#      And user logsOut and closes the browser
+#      And user switches to window 0
 
       Examples:
 

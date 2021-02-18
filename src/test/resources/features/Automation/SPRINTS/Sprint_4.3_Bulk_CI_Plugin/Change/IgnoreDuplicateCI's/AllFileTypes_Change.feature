@@ -1,6 +1,6 @@
 @All_File_Types_Bulk_Loading_Ignore_Duplicate_CI's_change @SAO-427
   #passed
-  Feature: Bulk Loading ignore duplicate CI's
+  Feature: Bulk Loading ignore duplicate CI's for change ticket
     Scenario Outline: Bulk Loading ignore duplicate CI's
 
       Given user is on the OneWorkflow login page
@@ -47,7 +47,7 @@
       Then user clicks on save button under bulk import
       And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-      And user waits 59 secs
+      And user waits 30 secs
       When user clicks on Show Bulk Import button
       And user switches to frame
       When user clicks on "Related CIs" tab
@@ -60,15 +60,15 @@
       And user validates "Status" as "With Warnings" in row 12
       And user validates "Status" as "With Warnings" in row 37
       Then user clicks on bulk loading close button
-      And user logsOut and closes the browser
-      And user switches to window 0
+#      And user logsOut and closes the browser
+#      And user switches to window 0
 
 
       Examples:
         |fileTypes                                                                                                  |
-   #     |Test Attachments\50 CI's (WithDuplicates)\50CIsCSV.csv|
-     #   |Test Attachments\50 CI's (WithDuplicates)\50CIsTextDOC.txt|
-     #   |Test Attachments\50 CI's (WithDuplicates)\50CIsXLS.xls|
+        |Test Attachments\50 CI's (WithDuplicates)\50CIsCSV.csv|
+        |Test Attachments\50 CI's (WithDuplicates)\50CIsTextDOC.txt|
+        |Test Attachments\50 CI's (WithDuplicates)\50CIsXLS.xls|
         |Test Attachments\50 CI's (WithDuplicates)\50CIsXLSX.xlsx|
 
 

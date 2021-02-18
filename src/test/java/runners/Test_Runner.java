@@ -5,12 +5,14 @@ import org.testng.collections.Lists;
 import java.util.List;
 
 @CucumberOptions(features = "classpath:features/",
-        plugin = { "pretty", "html:test-output/html",}, // for html report
+        plugin = { "pretty", "html:test-output/html",// for html report
+                   "rerun:test-output/failedReRun.txt"}, // To rerun failed scenarios
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@Bulk_Loading_Format_trouble_50CIS"}
+        tags = {"@SAO-427"}
 
 )
+
 public class Test_Runner extends BaseTest {
 
     public static void main(String[] args) {
@@ -21,4 +23,3 @@ public class Test_Runner extends BaseTest {
             testng.run();
         }
 }
-

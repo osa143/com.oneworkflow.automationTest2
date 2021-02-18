@@ -1,4 +1,4 @@
-@Network_Security_DNS_Sweden @PLAZA
+@Network_Security_DNS_Sweden @PLAZA @Network_Security
   #passed
   Feature: Network Security DNS Sweden plaza form test
     Scenario: user validates information sent to OW from Plaza
@@ -54,5 +54,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 5 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed

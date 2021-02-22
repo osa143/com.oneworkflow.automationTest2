@@ -1360,7 +1360,6 @@ public class OWF_ChangeRecordPageSteps {
     public void userValidatesSaveButtonIsPresent() {
         Assert.assertTrue(changeRecordPage.isTemplateSavePresent());
     }
-}
 
     @And("user validates Change CI {string} impact category is {string} in row {int}")
     public void userValidatesCIImpactCategoryIs(String arg0, String cellValue, int rowNum) {

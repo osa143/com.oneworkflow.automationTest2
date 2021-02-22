@@ -28,7 +28,7 @@ public class BaseRecordPage extends BasePage {
     public static final String txtINFORMATION_RESTRICTED_INFORMATION_ID= "arid_WIN_0_600001056";
 
     public static final String txt_REQUEST_END = "arid_WIN_0_777021161";
-    public static final String txtREASON_ID = "arid_WIN_0_777021007";
+    public static final String txtREASON_ID = "arid_WIN_0_705001003";
     public static final String txtASSIGNEE_ID = "arid_WIN_0_4";
 
     private static final String txtEXPECTED_ALARMS = "arid_WIN_0_705001002";

@@ -321,7 +321,6 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String dd_PRIORITY="//*[@id=\"WIN_0_700025204\"]/a";
     private static final String btn_ConfirmYes = "WIN_0_600009803";
     private static final String txt_PRIORITY = "arid_WIN_0_700025204";
-    private static final String txt_STATUS = "arid_WIN_0_777031000";
     private static final String txt_SERVICEPROVIDER = "arid_WIN_0_777031005";
     private static final String txt_impactType = "arid_WIN_0_777031437";
     private static final String txt_impactCategory = "//*[@id=\"T700009087\"]/tbody/tr[2]/td[11]/nobr";

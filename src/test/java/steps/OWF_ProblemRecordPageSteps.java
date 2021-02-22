@@ -101,7 +101,7 @@ public class OWF_ProblemRecordPageSteps {
     @And("user gets ticket value")
     public void userGetsTicketValue() {
         ticket = problemRecordPage.getTicketValue();
-        System.out.println("Stored ticket is " + ticket);
+        System.out.println("Saved ticket is - " + ticket);
         CommonUtils.savedTicket = ticket;
 
     }

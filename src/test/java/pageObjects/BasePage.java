@@ -709,7 +709,7 @@ public void clickElementById(String Id){
         wait(1000);
         for (int i = 1; i < elements.size(); i++)
         {
-            wait(1000);
+            wait(500);
             List<WebElement> tdElements = elements.get(i).findElements(By.tagName("td"));
 
             if (tdElements.size() > 0) {

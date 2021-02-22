@@ -9,7 +9,7 @@ import java.util.List;
                    "rerun:test-output/failedReRun.txt"}, // To rerun failed scenarios
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@Copy_to_New_02_CI"}
+        tags = {"@C2B_Tests"}
 
 )
 

@@ -1,4 +1,4 @@
-@SAO-5957 @PLAZA
+@SAO-5957 #@PLAZA
   Feature: SAO-5957
     Scenario: OP-000002113472 - Acknowledgment Not being sent even after creating reference
 

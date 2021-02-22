@@ -1,4 +1,4 @@
-@Closure_from_Analysis_Status_Normal_Change
+@Closure_from_Analysis_Status_Normal_Change @OW_Change
 
 
 Feature: Closure from Analysis Status - Normal Change [SaR]
@@ -50,6 +50,7 @@ Feature: Closure from Analysis Status - Normal Change [SaR]
     And user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 2
     Then user enters ticket previously created and searches
+    And user clicks on ticket refresh button and clicks enter
     When user clicks on "Schedule" tab
     Then multiple statuses "Analysis:Pending:Approval Requested:Withdrawn:Closed:(clear)" should be available in "Status" dropdown
     When user changes status to "Closed"
@@ -61,6 +62,8 @@ Feature: Closure from Analysis Status - Normal Change [SaR]
     Then user changes status to "Closed"
     When user clicks on Diagnosis tab
     And user right clicks on CI "SE_EPG_FREEPG1" and clears impact
-    And user should see confirmation message and clicks on yes button
+    And user enters actual start date as current time
+    And user enters actual end as current time
     And user clicks save button
     Then user validates ticket status as "Closed"
+    And user validates child ticket details are same as parent ticket

@@ -685,6 +685,19 @@ public class OWF_CiSearchPageSteps {
 
     }
 
+    @And("user enters bulk ci impact from date as {int} hours in {string} format")
+    public void userEntersBulkCiImpactFromDateAsHoursInFormat(int delay, String pattern) {
+        int newDelay= delay*60;
+        ciSearchPage.enterImpactFrom(CommonUtils.getDateTime(pattern, "Europe/Stockholm", newDelay));
+
+    }
+
+    @And("user enters bulk ci impact to date as {int} hours in {string} format")
+    public void userEntersBulkCiImpactToDateAsHoursInFormat(int delay, String pattern) {
+        int newDelay= delay*60;
+        ciSearchPage.enterImpactToPlus(CommonUtils.getDateTime(pattern, "Europe/Stockholm", newDelay));
+    }
+
     @And("user validates Change impact from time is same as request start time")
     public void userValidatesChangeImpactFromTimeIsSameAsRequestStartTime() {
         Assert.assertEquals(CommonUtils.eventStartTime, ciSearchPage.getImpactFrom_DiagnosisTab());

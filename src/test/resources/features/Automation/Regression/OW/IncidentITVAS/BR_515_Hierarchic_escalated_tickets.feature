@@ -1,4 +1,4 @@
-@BR_515 @OW_incident
+@BR_515 @OW_Incident
 
 Feature: BR-515 - Hierarchic escalated tickets[s]
 
@@ -23,6 +23,7 @@ Feature: BR-515 - Hierarchic escalated tickets[s]
     And user selects importance as "Critical"
     And user clicks on priority check button
     #Then user validates hierarchic escalation level isnt read only
+    And user waits 4 secs
     And user validates hierarchic escalation level as "Escalation manager (EM)"
     When user clicks "Work Orders" tab
     And user double clicks on work order and opens

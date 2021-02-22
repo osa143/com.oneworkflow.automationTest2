@@ -30,6 +30,7 @@
       When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2
       Then user enters plaza request id in the source id field
+      And user waits 10 secs
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
@@ -53,5 +54,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 5 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed

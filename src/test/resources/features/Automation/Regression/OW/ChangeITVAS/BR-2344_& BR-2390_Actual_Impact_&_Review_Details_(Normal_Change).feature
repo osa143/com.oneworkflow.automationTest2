@@ -1,4 +1,4 @@
-@BR_2344_BR_2390_Actual_Impact_&_Review_Details_Normal_Change
+@BR_2344_BR_2390_Actual_Impact_&_Review_Details_Normal_Change @OW_Change
 
 
 Feature: BR-2344 & BR-2390 - Actual Impact & Review Details (Normal Change) [SaR]
@@ -6,7 +6,7 @@ Feature: BR-2344 & BR-2390 - Actual Impact & Review Details (Normal Change) [SaR
   Scenario: BR-2344 & BR-2390 - Actual Impact & Review Details (Normal Change) [SaR]
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "ChangeManager2_Automation" and password as "Test@1234"
+    When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 1

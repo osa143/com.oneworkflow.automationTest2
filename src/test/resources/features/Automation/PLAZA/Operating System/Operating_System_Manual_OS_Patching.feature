@@ -15,7 +15,7 @@
       Then user selects operating system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system manual os patching request as "Test6 Operating System Manual/Request"
-      And user selects manual os patching Add CI as "cc001cgas001"
+      And user selects any operating system manual OS patching CI
       And user selects manual os patching Operating System as "Solaris"
       And user selects Server placed in Veha as "Yes"
       And user enters WBS Code as "P100-000-000"
@@ -50,14 +50,13 @@
       Then user clicks on "Interested Parties" tab
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
-      And user validates CI "cc001cgas001" is listed
-      And user right clicks on CI "cc001cgas001" and selects "Impact:Update"
+      And user right click on plaza primary CI and selects "Impact:Update"
       Then user switches to frame
       And user enters impact from time as past on impact details bulk update window
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      And user right clicks on CI "cc001cgas001" and clears impact
+      And user right clicks on primary CI and clears impact
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

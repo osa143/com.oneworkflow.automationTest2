@@ -1,4 +1,4 @@
-@All_File_Types_Bulk_Loading_CTI_Details_change @SAO-427
+@All_File_Types_Bulk_Loading_CTI_Details_change #@SAO-427
 Feature: checking of bulk loading CTI details and location details
   Scenario Outline: user checks the bulk loading CTI details and location details
 
@@ -27,6 +27,7 @@ Feature: checking of bulk loading CTI details and location details
     And user selects estimated impact dropdown as "Degradation of Service"
     And user clicks on save button
     And user waits 10 secs
+    And user gets ticket value
     When user clicks on "Diagnosis" tab
     And user clicks on Add Bulk Import button
     And user switches to frame
@@ -66,15 +67,15 @@ Feature: checking of bulk loading CTI details and location details
     And user validates region name as "KALMAR"
     And user validates latitude as "56.675540"
     And user validates longitude as "16.285040"
-    And user validates x degree as "0"
-    And user validates y degree as "0"
-    And user logsOut and closes the browser
-    And user switches to window 0
+    And user validates x degree as "56.8997"
+    And user validates y degree as "14.5551"
+#    And user logsOut and closes the browser
+#    And user switches to window 0
 
 
     Examples:
       |fileTypes                                                                                                  |
       |Test Attachments\10 CI's - Correct Names\CSV.csv |
-     # |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
-     # |Test Attachments\10 CI's - Correct Names\XLS.xls|
-     # |Test Attachments\10 CI's - Correct Names\TEXT.txt |
+      |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
+      |Test Attachments\10 CI's - Correct Names\XLS.xls|
+      |Test Attachments\10 CI's - Correct Names\TEXT.txt |

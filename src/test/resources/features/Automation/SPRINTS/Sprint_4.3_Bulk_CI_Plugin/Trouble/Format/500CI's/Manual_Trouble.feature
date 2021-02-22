@@ -1,4 +1,4 @@
-@Manual_500CI @427
+@Manual_500CI #@427
 Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format
 

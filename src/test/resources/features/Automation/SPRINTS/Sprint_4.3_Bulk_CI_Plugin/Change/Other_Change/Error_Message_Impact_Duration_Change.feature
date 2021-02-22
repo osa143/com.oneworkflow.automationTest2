@@ -1,6 +1,6 @@
 @Bulk_Loading_Error_Message_impact_duration_Change @SAO-427 @other_change*
   #passed
-Feature: checking of bulk loading error message impact duration
+Feature: checking of bulk loading error message impact duration for change ticket
   Scenario: user checks the impact duration message of bulk loading error
 
     Given user is on the OneWorkflow login page
@@ -33,23 +33,22 @@ Feature: checking of bulk loading error message impact duration
     Then user should see bulk ci loading window
     When user selects impact level as "No Impact"
     And user selects impact type as "Un-Planned"
+    And user enters bulk ci impact from date as 24 hours in "MM/dd/YYYY HH:mm:ss" format
+    And user enters bulk ci impact to date as 30 hours in "MM/dd/YYYY HH:mm:ss" format
     And user clicks on Manual Input radio button
-    And user enters impact from date as current date midnight plus 24 hours on bulk CI loading window
-    And user enters impact to date as current date midnight plus 30 hours on bulk CI loading window
-    When user clicks on Manual Input radio button
     And user enters "One Workflow" in manual CI search box
     Then user clicks on save button under bulk import
     And user should see error message of "(300825): From date cannot be in the future for planned impact record." on bulk cI window
     And user should see error message of "To date cannot be in the future for un-planned impact record." on bulk cI window and clicks ok
     And user switches to frame
-    And user enters impact from date as current date midnight plus -20 hours on bulk CI loading window
-    And user enters impact to date as current date midnight plus -24 hours on bulk CI loading window
+    And user enters bulk ci impact from date as -25 hours in "MM/dd/YYYY HH:mm:ss" format
+    And user enters bulk ci impact to date as -30 hours in "MM/dd/YYYY HH:mm:ss" format
     And user clicks on save button under bulk import
     Then user should see error message of "'Impact From' cannot be set in the past. (ARERR 10000)" on bulk cI window
     And user should see error message of "'Impact From' cannot be set in the past. (ARERR 10000)" on bulk cI window and clicks ok
     And user switches to frame
-    And user enters impact from date as current date midnight plus 48 hours on bulk CI loading window
-    And user enters impact to date as current date midnight plus 24 hours on bulk CI loading window
+    And user enters bulk ci impact from date as 48 hours in "MM/dd/YYYY HH:mm:ss" format
+    And user enters bulk ci impact to date as 24 hours in "MM/dd/YYYY HH:mm:ss" format
     And user clicks on save button under bulk import
     Then user should see error message of "Impact From date must be before Impact To date." on bulk cI window
     And user should see error message of "Impact From date must be before Impact To date." on bulk cI window and clicks ok

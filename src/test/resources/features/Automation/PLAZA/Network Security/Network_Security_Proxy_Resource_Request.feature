@@ -1,6 +1,6 @@
-@Network_Security_Proxy_Resource_Request @PLAZA
+@Network_Security_Proxy_Resource_Request @PLAZA @Network_Security
   #passed
-  Feature: Network Security Proxy General Inquiry plaza form test
+  Feature: Network Security Proxy resource request
     Scenario: user validates information sent to OW from Plaza
 
       Given user is on the Plaza login page
@@ -54,5 +54,6 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
+      And user waits 5 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed

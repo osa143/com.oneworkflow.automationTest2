@@ -1,4 +1,4 @@
-@05.01  @Incident1 @05  @smoke
+@05.01  @Incident1 @05  @smoke @HelixRegression
   #passed
   Feature: manually close an incident
     Scenario: manually close an incident

@@ -1,4 +1,4 @@
-@CRM @PLAZA
+@CRM
 Feature: Plaza CRM form test
   Scenario Outline: user validates information sent to OW from Plaza
 
@@ -10,7 +10,7 @@ Feature: Plaza CRM form test
     And user clicks on IT Infrastructure dropdown
     And user clicks on application under IT Infrastructure dropdown
     And user clicks on show more button
-    When user clicks on "CRM" pebble
+    When user clicks on CRM pebble
     Then user should see CRM form
    # Then user selects system name in haiti as "Other"
     When user selects role dropdown as "Application Operation Engineer"

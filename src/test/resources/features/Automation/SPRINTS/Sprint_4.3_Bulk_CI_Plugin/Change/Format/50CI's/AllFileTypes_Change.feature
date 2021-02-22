@@ -54,8 +54,8 @@ Feature: checking of bulk loading format
       And user validates Rows OK as "50"
       And user validates with errors as "0"
       Then user clicks on bulk loading close button
-      And user logsOut and closes the browser
-      And user switches to window 0
+#      And user logsOut and closes the browser
+#      And user switches to window 0
 
 
       Examples:

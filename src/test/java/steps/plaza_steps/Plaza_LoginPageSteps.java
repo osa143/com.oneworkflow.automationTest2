@@ -1,5 +1,6 @@
 package steps.plaza_steps;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import pageObjects.plaza.Plaza_LoginPage;
@@ -16,4 +17,5 @@ public class Plaza_LoginPageSteps  extends BaseSteps {
     public void userEntersUsernameAndPasswordAsAndClicksOnLogin(String arg0, String arg1) {
         loginPage.doLogin(arg0, arg1);
     }
+
 }

@@ -1,4 +1,4 @@
-@02.08 @Incident @02 @HelixRegr
+@02.08 @Incident @02 @HelixRegression
   #passed
   Feature: user change priority level
     Scenario: user change priority level
@@ -15,6 +15,7 @@
       And user enters description as "02:08 Change Priority Level"
       Then user clicks on save button
       And ticket should be created and status should be assigned
+      And user gets trouble ticket value
       When user selects importance as "Critical"
       And user selects impact as "Critical" on trouble event page
       And user clicks on priority check button

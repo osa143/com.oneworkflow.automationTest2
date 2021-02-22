@@ -1,4 +1,4 @@
-@BR_515_Emergency @OW_incident
+@BR_515_Emergency @OW_Incident
 
 Feature: BR_515_Hierarchic_escalated_tickets_Emergency
 

@@ -44,6 +44,7 @@
       When user selects status as "Completed" on user more filters window
       And user clicks on apply button on user more filters window
       Then user should only see tickets with "Status" of "Completed"
+      And user switches to frame
 
 
 

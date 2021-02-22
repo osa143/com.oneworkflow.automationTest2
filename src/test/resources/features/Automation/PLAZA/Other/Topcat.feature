@@ -34,11 +34,11 @@
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
       Then user should see plaza ticket
+      When user clicks on Ack button
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Topcat"
       And user validates request type as "Service Request | PLAZA"
-      #Not sure about description validation outside of a table
-#      And user validates topcat description same as plaza
+      And user validates topcat description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -55,7 +55,7 @@
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
       And user right clicks on CI "aa789win01t" and clears impact
-      When user clicks on Ack button
+      And user should see confirmation message for impact clear and user clicks yes
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
       And user clicks on "Schedule" tab
@@ -73,4 +73,4 @@
 
       |Service Request Name       |Request             |Description             |Additional Comments|
       |General Request            |Test2 Topcat/Request|Test2 Topcat/Description|Test2 Topcat/AC    |
-      #|Restore Catalogue Database |Test1 Topcat/Request|Test1 Topcat/Description|Test1 Topcat/AC    |
+      |Restore Catalogue Database |Test1 Topcat/Request|Test1 Topcat/Description|Test1 Topcat/AC    |

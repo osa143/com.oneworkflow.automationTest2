@@ -16,8 +16,8 @@
      # Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters veha request as "Test1 Veha/Request"
-      And user waits 20 secs
-      #Then user enters system as "sonera ca apache"
+#      And user waits 20 secs
+      Then user enters system as "sonera ca apache"
       Then user enters veha description as "Test1 Veha/Description"
       And user enters additional comments as "Test1 Veha/AC"
       Then user clicks on "Submit"
@@ -36,7 +36,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Network Management System Veha"
       And user validates request type as "Service Request | PLAZA"
-      #And user validates veha network management description same as plaza
+      And user validates veha network management description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

@@ -35,7 +35,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String txt_IMPACT_FROM= "arid_WIN_0_700009083";
     private static final String btn_ADD_BULK_IMPORT= "WIN_0_800038046";
     private static final String fld_BULK_CI_LOADING= "WIN_0_536870927";
-    private static final String rbtn_MANUAL_INPUT= "WIN_0_rc1id800038034";
+    private static final String rbtn_MANUAL_INPUT= "//label[contains(text(),'Manual Input')]";
     private static final String txt_MANUAL_CI_SEARCH_BOX= "arid_WIN_0_800038045";
     private static final String btn_SAVE_BULK_CI= "WIN_0_700025244";
     private static final String btn_SHOW_BULK_IMPORT= "WIN_0_800038047";
@@ -67,7 +67,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String txt_WITH_WARNINGS= "arid_WIN_0_800038069";
     private static final String PRIMARY_CI= "//*[@id='T700009087']/tbody/tr[2]/td[2]/nobr/span";
     private static final String bulkCILoading_DIV_ID = "WIN_0_800038059";
-    private static final String rbtn_IGNORE_HANDLING_DUPLICATE_CIS= "WIN_0_RCGroup800038013";
+    private static final String rbtn_IGNORE_HANDLING_DUPLICATE_CIS= "//label[contains(text(),'Ignore Duplicate CIs')]";
     private static final String txt_IMPACT_TO_PLUS_BULK_UPDATE= "arid_WIN_0_999000299";
     private static final String btn_RADIOOPEN_ID = "WIN_4_rc0id800040059";
     private static final String btn_RADIOCLOSED_ID = "WIN_4_rc0id800040061";
@@ -326,7 +326,8 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     }
 
     public void clickIgnoreHandlingDuplicateCis(){
-        clickElement(By.name(rbtn_IGNORE_HANDLING_DUPLICATE_CIS));
+        wait(500);
+        findElement(By.xpath(rbtn_IGNORE_HANDLING_DUPLICATE_CIS)).click();
     }
 
     public String getPrimaryCI(){
@@ -541,7 +542,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
 
 
     public void clickManualInput(){
-        clickElement(By.id(rbtn_MANUAL_INPUT));
+        clickElement(By.xpath(rbtn_MANUAL_INPUT));
     }
 
 

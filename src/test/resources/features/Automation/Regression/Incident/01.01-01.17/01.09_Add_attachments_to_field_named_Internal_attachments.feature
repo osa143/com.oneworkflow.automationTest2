@@ -1,4 +1,4 @@
-@01.09AddAttachments @Incident  @01
+@01.09AddAttachments @Incident  @01 @HelixRegression
 
   Feature: Add Attachments to field named internal attachments
     Scenario: Add Attachments to field named internal attachments
@@ -15,6 +15,7 @@
       And user enters description as "Test Case 01.09 Add attachments"
       And user clicks save button
       Then ticket should be created and status should be assigned
+      And user gets trouble ticket value
       When user clicks on attachments under sections
       And  user adds attachment and verifies under "internal"
         | summary   | description | fullFilePath       | attachments |

@@ -90,7 +90,7 @@
 							<div class="navbar-text nav-title flex" id="pageTitle">Dashboard</div>
 							<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Feb 18, 2021 05:21:07 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Feb 3, 2021 04:45:21 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 							</ul>
 						</div>
@@ -118,11 +118,11 @@
 						<span class="">Scenarios</span>
 					</div>
 					<div class="py-3 text-center text-md text-primary">
-						1
+						6
 					</div>
 					<div class="d-flex">
-						<span class="flex text-muted">Out of which 0 passed</span>
-						<span><i class="fa fa-circle-o text-primary"></i> .00%</span>
+						<span class="flex text-muted">Out of which 4 passed</span>
+						<span><i class="fa fa-circle-o text-primary"></i> 66.67%</span>
 					</div>
 				</div>
 			</div>
@@ -132,7 +132,7 @@
 						<span class="">Start</span>
 					</div>
 					<div class="py-3 text-center text-md">
-						Feb 18, 2021 05:21:07 PM
+						Feb 3, 2021 04:45:21 PM
 					</div>
 					<div class="d-flex">
 						<span class="flex"></span>
@@ -146,7 +146,7 @@
 						<span class="">Time Taken</span>
 					</div>
 					<div class="py-3 text-center text-md">
-						0h 3m 7s+555ms
+						0h 28m 53s+56ms
 					</div>
 					<div class="d-flex">
 						<span class="flex"></span>
@@ -195,14 +195,14 @@
 							<div class="col-lg-5">
 								<div class="list">
 									<div class="list-item">
-										<div><i class="badge badge-xs badge-o b-danger"></i> &nbsp;Fail 100.00%</div>
+										<div><i class="badge badge-xs badge-o b-danger"></i> &nbsp;Fail 33.33%</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="box-footer">
-						<small class="text-muted">0 passed, 1 failed and 0 skipped</small>
+						<small class="text-muted">4 passed, 2 failed and 0 skipped</small>
 					</div>
 				</div>
 			</div>
@@ -220,7 +220,7 @@
 							<div class="col-lg-5">
 								<div class="list">
 									<div class="list-item">
-										<div><i class="badge badge-xs badge-o b-danger"></i> 100%</div>
+										<div><i class="badge badge-xs badge-o b-danger"></i> 33.333%</div>
 										<div class="list-body"><span class="text-muted">Failed</span></div>
 									</div>
 								</div>
@@ -228,7 +228,7 @@
 						</div>
 					</div>
 					<div class="box-footer">
-						<small class="text-muted">42 passed, 1 failed and 33 skipped</small>
+						<small class="text-muted">470 passed, 2 failed and 62 skipped</small>
 					</div>
 				</div>
 			</div>
@@ -259,9 +259,21 @@
 							<th>Others</th>
 						</tr>
 						<tr>
-							<td>@Copy_to_New_02_CI</td>
+							<td>@E2E_Test_RAN</td>
+							<td>4</td>
+							<td>3</td>
 							<td>0</td>
-							<td>2</td>
+						</tr>
+						<tr>
+							<td>@E2E</td>
+							<td>4</td>
+							<td>3</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>@Regression</td>
+							<td>4</td>
+							<td>3</td>
 							<td>0</td>
 						</tr>
 					</table>
@@ -321,7 +333,7 @@
 			                datasets: [{
 			                    borderColor: 'transparent',
 			                    data: [
-			                    	0, 1, 0, 0, 0, 0
+			                    	4, 2, 0, 0, 0, 0
 			                    ],
 			                    backgroundColor: [
 			                        "#00af00", "#F7464A", "#8b0000", "#ff6347", "#FDB45C", "#1e90ff"
@@ -356,7 +368,7 @@
 			                datasets: [{
 			                    borderColor: 'transparent',
 			                    data: [
-			                    	42, 1, 0, 0, 0, 33
+			                    	470, 2, 0, 0, 0, 62
 			                    ],
 			                    backgroundColor: [
 			                        "#00af00", "#F7464A", "#8b0000", "#ff6347", "#FDB45C", "#1e90ff"
@@ -384,7 +396,7 @@
 		})();
 	})
     var timeline = {
-"Copy to New 02 (CIs) [aR]":187.071    };
+"E2E Scenarios":1732.03    };
     function getRandomColor() {
         var letters = '0123456789ABCDEF';
         var color = '#';

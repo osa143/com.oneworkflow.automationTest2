@@ -50,12 +50,12 @@ Feature: checking of bulk loading additional definitions default settings
     When user clicks on ticket refresh button
     And user clicks on Diagnosis tab
     Then user validates primary ci as "SE_AP_alvesta-radmannen-ap1"
-    And user logsOut and closes the browser
-    And user switches to window 0
+#    And user logsOut and closes the browser
+#    And user switches to window 0
 
     Examples:
       |fileTypes                                                                                                  |
       |Test Attachments\10 CI's - Correct Names\CSV.csv |
- #     |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
-  #    |Test Attachments\10 CI's - Correct Names\XLS.xls|
-#      |Test Attachments\10 CI's - Correct Names\TEXT.txt |
+      |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
+      |Test Attachments\10 CI's - Correct Names\XLS.xls|
+      |Test Attachments\10 CI's - Correct Names\TEXT.txt |

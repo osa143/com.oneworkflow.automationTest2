@@ -197,7 +197,7 @@ public class OWF_AgentConsolePageSteps {
     @When("user selects search menu as {string}")
     public void userSelectsSearchMenuAs(String arg0) {
         agentConsolePage.selectSearchMenu(arg0);
-        agentConsolePage.wait(5000);
+        agentConsolePage.wait(2000);
     }
 
     @And("user clicks on {string} tab")
@@ -351,7 +351,13 @@ public class OWF_AgentConsolePageSteps {
 
     @And("user clicks ok on alert")
     public void userClicksOkOnAlert() {
-        agentConsolePage.acceptAlert();
+        try {
+            agentConsolePage.acceptAlert();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     @When("user clicks on create known error")
@@ -971,6 +977,12 @@ public class OWF_AgentConsolePageSteps {
     @When("user selects contact {string} and clicks remove selected person")
     public void userSelectsContactAndClicksRemoveSelectedPerson(String contact) {
         agentConsolePage.selectContactAndClicksRemoveSelectedPerson(contact);
+    }
+
+    @And("user enters change ticket previously created and searches in agent console and highlights")
+    public void userEntersChangeTicketPreviouslyCreatedAndSearchesInAgentConsoleAndHighlights() {
+        agentConsolePage.enterTicketID(CommonUtils.changeTicket);
+        agentConsolePage.clickOnTableRow1_agentConsole();
     }
 
     @And("user closes confirmation for copy to new by pressing x")

@@ -1,4 +1,4 @@
-@Initiator_Link_Tickets @Reg_Problem  @problem @prob
+@Initiator_Link_Tickets @Reg_Problem  @problem @prob @HelixRegression
   #passed  #CI search window
 Feature: Initiator link tickets
   Scenario: user should be able to link different types of tickets together

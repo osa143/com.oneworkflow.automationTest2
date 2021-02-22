@@ -1,4 +1,4 @@
-@Request_Type_displayed_in_Hierarchy
+@Request_Type_displayed_in_Hierarchy @OW_Incident
 
 Feature: Request Type displayed in Hierarchy[s]
 

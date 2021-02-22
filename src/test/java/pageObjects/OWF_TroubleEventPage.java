@@ -1,6 +1,7 @@
 package pageObjects;
 
 import io.cucumber.datatable.DataTable;
+import org.apache.commons.exec.util.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -117,6 +118,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String Table_DIAGNOSIS= "T700009087";
     private static final String dd_IMPACT_NAME= "Impact Name";
     private static final String chkbx_CONFIRM_ID= "WIN_0_rc0id990000905";
+    private static final String chkbx_CONFIRM_SELECTED_NOT_SELECTED="WIN_0_rc0id800040031";
     private static final String btn_SAVE_BULK_UPDATE_ID= "WIN_0_990000906";
     private static final String txt_ASSIGNEE= "arid_WIN_0_4";
     private static final String dd_ASSIGNMENT_PROFILE= "Assignment Profile";
@@ -156,7 +158,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btn_ADD_TIMELINE= "WIN_0_777021404";
     private static final String div_AFFECTED_BU= "WIN_0_600002504";
     private static final String txt_ID= "arid_WIN_0_777021006";
-    private static final String txt_SERVICE_PROVIDER= "arid_WIN_0_777031005";
+    private static final String txt_SERVICE_PROVIDER= "arid_WIN_2_777031005";
     private static final String txt_HOLD_TO_DATE= "arid_WIN_0_777031004";
     private static final String dd_HOLD_REASON= "Reason";
     private static final String txt_REJECT_REASON="arid_WIN_0_600001019";
@@ -179,6 +181,8 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btn_TICKET_MATCHING_REFRESH = "WIN_0_600002911";
     private static final String chkbx_TICKET_MATCHING_INCIDENT = "WIN_0_rc0id800040281";
     private static final String chkbx_TICKET_MATCHING_WORK_ORDER = "WIN_0_rc0id800040283";
+    private static final String chkbx_TICKET_MATCHING_PROBLEM= "WIN_0_rc0id800040527";
+    private static final String chkbx_TICKET_MATCHING_KNOWN_ERROR= "WIN_0_rc0id800040528";
     private static final String chkbx_TICKET_MATCHING_CHANGE = "WIN_0_rc0id800040282";
     private static final String chkbx_TICKET_MATCHING_CLEARED = "WIN_0_rc0id800040286";
     private static final String chkbx_TICKET_MATCHING_OPEN = "WIN_0_rc0id800040285";
@@ -216,6 +220,13 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
 
     public void clickTicketMatchingWorkOrderCheckbox(){
         clickElementById(chkbx_TICKET_MATCHING_WORK_ORDER);
+    }
+
+    public void clickTicketMatchingProblemsCheckbox(){
+        clickElementById(chkbx_TICKET_MATCHING_PROBLEM);
+    }
+    public void clickTicketMatchingKnownErrorCheckbox(){
+        clickElementById(chkbx_TICKET_MATCHING_KNOWN_ERROR);
     }
 
     public void clickTicketMatchingIncidentCheckbox(){
@@ -332,18 +343,15 @@ public void rightClickOnElement(String cellData){
 }
     public void impactFromUpdateAsPastTime(String cellData){
         selectAndRightClickOnTableElement(cellData);
-        WebElement element = driver.switchTo().activeElement();
-        element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.UP);
-        //element.sendKeys(Keys.UP);
-        element.sendKeys(Keys.ARROW_RIGHT);
-        element.sendKeys(Keys.DOWN);
-        element.sendKeys(Keys.ENTER);
+        WebElement impact = driver.findElement(By.xpath("//td[contains(text(),'Impact')]"));
+        action.moveToElement(impact).build().perform();
+        WebElement update = driver.findElement(By.xpath("//td[contains(text(),'Update')]"));
+        action.moveToElement(update).click().perform();
         int size =driver.findElements(By.tagName("iframe")).size();
         switchToFrameByIndex(size - 1);
         enterImpactFromPlus(CommonUtils.getDateAsTodayMidnight(0));
         enterImpactToPlus(CommonUtils.getDateAsTodayMidnight(1));
-        clickConfirmCheckBox();
+        clickConfirmCheckBox_all();
         clickSave_bulkUpdate();
     }
 
@@ -368,7 +376,14 @@ public void rightClickOnElement(String cellData){
         selectDropDownNameAndValue("Level*", value, false);
     }
     public String getHierarchicEscalationLevel(){
-        return getAttributeValueById(txt_HIERARCHIC_ESCLATION_LEVEL);
+        String text= getAttributeValueById(txt_HIERARCHIC_ESCLATION_LEVEL);
+        if(text.trim().length()==0)
+        {
+             text= getTextByID(txt_HIERARCHIC_ESCLATION_LEVEL);
+        }
+        System.out.println("Hierarchic escalation level is - " +text);
+               return text;
+
     }
     public void SelectFirstThreeCIs(){
         clickElement(By.xpath("//*[@id='T700009024']/tbody/tr[2]"));
@@ -628,6 +643,10 @@ public void rightClickOnElement(String cellData){
     public void clickConfirmCheckBox(){
         findElement(By.id(chkbx_CONFIRM_ID)).click();
      }
+    public void clickConfirmCheckBox_all(){
+        findElement(By.id(chkbx_CONFIRM_SELECTED_NOT_SELECTED)).click();
+    }
+
 
      public void enterEventStartTime(String time){
         findElement(By.id(txt_EVENT_START_TIME)).clear();

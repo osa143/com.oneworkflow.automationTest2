@@ -197,7 +197,7 @@ public class OWF_AgentConsolePageSteps {
     @When("user selects search menu as {string}")
     public void userSelectsSearchMenuAs(String arg0) {
         agentConsolePage.selectSearchMenu(arg0);
-        agentConsolePage.wait(2000);
+        agentConsolePage.wait(5000);
     }
 
     @And("user clicks on {string} tab")
@@ -971,6 +971,12 @@ public class OWF_AgentConsolePageSteps {
     @When("user selects contact {string} and clicks remove selected person")
     public void userSelectsContactAndClicksRemoveSelectedPerson(String contact) {
         agentConsolePage.selectContactAndClicksRemoveSelectedPerson(contact);
+    }
+
+    @And("user closes confirmation for copy to new by pressing x")
+    public void userClosesConfirmationForCopyToNewByPressingX() {
+        agentConsolePage.closeTab();
+        CommonUtils.switchToChildWindow(driver, 1);
     }
 }
 

@@ -474,6 +474,7 @@ public class OWF_ChangeRecordPageSteps {
     @And("user clicks on view button")
     public void userClicksOnViewButton() {
         changeRecordPage.clickView_approvalTab();
+        changeRecordPage.switchToFrameByIndex(2);
     }
 
     @Then("user validates actual start time is updated")
@@ -838,6 +839,7 @@ public class OWF_ChangeRecordPageSteps {
     @When("user creates change ticket with following details")
     public void userCreatesChangeTicketWithFollowingDetails (DataTable dataTable){
                 changeRecordPage.createChangeTicket(dataTable);
+                changeRecordPage.wait(2000);
             }
 
     @When("user validates change type field availability")
@@ -893,7 +895,6 @@ public class OWF_ChangeRecordPageSteps {
     @And("user clicks on approve button")
     public void userClicksOnApproveButton() {
         changeRecordPage.clickApprove();
-        changeRecordPage.switchToFrameByIndex(2);
     }
 
     @When("user clears description field")
@@ -932,6 +933,12 @@ public class OWF_ChangeRecordPageSteps {
     @And("user enters impact duration as {string} hours")
     public void userEntersImpactDurationAsHours(String ImpactedHours) {
         changeRecordPage.enterImpactedHours(ImpactedHours);
+
+    }
+
+    @And("user enters impact duration as {string} Days")
+    public void userEntersImpactDurationAsDays(String ImpactedDays) {
+        changeRecordPage.enterImpactedDays(ImpactedDays);
     }
 
     @And("user clicks on last risk question selects last answer as {string}")
@@ -976,7 +983,6 @@ public class OWF_ChangeRecordPageSteps {
     @Then("user validates change builder button is present")
     public void userValidatesButtonIsPresent() {
         Assert.assertTrue(changeRecordPage.verifyChangeBuilderButtonIsDisplayed());
-
     }
 
     @Then("user validates Location Details are shown")
@@ -1089,7 +1095,6 @@ public class OWF_ChangeRecordPageSteps {
 
     @Then("user selects CAB approval")
     public void userSelectsApproval() {
-
         changeRecordPage.clickCABApproval();
     }
 
@@ -1136,10 +1141,152 @@ public class OWF_ChangeRecordPageSteps {
 
     @And("user clicks yes on impact update confirmation")
     public void userClicksYesOnImpactUpdateConfirmation() {
-        changeRecordPage.switchToFrameByIndex(1);
+        changeRecordPage.switchToFrameByIndex(2);
         changeRecordPage.clickYes();
     }
+
+    @When("user clicks copy to new button")
+    public void userClicksCopyToNewButtonAndConfirms() {
+        changeRecordPage.clickCopyToNewButton();
+        changeRecordPage.clickYesConfirmation();
+        changeRecordPage.wait(5000);
+
+    }
+
+    @And("user validates new CR ticket details are same as original CR ticket details")
+    public void userValidatesNewCRTicketDetailsAreSameAsOriginalCRTicketDetails() {
+        changeRecordPage.verifyCopiedCRTicketSameAsParent(1, 2);
+
+    }
+
+    @And("user enters expected alarms as {string}")
+    public void userEntersExpectedAlarmsAs(String ExpectedAlarms) {
+        changeRecordPage.enterExpectedAlarms(ExpectedAlarms);
+    }
+
+    @And("user validates Change CI {string} impact category is {string} in row {int}")
+    public void userValidatesCIImpactCategoryIs(String arg0, String cellValue, int rowNum) {
+        Assert.assertEquals(cellValue, changeRecordPage.verifyColumnStatus("Impact Category", rowNum));
+
+    }
+
+    @And("user validates Change CI {string} impact type is {string} in row {int}")
+    public void userValidatesCIImpactTypeIs(String arg0, String cellValue, int rowNum) {
+        Assert.assertEquals(cellValue, changeRecordPage.verifyColumnStatus("Impact Type", rowNum));
+    }
+
+    @Then("user validates Change CI {string} impact level is {string} in row {int}")
+    public void userValidatesCIImpactLevelIs(String arg0, String cellValue, int rowNum) {
+        Assert.assertEquals(cellValue, changeRecordPage.verifyColumnStatus("Impact Level", rowNum));
+    }
+
+    @And("user validates Change CI {string} impact status is {string} in row {int}")
+    public void userValidatesChangeCIImpactStatusIs(String arg0, String cellValue, int rowNum) {
+        Assert.assertEquals(cellValue, changeRecordPage.verifyColumnStatus("Impact Status", rowNum));
+    }
+
+    @Then("user validates new change fields are null")
+    public void userValidatesNewChangeFieldsAreNull() {
+        Assert.assertTrue(changeRecordPage.verifyFieldsAreEmpty());
+    }
+
+    @Then("user validates risk questions are not answered")
+    public void userValidatesRiskQuestionsAreNotAnswered() {
+        changeRecordPage.VerifyRiskColumnIsEmpty();
+    }
+
+    @Then("user validates version column has no entries")
+    public void userValidatesVersionColumnHasNoEntries() {
+        changeRecordPage.VerifyVersionColumnIsEmpty();
+    }
+
+    @Then("user validates there are no sent notifications")
+    public void userValidatesThereAreNoSentNotifications() {
+        changeRecordPage.VerifySentNotificationsColumnIsEmpty();
+    }
+
+    @Then("user validates Linked ID column as empty")
+    public void userValidatesColumnAs() {
+        changeRecordPage.VerifyLinkedItemsColumnIsEmpty();
+    }
+
+    @Then("user validates Work Order column as empty")
+    public void userValidatesWorkOrderColumnAsEmpty() {
+        changeRecordPage.VerifyWorkOrderColumnIsEmpty();
+    }
+
+    @And("user validates SLA Title column as empty")
+    public void userValidatesSLATITleColumnAsEmpty() {
+        changeRecordPage.VerifySLATitleColumnIsEmpty();
+    }
+
+    @Then("user validates Change Project ID column as empty")
+    public void userValidatesChangeProjectIDColumnAsEmpty() {
+        changeRecordPage.VerifyChangeProjectIDColumnIsEmpty();
+    }
+
+    @Then("user validates Channel column as empty")
+    public void userValidatesChannelColumnAsEmpty() {
+        changeRecordPage.VerifyChannelColumnIsEmpty();
+    }
+
+    @Then("user validates ExternalTicketId Field as empty")
+    public void userValidatesExternalTicketIdFieldAsEmpty() {
+        changeRecordPage.verifyExternalTicketIDFieldIsEmpty();
+    }
+
+    @Then("user validates confirmation for copy to new box is displayed")
+    public void userValidatesConfirmationForCopyToNewBoxIsDisplayed() {
+        changeRecordPage.validateCopyToNewConfirmationIsShown();
+    }
+
+    @And("user closes confirmation for copy to new by pressing cancel button")
+    public void userClosesConfirmationForCopyToNewByPressingCancelButton() {
+        changeRecordPage.clickCancel_copyToNew();
+
+    }
+
+    @Then("user clicks no on copy to new popup")
+    public void userClicksNoOnCopyToNewPopup() {
+        changeRecordPage.clickNoButtonCopyToNew();
+    }
+
+    @Then("user validates confirmation message for copy to new")
+    public void userValidatesConfirmationMessageForCopyToNew() {
+        changeRecordPage.validateCopyToNewConfirmationMessage();
+    }
+
+    @And("user validates copy to new change ticket is displayed")
+    public void userValidatesCopyToNewChangeTicketIsDisplayed() {
+        changeRecordPage.validateChangeTicketIsDisplayed();
+    }
+
+    @When("user opens copy to new option")
+    public void userOpensCopyToNewOption() {
+        changeRecordPage.wait(1000);
+        changeRecordPage.openCopyToNewNoClicks();
+        changeRecordPage.wait(500);
+    }
+
+    @And("user click yes on copy to new popup")
+    public void userClickYesOnCopyToNewPopup() {
+        changeRecordPage.clickYesCopyToNew();
+    }
+
+    @Then("user validates CI confirmation message for copy to new is shown")
+    public void userValidatesCIConfirmationMessageForCopyToNewIsShown() {
+        changeRecordPage.validateCICopyToNewConfirmationMessage();
+    }
+
+    @Then("user clicks no two on copy to new popup")
+    public void userClicksNoTwoOnCopyToNewPopup() {
+        changeRecordPage.clickNo2ButtonCopyToNew();
+
+    }
+
+    @Then("user validates confirmation message for copy to new is {string}")
+    public void userValidatesConfirmationMessageForCopyToNewIs(String arg0) {
+        Assert.assertEquals(changeRecordPage.verifyCopyToNewMessage(), arg0);
+
+    }
 }
-
-
-

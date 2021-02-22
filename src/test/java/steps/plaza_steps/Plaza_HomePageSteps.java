@@ -1994,7 +1994,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on INC under internal case subtasks")
     public void userClicksOnINCUnderInternalCaseSubtasks() {
-        clickElement(By.className("linked formlink"));
+        homePage.userClickINCNumber();
     }
 
     @Then("user should see INC form")
@@ -2450,6 +2450,16 @@ public class Plaza_HomePageSteps extends BasePage {
     @Then("user adds any CI on plaza exclusion endpoint protection antivirus form")
     public void userAddsAnyCIOnPlazaExclusionEndpointProtectionAntivirusForm() {
       homePage.select_CI_exclusionEndpoint();
+    }
+
+    @Then("user should see {string} update in plaza")
+    public void userShouldSeeUpdateInPlaza(String arg0) {
+        Assert.assertEquals(homePage.getOWNotification_plaza(), arg0);
+    }
+
+    @And("user opens second tab")
+    public void userOpensSecondTab() {
+        homePage.openSecondTab();
     }
 
     @And("user selects any server database CI")

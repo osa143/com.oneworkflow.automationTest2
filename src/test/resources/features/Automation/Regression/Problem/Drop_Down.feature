@@ -24,7 +24,7 @@
       And multiple statuses "Critical:High:Medium:Low:(clear)" should be available in "Urgency" dropdown
       And user selects urgency as High
       And user selects accountable organisation as "CA_Infra"
-      And multiple statuses "CA_Infra:CA_IT:CA_Provider:DivX:External:TeliaFinance(clear)" should be available in "Accountable Org." dropdown
+      And multiple statuses "CA_Infra:CA_IT:CA_Provider:DivX:External:TeliaFinance:(clear)" should be available in "Accountable Org." dropdown
       And User selects "Accountable Org." as dropdownValue and should see values for "notreadonly"
         | DropdownValue | DropdownValuesToBePresent |
         | CA_NSD        | IP:ServCore               |
@@ -42,9 +42,9 @@
         | PAITServ      | MDM_DAAS:Security         |
         | PAMedia       | ConnHome:TV               |
 
-     # And user selects affected organisation as "CA_IT"
       Then user clicks edit affected org button
-      And multiple statuses "CA_Infra:CA_IT:CA_Provider:DivX:External:TeliaFinance(clear)" should be available in "Organisations  " dropdown
+      And user selects affected organisation as "CA_IT"
+      And multiple statuses "CA_Infra:CA_IT:CA_Provider:DivX:External:TeliaFinance:(clear)" should be available in "Organisations" dropdown
       And User selects "Affected Orgs." as dropdownValue and should see values for "notreadonly"
         | DropdownValue | DropdownValuesToBePresent |
         | CA_NSD        | IP:ServCore               |

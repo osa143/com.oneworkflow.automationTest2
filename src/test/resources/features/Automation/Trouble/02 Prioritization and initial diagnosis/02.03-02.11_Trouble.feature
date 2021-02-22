@@ -4,7 +4,7 @@
     Scenario: 02.03-02.11 trouble
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid user and password
+      When user logs in with valid username "Change_Automation_9" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create trouble event
       And user switches to window 1
@@ -19,7 +19,7 @@
       When user changes event start time as "12-31-2019 11:59:59" past date and time
       Then user clicks on save button
       And ticket should be created and status should be assigned
-      Then user validates availability of tabs "Timeline:Diagnosis:Interested Parties:Notifications:Linked Items:Work Orders:Service Level:Alarms:Recurring Incidents:Service Info"
+      Then user validates availability of tabs "Timeline:Diagnosis:Interested Parties:Notifications:Linked Items:Work Orders:Service Level:Alarms:Ticket Matching:Service Info"
       When user clicks on Ack button
       And user clicks on assignment under sections
       Then user validates last ack by field has data present

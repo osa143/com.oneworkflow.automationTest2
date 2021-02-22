@@ -534,6 +534,14 @@ public void clickElementById(String Id){
         return false;
     }
 
+    public boolean checkIfControlIsNullByElement(WebElement element) {
+        String isNull = element.getAttribute("Null");
+        if (isNull != null && isNull.contains("true")) {
+            return true;
+        }
+        return false;
+    }
+
     public boolean verifyElementIsReadyOnlyByContainsText(String textName) {
         String element = String.format("//label[contains(text(),'%s')]/text area", textName);
         System.out.println(element);

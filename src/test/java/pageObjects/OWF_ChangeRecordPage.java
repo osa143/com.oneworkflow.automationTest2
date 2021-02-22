@@ -21,6 +21,8 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_SEARCH_FILTER_CALENDAR_XPATH= "//*[@id='combo-1017-inputEl']";
     private static final String btn_CHANGE_RECORD= "button-1052";
     private static final String dd_STATUS= "Status";
+    private static final String txt_Title= "arid_WIN_0_777031000";
+    private static final String txt_reqestType= "arid_WIN_0_777031002";
     private static final String btn_SEARCH= "WIN_0_700506222";
     private static final String btn_clear= "WIN_0_700506223";
     private static final String txt_LOCATION_ID_PLUS= "arid_WIN_0_777031006";
@@ -52,6 +54,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String fld_TEMPLATE= "label777504501";
     private static final String txt_CHANGE_TYPE = "arid_WIN_0_755000000";
     private static final String txt_SOURCE_ID = "arid_WIN_0_777021006";
+    private static final String txt_SOURCE_NAME = "arid_WIN_0_777777912";
     private static final String txt_CHANGE_INITIATOR = "arid_WIN_0_2";
     private static final String dd_REQUEST_CATEGORY = "arid_WIN_0_777021548";
     private static final String txt_TEMPLATE = "arid_WIN_0_777504501";
@@ -313,6 +316,52 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
         //clickElement(By.id(dd_SERVICE_PROVIDER));
         selectDropDownNameAndValue(dd_SERVICE_PROVIDER, value, readOnly);
     }
+    private static final String btn_COPY_TO_NEW= "WIN_0_999000117";
+    private static final String txt_tkt_DESCRIPTION="arid_WIN_0_777031007";
+    private static final String dd_PRIORITY="//*[@id=\"WIN_0_700025204\"]/a";
+    private static final String btn_ConfirmYes = "WIN_0_600009803";
+    private static final String txt_PRIORITY = "arid_WIN_0_700025204";
+    private static final String txt_SERVICEPROVIDER = "arid_WIN_0_777031005";
+    private static final String txt_impactType = "arid_WIN_0_777031437";
+    private static final String txt_impactCategory = "//*[@id=\"T700009087\"]/tbody/tr[2]/td[11]/nobr";
+    private static final String table_riskQuestionstable_ID = "T700050028";
+    private static final String table_VersionTable_ID = "//*[@id=\"WIN_0_705001250\"]/div[2]/div/div[2]";
+    private static final String table_sentNotifications = "//*[@id=\"WIN_0_700020677\"]/div[2]/div/div[2]";
+    private static final String table_WORKORDER_ID = "//*[@id=\"WIN_0_777504000\"]/div[2]/div/div[2]";
+    private static final String table_SLATITLE_ID = "//*[@id=\"T777506226\"]/tbody/tr/td";
+    private static final String table_LINKEDITEMSTAB = "T777506000";
+    private static final String txt_CHANGEPROJECTTAB = "arid_WIN_0_777021620";
+    private static final String table_ChangeChannel = "T600002223";
+    private static final String txt_EXTERNALTICKETID = "arid_WIN_0_600001073";
+    private static final String popup_COPYTONEW = "arid_WIN_0_700027903";
+    private static final String btn_CANCELCOPYTONEW = "WIN_0_600009805";
+    private static final String btn_NOCOPYTONEW = "WIN_0_600009804";
+    private static final String btn_YESCOPYTONEW = "WIN_0_600009803";
+    private static final String form_CHANGEFORM = "WIN_0_600009803";
+
+
+    public String validateImpactCategoryAs(){
+        return getAttributeValueById(txt_impactCategory);
+    }
+
+    public String validateImpactTypeAs(){
+
+        return getAttributeValueById(txt_impactType);
+        }
+
+    public void enterImpactedDays(String impactedDays){
+        enterTextByElement(By.id(txt_IMPACT_DAYS), impactedDays);
+    }
+
+    public void clickCopyToNewButton(){
+        clickElementById(btn_COPY_TO_NEW);
+    }
+
+    public void clickYesConfirmation(){
+        CommonUtils.switchToChildWindow(driver, 2);
+        clickElementById(btn_ConfirmYes);
+        CommonUtils.switchToChildWindow(driver, 1);
+    }
 
     public boolean verifyFieldsAreReadOnly(){
          WebElement Div_schedule_tab=  driver.findElement(By.id("WIN_0_999001529"));
@@ -534,22 +583,22 @@ public void clickCabRequiredYes(){
     }
 
     public String getImpactSecs(){
-        return getTextByID(txt_IMPACT_SECS);
+        return getAttributeValueById(txt_IMPACT_SECS);
     }
 
     public String getImpactMins(){
-        return getTextByID(txt_IMPACT_MINS);
+        return getAttributeValueById(txt_IMPACT_MINS);
     }
 
     public String getImpactHours(){
-        return getTextByID(txt_IMPACT_HOURS);
+        return getAttributeValueById(txt_IMPACT_HOURS);
     }
     public void enterImpactedHours(String text){
         enterTextByElement(By.id(txt_IMPACT_HOURS), text);
     }
 
     public String getImpactDays(){
-        return getTextByID(txt_IMPACT_DAYS);
+        return getAttributeValueById(txt_IMPACT_DAYS);
     }
 
     public String getExpectedAlarms(){
@@ -618,8 +667,8 @@ public void clickCabRequiredYes(){
         enterRiskDescriptionId(listMap.get(0).get("Risk"));
         enterServiceAndCustomerImpact(listMap.get(0).get("ServiceCustomerImpact"));
         selectEstimatedImpact(listMap.get(0).get("EstimatedImpact"));
-        enterStartDate(2);
-        enterEndDate(20);
+        enterStartDate(20);
+        enterEndDate(30);
         enterImpactDurationMins(listMap.get(0).get("ImpactDuration"));
         clickSave();
     }
@@ -688,6 +737,11 @@ public void clickCabRequiredYes(){
    public void enterProjectCode(String projectCode){
         enterTextByElement(By.id(txt_PROJECTCODE), projectCode);
    }
+
+    public void enterExpectedAlarms(String ExpectedAlarms){
+        enterTextByElement(By.id(txt_EXPECTED_ALARMS), ExpectedAlarms);
+    }
+
     public String getRequestCategory(){
        return getTextByID(txt_REQUEST_CATEGORY);
    }
@@ -898,7 +952,273 @@ public void clickCabRequiredYes(){
         Boolean availability = verifyElementIsDisplayed(By.id(txt_ACTUALIMPACT));
         System.out.println(availability);
         return availability;
+    }
+
+    public static String ParentCRTicketTitle;
+    public static String ParentCRTicketRequestType;
+    public static String ParentCRTicketDescription;
+    public static String ParentCRTicketPriority;
+    public static String ParentCRChangeType;
+    public static String ParentCRStatus;
+    public static String ParentCRServiceProvider;
+    public static String ParentCRSource;
+    public static String ParentCRTemplate;
+    public static String ParentCRReason;
+    public static String ParentCRChangeBuilder;
+    public static String ParentCRImplementation;
+    public static String ParentCRTestPlan;
+    public static String ParentCRRollback;
+    public static String ParentCRCommunicationPlan;
+    public static String ParentCRVerOfFunctionality;
+    public static String ParentCRRiskDescription;
+    public static String ParentCRServiceAndCustomerImpact;
+    public static String ChildCRTicketTitle;
+    public static String ChildCRTicketRequestType;
+    public static String ChildCRTicketDescription;
+    public static String ChildCRTicketPriority;
+    public static String ChildCRChangeType;
+    public static String ChildCRStatus;
+    public static String ChildCRServiceProvider;
+    public static String ChildCRSource;
+    public static String ChildCRTemplate;
+    public static String ChildCRReason;
+    public static String ChildCRChangeBuilder;
+    public static String ChildCRImplementation;
+    public static String ChildCRTestPlan;
+    public static String ChildCRRollback;
+    public static String ChildCRCommunicationPlan;
+    public static String ChildCRVerOfFunctionality;
+    public static String ChildCRRiskDescription;
+    public static String ChildCRServiceAndCustomerImpact;
+
+    public void getParentCRTicket(int parentWindowID){
+        CommonUtils.switchToChildWindow(driver, parentWindowID);
+        clickRefresh_ticketFresh();
+        clickElement(By.xpath("//*[@id=\"WIN_0_999000003\"]/div[2]/div[2]/div/dl/dd[4]/span[2]/a"));
+        ParentCRTicketTitle = getAttributeValueById(txt_Title);
+        ParentCRTicketRequestType = getAttributeValueById(txt_reqestType);
+        ParentCRTicketDescription = getAttributeValueById(txt_tkt_DESCRIPTION);
+        ParentCRTicketPriority = getAttributeValueById(txt_PRIORITY);
+        ParentCRChangeType = getAttributeValueById(txt_CHANGE_TYPE);
+        ParentCRStatus = getAttributeValueById(txt_STATUS);
+        ParentCRServiceProvider = getAttributeValueById(txt_SERVICEPROVIDER);
+        ParentCRSource = getAttributeValueById(txt_SOURCE_NAME);
+        ParentCRTemplate = getAttributeValueById(txt_TEMPLATE);
+        ParentCRReason = getAttributeValueById(txtREASON_ID);
+        ParentCRChangeBuilder = getAttributeValueById(txt_CHANGE_BUILDER);
+        ParentCRImplementation = getAttributeValueById(txt_IMPLEMENTATION);
+        ParentCRTestPlan = getAttributeValueById(txt_TEST_PLAN);
+        ParentCRRollback = getAttributeValueById(txt_ROLLBACK);
+        ParentCRCommunicationPlan = getAttributeValueById(txt_COMMUNICATION_PLAN);
+        ParentCRVerOfFunctionality = getAttributeValueById(txt_VER_OF_FUNCTIONALITY);
+        ParentCRRiskDescription = getAttributeValueById(txt_RISK_DESCRIPTION);
+        ParentCRServiceAndCustomerImpact = getAttributeValueById(txt_SERVICE_AND_CUSTOMER_IMPACT);
+    }
+    public void getChildTicket(int childWindowID){
+        CommonUtils.switchToChildWindow(driver, childWindowID);
+        ChildCRTicketTitle = getAttributeValueById(txt_Title);
+        ChildCRTicketRequestType = getAttributeValueById(txt_reqestType);
+        ChildCRTicketDescription = getAttributeValueById(txt_tkt_DESCRIPTION);
+        ChildCRTicketPriority = getAttributeValueById(txt_PRIORITY);
+        ChildCRChangeType = getAttributeValueById(txt_CHANGE_TYPE);
+        ChildCRStatus = getAttributeValueById(txt_STATUS);
+        ChildCRServiceProvider = getAttributeValueById(txt_SERVICEPROVIDER);
+        ChildCRSource = getAttributeValueById(txt_SOURCE_NAME);
+        ChildCRTemplate = getAttributeValueById(txt_TEMPLATE);
+        ChildCRReason = getAttributeValueById(txtREASON_ID);
+        ChildCRChangeBuilder = getAttributeValueById(txt_CHANGE_BUILDER);
+        ChildCRImplementation = getAttributeValueById(txt_IMPLEMENTATION);
+        ChildCRTestPlan = getAttributeValueById(txt_TEST_PLAN);
+        ChildCRRollback = getAttributeValueById(txt_ROLLBACK);
+        ChildCRCommunicationPlan = getAttributeValueById(txt_COMMUNICATION_PLAN);
+        ChildCRVerOfFunctionality = getAttributeValueById(txt_VER_OF_FUNCTIONALITY);
+        ChildCRRiskDescription = getAttributeValueById(txt_RISK_DESCRIPTION);
+        ChildCRServiceAndCustomerImpact = getAttributeValueById(txt_SERVICE_AND_CUSTOMER_IMPACT);
+
+    }
+    public boolean verifyCopiedCRTicketSameAsParent(int parentWindowID, int childWindowID) {
+        getParentCRTicket(parentWindowID);
+        getChildTicket(childWindowID);
+        Assert.assertTrue(verifySwedenBuIsSelected());
+
+        if (ParentCRTicketTitle.equals(ChildCRTicketTitle) && ParentCRTicketRequestType.equals(ChildCRTicketRequestType)
+                && ParentCRTicketDescription.equals(ChildCRTicketDescription) && ParentCRTicketPriority.equals(ChildCRTicketPriority) && ParentCRChangeType.equals(ChildCRChangeType)
+                && ParentCRStatus.equals(ChildCRStatus) && ParentCRServiceProvider.equals(ChildCRServiceProvider) && ParentCRSource.equals(ChildCRSource) && ParentCRTemplate.equals(ChildCRTemplate)
+                && ParentCRReason.equals(ChildCRReason) && ParentCRChangeBuilder.equals(ChildCRChangeBuilder) && ParentCRImplementation.equals(ChildCRImplementation) && ParentCRTestPlan.equals(ChildCRTestPlan)
+                && ParentCRRollback.equals(ChildCRRollback) && ParentCRCommunicationPlan.equals(ChildCRCommunicationPlan) && ParentCRVerOfFunctionality.equals(ChildCRVerOfFunctionality) && ParentCRRiskDescription.equals(ChildCRRiskDescription)
+                && ParentCRServiceAndCustomerImpact.equals(ChildCRServiceAndCustomerImpact))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean verifyFieldsAreEmpty(){
+        WebElement Div_changeForm=  driver.findElement(By.id("WIN_0_999000010"));
+        List<WebElement> elements= Div_changeForm.findElements(By.tagName("textarea"));
+        for (int i = 0; i < elements.size(); i ++)
+        {
+            boolean result =verifyGetTextIsEmpty(elements.get(i));
+            System.out.println("Null element - " +elements.get(i));
+            if (result==false)
+                return false;
+        }
+        return true;
+    }
+    public boolean verifyGetTextIsEmpty(WebElement element){
+        if (element.getText().trim().isEmpty()) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean VerifyRiskColumnIsEmpty()
+    {
+        String riskColumnData = getAttributeValueByElement(By.id(table_riskQuestionstable_ID));
+        if(riskColumnData == null || riskColumnData == ""){
+            return true;
+        }
+        else return false;
+    }
+
+    public boolean VerifyVersionColumnIsEmpty()
+    {
+        String versionColumnData = getAttributeValueByElement(By.xpath(table_VersionTable_ID));
+        if(versionColumnData == null || versionColumnData == ""){
+            return true;
+        }
+        else return false;
+    }
+
+    public boolean VerifySentNotificationsColumnIsEmpty()
+    {
+        String sentNotificationData = getAttributeValueByElement(By.xpath(table_sentNotifications));
+        if(sentNotificationData == null || sentNotificationData == ""){
+            return true;
+        }
+        else return false;
+    }
+
+    public boolean VerifyLinkedItemsColumnIsEmpty()
+    {
+      int rowsSize= getTableRows(By.id(table_LINKED_ITEMS_ID)).size();
+      if (rowsSize==0)
+          return true;
+      else return false;
+    }
+
+
+    public boolean VerifyWorkOrderColumnIsEmpty()
+    {
+        String workOrderData = getAttributeValueByElement(By.xpath(table_WORKORDER_ID));
+        if(workOrderData == null || workOrderData == ""){
+            return true;
+        }
+        else return false;
+    }
+
+    public boolean VerifySLATitleColumnIsEmpty(){
+        {
+            String changeProjectData = getAttributeValueByElement(By.xpath(table_SLATITLE_ID));
+            if(changeProjectData == null || changeProjectData == ""){
+                return true;
+            }
+            else return false;
+        }
+    }
+
+    public boolean VerifyChangeProjectIDColumnIsEmpty(){
+        {
+            String changeProjectData = getAttributeValueByElement(By.id(txt_CHANGEPROJECTTAB));
+            if(changeProjectData == null || changeProjectData == ""){
+                return true;
+            }
+            else return false;
+        }
+    }
+
+    public boolean VerifyChannelColumnIsEmpty(){
+        {
+            int rowsSize= getTableRows(By.id(table_ChangeChannel)).size();
+            if (rowsSize==0)
+                return true;
+            else return false;
+        }
+    }
+
+    public boolean verifyExternalTicketIDFieldIsEmpty(){
+        {
+            String changeExternalTickIDetData = getAttributeValueByElement(By.id(txt_EXTERNALTICKETID));
+            if(changeExternalTickIDetData == null || changeExternalTickIDetData == ""){
+                return true;
+            }
+            else return false;
+        }
+    }
+
+    public void validateCopyToNewConfirmationIsShown() {
+        findElement(By.id(popup_COPYTONEW)).isDisplayed();
+    }
+
+    public void clickCancel_copyToNew() {
+        findElement(By.id(btn_CANCELCOPYTONEW)).click();
+        CommonUtils.switchToChildWindow(driver, 1);
+    }
+
+    public void clickNoButtonCopyToNew() {
+        findElement(By.id(btn_NOCOPYTONEW)).click();
+        wait(5000);
+        CommonUtils.switchToChildWindow(driver,1);
+    }
+    public boolean validateCopyToNewConfirmationMessage(){
+        {
+            CommonUtils.switchToChildWindow(driver,3);
+            String copyToNewConfirmation = getAttributeValueByElement(By.id(popup_COPYTONEW));
+            if (copyToNewConfirmation.contains("holds no related CI's. Do you still want to make a copy of this Change Request?")){
+                return true;
+            }
+            else return false;
+        }
+    }
+
+    public void validateChangeTicketIsDisplayed() {
+        findElement(By.id(form_CHANGEFORM)).isDisplayed();
+    }
+
+    public void openCopyToNewNoClicks() {
+        findElement(By.id(btn_COPY_TO_NEW)).click();
+        CommonUtils.switchToChildWindow(driver, 2);
+    }
+
+    public void clickYesCopyToNew() {
+        CommonUtils.switchToChildWindow(driver,3);
+        findElement(By.id(btn_YESCOPYTONEW)).click();
+        wait(3000);
+        CommonUtils.switchToChildWindow(driver, 2);
+    }
+
+    public boolean validateCICopyToNewConfirmationMessage(){
+        {
+            String copyToNewConfirmation = getAttributeValueByElement(By.id(popup_COPYTONEW));
+            if (copyToNewConfirmation.contains("got 101 related CI's. This number of CIs cannot be copied. Do you want to create the new request without CIs?")){
+            }
+            return true;
+        }
 
     }
 
+    public void clickNo2ButtonCopyToNew() {
+        CommonUtils.switchToChildWindow(driver,3);
+        findElement(By.id(btn_NOCOPYTONEW)).click();
+        wait(3000);
+        CommonUtils.switchToChildWindow(driver,2);
+
+    }
+
+    public String verifyCopyToNewMessage() {
+        CommonUtils.switchToChildWindow(driver, 2);
+        String error =getTextByID(popup_COPYTONEW);
+        System.out.println(error);
+        return error;
+    }
 }

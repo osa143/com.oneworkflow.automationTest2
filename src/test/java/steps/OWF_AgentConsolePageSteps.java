@@ -984,6 +984,12 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.enterTicketID(CommonUtils.changeTicket);
         agentConsolePage.clickOnTableRow1_agentConsole();
     }
+
+    @And("user closes confirmation for copy to new by pressing x")
+    public void userClosesConfirmationForCopyToNewByPressingX() {
+        agentConsolePage.closeTab();
+        CommonUtils.switchToChildWindow(driver, 1);
+    }
 }
 
 

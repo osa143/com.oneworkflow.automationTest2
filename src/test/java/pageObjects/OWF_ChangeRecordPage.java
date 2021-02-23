@@ -127,7 +127,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String btn_SHOW_TEMPLATES = "WIN_0_700047004";
     private static final String txt_CUSTOMER = "arid_WIN_2_777031014";
     private static final String btn_OPEN_TEMPLATE = "WIN_0_777010092";
-    private static final String txt_STATUS = "arid_WIN_2_7";
+    private static final String txt_STATUS = "arid_WIN_0_777031003";
     private static final String txt_TEMPLATE_TYPE = "arid_WIN_2_700047012";
     private static final String txt_TEMPLATE_SUBTYPE = "arid_WIN_2_700047013";
     private static final String txt_TEMPLATE_NAME = "arid_WIN_2_777504501";

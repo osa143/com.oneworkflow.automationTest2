@@ -1,6 +1,5 @@
 @Copy_to_New_04_CI_Limit
 
-
 Feature: Copy to New 04 (CI Limit) [aR]
 
   Scenario: Copy to New 04 (CI Limit) [aR]
@@ -42,7 +41,7 @@ Feature: Copy to New 04 (CI Limit) [aR]
     And user enters as "Test" in service and customer impact
     Then user clicks save button
     When user clicks on Diagnosis tab
-    Then user validates no CIs are displayed
+    Then user validates CI availability
 
 
 

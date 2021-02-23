@@ -1465,8 +1465,8 @@ public class OWF_ChangeRecordPageSteps {
         changeRecordPage.wait(500);
     }
 
-    @And("user click yes on copy to new popup")
-    public void userClickYesOnCopyToNewPopup() {
+    @And("user clicks yes on copy to new popup")
+    public void userClicksYesOnCopyToNewPopup() {
         changeRecordPage.clickYesCopyToNew();
     }
 

@@ -949,7 +949,10 @@ public class OWF_WorkOrderPageSteps {
         Assert.assertEquals(workOrderPage.getCustomerContractID(), customerContractorID);
     }
 
-
+    @And("user validates OW description same as Helix")
+    public void userValidatesHelixDescriptionAs() {
+        Assert.assertTrue(workOrderPage.verifyHelixDesription());
+    }
 }
 
 

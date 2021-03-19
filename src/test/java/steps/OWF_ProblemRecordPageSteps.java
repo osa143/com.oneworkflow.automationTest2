@@ -121,14 +121,13 @@ public class OWF_ProblemRecordPageSteps {
 
     @When("user clicks on Ack button")
     public void userClicksOnAckButton() {
+        problemRecordPage.clickAckButton_problemRecord();
+        problemRecordPage.wait(6000);
         try {
-            problemRecordPage.clickAckButton_problemRecord();
             problemRecordPage.clickOkOnWarningMessage();
         } catch (Exception e) {
 
         }
-
-        problemRecordPage.wait(6000);
     }
 
     @Then("problem ticket status should be under investigation")

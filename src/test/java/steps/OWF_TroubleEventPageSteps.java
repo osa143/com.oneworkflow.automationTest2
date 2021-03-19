@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import driver.factory.DriverFactory;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -1141,10 +1142,15 @@ public class OWF_TroubleEventPageSteps {
             troubleEventPage.switchToFrameByIndex(2);
             troubleEventPage.clickElementByContainsTextAndTagName("a", "OK");
             troubleEventPage.switchToDefault();
-            troubleEventPage.switchToFrameByIndex(2);
+            int frames = troubleEventPage.getNumberOfFrames();
+            if(frames>2){
+                troubleEventPage.switchToFrameByIndex(2);
+                troubleEventPage.wait(3000);
+                troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
+                troubleEventPage.switchToDefault();
+            }
             troubleEventPage.wait(3000);
             troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
-            troubleEventPage.switchToDefault();
         }
         catch(Exception e){
             e.printStackTrace();
@@ -1689,6 +1695,25 @@ public class OWF_TroubleEventPageSteps {
         troubleEventPage.rightClickOnPrimaryCI();
         troubleEventPage.doImpactClear_all();
     }
+
+    @And("user enters ticket created from Helix stub")
+    public void userEntersTicketCreatedFromHelixStub() {
+        troubleEventPage.enterTroubleTicket(CommonUtils.HelixOPID_GeneratedFromStub);
+    }
+
+    @And("user should see an alarm is present")
+    public void userShouldSeeAnAlarmIsPresent() {
+        Assert.assertTrue(troubleEventPage.validateAlarmIsPresent());
+
+    }
+
+    @And("user should see warning message and clicks on ok button and clicks yes")
+    public void userShouldSeeWarningMessageAndClicksOnOkButton() {
+        troubleEventPage.clickOkOnPopup_Helix();
+        troubleEventPage.clickYes_Helix();
+
+    }
+
 }
 
 

@@ -5,6 +5,8 @@ import pageObjects.BasePage;
 
 import java.sql.SQLOutput;
 
+//This Class is the Page objects and Actions for BMC Helix Login page
+
 public class BMC_Helix_LoginPage extends BasePage {
 
     private String txt_username_ID = "username-id";

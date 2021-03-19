@@ -1,4 +1,6 @@
 @Incident @Regression
+  #Tag is an identifier for the runner class (testRunner)
+
 Feature: Incident
   In order to verify incident functionality
   I want to create an incident and process to till end
@@ -9,6 +11,7 @@ Feature: Incident
     And I click on login button
     Then I should see BMC helix homepage
 
+    @Scenario1
   Scenario: Incident End to End
     When I click on applications
     And I click on incident management and click new incident
@@ -35,6 +38,8 @@ Feature: Incident
     Then ticket status should be "Closed"
     When I click on logout
     Then I should be logged out successfully
+
+
 
 
 

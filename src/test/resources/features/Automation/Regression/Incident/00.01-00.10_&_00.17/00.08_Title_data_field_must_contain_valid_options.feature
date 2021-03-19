@@ -1,4 +1,4 @@
-@00.08 @Incident1 @00
+@00.08 @Incident @00
  #Passed
   Feature: Title data field must contain valid options
 
@@ -12,4 +12,9 @@
       Then trouble record form should appear in new tab
       When user validates Title availability
       Then multiple statuses "(no entries in menu)" should be available in "Title" dropdown
-#      And user logsOut and accepts alert
+      When user clicks on sweden checkbox under affected BU's
+      Then user enters "Test case 00.08 validate options for Title" in Title field
+      And user selects request type as "Customer" on trouble event page
+      And user enters description as "Test case 00.08 validate options for Title drop down"
+      And user clicks on save button
+      Then ticket should be created and status should be assigned

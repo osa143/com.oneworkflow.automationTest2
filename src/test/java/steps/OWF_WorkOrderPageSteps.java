@@ -248,8 +248,9 @@ public class OWF_WorkOrderPageSteps {
     }
 
     @And("user validates source field as {string}")
-    public void userValidatesSourceFieldAs(String arg0) {
-        Assert.assertEquals(workOrderPage.getSource(), arg0);
+    public void userValidatesSourceFieldAs(String expected_source) {
+       String actual_source=workOrderPage.getSource();
+        Assert.assertEquals(actual_source, expected_source);
     }
 
     @And("user validates PDB title field as {string}")

@@ -21,6 +21,7 @@ public class BasePage{
     WebDriverWait webDriverWait = new WebDriverWait(DriverFactory.getInstance().getDriver(), 30);
 
     protected BasePage() {
+
         driver = DriverFactory.getInstance().getDriver();
     }
 
@@ -33,7 +34,6 @@ public class BasePage{
         driver.get(appURL);
 
     }
-
     public String getPageTitle() {
         String Title=driver.getTitle();
         System.out.println(Title);
@@ -922,6 +922,7 @@ public void clickElementById(String Id){
     public void selectTab(String tab) {
         wait(2000);
         try {
+
             driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tab)).findFirst().orElse(null).click();
         }
         catch (Exception e){

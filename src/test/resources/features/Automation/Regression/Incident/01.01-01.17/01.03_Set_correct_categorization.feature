@@ -1,4 +1,4 @@
-@01.03 @Incident1  @01
+@01.03 @Incident  @01
 #passed
 # CORE for ST, Core for SIT
 Feature: Set correct categorization
@@ -21,4 +21,12 @@ Feature: Set correct categorization
     When user validates availability of item dropdown
     Then multiple statuses "DNS:EPG:GGSN:LOCAL_CORE:NAT:NLS:PCRF:PGW::PM:RADIUS:SGSN:SHAPERS:TPE-CMIPBB" should be available in "Item" dropdown
     And user selects Item as "SGSN"
+    When user clicks on sweden checkbox under affected BU's
+    When user enters "01.03 Set correct categorization" in Title field
+    And user selects request type as "Customer" on trouble event page
+    And user enters description as "01.03 set correct categorization"
+    And user clicks on save button
+    Then ticket should be created and status should be assigned
+
+
 

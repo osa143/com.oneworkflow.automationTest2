@@ -1,24 +1,24 @@
-package pageObjects.JMS;
-import java.util.List;
-import javax.jms.DeliveryMode;
-import javax.jms.MessageProducer;
-import javax.jms.Queue;
-import javax.jms.QueueConnection;
-import javax.jms.QueueConnectionFactory;
-import javax.jms.QueueSession;
-import javax.jms.Session;
-import javax.jms.TextMessage;
-
+//package pageObjects.JMS;
+//import java.util.List;
+//import javax.jms.DeliveryMode;
+//import javax.jms.MessageProducer;
+//import javax.jms.Queue;
+//import javax.jms.QueueConnection;
+//import javax.jms.QueueConnectionFactory;
+//import javax.jms.QueueSession;
+//import javax.jms.Session;
+//import javax.jms.TextMessage;
+//
 //import com.tibco.tibjms.TibjmsQueueConnectionFactory;
-import pageObjects.JMS.TibcoQueue;
-
-
-public class TibcoQueueUtils {
-        private QueueConnection queueConnection;
-        private QueueSession queueSession;
-        private Queue sendQueue;
-        private MessageProducer messageProducer;
-
+//import pageObjects.JMS.TibcoQueue;
+//
+//
+//public class TibcoQueueUtils {
+//        private QueueConnection queueConnection;
+//        private QueueSession queueSession;
+//        private Queue sendQueue;
+//        private MessageProducer messageProducer;
+//
 //        private void configureTibcoConnection(TibcoQueue tibcoQueue) throws Exception {
 //            QueueConnectionFactory queueConnectionFactory =
 //                    new TibjmsQueueConnectionFactory(tibcoQueue.getTibcoInstance());
@@ -64,5 +64,5 @@ public class TibcoQueueUtils {
 //                }
 //            });
 //        }
-    }
-
+//    }
+//

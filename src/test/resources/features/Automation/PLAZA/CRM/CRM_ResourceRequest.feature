@@ -1,4 +1,4 @@
-@CRM_ResourceRequest @PLAZA
+@CRM_ResourceRequest
 Feature: Plaza CRM form test
   Scenario: user validates information sent to OW from Plaza
 

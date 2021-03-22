@@ -1,4 +1,4 @@
-@00.01 @00 #@Incident1
+@00.01 @00 @Incident
   #Passed
   Feature: Validate incident record process artifact
 
@@ -113,5 +113,11 @@
       And user validates "Event End Time" is present
       And user validates "Withdrawn Reason" is present
       And user validates Save is present
-      #And user logsOut and accepts alert
+      When user clicks on sweden checkbox under affected BU's
+      When user enters "Test case 00.01 validate incident artifact" in Title field
+      And user selects request type as "Customer" on trouble event page
+      And user enters description as "Test case 00.01 validate incident artifact"
+      And user clicks on save button
+      Then ticket should be created and status should be assigned
+
 

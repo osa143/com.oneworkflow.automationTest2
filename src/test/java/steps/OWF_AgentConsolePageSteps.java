@@ -5,6 +5,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
+import pageObjects.BasePage;
 import pageObjects.OWF_AgentConsolePage;
 import utils.CommonUtils;
 import utils.Ticket;
@@ -14,6 +15,7 @@ import static utils.CommonUtils.*;
 public class OWF_AgentConsolePageSteps {
 
     OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
+
 
     @Then("user successfully logged in to OneWorkflow and agent console should be displayed")
     public void userSuccessfullyLoggedInToOneworkflowAndAgentConsoleShouldBeDisplayed() {
@@ -983,6 +985,12 @@ public class OWF_AgentConsolePageSteps {
     public void userEntersChangeTicketPreviouslyCreatedAndSearchesInAgentConsoleAndHighlights() {
         agentConsolePage.enterTicketID(CommonUtils.changeTicket);
         agentConsolePage.clickOnTableRow1_agentConsole();
+    }
+
+    @And("user closes confirmation for copy to new by pressing x")
+    public void userClosesConfirmationForCopyToNewByPressingX() {
+        agentConsolePage.closeTab();
+        CommonUtils.switchToChildWindow(driver, 1);
     }
 }
 

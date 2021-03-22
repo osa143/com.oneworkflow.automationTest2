@@ -51,14 +51,14 @@
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
       And user validates CI "apoteket-fnt-137263" is listed
-      And user right clicks on CI "apoteket-fnt-137263" and selects "Impact:Update"
+      And user right clicks on primary CI and selects "Impact:Update"
       Then user switches to frame
       And user enters impact from time as past on impact details bulk update window
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
       And user clicks on "Diagnosis" tab
-      When user right clicks on CI "apoteket-fnt-137263" and clears impact
+      When user right clicks on primary CI and clears impact
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
       And user clicks on "Schedule" tab

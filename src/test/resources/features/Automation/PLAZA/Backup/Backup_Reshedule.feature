@@ -1,4 +1,4 @@
-@Backup_Re_Schedule @Back_up
+@Backup_Re_Schedule  @Back_up
   Feature:Backup (Re)Schedule plaza form test
     Scenario: user validates information sent to OW from Plaza
 

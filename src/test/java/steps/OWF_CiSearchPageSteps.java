@@ -697,4 +697,21 @@ public class OWF_CiSearchPageSteps {
         int newDelay= delay*60;
         ciSearchPage.enterImpactToPlus(CommonUtils.getDateTime(pattern, "Europe/Stockholm", newDelay));
     }
+
+    @And("user validates Change impact from time is same as request start time")
+    public void userValidatesChangeImpactFromTimeIsSameAsRequestStartTime() {
+        Assert.assertEquals(CommonUtils.eventStartTime, ciSearchPage.getImpactFrom_DiagnosisTab());
+
+    }
+
+    @And("user validates Change impact to time is same as request end time")
+    public void userValidatesChangeImpactToTimeIsSameAsRequestEndTime() {
+        Assert.assertEquals(CommonUtils.requestEnd, ciSearchPage.getImpactTo_DiagnosisTab());
+    }
+
+    @And("user validates no CI's are on the ticket")
+    public void userValidatesNoCISAreOnTheTicket() {
+        Assert.assertTrue(ciSearchPage.validateNoCIsArePresent());
+    }
+
 }

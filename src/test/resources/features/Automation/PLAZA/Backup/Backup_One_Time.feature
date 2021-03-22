@@ -1,4 +1,4 @@
-@Backup_OneTime1  @Back_up
+@Backup_OneTime1 @Back_up
   Feature: Backup One Time plaza form test
     Scenario: user validates information sent to OW from Plaza
 
@@ -59,7 +59,7 @@
       And user clicks on bulk update save button
       And user clicks on "Diagnosis" tab
       And user waits 3 secs
-      When user right clicks on CI "cc100cgas001" and clears impact
+      When user right clicks on primary CI and clears impact
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

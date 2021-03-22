@@ -1,6 +1,6 @@
 @C2BService @C2B_Tests
 Feature: Plaza C2B Cache form test
-  Scenario Outline: user validates information sent to OW from Plaza
+  Scenario Outline: C2B service
 
     Given user is on the Plaza login page
     When user enters username "testauto" and password as "test123" and clicks on login

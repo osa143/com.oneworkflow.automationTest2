@@ -32,12 +32,15 @@ public class CommonUtils extends BasePage {
     public static String CI_Impact_From_Time;
     public static String CI_Impact_To_Time;
     public static String Timeline_Entry;
+    public static String before_estimatedReadyTime;
     public static String estimatedReadyTime;
     public static String WO_eventStartTime;
     public static String EventEndTime;
     public static String UnlinkTicket;
     public static String TokeID;
     public static String OLA_TargetTime;
+    public static String HelixOPID_GeneratedFromStub;
+
 
 
     // 0 - parent window

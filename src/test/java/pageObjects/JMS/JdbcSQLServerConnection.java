@@ -1,5 +1,6 @@
 package pageObjects.JMS;
 
+import org.apache.commons.collections.bag.SynchronizedSortedBag;
 import utils.CommonUtils;
 
 import java.sql.*;
@@ -37,6 +38,7 @@ public class JdbcSQLServerConnection {
 //            String sql= "select count (*) from OS3_OP_NMS_IntegrationIn";
             Statement statement=connection.createStatement();
             ResultSet resultSet= statement.executeQuery(sql);
+            System.out.println("Connected to the database successfully");
 
             int count = 0;
             while(resultSet.next()){

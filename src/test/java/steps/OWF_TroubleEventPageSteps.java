@@ -1142,14 +1142,13 @@ public class OWF_TroubleEventPageSteps {
             troubleEventPage.switchToFrameByIndex(2);
             troubleEventPage.clickElementByContainsTextAndTagName("a", "OK");
             troubleEventPage.switchToDefault();
+            troubleEventPage.wait(3000);
             int frames = troubleEventPage.getNumberOfFrames();
             if(frames>2){
                 troubleEventPage.switchToFrameByIndex(2);
-                troubleEventPage.wait(3000);
                 troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
                 troubleEventPage.switchToDefault();
             }
-            troubleEventPage.wait(3000);
             troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
         }
         catch(Exception e){

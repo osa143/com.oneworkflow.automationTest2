@@ -729,7 +729,7 @@ public class BaseRecordPage extends BasePage {
         return true;
     }
     public String getText(String columnName, int rowNum){
-        return getTableCellData(By.id(table_INTERESTED_PARTIES_ID), columnName, rowNum);
+        return getTableCellData(By.xpath(table_INTERESTED_PARTIES_ID), columnName, rowNum);
     }
     public boolean verifyUserListedUnderInterestedParty(){
         int size= getTableRows(By.id(table_INTERESTED_PARTIES_ID)).size();

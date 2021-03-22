@@ -38,6 +38,8 @@ public class CommonUtils extends BasePage {
     public static String UnlinkTicket;
     public static String TokeID;
     public static String OLA_TargetTime;
+    public static String HelixOPID_GeneratedFromStub;
+
 
 
     // 0 - parent window

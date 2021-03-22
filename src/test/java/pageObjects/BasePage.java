@@ -34,6 +34,11 @@ public class BasePage{
 
     }
 
+    public void moveToWebElement(WebElement element){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).build().perform();
+    }
+
     public String getPageTitle() {
         String Title=driver.getTitle();
         System.out.println(Title);

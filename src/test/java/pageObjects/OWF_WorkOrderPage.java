@@ -67,6 +67,16 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String txt_AGREEMENT_CONTRACTOR= "arid_WIN_0_536870920";
     private static final String txt_CUSTOMER_ID_CONTRACTOR= "arid_WIN_0_536870921";
 
+    public boolean verifyHelixDesription(){
+        String expectedDescription = "Helix Auto Generated Stub Test\n" +
+                "Helix Auto Generated Test Description";
+       String actualDescription = getDescription();
+       if(actualDescription.contains(expectedDescription)){
+           return true;
+       }
+       else return false;
+    }
+
    public String getAgreementContract(){
        return getAttributeValueById(txt_AGREEMENT_CONTRACTOR);
    }

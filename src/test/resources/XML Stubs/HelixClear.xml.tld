@@ -1,0 +1,20 @@
+<ns0:BAOInputRequest xmlns:ns0="OWIF">
+    <ns0:FaultManagement>
+        <ns0:UpdateAlarm>
+            <ns0:Action>Update</ns0:Action>
+            <ns0:Operation>Update Alarm</ns0:Operation>
+            <ns0:InterfaceName>Helix</ns0:InterfaceName>
+            <ns0:AlarmGUID>CommonString</ns0:AlarmGUID>
+            <ns0:AlarmNumber>CommonString</ns0:AlarmNumber>
+            <ns0:AlarmSeverity>Critical</ns0:AlarmSeverity>
+            <ns0:ClearTime>2021-01-01T00:00:00Z</ns0:ClearTime>
+            <ns0:ActualEventTime>2021-01-01T00:00:00Z</ns0:ActualEventTime>
+            <ns0:Notes>Closed 2021-01-01T00:00:00Z</ns0:Notes>
+            <ns0:NMS-GUID>CommonString</ns0:NMS-GUID>
+            <ns0:JobID>Helix_ticketID_1</ns0:JobID>
+            <!--ns0:isPrimary>Primary</ns0:Primary_event-->
+            <ns0:AlarmLastOccurrence>2021-01-01T00:00:00Z</ns0:AlarmLastOccurrence>
+            <ns0:MessageTimestamp>2021-01-01T00:00:00Z</ns0:MessageTimestamp>
+        </ns0:UpdateAlarm>
+    </ns0:FaultManagement>
+</ns0:BAOInputRequest>

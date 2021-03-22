@@ -10,8 +10,7 @@ import utils.CommonUtils;
 import utils.PlazaValidation;
 import utils.Ticket;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.sql.SQLOutput;
 import java.util.List;
 import java.util.Map;
 
@@ -192,7 +191,22 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_CLOSED_WITHIN_DAYS = "arid_WIN_0_800040404";
     private static final String chkbx_TICKET_MATCHING_TITLE = "WIN_0_rc0id800040405";
     private static final String dd_TICKET_MATCHING_MATCH_BY = "arid_WIN_0_800040284";
+    private static final String table_ALARMS = "T700508140";
 
+    public int getNumberOfFrames(){
+       int size = driver.findElements(By.tagName("iframe")).size();
+        System.out.println("Number of frames are: "+ size);
+        return size;
+    }
+
+    public boolean validateAlarmIsPresent(){
+        int size = getTableRows(By.id(table_ALARMS)).size();
+        System.out.println("Number of Alarms = " + size);
+        if(size>1){
+            return true;
+        }
+        return false;
+    }
 
 
     public void selectTicketMatchBy(String value){
@@ -868,6 +882,14 @@ public void rightClickOnElement(String cellData){
         driver.switchTo().frame(2);
         wait(1500);
     }
+
+    public void clickOkOnPopup_Helix()
+    {
+        driver.switchTo().frame(2);
+        findElement(By.xpath(btn_OK_Popup)).click();
+        switchToDefault();
+    }
+
     public void clickOk()
     {
         driver.switchTo().frame(1);

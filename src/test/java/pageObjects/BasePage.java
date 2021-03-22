@@ -21,7 +21,6 @@ public class BasePage{
     WebDriverWait webDriverWait = new WebDriverWait(DriverFactory.getInstance().getDriver(), 30);
 
     protected BasePage() {
-
         driver = DriverFactory.getInstance().getDriver();
     }
 
@@ -34,6 +33,12 @@ public class BasePage{
         driver.get(appURL);
 
     }
+
+    public void moveToWebElement(WebElement element){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).build().perform();
+    }
+
     public String getPageTitle() {
         String Title=driver.getTitle();
         System.out.println(Title);
@@ -534,6 +539,14 @@ public void clickElementById(String Id){
         return false;
     }
 
+    public boolean checkIfControlIsNullByElement(WebElement element) {
+        String isNull = element.getAttribute("Null");
+        if (isNull != null && isNull.contains("true")) {
+            return true;
+        }
+        return false;
+    }
+
     public boolean verifyElementIsReadyOnlyByContainsText(String textName) {
         String element = String.format("//label[contains(text(),'%s')]/text area", textName);
         System.out.println(element);
@@ -922,7 +935,6 @@ public void clickElementById(String Id){
     public void selectTab(String tab) {
         wait(2000);
         try {
-
             driver.findElements(By.className("Tab")).stream().filter(element -> element.getText().equals(tab)).findFirst().orElse(null).click();
         }
         catch (Exception e){

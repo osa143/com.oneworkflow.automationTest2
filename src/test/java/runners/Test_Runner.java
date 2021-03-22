@@ -1,9 +1,6 @@
 package runners;
-
-
-import com.beust.jcommander.internal.Lists;
 import cucumber.api.CucumberOptions;
-
+import org.testng.TestNG;
 import java.util.List;
 
 @CucumberOptions(features = "classpath:features/",

@@ -28,7 +28,7 @@ public class BaseRecordPage extends BasePage {
     public static final String txtINFORMATION_RESTRICTED_INFORMATION_ID= "arid_WIN_0_600001056";
 
     public static final String txt_REQUEST_END = "arid_WIN_0_777021161";
-    public static final String txtREASON_ID = "arid_WIN_0_777021007";
+    public static final String txtREASON_ID = "arid_WIN_0_705001003";
     public static final String txtASSIGNEE_ID = "arid_WIN_0_4";
 
     private static final String txtEXPECTED_ALARMS = "arid_WIN_0_705001002";
@@ -43,8 +43,7 @@ public class BaseRecordPage extends BasePage {
     public static final String txtANALYSIS_TEAM_MEMBER1_ID = "arid_WIN_0_600001015";
     public static final String txtACTUAL_START_ID = "arid_WIN_0_777021162";
 
-
-    public static final String btnYES = "WIN_4_700027904";
+    public static final String btnYES = "WIN_0_700027904";
     public static final String btnSAVE = "WIN_0_700025244";
     public static final String btnDIAGNOSIS = "//a[contains(text(),'Diagnosis')]";
     public static final String btnCISEARCH = "WIN_0_999000229";
@@ -542,8 +541,12 @@ public class BaseRecordPage extends BasePage {
     }
 
    public void clickYes(){
+        findElement(By.xpath(btnYES)).click();
+    }
+    public void clickYes_Helix(){
+        switchToFrameByIndex(2);
         findElement(By.id(btnYES)).click();
-   }
+    }
 
     Actions action = new Actions(driver);
 
@@ -1058,7 +1061,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterStartDate(int delay) {
-        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", delay);
+        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         CommonUtils.eventStartTime=dateTime;
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
@@ -1066,7 +1069,7 @@ public class BaseRecordPage extends BasePage {
 
     public void enterEndDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", delay);
+        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         CommonUtils.requestEnd=dateTime;
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );

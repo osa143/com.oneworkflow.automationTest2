@@ -212,7 +212,6 @@
       And user clicks on request that's "Pending Approval"
       Then user selects CAB approval
       And user clicks on view button
-      Then user switches to frame
       And user enters "Change can be approved right away" in comments field
       And user clicks on approve button
       Then user switches to window 2
@@ -283,9 +282,9 @@
       And user clicks yes on impact update confirmation
       And user switches to window 3
       Then user validates CI "Impact Status" is "Inactive"
-      And user validates CI impact from time and impact to time is updated
+      #And user validates CI impact from time and impact to time is updated
       Then user clicks on save button
-      And change should also be reflected in the timeline as "Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed. "
+      And change should also be reflected in the timeline as "Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed." on row 2
       And user logsOut
       And user goes back to login page
       When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
@@ -296,7 +295,7 @@
       And user clicks on apply button on user more filters window
       And user should see "CR" tickets with "Status" of "Completed"
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
-      And user switches to window 2
+      And user switches to window 4
       Then user enters ticket previously created and searches
       When user changes status to "Closed"
       And user selects resolved group as "Change Manager"

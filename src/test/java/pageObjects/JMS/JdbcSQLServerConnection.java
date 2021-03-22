@@ -1,5 +1,7 @@
 //package pageObjects.JMS;
 //
+//import utils.CommonUtils;
+//
 //import java.sql.*;
 //
 ///**
@@ -12,8 +14,10 @@
 //
 //    public void connectToDatabaseAndGetOpTicket(String Fld_Alarm_GUID){
 ////        String dbURL = "jdbc:sqlserver://localhost\\sqlexpress";
-//        String dbURL = "jdbc:sqlserver://td220testdb.ddc.teliasonera.net:1433;Instance=TD220TESTDB;Database=ARSystem;";
-//       // String dbURL="jdbc:sqlserver://220testdb:1433;databaseName=ARSystem;user=dbtestuser1;password=Workflow2020;";
+//        //ST:
+//        //  String dbURL = "jdbc:sqlserver://td220testdb.ddc.teliasonera.net:1433;Instance=TD220TESTDB;Database=ARSystem;";
+//        //SIT:
+//        String dbURL= "jdbc:sqlserver://td333testdb.ddc.teliasonera.net:1433;Instance=TD333TESTDB;Database=ARSystem_UATCopy";
 //        String db_driver   = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 //        String username = "dbtestuser1";
 //        String password = "Workflow2020";
@@ -25,11 +29,12 @@
 //                e.printStackTrace();
 //            }
 //            Connection connection = DriverManager.getConnection(dbURL, username, password);
-//            //String sql="select distinct Fld_OPRequestTicketID from OS3_OP_NMS_IntegrationIn where Fld_Alarm_GUID = 'm2101280949'";
+//
+////            select distinct Fld_OPRequestTicketID from OS3_OP_NMS_IntegrationIn
+////            where Fld_Alarm_GUID = 'MaheshTestTest4'
 //
 //            String sql= "select distinct Fld_OPRequestTicketID from OS3_OP_NMS_IntegrationIn where Fld_Alarm_GUID = '" + Fld_Alarm_GUID +"'";
-//            //String sql= "select count (*) from OS3_OP_NMS_IntegrationIn";
-//
+////            String sql= "select count (*) from OS3_OP_NMS_IntegrationIn";
 //            Statement statement=connection.createStatement();
 //            ResultSet resultSet= statement.executeQuery(sql);
 //
@@ -38,6 +43,9 @@
 //                count ++;
 //            String ticketId= resultSet.getString("Fld_OPRequestTicketID");
 //                System.out.println("OP ticket ID is - " + ticketId);
+//                CommonUtils.HelixOPID_GeneratedFromStub = ticketId;
+//                System.out.println("Fld_Alarm_GUID is - " + Fld_Alarm_GUID); //TibcoQueueClientPublisher -> generatedString
+//
 //            }
 //
 //            System.out.println("Number of Tickets - " + count);

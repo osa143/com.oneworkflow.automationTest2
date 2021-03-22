@@ -81,6 +81,16 @@ public class OWF_WorkOrderPage extends BasePage {
             return false;
     }
 
+    public boolean verifyHelixDesription(){
+        String expectedDescription = "Helix Auto Generated Stub Test\n" +
+                "Helix Auto Generated Test Description";
+       String actualDescription = getDescription();
+       if(actualDescription.contains(expectedDescription)){
+           return true;
+       }
+       else return false;
+    }
+
    public String getAgreementContract(){
        return getAttributeValueById(txt_AGREEMENT_CONTRACTOR);
    }

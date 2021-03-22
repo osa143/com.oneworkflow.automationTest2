@@ -401,6 +401,19 @@ public class OWF_CiSearchPage extends BaseRecordPage {
        System.out.println(impactFrom);
        return impactFrom;
    }
+
+    public String getImpactFrom_DiagnosisTab(){
+        String impactFrom=getTableCellData(By.id(table_DIAGNOSIS_ID), "Impact From", 1);
+        System.out.println(impactFrom);
+        return impactFrom;
+    }
+
+    public String getImpactTo_DiagnosisTab(){
+        String impactFrom=getTableCellData(By.id(table_DIAGNOSIS_ID), "Impact To", 1);
+        System.out.println(impactFrom);
+        return impactFrom;
+    }
+
     public void clickRow3(){
         clickElement(By.xpath(row3_BILK_LOADING_RELATED_JOBS));
     }
@@ -719,4 +732,11 @@ public class OWF_CiSearchPage extends BaseRecordPage {
    public List<WebElement> ciDiagnosisTableRows(){
         return getTableRows(By.id(CI_DIAGNOSIS_TABLE_ID));
    }
+
+    public boolean validateNoCIsArePresent() {
+        int size = ciDiagnosisTableRows().size();
+        if (size == 1)
+            return true;
+        else return false;
+    }
 }

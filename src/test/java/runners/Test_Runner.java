@@ -11,7 +11,7 @@ import java.util.List;
                    "rerun:test-output/failedReRun.txt"}, // To rerun failed scenarios
         glue = {"steps", "cucumberHooks"},
         //dryRun = true,
-        tags = {"@03.02"}
+        tags = {"@CRM_ResourceRequest"}
 
 )
 

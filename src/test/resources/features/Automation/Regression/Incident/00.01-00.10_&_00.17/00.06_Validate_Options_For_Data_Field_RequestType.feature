@@ -1,4 +1,4 @@
-@00.06 @Incident1 @00
+@00.06 @Incident @00
 #Passed
 Feature: Validate options for data field request type
 
@@ -16,5 +16,10 @@ Feature: Validate options for data field request type
     And User selects "Request Type" as dropdownValue and should see values for "notreadonly"
       | DropdownValue | DropdownValuesToBePresent|
       | Service Request | Service Request:Improvement|
-#    And user logsOut and accepts alert
+    When user clicks on sweden checkbox under affected BU's
+    Then user enters "Test case 00.06 validate options for Request type" in Title field
+    And user selects request type as "Customer" on trouble event page
+    And user enters description as "Test case 00.06 validate options for Request type drop down"
+    And user clicks on save button
+    Then ticket should be created and status should be assigned
 

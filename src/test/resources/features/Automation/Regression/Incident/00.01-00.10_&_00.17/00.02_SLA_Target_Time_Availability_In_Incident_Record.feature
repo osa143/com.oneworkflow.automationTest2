@@ -1,4 +1,4 @@
-@SLA_target_Time @00 #@Incident
+@SLA_target_Time @00 @Incident
 #Passed
 Feature: SLA Target time availability in Incident Record
 
@@ -12,7 +12,8 @@ Feature: SLA Target time availability in Incident Record
     When user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 1
     When user clicks on advanced search button
-    And user enters "'Cust. Remaining SLA' != $NULL$ AND 'Status' = \"Closed\"" in the advanced search bar
+    #And user enters "'Cust. Remaining SLA' != $NULL$ AND 'Status' = \"Closed\"" in the advanced search bar
+    And user enters "'Cust. Remaining SLA' != $NULL$" in the advanced search bar
     And user clicks Search on ticket search
     And user waits 25 secs
     Then ticket with SLA should be opened

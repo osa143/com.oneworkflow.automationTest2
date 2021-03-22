@@ -1,4 +1,4 @@
-@00.09 @Incident1 @00
+@00.09 @Incident @00
 #passed
   Feature: validation impact field availability in incident record
 
@@ -12,7 +12,12 @@
       Then trouble record form should appear in new tab
       When user validates impact field availability
       Then multiple statuses "No:Minor:Medium:Major:Critical" should be available in "Impact" dropdown readonly
-#      And user logsOut and accepts alert
+      When user clicks on sweden checkbox under affected BU's
+      And user enters "Test case 00.09 validate options for Impact" in Title field
+      And user selects request type as "Customer" on trouble event page
+      And user enters description as "Test case 00.09 validate options for Impact drop down"
+      And user clicks on save button
+      Then ticket should be created and status should be assigned
 
 
 

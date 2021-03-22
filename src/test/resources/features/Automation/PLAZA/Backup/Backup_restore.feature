@@ -1,4 +1,4 @@
-@Backup_restore @PLAZA @Back_up
+@Backup_restore @Back_up
   Feature: Backup restore plaza form test
     Scenario: user validates information sent to OW from Plaza
 

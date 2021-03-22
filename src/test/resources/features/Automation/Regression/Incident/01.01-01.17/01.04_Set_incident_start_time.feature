@@ -10,4 +10,11 @@ Feature: Setting of incident start time
     And user switches to window 1
     Then trouble record form should appear in new tab
     And user validates event start time is present
+    When user clicks on sweden checkbox under affected BU's
+    When user enters "Test case 01.04 incident start time check" in Title field
+    And user selects request type as "Customer" on trouble event page
+    And user enters description as "01.04 incident start time availability check"
+    And user clicks on save button
+    Then ticket should be created and status should be assigned
+
 

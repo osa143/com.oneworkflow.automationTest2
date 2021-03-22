@@ -31,7 +31,6 @@
       And user switches to frame
       Then user should see list of swedish sites
       When user clicks on the next chunk button
-    #Location Name,Location ID+,Region Name, Region ID, Latitude, Longitude
       And user highlights location "SE_Site_SE M1" and clicks ok and validates location details
       And user enters "Test Case 01.17 Event Start Time In History" in Title field in Trouble event
       And user selects request type as "Customer" on trouble event page

@@ -33,10 +33,10 @@ public class Hooks {
 //        int handlesCount = handles.size();
 //        System.out.println("Number of windows are - " + handlesCount);
 //        if (handlesCount > 1){
-//            CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
-            agentConsolePage.clickNavUserMenu();
-            agentConsolePage.clickMenuItemLogout_Hooks();
-            DriverFactory.getInstance().quit();
+//            CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 0);
+//            agentConsolePage.clickNavUserMenu();
+//            agentConsolePage.clickMenuItemLogout_Hooks();
+//            DriverFactory.getInstance().quit();
 //
 //        }
 //           else {

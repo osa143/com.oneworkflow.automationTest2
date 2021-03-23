@@ -1,21 +1,265 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/Regression/OW/ChangeITVAS/Copy_to_New_02_(CIs).feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/Regression/B2B/B2B_Test_Cases.feature");
 formatter.feature({
-  "name": "Copy to New 02 (CIs) [aR]",
+  "name": "B2B Cancel work order to field service before work is carried out",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@Copy_to_New_02_CI"
+      "name": "@B2B_Test_Cases"
+    }
+  ]
+});
+formatter.scenarioOutline({
+  "name": "user can cancel a work order sent to a field service before any work is carried out",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "user is on the OneWorkflow login page",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "user logs in with valid user and password",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user successfully logged in to OneWorkflow and agent console should be displayed",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user clicks on create work order",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user switches to window 1",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user enters title as \"\u003ctitle\u003e\"",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user selects request type as \"Maintenance\" on work order page",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enters description as \"\u003cDescription\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user selects priority as \"Info\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on save button",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user gets ticket value",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user adds CI \"\u003cCIName\u003e\" to the ticket with impact level \"Degradation of Service\"",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user clicks on ticket refresh button",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on apply BtwoB button",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user should see assigned profile as \"\u003cAssignmentProfile\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user selects SLA class as \"\u003cSLA Class\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on CTI details under sections",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user validates manufacturer as \"\u003cManufacturer\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user clicks on \"B2B Dispatch\" tab",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user enters header value as \"Test\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user enters message value as \"Automated Test\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on save button",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user clicks on \"B2B Dispatch\" tab",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user clicks on outbound events refresh button",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user should see \"Assignment\" notification in outbound in row 1",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user waits 59 secs",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on inbound events refresh button",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user should see \"BTA:OrderAcknowledgmentBySupplier\" notification in inbound in row \"\u003cAckRowNum\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on ticket refresh button",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user clicks on \"B2B Dispatch\" tab",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user should see WFM ticket ID",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user validates Contact Name as \"\u003cContactName\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user validates Contact Telephone Number is present",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user validates Contact Mail Address as \"\u003cContactMailAddress\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user selects dispatch status as \"Cancel Requested\"",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user enters Cancel Requested Reason as \"TEST\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on save button",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on outbound events refresh button",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user should see \"Withdrawn\" notification in outbound in row 2",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user waits 59 secs",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on inbound events refresh button",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user should see \"BTA:OrderCancellation\" notification in inbound in row \"\u003cCancelRowNum\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user clicks on ticket refresh button",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user validates ticket status as \"Withdrawn\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user clicks on \"B2B Dispatch\" tab",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user double clicks and open withdrawn message",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "new interface window should be opened",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user clicks on custom field tab and clicks on message field and opens it",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user should see message and withdrawn reason in message text field",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user switches to window 1",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user validates all fields are read only and not editable",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "title",
+        "Description",
+        "CIName",
+        "AssignmentProfile",
+        "Manufacturer",
+        "ContactName",
+        "ContactMailAddress",
+        "SLA Class",
+        "AckRowNum",
+        "CancelRowNum"
+      ]
+    },
+    {
+      "cells": [
+        "B2B Automated Test - Sweden Eltel",
+        "B2B Automation, Sweden, Eltel",
+        "SE_LTECell_103392011",
+        "Eltel - FS - SE - B2B",
+        "Nokia",
+        "Team Sundsvall Serv",
+        "NMC-MESSAGES@eltelnetworks.se",
+        "118 Hour 5 days Cleanup correction time workdays",
+        "1",
+        "3"
+      ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Copy to New 02 (CIs) [aR]",
+  "name": "user can cancel a work order sent to a field service before any work is carried out",
   "description": "",
-  "keyword": "Scenario",
+  "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Copy_to_New_02_CI"
+      "name": "@B2B_Test_Cases"
     }
   ]
 });
@@ -30,11 +274,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user logs in with valid username \"ChangeInitiatorInternal1\" and password as \"Test@1234\"",
-  "keyword": "When "
+  "name": "user logs in with valid user and password",
+  "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_LoginPageSteps.userLogsInWithValidUsernameAndPasswordAs(String,String)"
+  "location": "OWF_LoginPageSteps.userLogsInWithValidUserAndPassword()"
 });
 formatter.result({
   "status": "passed"
@@ -50,183 +294,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on create change record",
+  "name": "user clicks on create work order",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnCreateChangeRecord()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user switches to window 1",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters expected alarms as \"Test Expected Alarms\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userEntersExpectedAlarmsAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters project code as \"Test Project Code\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userEntersProjectCodeAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user creates change ticket with following details",
-  "rows": [
-    {
-      "cells": [
-        "RequestType",
-        "Title",
-        "RequestCategory",
-        "Description",
-        "Reason",
-        "Priority",
-        "ChangeBuilder",
-        "Implementation",
-        "TestPlan",
-        "RollBack",
-        "CommPlan",
-        "VerOfFunctionality",
-        "Risk",
-        "ServiceCustomerImpact",
-        "ImpactDuration",
-        "EstimatedImpact"
-      ]
-    },
-    {
-      "cells": [
-        "Normal Change",
-        "IT:Mobile:Billing",
-        "Cable splicing",
-        "Correcting error",
-        "none",
-        "Major",
-        "Closure from analysis",
-        "New implementation",
-        "Yes",
-        "Not possible",
-        "CommPlan",
-        "Not possible",
-        "No Risk",
-        "Test ticket no impact",
-        "5",
-        "No Impact"
-      ]
-    }
-  ],
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userCreatesChangeTicketWithFollowingDetails(DataTable)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user adds CI \"One Workflow\" to change ticket with impact level \"No Impact\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.userAddsCIToChangeTicketWithImpactLevel(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user opens copy to new option",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userOpensCopyToNewOption()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates confirmation for copy to new box is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesConfirmationForCopyToNewBoxIsDisplayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user closes confirmation for copy to new by pressing x",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClosesConfirmationForCopyToNewByPressingX()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user opens copy to new option",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userOpensCopyToNewOption()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user closes confirmation for copy to new by pressing cancel button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClosesConfirmationForCopyToNewByPressingCancelButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user opens copy to new option",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userOpensCopyToNewOption()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user click yes on copy to new popup",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClickYesOnCopyToNewPopup()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user waits 5 secs",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userWaitsSecs(int)"
+  "location": "OWF_AgentConsolePageSteps.userSelectsCreateMenuAs()"
 });
 formatter.result({
   "status": "passed"
@@ -237,13 +309,83 @@ formatter.step({
 });
 formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters title as \"B2B Automated Test - Sweden Eltel\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userEntersTitle(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects request type as \"Maintenance\" on work order page",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userSelectsRequestTypeAsOnWorkOrderPage(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters description as \"B2B Automation, Sweden, Eltel\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userEntersDescriptionAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects priority as \"Info\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSelectsPriorityAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on save button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user gets ticket value",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userGetsTicketValue()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user adds CI \"SE_LTECell_103392011\" to the ticket with impact level \"Degradation of Service\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_CiSearchPageSteps.userAddsCIToTheTicketWithImpactLevel(String,String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
   "name": "user clicks on ticket refresh button",
-  "keyword": "Then "
+  "keyword": "And "
 });
 formatter.match({
   "location": "OWF_TroubleEventPageSteps.userClicksOnTicketRefreshButton()"
@@ -252,24 +394,35 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on \"Schedule\" tab",
-  "keyword": "And "
+  "name": "user clicks on apply BtwoB button",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
+  "location": "OWF_WorkOrderPageSteps.userClicksOnApplyBBButton()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user switches to window 2",
+  "name": "user should see assigned profile as \"Eltel - FS - SE - B2B\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
+  "location": "OWF_WorkOrderPageSteps.userShouldSeeAssignedProfileAs(String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.AssertionError: expected [Eltel - FS - SE - B2B] but found [Transtema2 - FS - SE - B2B]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat steps.OWF_WorkOrderPageSteps.userShouldSeeAssignedProfileAs(OWF_WorkOrderPageSteps.java:88)\r\n\tat ✽.user should see assigned profile as \"Eltel - FS - SE - B2B\"(features/Automation/Regression/B2B/B2B_Test_Cases.feature:22)\r\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "user selects SLA class as \"118 Hour 5 days Cleanup correction time workdays\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userSelectsSLAClassAs(String)"
+});
+formatter.result({
+  "status": "skipped"
 });
 formatter.step({
   "name": "user clicks on CTI details under sections",
@@ -279,351 +432,20 @@ formatter.match({
   "location": "OWF_TroubleEventPageSteps.userClicksOnCTIDetailsUnderSections()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "user clicks on location under sections",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userClicksOnLocationUnderSections()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on owner under sections",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userClicksOnOwnerUnderSections()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on assignment under sections",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksOnAssignmentUnderSections()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on On Hold under sections",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userClicksOnOnHoldUnderSections()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on vendor under sections",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userClicksOnVendorUnderSections()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks attachments under sections",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksAttachmentsUnderSections()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on closure under sections",
+  "name": "user validates manufacturer as \"Nokia\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userClicksOnClosureUnderSections()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates new CR ticket details are same as original CR ticket details",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesNewCRTicketDetailsAreSameAsOriginalCRTicketDetails()"
-});
-formatter.result({
-  "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: arid_WIN_2_7 (tried for 30 second(s) with 500 milliseconds interval)\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\r\n\tat pageObjects.BasePage.findElement(BasePage.java:54)\r\n\tat pageObjects.BasePage.getAttributeValueById(BasePage.java:179)\r\n\tat pageObjects.OWF_ChangeRecordPage.getParentCRTicket(OWF_ChangeRecordPage.java:1003)\r\n\tat pageObjects.OWF_ChangeRecordPage.verifyCopiedCRTicketSameAsParent(OWF_ChangeRecordPage.java:1040)\r\n\tat steps.OWF_ChangeRecordPageSteps.userValidatesNewCRTicketDetailsAreSameAsOriginalCRTicketDetails(OWF_ChangeRecordPageSteps.java:1162)\r\n\tat ✽.user validates new CR ticket details are same as original CR ticket details(features/Automation/Regression/OW/ChangeITVAS/Copy_to_New_02_(CIs).feature:38)\r\nCaused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#arid_WIN_2_7\"}\n  (Session info: chrome\u003d88.0.4324.150)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-I92010A\u0027, ip: \u0027192.168.0.228\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_211\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.150, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\\Users\\h_smi\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55435}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: e8c63ff41c39fd2e98f5eb5bc6c3de64\n*** Element info: {Using\u003did, value\u003darid_WIN_2_7}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\r\n\tat pageObjects.BasePage.findElement(BasePage.java:54)\r\n\tat pageObjects.BasePage.getAttributeValueById(BasePage.java:179)\r\n\tat pageObjects.OWF_ChangeRecordPage.getParentCRTicket(OWF_ChangeRecordPage.java:1003)\r\n\tat pageObjects.OWF_ChangeRecordPage.verifyCopiedCRTicketSameAsParent(OWF_ChangeRecordPage.java:1040)\r\n\tat steps.OWF_ChangeRecordPageSteps.userValidatesNewCRTicketDetailsAreSameAsOriginalCRTicketDetails(OWF_ChangeRecordPageSteps.java:1162)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:49)\r\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\r\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:44)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\r\n\tat cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:68)\r\n\tat cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)\r\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:583)\r\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)\r\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)\r\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)\r\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:648)\r\n\tat org.testng.TestRunner.run(TestRunner.java:505)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:455)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:364)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1137)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1049)\r\n\tat org.testng.TestNG.run(TestNG.java:1017)\r\n\tat org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)\r\n\tat org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)\r\n",
-  "status": "failed"
-});
-formatter.step({
-  "name": "user enters request start time 24 hours ahead of current date",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userEntersRequestStartTimeHoursAheadOfCurrentDate(int)"
+  "location": "OWF_WorkOrderPageSteps.userValidatesManufacturerAs(String)"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user enters request end time 192 hours ahead of current date",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userEntersRequestEndTimeHoursAheadOfCurrentDate(int)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user enters impact duration as \"0\" Days",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userEntersImpactDurationAsDays(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user enters impact duration as \"0\" hours",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userEntersImpactDurationAsHours(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user enters impact duration as \"5\" minutes",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userEntersImpactDurationAsMinutes(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user enters impact duration as \"0\" seconds",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userEntersImpactDurationAsSeconds(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user enters as \"Test\" in service and customer impact",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userEntersAsInServiceAndCustomerImpact(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user selects estimated impact as \"No Impact\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userSelectsEstimatedImpactAs(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks save button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksSaveButton()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on Diagnosis tab",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksOnDiagnosisTab()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates primary ci as \"One Workflow\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.userValidatesPrimaryCiAs(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates impact from time is same as request start time",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.userValidatesImpactFromTimeIsSameAsRequestStartTime()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates impact to time is same as request end time",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.userValidatesImpactToTimeIsSameAsEventEndTime()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on \"Schedule\" tab",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates impact duration days as \"0\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesImpactDurationDaysAs(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates impact duration hours as \"0\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesImpactDurationHoursAs(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates impact duration minutes as \"5\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesImpactDurationMinutesAs(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates impact duration seconds as \"0\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesImpactDurationSecondsAs(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user opens copy to new option",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userOpensCopyToNewOption()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates confirmation message for copy to new is \"Change Request got one related CI\u0027s. Do you want to copy the CI across to the new request?\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesConfirmationMessageForCopyToNewIs(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user closes confirmation for copy to new by pressing cancel button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClosesConfirmationForCopyToNewByPressingCancelButton()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user opens copy to new option",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userOpensCopyToNewOption()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks no on copy to new popup",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksNoOnCopyToNewPopup()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on timeline tab",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksOnTimelineTab()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on risk tab",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksOnRiskTab()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates risk questions are not answered",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesRiskQuestionsAreNotAnswered()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on \"Interested Parties\" tab",
+  "name": "user clicks on \"B2B Dispatch\" tab",
   "keyword": "When "
 });
 formatter.match({
@@ -633,127 +455,37 @@ formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user validates \"ChangeInitiatorInternal1\" is listed as an interested party",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userValidatesIsListedAsAnInterestedParty(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on \"Approval\" tab",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates version column has no entries",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesVersionColumnHasNoEntries()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on \"Notifications\" tab",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on \"Sent\" tab",
+  "name": "user enters header value as \"Test\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
+  "location": "OWF_WorkOrderPageSteps.userEntersHeaderValueAs(String)"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user validates there are no sent notifications",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesThereAreNoSentNotifications()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on linked items tab",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.userClicksOnLinkedItemsTab()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates Linked ID column as empty",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesColumnAs()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on \"Work Orders\" tab",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates Work Order column as empty",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesWorkOrderColumnAsEmpty()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on \"Service Level\" tab",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates SLA Title column as empty",
+  "name": "user enters message value as \"Automated Test\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesSLATITleColumnAsEmpty()"
+  "location": "OWF_WorkOrderPageSteps.userEntersMessageValueAs(String)"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user clicks on \"Related Project\" tab",
+  "name": "user clicks on save button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on \"B2B Dispatch\" tab",
   "keyword": "When "
 });
 formatter.match({
@@ -763,17 +495,67 @@ formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user validates Change Project ID column as empty",
-  "keyword": "Then "
+  "name": "user clicks on outbound events refresh button",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesChangeProjectIDColumnAsEmpty()"
+  "location": "OWF_WorkOrderPageSteps.userClicksOnOutboundEventsRefreshButton()"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user clicks on \"Service Info\" tab",
+  "name": "user should see \"Assignment\" notification in outbound in row 1",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userShouldSeeNotification(String,int)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user waits 59 secs",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userWaitsSecs(int)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on inbound events refresh button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userClicksOnInboundEventsRefreshButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user should see \"BTA:OrderAcknowledgmentBySupplier\" notification in inbound in row \"1\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userShouldSeeNotificationInInboundInRow(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on ticket refresh button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userClicksOnTicketRefreshButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on \"B2B Dispatch\" tab",
   "keyword": "When "
 });
 formatter.match({
@@ -783,17 +565,147 @@ formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user validates Channel column as empty",
+  "name": "user should see WFM ticket ID",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesChannelColumnAsEmpty()"
+  "location": "OWF_WorkOrderPageSteps.userShouldSeeWFMTicketID()"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user clicks on \"Telenor\" tab",
+  "name": "user validates Contact Name as \"Team Sundsvall Serv\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userValidatesContactNameAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates Contact Telephone Number is present",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userValidatesContactTelephoneNumberIsPresent()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates Contact Mail Address as \"NMC-MESSAGES@eltelnetworks.se\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userValidatesContactMailAddressAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user selects dispatch status as \"Cancel Requested\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userSelectsDispatchStatusAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user enters Cancel Requested Reason as \"TEST\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userEntersCancelRequestedReasonAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on save button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on outbound events refresh button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userClicksOnOutboundEventsRefreshButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user should see \"Withdrawn\" notification in outbound in row 2",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userShouldSeeNotification(String,int)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user waits 59 secs",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userWaitsSecs(int)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on inbound events refresh button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userClicksOnInboundEventsRefreshButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user should see \"BTA:OrderCancellation\" notification in inbound in row \"3\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userShouldSeeNotificationInInboundInRow(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on ticket refresh button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userClicksOnTicketRefreshButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates ticket status as \"Withdrawn\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userValidatesTicketStatusAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on \"B2B Dispatch\" tab",
   "keyword": "When "
 });
 formatter.match({
@@ -803,11 +715,61 @@ formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user validates ExternalTicketId Field as empty",
+  "name": "user double clicks and open withdrawn message",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userDoubleClicksAndOpenWithdrawnMessage()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "new interface window should be opened",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.newInterfaceWindowShouldBeOpened()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on custom field tab and clicks on message field and opens it",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userClicksOnCustomFieldTabAndClicksOnMessageFieldAndOpensIt()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user should see message and withdrawn reason in message text field",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userValidatesExternalTicketIdFieldAsEmpty()"
+  "location": "OWF_WorkOrderPageSteps.userShouldSeeMessageAndWithdrawnReasonInMessageTextField()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user switches to window 1",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates all fields are read only and not editable",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_KnownErrorPageSteps.userValidatesAllFieldsAreReadOnlyAndNotEditable()"
 });
 formatter.result({
   "status": "skipped"

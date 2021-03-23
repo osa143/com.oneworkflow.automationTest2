@@ -2748,7 +2748,7 @@ public class Plaza_HomePage extends BasePage {
     }
     public void selectDropdown(By Element, By dropdownValuesListID, String dropdownValue){
         clickElement(Element);
-        wait(300);
+        wait(500);
         driver.findElement((dropdownValuesListID)).findElements(By.tagName("li")).stream().filter(element -> element.getText().trim().equals(dropdownValue)).findFirst().orElse(null).click();
 
     }

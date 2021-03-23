@@ -14,6 +14,7 @@ import java.util.Properties;
 public class WebService {
 
 
+
 //    post = This is HTTP method. Here as per the API design GET/POST/PUT/DELETE will be there.
 //    body = Path of xml input file
 //    Rest_URL = This is the Rest Api to be executed

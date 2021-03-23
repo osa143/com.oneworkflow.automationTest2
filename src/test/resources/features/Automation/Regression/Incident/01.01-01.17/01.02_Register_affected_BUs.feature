@@ -1,4 +1,4 @@
-@01.02 @Incident1 @01
+@01.02 @Incident @01
 #passed
 Feature: Register affected BU's
 
@@ -14,4 +14,8 @@ Feature: Register affected BU's
     And user clicks on sweden checkbox under affected BU's
     And user clicks on finland checkbox under affected BU's
     Then user validates sweden and finland checkboxes are selected
+    And user enters "Test case 01.02 register affected BU" in Title field
+    And user selects request type as "Customer" on trouble event page
+    And user enters description as "register affected BU"
+    And user clicks on save button
 

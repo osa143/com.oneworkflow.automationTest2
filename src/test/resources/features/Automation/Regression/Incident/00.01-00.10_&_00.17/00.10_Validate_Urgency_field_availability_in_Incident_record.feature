@@ -1,4 +1,4 @@
-@00.10 @Incident1 @00
+@00.10 @Incident @00
 #passed
 Feature: validate urgency field availability in incident record
 
@@ -12,4 +12,9 @@ Feature: validate urgency field availability in incident record
     Then trouble record form should appear in new tab
     When user validates importance field
     Then multiple statuses "Critical:High:Average:Low:(clear)" should be available in Importance dropdown
-#    And user logsOut and accepts alert
+    When user clicks on sweden checkbox under affected BU's
+    Then user enters "Test case 00.10 validate options for Urgency" in Title field
+    And user selects request type as "Customer" on trouble event page
+    And user enters description as "Test case 00.10 validate options for Urgency drop down"
+    And user clicks on save button
+    Then ticket should be created and status should be assigned

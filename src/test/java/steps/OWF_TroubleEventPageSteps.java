@@ -6,12 +6,16 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import driver.factory.DriverFactory;
 import io.cucumber.datatable.DataTable;
+import org.joda.time.DateTime;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.OWF_TroubleEventPage;
 import pageObjects.OWF_WorkOrderPage;
 import utils.CommonUtils;
 import utils.Ticket;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class OWF_TroubleEventPageSteps {
     OWF_TroubleEventPage troubleEventPage = new OWF_TroubleEventPage();
@@ -228,7 +232,7 @@ public class OWF_TroubleEventPageSteps {
     @And("user right clicks on primary CI and selects {string}")
     public void userRightClicksOnPrimaryCIAndSelects(String arg0) {
         troubleEventPage.selectPrimaryCI();
-       troubleEventPage.setPreferences(arg0);
+        troubleEventPage.setPreferences(arg0);
     }
 
     @And("user validates CI {string} is {string}")
@@ -287,13 +291,15 @@ public class OWF_TroubleEventPageSteps {
     @When("user enters estimated ready as event start time plus {int} days on trouble event page")
     public void userEntersEstimatedReadyAsEventStartTimePlusDays(int arg0) {
         //  workOrderPage.clearEstimatedReady();
+        CommonUtils.before_estimatedReadyTime=workOrderPage.getEstimatedReady();
         CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("MM/dd/yyyy HH:mm:ss","Europe/London",arg0);
         workOrderPage.enterEstimatedReady(CommonUtils.estimatedReadyTime);
     }
 
     @Then("estimated ready time should be saved correctly on trouble event page")
     public void estimatedReadyTimeShouldBeSavedCorrectly() {
-        Assert.assertEquals(CommonUtils.estimatedReadyTime, workOrderPage.getSavedEstimatedReady());
+        Assert.assertNotEquals(workOrderPage.getEstimatedReady(), CommonUtils.before_estimatedReadyTime);
+
     }
 
 
@@ -586,9 +592,11 @@ public class OWF_TroubleEventPageSteps {
        Assert.assertTrue(troubleEventPage.verifyDropdownValuesForImportance(arg0, ""));
     }
     @And("user changes event start time {int} day in the past")
-    public void userChangesEventStartTimeDayInThePast(int arg0) {
+    public void userChangesEventStartTimeDayInThePast(int delay) {
         troubleEventPage.clearEventStartTime();
-        troubleEventPage.enterEventStartTime(troubleEventPage.calculateEstimatedReady(arg0, "days"));
+        String eventStartTime= CommonUtils.getDateTimePlusDays("MM/dd/yyyy HH:mm:ss","Europe/London",delay);
+        System.out.println("Event strat time is - " + eventStartTime);
+        troubleEventPage.enterEventStartTime(eventStartTime);
     }
 
     @Then("user selects impact name as {string}")

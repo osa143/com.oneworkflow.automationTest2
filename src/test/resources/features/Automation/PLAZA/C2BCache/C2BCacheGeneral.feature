@@ -1,6 +1,6 @@
 @C2BCacheGeneral @C2B_Tests
 Feature: Plaza C2B Cache form test
-  Scenario Outline: user validates information sent to OW from Plaza
+  Scenario Outline: C2B General
 
     Given user is on the Plaza login page
     When user enters username "testauto" and password as "test123" and clicks on login
@@ -66,6 +66,6 @@ Feature: Plaza C2B Cache form test
       |Test2 C2BCache/Request|DEV          |Test2 C2BCache/Description|Test2 C2BCache/AC |
       |Test3 C2BCache/Request|MITE         |Test3 C2BCache/Description|Test3 C2BCache/AC |
       |Test4 C2BCache/Request|Prod         |Test4 C2BCache/Description|Test4 C2BCache/AC |
-      |Test5 C2BCache/Request|RATM         |Test5 C2BCache/Description|Test5 C2BCache/AC  |
+      |Test5 C2BCache/Request|RATM         |Test5 C2BCache/Description|Test5 C2BCache/AC |
       |Test6 C2BCache/Request|SIT          |Test6 C2BCache/Description|Test6 C2BCache/AC |
       |Test7 C2BCache/Request|ST           |Test7 C2BCache/Description|Test7 C2BCache/AC |

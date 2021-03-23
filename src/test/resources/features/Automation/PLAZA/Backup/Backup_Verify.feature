@@ -1,4 +1,4 @@
-@Backup_Verify @PLAZA @Back_up
+@Backup_Verify @Back_up
   Feature: Backup verify plaza form test
     Scenario: user validates information sent to OW from Plaza
 

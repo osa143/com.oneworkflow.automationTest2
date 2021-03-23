@@ -13,7 +13,7 @@ Feature: OLA target time availability in Incident Record
     Then user clicks on sweden checkbox under affected BU's
     And user enters "Test OLA Target Time Ticket" in Title field
     And user selects request type as "Customer" on trouble event page
-    And user enters description as "Test OLA Target Time Ticket"
+    And user enters description as " 00.03 Test OLA Target Time Ticket"
     Then user clicks on save button
     And ticket should be created and status should be assigned
     Then user validates OLA Target Time availability

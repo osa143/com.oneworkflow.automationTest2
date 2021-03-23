@@ -1,267 +1,243 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/Regression/B2B/B2B_Test_Cases.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/PLAZA/CRM/CRM_ResourceRequest.feature");
 formatter.feature({
-  "name": "B2B Cancel work order to field service before work is carried out",
+  "name": "Plaza CRM form test",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@B2B_Test_Cases"
-    }
-  ]
-});
-formatter.scenarioOutline({
-  "name": "user can cancel a work order sent to a field service before any work is carried out",
-  "description": "",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "name": "user is on the OneWorkflow login page",
-  "keyword": "Given "
-});
-formatter.step({
-  "name": "user logs in with valid user and password",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user successfully logged in to OneWorkflow and agent console should be displayed",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user clicks on create work order",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user switches to window 1",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user enters title as \"\u003ctitle\u003e\"",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user selects request type as \"Maintenance\" on work order page",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user enters description as \"\u003cDescription\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user selects priority as \"Info\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user clicks on save button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user gets ticket value",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user adds CI \"\u003cCIName\u003e\" to the ticket with impact level \"Degradation of Service\"",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user clicks on ticket refresh button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user clicks on apply BtwoB button",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user should see assigned profile as \"\u003cAssignmentProfile\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user selects SLA class as \"\u003cSLA Class\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user clicks on CTI details under sections",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user validates manufacturer as \"\u003cManufacturer\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user clicks on \"B2B Dispatch\" tab",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user enters header value as \"Test\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user enters message value as \"Automated Test\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user clicks on save button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user clicks on \"B2B Dispatch\" tab",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user clicks on outbound events refresh button",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user should see \"Assignment\" notification in outbound in row 1",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user waits 59 secs",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user clicks on inbound events refresh button",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user should see \"BTA:OrderAcknowledgmentBySupplier\" notification in inbound in row \"\u003cAckRowNum\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user clicks on ticket refresh button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user clicks on \"B2B Dispatch\" tab",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user should see WFM ticket ID",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user validates Contact Name as \"\u003cContactName\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user validates Contact Telephone Number is present",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user validates Contact Mail Address as \"\u003cContactMailAddress\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user selects dispatch status as \"Cancel Requested\"",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user enters Cancel Requested Reason as \"TEST\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user clicks on save button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user clicks on outbound events refresh button",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user should see \"Withdrawn\" notification in outbound in row 2",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user waits 59 secs",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user clicks on inbound events refresh button",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user should see \"BTA:OrderCancellation\" notification in inbound in row \"\u003cCancelRowNum\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user clicks on ticket refresh button",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user validates ticket status as \"Withdrawn\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user clicks on \"B2B Dispatch\" tab",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user double clicks and open withdrawn message",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "new interface window should be opened",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user clicks on custom field tab and clicks on message field and opens it",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user should see message and withdrawn reason in message text field",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user switches to window 1",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user validates all fields are read only and not editable",
-  "keyword": "Then "
-});
-formatter.examples({
-  "name": "",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
-    {
-      "cells": [
-        "title",
-        "Description",
-        "CIName",
-        "AssignmentProfile",
-        "Manufacturer",
-        "ContactName",
-        "ContactMailAddress",
-        "SLA Class",
-        "AckRowNum",
-        "CancelRowNum"
-      ]
-    },
-    {
-      "cells": [
-        "B2B Automated Test - Sweden Eltel",
-        "B2B Automation, Sweden, Eltel",
-        "SE_LTECell_103392011",
-        "Eltel - FS - SE - B2B",
-        "Nokia",
-        "Team Sundsvall Serv",
-        "NMC-MESSAGES@eltelnetworks.se",
-        "118 Hour 5 days Cleanup correction time workdays",
-        "1",
-        "3"
-      ]
+      "name": "@CRM_ResourceRequest"
     }
   ]
 });
 formatter.scenario({
-  "name": "user can cancel a work order sent to a field service before any work is carried out",
+  "name": "user validates information sent to OW from Plaza",
   "description": "",
-  "keyword": "Scenario Outline",
+  "keyword": "Scenario",
   "tags": [
     {
-      "name": "@B2B_Test_Cases"
+      "name": "@CRM_ResourceRequest"
     }
   ]
+});
+formatter.step({
+  "name": "user is on the Plaza login page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "Plaza_LoginPageSteps.userIsOnThePlazaLoginPage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters username \"testauto\" and password as \"test123\" and clicks on login",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "Plaza_LoginPageSteps.userEntersUsernameAndPasswordAsAndClicksOnLogin(String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user should see the plaza home page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userShouldSeeThePlazaHomePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on plaza portal",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userClicksOnPlazaPortal()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on Products \u0026 Services",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userClicksOnProductsServices()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on IT Infrastructure dropdown",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userClicksOnITInfrastructureDropdown()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on application under IT Infrastructure dropdown",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userClicksOnApplicationUnderITInfrastructureDropdown()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on show more button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userClicksOnShowMoreButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on \"CRM\" pebble",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userClicksOnPebble(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user should see CRM form",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userShouldSeeCRMForm()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects role dropdown as \"Application Operation Engineer\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userSelectsRoleDropdownAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects service request name as \"Resource Request\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userSelectsServiceRequestNameAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters CRM resource request as \"Test26 CRM/Request\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userEntersCRMResourceRequestAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters CRM  resource request planned start date as current date",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userEntersCRMResourceRequestPlannedStartDateAsCurrentDate()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters CRM resource request planned end date as current date",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userEntersCRMResourceRequestPlannedEndDateAsCurrentDate()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters CRM resource request description as \"Test26 CRM/Description\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userEntersCRMResourceRequestDescriptionAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters additional comments as \"Test26 CRM/AC\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userEntersAdditionalCommentsAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on \"Submit\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userClicksOnButton(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user gets plaza request id",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userGetsPlazaRequestId()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on plaza request id",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userClicksOnPlazaRequestId()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user should see service request form",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userShouldSeeServiceRequestForm()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user opens new tab",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "Plaza_HomePageSteps.userOpensNewTab()"
+});
+formatter.result({
+  "status": "passed"
 });
 formatter.step({
   "name": "user is on the OneWorkflow login page",
@@ -294,18 +270,18 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on create work order",
+  "name": "user selects search menu as \"Open Search Form:Work Order\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userSelectsCreateMenuAs()"
+  "location": "OWF_AgentConsolePageSteps.userSelectsSearchMenuAs(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user switches to window 1",
-  "keyword": "Then "
+  "name": "user switches to window 2",
+  "keyword": "And "
 });
 formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
@@ -314,139 +290,119 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters title as \"B2B Automated Test - Sweden Eltel\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userEntersTitle(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects request type as \"Maintenance\" on work order page",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userSelectsRequestTypeAsOnWorkOrderPage(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters description as \"B2B Automation, Sweden, Eltel\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersDescriptionAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects priority as \"Info\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSelectsPriorityAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on save button",
+  "name": "user enters plaza request id in the source id field",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
+  "location": "OWF_WorkOrderPageSteps.userEntersPlazaRequestIdInTheSourceIdField()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user gets ticket value",
+  "name": "user clicks Search on ticket search",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userGetsTicketValue()"
+  "location": "OWF_ProblemRecordPageSteps.userClicksSearchOnTicketSearch()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user adds CI \"SE_LTECell_103392011\" to the ticket with impact level \"Degradation of Service\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.userAddsCIToTheTicketWithImpactLevel(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on ticket refresh button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userClicksOnTicketRefreshButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on apply BtwoB button",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userClicksOnApplyBBButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user should see assigned profile as \"Eltel - FS - SE - B2B\"",
+  "name": "user should see plaza ticket",
   "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userShouldSeePlazaTicket()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user validates source field as \"PLAZA\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userValidatesSourceFieldAs(String)"
+});
+formatter.result({
+  "error_message": "java.lang.AssertionError: expected [PLAZA] but found []\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat steps.OWF_WorkOrderPageSteps.userValidatesSourceFieldAs(OWF_WorkOrderPageSteps.java:253)\r\n\tat ✽.user validates source field as \"PLAZA\"(features/Automation/PLAZA/CRM/CRM_ResourceRequest.feature:36)\r\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "user validates title field as \"Service Request | CRM\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userValidatesPdbTitleFieldAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates CRM description same as plaza",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userValidatesCRMDescriptionSameAsPlaza()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on owner under sections",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userClicksOnOwnerUnderSections()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on assignment under sections",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userClicksOnAssignmentUnderSections()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates owner profile as \"PLAZA\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userValidatesOwnerProfileAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates owner as \"PLAZA\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ChangeRecordPageSteps.userValidatesOwnerAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user should see assigned profile as \"CRM\"",
+  "keyword": "And "
 });
 formatter.match({
   "location": "OWF_WorkOrderPageSteps.userShouldSeeAssignedProfileAs(String)"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: expected [Eltel - FS - SE - B2B] but found [Transtema2 - FS - SE - B2B]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat steps.OWF_WorkOrderPageSteps.userShouldSeeAssignedProfileAs(OWF_WorkOrderPageSteps.java:88)\r\n\tat ✽.user should see assigned profile as \"Eltel - FS - SE - B2B\"(features/Automation/Regression/B2B/B2B_Test_Cases.feature:22)\r\n",
-  "status": "failed"
-});
-formatter.step({
-  "name": "user selects SLA class as \"118 Hour 5 days Cleanup correction time workdays\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userSelectsSLAClassAs(String)"
-});
-formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user clicks on CTI details under sections",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userClicksOnCTIDetailsUnderSections()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates manufacturer as \"Nokia\"",
+  "name": "user clicks on \"Interested Parties\" tab",
   "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userValidatesManufacturerAs(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on \"B2B Dispatch\" tab",
-  "keyword": "When "
 });
 formatter.match({
   "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
@@ -455,21 +411,61 @@ formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user enters header value as \"Test\"",
+  "name": "user validates \"PLAZA\" is listed as an interested party",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userEntersHeaderValueAs(String)"
+  "location": "OWF_WorkOrderPageSteps.userValidatesIsListedAsAnInterestedParty(String)"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user enters message value as \"Automated Test\"",
+  "name": "user clicks on Ack button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userClicksOnAckButton()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user changes status to \"Cleared\" on work order page",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userEntersMessageValueAs(String)"
+  "location": "OWF_WorkOrderPageSteps.userChangesStatusToOnWorkOrderPage(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user selects completion code as \"Success\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userSelectsCompletionCodeAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on \"Schedule\" tab",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user enters schedule end as current date",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userEntersScheduleEndAsCurrentDate()"
 });
 formatter.result({
   "status": "skipped"
@@ -485,218 +481,8 @@ formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user clicks on \"B2B Dispatch\" tab",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on outbound events refresh button",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userClicksOnOutboundEventsRefreshButton()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user should see \"Assignment\" notification in outbound in row 1",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userShouldSeeNotification(String,int)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user waits 59 secs",
+  "name": "user validates ticket status as \"Cleared\"",
   "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userWaitsSecs(int)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on inbound events refresh button",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userClicksOnInboundEventsRefreshButton()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user should see \"BTA:OrderAcknowledgmentBySupplier\" notification in inbound in row \"1\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userShouldSeeNotificationInInboundInRow(String,String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on ticket refresh button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userClicksOnTicketRefreshButton()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on \"B2B Dispatch\" tab",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user should see WFM ticket ID",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userShouldSeeWFMTicketID()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates Contact Name as \"Team Sundsvall Serv\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userValidatesContactNameAs(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates Contact Telephone Number is present",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userValidatesContactTelephoneNumberIsPresent()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates Contact Mail Address as \"NMC-MESSAGES@eltelnetworks.se\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userValidatesContactMailAddressAs(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user selects dispatch status as \"Cancel Requested\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userSelectsDispatchStatusAs(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user enters Cancel Requested Reason as \"TEST\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userEntersCancelRequestedReasonAs(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on outbound events refresh button",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userClicksOnOutboundEventsRefreshButton()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user should see \"Withdrawn\" notification in outbound in row 2",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userShouldSeeNotification(String,int)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user waits 59 secs",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userWaitsSecs(int)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on inbound events refresh button",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userClicksOnInboundEventsRefreshButton()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user should see \"BTA:OrderCancellation\" notification in inbound in row \"3\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userShouldSeeNotificationInInboundInRow(String,String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user clicks on ticket refresh button",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userClicksOnTicketRefreshButton()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user validates ticket status as \"Withdrawn\"",
-  "keyword": "Then "
 });
 formatter.match({
   "location": "OWF_WorkOrderPageSteps.userValidatesTicketStatusAs(String)"
@@ -705,57 +491,37 @@ formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user clicks on \"B2B Dispatch\" tab",
+  "name": "user changes status to \"Closed\" on work order page",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
+  "location": "OWF_WorkOrderPageSteps.userChangesStatusToOnWorkOrderPage(String)"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user double clicks and open withdrawn message",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userDoubleClicksAndOpenWithdrawnMessage()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "new interface window should be opened",
+  "name": "user clicks on save button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_WorkOrderPageSteps.newInterfaceWindowShouldBeOpened()"
+  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user clicks on custom field tab and clicks on message field and opens it",
+  "name": "user validates ticket status as \"Closed\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userClicksOnCustomFieldTabAndClicksOnMessageFieldAndOpensIt()"
+  "location": "OWF_WorkOrderPageSteps.userValidatesTicketStatusAs(String)"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user should see message and withdrawn reason in message text field",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "OWF_WorkOrderPageSteps.userShouldSeeMessageAndWithdrawnReasonInMessageTextField()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user switches to window 1",
+  "name": "user switches to window 0",
   "keyword": "When "
 });
 formatter.match({
@@ -765,11 +531,21 @@ formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "user validates all fields are read only and not editable",
+  "name": "user clicks on main page refresh",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_TroubleEventPageSteps.userClicksOnMainPageRefresh()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates plaza request has completed",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_KnownErrorPageSteps.userValidatesAllFieldsAreReadOnlyAndNotEditable()"
+  "location": "Plaza_HomePageSteps.userValidatesPlazaRequestHasCompleted()"
 });
 formatter.result({
   "status": "skipped"

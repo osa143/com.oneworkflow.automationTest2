@@ -24,8 +24,7 @@ Feature: PMO Tab
     And user clicks on search and selects open search forms and problem record
     And user switches to window 2
     And user enters Problem Ticket
-    And user clicks Search on ticket search
-    When user clicks on next tab button
+    When user clicks Search on ticket search
     Then user validates availability of tabs "PM Office"
     And user clicks on "PM Office" tab
     When user enters "Secret problem stuff" in the problem review field
@@ -55,7 +54,6 @@ Feature: PMO Tab
     And user enters Problem Ticket
     And user clicks Search on ticket search
     When user verifies PM office tab visibility
-    When user clicks on next tab button
     Then PM office tab should be visible
     When user enters "Secret problem stuff" in the problem review field
     And user clicks on save button

@@ -125,7 +125,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String btn_Open_Attachment= "WIN_0_777000021";
     private static final String txt_IMPACT_TYPE= "arid_WIN_0_700009080";
     private static final String link_GO_BACK_TO_LOGIN= "//*[@id='logoutmsg']/tbody/tr[4]/td[2]/a";
-    private static final String btn_AFFECTED_ORG = "//*[@id='WIN_0_808080010']/a";
+    private static final String btn_AFFECTED_ORG = "//a[@title='Edit']";
 
 
     public void enterVendorName(String vendorName){
@@ -276,11 +276,11 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
        selectDropDownNameAndValue("Organisations", affectedOrg, false);
    }
     public void selectAffected_Org(String value){
-        switchToFrameByIndex(2);
        clickElement(By.xpath(btn_AFFECTED_ORG));
+        switchToFrameByIndex(2);
         selectAffectedOrganisation(value);
-//       clickElementById(btnApply);
-//       switchToDefault();
+       clickElementById(btnApply);
+       switchToDefault();
 
 
     }

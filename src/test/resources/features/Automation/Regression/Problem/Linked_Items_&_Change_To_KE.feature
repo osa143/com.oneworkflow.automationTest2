@@ -70,7 +70,6 @@
       When user clicks on open checkbox under linked items tab
       And user clicks on radio button closed
       And user validates radio button cleared is selected
-      Then user validates 0 linked ticket availability
       And user clicks on linked items tab
       And user selects target application first dropdown as "OS3 - Change"
       And user selects target application second dropdown as "Caused by"

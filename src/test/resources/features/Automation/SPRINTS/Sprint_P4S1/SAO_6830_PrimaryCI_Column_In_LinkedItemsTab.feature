@@ -37,14 +37,14 @@
       And user clicks on the search button
       And user clicks on accept button
       And user switches to window 2
-      When user adds CI "SE_GSM-AHS" to the ticket
+      When user adds CI "SE_GSMCell_111124" to the ticket
       Then CI should be listed and displayed under the Diagnosis tab
       When user clicks on linked items tab
       And user should see "Primary CI" as "SE_LTECell_220184024" for linked ticket
       And user switches to window 1
       When user clicks on linked items tab
       Then user validates linked ticket availability under linked items
-      And user should see "Primary CI" as "SE_GSM-AHS" for linked ticket
+      And user should see "Primary CI" as "SE_GSMCell_111124" for linked ticket
       
       
 

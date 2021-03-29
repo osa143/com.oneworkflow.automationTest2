@@ -292,7 +292,7 @@ public class OWF_TroubleEventPageSteps {
     public void userEntersEstimatedReadyAsEventStartTimePlusDays(int arg0) {
         //  workOrderPage.clearEstimatedReady();
         CommonUtils.before_estimatedReadyTime=workOrderPage.getEstimatedReady();
-        CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("MM/dd/yyyy HH:mm:ss","Europe/London",arg0);
+        CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("dd/MM/yyyy HH:mm:ss","Europe/London",arg0);
         workOrderPage.enterEstimatedReady(CommonUtils.estimatedReadyTime);
     }
 
@@ -834,6 +834,12 @@ public class OWF_TroubleEventPageSteps {
         troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
+    @And("user enters event end time as {int} mins past ddmmyyyy")
+    public void userEntersEventEndTimeAsMinsPastddmmyyyy(int arg0) {
+        CommonUtils.EventEndTime= CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0);
+        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
+    }
+
     @And("user selects action dropdown as {string} on trouble event page")
     public void userSelectsActionDropdownAsOnTroubleEventPage(String arg0) {
         troubleEventPage.selectAction(arg0);
@@ -1150,14 +1156,13 @@ public class OWF_TroubleEventPageSteps {
             troubleEventPage.switchToFrameByIndex(2);
             troubleEventPage.clickElementByContainsTextAndTagName("a", "OK");
             troubleEventPage.switchToDefault();
+            troubleEventPage.wait(3000);
             int frames = troubleEventPage.getNumberOfFrames();
             if(frames>2){
                 troubleEventPage.switchToFrameByIndex(2);
-                troubleEventPage.wait(3000);
                 troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
                 troubleEventPage.switchToDefault();
             }
-            troubleEventPage.wait(3000);
             troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
         }
         catch(Exception e){
@@ -1388,6 +1393,14 @@ public class OWF_TroubleEventPageSteps {
         Assert.assertEquals(CommonUtils.EventEndTime, troubleEventPage.getEventEndTime_ClosedTicketStatus());
     }
 
+    @Then("user validates event end time is same as cleared status event end time Attribute")
+    public void userValidatesEventEndTimeIsSameAsClearedStatusEventEndTimeAttribute() {
+        System.out.println("cleared ticket event End time is - " +CommonUtils.EventEndTime);
+        System.out.println("closed ticket event End time is - " +troubleEventPage.getEventEndTime_ClosedTicketStatus_attribute());
+
+        Assert.assertEquals(CommonUtils.EventEndTime, troubleEventPage.getEventEndTime_ClosedTicketStatus_attribute());
+    }
+
     @Then("user validates fault position field is mandatory")
     public void userValidatesFaultPositionFieldIsMandatory() {
         Assert.assertTrue(troubleEventPage.verifyFaultPositionIsMandatory());
@@ -1445,7 +1458,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters auto close date as {int} mins past")
     public void userEntersAutoCloseDateAsIntMinsPast(int arg0) {
-        troubleEventPage.enterAutoCloseDate(CommonUtils.getDateTime("MM-dd-YYYY HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterAutoCloseDate(CommonUtils.getDateTime("YYYY-MM-dd HH:mm:ss", "Europe/London", arg0));
     }
 
     @Then("user validates hierarchic escalation level is read only")

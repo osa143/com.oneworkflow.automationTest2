@@ -1052,15 +1052,16 @@ public class Plaza_HomePage extends BasePage {
     }
 
     public void selectNimbusSystemNameHaiti(String dropdownName){
-        PlazaValidation.SystemNameInHaiti = dropdownName;
-        clickElement(By.id(dd_NIMBUS_HAITI));
-        WebElement Element=findElement(By.xpath(dd_SYSTEM_NAME_HAITI_NIMBUS));
-        Element.sendKeys(dropdownName);
-        wait(1000);
-        Element.sendKeys(Keys.ARROW_DOWN);
-        Element.sendKeys(Keys.ENTER);
+            PlazaValidation.SystemNameInHaiti = dropdownName;
+            clickElement(By.id(dd_SYSTEM_NAME_IN_HAITI));
+            WebElement Element=findElement(By.id(dd_SYSTEM_NAME_HAITI));
+            WebElement element= driver.switchTo().activeElement();
+            element.sendKeys(dropdownName);
+            wait(500);
+            element.sendKeys(Keys.ARROW_DOWN);
+            element.sendKeys(Keys.ENTER);
+        }
 
-    }
 
     public void selectNetworkSecurityRemoteAccessSystemNameHaiti(String dropdownName){
         clickElement(By.id(dd_REMOTE_ACCESS_HAITI));
@@ -1259,17 +1260,17 @@ public class Plaza_HomePage extends BasePage {
 
         driver.findElement((By.id(btn_PDB_AFFECTED_PERSON))).findElements(By.tagName("span")).stream().filter(element -> element.getText().trim().equals(AffectedPersonType)).findFirst().orElse(null).click();
     }
+
     public void selectSystemNameInHaiti(String dropdownName){
         PlazaValidation.SystemNameInHaiti = dropdownName;
         clickElement(By.id(dd_SYSTEM_NAME_IN_HAITI));
-        WebElement Element=findElement(By.id(dd_SYSTEM_NAME_HAITI));
         WebElement element= driver.switchTo().activeElement();
         element.sendKeys(dropdownName);
         wait(500);
         element.sendKeys(Keys.ARROW_DOWN);
         element.sendKeys(Keys.ENTER);
-
     }
+
     public String getOW_ManualUpdate(){
         return getTextByElement(By.id(""));
     }

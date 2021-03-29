@@ -16,7 +16,7 @@
       When user clicks on location under sections
       And user enters "SE_" within the location ID+ field
       Then user switches to frame
-      And user selects site "SE_Site_126608"
+      And user selects site "SE_Site_SE M1"
       And user clicks on ok button on location search
       Then user clicks on save button
       And ticket should be created and status should be assigned
@@ -120,7 +120,7 @@
       When user clicks on location under sections
       And user enters "FI_" within the location ID+ field
       Then user switches to frame
-      And user selects site "FI_Site_maarianvaara_keskus"
+      And user selects site "FI_Site_haminan lukio"
       And user clicks on ok button on location search
       Then user clicks on save button
       And ticket should be created and status should be assigned

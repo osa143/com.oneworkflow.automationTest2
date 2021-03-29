@@ -113,7 +113,7 @@ public class BaseRecordPage extends BasePage {
     public static final String table_DIAGNOSIS_ID = "T700009087";
     public static final String table_ALARMS_ID = "T700508140";
     public static final String table_LINKED_ITEMS_ID = "T777506000";
-    public static final String table_INTERESTED_PARTIES_ID = "//*[@id='WIN_0_700027964']/div[2]";
+    public static final String table_INTERESTED_PARTIES_ID = "T705002015";
     public static final String table_ASSOCIATED_ROOT_CAUSE_CODES_ID = "T800040090";
     private static final String table_ADD_INTERESTED_PARTIES= "T700027964";
     public static final String btnREFRESH_XPATH = "//*[@id='WIN_0_999000510']/div[1]/table/tbody/tr/td[2]/a[2]";

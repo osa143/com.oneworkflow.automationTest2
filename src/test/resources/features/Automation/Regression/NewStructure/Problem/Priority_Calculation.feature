@@ -35,7 +35,7 @@
       And user selects urgency as "Medium"
       Then priority should be "Minor"
       And user selects urgency as "Low"
-      Then priority should be "Minor"
+      Then priority should be "Info"
       When user clicks on internal checkbox under affected BU's
       And user enters "Priority_Calculation Test" in Title field
       And user selects request type as "CPS:IT:Other" in problem form

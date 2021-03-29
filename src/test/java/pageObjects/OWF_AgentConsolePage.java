@@ -203,13 +203,17 @@ public class OWF_AgentConsolePage extends BasePage {
 
     }
     public void clickOkButton(){
-        switchToFrameByIndex(2);
-        clickElementByContainsTextAndTagName("a", "OK");
+        try {
+            switchToFrameByIndex(2);
+            clickElementByContainsTextAndTagName("a", "OK");
+    }
+        catch (Exception e){
 
+        }
     }
 
-    public void verifyTicketIsUnlinked(){
-        Assert.assertNotEquals(CommonUtils.UnlinkTicket, getTextByElement(By.xpath(SELECT_TICKET_LINKED_ITEMS)));
+    public String getTicketLinkedItems(){
+       return getAttributeValueByElement(By.xpath(SELECT_TICKET_LINKED_ITEMS));
     }
 
     public void selectTicketAndUnlink(){

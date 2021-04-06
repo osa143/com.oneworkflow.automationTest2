@@ -414,8 +414,17 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     public String getImpact(){
         return getTextByID(txt_IMPACT);
     }
+
+    public String getPlazaPDBImpact(){
+        return getAttributeValueById(txt_IMPACT);
+    }
+
     public String getImportance(){
         return getTextByID(txt_IMPORTANCE);
+    }
+
+    public String getPlazaPDBImportance(){
+        return getAttributeValueById(txt_IMPORTANCE);
     }
 
 

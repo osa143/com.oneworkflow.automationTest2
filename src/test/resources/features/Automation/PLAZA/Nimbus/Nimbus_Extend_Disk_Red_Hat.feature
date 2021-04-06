@@ -1,4 +1,4 @@
-@Nimbus_Extend_Disk_Red_Hat @PLAZA
+@Nimbus_Extend_Disk_Red_Hat @Nimbus #@PLAZA
   Feature: Nimbus Extend Disk Red Hat plaza form test
     Scenario: user validates information sent to OW from Plaza
 

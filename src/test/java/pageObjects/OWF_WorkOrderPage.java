@@ -10,7 +10,7 @@ import utils.PlazaValidation;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class OWF_WorkOrderPage extends BasePage {
+public class OWF_WorkOrderPage extends BaseRecordPage {
 
     private static final String txtSTATUS_ID = "arid_WIN_0_777031003";
     private static final String txtPARENT_TICKET_ID= "arid_WIN_0_777777653";
@@ -45,7 +45,6 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String dd_STATUS= "Status*";
     private static final String txt_SOURCE_ID="arid_WIN_0_777021006";
     private static final String txt_SOURCE_FLD= "arid_WIN_0_777777912";
-    private static final String txt_DESCRIPTION= "arid_WIN_0_777031007";
     private static final String table_INTERESTED_PARTIES= "T705002015";
     private static final String txt_REQUEST_TYPE= "arid_WIN_0_777031002";
     private static final String txt_REASSIGNED_REASON= "arid_WIN_0_600001026";
@@ -200,8 +199,8 @@ public class OWF_WorkOrderPage extends BasePage {
 
     public boolean verifyPlazaPDB_Description() {
         String actualDescription = getDescription();
-        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.DateTime)
-                && actualDescription.contains(PlazaValidation.NatureAndContent) && actualDescription.contains(PlazaValidation.AffectedPersons)
+        if (actualDescription.contains(PlazaValidation.UserName)
+                && actualDescription.contains(PlazaValidation.NatureAndContent) //&& actualDescription.contains(PlazaValidation.AffectedPersons)
                 && actualDescription.contains(PlazaValidation.AffectedPersonNameID)){
             return true;
         }
@@ -296,11 +295,6 @@ public class OWF_WorkOrderPage extends BasePage {
             return true;
         }
         return false;
-    }
-    public String getDescription(){
-        String description= getAttributeValueById(txt_DESCRIPTION);
-        System.out.println(description);
-        return description;
     }
 
     public String getTitle(){

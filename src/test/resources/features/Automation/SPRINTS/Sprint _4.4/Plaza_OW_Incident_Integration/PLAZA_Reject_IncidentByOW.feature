@@ -25,7 +25,7 @@ Feature: Plaza creation of incident ticket - OW Rejects Incident
     And user enters "Test Update" in the ticket timeline
     And user clicks on plaza send button
     And user opens new tab
-    And user opens second tab
+    And user switches to window 2
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -36,7 +36,7 @@ Feature: Plaza creation of incident ticket - OW Rejects Incident
     Then user should see plaza incident ticket
     And user validates title field as "Test OW OP Ticket"
     And user validates request type as "Customer"
-    And user validates description as "Test OW OP Ticket"
+  #    And user validates ow incident description same as plaza
     And user validates ticket status as "Assigned"
     And user validates source field as "PLAZA"
     And user validates reassigned reason as "Assigned for Plaza Escalation to 2nd Level"

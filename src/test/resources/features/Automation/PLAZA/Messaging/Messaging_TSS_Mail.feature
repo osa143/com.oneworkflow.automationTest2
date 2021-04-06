@@ -1,4 +1,4 @@
-@Messaging_TSS_Mail @PLAZA
+@Messaging_TSS_Mail #@PLAZA
   Feature: Messaging TSS Mail plaza form test
     #passed
     Scenario: user validates information sent to OW from Plaza

@@ -1,4 +1,4 @@
-@Network_Security_Load_Balancing @PLAZA @Network_Security
+@Network_Security_Load_Balancing #@PLAZA @Network_Security
   #passed
   Feature: Network Security Load Balancing plaza form test
     Scenario: user validates information sent to OW from Plaza

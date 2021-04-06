@@ -15,6 +15,7 @@
       And user clicks on show more button
       And user waits 2 secs
       And user clicks on show more button
+      And user waits 2 secs
       When user clicks on "WEB TAB" pebble
       Then user should see "WEB TAB" form
       #Then user selects system name in haiti as "Other"

@@ -39,7 +39,7 @@
         | NSD           | ConvAccess:IP:ServCore    |
         | PAComm        | Conv:VAS:Voice                |
         | PAConn        | BusNW:Internet:MobVD      |
-        | PAITServ      | MDM_DAAS:Security         |
+        | PAITServ      | MDM_DAAS:Paas:Security         |
         | PAMedia       | ConnHome:TV               |
 
       Then user clicks edit affected org button
@@ -59,7 +59,7 @@
         | NSD           | ConvAccess:IP:ServCore    |
         | PAComm        | Conv:VAS:Voice                |
         | PAConn        | BusNW:Internet:MobVD      |
-        | PAITServ      | MDM_DAAS:Security         |
+        | PAITServ      | MDM_DAAS:Paas:Security         |
         | PAMedia       | ConnHome:TV               |
       When user clicks on save button on the problem form
       Then "Estimated Ready:Actual Finish:Decision Go/NoGo:Resolving Group:Resolving Person" shouldn't be visible on problem record form
@@ -105,7 +105,7 @@
         | Process and Organisation:Caused by Change | Approval flow violated:Inadequate risk assessment:Parallel Changes:Poor testing:Poor Verification |
         | Process and Organisation:Documentation missing or inadequate | Checks list and procedures:CI inadequately documented:CI not documented in inventory |
         | Process and Organisation:Vendor | Lack of documentation:Lack of unclear SLA, WLA, RACI:Not complying to vendor recommendations / requirements:Use of non approved contractor |
-        | Technical | HW error:Lack of capacity,licenses:Lack of patching:Missing inadequate monitoring and alarms:Other:Redundancy didn't work as expected:Root Cause Not Found:Security,hacker attack,SW & Config error:The design does not meet expectation:The implementation is not according to architecture |
+        | Technical | HW error:Lack of capacity,licenses:Lack of patching:Missing inadequate monitoring and alarms:Other:Redundancy didn't work as expected:Root Cause Not Found:Security,hacker attack,Software Bug,SW & Config error:The design does not meet expectation:The implementation is not according to architecture |
         | Technical:Infrastructure | Cooling & Heating:Power |
       And user selects solved under closure code
       And user enters solution as "A change in processes"

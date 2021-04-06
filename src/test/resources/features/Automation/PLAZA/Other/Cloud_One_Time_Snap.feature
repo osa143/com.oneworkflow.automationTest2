@@ -24,7 +24,8 @@
       And user enters date and time for deletion as current date and time
       And user enters additional comments as "Test1 Cloud one time snapshot/AC"
       And user clicks on add attachment in plaza
-      And user searches for "Test Attachments\other files\Test WORD FILE.docx" attachment and adds it
+      And user searches for plaza "Test Attachments\other files\Test WORD FILE.docx" attachment and adds it
+      And user waits 2 secs
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

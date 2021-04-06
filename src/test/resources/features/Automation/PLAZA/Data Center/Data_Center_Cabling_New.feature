@@ -1,4 +1,4 @@
-@Data_Center_Cabling_New @PLAZA
+@Data_Center_Cabling_New #@PLAZA
   Feature: Data center plaza form test not found
   Scenario: user validates information sent to OW from Plaza
 

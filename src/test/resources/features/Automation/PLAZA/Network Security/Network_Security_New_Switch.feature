@@ -1,4 +1,4 @@
-@Network_Security_Routing_New_Switching @PLAZA @Network_Security
+@Network_Security_Routing_New_Switching #@PLAZA @Network_Security
   Feature: Network Security New Switch
     Scenario: user validates information sent to OW from Plaza
 

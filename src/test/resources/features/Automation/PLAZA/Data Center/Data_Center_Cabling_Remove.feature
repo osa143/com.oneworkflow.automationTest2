@@ -1,4 +1,4 @@
-@Data_Center_Cabling_Remove @PLAZA
+@Data_Center_Cabling_Remove #@PLAZA
   Feature: Data Center Cabling Remove plaza form test
     Scenario: user validates information sent to OW from Plaza
 

@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import utils.CommonUtils;
 import utils.PlazaValidation;
@@ -165,6 +167,35 @@ public class BaseRecordPage extends BasePage {
     private static final String btn_YES= "//a[@arid='700027904']";
     private static final String table_INTEREST_PARTIES = "T705002015";
     private static final String btn_TIMELINE_REFRESH = "//*[@id='WIN_0_999000510']/div[1]/table/tbody/tr/td[2]/a[2]";
+    private static final String btn_UPLOAD_ATTACHMENT_XPATH = "uploadfiles";
+    private static final String txt_DESCRIPTION= "arid_WIN_0_777031007";
+
+    public String getDescription(){
+        String description= getAttributeValueById(txt_DESCRIPTION);
+        System.out.println(description);
+        return description;
+    }
+
+    public void clickonChooseFile_Frame(){
+        driver.switchTo().parentFrame();
+        int size = driver.findElements(By.tagName("iframe")).size();
+        switchToFrameByIndex(size - 1);
+        int size1 = driver.findElements(By.tagName("iframe")).size();
+        switchToFrameByIndex(size1 - 1);
+    }
+
+    public void uploadFile(String filepath){
+        WebDriverWait wait = new WebDriverWait(driver, 3);
+        clickonChooseFile_Frame();
+        String popUpOkButton = "//*[@id=\"PopupAttFooter\"]/a[1]";
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(popUpOkButton)));
+        driver.switchTo().activeElement().sendKeys(filepath);
+        clickElement(By.xpath(popUpOkButton));
+    }
+
+    public void uploadAttachmentFile(String path){
+        driver.switchTo().activeElement().sendKeys(path);
+    }
 
     public void clickTimelineRefresh(){
         clickElement(By.xpath(btn_TIMELINE_REFRESH));

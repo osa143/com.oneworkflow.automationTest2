@@ -1,4 +1,4 @@
-@Bulk_Loading_Format_change_500CIs #@SAO-427
+@Bulk_Loading_Format_change_500CIs @SAO-427
 Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format
 
@@ -55,9 +55,9 @@ Feature: checking of bulk loading format
       Examples:
 
           |fileTypes                                                                                           |
-#          |Test Attachments\500 CI's (No Duplicates)\CSV.csv|
-#          |Test Attachments\500 CI's (No Duplicates)\TEXT.txt|
+          |Test Attachments\500 CI's (No Duplicates)\CSV.csv|
+          |Test Attachments\500 CI's (No Duplicates)\TEXT.txt|
           |Test Attachments\500 CI's (No Duplicates)\XLS.xls|
-#          |Test Attachments\500 CI's (No Duplicates)\XLSX.xlsx|
+          |Test Attachments\500 CI's (No Duplicates)\XLSX.xlsx|
 
 

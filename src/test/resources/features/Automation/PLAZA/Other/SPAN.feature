@@ -19,7 +19,7 @@
      And user enters SPAN request as "<Request>"
      And user selects span select request as "Account/Password"
      And user selects span environment field as "<Environment>"
-     And user selects span add CI as "SPANGISAT"
+     And user selects span add CI as "SPAN"
      Then user enters SPAN description as "<Description>"
      And user enters additional comments as "<Additional Comments>"
      Then user clicks on "Submit"
@@ -48,14 +48,14 @@
      Then user clicks on "Interested Parties" tab
      And user validates "PLAZA" is listed as an interested party
      When user clicks on "Diagnosis" tab
-     And user validates CI "SPANGISAT" is listed
-     And user right clicks on CI "SPANGISAT" and selects "Impact:Update"
+     And user validates CI "SPAN" is listed
+     And user right clicks on CI "SPAN" and selects "Impact:Update"
      Then user switches to frame
      And user enters impact from time as past on impact details bulk update window
      And user enters impact to time as past on impact details bulk update window
      Then user clicks confirm checkbox
      And user clicks on bulk update save button
-     And user right clicks on CI "SPANGISAT" and clears impact
+     And user right clicks on CI "SPAN" and clears impact
      And user changes status to "Cleared" on work order page
      And user selects completion code as "Success"
      And user clicks on "Schedule" tab

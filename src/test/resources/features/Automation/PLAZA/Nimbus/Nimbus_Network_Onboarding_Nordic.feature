@@ -1,4 +1,4 @@
-@Nimbus_Network_OnBoarding_Nordic @PLAZA
+@Nimbus_Network_OnBoarding_Nordic @Nimbus #@PLAZA
   Feature: Nimbus Network Onboarding Nordic plaza form test
     Scenario: user validates information sent to OW from Plaza
 

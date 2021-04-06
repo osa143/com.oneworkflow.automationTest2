@@ -1722,6 +1722,10 @@ public class OWF_TroubleEventPageSteps {
 
     }
 
+    @And("user validates ow incident description same as plaza")
+    public void userValidatesOwIncidentDescriptionSameAsPlaza() {
+        Assert.assertTrue(troubleEventPage.verifyPlazaIncidentDescription());
+    }
 }
 
 

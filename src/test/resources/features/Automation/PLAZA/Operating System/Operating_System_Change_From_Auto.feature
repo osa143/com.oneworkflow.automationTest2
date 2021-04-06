@@ -1,4 +1,4 @@
-@Operating_System_Change_From_Auto @PLAZA
+@Operating_System_Change_From_Auto @OPS @PLAZA
   Feature: Operating System Change from Auto
     Scenario: user validates information sent to OW from Plaza
 

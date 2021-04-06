@@ -1,4 +1,4 @@
-@Messaging_Denmark_Mail @PLAZA
+@Messaging_Denmark_Mail #@PLAZA
   Feature: Messaging Denmark Mail plaza form test
     #passed
     Scenario: user validates information sent to OW from Plaza

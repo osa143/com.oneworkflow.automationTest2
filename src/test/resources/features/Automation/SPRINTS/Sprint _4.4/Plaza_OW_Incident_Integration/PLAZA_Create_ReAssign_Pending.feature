@@ -28,7 +28,8 @@
 #      And user validates INC is present under internal case subtasks
 #      When user clicks on INC under internal case subtasks
 #      Then user should see INC form
-      And user opens second tab
+      And user opens new tab
+      And user switches to window 2
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -40,7 +41,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Test OW OP Ticket"
       And user validates request type as "Customer"
-      And user validates description as "Test OW OP Ticket"
+          #And user validates ow incident description same as plaza
       And user validates ticket status as "Assigned"
       And user validates reassigned reason as "Assigned for Plaza Escalation to 2nd Level"
       Then change should also be reflected in the timeline as "Test Update" on row 1
@@ -61,23 +62,26 @@
       When user switches to window 1
       And user clicks on main page refresh
       And user waits 5 secs
-#      Then user should see "Comments from OneWorkflow @Change_Automation_9: Test Update" update in plaza
+#      Then user should see "Test Update" update in plaza
+      And user should see OW manual notification in plaza ticket as "Test Update"
       Then user switches to window 3
       When user selects assignment profile dropdown as "IT:Application:Application-NO"
       And user enters "dafu01" in assignee
       And user clicks on save button
       Then change should also be reflected in the timeline as "ASSIGNMENT.  Trouble has been reassigned from user  >> dafu01" on row 2
       When user switches to window 1
+      And user waits 10 secs
       And user clicks on main page refresh
-#      Then user should see "Assignee has changed in One Workflow with Assignment Profile as: Application-NO and Assignee Value as: dwk298" update in plaza ticket
 #      Then user should see "Assignee has changed in One Workflow with Assignment Profile as: Application-NO and Assignee Value as: dafu01" update in plaza
+      And user should see OW manual notification in plaza ticket as "Application-NO"
       Then user switches to window 3
       When user clicks on Ack button
       Then user validates ticket status as "Work In Progress"
+      And user waits 15 secs
       When user switches to window 1
       And user clicks on main page refresh
-#      Then user should see "State has been changed to Work In Progress in OWF with the Assignment Profile: OSS Tech Mahindra" update in plaza ticket
 #      Then user should see "State has been changed to Work In Progress in OWF with the Assignment Profile: Application-NO" update in plaza
+      And user should see OW manual notification in plaza ticket as "State has been changed to Work In Progress in OWF with the Assignment Profile: Application-NO"
       Then user switches to window 3
 #      When user changes status to "Pending"
 #      And user enters on hold to date 2 minutes in the future
@@ -89,8 +93,8 @@
 #      And user validates plaza first timeline message as "State has been changed to Pending in OneWorkflow"
 #      Then user waits for two minutes
 #      When user switches to window 3
-      And user clicks on ticket refresh button
-      Then user validates ticket status as "Work In Progress"
+#      And user clicks on ticket refresh button
+#      Then user validates ticket status as "Work In Progress"
 #      And change should also be reflected in the timeline as "State has been changed from Pending to Work In Progress in OneWorkflow" on row 3
       When user changes status to "Cleared" on trouble event page
       And user selects fault position as "N/A:N/A" on trouble event page
@@ -100,11 +104,19 @@
       And user clicks on save button and closes warning messages
       Then user validates ticket status as "Cleared"
       And user switches to window 1
+      And user waits 20 secs
       And user clicks on main page refresh
-      And user validates plaza first timeline message as "Resolution has been sent with the Primary Cause as: N/A | N/A | N/A"
-      And user validates plaza second timeline message as "Incident state Resolved was In Progress"
+      And user should see OW manual notification in plaza ticket as "Resolution has been sent with the Primary Cause as: N/A | N/A | N/A"
+#      And user validates plaza second timeline message as "Incident state Resolved was In Progress"
+#      When user clicks on shown ICM number
+      When user clicks on create ICM number
+      Then user should see ICM form
+      And user validates INC is present under internal case subtasks
+      When user clicks on INC under internal case subtasks
+      Then user should see INC form
       Then user enters plaza assignment group as "IT Application Support"
       And user enters plaza assignee as "Agata Stefanovič"
+      When user clicks on plaza closure information tab
       Then user validates resolution code as "Solved (Permanently)"
       And user validates resolution notes as "N/A:N/A:N/A"
       Then user clicks on plaza close incident button

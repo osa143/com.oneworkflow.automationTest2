@@ -1,4 +1,4 @@
-@Messaging_TSS_Premium_Mail @PLAZA
+@Messaging_TSS_Premium_Mail #@PLAZA
   Feature: Messaging TSS Premium Mail plaza form test
 
     Scenario: user validates information sent to OW from Plaza

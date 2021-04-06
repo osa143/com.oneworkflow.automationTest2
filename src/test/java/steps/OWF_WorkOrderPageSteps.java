@@ -255,9 +255,9 @@ public class OWF_WorkOrderPageSteps {
 
     @And("user validates PDB title field as {string}")
     public void userValidatesTitleFieldAs(String arg0) {
-        ////String expectedTitle= " "+arg0;
-        //System.out.println("Expected plaza title is " +expectedTitle);
-        Assert.assertEquals(workOrderPage.getTitle(), arg0);
+        String expectedTitle= " "+arg0;
+        System.out.println("Expected plaza title is " +expectedTitle);
+        Assert.assertEquals(workOrderPage.getTitle(), expectedTitle);
     }
 
     @And("user validates title field as {string}")

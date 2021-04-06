@@ -1,4 +1,4 @@
-@Messaging_CallGuide_Mail @PLAZA
+@Messaging_CallGuide_Mail #@PLAZA
   Feature: Messaging CallGuide Mail plaza form test
     #passed
     Scenario: user validates information sent to OW from Plaza

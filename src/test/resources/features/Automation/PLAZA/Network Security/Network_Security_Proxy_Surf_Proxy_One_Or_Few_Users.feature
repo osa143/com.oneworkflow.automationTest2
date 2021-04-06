@@ -1,4 +1,4 @@
-@Network_Security_Proxy_Surf_Proxy_One_Or_Few_Users @PLAZA @Network_Security
+@Network_Security_Proxy_Surf_Proxy_One_Or_Few_Users #@PLAZA @Network_Security
   #passed
   Feature: Network Security Proxy Surf Proxy One Or Few Users plaza form test
     Scenario: user validates information sent to OW from Plaza

@@ -24,8 +24,8 @@
       Then user enters Backup description as "Test1 Backup (Re)Schedule/Description"
       And user enters additional comments as "Test1 Backup (Re)Schedule/AC"
       And user selects Add CI back up as "cc100cgas001"
-      And user clicks on add attachment in plaza
-      And user searches for "Test Attachments\other files\Test WORD FILE.docx" attachment and adds it
+#      And user clicks on add attachment in plaza
+      And user searches for plaza "Test Attachments\other files\Test WORD FILE.docx" attachment and adds it
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

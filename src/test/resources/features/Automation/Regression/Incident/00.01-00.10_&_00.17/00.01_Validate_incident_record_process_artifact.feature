@@ -1,6 +1,6 @@
 @00.01 @00 @Incident
   #Passed
-  Feature: Validate incident record process artifact
+  Feature: 00.01 - Validate incident record process artifact
 
     Scenario: Validate incident record process artifact
 

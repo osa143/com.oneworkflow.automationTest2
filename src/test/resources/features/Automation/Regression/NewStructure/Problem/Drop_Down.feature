@@ -37,12 +37,11 @@
         | IT            | CustEng:EntServ:Infra:OSS:Workplace |
         | NO            | OC&MC:Phonero             |
         | NSD           | ConvAccess:IP:ServCore    |
-        | PAComm        | Conv:VAS:Voice                |
+        | PAComm        | Conv:VAS:Voice            |
         | PAConn        | BusNW:Internet:MobVD      |
         | PAITServ      | MDM_DAAS:Paas:Security         |
         | PAMedia       | ConnHome:TV               |
 
-      Then user clicks edit affected org button
       And user selects affected organisation as "CA_IT"
       And multiple statuses "CA_Infra:CA_IT:CA_Provider:DivX:External:TeliaFinance:(clear)" should be available in "Organisations" dropdown
       And User selects "Affected Orgs." as dropdownValue and should see values for "notreadonly"

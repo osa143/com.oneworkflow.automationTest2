@@ -21,9 +21,9 @@ Feature: Timeline update
     And user selects urgency as High
     And user clicks on save button
     Then user validates that priority changes to major
-    And change should also be reflected in the timeline as "Priority has changed from Minor to Major"
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Ticket Priority has changed from Info to Major. " on row 1
     Then user enters description as "-more information"
-    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation" on row 2
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation. " on row 2
     Then user clicks on timeline tab
     And user selects Auto text:Tech bridge closed
     And change should also be reflected in the timeline as "All parties drop from technical troubleshooting bridge."

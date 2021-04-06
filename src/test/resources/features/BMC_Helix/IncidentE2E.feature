@@ -1,4 +1,4 @@
-@Incident @Regression
+@Incident_BMCHelix @Regression
   #Tag is an identifier for the runner class (testRunner)
 
 Feature: Incident

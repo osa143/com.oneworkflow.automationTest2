@@ -1292,17 +1292,17 @@ public class Plaza_HomePage extends BaseRecordPage {
 
         driver.findElement((By.id(btn_PDB_AFFECTED_PERSON))).findElements(By.tagName("span")).stream().filter(element -> element.getText().trim().equals(AffectedPersonType)).findFirst().orElse(null).click();
     }
+
     public void selectSystemNameInHaiti(String dropdownName){
         PlazaValidation.SystemNameInHaiti = dropdownName;
         clickElement(By.id(dd_SYSTEM_NAME_IN_HAITI));
-        WebElement Element=findElement(By.id(dd_SYSTEM_NAME_HAITI));
         WebElement element= driver.switchTo().activeElement();
         element.sendKeys(dropdownName);
         wait(500);
         element.sendKeys(Keys.ARROW_DOWN);
         element.sendKeys(Keys.ENTER);
-
     }
+
     public String getOW_ManualUpdate(){
         return getTextByElement(By.id(""));
     }

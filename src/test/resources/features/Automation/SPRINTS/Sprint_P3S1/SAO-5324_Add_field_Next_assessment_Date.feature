@@ -1,4 +1,4 @@
-
+#To be run manually because of 1 hr wait
    Feature: SAO-5324 Next Assessment date
     @5324
     Scenario: verify when next assessment date less than 5 days in the future should send email notification

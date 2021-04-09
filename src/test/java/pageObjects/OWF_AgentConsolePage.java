@@ -10,7 +10,7 @@ import utils.CommonUtils;
 //import javax.xml.bind.SchemaOutputResolver;
 import java.util.List;
 
-public class OWF_AgentConsolePage extends BasePage {
+public class OWF_AgentConsolePage extends BaseRecordPage {
 
     Actions action = new Actions(driver);
     private static final String menuForCONSOLE = "Console";

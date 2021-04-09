@@ -1,5 +1,6 @@
 @PMO_Tab_known_error_ticket @problem @Reg_Problem
 #passed
+  #Covers SAO-5335_Add_PMO_Tab_KE
 Feature: PMO Tab
 
   Scenario: PMO Tab for known error ticket

@@ -841,7 +841,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event start time as {int} mins past")
     public void userEntersEventStartTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user should see confirmation message for impact clear and clicks ok")
@@ -1721,6 +1721,12 @@ public class OWF_TroubleEventPageSteps {
 
     }
 
+    @Then("user clicks on the related CI impact")
+    public void userClicksOnTheRelatedCIImpact() {
+        troubleEventPage.clickDiagnosis();
+        troubleEventPage.wait(1500);
+        troubleEventPage.openRelatedCIImpactTable();
+    }
     @And("user validates ow incident description same as plaza")
     public void userValidatesOwIncidentDescriptionSameAsPlaza() {
         Assert.assertTrue(troubleEventPage.verifyPlazaIncidentDescription());

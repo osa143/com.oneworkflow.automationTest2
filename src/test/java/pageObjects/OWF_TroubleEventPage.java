@@ -193,6 +193,16 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String chkbx_TICKET_MATCHING_TITLE = "WIN_0_rc0id800040405";
     private static final String dd_TICKET_MATCHING_MATCH_BY = "arid_WIN_0_800040284";
     private static final String table_ALARMS = "T700508140";
+    private static final String btn_relatedCIImpact = "//a[@title='Related CIs']";
+
+    private static final String btn_PREFRENCES_INTERNAL= "//div[@id='WIN_0_777000013']//a[@class='Prefs btn btn3d TableBtn'][contains(text(),'Preferences')]";
+    private static final String btn_REFRESH_INTERNAL= "//div[@id='WIN_0_777000013']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
+    private static final String btn_PREFRENCES_EXTERNAL= "//div[@id='WIN_0_600002205']//a[@class='Prefs btn btn3d TableBtn'][contains(text(),'Preferences')]";
+    private static final String btn_REFRESH_EXTERNAL= "//div[@id='WIN_0_600002205']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
+    private static final String chkbxHEADER_XPATH_AlarmsTab = "//div[@id='WIN_0_700508140']//input[@class='checkboxheader']";
+    private static final String btnALARMS_XPATH = "//div[@id='WIN_0_999000003']//div[@class='OuterTabsDiv']//div[@class='TabsViewPort']//div//a[@class='btn f1'][contains(text(),'Alarms')]";
+    private static final String ddIMPORTANCE_XPATH = "//div[@id='WIN_0_600001821']//a[@class='btn btn3d selectionbtn']";
+    private static final String chkbxHEADER_XPATH_Diagnosis = "//div[@id='WIN_0_700009087']//input[@class='checkboxheader']";
 
     public boolean verifyPlazaIncidentDescription() {
         String actualDescription = getDescription();
@@ -1335,14 +1345,8 @@ public void rightClickOnElement(String cellData){
         driver.navigate().refresh();
     }
 
-    private static final String btn_PREFRENCES_INTERNAL= "//div[@id='WIN_0_777000013']//a[@class='Prefs btn btn3d TableBtn'][contains(text(),'Preferences')]";
-    private static final String btn_REFRESH_INTERNAL= "//div[@id='WIN_0_777000013']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
-    private static final String btn_PREFRENCES_EXTERNAL= "//div[@id='WIN_0_600002205']//a[@class='Prefs btn btn3d TableBtn'][contains(text(),'Preferences')]";
-    private static final String btn_REFRESH_EXTERNAL= "//div[@id='WIN_0_600002205']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
-    private static final String chkbxHEADER_XPATH_AlarmsTab = "//div[@id='WIN_0_700508140']//input[@class='checkboxheader']";
-    private static final String btnALARMS_XPATH = "//div[@id='WIN_0_999000003']//div[@class='OuterTabsDiv']//div[@class='TabsViewPort']//div//a[@class='btn f1'][contains(text(),'Alarms')]";
-    private static final String ddIMPORTANCE_XPATH = "//div[@id='WIN_0_600001821']//a[@class='btn btn3d selectionbtn']";
-    private static final String chkbxHEADER_XPATH_Diagnosis = "//div[@id='WIN_0_700009087']//input[@class='checkboxheader']";
-
-
+    public void openRelatedCIImpactTable() {
+        wait(2000);
+        driver.findElement(By.xpath(btn_relatedCIImpact)).click();
+    }
 }

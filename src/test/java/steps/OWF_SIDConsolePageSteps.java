@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.OWF_SIDConsolePage;
 import utils.CommonUtils;
@@ -135,6 +136,11 @@ public class OWF_SIDConsolePageSteps {
     @And("user clicks on ticket title")
     public void userClicksOnTicketTitle() {
       sidConsolePage.clickOnColumnTitle();
+    }
+
+    @Then("user validates CI history is opened")
+    public void userValidatesCIHistoryIsOpened() {
+        Assert.assertTrue(sidConsolePage.validateHistoryTableIsDisplayed());
     }
 }
 

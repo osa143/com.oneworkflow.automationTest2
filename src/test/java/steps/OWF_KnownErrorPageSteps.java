@@ -110,7 +110,8 @@ public class OWF_KnownErrorPageSteps {
 
     @When("user enters next assessment date as {int} days in the future")
     public void userEntersNextAssessmentDateAsDaysInTheFuture(int delay) {
-          knownErrorPage.enterNextAssessmentDate(CommonUtils.getDateTimePlusDays("dd/MM/yyyy HH:mm:ss ", "Europe/London", delay));
+          int newDelay= delay*24*60;
+          knownErrorPage.enterNextAssessmentDate(CommonUtils.getDateTime("MM/DD/yyyy HH:mm:ss ", "Europe/London", newDelay));
     }
 
     @Then("{string} shouldn't be visible")

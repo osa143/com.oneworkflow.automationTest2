@@ -1301,8 +1301,8 @@ public class Plaza_HomePage extends BaseRecordPage {
         wait(500);
         element.sendKeys(Keys.ARROW_DOWN);
         element.sendKeys(Keys.ENTER);
-    }
 
+    }
     public String getOW_ManualUpdate(){
         return getTextByElement(By.id(""));
     }

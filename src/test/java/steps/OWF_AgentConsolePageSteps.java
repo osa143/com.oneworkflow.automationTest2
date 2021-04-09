@@ -4,7 +4,6 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.BasePage;
 import pageObjects.OWF_AgentConsolePage;
@@ -803,7 +802,7 @@ public class OWF_AgentConsolePageSteps {
 
     @And("user validates ticket has been unlinked")
     public void userValidatesTicketHasBeenUnlinked() {
-        Assert.assertNotEquals(CommonUtils.UnlinkTicket, agentConsolePage.getTicketLinkedItems());
+        agentConsolePage.verifyTicketIsUnlinked();
     }
 
     @And("user clicks ok button on linked items popup")

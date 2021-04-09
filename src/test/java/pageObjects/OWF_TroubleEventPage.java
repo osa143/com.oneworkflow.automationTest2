@@ -1113,12 +1113,6 @@ public void rightClickOnElement(String cellData){
 
     public String getEventEndTime_ClosedTicketStatus(){
 
-        return getTextByID(txtEVENT_END_TIME);
-
-    }
-
-    public String getEventEndTime_ClosedTicketStatus_attribute(){
-
         return getAttributeValueById(txtEVENT_END_TIME);
 
     }

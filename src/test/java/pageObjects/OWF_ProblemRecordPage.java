@@ -20,24 +20,18 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String dd_STATUS= "Status*";
     private static final String btnTIMELINE_XPATH = "//a[contains(text(),'Timeline')]";
     private static final String fld_TIMELINE_DISPLAY_XPATH = "//div[@id='WIN_0_999000510']//div[@class='BaseTableInner']";
-
+    private static final String ddNO_ID = "arid_WIN_0_600001801";
+    private static final String ddREASON = "Reason";
     private static final String txtTITLE_ID = "arid_WIN_0_777031000";
     private static final String txtREQUEST_CATEGORY_ID="arid_WIN_0_777021548";
     private static final String txtDESCRIPTION_ID = "arid_WIN_0_777031007";
     private static final String txtWORK_AROUND = "arid_WIN_0_600001040";
-    private static final String txtSOURCE_ID = "arid_WIN_0_777777912";
-    private static final String txtPRIORITY_ID = "arid_WIN_0_700025204";
-    private static final String txt_IMPACT= "arid_WIN_0_705002082";
-    private static final String txt_URGENCY= "arid_WIN_0_705002083";
-    private static final String txt_ROOTCAUSECODE= "arid_WIN_0_777031437";
-    private static final String txtTO_DATE = "arid_WIN_0_777031004";
 
     private static final String ddREQUEST_TYPE_ID = "arid_WIN_0_777031002";
     private static final String ddURGENCY = "Urgency";
     private static final String ddWITHDRAWN_REASON = "Withdrawn Reason";
     private static final String ddACCOUNTABLE_ORG= "Accountable Org.";
-    private static final String ddNO_ID = "arid_WIN_0_600001801";
-    private static final String ddREASON = "Reason";
+
     private static final String ddValueDUPLICATE_ENTRIES = "Duplicate Entries";
     private static final String ddValueFALSE_ALARM = "False Alarm";
     private static final String ddValueINSUFICIENT_INFORMATION = "Insuficient information";
@@ -46,10 +40,12 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String ddValueTEST_TICKET = "Test Ticket";
     private static final String ddValueTRAINING = "Training";
     private static final String dd_WITHDRAWN_REASON_ValueCLEAR = "(clear)";
+
     private static final String ddValueEXTENSIVE_WIDESPREAD = "Extensive/Widespread";
     private static final String ddValueSIGNIFICANT_LARGE = "Significant/Large";
     private static final String ddValueMODERATE_LIMITED = "Moderate/Limited";
     private static final String ddValueCLEAR = "(clear)";
+
     private static final String ddValueCRITICAL = "Critical";
     private static final String ddValueHIGH = "High";
     private static final String ddValueMEDIUM = "Medium";
@@ -73,10 +69,17 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String btnRELEASE_ID = "WIN_0_777021435";
     private static final String btn_YES= "//a[@arid='700027904']";
 
+    private static final String txtSOURCE_ID = "arid_WIN_0_777777912";
+    private static final String txtPRIORITY_ID = "arid_WIN_0_700025204";
+
     private static final String chkbxSWEDEN = "WIN_0_rc0id600002001";
+    private static final String txtTO_DATE = "arid_WIN_0_777031004";
     private static final String table_ADD_INTERESTED_PARTY= "T700027964";
+    private static final String txt_IMPACT= "arid_WIN_0_705002082";
+    private static final String txt_URGENCY= "arid_WIN_0_705002083";
+    private static final String txt_ROOTCAUSECODE= "arid_WIN_0_777031437";
     private static final String rbtn_PRIVATE= "WIN_0_rc1id777021180";
-    private static final String btn_REFRESH= "//*[@arid=\"777506000\"]/div[1]/table/tbody/tr/td[2]/a[2]";
+    private static final String btn_REFRESH= "//*[@id='WIN_5_777506000']/div[1]/table/tbody/tr/td[2]/a[2]";
     private static final String txt_SERVICEAFFECTED= "arid_WIN_0_600001014";
     private static final String txt_ESTIMATED_READY= "arid_WIN_0_777504503";
     private static final String txt_MODEL= "arid_WIN_0_240001002";

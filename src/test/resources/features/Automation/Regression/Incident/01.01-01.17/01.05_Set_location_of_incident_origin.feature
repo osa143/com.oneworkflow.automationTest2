@@ -14,7 +14,7 @@ Feature: Setting location of incident origin
     And user enters "SE_" within the location ID+ field
     And user switches to frame
     Then user should see list of swedish sites
-    When user clicks on the next chunk button
+    #When user clicks on the next chunk button
     And user highlights location "SE_Site_SE M1" and clicks ok and validates location details
     When user clicks on sweden checkbox under affected BU's
     When user enters "01.05 set location of an incident" in Title field

@@ -10,7 +10,7 @@ import utils.PlazaValidation;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class OWF_WorkOrderPage extends BasePage {
+public class OWF_WorkOrderPage extends BaseRecordPage {
 
     private static final String txtSTATUS_ID = "arid_WIN_0_777031003";
     private static final String txtPARENT_TICKET_ID= "arid_WIN_0_777777653";

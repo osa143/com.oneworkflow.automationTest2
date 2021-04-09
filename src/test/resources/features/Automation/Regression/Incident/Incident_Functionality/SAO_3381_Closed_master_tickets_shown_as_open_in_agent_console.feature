@@ -27,12 +27,12 @@ Feature: SAO-3381 - Closed master tickets shown as open in agent console.
     And user clicks save button
     Then ticket should be created and status should be assigned
     And user gets trouble ticket value
-    And user enters auto close date as 2 mins past
+    And user enters auto close date as 1 mins past
     Then user clicks save button
     And user switches to window 1
     Then user clicks refresh button under linked items
     And user validates 1 linked ticket availability
-    And user enters auto close date as 2 mins past
+    And user enters auto close date as 1 mins past
     Then user clicks save button
     And user waits for 6 minutes
     Then user clicks on main page refresh

@@ -59,7 +59,7 @@ Feature: SAO-6737 - Improving Recurring Incidents Tab(Name Subject to Change)
     When user enters closed within days as "0"
     And user clicks on ticket matching cleared checkbox
     And user clicks ticket matching refresh button
-    Then "New:Assigned:Approval Requested:Scheduled:Analysis:Implementation:Work In Progress" tickets should be displayed under ticket matching
+    Then "New:Assigned:Approved:Approval Requested:Scheduled:Analysis:Implementation:Work In Progress" tickets should be displayed under ticket matching
     When user clicks on ticket matching open checkbox
     And user clicks on ticket matching cleared checkbox
     And user clicks ticket matching refresh button
@@ -98,7 +98,7 @@ Feature: SAO-6737 - Improving Recurring Incidents Tab(Name Subject to Change)
     When user enters closed within days as "0"
     And user clicks on ticket matching cleared checkbox
     And user clicks ticket matching refresh button
-    Then "New:Assigned:Approval Requested:Scheduled:Analysis:Implementation:Work In Progress" tickets should be displayed under ticket matching
+    Then "New:Assigned:Approved:Approval Requested:Scheduled:Analysis:Implementation:Work In Progress" tickets should be displayed under ticket matching
     When user clicks on ticket matching open checkbox
     And user clicks on ticket matching cleared checkbox
     And user clicks ticket matching refresh button

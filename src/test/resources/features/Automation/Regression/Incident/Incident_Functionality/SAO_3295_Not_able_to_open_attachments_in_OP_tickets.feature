@@ -17,7 +17,7 @@ Feature: SAO-3295 Not able to open attachments in OP tickets.
     Then user clicks attachments under sections
     And  user adds attachment and verifies under "internal"
       | summary   | description | fullFilePath       | attachments |
-      | Test Text | Test Text   | attachement.doc.txt | 1           |
+      | Test Text | Test Text   | attachement.doc | 1           |
     And user clicks on the added attachment
     Then user clicks attachment open button
     And user switches to window 1
@@ -26,7 +26,7 @@ Feature: SAO-3295 Not able to open attachments in OP tickets.
     And user switches to window 1
     And  user adds attachment and verifies under "external"
       | summary   | description | fullFilePath       | attachments |
-      | Test Text2 | Test Text2   | attachement.doc.txt | 2           |
+      | Test Text2 | Test Text2   | attachement.doc | 2           |
     And user clicks on the added attachment
     Then user clicks attachment open button
     And user switches to window 1

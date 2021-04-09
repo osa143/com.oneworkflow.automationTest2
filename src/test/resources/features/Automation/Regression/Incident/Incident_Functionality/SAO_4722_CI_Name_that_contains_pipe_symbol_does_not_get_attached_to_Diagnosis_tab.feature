@@ -1,10 +1,5 @@
 @SAO_4722
 
-  #SE_Site_NICE_835319
-  #SE_Site_NICE_835319|
-  #Test Requires us to now go to the managed element form and then change a CI there to have the pipe symbol, then change back
-  #https://td777lb-mtint.ddc.teliasonera.net/arsys/forms/td777lb-ars/SMIT.SID.COMMON%3AOS3_ManagedElement/ObjectStoreView/?cacheid=f51db0e9
-
 Feature: SAO_4722 - CI Name that contains " | " does not get attached to Diagnosis tab
 
   Scenario: SAO_4722 - CI Name that contains pipe symbol does not get attached to Diagnosis tab

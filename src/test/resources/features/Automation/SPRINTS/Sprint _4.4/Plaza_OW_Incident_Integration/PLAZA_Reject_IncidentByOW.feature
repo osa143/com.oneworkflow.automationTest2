@@ -1,5 +1,4 @@
 @PLAZA_Reject_Incident @PLAZA_Incident_Flow
-  #no reject button for plaza work orders
 
 Feature: Plaza creation of incident ticket - OW Rejects Incident
   Scenario: user validates plaza incident ticket - OW Rejects Incident

@@ -1,4 +1,4 @@
-@Network_Security_Proxy_Surf_Proxy_Whitelisting @PLAZA @Network_Security
+@Network_Security_Proxy_Surf_Proxy_Whitelisting #@PLAZA @Network_Security
   #passed
   Feature: Network Security Proxy Surf Proxy Whitelisting plaza form test
     Scenario Outline: user validates information sent to OW from Plaza

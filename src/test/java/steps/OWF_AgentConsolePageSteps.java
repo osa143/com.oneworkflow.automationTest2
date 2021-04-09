@@ -4,7 +4,6 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.BasePage;
 import pageObjects.OWF_AgentConsolePage;
@@ -803,7 +802,7 @@ public class OWF_AgentConsolePageSteps {
 
     @And("user validates ticket has been unlinked")
     public void userValidatesTicketHasBeenUnlinked() {
-        Assert.assertNotEquals(CommonUtils.UnlinkTicket, agentConsolePage.getTicketLinkedItems());
+        agentConsolePage.verifyTicketIsUnlinked();
     }
 
     @And("user clicks ok button on linked items popup")
@@ -992,6 +991,52 @@ public class OWF_AgentConsolePageSteps {
     public void userClosesConfirmationForCopyToNewByPressingX() {
         agentConsolePage.closeTab();
         CommonUtils.switchToChildWindow(driver, 1);
+    }
+
+    @And("user clicks make primary alarm button")
+    public void userClicksMakePrimaryAlarmButton() {
+        agentConsolePage.clickMakePrimaryButton();
+    }
+
+    @And("user clicks on detach alarm button")
+    public void userClicksOnDetachAlarmButton() {
+        agentConsolePage.clickDetachAlarmButton();
+    }
+
+    @And("user clicks on detach and create alarm button")
+    public void userClicksOnDetachAndCreateAlarmButton() {
+        agentConsolePage.clickDetachAndCreate();
+    }
+
+    @And("user clicks open alarm button")
+    public void userClicksOpenAlarmButton() {
+        agentConsolePage.clickOpenAlarm();
+    }
+
+
+    @And("user clicks on alarm in row two")
+    public void userClicksOnAlarmInRowTwo() {
+        agentConsolePage.clickOnAlarmTableRow2();
+    }
+
+    @When("user clicks on alarm in row three")
+    public void userClicksOnAlarmInRowThree() {
+        agentConsolePage.clickOnAlarmsTableRow3();
+    }
+
+    @When("user clicks on alarm in row four")
+    public void userClicksOnAlarmInRowFour() {
+        agentConsolePage.clickOnAlarmsTableRow4();
+    }
+
+    @When("user clicks on alarm in row one")
+    public void userClicksOnAlarmInRowOne() {
+        agentConsolePage.clickOnAlarmTableRow1();
+    }
+
+    @When("user clicks on alarm in row five")
+    public void userClicksOnAlarmInRowFive() {
+        agentConsolePage.clickOnAlarmsTableRow5();
     }
 }
 

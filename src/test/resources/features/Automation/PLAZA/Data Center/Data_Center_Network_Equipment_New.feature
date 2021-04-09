@@ -1,4 +1,4 @@
-@Data_Center_Network_Equipment_New @PLAZA @DataCenter
+@Data_Center_Network_Equipment_New #@PLAZA @DataCenter
   Feature: Data Center Network Equipment New plaza form test
     Scenario: user validates information sent to OW from Plaza
 

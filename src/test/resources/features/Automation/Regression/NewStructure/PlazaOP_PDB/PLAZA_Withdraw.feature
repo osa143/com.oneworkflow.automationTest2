@@ -1,5 +1,5 @@
 @PLAZA_Withdraw @PLAZA_Incident_Flow
-  #Ticket ID to come from Plaza
+  #Ticket ID to come from Plaza2
 Feature: Plaza creation/withdrawing of incident ticket
   Scenario: user validates plaza incident ticket - Plaza withdraws
 
@@ -20,7 +20,7 @@ Feature: Plaza creation/withdrawing of incident ticket
     And user clicks on plaza request id
     And user gets plaza OP ticket
     And user clicks on main page refresh
-    And user waits 30 secs
+    And user waits 10 secs
     And user enters "Test Update" in the ticket timeline
     And user clicks on plaza send button
     And user waits 5 secs
@@ -31,6 +31,7 @@ Feature: Plaza creation/withdrawing of incident ticket
     When user clicks on INC under internal case subtasks
     Then user should see INC form
     And user opens new tab
+    And user switches to window 2
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -41,7 +42,7 @@ Feature: Plaza creation/withdrawing of incident ticket
     Then user should see plaza incident ticket
     And user validates title field as "Test OW OP Ticket"
     And user validates request type as "Customer"
-    And user validates description as "Test OW OP Ticket"
+#    And user validates ow incident description same as plaza
     And user validates ticket status as "Assigned"
     And user validates source field as "PLAZA"
     And user validates reassigned reason as "Assigned for Plaza Escalation to 2nd Level"
@@ -58,12 +59,9 @@ Feature: Plaza creation/withdrawing of incident ticket
     And user should see assigned profile as "OSS Tech Mahindra"
     And user switches to window 1
     And user clicks on "Withdraw from OWF"
-    And user enters plaza assignment group as "IT Application Support"
-    And user clicks on "Withdraw from OWF"
     And user validates plaza ticket status as "New"
     And user switches to window 3
+    And user waits 20 secs
     And user clicks on ticket refresh button
     And user validates ticket status as "Withdrawn"
     And user verifies status is read only
-
-

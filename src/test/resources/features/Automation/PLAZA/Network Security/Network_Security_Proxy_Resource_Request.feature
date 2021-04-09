@@ -1,4 +1,4 @@
-@Network_Security_Proxy_Resource_Request @PLAZA @Network_Security
+@Network_Security_Proxy_Resource_Request #@PLAZA @Network_Security
   #passed
   Feature: Network Security Proxy resource request
     Scenario: user validates information sent to OW from Plaza

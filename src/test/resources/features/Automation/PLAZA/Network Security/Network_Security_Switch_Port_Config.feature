@@ -1,4 +1,4 @@
-@Network_Security_Switch_Port_Config @PLAZA @Network_Security
+@Network_Security_Switch_Port_Config #@PLAZA @Network_Security
   Feature: Network Security Switch Port Config plaza form test
     Scenario: user validates information sent to OW from Plaza
 

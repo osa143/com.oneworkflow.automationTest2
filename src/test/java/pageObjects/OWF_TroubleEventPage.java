@@ -18,6 +18,7 @@ import static pageObjects.OWF_CiSearchPage.*;
 
 public class OWF_TroubleEventPage extends BaseRecordPage {
 
+
     private static final String btnREFRESH_IMAGE_ID= "reg_img_600003444";
 
     private static final String ddSTATUS_ID = "arid_WIN_0_777031003";
@@ -160,7 +161,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btn_ADD_TIMELINE= "WIN_0_777021404";
     private static final String div_AFFECTED_BU= "WIN_0_600002504";
     private static final String txt_ID= "arid_WIN_0_777021006";
-    private static final String txt_SERVICE_PROVIDER= "arid_WIN_2_777031005";
+    private static final String txt_SERVICE_PROVIDER= "arid_WIN_0_777031005";
     private static final String txt_HOLD_TO_DATE= "arid_WIN_0_777031004";
     private static final String dd_HOLD_REASON= "Reason";
     private static final String txt_REJECT_REASON="arid_WIN_0_600001019";
@@ -202,6 +203,16 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btnALARMS_XPATH = "//div[@id='WIN_0_999000003']//div[@class='OuterTabsDiv']//div[@class='TabsViewPort']//div//a[@class='btn f1'][contains(text(),'Alarms')]";
     private static final String ddIMPORTANCE_XPATH = "//div[@id='WIN_0_600001821']//a[@class='btn btn3d selectionbtn']";
     private static final String chkbxHEADER_XPATH_Diagnosis = "//div[@id='WIN_0_700009087']//input[@class='checkboxheader']";
+
+    public boolean verifyPlazaIncidentDescription() {
+        String actualDescription = getDescription();
+        if (/*actualDescription.contains("") &&*/ actualDescription.contains(PlazaValidation.Category_Incident)
+                && actualDescription.contains(PlazaValidation.Subject)  && actualDescription.contains("OSS_Presentation_AlarmMap_application_error")
+                && actualDescription.contains(PlazaValidation.Description_Incident)){
+            return true;
+        }
+        return false;
+    }
 
     public int getNumberOfFrames(){
        int size = driver.findElements(By.tagName("iframe")).size();
@@ -1111,12 +1122,6 @@ public void rightClickOnElement(String cellData){
     }
 
     public String getEventEndTime_ClosedTicketStatus(){
-
-        return getTextByID(txtEVENT_END_TIME);
-
-    }
-
-    public String getEventEndTime_ClosedTicketStatus_attribute(){
 
         return getAttributeValueById(txtEVENT_END_TIME);
 

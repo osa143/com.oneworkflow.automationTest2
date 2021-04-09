@@ -1,4 +1,4 @@
-@Network_Security_Remote_Access @PLAZA @Network_Security
+@Network_Security_Remote_Access #@PLAZA @Network_Security
   #passed
   Feature: Network Security Remote Access plaza form test
     Scenario: user validates information sent to OW from Plaza

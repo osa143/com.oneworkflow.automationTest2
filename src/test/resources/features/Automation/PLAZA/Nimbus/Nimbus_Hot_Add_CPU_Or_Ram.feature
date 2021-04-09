@@ -1,4 +1,4 @@
-@Nimbus_Hot_Add_CPU_Or_Ram @PLAZA
+@Nimbus_Hot_Add_CPU_Or_Ram @Nimbus #@PLAZA
   Feature: Nimbus Hot Add CPU Or Ram plaza form test
     Scenario: user validates information sent to OW from Plaza
 

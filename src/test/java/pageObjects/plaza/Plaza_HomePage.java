@@ -390,7 +390,7 @@ public class Plaza_HomePage extends BaseRecordPage {
     private static final String dd_DATABASE_SYSTEM_NAME_HAITI = "//input[@aria-owns='select2-results-23']";
     private static final String txt_VERIFY_INC = "u_internal_case_management.REL:975cb40fdbd9db446734f1eabf961939_table";
     private static final String btn_CLICK_INC_NUMBER = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[5]/div[2]/div/div[2]/p/a";
-    private static final String txt_FIRST_TIMELINE_MESSAGE = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[4]/div[2]/div/div[2]/p";
+    private static final String txt_FIRST_TIMELINE_MESSAGE = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p";
     private static final String txt_SECOND_TIMELINE_MESSAGE = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[2]/div[2]/div/div[2]/p/text()";
     private static final String dd_PLAZA_INCIDENT_CATEGORY = "select2-chosen-1";
     private static final String dd_PLAZA_INCIDENT_CATEGORY_RESULTS = "select2-results-1";

@@ -117,7 +117,7 @@ public class CommonUtils extends BasePage {
         } else {
             todayMidnight= todayMidnight.minusMinutes(Math.abs(delayMinutes));
         }
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/YYYY HH:mm:ss");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM/dd/YYYY HH:mm:ss");
         return dateTimeFormatter.format(todayMidnight);
 
     }

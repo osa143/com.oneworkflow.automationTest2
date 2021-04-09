@@ -58,6 +58,8 @@ Feature: Plaza creation of incident ticket - OW Rejects Incident
     And user verifies status is read only
     And user switches to window 1
     And user clicks on main page refresh
-    Then user should see "The incident has been rejected assignment from OneWorkflow due to the reason: Testing" update in plaza
+#    Then user should see "The incident has been rejected assignment from OneWorkflow due to the reason: Testing" update in plaza
+    And user waits 5 secs
+    Then user validates plaza first timeline message as "The incident has been rejected assignment from OneWorkflow due to the reason: Testing"
 
 

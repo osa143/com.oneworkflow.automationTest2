@@ -303,4 +303,12 @@ public class OWF_SIDConsolePage extends BasePage {
         return verifyColumnValuesForMultipleInputs(By.id(SID_ConsoleTable_ID), colName, colValue);
 
     }
+
+    public boolean validateHistoryTableIsDisplayed() {
+        int tickets = getTableRows(By.id(table_RELATED_MATCHES)).size();
+        System.out.println("Number of tickets shown in history are: " + tickets);
+        if(tickets>1)
+            return true;
+        else return false;
+    }
 }

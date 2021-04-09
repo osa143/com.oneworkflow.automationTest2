@@ -16,10 +16,10 @@ Feature: Set correct categorization
     Then multiple statuses "1:Access:BSS:Computer Equipment:Computer Services:Core:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:OSS:Packet_Transport:Process:Product:SERVER:Service:Service Platform:SITE-LP:Software:Telecom:Transmission:Transport:TV:VAS" should be available in "Category" dropdown
     And user selects Category as "Core"
     Then user validates availability of type dropdown
-    And multiple statuses "Fixed_IMS:IP:MESSAGING:Mobile CS Core Network:Mobile IMS Core Network:Mobile PS Core:Mobile PS Core Network:Mobile_CS:Mobile_PS:NFVI:Other:Presentation:Software:Sync:WLAN:Workflow" should be available in "Type" dropdown
+    And multiple statuses "Fixed_IMS:IP:MESSAGING:Mobile CS Core Network:Mobile IMS Core Network:Mobile PS Core Network:Mobile_CS:NFVI:Other:Presentation:Software:Sync:WLAN:Workflow" should be available in "Type" dropdown
     Then user selects Type as "Mobile PS Core Network"
     When user validates availability of item dropdown
-    Then multiple statuses "DNS:EPG:GGSN:LOCAL_CORE:NAT:NLS:PCRF:PGW::PM:RADIUS:SGSN:SHAPERS:TPE-CMIPBB" should be available in "Item" dropdown
+    Then multiple statuses "CMG:CMM:DNS:EPG:GGSN:LOCAL_CORE:NAT:NLS:PCRF:PGW:PM:RADIUS:SGSN:SHAPERS:TPE-CMIPBB" should be available in "Item" dropdown
     And user selects Item as "SGSN"
     When user clicks on sweden checkbox under affected BU's
     When user enters "01.03 Set correct categorization" in Title field

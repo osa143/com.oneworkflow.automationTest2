@@ -31,6 +31,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String ddValueALL_CIS = "All CIs";
     private static final String Table_ID = "T700009024";
     private static final String CI_DIAGNOSIS_TABLE_ID = "T700009087";
+    private static final String RelatedCI_DIAGNOSIS_TABLE_ID = "T996870930";
     private static final String TABLE_ID_linkedItems = "T777506000";
     private static final String txt_IMPACT_FROM= "arid_WIN_0_700009083";
     private static final String btn_ADD_BULK_IMPORT= "WIN_0_800038046";
@@ -262,12 +263,20 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         List<List<String>> Cis = CiName.asLists(String.class);
         for (int i = 1; i < Cis.size(); i++) {
             System.out.println("CI Name is: " + Cis.get(i).get(0));
+            enterNamePlus(Cis.get(i).get(0));
+            clickCiSearchButton();
+            clickToSelectCi();
+            selectLevel(CI_Impact);
+            clickRelateCiButton();
+            clickYesOnConfirmationMessage();
+            //closeWarningMessage();
             clickClearButton();
             enterNamePlus(Cis.get(i).get(0));
             clickCiSearchButton();
             clickToSelectCi();
             selectLevel(CI_Impact);
             clickRelateCiButton();
+            wait(1000);
             clickYesOnConfirmationMessage();
             //closeWarningMessage();
         }
@@ -291,12 +300,33 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         }
         clickRelateCiButton();
         clickYesOnConfirmationMessage();
-       // closeWarningMessage();
+        //closeWarningMessage();
         wait(3000);
         clickCloseButton();
         switchToDefault();
         wait(3000);
+    }
 
+    public void addCIExtraDelay(String CIName, String CI_Impact){
+        clickDiagnosis();
+        clickCiSearch();
+        int size = driver.findElements(By.tagName("iframe")).size();
+        switchToFrameByIndex(size-1);
+        clickClearButton();
+        enterNamePlus(CIName);
+        clickCiSearchButton();
+        clickToSelectCi();
+        selectLevel(CI_Impact);
+        if(getImpactFromDateCiSearchWindow().equals("")||getImpactFromDateCiSearchWindow().equals(null))
+        {
+            driver.findElement(By.id(txt_Impact_From_CI_Search)).sendKeys(Keys.ENTER);
+        }
+        clickRelateCiButton();
+        clickYesOnConfirmationMessage();
+        //closeWarningMessage();
+        clickCloseButton();
+        switchToDefault();
+        wait(3000);
     }
 
     public void addCI_ToChangeTicket(String CIName, String CI_ImpactLevel){
@@ -338,6 +368,9 @@ public class OWF_CiSearchPage extends BaseRecordPage {
 
     public String getCI_Name(String columnName, int rowNum){
         return getTableCellData(By.id(CI_DIAGNOSIS_TABLE_ID), columnName, rowNum);
+    }
+    public String getRelatedImpact_CIName(String columnName, int rowNum){
+        return getTableCellData(By.id(RelatedCI_DIAGNOSIS_TABLE_ID), columnName, rowNum);
     }
 
     public String getWithWarnings(){
@@ -690,7 +723,9 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         clickElement(By.id("ardivpcl"));
         wait(700);
         driver.switchTo().defaultContent();
-        driver.switchTo().frame(2);
+        int frames = driver.findElements(By.tagName("iframe")).size();
+        System.out.println("Number of frames are - "+ frames);
+        driver.switchTo().frame(frames-1);
     }
     public void closeWarningMessage()
     {

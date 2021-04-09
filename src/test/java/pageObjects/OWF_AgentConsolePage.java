@@ -126,6 +126,53 @@ public class OWF_AgentConsolePage extends BaseRecordPage {
     private static final String txt_QUALIFICATION = "arid_WIN_0_500182000";
     private static final String btn_APPLY_QUALIFICATION = "WIN_0_900008001";
     private static final String txt_ALARM_MESSAGE = "arid_WIN_3_800040444";
+    private static final String btn_MAKE_PRIMARY = "WIN_0_860000016";
+    private static final String btn_DETACH = "WIN_0_860000011";
+    private static final String btn_DETACH_AND_CREATE = "WIN_0_860000013";
+    private static final String btn_OPEN_ALARM = "WIN_0_860000010";
+    private static final String AlarmsTableRow1 = "//*[@id='T860000008']/tbody/tr[2]";
+    private static final String AlarmsTableRow2 = "//*[@id='T860000008']/tbody/tr[3]";
+    private static final String AlarmsTableRow3 = "//*[@id='T860000008']/tbody/tr[4]";
+    private static final String AlarmsTableRow4 = "//*[@id='T860000008']/tbody/tr[5]";
+    private static final String AlarmsTableRow5 = "//*[@id='T860000008']/tbody/tr[6]";
+
+    public void clickOnAlarmsTableRow5(){
+        clickElement(By.xpath(AlarmsTableRow5));
+    }
+
+    public void clickOnAlarmsTableRow4(){
+        clickElement(By.xpath(AlarmsTableRow4));
+    }
+
+    public void clickOnAlarmsTableRow3(){
+        clickElement(By.xpath(AlarmsTableRow3));
+    }
+
+    //*[@id="T860000008"]/tbody/tr[3]
+
+    public void clickOnAlarmTableRow2(){
+        clickElement(By.xpath(AlarmsTableRow2));
+    }
+
+    public void clickOnAlarmTableRow1(){
+        clickElement(By.xpath(AlarmsTableRow1));
+    }
+
+    public void clickOpenAlarm(){
+        clickElementById(btn_OPEN_ALARM);
+    }
+
+    public void clickDetachAndCreate(){
+        clickElementById(btn_DETACH_AND_CREATE);
+    }
+
+    public void clickDetachAlarmButton(){
+        clickElementById(btn_DETACH);
+    }
+
+    public void clickMakePrimaryButton(){
+        clickElementById(btn_MAKE_PRIMARY);
+    }
 
     public void  enterAlarmMessage(String Message)
     {
@@ -203,17 +250,13 @@ public class OWF_AgentConsolePage extends BaseRecordPage {
 
     }
     public void clickOkButton(){
-        try {
-            switchToFrameByIndex(2);
-            clickElementByContainsTextAndTagName("a", "OK");
-    }
-        catch (Exception e){
+        switchToFrameByIndex(2);
+        clickElementByContainsTextAndTagName("a", "OK");
 
-        }
     }
 
-    public String getTicketLinkedItems(){
-       return getAttributeValueByElement(By.xpath(SELECT_TICKET_LINKED_ITEMS));
+    public void verifyTicketIsUnlinked(){
+        Assert.assertNotEquals(CommonUtils.UnlinkTicket, getTextByElement(By.xpath(SELECT_TICKET_LINKED_ITEMS)));
     }
 
     public void selectTicketAndUnlink(){

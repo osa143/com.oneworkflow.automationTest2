@@ -1,4 +1,4 @@
-@Network_Security_Slow_Surfing @PLAZA @Network_Security
+@Network_Security_Slow_Surfing #@PLAZA @Network_Security
   #passed
   Feature: Network Security proxy surf proxy slow surfing
     Scenario: user validates information sent to OW from Plaza

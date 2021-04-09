@@ -1,4 +1,4 @@
-@Network_Security_General_Inquiry @PLAZA @Network_Security
+@Network_Security_General_Inquiry #@PLAZA @Network_Security
   #passed
   Feature: Network Security General Inquiry
     Scenario: user validates information sent to OW from Plaza

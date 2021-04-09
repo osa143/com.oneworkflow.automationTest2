@@ -1,4 +1,4 @@
-@Network_Security_Add_Modify_RemoveDNS @PLAZA @Network_Security
+@Network_Security_Add_Modify_RemoveDNS #@PLAZA @Network_Security
   #passed
   Feature: Network Security Add Modify Remove DNS plaza form test
     Scenario: user validates information sent to OW from Plaza

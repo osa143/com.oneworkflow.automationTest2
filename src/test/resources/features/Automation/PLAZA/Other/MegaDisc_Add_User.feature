@@ -21,7 +21,7 @@
       Then user selects choose option as "Add User"
       And user enters megadisc account name as "Test1234"
       Then user enters megadisc select group as "App_Megadisc_Admin"
-#      Then user selects requested person as "Anders Englund"
+      Then user selects requested person as "Anders Englund"
       And user enters megadisc description as "Test1 MegaDisc/Description"
       And user enters additional comments as "Test1 Megadisc/AC"
       Then user clicks on "Submit"

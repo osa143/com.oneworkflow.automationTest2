@@ -1,4 +1,4 @@
-@Messaging_SMTP_Support @PLAZA
+@Messaging_SMTP_Support #@PLAZA
   Feature: Messaging SMTP Support plaza form test
    #passed
     Scenario: user validates information sent to OW from Plaza

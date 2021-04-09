@@ -1,4 +1,4 @@
-@Network_Security_New_VLAN @PLAZA @Network_Security
+@Network_Security_New_VLAN #@PLAZA @Network_Security
   #passed
   Feature: Network Security New VLAN plaza form test
     Scenario: user validates information sent to OW from Plaza

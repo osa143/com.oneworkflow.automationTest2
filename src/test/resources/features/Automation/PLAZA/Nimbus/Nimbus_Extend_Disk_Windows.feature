@@ -1,4 +1,4 @@
-@Nimbus_Extend_Disk_Windows @PLAZA
+@Nimbus_Extend_Disk_Windows @Nimbus #@PLAZA
   Feature: Nimbus Extend Disk Windows plaza form test
     Scenario: user validates information sent to OW from Plaza
 

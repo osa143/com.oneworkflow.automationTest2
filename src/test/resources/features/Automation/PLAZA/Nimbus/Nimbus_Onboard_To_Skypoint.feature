@@ -1,4 +1,4 @@
-@Nimbus_Onboard_To_SkyPoint @PLAZA
+@Nimbus_Onboard_To_SkyPoint @Nimbus #@PLAZA
   Feature: Nimbus Onboard To Skypoint plaza form test
     Scenario: user validates information sent to OW from Plaza
 

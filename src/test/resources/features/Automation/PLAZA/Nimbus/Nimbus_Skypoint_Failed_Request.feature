@@ -1,4 +1,4 @@
-@Nimbus_Skypoint_Failed_Request @PLAZA
+@Nimbus_Skypoint_Failed_Request @Nimbus #@PLAZA
   Feature: Nimbus Skypoint Failed Request plaza form test
     Scenario: user validates information sent to OW from Plaza
 

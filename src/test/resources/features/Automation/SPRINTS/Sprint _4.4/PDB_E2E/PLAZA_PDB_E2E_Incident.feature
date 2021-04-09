@@ -1,4 +1,4 @@
-@PLAZA_PDB_E2E_Incident @PLAZA_Incident_Flow
+@PLAZA_PDB_E2E_Incident @PLAZA_Incident_Flow2
   #Ticket ID to come from Plaza
   #below scenario also covers SAO- 5205, when creating a Major ticket from Plaza for PDB validate Importance, impact logic follow.
   Feature: Plaza PDB

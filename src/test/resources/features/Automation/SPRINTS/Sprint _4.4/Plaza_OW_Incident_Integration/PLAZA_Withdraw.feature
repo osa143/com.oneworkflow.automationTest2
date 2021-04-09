@@ -1,4 +1,4 @@
-@PLAZA_Withdraw @PLAZA_Incident_Flow
+@PLAZA_Withdraw @PLAZA_Incident_Flow2
   #Ticket ID to come from Plaza
 Feature: Plaza creation/withdrawing of incident ticket
   Scenario: user validates plaza incident ticket - Plaza withdraws

@@ -1,7 +1,6 @@
-@Initiator_Create_Ticket @problem @Reg_Problem  @prob
+@Initiator_Create_Ticket @ProblemRegression
   #Passed
-Feature: initiator create ticket and withdraw
-
+  Feature: initiator create ticket and withdraw
   Scenario: initiator create ticket and withdraw
 
     Given user is on the OneWorkflow login page

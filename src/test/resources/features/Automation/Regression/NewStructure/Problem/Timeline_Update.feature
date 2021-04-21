@@ -1,8 +1,7 @@
-@Timeline_Update @problem @Reg_Problem  @prob @HelixRegression
+@Timeline_Update @ProblemRegression
 #passed
-Feature: Timeline update
-
-  Scenario: Timeline update.
+  Feature: Timeline update
+  Scenario: Timeline update
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"

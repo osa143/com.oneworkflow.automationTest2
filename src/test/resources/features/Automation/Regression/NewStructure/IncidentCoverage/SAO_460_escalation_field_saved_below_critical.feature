@@ -1,4 +1,4 @@
-@SAO_460
+@SAO_460 @IncidentCoverage
 #OP-000000878549-ALM-3924-Escalation - escalation field saved below critical
 
 Feature: SAO-460 - OP-000000878549-ALM-3924-Escalation - escalation field saved below critical

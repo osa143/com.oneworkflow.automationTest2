@@ -1,6 +1,5 @@
-@prob
-   Feature: SAO-5325 Hide fields
-    @5325
+@5325 @ProblemRegression
+    Feature: SAO-5325 Hide fields
     Scenario: verify fields are invisible
 
      Given user is on the OneWorkflow login page

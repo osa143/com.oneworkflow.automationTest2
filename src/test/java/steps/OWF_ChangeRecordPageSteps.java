@@ -381,12 +381,12 @@ public class OWF_ChangeRecordPageSteps {
     @Then("user should see {string} email update")
     public void userShouldSeeEmailUpdate(String arg0) {
         try {
-            changeRecordPage.wait(45000);
+            changeRecordPage.wait(60000);
             changeRecordPage.selectTab("Notifications");
             changeRecordPage.selectTab("Sent");
             Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 1), arg0);
         } catch (Exception e) {
-            changeRecordPage.wait(45000);
+            changeRecordPage.wait(60000);
             changeRecordPage.clickRefresh_ticketFresh();
             changeRecordPage.selectTab("Notifications");
             changeRecordPage.selectTab("Sent");
@@ -570,7 +570,7 @@ public class OWF_ChangeRecordPageSteps {
 
         }
         try {
-            changeRecordPage.wait(5000);
+            changeRecordPage.wait(6000);
             changeRecordPage.switchToFrameByIndex(2);
             changeRecordPage.clickElementByContainsTextAndTagName("a", "Yes");
         } catch (Exception e) {

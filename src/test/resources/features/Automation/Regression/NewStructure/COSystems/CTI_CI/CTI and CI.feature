@@ -16,7 +16,7 @@ Feature:  Today in the customer operations interface,
     And user clicks on cloud under IT Infrastructure dropdown
     When user clicks on "Skypoint - private cloud" pebble
     Then user should see "Skypoint - private cloud" form
-    Then user selects system name in haiti as "1B"
+    Then user selects system name in haiti as "118 redagavimo sistema"
     #Then user selects system name in haiti as "1B"
     When user selects role dropdown as "Application Operation Engineer"
     And user selects service request name as "Add/Modify/Remove CPU/Memory/Disk to VM"
@@ -50,6 +50,7 @@ Feature:  Today in the customer operations interface,
     And user validates Category as "IT"
     And user validates type as "Cloud Infrastructure"
     And user validates item as "Nimbus/TSVP"
+    Then user clicks on save button
 
 
 

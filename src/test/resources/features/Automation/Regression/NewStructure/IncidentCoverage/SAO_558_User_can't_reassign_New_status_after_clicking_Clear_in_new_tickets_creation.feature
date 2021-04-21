@@ -1,4 +1,4 @@
-@SAO_558
+@SAO_558 @IncidentCoverage
 
 Feature: SAO-558 - User can't reassign "New" status after clicking "Clear" in new tickets creation
 

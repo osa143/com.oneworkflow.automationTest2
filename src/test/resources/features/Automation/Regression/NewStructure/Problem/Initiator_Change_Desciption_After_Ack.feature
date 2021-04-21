@@ -1,8 +1,7 @@
-@Initiator_Change_Description_After_Ack @problem @Reg_Problem  @prob
+@Initiator_Change_Description_After_Ack @ProblemRegression
   #passed
-Feature:Initiator change description
-
-  Scenario: After Acknowledge
+  Feature:Initiator change description after ack
+  Scenario: Problem Initiator changes description after ack
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"

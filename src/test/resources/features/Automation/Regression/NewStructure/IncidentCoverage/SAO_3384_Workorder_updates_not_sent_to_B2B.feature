@@ -1,4 +1,4 @@
-@SAO_3384
+@SAO_3384 @IncidentCoverage
 
 Feature: SAO-3384 - Workorder updates not sent to B2B
 

@@ -1,4 +1,4 @@
-@SAO_3295
+@SAO_3295 @IncidentCoverage
 
 Feature: SAO-3295 Not able to open attachments in OP tickets.
 

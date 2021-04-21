@@ -1,4 +1,4 @@
-@Set_BU_CTI_based_on_CI @Incident_NonSAO
+@Set_BU_CTI_based_on_CI @Incident_NonSAO @Rerun
  # This test also cover SAO-3937
   Feature: Work order creation from incident and validate set country based on CI
 

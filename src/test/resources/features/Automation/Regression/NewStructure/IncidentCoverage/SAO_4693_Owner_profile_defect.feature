@@ -1,4 +1,4 @@
-@SAO_4693
+@SAO_4693 @IncidentCoverage
 
 Feature: SAO-4693 - OP-000001763134 - Owner profile defect
 

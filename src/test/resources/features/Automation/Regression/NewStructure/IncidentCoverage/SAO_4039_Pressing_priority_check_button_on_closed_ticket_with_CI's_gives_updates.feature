@@ -1,4 +1,4 @@
-@SAO_4039
+@SAO_4039 @IncidentCoverage
 #manually check priority check button is disabled
 Feature: SAO-4039 - Pressing priority check button on closed ticket with CI's gives updates
 

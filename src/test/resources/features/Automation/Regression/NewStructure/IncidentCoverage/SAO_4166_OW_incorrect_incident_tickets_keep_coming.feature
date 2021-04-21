@@ -1,4 +1,4 @@
-@SAO_4166
+@SAO_4166 @IncidentCoverage
 #cannot click refresh after wait time
 Feature: SAO-4166 - OW - incorrect incident tickets keep coming
 

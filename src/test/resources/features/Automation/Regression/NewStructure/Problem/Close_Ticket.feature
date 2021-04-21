@@ -1,6 +1,6 @@
-@Close_Ticket @problem @Reg_Problem @smoke @prob @HelixRegression
+@Close_Ticket @ProblemRegression
  #passed
-Feature: User is able to close and clone a problem ticket
+Feature: Close and Clone Problem
   #Below scenario also covers-SAO-5208-Multiple root causes code menus, 4 with one Primary and
   #SAO-5198, All CI Impact Statuses will remain ‘Active’until the status of the problem moves to closed
   #SAO-5337	Restrictions on PB closure

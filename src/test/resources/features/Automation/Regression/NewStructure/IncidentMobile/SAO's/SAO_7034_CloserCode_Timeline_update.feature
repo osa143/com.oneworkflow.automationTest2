@@ -1,6 +1,6 @@
 @Incident_SAO
 Feature: Verifying closure codes update in timeline
-    @7034
+    @7034_1
     Scenario: Closure code timeline update
 
       Given user is on the OneWorkflow login page
@@ -59,7 +59,7 @@ Feature: Verifying closure codes update in timeline
       And user enters "HPE Common Temip" in the source field
       When user clicks on advanced search button
      ## In advance search we have to enter the date in correct format to search within age in days of source##
-      And user enters "'3'>\"2020/12/01\"" in the advanced search bar
+      And user enters "'3'>\"15/03/2021\"" in the advanced search bar
       And user clicks Search on ticket search
       And user waits 15 secs
       When user selects fault position as "Other:Other" on trouble event page

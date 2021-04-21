@@ -1,4 +1,4 @@
-@Linked_Items_&_Change_To_KE @Reg_Problem  @problem @prob
+@Linked_Items_&_Change_To_KE @ProblemRegression
   #Passed
   #CI search window
   Feature: linked items and change to KE
@@ -87,5 +87,5 @@
       And user clicks on radio button closed
       And user clicks on open checkbox under linked items tab
       And user validates radio button cleared is selected
-      Then user validates 0 linked ticket availability
+      Then user validates -1 linked ticket availability
 

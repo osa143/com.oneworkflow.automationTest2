@@ -1,4 +1,4 @@
-@SAO_478
+@SAO_478 @IncidentCoverage
 
 Feature: SAO-478 - Details Sections fields are unavailable
 

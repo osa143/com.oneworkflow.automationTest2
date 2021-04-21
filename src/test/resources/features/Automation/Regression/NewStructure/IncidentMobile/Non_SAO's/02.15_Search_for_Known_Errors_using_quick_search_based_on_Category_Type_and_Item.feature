@@ -48,7 +48,7 @@
       And user clicks on link button
       Then user switches to frame
       And user clicks on the clear button
-      And user selects Category as "Core"
+      And user selects Category as "CORE"
       And user selects Type as "Other"
       And user selects Item as "BR"
       And user clicks on the search button

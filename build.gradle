@@ -25,22 +25,19 @@ repositories {
 }
 
 dependencies {
-
+   
     testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.3.0'
-//    compile group: 'javax.jms', name: 'javax.jms-api', version: '2.0.1'
-//    compile("com.tibco:tibjms:8.3.0")
-//    compile("com.tibco:tibcrypt:2.18.300.001")n
-//    compile("com.tibco:tibjms.admin:8.3.0")
-//    compile("com.tibco:tibjms.appserver:8.3.0")
-//    compile("com.tibco:tibrvjms:8.3.0")
-//    compile group: 'com.tibco', name: 'tibjms', version: '4.4.3'
-//    compile group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '7.2.1.jre8'
+    compile group: 'javax.jms', name: 'javax.jms-api', version: '2.0.1'
+    compile("com.tibco:tibjms:8.3.0")
+    compile("com.tibco:tibcrypt:2.18.300.001")
+    compile("com.tibco:tibjms.admin:8.3.0")
+    compile("com.tibco:tibjms.appserver:8.3.0")
+    compile("com.tibco:tibrvjms:8.3.0")
+    compile group: 'com.tibco', name: 'tibjms', version: '4.4.3'
+    compile group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '7.2.1.jre8'
 
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     compile group: 'log4j', name: 'log4j', version: '1.2.17'
-    testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.3.0'
-    compile group: 'javax.jms', name: 'javax.jms-api', version: '2.0.1'
-    compile group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '7.2.1.jre8'
     compile group: 'net.masterthought', name: 'cucumber-reporting', version: '4.6.0'
     compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '3.4.0'
     compile group: 'io.cucumber', name: 'cucumber-core', version: '4.2.0'
@@ -49,7 +46,7 @@ dependencies {
     compile group: 'io.cucumber', name: 'cucumber-picocontainer', version: '4.2.0'
     compile group: 'org.testng', name: 'testng', version: '6.14.3'
     compile group: 'com.aventstack', name: 'extentreports', version: '4.0.7'
-
+    
 }
 
 task cukes (type: Test){

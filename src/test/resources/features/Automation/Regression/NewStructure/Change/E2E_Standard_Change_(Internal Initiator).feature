@@ -35,7 +35,7 @@ Feature: E2E standard change internal initiator
     #Then user adds "Regression - Change Management Process" to current description
     And user clicks on save button
     And user waits 5 secs
-    Then change should also be reflected in the timeline as "Ticket Priority is set to Info. Request Status is set to New. " on row 2
+    Then change should also be reflected in the timeline as "Ticket Priority is set to Info. Request Status is set to New. " on row 1
     When user clicks on Send button
     And an error message should appear: "Please select at least one country of impact for this change. (ARERR 10000)"
     And user clicks on norway checkbox under affected BU's
@@ -49,16 +49,19 @@ Feature: E2E standard change internal initiator
     And user clicks on add email button
     Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
     And user clicks on send button and clicks yes on warning window
+    And user switches to default
     Then user validates ticket status as "Assigned"
     And user clicks on owner under sections
     And user clicks on assignment under sections
     And user validates owner profile as "Change Manager"
     And user validates owner as "Change Manager"
     And user should see assigned profile as "Change Implementation Control"
+    And user waits for 1 minutes
+    Then user clicks on timeline tab
     Then change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Assigned to Scheduled. " on row 1
     And user waits for 1 minutes
     And user clicks on ticket refresh button
-    And change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Start has changed from  UTC to 2019-09-05 10:15:00 UTC. Request Status has changed from Scheduled to Implementation." on row 2
+    And change should also be reflected in the timeline as "STATUS MODIFIED. Request Status has changed from Scheduled to Implementation." on row 2
     And user validates Description* isn't readonly
     And user validates Project Code isn't readonly
     And user validates Change Builder+* isn't readonly
@@ -73,7 +76,7 @@ Feature: E2E standard change internal initiator
     And user validates save is enabled
     When user waits for 5 minutes
     And user clicks on ticket refresh button
-    Then change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Impact has changed from  to No Impact. Actual End has changed from  UTC to 2019-09-05 10:21:00 UTC. Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed. " on row 2
+    Then change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Impact has changed from  to No Impact. Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed. " on row 2
     When user waits for 5 minutes
     And user clicks on ticket refresh button
     And user validates ticket status as "Closed"

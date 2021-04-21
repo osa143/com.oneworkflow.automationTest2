@@ -1,7 +1,6 @@
 #Need to check ticket status manually after 30 mins
-@Pending_Status @Reg_Problem @HelixRegression
-Feature: User is able to change status to pending
-
+@Pending_Status @ProblemRegression
+Feature: Pending Status
   Scenario: User logs into One workflow, creates a problem ticket, changes status to pending then checks ticket status
 
     Given user is on the OneWorkflow login page

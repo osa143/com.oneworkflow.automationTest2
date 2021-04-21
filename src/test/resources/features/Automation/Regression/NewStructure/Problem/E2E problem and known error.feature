@@ -1,8 +1,7 @@
-@E2E_problem_and_known_error @problem @Reg_Problem  @prob @HelixRegression
+@E2E_problem_and_known_error @ProblemRegression
 #passed
 # This test also covers SAO-5334 Hide section vendor
-  Feature: E2E problem and known error
-
+    Feature: E2E problem and known error
     Scenario: E2E problem and known error
 
       Given user is on the OneWorkflow login page

@@ -1,6 +1,6 @@
-@Add_CI_&_Attachment  @Reg_Problem @HelixRegression
+@Add_CI_&_Attachment @ProblemRegression
   #OS3:PM:Configuration:AddCI
-Feature: User is able to add a CI and attachment to a problem ticket
+Feature: Add CI & Attachment
     Scenario: user can create a problem record and add a CI and attachment to it
 
       Given user is on the OneWorkflow login page

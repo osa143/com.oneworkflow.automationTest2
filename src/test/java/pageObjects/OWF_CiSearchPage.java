@@ -603,7 +603,8 @@ public class OWF_CiSearchPage extends BaseRecordPage {
 
     public void selectCi(String text)
     {
-        ClickTableElementByText(By.id(Table_ID),"Name",text,false);
+        wait(1000);
+        ClickTableElementByText(By.id(RelatedCI_DIAGNOSIS_TABLE_ID),"CI Name",text,false);
     }
 
 

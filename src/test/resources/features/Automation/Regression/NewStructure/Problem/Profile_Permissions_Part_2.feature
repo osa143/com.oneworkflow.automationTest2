@@ -1,4 +1,4 @@
-@Profile_Permissions_Part_2 @problem @Reg_Problem  @prob
+@Profile_Permissions_Part_2 @ProblemRegression
   #Passed
 
   Feature: profile permissions part 2

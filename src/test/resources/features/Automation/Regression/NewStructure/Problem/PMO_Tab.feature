@@ -1,9 +1,9 @@
-@PMO_Tab @problem @Reg_Problem  @prob
+@PMO_Tab @ProblemRegression
 #passed
 Feature: PMO Tab
+
   @PMO_Tab_problem
   Scenario: PMO Tab for problem ticket
-
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed

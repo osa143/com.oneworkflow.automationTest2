@@ -1,4 +1,4 @@
-@Add_CI_In_OW222 @Incident_NonSAO
+@Add_CI_In_OW222 @Incident_NonSAO @Rerun
 #OS3:WO:Request:IF:Interface:SubmitAttachCIValidateCIName
 
 Feature: Adding CI in OW

@@ -1,4 +1,4 @@
-@SAO_3381
+@SAO_3381 @IncidentCoverage
 
 Feature: SAO-3381 - Closed master tickets shown as open in agent console.
 

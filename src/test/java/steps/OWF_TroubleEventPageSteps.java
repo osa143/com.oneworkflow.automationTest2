@@ -292,7 +292,7 @@ public class OWF_TroubleEventPageSteps {
     public void userEntersEstimatedReadyAsEventStartTimePlusDays(int arg0) {
         //  workOrderPage.clearEstimatedReady();
         CommonUtils.before_estimatedReadyTime=workOrderPage.getEstimatedReady();
-        CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("MM/dd/yyyy HH:mm:ss","Europe/London",arg0);
+        CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("dd/MM/yyyy HH:mm:ss","Europe/London",arg0);
         workOrderPage.enterEstimatedReady(CommonUtils.estimatedReadyTime);
     }
 
@@ -830,8 +830,8 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event end time as {int} mins past")
     public void userEntersEventEndTimeAsMinsPast(int arg0) {
-        CommonUtils.EventEndTime= CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0);
-        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
+        CommonUtils.EventEndTime= CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0);
+        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user selects action dropdown as {string} on trouble event page")
@@ -1307,14 +1307,13 @@ public class OWF_TroubleEventPageSteps {
     @And("user clicks on save button and closes confirmation")
     public void userClicksOnSaveButtonAndClicksClosesConfirmation() {
         troubleEventPage.clickSaveButton();
+        troubleEventPage.wait(6000);
         troubleEventPage.switchToFrameByIndex(2);
-        troubleEventPage.wait(5000);
         try{
             troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
             troubleEventPage.switchToDefault();
         }
         catch(Exception e){
-
         }
 
     }
@@ -1718,14 +1717,14 @@ public class OWF_TroubleEventPageSteps {
     public void userShouldSeeWarningMessageAndClicksOnOkButton() {
         troubleEventPage.clickOkOnPopup_Helix();
         troubleEventPage.clickYes_Helix();
-
     }
 
     @Then("user clicks on the related CI impact")
     public void userClicksOnTheRelatedCIImpact() {
         troubleEventPage.clickDiagnosis();
-        troubleEventPage.wait(1500);
+        troubleEventPage.wait(300);
         troubleEventPage.openRelatedCIImpactTable();
+        troubleEventPage.wait(200);
     }
     @And("user validates ow incident description same as plaza")
     public void userValidatesOwIncidentDescriptionSameAsPlaza() {

@@ -23,7 +23,6 @@
       Then user should only see "WO" tickets
       When user selects "All Tickets" under all tickets
       And user clicks on more filters button
-      Then user switches to frame
       And user clicks on "Assignment Profile" tab
       And user enter in the search as "Mobile service-FLEN" on user more filters window
       Then user clicks search button on more user filters window

@@ -143,9 +143,10 @@ Feature: External Normal Change E2E
     When user clicks on "Approval" tab
     And user clicks on request thats pending approval
     And user clicks on view button
-    Then user switches to frame
+    #Then user switches to frame
     And user enters "Change can be approved right away" in comments field
     And user clicks on approve button
+    And user switches to default
     Then user switches to window 2
     And user clicks on save button and closes confirmation
     And user clicks on ticket refresh button

@@ -1,4 +1,4 @@
-@06.09 @Remove_a_CI_from_Diagnosis_tab @Incident @Trouble1 @HelixRegression @Incident_NonSAO
+@06.09 @Remove_a_CI_from_Diagnosis_tab @Incident @Trouble1 @HelixRegression @Incident_NonSAO @Rerun
   #passed
   Feature: Remove of CI from diagnosis tab
     Scenario: Remove of CI from diagnosis tab
@@ -17,7 +17,6 @@
       Then user adds CI "SE_EPG_FREEPG1" to the ticket with impact level "No Impact"
       Then user adds CI "SE_EPG_HYEPG1" to the ticket with impact level "No Impact"
       Then user adds CI "SE_EPG_LDHEPG1" to the ticket with impact level "No Impact"
-      And user adds below CI's to the ticket
       And user clicks on "Diagnosis" tab
 #      Then user validates "Business Hours" is available
 #      When user clicks on Remove Column under preferences

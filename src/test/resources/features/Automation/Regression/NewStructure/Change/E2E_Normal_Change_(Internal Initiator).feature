@@ -75,18 +75,18 @@
       When user clicks on "Interested Parties" tab
       And user enters email address as "Test123xxx@Test123xxx.com"
       And user clicks on add email button
-      Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
-#      Then user clicks on add button under interested parties
-#      And user switches to frame 3
-#      When user selects type as "Additional Access" under interested parties
-#      And user clicks on radio button user
-#      And user enters organization name plus as "ANS" and searches
-#      And user selects Agile Network Systems and clicks use button
-#      And user switches to default
-#      And user switches to frame 3
-#      Then user validates organization as "Agile Network Systems"
-#      Then user clicks on cancel button on interested parties window
-#      And user switches to default
+      #Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
+      Then user clicks on add button under interested parties
+      And user switches to frame 3
+      When user selects type as "Additional Access" under interested parties
+      And user clicks on radio button user
+      And user enters organization name plus as "ANS" and searches
+      And user selects Agile Network Systems and clicks use button
+      And user switches to default
+      And user switches to frame 3
+      Then user validates organization as "Agile Network Systems"
+      Then user clicks on cancel button on interested parties window
+      And user switches to default
       And user validates finland as affected BU
       When user clicks on Send button
       Then user validates ticket status as "Assigned"
@@ -156,7 +156,7 @@
       When user clicks on "Interested Parties" tab
       And user enters email address as "Test2@Test2.com"
       And user clicks on add email button
-      Then user should see new email "Test2@Test2.com" added in "Email Address" in row 3
+      #Then user should see new email "Test2@Test2.com" added in "Email Address" in row 3
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab
       Then user should see "Acknowledged" email update
@@ -220,9 +220,10 @@
       And user waits 45 secs
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab
-      Then user should see "Approved-ChangeBuilder" email update
+      #Then user should see "Approved-ChangeBuilder" email update
       And user waits 45 secs
-      And user clicks on ticket refresh button
+      #And user clicks on ticket refresh button
+      And user clicks on save button and closes confirmation
 #      And change should also be reflected in the timeline as "Ticket approved by ChangeManager1_Automation in date: "
 #      And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approval Requested to Approved. "
 #      And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approved to Schedule Requested. "

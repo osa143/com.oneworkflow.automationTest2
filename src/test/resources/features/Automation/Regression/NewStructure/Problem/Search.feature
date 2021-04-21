@@ -1,4 +1,4 @@
-@search @problem @Reg_Problem  @prob
+@search @ProblemRegression
  #passed
   Feature: problem record Search
   Scenario: user is able to search for tickets using problem ticket status

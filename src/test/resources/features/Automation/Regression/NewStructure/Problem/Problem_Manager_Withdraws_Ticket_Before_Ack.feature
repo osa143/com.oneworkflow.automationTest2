@@ -1,7 +1,7 @@
 @Pm_Withdraw_Ticket_Before_Ack @ProblemRegression
   #passed
 Feature: Problem Manager Withdraws ticket before Ack
-  Scenario: problem manager withdraws ticket before Ack
+  Scenario: PM Withdraw after ack - problem manager withdraws ticket before Ack
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"

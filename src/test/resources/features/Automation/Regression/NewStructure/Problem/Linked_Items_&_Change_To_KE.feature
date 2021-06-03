@@ -2,7 +2,7 @@
   #Passed
   #CI search window
   Feature: linked items and change to KE
-    Scenario: user is able to link a change and trouble ticket to a known error
+    Scenario: linked items and change to KE - user is able to link a change and trouble ticket to a known error
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"

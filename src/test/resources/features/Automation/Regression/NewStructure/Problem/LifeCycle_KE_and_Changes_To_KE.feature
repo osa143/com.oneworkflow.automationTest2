@@ -2,7 +2,7 @@
   #passed
 #CI search window
     Feature: life cycle known error and change known error
-    Scenario:user is able to change life cycle to known error
+    Scenario: LifeCycle KE + Change KE - user is able to change life cycle to known error
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"

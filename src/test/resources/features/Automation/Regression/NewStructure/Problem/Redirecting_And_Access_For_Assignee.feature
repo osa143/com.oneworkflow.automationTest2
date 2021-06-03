@@ -2,7 +2,7 @@
 #passed
 #This feature covers 2 scenarios
   Feature: Redirecting and Access for Assignee
-  Scenario: User is able to change assignment/assignee on problem ticket
+  Scenario: Redirecting and Access for Assignee - User is able to change assignment/assignee on problem ticket
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"

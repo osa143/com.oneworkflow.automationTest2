@@ -63,13 +63,13 @@
       And user clicks on save button
       And user switches to default
       And CI should be listed and displayed under the Diagnosis tab
-#      When user right clicks on CI "FI_MGW_SMG03TRE" and selects "Show:Location Details"
-#      Then user validates Location Details are shown
-#      And user validates availability of tabs "Details:Relationships"
-#      And user clicks on "Relationships" tab
-#      Then user clicks on refresh button under related CIs
-#      And user validates CIs are shown under related CI table
-#      And user clicks on the close button on location details window
+      When user right clicks on CI "FI_MGW_SMG03TRE" and selects "Show:Location Details"
+      Then user validates Location Details are shown
+      And user validates availability of tabs "Details:Relationships"
+      And user clicks on "Relationships" tab
+      Then user clicks on refresh button under related CIs
+      And user validates CIs are shown under related CI table
+      And user clicks on the close button on location details window
       When user clicks on Show CR Matching button
       Then user should see Show CR Matching table appear
       When user clicks on "Interested Parties" tab
@@ -215,19 +215,17 @@
       And user enters "Change can be approved right away" in comments field
       And user clicks on approve button
       Then user switches to window 2
-      And user clicks on ticket refresh button
+      And user gets ticket value
+      Then user clicks on main page refresh
+      And user enters ticket previously created and searches
+#      And user clicks on ticket refresh button
       Then user validates ticket status as "Approved"
       And user waits 45 secs
       When user clicks on "Notifications" tab
       And user clicks on "Sent" tab
-      #Then user should see "Approved-ChangeBuilder" email update
+      Then user should see "Approved-ChangeBuilder" email update
       And user waits 45 secs
-      #And user clicks on ticket refresh button
       And user clicks on save button and closes confirmation
-#      And change should also be reflected in the timeline as "Ticket approved by ChangeManager1_Automation in date: "
-#      And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approval Requested to Approved. "
-#      And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approved to Schedule Requested. "
-#      Then change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has automatically changed from Scheduled Request to Scheduled. "
       And user validates ticket status as "Scheduled"
       Then user clicks on assignment under sections
       And user should see assigned profile as "Change Implementation Control"
@@ -236,12 +234,8 @@
       And user validates owner profile as "Change Manager"
       And user validates owner as "ChangeManager1_Automation"
       Then user clicks on save button
-      And user waits 45 secs
-      And user clicks on ticket refresh button
-      When user clicks on "Notifications" tab
-      And user clicks on "Sent" tab
-      Then user should see "Assignment-User" email update
       And user logsOut
+      And user switches to window 1
       And user goes back to login page
       When user logs in with valid username "ChangeImplementationControl1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -251,7 +245,7 @@
       And user clicks on apply button on user more filters window
       And user should see "CR" tickets with "Status" of "Scheduled"
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
-      And user switches to window 3
+      And user switches to window 2
       Then user enters ticket previously created and searches
       When user changes status to "Implementation"
       And user clicks on save button
@@ -269,8 +263,6 @@
       And user clicks on add button on timeline
       When user changes status to "Completed"
       And user clicks on save button
-#      And error message should display as "Required field (without a default) not specified : Actual Impact (ARERR 9424)"
-#      And error message should display as "Required field (without a default) not specified : Completed Code (ARERR 9424)"
       Then user clicks on "Schedule" tab
       Then user validates actual end time is updated
       Then user selects actual impact as "No Impact"
@@ -283,7 +275,6 @@
       And user clicks yes on impact update confirmation
       And user switches to window 3
       Then user validates CI "Impact Status" is "Inactive"
-      #And user validates CI impact from time and impact to time is updated
       Then user clicks on save button
       And change should also be reflected in the timeline as "Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed." on row 2
       And user logsOut
@@ -296,7 +287,7 @@
       And user clicks on apply button on user more filters window
       And user should see "CR" tickets with "Status" of "Completed"
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
-      And user switches to window 4
+      And user switches to window 3
       Then user enters ticket previously created and searches
       When user changes status to "Closed"
       And user selects resolved group as "Change Manager"

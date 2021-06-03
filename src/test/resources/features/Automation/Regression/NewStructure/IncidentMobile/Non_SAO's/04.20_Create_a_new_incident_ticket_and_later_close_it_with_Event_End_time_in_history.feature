@@ -27,6 +27,6 @@
       When user changes status to "Closed" on trouble event page
       And user clicks on save button
       Then user validates ticket status as "Closed"
-      Then user validates event end time is same as cleared status event end time Attribute
+      Then user validates event end time is same as cleared status event end time
 
 

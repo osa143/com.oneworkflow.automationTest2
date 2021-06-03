@@ -124,7 +124,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String Error_POP_UP_ID= "PopupMsgBox";
     private static final String btn_Open_Attachment= "WIN_0_777000021";
     private static final String txt_IMPACT_TYPE= "arid_WIN_0_700009080";
-    private static final String link_GO_BACK_TO_LOGIN= "//*[@id='logoutmsg']/tbody/tr[4]/td[2]/a";
+    private static final String link_GO_BACK_TO_LOGIN= "ReturnHome";
     private static final String btn_AFFECTED_ORG = "//a[@title='Edit']";
 
 
@@ -132,7 +132,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         enterTextByElement(By.id(txt_VENDOR_NAME), vendorName);
     }
     public void clickOnGoBackToLoginPage(){
-        clickElement(By.xpath(link_GO_BACK_TO_LOGIN));
+        clickElement(By.className(link_GO_BACK_TO_LOGIN));
     }
 
     public void clickOpenAttachment(){

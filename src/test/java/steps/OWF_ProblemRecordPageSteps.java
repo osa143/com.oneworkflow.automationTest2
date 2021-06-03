@@ -101,7 +101,7 @@ public class OWF_ProblemRecordPageSteps {
     @And("user gets ticket value")
     public void userGetsTicketValue() {
         ticket = problemRecordPage.getTicketValue();
-        System.out.println("Stored ticket is " + ticket);
+        System.out.println("Saved ticket is - " + ticket);
         CommonUtils.savedTicket = ticket;
 
     }
@@ -121,14 +121,13 @@ public class OWF_ProblemRecordPageSteps {
 
     @When("user clicks on Ack button")
     public void userClicksOnAckButton() {
+        problemRecordPage.clickAckButton_problemRecord();
+        problemRecordPage.wait(6000);
         try {
-            problemRecordPage.clickAckButton_problemRecord();
             problemRecordPage.clickOkOnWarningMessage();
         } catch (Exception e) {
 
         }
-
-        problemRecordPage.wait(6000);
     }
 
     @Then("problem ticket status should be under investigation")
@@ -1022,9 +1021,9 @@ public class OWF_ProblemRecordPageSteps {
         String fullFilePath = projectPath + "\\src\\test\\resources\\" + filePath;
         System.out.println(fullFilePath);
         CommonUtils.uploadFile(fullFilePath);
-        problemRecordPage.wait(2000);
-        //CommonUtils.uploadFile(arg0);
-        //problemRecordPage.wait(2000);
+//        problemRecordPage.uploadFile(fullFilePath);
+        problemRecordPage.wait(500);
+//        problemRecordPage.clickEscButton();
     }
 
     @Then("user validates Category as {string}")
@@ -1582,6 +1581,16 @@ public class OWF_ProblemRecordPageSteps {
     @Then("user should see confirmation message for impact clear all and user clicks yes")
     public void userShouldSeeConfirmationMessageForImpactClearAllAndUserClicksYes() {
         problemRecordPage.clickYes_impactClear_all();
+    }
+
+    @And("user validates plaza pdb impact as {string}")
+    public void userValidatesPlazaPdbImpactAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getPlazaPDBImpact(), arg0);
+    }
+
+    @And("user validates plaza pdb importance as {string}")
+    public void userValidatesPlazaPdbImportanceAs(String arg0) {
+        Assert.assertEquals(problemRecordPage.getPlazaPDBImportance(), arg0);
     }
 }
 

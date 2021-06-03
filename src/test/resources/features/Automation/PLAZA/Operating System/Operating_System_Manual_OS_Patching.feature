@@ -1,4 +1,4 @@
-@Operating_System_Manual_OS_Patching @PLAZA
+@Operating_System_Manual_OS_Patching @OPS @PLAZA
   Feature: Operating System Manual OS Patching plaza form test
     Scenario: user validates information sent to OW from Plaza
 

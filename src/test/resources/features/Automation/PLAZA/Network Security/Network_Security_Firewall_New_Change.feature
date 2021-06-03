@@ -1,4 +1,4 @@
-@Network_Security_Firewall_New_Change @PLAZA @Network_Security
+@Network_Security_Firewall_New_Change #@PLAZA @Network_Security
   #passed
   Feature: Network Security Firewall New Change plaza form test
     Scenario: user validates information sent to OW from Plaza

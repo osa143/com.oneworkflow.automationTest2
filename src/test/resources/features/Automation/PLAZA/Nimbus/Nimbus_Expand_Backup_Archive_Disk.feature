@@ -1,4 +1,4 @@
-@Nimbus_Expand_Backup_Archive_Disk @PLAZA
+@Nimbus_Expand_Backup_Archive_Disk @Nimbus #@PLAZA
   Feature: Nimbus Expand Backup Archive Disk plaza form test
     Scenario: user validates information sent to OW from Plaza
 

@@ -1,4 +1,4 @@
-@Nimbus_Modify_OnBoarding @PLAZA
+@Nimbus_Modify_OnBoarding @Nimbus #@PLAZA
   Feature: Nimbus Modify Onboarding plaza form test
     Scenario: user validates information sent to OW from Plaza
 

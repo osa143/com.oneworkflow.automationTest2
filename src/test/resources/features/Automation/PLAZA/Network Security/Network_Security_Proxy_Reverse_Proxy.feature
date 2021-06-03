@@ -1,4 +1,4 @@
-@Network_Security_Proxy_Reverse_Proxy @PLAZA @Network_Security
+@Network_Security_Proxy_Reverse_Proxy #@PLAZA @Network_Security
 
   Feature: Network Security Proxy Reverse Proxy form test
     Scenario: user validates information sent to OW from Plaza
@@ -20,12 +20,12 @@
       Then user enters Source IP as "Test 192.168.1.1"
       And user enters Reverseproxy DNS name as "Test.teliacompany.net"
       And user enters Reverseproxy Protocol Port as "https/447.test"
-      And user waits 15 secs
-      #And user selects Certificate as "Order CSR"
+#      And user waits 15 secs
+      And user selects Certificate as "Order CSR"
       Then user enters webserver address as "Test webserver"
       And user selects high availability as "Yes"
-      And user waits 15 secs
-      #And user selects load balancing method as "Least Connections"
+#      And user waits 15 secs
+      And user selects load balancing method as "Least Connections"
       Then user enters network security proxy description as "Test3 Network Security Proxy/Description"
       And user enters additional comments as "Network Security Proxy - Test3/AC"
       Then user clicks on "Submit"

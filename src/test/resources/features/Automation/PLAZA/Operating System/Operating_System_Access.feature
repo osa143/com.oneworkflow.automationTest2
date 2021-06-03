@@ -1,4 +1,4 @@
-@Operating_System_Access @PLAZA
+@Operating_System_Access @OPS @PLAZA
   #passed
   Feature: Nimbus Add Modify Remove plaza form test
     Scenario: user validates information sent to OW from Plaza

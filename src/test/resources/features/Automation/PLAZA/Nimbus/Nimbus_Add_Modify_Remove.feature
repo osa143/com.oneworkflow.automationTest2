@@ -1,4 +1,4 @@
-@Nimbus_Add_Modify_Remove @PLAZA
+@Nimbus_Add_Modify_Remove @Nimbus #@PLAZA
   Feature: Nimbus Add Modify Remove plaza form test
     Scenario: user validates information sent to OW from Plaza
 

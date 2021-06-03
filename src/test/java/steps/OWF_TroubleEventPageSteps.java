@@ -4,13 +4,18 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import driver.factory.DriverFactory;
 import io.cucumber.datatable.DataTable;
+import org.joda.time.DateTime;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.OWF_TroubleEventPage;
 import pageObjects.OWF_WorkOrderPage;
 import utils.CommonUtils;
 import utils.Ticket;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class OWF_TroubleEventPageSteps {
     OWF_TroubleEventPage troubleEventPage = new OWF_TroubleEventPage();
@@ -227,7 +232,7 @@ public class OWF_TroubleEventPageSteps {
     @And("user right clicks on primary CI and selects {string}")
     public void userRightClicksOnPrimaryCIAndSelects(String arg0) {
         troubleEventPage.selectPrimaryCI();
-       troubleEventPage.setPreferences(arg0);
+        troubleEventPage.setPreferences(arg0);
     }
 
     @And("user validates CI {string} is {string}")
@@ -286,13 +291,15 @@ public class OWF_TroubleEventPageSteps {
     @When("user enters estimated ready as event start time plus {int} days on trouble event page")
     public void userEntersEstimatedReadyAsEventStartTimePlusDays(int arg0) {
         //  workOrderPage.clearEstimatedReady();
-        CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("MM/dd/yyyy HH:mm:ss","Europe/London",arg0);
+        CommonUtils.before_estimatedReadyTime=workOrderPage.getEstimatedReady();
+        CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("yyyy-MM-dd HH:mm:ss","Europe/London",arg0);
         workOrderPage.enterEstimatedReady(CommonUtils.estimatedReadyTime);
     }
 
     @Then("estimated ready time should be saved correctly on trouble event page")
     public void estimatedReadyTimeShouldBeSavedCorrectly() {
-        Assert.assertEquals(CommonUtils.estimatedReadyTime, workOrderPage.getSavedEstimatedReady());
+        Assert.assertNotEquals(workOrderPage.getEstimatedReady(), CommonUtils.before_estimatedReadyTime);
+
     }
 
 
@@ -585,9 +592,11 @@ public class OWF_TroubleEventPageSteps {
        Assert.assertTrue(troubleEventPage.verifyDropdownValuesForImportance(arg0, ""));
     }
     @And("user changes event start time {int} day in the past")
-    public void userChangesEventStartTimeDayInThePast(int arg0) {
+    public void userChangesEventStartTimeDayInThePast(int delay) {
         troubleEventPage.clearEventStartTime();
-        troubleEventPage.enterEventStartTime(troubleEventPage.calculateEstimatedReady(arg0, "days"));
+        String eventStartTime= CommonUtils.getDateTimePlusDays("MM/dd/yyyy HH:mm:ss","Europe/London",delay);
+        System.out.println("Event strat time is - " + eventStartTime);
+        troubleEventPage.enterEventStartTime(eventStartTime);
     }
 
     @Then("user selects impact name as {string}")
@@ -821,8 +830,8 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event end time as {int} mins past")
     public void userEntersEventEndTimeAsMinsPast(int arg0) {
-        CommonUtils.EventEndTime= CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0);
-        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
+        CommonUtils.EventEndTime= CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0);
+        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user selects action dropdown as {string} on trouble event page")
@@ -832,7 +841,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event start time as {int} mins past")
     public void userEntersEventStartTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user should see confirmation message for impact clear and clicks ok")
@@ -1141,10 +1150,14 @@ public class OWF_TroubleEventPageSteps {
             troubleEventPage.switchToFrameByIndex(2);
             troubleEventPage.clickElementByContainsTextAndTagName("a", "OK");
             troubleEventPage.switchToDefault();
-            troubleEventPage.switchToFrameByIndex(2);
             troubleEventPage.wait(3000);
+            int frames = troubleEventPage.getNumberOfFrames();
+            if(frames>2){
+                troubleEventPage.switchToFrameByIndex(2);
+                troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
+                troubleEventPage.switchToDefault();
+            }
             troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
-            troubleEventPage.switchToDefault();
         }
         catch(Exception e){
             e.printStackTrace();
@@ -1294,14 +1307,13 @@ public class OWF_TroubleEventPageSteps {
     @And("user clicks on save button and closes confirmation")
     public void userClicksOnSaveButtonAndClicksClosesConfirmation() {
         troubleEventPage.clickSaveButton();
-        troubleEventPage.switchToFrameByIndex(2);
-        troubleEventPage.wait(5000);
+        troubleEventPage.wait(6000);
+        troubleEventPage.switchToFrameByIndex(3);
         try{
             troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
             troubleEventPage.switchToDefault();
         }
         catch(Exception e){
-
         }
 
     }
@@ -1688,6 +1700,35 @@ public class OWF_TroubleEventPageSteps {
         troubleEventPage.clickDiagnosis();
         troubleEventPage.rightClickOnPrimaryCI();
         troubleEventPage.doImpactClear_all();
+    }
+
+    @And("user enters ticket created from Helix stub")
+    public void userEntersTicketCreatedFromHelixStub() {
+        troubleEventPage.enterTroubleTicket(CommonUtils.HelixOPID_GeneratedFromStub);
+    }
+
+    @And("user should see an alarm is present")
+    public void userShouldSeeAnAlarmIsPresent() {
+        Assert.assertTrue(troubleEventPage.validateAlarmIsPresent());
+
+    }
+
+    @And("user should see warning message and clicks on ok button and clicks yes")
+    public void userShouldSeeWarningMessageAndClicksOnOkButton() {
+        troubleEventPage.clickOkOnPopup_Helix();
+        troubleEventPage.clickYes_Helix();
+    }
+
+    @Then("user clicks on the related CI impact")
+    public void userClicksOnTheRelatedCIImpact() {
+        troubleEventPage.clickDiagnosis();
+        troubleEventPage.wait(300);
+        troubleEventPage.openRelatedCIImpactTable();
+        troubleEventPage.wait(200);
+    }
+    @And("user validates ow incident description same as plaza")
+    public void userValidatesOwIncidentDescriptionSameAsPlaza() {
+        Assert.assertTrue(troubleEventPage.verifyPlazaIncidentDescription());
     }
 }
 

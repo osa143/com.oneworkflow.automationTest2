@@ -81,6 +81,7 @@
       And user clicks on main page refresh
       Then user validates plaza request has completed
 
+
       Examples:
 
       |Request                                |Database Type|Description                      |Additional Comments  |Account Type|Assigned Profile|

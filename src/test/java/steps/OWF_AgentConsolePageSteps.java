@@ -5,6 +5,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
+import pageObjects.BasePage;
 import pageObjects.OWF_AgentConsolePage;
 import utils.CommonUtils;
 import utils.Ticket;
@@ -14,6 +15,7 @@ import static utils.CommonUtils.*;
 public class OWF_AgentConsolePageSteps {
 
     OWF_AgentConsolePage agentConsolePage = new OWF_AgentConsolePage();
+
 
     @Then("user successfully logged in to OneWorkflow and agent console should be displayed")
     public void userSuccessfullyLoggedInToOneworkflowAndAgentConsoleShouldBeDisplayed() {
@@ -977,6 +979,64 @@ public class OWF_AgentConsolePageSteps {
     @When("user selects contact {string} and clicks remove selected person")
     public void userSelectsContactAndClicksRemoveSelectedPerson(String contact) {
         agentConsolePage.selectContactAndClicksRemoveSelectedPerson(contact);
+    }
+
+    @And("user enters change ticket previously created and searches in agent console and highlights")
+    public void userEntersChangeTicketPreviouslyCreatedAndSearchesInAgentConsoleAndHighlights() {
+        agentConsolePage.enterTicketID(CommonUtils.changeTicket);
+        agentConsolePage.clickOnTableRow1_agentConsole();
+    }
+
+    @And("user closes confirmation for copy to new by pressing x")
+    public void userClosesConfirmationForCopyToNewByPressingX() {
+        agentConsolePage.closeTab();
+        CommonUtils.switchToChildWindow(driver, 1);
+    }
+
+    @And("user clicks make primary alarm button")
+    public void userClicksMakePrimaryAlarmButton() {
+        agentConsolePage.clickMakePrimaryButton();
+    }
+
+    @And("user clicks on detach alarm button")
+    public void userClicksOnDetachAlarmButton() {
+        agentConsolePage.clickDetachAlarmButton();
+    }
+
+    @And("user clicks on detach and create alarm button")
+    public void userClicksOnDetachAndCreateAlarmButton() {
+        agentConsolePage.clickDetachAndCreate();
+    }
+
+    @And("user clicks open alarm button")
+    public void userClicksOpenAlarmButton() {
+        agentConsolePage.clickOpenAlarm();
+    }
+
+
+    @And("user clicks on alarm in row two")
+    public void userClicksOnAlarmInRowTwo() {
+        agentConsolePage.clickOnAlarmTableRow2();
+    }
+
+    @When("user clicks on alarm in row three")
+    public void userClicksOnAlarmInRowThree() {
+        agentConsolePage.clickOnAlarmsTableRow3();
+    }
+
+    @When("user clicks on alarm in row four")
+    public void userClicksOnAlarmInRowFour() {
+        agentConsolePage.clickOnAlarmsTableRow4();
+    }
+
+    @When("user clicks on alarm in row one")
+    public void userClicksOnAlarmInRowOne() {
+        agentConsolePage.clickOnAlarmTableRow1();
+    }
+
+    @When("user clicks on alarm in row five")
+    public void userClicksOnAlarmInRowFive() {
+        agentConsolePage.clickOnAlarmsTableRow5();
     }
 }
 

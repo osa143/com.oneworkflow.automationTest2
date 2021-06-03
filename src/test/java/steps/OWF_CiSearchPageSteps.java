@@ -447,6 +447,11 @@ public class OWF_CiSearchPageSteps {
         Assert.assertEquals(ciSearchPage.getCI_Name("CI Name", 1), arg0);
     }
 
+    @And("user validates CI {string} is listed under related ci impacts table")
+    public void userValidatesRelatedCIIsListed(String arg0) {
+        Assert.assertEquals(ciSearchPage.getCI_Name("CI Name", 1), arg0);
+    }
+
     @And("user enters impacted from date as date in past")
     public void userEntersImpactedFromDateAsDateInPast() {
         ciSearchPage.enterImpactFrom(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", -10));
@@ -486,6 +491,11 @@ public class OWF_CiSearchPageSteps {
     @And("user adds CI {string} to the ticket with impact level {string}")
     public void userAddsCIToTheTicketWithImpactLevel(String CIName, String impactLevel) {
         ciSearchPage.addCI(CIName, impactLevel);
+    }
+
+    @And("user adds CI {string} to the ticket with impact level {string} with extra delay")
+    public void userAddsCIToTheTicketWithImpactLevelWithExtraDelay(String CIName, String impactLevel) {
+        ciSearchPage.addCIExtraDelay(CIName, impactLevel);
     }
 
     @And("user adds CI {string} to change ticket with impact level {string}")
@@ -697,4 +707,21 @@ public class OWF_CiSearchPageSteps {
         int newDelay= delay*60;
         ciSearchPage.enterImpactToPlus(CommonUtils.getDateTime(pattern, "Europe/Stockholm", newDelay));
     }
+
+    @And("user validates Change impact from time is same as request start time")
+    public void userValidatesChangeImpactFromTimeIsSameAsRequestStartTime() {
+        Assert.assertEquals(CommonUtils.eventStartTime, ciSearchPage.getImpactFrom_DiagnosisTab());
+
+    }
+
+    @And("user validates Change impact to time is same as request end time")
+    public void userValidatesChangeImpactToTimeIsSameAsRequestEndTime() {
+        Assert.assertEquals(CommonUtils.requestEnd, ciSearchPage.getImpactTo_DiagnosisTab());
+    }
+
+    @And("user validates no CI's are on the ticket")
+    public void userValidatesNoCISAreOnTheTicket() {
+        Assert.assertTrue(ciSearchPage.validateNoCIsArePresent());
+    }
+
 }

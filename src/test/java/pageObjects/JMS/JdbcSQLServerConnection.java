@@ -1,5 +1,8 @@
 package pageObjects.JMS;
 
+import org.apache.commons.collections.bag.SynchronizedSortedBag;
+import utils.CommonUtils;
+
 import java.sql.*;
 
 /**
@@ -12,8 +15,10 @@ public class JdbcSQLServerConnection {
 
     public void connectToDatabaseAndGetOpTicket(String Fld_Alarm_GUID){
 //        String dbURL = "jdbc:sqlserver://localhost\\sqlexpress";
-        String dbURL = "jdbc:sqlserver://td220testdb.ddc.teliasonera.net:1433;Instance=TD220TESTDB;Database=ARSystem;";
-       // String dbURL="jdbc:sqlserver://220testdb:1433;databaseName=ARSystem;user=dbtestuser1;password=Workflow2020;";
+        //ST:
+        //  String dbURL = "jdbc:sqlserver://td220testdb.ddc.teliasonera.net:1433;Instance=TD220TESTDB;Database=ARSystem;";
+        //SIT:
+        String dbURL= "jdbc:sqlserver://td333testdb.ddc.teliasonera.net:1433;Instance=TD333TESTDB;Database=ARSystem_UATCopy";
         String db_driver   = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
         String username = "dbtestuser1";
         String password = "Workflow2020";
@@ -33,12 +38,16 @@ public class JdbcSQLServerConnection {
 //            String sql= "select count (*) from OS3_OP_NMS_IntegrationIn";
             Statement statement=connection.createStatement();
             ResultSet resultSet= statement.executeQuery(sql);
+            System.out.println("Connected to the database successfully");
 
             int count = 0;
             while(resultSet.next()){
                 count ++;
             String ticketId= resultSet.getString("Fld_OPRequestTicketID");
                 System.out.println("OP ticket ID is - " + ticketId);
+                CommonUtils.HelixOPID_GeneratedFromStub = ticketId;
+                System.out.println("Fld_Alarm_GUID is - " + Fld_Alarm_GUID); //TibcoQueueClientPublisher -> generatedString
+
             }
 
             System.out.println("Number of Tickets - " + count);

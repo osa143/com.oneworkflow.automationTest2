@@ -1,4 +1,4 @@
-@Operating_System_Account_Management @PLAZA
+@Operating_System_Account_Management @OPS @PLAZA
   #retest
   Feature: Operating System Account Management plaza
     Scenario: user validates information sent to OW from Plaza

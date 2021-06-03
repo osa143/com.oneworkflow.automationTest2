@@ -248,15 +248,16 @@ public class OWF_WorkOrderPageSteps {
     }
 
     @And("user validates source field as {string}")
-    public void userValidatesSourceFieldAs(String arg0) {
-        Assert.assertEquals(workOrderPage.getSource(), arg0);
+    public void userValidatesSourceFieldAs(String expected_source) {
+       String actual_source=workOrderPage.getSource();
+        Assert.assertEquals(actual_source, expected_source);
     }
 
     @And("user validates PDB title field as {string}")
     public void userValidatesTitleFieldAs(String arg0) {
-        ////String expectedTitle= " "+arg0;
-        //System.out.println("Expected plaza title is " +expectedTitle);
-        Assert.assertEquals(workOrderPage.getTitle(), arg0);
+        String expectedTitle= " "+arg0;
+        System.out.println("Expected plaza title is " +expectedTitle);
+        Assert.assertEquals(workOrderPage.getTitle(), expectedTitle);
     }
 
     @And("user validates title field as {string}")
@@ -949,7 +950,10 @@ public class OWF_WorkOrderPageSteps {
         Assert.assertEquals(workOrderPage.getCustomerContractID(), customerContractorID);
     }
 
-
+    @And("user validates OW description same as Helix")
+    public void userValidatesHelixDescriptionAs() {
+        Assert.assertTrue(workOrderPage.verifyHelixDesription());
+    }
 }
 
 

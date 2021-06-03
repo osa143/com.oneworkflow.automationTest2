@@ -1935,8 +1935,8 @@ public class Plaza_HomePageSteps extends BasePage {
         homePage.clickPDB_AffectedCountry(arg0);
     }
     @And("user should see OW manual notification in plaza ticket as {string}")
-    public void userShouldSeeOWManualNotificationInPlazaTicketAs(String arg0) {
-        Assert.assertEquals(homePage.getOW_ManualNotification_plaza(), arg0);
+    public void userShouldSeeOWManualNotificationInPlazaTicketAs(String expectedTimelineUpdate) {
+        Assert.assertTrue(homePage.verifyOWTimelineUpdateInPlaza(expectedTimelineUpdate));
     }
     @Then("user should see {string} update in plaza ticket")
     public void userShouldSeeUpdateInPlazaTicket(String arg0) {
@@ -1994,7 +1994,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @When("user clicks on INC under internal case subtasks")
     public void userClicksOnINCUnderInternalCaseSubtasks() {
-        clickElement(By.className("linked formlink"));
+        homePage.userClickINCNumber();
     }
 
     @Then("user should see INC form")
@@ -2344,7 +2344,7 @@ public class Plaza_HomePageSteps extends BasePage {
 
     @Then("user validates resolution code as {string}")
     public void userValidatesResolutionCodeAs(String arg0) {
-        Assert.assertEquals(homePage.getResolutionCode(), arg0);
+        Assert.assertTrue(homePage.getResolutionCode(), arg0);
     }
 
     @And("user selects affected person type as {string}")
@@ -2452,6 +2452,16 @@ public class Plaza_HomePageSteps extends BasePage {
       homePage.select_CI_exclusionEndpoint();
     }
 
+    @Then("user should see {string} update in plaza")
+    public void userShouldSeeUpdateInPlaza(String arg0) {
+        Assert.assertEquals(homePage.getOWNotification_plaza(), arg0);
+    }
+
+    @And("user opens second tab")
+    public void userOpensSecondTab() {
+        homePage.openSecondTab();
+    }
+
     @And("user selects any server database CI")
     public void userSelectsAnyServerDatabaseCI() {
         homePage.selectAnyServerDatabaseCI();
@@ -2529,4 +2539,27 @@ public class Plaza_HomePageSteps extends BasePage {
         homePage.selectCI_CEWS();
     }
 
+    @And("user searches for plaza {string} attachment and adds it")
+    public void userSearchesForPlazaAttachmentAndAddsIt(String filePath) {
+        String projectPath = System.getProperty("user.dir");
+        System.out.println(projectPath);
+        String fullFilePath = projectPath + "\\src\\test\\resources\\" + filePath;
+        System.out.println(fullFilePath);
+//        CommonUtils.uploadFile(fullFilePath);
+        homePage.uploadPlazaAttachmentFile(fullFilePath);
+        homePage.wait(500);
+        homePage.clickElementByContainsTextAndTagName("button", "Upload Without Encrypting");
+
+    }
+
+    @And("user selects plaza affected persons as other")
+    public void userSelectsPlazaAffectedPersonsAsOther() {
+        homePage.clickConsumerCustomerRadioButton();
+    }
+
+
+    @When("user clicks on create ICM number")
+    public void userClicksOnCreateICMNumber() {
+        homePage.clickOn_PlazaCreateICM_number();
+    }
 }

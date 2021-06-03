@@ -9,12 +9,15 @@ import org.testng.Assert;
 import utils.CommonUtils;
 import utils.PlazaValidation;
 import utils.Ticket;
+
+import java.sql.SQLOutput;
 import java.util.List;
 import java.util.Map;
 
 import static pageObjects.OWF_CiSearchPage.*;
 
 public class OWF_TroubleEventPage extends BaseRecordPage {
+
 
     private static final String btnREFRESH_IMAGE_ID= "reg_img_600003444";
 
@@ -189,6 +192,42 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txt_CLOSED_WITHIN_DAYS = "arid_WIN_0_800040404";
     private static final String chkbx_TICKET_MATCHING_TITLE = "WIN_0_rc0id800040405";
     private static final String dd_TICKET_MATCHING_MATCH_BY = "arid_WIN_0_800040284";
+    private static final String table_ALARMS = "T700508140";
+    private static final String btn_relatedCIImpact = "//a[@title='Related CIs']";
+
+    private static final String btn_PREFRENCES_INTERNAL= "//div[@id='WIN_0_777000013']//a[@class='Prefs btn btn3d TableBtn'][contains(text(),'Preferences')]";
+    private static final String btn_REFRESH_INTERNAL= "//div[@id='WIN_0_777000013']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
+    private static final String btn_PREFRENCES_EXTERNAL= "//div[@id='WIN_0_600002205']//a[@class='Prefs btn btn3d TableBtn'][contains(text(),'Preferences')]";
+    private static final String btn_REFRESH_EXTERNAL= "//div[@id='WIN_0_600002205']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
+    private static final String chkbxHEADER_XPATH_AlarmsTab = "//div[@id='WIN_0_700508140']//input[@class='checkboxheader']";
+    private static final String btnALARMS_XPATH = "//div[@id='WIN_0_999000003']//div[@class='OuterTabsDiv']//div[@class='TabsViewPort']//div//a[@class='btn f1'][contains(text(),'Alarms')]";
+    private static final String ddIMPORTANCE_XPATH = "//div[@id='WIN_0_600001821']//a[@class='btn btn3d selectionbtn']";
+    private static final String chkbxHEADER_XPATH_Diagnosis = "//div[@id='WIN_0_700009087']//input[@class='checkboxheader']";
+
+    public boolean verifyPlazaIncidentDescription() {
+        String actualDescription = getDescription();
+        if (/*actualDescription.contains("") &&*/ actualDescription.contains(PlazaValidation.Category_Incident)
+                && actualDescription.contains(PlazaValidation.Subject)  && actualDescription.contains("OSS_Presentation_AlarmMap_application_error")
+                && actualDescription.contains(PlazaValidation.Description_Incident)){
+            return true;
+        }
+        return false;
+    }
+
+    public int getNumberOfFrames(){
+       int size = driver.findElements(By.tagName("iframe")).size();
+        System.out.println("Number of frames are: "+ size);
+        return size;
+    }
+
+    public boolean validateAlarmIsPresent(){
+        int size = getTableRows(By.id(table_ALARMS)).size();
+        System.out.println("Number of Alarms = " + size);
+        if(size>1){
+            return true;
+        }
+        return false;
+    }
 
 
     public void selectTicketMatchBy(String value){
@@ -864,6 +903,14 @@ public void rightClickOnElement(String cellData){
         driver.switchTo().frame(2);
         wait(1500);
     }
+
+    public void clickOkOnPopup_Helix()
+    {
+        driver.switchTo().frame(2);
+        findElement(By.xpath(btn_OK_Popup)).click();
+        switchToDefault();
+    }
+
     public void clickOk()
     {
         driver.switchTo().frame(1);
@@ -1298,14 +1345,8 @@ public void rightClickOnElement(String cellData){
         driver.navigate().refresh();
     }
 
-    private static final String btn_PREFRENCES_INTERNAL= "//div[@id='WIN_0_777000013']//a[@class='Prefs btn btn3d TableBtn'][contains(text(),'Preferences')]";
-    private static final String btn_REFRESH_INTERNAL= "//div[@id='WIN_0_777000013']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
-    private static final String btn_PREFRENCES_EXTERNAL= "//div[@id='WIN_0_600002205']//a[@class='Prefs btn btn3d TableBtn'][contains(text(),'Preferences')]";
-    private static final String btn_REFRESH_EXTERNAL= "//div[@id='WIN_0_600002205']//a[@class='Ref btn btn3d TableBtn'][contains(text(),'Refresh')]";
-    private static final String chkbxHEADER_XPATH_AlarmsTab = "//div[@id='WIN_0_700508140']//input[@class='checkboxheader']";
-    private static final String btnALARMS_XPATH = "//div[@id='WIN_0_999000003']//div[@class='OuterTabsDiv']//div[@class='TabsViewPort']//div//a[@class='btn f1'][contains(text(),'Alarms')]";
-    private static final String ddIMPORTANCE_XPATH = "//div[@id='WIN_0_600001821']//a[@class='btn btn3d selectionbtn']";
-    private static final String chkbxHEADER_XPATH_Diagnosis = "//div[@id='WIN_0_700009087']//input[@class='checkboxheader']";
-
-
+    public void openRelatedCIImpactTable() {
+        wait(2000);
+        driver.findElement(By.xpath(btn_relatedCIImpact)).click();
+    }
 }

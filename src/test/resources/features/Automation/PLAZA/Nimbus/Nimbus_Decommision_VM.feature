@@ -1,4 +1,4 @@
-@Nimbus_Decomission_VM @PLAZA
+@Nimbus_Decomission_VM @Nimbus #@PLAZA
   Feature: Nimbus Decomission VM plaza form test
     Scenario: user validates information sent to OW from Plaza
 

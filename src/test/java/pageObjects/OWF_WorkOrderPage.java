@@ -3,10 +3,14 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import utils.CommonUtils;
 import utils.PlazaValidation;
 
-public class OWF_WorkOrderPage extends BasePage {
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class OWF_WorkOrderPage extends BaseRecordPage {
 
     private static final String txtSTATUS_ID = "arid_WIN_0_777031003";
     private static final String txtPARENT_TICKET_ID= "arid_WIN_0_777777653";
@@ -41,7 +45,6 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String dd_STATUS= "Status*";
     private static final String txt_SOURCE_ID="arid_WIN_0_777021006";
     private static final String txt_SOURCE_FLD= "arid_WIN_0_777777912";
-    private static final String txt_DESCRIPTION= "arid_WIN_0_777031007";
     private static final String table_INTERESTED_PARTIES= "T705002015";
     private static final String txt_REQUEST_TYPE= "arid_WIN_0_777031002";
     private static final String txt_REASSIGNED_REASON= "arid_WIN_0_600001026";
@@ -66,6 +69,26 @@ public class OWF_WorkOrderPage extends BasePage {
     private static final String td_ROW1= "//*[@id='T777504000']/tbody/tr[2]/td[1]/nobr";
     private static final String txt_AGREEMENT_CONTRACTOR= "arid_WIN_0_536870920";
     private static final String txt_CUSTOMER_ID_CONTRACTOR= "arid_WIN_0_536870921";
+
+    public boolean estimatedReadyTimeSavedCorrectly(){
+        String actualEstimatedReadyTime = getSavedEstimatedReady();
+        String expectedEstimatedReadyTime = CommonUtils.estimatedReadyTime;
+
+        if(actualEstimatedReadyTime.contains(expectedEstimatedReadyTime))
+            return true;
+        else
+            return false;
+    }
+
+    public boolean verifyHelixDesription(){
+        String expectedDescription = "Helix Auto Generated Stub Test\n" +
+                "Helix Auto Generated Test Description";
+       String actualDescription = getDescription();
+       if(actualDescription.contains(expectedDescription)){
+           return true;
+       }
+       else return false;
+    }
 
    public String getAgreementContract(){
        return getAttributeValueById(txt_AGREEMENT_CONTRACTOR);
@@ -176,8 +199,8 @@ public class OWF_WorkOrderPage extends BasePage {
 
     public boolean verifyPlazaPDB_Description() {
         String actualDescription = getDescription();
-        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.DateTime)
-                && actualDescription.contains(PlazaValidation.NatureAndContent) && actualDescription.contains(PlazaValidation.AffectedPersons)
+        if (actualDescription.contains(PlazaValidation.UserName)
+                && actualDescription.contains(PlazaValidation.NatureAndContent) //&& actualDescription.contains(PlazaValidation.AffectedPersons)
                 && actualDescription.contains(PlazaValidation.AffectedPersonNameID)){
             return true;
         }
@@ -272,11 +295,6 @@ public class OWF_WorkOrderPage extends BasePage {
             return true;
         }
         return false;
-    }
-    public String getDescription(){
-        String description= getAttributeValueById(txt_DESCRIPTION);
-        System.out.println(description);
-        return description;
     }
 
     public String getTitle(){

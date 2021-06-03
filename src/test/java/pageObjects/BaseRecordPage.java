@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import utils.CommonUtils;
 import utils.PlazaValidation;
@@ -43,8 +45,7 @@ public class BaseRecordPage extends BasePage {
     public static final String txtANALYSIS_TEAM_MEMBER1_ID = "arid_WIN_0_600001015";
     public static final String txtACTUAL_START_ID = "arid_WIN_0_777021162";
 
-
-    public static final String btnYES = "WIN_4_700027904";
+    public static final String btnYES = "WIN_0_700027904";
     public static final String btnSAVE = "WIN_0_700025244";
     public static final String btnDIAGNOSIS = "//a[contains(text(),'Diagnosis')]";
     public static final String btnCISEARCH = "WIN_0_999000229";
@@ -164,6 +165,48 @@ public class BaseRecordPage extends BasePage {
     private static final String txt_DESCRIPTION_WO_QUICK_CREATE= "arid_WIN_0_800007046";
     private static final String btn_CREATE_WO_QUICK_CREATE= "WIN_0_800007047";
     private static final String btn_YES= "//a[@arid='700027904']";
+    private static final String table_INTEREST_PARTIES = "T705002015";
+    private static final String btn_TIMELINE_REFRESH = "//*[@id='WIN_0_999000510']/div[1]/table/tbody/tr/td[2]/a[2]";
+    private static final String btn_UPLOAD_ATTACHMENT_XPATH = "uploadfiles";
+    private static final String txt_DESCRIPTION= "arid_WIN_0_777031007";
+
+    public String getDescription(){
+        String description= getAttributeValueById(txt_DESCRIPTION);
+        System.out.println(description);
+        return description;
+    }
+
+    public void clickonChooseFile_Frame(){
+        driver.switchTo().parentFrame();
+        int size = driver.findElements(By.tagName("iframe")).size();
+        switchToFrameByIndex(size - 1);
+        int size1 = driver.findElements(By.tagName("iframe")).size();
+        switchToFrameByIndex(size1 - 1);
+    }
+
+    public void uploadFile(String filepath){
+        WebDriverWait wait = new WebDriverWait(driver, 3);
+        clickonChooseFile_Frame();
+        String popUpOkButton = "//*[@id=\"PopupAttFooter\"]/a[1]";
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(popUpOkButton)));
+        driver.switchTo().activeElement().sendKeys(filepath);
+        clickElement(By.xpath(popUpOkButton));
+    }
+
+    public void uploadAttachmentFile(String path){
+        driver.switchTo().activeElement().sendKeys(path);
+    }
+
+    public void clickTimelineRefresh(){
+        clickElement(By.xpath(btn_TIMELINE_REFRESH));
+    }
+
+    public String verifyColumnStatusInterestedParties(String columnName, int rowNum)
+    {
+        wait(500);
+        return getTableCellData(By.id(table_INTEREST_PARTIES), columnName, rowNum );
+    }
+
 
 
     public void clickCreate_WO_quickCreate() {
@@ -264,6 +307,7 @@ public class BaseRecordPage extends BasePage {
     }
     public void clickPendingTicketForApproval(){
         clickElement(By.xpath(fld_PENDING_TICKET));
+        wait(2000);
     }
 
     public void clickOpenCheckBox(){
@@ -530,7 +574,11 @@ public class BaseRecordPage extends BasePage {
 
    public void clickYes(){
         findElement(By.id(btnYES)).click();
-   }
+    }
+    public void clickYes_Helix(){
+        switchToFrameByIndex(2);
+        findElement(By.id(btnYES)).click();
+    }
 
     Actions action = new Actions(driver);
 
@@ -1045,7 +1093,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterStartDate(int delay) {
-        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", delay);
+        String dateTime = CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", delay);
         CommonUtils.eventStartTime=dateTime;
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
@@ -1053,21 +1101,21 @@ public class BaseRecordPage extends BasePage {
 
     public void enterEndDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("MM/dd/yyyy HH:mm:ss", "Europe/London", delay);
+        String dateTime = CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", delay);
         CommonUtils.requestEnd=dateTime;
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );
     }
 
     public void enterStartDate_format(int delay) {
-        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", delay);
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
     }
 
     public void enterEndDate_format(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", delay);
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );
     }

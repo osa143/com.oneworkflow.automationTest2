@@ -34,6 +34,11 @@ public class BasePage{
 
     }
 
+    public void moveToWebElement(WebElement element){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).build().perform();
+    }
+
     public String getPageTitle() {
         String Title=driver.getTitle();
         System.out.println(Title);
@@ -534,6 +539,14 @@ public void clickElementById(String Id){
         return false;
     }
 
+    public boolean checkIfControlIsNullByElement(WebElement element) {
+        String isNull = element.getAttribute("Null");
+        if (isNull != null && isNull.contains("true")) {
+            return true;
+        }
+        return false;
+    }
+
     public boolean verifyElementIsReadyOnlyByContainsText(String textName) {
         String element = String.format("//label[contains(text(),'%s')]/text area", textName);
         System.out.println(element);
@@ -709,7 +722,7 @@ public void clickElementById(String Id){
         wait(1000);
         for (int i = 1; i < elements.size(); i++)
         {
-            wait(1000);
+            wait(500);
             List<WebElement> tdElements = elements.get(i).findElements(By.tagName("td"));
 
             if (tdElements.size() > 0) {

@@ -1,4 +1,4 @@
-@Nimbus_Restore_VM @PLAZA
+@Nimbus_Restore_VM @Nimbus #@PLAZA
   Feature: Nimbus Restore VM plaza form test
     Scenario: user validates information sent to OW from Plaza
 

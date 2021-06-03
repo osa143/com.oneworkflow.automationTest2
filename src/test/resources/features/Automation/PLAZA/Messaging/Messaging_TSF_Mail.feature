@@ -1,4 +1,4 @@
-@Messaging_TSF_Mail  @PLAZA
+@Messaging_TSF_Mail  #@PLAZA
   Feature: Messaging TSF Mail  plaza form test
     #not checked on ow
     Scenario: user validates information sent to OW from Plaza

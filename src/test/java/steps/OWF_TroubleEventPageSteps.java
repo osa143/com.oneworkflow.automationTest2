@@ -1443,7 +1443,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters auto close date as {int} mins past")
     public void userEntersAutoCloseDateAsIntMinsPast(int arg0) {
-        troubleEventPage.enterAutoCloseDate(CommonUtils.getDateTime("MM-dd-YYYY HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterAutoCloseDate(CommonUtils.getDateTime("YYYY-MM-dd HH:mm:ss", "Europe/London", arg0));
     }
 
     @Then("user validates hierarchic escalation level is read only")

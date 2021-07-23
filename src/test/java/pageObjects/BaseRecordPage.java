@@ -1093,7 +1093,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void enterStartDate(int delay) {
-        String dateTime = CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         CommonUtils.eventStartTime=dateTime;
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
@@ -1101,21 +1101,21 @@ public class BaseRecordPage extends BasePage {
 
     public void enterEndDate(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         CommonUtils.requestEnd=dateTime;
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );
     }
 
     public void enterStartDate_format(int delay) {
-        String dateTime = CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         findElement(By.id(txt_REQUEST_START)).clear();
         enterTextByElement(By.id(txt_REQUEST_START),dateTime );
     }
 
     public void enterEndDate_format(int delay) {
 
-        String dateTime = CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/Stockholm", delay);
+        String dateTime = CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/Stockholm", delay);
         findElement(By.id(txt_REQUEST_END)).clear();
         enterTextByElement(By.id(txt_REQUEST_END),dateTime );
     }

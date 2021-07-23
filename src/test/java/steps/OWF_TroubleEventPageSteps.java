@@ -292,7 +292,7 @@ public class OWF_TroubleEventPageSteps {
     public void userEntersEstimatedReadyAsEventStartTimePlusDays(int arg0) {
         //  workOrderPage.clearEstimatedReady();
         CommonUtils.before_estimatedReadyTime=workOrderPage.getEstimatedReady();
-        CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("dd/MM/yyyy HH:mm:ss","Europe/London",arg0);
+        CommonUtils.estimatedReadyTime= CommonUtils.getDateTimePlusDays("yyyy-MM-dd HH:mm:ss","Europe/London",arg0);
         workOrderPage.enterEstimatedReady(CommonUtils.estimatedReadyTime);
     }
 
@@ -830,8 +830,8 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event end time as {int} mins past")
     public void userEntersEventEndTimeAsMinsPast(int arg0) {
-        CommonUtils.EventEndTime= CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0);
-        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
+        CommonUtils.EventEndTime= CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0);
+        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user selects action dropdown as {string} on trouble event page")
@@ -841,7 +841,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event start time as {int} mins past")
     public void userEntersEventStartTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("dd/MM/yyyy HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user should see confirmation message for impact clear and clicks ok")
@@ -1308,7 +1308,7 @@ public class OWF_TroubleEventPageSteps {
     public void userClicksOnSaveButtonAndClicksClosesConfirmation() {
         troubleEventPage.clickSaveButton();
         troubleEventPage.wait(6000);
-        troubleEventPage.switchToFrameByIndex(2);
+        troubleEventPage.switchToFrameByIndex(3);
         try{
             troubleEventPage.clickElementByContainsTextAndTagName("a", "Yes");
             troubleEventPage.switchToDefault();
@@ -1443,7 +1443,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters auto close date as {int} mins past")
     public void userEntersAutoCloseDateAsIntMinsPast(int arg0) {
-        troubleEventPage.enterAutoCloseDate(CommonUtils.getDateTime("MM-dd-YYYY HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterAutoCloseDate(CommonUtils.getDateTime("YYYY-MM-dd HH:mm:ss", "Europe/London", arg0));
     }
 
     @Then("user validates hierarchic escalation level is read only")

@@ -3,7 +3,7 @@
 # This test also covers SAO-5305 Auto population from PB to KE tickets
 
      Feature: Problem Link to New Known Error and Withdraw
-    Scenario: user opens problem ticket, then opens known error and withdraws
+    Scenario: Problem Link to New Known Error and Withdraw - user opens problem ticket, then opens known error and withdraws
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"

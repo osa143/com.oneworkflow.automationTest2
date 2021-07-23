@@ -27,7 +27,7 @@ Feature: SAO-4039 - Pressing priority check button on closed ticket with CI's gi
     Then user changes status to "Cleared" on trouble event page
     And user clicks on Diagnosis tab
     Then user right clicks on CI "SE_EPG_FREEPG1" and clears impact for all CI's
-    And user should see confirmation message for impact clear and user clicks yes
+    And user should see impact clear confirmation message and user clicks yes
     And user selects fault position as "N/A:N/A" on trouble event page
     Then user selects cause as "N/A:N/A:N/A" on trouble event page
     And user enters event end time as current time

@@ -1,7 +1,7 @@
 #Need to check ticket status manually after 30 mins
-@Pending_Status @ProblemRegression
+@Pending_Status @ProblemRegression_1
 Feature: Pending Status
-  Scenario: User logs into One workflow, creates a problem ticket, changes status to pending then checks ticket status
+  Scenario: Pending Status - User is able to create a problem ticket and move the status to pending
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"

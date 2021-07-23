@@ -15,7 +15,7 @@ Scenario: Create work order when CO system sends CTI and No CI
     And user clicks on data center under IT Infrastructure dropdown
     When user clicks on "Cabling - New" pebble
     Then user should see "Cabling - New" form
-      Then user selects system name in haiti as "118 redagavimo sistema"
+    Then user selects system name in haiti as "118 redagavimo sistema"
     When user selects role dropdown as "Application Operation Engineer"
     And user enters Cabling - New request as "Test1 Cabling/Request"
     And user enters DC-site or address as "Test address"

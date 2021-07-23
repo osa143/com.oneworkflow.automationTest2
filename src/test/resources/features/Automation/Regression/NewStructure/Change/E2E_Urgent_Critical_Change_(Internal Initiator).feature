@@ -70,7 +70,7 @@ Feature: Internal Urgent Critical Change E2E
     And user selects impact level as "Loss of Service"
     And user clicks on relate CI
     Then user closes warning message on change add CI
-#    And user clicks yes on save confirmation message
+    And user clicks yes on save confirmation message
     And user waits 20 secs
     And CI should be listed and displayed under the Diagnosis tab
     And user clicks on Diagnosis tab

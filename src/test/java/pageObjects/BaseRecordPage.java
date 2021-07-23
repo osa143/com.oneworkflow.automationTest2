@@ -573,7 +573,7 @@ public class BaseRecordPage extends BasePage {
     }
 
    public void clickYes(){
-        findElement(By.xpath(btnYES)).click();
+        findElement(By.id(btnYES)).click();
     }
     public void clickYes_Helix(){
         switchToFrameByIndex(2);

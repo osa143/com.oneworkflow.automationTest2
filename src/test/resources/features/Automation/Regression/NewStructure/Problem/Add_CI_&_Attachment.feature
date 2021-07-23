@@ -1,7 +1,7 @@
-@Add_CI_&_Attachment @ProblemRegression
+@Add_CI_&_Attachment @ProblemRegression_1
   #OS3:PM:Configuration:AddCI
 Feature: Add CI & Attachment
-    Scenario: user can create a problem record and add a CI and attachment to it
+    Scenario: Add CI & Attachment - user can create a problem record and add a CI and attachment to it
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"
@@ -20,7 +20,7 @@ Feature: Add CI & Attachment
       When user adds below CI's to the ticket
         |   CI Name     |
         |SE_CPE_FRECPE5 |
-       |FI_LTECell_Valpe4H|
+        |FI_LTECell_Valpe4H|
       And user clicks on Diagnosis tab
       Then CI should be listed and displayed under the Diagnosis tab
       When user clicks on ticket refresh button

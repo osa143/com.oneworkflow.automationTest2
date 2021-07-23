@@ -4,7 +4,7 @@ Feature: Close and Clone Problem
   #Below scenario also covers-SAO-5208-Multiple root causes code menus, 4 with one Primary and
   #SAO-5198, All CI Impact Statuses will remain ‘Active’until the status of the problem moves to closed
   #SAO-5337	Restrictions on PB closure
-  Scenario: User logs into One workflow, creates a problem ticket, closes it then clones it
+  Scenario: Close and Clone Problem - User logs into One workflow, creates a problem ticket, closes it then clones it
 
 
     Given user is on the OneWorkflow login page

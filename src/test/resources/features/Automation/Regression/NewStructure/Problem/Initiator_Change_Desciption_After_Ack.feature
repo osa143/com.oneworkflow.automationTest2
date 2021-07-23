@@ -1,6 +1,6 @@
 @Initiator_Change_Description_After_Ack @ProblemRegression
   #passed
-  Feature:Initiator change description after ack
+  Feature: Initiator change description after ack
   Scenario: Problem Initiator changes description after ack
 
     Given user is on the OneWorkflow login page

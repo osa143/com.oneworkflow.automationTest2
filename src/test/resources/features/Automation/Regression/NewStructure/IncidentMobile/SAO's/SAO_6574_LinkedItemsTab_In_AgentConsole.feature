@@ -1,4 +1,4 @@
-@SAO_6574 @Incident_SAO
+@SAO_6574 @Incident_SAO1
 #To be changed
   Feature: SAO-6574 - user testing linked ticket radio buttons
     Scenario: user testing linked ticket radio buttons

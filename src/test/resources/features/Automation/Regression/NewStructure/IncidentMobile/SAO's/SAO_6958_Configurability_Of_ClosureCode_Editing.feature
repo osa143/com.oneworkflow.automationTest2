@@ -4,7 +4,7 @@
     Scenario: Verification of configuring source
 
      Given user is on the OneWorkflow login page
-     When user logs in with valid username "fhr501" and password as "H0neybadger1"
+     When user logs in with valid username "fhr501" and password as "C0rrectr1ghtr1ght"
      Then user successfully logged in to OneWorkflow and agent console should be displayed
      When user selects "Administration" menu as "Trouble:Edit Closure Code Configuration"
      And user switches to window 1

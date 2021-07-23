@@ -1,4 +1,5 @@
-#Production Defect  @Cleared_time_change_to_closed
+#Production Defect
+@Cleared_time_change_to_closed
 Feature: Incident ticket - Cleared time change to closed: Event time should not be changed to closed time,
 #            after ticket is closed.
 #

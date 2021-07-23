@@ -951,6 +951,11 @@ public class OWF_ProblemRecordPageSteps {
         problemRecordPage.clickYes_impactClear();
     }
 
+    @And("user should see impact clear confirmation message and user clicks yes")
+    public void userShouldSeeImpactClearConfirmationMessageAndUserClicksOk() {
+        problemRecordPage.clickYesOnImpactClear();
+    }
+
 
     @When("user changes status as Investigation Complete on problem record page")
     public void userChangesStatusAsInvestigationCompleteOnProblemRecordPage() {

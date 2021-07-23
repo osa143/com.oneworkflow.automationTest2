@@ -1147,6 +1147,7 @@ public class OWF_ChangeRecordPageSteps {
     public void userClicksYesOnImpactUpdateConfirmation() {
         changeRecordPage.switchToFrameByIndex(2);
         changeRecordPage.clickYes();
+        changeRecordPage.switchToDefault();
     }
 
     @When("user clicks copy to new button")
@@ -1478,12 +1479,32 @@ public class OWF_ChangeRecordPageSteps {
     @Then("user clicks no two on copy to new popup")
     public void userClicksNoTwoOnCopyToNewPopup() {
         changeRecordPage.clickNo2ButtonCopyToNew();
-
     }
 
     @Then("user validates confirmation message for copy to new is {string}")
     public void userValidatesConfirmationMessageForCopyToNewIs(String arg0) {
         Assert.assertEquals(changeRecordPage.verifyCopyToNewMessage(), arg0);
+    }
 
+    @Then("user validates Change Builder button is present" )
+    public void userValidatesChangeBuilderButtonIsPresent() {
+        Assert.assertTrue(changeRecordPage.verifyChangeBuilderButtonIsDisplayed());
+    }
+
+    @Then("user should see {string} email update on row two")
+    public void userShouldSeeEmailUpdateOnRow(String message) {
+        try {
+            changeRecordPage.wait(60000);
+            changeRecordPage.selectTab("Notifications");
+            changeRecordPage.selectTab("Sent");
+            Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 2), message);
+        } catch (Exception e) {
+            changeRecordPage.wait(60000);
+            changeRecordPage.clickRefresh_ticketFresh();
+            changeRecordPage.selectTab("Notifications");
+            changeRecordPage.selectTab("Sent");
+            System.out.println("Trying second time");
+            Assert.assertEquals(changeRecordPage.getText_notifications("Activity", 2), message);
+        }
     }
 }

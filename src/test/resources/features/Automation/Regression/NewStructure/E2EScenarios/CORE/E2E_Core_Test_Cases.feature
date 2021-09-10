@@ -17,7 +17,7 @@
       When user clicks on CTI details under sections
       And user validates availability of category dropdown
 #      Then multiple statuses "1:Access:Access|Transport:BSS:Computer Equipment:Computer Services:Core:Customer Service:Customer Services:DS:External:Hardware:Internal Service:IOT:IT:Location:Miscellaneous:Network:Nokia:Organization:OSS:Packet_Transport:Product:SERVER:Service:SITE-LP:Software:Transmission:Transport:Transport|Access:TV:VAS" should be available in "Category" dropdown
-      And user selects Category as "Core"
+      And user selects Category as "CORE"
       Then user validates availability of type dropdown
 #      And multiple statuses "Fixed_IMS:IP:MESSAGING:Mobile CS Core Network:Mobile IMS Core Network:Mobile PS Core Network:Mobile_CS:Mobile_PS:NFVI:Other:Performance:Planning:Presentation:Software:WLAN:Workflow" should be available in "Type" dropdown
       Then user selects Type as "Mobile PS Core Network"

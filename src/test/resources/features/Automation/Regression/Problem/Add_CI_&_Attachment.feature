@@ -1,4 +1,4 @@
-@Add_CI_&_Attachment  @Reg_Problem @HelixRegression
+@Add_CI_&_Attachment1  @Reg_Problem @HelixRegression
   #OS3:PM:Configuration:AddCI
 Feature: User is able to add a CI and attachment to a problem ticket
     Scenario: user can create a problem record and add a CI and attachment to it
@@ -26,9 +26,9 @@ Feature: User is able to add a CI and attachment to a problem ticket
       When user clicks on ticket refresh button
       Then user validates finland as affected BU
       When user clicks on CTI details under sections
-      Then user validates Category as "Packet_Transport"
-      And user validates type as "Other"
-      And user validates item as "CPE"
+#      Then user validates Category as "Packet_Transport"
+#      And user validates type as "Other"
+#      And user validates item as "CPE"
       And  user adds attachment and verifies under ""
         | summary   | description | fullFilePath       | attachments |
         | Test JPEG | Test JPEG   | attachement.doc.txt | 1          |

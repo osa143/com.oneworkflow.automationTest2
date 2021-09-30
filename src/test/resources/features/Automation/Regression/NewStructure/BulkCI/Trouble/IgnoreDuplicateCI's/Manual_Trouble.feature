@@ -1,4 +1,4 @@
-@Bulk_Loading_Ignore_Duplicate_CI's_Trouble_Manual @SAO-427
+@Bulk_Loading_Ignore_Duplicate_CI's_Trouble_Manual2 @SAO-427
   #passed
   Feature: Bulk Loading ignore duplicate CI's
     Scenario: Bulk Loading ignore duplicate CI's

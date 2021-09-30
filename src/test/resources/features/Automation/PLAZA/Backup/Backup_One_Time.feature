@@ -11,7 +11,7 @@
       And user clicks on storage & data protection under IT Infrastructure
       When user clicks on "One-time Backup" pebble
       Then user should see "One-time Backup" form
-      Then user selects system name in haiti as "1B"
+      Then user selects system name in haiti as "AAA"
       When user selects role dropdown as "Application Operation Engineer"
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox
@@ -41,7 +41,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | One-time Backup"
       And user validates request type as "Service Request | PLAZA"
-      And user validates back up description same as plaza
+#      And user validates back up description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

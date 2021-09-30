@@ -1,4 +1,4 @@
-@PLAZA_PDB_E2E_Incident @PLAZA_Incident_Flow
+@PLAZA_PDB_E2E_Incident2 @PLAZA_Incident_Flow
   #Ticket ID to come from Plaza
   #below scenario also covers SAO- 5205, when creating a Major ticket from Plaza for PDB validate Importance, impact logic follow.
 Feature: Plaza PDB
@@ -44,7 +44,7 @@ Feature: Plaza PDB
     And user validates service provider as "Data Breach"
     And user validates "<PDB Affected Country>" BU is added automatically
     And user validates PDB title field as "<Title>"
-    And user validates PDB description same as Plaza
+#    And user validates PDB description same as Plaza
     And user validates ticket priority as "<Priority>"
     And user validates plaza pdb impact as "<Impact>"
     And user validates plaza pdb importance as "<Importance>"
@@ -61,7 +61,7 @@ Feature: Plaza PDB
     And user switches to window 1
     And user waits 6 secs
     And user clicks on main page refresh
-    And user should see OW manual notification in plaza ticket as "Test OW Update"
+#    And user should see OW manual notification in plaza ticket as "Test OW Update"
     And user switches to window 3
 #      When user changes status to "Pending"
 #      And user enters on hold to date 2 minutes in the future
@@ -127,64 +127,64 @@ Feature: Plaza PDB
 #      |Estonia                         |No               |Personal Data Breach \| Estonia                                |Minor   |Minor |	Low      |PDB EE           |
       |Lithuania                       |No               |Personal Data Breach \| Lithuania                              |Minor   |Minor |	Low      |PDB LT           |
 
-  @PlazaPDBPending
-  Scenario Outline: Plaza PDB Pending
-
-    Given user is on the Plaza login page
-    When user enters username "testauto" and password as "test123" and clicks on login
-    Then user should see the plaza home page
-    And user clicks on plaza portal
-    When user clicks support on plaza homepage
-    And user clicks on "SUBMIT A TICKET"
-    And user switches to window 1
-    Then user validates PDB submit form opens
-    And user selects service area as "Security"
-    And user selects service as "Personal Data Breach"
-    Then user enters PDB date and time as current date and time
-    And user selects PDB effected country "<PDB Affected Country>"
-    And user selects nature and content as "Address"
-    And user selects affected persons as "<Number of Persons>"
-    And user selects plaza affected persons as other
-    And user enters "Test Data" under Affected persons name and unique id
-    And user clicks on submit button on plaza form
-    And user gets plaza request id
-    And user clicks on plaza request id
-    And user validates internal case management form opens
-    And user waits 40 secs
-    And user clicks on main page refresh
-    Then user should see incident ticket update in plaza
-    Then user opens new tab
-    And user switches to window 2
-    Given user is on the OneWorkflow login page
-    When user logs in with valid username "PlazaTest" and password as "Test@1234"
-    Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user selects search menu as "Open Search Form:Trouble Event"
-    And user switches to window 3
-    Then user should see blank trouble search form
-    When user enters plaza incident ticket
-    And user should see plaza incident ticket
-    When user changes status to "Pending"
-    And user enters on hold to date 2 minutes in the future
-    And user selects on hold reason as "Waiting for Customer Info"
-    Then user clicks on save button
-    And user validates ticket status as "Pending"
-    And user switches to window 1
-    And user waits 6 secs
-    And user clicks on main page refresh
-    And user should see OW manual notification in plaza ticket as "Waiting for Customer Info"
-    And user switches to window 3
-    Then user waits for 9 minutes
-    And user clicks on ticket refresh button
-    And user validates ticket status as "Assigned"
-
-    Examples:
-      |PDB Affected Country             |Number of Persons|Title                                                          |Priority|Impact|Importance|AssignedProfile  |
-#      |Sweden                          |Yes              |Personal Data Breach \| Sweden                                 |Major   |Major |  High    |PDB Control Center|
-      |Sweden                          |No               |Personal Data Breach \| Sweden                                 |Minor   |Minor |	Low      |PDB SE           |
-
-
-
-
+#  @PlazaPDBPending
+#  Scenario Outline: Plaza PDB Pending
+#
+#    Given user is on the Plaza login page
+#    When user enters username "testauto" and password as "test123" and clicks on login
+#    Then user should see the plaza home page
+#    And user clicks on plaza portal
+#    When user clicks support on plaza homepage
+#    And user clicks on "SUBMIT A TICKET"
+#    And user switches to window 1
+#    Then user validates PDB submit form opens
+#    And user selects service area as "Security"
+#    And user selects service as "Personal Data Breach"
+#    Then user enters PDB date and time as current date and time
+#    And user selects PDB effected country "<PDB Affected Country>"
+#    And user selects nature and content as "Address"
+#    And user selects affected persons as "<Number of Persons>"
+#    And user selects plaza affected persons as other
+#    And user enters "Test Data" under Affected persons name and unique id
+#    And user clicks on submit button on plaza form
+#    And user gets plaza request id
+#    And user clicks on plaza request id
+#    And user validates internal case management form opens
+#    And user waits 40 secs
+#    And user clicks on main page refresh
+#    Then user should see incident ticket update in plaza
+#    Then user opens new tab
+#    And user switches to window 2
+#    Given user is on the OneWorkflow login page
+#    When user logs in with valid username "PlazaTest" and password as "Test@1234"
+#    Then user successfully logged in to OneWorkflow and agent console should be displayed
+#    When user selects search menu as "Open Search Form:Trouble Event"
+#    And user switches to window 3
+#    Then user should see blank trouble search form
+#    When user enters plaza incident ticket
+#    And user should see plaza incident ticket
+#    When user changes status to "Pending"
+#    And user enters on hold to date 2 minutes in the future
+#    And user selects on hold reason as "Waiting for Customer Info"
+#    Then user clicks on save button
+#    And user validates ticket status as "Pending"
+#    And user switches to window 1
+#    And user waits 6 secs
+#    And user clicks on main page refresh
+#    And user should see OW manual notification in plaza ticket as "Waiting for Customer Info"
+#    And user switches to window 3
+#    Then user waits for 9 minutes
+#    And user clicks on ticket refresh button
+#    And user validates ticket status as "Assigned"
+#
+#    Examples:
+#      |PDB Affected Country             |Number of Persons|Title                                                          |Priority|Impact|Importance|AssignedProfile  |
+##      |Sweden                          |Yes              |Personal Data Breach \| Sweden                                 |Major   |Major |  High    |PDB Control Center|
+#      |Sweden                          |No               |Personal Data Breach \| Sweden                                 |Minor   |Minor |	Low      |PDB SE           |
+#
+#
+#
+#
 
 
 

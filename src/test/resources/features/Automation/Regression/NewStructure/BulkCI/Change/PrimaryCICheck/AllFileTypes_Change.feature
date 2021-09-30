@@ -1,4 +1,4 @@
-@Text_Bulk_Loading_Primary_CI_Default_Settings_change @SAO-427
+@Text_Bulk_Loading_Primary_CI_Default_Settings_change2 @SAO-427
   #passed
 Feature: checking of bulk loading additional definitions default settings
   Scenario Outline: user checks the bulk loading additional definitions default settings

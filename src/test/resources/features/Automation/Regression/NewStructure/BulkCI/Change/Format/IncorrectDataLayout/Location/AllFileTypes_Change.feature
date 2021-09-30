@@ -1,4 +1,4 @@
-@Bulk_Loading_Format_Location_change @SAO-427
+@Bulk_Loading_Format_Location_change2 @SAO-427
     #Don't need to test for txt file as it dosn't have columns
 Feature: Bulk Loading Incorrect Data layout- Location
     Scenario Outline:Location-All files
@@ -57,8 +57,8 @@ Feature: Bulk Loading Incorrect Data layout- Location
 
           |fileTypes                                                                                                    |
           |Test Attachments\IncorrectFormatColumnLocation\CSV.csv|
-          |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xls|
-          |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xlsx|
+#          |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xls|
+#          |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xlsx|
 
 
 

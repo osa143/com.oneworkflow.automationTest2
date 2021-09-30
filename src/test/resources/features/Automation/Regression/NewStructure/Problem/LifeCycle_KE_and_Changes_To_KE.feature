@@ -40,6 +40,7 @@
       Then known error ticket status should be "Published"
       When user enters description as "More information"
       And user clicks on save button
+      And user waits 10 secs
       Then change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Draft to Published. Known Error Code has changed from  to Risk accepted. Accountable Org. has changed from  to CA_IT. Affected Orgs. has changed from  to CA_Infra;." on row 2
       When user clicks on timeline tab
       And user selects Auto text:Tech bridge closed

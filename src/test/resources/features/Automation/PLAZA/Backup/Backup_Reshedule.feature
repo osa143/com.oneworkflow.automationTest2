@@ -11,7 +11,7 @@
       And user clicks on storage & data protection under IT Infrastructure
       When user clicks on "Re/Schedule Backup" pebble
       Then user should see "Re/Schedule Backup" form
-      Then user selects system name in haiti as "1B"
+      Then user selects system name in haiti as "AAA"
       When user selects role dropdown as "Application Operation Engineer"
       Then user clicks on the contact checkbox
       And user then clicks on the name not found checkbox
@@ -26,6 +26,7 @@
       And user selects Add CI back up as "cc100cgas001"
 #      And user clicks on add attachment in plaza
       And user searches for plaza "Test Attachments\other files\Test WORD FILE.docx" attachment and adds it
+      And user waits 10 secs
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id

@@ -22,7 +22,8 @@
       And user goes back to login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      And user clicks on search and selects open search forms and problem record
+#      And user clicks on search and selects open search forms and problem record
+      And user selects search menu as "Open Search Form:Problem Record"
       And user switches to window 2
       And user enters Problem Ticket
       And user clicks Search on ticket search
@@ -40,7 +41,8 @@
       And user goes back to login page
       When user logs in with valid username "Tohall_copy" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      And user clicks on search and selects open search forms and problem record
+#      And user clicks on search and selects open search forms and problem record
+      And user selects search menu as "Open Search Form:Problem Record"
       And user switches to window 3
       And user enters Problem Ticket
       And user clicks Search on ticket search
@@ -57,7 +59,8 @@
       And user goes back to login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      And user clicks on search and selects open search forms and problem record
+#      And user clicks on search and selects open search forms and problem record
+      And user selects search menu as "Open Search Form:Problem Record"
       And user switches to window 3
       And user enters Problem Ticket
       And user clicks Search on ticket search
@@ -78,7 +81,8 @@
       And user goes back to login page
       When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      And user clicks on search and selects open search forms and problem record
+      And user selects search menu as "Open Search Form:Problem Record"
+#      And user clicks on search and selects open search forms and problem record
       And user switches to window 5
       And user enters Problem Ticket
       And user clicks Search on ticket search

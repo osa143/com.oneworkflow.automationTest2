@@ -1,4 +1,4 @@
-@SAO_453
+@SAO_453_2
 
 Feature: SAO-453 - Missing Interested Party Types (ISO, ISM...)
 
@@ -26,7 +26,7 @@ Feature: SAO-453 - Missing Interested Party Types (ISO, ISM...)
     And user waits 5 secs
     Then user enters as "test" in Change Builder field
     And user switches to frame
-    And user waits 4 secs
+    And user waits 20 secs
     Then user validates multiple options "Additional Access:Change Builder:Change Initiator:Contact:Custom1:Custom2:Requested By:Requested For:Solution Manager:Solution Owner:Vendor:(clear)" should be available in Type dropdown
     And user selects type as "Change Builder" under interested parties
     Then user enters "Change_Automation_3" in login name plus field

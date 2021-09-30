@@ -1,4 +1,4 @@
-@SAO_7115 @Incident_SAO
+@SAO_7115_2 @Incident_SAO
 
 Feature: SAO-7115 - New CI Information GUI
 
@@ -17,9 +17,12 @@ Feature: SAO-7115 - New CI Information GUI
     And user clicks on save button
     Then ticket should be created and status should be assigned
     When user adds below CI's to the ticket
+
+    |CIs|
     |SE_AAA_AAA98SE|
     |SE_AAA_AAA99SE|
     |test          |
+
     And user clicks on Diagnosis tab
     Then user right clicks on CI "SE_AAA_AAA98SE" and selects "Show:CI Details"
     When user clicks manage my template cog button

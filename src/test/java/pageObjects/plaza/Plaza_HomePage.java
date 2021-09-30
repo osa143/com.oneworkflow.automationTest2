@@ -59,7 +59,7 @@ public class Plaza_HomePage extends BaseRecordPage {
     public static final String txt_UNC_LOCAL_PATH= "sp_formfield_include_exclude";
     public static final String txt_Description= "sp_formfield_description";
     public static final String dd_BACK_UP_ADD_CI= "s2id_autogen14";
-    public static final String btn_ADD_ATTACHMENT="//*[@id='catItemTop']/div/div[4]/div/div[2]/label/span";
+    public static final String btn_ADD_ATTACHMENT="//*[@id='catItemTop']/div/div[3]/div/div[2]/label/sp-attachment-button/span/button/span";
     public static final String btn_ADD_SECOND_ATTACHMENT="//*[@id='catItemTop']/div/div[4]/div/div[3]/label/span";
     public static final String txt_INCLUDE_CI="sp_formfield_include_ci";
     public static final String txt_RETENTION_PERIOD="sp_formfield_retention_period";
@@ -302,7 +302,7 @@ public class Plaza_HomePage extends BaseRecordPage {
     private static final String div_PDB_Affected_COUNTRY= "sp_formfield_pdb_country";
     private static final String txt_ASSIGNMENT_GROUP= "sys_display.incident.assignment_group";
     private static final String txt_ASSIGNED_TO= "sys_display.incident.assigned_to";
-    private static final String txt_STATE= "//select[@id='sys_readonly.u_internal_case_management.state']/option[3]";
+    private static final String txt_STATE= "//select[@id='sys_readonly.u_internal_case_management.state']/option[1]";
     private static final String btn_CLOSE_INCIDENT= "close_incident";
     private static final String dd_SYSTEMNAME_HAITI_DATABASE = "s2id_sp_formfield_h2_name";
     private static final String dd_NETWORKSECURITY_HAITI= "s2id_sp_formfield_h2_name";
@@ -381,7 +381,7 @@ public class Plaza_HomePage extends BaseRecordPage {
     private static final String dd_CI_WEBTAB = "//input[@aria-owns='s2id_autogen13_results']";
     private static final String dd_SYSTEM_VEHA = "//input[@aria-owns='s2id_autogen13_results']";
     private static final String dd_CI_OCC = "//input[@aria-owns='s2id_autogen13_results']";
-    private static final String dd_IT_FI_SYSTEM = "//input[@type='text']";
+    private static final String dd_IT_FI_SYSTEM = "s2id_autogen13_results";
     private static final String dd_SYSTEM_NAME_HAITI_NIMBUS = "/html/body/div[6]";
     private static final String dd_NETWORK_SECURITY_REMOTE_ACCESS_SYSTEM_HAITI = "//input[@aria-owns='select2-results-13']";
     private static final String dd_NETWORK_SECURITY_PROXY_GENERAL_INQUIRY_HAITI = "//input[@type='text']";
@@ -395,7 +395,7 @@ public class Plaza_HomePage extends BaseRecordPage {
     private static final String dd_PLAZA_INCIDENT_CATEGORY = "select2-chosen-1";
     private static final String dd_PLAZA_INCIDENT_CATEGORY_RESULTS = "select2-results-1";
     private static final String dd_PLAZA_INCIDENT_TYPE_OF_ISSUE = "s2id_sp_formfield_subcategory";
-    private static final String dd_PLAZA_INCIDENT_TYPE_OF_ISSUE_RESULTS = "select2-results-3";
+    private static final String dd_PLAZA_INCIDENT_TYPE_OF_ISSUE_RESULTS = "select2-results-2";
     private static final String txt_PLAZA_INCIDENT_SUBJECT = "sp_formfield_short_description";
     private static final String txt_PLAZA_INCIDENT_DESCRIPTION = "sp_formfield_description";
     private static final String btn_ACCESS_TO_EMAIL = "//*[@id='sp_formfield_access_to_email']/label[2]/input";
@@ -1153,13 +1153,20 @@ public class Plaza_HomePage extends BaseRecordPage {
     }
 
     public void selectNetworkSecuritySystemNameHaiti(String dropdownName){
+//        PlazaValidation.SystemNameInHaiti = dropdownName;
+//        clickElement(By.id(dd_NETWORKSECURITY_HAITI));
+//        wait(1000);
+//        WebElement Element=findElement(By.id(dd_NETWORK_SECURITY_SYSTEM_NAME_HAITI));
+//        Element.sendKeys(dropdownName);
+//        wait(1000);
+//        Element.sendKeys(Keys.ENTER);
         PlazaValidation.SystemNameInHaiti = dropdownName;
         clickElement(By.id(dd_NETWORKSECURITY_HAITI));
-        wait(1000);
-        WebElement Element=findElement(By.id(dd_NETWORK_SECURITY_SYSTEM_NAME_HAITI));
-        Element.sendKeys(dropdownName);
-        wait(1000);
-        Element.sendKeys(Keys.ENTER);
+        WebElement element= driver.switchTo().activeElement();
+        element.sendKeys(dropdownName);
+        wait(500);
+        element.sendKeys(Keys.ARROW_DOWN);
+        element.sendKeys(Keys.ENTER);
     }
 
     public void selectNetworkSecurityFirewallNewChangeSystemNameHaiti(String dropdownName){

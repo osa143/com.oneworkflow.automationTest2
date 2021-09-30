@@ -1,4 +1,4 @@
-@Bulk_Loading_Format_Incorrect_CI_Names_trouble @SAO-427
+@Bulk_Loading_Format_Incorrect_CI_Names_trouble2 @SAO-427
 #passed
    Feature: checking of bulk loading format
    Scenario Outline: user checks the format of bulk loading format
@@ -48,9 +48,9 @@
      Examples:
 
       |fileTypes                                                                                                 |
-      |Test Attachments\10 CI's - Incorrect Names\CSV.csv|
-      |Test Attachments\10 CI's - Incorrect Names\TEXT.txt|
-      |Test Attachments\10 CI's - Incorrect Names\XLS.xls|
+#      |Test Attachments\10 CI's - Incorrect Names\CSV.csv|
+#      |Test Attachments\10 CI's - Incorrect Names\TEXT.txt|
+#      |Test Attachments\10 CI's - Incorrect Names\XLS.xls|
       |Test Attachments\10 CI's - Incorrect Names\XLSX.xlsx|
 
 

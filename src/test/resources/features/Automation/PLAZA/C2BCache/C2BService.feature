@@ -59,7 +59,7 @@ Feature: Plaza C2B Cache form test
 
     Examples:
     |Request                 |Environment|Description                 |AdditionalComments |
-     |Test1 C2BService/Request|AT         |Test1 C2BService/Description|Test1 C2BService/AC|
+#     |Test1 C2BService/Request|AT         |Test1 C2BService/Description|Test1 C2BService/AC|
      |Test2 C2BService/Request|Prod       |Test2 C2BService/Description|Test1 C2BService/AC|
 
 

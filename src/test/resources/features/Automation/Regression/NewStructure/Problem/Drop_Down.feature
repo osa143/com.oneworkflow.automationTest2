@@ -43,23 +43,23 @@
         | PAMedia       | ConnHome:TV               |
 
       And user selects affected organisation as "CA_IT"
-      And multiple statuses "CA_Infra:CA_IT:CA_Provider:DivX:External:TeliaFinance:(clear)" should be available in "Organisations" dropdown
-      And User selects "Affected Orgs." as dropdownValue and should see values for "notreadonly"
-        | DropdownValue | DropdownValuesToBePresent |
-        | CA_NSD        | IP:ServCore               |
-        | InfraDK       | CableSites:NW             |
-        | InfraEE       | CableSites:NW             |
-        | InfraFI       | CableSites:NW             |
-        | InfraLT       | CableSites:NW             |
-        | InfraNO       | CableSites:NW             |
-        | InfraSE       | CableSites:NCS:PSTN       |
-        | IT            | CustEng:EntServ:Infra:OSS:Workplace |
-        | NO            | OC&MC:Phonero             |
-        | NSD           | ConvAccess:IP:ServCore    |
-        | PAComm        | Conv:VAS:Voice                |
-        | PAConn        | BusNW:Internet:MobVD      |
-        | PAITServ      | MDM_DAAS:Security         |
-        | PAMedia       | ConnHome:TV               |
+#      And multiple statuses "CA_Infra:CA_IT:CA_Provider:DivX:External:TeliaFinance:(clear)" should be available in "Organisations" dropdown
+#      And User selects "Affected Orgs." as dropdownValue and should see values for "notreadonly"
+#        | DropdownValue | DropdownValuesToBePresent |
+#        | CA_NSD        | IP:ServCore               |
+#        | InfraDK       | CableSites:NW             |
+#        | InfraEE       | CableSites:NW             |
+#        | InfraFI       | CableSites:NW             |
+#        | InfraLT       | CableSites:NW             |
+#        | InfraNO       | CableSites:NW             |
+#        | InfraSE       | CableSites:NCS:PSTN       |
+#        | IT            | CustEng:EntServ:Infra:OSS:Workplace |
+#        | NO            | OC&MC:Phonero             |
+#        | NSD           | ConvAccess:IP:ServCore    |
+#        | PAComm        | Conv:VAS:Voice                |
+#        | PAConn        | BusNW:Internet:MobVD      |
+#        | PAITServ      | MDM_DAAS:PaaS:Security         |
+#        | PAMedia       | ConnHome:TV               |
       When user clicks on save button on the problem form
       Then "Estimated Ready:Actual Finish:Decision Go/NoGo:Resolving Group:Resolving Person" shouldn't be visible on problem record form
       Then multiple statuses "Assigned:Pending:Under Investigation:Withdrawn:(clear)" should be available in "Status*" dropdown
@@ -104,7 +104,7 @@
         | Process and Organisation:Caused by Change | Approval flow violated:Inadequate risk assessment:Parallel Changes:Poor testing:Poor Verification |
         | Process and Organisation:Documentation missing or inadequate | Checks list and procedures:CI inadequately documented:CI not documented in inventory |
         | Process and Organisation:Vendor | Lack of documentation:Lack of unclear SLA, WLA, RACI:Not complying to vendor recommendations / requirements:Use of non approved contractor |
-        | Technical | HW error:Lack of capacity,licenses:Lack of patching:Missing inadequate monitoring and alarms:Other:Redundancy didn't work as expected:Root Cause Not Found:Security,hacker attack,SW & Config error:The design does not meet expectation:The implementation is not according to architecture |
+        | Technical | HW error:Lack of capacity,licenses:Lack of patching:Missing inadequate monitoring and alarms:Other:Redundancy didn't work as expected:Root Cause Not Found:Software Bug:Security,hacker attack,SW & Config error:The design does not meet expectation:The implementation is not according to architecture |
         | Technical:Infrastructure | Cooling & Heating:Power |
       And user selects solved under closure code
       And user enters solution as "A change in processes"

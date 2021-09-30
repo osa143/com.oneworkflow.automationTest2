@@ -1,4 +1,4 @@
-@All_File_Types_Bulk_Loading_Ignore_Duplicate_CI's_change @SAO-427
+@All_File_Types_Bulk_Loading_Ignore_Duplicate_CI's_change2 @SAO-427
   #passed
   Feature: Bulk Loading ignore duplicate CI's for change ticket
     Scenario Outline: Bulk Loading ignore duplicate CI's

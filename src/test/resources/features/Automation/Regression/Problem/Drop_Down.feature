@@ -1,4 +1,4 @@
-@Dropdown    @Reg_Problem
+@Dropdown2    @Reg_Problem
 #  This testcase also covers 3 other stories from P2S1 Sprint
 #  SAO-5196:Accountable Organisation drop down menu
 #  SAO-5203:Affected Organisation drop down menu,
@@ -39,7 +39,7 @@
         | NSD           | ConvAccess:IP:ServCore    |
         | PAComm        | Conv:VAS:Voice                |
         | PAConn        | BusNW:Internet:MobVD      |
-        | PAITServ      | MDM_DAAS:Paas:Security         |
+#        | PAITServ      | MDM_DAAS:Paas:Security         |
         | PAMedia       | ConnHome:TV               |
 
       Then user clicks edit affected org button
@@ -59,7 +59,7 @@
         | NSD           | ConvAccess:IP:ServCore    |
         | PAComm        | Conv:VAS:Voice                |
         | PAConn        | BusNW:Internet:MobVD      |
-        | PAITServ      | MDM_DAAS:Paas:Security         |
+#        | PAITServ      | MDM_DAAS:Paas:Security         |
         | PAMedia       | ConnHome:TV               |
       When user clicks on save button on the problem form
       Then "Estimated Ready:Actual Finish:Decision Go/NoGo:Resolving Group:Resolving Person" shouldn't be visible on problem record form

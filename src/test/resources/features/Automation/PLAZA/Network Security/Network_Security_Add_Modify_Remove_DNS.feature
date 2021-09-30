@@ -12,7 +12,8 @@
       And user clicks on firewall & network under IT Infrastructure dropdown
       When user clicks on DNS DHCP pebble
       Then user should see "DNS/DHCP" form
-      Then user selects network security system name in haiti as "1B"
+      Then user selects network security system name in haiti as "AAA"
+#      And user waits 8 secs
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Service Request Name as "Add/Modify/Remove DNS entry"
       And user enters Network Security Add Modify Remove DNS request as "Test1 Network Security Add/Request"

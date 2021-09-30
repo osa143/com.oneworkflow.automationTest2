@@ -1,4 +1,4 @@
-@Bulk_Loading_Format_trouble_50CIS @SAO-427
+@Bulk_Loading_Format_trouble2_50CIS @SAO-427
     #PASSED
   Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format
@@ -48,9 +48,9 @@
 
           |fileTypes                                                                                       |
           |Test Attachments\50 CI's\50CIsCSV.csv|
-          |Test Attachments\50 CI's\50CIsDOC.txt|
-          |Test Attachments\50 CI's\50CIsXLS.xls|
-          |Test Attachments\50 CI's\50CIsXLSX.xlsx|
+#          |Test Attachments\50 CI's\50CIsDOC.txt|
+#          |Test Attachments\50 CI's\50CIsXLS.xls|
+#          |Test Attachments\50 CI's\50CIsXLSX.xlsx|
 
 
 

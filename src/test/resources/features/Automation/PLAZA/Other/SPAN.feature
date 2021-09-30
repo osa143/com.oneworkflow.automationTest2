@@ -72,5 +72,5 @@
      Examples:
 
      |Request            |Environment|Description          |Additional Comments|
-     |SPAN - Test/Request|Test       |SPAN-Test/Description|SPAN-Test/AC       |
+#     |SPAN - Test/Request|Test       |SPAN-Test/Description|SPAN-Test/AC       |
      |SPAN - Prod Request|Prod       |SPAN-Test/Description|SPAN-Test/AC       |

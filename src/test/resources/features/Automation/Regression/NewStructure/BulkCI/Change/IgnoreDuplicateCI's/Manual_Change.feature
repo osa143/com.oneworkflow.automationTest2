@@ -1,4 +1,4 @@
-@Manual_Bulk_Loading_Ignore_Duplicate_CI's_change @SAO-427
+@Manual_Bulk_Loading_Ignore_Duplicate_CI's_change2 @SAO-427
   Feature: Bulk Loading ignore duplicate CI's
     Scenario: Bulk Loading ignore duplicate CI's
 

@@ -1,4 +1,4 @@
-@All_File_Types_Bulk_Loading_CTI_Details_change #@SAO-427
+@All_File_Types_Bulk_Loading_CTI_Details_change2 #@SAO-427
 Feature: checking of bulk loading CTI details and location details
   Scenario Outline: user checks the bulk loading CTI details and location details
 
@@ -58,7 +58,7 @@ Feature: checking of bulk loading CTI details and location details
     When user clicks on ticket refresh button
     When user clicks on CTI details under sections
     Then user validates Category as "Access"
-    And user validates type as "WLAN Access"
+    And user validates type as "WLAN"
     And user validates item as "AccessPoint"
     When user clicks on location under sections
     Then user validates location id as "ALV WLAN11"

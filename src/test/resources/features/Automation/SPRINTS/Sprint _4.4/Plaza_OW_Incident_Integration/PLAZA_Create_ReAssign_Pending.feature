@@ -83,19 +83,19 @@
 #      Then user should see "State has been changed to Work In Progress in OWF with the Assignment Profile: Application-NO" update in plaza
       And user should see OW manual notification in plaza ticket as "State has been changed to Work In Progress in OWF with the Assignment Profile: Application-NO"
       Then user switches to window 3
-#      When user changes status to "Pending"
-#      And user enters on hold to date 2 minutes in the future
-#      And user enters reason field as "Waiting for Customer Info"
-#      Then user clicks on save button and closes warning messages
-#      And change should also be reflected in the timeline as "STATUS MODIFIED.  The trouble Status has changed: Work In Progress >> Pending." on row 1
-#      Then user switches to window 1
-#      And user waits 5 secs
-#      And user validates plaza first timeline message as "State has been changed to Pending in OneWorkflow"
-#      Then user waits for two minutes
-#      When user switches to window 3
-#      And user clicks on ticket refresh button
-#      Then user validates ticket status as "Work In Progress"
-#      And change should also be reflected in the timeline as "State has been changed from Pending to Work In Progress in OneWorkflow" on row 3
+      When user changes status to "Pending"
+      And user enters on hold to date 2 minutes in the future
+      And user enters reason field as "Waiting for Customer Info"
+      Then user clicks on save button and closes warning messages
+      And change should also be reflected in the timeline as "STATUS MODIFIED.  The trouble Status has changed: Work In Progress >> Pending." on row 1
+      Then user switches to window 1
+      And user waits 5 secs
+      And user validates plaza first timeline message as "State has been changed to Pending in OneWorkflow"
+      Then user waits for two minutes
+      When user switches to window 3
+      And user clicks on ticket refresh button
+      Then user validates ticket status as "Work In Progress"
+      And change should also be reflected in the timeline as "State has been changed from Pending to Work In Progress in OneWorkflow" on row 3
       When user changes status to "Cleared" on trouble event page
       And user selects fault position as "N/A:N/A" on trouble event page
       And user selects cause as "N/A:N/A:N/A" on trouble event page

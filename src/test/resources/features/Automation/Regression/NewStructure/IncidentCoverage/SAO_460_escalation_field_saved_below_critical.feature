@@ -1,4 +1,4 @@
-@SAO_460
+@SAO_460_2
 #OP-000000878549-ALM-3924-Escalation - escalation field saved below critical
 
 Feature: SAO-460 - OP-000000878549-ALM-3924-Escalation - escalation field saved below critical
@@ -24,5 +24,5 @@ Feature: SAO-460 - OP-000000878549-ALM-3924-Escalation - escalation field saved 
     And user clicks save button
     And user waits 5 secs
     Then user validates ticket priority as "Emergency"
-    #And user validates hierarchic escalation level as "Escalation manager (EM)"
-    And user validates hierarchic escalation level isnt read only
+    And user validates hierarchic escalation level as "Escalation manager (EM)"
+#    And user validates hierarchic escalation level isnt read only

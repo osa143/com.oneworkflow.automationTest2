@@ -1,4 +1,4 @@
-@Format_change_50CI's_1 @SAO-427
+@Format_change_50CI's_2 @SAO-427
     #passed
 Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format

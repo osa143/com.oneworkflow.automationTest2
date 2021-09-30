@@ -276,6 +276,7 @@ public class OWF_LoginPageSteps extends BaseSteps {
 
     @Then("user navigates back to login page using URL")
     public void userNavigatesBackToLoginPageUsingURL() {
+//        loginPage.getURL(getProperties().getProperty("appURL"));
         loginPage.goBacktoLoginPage();
     }
 }

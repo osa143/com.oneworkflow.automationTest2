@@ -113,8 +113,8 @@
       Examples:
       |BU_Name1 |BU_Name2 |Location|Location Name   |Title                        |Description                  |CI Name1         |CI Name2        |CI Name          |Validate BU |
       |Sweden   |Finland  |SE_     |SE_Site_SE M1   |Test case MT004 Sweden E2E   |Test case MT004 Sweden E2E   |SE_SGSN_FREMME2  |LT_SGSN_VLMMME02|SE_SGSN_FREMME2  |Lithuania   |
-      |Norway   |Finland  |NO_     |NO_Site_VSF087  |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_EPG_AKH902EPG3  |DK_EPG_AMBEPG1  |NO_EPG_AKH902EPG3|Denmark     |
-      |Lithuania|Denmark  |LT_     |LT_Site_9AA     |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E| LT_UMTSCell_0046|SE_SGSN_FREMME2 |LT_UMTSCell_0046 |Sweden      |
-      |Finland  |Denmark  |FI_     |FI_Site_sampi   |Test case MT004 Finland E2E  |Test case MT004 Finland E2E  | FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1|FI_SGSN_HKIMME02 |Estonia     |
+      |Norway   |Finland  |NO_     |NO_Site_VSF087  |Test case MT004 Norway E2E   |Test case MT004 Norway E2E   |NO_EPG_AKH902EPG3|DK_EPG_AMBEPG1  |NO_EPG_AKH902EPG3|Denmark     |
+      |Lithuania|Denmark  |LT_     |LT_Site_9AA     |Test case MT004 Lithuania E2E|Test case MT004 Lithuania E2E|LT_UMTSCell_0046 |SE_SGSN_FREMME2 |LT_UMTSCell_0046 |Sweden      |
+      |Finland  |Denmark  |FI_     |FI_Site_sampi   |Test case MT004 Finland E2E  |Test case MT004 Finland E2E  |FI_SGSN_HKIMME02 |EE_EPG_KOORTEPG1|FI_SGSN_HKIMME02 |Estonia     |
       |Estonia  |Sweden   |EE_     |EE_Site_KARDL   |Test case MT004 Estonia E2E  |Test case MT004 Estonia E2E  |EE_EPG_KOORTEPG1 |FI_SGSN_HKIMME02|EE_EPG_KOORTEPG1 |Finland     |
       |Denmark  |Sweden   |DK_     |DK_Site_S0001   |Test case MT004 Denmark E2E  |Test case MT004 Denmark E2E  |DK_EPG_AMBEPG1   |EE_EPG_KOORTEPG1|DK_EPG_AMBEPG1   |Estonia     |

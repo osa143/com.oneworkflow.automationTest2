@@ -299,6 +299,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
             driver.findElement(By.id(txt_Impact_From_CI_Search)).sendKeys(Keys.ENTER);
         }
         clickRelateCiButton();
+        wait(2000);
         clickYesOnConfirmationMessage();
         //closeWarningMessage();
         wait(3000);
@@ -604,7 +605,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     public void selectCi(String text)
     {
         wait(1000);
-        ClickTableElementByText(By.id(RelatedCI_DIAGNOSIS_TABLE_ID),"CI Name",text,false);
+        ClickTableElementByText(By.id(Table_ID),"Name",text,false);
     }
 
 

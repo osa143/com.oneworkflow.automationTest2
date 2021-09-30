@@ -17,7 +17,6 @@ public class OWF_LoginPageSteps extends BaseSteps {
     @Given("user is on the OneWorkflow login page")
     public void userIsOnTheOneWorkflowLoginPage() {
         loginPage.getURL(getProperties().getProperty("appURL"));
-
         String LoginPageTitle = loginPage.getPageTitle();
         System.out.println(LoginPageTitle);
         // Assert.assertEquals(LoginPageTitle, "BMC Remedy Mid Tier 9.1 - Login");
@@ -266,6 +265,19 @@ public class OWF_LoginPageSteps extends BaseSteps {
     @When("user selects the preferences as {string}")
     public void userSelectsThePreferencesAs(String preferences) {
      securityConsolePage.selectPreferences(preferences);
+    }
+
+
+    @Then("user logs in with valid username {string} and password as {string} on new login page")
+    public void userLogsInWithValidUsernameAndPasswordAsOnNewLoginPage(String username, String password) {
+        loginPage.doNewLogin(username, password);
+        loginPage.wait(3000);
+    }
+
+    @Then("user navigates back to login page using URL")
+    public void userNavigatesBackToLoginPageUsingURL() {
+//        loginPage.getURL(getProperties().getProperty("appURL"));
+        loginPage.goBacktoLoginPage();
     }
 }
 

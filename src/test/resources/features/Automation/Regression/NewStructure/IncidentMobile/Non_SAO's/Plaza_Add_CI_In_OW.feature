@@ -50,5 +50,5 @@ Feature: Adding CI in OW
     #When user adds CI "One Workflow" to the ticket
     When user adds CI "One Workflow" to the ticket with impact level "No Impact"
     #When user add ci "" to the ticket with impact level "No Impact"
-    Then user validates CI "cc100cgas001" is listed
-    And user validates CI "One Workflow" is listed in row 2
+    Then user validates CI "cc100cgas001" is listed in row 2
+    And user validates CI "One Workflow" is listed in row 1

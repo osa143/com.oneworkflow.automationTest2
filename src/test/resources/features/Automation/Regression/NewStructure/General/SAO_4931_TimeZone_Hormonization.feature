@@ -8,40 +8,40 @@
      Given user is on the OneWorkflow login page
      When user logs in with valid username "frvi96_auto" and password as "Test@1234"
      Then user successfully logged in to OneWorkflow and agent console should be displayed
-     And user should see specified Timezone as "GMT+0000 (Greenwich Mean Time)" top right under username
+     And user should see specified Timezone as "Etc/UTC" top right under username
      When user selects "Console" menu as "SID Console"
      And user switches to window 1
-     Then user should see specified Timezone as "GMT+0000 (Greenwich Mean Time)" top right under username
+     Then user should see specified Timezone as "Etc/UTC" top right under username
      And user closes current tab
      And user switches to window 0
      When user selects "Console" menu as "Alert Console"
      And user switches to window 1
-     Then user should see specified Timezone as "GMT+0000 (Greenwich Mean Time)" top right under username
+     Then user should see specified Timezone as "Etc/UTC" top right under username
      And user closes current tab
      And user switches to window 0
      When user selects "Create" menu as "Change Record/Project/Freeze"
      And user switches to window 1
-     Then user should see specified Timezone as "GMT+0000 (Greenwich Mean Time)" top right under username
+     Then user should see specified Timezone as "Etc/UTC" top right under username
      And user closes current tab
      And user switches to window 0
      When user selects "Create" menu as "Problem Record"
      And user switches to window 1
-     Then user should see specified Timezone as "GMT+0000 (Greenwich Mean Time)" top right under username
+     Then user should see specified Timezone as "Etc/UTC" top right under username
      And user closes current tab
      And user switches to window 0
      When user selects "Create" menu as "Trouble Event"
      And user switches to window 1
-     Then user should see specified Timezone as "GMT+0000 (Greenwich Mean Time)" top right under username
+     Then user should see specified Timezone as "Etc/UTC" top right under username
      And user closes current tab
      And user switches to window 0
      When user selects "Create" menu as "Work Order"
      And user switches to window 1
-     Then user should see specified Timezone as "GMT+0000 (Greenwich Mean Time)" top right under username
+     Then user should see specified Timezone as "Etc/UTC" top right under username
      And user closes current tab
      And user switches to window 0
      When user selects "Create" menu as "Known Error"
      And user switches to window 1
-     Then user should see specified Timezone as "GMT+0000 (Greenwich Mean Time)" top right under username
+     Then user should see specified Timezone as "Etc/UTC" top right under username
      And user closes current tab
      And user switches to window 0
      When user selects "Nav-Username" as "My Account"

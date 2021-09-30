@@ -1,27 +1,27 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/Regression/NewStructure/IncidentMobile/SAO\u0027s/SAO_6830_PrimaryCI_Column_In_LinkedItemsTab.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/Automation/Regression/NewStructure/Problem/Profile_Permissions_Part_1.feature");
 formatter.feature({
-  "name": "Incident",
+  "name": "profile permissions part 1",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@6830"
+      "name": "@Profile_Permissions_Part_1"
     },
     {
-      "name": "@Incident_SAO"
+      "name": "@ProblemRegression"
     }
   ]
 });
 formatter.scenario({
-  "name": "verify primary CI column and CI for linked ticket",
+  "name": "profile permissions part 1",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@6830"
+      "name": "@Profile_Permissions_Part_1"
     },
     {
-      "name": "@Incident_SAO"
+      "name": "@ProblemRegression"
     }
   ]
 });
@@ -36,11 +36,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user logs in with valid user and password",
+  "name": "user logs in with valid username \"syvaptu1_auto\" and password as \"Test@1234\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_LoginPageSteps.userLogsInWithValidUserAndPassword()"
+  "location": "OWF_LoginPageSteps.userLogsInWithValidUsernameAndPasswordAs(String,String)"
 });
 formatter.result({
   "status": "passed"
@@ -56,11 +56,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on create trouble event",
+  "name": "user clicks on create problem record",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnCreateTroubleEvent()"
+  "location": "OWF_AgentConsolePageSteps.userClicksOnCreateProblemRecord()"
 });
 formatter.result({
   "status": "passed"
@@ -76,61 +76,41 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "trouble record form should appear in new tab",
+  "name": "problem record form should appear in new tab",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_TroubleEventPageSteps.troubleRecordFormShouldAppearInNewTab()"
+  "location": "OWF_ProblemRecordPageSteps.problemRecordFormShouldAppearInNewTab()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on sweden checkbox under affected BU\u0027s",
+  "name": "user creates problem ticket with below details",
+  "rows": [
+    {
+      "cells": [
+        "Title",
+        "RequestType",
+        "Description",
+        "ImpactType",
+        "Urgency"
+      ]
+    },
+    {
+      "cells": [
+        "Proactive investigation of frvi96_auto",
+        "XX_Test:Functional Test",
+        "UAT Profile Permissions test",
+        "Moderate/Limited",
+        "Low"
+      ]
+    }
+  ],
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksOnSwedenCheckboxUnderAffectedBUS()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters \"Parent ticket\" in Title field in Trouble event",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userEntersInTitleFieldInTroubleEvent(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects request type as \"Customer\" on trouble event page",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userSelectsRequestTypeAsStringOnTroubleEventPage(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters description as \"Link to child ticket\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersDescriptionAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
+  "location": "OWF_ProblemRecordPageSteps.userCreatesProblemTicketWithBelowDetails(DataTable)"
 });
 formatter.result({
   "status": "passed"
@@ -146,91 +126,181 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user adds CI \"SE_LTECell_220184024\" to the ticket",
+  "name": "user clicks on \"Interested Parties\" tab",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_CiSearchPageSteps.userAddsToTheTicket(String)"
+  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "CI should be listed and displayed under the Diagnosis tab",
+  "name": "user clicks on add button under interested parties",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_KnownErrorPageSteps.userClicksOnAddButtonUnderInterestedParties()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user switches to frame 2",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userSwitchesToFrame(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects type as \"Additional Access\" under interested parties",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_KnownErrorPageSteps.userSelectsTypeAsUnderInterestedParties(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on radio button user",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_KnownErrorPageSteps.userClicksOnRadioButtonUser()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters \"Tohall_copy\" in login name plus field",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_CiSearchPageSteps.ciShouldBeListedAndDisplayedUnderTheDiagnosisTab()"
+  "location": "OWF_KnownErrorPageSteps.userEntersInLoginNamePlusField(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on create trouble event",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_AgentConsolePageSteps.userClicksOnCreateTroubleEvent()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user switches to window 2",
+  "name": "user clicks on search under add interested party",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
+  "location": "OWF_KnownErrorPageSteps.userClicksOnSearchUnderAddInterestedParty()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "trouble record form should appear in new tab",
+  "name": "user highlights present user under add interested party",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userHighlightsPresentUser()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects access radio button as read and write",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_KnownErrorPageSteps.userSelectsAccessRadioButtonAsReadAndWrite()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user selects auto notify radio button as yes",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_KnownErrorPageSteps.userSelectsAutoNotifyRadioButtonAsYes()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on save button under interested parties frame",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userClicksOnSaveButtonUnderInterestedPartiesFrame()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "problem initiator user should be listed under interested parties tab",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_TroubleEventPageSteps.troubleRecordFormShouldAppearInNewTab()"
+  "location": "OWF_ProblemRecordPageSteps.problemInitiatorUserShouldBeListedUnderInterestedPartiesTab()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks on sweden checkbox under affected BU\u0027s",
+  "name": "user clicks on \"Additional Info\" tab",
   "keyword": "When "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userClicksOnSwedenCheckboxUnderAffectedBUS()"
+  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters \"Child ticket\" in Title field in Trouble event",
+  "name": "user enters \"Tohall_copy\" in the analysis team member one field",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userEntersInTitleFieldInTroubleEvent(String)"
+  "location": "OWF_ProblemRecordPageSteps.userEntersInTheAnalysisTeamMemberOneField(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user selects request type as \"Customer\" on trouble event page",
+  "name": "user clicks on save button on the problem form",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userSelectsRequestTypeAsStringOnTroubleEventPage(String)"
+  "location": "OWF_ProblemRecordPageSteps.userClicksOnSaveButtonOnTheProblemForm()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters description as \"Link to Master ticket\"",
+  "name": "user should see problem initiator listed as analysis team member one as \"Tohall_copy\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userShouldSeeProblemInitiatorListedAsAnalysisTeamMemberOneAs(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on \"Restricted Info\" tab",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters \"Restricted info\" in the information field",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersDescriptionAs(String)"
+  "location": "OWF_ProblemRecordPageSteps.userEntersInTheInformationField(String)"
 });
 formatter.result({
   "status": "passed"
@@ -246,114 +316,55 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "ticket should be created and status should be assigned",
+  "name": "user gets ticket value",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_ChangeRecordPageSteps.ticketShouldBeCreatedAndStatusShouldBeAssigned()"
+  "location": "OWF_ProblemRecordPageSteps.userGetsTicketValue()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user gets trouble ticket value",
+  "name": "user logsOut",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userGetsTroubleTicketValue()"
+  "location": "OWF_AgentConsolePageSteps.userLogsOut()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user switches to window 1",
+  "name": "user navigates back to login page using URL",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userNavigatesBackToLoginPageUsingURL()"
+});
+formatter.result({
+  "error_message": "org.openqa.selenium.InvalidArgumentException: invalid argument\n  (Session info: chrome\u003d92.0.4515.159)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-I92010A\u0027, ip: \u0027192.168.0.8\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_211\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\\Users\\h_smi\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58402}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: a1059f0e1e964fe11df3848a253667ab\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)\r\n\tat pageObjects.OWF_LoginPage.goBacktoLoginPage(OWF_LoginPage.java:56)\r\n\tat steps.OWF_LoginPageSteps.userNavigatesBackToLoginPageUsingURL(OWF_LoginPageSteps.java:279)\r\n\tat ✽.user navigates back to login page using URL(features/Automation/Regression/NewStructure/Problem/Profile_Permissions_Part_1.feature:42)\r\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "user logs in with valid username \"mina09_auto\" and password as \"Test@1234\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
+  "location": "OWF_LoginPageSteps.userLogsInWithValidUsernameAndPasswordAs(String,String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "user clicks on linked items tab",
-  "keyword": "When "
+  "name": "user clicks on search and selects open search forms and problem record",
+  "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_CiSearchPageSteps.userClicksOnLinkedItemsTab()"
+  "location": "OWF_AgentConsolePageSteps.userClicksOnSearchAndSelectsOpenSearchFormsAndProblemRecord()"
 });
 formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects target application first dropdown as \"OS3 - Operations\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.userSelectsTargetApplicationFirstDropdownAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user selects target application second dropdown as \"Is master of\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.userSelectsTargetApplicationSecondDropdownAs(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on link button under linked items tab",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userClicksOnLinkButtonUnderLinkedItemsTab()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user switches to frame",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userSwitchesToFrame()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters ticket in ticket ID+ field",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_ProblemRecordPageSteps.userEntersTicketInTicketIDField()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on the search button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userClicksOnTheSearchButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on accept button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userClicksOnAcceptButton()"
-});
-formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "user switches to window 2",
@@ -363,87 +374,307 @@ formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "user adds CI \"SE_GSMCell_111124\" to the ticket",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.userAddsToTheTicket(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "CI should be listed and displayed under the Diagnosis tab",
+  "name": "user enters Problem Ticket",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_CiSearchPageSteps.ciShouldBeListedAndDisplayedUnderTheDiagnosisTab()"
+  "location": "OWF_ProblemRecordPageSteps.userEntersProblemTicket()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "user clicks on linked items tab",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.userClicksOnLinkedItemsTab()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user should see \"Primary CI\" as \"SE_LTECell_220184024\" for linked ticket",
+  "name": "user clicks Search on ticket search",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userShouldSeeAsForLinkedTicket(String,String)"
+  "location": "OWF_ProblemRecordPageSteps.userClicksSearchOnTicketSearch()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "user switches to window 1",
+  "name": "user changes status to \"Under Investigation\" on problem record page",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userChangesStatusToOnProblemRecordPage(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on save button on the problem form",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userClicksOnSaveButtonOnTheProblemForm()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "problem ticket status should be under investigation",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.problemTicketStatusShouldBeUnderInvestigation()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "change should also be reflected in the timeline as \"STATUS MODIFIED.  Status has changed from Assigned to Under Investigation. \"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.changeShouldAlsoBeReflectedInTheTimelineAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on \"Restricted Info\" tab",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user enters \"More Restricted info\" in the information field",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userEntersInTheInformationField(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on save button on the problem form",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userClicksOnSaveButtonOnTheProblemForm()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user logsOut",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userLogsOut()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user navigates back to login page using URL",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userNavigatesBackToLoginPageUsingURL()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user logs in with valid username \"Tohall_copy\" and password as \"Test@1234\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_LoginPageSteps.userLogsInWithValidUsernameAndPasswordAs(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on search and selects open search forms and problem record",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userClicksOnSearchAndSelectsOpenSearchFormsAndProblemRecord()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user switches to window 3",
   "keyword": "And "
 });
 formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userSwitchesToWindow(int)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "user clicks on linked items tab",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "OWF_CiSearchPageSteps.userClicksOnLinkedItemsTab()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user validates linked ticket availability under linked items",
+  "name": "user enters Problem Ticket",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userValidatesLinkedTicketAvailabilityUnderLinkedItems()"
+  "location": "OWF_ProblemRecordPageSteps.userEntersProblemTicket()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "user should see \"Primary CI\" as \"SE_GSMCell_111124\" for linked ticket",
+  "name": "user clicks Search on ticket search",
   "keyword": "And "
 });
 formatter.match({
-  "location": "OWF_TroubleEventPageSteps.userShouldSeeAsForLinkedTicket(String,String)"
+  "location": "OWF_ProblemRecordPageSteps.userClicksSearchOnTicketSearch()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user changes status to \"Investigation Complete\" on problem record page",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userChangesStatusToOnProblemRecordPage(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user selects root cause code as Technical:HW error under route cause",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userSelectsRootCauseCodeAsTechnicalHWErrorUnderRouteCause()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user enters route cause details as \"Lacking information and RC found date\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userEntersRouteCauseDetailsAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user enters RC found date as current date",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userEntersRCFoundDateAsCurrentDate()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on save button on the problem form",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userClicksOnSaveButtonOnTheProblemForm()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates ticket status as \"Investigation Complete\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_WorkOrderPageSteps.userValidatesTicketStatusAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "change should also be reflected in the timeline as \"STATUS MODIFIED.  Status has changed from Under Investigation to Investigation Complete. \"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.changeShouldAlsoBeReflectedInTheTimelineAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on \"Restricted Info\" tab",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user validates text availability within information field",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userValidatesTextAvailabilityWithinInformationField()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user enters \"Even more Restricted info\" in the information field",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userEntersInTheInformationField(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on save button on the problem form",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userClicksOnSaveButtonOnTheProblemForm()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user enters description as \"More information on problem ticket\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userEntersDescriptionAs(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user clicks on save button on the problem form",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.userClicksOnSaveButtonOnTheProblemForm()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "change should be reflected in the timeline \"Ticket Description has changed from |UAT Profile Permissions test| to |More information on problem ticket|\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "OWF_ProblemRecordPageSteps.changeShouldBeReflectedInTheTimeline(String)"
+});
+formatter.result({
+  "status": "skipped"
 });
 formatter.after({
   "status": "passed"

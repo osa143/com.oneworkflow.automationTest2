@@ -1,4 +1,4 @@
-@SAO_613
+@SAO_613 @IncidentCoverage
 
 Feature: SAO-613 - QuickCreate - Cannot Save OP ticket
 

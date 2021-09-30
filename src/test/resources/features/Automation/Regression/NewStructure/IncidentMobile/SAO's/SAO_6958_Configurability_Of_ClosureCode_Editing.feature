@@ -4,7 +4,7 @@
     Scenario: Verification of configuring source
 
      Given user is on the OneWorkflow login page
-     When user logs in with valid username "fhr501" and password as "H0neybadger1"
+     When user logs in with valid username "apitester1" and password as "badger"
      Then user successfully logged in to OneWorkflow and agent console should be displayed
      When user selects "Administration" menu as "Trouble:Edit Closure Code Configuration"
      And user switches to window 1
@@ -16,6 +16,7 @@
 
 
     @6958_2
+     #To DO: Update Date when running to match current date-29 days
     Scenario: Verification of edit closure codes
 
      Given user is on the OneWorkflow login page
@@ -35,7 +36,7 @@
      And user enters "HPE Common Temip" in the source field
      When user clicks on advanced search button
      ## In advance search we have to enter the date in correct format to search within age in days of source##
-     And user enters "'Event Start Time' > \"28/02/2021\" AND 'Event End Time' != $NULL$" in the advanced search bar
+     And user enters "'Event Start Time' > \"2021/08/20\" AND 'Event End Time' != $NULL$" in the advanced search bar
      And user clicks Search on ticket search
      And user waits 15 secs
      When user selects fault position as "Other:Other" on trouble event page
@@ -55,7 +56,7 @@
      And user enters "HPE Common Temip" in the source field
      When user clicks on advanced search button
      ## In advanced search we have to enter the date in correct format to search within age in days of source##
-     And user enters "'Event Start Time' < \"28/02/2021\" AND 'Event End Time' != $NULL$" in the advanced search bar
+     And user enters "'Event Start Time' < \"2021/07/01\" AND 'Event End Time' != $NULL$" in the advanced search bar
      And user clicks Search on ticket search
      And user waits 15 secs
      And user should see fault position, equipment, cause, action, closure info fields read only

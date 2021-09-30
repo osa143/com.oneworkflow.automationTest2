@@ -1,8 +1,7 @@
-@Pm_Withdraw_Ticket_Before_Ack @problem @Reg_Problem  @prob
+@Pm_Withdraw_Ticket_Before_Ack @ProblemRegression
   #passed
-
-Feature: problem record
-  Scenario: problem manager withdraws ticket before Ack
+Feature: Problem Manager Withdraws ticket before Ack
+  Scenario: PM Withdraw after ack - problem manager withdraws ticket before Ack
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"

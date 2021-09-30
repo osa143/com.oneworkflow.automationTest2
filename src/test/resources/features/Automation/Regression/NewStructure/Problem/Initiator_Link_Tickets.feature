@@ -1,7 +1,7 @@
-@Initiator_Link_Tickets @Reg_Problem  @problem @prob @HelixRegression
+@Initiator_Link_Tickets @ProblemRegression
   #passed  #CI search window
-Feature: Initiator link tickets
-  Scenario: user should be able to link different types of tickets together
+  Feature: Initiator link tickets
+  Scenario: Initiator link tickets - user should be able to link different types of tickets together
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"

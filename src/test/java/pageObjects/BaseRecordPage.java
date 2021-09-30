@@ -307,6 +307,7 @@ public class BaseRecordPage extends BasePage {
     }
     public void clickPendingTicketForApproval(){
         clickElement(By.xpath(fld_PENDING_TICKET));
+        wait(2000);
     }
 
     public void clickOpenCheckBox(){
@@ -424,7 +425,7 @@ public class BaseRecordPage extends BasePage {
     }
 
     public void clickTableElement_interestedParteis(String colName, String cellData){
-        WebElement element=getTableCellElement(By.xpath(table_INTERESTED_PARTIES_ID), colName, cellData);
+        WebElement element=getTableCellElement(By.id(table_INTERESTED_PARTIES_ID), colName, cellData);
         element.click();
     }
 
@@ -572,7 +573,7 @@ public class BaseRecordPage extends BasePage {
     }
 
    public void clickYes(){
-        findElement(By.xpath(btnYES)).click();
+        findElement(By.id(btnYES)).click();
     }
     public void clickYes_Helix(){
         switchToFrameByIndex(2);

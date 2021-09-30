@@ -1,8 +1,7 @@
-@PM_Withdraw_Ticket_After_Ack @problem @Reg_Problem  @prob
+@PM_Withdraw_Ticket_After_Ack @ProblemRegression
 #passed
-Feature:withdraw problem Ticket
-
-  Scenario: withdraw ticket after Acknowledge
+  Feature: Problem Manager Withdraws ticket after Ack
+  Scenario: PM withdraw after ack - user can withdraw ticket after acknowledge
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"

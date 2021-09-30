@@ -1,7 +1,6 @@
-
+@5324 @ProblemRegression
    Feature: SAO-5324 Next Assessment date
-    @5324
-    Scenario: verify when next assessment date less than 5 days in the future should send email notification
+    Scenario: SAO-5324 - verify when next assessment date less than 5 days in the future should send email notification
 
      Given user is on the OneWorkflow login page
      When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"

@@ -79,7 +79,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String txt_URGENCY= "arid_WIN_0_705002083";
     private static final String txt_ROOTCAUSECODE= "arid_WIN_0_777031437";
     private static final String rbtn_PRIVATE= "WIN_0_rc1id777021180";
-    private static final String btn_REFRESH= "//*[@id='WIN_4_777506000']/div[1]/table/tbody/tr/td[2]/a[2]";
+    private static final String btn_REFRESH= "//*[@id=\"WIN_4_777506000\"]/div[1]/table/tbody/tr/td[2]/a[2]";
     private static final String txt_SERVICEAFFECTED= "arid_WIN_0_600001014";
     private static final String txt_ESTIMATED_READY= "arid_WIN_0_777504503";
     private static final String txt_MODEL= "arid_WIN_0_240001002";
@@ -124,7 +124,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     private static final String Error_POP_UP_ID= "PopupMsgBox";
     private static final String btn_Open_Attachment= "WIN_0_777000021";
     private static final String txt_IMPACT_TYPE= "arid_WIN_0_700009080";
-    private static final String link_GO_BACK_TO_LOGIN= "//*[@id='logoutmsg']/tbody/tr[4]/td[2]/a";
+    private static final String link_GO_BACK_TO_LOGIN= "ReturnHome";
     private static final String btn_AFFECTED_ORG = "//a[@title='Edit']";
 
 
@@ -132,7 +132,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         enterTextByElement(By.id(txt_VENDOR_NAME), vendorName);
     }
     public void clickOnGoBackToLoginPage(){
-        clickElement(By.xpath(link_GO_BACK_TO_LOGIN));
+        clickElement(By.className(link_GO_BACK_TO_LOGIN));
     }
 
     public void clickOpenAttachment(){
@@ -438,10 +438,9 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
     }
     public void clickYes_impactClear(){
+        wait(2000);
         int frames= driver.findElements(By.tagName("iframe")).size();
-
-        if(frames==2){
-
+        if(frames==2) {
         }
         else if(frames>=3){
             switchToFrameByIndex(frames-1);
@@ -450,6 +449,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
         }
         else {
             try{
+                switchToFrameByIndex(frames-1);
                 clickElement(By.xpath(btn_YES));
                 wait(500);
             }
@@ -459,6 +459,11 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
         }
     }
+
+    public void ImpactYesClick(){
+
+    }
+
     public boolean verifyTitleIsReadOnly(){
         return checkIfControlIsReadonly(txtTITLE_ID);
     }
@@ -867,4 +872,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
     }
 
+    public void clickYesOnImpactClear() {
+        driver.findElement(By.xpath(btn_YES)).click();
+    }
 }

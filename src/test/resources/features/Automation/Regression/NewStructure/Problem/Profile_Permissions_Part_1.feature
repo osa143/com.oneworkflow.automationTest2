@@ -1,10 +1,12 @@
-@Profile_Permissions_Part_1 @problem @Reg_Problem  @prob @HelixRegression
+@Profile_Permissions_Part_1 @ProblemRegression
 #Passed
 
   Feature:  profile permissions part 1
     Scenario:  profile permissions part 1
 
       Given user is on the OneWorkflow login page
+#      When user closes login popup
+#      Then user logs in with valid username "syvaptu1_auto" and password as "Test@1234" on new login page
       When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create problem record
@@ -36,7 +38,8 @@
       And user clicks on save button
       Then user gets ticket value
       And user logsOut
-      Then user goes back to login page
+      #And user goes back to login page
+      Then user navigates back to login page using URL
       And user logs in with valid username "mina09_auto" and password as "Test@1234"
       Then user clicks on search and selects open search forms and problem record
       And user switches to window 2
@@ -50,7 +53,8 @@
       And user enters "More Restricted info" in the information field
       And user clicks on save button on the problem form
       Then user logsOut
-      And user goes back to login page
+      #And user goes back to login page
+      Then user navigates back to login page using URL
       When user logs in with valid username "Tohall_copy" and password as "Test@1234"
       Then user clicks on search and selects open search forms and problem record
       And user switches to window 3

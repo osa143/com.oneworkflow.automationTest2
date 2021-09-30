@@ -119,7 +119,8 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@B2B_Test_Cases</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@Profile_Permissions_Part_1</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@ProblemRegression</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -138,71 +139,483 @@
 										<h6 class="mb-3 ml-1">Test Logs</h6>
 											<div class="tsc" status="fail">
 											<div class="st fail test l0" 
-												tags="@B2B_Test_Cases"
+												tags="@Profile_Permissions_Part_1 @ProblemRegression"
 												devices="">
-												<span class="tt">09.30.2021 10:05:34</span>&nbsp;
+												<span class="tt">09.09.2021 16:10:15</span>&nbsp;
 												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">[B2B Cancel work order to field service before work is carried out] started</span>
+												<span class="tn">[profile permissions part 1] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @B2B_Test_Cases</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Profile_Permissions_Part_1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @ProblemRegression</span>
 												</span>
 												
 											</div>
 											<div class="st fail test l1" 
-												tags=""
+												tags="@Profile_Permissions_Part_1 @ProblemRegression"
 												devices="">
-												<span class="tt">09.30.2021 10:05:34</span>&nbsp;
+												<span class="tt">09.09.2021 16:10:15</span>&nbsp;
 												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">|---[user can cancel a work order sent to a field service before any work is carried out] started</span>
-												
-											</div>
-											<div class="st fail test l2" 
-												tags="@B2B_Test_Cases"
-												devices="">
-												<span class="tt">09.30.2021 10:05:34</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[user can cancel a work order sent to a field service before any work is carried out] started</span>
+												<span class="tn">|---[profile permissions part 1] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @B2B_Test_Cases</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Profile_Permissions_Part_1</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @ProblemRegression</span>
 												</span>
 												
 											</div>
-											<div class="st pass test l3" 
+											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:05:34</span>&nbsp;
+												<span class="tt">09.09.2021 16:10:15</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">09.30.2021 10:05:38</span>&nbsp;
+													<span class="tt">09.09.2021 16:10:21</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st fail test l3" 
+											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:05:38</span>&nbsp;
+												<span class="tt">09.09.2021 16:10:21</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:10:28</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:10:28</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:10:28</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:10:28</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create problem record] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:10:35</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create problem record]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:10:35</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:10:35</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 1]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:10:35</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem record form should appear in new tab] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:10:35</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem record form should appear in new tab]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:10:35</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user creates problem ticket with below details] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:10:35</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user creates problem ticket with below details]</span>
+													
+													<span class="td"><table class='runtime-table table-striped table'><tr><td>Title</td><td>RequestType</td><td>Description</td><td>ImpactType</td><td>Urgency</td></tr><tr><td>Proactive investigation of frvi96_auto</td><td>XX_Test:Functional Test</td><td>UAT Profile Permissions test</td><td>Moderate/Limited</td><td>Low</td></tr></table></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:10:57</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then ticket should be created and status should be assigned] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:07</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then ticket should be created and status should be assigned]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:07</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Interested Parties" tab] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:09</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Interested Parties" tab]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:09</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on add button under interested parties] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:09</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on add button under interested parties]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:09</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to frame 2] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:10</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to frame 2]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:10</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects type as "Additional Access" under interested parties] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:13</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects type as "Additional Access" under interested parties]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:13</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on radio button user] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:14</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on radio button user]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters "Tohall_copy" in login name plus field] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:14</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters "Tohall_copy" in login name plus field]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search under add interested party] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:14</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on search under add interested party]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user highlights present user under add interested party] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:14</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user highlights present user under add interested party]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects access radio button as read and write] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:14</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects access radio button as read and write]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects auto notify radio button as yes] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:14</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects auto notify radio button as yes]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button under interested parties frame] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:18</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button under interested parties frame]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:18</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem initiator user should be listed under interested parties tab] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:18</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem initiator user should be listed under interested parties tab]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:18</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Additional Info" tab] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:21</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Additional Info" tab]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:21</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "Tohall_copy" in the analysis team member one field] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:21</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "Tohall_copy" in the analysis team member one field]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:21</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:26</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:26</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see problem initiator listed as analysis team member one as "Tohall_copy"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:27</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see problem initiator listed as analysis team member one as "Tohall_copy"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:27</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Restricted Info" tab] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:30</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Restricted Info" tab]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:30</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "Restricted info" in the information field] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:30</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "Restricted info" in the information field]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:30</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:37</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:37</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user gets ticket value] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:11:37</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user gets ticket value]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:11:37</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut] started</span>
+												
+												<div class="st pass">
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logsOut]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid user and password] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user navigates back to login page using URL] started</span>
 												
 												<div class="st fail">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">fail</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid user and password]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user navigates back to login page using URL]</span>
 													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#username\-id"}
-  (Session info: chrome=94.0.4606.61)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.InvalidArgumentException: invalid argument
+  (Session info: chrome=92.0.4515.159)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-6FQK1D6', ip: '10.85.242.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+System info: host: 'DESKTOP-I92010A', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\jlm97\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61428}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 580ee632527b14c4900d5cec57f793df
-*** Element info: {Using=id, value=username-id}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\h_smi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58402}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a1059f0e1e964fe11df3848a253667ab
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -213,1581 +626,520 @@ Session ID: 580ee632527b14c4900d5cec57f793df
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.OWF_LoginPage.enterUsername(OWF_LoginPage.java:13)
-	at pageObjects.OWF_LoginPage.doLogin(OWF_LoginPage.java:26)
-	at steps.OWF_LoginPageSteps.userLogsInWithValidUserAndPassword(OWF_LoginPageSteps.java:42)
-	at ✽.user logs in with valid user and password(features/Automation/Regression/B2B/B2B_Test_Cases.feature:10)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at pageObjects.OWF_LoginPage.goBacktoLoginPage(OWF_LoginPage.java:56)
+	at steps.OWF_LoginPageSteps.userNavigatesBackToLoginPageUsingURL(OWF_LoginPageSteps.java:279)
+	at ✽.user navigates back to login page using URL(features/Automation/Regression/NewStructure/Problem/Profile_Permissions_Part_1.feature:42)
 </textarea></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid username "mina09_auto" and password as "Test@1234"] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid username "mina09_auto" and password as "Test@1234"]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create work order] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on search and selects open search forms and problem record] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create work order]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on search and selects open search forms and problem record]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to window 1] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 2] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to window 1]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 2]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters title as "B2B Automated Test - Sweden Transtema"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters Problem Ticket] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters title as "B2B Automated Test - Sweden Transtema"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters Problem Ticket]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Maintenance" on work order page] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Maintenance" on work order page]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "B2B Automation, Sweden, Transtema"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to "Under Investigation" on problem record page] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "B2B Automation, Sweden, Transtema"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to "Under Investigation" on problem record page]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects priority as "Info"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects priority as "Info"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem ticket status should be under investigation] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then problem ticket status should be under investigation]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user gets ticket value] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation. "] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user gets ticket value]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Under Investigation. "]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user adds CI "SE_LTECell_100895010" to the ticket with impact level "Degradation of Service"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Restricted Info" tab] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user adds CI "SE_LTECell_100895010" to the ticket with impact level "Degradation of Service"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Restricted Info" tab]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on ticket refresh button] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "More Restricted info" in the information field] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on ticket refresh button]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "More Restricted info" in the information field]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on apply BtwoB button] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on apply BtwoB button]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see assigned profile as "Transtema2 - FS - SE - B2B"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user logsOut] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see assigned profile as "Transtema2 - FS - SE - B2B"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user logsOut]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects SLA class as "118 Hour 5 days Cleanup correction time workdays"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user navigates back to login page using URL] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects SLA class as "118 Hour 5 days Cleanup correction time workdays"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user navigates back to login page using URL]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on CTI details under sections] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Tohall_copy" and password as "Test@1234"] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on CTI details under sections]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user logs in with valid username "Tohall_copy" and password as "Test@1234"]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates manufacturer as "Ericsson"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on search and selects open search forms and problem record] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates manufacturer as "Ericsson"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on search and selects open search forms and problem record]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "B2B Dispatch" tab] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 3] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "B2B Dispatch" tab]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user switches to window 3]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters header value as "Test"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters Problem Ticket] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters header value as "Test"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters Problem Ticket]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters message value as "Automated Test"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters message value as "Automated Test"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks Search on ticket search]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to "Investigation Complete" on problem record page] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user changes status to "Investigation Complete" on problem record page]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "B2B Dispatch" tab] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects root cause code as Technical:HW error under route cause] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "B2B Dispatch" tab]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects root cause code as Technical:HW error under route cause]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on outbound events refresh button] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters route cause details as "Lacking information and RC found date"] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on outbound events refresh button]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters route cause details as "Lacking information and RC found date"]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see "Assignment" notification in outbound in row 1] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters RC found date as current date] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see "Assignment" notification in outbound in row 1]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters RC found date as current date]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user waits 59 secs] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button on the problem form] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user waits 59 secs]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button on the problem form]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on inbound events refresh button] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates ticket status as "Investigation Complete"] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on inbound events refresh button]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates ticket status as "Investigation Complete"]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user should see "BTA:OrderAcknowledgmentBySupplier" notification in inbound in row "2"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Under Investigation to Investigation Complete. "] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user should see "BTA:OrderAcknowledgmentBySupplier" notification in inbound in row "2"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Under Investigation to Investigation Complete. "]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on ticket refresh button] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Restricted Info" tab] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on ticket refresh button]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "Restricted Info" tab]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "B2B Dispatch" tab] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates text availability within information field] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "B2B Dispatch" tab]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates text availability within information field]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see WFM ticket ID] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "Even more Restricted info" in the information field] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see WFM ticket ID]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters "Even more Restricted info" in the information field]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Contact Name as "Transtema SOC"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Contact Name as "Transtema SOC"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Contact Telephone Number is present] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters description as "More information on problem ticket"] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Contact Telephone Number is present]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters description as "More information on problem ticket"]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Contact Mail Address as "support.tns@transtema.com"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Contact Mail Address as "support.tns@transtema.com"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button on the problem form]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects dispatch status as "Cancel Requested"] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then change should be reflected in the timeline "Ticket Description has changed from |UAT Profile Permissions test| to |More information on problem ticket|"] started</span>
 												
 												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects dispatch status as "Cancel Requested"]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then change should be reflected in the timeline "Ticket Description has changed from |UAT Profile Permissions test| to |More information on problem ticket|"]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters Cancel Requested Reason as "TEST"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters Cancel Requested Reason as "TEST"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on outbound events refresh button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on outbound events refresh button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see "Withdrawn" notification in outbound in row 2] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see "Withdrawn" notification in outbound in row 2]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user waits 59 secs] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user waits 59 secs]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on inbound events refresh button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on inbound events refresh button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see "BTA:OrderCancellation" notification in inbound in row "3"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see "BTA:OrderCancellation" notification in inbound in row "3"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on ticket refresh button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on ticket refresh button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates ticket status as "Withdrawn"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates ticket status as "Withdrawn"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "B2B Dispatch" tab] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "B2B Dispatch" tab]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user double clicks and open withdrawn message] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user double clicks and open withdrawn message]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And new interface window should be opened] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And new interface window should be opened]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on custom field tab and clicks on message field and opens it] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on custom field tab and clicks on message field and opens it]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see message and withdrawn reason in message text field] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see message and withdrawn reason in message text field]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user switches to window 1] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user switches to window 1]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates all fields are read only and not editable] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates all fields are read only and not editable]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+												<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
 												
 												<div class="st pass">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
+													<span class="tt">09.09.2021 16:12:12</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st fail test l2" 
-												tags="@B2B_Test_Cases"
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[user can cancel a work order sent to a field service before any work is carried out] started</span>
-												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @B2B_Test_Cases</span>
-												</span>
-												
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page] started</span>
-												
-												<div class="st pass">
-													<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user is on the OneWorkflow login page]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st fail test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:09</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid user and password] started</span>
-												
-												<div class="st fail">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">fail</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user logs in with valid user and password]</span>
-													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#username\-id"}
-  (Session info: chrome=94.0.4606.61)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-6FQK1D6', ip: '10.85.242.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\jlm97\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61428}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 580ee632527b14c4900d5cec57f793df
-*** Element info: {Using=id, value=username-id}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.OWF_LoginPage.enterUsername(OWF_LoginPage.java:13)
-	at pageObjects.OWF_LoginPage.doLogin(OWF_LoginPage.java:26)
-	at steps.OWF_LoginPageSteps.userLogsInWithValidUserAndPassword(OWF_LoginPageSteps.java:42)
-	at ✽.user logs in with valid user and password(features/Automation/Regression/NewStructure/B2B/B2B_Test_Cases.feature:9)
-</textarea></span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user successfully logged in to OneWorkflow and agent console should be displayed]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create work order] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on create work order]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to window 1] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user switches to window 1]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters title as "B2B Automated Test - Norway Oneco"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enters title as "B2B Automated Test - Norway Oneco"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Maintenance" on work order page] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects request type as "Maintenance" on work order page]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "B2B Automation, Norway, Oneco"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters description as "B2B Automation, Norway, Oneco"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects priority as "Info"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects priority as "Info"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user gets ticket value] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user gets ticket value]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user adds CI "NO_LTECell_TLM150_L18-1" to the ticket with impact level "Degradation of Service"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user adds CI "NO_LTECell_TLM150_L18-1" to the ticket with impact level "Degradation of Service"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on ticket refresh button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on ticket refresh button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on apply BtwoB button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on apply BtwoB button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see assigned profile as "Oneco2 - FS - NO - B2B"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see assigned profile as "Oneco2 - FS - NO - B2B"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects SLA class as "118 Hour 5 days Cleanup correction time workdays"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user selects SLA class as "118 Hour 5 days Cleanup correction time workdays"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on CTI details under sections] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on CTI details under sections]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates manufacturer as "Huawei"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates manufacturer as "Huawei"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "B2B Dispatch" tab] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "B2B Dispatch" tab]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters header value as "Test"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters header value as "Test"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters message value as "Automated Test"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters message value as "Automated Test"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on save button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "B2B Dispatch" tab] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "B2B Dispatch" tab]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on outbound events refresh button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on outbound events refresh button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see "Assignment" notification in outbound in row 1] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see "Assignment" notification in outbound in row 1]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user waits 59 secs] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user waits 59 secs]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on inbound events refresh button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on inbound events refresh button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user should see "BTA:OrderAcknowledgmentBySupplier" notification in inbound in row "1"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user should see "BTA:OrderAcknowledgmentBySupplier" notification in inbound in row "1"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on ticket refresh button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user clicks on ticket refresh button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "B2B Dispatch" tab] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "B2B Dispatch" tab]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see WFM ticket ID] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see WFM ticket ID]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Contact Name as "OneCo SPOC (Single Point Of Contact)"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Contact Name as "OneCo SPOC (Single Point Of Contact)"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Contact Telephone Number is present] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Contact Telephone Number is present]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Contact Mail Address as "spoc@oneco.no"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user validates Contact Mail Address as "spoc@oneco.no"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects dispatch status as "Cancel Requested"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user selects dispatch status as "Cancel Requested"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters Cancel Requested Reason as "TEST"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user enters Cancel Requested Reason as "TEST"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on save button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on outbound events refresh button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on outbound events refresh button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see "Withdrawn" notification in outbound in row 2] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see "Withdrawn" notification in outbound in row 2]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user waits 59 secs] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user waits 59 secs]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on inbound events refresh button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on inbound events refresh button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see "BTA:OrderCancellation" notification in inbound in row "2"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see "BTA:OrderCancellation" notification in inbound in row "2"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on ticket refresh button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on ticket refresh button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates ticket status as "Withdrawn"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates ticket status as "Withdrawn"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "B2B Dispatch" tab] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on "B2B Dispatch" tab]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user double clicks and open withdrawn message] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user double clicks and open withdrawn message]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And new interface window should be opened] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And new interface window should be opened]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on custom field tab and clicks on message field and opens it] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on custom field tab and clicks on message field and opens it]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see message and withdrawn reason in message text field] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user should see message and withdrawn reason in message text field]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user switches to window 1] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user switches to window 1]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates all fields are read only and not editable] started</span>
-												
-												<div class="st skip">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user validates all fields are read only and not editable]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)] started</span>
-												
-												<div class="st pass">
-													<span class="tt">09.30.2021 10:06:39</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.Teardown(Scenario)]</span>
 													
 													<span class="td"></span>
 												</div>

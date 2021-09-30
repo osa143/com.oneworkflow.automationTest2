@@ -1,4 +1,4 @@
-@SAO_3295
+@SAO_3295 @IncidentCoverage
 
 Feature: SAO-3295 Not able to open attachments in OP tickets.
 
@@ -32,3 +32,5 @@ Feature: SAO-3295 Not able to open attachments in OP tickets.
     And user switches to window 1
     And user clicks on the added attachment
     Then user clicks attachment open button
+    Then user switches to window 1
+    And user clicks on save button

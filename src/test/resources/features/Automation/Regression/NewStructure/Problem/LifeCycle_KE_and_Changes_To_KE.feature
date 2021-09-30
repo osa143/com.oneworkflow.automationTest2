@@ -1,9 +1,8 @@
-@LifeCycle_KE_and_Changes_To_KE @Reg_Problem  @problem
+@LifeCycle_KE_and_Changes_To_KE @ProblemRegression
   #passed
 #CI search window
     Feature: life cycle known error and change known error
-
-    Scenario:user is able to change life cycle to known error
+    Scenario: LifeCycle KE + Change KE - user is able to change life cycle to known error
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"
@@ -40,7 +39,8 @@
       Then known error ticket status should be "Published"
       When user enters description as "More information"
       And user clicks on save button
-      And user waits 10 secs
+      And user clicks yes on save confirmation message
+      Then user clicks on "Timeline" tab
       Then change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Draft to Published. Known Error Code has changed from  to Risk accepted. Accountable Org. has changed from  to CA_IT. Affected Orgs. has changed from  to CA_Infra;." on row 2
       When user clicks on timeline tab
       And user selects Auto text:Tech bridge closed

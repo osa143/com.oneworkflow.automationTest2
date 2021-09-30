@@ -1,11 +1,11 @@
-@Dropdown    @Reg_Problem
+@Dropdown @ProblemRegression_1
 #  This testcase also covers 3 other stories from P2S1 Sprint
 #  SAO-5196:Accountable Organisation drop down menu
 #  SAO-5203:Affected Organisation drop down menu,
 #  SAO-5206: Remove 5 existing fields
   #passed
-  Feature: user validates drop-downs for problem record
-    Scenario: user verifies available information
+  Feature: DropDown
+    Scenario: DropDown - user verifies available information
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"

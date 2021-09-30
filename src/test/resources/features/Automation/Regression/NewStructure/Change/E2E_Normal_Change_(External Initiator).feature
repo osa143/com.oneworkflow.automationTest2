@@ -71,7 +71,7 @@ Feature: External Normal Change E2E
     #And user validates no changes other changes can be made to the change ticket
     And user validates owner profile as "Change Manager"
     And user validates owner as "ChangeManager"
-    Then change should also be reflected in the timeline as "STATUS MODIFIED.  Assignee Profile has changed from  to DC IMS Core. Request Status has changed from New to Assigned."
+    Then change should also be reflected in the timeline as "STATUS MODIFIED.  Assignee Profile has changed from  to DC IMS Core. Request Status has changed from New to Assigned." on row 1
     And user gets ticket value
     And user logsOut from One workflow
     And user goes back to login page
@@ -143,52 +143,55 @@ Feature: External Normal Change E2E
     When user clicks on "Approval" tab
     And user clicks on request thats pending approval
     And user clicks on view button
-    Then user switches to frame
+    #Then user switches to frame
     And user enters "Change can be approved right away" in comments field
     And user clicks on approve button
     Then user switches to window 2
     And user clicks on save button and closes confirmation
     And user clicks on ticket refresh button
     Then user validates ticket status as "Approved"
-    And user waits 5 secs
+    And user waits 15 secs
     When user clicks on "Notifications" tab
     And user clicks on "Sent" tab
     Then user should see "Approved" email update
-    When user changes status to "Schedule Requested"
-    And user clicks on save button
+    Then user waits for 1 minutes
+    Then user clicks on ticket refresh button
+    And user validates status as "Scheduled"
     And user clicks on timeline tab
-    And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approved to Schedule Requested. "
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has automatically changed from Scheduled Request to Scheduled. "
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approved to Schedule Requested. " on row 2
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Approval Requested to Approved. " on row 4
     When user clears description field
     And user enters description as "TEST TICKET - New Description"
     And user clicks on save button
-    Then change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (External Initiator)- Additional Information to TEST TICKET - New Description"
-    Then user validates ticket status as "Scheduled"
+    Then change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from - Additional Information to TEST TICKET - New Description. "
+    When user clicks on "Schedule" tab
     And user validates agreed start time is updated
     And user validates agreed end time is updated
     Then user clicks on assignment under sections
-    And user should see assigned profile as "ChangeImplementationControl"
+    And user should see assigned profile as "Change Implementation Control"
     And user validates assignee is "Change Impl Contr"
     When user logsOut from One workflow
     And user goes back to login page
     Then user logs in with valid username "ChangeImplementationControl1" and password as "Test@1234"
     And user successfully logged in to OneWorkflow and agent console should be displayed
-    And user selects all dropdown as "Change Ticket"
+    And user selects "Change Record" under all tickets
     When user clicks on more filters button
     And user clicks on "Core" tab
     And user selects status as "Scheduled" on user more filters window
     Then user clicks on apply button on user more filters window
-    And user switches to window 1
+    And user switches to window 2
     And user should see "CR" tickets with "Status" of "Scheduled"
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
-    And user switches to window 2
+    And user switches to window 3
     Then user enters ticket previously created and searches
     Then user should see change record ticket
     When user changes status to "Implementation"
     And user clicks on save button
     Then user validates ticket status as "Implementation"
-    And change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Start has changed from  UTC to 2019-08-30 13:35:27 UTC. Request Status has changed from Scheduled to Implementation."
+    And change should also be reflected in the timeline as "Request Status has changed from Scheduled to Implementation." on row 2
     And user clicks on "Schedule" tab
-    And user validates actual start time as current date time
+    #And user validates actual start time as current date time
     When user clicks on "Notifications" tab
     And user clicks on "Sent" tab
     Then user should see "Implementation" email update
@@ -219,10 +222,10 @@ Feature: External Normal Change E2E
     And user clicks on "Core" tab
     And user selects status as "Completed" on user more filters window
     Then user clicks on apply button on user more filters window
-    And user switches to window 1
+    And user switches to window 2
     And user should see "CR" tickets with "Status" of "Completed"
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
-    And user switches to window 2
+    And user switches to window 3
     Then user enters ticket previously created and searches
     Then user should see change record ticket
     When user changes status to "Closed"

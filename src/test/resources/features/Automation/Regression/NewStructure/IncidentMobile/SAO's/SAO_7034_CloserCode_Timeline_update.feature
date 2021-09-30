@@ -1,7 +1,7 @@
 @Incident_SAO
 Feature: Verifying closure codes update in timeline
-    @7034
-    Scenario: Closure code timeline update
+    @7034_1
+    Scenario: SAO-7034 - Closure code timeline update
 
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
@@ -48,7 +48,7 @@ Feature: Verifying closure codes update in timeline
       Then user validates ticket status as "Closed"
 
     @7034_2
-    Scenario: Verification of edit closure codes timeline update
+    Scenario: SAO-7034 - Verification of edit closure codes timeline update
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
@@ -59,7 +59,7 @@ Feature: Verifying closure codes update in timeline
       And user enters "HPE Common Temip" in the source field
       When user clicks on advanced search button
      ## In advance search we have to enter the date in correct format to search within age in days of source##
-      And user enters "'3'>\"2020/12/01\"" in the advanced search bar
+      And user enters "'3'>\"2021-05-15\"" in the advanced search bar
       And user clicks Search on ticket search
       And user waits 15 secs
       When user selects fault position as "Other:Other" on trouble event page

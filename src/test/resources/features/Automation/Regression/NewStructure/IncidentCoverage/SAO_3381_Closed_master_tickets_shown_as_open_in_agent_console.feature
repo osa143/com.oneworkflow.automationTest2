@@ -1,4 +1,4 @@
-@SAO_3381
+@SAO_3381 @IncidentCoverage
 
 Feature: SAO-3381 - Closed master tickets shown as open in agent console.
 
@@ -35,8 +35,7 @@ Feature: SAO-3381 - Closed master tickets shown as open in agent console.
     And user enters auto close date as 2 mins past
     Then user clicks save button
     And user waits for 6 minutes
-    Then user clicks on main page refresh
-    When user enters ticket previously created and searches
+    Then user clicks on ticket refresh button
     And user waits 5 secs
     And ticket status should be closed
     Then user switches to window 2

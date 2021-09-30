@@ -1,7 +1,7 @@
-@search @problem @Reg_Problem  @prob
+@search @ProblemRegression
  #passed
   Feature: problem record Search
-  Scenario: user is able to search for tickets using problem ticket status
+  Scenario: problem record Search - user is able to search for tickets using problem ticket status
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"

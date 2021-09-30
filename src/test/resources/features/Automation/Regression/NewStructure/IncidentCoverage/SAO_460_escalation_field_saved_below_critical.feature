@@ -1,10 +1,9 @@
-@SAO_460_2
+@SAO_460 @IncidentCoverage
 #OP-000000878549-ALM-3924-Escalation - escalation field saved below critical
 
 Feature: SAO-460 - OP-000000878549-ALM-3924-Escalation - escalation field saved below critical
 
   Scenario: SAO-460 - OP-000000878549-ALM-3924-Escalation - escalation field saved below critical
-
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
@@ -24,5 +23,5 @@ Feature: SAO-460 - OP-000000878549-ALM-3924-Escalation - escalation field saved 
     And user clicks save button
     And user waits 5 secs
     Then user validates ticket priority as "Emergency"
-    And user validates hierarchic escalation level as "Escalation manager (EM)"
-#    And user validates hierarchic escalation level isnt read only
+    #And user validates hierarchic escalation level as "Escalation manager (EM)"
+    And user validates hierarchic escalation level isnt read only

@@ -5,6 +5,7 @@ Feature: SAO-4687 - Closure codes issues
   Scenario: SAO-4687 - Closure codes issues
 
     Given user is on the OneWorkflow login page
+    When user navigates back to login page using URL
     When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create trouble event

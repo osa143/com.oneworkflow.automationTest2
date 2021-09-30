@@ -1,4 +1,4 @@
-@SAO_3384
+@SAO_3384 @IncidentCoverage
 
 Feature: SAO-3384 - Workorder updates not sent to B2B
 
@@ -45,4 +45,4 @@ Feature: SAO-3384 - Workorder updates not sent to B2B
     Then user should see "NewInfo" notification in outbound in row 2
     And user waits 15 secs
     When user clicks on inbound events refresh button
-    And user should see "BTA:OrderUpdateAcknowledgmentByResponder" notification in inbound in row "2"
+    And user should see "BTA:OrderUpdateAcknowledgmentByResponder" notification in inbound in row "3"

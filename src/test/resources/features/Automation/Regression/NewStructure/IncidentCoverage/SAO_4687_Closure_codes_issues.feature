@@ -1,4 +1,4 @@
-@SAO_4687
+@SAO_4687 @IncidentCoverage
 
 Feature: SAO-4687 - Closure codes issues
 

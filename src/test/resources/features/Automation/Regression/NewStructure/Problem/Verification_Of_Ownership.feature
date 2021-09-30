@@ -1,8 +1,7 @@
-@Verification_of_ownership @problem @Reg_Problem  @prob @HelixRegression
+@Verification_of_ownership @ProblemRegression
   #passed
-Feature: Verification of Problem ticket owner
-
-  Scenario: user shouldn't be able to alter a problem ticket not assigned to them
+  Feature: Verification of Problem ticket owner
+  Scenario: Verification of Ownership - user shouldn't be able to alter a problem ticket not assigned to them
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"

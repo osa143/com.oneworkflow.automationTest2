@@ -1,10 +1,9 @@
-@Problem_Link_To_New_Known_Error_And_Withdraw @problem @Reg_Problem  @prob
+@Problem_Link_To_New_Known_Error_And_Withdraw @ProblemRegression
   #Passed
 # This test also covers SAO-5305 Auto population from PB to KE tickets
 
-  Feature: user is able to link problem to new known error and withdraw
-
-    Scenario: user opens problem ticket, then opens known error and withdraws
+     Feature: Problem Link to New Known Error and Withdraw
+    Scenario: Problem Link to New Known Error and Withdraw - user opens problem ticket, then opens known error and withdraws
 
       Given user is on the OneWorkflow login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"

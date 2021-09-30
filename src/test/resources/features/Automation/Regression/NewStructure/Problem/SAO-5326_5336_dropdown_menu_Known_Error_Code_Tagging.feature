@@ -1,9 +1,7 @@
-@prob
-   Feature: SAO-5326 dropdown menu Known Error Code and SAO-5336 dropdown menu Tagging(Accountable and affected Org)
-    @5326_5336
-    Scenario: verify dropdown menu Known Error Code and accountable and affected dropdown menus
+@5326_5336 @ProblemRegression
 
-
+    Feature: SAO-5326 dropdown menu Known Error Code and SAO-5336 dropdown menu Tagging(Accountable and affected Org)
+    Scenario: SAO-5326 - verify dropdown menu Known Error Code and accountable and affected dropdown menus
 
      Given user is on the OneWorkflow login page
      When user logs in with valid username "frvi96_auto" and password as "Test@1234"

@@ -1,9 +1,8 @@
-@Changing_of_assignee_for_problem_ticket @problem @Reg_Problem  @prob @HelixRegression
+@Redirecting_Access_for_Assignee @ProblemRegression
 #passed
 #This feature covers 2 scenarios
-Feature: Changing of assignee for problem ticket
-
-  Scenario: User is able to change assignment/assignee on problem ticket
+  Feature: Redirecting and Access for Assignee
+  Scenario: Redirecting and Access for Assignee - User is able to change assignment/assignee on problem ticket
 
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"

@@ -449,7 +449,7 @@ public class OWF_CiSearchPageSteps {
 
     @And("user validates CI {string} is listed under related ci impacts table")
     public void userValidatesRelatedCIIsListed(String arg0) {
-        Assert.assertEquals(ciSearchPage.getRelatedImpact_CIName("CI Name", 1), arg0);
+        Assert.assertEquals(ciSearchPage.getCI_Name("CI Name", 1), arg0);
     }
 
     @And("user enters impacted from date as date in past")

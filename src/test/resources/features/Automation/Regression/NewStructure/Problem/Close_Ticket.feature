@@ -50,7 +50,8 @@ Feature: Close and Clone Problem
     Then error message should display for close ticket as "Your user profile doesn't allow you to change the status to \"Closed\". (ARERR 10000)"
     Then user gets ticket value
     And user logsOut
-    Then user goes back to login page
+    And user navigates back to login page using URL
+#    Then user goes back to login page
     When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
     Then user clicks on search and selects open search forms and problem record
     And user switches to window 2

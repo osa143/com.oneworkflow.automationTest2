@@ -13,10 +13,11 @@
     When user creates problem ticket with below details
       |               Title                  |RequestType            |Description                        |ImpactType      |Urgency|
       |Proactive investigation of frvi96_auto|XX_Test:Functional Test|Redirecting and access for assignee|Moderate/Limited|Low    |
-    Then ticket should be created and status should be assigned
+#    Then ticket should be created and status should be assigned
     And user gets ticket value
     Then user logsOut
-    And user goes back to login page
+    And user navigates back to login page using URL
+#    And user goes back to login page
     When user logs in with valid username "mina09_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
@@ -41,7 +42,8 @@
     And user "frvi96_auto" is listed as the assigned profile
     And user gets ticket value
     Then user logsOut
-    And user goes back to login page
+    And user navigates back to login page using URL
+#    And user goes back to login page
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record

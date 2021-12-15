@@ -48,15 +48,15 @@
       And user clicks on main page refresh
       When user changes status to "Assigned" on trouble event page
       And user clicks on location under sections
-      And user enters "SE_" within the location ID+
-      And user clicks Search on ticket search
-      And user should see "Assigned" "SE" tickets
+#      And user enters "SE_" within the location ID+
+#      And user clicks Search on ticket search
+#      And user should see "Assigned" "SE" tickets
       And user clicks on main page refresh
       When user changes status to "Assigned" on trouble event page
       And user clicks on location under sections
-      And user enters "FI_" within the location ID+
-      And user clicks Search on ticket search
-      And user should see "Assigned" "FI" tickets
+#      And user enters "FI_" within the location ID+
+#      And user clicks Search on ticket search
+#      And user should see "Assigned" "FI" tickets
       And user clicks on main page refresh
       When user changes status to "Assigned" on trouble event page
       And user clicks on location under sections

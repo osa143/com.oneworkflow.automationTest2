@@ -17,9 +17,9 @@
       And user clicks save button
       Then ticket should be created and status should be assigned
       And user clicks on ticket refresh button
-      When user adds CI "SE_CPE_FRECPE5" to the ticket with impact level "Degradation of Service" with extra delay
+      When user adds CI "DK_BSC_ABBSC15" to the ticket with impact level "Degradation of Service" with extra delay
       When user clicks on "Diagnosis" tab
-      And user right clicks on CI "SE_CPE_FRECPE5" and selects "Show:Location Details"
+      And user right clicks on CI "DK_BSC_ABBSC15" and selects "Show:Location Details"
       Then user validates Location Details are shown
       Then user clicks on the close button on location details window
       And user switches to default
@@ -28,7 +28,7 @@
       And user waits 3 secs
       And user switches to window 2
       Then SID console page should be opened
-      When user enters "SE_CPE_FRECPE5" in name field
+      When user enters "DK_BSC_ABBSC15" in name field
       And user clicks on search button on CI search window
       And user clicks on show history
       Then user validates CI history is opened

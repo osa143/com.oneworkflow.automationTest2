@@ -243,7 +243,8 @@ formatter.match({
   "location": "OWF_ProblemRecordPageSteps.problemInitiatorUserShouldBeListedUnderInterestedPartiesTab()"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#T705002015\"}\n  (Session info: chrome\u003d96.0.4664.110)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-6FQK1D6\u0027, ip: \u002710.85.242.198\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\\Users\\jlm97\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54168}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 6f83989956d63b6573b26dbb6032e9d6\n*** Element info: {Using\u003did, value\u003dT705002015}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat pageObjects.BasePage.getTableRows(BasePage.java:647)\r\n\tat pageObjects.BaseRecordPage.verifyUserListedUnderInterestedParty(BaseRecordPage.java:767)\r\n\tat steps.OWF_ProblemRecordPageSteps.problemInitiatorUserShouldBeListedUnderInterestedPartiesTab(OWF_ProblemRecordPageSteps.java:707)\r\n\tat ✽.problem initiator user should be listed under interested parties tab(features/Automation/Regression/NewStructure/Problem/Profile_Permissions_Part_1.feature:30)\r\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "user clicks on \"Additional Info\" tab",
@@ -253,7 +254,7 @@ formatter.match({
   "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "user enters \"Tohall_copy\" in the analysis team member one field",
@@ -263,7 +264,7 @@ formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userEntersInTheAnalysisTeamMemberOneField(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "user clicks on save button on the problem form",
@@ -273,7 +274,7 @@ formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userClicksOnSaveButtonOnTheProblemForm()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "user should see problem initiator listed as analysis team member one as \"Tohall_copy\"",
@@ -283,7 +284,7 @@ formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userShouldSeeProblemInitiatorListedAsAnalysisTeamMemberOneAs(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "user clicks on \"Restricted Info\" tab",
@@ -293,7 +294,7 @@ formatter.match({
   "location": "OWF_AgentConsolePageSteps.userClicksOnAlarmTab(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "user enters \"Restricted info\" in the information field",
@@ -303,7 +304,7 @@ formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userEntersInTheInformationField(String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "user clicks on save button",
@@ -313,7 +314,7 @@ formatter.match({
   "location": "OWF_ChangeRecordPageSteps.userClicksOnSaveButton()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "user gets ticket value",
@@ -323,7 +324,7 @@ formatter.match({
   "location": "OWF_ProblemRecordPageSteps.userGetsTicketValue()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "user logsOut",
@@ -333,7 +334,7 @@ formatter.match({
   "location": "OWF_AgentConsolePageSteps.userLogsOut()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "user navigates back to login page using URL",
@@ -343,8 +344,7 @@ formatter.match({
   "location": "OWF_LoginPageSteps.userNavigatesBackToLoginPageUsingURL()"
 });
 formatter.result({
-  "error_message": "org.openqa.selenium.InvalidArgumentException: invalid argument\n  (Session info: chrome\u003d92.0.4515.159)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-I92010A\u0027, ip: \u0027192.168.0.8\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_211\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\\Users\\h_smi\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58402}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: a1059f0e1e964fe11df3848a253667ab\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)\r\n\tat pageObjects.OWF_LoginPage.goBacktoLoginPage(OWF_LoginPage.java:56)\r\n\tat steps.OWF_LoginPageSteps.userNavigatesBackToLoginPageUsingURL(OWF_LoginPageSteps.java:279)\r\n\tat ✽.user navigates back to login page using URL(features/Automation/Regression/NewStructure/Problem/Profile_Permissions_Part_1.feature:42)\r\n",
-  "status": "failed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "user logs in with valid username \"mina09_auto\" and password as \"Test@1234\"",

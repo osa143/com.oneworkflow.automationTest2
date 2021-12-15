@@ -18,7 +18,8 @@
       And user validates vendor section is not present
       And user gets ticket value
       Then user logsOut
-      And user goes back to login page
+      And user navigates back to login page using URL
+#      And user goes back to login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       And user clicks on search and selects open search forms and problem record
@@ -36,7 +37,8 @@
       And user clicks on save button on the problem form
       Then change should also be reflected in the timeline "Request has been reassigned from Assignee user :frvi96_auto:Tohall_copy"
       Then user logsOut
-      And user goes back to login page
+      And user navigates back to login page using URL
+#      And user goes back to login page
       When user logs in with valid username "Tohall_copy" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       And user clicks on search and selects open search forms and problem record
@@ -53,7 +55,8 @@
       And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Under Investigation to Investigation Complete."
       And user logsOut
       And user switches to window 2
-      And user goes back to login page
+      And user navigates back to login page using URL
+#      And user goes back to login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       And user clicks on search and selects open search forms and problem record
@@ -74,7 +77,8 @@
       And user validates vendor section is not present
       And user logsOut
       And user switches to window 4
-      And user goes back to login page
+      And user navigates back to login page using URL
+#      And user goes back to login page
       When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       And user clicks on search and selects open search forms and problem record

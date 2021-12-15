@@ -1,4 +1,4 @@
-@SAO-427-BR2862-Bulk_Loading_Error_Message_Structure_Trouble @SAO-427 @other_trouble
+@SAO-427-BR2862-Bulk_Loading_Error_Message_Structure_Trouble2 @SAO-427 @other_trouble
   #passed
   Feature: checking of bulk loading error message structure
     Scenario: user checks the message structure of bulk loading error

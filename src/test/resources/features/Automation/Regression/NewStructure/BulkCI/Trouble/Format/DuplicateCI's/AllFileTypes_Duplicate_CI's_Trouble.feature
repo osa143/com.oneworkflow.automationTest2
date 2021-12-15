@@ -1,4 +1,4 @@
-@Bulk_Loading_Format_5duplicateCIs_trouble_2 @SAO-427
+@Bulk_Loading_Format_5duplicateCIs_trouble_3 @SAO-427
     #passed
 Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format
@@ -53,10 +53,10 @@ Feature: checking of bulk loading format
       Examples:
 
           |fileTypes                                                                                       |
-          |Test Attachments\5DuplicateCIs\5CIsCSV.csv|
+#          |Test Attachments\5DuplicateCIs\5CIsCSV.csv|
           |Test Attachments\5DuplicateCIs\5CIsTextDOC.txt|
-          |Test Attachments\5DuplicateCIs\5CIsXLS.xls|
-          |Test Attachments\5DuplicateCIs\5CIsXLSX.xlsx|
+#          |Test Attachments\5DuplicateCIs\5CIsXLS.xls|
+#          |Test Attachments\5DuplicateCIs\5CIsXLSX.xlsx|
 
 
 

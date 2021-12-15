@@ -36,7 +36,7 @@
         | InfraSE       | CableSites:NCS:PSTN       |
         | IT            | CustEng:EntServ:Infra:OSS:Workplace |
         | NO            | OC&MC:Phonero             |
-        | NSD           | ConvAccess:IP:ServCore    |
+        | NSD           | ConvAccess:IP:NSMA:ServCore    |
         | PAComm        | Conv:VAS:Voice            |
         | PAConn        | BusNW:Internet:MobVD      |
         | PAITServ      | MDM_DAAS:PaaS:Security    |

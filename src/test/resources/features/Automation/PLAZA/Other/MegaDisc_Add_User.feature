@@ -35,6 +35,7 @@
       When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2
       Then user enters plaza request id in the source id field
+      And user waits 30 secs
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"

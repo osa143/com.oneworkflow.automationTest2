@@ -19,7 +19,8 @@
       Then user enters email address field as "Test@Test.com"
       Then user enters phone field as "123456789"
       And user enters Cloud one time snapshot request as "Test1 Cloud one time snapshot/Request"
-      And users adds any cloud one time CI
+#      And users adds any cloud one time CI
+      And user waits 20 secs
       Then user enters cloud one time snapshot description as "Test1 Cloud one time snapshot/Description"
       And user enters date and time for deletion as current date and time
       And user enters additional comments as "Test1 Cloud one time snapshot/AC"

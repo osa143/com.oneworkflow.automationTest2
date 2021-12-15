@@ -56,8 +56,8 @@ Feature: Bulk Loading Incorrect Data layout- Location
       Examples:
 
           |fileTypes                                                                                                    |
-          |Test Attachments\IncorrectFormatColumnLocation\CSV.csv|
-#          |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xls|
+#          |Test Attachments\IncorrectFormatColumnLocation\CSV.csv|
+          |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xls|
 #          |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xlsx|
 
 

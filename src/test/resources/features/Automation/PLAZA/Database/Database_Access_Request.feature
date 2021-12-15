@@ -25,7 +25,7 @@
       Then user enters database Permissions as "Test permission"
       Then user enters Database Access Request description as "<Description>"
       And user enters additional comments as "<Additional Comments>"
-      And user waits 30 secs
+      And user waits 10 secs
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -43,7 +43,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Database Request"
       And user validates request type as "Service Request | PLAZA"
-#      And user validates Database access request description same as plaza
+      And user validates Database access request description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

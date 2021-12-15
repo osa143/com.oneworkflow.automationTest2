@@ -22,7 +22,7 @@
       When user selects impact level as "No Impact"
       And user clicks on Manual Input radio button
       And user clicks on Ignore Duplicate CIs checkbox
-      And user enters "LT DNS SIP;LT DNS SIP;FI DNS Gi;FI DNS Gn;FI DNS ENUM" in manual CI search box
+      And user enters "LT DNS SIP;LT DNS SIP;LT DNS SIP;FI DNS Gi;FI DNS Gn;FI DNS ENUM" in manual CI search box
       Then user clicks on save button under bulk import
       And first error message should display as "The manually identified CIs are now being processed..." on bulk ci window
       And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window

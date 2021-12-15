@@ -27,13 +27,13 @@ repositories {
 dependencies {
    
     testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.3.0'
-    compile group: 'javax.jms', name: 'javax.jms-api', version: '2.0.1'
-    compile("com.tibco:tibjms:8.3.0")
-    compile("com.tibco:tibcrypt:2.18.300.001")
-    compile("com.tibco:tibjms.admin:8.3.0")
-    compile("com.tibco:tibjms.appserver:8.3.0")
-    compile("com.tibco:tibrvjms:8.3.0")
-    compile group: 'com.tibco', name: 'tibjms', version: '4.4.3'
+//    compile group: 'javax.jms', name: 'javax.jms-api', version: '2.0.1'
+//    compile("com.tibco:tibjms:8.3.0")
+//    compile("com.tibco:tibcrypt:2.18.300.001")
+//    compile("com.tibco:tibjms.admin:8.3.0")
+//    compile("com.tibco:tibjms.appserver:8.3.0")
+//    compile("com.tibco:tibrvjms:8.3.0")
+//    compile group: 'com.tibco', name: 'tibjms', version: '4.4.3'
     compile group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '7.2.1.jre8'
 
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'

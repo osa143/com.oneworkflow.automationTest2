@@ -13,7 +13,8 @@ Feature: Plaza creation of incident ticket - OW Rejects Incident
     And user switches to window 1
     And user selects "Applications" under Service area dropdown
     And user selects "AlarmMap" under plaza category dropdown
-    And user selects "Application Error" under plaza type of issue
+#    And user selects "Application Error" under plaza type of issue
+    And user waits 10 secs
     And user enters "Test OW OP Ticket" in the plaza subject field
     And user enters "Test OW OP Ticket" in the plaza describe field
     Then user clicks on submit button on plaza form
@@ -50,7 +51,7 @@ Feature: Plaza creation of incident ticket - OW Rejects Incident
     And user validates technology as "Incident"
     And user validates owner profile as "PLAZA"
     And user validates owner as "PLAZA"
-    And user should see assigned profile as "OSS Tech Mahindra"
+    And user should see assigned profile as "OSS Mon ADM Accenture"
     When user clicks on "Reject"
     And user enters rejection reason as "Testing"
     Then user clicks on save button

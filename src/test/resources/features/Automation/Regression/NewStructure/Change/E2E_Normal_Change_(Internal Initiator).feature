@@ -30,8 +30,8 @@
       Then user validates change builder button is present
       And user validates reason text field expand button is present
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-      And user enters start time as 24 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
-      And user enters end time as 28 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
+      And user enters start time as 24 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss" format
+      And user enters end time as 28 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss" format
       And user enters impact duration as "45" minutes
       And user selects estimated impact dropdown as "Degradation of Service"
       And user clicks on save button
@@ -64,7 +64,7 @@
       And user switches to default
       And CI should be listed and displayed under the Diagnosis tab
       When user right clicks on CI "FI_MGW_SMG03TRE" and selects "Show:Location Details"
-      Then user validates Location Details are shown
+#      Then user validates Location Details are shown
       And user validates availability of tabs "Details:Relationships"
       And user clicks on "Relationships" tab
       Then user clicks on refresh button under related CIs

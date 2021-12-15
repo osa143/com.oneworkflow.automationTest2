@@ -421,7 +421,7 @@ public class Plaza_HomePage extends BaseRecordPage {
     private static final String txt_LINUX_UNIX_SERVER_CI = "s2id_autogen24";
     private static final String txt_LINUX_UNIX_SERVER_CI_RESULTS = "s2id_autogen24_results";
     private static final String txt_LINUX_UNIX_SERVER_DESCRIPTION = "sp_formfield_sr_gen_v_description";
-    private static final String dd_SERVICE_AREA = "sp_formfield_reference_service_area";
+    private static final String dd_SERVICE_AREA = "s2id_sp_formfield_service_area";
     private static final String txt_SERVICE_AREA_RESULTS = "select2-results-24";
     private static final String dd_TYPE_OF_SERVER = "select2-chosen-11";
     private static final String txt_TYPE_OF_SERVER = "select2-results-11";
@@ -516,7 +516,7 @@ public class Plaza_HomePage extends BaseRecordPage {
     private static final String pebble_ACCESS_RED_HAT_KNOWLEDGEBASE = "//h3[@title='Access to Red Hat Knowledgebase']";
     private static final String btn_SUBMIT = "//button[@name='submit']";
     private static final String btn_SEND = "//input[@value='Send']";
-    private static final String link_PRODUCTS_AND_SERVICES = "//*[contains(text(),'Products & Services')]";
+    private static final String link_PRODUCTS_AND_SERVICES = "//*[@id='x2bb2f7421b8480d00c1e87fe6e4bcb7b']/div/a/h2";
     private static final String link_ACCOUNT_MANAGEMENT_AND_SERVER_FORM = "//h3[@title='Account Management - Server']";
     private static final String pebble_CRM = "//h3[@title='CRM']";
     private static final String link_APPLICATION = "b49dd9c1db9997446734f1eabf961975";

@@ -1,4 +1,4 @@
-@All_File_Types_Bulk_Loading_CTI_Details_trouble #@SAO-427
+@All_File_Types_Bulk_Loading_CTI_Details_trouble2 #@SAO-427
   #passed
 Feature: checking of bulk loading CTI details
   Scenario Outline: user checks the bulk loading CTI details
@@ -59,8 +59,8 @@ Feature: checking of bulk loading CTI details
       |fileTypes                                                                                                  |
 #      |Test Attachments\10 CI's - Correct Names\CSV.csv |
       |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
-      |Test Attachments\10 CI's - Correct Names\XLS.xls|
-      |Test Attachments\10 CI's - Correct Names\TEXT.txt |
+#      |Test Attachments\10 CI's - Correct Names\XLS.xls|
+#      |Test Attachments\10 CI's - Correct Names\TEXT.txt |
 
 
 

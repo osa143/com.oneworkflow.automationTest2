@@ -12,7 +12,8 @@ Feature: Plaza creation/withdrawing of incident ticket
     And user switches to window 1
     And user selects "Applications" under Service area dropdown
     And user selects "AlarmMap" under plaza category dropdown
-    And user selects "Application Error" under plaza type of issue
+#    And user selects "Application Error" under plaza type of issue
+    And user waits 10 secs
     And user enters "Test OW OP Ticket" in the plaza subject field
     And user enters "Test OW OP Ticket" in the plaza describe field
     Then user clicks on submit button on plaza form
@@ -56,7 +57,7 @@ Feature: Plaza creation/withdrawing of incident ticket
     And user validates technology as "Incident"
     And user validates owner profile as "PLAZA"
     And user validates owner as "PLAZA"
-    And user should see assigned profile as "OSS Tech Mahindra"
+    And user should see assigned profile as "OSS Mon ADM Accenture"
     And user switches to window 1
     And user clicks on "Withdraw from OWF"
     And user validates plaza ticket status as "New"

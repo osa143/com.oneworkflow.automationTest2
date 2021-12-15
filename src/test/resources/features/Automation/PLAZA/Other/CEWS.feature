@@ -22,7 +22,8 @@
       And user enters email address field as "Test@Test.com"
       Then user enters phone field as "123456789"
       And user enters CEWS request as "Test1 CEWS/Request"
-      And user selects any cews CI
+#      And user selects any cews CI
+      And user waits 20 secs
       Then user enters CEWS description as "Test1 CEWS/Description"
       And user enters additional comments as "Test1 CEWS/AC"
       Then user clicks on "Submit"
@@ -37,13 +38,14 @@
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
+      And user waits 30 secs
       Then user should see plaza ticket
       When user clicks on Ack button
       And user clicks on ticket refresh button
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | CEWS"
       And user validates request type as "Service Request | PLAZA"
-      And user validates cews description same as plaza
+#      And user validates cews description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

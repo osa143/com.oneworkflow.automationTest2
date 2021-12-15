@@ -34,7 +34,7 @@ public class OWF_AgentConsolePage extends BaseRecordPage {
 
     private static final String ddALL_TICKETS = "WIN_0_700010167";
     private static final String ddALL_ROLES = "WIN_0_700010200";
-    private static final String dd_ALL_TICKETS= "Fld-OfTypeID";
+    private static final String dd_ALL_TICKETS= "arid_WIN_0_700010166";
     private static final String dd_STATUS= "Status";
     private static final String dd_ALL_ROLES= "Fld-RoleViewMenu";
     private static final String dd_ALL = "Fld-ViewTicketsID";

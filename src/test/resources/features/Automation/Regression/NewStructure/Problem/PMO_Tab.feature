@@ -2,7 +2,7 @@
 #passed
 Feature: PMO Tab
 
-  @PMO_Tab_problem
+  @PMO_Tab_problem2
   Scenario: PMO Tab for problem ticket
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
@@ -18,7 +18,8 @@ Feature: PMO Tab
     When user verifies PM office tab visibility
     Then PM office tab should not be visible
     Then user logsOut
-    And user goes back to login page
+#    And user goes back to login page
+    And user navigates back to login page using URL
     When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
@@ -32,7 +33,8 @@ Feature: PMO Tab
     And problem review field should be updated with the text "Secret problem stuff"
     And user logsOut
     And user switches to window 1
-    And user goes back to login page
+#    And user goes back to login page
+    And user navigates back to login page using URL
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
@@ -42,11 +44,13 @@ Feature: PMO Tab
     And user changes status to "Withdrawn" on problem record page
     And user selects withdrawn reason as false alarm and clicks save
     And user clicks on yes button on warning window
-    Then user validates ticket status as "Withdrawn"
-    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Withdrawn. "
+    And user waits 5 secs
+#    Then user validates ticket status as "Withdrawn"
+#    And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Assigned to Withdrawn. "
     And user logsOut
     And user switches to window 1
-    And user goes back to login page
+#    And user goes back to login page
+    And user navigates back to login page using URL
     When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record
@@ -79,7 +83,8 @@ Feature: PMO Tab
     When user verifies PM office tab visibility
     Then PM office tab should not be visible
     Then user logsOut
-    And user goes back to login page
+#    And user goes back to login page
+    And user navigates back to login page using URL
     When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user selects search menu as "Open Search Form:Known Error"
@@ -94,7 +99,8 @@ Feature: PMO Tab
     And problem review field should be updated with the text "Secret problem stuff"
     And user logsOut
     And user switches to window 2
-    And user goes back to login page
+#    And user goes back to login page
+    And user navigates back to login page using URL
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user selects search menu as "Open Search Form:Known Error"
@@ -108,7 +114,8 @@ Feature: PMO Tab
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Status has changed from Draft to Withdrawn. "
     And user logsOut
     And user switches to window 2
-    And user goes back to login page
+#    And user goes back to login page
+    And user navigates back to login page using URL
     When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user selects search menu as "Open Search Form:Known Error"

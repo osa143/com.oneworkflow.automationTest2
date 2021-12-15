@@ -11,6 +11,7 @@
       And user clicks on "Core" tab
       When multiple statuses "New:Draft:Assigned:Analysis:Approval Requested:Approved:Schedule Requested:Scheduled:Implementation:Work In Progress:Under Investigation:Pending:Completed:Cleared:Investigation Complete:Published:(clear)" should be available in "Status" dropdown
       And user clicks on close button
+      And user waits 2 secs
       When user selects "Change Record" under all tickets
       When user clicks on more filters button
       And user clicks on "Core" tab

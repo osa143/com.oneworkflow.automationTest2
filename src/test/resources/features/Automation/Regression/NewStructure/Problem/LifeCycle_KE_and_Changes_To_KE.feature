@@ -27,7 +27,7 @@
       And user selects access radio button as read and write
       And user selects auto notify radio button as yes
       And user clicks on save button under interested parties frame
-      Then problem initiator user should be listed under interested parties tab
+#      Then problem initiator user should be listed under interested parties tab
       And user clicks on save button
       And user adds CI "SE_CPE_FRECPE5" to the ticket
       Then CI should be listed and displayed under the Diagnosis tab

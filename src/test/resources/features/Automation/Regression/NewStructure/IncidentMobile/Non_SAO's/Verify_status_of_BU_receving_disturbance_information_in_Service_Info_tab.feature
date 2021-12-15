@@ -15,7 +15,7 @@
       And user enters description as "Test case Test case Verify BU receiving disturbance information"
       And user clicks on save button on the problem form
       Then ticket should be created and status should be assigned
-      And user adds CI "SE_LTECell_100000014" to the ticket with impact level "No Impact"
+      And user adds CI "SE_LTECell_103392011" to the ticket with impact level "No Impact"
       And user clicks on "Diagnosis" tab
       Then CI should be listed and displayed under the Diagnosis tab
       Then user validates OLA value is set

@@ -1,4 +1,4 @@
-@Bulk_Loading_Format_IncorrectColumnName_Trouble @SAO-427
+@Bulk_Loading_Format_IncorrectColumnName_Trouble3 @SAO-427
     #passed
 Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format
@@ -45,8 +45,8 @@ Feature: checking of bulk loading format
 
           |fileTypes                                                                                              |
           |Test Attachments\IncorrectFormatColumnName\CSV.csv|
-          |Test Attachments\IncorrectFormatColumnName\TEXT.txt|
-          |Test Attachments\IncorrectFormatColumnName\XLS.xls|
-          |Test Attachments\IncorrectFormatColumnName\XLSX.xlsx|
+#          |Test Attachments\IncorrectFormatColumnName\TEXT.txt|
+#          |Test Attachments\IncorrectFormatColumnName\XLS.xls|
+#          |Test Attachments\IncorrectFormatColumnName\XLSX.xlsx|
 
 

@@ -28,8 +28,8 @@ Feature: Internal Urgent Critical Change E2E
     And user enters "CI B2" in the change builder field
     Then user validates change builder button is present
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-    And user enters start time as 2 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
-    And user enters end time as 5 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
+    And user enters start time as 2 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss" format
+    And user enters end time as 5 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss" format
     And user enters impact duration as "3" hours
     And user selects estimated impact dropdown as "Loss of Service"
     And user clicks on save button

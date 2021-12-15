@@ -39,7 +39,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | TSPAN"
       And user validates request type as "Service Request | PLAZA"
-      And user validates tspan description same as plaza
+#      And user validates tspan description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -49,12 +49,12 @@
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis" tab
       And user validates CI "cc100cgas001" is listed
-      And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
-      Then user switches to frame
-      And user enters impact from time as past on impact details bulk update window
-      And user enters impact to time as past on impact details bulk update window
-      Then user clicks confirm checkbox
-      And user clicks on bulk update save button
+#      And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
+#      Then user switches to frame
+#      And user enters impact from time as past on impact details bulk update window
+#      And user enters impact to time as past on impact details bulk update window
+#      Then user clicks confirm checkbox
+#      And user clicks on bulk update save button
       And user right clicks on CI "cc100cgas001" and clears impact
       And user should see confirmation message for impact clear and user clicks yes
       And user changes status to "Cleared" on work order page

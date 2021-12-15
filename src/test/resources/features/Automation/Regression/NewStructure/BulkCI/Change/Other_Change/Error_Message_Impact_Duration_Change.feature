@@ -40,7 +40,7 @@ Feature: checking of bulk loading error message impact duration for change ticke
     Then user clicks on save button under bulk import
     And user should see error message of "(300825): From date cannot be in the future for planned impact record." on bulk cI window
     And user should see error message of "To date cannot be in the future for un-planned impact record." on bulk cI window and clicks ok
-    And user switches to frame
+#    And user switches to frame
     And user enters bulk ci impact from date as -25 hours in "MM/dd/YYYY HH:mm:ss" format
     And user enters bulk ci impact to date as -30 hours in "MM/dd/YYYY HH:mm:ss" format
     And user clicks on save button under bulk import

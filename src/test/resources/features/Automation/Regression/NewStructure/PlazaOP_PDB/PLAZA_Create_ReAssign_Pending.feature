@@ -12,7 +12,8 @@ Feature: Plaza creation of incident ticket
     And user switches to window 1
     And user selects "Applications" under Service area dropdown
     And user selects "AlarmMap" under plaza category dropdown
-    And user selects "Application Error" under plaza type of issue
+#    And user selects "Application Error" under plaza type of issue
+    And user waits 15 secs
     And user enters "Test OW OP Ticket" in the plaza subject field
     And user enters "Test OW OP Ticket" in the plaza describe field
     Then user clicks on submit button on plaza form
@@ -54,7 +55,7 @@ Feature: Plaza creation of incident ticket
     And user validates technology as "Incident"
     And user validates owner profile as "PLAZA"
     And user validates owner as "PLAZA"
-    And user should see assigned profile as "OSS Tech Mahindra"
+    And user should see assigned profile as "OSS Mon ADM Accenture"
     When user enters "Test Update" in the timeline text box
     And user clicks on public radio button
     And user clicks on add button
@@ -80,19 +81,19 @@ Feature: Plaza creation of incident ticket
     And user clicks on main page refresh
     And user should see OW manual notification in plaza ticket as "State has been changed to Work In Progress in OWF with the Assignment Profile: Application-NO"
     Then user switches to window 3
-#      When user changes status to "Pending"
-#      And user enters on hold to date 2 minutes in the future
-#      And user enters reason field as "Waiting for Customer Info"
-#      Then user clicks on save button and closes warning messages
-#      And change should also be reflected in the timeline as "STATUS MODIFIED.  The trouble Status has changed: Work In Progress >> Pending." on row 1
-#      Then user switches to window 1
-#      And user waits 5 secs
-#      And user validates plaza first timeline message as "State has been changed to Pending in OneWorkflow"
-#      Then user waits for two minutes
-#      When user switches to window 3
-#      And user clicks on ticket refresh button
-#      Then user validates ticket status as "Work In Progress"
-#      And change should also be reflected in the timeline as "State has been changed from Pending to Work In Progress in OneWorkflow" on row 3
+      When user changes status to "Pending"
+      And user enters on hold to date 2 minutes in the future
+      And user enters reason field as "Waiting for Customer Info"
+      Then user clicks on save button and closes warning messages
+      And change should also be reflected in the timeline as "STATUS MODIFIED.  The trouble Status has changed: Work In Progress >> Pending." on row 1
+      Then user switches to window 1
+      And user waits 5 secs
+      And user validates plaza first timeline message as "State has been changed to Pending in OneWorkflow"
+      Then user waits for two minutes
+      When user switches to window 3
+      And user clicks on ticket refresh button
+      Then user validates ticket status as "Work In Progress"
+      And change should also be reflected in the timeline as "State has been changed from Pending to Work In Progress in OneWorkflow" on row 3
     When user changes status to "Cleared" on trouble event page
     And user selects fault position as "N/A:N/A" on trouble event page
     And user selects cause as "N/A:N/A:N/A" on trouble event page

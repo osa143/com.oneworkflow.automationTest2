@@ -40,7 +40,8 @@ Feature: checking of bulk loading additional definitions default settings
     Then user clicks on choose file button
     And user searches for "<fileTypes>" attachment and adds it
     And user clicks on attachment ok button
-    And user switches to frame
+#    And user switches to frame
+#    And user switches to frame 1
     Then user validates attached document is visible
     Then user clicks on save button under bulk import
     And first error message should display as "The Uploaded File is now being processed..." on bulk ci window
@@ -67,6 +68,6 @@ Feature: checking of bulk loading additional definitions default settings
 
       |fileTypes                                                                                                 |
       |Test Attachments\10 CI's - Correct Names\CSV.csv|
-      |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
-      |Test Attachments\10 CI's - Correct Names\XLS.xls|
-      |Test Attachments\10 CI's - Correct Names\TEXT.txt|
+#      |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
+#      |Test Attachments\10 CI's - Correct Names\XLS.xls|
+#      |Test Attachments\10 CI's - Correct Names\TEXT.txt|

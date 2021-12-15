@@ -1,4 +1,4 @@
-@AllFileTypes_Bulk_Loading_Primary_CI_Default_Settings @SAO-427
+@AllFileTypes_Bulk_Loading_Primary_CI_Default_Settings1 @SAO-427
   #passed
 Feature: checking of bulk loading additional definitions default settings
   Scenario Outline: user checks the bulk loading additional definitions default settings
@@ -56,6 +56,6 @@ Feature: checking of bulk loading additional definitions default settings
     Examples:
       |fileTypes                                                                                                  |
       |Test Attachments\10 CI's - Correct Names\CSV.csv |
-      |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
-      |Test Attachments\10 CI's - Correct Names\XLS.xls|
-      |Test Attachments\10 CI's - Correct Names\TEXT.txt |
+#      |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
+#      |Test Attachments\10 CI's - Correct Names\XLS.xls|
+#      |Test Attachments\10 CI's - Correct Names\TEXT.txt |

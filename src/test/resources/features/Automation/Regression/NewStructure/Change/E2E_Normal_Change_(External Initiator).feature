@@ -27,8 +27,8 @@ Feature: External Normal Change E2E
     And user enters "Privacy Data: Just Testing" in the change builder field
     Then user validates change builder button is present
     Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-    And user enters start time as 24 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
-    And user enters end time as 28 hours fast from current sweden time in "dd/MM/yyyy HH:mm:ss" format
+    And user enters start time as 24 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss" format
+    And user enters end time as 28 hours fast from current sweden time in "MM/dd/yyyy HH:mm:ss" format
     And user enters impact duration as "45" minutes
     And user selects estimated impact dropdown as "Degradation of Service"
     And user clicks on save button

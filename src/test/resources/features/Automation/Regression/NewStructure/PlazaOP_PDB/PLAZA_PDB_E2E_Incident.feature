@@ -17,7 +17,8 @@ Feature: Plaza PDB
     Then user enters PDB date and time as current date and time
     And user selects PDB effected country "<PDB Affected Country>"
     And user selects nature and content as "Address"
-    And user selects affected persons as "<Number of Persons>"
+#    And user selects affected persons as "<Number of Persons>"
+    And user waits 10 secs
     And user selects plaza affected persons as other
     And user enters "Test Data" under Affected persons name and unique id
     And user clicks on submit button on plaza form

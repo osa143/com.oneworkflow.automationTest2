@@ -31,8 +31,8 @@ Feature: SAO-6737 - Improving Recurring Incidents Tab(Name Subject to Change)
     And user selects template as "All:IT:Carrier:Telia Carrier UAT Changes"
     When user enters "CI B2" in the change builder field
     And user enters as "Automation Test" in service and customer impact
-    And user enters request start time as 30 minutes past from "Europe/London" timezone "yyyy-MM-dd HH:mm:ss" format
-    And user enters request end time as 55 minutes past from "Europe/London" timezone "yyyy-MM-dd HH:mm:ss" format
+    And user enters request start time as 30 minutes past from "Europe/London" timezone "MM-dd-yyyy HH:mm:ss" format
+    And user enters request end time as 55 minutes past from "Europe/London" timezone "MM-dd-yyyy HH:mm:ss" format
     And user enters impact duration as "20" minutes
     Then user enters description as "Regression - Change Management Process"
     And user clicks on save button

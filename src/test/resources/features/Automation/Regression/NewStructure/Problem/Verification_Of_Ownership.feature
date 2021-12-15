@@ -29,7 +29,8 @@
     Then ticket should be created and status should be assigned
     And user gets ticket value
     Then user logsOut
-    And user goes back to login page
+    And user navigates back to login page using URL
+#    And user goes back to login page
     And user logs in with valid username "frvi96_auto4" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And user clicks on search and selects open search forms and problem record

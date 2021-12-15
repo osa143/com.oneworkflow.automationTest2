@@ -16,7 +16,8 @@ Feature: Plaza EFS-BSS form test
     #Then user selects system name in haiti as "Other"
     When user selects role dropdown as "Application Operation Engineer"
     And user enters EFS-BSS request as "Test1 EFS/Request"
-    And user selects any efs bss CI
+#    And user selects any efs bss CI
+    And user waits 20 secs
     And user enters EFS description as "Test1 EFS/Description"
     And user enters additional comments as "Test1 EFS/AC"
     Then user clicks on "Submit"
@@ -36,7 +37,7 @@ Feature: Plaza EFS-BSS form test
     And user validates source field as "PLAZA"
     And user validates title field as "Service Request | EFS-BSS"
     And user validates request type as "Service Request | PLAZA"
-    And user validates efs-bss description same as plaza
+#    And user validates efs-bss description same as plaza
     Then user clicks on owner under sections
     And user clicks on assignment under sections
     Then user validates owner profile as "PLAZA"

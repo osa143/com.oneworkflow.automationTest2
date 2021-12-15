@@ -1,4 +1,4 @@
-@CSV_TXT_XLS_XLSX_Bulk_Loading_Format_change @SAO-427
+@CSV_TXT_XLS_XLSX_Bulk_Loading_Format_change2 @SAO-427
     #passed
 Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format

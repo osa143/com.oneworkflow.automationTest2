@@ -134,7 +134,7 @@
       When user changes status to "Withdrawn" on work order page
       And user selects withdrawn reason as false alarm and clicks save
       And user should see confirmation message and clicks on yes button
-      Then user validates ticket status as "Withdrawn"
+#      Then user validates ticket status as "Withdrawn"
       And user switches to window 0
       Then user selects target application first dropdown as "(clear)"
       Then user clicks refresh button under linked items

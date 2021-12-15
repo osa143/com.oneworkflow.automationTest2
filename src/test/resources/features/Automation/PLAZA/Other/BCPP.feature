@@ -17,7 +17,7 @@
       And user enters BCCP request as "<Request>"
       And user selects service request name as "Account/Password"
       And user selects BCPP environment as "<Environment>"
-      And user selects any BCPP CI
+#      And user selects any BCPP CI
       And user waits 30 secs
       And user enters BCPP description as "<Description>"
       And user enters additional comments as "<Additional Comments>"
@@ -70,7 +70,7 @@
       Examples:
 
         |Request                |Environment|Description                |Additional Comments|
-#        |BCPP-Prod/Request      |Prod       |BCPP-Prod/Description      |BCPP-Prod/AC       |
+        |BCPP-Prod/Request      |Prod       |BCPP-Prod/Description      |BCPP-Prod/AC       |
 #        |Test2-BCPP-Prod/Request|Prod       |Test2-BCPP-Prod/Description|Test2-BCPP-Prod/AC |
-        |BCPP-Test/Request      |Test       |BCPP-Test/Description      |BCPP-Test/AC       |
+#        |BCPP-Test/Request      |Test       |BCPP-Test/Description      |BCPP-Test/AC       |
 #        |Test2-BCPP-Test/Request|Test       |Test2-BCPP-Test/Description|Test2-BCPP-Test/AC |

@@ -1,4 +1,4 @@
-@Bulk_Loading_Format_change_500CIs #@SAO-427
+@Bulk_Loading_Format_change_500CIs2 #@SAO-427
 Feature: checking of bulk loading format
   Scenario Outline: user checks the format of bulk loading format
 

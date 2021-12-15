@@ -30,7 +30,7 @@
       And user enters "SE_" within the location ID+ field
       And user switches to frame
       Then user should see list of swedish sites
-      And user highlights location "SE_Site_SE M1" and clicks ok and validates location details
+      And user highlights location "SE_Site_SE- WLA08842" and clicks ok and validates location details
       And user enters "Test Case 01.17 Event Start Time In History" in Title field in Trouble event
       And user selects request type as "Customer" on trouble event page
       And user enters description as "Test Case 01.17 Event Start Time In History"

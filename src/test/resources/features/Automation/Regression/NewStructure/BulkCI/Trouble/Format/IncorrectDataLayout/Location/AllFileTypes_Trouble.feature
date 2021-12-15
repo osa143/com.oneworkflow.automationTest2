@@ -1,4 +1,4 @@
-@Bulk_Loading_Format_Location_Trouble @SAO-427
+@Bulk_Loading_Format_Location_Trouble2 @SAO-427
   #passed
   #Can't Test for Text file as it doesn't have columns
 Feature: checking of bulk loading format
@@ -45,8 +45,8 @@ Feature: checking of bulk loading format
      Examples:
 
          |fileTypes                                                                                                    |
-         |Test Attachments\IncorrectFormatColumnLocation\CSV.csv|
-         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xls|
+#         |Test Attachments\IncorrectFormatColumnLocation\CSV.csv|
+#         |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xls|
          |Test Attachments\IncorrectFormatColumnLocation\BIR+Load+Template.xlsx|
 
 

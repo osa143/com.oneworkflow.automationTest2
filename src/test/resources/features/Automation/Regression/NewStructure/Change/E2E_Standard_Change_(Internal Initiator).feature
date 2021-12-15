@@ -1,4 +1,4 @@
-@E2E_Standard_Change_Internal_Initiator @Change
+@E2E_Standard_Change_Internal_Initiator @Change1
   #Can only be run up to point of scheduled, time it takes to change status' automatically is too much of a delay for automation, tickets should be checked manually later to ensure they get closed
 
 Feature: E2E standard change internal initiator

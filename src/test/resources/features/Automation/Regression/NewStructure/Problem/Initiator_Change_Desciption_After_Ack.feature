@@ -1,4 +1,4 @@
-@Initiator_Change_Description_After_Ack @ProblemRegression
+@Initiator_Change_Description_After_Ack @ProblemRegression2
   #passed
   Feature: Initiator change description after ack
   Scenario: Problem Initiator changes description after ack

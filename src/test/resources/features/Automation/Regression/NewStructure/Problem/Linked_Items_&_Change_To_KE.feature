@@ -7,7 +7,8 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user clicks on create trouble event
+#      When user clicks on create trouble event
+      When user clicks on agent console create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
       When user clicks on sweden checkbox under affected BU's
@@ -17,7 +18,8 @@
       And user clicks on save button
       And user gets ticket value
       Then ticket should be created and status should be assigned
-      When user clicks on change record from agent console
+#      When user clicks on change record from agent console
+      When user clicks on agent console create change record
       And user switches to window 2
       Then change record form should open in a new tab
       When user creates change ticket with following details
@@ -34,7 +36,7 @@
       And user selects answer as "Simple"
       And user selects last answer as "No"
       And user clicks on save button
-      And user adds CI "SE_CPE_FRECPE5" to change ticket with impact level "No Impact"
+      And user adds CI "aa789win01t" to change ticket with impact level "No Impact"
       When user clicks on Send button
       Then ticket should be created and status should be assigned
       When user clicks on create known error

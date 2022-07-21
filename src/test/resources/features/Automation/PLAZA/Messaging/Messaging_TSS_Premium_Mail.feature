@@ -9,6 +9,7 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 4 secs
       And user clicks on messaging under IT Infrastructure dropdown
       When user clicks on "TSS Mail Premium Support" pebble
       Then user should see "TSS Mail Premium Support" form
@@ -40,7 +41,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | TSS Mail Premium Support"
       And user validates request type as "Service Request | PLAZA"
-      And user validates messaging tss premium mail description same as plaza
+#      And user validates messaging tss premium mail description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

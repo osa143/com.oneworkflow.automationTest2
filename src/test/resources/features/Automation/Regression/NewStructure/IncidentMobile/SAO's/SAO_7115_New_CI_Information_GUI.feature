@@ -7,10 +7,12 @@ Feature: SAO-7115 - New CI Information GUI
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user clicks on create trouble event
+#    When user clicks on create trouble event
+    When user clicks on agent console create trouble event
     And user switches to window 1
     Then trouble record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
+    When user clicks on OP sweden checkbox under affected BU's
     And user enters "Test SAO-6737" in Title field in Trouble event
     And user selects request type as "Customer" on trouble event page
     And user enters description as "Test SAO-6737"

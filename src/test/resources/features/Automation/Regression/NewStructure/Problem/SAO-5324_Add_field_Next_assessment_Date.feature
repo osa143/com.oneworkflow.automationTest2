@@ -5,7 +5,8 @@
      Given user is on the OneWorkflow login page
      When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
      Then user successfully logged in to OneWorkflow and agent console should be displayed
-     When user clicks on create known error
+#     When user clicks on create known error
+      When user clicks on agent console create known error
      And user switches to window 1
      Then known error form should appear in new tab
      And user should see "Next Assessment Date" dropdown as optional

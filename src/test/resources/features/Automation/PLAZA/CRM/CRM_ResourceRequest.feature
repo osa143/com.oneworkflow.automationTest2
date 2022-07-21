@@ -8,6 +8,7 @@ Feature: Plaza CRM form test
     Then user clicks on plaza portal
     When user clicks on Products & Services
     And user clicks on IT Infrastructure dropdown
+    And user waits 2 secs
     And user clicks on application under IT Infrastructure dropdown
     And user clicks on show more button
     When user clicks on "CRM" pebble
@@ -28,14 +29,16 @@ Feature: Plaza CRM form test
     Given user is on the OneWorkflow login page
     And user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user selects search menu as "Open Search Form:Work Order"
+    And user clicks agent console search menu
+    And user selects agent console open search form
+    And user selects agent console search work order
     And user switches to window 2
     Then user enters plaza request id in the source id field
     And user clicks Search on ticket search
     Then user should see plaza ticket
     And user validates source field as "PLAZA"
     And user validates title field as "Service Request | CRM"
-    And user validates CRM description same as plaza
+#    And user validates CRM description same as plaza
     Then user clicks on owner under sections
     And user clicks on assignment under sections
     Then user validates owner profile as "PLAZA"

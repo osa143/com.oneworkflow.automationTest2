@@ -8,6 +8,7 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on "Storage & Data Protection"
       When user clicks on "Export volume Snapshot to Host" pebble
       Then user should see "Export volume Snapshot to Host" form

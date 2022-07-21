@@ -18,6 +18,7 @@ repositories {
 repositories {
     maven {
         url 'http://maven.ans-cloud.net/artifactory/libs-release/'
+        
     }
     maven {
         url 'http://maven.ans-cloud.net/artifactory/libs-snapshot/'

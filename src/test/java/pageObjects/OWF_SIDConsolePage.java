@@ -10,8 +10,11 @@ import java.util.List;
 
 public class OWF_SIDConsolePage extends BasePage {
     private static final String ddCATEGORY = "Category";
+    private static final String ddOPCategory = "arid_WIN_0_200000003";
     private static final String ddTYPE = "Type";
+    private static final String ddOPTYPE = "arid_WIN_0_200000004";
     private static final String ddITEM = "Item";
+    private static final String dd_OP_ITEM = "arid_WIN_0_200000005";
     private static final String ddSEARCH_FOR = "arid_WIN_0_700009236";
     private static final String ddFILTER = "Filter";
 
@@ -94,11 +97,30 @@ public class OWF_SIDConsolePage extends BasePage {
     public void selectCategory(String value){
         selectDropDownNameAndValue(ddCATEGORY, value, false);
     }
+
+    public void selectOPCategory(String value){
+//        selectDropDownNameAndValue(ddCATEGORY, value, false);
+        driver.findElement(By.id(ddOPCategory)).click();
+        selectDropDownValue(value);
+    }
+
+
     public void selectType(String value){
         selectDropDownNameAndValue(ddTYPE, value, false);
     }
+
+    public void selectOPType(String value){
+        driver.findElement(By.id(ddOPTYPE)).click();
+        selectDropDownValue(value);
+    }
+
     public void selectsItem(String value){
         selectDropDownNameAndValue(ddITEM, value, false);
+    }
+
+    public void selectsOpItem(String value){
+        driver.findElement(By.id(dd_OP_ITEM)).click();
+        selectDropDownValue(value);
     }
 
 

@@ -16,6 +16,7 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
 
     private static final String txtTICKET_ID = "arid_WIN_0_730000060";
     private static final String linkASSIGNMENTS = "WIN_0_999000346";
+    private static final String linkOPASSIGNMENTS = "WIN_0_1000000033";
     private static final String TABLE_ID = "T1020";
     private static final String dd_STATUS= "Status*";
     private static final String btnTIMELINE_XPATH = "//a[contains(text(),'Timeline')]";
@@ -519,6 +520,11 @@ public class OWF_ProblemRecordPage extends BaseRecordPage {
     public void clickAssignments_underSections(){
         //clickElementByContainsTextAndTagName("*", "Assignment");
         driver.findElement(By.id(linkASSIGNMENTS)).click();
+    }
+
+    public void clickOPAssignments_underSections(){
+        //clickElementByContainsTextAndTagName("*", "Assignment");
+        driver.findElement(By.id(linkOPASSIGNMENTS)).click();
     }
 
     public void clickRelease(){

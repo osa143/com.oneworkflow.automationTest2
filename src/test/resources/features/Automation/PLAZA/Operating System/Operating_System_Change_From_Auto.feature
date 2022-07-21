@@ -8,6 +8,7 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on compute & operating system under IT Infrastructure dropdown
       And user clicks on show more button
       When user clicks on Change OS Patching
@@ -17,7 +18,8 @@
       And user enters operating system change from auto request as "Test3 Operating System Account/Request"
       And user selects select request "Changing from Auto to Manual patching"
       And user selects operating system as "Windows"
-      And user selects any operating system CI
+#      And user selects any operating system CI
+      And user waits 50 secs
       And user enters operating system justification as "Test justification"
       And user enters plan to enable automatic monthly patching as "Test plan"
       And user clicks on the commitment checkbox
@@ -40,7 +42,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Change OS Patching"
       And user validates request type as "Service Request | PLAZA"
-      And user validates operating system change from auto description same as plaza
+#      And user validates operating system change from auto description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

@@ -17,6 +17,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     private static final String btnCLEAR = "WIN_0_700009116";
     private static final String btnCI_SEARCH = "WIN_0_700009021";
     private static final String btnLINK_ID = "WIN_4_777506009";
+    private static final String btn_LINK_OP_ID = "WIN_3_777506009";
     private static final String btn_LINK = "WIN_5_777506009";
     private static final String btnACCEPT_ID = "WIN_0_730011058";
     private static final String txtLOCATION_ID = "arid_WIN_0_700009015";
@@ -651,6 +652,14 @@ public class OWF_CiSearchPage extends BaseRecordPage {
     public void clickLink(){
         clickElement(By.id(btnLINK_ID));
     }
+
+    public void clickOPLink(){
+        clickElement(By.id(btn_LINK_OP_ID));
+    }
+
+
+
+
     public void clickLink_linkedItems(){
         clickElement(By.id(btn_LINK));
     }

@@ -179,7 +179,7 @@
 
       Examples:
         |PDB Affected Country             |Number of Persons|Title                                                          |Priority|Impact|Importance|AssignedProfile  |
-#      |Sweden                          |Yes              |Personal Data Breach \| Sweden                                 |Major   |Major |  High    |PDB Control Center|
+      |Sweden                          |Yes              |Personal Data Breach \| Sweden                                 |Major   |Major |  High    |PDB Control Center|
       |Sweden                          |No               |Personal Data Breach \| Sweden                                 |Minor   |Minor |	Low      |PDB SE           |
 
 

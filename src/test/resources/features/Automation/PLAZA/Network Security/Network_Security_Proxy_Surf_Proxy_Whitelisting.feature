@@ -9,11 +9,13 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on firewall & network under IT Infrastructure dropdown
       And user clicks on show more button
+      And user waits 2 secs
       When user clicks on Proxy pebble
       Then user should see "Proxy" form
-      Then user selects proxy general inquiry system name in haiti as "1B"
+      Then user selects proxy general inquiry system name in haiti as "AAA"
       When user selects role dropdown as "Application Operation Engineer"
       Then user selects select request "Surf proxy/URL filter"
       And user enters network security proxy request as "<Request>"
@@ -39,7 +41,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Proxy"
       And user validates request type as "Service Request | PLAZA"
-      And user validates network security proxy surf proxy whitelisting description
+#      And user validates network security proxy surf proxy whitelisting description
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -66,5 +68,5 @@
       Examples:
 
       |Request                                          |SurfProxy /URL filter|Description                             |Additional Comments        |
-      |Test7 Network Security Proxy Whitelisting/Request|Whitelisting DDC FI  |Test7 Network Security Proxy/Description|Network Security - Test7/AC|
+#      |Test7 Network Security Proxy Whitelisting/Request|Whitelisting DDC FI  |Test7 Network Security Proxy/Description|Network Security - Test7/AC|
       |Test8 Network Security Proxy Whitelisting/Request|Whitelisting DDC SE |Test8 Network Security Proxy/Description|Network Security - Test8/AC|

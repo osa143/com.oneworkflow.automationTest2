@@ -545,8 +545,8 @@ public class OWF_WorkOrderPage extends BaseRecordPage {
 
     public boolean verifyDataCenterNetworkEquipmentNewDescription() {
         String actualDescription = getDescription();
-        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
-                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.DcSite)
+//        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+              if  (actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.DcSite)
                 && actualDescription.contains(PlazaValidation.Room) && actualDescription.contains(PlazaValidation.CI)
                 && actualDescription.contains(PlazaValidation.DnsIpAddress) && actualDescription.contains(PlazaValidation.DeliveryDate)
                 && actualDescription.contains(PlazaValidation.WbsCodeField) && actualDescription.contains(PlazaValidation.AdditionalComments)
@@ -571,8 +571,8 @@ public class OWF_WorkOrderPage extends BaseRecordPage {
 
     public boolean verifyDataCenterOnSiteServicesDescription() {
         String actualDescription = getDescription();
-        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
-                && actualDescription.contains(PlazaValidation.DcSite) && actualDescription.contains(PlazaValidation.Description)
+//        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+        if        ( actualDescription.contains(PlazaValidation.DcSite) && actualDescription.contains(PlazaValidation.Description)
                 && actualDescription.contains(PlazaValidation.AdditionalComments) && actualDescription.contains(PlazaValidation.Request)) {
             return true;
         }
@@ -581,8 +581,8 @@ public class OWF_WorkOrderPage extends BaseRecordPage {
 
     public boolean verifyDataCenterRequestDescription() {
         String actualDescription = getDescription();
-        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
-                && actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.DcSite)
+//        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+         if ( actualDescription.contains(PlazaValidation.Request) && actualDescription.contains(PlazaValidation.DcSite)
                 && actualDescription.contains(PlazaValidation.Room) && actualDescription.contains(PlazaValidation.DeliveryDate)
                 && actualDescription.contains(PlazaValidation.WbsCodeField) && actualDescription.contains(PlazaValidation.AdditionalComments)
                 && actualDescription.contains(PlazaValidation.Description)) {
@@ -593,8 +593,8 @@ public class OWF_WorkOrderPage extends BaseRecordPage {
 
     public boolean verifyDatabaseAccessRequestDescription() {
         String actualDescription = getDescription();
-        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
-                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+//        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+             if (   actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.DatabaseType) && actualDescription.contains(PlazaValidation.CI)
                 && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.DatabaseName)
                 && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AccountType)
@@ -872,8 +872,8 @@ public class OWF_WorkOrderPage extends BaseRecordPage {
 
     public boolean verifyNetworkSecurityProxyGeneralInquiryDescription() {
         String actualDescription = getDescription();
-        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
-                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+//        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+          if ( actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.SystemNameInHaiti)
                 && actualDescription.contains(PlazaValidation.Description) && actualDescription.contains(PlazaValidation.AdditionalComments)) {
             return true;
@@ -975,8 +975,8 @@ public class OWF_WorkOrderPage extends BaseRecordPage {
 
     public boolean verifyNetworkSecuritySwitchPortConfigDescription() {
         String actualDescription = getDescription();
-        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
-                && actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
+//        if (actualDescription.contains(PlazaValidation.UserName) && actualDescription.contains(PlazaValidation.Role)
+         if ( actualDescription.contains(PlazaValidation.ServiceRequestName) && actualDescription.contains(PlazaValidation.Request)
                 && actualDescription.contains(PlazaValidation.ExistingIpNet) && actualDescription.contains(PlazaValidation.NewIpNet)
                 && actualDescription.contains(PlazaValidation.CI) && actualDescription.contains(PlazaValidation.Description)
                 && actualDescription.contains(PlazaValidation.SystemNameInHaiti) && actualDescription.contains(PlazaValidation.AdditionalComments)) {

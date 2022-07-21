@@ -1,11 +1,11 @@
 CI Name
-SE_AP_alvesta-radmannen-ap1
-SE_AP_alvesta-radmannen-ap10
-SE_AP_alvesta-radmannen-ap2
-SE_AP_alvesta-radmannen-ap3
-SE_AP_alvesta-radmannen-ap4
-SE_AP_alvesta-radmannen-ap5
-SE_AP_alvesta-radmannen-ap6
-SE_AP_alvesta-radmannen-ap7
-SE_AP_alvesta-radmannen-ap8
-SE_AP_alvesta-radmannen-ap9
+SE_ALE_hogalid-ale1
+SE_AAA_AAA99SE
+SE_BTS_433_63022
+SE_BSC_AB14B
+SE_GSMCell_140010
+SE_GSMCell_140160
+SE_GSMCell_140161
+SE_GSMCell_14110
+SE_GSMCell_14111
+SE_GSMCell_14112

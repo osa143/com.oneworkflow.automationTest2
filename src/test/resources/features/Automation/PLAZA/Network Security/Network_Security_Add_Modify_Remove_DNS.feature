@@ -9,6 +9,7 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on firewall & network under IT Infrastructure dropdown
       When user clicks on DNS DHCP pebble
       Then user should see "DNS/DHCP" form
@@ -28,7 +29,10 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user selects search menu as "Open Search Form:Work Order"
+      And user clicks agent console search menu
+      And user selects agent console open search form
+      And user selects agent console search work order
+      And user waits 40 secs
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search

@@ -9,8 +9,10 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on firewall & network under IT Infrastructure dropdown
       And user clicks on show more button
+      And user waits 2 secs
       When user clicks on Proxy pebble
       Then user should see "Proxy" form
       Then user selects proxy general inquiry system name in haiti as "1B"

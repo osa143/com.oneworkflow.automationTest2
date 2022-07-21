@@ -8,16 +8,18 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on application under IT Infrastructure dropdown
       And user clicks on show more button
-      And user waits 2 secs
-      And user clicks on show more button
+#      And user waits 2 secs
+#      And user clicks on show more button
       When user clicks on "OCC" pebble
       Then user should see "OCC" form
      # Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters OCC request as "Test1 OCC/Request"
-      And user enters occ CI as "aa789win01t"
+#      And user enters occ CI as "aa789win01t"
+      And user waits 30 secs
       Then user enters OCC description as "Test1 OCC/Description"
       And user enters additional comments as "Test1 OCC/AC"
       Then user clicks on "Submit"
@@ -28,7 +30,10 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user selects search menu as "Open Search Form:Work Order"
+#      When user selects search menu as "Open Search Form:Work Order"
+      And user clicks agent console search menu
+      And user selects agent console open search form
+      And user selects agent console search work order
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
@@ -37,7 +42,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | OCC"
       And user validates request type as "Service Request | PLAZA"
-      And user validates occ description same as plaza
+#      And user validates occ description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

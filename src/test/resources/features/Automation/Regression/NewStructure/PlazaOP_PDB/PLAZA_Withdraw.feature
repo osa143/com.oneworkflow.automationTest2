@@ -13,7 +13,7 @@ Feature: Plaza creation/withdrawing of incident ticket
     And user selects "Applications" under Service area dropdown
     And user selects "AlarmMap" under plaza category dropdown
 #    And user selects "Application Error" under plaza type of issue
-    And user waits 10 secs
+    And user waits 50 secs
     And user enters "Test OW OP Ticket" in the plaza subject field
     And user enters "Test OW OP Ticket" in the plaza describe field
     Then user clicks on submit button on plaza form
@@ -25,18 +25,21 @@ Feature: Plaza creation/withdrawing of incident ticket
     And user enters "Test Update" in the ticket timeline
     And user clicks on plaza send button
     And user waits 5 secs
-    When user clicks on shown ICM number
-    Then user should see ICM form
-    And user waits 5 secs
-    And user validates INC is present under internal case subtasks
-    When user clicks on INC under internal case subtasks
-    Then user should see INC form
+#    When user clicks on shown ICM number
+#    Then user should see ICM form
+#    And user waits 5 secs
+#    And user validates INC is present under internal case subtasks
+#    When user clicks on INC under internal case subtasks
+#    Then user should see INC form
     And user opens new tab
     And user switches to window 2
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user selects search menu as "Open Search Form:Trouble Event"
+#    When user selects search menu as "Open Search Form:Trouble Event"
+    And user clicks agent console search menu
+    And user selects agent console open search form
+    And user selects agent console search trouble event
     And user switches to window 3
     Then user should see blank trouble search form
     When user enters plaza incident ticket

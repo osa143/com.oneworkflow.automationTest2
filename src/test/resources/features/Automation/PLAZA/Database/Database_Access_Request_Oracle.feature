@@ -8,7 +8,9 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on database under IT Infrastructure
+      And user waits 2 secs
       When user clicks on "Database Request" pebble
       Then user should see "Database Request" form
       Then user selects System name in haiti as "1B"

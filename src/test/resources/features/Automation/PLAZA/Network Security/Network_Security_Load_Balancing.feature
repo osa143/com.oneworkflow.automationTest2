@@ -9,11 +9,13 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on firewall & network under IT Infrastructure dropdown
       And user clicks on show more button
+      And user waits 2 secs
       When user clicks on Network Load Balancing pebble
       Then user should see "Network Load Balancing" form
-      Then user selects system name in haiti as "1B"
+      Then user selects system name in haiti as "AAA"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Network Security Load request as "Test6 Network Security/Request"
       Then user enters Network Security Load description as "Test6 Network Security/Description"
@@ -34,7 +36,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Network Load Balancing"
       And user validates request type as "Service Request | PLAZA"
-      And user validates network security load balancing description same as plaza
+#      And user validates network security load balancing description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

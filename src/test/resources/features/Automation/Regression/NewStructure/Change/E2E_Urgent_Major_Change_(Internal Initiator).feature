@@ -5,7 +5,8 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid username "ChangeInitiatorInternal1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user clicks on create change record
+#      When user clicks on create change record
+      When user clicks on agent console create change record
       Then user switches to window 1
       When user clicks save button
       Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)" on change record page
@@ -58,6 +59,7 @@
       When user clicks on estonia checkbox under affected BU's
       And user clicks on Send button
       Then error message should display as "You must select at least one CI in the Diagnosis Tab (ARERR 10000)" on change record page
+      And user waits 2 secs
       And user clicks on Diagnosis tab
       And user clicks on CI search button
       Then user switches to frame

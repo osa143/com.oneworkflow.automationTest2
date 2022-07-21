@@ -9,10 +9,11 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on application under IT Infrastructure dropdown
       And user clicks on show more button
-      And user waits 2 secs
-      And user clicks on show more button
+#      And user waits 2 secs
+#      And user clicks on show more button
       When user clicks on "TCFP (Account Management)" pebble
       Then user should see "TCFP (Account Management)" form
      # Then user selects system name in haiti as "Other"
@@ -40,7 +41,8 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user selects search menu as "Open Search Form:Work Order"
+#      When user selects search menu as "Open Search Form:Work Order"
+      And user waits 40 secs
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
@@ -48,7 +50,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | TCFP (Account Management)"
       And user validates request type as "Service Request | PLAZA"
-      And user validates tcfp add user description same as plaza
+#      And user validates tcfp add user description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

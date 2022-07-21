@@ -9,7 +9,9 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user clicks on create work order
+#      When user clicks on create work order
+#      When user clicks on agent console create problem record
+      When user clicks on agent console create work order
       Then user switches to window 1
       When user enters title as "Non-B2B to B2B"
       And user selects request type as "Maintenance" on work order page

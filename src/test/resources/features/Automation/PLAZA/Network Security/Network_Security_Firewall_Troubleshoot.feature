@@ -10,10 +10,11 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on firewall & network under IT Infrastructure dropdown
       When user clicks on Firewall Routing Request pebble
       Then user should see "Firewall Routing Request" form
-      Then user selects network security firewall system name in haiti as "1B"
+      Then user selects network security firewall system name in haiti as "AAA"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Troubleshoot Firewall order"
       And user enters Network Security Firewall Troubleshoot request as "Test4 Network Security/Request"

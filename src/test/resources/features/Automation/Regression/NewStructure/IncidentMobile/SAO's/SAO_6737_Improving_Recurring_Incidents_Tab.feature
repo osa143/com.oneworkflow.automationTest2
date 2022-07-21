@@ -1,21 +1,25 @@
 @SAO_6737 @Incident_SAO
 Feature: SAO-6737 - Improving Recurring Incidents Tab(Name Subject to Change)
   Scenario: SAO-6737 - Improving Recurring Incidents Tab(Name Subject to Change)
+
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user clicks on create trouble event
+#    When user clicks on create trouble event
+    When user clicks on agent console create trouble event
     And user switches to window 1
     Then trouble record form should appear in new tab
-    When user clicks on sweden checkbox under affected BU's
+    When user clicks on OP sweden checkbox under affected BU's
+#    When user clicks on sweden checkbox under affected BU's
     And user enters "Test SAO-6737" in Title field in Trouble event
     And user selects request type as "Customer" on trouble event page
     And user enters description as "Test SAO-6737"
     And user clicks on save button
     Then ticket should be created and status should be assigned
-    When user adds CI "SE_AAA_AAA98SE" to the ticket with impact level "No Impact"
+    When user adds CI "FI_LTECell_Ksamo4H" to the ticket with impact level "No Impact"
     Then CI should be listed and displayed under the Diagnosis tab
-    When user clicks on create work order
+    When user clicks on agent console create work order
+#    When user clicks on create work order
     And user switches to window 2
     Then work order form should appear in new tab
     When user enters title as "Test SAO-6737"
@@ -23,7 +27,7 @@ Feature: SAO-6737 - Improving Recurring Incidents Tab(Name Subject to Change)
     And user enters description as "Testing"
     Then user selects priority as "Major"
     And user clicks save button
-    When user adds CI "SE_AAA_AAA98SE" to the ticket with impact level "No Impact"
+    When user adds CI "FI_LTECell_Ksamo4H" to the ticket with impact level "No Impact"
     Then CI should be listed and displayed under the Diagnosis tab
     When user clicks on create change record
     And user switches to window 3
@@ -36,7 +40,7 @@ Feature: SAO-6737 - Improving Recurring Incidents Tab(Name Subject to Change)
     And user enters impact duration as "20" minutes
     Then user enters description as "Regression - Change Management Process"
     And user clicks on save button
-    And user adds CI "SE_AAA_AAA98SE" to change ticket with impact level "No Impact"
+    And user adds CI "FI_LTECell_Ksamo4H" to change ticket with impact level "No Impact"
     Then CI should be listed and displayed under the Diagnosis tab
     And user switches to window 1
     When user clicks on "Ticket Matching" tab
@@ -115,7 +119,7 @@ Feature: SAO-6737 - Improving Recurring Incidents Tab(Name Subject to Change)
     When user selects match by dropdown as "CI"
     And user clicks on ticket matching title checkbox
     And user clicks ticket matching refresh button
-    Then user validates tickets with same CI "SE_AAA_AAA98SE" are displayed
+    Then user validates tickets with same CI "FI_LTECell_Ksamo4H" are displayed
 
 
 

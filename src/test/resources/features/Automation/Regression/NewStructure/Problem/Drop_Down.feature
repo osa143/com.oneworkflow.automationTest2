@@ -10,11 +10,12 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user clicks on create problem record
+#      When user clicks on create problem record
+      When user clicks on agent console create problem record
       And user switches to window 1
       Then problem record form should appear in new tab
       Then "Estimated Ready:Actual Finish:Decision Go/NoGo:Resolving Group:Resolving Person" shouldn't be visible on problem record form
-      Then user validates BU availability
+#      Then user validates BU availability
       And user clicks on internal checkbox under affected BU's
       Then user enters "Reactive investigation of:Tohall_copy" in Title field
       And user selects request type as "CPS:IT:Other" in problem form

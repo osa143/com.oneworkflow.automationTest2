@@ -8,6 +8,7 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on application under IT Infrastructure dropdown
       And user clicks on show more button
       When user clicks on Finance & Assurance
@@ -15,8 +16,8 @@
       #Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters "<Request>" in the request field
-#      And user selects system dropdown as "<System>"
-      And user waits 10 secs
+      And user selects system dropdown as "<System>"
+      And user waits 2 secs
       And user enters planned start time as current time
       And user enters planned end time as current time
       And user enters plaza description as "<Description>"
@@ -29,7 +30,9 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user selects search menu as "Open Search Form:Work Order"
+      And user clicks agent console search menu
+      And user selects agent console open search form
+      And user selects agent console search work order
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
@@ -57,7 +60,7 @@
       And user clicks on save button
       And user validates ticket status as "Closed"
       When user switches to window 0
-      And user waits 10 secs
+      And user waits 15 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed
 

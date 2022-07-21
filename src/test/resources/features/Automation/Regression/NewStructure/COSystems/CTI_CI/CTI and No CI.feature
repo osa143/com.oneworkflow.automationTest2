@@ -12,6 +12,7 @@ Scenario: Create work order when CO system sends CTI and No CI
     Then user clicks on plaza portal
     When user clicks on Products & Services
     And user clicks on IT Infrastructure dropdown
+    And user waits 2 secs
     And user clicks on data center under IT Infrastructure dropdown
     When user clicks on "Cabling - New" pebble
     Then user should see "Cabling - New" form
@@ -32,7 +33,10 @@ Scenario: Create work order when CO system sends CTI and No CI
     Given user is on the OneWorkflow login page
     And user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user selects search menu as "Open Search Form:Work Order"
+#    When user selects search menu as "Open Search Form:Work Order"
+    And user clicks agent console search menu
+    And user selects agent console open search form
+    And user selects agent console search trouble event
     And user switches to window 2
     Then user enters plaza request id in the source id field
     And user clicks Search on ticket search

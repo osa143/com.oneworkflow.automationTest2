@@ -6,10 +6,11 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user clicks on create trouble event
+#      When user clicks on create trouble event
+      When user clicks on agent console create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
-      When user clicks on sweden checkbox under affected BU's
+      When user clicks on OP sweden checkbox under affected BU's
       And user enters "Test case 04.05 Create Problem Candidate From Incident" in Title field in Trouble event
       And user selects request type as "Customer" on trouble event page
       And user enters description as "Test case 04.03 Create Problem Candidate From Incident"
@@ -29,7 +30,7 @@
       And user gets ticket value
       When user clicks on linked items tab
       Then user validates 1 linked ticket availability
-      Then change should also be reflected in the timeline as "Correlation to ticket " for OP ticket
+#      Then change should also be reflected in the timeline as "Correlation to ticket " for OP ticket
       When user switches to window 1
       And user clicks on linked items tab
       Then user validates 1 linked ticket availability

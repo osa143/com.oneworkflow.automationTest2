@@ -8,10 +8,11 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 3 secs
       And user clicks on data center under IT Infrastructure dropdown
       When user clicks on "Network Equipment - New" pebble
       Then user should see "Network Equipment - New" form
-      Then user selects system name in haiti as "1B"
+      Then user selects system name in haiti as "AAA"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Network Equipment Request as "Test3 Data Center/Request"
       And user enters Network Equipment DC-site or address as "Test address"

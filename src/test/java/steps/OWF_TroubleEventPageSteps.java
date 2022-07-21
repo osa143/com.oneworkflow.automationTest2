@@ -132,6 +132,11 @@ public class OWF_TroubleEventPageSteps {
         troubleEventPage.clickDenmarkCheckBox();
     }
 
+    @And("user clicks on OP denmark checkbox under affected BU's")
+    public void userClicksOnOpDenmarkCheckboxUnderAffectedBUS() {
+        troubleEventPage.clickOPDenmarkCheckBox();
+    }
+
     @When("user clicks on main page refresh")
     public void userClicksOnMainPageRefresh() {
         troubleEventPage.refreshPage();
@@ -629,6 +634,11 @@ public class OWF_TroubleEventPageSteps {
         troubleEventPage.selectAssignmentProfile(arg0);
     }
 
+    @When("user selects OP assignment profile dropdown as {string}")
+    public void userSelectsOpAssignmentProfileDropdownAs(String arg0) {
+        troubleEventPage.selectOPAssignmentProfile(arg0);
+    }
+
     @And("user changes event start time as {string} future date and time")
     public void userChangesEventStartTimeAsFutureDateAndTime(String arg0) {
         troubleEventPage.clearEventStartTime();
@@ -671,9 +681,19 @@ public class OWF_TroubleEventPageSteps {
        troubleEventPage.enterText_timeline(arg0);
     }
 
+    @When("user enters {string} in the OP timeline text box")
+    public void userEntersInTheOPTimelineTextBox(String arg0) {
+        troubleEventPage.enterOPText_timeline(arg0);
+    }
+
     @And("user clicks on public radio button")
     public void userClicksOnPublicRadioButton() {
         troubleEventPage.clickPublicRadioButton();
+    }
+
+    @And("user clicks on OP timeline public radio button")
+    public void userClicksOnOpTimelinePublicRadioButton() {
+        troubleEventPage.clickOPRadioButton();
     }
 
     @Then("user validates {int} linked ticket availability")
@@ -813,7 +833,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user gets trouble ticket value")
     public void userGetsTroubleTicketValue() {
-        CommonUtils.opTicket = troubleEventPage.getTicketValue();
+        CommonUtils.opTicket = troubleEventPage.getNewOPTicketValue();
             System.out.println("Stored trouble ticket is " + CommonUtils.opTicket);
     }
 
@@ -831,7 +851,7 @@ public class OWF_TroubleEventPageSteps {
     @And("user enters event end time as {int} mins past")
     public void userEntersEventEndTimeAsMinsPast(int arg0) {
         CommonUtils.EventEndTime= CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0);
-        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("MM-dd-yyyy HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user selects action dropdown as {string} on trouble event page")
@@ -841,7 +861,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event start time as {int} mins past")
     public void userEntersEventStartTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("MM-dd-yyyy HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user should see confirmation message for impact clear and clicks ok")

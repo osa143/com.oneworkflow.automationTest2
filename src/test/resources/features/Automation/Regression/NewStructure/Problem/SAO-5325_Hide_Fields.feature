@@ -5,7 +5,8 @@
      Given user is on the OneWorkflow login page
      When user logs in with valid username "frvi96_auto" and password as "Test@1234"
      Then user successfully logged in to OneWorkflow and agent console should be displayed
-     When user clicks on create known error
+#     When user clicks on create known error
+      When user clicks on agent console create known error
      And user switches to window 1
      Then known error form should appear in new tab
      Then "Workaround Available,Customer Effect,Cust. Effect Description,Work Around Initiation date,Work Around Accountable : TeliaID,Work Around Accountable : Name,Solution Proposal Category,Solution Proposal Reference ID #,Solution Proposal Status" shouldn't be visible

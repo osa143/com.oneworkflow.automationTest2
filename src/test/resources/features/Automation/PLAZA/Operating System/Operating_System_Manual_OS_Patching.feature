@@ -8,6 +8,7 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on compute & operating system under IT Infrastructure dropdown
       And user clicks on show more button
       When user clicks on Manual OS Patching
@@ -15,7 +16,8 @@
       Then user selects operating system name in haiti as "1B"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters operating system manual os patching request as "Test6 Operating System Manual/Request"
-      And user selects any operating system manual OS patching CI
+#      And user selects any operating system manual OS patching CI
+      And user waits 40 secs
       And user selects manual os patching Operating System as "Solaris"
       And user selects Server placed in Veha as "Yes"
       And user enters WBS Code as "P100-000-000"
@@ -41,7 +43,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Manual OS Patching"
       And user validates request type as "Service Request | PLAZA"
-      And user validates operating system manual os patching description same as plaza
+#      And user validates operating system manual os patching description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

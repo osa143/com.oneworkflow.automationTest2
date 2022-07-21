@@ -8,10 +8,11 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on storage & data protection under IT Infrastructure
       When user clicks on "Restore from Backup" pebble
       Then user should see "Restore from Backup" form
-      Then user selects system name in haiti as "1B"
+      Then user selects system name in haiti as "AAA"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Backup request as "Test1 Backup Restore/Request"
       And user enters back up date and as current date and time
@@ -22,8 +23,9 @@
       And user enters additional comments as "Test1 Backup Restore/AC"
       And user clicks on add attachment in plaza
       And user searches for plaza "Test Attachments\other files\Test Image.png" attachment and adds it
-      And user clicks on add second attachment in plaza
-      And user searches for plaza "Test Attachments\other files\Test Image.png" attachment and adds it
+      And user waits 20 secs
+#      And user clicks on add second attachment in plaza
+#      And user searches for plaza "Test Attachments\other files\Test Image.png" attachment and adds it
       Then user clicks on "Submit"
       And user gets plaza request id
       And user clicks on plaza request id
@@ -42,7 +44,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Restore from Backup"
       And user validates request type as "Service Request | PLAZA"
-      And user validates back up restore description same as plaza
+#      And user validates back up restore description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       And user clicks on attachments under sections

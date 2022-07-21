@@ -6,7 +6,9 @@
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user selects search menu as "Open Search Form:Problem Record"
+    And user clicks agent console search menu
+    And user selects agent console open search form
+    And user selects agent console search problem
     And user switches to window 1
     Then user should see blank problem search form
     When user verifies for all entries in status dropdown

@@ -6,7 +6,7 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user clicks on create known error
+      When user clicks on agent console create known error
       And user switches to window 1
       Then known error form should appear in new tab
       And user enters "Known Error B" in Title field
@@ -25,10 +25,12 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user clicks on create trouble event
+#      When user clicks on create trouble event
+      When user clicks on agent console create trouble event
       And user switches to window 2
       Then trouble record form should appear in new tab
-      When user clicks on sweden checkbox under affected BU's
+#      When user clicks on sweden checkbox under affected BU's
+      When user clicks on OP sweden checkbox under affected BU's
       And user enters "Test Case 02.15 Search for Known Errors" in Title field in Trouble event
       And user selects request type as "Customer" on trouble event page
       And user enters description as "Test Case 02.15 Search for Known Errors"
@@ -37,15 +39,19 @@
       And user adds CI "SE_SGSN_VRRMME1" to the ticket
       And user clicks on "Diagnosis" tab
       Then CI should be listed and displayed under the Diagnosis tab
-      When user clicks on CTI details under sections
-      And user selects Category as "CORE"
-      And user selects Type as "Other"
-      And user selects Item as "BR"
+#      When user clicks on CTI details under sections
+#      And user selects Category as "CORE"
+      And user selects OP Category as "CORE"
+      And user selects OP Type as "Other"
+      And user selects OP Item as "BR"
+#      And user selects Type as "Other"
+#      And user selects Item as "BR"
       Then user clicks on save button
       When user clicks on linked items tab
       And user selects target application first dropdown as "OS3 - Known Error"
       And user selects target application second dropdown as "Has workaround"
-      And user clicks on link button
+#      And user clicks on link button
+      And user clicks on OP link button
       Then user switches to frame
       And user clicks on the clear button
       And user selects Category as "CORE"

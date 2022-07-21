@@ -7,15 +7,16 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user clicks on create trouble event
+#      When user clicks on create trouble event
+      When user clicks on agent console create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
-      And user validates "Ticket Number" is present
+#      And user validates "Ticket Number" is present
       And user validates "Status" is present
       And user validates "Source" is present
       And user validates "ID" is present
       And user validates "Service Provider" is present
-      And user validates BU availability
+#      And user validates BU availability
       And user validates "Created by Light GUI" is present
       And user validates "Cust. Remaining SLA" is present
       And user validates "OLA Target Time" is present
@@ -31,10 +32,10 @@
       And user validates "Fault Domain" is present
       And user validates "Rejection Reason" is present
       And user validates "Re-Assigned Reason" is present
-      And user validates "Auto Close Date" is present
+#      And user validates "Auto Close Date" is present
       And user validates "Do Not AutoClose" is present
       And user validates "Auto Close" is present
-      And user validates "Request sent to FM" is present
+#      And user validates "Request sent to FM" is present
       And user validates "Servicedesk Escalated Incidents" is present
       And user validates "Customer Escalated Incidents" is present
       And user validates "Hierarchic escalation level" is present

@@ -8,9 +8,11 @@ Feature: 00.03 - OLA target time availability in Incident Record
     When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And multiple menu options "Console:Create:Search:Administration" should be available
-    When user clicks on create trouble event
+#    When user clicks on create trouble event
+    When user clicks on agent console create trouble event
     And user switches to window 1
-    Then user clicks on sweden checkbox under affected BU's
+#    Then user clicks on sweden checkbox under affected BU's
+    Then user clicks on OP sweden checkbox under affected BU's
     And user enters "Test OLA Target Time Ticket" in Title field
     And user selects request type as "Customer" on trouble event page
     And user enters description as " 00.03 Test OLA Target Time Ticket"

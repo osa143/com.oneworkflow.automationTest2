@@ -6,7 +6,7 @@
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user clicks on create problem record
+    When user clicks on agent console create problem record
     And user switches to window 1
     Then problem record form should appear in new tab
     When user creates problem ticket with below details
@@ -24,14 +24,16 @@
     When user clicks on create trouble event
     And user switches to window 3
     Then trouble record form should appear in new tab
-    When user clicks on sweden checkbox under affected BU's
+#    When user clicks on sweden checkbox under affected BU's
+    When user clicks on OP sweden checkbox under affected BU's
     And user enters "A Problem Test" in Title field
     And user selects request type as "Customer" on trouble event page
     And user enters description as "A Customer Complaint"
     And user clicks on save button
     Then ticket should be created and status should be assigned
     And user gets trouble ticket value
-    When user clicks on create change record
+#    When user clicks on create change record
+    When user clicks on agent console create change record
     And user switches to window 4
     When user creates change ticket with following details
       |RequestType  |Title            |RequestCategory|Description     |Reason       |Priority|ChangeBuilder      |Implementation|TestPlan   |RollBack   |CommPlan   |VerOfFunctionality|Risk   |ServiceCustomerImpact|ImpactDuration|EstimatedImpact       |
@@ -61,7 +63,7 @@
     And user enters ticket in ticket ID+ field
     And user clicks on the search button on select target request
     And user clicks accept button
-    When user clicks on linked items tab
+#    When user clicks on linked items tab
     And user selects target application first dropdown as "OS3 - Change"
     And user selects target application second dropdown as "Caused by"
     When user clicks on link button under linked items tab

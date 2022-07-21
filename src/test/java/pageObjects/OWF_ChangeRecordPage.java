@@ -20,7 +20,7 @@ public class OWF_ChangeRecordPage extends BaseRecordPage {
     private static final String txt_SEARCH_FILTER_CALENDAR= "combo-1017-inputEl";
     private static final String txt_SEARCH_FILTER_CALENDAR_XPATH= "//*[@id='combo-1017-inputEl']";
     private static final String btn_CHANGE_RECORD= "button-1052";
-    private static final String dd_STATUS= "Status";
+    private static final String dd_STATUS= "arid_WIN_0_777031003";
     private static final String txt_Title= "arid_WIN_0_777031000";
     private static final String txt_reqestType= "arid_WIN_0_777031002";
     private static final String btn_SEARCH= "WIN_0_700506222";

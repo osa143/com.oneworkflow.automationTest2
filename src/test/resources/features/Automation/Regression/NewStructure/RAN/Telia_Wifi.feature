@@ -5,10 +5,12 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      Then user clicks on create trouble event
+#      Then user clicks on create trouble event
+      Then user clicks on agent console create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
-      When user clicks on sweden checkbox under affected BU's
+#      When user clicks on sweden checkbox under affected BU's
+      When user clicks on OP sweden checkbox under affected BU's
       And user enters "Test Telia Wifi" in Title field
       Then user selects request type as "Event" on trouble event page
       And user enters description as "Test WO"

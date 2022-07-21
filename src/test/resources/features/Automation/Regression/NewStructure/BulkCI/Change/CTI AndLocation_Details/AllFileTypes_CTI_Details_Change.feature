@@ -5,7 +5,8 @@ Feature: checking of bulk loading CTI details and location details
     Given user is on the OneWorkflow login page
     And user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user clicks on create change record
+#    When user clicks on create change record
+    When user clicks on agent console create change record
     Then user switches to window 1
     And user selects request type as "Normal Change"
     Then user selects title as "Mobile:CS Core (Voice)" on Change record page
@@ -77,5 +78,5 @@ Feature: checking of bulk loading CTI details and location details
       |fileTypes                                                                                                  |
 #      |Test Attachments\10 CI's - Correct Names\CSV.csv |
 #      |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
-#      |Test Attachments\10 CI's - Correct Names\XLS.xls|
-      |Test Attachments\10 CI's - Correct Names\TEXT.txt |
+      |Test Attachments\10 CI's - Correct Names\XLS.xls|
+#      |Test Attachments\10 CI's - Correct Names\TEXT.txt |

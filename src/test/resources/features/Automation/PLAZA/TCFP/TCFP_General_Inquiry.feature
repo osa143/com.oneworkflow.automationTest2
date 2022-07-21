@@ -8,11 +8,12 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on application under IT Infrastructure dropdown
       And user clicks on show more button
       And user waits 2 secs
-      And user clicks on show more button
-      And user waits 2 secs
+#      And user clicks on show more button
+#      And user waits 2 secs
       When user clicks on "TCFP (Account Management)" pebble
       Then user should see "TCFP (Account Management)" form
       #Then user selects system name in haiti as "Other"
@@ -20,7 +21,8 @@
       And user selects service request name as "General Inquiry"
       And user enters TCFP general inquiry request as "Test1 TCFP General Inquiry/Request"
       And user enters TCFP general inquiry description as "Test1 TCFP General Inquiry/Description"
-      Then user selects TCFP general inquiry CI as "cc100cgas001"
+#      Then user selects TCFP general inquiry CI as "cc100cgas001"
+      And user waits 50 secs
       And user enters additional comments as "Test1 TCFP General Inquiry/AC"
       Then user clicks on "Submit"
       And user gets plaza request id

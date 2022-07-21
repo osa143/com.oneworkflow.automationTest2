@@ -1,4 +1,4 @@
-@Bulk_Loading_Error_Message_impact_duration_Change @SAO-427 @other_change*
+@Bulk_Loading_Error_Message_impact_duration_Change2 @SAO-427 @other_change*
   #passed
 Feature: checking of bulk loading error message impact duration for change ticket
   Scenario: user checks the impact duration message of bulk loading error
@@ -6,7 +6,8 @@ Feature: checking of bulk loading error message impact duration for change ticke
     Given user is on the OneWorkflow login page
     And user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user clicks on create change record
+#    When user clicks on create change record
+    When user clicks on agent console create change record
     Then user switches to window 1
     And user selects request type as "Normal Change"
     Then user selects title as "Mobile:CS Core (Voice)" on Change record page

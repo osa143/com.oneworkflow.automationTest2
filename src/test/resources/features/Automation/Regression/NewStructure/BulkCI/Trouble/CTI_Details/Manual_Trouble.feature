@@ -1,4 +1,4 @@
-@Manual_Bulk_Loading_CTI_Details_trouble #@SAO-427
+@Manual_Bulk_Loading_CTI_Details_trouble2 #@SAO-427
   #passed
 Feature: checking of bulk loading CTI details
   Scenario: user checks the bulk loading CTI details
@@ -26,14 +26,14 @@ Feature: checking of bulk loading CTI details
     And user validates Level default value is ""
     Then user selects impact level as "No Impact"
     When user clicks on Manual Input radio button
-    And user enters "SE_AP_alvesta-radmannen-ap1" in manual CI search box
+    And user enters "FI_LTECell_Valpe4H" in manual CI search box
     Then user clicks on save button under bulk import
     And first error message should display as "The manually identified CIs are now being processed..." on bulk ci window
     And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-    When user clicks on CTI details under sections
+#    When user clicks on CTI details under sections
     Then user validates Category as "Access"
     And user validates type as "WLAN Access"
-    And user validates item as "AccessPoint"
+    And user validates item as "AP_ACC_WLAN"
     When user clicks on location under sections
     Then user validates location id as "ALV WLAN11"
     And user validates location name as "SE_Site_ALV WLAN11"

@@ -8,6 +8,7 @@ Feature: Plaza CRM form test
     Then user clicks on plaza portal
     When user clicks on Products & Services
     And user clicks on IT Infrastructure dropdown
+    And user waits 2 secs
     And user clicks on application under IT Infrastructure dropdown
     And user clicks on show more button
     When user clicks on CRM pebble
@@ -29,14 +30,17 @@ Feature: Plaza CRM form test
     Given user is on the OneWorkflow login page
     And user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user selects search menu as "Open Search Form:Work Order"
+    And user clicks agent console search menu
+    And user selects agent console open search form
+    And user selects agent console search work order
+    And user waits 40 secs
     And user switches to window 2
     Then user enters plaza request id in the source id field
     And user clicks Search on ticket search
     Then user should see plaza ticket
     And user validates source field as "PLAZA"
     And user validates title field as "Service Request | CRM"
-    And user validates CRM description same as plaza
+#    And user validates CRM description same as plaza
     Then user clicks on owner under sections
     And user clicks on assignment under sections
     Then user validates owner profile as "PLAZA"
@@ -55,7 +59,7 @@ Feature: Plaza CRM form test
     And user clicks on save button
     And user validates ticket status as "Closed"
     When user switches to window 0
-    And user waits 6 secs
+    And user waits 15 secs
     And user clicks on main page refresh
     Then user validates plaza request has completed
 
@@ -67,7 +71,7 @@ Feature: Plaza CRM form test
 #    |Test4 CRM/Request |ALPHA2       |Test4 CRM/Description |Test4 CRM/AC      |
 #    |Test5 CRM/Request |EMU          |Test5 CRM/Description |Test5 CRM/AC      |
 #    |Test6 CRM/Request |FLOWVIEW     |Test6 CRM/Description |Test6 CRM/AC      |
-#    |Test7 CRM/Request |GESB-AIPL    |Test7 CRM/Description |Test7 CRM/AC      |
+##    |Test7 CRM/Request |GESB-AIPL    |Test7 CRM/Description |Test7 CRM/AC      |
 #    |Test8 CRM/Request |GESB-B2BEBXML|Test8 CRM/Description |Test8 CRM/AC      |
 #    |Test9 CRM/Request |GESB-B2BLight|Test9 CRM/Description |Test9 CRM/AC      |
 #    |Test10 CRM/Request|GESB-B2BSOAP |Test10 CRM/Description|Test10 CRM/AC     |

@@ -39,6 +39,12 @@ public class OWF_ProblemRecordPageSteps {
 
     }
 
+    @When("user clicks on OP sweden checkbox under affected BU's")
+    public void userClicksOnOpSwedenCheckboxUnderAffectedBUS() {
+        problemRecordPage.clickOPSwedenCheckBox();
+
+    }
+
     @Then("multiple error messages should appear with red boarder around fields")
     public void multipleErrorMessagesShouldAppearWithRedBoarderAroundFields() {
         Assert.assertTrue(problemRecordPage.validateMultipleErrorMessages(), "Multiple error messages are not shown");
@@ -302,6 +308,12 @@ public class OWF_ProblemRecordPageSteps {
     @And("user clicks on add button")
     public void userClicksOnAddButton() {
         problemRecordPage.clickAddButtonOnTemplate();
+
+    }
+
+    @And("user clicks on OP add button")
+    public void userClicksOnOpAddButton() {
+        problemRecordPage.clickAddButtonOnOpTemplate();
 
     }
 
@@ -594,6 +606,13 @@ public class OWF_ProblemRecordPageSteps {
     public void userClicksOnAssignmentUnderSections() {
         problemRecordPage.wait(500);
         problemRecordPage.clickAssignments_underSections();
+
+    }
+
+    @When("user clicks on OP assignment under sections")
+    public void userClicksOnOpAssignmentUnderSections() {
+        problemRecordPage.wait(500);
+        problemRecordPage.clickOPAssignments_underSections();
 
     }
 

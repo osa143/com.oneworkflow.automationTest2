@@ -8,10 +8,11 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on data center under IT Infrastructure dropdown
       When user clicks on "Datacenter Request" pebble
       Then user should see "Datacenter Request" form
-      Then user selects system name in haiti as "1B"
+      Then user selects system name in haiti as "AAA"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters Data Center Request request as "Test6 Data Center/Request"
       And user enters Data Center Request DC-site or address as "Test address"

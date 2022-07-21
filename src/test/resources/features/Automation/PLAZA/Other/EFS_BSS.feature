@@ -9,6 +9,7 @@ Feature: Plaza EFS-BSS form test
     And user waits 5 secs
     When user clicks on Products & Services
     And user clicks on IT Infrastructure dropdown
+    And user waits 2 secs
     And user clicks on application under IT Infrastructure dropdown
     And user clicks on show more button
     When user clicks on "EFS-BSS" pebble
@@ -17,7 +18,7 @@ Feature: Plaza EFS-BSS form test
     When user selects role dropdown as "Application Operation Engineer"
     And user enters EFS-BSS request as "Test1 EFS/Request"
 #    And user selects any efs bss CI
-    And user waits 20 secs
+    And user waits 40 secs
     And user enters EFS description as "Test1 EFS/Description"
     And user enters additional comments as "Test1 EFS/AC"
     Then user clicks on "Submit"
@@ -28,7 +29,9 @@ Feature: Plaza EFS-BSS form test
     Given user is on the OneWorkflow login page
     And user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user selects search menu as "Open Search Form:Work Order"
+    And user clicks agent console search menu
+    And user selects agent console open search form
+    And user selects agent console search work order
     And user switches to window 2
     Then user enters plaza request id in the source id field
     And user clicks Search on ticket search

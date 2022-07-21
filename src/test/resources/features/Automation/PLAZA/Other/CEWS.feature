@@ -10,6 +10,7 @@
       And user waits 5 secs
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on application under IT Infrastructure dropdown
       And user clicks on show more button
       When user clicks on "CEWS" pebble
@@ -23,7 +24,7 @@
       Then user enters phone field as "123456789"
       And user enters CEWS request as "Test1 CEWS/Request"
 #      And user selects any cews CI
-      And user waits 20 secs
+      And user waits 60 secs
       Then user enters CEWS description as "Test1 CEWS/Description"
       And user enters additional comments as "Test1 CEWS/AC"
       Then user clicks on "Submit"
@@ -34,7 +35,10 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user selects search menu as "Open Search Form:Work Order"
+#      When user selects search menu as "Open Search Form:Work Order"
+      And user clicks agent console search menu
+      And user selects agent console open search form
+      And user selects agent console search work order
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search

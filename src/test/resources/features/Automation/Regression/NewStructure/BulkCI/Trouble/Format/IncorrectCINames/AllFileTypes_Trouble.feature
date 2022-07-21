@@ -5,10 +5,12 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user clicks on create trouble event
+#      When user clicks on create trouble event
+     When user clicks on agent console create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
-      When user clicks on sweden checkbox under affected BU's
+#      When user clicks on sweden checkbox under affected BU's
+     When user clicks on OP sweden checkbox under affected BU's
       And user enters "SAO-427 Test Bulk Loading Format Incorrect CI names" in Title field
       And user selects request type as "Event" on trouble event page
       And user enters description as "SAO-427 Test Bulk Loading Format Incorrect CI names"

@@ -10,9 +10,9 @@
      And user switches to window 1
      Then user validates source status as "Enabled"
      And user validates configuring source as "HPE Common Temip"
-     When user enters Age in days as "90" and clicks save button
+     When user enters Age in days as "400" and clicks save button
      And user clicks on "Refresh"
-     Then age in days should be updated to "90"
+     Then age in days should be updated to "400"
 
 
     @6958_2
@@ -22,7 +22,9 @@
      Given user is on the OneWorkflow login page
      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
      Then user successfully logged in to OneWorkflow and agent console should be displayed
-     When user selects "Search" menu as "Open Search Form:Trouble Event"
+      And user clicks agent console search menu
+      And user selects agent console open search form
+      And user selects agent console search trouble event
      And user switches to window 1
      And user selects status as "Closed"
      And user enters "HPE Common Temip" in the source field
@@ -56,7 +58,7 @@
      And user enters "HPE Common Temip" in the source field
      When user clicks on advanced search button
      ## In advanced search we have to enter the date in correct format to search within age in days of source##
-     And user enters "'Event Start Time' < \"2021/07/01\" AND 'Event End Time' != $NULL$" in the advanced search bar
+     And user enters "'Event Start Time' < /"2021/07/01\" AND 'Event End Time' != $NULL$" in the advanced search bar
      And user clicks Search on ticket search
      And user waits 15 secs
      And user should see fault position, equipment, cause, action, closure info fields read only

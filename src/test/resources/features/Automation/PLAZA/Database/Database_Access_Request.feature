@@ -8,10 +8,11 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on database under IT Infrastructure
       When user clicks on "Database Request" pebble
       Then user should see "Database Request" form
-      Then user selects System name in haiti as "SINN"
+      Then user selects System name in haiti as "118.it"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Access Request"
       And user enters Database Access request as "<Request>"
@@ -34,7 +35,10 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user selects search menu as "Open Search Form:Work Order"
+      And user clicks agent console search menu
+      And user selects agent console open search form
+      And user selects agent console search work order
+      And user waits 40 secs
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
@@ -43,7 +47,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Database Request"
       And user validates request type as "Service Request | PLAZA"
-      And user validates Database access request description same as plaza
+#      And user validates Database access request description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

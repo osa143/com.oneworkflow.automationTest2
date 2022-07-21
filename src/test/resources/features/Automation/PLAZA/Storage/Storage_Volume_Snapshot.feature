@@ -8,6 +8,7 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on "Storage & Data Protection"
       When user clicks on "Volume Snapshot" pebble
       Then user should see "Volume Snapshot" form
@@ -36,7 +37,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Volume Snapshot"
       And user validates request type as "Service Request | PLAZA"
-      And user validates storage volume snapshot description same as plaza
+#      And user validates storage volume snapshot description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

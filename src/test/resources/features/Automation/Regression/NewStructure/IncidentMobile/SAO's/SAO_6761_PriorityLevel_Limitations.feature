@@ -6,7 +6,8 @@ Feature: Change
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user clicks on create change record
+#    When user clicks on create change record
+    When user clicks on agent console create change record
     Then user switches to window 1
     When user selects request type as "Standard Change"
     Then dropdown values "Critical:Major:Minor:Info:Unknown" should be available in "Priority" dropdown

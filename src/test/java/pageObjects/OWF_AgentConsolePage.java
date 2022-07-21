@@ -15,12 +15,21 @@ public class OWF_AgentConsolePage extends BaseRecordPage {
     Actions action = new Actions(driver);
     private static final String menuForCONSOLE = "Console";
     private static final String menuForCREATE = "Create";
+    private static final String menuAgentConsoleForCREATE = "WIN_1_1000001660";
     private static final String menuForSEARCH = "Search";
+    private static final String menunewforSEARCH = "//*[@id='WIN_1_1000001662']/a";
+    private static final String menunewforOPENSEARCHFORM = "/html/body/div[3]/div[2]/table/tbody/tr[1]/td[1]";
+    private static final String menunewforSEARCHWORKORDER = "/html/body/div[4]/div[2]/table/tbody/tr[5]/td[1]";
+    private static final String menunewforSEARCHTROUBLEEVENT = "/html/body/div[4]/div[2]/table/tbody/tr[4]/td[1]";
+    private static final String menunewforSEARCHPROBLEMRECORD = "/html/body/div[4]/div[2]/table/tbody/tr[3]";
+    private static final String menunewforSEARCHKNOWNERROR = "/html/body/div[4]/div[2]/table/tbody/tr[2]/td[1]";
     private static final String menuForADMINISTRATION = "Administration";
     private static final String menuForNAV_USERNAME = "Nav-Username";
     private static final String menuItemSID_CONSOLE = "SID Console";
     private static final String menuItemCHANGE_RECORD = "Change Record/Project/Freeze";
     private static final String menuItemPROBLEM_RECORD = "Problem Record";
+    private static final String menuItemWORK_ORDER = "Work Order";
+//    private static final String menuItemPROBLEM_RECORD = "Problem Record";
     private static final String menuItemTROUBLE_EVENT = "Trouble Event";
     private static final String menuitemKNOWN_ERROR = "Known Error";
     private static final String menuItemLOGOUT = "Logout";
@@ -59,7 +68,8 @@ public class OWF_AgentConsolePage extends BaseRecordPage {
     private static final String btnYES_ON_FRAME_ID = "WIN_0_700027904";
     private static final String fullView_TABLE_ID = "T860000008";
     private static final String btnOK_secondaryPrimary_onFRAME_XPATH = "//*[@id='PopupMsgFooter']/a";
-    private static final String btn_MORE_FILTERS = "WIN_0_536889440";
+    private static final String btn_MORE_FILTERS = "WIN_2_536889440";
+    private static final String BTN_FILTER_DROPDOWN = "WIN_2_1000000062";
     private static final String btn_APPLY = "WIN_0_600002902";
     private static final String fld_DETAILS= "WIN_0_600003303";
     private static final String fld_CTI_DETAILS= "WIN_0_600003302";
@@ -521,6 +531,10 @@ public class OWF_AgentConsolePage extends BaseRecordPage {
    clickElement(By.id(btn_MORE_FILTERS));
    }
 
+   public void clickFilterDropdown(){
+        clickElement(By.id(BTN_FILTER_DROPDOWN));
+   }
+
    public void selectStatus(String value){
        selectDropDownNameAndValue(dd_STATUS, value, false);
    }
@@ -552,8 +566,13 @@ public class OWF_AgentConsolePage extends BaseRecordPage {
         }
 
      public void selectCreateAsKnownError(){
-        selectMainMenuAndMenuItem(menuForCREATE, menuitemKNOWN_ERROR);
+//        selectMainMenuAndMenuItem(menuForCREATE, menuitemKNOWN_ERROR);
+
+         clickAgentConsoleCreateMenu();
+         clickMenuItemKnownError();
      }
+
+
     public void selectCreateMenu(String menuItem){
         selectMainMenuAndMenuItem(menuForCREATE, menuItem);
     }
@@ -708,7 +727,15 @@ public class OWF_AgentConsolePage extends BaseRecordPage {
 
     public void clickCreateMenu() {
         selectMainMenu(menuForCREATE);
+//        clickElementById(menuForCREATE);
        wait(500);
+
+    }
+
+    public void clickAgentConsoleCreateMenu() {
+//        selectMainMenu(menuForCREATE);
+        clickElementById(menuAgentConsoleForCREATE);
+        wait(500);
 
     }
 
@@ -761,9 +788,18 @@ public class OWF_AgentConsolePage extends BaseRecordPage {
         selectMenuItem(menuItemPROBLEM_RECORD);
     }
 
+    public void clickMenuItemWorkOrder() {
+
+        selectMenuItem(menuItemWORK_ORDER);
+    }
+
     public void clickMenuItemTroubleEvent() {
 
         selectMenuItem(menuItemTROUBLE_EVENT);
+    }
+
+    public void clickMenuItemKnownError(){
+        selectMenuItem(menuitemKNOWN_ERROR);
     }
 
 
@@ -824,8 +860,47 @@ public class OWF_AgentConsolePage extends BaseRecordPage {
     }
 
     public void selectSearchMenu(String menuItem){
-        selectMainMenuAndMenuItem(menuForSEARCH, menuItem);
+        selectMainMenuAndMenuItem(menunewforSEARCH, menuItem);
+//        selectMainMenu(menunewforSEARCH);
+//        selectDropDownMenu(menunewforSEARCH);
     }
+
+    public void selectNewConsoleSearchMenu(){
+//        findElement(By.id(menunewforSEARCH)).click();
+        clickElement(By.xpath(menunewforSEARCH));
+//        selectDropDownValue(searchItem);
+    }
+
+    public void selectNewConsoleOpenSearchForm(){
+//        findElement(By.id(menunewforOPENSEARCHFORM)).click();
+//        selectDropDownValue(By.xpath(menunewforOPENSEARCHFORM);
+        clickElement(By.xpath(menunewforOPENSEARCHFORM));
+    }
+
+    public void selectNewConsoleSearchWorkOrder(){
+//        findElement(By.id(menunewforOPENSEARCHFORM)).click();
+//        selectDropDownValue(By.xpath(menunewforOPENSEARCHFORM);
+        clickElement(By.xpath(menunewforSEARCHWORKORDER));
+    }
+
+    public void selectNewConsoleSearchTroubleEvent(){
+//        findElement(By.id(menunewforOPENSEARCHFORM)).click();
+//        selectDropDownValue(By.xpath(menunewforOPENSEARCHFORM);
+        clickElement(By.xpath(menunewforSEARCHTROUBLEEVENT));
+    }
+
+    public void selectNewConsoleSearchProblemRecord(){
+//        findElement(By.id(menunewforOPENSEARCHFORM)).click();
+//        selectDropDownValue(By.xpath(menunewforOPENSEARCHFORM);
+        clickElement(By.xpath(menunewforSEARCHPROBLEMRECORD));
+    }
+
+    public void selectNewConsoleSearchKnownError(){
+//        findElement(By.id(menunewforOPENSEARCHFORM)).click();
+//        selectDropDownValue(By.xpath(menunewforOPENSEARCHFORM);
+        clickElement(By.xpath(menunewforSEARCHKNOWNERROR));
+    }
+
 
     public String getAlarmNumber(){
         return findElement(By.id(txtALARM_NUMBER_ID)).getAttribute("value");

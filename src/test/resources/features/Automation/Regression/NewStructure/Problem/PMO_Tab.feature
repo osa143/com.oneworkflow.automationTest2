@@ -1,13 +1,14 @@
-@PMO_Tab @ProblemRegression
+@PMO_Tab3 @ProblemRegression
 #passed
 Feature: PMO Tab
 
   @PMO_Tab_problem2
   Scenario: PMO Tab for problem ticket
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Tohall_copy" and password as "Test@1234"
+    When user logs in with valid username "Tohall_copy2" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user clicks on create problem record
+#    When user clicks on create problem record
+    When user clicks on agent console create problem record
     And user switches to window 1
     Then problem record form should appear in new tab
     When user creates problem ticket with below details
@@ -22,7 +23,9 @@ Feature: PMO Tab
     And user navigates back to login page using URL
     When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    And user clicks on search and selects open search forms and problem record
+    And user clicks agent console search menu
+    And user selects agent console open search form
+    And user selects agent console search problem
     And user switches to window 2
     And user enters Problem Ticket
     When user clicks Search on ticket search
@@ -37,7 +40,9 @@ Feature: PMO Tab
     And user navigates back to login page using URL
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    And user clicks on search and selects open search forms and problem record
+    And user clicks agent console search menu
+    And user selects agent console open search form
+    And user selects agent console search problem
     And user switches to window 2
     And user enters Problem Ticket
     And user clicks Search on ticket search
@@ -53,7 +58,9 @@ Feature: PMO Tab
     And user navigates back to login page using URL
     When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    And user clicks on search and selects open search forms and problem record
+    And user clicks agent console search menu
+    And user selects agent console open search form
+    And user selects agent console search problem
     And user switches to window 2
     And user enters Problem Ticket
     And user clicks Search on ticket search
@@ -70,7 +77,8 @@ Feature: PMO Tab
     Given user is on the OneWorkflow login page
     When user logs in with valid username "Tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user clicks on create known error
+#    When user clicks on create known error
+    When user clicks on agent console create known error
     And user switches to window 1
     Then problem record form should appear in new tab
     When user enters "PM Office Tab for Known Error" in Title field
@@ -87,7 +95,10 @@ Feature: PMO Tab
     And user navigates back to login page using URL
     When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    And user selects search menu as "Open Search Form:Known Error"
+#    And user selects search menu as "Open Search Form:Known Error"
+    And user clicks agent console search menu
+    And user selects agent console open search form
+    And user selects agent console search known error
     And user switches to window 2
     And user enters known error ticket
     And user clicks Search on ticket search
@@ -103,7 +114,10 @@ Feature: PMO Tab
     And user navigates back to login page using URL
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    And user selects search menu as "Open Search Form:Known Error"
+#    And user selects search menu as "Open Search Form:Known Error"
+    And user clicks agent console search menu
+    And user selects agent console open search form
+    And user selects agent console search known error
     And user switches to window 3
     And user enters known error ticket
     And user clicks Search on ticket search
@@ -118,7 +132,9 @@ Feature: PMO Tab
     And user navigates back to login page using URL
     When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    And user selects search menu as "Open Search Form:Known Error"
+    And user clicks agent console search menu
+    And user selects agent console open search form
+    And user selects agent console search known error
     And user switches to window 3
     And user enters known error ticket
     And user clicks Search on ticket search

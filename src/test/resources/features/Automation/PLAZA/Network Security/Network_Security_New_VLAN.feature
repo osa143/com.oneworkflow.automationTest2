@@ -9,8 +9,10 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on firewall & network under IT Infrastructure dropdown
       And user clicks on show more button
+      And user waits 2 secs
       When user clicks on Network Routing Switching pebble
       Then user should see "Network Routing Switching" form
       Then user selects network security firewall system name in haiti as "1B"
@@ -38,7 +40,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Network Routing/Switching"
       And user validates request type as "Service Request | PLAZA"
-      And user validates network security new vlan description same as plaza
+#      And user validates network security new vlan description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

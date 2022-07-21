@@ -16,9 +16,9 @@ Feature: Plaza PDB
     And user selects service as "Personal Data Breach"
     Then user enters PDB date and time as current date and time
     And user selects PDB effected country "<PDB Affected Country>"
-    And user selects nature and content as "Address"
+#    And user selects nature and content as "Address"
 #    And user selects affected persons as "<Number of Persons>"
-    And user waits 10 secs
+    And user waits 40 secs
     And user selects plaza affected persons as other
     And user enters "Test Data" under Affected persons name and unique id
     And user clicks on submit button on plaza form
@@ -35,7 +35,9 @@ Feature: Plaza PDB
     Given user is on the OneWorkflow login page
     When user logs in with valid username "PlazaTest" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user selects search menu as "Open Search Form:Trouble Event"
+    And user clicks agent console search menu
+    And user selects agent console open search form
+    And user selects agent console search trouble event
     And user switches to window 3
     Then user should see blank trouble search form
     When user enters plaza incident ticket

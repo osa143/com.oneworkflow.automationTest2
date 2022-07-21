@@ -8,11 +8,12 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on cloud under IT Infrastructure dropdown
 #      And user clicks on show more button
       When user clicks on "Skypoint - private cloud" pebble
       Then user should see "Skypoint - private cloud" form
-      Then user selects nimbus system name in haiti as "1B"
+      Then user selects nimbus system name in haiti as "AAA"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Skypoint -Failed request support"
       And user enters nimbus request as "Test11 Nimbus/Request"
@@ -34,7 +35,7 @@
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Skypoint - private cloud"
-      And user validates nimbus skypoint failed request description same as plaza
+#      And user validates nimbus skypoint failed request description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

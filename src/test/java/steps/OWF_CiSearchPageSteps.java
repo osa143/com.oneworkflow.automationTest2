@@ -89,6 +89,12 @@ public class OWF_CiSearchPageSteps {
         ciSearchPage.wait(1000);
     }
 
+    @When("user clicks on OP link button")
+    public void userClicksOnOpLinkButton() {
+        ciSearchPage.clickOPLink();
+        ciSearchPage.wait(1000);
+    }
+
 
     @And("user clicks ticket checkbox")
     public void userClicksTicketCheckbox() {

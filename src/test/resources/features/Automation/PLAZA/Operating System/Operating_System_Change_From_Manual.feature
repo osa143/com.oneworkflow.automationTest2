@@ -8,6 +8,7 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on compute & operating system under IT Infrastructure dropdown
       And user clicks on show more button
       When user clicks on Change OS Patching
@@ -17,7 +18,8 @@
       And user enters operating system change from manual request as "<Request>"
       And user selects select request "<Select Request>"
       And user selects operating system as "Windows"
-      And user selects any operating system CI
+#      And user selects any operating system CI
+      And user waits 50 secs
       And user selects operating system change from manual service window as "Patch-Week-1-Wednesday-2200-0100"
       And user enters operating system justification as "Test justification"
       And user enters plan to enable automatic monthly patching as "Test plan"
@@ -40,7 +42,7 @@
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | Change OS Patching"
       And user validates request type as "Service Request | PLAZA"
-      And user validates operating system change from manual description same as plaza
+#      And user validates operating system change from manual description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"
@@ -73,5 +75,5 @@
       Examples:
 
       |Request                              |Select Request                                |Description                       |Additional Comments      |
-      |Test4 Operating System Change/Request|Changing from Manual to Auto patching         |Test4 Operating System/Description|Test4 Operating System/AC|
+#      |Test4 Operating System Change/Request|Changing from Manual to Auto patching         |Test4 Operating System/Description|Test4 Operating System/AC|
       |Test5 Operating System Change/Request|Changing patch window for server in auto patch|Test5 Operating System/Description|Test5 Operating System/AC|

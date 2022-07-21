@@ -8,14 +8,16 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
-      And user clicks on cloud under IT Infrastructure dropdown
+      And user waits 10 secs
+#      And user clicks on cloud under IT Infrastructure dropdown
       When user clicks on "Skypoint - private cloud" pebble
       Then user should see "Skypoint - private cloud" form
       Then user selects nimbus system name in haiti as "118 redagavimo sistema"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Add/Modify/Remove CPU/Memory/Disk to VM"
       And user enters nimbus request as "Test1 Nimbus/Request"
-      Then user selects nimbus CI as "cc100cgas001"
+#      Then user selects nimbus CI as "cc100cgas001"
+      And user waits 50 secs
       And user selects nimbus type as "CPU"
       And user enters nimbus mandatory description as "Test1 Nimbus/Description"
       And user enters additional comments as "Test1 Nimbus/AC"
@@ -27,7 +29,9 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user selects search menu as "Open Search Form:Work Order"
+      And user clicks agent console search menu
+      And user selects agent console open search form
+      And user selects agent console search work order
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search

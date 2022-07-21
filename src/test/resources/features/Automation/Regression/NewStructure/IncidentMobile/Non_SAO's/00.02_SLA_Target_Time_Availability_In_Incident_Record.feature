@@ -9,7 +9,9 @@ Feature: 00.02 - SLA Target time availability in Incident Record
     When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     And multiple menu options "Console:Create:Search:Administration" should be available
-    When user selects search menu as "Open Search Form:Trouble Event"
+    And user clicks agent console search menu
+    And user selects agent console open search form
+    And user selects agent console search trouble event
     And user switches to window 1
     When user clicks on advanced search button
     #And user enters "'Cust. Remaining SLA' != $NULL$ AND 'Status' = \"Closed\"" in the advanced search bar

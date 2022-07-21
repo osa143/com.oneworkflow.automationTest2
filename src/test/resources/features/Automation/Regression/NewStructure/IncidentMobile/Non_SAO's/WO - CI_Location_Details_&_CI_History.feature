@@ -6,7 +6,8 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user selects create menu as "Work Order"
+#      When user selects create menu as "Work Order"
+      When user clicks on agent console create work order
       Then work order form should appear in new tab
       And user switches to window 1
       When user enters "Testing" in Title field

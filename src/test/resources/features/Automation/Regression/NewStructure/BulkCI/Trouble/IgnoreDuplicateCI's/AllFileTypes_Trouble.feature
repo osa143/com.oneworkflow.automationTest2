@@ -1,4 +1,4 @@
-@Bulk_Loading_Ignore_Duplicate_CI's_Trouble2 @SAO-427
+@Bulk_Loading_Ignore_Duplicate_CI's_Trouble3 @SAO-427
   Feature: Bulk Loading ignore duplicate CI's for trouble ticket
     Scenario Outline: Bulk Loading ignore duplicate CI's
       #retest

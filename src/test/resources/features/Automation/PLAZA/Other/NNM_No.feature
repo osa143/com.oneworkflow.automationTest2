@@ -9,8 +9,9 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on application under IT Infrastructure dropdown
-      And user clicks on show more button
+#      And user clicks on show more button
       And user waits 2 secs
       And user clicks on show more button
       When user clicks on "NNM" pebble
@@ -30,15 +31,16 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user selects search menu as "Open Search Form:Work Order"
-      And user switches to window 2
+      And user clicks agent console search menu
+      And user selects agent console open search form
+      And user selects agent console search work order
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
       Then user should see plaza ticket
       And user validates source field as "PLAZA"
       And user validates title field as "Service Request | NNM"
       And user validates request type as "Service Request | PLAZA"
-      And user validates nnm no description same as plaza
+#      And user validates nnm no description same as plaza
       Then user clicks on owner under sections
       And user clicks on assignment under sections
       Then user validates owner profile as "PLAZA"

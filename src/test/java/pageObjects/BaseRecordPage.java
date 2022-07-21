@@ -53,6 +53,7 @@ public class BaseRecordPage extends BasePage {
     public static final String btnSEND = "WIN_0_600002905";
 
     public static final String btnADD_ID = "WIN_0_777021404";
+    public static final String btn_ADD_OP = "WIN_2_1000001769";
 
     public static final String ddREQUEST_TYPE = "Request Type";
     public static final String ddTEMPLATE = "Template";
@@ -64,7 +65,7 @@ public class BaseRecordPage extends BasePage {
     public static final String ddREQUEST_CATEGORY = "Request Category";
     public static final String ddCHANGE_RECORD = "WIN_0_755000000";
     public static final String ddSERVICE_PROVIDER = "Service Provider";
-    public static final String ddSTATuS_ID = "arid_WIN_0_777031003";
+    public static final String ddSTATuS_ID = "//*[@id='arid_WIN_0_777031003']";
     public static final String ddROOT_CAUSE_CODE = "Root Cause Code";
     public static final String txtROOT_CAUSE_DETAILS_ID = "arid_WIN_0_705002081";
     public static final String ddCLOSER_CODE = "Closure Code";
@@ -73,8 +74,10 @@ public class BaseRecordPage extends BasePage {
     public static final String ddCLOSURE_CODE = "Closure Code";
     public static final String ddValueSOLVED = "Solved";
     public static final String chkbxSWEDEN = "WIN_0_rc0id600002001";
+    public static final String chkbxOPSWEDEN = "//*[@id='WIN_0_600002001']/fieldset/div";
     public static final String chkbxFINLAND = "WIN_0_rc0id600002002";
-    public static final String chkbxDENMARK = "WIN_0_rc0id600002003";
+    public static final String chkbxDENMARK = "//*[@id='WIN_0_600002003']/fieldset/div/span/label";
+    public static final String chkbxOPDENMARK = "WIN_0_rc0id600002003";
     public static final String chkbxNORWAY = "WIN_0_rc0id600002004";
     public static final String chkbxLITHUANIA = "WIN_0_rc0id600002005";
     public static final String chkbxESTONIA = "WIN_0_rc0id600002006";
@@ -104,6 +107,7 @@ public class BaseRecordPage extends BasePage {
     public static final String btnATTACHMENTS = "WIN_0_999000623";
     public static final String btn_ATTACHMENTS = "WIN_0_999000368";
     public static final String txtTICKET_ID = "arid_WIN_0_730000060";
+    public static final String txtNEWUITICKETID = "arid_WIN_0_1000000013";
     public static final String txtSEARCH_TICKET_ID = "arid_WIN_0_777777600";
     public static final String ddSUMMARY = "Summary*";
     public static final String txtDESCRIPTION_ON_FRAME_ID = "arid_WIN_0_700500102";
@@ -336,6 +340,11 @@ public class BaseRecordPage extends BasePage {
     }public void clickSwedenCheckBox() {
         driver.findElement(By.id(chkbxSWEDEN)).click();
     }
+
+    public void clickOPSwedenCheckBox() {
+        driver.findElement(By.xpath(chkbxOPSWEDEN)).click();
+    }
+
     public void clearDescriptionField(){
         findElement(By.id(txtDESCRIPTION_ID)).clear();
     }
@@ -704,6 +713,10 @@ public class BaseRecordPage extends BasePage {
         return getAttributeValueById(txtTICKET_ID);
     }
 
+    public String getNewOPTicketValue() {
+        return getAttributeValueById(txtNEWUITICKETID);
+    }
+
     public boolean validateCIColumnsHaveData()
     {
         int size = getTableRows(By.id(table_DIAGNOSIS_ID)).size();
@@ -909,6 +922,11 @@ public class BaseRecordPage extends BasePage {
     } public void clickAddButtonOnTemplate(){
         clickElement(By.id(btnADD_ID));
     }
+
+    public void clickAddButtonOnOpTemplate(){
+        clickElement(By.id(btn_ADD_OP));
+    }
+
     public void selectActions_TimeTracking(){
         selectDropDownNameAndValue(ddACTIONS, ddValueTIME_TRACKING, false);
     }
@@ -970,6 +988,10 @@ public class BaseRecordPage extends BasePage {
 
     public void clickDenmarkCheckBox() {
         driver.findElement(By.id(chkbxDENMARK)).click();
+    }
+
+    public void clickOPDenmarkCheckBox() {
+        driver.findElement(By.xpath(chkbxOPDENMARK)).click();
     }
 
     public void clickNorwayCheckBox() {
@@ -1036,7 +1058,7 @@ public class BaseRecordPage extends BasePage {
 
     }
     public String getStatusText() {
-        String StatusText = findElement(By.id(ddSTATuS_ID)).getAttribute("value");
+        String StatusText = findElement(By.xpath(ddSTATuS_ID)).getAttribute("value");
         System.out.println("Ticket status is - " +StatusText);
         return StatusText;
 

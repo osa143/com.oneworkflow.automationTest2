@@ -78,10 +78,10 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String dd_IMPORTANCE="arid_WIN_0_600001821";
     private static final String btn_CLOSE_BULK_UPDATE= "WIN_0_999000100";
 
-    private static final String ddSTATUS = "Status";
+    private static final String ddSTATUS = "arid_WIN_0_777031003";
     private static final String ddTEMPLATE = "Template";
     private static final String ddTITLE = "Title";
-    private static final String ddREQUEST_TYPEE = "Request Type";
+    private static final String ddREQUEST_TYPEE = "arid_WIN_0_777031002";
     private static final String ddFAULT_TYPE = "Fault Type";
     private static final String ddIMPACT = "Impact";
     private static final String ddASIGNMENT_PROFILE = "Assignment Profile";
@@ -125,11 +125,14 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String btn_SAVE_BULK_UPDATE_ID= "WIN_0_990000906";
     private static final String txt_ASSIGNEE= "arid_WIN_0_4";
     private static final String dd_ASSIGNMENT_PROFILE= "Assignment Profile";
+    private static final String dd_OP_ASSIGNMENT_PROFILE = "//*[@id='arid_WIN_0_777031408']";
     private static final String btn_PRIORITY_CHECK= "WIN_0_600002912";
     private static final String table_SELECT_TARGET_REQUEST= "T700506101";
     private static final String btn_LINK_LINKED_ITEMS= "WIN_5_777506009";
     private static final String txt_TIMELINE= "arid_WIN_0_777777103";
+    private static final String txt_OP_TIMELINE = "arid_WIN_2_1000001768";
     private static final String rbtn_PUBLIC= "WIN_0_rc0id777021180";
+    private static final String btn_OP_TIMELINE_RADIO = "//*[@id='WIN_2_1000001767']/fieldset/div/span/label";
     private static final String txt_ROOT_CAUSE_DESCRIPTION= "arid_WIN_0_777021052";
     private static final String btn_CANCEL= "WIN_0_700000105";
     private static final String dd_ACTION= "Action";
@@ -638,9 +641,19 @@ public void rightClickOnElement(String cellData){
     public void clickPublicRadioButton(){
         findElement(By.id(rbtn_PUBLIC)).click();
     }
+
+    public void clickOPRadioButton(){
+        findElement(By.xpath(btn_OP_TIMELINE_RADIO)).click();
+    }
+
     public void enterText_timeline(String text){
        findElement(By.id(txt_TIMELINE)).sendKeys(text);
     }
+
+    public void enterOPText_timeline(String text){
+        findElement(By.id(txt_OP_TIMELINE)).sendKeys(text);
+    }
+
     public void clickLink_LinkedItems(){
         findElement(By.id(btn_LINK_LINKED_ITEMS)).click();
     }
@@ -660,6 +673,15 @@ public void rightClickOnElement(String cellData){
     public void selectAssignmentProfile(String value){
         selectDropDownNameAndValue(dd_ASSIGNMENT_PROFILE, value, false);
     }
+
+    public void selectOPAssignmentProfile(String value){
+//        selectDropDownNameAndValue(dd_OP_ASSIGNMENT_PROFILE, value, false);
+        driver.findElement(By.xpath(dd_OP_ASSIGNMENT_PROFILE)).click();
+        wait(1000);
+        selectDropDownValue(value);
+
+    }
+
     public void selectAction(String value){
         selectDropDownNameAndValue(dd_ACTION, value, true);
     }
@@ -1027,7 +1049,9 @@ public void rightClickOnElement(String cellData){
         return checkIfControlIsReadonly(txtCUST_REMAINING_SLA_ID);
     }
   public void selectStatus(String value){
-        selectDropDownNameAndValue(ddSTATUS, value, false);
+//        selectDropDownNameAndValue(ddSTATUS, value, false);
+      driver.findElement(By.id(ddSTATUS)).click();
+      selectDropDownValue(value);
   }
 
 
@@ -1159,7 +1183,10 @@ public void rightClickOnElement(String cellData){
     }
     public void selectRequestType(String value){
         wait(500);
-        selectDropDownNameAndValue(ddREQUEST_TYPEE, value, false );
+//        selectDropDownNameAndValue(ddREQUEST_TYPEE, value, false );
+        driver.findElement(By.id(ddREQUEST_TYPEE)).click();
+        selectDropDownValue(value);
+
     }
 
     public void clickDoNotAutoCloseCheckBox() {

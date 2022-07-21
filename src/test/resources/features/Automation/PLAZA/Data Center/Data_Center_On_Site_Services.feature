@@ -8,10 +8,11 @@
       Then user clicks on plaza portal
       When user clicks on Products & Services
       And user clicks on IT Infrastructure dropdown
+      And user waits 2 secs
       And user clicks on data center under IT Infrastructure dropdown
       When user clicks on "On-site Services" pebble
       Then user should see "On-site Services" form
-      Then user selects system name in haiti as "1B"
+      Then user selects system name in haiti as "AAA"
       When user selects role dropdown as "Application Operation Engineer"
       And user enters on site services DC-site or address as "Test address"
       Then user enters on site services description as "Test4 Data Center/Description"

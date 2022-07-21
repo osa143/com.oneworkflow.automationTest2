@@ -7,7 +7,8 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user clicks on create known error
+#      When user clicks on create known error
+      When user clicks on agent console create known error
       And user switches to window 1
       Then known error form should appear in new tab
       And user enters "Known Error B" in Title field
@@ -20,7 +21,8 @@
       And user clicks on add button under interested parties
       And user switches to frame
       And user selects type as "Additional Access" under interested parties
-      And user clicks on radio button user
+#      And user clicks on radio button user
+      And user waits 15 secs
       Then user enters "Tohall_copy" in login name plus field
       And user clicks on search under add interested party
       When user highlights present user under add interested party

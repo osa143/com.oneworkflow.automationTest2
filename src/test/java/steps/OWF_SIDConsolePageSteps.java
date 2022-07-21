@@ -28,15 +28,33 @@ public class OWF_SIDConsolePageSteps {
 
     }
 
+    @When("user selects OP Category as {string}")
+    public void userSelectsOpCategoryAs(String category) {
+        sidConsolePage.selectOPCategory(category);
+
+
+    }
+
     @And("user selects Type as {string}")
     public void userSelectsTypeAs(String arg0) {
         sidConsolePage.selectType(arg0);
 
     }
 
+    @And("user selects OP Type as {string}")
+    public void userSelectsOpTypeAs(String arg0) {
+        sidConsolePage.selectOPType(arg0);
+
+    }
+
     @And("user selects Item as {string}")
     public void userSelectsItemAs(String arg0) {
         sidConsolePage.selectsItem(arg0);
+    }
+
+    @And("user selects OP Item as {string}")
+    public void userSelectsOpItemAs(String arg0) {
+        sidConsolePage.selectsOpItem(arg0);
     }
 
     @And("user clicks on search")

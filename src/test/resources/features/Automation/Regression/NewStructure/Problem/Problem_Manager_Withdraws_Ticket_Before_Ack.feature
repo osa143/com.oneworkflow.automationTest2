@@ -4,9 +4,10 @@ Feature: Problem Manager Withdraws ticket before Ack
   Scenario: PM Withdraw after ack - problem manager withdraws ticket before Ack
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Tohall_copy" and password as "Test@1234"
+    When user logs in with valid username "Tohall_copy2" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user clicks on create problem record
+#    When user clicks on create problem record
+    When user clicks on agent console create problem record
     And user switches to window 1
     Then problem record form should appear in new tab
     When user creates problem ticket with below details
@@ -19,7 +20,9 @@ Feature: Problem Manager Withdraws ticket before Ack
 #    And user goes back to login page
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    And user clicks on search and selects open search forms and problem record
+    And user clicks agent console search menu
+    And user selects agent console open search form
+    And user selects agent console search problem
     And user switches to window 2
     And user enters Problem Ticket
     And user clicks Search on ticket search

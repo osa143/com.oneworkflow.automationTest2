@@ -55,6 +55,26 @@ public class OWF_AgentConsolePageSteps {
         //CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
     }
 
+    @When("user clicks on agent console create problem record")
+    public void userClicksOnAgentConsoleCreateProblemRecord() {
+
+
+        agentConsolePage.clickAgentConsoleCreateMenu();
+        agentConsolePage.clickMenuItemProblemRecord();
+        //agentConsolePage.wait(3000);
+        //CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
+    }
+
+    @When("user clicks on agent console create work order")
+    public void userClicksOnAgentConsoleCreateWorkOrder() {
+
+
+        agentConsolePage.clickAgentConsoleCreateMenu();
+        agentConsolePage.clickMenuItemWorkOrder();
+        //agentConsolePage.wait(3000);
+        //CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
+    }
+
 
     @And("OP next due date information should be displayed")
     public void opNextDueDateInformationShouldBeDisplayed() {
@@ -188,6 +208,16 @@ public class OWF_AgentConsolePageSteps {
 
     }
 
+    @When("user clicks on agent console create trouble event")
+    public void userClicksOnAgentConsoleCreateTroubleEvent() {
+
+
+        agentConsolePage.clickAgentConsoleCreateMenu();
+        agentConsolePage.clickMenuItemTroubleEvent();
+        //agentConsolePage.wait(3000);
+        //CommonUtils.switchToChildWindow(agentConsolePage.getDriver(), 1);
+    }
+
 
     @When("user clicks on create change record")
     public void userClicksOnCreateChangeRecord() {
@@ -195,10 +225,59 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.clickMenuItemChangeRecord();
     }
 
+    @When("user clicks on agent console create change record")
+    public void userClicksOnAgentConsoleCreateChangeRecord() {
+        agentConsolePage.clickAgentConsoleCreateMenu();
+        agentConsolePage.clickMenuItemChangeRecord();
+    }
+
 
     @When("user selects search menu as {string}")
     public void userSelectsSearchMenuAs(String arg0) {
+        agentConsolePage.wait(2000);
         agentConsolePage.selectSearchMenu(arg0);
+        agentConsolePage.wait(2000);
+    }
+
+    @When("user clicks agent console search menu")
+    public void userClicksAgentConsoleSearchMenuAs() {
+        agentConsolePage.wait(2000);
+        agentConsolePage.selectNewConsoleSearchMenu();
+        agentConsolePage.wait(2000);
+    }
+
+    @When("user selects agent console open search form")
+    public void userSelectsAgentConsoleOpenSearchForm() {
+        agentConsolePage.wait(2000);
+        agentConsolePage.selectNewConsoleOpenSearchForm();
+        agentConsolePage.wait(2000);
+    }
+
+    @When("user selects agent console search work order")
+    public void userSelectsAgentConsoleSearchWorkOrder() {
+        agentConsolePage.wait(2000);
+        agentConsolePage.selectNewConsoleSearchWorkOrder();
+        agentConsolePage.wait(2000);
+    }
+
+    @When("user selects agent console search trouble event")
+    public void userSelectsAgentConsoleSearchTroubleEvent() {
+        agentConsolePage.wait(2000);
+        agentConsolePage.selectNewConsoleSearchTroubleEvent();
+        agentConsolePage.wait(2000);
+    }
+
+    @When("user selects agent console search problem")
+    public void userSelectsAgentConsoleSearchProblem() {
+        agentConsolePage.wait(2000);
+        agentConsolePage.selectNewConsoleSearchProblemRecord();
+        agentConsolePage.wait(2000);
+    }
+
+    @When("user selects agent console search known error")
+    public void userSelectsAgentConsoleSearchKnownError() {
+        agentConsolePage.wait(2000);
+        agentConsolePage.selectNewConsoleSearchKnownError();
         agentConsolePage.wait(2000);
     }
 
@@ -367,6 +446,11 @@ public class OWF_AgentConsolePageSteps {
         agentConsolePage.selectCreateAsKnownError();
     }
 
+    @When("user clicks on agent console create known error")
+    public void userClicksOnAgentConsoleCreateKnownError() {
+        agentConsolePage.selectCreateAsKnownError();
+    }
+
     @And("multiple menu options {string} should be available")
     public void multipleMenuOptionsShouldBeAvailable(String arg0) {
         Assert.assertTrue(agentConsolePage.verifyMenuItems(arg0));
@@ -384,6 +468,7 @@ public class OWF_AgentConsolePageSteps {
 
     @When("user clicks on more filters button")
     public void userClicksOnMoreFiltersButton() {
+        agentConsolePage.clickFilterDropdown();
         agentConsolePage.clickMoreFilters();
         agentConsolePage.switchToFrameByIndex(2);
     }

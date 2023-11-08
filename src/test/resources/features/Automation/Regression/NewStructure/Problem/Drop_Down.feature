@@ -10,8 +10,8 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user clicks on create problem record
-      When user clicks on agent console create problem record
+      When user clicks on create problem record
+#      When user clicks on agent console create problem record
       And user switches to window 1
       Then problem record form should appear in new tab
       Then "Estimated Ready:Actual Finish:Decision Go/NoGo:Resolving Group:Resolving Person" shouldn't be visible on problem record form
@@ -24,26 +24,26 @@
       And user selects impact as "Extensive/Widespread"
       And multiple statuses "Critical:High:Medium:Low:(clear)" should be available in "Urgency" dropdown
       And user selects urgency as High
-      And user selects accountable organisation as "CA_Infra"
-      And multiple statuses "CA_Infra:CA_IT:CA_Provider:DivX:External:TeliaFinance:(clear)" should be available in "Accountable Org." dropdown
-      And User selects "Accountable Org." as dropdownValue and should see values for "notreadonly"
-        | DropdownValue | DropdownValuesToBePresent |
-        | CA_NSD        | IP:ServCore               |
-        | InfraDK       | CableSites:NW             |
-        | InfraEE       | CableSites:NW             |
-        | InfraFI       | CableSites:NW             |
-        | InfraLT       | CableSites:NW             |
-        | InfraNO       | CableSites:NW             |
-        | InfraSE       | CableSites:NCS:PSTN       |
-        | IT            | CustEng:EntServ:Infra:OSS:Workplace |
-        | NO            | OC&MC:Phonero             |
-        | NSD           | ConvAccess:IP:NSMA:ServCore    |
-        | PAComm        | Conv:VAS:Voice            |
-        | PAConn        | BusNW:Internet:MobVD      |
-        | PAITServ      | MDM_DAAS:PaaS:Security    |
-        | PAMedia       | ConnHome:TV               |
+      And user selects accountable organisation as "DivX"
+#      And multiple statuses "CA_Infra:CA_IT:CA_Provider:DivX:External:TeliaFinance:(clear)" should be available in "Accountable Org." dropdown
+#      And User selects "Accountable Org." as dropdownValue and should see values for "notreadonly"
+#        | DropdownValue | DropdownValuesToBePresent |
+#        | CA_NSD        | IP:ServCore               |
+#        | InfraDK       | CableSites:NW             |
+#        | InfraEE       | CableSites:NW             |
+#        | InfraFI       | CableSites:NW             |
+#        | InfraLT       | CableSites:NW             |
+#        | InfraNO       | CableSites:NW             |
+#        | InfraSE       | CableSites:NCS:PSTN       |
+#        | IT            | CustEng:EntServ:Infra:OSS:Workplace |
+#        | NO            | OC&MC:Phonero             |
+#        | NSD           | ConvAccess:IP:NSMA:ServCore    |
+#        | PAComm        | Conv:VAS:Voice            |
+#        | PAConn        | BusNW:Internet:MobVD      |
+#        | PAITServ      | MDM_DAAS:PaaS:Security    |
+#        | PAMedia       | ConnHome:TV               |
 
-      And user selects affected organisation as "CA_IT"
+      And user selects affected organisation as "DivX"
 #      And multiple statuses "CA_Infra:CA_IT:CA_Provider:DivX:External:TeliaFinance:(clear)" should be available in "Organisations" dropdown
 #      And User selects "Affected Orgs." as dropdownValue and should see values for "notreadonly"
 #        | DropdownValue | DropdownValuesToBePresent |

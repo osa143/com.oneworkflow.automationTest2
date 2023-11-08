@@ -7,12 +7,12 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user clicks on create trouble event
-      When user clicks on agent console create trouble event
+      When user clicks on create trouble event
+#      When user clicks on agent console create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
-      When user clicks on OP sweden checkbox under affected BU's
-#      When user clicks on sweden checkbox under affected BU's
+#      When user clicks on OP sweden checkbox under affected BU's
+      When user clicks on sweden checkbox under affected BU's
       And user enters "Test case WO Status" in Title field in Trouble event
       And user selects request type as "Customer" on trouble event page
       And user enters description as "Test case WO Status"
@@ -35,7 +35,7 @@
       Then user switches to window 2
       And user waits 2 secs
       And user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
-      And user enters "Change_Automation_1" in assignee
+      And user enters "Change_Automation_2" in assignee
       Then user clicks on save button
       And user validates ticket status as "Assigned"
       Then user clicks on Ack button
@@ -53,7 +53,7 @@
       Then user validates WO's Status is "OPEN"
       When user switches to window 3
       And user selects assigned profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
-      And user enters "Change_Automation_1" in assignee
+      And user enters "Change_Automation_2" in assignee
       Then user clicks on save button
       And user validates ticket status as "Assigned"
       Then user clicks on Ack button

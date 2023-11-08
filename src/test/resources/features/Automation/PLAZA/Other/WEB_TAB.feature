@@ -33,12 +33,12 @@
       When user opens new tab
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
-#      Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user selects search menu as "Open Search Form:Work Order"
-      And user clicks agent console search menu
-      And user selects agent console open search form
-      And user selects agent console search work order
-#      And user waits 20 secs
+      Then user successfully logged in to OneWorkflow and agent console should be displayed
+      When user selects search menu as "Open Search Form:Work Order"
+#      And user clicks agent console search menu
+#      And user selects agent console open search form
+#      And user selects agent console search work order
+      And user waits 10 secs
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
@@ -57,13 +57,13 @@
       And user validates "PLAZA" is listed as an interested party
       When user clicks on "Diagnosis"
       And user validates CI "cc100cgas001" is listed
-#      And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
-#      Then user switches to frame
-#      And user enters impact from time as past on impact details bulk update window
-#      And user enters impact to time as past on impact details bulk update window
-#      Then user clicks confirm checkbox
-#      And user clicks on bulk update save button
-#      And user waits 5 secs
+      And user right clicks on CI "cc100cgas001" and selects "Impact:Update"
+      Then user switches to frame
+      And user enters impact from time as past on impact details bulk update window
+      And user enters impact to time as past on impact details bulk update window
+      Then user clicks confirm checkbox
+      And user clicks on bulk update save button
+      And user waits 5 secs
 #      And user right clicks on CI "cc100cgas001" and selects "Impact:Clear"
       When user right clicks on CI "cc100cgas001" and clears impact
       And user should see confirmation message for impact clear and user clicks yes

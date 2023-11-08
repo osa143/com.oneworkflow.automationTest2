@@ -10,8 +10,8 @@ Feature: Close and Clone Problem
     Given user is on the OneWorkflow login page
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-#    When user clicks on create problem record
-    When user clicks on agent console create problem record
+    When user clicks on create problem record
+#    When user clicks on agent console create problem record
     And user switches to window 1
     Then problem record form should appear in new tab
     When user creates problem ticket with below details
@@ -21,9 +21,9 @@ Feature: Close and Clone Problem
     When user adds below CI's to the ticket
       |   CI Name     |
       |SE_SGSN_FREMME2|
-      |SE_SGSN_HYMME2 |
-      |SE_SGSN_LDHMME1|
-      |SE_SGSN_VRRMME1|
+#      |SE_SGSN_HYMME2 |
+#      |SE_SGSN_LDHMME1|
+#      |SE_SGSN_VRRMME1|
     Then user clicks on Ack button
     And problem ticket status should be under investigation
     Then user changes status to investigation complete

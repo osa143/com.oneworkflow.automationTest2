@@ -5,12 +5,12 @@ Feature: SAO-6737 - Improving Recurring Incidents Tab(Name Subject to Change)
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-#    When user clicks on create trouble event
-    When user clicks on agent console create trouble event
+    When user clicks on create trouble event
+#    When user clicks on agent console create trouble event
     And user switches to window 1
     Then trouble record form should appear in new tab
-    When user clicks on OP sweden checkbox under affected BU's
-#    When user clicks on sweden checkbox under affected BU's
+#    When user clicks on OP sweden checkbox under affected BU's
+    When user clicks on sweden checkbox under affected BU's
     And user enters "Test SAO-6737" in Title field in Trouble event
     And user selects request type as "Customer" on trouble event page
     And user enters description as "Test SAO-6737"
@@ -18,8 +18,8 @@ Feature: SAO-6737 - Improving Recurring Incidents Tab(Name Subject to Change)
     Then ticket should be created and status should be assigned
     When user adds CI "FI_LTECell_Ksamo4H" to the ticket with impact level "No Impact"
     Then CI should be listed and displayed under the Diagnosis tab
-    When user clicks on agent console create work order
-#    When user clicks on create work order
+#    When user clicks on agent console create work order
+    When user clicks on create work order
     And user switches to window 2
     Then work order form should appear in new tab
     When user enters title as "Test SAO-6737"
@@ -32,7 +32,7 @@ Feature: SAO-6737 - Improving Recurring Incidents Tab(Name Subject to Change)
     When user clicks on create change record
     And user switches to window 3
     When user selects request type as "Standard Change"
-    And user selects template as "All:IT:Carrier:Telia Carrier UAT Changes"
+    And user selects template as "All:IT:Carrier:Telia Carrier PROD and UAT Database Changes"
     When user enters "CI B2" in the change builder field
     And user enters as "Automation Test" in service and customer impact
     And user enters request start time as 30 minutes past from "Europe/London" timezone "MM-dd-yyyy HH:mm:ss" format

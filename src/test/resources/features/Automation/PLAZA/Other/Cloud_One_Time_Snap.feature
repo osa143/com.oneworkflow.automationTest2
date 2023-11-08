@@ -14,11 +14,11 @@
       Then user should see "Order one-time Snapshot of VM" form
       Then user selects system name in haiti as "AAA"
       When user selects role dropdown as "Application Operation Engineer"
-      Then user clicks on the contact checkbox
-      And user then clicks on the name not found checkbox
-      And user enters name field as "Test1234"
-      Then user enters email address field as "Test@Test.com"
-      Then user enters phone field as "123456789"
+#      Then user clicks on the contact checkbox
+#      And user then clicks on the name not found checkbox
+#      And user enters name field as "Test1234"
+#      Then user enters email address field as "Test@Test.com"
+#      Then user enters phone field as "123456789"
       And user enters Cloud one time snapshot request as "Test1 Cloud one time snapshot/Request"
 #      And users adds any cloud one time CI
       And user waits 40 secs
@@ -36,9 +36,10 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      And user clicks agent console search menu
-      And user selects agent console open search form
-      And user selects agent console search work order
+#      And user clicks agent console search menu
+#      And user selects agent console open search form
+#      And user selects agent console search work order
+      When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search

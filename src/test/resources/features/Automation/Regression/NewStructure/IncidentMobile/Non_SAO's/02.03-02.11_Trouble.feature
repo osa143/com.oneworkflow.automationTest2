@@ -4,18 +4,18 @@
     Scenario: 02.03-02.11 trouble
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_8" and password as "Test@1234"
+      When user logs in with valid username "Change_Automation_7" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user clicks on create trouble event
-      When user clicks on agent console create trouble event
+      When user clicks on create trouble event
+#      When user clicks on agent console create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
-      When user clicks on OP sweden checkbox under affected BU's
-#      When user clicks on sweden checkbox under affected BU's
+#      When user clicks on OP sweden checkbox under affected BU's
+      When user clicks on sweden checkbox under affected BU's
       And user enters "02:07 Change Incident Start Time" in Title field in Trouble event
       And user selects request type as "Customer" on trouble event page
       And user enters description as "02:07 Change Incident Start Time"
-      And user changes event start time as "12-07-2022 11:59:59" future date and time
+      And user changes event start time as "12-02-2023 11:59:59" future date and time
       Then user clicks on save button
       And an error message should appear: "The Event Start Time cannot be set in the future (ARERR 999001300)"
       When user changes event start time as "12-31-2019 11:59:59" past date and time
@@ -23,15 +23,15 @@
       And ticket should be created and status should be assigned
 #      Then user validates availability of tabs "Timeline:Diagnosis:Interested Parties:Notifications:Linked Items:Work Orders:Service Level:Alarms:Ticket Matching:Service Info"
       When user clicks on Ack button
-#      And user clicks on assignment under sections
-      And user clicks on OP assignment under sections
+      And user clicks on assignment under sections
+#      And user clicks on OP assignment under sections
       Then user validates last ack by field has data present
-#      When user selects assignment profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
-      #assignee needs to be the same as the user who last ack'd ticket (in this case will be ticket creator)
-#      Then user enters "Change_Automation_1" in assignee
-#      And user clicks on save button
-#      When user clicks on assignment under sections
-#      Then user validates assignee is "Change_Automation_1"
+      When user selects assignment profile dropdown as "Core:Mobile:Mobile PS:Mob PS Core WEST"
+#      assignee needs to be the same as the user who last ack'd ticket (in this case will be ticket creator)
+      Then user enters "Change_Automation_2" in assignee
+      And user clicks on save button
+      When user clicks on assignment under sections
+      Then user validates assignee is "Change_Automation_2"
       When user adds below CI's to the ticket
         |   CI Name     |
         |SE_SGSN_FREMME2|
@@ -56,9 +56,9 @@
       And user clicks on save button
       Then user validates that priority changes to "Emergency"
       And change should also be reflected in the timeline as "The Ticket Priority has been updated to :  Emergency" on row 1
-      And user clicks agent console search menu
-      And user selects agent console open search form
-      And user selects agent console search trouble event
+#      And user clicks agent console search menu
+#      And user selects agent console open search form
+#      And user selects agent console search trouble event
       And user switches to window 2
       And user enters ticket id as "OP-000000539006"
       Then user validates OLA value is set

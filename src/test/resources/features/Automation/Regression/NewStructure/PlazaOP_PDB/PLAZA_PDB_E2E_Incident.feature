@@ -19,7 +19,7 @@ Feature: Plaza PDB
 #    And user selects nature and content as "Address"
 #    And user selects affected persons as "<Number of Persons>"
     And user waits 40 secs
-    And user selects plaza affected persons as other
+#    And user selects plaza affected persons as other
     And user enters "Test Data" under Affected persons name and unique id
     And user clicks on submit button on plaza form
     And user gets plaza request id
@@ -33,11 +33,12 @@ Feature: Plaza PDB
     Then user opens new tab
     And user switches to window 2
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "PlazaTest" and password as "Test@1234"
+    When user logs in with valid username "osa143" and password as "Jordan123"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    And user clicks agent console search menu
-    And user selects agent console open search form
-    And user selects agent console search trouble event
+#    And user clicks agent console search menu
+#    And user selects agent console open search form
+#    And user selects agent console search trouble event
+    When user selects search menu as "Open Search Form:Trouble Event"
     And user switches to window 3
     Then user should see blank trouble search form
     When user enters plaza incident ticket

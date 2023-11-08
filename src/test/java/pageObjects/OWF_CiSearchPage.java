@@ -306,7 +306,7 @@ public class OWF_CiSearchPage extends BaseRecordPage {
         wait(3000);
         clickCloseButton();
         switchToDefault();
-        wait(3000);
+        wait(5000);
     }
 
     public void addCIExtraDelay(String CIName, String CI_Impact){

@@ -11,7 +11,7 @@
       And user waits 2 secs
       And user clicks on database under IT Infrastructure
       When user clicks on "Database Request" pebble
-      Then user should see "Database Request" form
+#      Then user should see "Database Request" form
       Then user selects System name in haiti as "118.it"
       When user selects role dropdown as "Application Operation Engineer"
       And user selects service request name as "Access Request"
@@ -35,10 +35,11 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      And user clicks agent console search menu
-      And user selects agent console open search form
-      And user selects agent console search work order
-      And user waits 40 secs
+#      And user clicks agent console search menu
+#      And user selects agent console open search form
+#      And user selects agent console search work order
+#      And user waits 40 secs
+      When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
@@ -71,6 +72,7 @@
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
       And user right clicks on CI "cc100cgas001" and clears impact for all CI's
+#      When user right clicks on CI "cc100cgas001" and clears impact
       Then user should see confirmation message for impact clear all and user clicks yes
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

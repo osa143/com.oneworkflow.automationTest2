@@ -30,7 +30,7 @@ Feature: checking of bulk loading CTI details
     Then user clicks on save button under bulk import
     And first error message should display as "The manually identified CIs are now being processed..." on bulk ci window
     And second error message should display as "Please Check for the progress of this process in \"Show Bulk Import\". (ARNOTE 10000)" on bulk ci window
-#    When user clicks on CTI details under sections
+    When user clicks on CTI details under sections
     Then user validates Category as "Access"
     And user validates type as "WLAN Access"
     And user validates item as "AP_ACC_WLAN"

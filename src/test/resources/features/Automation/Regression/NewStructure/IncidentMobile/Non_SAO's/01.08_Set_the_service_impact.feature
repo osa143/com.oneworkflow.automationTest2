@@ -8,13 +8,14 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user clicks on create trouble event
-      When user clicks on agent console create trouble event
+      When user clicks on create trouble event
+#      When user clicks on agent console create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
       When user clicks save button
       Then an error message should appear: "Please select at least one country of impact for this Trouble Ticket. (ARERR 10000)"
-      When user clicks on OP sweden checkbox under affected BU's
+      When user clicks on sweden checkbox under affected BU's
+#      When user clicks on OP sweden checkbox under affected BU's
       And user clicks save button
       Then multiple error messages should appear with red boarder around fields
       When user enters "Test case 01.08 Set the Service impact" in Title field in Trouble event
@@ -22,7 +23,7 @@
       And user enters description as "Test case 01.08 Set the Service impact"
       Then user clicks on save button
       And ticket should be created and status should be assigned
-#      Then user validates availability of tabs "Timeline:Diagnosis:Interested Parties:Notifications:Linked Items:Work Orders:Service Level:Alarms:Ticket Matching:Service Info"
+      Then user validates availability of tabs "Timeline:Diagnosis:Interested Parties:Notifications:Linked Items:Work Orders:Service Level:Alarms:Ticket Matching:Service Info"
       When user clicks on Diagnosis tab
       And user clicks on CI search button
       Then user switches to frame

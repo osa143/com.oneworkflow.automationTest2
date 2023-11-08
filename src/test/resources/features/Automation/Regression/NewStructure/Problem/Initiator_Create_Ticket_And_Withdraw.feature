@@ -4,10 +4,10 @@
   Scenario: initiator create ticket and withdraw
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Tohall_copy" and password as "Test@1234"
+    When user logs in with valid username "tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-#    When user clicks on create problem record
-    When user clicks on agent console create problem record
+    When user clicks on create problem record
+#    When user clicks on agent console create problem record
     Then problem record form should appear in new tab
     And user switches to window 1
     When user clicks save button

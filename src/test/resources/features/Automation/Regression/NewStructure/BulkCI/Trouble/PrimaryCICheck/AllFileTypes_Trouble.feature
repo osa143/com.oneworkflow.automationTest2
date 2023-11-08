@@ -7,9 +7,11 @@ Feature: checking of bulk loading additional definitions default settings
     And user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on create trouble event
+#    When user clicks on agent console create trouble event
     And user switches to window 1
     Then trouble record form should appear in new tab
     When user clicks on sweden checkbox under affected BU's
+#    When user clicks on OP sweden checkbox under affected BU's
     And user enters "SAO-427 Test Bulk Loading Primary CI Check" in Title field
     And user selects request type as "Event" on trouble event page
     And user enters description as "SAO-427 Test Bulk Loading Primary CI Check"
@@ -55,7 +57,7 @@ Feature: checking of bulk loading additional definitions default settings
 
     Examples:
       |fileTypes                                                                                                  |
-      |Test Attachments\10 CI's - Correct Names\CSV.csv |
+#      |Test Attachments\10 CI's - Correct Names\CSV.csv |
 #      |Test Attachments\10 CI's - Correct Names\FILE.xlsx|
 #      |Test Attachments\10 CI's - Correct Names\XLS.xls|
-#      |Test Attachments\10 CI's - Correct Names\TEXT.txt |
+      |Test Attachments\10 CI's - Correct Names\TEXT.txt |

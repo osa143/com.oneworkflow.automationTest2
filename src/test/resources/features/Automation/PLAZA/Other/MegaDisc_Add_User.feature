@@ -23,7 +23,7 @@
       Then user selects choose option as "Add User"
       And user enters megadisc account name as "Test1234"
 #      Then user enters megadisc select group as "App_Megadisc_Admin"
-      And user waits 40 secs
+      And user waits 60 secs
       Then user selects requested person as "Mattias Malmqvist"
       And user enters megadisc description as "Test1 MegaDisc/Description"
       And user enters additional comments as "Test1 Megadisc/AC"
@@ -35,9 +35,11 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      And user clicks agent console search menu
-      And user selects agent console open search form
-      And user selects agent console search work order
+#      And user clicks agent console search menu
+#      And user selects agent console open search form
+#      And user selects agent console search work order
+      When user selects search menu as "Open Search Form:Work Order"
+      And user switches to window 2
       Then user enters plaza request id in the source id field
       And user waits 30 secs
       And user clicks Search on ticket search

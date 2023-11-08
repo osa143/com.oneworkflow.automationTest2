@@ -17,11 +17,11 @@
       Then user should see "CEWS" form
       #Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
-      Then user clicks on the contact checkbox
-      And user then clicks on the name not found checkbox
-      And user enters name field as "Test1234"
-      And user enters email address field as "Test@Test.com"
-      Then user enters phone field as "123456789"
+#      Then user clicks on the contact checkbox
+#      And user then clicks on the name not found checkbox
+#      And user enters name field as "Test1234"
+#      And user enters email address field as "Test@Test.com"
+#      Then user enters phone field as "123456789"
       And user enters CEWS request as "Test1 CEWS/Request"
 #      And user selects any cews CI
       And user waits 60 secs
@@ -35,10 +35,10 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user selects search menu as "Open Search Form:Work Order"
-      And user clicks agent console search menu
-      And user selects agent console open search form
-      And user selects agent console search work order
+      When user selects search menu as "Open Search Form:Work Order"
+#      And user clicks agent console search menu
+#      And user selects agent console open search form
+#      And user selects agent console search work order
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search

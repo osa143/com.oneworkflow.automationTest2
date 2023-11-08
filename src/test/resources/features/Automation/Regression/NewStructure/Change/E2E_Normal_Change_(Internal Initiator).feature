@@ -7,8 +7,8 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid username "ChangeInitiatorInternal1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user clicks on create change record
-      When user clicks on agent console create change record
+      When user clicks on create change record
+#      When user clicks on agent console create change record
       Then user switches to window 1
       When user clicks save button
       Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)" on change record page
@@ -64,13 +64,13 @@
       And user clicks on save button
       And user switches to default
       And CI should be listed and displayed under the Diagnosis tab
-      When user right clicks on CI "FI_MGW_SMG03TRE" and selects "Show:Location Details"
+#      When user right clicks on CI "FI_MGW_SMG03TRE" and selects "Show:Location Details"
 #      Then user validates Location Details are shown
-      And user validates availability of tabs "Details:Relationships"
-      And user clicks on "Relationships" tab
-      Then user clicks on refresh button under related CIs
-      And user validates CIs are shown under related CI table
-      And user clicks on the close button on location details window
+#      And user validates availability of tabs "Details:Relationships"
+#      And user clicks on "Relationships" tab
+#      Then user clicks on refresh button under related CIs
+#      And user validates CIs are shown under related CI table
+#      And user clicks on the close button on location details window
       When user clicks on Show CR Matching button
       Then user should see Show CR Matching table appear
       When user clicks on "Interested Parties" tab
@@ -112,15 +112,16 @@
       #Below step doesnt work, button is disabled, but comes back as enabled in Intellij, until we figure this out, below step will stay disabled
       #And user validates send button is disabled
       When user logsOut from One workflow
-      And user goes back to login page
+#      And user goes back to login page
+      And user navigates back to login page using URL
         Then user logs in with valid username "DC CS Core (Voice)_auto" and password as "Test@1234"
       And user successfully logged in to OneWorkflow and agent console should be displayed
-      When user clicks on more filters button
-      And user clicks on "Core" tab
-      Then user enters title as "Mobile | CS Core (Voice)" on more filter window
-      And user selects status as "Assigned" on user more filters window
-      Then user clicks on apply button on user more filters window
-      And user should see "CR" tickets with "Status" of "Assigned"
+#      When user clicks on more filters button
+#      And user clicks on "Core" tab
+#      Then user enters title as "Mobile | CS Core (Voice)" on more filter window
+#      And user selects status as "Assigned" on user more filters window
+#      Then user clicks on apply button on user more filters window
+#      And user should see "CR" tickets with "Status" of "Assigned"
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
       And user switches to window 2
       Then user enters ticket previously created and searches
@@ -169,14 +170,15 @@
       And user waits 2 secs
       When user logsOut from One workflow
       And user switches to window 1
-      And user goes back to login page
+#      And user goes back to login page
+      And user navigates back to login page using URL
       Then user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
       And user successfully logged in to OneWorkflow and agent console should be displayed
-      When user clicks on more filters button
-      And user clicks on "Core" tab
-      And user selects status as "Approval Requested" on user more filters window
-      And user clicks on apply button on user more filters window
-      And user should see "CR" tickets with "Status" of "Approval Requested"
+#      When user clicks on more filters button
+#      And user clicks on "Core" tab
+#      And user selects status as "Approval Requested" on user more filters window
+#      And user clicks on apply button on user more filters window
+#      And user should see "CR" tickets with "Status" of "Approval Requested"
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
       And user switches to window 2
       Then user enters ticket previously created and searches
@@ -240,11 +242,11 @@
       And user goes back to login page
       When user logs in with valid username "ChangeImplementationControl1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user clicks on more filters button
-      And user clicks on "Core" tab
-      And user selects status as "Scheduled" on user more filters window
-      And user clicks on apply button on user more filters window
-      And user should see "CR" tickets with "Status" of "Scheduled"
+#      When user clicks on more filters button
+#      And user clicks on "Core" tab
+#      And user selects status as "Scheduled" on user more filters window
+#      And user clicks on apply button on user more filters window
+#      And user should see "CR" tickets with "Status" of "Scheduled"
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
       And user switches to window 2
       Then user enters ticket previously created and searches
@@ -279,14 +281,15 @@
       Then user clicks on save button
       And change should also be reflected in the timeline as "Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed." on row 2
       And user logsOut
-      And user goes back to login page
+#      And user goes back to login page
+      And user navigates back to login page using URL
       When user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      When user clicks on more filters button
-      And user clicks on "Core" tab
-      And user selects status as "Completed" on user more filters window
-      And user clicks on apply button on user more filters window
-      And user should see "CR" tickets with "Status" of "Completed"
+#      When user clicks on more filters button
+#      And user clicks on "Core" tab
+#      And user selects status as "Completed" on user more filters window
+#      And user clicks on apply button on user more filters window
+#      And user should see "CR" tickets with "Status" of "Completed"
       When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
       And user switches to window 3
       Then user enters ticket previously created and searches

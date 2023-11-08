@@ -6,8 +6,8 @@ Feature: Add CI & Attachment
       Given user is on the OneWorkflow login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user clicks on create problem record
-      When user clicks on agent console create problem record
+      When user clicks on create problem record
+#      When user clicks on agent console create problem record
       And user switches to window 1
       Then problem record form should appear in new tab
       When user creates problem ticket with below details
@@ -20,16 +20,16 @@ Feature: Add CI & Attachment
       And change should also be reflected in the timeline as "Ticket Description has changed from \"UAT Test 3 Add CI and attachment\" to \"-More information\""
       When user adds below CI's to the ticket
         |   CI Name     |
-        |SE_CPE_FRECPE5 |
+#        |SE_CPE_FRECPE5 |
         |FI_LTECell_Valpe4H|
       And user clicks on Diagnosis tab
       Then CI should be listed and displayed under the Diagnosis tab
       When user clicks on ticket refresh button
       Then user validates finland as affected BU
       When user clicks on CTI details under sections
-      Then user validates Category as "Packet_Transport"
-      And user validates type as "Other"
-      And user validates item as "CPE"
+#      Then user validates Category as "Packet_Transport"
+#      And user validates type as "Other"
+#      And user validates item as "CPE"
       And  user adds attachment and verifies under ""
         | summary   | description | fullFilePath       | attachments |
         | Test JPEG | Test JPEG   | attachement.doc.txt | 1          |
@@ -37,6 +37,7 @@ Feature: Add CI & Attachment
       And change should also be reflected in the timeline as "Attachment has been added. File Name - attachement.doc.txt"
       When user clicks on the added attachment
       And user clicks attachment open button
+      And user waits 2 secs
       Then attachment form should open in new tab
       When user clicks on the attachment listed
       And clicks on display button

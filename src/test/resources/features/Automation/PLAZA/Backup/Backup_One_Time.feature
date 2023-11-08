@@ -14,11 +14,11 @@
       Then user should see "One-time Backup" form
       Then user selects system name in haiti as "AAA"
       When user selects role dropdown as "Application Operation Engineer"
-      Then user clicks on the contact checkbox
-      And user then clicks on the name not found checkbox
-      And user enters name field as "Test1234"
-      Then user enters email address field as "Test@Test.com"
-      Then user enters phone field as "123456789"
+#      Then user clicks on the contact checkbox
+#      And user then clicks on the name not found checkbox
+#      And user enters name field as "Test1234"
+#      Then user enters email address field as "Test@Test.com"
+#      Then user enters phone field as "123456789"
       And user enters Backup request as "Test1 Backup One Time/Request"
       And user selects Add CI back up as "cc100cgas001"
       And user enters Backup one time UNC Local path as "\\TESTING\This"
@@ -34,9 +34,10 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      And user clicks agent console search menu
-      And user selects agent console open search form
-      And user selects agent console search work order
+#      And user clicks agent console search menu
+#      And user selects agent console open search form
+#      And user selects agent console search work order
+      When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
@@ -63,6 +64,7 @@
       And user clicks on "Diagnosis" tab
       And user waits 3 secs
       When user right clicks on primary CI and clears impact
+#      When user right clicks on CI "cc100cgas001" and clears impact
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

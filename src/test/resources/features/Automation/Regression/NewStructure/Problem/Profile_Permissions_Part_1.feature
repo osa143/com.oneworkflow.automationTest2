@@ -1,4 +1,4 @@
-@Profile_Permissions_Part_1 @ProblemRegression
+@ProfilePer1 @ProblemRegression
 #Passed
 
   Feature:  profile permissions part 1
@@ -9,8 +9,8 @@
 #      Then user logs in with valid username "syvaptu1_auto" and password as "Test@1234" on new login page
       When user logs in with valid username "syvaptu1_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user clicks on create problem record
-      When user clicks on agent console create problem record
+      When user clicks on create problem record
+#      When user clicks on agent console create problem record
       And user switches to window 1
       Then problem record form should appear in new tab
       When user creates problem ticket with below details
@@ -21,15 +21,15 @@
       When user clicks on add button under interested parties
       And user switches to frame 2
       And user selects type as "Additional Access" under interested parties
-#      And user clicks on radio button user
+      And user clicks on radio button user
       And user waits 20 secs
       Then user enters "Tohall_copy" in login name plus field
       And user clicks on search under add interested party
       When user highlights present user under add interested party
-#      And user selects access radio button as read and write
-#      And user selects auto notify radio button as yes
-#      And user clicks on save button under interested parties frame
-      And user waits 40 secs
+      And user selects access radio button as read and write
+      And user selects auto notify radio button as yes
+      And user clicks on save button under interested parties frame
+#      And user waits 40 secs
       Then problem initiator user should be listed under interested parties tab
      # And change should also be reflected in the timeline as "The User Tomas Hallén has been added as interested parties."
       When user clicks on "Additional Info" tab
@@ -44,9 +44,10 @@
       #And user goes back to login page
       Then user navigates back to login page using URL
       And user logs in with valid username "mina09_auto" and password as "Test@1234"
-      And user clicks agent console search menu
-      And user selects agent console open search form
-      And user selects agent console search problem
+#      And user clicks agent console search menu
+#      And user selects agent console open search form
+#      And user selects agent console search problem
+      And user clicks on search and selects open search forms and problem record
       And user switches to window 2
       Then user enters Problem Ticket
       And user clicks Search on ticket search
@@ -60,10 +61,11 @@
       Then user logsOut
       #And user goes back to login page
       Then user navigates back to login page using URL
-      When user logs in with valid username "Tohall_copy" and password as "Test@1234"
-      And user clicks agent console search menu
-      And user selects agent console open search form
-      And user selects agent console search problem
+      When user logs in with valid username "tohall_copy2" and password as "Test@1234"
+#      And user clicks agent console search menu
+#      And user selects agent console open search form
+#      And user selects agent console search problem
+      And user clicks on search and selects open search forms and problem record
       And user switches to window 3
       Then user enters Problem Ticket
       And user clicks Search on ticket search

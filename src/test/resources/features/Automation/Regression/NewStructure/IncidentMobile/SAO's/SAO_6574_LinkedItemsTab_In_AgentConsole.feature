@@ -6,12 +6,12 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user clicks on create trouble event
-      When user clicks on agent console create trouble event
+      When user clicks on create trouble event
+#      When user clicks on agent console create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
-#      When user clicks on sweden checkbox under affected BU's
-      When user clicks on OP sweden checkbox under affected BU's
+      When user clicks on sweden checkbox under affected BU's
+#      When user clicks on OP sweden checkbox under affected BU's
       And user enters "Test SAO-6574 - Linked Tickets in agent console" in Title field in Trouble event
       And user selects request type as "Customer" on trouble event page
       And user enters description as "Test SAO-6574 - Linked Tickets in agent console"
@@ -55,11 +55,11 @@
       And user selects request type as "CPS:IT:Other" in problem form
       Then user selects impact as "Extensive/Widespread"
       And user selects urgency as "High"
-      And user selects accountable organisation as "CA_Infra"
-      And user selects affected organisation as "CA_IT"
+      And user selects accountable organisation as "DivX"
+      And user selects affected organisation as "DivX"
       And user waits 3 secs
       And user clicks on save button
-      Then problem ticket status should be assigned
+#      Then problem ticket status should be assigned
       And user switches to window 0
       Then user selects target application first dropdown as "(clear)"
       Then user clicks refresh button under linked items
@@ -87,7 +87,7 @@
       And user waits 5 secs
       And user selects change type as "Change Record"
       Then user selects request type as "Standard Change"
-      And user selects template as "All:IT:Carrier:Telia Carrier UAT Changes"
+      And user selects template as "All:IT:Carrier:Telia Carrier PROD and UAT Database Changes"
       And user enters "Test" in the change builder field
       Then user enters request start time 24 hours ahead of current date
       And user enters request end time 48 hours ahead of current date

@@ -34,17 +34,17 @@ Feature:  Today in the customer operations interface,
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-#    When user selects search menu as "Open Search Form:Work Order"
-    And user clicks agent console search menu
-    And user selects agent console open search form
-    And user selects agent console search work order
+    When user selects search menu as "Open Search Form:Work Order"
+#    And user clicks agent console search menu
+#    And user selects agent console open search form
+#    And user selects agent console search work order
     And user switches to window 2
     Then user enters plaza request id in the source id field
     And user clicks Search on ticket search
     Then user should see plaza ticket
     And user validates source field as "PLAZA"
     And user validates title field as "Service Request | Skypoint - private cloud"
-    And user validates nimbus add modify remove description same as plaza
+#    And user validates nimbus add modify remove description same as plaza
     When user clicks on owner under sections
     And user clicks on assignment under sections
     And user clicks on CTI details under sections

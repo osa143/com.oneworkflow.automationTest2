@@ -6,15 +6,15 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user clicks on create trouble event
-      When user clicks on agent console create trouble event
+      When user clicks on create trouble event
+#      When user clicks on agent console create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
       When user creates an incident with following details
         |                Title     |RequestType|                 Description              |
         |Remove a CI from Diagnosis|Customer   |Test case 05.01 Manually close an incident|
       Then ticket should be created and status should be assigned
-      And user gets trouble ticket value
+#      And user gets trouble ticket value
       Then user adds CI "SE_EPG_FREEPG1" to the ticket with impact level "No Impact"
       Then user adds CI "SE_EPG_HYEPG1" to the ticket with impact level "No Impact"
       Then user adds CI "SE_EPG_LDHEPG1" to the ticket with impact level "No Impact"

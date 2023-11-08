@@ -6,8 +6,8 @@ Feature: checking of bulk loading additional definitions default settings
     Given user is on the OneWorkflow login page
     And user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-#    When user clicks on create change record
-    When user clicks on agent console create change record
+    When user clicks on create change record
+#    When user clicks on agent console create change record
     Then user switches to window 1
     And user waits 3 secs
 #    When user clicks save button

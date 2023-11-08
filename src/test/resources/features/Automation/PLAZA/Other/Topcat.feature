@@ -19,7 +19,8 @@
       When user selects role dropdown as "Application Operation Engineer"
       And user selects Select service request name as "<Service Request Name>"
       And user enters Topcat request as "<Request>"
-      And user enters topcat add CI as "aa789win01t"
+#      And user enters topcat add CI as "aa789win01t"
+      And user enters topcat add CI as "cc100cgas001"
       And user enters Topcat description as "<Description>"
       And user enters additional comments as "<Additional Comments>"
       Then user clicks on "Submit"
@@ -30,10 +31,10 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user selects search menu as "Open Search Form:Work Order"
-      And user clicks agent console search menu
-      And user selects agent console open search form
-      And user selects agent console search work order
+      When user selects search menu as "Open Search Form:Work Order"
+#      And user clicks agent console search menu
+#      And user selects agent console open search form
+#      And user selects agent console search work order
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search

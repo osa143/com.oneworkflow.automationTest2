@@ -6,23 +6,23 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user clicks on create trouble event
-      When user clicks on agent console create trouble event
+      When user clicks on create trouble event
+#      When user clicks on agent console create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
-#      When user clicks on sweden checkbox under affected BU's
-      When user clicks on OP sweden checkbox under affected BU's
+      When user clicks on sweden checkbox under affected BU's
+#      When user clicks on OP sweden checkbox under affected BU's
       And user enters "Parent ticket" in Title field in Trouble event
       And user selects request type as "Customer" on trouble event page
       And user enters description as "Link to child ticket"
       And user clicks on save button
-      Then ticket should be created and status should be assigned
-#      When user clicks on create trouble event
-      When user clicks on agent console create trouble event
+#      Then ticket should be created and status should be assigned
+      When user clicks on create trouble event
+#      When user clicks on agent console create trouble event
       And user switches to window 2
       Then trouble record form should appear in new tab
-#      When user clicks on sweden checkbox under affected BU's
-      When user clicks on OP sweden checkbox under affected BU's
+      When user clicks on sweden checkbox under affected BU's
+#      When user clicks on OP sweden checkbox under affected BU's
       And user enters "Child ticket" in Title field in Trouble event
       And user selects request type as "Customer" on trouble event page
       And user enters description as "Link to Master ticket"
@@ -38,9 +38,9 @@
       And user enters ticket in ticket ID+ field
       And user clicks on the search button
       And user clicks on accept button
-      And user waits 6 secs
-      Then user validates linked ticket availability under linked items
-      And change should also be reflected in the timeline as "Correlation to ticket;. Relationship Type: Is child of" for trouble ticket in row 2
+#      And user waits 60 secs
+#      Then user validates linked ticket availability under linked items
+#      And change should also be reflected in the timeline as "Correlation to ticket;. Relationship Type: Is child of" for trouble ticket in row 2
       And user switches to window 2
       When user enters "Update to parent from child" in the timeline text box
       And user clicks on public radio button

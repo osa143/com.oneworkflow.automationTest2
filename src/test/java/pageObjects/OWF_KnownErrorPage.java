@@ -6,7 +6,7 @@ public class OWF_KnownErrorPage extends BaseRecordPage {
 
     private static final String btnADD_ID = "WIN_0_705002007";
     private static final String ddTYPE = "Type";
-    private static final String rbtnUSER = "WIN_0_rc0id700027222";
+    private static final String rbtnUSER = "//*[@id='WIN_0_rc0id700027222']";
     private static final String ddREQUEST_TYPE = "Request Type";
     private static final String txtLOGIN_NAME_PLUS_ID = "arid_WIN_0_700027012";
     private static final String txtFIRST_NAME_PLUS_ID = "arid_WIN_0_700027160";
@@ -44,7 +44,7 @@ public class OWF_KnownErrorPage extends BaseRecordPage {
     }
 
     public void clickOnUserRadioButton(){
-        driver.findElement(By.id(rbtnUSER)).click();
+        driver.findElement(By.xpath(rbtnUSER)).click();
     }
 
     public void selectType(String value){

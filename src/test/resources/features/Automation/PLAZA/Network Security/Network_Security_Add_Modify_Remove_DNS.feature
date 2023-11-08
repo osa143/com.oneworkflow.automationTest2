@@ -29,10 +29,11 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      And user clicks agent console search menu
-      And user selects agent console open search form
-      And user selects agent console search work order
-      And user waits 40 secs
+#      And user clicks agent console search menu
+#      And user selects agent console open search form
+#      And user selects agent console search work order
+#      And user waits 40 secs
+      When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search

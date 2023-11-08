@@ -2548,7 +2548,7 @@ public class Plaza_HomePageSteps extends BasePage {
 //        CommonUtils.uploadFile(fullFilePath);
         homePage.uploadPlazaAttachmentFile(fullFilePath);
         homePage.wait(500);
-        homePage.clickElementByContainsTextAndTagName("button", "Upload Without Encrypting");
+//        homePage.clickElementByContainsTextAndTagName("button", "Upload Without Encrypting");
 
     }
 

@@ -6,12 +6,12 @@ Feature: Verifying closure codes update in timeline
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user clicks on create trouble event
-      When user clicks on agent console create trouble event
+      When user clicks on create trouble event
+#      When user clicks on agent console create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
-#      When user clicks on sweden checkbox under affected BU's
-      When user clicks on OP sweden checkbox under affected BU's
+      When user clicks on sweden checkbox under affected BU's
+#      When user clicks on OP sweden checkbox under affected BU's
       And user enters "SAO-7034 Closer code Timeline update test" in Title field in Trouble event
       And user selects request type as "Customer" on trouble event page
       And user enters description as "SAO-7034 Closer code Timeline update test"
@@ -53,15 +53,18 @@ Feature: Verifying closure codes update in timeline
     Scenario: SAO-7034 - Verification of edit closure codes timeline update
 
       Given user is on the OneWorkflow login page
-      When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+      When user logs in with valid username "Change_Automation_8" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user selects "Search" menu as "Open Search Form:Trouble Event"
+#      And user clicks agent console search menu
+#      And user selects agent console open search form
+#      And user selects agent console search trouble event
       And user switches to window 1
       And user selects status as "Closed"
       And user enters "HPE Common Temip" in the source field
       When user clicks on advanced search button
      ## In advance search we have to enter the date in correct format to search within age in days of source##
-      And user enters "'3'>\"2021-10-19\"" in the advanced search bar
+      And user enters "'3'>\"2021/10/19\"" in the advanced search bar
       And user clicks Search on ticket search
       And user waits 15 secs
       When user selects fault position as "Other:Other" on trouble event page

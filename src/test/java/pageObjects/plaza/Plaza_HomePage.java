@@ -161,7 +161,7 @@ public class Plaza_HomePage extends BaseRecordPage {
     private static final String txt_NIMBUS_SKYPOINT_REQUEST= "sp_formfield_skypoint_request";
     public static final String dd_NETWORK_SECURITY_ADD_MODIFY_REMOVE_DNS_SERVICE_REQUEST_NAME= "select2-chosen-11";
     public static final String txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_DNS_REQUEST= "sp_formfield_sr105_v_request";
-    public static final String dd_NETWORK_SECURITY_ADD_MODIFY_REMOVE_SCHEDULED_CHANGE= "s2id_sp_formfield_sr5_v_operating_system";
+    public static final String dd_NETWORK_SECURITY_ADD_MODIFY_REMOVE_SCHEDULED_CHANGE= "s2id_sp_formfield_sr6_v_operating_system";
     public static final String txt_NETWORK_SECURITY_ADD_MODIFY_REMOVE_DESCRIPTION= "sp_formfield_sr105_v_description";
     public static final String dd_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_SERVICE_REQUEST= "select2-chosen-9";
     public static final String txt_NETWORK_SECURITY_FIREWALL_NEW_CHANGE_REQUEST= "sp_formfield_sr114_v_request";
@@ -403,7 +403,7 @@ public class Plaza_HomePage extends BaseRecordPage {
     private static final String txt_OW_ATTACHMENT_NOTIFICATION_PLAZA = "//*[@id='activity_abec696c1b17ac50db6611b1b24bcbca']/div/span/text()";
     private static final String btn_PDB_AFFECTED_PERSON = "sp_formfield_pdb_affectedPerson";
     private static final String dd_SYSTEM_NAME_HAITI = "select2-results-12";
-    private static final String txt_GET_OP_TICKET = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[1]/div[2]/div/div[2]/p";
+    private static final String txt_GET_OP_TICKET = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[2]/div[2]/div/div[2]/p";
     private static final String txt_AFFECTED_PERSONS_PDB = "sp_formfield_pdb_affPerDescCheck";
     private static final String txt_NATURE_AND_CONTENT = "s2id_sp_formfield_pdb_natureOfContent";
     private static final String txt_AFFECTED_PERSONS = "s2id_sp_formfield_pdb_affectedNumOfPerson";
@@ -536,7 +536,7 @@ public class Plaza_HomePage extends BaseRecordPage {
     private static final String txt_SELECT_CI_EXCLUSION= "s2id_sp_formfield_owf_scep_ci";
     private static final String btn_LINKED_INC = "//a[@class='linked formlink']";
     private static final String btn_UPLOAD_ATTACHMENT_XPATH = "//input[@class='sp-attachments-input']";
-    private static final String btn_AFFECTED_PERSONS_OTHER = "//input[@value='Consumer customer']";
+    private static final String btn_AFFECTED_PERSONS_OTHER = "//*[@id='sp_formfield_pdb_affectedPerson']/div/div[5]/label/input";
     private static final String btn_SHOWN_ICM_PLAZA_CREATE = "//*[@id='xba9dcc6fdb3ad7802b3cfc16bf96195f']/div/div/div[2]/div/div/ul/li[9]/div[2]/div/div[2]/p/a";
 
     public void clickOn_PlazaCreateICM_number(){

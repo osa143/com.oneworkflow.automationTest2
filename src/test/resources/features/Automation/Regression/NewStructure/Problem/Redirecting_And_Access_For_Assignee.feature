@@ -5,10 +5,10 @@
   Scenario: Redirecting and Access for Assignee - User is able to change assignment/assignee on problem ticket
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Tohall_copy2" and password as "Test@1234"
+    When user logs in with valid username "tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-#    When user clicks on create problem record
-    When user clicks on agent console create problem record
+    When user clicks on create problem record
+#    When user clicks on agent console create problem record
     And user switches to window 1
     Then problem record form should appear in new tab
     When user creates problem ticket with below details
@@ -21,9 +21,10 @@
 #    And user goes back to login page
     When user logs in with valid username "mina09_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    And user clicks agent console search menu
-    And user selects agent console open search form
-    And user selects agent console search problem
+#    And user clicks agent console search menu
+#    And user selects agent console open search form
+#    And user selects agent console search problem
+    And user clicks on search and selects open search forms and problem record
     And user switches to window 2
     And user enters Problem Ticket
     And user clicks Search on ticket search
@@ -49,9 +50,10 @@
 #    And user goes back to login page
     When user logs in with valid username "frvi96_auto" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    And user clicks agent console search menu
-    And user selects agent console open search form
-    And user selects agent console search problem
+#    And user clicks agent console search menu
+#    And user selects agent console open search form
+#    And user selects agent console search problem
+    And user clicks on search and selects open search forms and problem record
     And user switches to window 3
     Then problem record form should appear in new tab
     And user enters Problem Ticket
@@ -84,12 +86,14 @@
     And user clicks on save button on the problem form
     And change should be reflected in the timeline "Request has been reassigned from Assignee user |frvi96_auto| to  Assignee  user |Tohall_copy|."
     Then user logsOut
-    And user goes back to login page
-    And user logs in with valid username "Tohall_copy2" and password as "Test@1234"
+#    And user goes back to login page
+    And user navigates back to login page using URL
+    And user logs in with valid username "tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    And user clicks agent console search menu
-    And user selects agent console open search form
-    And user selects agent console search problem
+#    And user clicks agent console search menu
+#    And user selects agent console open search form
+#    And user selects agent console search problem
+    And user clicks on search and selects open search forms and problem record
     And user switches to window 4
     Then problem record form should appear in new tab
     And user enters Problem Ticket
@@ -99,6 +103,20 @@
     And user highlights user "thgi00" under interested parties
     And user clicks on remove button
     Then user Thgi00 shouldn't be listed anymore
+    And user logsOut
+    And user navigates back to login page using URL
+#    And user goes back to login page
+    When user logs in with valid username "frvi96_auto" and password as "Test@1234"
+    Then user successfully logged in to OneWorkflow and agent console should be displayed
+#    And user clicks agent console search menu
+#    And user selects agent console open search form
+#    And user selects agent console search problem
+    And user clicks on search and selects open search forms and problem record
+    And user switches to window 5
+    Then problem record form should appear in new tab
+    And user enters Problem Ticket
+    And user clicks Search on ticket search
+    And user should see problem ticket
     When user changes status to "Investigation Complete" on problem record page
     And user clicks on save button on the problem form
     Then an error message should appear: "Required field (without a default) not specified : Root Cause Details (ARERR 9424)"

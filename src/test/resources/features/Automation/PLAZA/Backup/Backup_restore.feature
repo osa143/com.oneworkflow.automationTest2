@@ -63,7 +63,8 @@
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      When user right clicks on primary CI and clears impact
+#      When user right clicks on primary CI and clears impact
+      When user right clicks on CI "cc100cgas001" and clears impact
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
       And user clicks on "Schedule" tab

@@ -66,6 +66,7 @@
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
       And user right clicks on CI "cc100cgas001" and clears impact for all CI's
+#      When user right clicks on CI "cc100cgas001" and clears impact
       Then user should see confirmation message for impact clear all and user clicks yes
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

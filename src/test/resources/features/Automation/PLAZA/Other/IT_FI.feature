@@ -17,11 +17,11 @@
       Then user should see "IT FI" form
       #Then user selects system name in haiti as "Other"
       When user selects role dropdown as "Application Operation Engineer"
-      Then user clicks on the contact checkbox
-      And user then clicks on the name not found checkbox
-      And user enters name field as "Test1234"
-      Then user enters email address field as "Test@Test.com"
-      Then user enters phone field as "123456789"
+#      Then user clicks on the contact checkbox
+#      And user then clicks on the name not found checkbox
+#      And user enters name field as "Test1234"
+#      Then user enters email address field as "Test@Test.com"
+#      Then user enters phone field as "123456789"
       And user enters IT FI request as "Test1 IT FI/Request"
       Then user enters IT FI description as "Test1 IT FI/Description"
       And user enters additional comments as "Test1 IT FI/AC"
@@ -37,8 +37,8 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user selects search menu as "Open Search Form:Work Order"
-      And user waits 30 secs
+      When user selects search menu as "Open Search Form:Work Order"
+#      And user waits 30 secs
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search

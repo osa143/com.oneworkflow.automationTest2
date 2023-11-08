@@ -22,7 +22,7 @@
       And user waits 50 secs
       And user enters operating system justification as "Test justification"
       And user enters plan to enable automatic monthly patching as "Test plan"
-      And user clicks on the commitment checkbox
+#      And user clicks on the commitment checkbox
       Then user enters operating system change from auto description as "Test3 Operating System/Description"
       And user enters additional comments as "Test3 Operating System/AC"
       Then user clicks on "Submit"
@@ -57,7 +57,8 @@
       And user enters impact to time as past on impact details bulk update window
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
-      And user right clicks on primary CI and clears impact
+#      And user right clicks on primary CI and clears impact
+      When user right clicks on CI "cc100cgas001" and clears impact
       When user clicks on Ack button
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"

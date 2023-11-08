@@ -39,7 +39,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String txtRESPONSE_TIME = "arid_WIN_0_700048056";
     private static final String txtTITLE_ID = "arid_WIN_0_777031000";
     private static final String txtSOURCE_ID = "arid_WIN_0_777777912";
-    private static final String txtTROUBLE_TICKET_ID = "arid_WIN_0_777777600"; //Ticket ID+
+    private static final String txtTROUBLE_TICKET_ID = "arid_WIN_0_777777600";
     private static final String txtEVENT_END_TIME = "arid_WIN_0_777010106";
     private static final String txtCLOSURE_INFO = "arid_WIN_0_777031384";
     private static final String txt_CATEGORY= "arid_WIN_0_200000003";
@@ -78,7 +78,7 @@ public class OWF_TroubleEventPage extends BaseRecordPage {
     private static final String dd_IMPORTANCE="arid_WIN_0_600001821";
     private static final String btn_CLOSE_BULK_UPDATE= "WIN_0_999000100";
 
-    private static final String ddSTATUS = "arid_WIN_0_777031003";
+    private static final String ddSTATUS = "//*[@id='WIN_0_777031003']/a";
     private static final String ddTEMPLATE = "Template";
     private static final String ddTITLE = "Title";
     private static final String ddREQUEST_TYPEE = "arid_WIN_0_777031002";

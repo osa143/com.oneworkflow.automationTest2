@@ -20,11 +20,12 @@
     Scenario: Verification of edit closure codes
 
      Given user is on the OneWorkflow login page
-     When user logs in with valid username "Change_Automation_1" and password as "Test@1234"
+     When user logs in with valid username "Change_Automation_8" and password as "Test@1234"
      Then user successfully logged in to OneWorkflow and agent console should be displayed
-      And user clicks agent console search menu
-      And user selects agent console open search form
-      And user selects agent console search trouble event
+#      And user clicks agent console search menu
+#      And user selects agent console open search form
+#      And user selects agent console search trouble event
+      When user selects "Search" menu as "Open Search Form:Trouble Event"
      And user switches to window 1
      And user selects status as "Closed"
      And user enters "HPE Common Temip" in the source field

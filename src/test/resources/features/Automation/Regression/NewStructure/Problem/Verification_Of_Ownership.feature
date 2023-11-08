@@ -4,10 +4,10 @@
   Scenario: Verification of Ownership - user shouldn't be able to alter a problem ticket not assigned to them
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Tohall_copy2" and password as "Test@1234"
+    When user logs in with valid username "tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-#    When user clicks on create problem record
-    When user clicks on agent console create problem record
+    When user clicks on create problem record
+#    When user clicks on agent console create problem record
     And user switches to window 1
     Then problem record form should appear in new tab
     When user clicks save button
@@ -20,12 +20,12 @@
     And user enters description as "UAT Test3"
     And user selects impact type as moderate:limited
     And user selects urgency as low
-    And user selects accountable organisation as "CA_Infra"
-    And user selects affected organisation as "CA_IT"
+    And user selects accountable organisation as "DivX"
+    And user selects affected organisation as "DivX"
     And user clicks on assignment under sections
     And user selects assigned profile dropdown as "Problem Management:Problem Initiator"
     #And user selects assigned profile dropdown as "Problem Initiator"
-    And user enters "Tohall_copy" in assignee
+    And user enters "tohall_copy" in assignee
     And user clicks on save button on the problem form
     Then ticket should be created and status should be assigned
     And user gets ticket value

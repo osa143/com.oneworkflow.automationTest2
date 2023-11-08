@@ -13,12 +13,13 @@ Feature: Plaza creation/withdrawing of incident ticket
     And user selects "Applications" under Service area dropdown
     And user selects "AlarmMap" under plaza category dropdown
 #    And user selects "Application Error" under plaza type of issue
-    And user waits 50 secs
+    And user waits 20 secs
     And user enters "Test OW OP Ticket" in the plaza subject field
     And user enters "Test OW OP Ticket" in the plaza describe field
     Then user clicks on submit button on plaza form
     And user gets plaza request id
     And user clicks on plaza request id
+    And user waits 3 secs
     And user gets plaza OP ticket
     And user clicks on main page refresh
     And user waits 10 secs
@@ -36,10 +37,10 @@ Feature: Plaza creation/withdrawing of incident ticket
     Given user is on the OneWorkflow login page
     When user logs in with valid user and password
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-#    When user selects search menu as "Open Search Form:Trouble Event"
-    And user clicks agent console search menu
-    And user selects agent console open search form
-    And user selects agent console search trouble event
+    When user selects search menu as "Open Search Form:Trouble Event"
+#    And user clicks agent console search menu
+#    And user selects agent console open search form
+#    And user selects agent console search trouble event
     And user switches to window 3
     Then user should see blank trouble search form
     When user enters plaza incident ticket

@@ -7,8 +7,8 @@ Feature: E2E standard change internal initiator
     Given user is on the OneWorkflow login page
     When user logs in with valid username "ChangeInitiatorInternal1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-#    When user clicks on create change record
-    When user clicks on agent console create change record
+    When user clicks on create change record
+#    When user clicks on agent console create change record
     Then user switches to window 1
     When user clicks save button
     Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)" on change record page
@@ -16,7 +16,7 @@ Feature: E2E standard change internal initiator
     And user validates change builder+ is mandatory
     When user selects request type as "Standard Change"
     And user validates "Template*" is mandatory
-    And user selects template as "All:IT:Other:TEST TEMPLATE [UAT] - Standard Change"
+    And user selects template as "All:IT:Other:DK RPA Process Automation"
     Then user validates Title is readonly
     And user validates Request Category is readonly
     And user validates Description* isn't readonly
@@ -30,9 +30,10 @@ Feature: E2E standard change internal initiator
     And multiple error messages should appear with red boarder around fields
     When user enters "CI B2" in the change builder field
     #Then user validates "Change Builder" button is present
-    And user enters start time as 3 minutes fast from current sweden time
-    And user enters end time as 9 minutes fast from current sweden time
-    And user enters impact duration as "5" minutes
+    And user enters start time as -55 minutes fast from current sweden time
+    And user enters end time as -52 minutes fast from current sweden time
+    And user enters impact duration as "3" minutes
+    And user selects estimated impact as "No Impact"
     Then user enters description as "Regression - Change Management Process"
     #Then user adds "Regression - Change Management Process" to current description
     And user clicks on save button

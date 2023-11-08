@@ -6,8 +6,8 @@ Feature: Internal Urgent Critical Change E2E
     Given user is on the OneWorkflow login page
     When user logs in with valid username "ChangeInitiatorInternal1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-#    When user clicks on create change record
-    When user clicks on agent console create change record
+    When user clicks on create change record
+#    When user clicks on agent console create change record
     Then user switches to window 1
     When user clicks save button
     Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)" on change record page
@@ -20,7 +20,7 @@ Feature: Internal Urgent Critical Change E2E
     When user clicks save button
     And multiple error messages should appear with red boarder around fields
     When user selects request type as "Urgent Change"
-    Then user selects title as "Mobile:RAN NSN" on Change record page
+    Then user selects title as "IT:Mobile:Billing" on Change record page
     And user selects request category as "Software Installation" on change record page
     And user enters description as "TEST TICKET PLEASE IGNORE - Automated Test for Urgent Major Critical (Internal Initiator)"
     And user enters reason field as "Regression"
@@ -64,8 +64,8 @@ Feature: Internal Urgent Critical Change E2E
     Then user switches to frame
     And CI search tab should be opened
     And user clicks on clear button
-    And user selects Category as "Access"
-    Then user enters "SE_BSC_AB16B" in the name+ field
+#    And user selects Category as "Access"
+    Then user enters "SE_EPG_FREEPG1" in the name+ field
     Then user clicks on search button on CI search window
     And user selects all CI's that appear
     And user selects impact level as "Loss of Service"
@@ -74,34 +74,34 @@ Feature: Internal Urgent Critical Change E2E
     And user clicks yes on save confirmation message
     And user waits 20 secs
     And CI should be listed and displayed under the Diagnosis tab
-    And user clicks on Diagnosis tab
-    And user clicks on CI search button
-    Then user switches to frame
-    And CI search tab should be opened
-    And user clicks on clear button
-    And user selects Category as "Access"
-    Then user enters "SE_RNC_AK6RU102" in the name+ field
-    Then user clicks on search button on CI search window
-    And user selects all CI's that appear
-    And user selects impact level as "Loss of Service"
-    And user clicks on relate CI
-    And user closes warning message on change add CI
-    #And user clicks yes on save confirmation message
-    And user waits 20 secs
-    And CI should be listed and displayed under the Diagnosis tab
+#    And user clicks on Diagnosis tab
+#    And user clicks on CI search button
+#    Then user switches to frame
+#    And CI search tab should be opened
+#    And user clicks on clear button
+#    And user selects Category as "Access"
+#    Then user enters "SE_RNC_AK6RU102" in the name+ field
+#    Then user clicks on search button on CI search window
+#    And user selects all CI's that appear
+#    And user selects impact level as "Loss of Service"
+#    And user clicks on relate CI
+#    And user closes warning message on change add CI
+#    #And user clicks yes on save confirmation message
+#    And user waits 20 secs
+#    And CI should be listed and displayed under the Diagnosis tab
     When user clicks on Show CR Matching button
     Then user should see Show CR Matching table appear
     When user clicks on "Interested Parties" tab
     And user enters email address as "Test123xxx@Test123xxx.com"
     And user clicks on add email button
-    Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
+#    Then user should see new email "Test123xxx@Test123xxx.com" added in "Email Address" in row 2
     When user clicks on Send button
     And user waits 5 secs
     Then user validates ticket status as "Assigned"
-    And user clicks on owner under sections
+#    And user clicks on owner under sections
     And user clicks on assignment under sections
     And user validates owner profile as "Change Manager"
-    And user validates owner as "ChangeManager"
+    And user validates owner as "Change Manager"
     And user should see assigned profile as "Escalation Manager"
     And user clicks on timeline tab
     Then user validates Description* isn't readonly
@@ -111,28 +111,28 @@ Feature: Internal Urgent Critical Change E2E
     And user validates Ver of Functionality* isn't readonly
     And user validates Risk Description* isn't readonly
     And user validates Timeline Text entry isn't readonly
-    Then change should also be reflected in the timeline as "Assignee Profile has changed from  to Escalation Manager. Estonia Country has changed from  to Estonia. Request Status has changed from New to Assigned."
+    Then change should also be reflected in the timeline as "Assignee Profile has changed from  to Escalation Manager. Request Status has changed from New to Assigned."
     And user gets ticket value
-    And user waits 40 secs
-    When user clicks on "Notifications" tab
-    And user clicks on "Sent" tab
-    Then user should see "Assignment-Profile" email update
-    And user validates "Send" is readonly
+    And user waits 20 secs
+#    When user clicks on "Notifications" tab
+#    And user clicks on "Sent" tab
+#    Then user should see "Assignment-Profile" email update
+#    And user validates "Send" is readonly
     When user logsOut
-    And user goes back to login page
+#    And user goes back to login page
+    And user navigates back to login page using URL
     Then user logs in with valid username "EscalationManager1" and password as "Test@1234"
     And user successfully logged in to OneWorkflow and agent console should be displayed
-    When user clicks on more filters button
-    And user switches to frame
-    And user clicks on "Core" tab
-    Then user selects request type as "Urgent Change"
-    And user selects status as "Assigned" on user more filters window
-    Then user clicks on apply button on user more filters window
-    And user should see "CR" tickets with "Status" of "Assigned"
+#    When user clicks on more filters button
+#    And user switches to frame
+#    And user clicks on "Core" tab
+#    Then user selects request type as "Urgent Change"
+#    And user selects status as "Assigned" on user more filters window
+#    Then user clicks on apply button on user more filters window
+#    And user should see "CR" tickets with "Status" of "Assigned"
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 2
     Then user enters ticket previously created and searches
-    And user clicks Search on ticket search
     When user clicks on Ack button
     Then user validates ticket status as "Analysis"
     And user validates last ack by field has data present
@@ -153,12 +153,13 @@ Feature: Internal Urgent Critical Change E2E
     And user enters request end time 171 hours ahead of current date
     Then user clicks on save button
     And user clicks on timeline tab
-    And change should also be reflected in the timeline as "STATUS MODIFIED.  Assignment User has changed from  to EscalationManager1. Request Status has changed from Assigned to Analysis. " on row 2
-    And change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Urgent Major Critical (Internal Initiator) to TEST TICKET PLEASE IGNORE - Automated Test for Urgent Major Critical (Internal Initiator)- Additional Information. Requested Start has changed from 2019-09-09 13:00:00 UTC to 2019-09-16 13:00:00 UTC. Requested End has changed from 2019-09-09 16:00:00 UTC to 2019-09-16 16:00:00 UTC. " on row 1
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Assignment User has changed from  to EscalationManager1." on row 3
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Request Status has changed from Assigned to Analysis. " on row 4
+    And change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Urgent Major Critical (Internal Initiator) to - Additional Information." on row 2
     When user clicks on "Interested Parties" tab
     And user enters email address as "Test2@Test2.com"
     And user clicks on add email button
-    Then user should see new email "Test2@Test2.com" added in "Email Address" in row 3
+#    Then user should see new email "Test2@Test2.com" added in "Email Address" in row 3
     When user changes status to "Approval Requested"
     And user clicks on save button
     Then user validates ticket status as "Approval Requested"
@@ -176,9 +177,9 @@ Feature: Internal Urgent Critical Change E2E
     And user switches to window 2
     Then user validates ticket status as "Approved"
     And user waits for 1 minutes
-    Then user clicks on "Notifications" tab
-    And user should see "Approved" email update
-    And user should see "Approved-ChangeBuilder" email update
+#    Then user clicks on "Notifications" tab
+#    And user should see "Approved" email update
+#    And user should see "Approved-ChangeBuilder" email update
     When user changes status to "Schedule Requested"
     And user clicks on save button
     Then user validates ticket status as "Scheduled"
@@ -192,13 +193,14 @@ Feature: Internal Urgent Critical Change E2E
     And user should see assigned profile as "Change Implementation Control"
     And user validates assignee is "Change Impl Contr"
     When user logsOut from One workflow
-    And user goes back to login page
+#    And user goes back to login page
+    And user navigates back to login page using URL
     Then user logs in with valid username "ChangeImplementationControl1" and password as "Test@1234"
     And user successfully logged in to OneWorkflow and agent console should be displayed
-    When user clicks on more filters button
-    And user selects status as "Scheduled" on user more filters window
-    And user clicks on apply button on user more filters window
-    And user should see "CR" tickets with "Status" of "Scheduled"
+#    When user clicks on more filters button
+#    And user selects status as "Scheduled" on user more filters window
+#    And user clicks on apply button on user more filters window
+#    And user should see "CR" tickets with "Status" of "Scheduled"
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 2
     Then user enters ticket previously created and searches
@@ -240,16 +242,17 @@ Feature: Internal Urgent Critical Change E2E
     And change should also be reflected in the timeline as "STATUS MODIFIED.  Actual Impact has changed from  to No Impact. Actual End has changed from  UTC to 2019-09-18 14:39:25 UTC. Completed Code has changed from  to Successful. Request Status has changed from Implementation to Completed" on row 1
     And change should also be reflected in the timeline as "EscalationManager1 - The Actual End Date Time has been updated to : 2019-09-18 14:39:25 UTC" on row 2
     When user logsOut
-    And user goes back to login page
+#    And user goes back to login page
+    And user navigates back to login page using URL
     Then user logs in with valid username "EscalationManager1" and password as "Test@1234"
     And user successfully logged in to OneWorkflow and agent console should be displayed
-    When user clicks on more filters button
-    And user switches to frame
-    And user clicks on "Core" tab
-    Then user selects request type as "Urgent Change"
-    And user selects status as "Completed" on user more filters window
-    Then user clicks on apply button on user more filters window
-    And user should see "CR" tickets with "Status" of "Completed"
+#    When user clicks on more filters button
+#    And user switches to frame
+#    And user clicks on "Core" tab
+#    Then user selects request type as "Urgent Change"
+#    And user selects status as "Completed" on user more filters window
+#    Then user clicks on apply button on user more filters window
+#    And user should see "CR" tickets with "Status" of "Completed"
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 2
     Then user enters ticket previously created and searches

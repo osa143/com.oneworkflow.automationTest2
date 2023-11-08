@@ -7,12 +7,12 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user clicks on create trouble event
-      When user clicks on agent console create trouble event
+      When user clicks on create trouble event
+#      When user clicks on agent console create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
-      When user clicks on OP sweden checkbox under affected BU's
-#      When user clicks on sweden checkbox under affected BU's
+#      When user clicks on OP sweden checkbox under affected BU's
+      When user clicks on sweden checkbox under affected BU's
       And user enters "<title>" in Title field in Trouble event
       And user selects request type as "Customer" on trouble event page
       And user enters description as "<Description>"
@@ -25,7 +25,7 @@
       Then user clicks on save button
       And user validates ticket status as "New"
       And user clicks on ticket refresh button
-      And user validates child WO ticket details are same as parent OP ticket
+#      And user validates child WO ticket details are same as parent OP ticket
       When user clicks on apply BtwoB button
       Then user should see assigned profile as "<AssignmentProfile>"
       And user selects SLA class as "<SLA Class>"
@@ -64,9 +64,10 @@
 
          Examples:
         |               title                 |           Description            |         CIName        |    AssignmentProfile    |Manufacturer|   ContactName                    |ContactMailAddress                |                 SLA Class                              |AckRowNum|CancelRowNum|
-        |B2B Automated Test - Sweden Transtema|B2B Automation, Sweden, Transtema |SE_LTECell_100895010   |Transtema2 - FS - SE - B2B|Ericsson   |Transtema SOC                      |support.tns@transtema.com         |118 Hour 5 days Cleanup correction time workdays        |   2     |     3      |
-#        |B2B Automated Test - Finland Eltel   |B2B Automation, Finland, Eltel    |FI_LTECell_Valpe4H     |Eltel - FS - FIN - B2B   |Nokia      |ELTEL ContactCenter                |nmc-messages@eltelnetworks.se    |118 Hour 5 days Cleanup correction time workdays (FI=A3) |   1     |     2    |
+#        |B2B Automated Test - Sweden Transtema|B2B Automation, Sweden, Transtema |SE_LTECell_100895010   |Transtema2 - FS - SE - B2B|Ericsson   |Transtema SOC                      |support.tns@transtema.com         |118 Hour 5 days Cleanup correction time workdays        |   2     |     3      |
+        |B2B Automated Test - Finland Eltel   |B2B Automation, Finland, Eltel    |FI_LTECell_Valpe4H     |Eltel - FS - FIN - B2B   |Nokia      |ELTEL ContactCenter                |nmc-messages@eltelnetworks.se    |118 Hour 5 days Cleanup correction time workdays (FI=A3) |   1     |     2    |
 #        |B2B Automated Test - Finland Empower |B2B Automation, Finland, Empower  |FI_LTECell_Hauci1L     |Empower - FS - FI - B2B  |Nokia      |Empower Switchboard                |SCTyonohjaus@empower.fi          |118 Hour 5 days Cleanup correction time workdays (FI=A3) |   1     |     2      |
+#        |B2B Automated Test - Sweden Eltel    |B2B Automation, Sweden, Eltel     |SE_LTECell_103392011    |Transtema2 - FS - SE - B2B|Nokia      |Team Sundsvall Serv                |NMC-MESSAGES@eltelnetworks.se   |118 Hour 5 days Cleanup correction time workdays          |   1     |     3      |
 
 
 

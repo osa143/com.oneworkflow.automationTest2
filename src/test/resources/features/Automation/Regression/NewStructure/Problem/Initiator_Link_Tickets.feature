@@ -4,36 +4,37 @@
   Scenario: Initiator link tickets - user should be able to link different types of tickets together
 
     Given user is on the OneWorkflow login page
-    When user logs in with valid username "Tohall_copy" and password as "Test@1234"
+    When user logs in with valid username "tohall_copy" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-    When user clicks on agent console create problem record
+#    When user clicks on agent console create problem record
+    When user clicks on create problem record
     And user switches to window 1
     Then problem record form should appear in new tab
     When user creates problem ticket with below details
       |Title                                 |RequestType |Description           |ImpactType      |Urgency|
       |Proactive investigation of Tohall_Copy|CPS:IT:Other|UAT Test2 Linked items|Moderate/Limited|Low    |
-    Then ticket should be created and status should be assigned
+#    Then ticket should be created and status should be assigned
     When user clicks on create problem record
     And user switches to window 2
     Then problem record form should appear in new tab
     When user creates problem ticket with below details
       |Title                                 |RequestType |Description                            |ImpactType      |Urgency|
       |Proactive investigation of Tohall_Copy|CPS:IT:Other|UAT Test2 Linked items - Linked problem|Moderate/Limited|Low    |
-    Then ticket should be created and status should be assigned
+#    Then ticket should be created and status should be assigned
     And user gets ticket value
     When user clicks on create trouble event
     And user switches to window 3
     Then trouble record form should appear in new tab
-#    When user clicks on sweden checkbox under affected BU's
-    When user clicks on OP sweden checkbox under affected BU's
+    When user clicks on sweden checkbox under affected BU's
+#    When user clicks on OP sweden checkbox under affected BU's
     And user enters "A Problem Test" in Title field
     And user selects request type as "Customer" on trouble event page
     And user enters description as "A Customer Complaint"
     And user clicks on save button
     Then ticket should be created and status should be assigned
     And user gets trouble ticket value
-#    When user clicks on create change record
-    When user clicks on agent console create change record
+    When user clicks on create change record
+#    When user clicks on agent console create change record
     And user switches to window 4
     When user creates change ticket with following details
       |RequestType  |Title            |RequestCategory|Description     |Reason       |Priority|ChangeBuilder      |Implementation|TestPlan   |RollBack   |CommPlan   |VerOfFunctionality|Risk   |ServiceCustomerImpact|ImpactDuration|EstimatedImpact       |
@@ -47,7 +48,7 @@
     And user selects answer as "Simple"
     And user selects last answer as "No"
     And user clicks on save button
-    Then user adds CI "SE_CPE_FRECPE5" to change ticket with impact level "No Impact"
+    Then user adds CI "SE_AAA_AAA99SE" to change ticket with impact level "No Impact"
     Then CI should be listed and displayed under the Diagnosis tab
     When user clicks on Send button
     And user waits

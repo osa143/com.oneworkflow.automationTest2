@@ -43,7 +43,7 @@
         |DC IMS Core_auto            |Test@1234|2186|
         |mina09_auto                 |Test@1234|2185:2005:2184:2001:2002|
         |syvaptu1_auto               |Test@1234|2002|
-        |PlazaTest                   |Test@1234|2003:2279:2196:2438:2578|
+#        |PlazaTest                   |Test@1234|2003:2279:2196:2438:2578|
         |ow_basic2_auto              |Test@1234|2006:2136:2003:2279:2196:2007:2011|
         |ow_CCMobAccess_auto         |Test@1234|2003:2279:2126:2189:2182:2158:2100|
         |ow_CCMobAccess1_auto        |Test@1234|2126:2003:2100:2158:2182:2189:2279|

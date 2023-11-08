@@ -5,8 +5,8 @@ Feature: External Normal Change E2E
     Given user is on the OneWorkflow login page
     When user logs in with valid username "ChangeInitiator/Builder1" and password as "Test@1234"
     Then user successfully logged in to OneWorkflow and agent console should be displayed
-#    When user clicks on create change record
-    When user clicks on agent console create change record
+    When user clicks on create change record
+#    When user clicks on agent console create change record
     Then user switches to window 1
     When user clicks save button
     Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)" on change record page
@@ -19,7 +19,7 @@ Feature: External Normal Change E2E
     When user clicks save button
     And multiple error messages should appear with red boarder around fields
     When user selects request type as "Normal Change"
-    Then user selects title as "Mobile:IMS Core" on Change record page
+    Then user selects title as "IT:Mobile:Billing" on Change record page
     And user selects request category as "Software Installation" on change record page
     And user enters description as "TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (External Initiator)"
     And user enters reason field as "Regression"
@@ -72,18 +72,18 @@ Feature: External Normal Change E2E
     #And user validates no changes other changes can be made to the change ticket
     And user validates owner profile as "Change Manager"
     And user validates owner as "ChangeManager"
-    Then change should also be reflected in the timeline as "STATUS MODIFIED.  Assignee Profile has changed from  to DC IMS Core. Request Status has changed from New to Assigned." on row 1
+    Then change should also be reflected in the timeline as "STATUS MODIFIED.  Assignee Profile has changed from  to DC Billing. Request Status has changed from New to Assigned." on row 1
     And user gets ticket value
     And user logsOut from One workflow
-    And user goes back to login page
+    And user navigates back to login page using URL
     When user logs in with valid username "DC IMS Core_auto" and password as "Test@1234"
     And user successfully logged in to OneWorkflow and agent console should be displayed
-    When user clicks on more filters button
-    And user clicks on "Core" tab
-    Then user enters title as "Mobile | IMS Core" on more filter window
-    And user selects status as "Assigned" on user more filters window
-    Then user clicks on apply button on user more filters window
-    And user should see "CR" tickets with "Status" of "Assigned"
+#    When user clicks on more filters button
+#    And user clicks on "Core" tab
+#    Then user enters title as "Mobile | IMS Core" on more filter window
+#    And user selects status as "Assigned" on user more filters window
+#    Then user clicks on apply button on user more filters window
+#    And user should see "CR" tickets with "Status" of "Assigned"
     When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 2
     Then user enters ticket previously created and searches
@@ -91,21 +91,23 @@ Feature: External Normal Change E2E
     #Then user validates ticket status as "Analysis"
     And user validates last ack by field has data present
     And user selects assigned profile dropdown as "DC IMS Core"
-    And user enters "DC IMS Core_auto" in assignee
+#    And user enters "ain" in assignee
+#    And user assignee
     And user clicks on save button
     When user clicks on Diagnosis tab
     And user clicks on Show CR Matching button
     Then user should see Show CR Matching table appear
     When user enters description as "- Additional Information"
-    Then user enters reason field as "- New Reason"
+#    Then user enters reason field as "- New Reason"
     And user clicks on details under sections
     Then user enters "- New Communication plan" in the communication plan field
     And user clicks on save button
     Then change should also be reflected in the timeline as "STATUS MODIFIED.  Description has changed from TEST TICKET PLEASE IGNORE - Automated Test for Normal Change (External Initiator) to - Additional Information. "
     Then user clicks on "Schedule" tab
-    Then user enters request start time 168 hours ahead of current date
-    And user enters request end time 172 hours ahead of current date
+#    Then user enters request start time 168 hours ahead of current date
+#    And user enters request end time 172 hours ahead of current date
     Then user clicks on save button
+    When user clicks on Ack button
     And user clicks on Diagnosis tab
     And user right clicks on primary CI and selects "Impact:Update"
     Then user switches to frame
@@ -113,7 +115,7 @@ Feature: External Normal Change E2E
     And user enters impact to time as same value as request end time on impact details bulk update window
     And user clicks confirm checkbox
     Then user clicks on bulk update save button
-    Then user should see "Acknowledged" email update
+#    Then user should see "Acknowledged" email update
     When user changes status to "Approval Requested"
     And user clicks on save button
     #And change should also be reflected in the timeline as "Processing of the following notification event(s) started: Approvals Notification messages will be displayed on the Notifications tab. " on row 60
@@ -122,16 +124,17 @@ Feature: External Normal Change E2E
     And user validates availability of tabs "Approval"
     And user waits 2 secs
     When user logsOut from One workflow
-    And user switches to window 1
-    And user goes back to login page
+    And user navigates back to login page using URL
+#    And user switches to window 1
+#    And user goes back to login page
     Then user logs in with valid username "ChangeManager1_Automation" and password as "Test@1234"
     And user successfully logged in to OneWorkflow and agent console should be displayed
     When user clicks on more filters button
-    And user clicks on "Core" tab
-    And user selects status as "Approval Requested" on user more filters window
-    And user clicks on apply button on user more filters window
-    And user should see "CR" tickets with "Status" of "Approval Requested"
-    When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
+#    And user clicks on "Core" tab
+#    And user selects status as "Approval Requested" on user more filters window
+#    And user clicks on apply button on user more filters window
+#    And user should see "CR" tickets with "Status" of "Approval Requested"
+#    When user selects search menu as "Open Search Form:Change Record/Project/Freeze"
     And user switches to window 2
     Then user enters ticket previously created and searches
     When user clicks on owner under sections

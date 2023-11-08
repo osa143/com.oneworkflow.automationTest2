@@ -566,10 +566,10 @@ public class OWF_AgentConsolePage extends BaseRecordPage {
         }
 
      public void selectCreateAsKnownError(){
-//        selectMainMenuAndMenuItem(menuForCREATE, menuitemKNOWN_ERROR);
+        selectMainMenuAndMenuItem(menuForCREATE, menuitemKNOWN_ERROR);
 
-         clickAgentConsoleCreateMenu();
-         clickMenuItemKnownError();
+//         clickAgentConsoleCreateMenu();
+//         clickMenuItemKnownError();
      }
 
 
@@ -860,7 +860,7 @@ public class OWF_AgentConsolePage extends BaseRecordPage {
     }
 
     public void selectSearchMenu(String menuItem){
-        selectMainMenuAndMenuItem(menunewforSEARCH, menuItem);
+        selectMainMenuAndMenuItem(menuForSEARCH, menuItem);
 //        selectMainMenu(menunewforSEARCH);
 //        selectDropDownMenu(menunewforSEARCH);
     }

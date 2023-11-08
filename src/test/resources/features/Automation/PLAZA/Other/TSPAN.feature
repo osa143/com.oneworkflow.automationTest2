@@ -33,10 +33,10 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user selects search menu as "Open Search Form:Work Order"
-      And user clicks agent console search menu
-      And user selects agent console open search form
-      And user selects agent console search work order
+      When user selects search menu as "Open Search Form:Work Order"
+#      And user clicks agent console search menu
+#      And user selects agent console open search form
+#      And user selects agent console search work order
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
@@ -79,7 +79,7 @@
       Examples:
 
       |Request            |Select Request  |Environment|Description            |Additional Comments|
-#      |Test1 TSPAN/Request|Account/Password|Prod       |Test1 TSPAN/Description|Test1 TSPAN/AC     |
+      |Test1 TSPAN/Request|Account/Password|Prod       |Test1 TSPAN/Description|Test1 TSPAN/AC     |
 #      |Test2 TSPAN/Request|Account/Password|Test       |Test2 TSPAN/Description|Test2 TSPAN/AC     |
 #      |Test3 TSPAN/Request|Other          |Prod       |Test3 TSPAN/Description|Test3 TSPAN/AC     |
-      |Test4 TSPAN/Request|Other          |Test       |Test4 TSPAN/Description|Test4 TSPAN/AC     |
+#      |Test4 TSPAN/Request|Other          |Test       |Test4 TSPAN/Description|Test4 TSPAN/AC     |

@@ -7,6 +7,7 @@
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
       When user clicks on create change record
+#      When user clicks on agent console create change record
       Then user switches to window 1
       And user selects request type as "Normal Change"
       Then user selects title as "Mobile:CS Core (Voice)" on Change record page
@@ -22,8 +23,8 @@
       And user enters "Regression - Change Management Process" in the ver of functionality field
       And user enters "Regression - Change Management Process" in the risk description field
       Then user enters as "Test Data - Ignore Ticket" in service and customer impact
-      And user enters start time as 24 hours fast from current sweden time in "YYYY/mm/dd HH:mm:ss" format
-      And user enters end time as 28 hours fast from current sweden time in "YYYY/mm/dd HH:mm:ss" format
+      And user enters start time as 24 hours fast from current sweden time in "MM/dd/YYYY HH:mm:ss" format
+      And user enters end time as 28 hours fast from current sweden time in "MM/dd/YYYY HH:mm:ss" format
       And user enters impact duration as "45" minutes
       And user selects estimated impact dropdown as "Degradation of Service"
       And user clicks on save button

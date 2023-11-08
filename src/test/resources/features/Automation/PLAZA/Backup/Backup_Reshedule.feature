@@ -15,11 +15,11 @@
       Then user should see "Re/Schedule Backup" form
       Then user selects system name in haiti as "AAA"
       When user selects role dropdown as "Application Operation Engineer"
-      Then user clicks on the contact checkbox
-      And user then clicks on the name not found checkbox
-      And user enters name field as "Test1234"
-      Then user enters email address field as "Test@Test.com"
-      Then user enters phone field as "123456789"
+#      Then user clicks on the contact checkbox
+#      And user then clicks on the name not found checkbox
+#      And user enters name field as "Test1234"
+#      Then user enters email address field as "Test@Test.com"
+#      Then user enters phone field as "123456789"
       And user enters Backup request as "Test1 Backup (Re)Schedule/Request"
       And user enters Backup (Re)Schedule schedule as "Test Schedule"
       And user enters Backup (Re)Schedule UNC Local path as "\\TESTING\This"
@@ -37,9 +37,10 @@
       Given user is on the OneWorkflow login page
       And user logs in with valid user and password
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-      And user clicks agent console search menu
-      And user selects agent console open search form
-      And user selects agent console search work order
+#      And user clicks agent console search menu
+#      And user selects agent console open search form
+#      And user selects agent console search work order
+      When user selects search menu as "Open Search Form:Work Order"
       And user switches to window 2
       Then user enters plaza request id in the source id field
       And user clicks Search on ticket search
@@ -71,6 +72,7 @@
       Then user clicks confirm checkbox
       And user clicks on bulk update save button
       When user right clicks on primary CI and clears impact
+#      When user right clicks on CI "cc100cgas001" and clears impact
       And user changes status to "Cleared" on work order page
       And user selects completion code as "Success"
       And user clicks on "Schedule" tab
@@ -84,3 +86,4 @@
       And user waits 4 secs
       And user clicks on main page refresh
       Then user validates plaza request has completed
+      And user says hello

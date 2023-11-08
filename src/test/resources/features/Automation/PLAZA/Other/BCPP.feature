@@ -19,7 +19,7 @@
       And user selects service request name as "Account/Password"
       And user selects BCPP environment as "<Environment>"
 #      And user selects any BCPP CI
-      And user waits 30 secs
+      And user waits 40 secs
       And user enters BCPP description as "<Description>"
       And user enters additional comments as "<Additional Comments>"
       Then user clicks on "Submit"

@@ -5,8 +5,8 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid username "ChangeInitiatorInternal1" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user clicks on create change record
-      When user clicks on agent console create change record
+      When user clicks on create change record
+#      When user clicks on agent console create change record
       Then user switches to window 1
       When user clicks save button
       Then error message should display as "Please fill up all the mandatory fields in the Details Panel to create a Change Request. (ARERR 10000)" on change record page
@@ -19,7 +19,7 @@
       When user clicks save button
       And multiple error messages should appear with red boarder around fields
       When user selects request type as "Urgent Change"
-      Then user selects title as "Mobile:RAN NSN" on Change record page
+      Then user selects title as "IT:Mobile:Billing" on Change record page
       And user selects request category as "Software Installation" on change record page
       And user enters description as "TEST TICKET PLEASE IGNORE - Automated Test for Urgent Major Change (Internal Initiator)"
       And user enters reason field as "Regression"

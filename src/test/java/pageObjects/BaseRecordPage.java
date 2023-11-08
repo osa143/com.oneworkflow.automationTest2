@@ -17,7 +17,7 @@ public class BaseRecordPage extends BasePage {
 
     public static final String ddSTATUS = "Status*";
     public static final String ddValueINVESTIGATION_COMPLETE = "Investigation Complete";
-    public static final String ddValueCLOSED = "Closed";
+    public static final String ddValueCLOSED = "/html/body/div[8]/div[2]/table/tbody/tr[4]/td[1]";
 
     public static final String txtCHANGE_BUILDER_FIELD_ID = "arid_WIN_0_600001054";
     public static final String txtIMPLEMENTATION_ID = "arid_WIN_0_700007007";
@@ -65,7 +65,7 @@ public class BaseRecordPage extends BasePage {
     public static final String ddREQUEST_CATEGORY = "Request Category";
     public static final String ddCHANGE_RECORD = "WIN_0_755000000";
     public static final String ddSERVICE_PROVIDER = "Service Provider";
-    public static final String ddSTATuS_ID = "//*[@id='arid_WIN_0_777031003']";
+    public static final String ddSTATuS_ID = "arid_WIN_0_777031003";
     public static final String ddROOT_CAUSE_CODE = "Root Cause Code";
     public static final String txtROOT_CAUSE_DETAILS_ID = "arid_WIN_0_705002081";
     public static final String ddCLOSER_CODE = "Closure Code";
@@ -1058,7 +1058,8 @@ public class BaseRecordPage extends BasePage {
 
     }
     public String getStatusText() {
-        String StatusText = findElement(By.xpath(ddSTATuS_ID)).getAttribute("value");
+        wait(3000);
+        String StatusText = findElement(By.id(ddSTATuS_ID)).getAttribute("value");
         System.out.println("Ticket status is - " +StatusText);
         return StatusText;
 

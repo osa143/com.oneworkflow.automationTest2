@@ -833,7 +833,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user gets trouble ticket value")
     public void userGetsTroubleTicketValue() {
-        CommonUtils.opTicket = troubleEventPage.getNewOPTicketValue();
+        CommonUtils.opTicket = troubleEventPage.getTicketValue();
             System.out.println("Stored trouble ticket is " + CommonUtils.opTicket);
     }
 
@@ -851,7 +851,7 @@ public class OWF_TroubleEventPageSteps {
     @And("user enters event end time as {int} mins past")
     public void userEntersEventEndTimeAsMinsPast(int arg0) {
         CommonUtils.EventEndTime= CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0);
-        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterEventEndTimeAsPast(CommonUtils.getDateTime("MM-dd-yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user selects action dropdown as {string} on trouble event page")
@@ -861,7 +861,7 @@ public class OWF_TroubleEventPageSteps {
 
     @And("user enters event start time as {int} mins past")
     public void userEntersEventStartTimeAsMinsPast(int arg0) {
-        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("yyyy-MM-dd HH:mm:ss", "Europe/London", arg0));
+        troubleEventPage.enterEventStartTime(CommonUtils.getDateTime("MM-dd-yyyy HH:mm:ss", "Europe/London", arg0));
     }
 
     @And("user should see confirmation message for impact clear and clicks ok")

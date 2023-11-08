@@ -7,19 +7,20 @@
       Given user is on the OneWorkflow login page
       When user logs in with valid username "frvi96_auto" and password as "Test@1234"
       Then user successfully logged in to OneWorkflow and agent console should be displayed
-#      When user clicks on create trouble event
-      When user clicks on agent console create trouble event
+      When user clicks on create trouble event
+#      When user clicks on agent console create trouble event
       And user switches to window 1
       Then trouble record form should appear in new tab
+#      When user clicks on OP sweden checkbox under affected BU's
       When user clicks on sweden checkbox under affected BU's
       When user enters "Problem test" in Title field
       And user selects request type as "Customer" on trouble event page
       And user enters description as "A customer complaint"
       And user clicks on save button
-      And user gets ticket value
-      Then ticket should be created and status should be assigned
-#      When user clicks on change record from agent console
-      When user clicks on agent console create change record
+#      And user gets ticket value
+#      Then ticket should be created and status should be assigned
+      When user clicks on change record from agent console
+#      When user clicks on agent console create change record
       And user switches to window 2
       Then change record form should open in a new tab
       When user creates change ticket with following details
@@ -36,7 +37,8 @@
       And user selects answer as "Simple"
       And user selects last answer as "No"
       And user clicks on save button
-      And user adds CI "aa789win01t" to change ticket with impact level "No Impact"
+#      And user adds CI "aa789win01t" to change ticket with impact level "No Impact"
+      And user adds CI "SE_AAA_AAA99SE" to change ticket with impact level "No Impact"
       When user clicks on Send button
       Then ticket should be created and status should be assigned
       When user clicks on create known error
@@ -50,8 +52,8 @@
       Then user validates ticket status as "Draft"
       When user changes status to "Published" on problem record page
       And user selects "Known Error Code" as "Risk accepted"
-      And user selects affected organisation as "CA_Infra"
-      And user selects accountable organisation as "CA_IT"
+      And user selects affected organisation as "DivX"
+      And user selects accountable organisation as "DivX"
       And user clicks save button
       Then known error ticket status should be "Published"
       And user clicks on linked items tab
